@@ -1,0 +1,39 @@
+// Datei: ./praxis/mit-aptitude-vormerkungen-machen/vormerkungen-ueber-die-textoberflaeche-durchfuehren.txt
+
+// Baustelle: Rohtext
+
+[[vormerkungen-ueber-die-textoberflaeche-durchfuehren]]
+
+=== Vormerkungen über die Textoberfläche durchführen ===
+
+// Stichworte für den Index
+(((aptitude, Paketaktionen vormerken)))
+
+Um eine Paketoperation für eine spätere Verarbeitung vorzumerken, wählen
+Sie zunächst das gewünschte Paket aus der Paketliste aus.
+<<tab.aptitude-vormerkungen>> stellt die Tastenkombinationen zusammen,
+die Sie dafür benutzen können.
+
+.Tastenkombination für Vormerkungen in `aptitude`
+[frame="topbot",options="header",cols="1,9",id="tab.aptitude-vormerkungen"]
+|====
+| Taste | Bedeutung
+| `+`   | Paket installieren oder aktualisieren (_install_ oder _upgrade_)
+| `-`   | Paket entfernen (_remove_)
+| `_`   | Paket vollständig entfernen (_purge_)
+| `:`   | Paketversion behalten (_keep_)
+| `=`   | Paketversion dauerhaft beibehalten (_hold_)
+| `L`   | Paket nochmals installieren (_reinstall_)
+| `U`   | alle aktualisierbaren Pakete zur Aktualisierung vormerken
+|====
+
+Drücken Sie die Taste key:[g], erhalten Sie danach zunächst nur eine
+Vorschau ihrer Vormerkungen (siehe
+<<bestehende-vormerkungen-anzeigen>>). Drücken Sie die Taste key:[g]
+erneut führt `aptitude` ihre Vormerkungen auch tatsächlich aus (siehe
+<<vormerkungen-ausfuehren>>).
+
+Ihre bereits gewählten Vormerkungen können Sie jederzeit wieder
+aufheben. Die Details dazu entnehmen Sie <<vormerkungen-wieder-aufheben>>.
+
+// Datei (Ende): ./praxis/mit-aptitude-vormerkungen-machen/vormerkungen-ueber-die-textoberflaeche-durchfuehren.txt

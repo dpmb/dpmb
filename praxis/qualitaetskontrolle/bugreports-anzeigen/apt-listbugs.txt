@@ -1,0 +1,117 @@
+// Datei: ./praxis/qualitaetskontrolle/bugreports-anzeigen/apt-listbugs.txt
+
+// Baustelle: Rohtext
+
+[[bugreports-apt-listbugs]]
+==== Bugreports mit `apt-listbugs` lesen ====
+
+// Stichworte für den Index
+(((apt-listbugs)))
+(((Debian BTS)))
+(((Debianpaket, apt-listbugs)))
+
+Die generelle Idee zu dem Werkzeug `apt-listbugs` aus dem gleichnamigen
+Debianpaket{empty}footnote:[https://packages.debian.org/de/stable/apt-listbugs]
+ist, Fehlerberichte aus dem Debian BTS abzurufen. Wie wir bereits zuvor
+in <<bugreports-hintergrundwissen>> angerissen haben, ist das Werkzeug
+in den Ablauf zur Aktualisierung und Installation eines Paketes mit APT
+integriert. Es prüft in diesem Zusammenhang automatisch mit, ob im
+Debian BTS Fehler für das betreffende Paket vorliegen und diese bereits
+repariert wurden.
+
+Darüberhinaus können Sie das Werkzeug auch direkt über die Kommandozeile
+aufrufen und sich eine Liste der registrierten Fehler ausgeben lassen.
+`apt-listbugs` akzeptiert dafür die folgenden Schalter (Auswahl):
+
+// Stichworte für den Index
+(((apt-listbugs, Fehlerberichte filtern)))
+(((apt-listbugs, -s)))
+(((apt-listbugs, --severity)))
+
+`-s` 'Schweregrad' (Langform `--severity`)::
+Fehler je nach Schweregrad eingrenzen. Möglich sind die Werte
+`critical` (kritisch), `grave` (sehr schwerwiegend), `serious`
+(schwerwiegend), `important` (wichtig), `normal` (normal), `minor`
+(weniger relevant), `wishlist` (Wunschliste) und `all` (alle
+Schweregrade). Mehrere Werte trennen Sie mittels Komma voneinander. Der
+Standardwert ist die Kombination der drei erstgenannten Werte
+`critical,grave,serious`.
+
+// Stichworte für den Index
+(((apt-listbugs, Fehlerberichte filtern)))
+(((apt-listbugs, -T)))
+(((apt-listbugs, --tags)))
+
+`-T` 'Schlüsselworte' (Langform `--tags`)::
+Filtere die Fehlermeldungen anhand des gegebenen Schlüsselworts. Mehrere
+Werte trennen Sie mittels Komma voneinander.
+
+// Stichworte für den Index
+(((apt-listbugs, Fehlerberichte sortieren)))
+(((apt-listbugs, -S)))
+(((apt-listbugs, --stats)))
+
+`-S` 'Status' (Langform `--stats`)::
+Filtere und sortiere die Fehlerberichte anhand des aktuellen Status.
+Mögliche Statuswerte sind `pending` (offener Fehler), `forwarded`
+(der Fehlerbericht ist als weitergeleitet markiert), `pending-fixed`
+(der Fehlerbericht ist als 'gelöst' markiert, aber noch ohne
+Bestätigung), `fixed` (der Fehlerbericht ist markiert als 'gelöst'),
+`absent` (in der angefragten Veröffentlichung bzw. Architektur existiert
+der Fehler nicht) und `done` (für die angefragte Veröffentlichung bzw.
+Architektur ist der Fehler gelöst).
+
+// Stichworte für den Index
+(((apt-listbugs, Fehlerberichte filtern)))
+(((apt-listbugs, -B)))
+(((apt-listbugs, --bugs)))
+
+`-B` 'Fehlernummer' (Langform `--bugs`)::
+Filtere die Fehlerberichte anhand der gegebenen Nummer des
+Fehlerberichts und zeige nur die betreffenden an. Mehrere Werte trennen
+Sie mittels Komma voneinander.
+
+// Stichworte für den Index
+(((apt-listbugs, -D)))
+(((apt-listbugs, --show-downgrade)))
+
+`-D` (Langform `--show-downgrade`)::
+Zeige nur die Fehlerberichte für Pakete an, für die ein Downgrade
+erfolgt ist (siehe auch <<pakete-downgraden>>).
+
+// Stichworte für den Index
+(((apt-listbugs, -P)))
+(((apt-listbugs, --pin-priority)))
+
+`-P` 'Priorität' (Langform `--pin-priority`)::
+Benutze die Pin-Priorität als Filterkriterium (siehe
+<<veroeffentlichungen-mischen>> für weitere Informationen zur
+Pin-Priorität).
+
+// Stichworte für den Index
+(((apt-listbugs, apt)))
+(((apt-listbugs, list)))
+(((apt-listbugs, rss)))
+
+Als weiteren Wert zum Aufruf benötigt `apt-listbugs` noch ein Kommando.
+Zur Auswahl stehen `apt`, `list` und `rss`. Bei ersterem liest
+`apt-listbugs` von `stdin`, bei `list` erwartet es die Paketnamen als
+Argumente zum Aufruf und bei letzterem im RSS-Format. Den Abschluß des
+Aufrufs bildet der Paketname, an den Sie zudem eine spezifische
+Paketversion anfügen können. Als Trennzeichen fungiert hier der
+Schrägstrich, sodaß bspw. die Spezifikation für das Paket
+'apt-listbugs' in der Version 0.1.5 `apt-listbugs/0.1.5` lautet.
+
+.Berichtete Fehler zum Paket 'coreutils' auflisten
+----
+$ apt-listbugs -s critical,grave,serious list coreutils
+Laden der Fehlerberichte ... Erledigt
+»Found/Fixed«-Informationen werden ausgewertet ... Erledigt
+grave Fehler von coreutils (-> ) <ungelöst>
+ #743955 - coreutils: corrupted files on heavily fragmented ext3 and ext4 partitions
+Zusammenfassung:
+ coreutils(1 Fehler)
+$
+----
+
+// Datei (Ende): ./praxis/qualitaetskontrolle/bugreports-anzeigen/apt-listbugs.txt

@@ -1,0 +1,39 @@
+// Datei: ./kann-denn-paketmanagement-spass-machen/zum-buch/dokumentation-deb-vs-rpm.txt
+
+// Baustelle: Fertig
+// Axel: Fertig
+
+==== Dokumentation `deb` vs. `rpm` ====
+
+(((Dokumentation,aptitude)))
+(((aptitude,Dokumentation)))
+Trotz vieler Fortschritte sind manche Programme zur Paketverwaltung und
+Hinweise zum Zusammenspiel von `dpkg`, APT und `aptitude` nur
+bruchstückhaft oder gar nicht beschrieben – oder sie sind über viele
+Köpfe und Online-Ressourcen hinweg verstreut. Auch an Übersetzungen
+mangelt es: So liegt trotz des hohen Nutzungsgrades beispielsweise die
+`aptitude`-Dokumentation bisher nicht in deutscher Sprache vor.
+
+// Schlagworte für den Index
+(((RPM,Dokumentation)))
+Im Vergleich steht das Paketformat RPM etwas besser da. In seinem Buch
+``Maximum RPM''{empty}footnote:[Edward C. Bailey: Maximum RPM. Taking
+the Red Hat Package Manager to the Limit, Red Hat Inc., 2000, ISBN
+1-888172-78-9, http://www.rpm.org/max-rpm/] hat Edward C. Bailey im Jahr
+2000 die Regieanweisungen für den Umgang mit diesem Format
+veröffentlicht. Aktueller sind der ``RPM Guide'' des
+Fedora-Projekts{empty}footnote:[Eric Foster-Johnson, Stuart Ellis und
+Ben Cotton: RPM Guide, 2005/2011, Fedora Project Contributors, Edition
+0,
+http://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/RPM_Guide/index.html]
+und weiterführende Dokumentation auf der
+`rpm`-Projektseite{empty}footnote:[http://www.rpm.org/wiki/Docs].
+
+Ein vergleichbares Buch zur Debian-basierten Paketverwaltung fehlte
+bislang. Viele hervorragende Kompendien (siehe dazu <<weitere-buecher>>)
+behandeln zwar die einzelnen Kommandozeilenwerkzeuge `dpkg`, APT,
+`aptitude` oder Synaptic, aber meist fehlt der (entscheidende) Entwurf
+eines Gesamtbildes, das sich erst aus der geschickten Kombination dieser
+Werkzeuge ergibt.
+
+// Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/dokumentation-deb-vs-rpm.txt

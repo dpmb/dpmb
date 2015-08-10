@@ -1,0 +1,188 @@
+// Datei: ./werkzeuge/paketoperationen/liste-der-installierten-pakete-anzeigen-und-deuten.txt
+
+// Baustelle: Fertig
+
+[[liste-der-installierten-pakete-anzeigen-und-deuten]]
+
+=== Liste der installierten Pakete anzeigen und deuten ===
+
+// Stichworte für den Index
+(((installierte Pakete anzeigen)))
+Diese Aktion betrifft häufig nicht nur ein einzelnes Paket, sondern den
+Gesamtbestand an Software, die auf ihrem Linuxsystem installiert sind
+oder waren. Im Alltag ergeben sich eine ganze Reihe von
+Anwendungsfällen, bei denen diese Aktion durchgeführt wird.
+
+Hintergrund für den _Fall 1_ ist der Wunsch nach einem Überblick zum
+Gesamtzustand eines Systems und vor allem der Software, die darauf
+installiert ist. Das betrifft insbesondere die Rechnersysteme, die Sie
+nicht selbst eingerichtet haben und deren Betreuung Ihnen obliegt, bspw.
+Geräte im Auslieferungszustand oder im Rahmen der Wartung als
+Bestandteil eines Kundenauftrags. Dabei kommt häufig die
+Berücksichtigung ``gewachsener Infrastruktur'' ins Spiel.
+
+_Fall 2_ betrifft ``großflächige'' Änderungen auf einem Rechnersystem.
+Sie überprüfen, ob diese korrekt abgelaufen sind. _Fall 3_ betrifft die
+Entwicklung, hier ist die Fehlersuche bei den Paketwerkzeugen zu nennen.
+
+Zu den konkreten Aktionen zählt weiterhin das Herausfinden, ob ein
+bestimmtes Paket oder Programm auf ihrem Rechnersystem überhaupt
+installiert ist, und falls ja, ob dieses vollständig installiert und
+(bereits) konfiguriert wurde. Wurde es hingegen entfernt, ist zu klären,
+ob es vollständig entfernt wurde oder noch ``Reste'' übrig sind, bspw.
+paketspezifische Konfigurationsdateien.
+
+Für die Kommandozeile existieren zwei grundlegende Möglichkeiten.
+Einerseits ist das `dpkg -l` und andererseits `aptitude search ~i`. Die
+Darstellung in den graphischen Programme klären wir weiter unten
+genauer.
+
+==== `dpkg -l` 'Paketname' (Langform `--list`) ====
+
+// Stichworte für den Index
+(((dpkg, -l)))
+(((dpkg, --list)))
+`dpkg` wird für diese Aufgabe sehr häufig genutzt. Ohne die Angabe des
+Paketnamens zeigen Sie alle Pakete und Paketreste an, die auf ihrem
+System derzeit installiert sind. Geben Sie ein oder mehrere Pakete als
+Parameter durch Leerzeichen getrennt an, erhalten Sie nur Informationen
+zu diesen benannten Paketen. In nachfolgender Paketliste zeigen die
+einzelnen Spalten nacheinander den Paketzustand, den Namen des Pakets
+(siehe <<benennung-eines-debian-pakets>>), dessen Version und die
+Kurzbeschreibung dazu.
+
+//.Vollständige Paketliste mit `dpkg`
+----
+$ dpkg -l
+Gewünscht=Unbekannt/Installieren/R=Entfernen/P=Vollständig Löschen/Halten
+| Status=Nicht/Installiert/Config/U=Entpackt/halb konFiguriert/
+         Halb installiert/Trigger erWartet/Trigger anhängig
+|/ Fehler?=(kein)/R=Neuinstallation notwendig (Status, Fehler: GROSS=schlecht)
+||/ Name                                      Version                              Beschreibung
++++-=========================================-====================================-==========================
+====================================================
+ii  a2ps                                      1:4.14-1.1                           GNU a2ps - 'Anything to Po
+stScript' converter and pretty-printer
+rc  bsh                                       2.0b4-12                             Java scripting environment
+ (BeanShell) Version 2
+...
+un  xfce4-icon-theme                          <keine>                              (keine Beschreibung vorhanden)
+$
+----
+
+// Stichworte für den Index
+(((Paketstatus)))
+(((Paketzustand)))
+Die ersten drei Spalten jeder ausgegebenen Zeile interpretieren Sie
+anhand der <<tab.paketzustand>>. Die Begriffe in Klammern nennen die
+englischen Übersetzungen – i.d.R. ist das die Langform der jeweiligen
+Option. Mit Ausnahme von von `W` für 'aWaited trigger' entspricht dabei
+der verwendete Buchstabe in der Spalte jeweils dem Anfangsbuchstaben der
+Langform der Option.
+
+.Paketzustand deuten
+[frame="topbot",options="header",id="tab.paketzustand"]
+|====
+| gewünschte Aktion durch den Paketmanager | Paketstatus | Fehler-Schalter
+| `u`: Unbekannt ('unknown') | `n`: Paket ist nicht installiert ('not
+installed') | (leer): kein Fehler
+| `i`: Installieren ('installed') | `c`: nur die Konfigurationsdatei ist
+vorhanden ('configured') | `R`: eine Neuinstallation ist notwendig ('reinstall')
+| `h`: Halten ('hold') | `H`: Paket ist nur halb installiert ('half
+installed') |
+| `r`: Entfernen ('remove') | `U`: Paket wurde entpackt ('unpacked') |
+| `p`: Vollständig Löschen ('purge') | `F`: Fehlgeschlagene
+Konfiguration ('failed') |
+| | `W`: Trigger erwartet ('aWaited trigger') |
+| | `t`: Trigger anhängig ('trigger') |
+| | `i`: Installiert ('installed') |
+|====
+
+//* gewünschte Aktion durch den Paketmanager:
+//** `u`: Unbekannt ('unknown')
+//** `i`: Installieren ('installed')
+//** `h`: Halten ('hold')
+//** `r`: Entfernen ('remove')
+//** `p`: Vollständig Löschen ('purge')
+
+//* Paketstatus
+//** `n`: Paket ist nicht installiert ('not installed')
+//** `c`: nur die Konfigurationsdatei ist vorhanden ('configured')
+//** `H`: Paket ist nur halb installiert ('half installed')
+//** `U`: Paket wurde entpackt ('unpacked')
+//** `F`: Fehlgeschlagene Konfiguration ('failed')
+//** `W`: Trigger erwartet ('aWaited trigger')
+//** `t`: Trigger anhängig ('trigger')
+//** `i`: Installiert ('installed')
+
+//* Fehler-Schalter
+//** (leer): kein Fehler
+//** `R`: eine Neuinstallation ist notwendig ('reinstall')
+
+Kleinbuchstaben zeigen dabei an, daß alles im grünen Bereich ist.
+Großbuchstaben heben hingegen Fehlerfälle oder auch Zustände hervor, die
+ihrerseits eine genauere Begutachtung und eine Aktion zu diesem Paket
+erfordern. Obige Darstellung mit Buchstaben verwendet sowohl `dpkg`, als
+auch `aptitude`. <<tab.paketzustandskombinationen>> zeigt Ihnen die
+Status-Kombinationen, die Ihnen häufig im Alltag begegnen werden.
+
+.Alltägliche Kombinationen zum Paketzustand
+[frame="topbot",options="header",cols="2,5",id="tab.paketzustandskombinationen"]
+|====
+| Paketstatus | Beschreibung 
+| `ii` | das Paket ist vollständig und fehlerfrei installiert sowie
+konfiguriert.
+| `rc` | das Paket wurde gelöscht, aber die Konfigurationsdateien sind
+noch gespeichert (Abkürzung für 'removed, configured, no error').
+| `un` | unbekanntes, nicht installiertes Paket (Abkürzung für 'unknown,
+not installed').
+| `hi` | das Paket ist installiert, aber auf 'hold' gesetzt. Bei
+Softwareaktualisierungen wird das Paket nicht berücksichtigt und in
+seinem derzeitigen Zustand belassen (siehe Paketflags in
+<<paketflags>>).
+|====
+
+==== `aptitude search ~i` ====
+
+// Stichworte für den Index
+(((aptitude, search ~i)))
+(((aptitude, search ?installed)))
+`aptitude` kennt dazu das Unterkommando `search` und erwartet danach
+entweder einen Paketnamen oder ein Flag. In diesem Fall ist es das Flag
+`~i` für ``installierte Pakete'' (Langform `?installed`).
+
+Wie bereits oben genannt, verwendet `aptitude` in der Ausgabe die
+gleichen Buchstaben wie `dpkg` (siehe <<tab.paketzustand>>). Der
+Buchstabe `i` bezeichnet ein installiertes Paket, `A` in der dritten
+Spalte markiert ``automatisch installiert'' und deutet auf eine
+automatisch erfüllte Paketabhängigkeit hin (siehe dazu
+<<automatisch-installierte-pakete-anzeigen>>). Daneben sehen Sie in der
+Ausgabe noch den Namen und die Kurzbeschreibung zum jeweiligen Paket.
+
+//.`aptitude` listet die installierten LaTeX-Pakete auf
+----
+$ aptitude search ~i | grep texlive
+i   texlive                         - TeX Live: Eine anständige Auswahl der TeX-
+i A texlive-base                    - TeX Live: Grundlegende Programme und Datei
+i A texlive-bibtex-extra            - TeX Live: Extra BibTeX styles
+i A texlive-binaries                - Binärdateien für TeX Live
+i A texlive-common                  - TeX Live: Basiskomponenten
+i A texlive-doc-base                - TeX Live: Dokumentation für TeX Live
+$
+----
+
+==== Weitere Möglichkeiten ====
+
+Graphische Programme wie beispielsweise Synaptic (siehe
+<<gui-synaptic>>) und SmartPM (siehe <<gui-smartpm>>) verwenden
+keine Buchstaben zur Kennzeichnung des Paketstaus, sondern nutzen
+stattdessen verschiedenfarbige Kästchen (``Icons''). In
+<<fig.smartpm-icons>> sehen Sie alle Möglichkeiten in der vollständigen
+Übersicht. Installierte Pakete erkennen Sie an der grünen Farbe,
+weiß/hellgrau kennzeichnet nicht installierte Pakete und rot steht hier
+für defekte Pakete (Status ``broken'').
+
+.Icons zur Darstellung des Paketstatus
+image::werkzeuge/paketoperationen/smartpm-icons.png[id="fig.smartpm-icons", width="50%"]
+
+// Datei (Ende): ./werkzeuge/paketoperationen/liste-der-installierten-pakete-anzeigen-und-deuten.txt

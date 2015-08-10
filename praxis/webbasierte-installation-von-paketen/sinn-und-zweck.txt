@@ -1,0 +1,24 @@
+// Datei: ./praxis/webbasierte-installation-von-paketen/sinn-und-zweck.txt
+
+// Baustelle: Notizen
+
+=== Sinn und Zweck ===
+
+* Installation von Paketen aus den eingetragenen Repositories (bzw.
+Channels bei Ubuntu) über die Adresszeile des Webbrowsers
+** URL im Webbrowser: `apt://cowsay` für das Paket 'cowsay'
+** URL im Webbrowser: `apt://cowsay,xmms` für die beiden Pakete 'cowsay'
+und 'xmms'
+* Einsatzbereich:
+** Paket 'xyz' wird benötigt, aber die lokale Netzwerk-Infrastruktur
+gestattet nur den Zugriff über Port 80 (`http`) und 443 (`https`).
+Trifft insbesondere auf freie WLANs bzw. WLANs in Hotels und
+öffentlichen Einrichtungen zu.
+** Installation über die ``üblichen Wege'' geht nicht, aber `http` ist
+nutzbar
+** reguläre Paketmirror sind nicht erreichbar
+** Nutzung eines lokalen, eigenen Paketmirrors (siehe Paketverwaltung
+beschleunigen in <<paketverwaltung-beschleunigen>>)
+
+
+// Datei (Ende): ./praxis/webbasierte-installation-von-paketen/sinn-und-zweck.txt

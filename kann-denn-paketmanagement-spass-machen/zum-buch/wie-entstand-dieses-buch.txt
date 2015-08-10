@@ -1,0 +1,147 @@
+// Datei: ./kann-denn-paketmanagement-spass-machen/zum-buch/wie-entstand-dieses-buch.txt
+
+// Baustelle: TODO (Post-OSP)
+// Axel: Fertig Moving-Target
+
+[[wie-entstand-dieses-buch]]
+==== Wie und warum dieses Buch entstand ====
+
+Das Thema ``Paketmanagement'' beschäftigt uns als Autoren schon sehr
+lange. Obwohl jeder die Werkzeuge und Mechanismen tagtäglich verwendet,
+entdeckten wir zunächst unabhängig voneinander immer wieder neue
+Aspekte, die sich schrittweise zu einem komplexen Gesamtbild ergänzten.
+
+Beim gemeinsamen Fachsimpeln entstanden aus dieser Begeisterung heraus
+zunächst Beiträge für die Zeitschrift LinuxUser.{empty}footnote:[Frank
+Hofmann, Thomas Osterried: Gestaltwandler.  Programmpakete richtig
+konvertieren, LinuxUser 1/2010, LinuxNewMedia AG, München, 2010, S.
+32ff,
+http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2010/01/Programmpakete-richtig-konvertieren.
+– Frank Hofmann, Thomas Winde: Zentraler Zugangspunkt. Komfortabel
+Pakete managen mit der Apt-Shell, LinuxUser 06/2012, LinuxNewMedia AG,
+München, 2012, S. 30ff.,
+http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2012/06/Komfortabel-Pakete-managen-mit-der-Apt-Shell
+– Frank Hofmann: Dschungelführer. Pakete zielgenau finden mit Debtags,
+LinuxUser 06/2012, LinuxNewMedia AG, München, 2012, S. 22ff.,
+http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2012/06/Pakete-zielgenau-finden-mit-Debtags]
+Parallel dazu arbeiteten wir weitere Aspekte digital auf und veröffentlichten entsprechende
+Blogbeiträge{empty}footnote:[http://noone.org/blog], hielten Vorträge
+bei Linux-Veranstaltungen und versuchten uns in einem Screencast zum
+Thema.
+
+Im Herbst 2012 hatte Axel die Idee, einen LinuxUser-Artikel zu
+`aptitude` im Alltagsgebrauch zu schreiben. Dazu kam es bisher noch
+nicht{empty}footnote:[Jörg, bitte nicht böse sein!], denn eine Reihe von
+Vorarbeiten war dazu notwendig. Wir einigten uns daher auf einen Beitrag
+zu den Unterschieden zwischen `apt-get` und `aptitude`, der jedoch immer
+länger und länger wurde und schließlich im Frühjahr 2013 in einen
+Zweiteiler mündete.{empty}footnote:[Axel Beckert, Frank Hofmann:
+Dynamisches Duo. Apt-get und Aptitude, LinuxUser 04/2013, S.  90ff.,
+http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2013/04/Apt-get-und-Aptitude-Teil-1
+– Axel Beckert, Frank Hofmann: Paarweise. Apt-get und Aptitude,
+LinuxUser 06/2013, S. 90ff.,
+http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2013/06/Apt-Get-und-Aptitude-im-Einsatz]
+
+Bevor wir uns daran machten, Passagen aus diesen umfangreichen Beiträgen
+wieder herauszustreichen, fiel irgendwann der Satz: ``Wenn wir so
+weitermachen, können wir eigentlich gleich ein Buch schreiben''. Seitdem ließ uns
+diese Idee nicht mehr los. Teile der Texte und Abbildungen wurden aus
+den erwähnten Veröffentlichungen übernommen und nach Bedarf für das
+vorliegende Werk überarbeitet. Das Ergebnis halten Sie nun in Ihren
+Händen.
+
+==== Motivation ====
+
+Uns fasziniert die Paketverwaltung unter Debian, deren Mächtigkeit und
+unglaubliche Robustheit. Sie funktioniert so klaglos, dass man schon
+wieder skeptisch werden müsste und nach konzeptionellen Fehlern sucht –
+aber es gibt tatsächlich keine. Wie in jedem größeren IT-Projekt gibt
+es neben den intensiv genutzten, gut dokumentierten Bereichen aber auch
+``dunkle Ecken'' und unangenehme Bugs, kuriose Lösungen und kurzfristige
+Workarounds; es sind allerdings nur wenige, die auch nur in recht
+ausgefallenen Situationen zutage treten.
+
+Genießen Sie also das beruhigende Gefühl, dass bei der Verwendung der
+Werkzeuge eigentlich nichts schiefgehen kann – und wenn doch, gibt es
+immer einen kurzen Weg, das Malheur wieder zu beseitigen.
+
+Sich hingegen in dem vielschichtigen Geflecht aus `dpkg`, APT und
+`aptitude` zurechtzufinden und ein Verständnis für die einzelnen
+Programme und Mechanismen zu entwickeln, bedarf ihrerseits ein wenig
+Geduld: Ohne nachzulesen und intensiv auszuprobieren, geht es nicht –
+und auf eben diesem Weg möchte Sie unser Buch begleiten.
+
+// Stichworte für den Index
+(((Werkzeuge zur Paketverwaltung,Hierarchie)))
+Nach einem ersten, flüchtigen Blick auf die genannten Werkzeuge zur
+Paketverwaltung scheint es so, als sei es unerheblich, welches wann zum
+Einsatz kommt. Dem ist nicht so, denn jedes hat seine ureigene Aufgabe
+in der Hierarchie der Paketverwaltung. Subtile Unterschiede zwischen APT
+und `aptitude` sorgen mitunter für eine blutige Nase, und insbesondere
+(RPM-Quer-)Einsteiger haben es zu Beginn nicht so leicht. Das Buch will
+darum vor allem Klarheit schaffen und Ihnen die Zusammenhänge zwischen
+den Programmen deutlich machen. Es hilft Ihnen, in jeder Situation das
+passende Werkzeug zur Paketverwaltung auszuwählen und es gekonnt
+einzusetzen. Dazu fassen wir den aktuellen Stand der Entwicklung
+zusammen und beleuchten darüber hinaus die angrenzenden Programme bzw.
+die damit verbundenen Fragestellungen im Alltag der Systembetreuung.
+
+//////////
+//Done:fho
+//Dr. Markus Wirtz, 2015-05-20 17:03
+//Abgesehen davon, dass mir in den folgenden Abschnitten "textovia"
+//deutlich zu kurz kommt ;), plädiere ich _sehr_ dafür, sie einfach
+//wegzulassen. So viel "Making of" ist einfach zu viel des Guten und macht
+//den Leser auf der Suche nach den technischen Informationen mürbe.
+//////////
+
+==== Technische Basis ====
+
+// TODO: Github muss da für die Zukunft rein
+
+Rein technisch setzt das Buch auf
+AsciiDoc{empty}footnote:[http://www.methods.co.nz/asciidoc/] auf --
+einem Textformat, aus welchem dann über mehrere Zwischenstufen diverse
+Ausgabeformate wie PDF, ePub oder HTML entstehen. Basierend auf einer
+einzigen Quelle stehen damit passende Ergebnisse für die verschiedenen
+Ausgabegeräte zur Verfügung. Die AsciiDoc-Dateien liegen in einem
+Versionskontrollsystem namens Git. Neben der Möglichkeit, während des
+Arbeitens auch auf eine frühere Revision zurückgreifen zu können,
+ermöglicht Git ein paralleles, verteiltes Arbeiten von verschiedenen
+Standorten aus.
+
+[TIP]
+.Versionsverwaltung mit Git
+====
+Den Einstieg zu Git erleichtert Ihnen das gleichnamige Buch von Julius
+Plenz und Valentin Haenel (Julius Plenz und Valentin Haenel: Git.
+Verteilte Versionsverwaltung für Code und Dokumente, Open Source Press,
+München, 2. Auflage November 2014, ISBN 978-3-95539-119-5).
+====
+
+==== Organisatorisch ====
+
+Beide Autoren leben und arbeiten etwa 90 Flugminuten (oder rund 850
+km) voneinander entfernt – in Zürich und Berlin. Regelmäßige
+Arbeitstreffen waren daher nur begrenzt möglich und wurden mit Hilfe
+von Buchsprints sowie elektronischer Kommunikation überbrückt. Das
+Buch entstand über einen Zeitraum von mehreren Jahren auch im Rahmen
+von Linux-Events — besonders hervorzuheben sind die Chemnitzer
+Linux-Tage <<CLT>>, die Rencontres Mondiales du Logiciel Libre
+<<RMLL>> und die Debian Entwicklerkonferenz <<DebConf>> — aber auch
+vielfach von unterwegs aus, bspw. in Andorra,
+Augsburg, Beauvais (Picardie), Bergneustadt, Berlin, Besançon,
+Bottighofen (Bodensee, Schweiz), Chemnitz, Frankfurt/Main,
+Friedrichshafen, Genf, Goizueta (Baskenland, Spanien), Hamburg, Heidelberg,
+Koblenz, Lauchringen (Wutachtal), Lausanne, Meersburg, Montpellier,
+München, Port del Cantó (Katalanische Pyrenäen, Spanien), Radebeul bei
+Dresden, Rostock-Warnemünde, Saint Cergue (Jura, Schweiz),
+Saint-Jouin-Bruneval (Normandie), Tübingen und Zürich. Wir nahmen uns
+dabei an der Philosophie von Debian GNU/Linux ein Beispiel: ohne
+Hektik, mit dem Blick fürs Detail und zumeist pedantisch bis ins
+letzte i-Tüpfelchen, aber trotzdem mit viel Freude, Neugierde und
+unserem Entdeckerdrang folgend.
+
+// TODO: Karte einbauen :-D
+
+// Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/wie-entstand-dieses-buch.txt

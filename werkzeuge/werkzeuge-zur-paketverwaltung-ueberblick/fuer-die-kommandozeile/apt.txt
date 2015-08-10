@@ -1,0 +1,208 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/apt.txt
+
+// Baustelle: Fertig
+
+[[apt]]
+
+==== APT ====
+
+APT ist das Debian-Programm für etwas komplexere Paketoperationen und
+steht als Abkürzung für 'Advanced Packaging Tool'. Sie finden es im
+Paket 'apt' <<Debian-Paket-apt>>, welches zur Standardinstallation
+ihres Debian-Systems gehört. 
+
+APT ist für den Alltagseinsatz konzipiert. Es eignet sich sowohl für
+Recherchezwecke (Abfrage von Status- und Zustandsinformationen), als
+auch für die Installation und Aktualisierung einzelner Pakete sowie
+gesamter Paketstrukturen (Veröffentlichungen).
+
+Im Gegensatz zu `aptitude` (siehe <<aptitude>>) ist es deutlich weniger
+anspruchsvoll. Das betrifft die Anforderungen an die Hardware und
+insbesondere den benötigten Speicher für die Ausführung. APT hat zudem
+eine deutlich höhere Ausführungsgeschwindigkeit als `aptitude`.
+
+APT ist sehr mächtig und kann mit Paketen umgehen, die sich entweder
+bereits lokal auf ihrem System befinden, oder noch auf einem Paketmirror
+vorliegen. Es kombiniert i.d.R. mehrere Einzelaktionen von `dpkg`,
+greift dabei aber nicht direkt auf `dpkg` zurück, sondern kapselt dafür
+die Aufrufe mit Hilfe der Bibliothek `libapt-pkg` (siehe dazu APT und
+Bibliotheken unter <<apt-und-bibliotheken>>).
+
+APT umfaßt ausschließlich Programme für die Kommandozeile. Dazu zählen
+`apt-cache`, `apt-cdrom` (siehe
+<<physische-installationsmedien-mit-apt-cdrom-einbinden>>), `apt-config`
+zur Konfiguration von APT (siehe
+<<apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen>>), `apt-get`,
+`apt-key` (siehe <<paketquelle-auf-echtheit-ueberpruefen>>) und
+`apt-mark` (siehe <<paketstatus-apt-mark>>). Jedes der genannten
+Programme verfügt über umfangreiche Unterkommandos, die Sie wiederum mit
+diversen Optionen und Schaltern kombinieren können. Die gebräuchlichsten
+Aktionen für den Alltag sind:
+
+* Paketstatus erfragen (<<paketstatus-erfragen>>) mit `apt-cache show
+Paketname`
+* Inhalt eines Pakets anzeigen (<<paketinhalte-anzeigen-apt-file>>) mit `apt-file show Paketname`
+* Paketabhängigkeiten anzeigen (<<paketabhaengigkeiten-anzeigen>>) mit
+`apt-cache depends Paketname`
+* Paket über den Namen oder die Beschreibung finden
+(<<pakete-ueber-den-namen-finden>>) mit `apt-cache search
+Paketname`
+* Paket installieren (<<pakete-installieren>>) mit `apt-get install
+Paketname`
+* Installierte Pakete löschen (<<pakete-deinstallieren>> mit `apt-get remove
+Paketname`
+* Paketliste aktualisieren (<<liste-der-verfuegbaren-pakete-aktualisieren>>) mit `apt-get update`
+
+Nachfolgend geben wir Ihnen eine Übersicht zu allen Unterkommandos, die
+die einzelnen APT-Werkzeuge bereithalten. Neben dem jeweiligen
+Unterkommando finden Sie den Verweis auf den entsprechenden Abschnitt im
+Buch, in dem wir auf dieses genauer eingehen.
+
+`apt-cache` bietet die folgenden Unterkommandos:
+
+`depends`:: 
+Paketabhängigkeiten anzeigen (siehe <<paketabhaengigkeiten-anzeigen>>)
+
+`dotty`:: 
+einen Abhängigkeitsgraphen im `dot`-Format für die benannten Pakete erzeugen (siehe das Beispiel in <<zusammenspiel-von-dpkg-und-apt>>)
+
+`dump`:: 
+eine kurze Programminformation von jedem Paket im Paketcache anzeigen
+
+`dumpavail`:: 
+die Liste der verfügbaren Pakete anzeigen
+
+`gencaches`:: 
+den Paketzwischenspeicher von APT erzeugen
+
+`madison`:: 
+verfügbare Versionen eines Paketes anzeigen (siehe
+<<aus-welchem-repo-kommen-die-pakete>> und
+<<verfuegbare-paketversionen-ermitteln>>)
+
+`pkgnames`:: 
+die Namen aller Pakete auflisten, die APT kennt (siehe <<bekannte-paketnamen-auflisten>>)
+
+`policy`:: 
+die Quellen und deren Prioritäten auflisten (siehe
+<<aus-welchem-repo-kommen-die-pakete>>)
+
+`rdepends`:: 
+umgekehrte Paketabhängigkeiten anzeigen (siehe <<paketabhaengigkeiten-anzeigen>>)
+
+`search`:: 
+Paket über den Namen finden (siehe <<pakete-ueber-den-namen-finden>>)
+
+`show`:: 
+Paketinformationen ausgeben und Paketstatus erfragen siehe (<<paketstatus-erfragen>>)
+
+`showpkg`:: 
+Informationen über das Paket anzeigen (siehe <<paketstatus-erfragen>>)
+
+`showsrc`:: 
+Informationen zum Sourcepaket anzeigen (siehe <<sourcepakete-anzeigen>>)
+
+`stats`:: 
+Statistik zum Paketcache ausgeben (siehe <<paketcache-status>>)
+
+`unmet`:: 
+eine Zusammenfassung aller unerfüllten Abhängigkeiten im Paketcache
+ausgeben (siehe Paketstatus erfragen in <<paketstatus-erfragen>>)
+
+`xvcg`:: einen Abhängigkeitsgraphen für 'xvcg' für die benannten Pakete erzeugen
+
+`apt-get` gehört mit Sicherheit zur Menge der gebräuchlichsten Kommandos
+der APT-Familie und verfügt über die folgenden Unterkommandos:
+
+`autoclean`:: 
+Paketcache aufräumen (siehe <<paketcache-aufraeumen>>)
+
+`autoremove`:: 
+Paketwaisen löschen (siehe <<umgang-mit-waisen>>)
+
+`build-dep`:: 
+Abhängigkeiten eines Sourcepakets erfüllen (findet Verwendung beim Erstellen von Paketen)
+
+`check`:: 
+Paketcache auf beschädigte Paketabhängigkeiten prüfen (siehe <<paketabhaengigkeiten-anzeigen>>)
+
+`clean`:: 
+Paketcache aufräumen (siehe <<paketcache-aufraeumen>>)
+
+`dist-upgrade`:: 
+Distribution aktualisieren (siehe <<distribution-aktualisieren>>)
+
+`download`:: 
+Paketdatei nur herunterladen (siehe <<paketdatei-nur-herunterladen>>)
+
+`dselect-upgrade`:: 
+Aktualisierung der Pakete über `dselect`
+
+`install`:: 
+Paket installieren (siehe <<pakete-installieren>>)
+
+`purge`:: 
+Paket inklusive Konfigurationsdateien des Pakets entfernen (siehe <<pakete-deinstallieren>>)
+
+`remove`:: 
+Paket deinstallieren (siehe <<pakete-deinstallieren>>)
+
+`source`:: 
+Beziehen der Sourcepakete (siehe <<sourcepakete-beziehen>>)
+
+`update`:: 
+Paketliste aktualisieren (siehe <<liste-der-verfuegbaren-pakete-aktualisieren>>)
+
+`upgrade`:: 
+Pakete auf eine neue Version aktualisieren (siehe <<pakete-aktualisieren>>)
+
+Für `apt-key` sind die Unterkommandos `add`, `adv`, `del`, `export`,
+`exportall`, `finger`, `list`, `netupdate` und `update` zulässig. Diese
+besprechen wir ausführlich unter Paketquelle auf Echtheit überprüfen in
+<<paketquelle-auf-echtheit-ueberpruefen>>.
+
+Die Unterkommandos von `apt-mark` lauten `auto`, `manual`, `showauto`
+und `showmanual`. Dazu gehen wir unter <<paketstatus-erfragen>>
+detailliert ein.
+
+// Absatz zusammengefaßt -- ist ein Gedanke, der zusammengehört
+
+Die *Weiterentwicklung von APT* geht stetig voran. Seit mehreren Jahren
+gibt es Bestrebungen, APT grundlegend zu erneuern bzw. dessen verteilte
+Funktionalität unter einer einzigen Benutzeroberfläche zusammenzufassen.
+Unter dem Namen APT2 <<apt2>> existiert zwar ein Prototyp mit neuer API,
+jedoch gab es dort nach unserer Recherche seit 2011 keine weitere
+Entwicklung mehr.
+
+Eine weniger tiefgreifende, aber dennoch erfrischende Modernisierung
+gibt es seit *APT Version 1.0*. Von da an enthält das Paket 'apt' das
+zusätzliche, gleichnamige Kommandozeilenprogramm `apt`. Dieser
+Programmname wurde bis dato von einem Java-Programm zur
+Annotationsverarbeitung ('Annotation Processing Tool') belegt
+<<Java-Apt>>. Es wird seit Java 7 als 'veraltet' deklariert und ist seit
+Java 8 nicht mehr Bestandteil von Java.
+
+Somit wurde der Weg für ein neues Programm frei, ohne große Verwirrung
+zu stiften. `apt` vereint die gängigsten Unterkommandos von `apt-get`
+und `apt-cache` in einem kürzeren Befehl und mit moderneren
+Standardeinstellungen wie z.B. einem Fortschrittsbalken und farbiger
+Ausgabe auf dem Terminal (siehe <<Vogt-Apt-1.0>>). Neben den bekannten
+Unterkommandos `list`, `search`, `show`, `update`, `install` und
+`upgrade` kennt es auch die neuen Aktionen `full-upgrade` als Ersatz
+für `dist-upgrade` und `edit-sources` zur direkten Veränderung der Datei
+`/etc/apt/sources.list` (siehe <<pakete-aktualisieren>> und
+<<etc-apt-sources.list-verstehen>>). Darüberhinaus verfügt es ab *APT
+Version 1.1* über die Fähigkeit, lokal vorliegende `deb`-Pakete zu
+installieren und dabei die dazugehörigen Paketabhängigkeiten mit zu
+berücksichtigen.footnote:[Diese Eigenschaft stammt vom Programm
+`gdebi` (siehe <<gui-gdebi>>), welches ebenfalls vom APT-Entwickler
+Michael Vogt gepflegt wird.]
+
+Ebenfalls in produktivem Zustand und teilweise intensiver Benutzung
+befinden sich die Werkzeuge `aptsh`, `cupt`, `aptitude` und SmartPM.
+Während sich `aptsh` und `cupt` nur auf die Kommandozeile beschränken,
+bieten Ihnen `aptitude` zusätzlich eine textbasierte bzw. SmartPM eine
+graphische Benutzeroberfläche. Auf diese Werkzeuge gehen wir nachfolgend
+genauer ein (siehe <<aptsh>>, <<Cupt>>, <<aptitude>> und <<gui-smartpm>>).
+
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/apt.txt

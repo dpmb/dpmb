@@ -1,0 +1,152 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/frontends-fuer-das-paketmanagement.txt
+
+// Baustelle: Fertig
+
+[[frontends-fuer-das-paketmanagement]]
+
+=== Frontends für das Paketmanagement ===
+
+Unter einem 'Frontend' verstehen wir ein Programm oder ein Werkzeug mit
+einer Bedienoberfläche, welches im Alltag von Ihnen für die Verwaltung
+der Softwarepakete verwendet wird. Es deckt alle dafür notwendigen
+Aktionen auf ihrem System ab und umfaßt die grundsätzliche Pflege des
+Paketbestands. Dazu zählen bspw. die Installation, die Aktualisierung
+und die restlose Entfernung von Softwarepaketen, wobei das Gesamtsystem
+stets in einem konsistenten, benutzbaren Zustand verbleibt.
+
+Frontends existieren in recht unterschiedlichen Varianten und folgen
+divergierenden Bedienkonzepten. Die nachfolgende Übersicht orientiert
+sich daher an der Benutzerschnittstelle und dem Paketformat, für daß Sie
+das jeweilige Programm benutzen können. Einige Programme sind Zwitter
+und stellen mehrere Bedienmodi zur Verfügung, so bspw. SmartPM
+(<<gui-smartpm>>), welches Sie sowohl über die Kommandozeile, als auch
+über eine graphische Oberfläche (GUI) bedienen können. `aptitude`
+(<<aptitude>>), `aptsh` (<<aptsh>>), `cupt` (<<Cupt>>) und `wajig`
+(<<wajig>>) stellen über die Kommandozeile hinaus auch ein eigenes Text
+User Interface (TUI) bereit. Die nachfolgende Zusammenstellung in
+<<tab.frontends>> ist daher nicht ganz diskussionsfrei und erhebt zudem
+keinen Anspruch auf Vollständigkeit.
+
+.Frontends zur Paketverwaltung
+[options="header", id="tab.frontends"]
+|=============================
+| Kategorie | `deb`-basierte Systeme | `rpm`-basierte Systeme | andere Paketformate
+| Kommandozeile| `dpkg`, `dpkg-www`, APT, `aptitude`, `aptsh`, `cupt`, SmartPM, `gdebi` ('gdebi-core'), `wajig`| `rpm`, `yum`, `urpmi`, `zypper`, SmartPM | `emerge`, `pacman`
+| Text User Interface (TUI) | `tasksel`, `aptitude`, Debian Installer, Univention Installer für Univention Corporate Server (UCS) | Yet another Setup Tool (YaST), DrakConf oder Mandriva Linux Control Center (MCC) <<Mandriva-Wiki>> bzw. Mageia Control Center (MCC) (Textkonsole) | pcurses
+| Graphical User Interface (GUI) | Synaptic, SmartPM, Ubuntu Software Center, PackageKit, Apper (früher 'KPackageKit'), `gdebi` | Yet another Setup Tool 2 (YaST2), DrakConf
+oder Mandriva Linux Control Center (MCC) <<Mandriva-Wiki>> bzw. Mageia Control Center (MCC) | PacmanXG4, PacmanExpress, tkPacman, GNOME PackageKit, Zenity Pacman GUI, Octopi
+| webbasierte Verwaltung (WUI) | IP Brick <<ipbrick>>, Univention Management Console für Univention Corporate Server (UCS), Ubuntu Landscape , Appnr, Communtu, Debian Pure Blends | |
+|=============================
+
+
+// Kommandozeile:: 
+// * `deb`-basierte Systeme: `dpkg` <<dpkg>>, APT <<apt>>, `aptitude`
+// <<aptitude>>, `aptsh` <<aptsh>>, `cupt` <<Cupt>>, SmartPM <<gui-smartpm>>, `gdebi`
+// (gdebi-core) <<gdebi>>, `wajig` <<wajig>>
+// * `rpm`-basierte Systeme: `rpm`, `yum`, `urpmi`, `zypper`, SmartPM <<gui-smartpm>>
+// * andere Paketformate: `emerge`, `pacman`
+
+// Text User Interface (TUI):: 
+// * `deb`-basierte Systeme: `tasksel` <<tasksel>>, `aptitude` <<aptitude>>, Univention Installer für Univention Corporate Server (UCS) <<UCS>>
+// * `rpm`-basierte Systeme: Yet another Setup Tool (YaST), DrakConf oder
+// Mandriva Linux Control Center (MCC) <<Mandriva-Wiki>> bzw. Mageia Control Center (MCC) (Textkonsole)
+
+// Graphical User Interface (GUI):: 
+// * `deb`-basierte Systeme: Synaptic <<gui-synaptic>>, SmartPM
+// <<gui-smartpm>>, Ubuntu Software Center <<gui-ubuntu-software-center>>,
+// PackageKit <<gui-packagekit>>, Apper (früher KPackageKit) <<apper>>,
+// Gjig <<gui-gjig>>, `gdebi` <<gdebi>>
+// * `rpm`-basierte Systeme: Yet another Setup Tool 2 (YaST2), DrakConf
+// oder Mandriva Linux Control Center (MCC) <<Mandriva-Wiki>> bzw.
+// Mageia Control Center (MCC)
+
+// webbasierte Verwaltung (WUI):: 
+// * `deb`-basierte Systeme: IP Brick <<ipbrick>>, Univention Management
+// Console für Univention Corporate Server (UCS) <<UCS>>, Ubuntu Landscape
+// <<Ubuntu-Landscape>>
+
+==== Aufgaben, Sinn und Zweck des Frontends ====
+
+Basierend auf der Einordnung in die unterschiedlichen Softwarestapel und
+Ebenen (siehe <<softwarestapel-und-ebenen>>) läßt sich der
+Aufgabenbereich und damit der Funktionsumfang eines Programms zur
+Paketverwaltung konkreter fassen. Dabei kommen häufig die
+UNIX-Prinzipien ``Ein Werkzeug für eine Aufgabe'' und ``Keep it simple,
+stupid'' (sinngemäß: Mach's so einfach wie möglich) sehr stark zum
+tragen.
+
+Zur 'unteren Ebene' gehört das Programm `dpkg`. Es bietet grundsätzliche
+Funktionen, die ein erforderliches Minimum abdecken. Die Funktionen
+betreffen nur das lokale System und setzen voraus, daß alle notwendigen
+Informationen und `deb`-Pakete bereits vorliegen. Dazu gehören die
+Fähigkeiten, Informationen über installierte und noch zur Verfügung
+stehende Pakete und Paketdateien anzuzeigen sowie bereits lokal als
+Datei vorliegende Pakete zu installieren, zu konfigurieren und wieder
+vom System zu entfernen. `dpkg` fokussiert dabei eher auf Einzelpakete,
+bspw. der Aufruf `dpkg -i Paketname` zur Installation eines Paketes
+(siehe auch <<pakete-installieren>>).
+
+Die 'obere Ebene' beinhaltet im weitesten Sinne alle übergeordneten
+Aufgaben, wie bspw. komplexere Verwaltungsfunktionen. Dazu zählt das
+Herunterladen der Paketlisten von den vorher von Ihnen festgelegten
+Paketmirrors, das Aktualisieren der lokalen Paketlisten, das Auswählen
+und Beziehen eines Paketes von einem passenden Paketmirror, das Auflösen
+der Paketabhängigkeiten und das Klären weiterer, dazu benötigter oder
+empfohlener Pakete, die zum ausgewählten Paket passen und welche für Sie
+als Benutzer interessant sein könnten. Ebenso gehört die Validierung
+eines Paketes anhand seines GPG-Schlüssels (siehe
+<<bezogenes-paket-verifizieren>>) dazu. Zur oberen Ebene zählen bspw.
+Programme wie `tasksel`, APT, `aptitude`, SmartPM, das Ubuntu Software
+Center und die PackageKit-Varianten 'apper' (KDE) und 'gnome-packagekit'
+(GNOME).
+
+Eine Mischform stellen hingegen die Programme `aptsh`, `cupt`, `wajig`
+und `gdebi` dar. Deren Anspruch ist es, beide Ebenen in einem einzigen
+Programm abzudecken und alle erforderlichen Funktionen zur
+Paketverwaltung bereitzustellen. Die genannten Programme kommen diesem
+Ziel derzeit in unterschiedlicher Qualität nahe. Dabei erfolgt ein
+Zugriff auf die bestehenden Bibliotheken, der durch eigene, zusätzliche
+Funktionalitäten ergänzt wird.
+
+==== Anmerkungen zur Programmauswahl ====
+
+Es gibt keine Regelung oder Empfehlung dafür, welches Programm aus
+obiger Liste Sie benutzen sollen. Dafür sind die Wissensstände,
+Gewohnheiten und Vorlieben im Umgang mit Software zu unterschiedlich
+(siehe auch Ausblick und Empfehlung für Einsteiger in
+<<ausblick-empfehlung-fuer-einsteiger>>).
+
+In der Praxis zeigt sich, daß `apt-get` häufig die schnellste und
+effizienteste Variante ist, sofern Sie den exakten Namen eines
+Debian-Pakets (siehe dazu <<benennung-eines-debian-pakets>>) oder
+zumindest einen Großteil davon wissen. Die Kommandozeilenwerkzeuge sind
+sehr flexibel und verfügen über eine hohe Anzahl von Funktionen. Diese
+sprechen Sie über vielfältige Unterkommandos, Schalter und Parameter an.
+
+// TODO: Weniger aggressiv formulieren ("Marketingfritzen")
+// Wort kam von Dir -- fand ich gut :)
+
+Viele Schalter und Parameter der Kommandozeilenwerkzeuge werden in den
+TUI, GUI und WUI nicht oder nur unzureichend abgebildet, sind zudem in
+den meisten Fällen geschickt versteckt, anders benannt oder auch
+mitunter sinnentstellend übersetzt. Das sorgt vielfach für Unmut und
+Verzweiflung bei der Suche nach einer bestimmten Funktionalität.
+Erfahrenere Benutzer vermissen häufig die Flexibilität der vielen
+Optionen und greifen daher bevorzugt zur Kommandozeile oder zum TUI, da
+das schneller und einfacher geht. Das hoffnungs- und erwartungsvolle
+Herumklicken in einer graphischen Anwendung möchten sie den
+Marketingfritzen und Mausschubsern überlassen.
+
+Die Komplexität der Kommandozeilenwerkzeuge kann Einsteiger überfordern
+-- gleiches gilt aber auch für graphische Oberflächen. In jedem Fall
+setzt es bei Ihnen den Willen zur Einarbeitung voraus -- gleich welches
+Werkzeug es auch ist. Der Vorteil der Kommandozeilenwerkzeuge liegt
+darin, daß sie meist zur Basisinstallation ihres Debian-Systems gehören
+und somit auch auf ferngewarteten Serversystemen zur Verfügung stehen.
+Graphische Werkzeuge sind in der Regel nur auf Desktopsystemen
+installiert. Webbasierte Benutzerschnittstellen sind deutlich in der
+Minderheit und haben den Exotenstatus. Steigt der Verbreitungsgrad
+UNIX/Linux-basierter Smartphones und TabletPCs mit Android bzw. Ubuntu
+weiter an, ist mit einer Zunahme von Programmen wie Appnr (siehe
+<<webbasierte-programme-appnr>>) im Alltag zu rechnen.
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/frontends-fuer-das-paketmanagement.txt

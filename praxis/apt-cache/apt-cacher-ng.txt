@@ -1,0 +1,25 @@
+// Datei: ./praxis/apt-cache/apt-cacher-ng.txt
+
+// Baustelle: Notizen
+
+[[apt-cacher-ng]]
+
+=== apt-cacher-ng ===
+
+* Programmpaket: 'apt-cacher-ng' <<Debian-Paket-apt-cacher-ng>>
+* Projektwebseite <<apt-cacher-ng-Projektseite>>
+
+* Selbstbeschreibung:
+** Proxyserver zum Zwischenspeichern von Softwaredepots.
+** Proxy, um Pakete von Softwaredepots im Debian-Stil (oder möglicherweise von anderen Typen) herunterzuladen.
+** Downloads gehen durch den Proxy
+** Apt-Cacher NG speichert eine Kopie aller Nutzdaten, die über ihn laufen
+** Apt-Cacher NG wurde von Grund auf neu als Ersatz für `apt-cacher`
+entwickelt (siehe <<apt-cacher>>)
+** Fokus:
+*** maximaler Durchsatz mit geringen Systemanforderungen
+*** Ersatz für `apt-proxy` und `approx` (<<approx>>) verwendet werden,
+ohne die Datei `/etc/apt/sources.list` der Clients zu ändern.
+
+
+// Datei (Ende): ./praxis/apt-cache/apt-cacher-ng.txt

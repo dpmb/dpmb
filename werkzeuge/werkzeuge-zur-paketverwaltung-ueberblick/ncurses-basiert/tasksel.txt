@@ -1,0 +1,141 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/tasksel.txt
+
+// Baustelle: Fertig
+
+[[tasksel]]
+
+==== tasksel ====
+
+`tasksel` gehört zu den Anwendungen, die Sie vielleicht nur aus der
+textbasierten Installation von Debian her kennen. Nach der
+Zusammenstellung des Debian-Basissystems wird dieses Werkzeug
+üblicherweise einmal automatisch im Installationsprozess aufgerufen und
+gerät danach vollständig in Vergessenheit. Stattdessen helfen Ihnen APT
+und `aptitude` bei den Routineaufgaben.
+
+Der Name ist eine Abkürzung und steht für 'task select', auf Deutsch
+übersetzbar mit ``Aufgabe auswählen''. Das Paket 'tasksel'
+<<Debian-Paket-tasksel>> beinhaltet lediglich die Benutzeroberfläche,
+das Paket 'tasksel-data' hingegen eine Liste mit vorab festgelegten
+Standardaufgaben (englisch 'tasks'). Jeder genannten Aufgabe sind eine
+Reihe von Paketen zugeordnet.
+
+Die beiden 'tasksel'-Generationen 2.x und 3.x unterscheiden sich massiv
+voneinander. Während Generation 2 noch von `aptitude` abhängt, setzt
+Generation 3 hingegen verstärkt auf die Nutzung von Metapaketen (siehe
+<<uebergangs-und-metapakete>>). Das zeigt sich sehr deutlich in den
+Ausgaben im Terminal, auf die wir unten genauer eingehen.
+
+.Softwareauswahl in `tasksel`
+image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/tasksel.png[id="fig.tasksel", width="50%"]
+
+Über die textbasierte Benutzeroberfläche und der dargestellten Liste
+wählen Sie zunächst mittels Pfeil- und Leertaste die gewünschten
+Aufgaben aus. Daraufhin werden alle Pakete ``in einem Rutsch'' auf ihrem
+Linuxsystem installiert, die diesen Aufgaben zugeordnet sind.
+
+Bei Debian und Ubuntu existieren viele Aufgaben als separate,
+vorgefertigte Pakete, die Ihnen die Einrichtung gemäß eines spezifischen
+Zwecks erleichtern, indem benötigte Pakete gruppiert werden. Diese
+Pakete tragen die Bezeichnung 'task-' am Anfang des Paketnamens (siehe
+<<debian-pakete-varianten>>). Dazu zählen bspw. die Aufgaben Mailserver,
+Webserver, Desktopumgebung und Laptop (siehe <<fig.tasksel>>).
+
+[NOTE]
+.`tasksel` und andere Programme
+====
+Wenn das Paket `tasksel` installiert ist, zeigen sowohl Aptitude wie
+auch Synaptic (siehe <<gui-synaptic>>) ebenfalls alle verfügbaren
+Aufgaben an. Aptitude verwendet dafür einen eigenen Ast als Sektion
+``Debian'' und Distributionsbereich ``Tasks'', bei Synaptic hingegen
+heißt der Bereich (Sektion) ``Tasks''.
+====
+
+Die textbasierte Benutzeroberfläche von `tasksel` ist jedoch nur eine
+Seite der Medaille. Das Programm ist ebenso für eine Steuerung über die
+Kommandozeile empfänglich. Die nachfolgende Liste zeigt die möglichen
+Schalter:
+
+`install Aufgabe`:: 
+installiert alle Pakete, die für die 'Aufgabe' notwendig sind
+
+`remove Aufgabe`:: 
+entfernt alle Pakete, die zur angegebenen 'Aufgabe' gehören
+
+`--list-tasks`:: 
+listet alle Aufgaben auf, die `tasksel` kennt
+
+`--task-desc Aufgabe`:: 
+zeigt eine Beschreibung der gewählten 'Aufgabe' an
+
+`--task-packages Aufgabe`:: 
+zeigt alle Pakete an, die zur gewählten 'Aufgabe' gehören
+
+`-t` (Langform `--test`):: 
+Trockendurchlauf, Ausführung der gewünschten Aktion ohne echte Auswirkung
+
+
+Über den Schalter `--list-tasks` stellt Ihnen `tasksel` alle vorab
+definierten Aufgaben zusammen (Debian). Am Buchstaben in der ersten
+Spalte der Ausgabe erkennen Sie, ob diese Aufgabe vollständig auf ihrem
+Linuxsystem umgesetzt wurde. Daneben sehen Sie das vergebene Kürzel und
+eine Kurzbeschreibung zur jeweiligen Aufgabe.
+
+.Ausgabe aller festgelegten Aufgaben von `tasksel`
+----
+$ tasksel --list-tasks 
+u desktop         Debian desktop environment
+u web-server      Web server
+u print-server    Printserver
+u database-server SQL database
+u dns-server      DNS Server
+u file-server     File server
+u mail-server     Mail server
+u ssh-server      SSH server
+u laptop          Laptop
+$
+----
+
+Für jede Aufgabe ist eine Beschreibung der Aufgabe hinterlegt. Diese
+zeigen Sie mit dem Schalter `--task-desc` an{empty}footnote:[Unter Debian 7
+'Wheezy' ist die Ausgabe derzeit defekt und als Bug #756841 hinterlegt,
+siehe https://bugs.debian.org/756841]. Auf einem Ubuntu mit `tasksel` in
+der Version 2.88 sehen Sie diese Ausgabe:
+
+.Ausgabe der Aufgabenbeschreibung eines 'tasks' (Ubuntu)
+----
+$ tasksel --task-desc openssh-server
+Selects packages needed for an Openssh server.
+$
+----
+
+`tasksel` zeigt Ihnen mit Hilfe des Schalters `--task-packages` auch die
+Pakete an, die zu der entsprechenden Aufgabe gehören. Bei Debian und der
+Aufgabe 'ssh-server' sieht das wie folgt aus -- es verweist auf ein
+entsprechendes Debianpaket:
+
+.Pakete, die zu einer Aufgabe gehören (Debian)
+----
+$ tasksel --task-packages ssh-server
+task-ssh-server
+$
+----
+
+Der gleiche Aufruf auf einem Ubuntu -- hier für das Paket
+'openssh-server' -- ergibt diese Liste (Auszug) mit allen benötigten
+Einzelpaketen:
+
+.Pakete, die zu einer Aufgabe gehören (Ubuntu)
+----
+$ tasksel --task-packages openssh-server
+python-six
+python-chardet
+python2.7
+tcpd
+openssh-server
+ncurses-term
+ssh-import-id
+...
+$
+----
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/tasksel.txt

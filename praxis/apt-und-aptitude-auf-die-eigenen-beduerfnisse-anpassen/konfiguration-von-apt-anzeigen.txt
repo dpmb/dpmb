@@ -1,0 +1,42 @@
+// Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfiguration-von-apt-anzeigen.txt
+
+// Baustelle: Fertig
+
+[[konfiguration-von-apt-anzeigen]]
+=== Konfiguration von APT anzeigen ===
+
+// Stichworte für den Index
+indexterm:[apt-config, dump]
+indexterm:[apt, Konfiguration anzeigen]
+
+Zu diesem Zweck steht Ihnen das Werkzeug `apt-config` zur Verfügung. Das
+Ziel des von den Entwicklern gewählten Schnittstellendesigns besteht in
+der leichten Benutzbarkeit des Programms -- auch von Shellskripten aus
+(siehe <<Debian-Wiki-AptConf>>).
+
+Die Konfiguration von APT erhalten Sie mit dem Schalter `dump`.
+Nachfolgend sehen Sie einen Auszug der Ausgabe. Um diese Informationen
+zusammenzustellen, kombiniert `apt-config` die Inhalte der einzelnen
+Module zur Konfiguration (siehe dazu <<konfigurationsdateien-von-apt>>).
+
+.Ausgabe der aktuellen Einstellungen von APT mittels `apt-config`
+----
+$ apt-config dump
+APT "";
+APT::Architecture "i386";
+APT::Build-Essential "";
+APT::Build-Essential:: "build-essential";
+APT::Install-Recommends "true";
+APT::Install-Suggests "0";
+APT::Authentication "";
+APT::Authentication::TrustCDROM "true";
+APT::NeverAutoRemove "";
+APT::NeverAutoRemove:: "^firmware-linux.*";
+APT::NeverAutoRemove:: "^linux-firmware$";
+APT::NeverAutoRemove:: "^linux-image.*";
+APT::NeverAutoRemove:: "^kfreebsd-image.*";
+...
+$
+----
+
+// Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfiguration-von-apt-anzeigen.txt

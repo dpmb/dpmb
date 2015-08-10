@@ -1,0 +1,79 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-ueber-die-paketbeschreibung-finden.txt
+
+// Baustelle: Fertig
+
+[[pakete-ueber-die-paketbeschreibung-finden]]
+
+=== Pakete über die Paketbeschreibung finden ===
+
+// Stichworte für den Index
+(((Debianpaket, dctrl-tools)))
+(((grep-available)))
+(((grep-status)))
+(((Paketsuche, über die Paketbeschreibung)))
+Bleibt ihre Recherche über den Paketnamen ohne Erfolg, dehnen Sie ihre
+Suche am besten auf die gesamte Paketbeschreibung aus. Zur Recherche
+darin helfen Ihnen die darauf spezialisierten Programme `grep-available`
+und `grep-status` aus dem Paket
+'dctrl-tools'{empty}footnote:[http://packages.debian.org/de/stable/dctrl-tools].
+
+// Stichworte für den Index
+(((grep-available, -F)))
+(((grep-available, -i)))
+Ohne die Angabe weiterer Parameter durchsucht `grep-available` die
+gesamte Paketbeschreibung. Mit Hilfe der Option `-F` schränken Sie den
+Vorgang auf einen darüber ausgewählten Feldnamen ein. Nachfolgender
+Aufruf zeigt Ihnen von allen verfügbaren Paketen die Paketnamen an, bei
+denen in der Beschreibung und im Paketnamen die Zeichenfolge `xpdf`
+enthalten ist. Durch den Schalter `-i` erfolgt die Suche dabei
+unabhängig von der Groß- und Kleinschreibung. Das abschließende
+`sort`-Kommando sorgt darüberhinaus für eine Ausgabe in alphabetisch
+aufsteigender Abfolge.
+
+//.Verfügbare Pakete anzeigen, bei denen in der Beschreibung und im Paketnamen die Zeichenfolge `xpdf` enthalten ist
+----
+$ grep-available -F Description -F Package -i xpdf | grep Package | sort
+Package: flpsed
+Package: libpoppler19
+Package: libpoppler3
+Package: libpoppler5
+Package: libpoppler-cpp0
+Package: libpoppler-glib3
+Package: libpoppler-glib4
+Package: libpoppler-glib8
+Package: libpoppler-qt2
+Package: libpoppler-qt4-3
+Package: poppler-utils
+Package: python-poppler
+Package: xpdf
+$
+----
+
+// Stichworte für den Index
+(((grep-status, -s)))
+Obige Liste enthält alle Pakete – unabhängig davon, ob diese auf ihrem
+System installiert sind, oder nicht. Mit dem nachfolgenden Aufruf
+reduzieren Sie die Liste entsprechend. Dabei kommt der Schalter `-s` zum
+tragen, der den Paketstatus passend auswertet.
+
+//.Lediglich die installierten Pakete anzeigen, bei denen in der Beschreibung und im Paketnamen die Zeichenfolge `xpdf` enthalten ist
+----
+$ grep-status -F Description -F Package -i -s Package xpdf | grep Package | sort
+Package: flpsed
+Package: libpoppler19
+Package: libpoppler-cpp0
+Package: libpoppler-glib8
+Package: libpoppler-qt4-3
+Package: poppler-utils
+Package: python-poppler
+Package: xpdf
+$
+----
+
+// Stichworte für den Index
+(((grep-status, -v)))
+(((grep-status, --invert-match))
+Hilfreich ist auch der Schalter `-v` (Langversion `--invert-match`). Mit
+diesem verkehren Sie das Suchergebnis in das Gegenteil. 
+
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-die-paketbeschreibung-finden.txt

@@ -1,0 +1,10 @@
+// Datei: ./anhang/anhang.txt
+// Baustelle: Rohtext
+
+include::teil-anhang.txt[]
+
+include::anhang-debian-architekturen/anhang-debian-architekturen.txt[]
+
+include::paketformat-im-einsatz/paketformat-im-einsatz.txt[]
+
+// Datei (Ende): ./anhang/anhang.txt

@@ -1,0 +1,133 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-konfigurieren.txt
+
+// Baustelle: Rohtext
+
+[[pakete-konfigurieren]]
+
+=== Pakete konfigurieren ===
+
+// Stichworte für den Index
+(((Paket konfigurieren)))
+(((Paket erneut konfigurieren)))
+
+Im Normalfall liegen die Debianpakete entweder bereits fertig
+konfiguriert oder mit einer vorbereiteten Konfiguration auf dem
+Spiegelserver. Dafür zeichnet der Paketmaintainer verantwortlich. Diese
+Basiseinstellungen funktionieren im Allgemeinen, haben aber nicht immer
+einen Bezug zum konkreten Einsatzfall. Dieser läßt sich kaum
+vorhersehen. Daher folgt im Rahmen der Paketinstallation ein
+individuelles Feintuning seitens des Administrators (Voreinstellungen
+für alle Benutzer) oder durch Sie als Benutzer selbst (individuelle,
+lokale Einstellungen).
+
+Das Anwenden der vorbereiteten Konfiguration umfaßt bspw. das Festlegen
+von Zugangsdaten (administratives Passwort von MySQL) oder das Starten
+von benötigten Diensten, bspw. Exim als Mail Transfer Agent (MTA).
+Stellt `dpkg` dabei fest, daß zwischen der mitgelieferten Konfiguration
+des neuen Pakets und der bereits bestehenden Konfiguration Unterschiede
+vorliegen, werden Sie durch das Programm gefragt, welche der beiden
+Einstellungen zukünftig genutzt werden soll. Das ist sinnvoll und
+berücksichtigt insbesondere den Fall, daß das Paket bereits installiert
+ist und von Ihnen händisch auf ihre individuellen Gegebenheiten angepaßt
+wurde. Als Möglichkeiten werden Ihnen angeboten: 
+
+* die mitgelieferte Konfiguration des neuen Pakets zu benutzen
+* die bestehende Konfiguration des installierten Pakets beibehalten
+* sich die Unterschiede zwischen beiden anzeigen zu lassen und 
+* eine Shell zur individuellen Problembehebung zu öffnen. 
+
+Bei letzterem eröffnet sich Ihnen damit die Möglichkeit, bspw. eine
+Sicherheitskopie der bestehenden Konfiguration anzulegen, bevor diese
+verändert wird. Sollte diese neue Konfiguration nicht ihren Erwartungen
+entsprechen, können Sie somit jederzeit auf die Sicherheitskopie
+zurückgreifen. Bei diesem Vorgehen haben Sie als Administrator die
+Möglichkeit, zu sehen, daß Unterschiede bestehen, welche Unterschiede
+das konkret sind, ihre Konfiguration beizubehalten und im Zweifelsfall
+die Konfiguration auf neue (Standard)Werte zurückzusetzen.
+
+In seltenen Fällen geht dieser Prozess schief, d.h. das Paket wurde zwar
+entpackt, aber nicht konfiguriert. Hintergrund können nicht sauber
+aufgelöste Abhängigkeiten sein, aber auch Fehler im Paket selbst. Ist
+ein benötigtes Paket nicht konfiguriert und be- bzw. verhindert damit
+die Installation und Einrichtung weiterer, davon abhängiger Pakete,
+teilt Ihnen `dpkg` das mit:
+
+//.Fehler in der Konfiguration am Beispiel des Pakets 'mysql-server'
+----
+...
+mysql-server hängt ab von mysql-server-5.5; aber:
+  Paket mysql-server-5.5 ist noch nicht konfiguriert.
+dpkg: Fehler beim Bearbeiten von mysql-server (--configure):
+ Abhängigkeitsprobleme - verbleibt unkonfiguriert
+...
+Richte docbook-xml ein (4.5-5) ...
+update-xmlcatalog: error: entity already registered
+dpkg: Fehler beim Bearbeiten von docbook-xml (--configure):
+Unterprozess post-installation script gab den Fehlerwert 1 zurück
+dpkg: Abhängigkeitsprobleme verhindern Konfiguration von scrollkeeper:
+scrollkeeper hängt ab von docbook-xml (>= 4.2-11); aber:
+Paket docbook-xml ist noch nicht konfiguriert.
+dpkg: Fehler beim Bearbeiten von scrollkeeper (--configure):
+ Abhängigkeitsprobleme - lasse es unkonfiguriert
+...
+----
+
+// Stichworte für den Index
+(((dpkg, --audit)))
+(((dpkg, -C)))
+Hilfreich ist es in diesem Fall, daß Sie zunächst herausbekommen, welche
+Pakete unvollständig installiert sind. Dabei hilft Ihnen der Aufruf
+`dpkg -C`, wobei `dpkg` für letzteres auch die Langform `--audit` kennt.
+
+//.Auflistung der unvollständig installierten Pakete mittels `dpkg`
+----
+# dpkg --audit
+Für die folgenden Pakete fehlt die MD5-Prüfsummen-Datei in der Datenbank,
+sie müssen erneut installiert werden:
+ slib                 Portable Scheme library
+ vifm                 a ncurses based file manager with vi like keybindings
+#
+----
+
+// Stichworte für den Index
+(((dpkg, -a)))
+(((dpkg, --configure)))
+(((dpkg, --pending))
+Als nächsten Schritt schieben Sie die Konfiguration des Pakets an. Für
+ein einzelnes Paket gelingt Ihnen das mit dem Aufruf `dpkg --configure
+Paketname` und für mehrere Pakete mit `dpkg -a` (Langform `--pending`).
+
+* was passiert da genau (aus der Manpage zu `dpkg`):
+
+----
+Die Konfiguration besteht aus folgenden Schritten:
+
+1. Entpacke die Conffiles und sichere gleichzeitig die alten
+Conffiles, sodaß diese, falls etwas schief geht, wiederhergestellt
+werden können.
+
+
+2. Führe das postinst-Skript aus, falls dies vom Paket bereitgestellt
+wird.
+----
+
+* konfigurieren vs. erneut konfigurieren
+Mit dem Kommando `dpkg-reconfigure` wenden Sie die gleiche Prozedur auf ein
+bereits installiertes und konfiguriertes Paket an (siehe dazu
+<<dpkg-reconfigure>>).
+
+[[dpkg-reconfigure]]
+==== `dpkg-reconfigure` ====
+
+// Stichworte für den Index
+(((debconf)))
+(((dpkg-reconfigure)))
+(((Konfigurationsdatei, /var/cache/debconf)))
+
+* Aufruf: `dpkg-reconfigure Paket`
+* konfiguriert ein bereits installiertes Paket erneut
+* verwendet wird dazu `debconf`, welches eine Datenbank mit den
+Konfigurationseinträgen der Pakete unter `/var/cache/debconf` speichert
+
+
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-konfigurieren.txt

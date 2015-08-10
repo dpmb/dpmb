@@ -1,0 +1,128 @@
+// Datei: ./praxis/paketverwaltung-ohne-internet/strategien.txt
+
+// Baustelle: Rohtext
+
+[[paketverwaltung-offline-strategien]]
+
+=== Strategien ===
+
+// Stichworte für den Index
+(((Debianpaket, apt-offline)))
+(((Debianpaket, apt-zip)))
+(((Debianpaket, aptoncd)))
+(((Keryx)))
+
+Aus unserer Sicht bestehen mehrere, grundlegende Verfahren, die sich
+hier anbieten:
+
+* die benötigten Pakete vorher explizit herunterladen
+* die Einbindung fester Installationsmedien
+* die Einbindung eines lokalen Paketmirrors
+
+Diese drei Wege basieren auf Werkzeugen und Verfahren, die wir bislang
+im Buch bereits angesprochen haben. Sagen Ihnen diese nicht zu, werfen
+Sie einen genaueren Blick auf die Projekte `apt-offline`, `apt-zip`,
+`aptoncd` und Keryx, die wir im Anschluß unter Werkzeuge in
+<<paketverwaltung-offline-werkzeuge>> genauer vorstellen.
+
+==== Benötigte Pakete vorher explizit herunterladen ====
+
+// Stichworte für den Index
+(((apt-get, download)))
+(((apt-get, --no-download install)))
+(((Paket, nur herunterladen)))
+
+Dieser Weg setzt voraus, daß Sie wissen, was Sie brauchen werden. Das
+gelingt nicht immer und läßt sich auch nicht in allen Fällen exakt
+vorhersagen. Bitte testen Sie das daher im Vorfeld aus.
+
+Wenn jedoch feststeht, welche Pakete erforderlich sind, laden Sie diese
+zunächst explizit mittels APT oder `aptitude` herunter. Damit landen die
+neuen Pakete inklusive der zusätzlich benötigten Abhängigkeiten im
+lokalen Paketcache ihres Systems. Zu einem späteren Zeitpunkt können Sie
+die dort hinterlegten Pakete hervorholen und auf ihrem System
+installieren. Für das Paket 'debtags' mittels APT sind bspw. diese
+beiden Aufrufe notwendig:
+
+.APT-Aufrufe zum Zwischenspeichern und späteren Installieren eines Paketes
+----
+# apt-get download debtags
+# apt-get --no-download install debtags
+#
+----
+
+Ausführlicher besprechen wir jeden der beiden Einzelschritte in
+<<paketdatei-nur-herunterladen>> und
+<<installation-zwischengespeicherter-pakete-aus-dem-paketcache>>. Das
+betrifft sowohl APT, als auch `aptitude`.
+
+==== Einbindung fester Installationsmedien ====
+
+// Stichworte für den Index
+(((Paketquelle, Installationsmedium einbinden)))
+(((Paketquelle, Versionskonflikte)))
+
+Vorbereitete Installationsmedien bekommen Sie von der Webseite des
+Debian-Projekts als ISO-Image und Live-CD bzw.
+-DVD{empty}footnote:[http://www.debian.org/distrib/]. Alternativ können
+Sie auch selbst Diskimages erstellen und
+benutzen{empty}footnote:[https://wiki.debian.org/DiskImage]. Ein solches
+Installationsmedium binden Sie als lokales Paketarchiv wie folgt ein:
+
+.Einbindung eines lokalen CD/DVD-Images namens `image.iso` als `loop device` unter `/mnt/iso`
+----
+# mkdir /mnt/iso
+# mount -o loop -t iso9660 image.iso /mnt/iso
+#
+----
+
+Bitte beachten Sie dabei, daß der Paketbestand zwischen dem
+eingebundenen Diskimage und ihrer lokalen Installation bezüglich ihrer
+benötigten Architektur und der genutzten Veröffentlichung harmonieren
+muß. Passen beide nicht zusammen, provozieren Sie Versionskonflikte
+zwischen den beiden Paketbeständen und mit hoher Wahrscheinlichkeit
+werden Sie die benötigten Pakete von dem Diskimage nicht auf ihr lokales
+System einspielen können.
+
+// Stichworte für den Index
+(((apt-cdrom)))
+(((Debianpaket, apt-cdrom)))
+
+Eine Alternative stellt das Werkzeug `apt-cdrom` dar. Dieses stellen wir
+Ihnen unter Physische Installationsmedien mit `apt-cdrom` einbinden in
+<<physische-installationsmedien-mit-apt-cdrom-einbinden>> genauer vor.
+
+==== Einbindung eines lokalen Paketmirrors ====
+
+// Stichworte für den Index
+(((/etc/apt/sources.list, Paketquelle nachtragen)))
+(((Paketmirror)))
+
+Variante Drei ist das Benutzen eines eigenen Paketmirrors. Dieser kann
+lokal vorliegen (siehe <<eigenen-apt-mirror-aufsetzen>>), aber auch als
+mobile Kopie auf einer externen (USB-)Festplatte überall zum Einsatz
+kommen. Diesen Datenträger mounten Sie zunächst und tragen den
+Paketmirror danach als zusätzliche Paketquelle ('Repository') in der
+Datei `/etc/apt/sources.list` auf ihrem lokalen System ein. Ist der
+Datenträger bspw. als `/mnt/mirror` gemounted, sieht der Eintrag in der
+Liste der Paketquellen wie folgt aus:
+
+.Einbinden einer externen Festplatte als Paketmirror
+----
+deb file:/mnt/mirror/debian stable main contrib non-free
+----
+
+Fügen Sie nun Pakete zu ihrem lokalen System hinzu, sucht die
+Paketverwaltung die Pakete auf der angegebenen Paketquelle und bezieht
+diese von dort.
+
+Dieser Schritt setzt voraus, daß Sie über eine genügend großen,
+zusätzlichen, mobilen Datenträger verfügen, um einen solchen Paketmirror
+vorzubereiten (meist unproblematisch). Weiterhin probieren Sie zuvor
+aus, ob die Paketinstallation von diesem Paketmirror klappt, um im
+Ernstfall handlungsfähig zu sein (auch unproblematisch). Als drittes
+sind Sie angeraten, diesen Datenträger dann auch mitzunehmen und nicht
+im Büro vergessen (schon eher problematisch) -- ansonsten ist alle Mühe
+umsonst.
+
+// Datei (Ende): ./praxis/paketverwaltung-ohne-internet/strategien.txt

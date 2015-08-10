@@ -1,0 +1,14 @@
+// Datei: ./praxis/webbasierte-installation-von-paketen/risiken-und-bedenken.txt
+
+// Baustelle: Notizen
+
+=== Risiken und Bedenken ===
+
+* Überprüfung der Paketabhängigkeiten
+* Überprüfung auf Vertrauenswürdigkeit der Paketquelle (siehe
+<<paketquelle-auf-echtheit-ueberpruefen>>)
+* Überprüfung auf Echtheit und Fehlerfreiheit des Pakets (siehe
+<<bezogenes-paket-verifizieren>>)
+
+
+// Datei (Ende): ./praxis/webbasierte-installation-von-paketen/risiken-und-bedenken.txt

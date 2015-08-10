@@ -1,0 +1,24 @@
+// Datei: ./praxis/versionierte-paketverwaltung.txt
+
+// Baustelle: Notizen
+
+[[versionierte-paketverwaltung]]
+== Versionierte Paketverwaltung ==
+
+* Idee:
+** Verwaltung der Quellpakete als Versionskontrollsystem, bspw. Git
+
+ToDo: entnommen/transferiert aus Paketformat im Detail: Aufbau und Format
+
+Darüberhinaus bestehen experimentelle, (noch) nicht offiziell verwendete
+Varianten. Diese sollen es ermöglichen, als Basis für das Paket auch ein
+Versionskontrollsystem wie bspw. Git oder Bzr zu verwenden (siehe
+<<Debian-Paket-dgit>> und <<Canonical-builder>>).
+
+// ToDo weil unklar:
+// Git-Dpm hat _nichts_ mit dem Paketformat zu tun, das ist eine ganz
+// andere Ebene: <<Debian-Paket-git-dpm>>,<<Debian-Wiki-git-dpm>>,
+// <<Debian-Wiki-git-dpm-packaging>>
+
+
+// Datei (Ende): ./praxis/versionierte-paketverwaltung.txt

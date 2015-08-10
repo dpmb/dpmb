@@ -1,0 +1,56 @@
+// Datei: ./kann-denn-paketmanagement-spass-machen/zum-buch/danksagung.txt
+
+// Baustelle: Rohtext
+// Axel: Moving-Target
+
+[[danksagung]]
+
+=== Danksagung ===
+
+Eine Reihe von Menschen haben uns bei der Realisierung dieses Buches
+direkt oder indirekt unterstützt, sei es in Form von Anregungen, Kritik,
+Vorschlägen zur Ergänzung oder Fach- und Verständnisfragen. Diesen
+Menschen gebürt unser Dank:
+
+//////////
+//Done:fho
+//Dr. Markus Wirtz, 2015-05-21 11:11
+//Die folgenden Querverweise funktionieren nicht, da sie nicht auf
+//Elemente im Buch verweisen. Bitte durch Fußnoten mit Quellenangaben
+//ersetzen!
+//////////
+
+* Elmar Heeb (für `aptitude-robot` und viele interessante Diskussionen)
+* Dirk Deimeke (für Tipps zum Autor-Werden){empty}footnote:[Hackerfunk
+Zürich, Folge 65, Fachliteratur Schreiben,
+http://www.hackerfunk.ch/?id=127]
+* Arne Wichmann (für das Diagramm der Vertrauenskette in Debian – unter GPL)
+* Annette Kalbow (für inhaltliche Vorschläge mit `apt-file`, `dpkg -l` und `dpkg -L`)
+* Mechtilde Stehmann (für Vorschläge für die FAQ)
+* Marco Uhl (für die Idee zum FAQ-Eintrag über `snapshot.debian.org` bei Testing- vs. Produktiv-Umgebung)
+* Werner Heuser (für die Installation und den Umgang auf Embedded und Mobile Devices)
+* Claude Becker (für Ideen und Korrekturlesen rund um das Parsen von
+  Debian-Versionsnummern und APT-Pinning)
+* Christoph Berg (für Tipps und Tricks rund um `reprepro` und seine
+Erfahrungen mit `apt.postgresql.org`){empty}footnote:[https://wiki.postgresql.org/wiki/Apt]
+* Dr. Thomas Fricke (für Ergänzungen rund um die Verteilung von Paketen auf mehrere Maschinen)
+* Jens Wilke (Konfigurationsmanagement)
+* Martin Schütte (`reprepro`)
+* Michael Vogt (für Erklärungen rund um APTs `mirror://` Methode und 'gdebi')
+* David Kalnischkies (für viele Detailerklärungen – z.B. zur
+Parameterverarbeitung von `apt-get` – und die endlosen Diskussionen
+darüber, die dennoch meist irgendwann in Erleuchtung endeten)
+* Albrecht Barthel (für die vielen Infos und Einblicke zum Univention
+Corporate Server, UCS)
+* Martin 'Venty' Ebnöther (für ein weiteres paar Augen und Ohren zum
+  Thema Paketmanagement)
+* Dr. Markus Wirtz für die lange Unterstützung und Hilfe, das Buch auf
+  seinen Weg zu bringen sowie fürs Lektorat der Einleitung und dem
+  erstem Kapitel.
+
+Nicht zu vergessen sind die Probeleser, die sich durch unser Manuskript
+gekämpft haben: Arne Wichmann, Thomas Winde, Jana Pirat, Jörg Dölz,
+Hagen Sankowski und Eberhard Hofmann. Vielen Dank für Eure Mühe und
+Geduld!
+
+// Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/danksagung.txt

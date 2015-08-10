@@ -1,0 +1,47 @@
+// Datei: ./praxis/mit-aptitude-vormerkungen-machen/vormerkungen-ueber-die-kommandozeile-durchfuehren.txt
+
+// Baustelle: Fertig
+
+[[vormerkungen-ueber-die-kommandozeile-durchfuehren]]
+
+=== Vormerkungen über die Kommandozeile durchführen ===
+
+// Stichworte für den Index
+(((aptitude, Paketaktionen vormerken)))
+(((aptitude, --schedule-only)))
+Dafür bietet Ihnen `aptitude` den Schalter `--schedule-only` an. Dieser
+Schalter ist gleichwertig zur Auswahl über die Textoberfläche und
+beliebig mit Vormerkungen daraus mischbar.
+
+In nachfolgender Ausgabe sehen Sie, wie Sie die Vormerkungen zur
+Installation des Paketes 'cssed', zum Entfernen des Paketes 'apt-doc'
+und der Aktualisierung des Paketes 'iceweasel' samt dessen
+Abhängigkeiten 'libmozjs24d' und 'xulrunner-24.0' durchführen. Das
+abschließende Kommando 'search' gibt Ihnen eine Übersicht zu den
+Paketoperationen, die sich `aptitude` nun gemerkt hat und welche Pakete
+zur Änderung anstehen (siehe auch <<bestehende-vormerkungen-anzeigen>>).
+
+//.Vormerkungen über die Kommandozeile durchführen
+----
+# aptitude --schedule-only install cssed
+# aptitude --schedule-only remove apt-doc
+# aptitude --schedule-only upgrade iceweasel
+Auflösen der Abhängigkeiten ...
+# aptitude search '!~akeep'
+id  apt-doc                 - Dokumentation für APT
+pi  cssed                   - graphical CSS editor
+iu  iceweasel               - Webbrowser auf Basis von Firefox
+iu  libmozjs24d             - Mozilla SpiderMonkey JavaScript library
+iu  xulrunner-24.0          - XUL + XPCOM application runner
+# 
+----
+
+[TIP]
+.Vormerkungen wieder aufheben
+====
+Möchten Sie die gewählten Vormerkungen nicht ausführen und stattdessen
+wieder rückgängig machen, heben Sie diese wieder auf. Die Details dazu
+entnehmen Sie dem <<vormerkungen-wieder-aufheben>>.
+====
+
+// Datei (Ende): ./praxis/mit-aptitude-vormerkungen-machen/vormerkungen-ueber-die-kommandozeile-durchfuehren.txt

@@ -1,0 +1,240 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-deinstallieren.txt
+
+// Baustelle: Fertig
+
+[[pakete-deinstallieren]]
+
+=== Pakete deinstallieren ===
+
+Weitaus anspruchsvoller als die Installation eines Paketes ist hingegen
+deren rückstandsfreie und saubere Entfernung. Dazu zählt nicht nur das
+Löschen der Dateien des eigentlichen Pakets, sondern auch das Aufräumen
+und Entsorgen der dazugehörigen Konfigurationsdateien aus ihrem
+Linuxsystem.
+
+Wir unterscheiden daher an dieser Stelle vier Fälle. Fall 1 ist das
+einfache Deinstallieren eines Pakets, Fall 2 die Recherche, Fall 3 das
+Entfernen von noch verbliebenen Konfigurationsdateien bereits
+deinstallierter Pakete sowie als Fall 4 das vollständige Entsorgen von
+Pakets samt dazugehöriger Konfigurationsdateien in einem einzigen
+Schritt.
+
+==== Fall 1: Paket einfach löschen ====
+
+// Stichworte für den Index
+(((apt-get, remove)))
+(((aptitude, remove)))
+(((dpkg, -r)))
+Dazu dienen die beiden Kommandos `apt-get remove Paketname` und
+`aptitude remove Paketname`. Beide Aufrufe entfernen das Paket und ggf.
+auch alle weiteren Pakete, die davon abhängen. Dabei werden jedoch nur
+die Daten und die ausführbaren Dateien gelöscht – die dazugehörigen
+Konfigurationsdateien bleiben unversehrt. Das Vorgehen entspricht dem
+Aufruf `dpkg -r Paketname` in der richtigen Reihenfolge der
+Paketabhängigkeiten. Der nachfolgende Aufruf zeigt das Vorgehen anhand
+des Paketes 'cssed' für `apt-get`.
+
+//.Löschen eines Paketes 'cssed' mittels APT
+----
+# apt-get remove cssed
+Paketlisten werden gelesen... Fertig
+Abhängigkeitsbaum wird aufgebaut.       
+Statusinformationen werden eingelesen.... Fertig
+Das folgende Paket wurde automatisch installiert und wird nicht mehr benötigt:
+  gcr
+Verwenden Sie »apt-get autoremove«, um es zu entfernen.
+Die folgenden Pakete werden ENTFERNT:
+  cssed
+0 aktualisiert, 0 neu installiert, 1 zu entfernen und 16 nicht aktualisiert.
+Nach dieser Operation werden 2.052 kB Plattenplatz freigegeben.
+Möchten Sie fortfahren [J/n]? J
+(Lese Datenbank ... 304082 Dateien und Verzeichnisse sind derzeit installiert.)
+Entfernen von cssed ...
+Trigger für man-db werden verarbeitet ...
+Trigger für menu werden verarbeitet ...
+Trigger für gnome-menus werden verarbeitet ...
+Trigger für desktop-file-utils werden verarbeitet ...
+#
+----
+
+Ein Knackpunkt stellt die Berücksichtigung der jeweiligen
+Paketabhängigkeiten dar. Dabei treten mehrere Möglichkeiten auf –
+bestimmte, zur Löschung vorgesehene Pakete werden von anderer Software
+noch benötigt, Ersetzungen sind erforderlich oder es entstehen Waisen
+('Orphans'). Bei Möglichkeit eins dürfen die Pakete, die von anderer
+Software noch benötigt werden, nicht gelöscht werden – die andere
+installierte Software soll ja trotzdem weiterhin funktionieren. Bei
+systemrelevanten Werkzeugen in essentiellen Paketen erhalten Sie daher
+eine zusätzliche, deutliche Warnung (siehe nachfolgendes Beispiel sowie
+Paketprioritäten und essentielle Pakete in
+<<paket-prioritaet-und-essentielle-pakete>>).
+
+//.Ausgabe einer deutlichen Warnung vor dem Löschen des essentiellen Pakets 'base-files'
+----
+# apt-get remove base-files
+Paketlisten werden gelesen... Fertig
+Abhängigkeitsbaum wird aufgebaut
+Statusinformationen werden eingelesen... Fertig
+Die folgenden Pakete werden ENTFERNT:
+  base-files bash bash-completion bsd-mailx build-essential clisp common-lisp-controller debhelper
+  dpkg-dev foomatic-db-engine foomatic-filters grsync grub grub-common grub-pc gt5 libnss-mdns rsync
+  virtualbox-ose-guest-source virtualbox-ose-source xindy
+WARNUNG: Die folgenden essentiellen Pakete werden entfernt.
+Dies sollte NICHT geschehen, außer Sie wissen genau, was Sie tun!
+  base-files bash
+0 aktualisiert, 0 neu installiert, 21 zu entfernen und 138 nicht aktualisiert.
+Nach dieser Operation werden 32,4 MB Plattenplatz freigegeben.
+Sie sind im Begriff, etwas potentiell Schädliches zu tun.
+Zum Fortfahren geben Sie bitte »Ja, tue was ich sage!« ein.
+Abbruch.
+#
+----
+
+Möglichkeit zwei ist die Ersetzung durch ein alternatives Paket. Das
+gelingt dann automatisch, wenn in der Paketbeschreibung als
+Paketabhängigkeit entweder mehrere Einzelpakete oder ein einzelnes,
+virtuelles Paket benannt wurden. Aus dieser Liste wird dann eines
+ausgewählt, um die Paketabhängigkeit zu erfüllen. Bestes Beispiel ist
+das virtuelle Paket 'pdf-viewer', welches beispielsweise auf 'epdfview',
+'evince', 'okular', 'xpdf' und 'zathura' verweist.
+
+//.Ersetzung durch ein alternatives Paket
+----
+ToDo: Beispiel mit Ersetzung durch alternatives Paket
+----
+
+Bei Möglichkeit drei entstehen Waisen – Pakete, die keine
+Abhängigkeiten zu anderen Paketen mehr aufweisen. Unter Umgang mit
+Waisen in <<umgang-mit-waisen>> beleuchten wir dieses Thema näher.
+
+==== Fall 2: Suche von Konfigurationsdateien bereits deinstallierter Pakete ====
+
+Um das zu tun, bedarf es zunächst der Lokalisierung der Pakete, welche
+zwar gelöscht wurden, aber noch als konfiguriert gelten. Dabei geht es
+nur um die Konfigurationsdateien ('conf files'), die sich unter dem
+Verzeichnis `/etc` befinden. Dateien in ihrem Homeverzeichnis
+bleiben unberührt.
+
+Die passenden Werkzeuge sind dafür die Kombination aus `dpkg` mit `grep`
+sowie `aptitude`. APT hat u.E. bislang keinen entsprechenden Schalter
+dafür. 
+
+// Stichworte für den Index
+(((dpkg, -l)))
+`dpkg` rufen Sie dazu zunächst mit der Option `-l` auf (siehe
+<<liste-der-installierten-pakete-anzeigen-und-deuten>>) und schicken
+dessen Ausgabe an das Kommando `grep` weiter. Mit dem regulären Ausdruck
+`"^rc "` (mit Leerzeichen am Ende) filtern Sie alle Zeilen aus der
+Ausgabe heraus, die mit den beiden Buchstaben `rc` beginnen und von
+einem Leerzeichen gefolgt werden. Damit erhalten Sie eine Liste aller
+verbliebenen Konfigurationsdateien, die `dpkg` einem Paket zuordnen
+kann.
+
+//.Suche nach gelöschten, aber noch konfigurierten Paketen mittels `dpkg`
+----
+$ dpkg -l | grep "^rc "
+rc  akonadi-backend-mysql 1.7.2-3   all   MySQL storage backend for Akonadi
+rc  akonadi-server        1.7.2-3   i386  Akonadi PIM storage service
+rc  atop                  1.26-2    i386  Monitor for system resources and process activity
+rc  audtty                0.1.12-1  i386  ncurses based frontend to audacious
+...
+$
+----
+
+// Stichworte für den Index
+(((aptitude, search ~c)))
+(((aptitude, search ?config-files)))
+Auch `aptitude` kann in diese Richtung recherchieren. Es kennt zu diesem
+Zweck zum Schalter `search` die Option `~c` bzw. die Langform
+`?config-files`. Das Ergebnis umfaßt jedoch _alle_ konfigurierten
+Pakete – unabhängig davon, ob diese als gelöscht markiert sind oder
+nicht.
+
+//.Suche nach konfigurierten Paketen mittels `aptitude`
+----
+$ aptitude search ~c
+c   akonadi-backend-mysql   - MySQL-Speicher-Backend für Akonadi
+c   akonadi-server          - PIM-Speicherdienst Akonadi
+c   atop                    - Überwachung für Systemressourcen und Proze
+c   audtty                  - auf ncurses basierende Oberfläche für auda
+...
+$
+----
+
+==== Fall 3: Löschen von Konfigurationsdateien bereits deinstallierter Pakete ====
+
+// Stichworte für den Index
+(((aptitude, purge)))
+(((apt-get, remove --purge)))
+Haben Sie die aus ihrer Sicht unnützen Konfigurationsdateien eines
+bereits deinstallierten Paketes ausfindig gemacht und möchten diese
+endgültig ins digitale Nirwana befördern, sind Ihnen APT und `aptitude`
+gern dabei behilflich. APT unterstützt Sie mit der Kombination aus dem
+Kommando `apt-get`, dessen Schalter `remove` und der Option `--purge
+Paketname`. Bei `aptitude` besteht kein separater Schalter für den
+Schritt – stattdessen genügt hier der Schalter `purge` vollkommen.
+
+//.Löschen der Konfigurationsdateien mittels APT
+----
+# apt-get remove --purge cssed
+Paketlisten werden gelesen... Fertig
+Abhängigkeitsbaum wird aufgebaut.       
+Statusinformationen werden eingelesen.... Fertig
+Die folgenden Pakete werden ENTFERNT:
+  cssed*
+0 aktualisiert, 0 neu installiert, 1 zu entfernen und 16 nicht aktualisiert.
+Nach dieser Operation werden 0 B Plattenplatz zusätzlich benutzt.
+Möchten Sie fortfahren [J/n]? 
+(Lese Datenbank ... 304031 Dateien und Verzeichnisse sind derzeit installiert.)
+Entfernen von cssed ...
+Löschen der Konfigurationsdateien von cssed ...
+Trigger für menu werden verarbeitet ...
+#
+----
+
+==== Fall 4: Paket samt Konfigurationsdateien deinstallieren ====
+
+// Stichworte für den Index
+(((dpkg, -P)))
+(((aptitude, purge)))
+(((apt-get, remove --purge)))
+APT und `aptitude` ermöglichen auch das Deinstallieren eines oder
+mehrerer Pakete samt zugehöriger Konfigurationsdateien in einem einzigen
+Schritt. Die Aufrufe entsprechen dem Kommando `dpkg -P Paketname` für
+eine Menge von Paketen in der richtigen Reihenfolge der
+Paketabhängigkeiten. 
+
+Für diese Aktion kombinieren Sie entweder `apt-get` mit dem Schalter
+`remove` und der Option `--purge Paketname`. `aptitude` kennt
+stattdessen nur den Schalter `purge`.
+
+//.Löschen des Pakets 'cssed' samt Konfigurationsdateien in einem Schritt
+----
+# aptitude purge cssed
+Die folgenden Pakete werden ENTFERNT:
+  cssed{p} 
+0 Pakete aktualisiert, 0 zusätzlich installiert, 1 werden entfernt und 16 nicht aktualisiert.
+0 B an Archiven müssen heruntergeladen werden. Nach dem Entpacken werden 2.052 kB frei werden.
+Möchten Sie fortsetzen? [Y/n/?] 
+(Lese Datenbank ... 304082 Dateien und Verzeichnisse sind derzeit installiert.)
+Entfernen von cssed ...
+Löschen der Konfigurationsdateien von cssed ...
+Trigger für man-db werden verarbeitet ...
+Trigger für menu werden verarbeitet ...
+Trigger für gnome-menus werden verarbeitet ...
+Trigger für desktop-file-utils werden verarbeitet ...
+ 
+#
+----
+
+Ein Sonderfall ist das Entfernen aller Pakete für eine bestimmte
+Architektur. Das tritt auf, wenn Sie bspw. mit dem 'Multiarch'-Feature
+experimentieren (siehe <<debian-architekturen-multiarch>>). Um alle
+Pakete für die Architektur 'i386' vollständig zu entfernen, nutzen Sie
+diesen Aufruf:
+
+//.Vollständiges Entfernen aller installierten Pakete für die Architektur 'i386'
+----
+# apt-get remove --purge ".*:i386"
+----
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-deinstallieren.txt

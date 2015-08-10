@@ -1,0 +1,27 @@
+// Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen.txt
+
+// Baustelle: Rohtext
+
+[[apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen]]
+== APT und `aptitude` auf die eigenen Bedürfnisse anpassen ==
+
+// Konfigurationsdateien von APT
+include::konfigurationsdateien-von-apt.txt[]
+
+// Konfiguration von APT anzeigen
+include::konfiguration-von-apt-anzeigen.txt[]
+
+// Interaktives Ändern von Optionen
+include::interaktives-aendern-von-optionen.txt[]
+
+// aptitude Formatstrings
+include::aptitude-formatstrings.txt[]
+
+// aptitude Gruppierung
+include::aptitude-gruppierung.txt[]
+
+// aptitude-Farbschema anpassen
+include::aptitude-farbschema-anpassen.txt[]
+
+
+// Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen.txt

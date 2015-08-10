@@ -1,0 +1,314 @@
+// Datei: ./werkzeuge/debian-paketformat-im-detail/aufbau-und-format.txt
+
+// Baustelle: Fertig
+
+[[aufbau-und-format]]
+
+=== Aufbau und Format ===
+
+==== Generell: 2 Ebenen ====
+
+// Stichworte für den Index
+(((deb-Paketformat, Bestandteile)))
+(((deb-Paketformat, Daten)))
+(((deb-Paketformat, Metainformationen)))
+Debianpakete beinhalten stets zwei Komponenten – Daten und
+Metainformationen. Die _Daten_ sind die tatsächlichen Inhalte des
+Pakets, d.h. entweder der Quellcode oder die übersetzten
+Programmdateien, die bei der Installation auf ihr System kopiert werden.
+
+Die _Metainformationen_ sind zusätzliche Informationen zu einem Paket,
+die dieses näher beschreiben. Dazu zählen erstens die Relationen zu
+anderen Paketen. Diese legen die Voraussetzungen fest, nach denen das
+Paket überhaupt übersetzt (``gebaut'') und später auf ihrem Linux-System
+installiert werden kann. Insbesondere zählen dazu die Abhängigkeiten und
+Konflikte zu anderen Paketen. Diese Relationen beschreiben wir
+ausführlich in Konzepte und Ideen dahinter
+(<<konzepte-und-ideen-dahinter>>).
+
+Zweitens gehören die sogenannten Maintainer-Skripte namens `preinst`,
+`postinst`, `prerm` und `postrm` dazu. Die beiden Skripte `preinst` und
+`postinst` regeln alle Aktivitäten vor und nach der Installation,
+`prerm` und `postrm` hingegen vor und nach der Entfernung des Pakets von
+ihrem System. Diese vier Skripte sind üblicherweise
+distributionsspezifische Shellskripte, die der Maintainer des jeweiligen
+Pakets pflegt.
+
+Für das Paket
+'dpkg-www'{empty}footnote:[https://packages.debian.org/de/stable/dpkg-www]
+beinhaltet das bspw. das Starten des Webservers nach der Installation
+des Pakets, das Anhalten (vorher) und Neustarten (nachher) im Zuge einer
+Aktualisierung des Paketes und das Anhalten des Dienstes, bevor das
+Paket vom System wieder entfernt wird. In <<fig.postinst>> sehen Sie
+einen Ausschnitt aus dem `postinst`-Skript zu besagtem Paket.
+
+.Auszug aus dem `postinst`-Skript zum Paket 'dpkg-www'
+image::werkzeuge/debian-paketformat-im-detail/postinst.png[id="fig.postinst", width="50%"]
+
+[[aufbau-und-format-source]]
+
+==== Source-Pakete ====
+
+Ein Source-Paket beinhaltet einerseits den Quellcode der Software und
+andererseits die Anweisungen, nach denen aus dem Quellcode der Software
+eines oder mehrere Binärpakete entstehen <<Krafft-Debian-System>>. Dazu
+besteht es aus mindestens 2, meistens jedoch 3 und ggf. auch noch
+weiteren Dateien:
+
+`.dsc`::
+Meta-Datei, die alle anderen Dateien mitsamt deren Hashsummen auflistet
+und ggf. signiert. Über die Hashsummen sind gleichzeitig alle anderen
+Dateien ebenfalls abgesichert.
+
+Debian-spezifische Daten::
+* Bei Source-Format 1.0 ist es ein komprimierter Patch -- erkennbar an der
+Erweiterung `diff.gz`. Dieser kann nur Textdateien enthalten.
+* Bei Source-Format 3.0 ist es ein komprimiertes `tar`-Archiv --
+heutzutage meist mit `debian.tar.xz` benannt. Zulässig sind die
+Komprimierungsverfahren `gzip`, `bzip2`, `lzma` und `xz`. `lzma` wurde
+von Debian GNU/Linux allerdings nie unterstützt, wohl aber von anderen
+`deb`-basierten Distributionen
+(<<welche-unix-artigen-betriebssysteme-verwenden-das>>).
+* Software, die nur im Debian-Paketformat vertrieben wird, verfügt weder
+über den komprimierten Patch noch das o.g. Archiv. In diesem Fall wird
+von sogenannten 'nativen' Paketen gesprochen.
+
+Upstream-Quellcode::
+Der Originalquellcode der paketierten Software. Es wird versucht, diesen
+soweit wie möglich unverändert zu lassen. Es muss sich jedoch dabei um
+ein `tar`-Archiv handeln. Andere Container-Formate wie z.B. `zip` werden
+nicht unterstützt. Offerieren die Entwickler der Software den Quellcode
+z.B. nur als `zip`- oder `rar`-Archiv, so muß der Quellcode zunächst in
+ein `tar`-Archiv umgepackt werden. Der Dateiname des `tar`-Archivs endet
+dabei in `orig.tar.endung`, wobei das Suffix `endung` vom
+Komprimierungsformat abhängt. Erlaubt sind ebenfalls wieder `gzip`,
+`bzip2`, `lzma` und `xz`. `lzma` wird vom Debian-Archiv nicht
+unterstützt, aber von anderen `deb`-basierten Distributionen
+(<<welche-unix-artigen-betriebssysteme-verwenden-das>>). Ab dem
+Source-Format 3.0 kann ein Quellpaket (<<sourcepakete>>) mehr als ein
+`tar`-Archiv mit Upstream-Quellcode beinhalten. Diese haben dann die
+Endung `orig-komponente.tar.endung`, wobei `komponente` nur
+alphanumerische Zeichen und Bindestriche beinhalten darf.
+
+//* aus <<Debian-Package-Basics>>:
+//  ``Source packages, which consist of a .dsc file describing the source
+//  package (including the names of the following files), a .orig.tar.gz
+//    file that contains the original unmodified source in gzip-compressed 
+//    tar format and usually a .diff.gz file that contains the Debian-specific
+//    changes to the original source. The utility dpkg-source packs and 
+//    unpacks Debian source archives; details are provided in its manual 
+//    page. (The program apt-get can get used a frontend for dpkg-source.)''
+
+Als *Paketformate* existieren die Versionen 1.0, 2.0 (wurde offiziell
+nie unterstützt) und 3.0 <<Debian-DebSrc3.0>>. Letzteres existiert in
+den zwei Varianten 'quilt' (benannt als ``3.0 (quilt)'') und 'native'
+(benannt als ``3.0 (native)'') und hat sich seit dessen Einführung mit
+Debian 6 'Squeeze' im Jahr 2011 mittlerweile etabliert. Dabei umfassen
+die Namen der Varianten für Version 3.0 jeweils auch die Leerzeichen und
+die beiden Klammern.
+
+[[aufbau-und-format-binaer]]
+
+==== Binärpakete ====
+
+Ein Debian-Binärpaket ist ein BSD-`ar`-Archiv, welches weitere,
+komprimierte `tar`-Archive beinhaltet. Nachfolgendes Beispiel zeigt das
+für das Paket 'autotools-dev'.
+
+.Auspacken von Paketen mit `ar`
+----
+$ ar t autotools-dev_20100122.1_all.deb
+debian-binary
+control.tar.gz
+data.tar.gz
+$
+----
+
+Dabei stehen die einzelnen Komponenten eines Paketes für:
+
+`debian-binary` ::
+Kennzeichnung für ein Debian-Paket. `debian-binary` ist eine
+Textdatei, welche lediglich die Versionsnummer des verwendeten
+Binär-Paketformats enthält. Nachfolgender Auszug zeigt die
+Versionsnummer für das Paket 'mplayer':
+
+----
+$ ar t mplayer_2%3a1.0~rc4.dfsg1+svn34540-1+b2_i386.deb 
+debian-binary
+control.tar.gz
+data.tar.gz
+$ ar x mplayer_2%3a1.0~rc4.dfsg1+svn34540-1+b2_i386.deb debian-binary
+$ cat debian-binary 
+2.0
+$
+----
+
+`control.tar.gz`::
+mit `gzip` komprimiertes `tar`-Archiv; dieses enthält die
+Kontrollinformationen für die Paketverwaltung
+
+`data.tar.gz`, `data.tar.xz`, `data.tar.bz2` ::
+eigentliche Dateien des Pakets plus Speicherort, jeweils mit `gzip`,
+`xz` oder `bzip2` komprimiert
+
+Ein Debian-Binärpaket ist eine Datei mit der Erweiterung `deb` oder
+`udeb`. Ersteres beinhaltet ausführbare Dateien, Daten, Dokumentation,
+Konfigurationsdateien und Copyright-Informationen
+<<Krafft-Debian-System>>. Bei `udeb`-Dateien handelt es sich um ein
+Paket mit reduziertem Paketinhalt, welches speziell für den
+Debian-Installer gedacht ist (siehe <<Debian-udeb>>).
+
+Wie bereits oben angesprochen, beinhaltet jedes Debianpaket auch
+sogenannte 'Control-Files' (nach <<Krafft-Debian-System144>>). Diese
+Steuerdateien werden in der Komponente `control.tar.gz`
+aufbewahrt und bestehen aus diesen Dateien:
+
+`control`::
+Das ist eine Steuerdatei und diese muß immer vorhanden sein. Sie
+beinhaltet die Metainformationen für die Paketverwaltung, bspw. zur
+Prüfung der Paketabhängigkeiten vor der Installation. Diese Steuerdatei
+kann beim Bauen des Pakets generiert worden sein, z.B. aus der Datei
+`control.in` mit Hilfe des Pakets 'autotools'.
+
+`conffiles`::
+Das ist eine Liste mit Konfigurationsdateien zum Paket. Erfolgt eine
+Paketaktualisierung, werden die Dateien, die in dieser Liste aufgeführt
+sind, auf dem System beibehalten und nicht durch die Daten aus dem neuen
+Paket überschrieben. Damit bleiben bereits bestehende lokale Änderungen
+erhalten, bspw. von spezifisch angepaßten Konfigurationsdateien. Diese
+Liste wird meist automatisiert generiert.
+
+`preinst`::
+Skriptdatei mit paketspezifischen Anweisungen. Diese Anweisungen werden
+'vor' der Installation oder Aktualisierung des Pakets (Upgrade) mit
+bestimmten Parametern aufgerufen.
+
+`postinst`::
+Skriptdatei mit paketspezifischen Anweisungen. Diese Anweisungen werden
+'nach' der Installation oder Aktualisierung (Upgrade) sowie zur
+Konfiguration des Pakets mit bestimmten Parametern aufgerufen.
+
+`prerm`::
+Skriptdatei mit paketspezifischen Anweisungen. Diese Anweisungen werden
+mit bestimmten Parametern aufgerufen, 'bevor' das Paket entfernt wird.
+
+`postrm`::
+Skriptdatei mit paketspezifischen Anweisungen. Diese Anweisungen werden
+mit bestimmten Parametern aufgerufen, 'nachdem' das Paket entfernt
+wurde.
+
+`md5sums`::
+MD5-Summen der Dateien, welche im Paket enthalten sind. Damit wird
+sichergestellt, daß beispielsweise keine Übertragungsfehler (Bitfehler)
+oder Änderungen zwischen dem Paketmirror und ihrem lokalen System
+erfolgt sind (siehe auch Bezogenes Paket verifizieren in
+<<bezogenes-paket-verifizieren>>).
+
+`shlibs`::
+Diese Datei listet Bibliotheken und 'Shared Object Name' (kurz 'SONAME')
+auf, welches das Paket gemeinsam mit dem Paketnamen zur Verfügung
+stellt.
+
+`config`::
+Skriptdatei. Diese erfragt vom Benutzer Konfigurationsparameter, welche
+für das Paket zur Einrichtung benötigt werden. Die Anworten werden
+direkt in der `debconf`-Datenbank abgelegt und bspw. im
+`postinst`-Skript verarbeitet.
+
+`templates`::
+Diese Datei enthält Texte zu den Fragen und Hinweisen, die `debconf`
+während der Paketkonfiguration anzeigt (siehe dazu auch Pakete
+konfigurieren in <<pakete-konfigurieren>>).
+
+Die eigentlichen Dateien zu einem Paket liegen in der 'Datenkomponente'.
+Damit `dpkg` die zu installierenden Programme und Daten des Binärpakets
+auch an die richtige Position in der Dateisystemhierarchie kopieren
+kann, spiegelt der Inhalt dieser Komponente die entsprechende
+Verzeichnisstruktur auf dem Zielsystem vollständig wieder.
+
+Diese Struktur, die zu installierenden Dateien sowie deren Typ und Größe
+zeigen Sie mit dem Kommando `dpkg-deb -c Paketdatei` an. Am Beispiel von
+'vnstat' sehen Sie damit, daß im Debianpaket sowohl Programme
+(ausführbare Dateien in `/usr/bin` und `/usr/sbin`) als
+auch Dokumentation (in `/usr/share/doc` und
+`/usr/share/man`), Konfigurationsdateien (in `/etc`) und
+ein Verzeichnis für variable Daten (unterhalb von `/var/lib`)
+enthalten sind:
+
+.Inhalt des Pakets 'vnstat' mit `dpkg-deb` anzeigen
+----
+$ dpkg-deb -c vnstat_1.10-1_i386.deb 
+drwxr-xr-x root/root         0 2010-04-20 20:38 ./
+drwxr-xr-x root/root         0 2010-04-20 20:38 ./usr/
+drwxr-xr-x root/root         0 2010-04-20 20:38 ./usr/bin/
+-rwxr-xr-x root/root    106424 2010-04-20 20:38 ./usr/bin/vnstat
+drwxr-xr-x root/root         0 2010-04-20 20:38 ./usr/sbin/
+-rwxr-xr-x root/root     56184 2010-04-20 20:38 ./usr/sbin/vnstatd
+drwxr-xr-x root/root         0 2010-04-20 20:38 ./usr/share/
+drwxr-xr-x root/root         0 2010-04-20 20:38 ./usr/share/doc/
+drwxr-xr-x root/root         0 2010-04-20 20:38 ./usr/share/doc/vnstat/
+-rw-r--r-- root/root      1604 2010-04-20 18:38 ./usr/share/doc/vnstat/changelog.Debian.gz
+-rw-r--r-- root/root      2101 2010-01-02 01:32 ./usr/share/doc/vnstat/README
+-rw-r--r-- root/root      3050 2010-01-02 02:36 ./usr/share/doc/vnstat/changelog.gz
+-rw-r--r-- root/root      1501 2010-04-20 18:18 ./usr/share/doc/vnstat/copyright
+-rw-r--r-- root/root      2077 2010-01-02 01:33 ./usr/share/doc/vnstat/FAQ.gz
+drwxr-xr-x root/root         0 2010-04-20 20:38 ./usr/share/man/
+drwxr-xr-x root/root         0 2010-04-20 20:38 ./usr/share/man/man1/
+-rw-r--r-- root/root      2558 2010-04-20 20:38 ./usr/share/man/man1/vnstatd.1.gz
+-rw-r--r-- root/root      4085 2010-04-20 20:38 ./usr/share/man/man1/vnstat.1.gz
+drwxr-xr-x root/root         0 2010-04-20 20:38 ./usr/share/man/man5/
+-rw-r--r-- root/root      2488 2010-04-20 20:38 ./usr/share/man/man5/vnstat.conf.5.gz
+drwxr-xr-x root/root         0 2010-04-20 20:38 ./etc/
+drwxr-xr-x root/root         0 2010-04-20 20:38 ./etc/init.d/
+-rwxr-xr-x root/root      1466 2010-04-20 17:52 ./etc/init.d/vnstat
+-rw-r--r-- root/root      2889 2010-04-20 20:38 ./etc/vnstat.conf
+drwxr-xr-x root/root         0 2010-04-20 20:38 ./var/
+drwxr-xr-x root/root         0 2010-04-20 20:38 ./var/lib/
+drwxr-xr-x root/root         0 2010-04-20 20:38 ./var/lib/vnstat/
+$
+----
+
+[[aufbau-und-format-uebergang-und-metapakete]]
+
+==== Übergangs- und Metapakete ====
+
+Wie bereits in Übergangs- und Metapakete (siehe
+<<uebergangs-und-metapakete>>) deutlich wurde, handelt es sich hierbei
+um Binärpakete, die eine spezielle Charakteristik haben: sie haben meist
+außer der Dokumentation keine weiteren Inhalte. Der eigentliche Inhalt
+sowie Sinn und Zweck sind die Beschreibung der Abhängigkeiten der
+Pakete.
+
+Übergangspakete werden auch 'Dummypakete' oder 'Transitionspakete'
+genannt. Deren Aufgabe ist es, Paketumbenennungen bei der Aktualisierung
+auf eine neue Veröffentlichung sauber zu handhaben und in diesem
+Zusammenhang auftretende Abhängigkeitskonflikte zu verhindern.
+Metapakete erleichtern dagegen nur die Installation einer Gruppe von
+zusammenhängenden Paketen.
+
+// TODO: Gibt es ein schönes Beispiel für Abhängigkeitskonflikte bei
+// Transitionspaketen? Mir fällt nämlich keines ein, deswegen hatte
+// ich das Thema "Konflikte" an der Stelle nämlich IIRC
+// rausgelöscht. -- Axel
+
+Ein Paket dieser Art beinhaltet meist nur zwei Dateien unterhalb von
+`/usr/share/doc` -- die Informationen zum Copyright und die
+bisherigen Änderungen. Letzteres liegt in der Datei
+`changelog.Debian.gz`. Beide Dateien können aus Gründen der
+Platzersparnis durch einen symbolischen Link auf eine der Abhängigkeiten
+ersetzt werden, falls diese aus dem gleichen Sourcepaket gebaut wurden.
+
+Darüberhinaus können die Pakete einen Wrapper oder einen symbolischen
+Link zur Wahrung der Rückwärtskompatibilität beinhalten. Beispielsweise
+umfaßt das Paket 'ash' nur eine Abhängigkeit auf das Paket 'dash' und
+einen symbolischen Verweis (Symlink) von `/bin/ash` zu
+`/bin/dash`:
+
+.Symbolischer Verweis auf eine andere Komponente am Beispiel der 'ash'
+----
+$ ls -la /bin/ash
+lrwxrwxrwx 1 root root 4 Mär  1  2012 /bin/ash -> dash
+$
+----
+
+// Datei (Ende): ./werkzeuge/debian-paketformat-im-detail/aufbau-und-format.txt

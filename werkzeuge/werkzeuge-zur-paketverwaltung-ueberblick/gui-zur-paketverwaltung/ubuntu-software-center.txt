@@ -1,0 +1,52 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/ubuntu-software-center.txt
+
+// Baustelle: Fertig
+
+[[gui-ubuntu-software-center]]
+
+==== Ubuntu Software Center ====
+
+Canonical bietet mit dem Ubuntu Software Center
+<<Ubuntu-Software-Center>> eine weitere graphische Verwaltung zur
+Auswahl und Pflege ihres Softwarebestands an. Dieses Paket wurde 2010
+auch in den Bestand von Debian übernommen (Paket 'software-center',
+<<Debian-Paket-software-center>>), aber bereits 2014 wieder aus Debian
+entfernt. Die Begründung ist, daß das Programm nicht mehr aktuell in
+Debian sei und auch bessere Alternativen existieren
+(<<RM-software-center>>).  Es ist daher in Debian 6 'Squeeze' und Debian
+7 'Wheezy' enthalten, aber nicht mehr in Debian 8 'Jessie'.
+
+Wie bei den anderen bereits weiter oben vorgestellten Programmen können
+Sie damit nicht nur die benutzten Paketquellen verwalten, d.h.
+hinzufügen, ändern, löschen und verifizieren, sondern auch den
+Softwarebestand ihrer Systeme verändern. Über die Benutzeroberfläche
+erhalten Sie eine Anwendungsübersicht nach Kategorien, wählen daraus die
+gewünschten Softwarepakete aus und installieren, entfernen und
+aktualisieren diese (siehe <<fig.ubuntu-software-center>>).
+
+.Softwareauswahl im Ubuntu Software Center (aus Xubuntu 13.04)
+image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/ubuntu-software-center.png[id="fig.ubuntu-software-center", width="50%"]
+
+Bis zur Jahresmitte 2014 bestand seitens Canonical der
+Datenaustauschdienst Ubuntu One <<Ubuntu-One>> <<Ubuntu-One-Wikipedia>>.
+Das Ubuntu Software Center war in diesen Dienst integriert und bot Ihnen
+die Möglichkeit, über das Programm den Softwarebestand zwischen
+verschiedenen Rechnern abzugleichen. Das beinhaltete ebenso die
+Veränderungen im Paketbestand und listete auf, welche Pakete wann
+installiert, aktualisiert oder gelöscht wurden (siehe
+<<fig.ubuntu-software-center-verlauf>>). Wie Ihnen das gleiche auf der
+Kommandozeile gelingt, lesen Sie unter Liste der zuletzt installierten
+Pakete anzeigen in <<liste-der-zuletzt-installierten-pakete-anzeigen>>.
+
+.Verlauf der Änderungen im Paketbestand
+image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/ubuntu-software-center-verlauf.png[id="fig.ubuntu-software-center-verlauf", width="50%"]
+
+Bei der Benutzung des Programms beachten Sie bitte, daß das Programm
+viele graphische Elemente und Inhalte enthält, die über das Internet
+bereitgestellt werden. Daher empfehlen wir Ihnen zur Benutzung eine
+Internetverbindung, da ansonsten viele Informationen in der
+Bedienoberfläche nicht angezeigt werden können. Desweiteren ist das
+Programm nur weitestgehend mit der Maus bedienbar und kaum über die
+Tastatur. Das ist nicht für alle Nutzungskonstellationen und Anwender
+hilfreich.
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/ubuntu-software-center.txt

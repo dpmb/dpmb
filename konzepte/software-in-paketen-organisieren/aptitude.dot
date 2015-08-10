@@ -1,0 +1,28 @@
+digraph "aptitude" {
+	rankdir=LR;
+	node [shape=box];
+	"aptitude" -> "aptitude-common" [color=blue,label="(= 0.6.11-1)"];
+	"aptitude" -> "libapt-pkg4.12" [color=blue,label="(>= 0.9.16)"];
+	"libapt-pkg4.12" -> "libbz2-1.0" [color=blue];
+	"libapt-pkg4.12" -> "liblzma5" [color=blue,label="(>= 5.1.1alpha+20120614)"];
+	"aptitude" -> "libboost-iostreams1.55.0" [color=blue];
+	"libboost-iostreams1.55.0" -> "libbz2-1.0" [color=blue];
+	"aptitude" -> "libcwidget3" [color=blue];
+	"libcwidget3" -> "libncursesw5" [color=blue,label="(>= 5.6+20070908)"];
+	"libncursesw5" -> "libtinfo5" [color=blue,label="(= 5.9+20140913-1+b1)"];
+	"libcwidget3" -> "libsigc++-2.0-0c2a" [color=blue,label="(>= 2.2.0)"];
+	"libcwidget3" -> "libtinfo5" [color=blue];
+	"aptitude" -> "libncursesw5" [color=blue,label="(>= 5.6+20070908)"];
+	"aptitude" -> "libsigc++-2.0-0c2a" [color=blue,label="(>= 2.2.0)"];
+	"aptitude" -> "libsqlite3-0" [color=blue,label="(>= 3.6.5)"];
+	"aptitude" -> "libtinfo5" [color=blue];
+	"aptitude" -> "libxapian22" [color=blue];
+	"libxapian22" -> "libuuid1" [color=blue,label="(>= 2.16)"];
+	"libuuid1" -> "passwd" [color=blue];
+	"aptitude" [style="setlinewidth(2)"]
+	"passwd" [shape=diamond];
+}
+// Excluded dependencies:
+// libc6 libgcc1 libstdc++6 multiarch-support zlib1g
+// total size of all shown packages: 24866816
+// download size of all shown packages: 6461736

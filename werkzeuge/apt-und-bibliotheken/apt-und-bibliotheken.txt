@@ -1,0 +1,61 @@
+// Datei: ./werkzeuge/apt-und-bibliotheken/apt-und-bibliotheken.txt
+
+// Baustelle: Rohtext
+
+[[apt-und-bibliotheken]]
+== APT und Bibliotheken ==
+
+Wie bereits in der Übersicht in Softwarestapel und Ebenen (siehe
+<<softwarestapel-und-ebenen>>) deutlich wurde, ist die Paketverwaltung
+von Debian GNU/Linux mehrstufig und modular aufgebaut. Hinter den
+Bedienoberflächen `dpkg`, APT und `aptitude` (siehe Werkzeuge zur
+Paketverwaltung in <<werkzeuge-zur-paketverwaltung>>) stecken mächtige
+Bibliotheken, die den Zugriff auf die einzelnen Softwarepakete und die
+Paketdatenbank kapseln. Mit Hilfe der nachfolgend vorgestellten
+Bibliotheken und den Funktionen daraus können Sie eigene Anwendungen zur
+Paketverwaltung entwickeln.
+
+=== Bibliothek `libapt-pkg` ===
+
+Diese Bibliothek enthält die Basiskomponenten zum Zugriff auf die
+einzelnen Softwarepakete. Das umfaßt Funktionen zur Suche nach Paketen,
+deren Verwaltung sowie die Ausgabe der Paketinformationen. Dazu gehören:
+
+* der Abruf von Informationen zu einem Paket aus den verschiedenen Paketquellen
+* der Abruf eines Paketes und der vollständigen Auflösung der
+Paketabhängigkeiten dieses Pakets
+* die Authentifizierung der Paketquellen und Überprüfung der abgerufenen
+Daten (Validierung)
+* die Installation und Entfernung von Paketen aus ihrem Linux-System
+* der Zugriff auf den Paketcache (siehe <<paketcache>>)
+* die Bereitstellung von Schnittstellen zu Netzwerkprotokollen, um Daten
+und Pakete über diese beziehen zu können. Dazu gehören bspw. CD-ROM,
+FTP, HTTP/S, rsh und DebTorrent (APT über BitTorent)
+(<<Debian-Paket-apt-transport-debtorrent>> und <<Debian-Wiki-DebTorrent>>).
+
+=== Bibliothek `libapt-pkg-perl` ===
+
+Diese Bibliothek beinhaltet die Perl-Schnittstelle zum Zugriff auf die
+einzelnen Softwarepakete. Es hat die gleiche Funktionalität wie das
+weiter oben beschriebene Paket 'libapt-pkg'.
+
+=== Bibliothek `libapt-pkg-doc` ===
+
+Dieses Paket stellt die Dokumentation zur Verfügung, auf deren Grundlage
+Sie eigene Entwicklungen in APT anstoßen können. Die Dokumentation
+steht als Plaintext und als HTML-Dokument bereit.
+
+=== Bibliothek `libapt-inst` ===
+
+// Worin liegt der Unterschied und Nutzen im Vergleich zu libapt-pkg?
+
+Um Informationen aus `deb`-Paketen zur erhalten, nutzen Sie diese
+Bibliothek. Darüber steht eine Schnittstelle zur Abfrage der
+Paketinterna bereit, die sowohl den Paketinhalt, als auch die
+Steuerdaten der Komponente `control.tar.gz` umfassen (siehe
+Debian-Paketformat im Detail in <<aufbau-und-format>>).
+
+// ==== `libdpkg-perl` ====
+//
+// Dpkg perl modules
+// Datei (Ende): ./werkzeuge/apt-und-bibliotheken/apt-und-bibliotheken.txt

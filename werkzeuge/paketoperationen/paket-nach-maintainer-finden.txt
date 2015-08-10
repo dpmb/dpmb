@@ -1,0 +1,214 @@
+// Datei: ./werkzeuge/paketoperationen/paket-nach-maintainer-finden.txt
+
+// Baustelle: Fertig
+
+[[paket-nach-maintainer-finden]]
+=== Paket nach Maintainer finden ===
+
+// Stichworte für den Index
+(((Paketsuche, anhand des Maintainers)))
+Als 'Debian Maintainer' versteht sich diejenige Einzelperson oder das
+Team, welche(s) eine Software betreut und für das entsprechende
+Debian-Paket verantwortlich zeichnet. Maintainer kümmern sich darum, daß
+das Paket gepflegt wird, d.h. Änderungen und Verbesserungen aus dem
+Upstream in das Paket unter Berücksichtigung der Debian-Spezifika
+einfließen, dieses dabei weiterhin den Debian-Richtlinien entspricht und
+in möglichst stabiler Form verfügbar
+bleibt{empty}footnote:[https://wiki.debian.org/DebianMaintainer].
+
+==== Welche Pakete betreut ein Debian-Maintainer ====
+
+// Stichworte für den Index
+(((aptitude, search ~m)))
+(((aptitude, Format Strings)))
+(((ara)))
+(((grep-ctrl)))
+(((Synaptic)))
+Diese Information liefern Ihnen mehrere Werkzeuge – `aptitude`,
+`grep-dctrl` sowie `ara` und Synaptic. Die Unterschiede liegen im Aufruf
+und den Parametern.
+
+`aptitude` kennt den Schalter `~m` gefolgt von der Emailadresse des
+Maintainers. Damit finden Sie die 'Binärpakete', in denen dieser
+Maintainer als Verantwortlicher eingetragen ist. Für Axel Beckert und
+seine Emailadresse `abe@debian.org` lautet der komplette Aufruf
+`aptitude search '~m abe@debian.org'`. In der Schreibweise ist
+`aptitude` sehr tolerant – es gestattet den Aufruf mit und auch ohne
+Leerzeichen zwischen der Option und der Emailadresse.
+
+//.Paketfilterung nach der Emailadresse des Maintainers mittels `aptitude`
+----
+$ aptitude search '~m abe@debian.org'
+p   aha                               - Konvertiert ANSI-Farben nach HTML
+p   amora-applet                      - use a bluetooth device as X remote control (
+p   amora-cli                         - use a bluetooth device as X remote control (
+p   autossh                           - SSH-Sitzungen und -Tunnel automatisch neu st
+p   conkeror                          - Tastaturbedienbarer Webbrowser mit Emacs-ähn
+p   conkeror-spawn-process-helper     - spawn external processes in Conkeror
+p   dillo                             - Kleiner und schneller Webbrowser
+p   dphys-config                      - Werkzeug zum Verteilen von Konfigurationsdat
+p   dphys-swapfile                    - Automatisches Generieren und Nutzen einer Au
+p   libapache2-mod-macro              - Create macros inside Apache config files
+p   links                             - Textmodus-Webbrowser
+i   links2                            - Webbrowser für den grafischen und den Textmo
+...
+$
+----
+
+Obige Ausgabe basiert auf dem Formatstring `-F '%c%a%M %p - %d'`. Die
+einzelnen Buchstaben stehen für den aktuellen Paketstatus (`%c`), die
+Aktion des Paketes (`%a`), automatische Installation (`%M`), den
+Paketnamen (`%p`) und die Paketbeschreibung (`%d`). Eine detaillierte
+Übersicht zu allen zulässigen Formatoptionen erklären wir Ihnen unter
+`aptitude` Format Strings in <<aptitude-format-strings>>. Eine
+Alternative bietet zudem das Aptitude Handbuch{empty}footnote:[http://aptitude.alioth.debian.org/doc/en/ch02s05s01.html#secDisplayFormat].
+
+Möchten Sie in der Ausgabe stattdesen nur den Paketnamen, die
+Paketbeschreibung und den Paketmaintainer ausgeben, helfen Ihnen dabei
+die drei Optionen `%p`, `%d` und `%m` weiter. Letztgenanntes steht als
+Abkürzung für 'maintainer'.
+
+//.Paketsuche nach Paketnamen, Paketbeschreibung und Paketmaintainer
+----
+$ aptitude search -F '%p - %d - %m' '~mabe@debian.org' 
+aha            - Konvertiert ANSI-Farben nach HTML  - Axel Beckert <abe@debian.org>
+amora-applet   - use a bluetooth device as X remote - Axel Beckert <abe@debian.org>
+amora-cli      - use a bluetooth device as X remote - Axel Beckert <abe@debian.org>
+autossh        - SSH-Sitzungen und -Tunnel automati - Axel Beckert <abe@debian.org>
+...
+$
+----
+
+// Stichworte für den Index
+(((Debianpaket, dctrl-tools)))
+(((grep-dctrl, -F)))
+(((grep-dctrl, -s)))
+Das Programm `grep-dctrl` aus dem Paket 'dctrl-tools' sucht alle Pakete
+heraus, bei dem als Maintainer oder Uploader die angefragte Person
+hinterlegt ist und gibt diese zum gefundenen Paketnamen aus. Als
+weiteren Parameter benötigt es noch die lokal gespeicherte Paketliste,
+die es durchsuchen soll. Im nachfolgenden Beispiel ist das die
+Paketliste für den Paketmirror `ftp.de.debian.org` für die Distribution
+Debian 7 _Wheezy_ sowie daraus der Bereich _main_ und die Architektur
+_i386_.
+
+//.Suche nach Maintainer und Uploader in der lokalen Paketliste (Ausschnitt)
+----
+$ grep-dctrl -F Maintainer,Uploaders abe@debian.org -s Package,Maintainer,Uploaders /var/lib/apt/lists/ftp.de.debian.org_debian_dists_wheezy_main_binary-i386_Packages 
+Package: aha
+Maintainer: Axel Beckert <abe@debian.org>
+
+Package: amora-applet
+Maintainer: Axel Beckert <abe@debian.org>
+
+Package: amora-cli
+Maintainer: Axel Beckert <abe@debian.org>
+
+Package: autossh
+Maintainer: Axel Beckert <abe@debian.org>
+
+...
+$
+----
+
+// Stichworte für den Index
+(((ara)))
+(((Debianpaket, ara)))
+(((Paketsuche, anhand des Maintainers)))
+(((Paketsuche, anhand des Uploaders)))
+Das Programm `ara` aus dem gleichnamigen
+Paket{empty}footnote:[http://packages.debian.org/de/stable/ara] erlaubt
+eine sehr kompakte Schreibweise. Es sucht dabei in den Binär- und den
+Sourcepaketen, sofern diese vorhanden sind und gibt dabei trotzdem die
+Namen der dazugehörigen Binärpakete aus. Nachfolgender Aufruf zeigt die
+Recherche nach den Feldern 'uploaders' und 'maintainer' für den Benutzer
+mit der Emailadresse `abe@debian.org`. Bitte berücksichtigen Sie bei
+eigenen Experimenten die unterschiedlichen Trennzeichen zwischen den
+Komponenten und den abschließenden Schrägstrich nach der Emailadresse.
+
+//.Einfache Recherche nach Paketen mit Hilfe von `ara`
+----
+$ ara uploaders,maintainer:/abe@debian.org/
+aha
+amora-applet
+amora-cli
+amora-server
+autocutsel
+autossh
+conkeror
+conkeror-spawn-process-helper
+...
+$
+----
+
+Besonders schön sehen Sie das bei der nachfolgenden Abfrage in
+<<fig.ara-suche>>. Die verwendeten Schalter `-progress` und `-table`
+zählen nicht nur die überprüften Pakete und zeigen die gerade
+untersuchte Paketquelle an, sondern zeichnen auch noch eine hübsche
+Tabelle ringsrum. Zu jedem gefundenen Source-Paket werden in der
+jeweiligen Spalte die dazugehörigen Binärpakete aufgelistet.
+
+//.Recherche nach Paketen mittels `ara`
+image::werkzeuge/paketoperationen/ara-suche.png[id="fig.ara-suche", width="50%"]
+
+// Stichworte für den Index
+(((Synaptic)))
+Das graphische Programm Synaptic (<<gui-synaptic>>) handhabt das ganze
+etwas anders und bietet Ihnen einen passenden Menüeintrag an. Unter dem
+Eintrag ospmenu:[Bearbeiten, Suchen] bzw. mit der Tastenkombination
+key:[Ctrl,F] erreichen Sie den Suchdialog. Im Auswahlfeld selektieren
+Sie den Eintrag ospmenu:[Betreuer] und tragen im Eingabefeld dessen
+Namen ein. Daraufhin liefert Ihnen Synaptic ein Ergebnis wie in
+<<fig.synaptic-suche-nach-maintainer>>. In der linken Spalte der
+Paketauswahl erscheint zudem ein zusätzlicher Eintrag mit dem Namen des
+Paketmaintainers.
+
+.Ergebnis der Suche nach dem Paketmaintainer in Synaptic
+image::werkzeuge/paketoperationen/synaptic-suche-nach-maintainer.png[id="fig.synaptic-suche-nach-maintainer", width="50%"]
+
+==== Rückrichtung: Wer betreut ein bestimmtes Paket ====
+
+// Stichworte für den Index
+(((dd-list)))
+(((Debianpaket, devscripts)))
+(((Paketsuche, anhand des Maintainers)))
+(((Paketsuche, anhand des Co-Maintainers)))
+Interessant ist natürlich auch die Rückrichtung: das Ausgeben aller
+Maintainer und Co-Maintainer zu einer Liste von Source- und
+Binärpaketen. Das gelingt Ihnen mit dem Kommando `dd-list` aus dem Paket
+'devscripts'{empty}footnote:[http://packages.debian.org/de/stable/devscripts].
+Als Parameter geben Sie die Namen der Pakete an, die Sie interessieren.
+Leider werden in der Ausgabe die Co-Maintainer irreführend als Uploader
+mit einem großen `U` benannt.
+
+//.Ausgabe der Maintainer und Co-Maintainer mittels `dd-list`
+----
+$ dd-list screen xymon fping ack-grep
+Anibal Monsalve Salazar <anibal@debian.org>
+   fping
+
+Axel Beckert <abe@debian.org>
+   ack-grep (U)
+   fping (U)
+   screen
+   xymon (U)
+
+Christoph Berg <myon@debian.org>
+   xymon
+
+Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+   ack-grep
+Jan Christoph Nordholz <hesso@pool.math.tu-berlin.de>
+   screen (U)
+
+Ryan Niebur <ryan@debian.org>
+   ack-grep (U)
+$
+----
+
+Viele Entwickler mögen dieses Kommando sehr. Sie verwenden es, um Listen
+von einem bestimmten Problem oder einer Migration betroffenen Pakete zu
+erhalten. Darin suchen sie nach ihrem eigenen Namen und wenn dieser
+nicht mehr darin auftaucht, haben sie keine Arbeit mehr damit ;-)
+
+// Datei (Ende): ./werkzeuge/paketoperationen/paket-nach-maintainer-finden.txt

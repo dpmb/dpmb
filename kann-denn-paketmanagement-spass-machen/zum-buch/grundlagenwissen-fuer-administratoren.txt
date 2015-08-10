@@ -1,0 +1,38 @@
+// Datei: ./kann-denn-paketmanagement-spass-machen/zum-buch/grundlagenwissen-fuer-administratoren.txt
+
+// Baustelle: Fertig
+// Axel: Fertig
+
+==== Grundlagenwissen für Administratoren ====
+
+// Stichworte für den Index
+(((Werkzeuge,Grundwissen)))
+Der sichere Umgang mit der Paketverwaltung zählt zu Ihrem Grundwissen
+als Administrator, um ein UNIX-/Linux-System einrichten und in Bezug auf
+die eingesetzte Software betreuen zu können. Betreiben Sie Ihre Systeme
+als Benutzer in Eigenverantwortung, sind diese Kenntnisse für Sie im
+Alltag ebenso unverzichtbar.
+
+// Schlagworte für den Index
+(((LPI,Grundwissen)))
+(((LPI,Material)))
+(((LPI,Vorbereitung)))
+(((LPI,Zertifizierung)))
+Unabdingbar ist die Auseinandersetzung mit dem Paketmanagement für
+Zertifizierungen. Das Linux Professional Institute (LPI) widmet dem
+Thema in der Zertifikatsstufe LPIC-1 einen eigenen Schwerpunkt mit hoher
+Gewichtung.{empty}footnote:[https://www.lpi.org/study-resources/lpic-1-101-exam-objectives/]
+
+[TIP]
+.Material für Ihre LPIC-Prüfungen
+======
+Ihre Vorbereitung auf die anspruchsvollen Tests des LPI ergänzt das Buch
+``LPIC-1. Vorbereitung auf die Prüfungen des Linux Professional
+Institute'' von Peer Heinlein.{empty}footnote:[Open Source Press, 5.
+Auflage, ISBN 978-3-95539-012-9, deutsch, 501 Seiten,
+http://www.opensourcepress.de/de/produkte/LPIC-1/452/978-3-95539-012-9
+oder mittlerweile erschienene Neuauflagen zu den aktualisierten
+Prüfungsfragen des LPI.]
+======
+
+// Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/grundlagenwissen-fuer-administratoren.txt

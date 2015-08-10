@@ -1,0 +1,19 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/fuer-die-kommandozeile.txt
+
+// Baustelle: Fertig
+
+[[fuer-die-kommandozeile]]
+
+=== Für die Kommandozeile ===
+
+include::dpkg.txt[]
+
+include::apt.txt[]
+
+include::aptsh.txt[]
+
+include::wajig.txt[]
+
+include::cupt.txt[]
+
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/fuer-die-kommandozeile.txt

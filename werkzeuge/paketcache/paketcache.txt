@@ -1,0 +1,14 @@
+// Datei: ./werkzeuge/paketcache/paketcache.txt
+
+// Baustelle: Fertig
+
+[[paketcache]]
+
+== Paketcache ==
+
+include::hintergrundwissen.txt[]
+
+include::paketcache-status.txt[]
+
+include::paketcache-aufraeumen.txt[]
+// Datei (Ende): ./werkzeuge/paketcache/paketcache.txt

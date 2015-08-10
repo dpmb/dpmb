@@ -1,0 +1,11 @@
+// Datei: ./praxis/apt-mirror/reprepro.txt
+
+// Baustelle: Notizen
+
+[[reprepro]]
+
+=== reprepro ===
+
+* Paket <<Debian-Paket-reprepro>>
+* Optionen und Filter, um ein Repo zu erzeugen
+// Datei (Ende): ./praxis/apt-mirror/reprepro.txt

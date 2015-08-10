@@ -1,0 +1,31 @@
+// Datei: ./praxis/mobile-geraete/mobile-geraete.txt
+
+// Baustelle: Rohtext
+
+[[paketverwaltung-mit-eingeschraenkten-ressourcen-fuer-embedded-und-mobile-devices]]
+
+== Paketverwaltung mit eingeschränkten Ressourcen für Embedded und Mobile Devices ==
+
+Die Idee und Anregung für diese Thematik kommt dankenswerter Weise von
+Werner Heuser <<Sentinel4Mobile>>, einem langjährigen Berliner
+Spezialisten für Linux auf mobilen Geräten. Den Hintergrund bildet die
+Frage, welche Programme und Methoden optimal für mobile Geräte sind, um
+einerseits eine möglichst lange Nutzungsdauer zu ermöglichen und
+andererseits dabei nur so viel Ressourcen zu verbrauchen, wie unbedingt
+erforderlich sind. Wir betrachten das daher nachfolgend anhand der
+Richtgrößen Batterielaufzeit, belegter Speicherplatz, Bildschirmgröße
+und die Erfordernisse an die CPU.
+
+// Batterielaufzeit
+
+// Speicherplatz: localepurge, gehört hier erwähnt, aber eher nach
+// plattenplatz-sparen-mit-der-paketverwaltung.txt
+include::localepurge.txt[]
+// Ggf. Paradebeispiel N900 mit dem unsäglichen docpurge erwähnen: https://maemo.gitorious.org/maemo-af/docpurge/source/0bd88357713d7f554f119ab0c2ebaa676c433ec7:
+
+// Bildschirmgröße
+
+// Erfordernisse an die CPU
+
+// Debdelta gehört hier erwähnt, bzw. systeme-mit-schlechter-anbindung-warten.txt
+// Datei (Ende): ./praxis/mobile-geraete/mobile-geraete.txt

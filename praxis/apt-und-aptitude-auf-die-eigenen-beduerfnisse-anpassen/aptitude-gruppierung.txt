@@ -1,0 +1,16 @@
+// Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-gruppierung.txt
+
+// Baustelle: Notizen
+
+[[aptitude-gruppierung]]
+
+=== `aptitude`-Gruppierung ===
+
+ToDo:
+
+* Anordnung der Spalten in der Text-Modus-Oberfläche
+* Breite der Spalten
+* welche Spalten sind überhaupt darstellbar
+* wie stelle ich das ein
+
+// Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-gruppierung.txt

@@ -1,0 +1,185 @@
+// Datei: ./werkzeuge/paketoperationen/groesstes-installiertes-paket-finden.txt
+
+// Baustelle: Fertig
+// Frank: Axels-Zeugs-Korrekturlesen
+
+[[groesstes-installiertes-paket-finden]]
+
+=== Größtes installiertes Paket finden ===
+
+==== dpigs ====
+
+// Stichworte für den Index
+(((Debianpaket, dctrl-tools)))
+(((Debianpaket, debian-goodies)))
+(((dpigs)))
+(((grep-status)))
+Mit dem Programm `dpigs`{empty}footnote:[``pig'' ist Englisch für
+Schwein bzw. Sau. Es geht sozusagen um Debianpakete, die den
+Plattenplatz versauen, auch bekannt als ``Plattenplatzschweine''.] aus
+dem Paket
+'debian-goodies'{empty}footnote:[http://packages.debian.org/de/stable/debian-goodies]
+zeigen Sie die Programme bzw. Programmpakete an, die den meisten
+Speicherplatz auf ihrem Debiansystem belegen. Es wertet dazu die Ausgabe
+des Kommandos `grep-status` aus dem Paket
+'dctrl-tools'{empty}footnote:[http://packages.debian.org/de/stable/dctrl-tools]
+aus. Ausführlicher besprechen wir die Werkzeuge im Abschnitt Schlagworte
+verwenden (Debtags) (siehe <<suche-anhand-der-schlagworte>>)].
+
+Ein Aufruf ohne weitere Parameter listet Ihnen die zehn größten
+Speicherfresser auf ihrem System auf. Dabei enthält die erste Spalte die
+Größe in Kilobyte und die zweite Spalte den Paketnamen.
+
+//.Ausgabe von `dpigs`
+----
+$ dpigs
+399871 texlive-fonts-extra
+377071 texlive-latex-extra-doc
+129158 libreoffice-core
+91551 pdfstudio
+88963 libgl1-mesa-dri
+86913 texlive-lang-greek
+86446 texlive-pstricks-doc
+80298 libwine
+80178 openjdk-6-jre-headless
+80175 linux-image-3.2.0-4-686-pae
+$
+----
+
+// Stichworte für den Index
+(((dpigs, -n)))
+(((dpigs, --lines)))
+(((dpigs, -H)))
+(((dpigs, -S)))
+`dpigs` verfügt nur über einige wenige, aber durchaus nützliche
+Schalter. Um beispielsweise die Anzahl der ausgegebenen Pakete zu
+begrenzen, nutzen Sie die Option `-n` (Langform `--lines=N`), wobei `n`
+bzw. `N` ein Zahlenwert für die gewünschte Anzahl ist. Der Schalter `-S`
+zeigt die Pakete an, die hingegen die größten Quelldaten haben. Mit dem
+Schalter `-H` rechnet `dpigs` die Größenangaben in menschlich lesbare
+Werte um. Der Schalter `-H` steht hierbei als Abkürzung für 'human
+readable'. Kombinieren Sie die drei genannten Schalter, sieht die
+Recherche nach den fünf großen Paketen auf einem Desktopsystem in etwa
+folgendermaßen aus:
+
+//.Ausgabe von `dpigs` mit Einschränkung auf die fünf Spitzenreiter in menschenlesbarer Form
+----
+$ dpigs -S --lines=5 -H
+   1.0G texlive-extra
+ 299.7M libreoffice
+ 274.7M texlive-base
+ 131.4M chromium-browser
+ 120.5M calligra
+$
+----
+
+==== `aptitude` ====
+
+`aptitude` kann mit dem o.g. vorgestellten Programm `dpigs` problemlos
+mithalten. Es macht nur ein wenig mehr Mühe, die gewünschten
+Informationen zu erhalten. 
+
+Mit dieser Schrittfolge erhalten Sie eine entsprechend sortierte Liste in
+aufsteigender Reihenfolge in der Text-Modus-Oberfläche:
+
+. Mit key:[Ctrl,t] oder key:[F10] öffnen Sie die Menüleiste.
+. Dort wählen Sie den Eintrag ospmenu:[Ansichten,Neue einfache
+  Paketansicht] aus. 
+. Darin schränken Sie nun die Ansicht auf die installierten Pakete ein.
+  Dazu drücken Sie key:[l] (für ``limit'') und geben als Filter `~i` für
+``nur installierte Pakete'' ein. Den Vorgang schließen Sie mit der
+  Eingabetaste ab.
+. Nun fehlt nur noch die passende Sortierung. Diese erhalten Sie durch
+  das Drücken von key:[S] und der Eingabe von `installsize`. Mit
+  der Eingabetaste schließen Sie den Vorgang ab.
+. Jetzt springen Sie mit der key:[Ende]-Taste ans Ende der Liste und
+  sehen die schlimmsten Plattenplatzverbraucher ihres Systems.
+
+// Stichworte für den Index
+(((aptitude, search ~i)))
+(((aptitude, search --sort installsize)))
+Im Terminal finden Sie die zehn Pakete mit dem meisten 
+Plattenplatzverbrauch durch eine Kombination von `aptitude` und dem
+Standard-UNIX-Kommando `tail`. An `aptitude` übergeben Sie dabei neben
+dem Unterkommando `search` mehrere Optionen. Während `--sort
+installsize` für die Sortierung nach dem Paketattribut ``belegter
+Plattenplatzverbrauch'' sorgt, filtert `'~i'` nur alle installierten
+Pakete aus der Liste heraus. Die Ausgabe enthält den Paketstatus, den
+Namen des Pakets und die Paketbeschreibung in Kurzform (siehe
+<<liste-der-installierten-pakete-anzeigen-und-deuten>>). Der
+anschließende Aufruf des Kommandos `tail` ohne weitere Optionen
+beschränkt die Darstellung auf die letzten zehn Zeilen der Ausgabe von
+`aptitude` und somit die zehn größten Pakete.
+
+//.Suche nach den größten installierten Paketen mit `aptitude` (Namensliste)
+----
+$ aptitude search --sort installsize '~i' | tail
+i A cube2-data                 - demo game and content for the Cube2 engine
+i A nexuiz-data                - Nexuiz game data files
+i A torcs-data-tracks          - data files for TORCS game - Tracks set
+i A supertuxkart-data          - 3D kart racing game (data)
+i A flightgear-data-aircrafts  - FlightGear Flight Simulator -- standard ai
+i A flightgear-data-ai         - FlightGear Flight Simulator -- standard AI
+i A nexuiz-textures            - Textures for Nexuiz
+i A sauerbraten                - 3D first-person shooter game
+i A flightgear-data-base       - FlightGear Flight Simulator -- base files
+i A 0ad-data                   - Real-time strategy game of ancient warfare
+$
+----
+
+// Stichworte für den Index
+(((aptitude, Format Strings)))
+(((aptitude, -F)))
+(((aptitude, --display-format)))
+
+Möchten Sie zudem wissen, wieviel Platz die einzelnen Pakete
+verbrauchen, hilft Ihnen der Schalter `-F` (Langform `--display-format`)
+gefolgt von einem Formatstring weiter. Darüber steuern Sie die Ausgabe
+des Suchergebnisses von `aptitude`. Mit einem Formatstring legen Sie die
+Informationen und deren Reihenfolge fest, in der diese ausgegeben werden
+sollen (siehe `aptitude`-Formatstrings in <<aptitude-format-strings>>).
+
+In unserem Fall benötigen wir lediglich den Plattenplatzverbrauch und
+den Paketnamen. Die beiden Spalteninhalte spezifizieren Sie über die
+beiden Formatbezeichner `%I` für die Installationsgröße (engl.
+``installed size'') und `%p` für den Paketnamen (engl. ``package
+name''). Nachfolgende Darstellung ist aufsteigend, d.h. das
+zehntkleinste Paket sehen Sie in der ersten und das größte in der
+letzten Zeile der Auflistung.
+
+//.Suche nach den größten Paketen mit `aptitude` (Größe und Paketname), aufsteigende Sortierung
+----
+$ aptitude search -F '%I %p' --sort installsize '~i' | tail
+272 MB   cube2-data
+278 MB   nexuiz-data
+302 MB   torcs-data-tracks
+306 MB   supertuxkart-data
+320 MB   flightgear-data-aircrafts
+466 MB   flightgear-data-ai
+523 MB   nexuiz-textures
+652 MB   sauerbraten
+751 MB   flightgear-data-base
+1359 MB  0ad-data
+$
+----
+
+Für eine umgekehrte, absteigende Darstellung kommt noch das
+UNIX-Kommando `tac` ins Spiel. Über eine Pipe leiten Sie die Ausgabe von
+`tail` and `tac` weiter. Dieses dreht die Ausgabe um, sodaß die
+letzte Zeile zuerst ausgegeben wird, danach die vorletzte u.s.w. Die
+nachfolgende Ausgabe zeigt eine Auflistung der fünf größten Pakete in
+absteigender Reihenfolge. Da `tail` ohne Parameter stets 10 Zeilen
+ausgibt, wurde dessen Aufruf noch um die Angabe `-5` ergänzt.
+
+//.Suche nach den größten Paketen mit `aptitude` (Größe und Paketname), absteigende Sortierung
+----
+$ aptitude search -F '%I %p' --sort installsize '~i' | tail -5 | tac
+1359 MB  0ad-data
+751 MB   flightgear-data-base
+652 MB   sauerbraten
+523 MB   nexuiz-textures
+466 MB   flightgear-data-ai
+$
+----
+
+// Datei (Ende): ./werkzeuge/paketoperationen/groesstes-installiertes-paket-finden.txt

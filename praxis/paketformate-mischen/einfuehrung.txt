@@ -1,0 +1,38 @@
+// Datei: ./praxis/paketformate-mischen/einfuehrung.txt
+
+// Baustelle: Rohtext
+
+[[paketformate-mischen-einfuehrung]]
+
+=== Einführung ===
+
+Debian GNU/Linux und seine Derivate setzen auf das `deb`-Format auf.
+Eine Vielzahl Pakete stehen in diesem Format bereit und erlauben die
+Zusammenstellung und den Betrieb stabiler Systeme. Mitunter treten
+Situationen auf, die die Einbindung weiterer Software erfordern, die in
+einem anderen Paketformat vorliegt, bspw. `rpm`. Die Gründe dafür sind
+vielfältig:
+
+* Die Software wurde nur zusammengestellt und liegt bislang nur als
+`tar.gz`-Archiv vor.
+* Die Software ist bislang nicht anders paketiert, weil sich bspw. der
+Entwickler nur mit genau diesem Paketformat und dem Mechanismus zur
+Paketierung auskennt.
+* Das bestehende `deb`-Paket liegt zu weit zurück (``ist zu alt'') und
+neuere Features werden benötigt. Eine neuere Variante ist jedoch in
+einem anderen Paketformat erhältlich.
+* Das gewünschte Paket oder die benötigte Version wurde noch nicht in
+die stabile Veröffentlichung aufgenommen. Das Paket ist noch zu neu und
+liegt ``in Quarantäne''. 
+* Die Software bzw. das Debianpaket wurde noch nicht für ihre gewünschte
+Plattform portiert.
+
+Helfen Ihnen an dieser Stelle 'Debian Backports' (siehe
+<<debian-backports>>) oder das Mischen von Veröffentlichungen (siehe
+<<veroeffentlichungen-mischen>> nicht weiter, stellt die Verwendung
+eines Pakets im Fremdformat eine Variante zur Lösung dar. Nachfolgend
+gehen wir darauf ein, wie Ihnen dabei das Programm `alien` helfen kann
+(siehe <<fremdformate-mit-alien-hinzufuegen>>).
+
+
+// Datei (Ende): ./praxis/paketformate-mischen/einfuehrung.txt

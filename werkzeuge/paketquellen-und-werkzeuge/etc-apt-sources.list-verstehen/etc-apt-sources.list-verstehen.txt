@@ -1,0 +1,33 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/etc-apt-sources.list-verstehen.txt
+
+// Baustelle: Fertig
+
+[[etc-apt-sources.list-verstehen]]
+
+=== `/etc/apt/sources.list` verstehen ===
+
+// Format der Paketliste
+include::format-der-paketliste.txt[]
+
+// Format eines Eintrags
+include::format-eines-eintrags.txt[]
+
+// Beispieleinträge für offizielle Pakete
+include::beispieleintraege-fuer-offizielle-pakete.txt[]
+
+// Verzeichnis als Paketquelle
+include::verzeichnis-als-paketquelle.txt[]
+
+// Einträge für Sicherheitsaktualisierungen
+include::eintraege-fuer-sicherheitsaktualisierungen.txt[]
+
+// Einträge für nicht-offzielle Pakete
+include::eintraege-fuer-nicht-offizielle-pakete.txt[]
+
+// Einträge für Quellpakete
+include::eintraege-fuer-quellpakete.txt[]
+
+// Einträge für Deutschland
+include::eintraege-fuer-deutschland.txt[]
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/etc-apt-sources.list-verstehen.txt

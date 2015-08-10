@@ -1,0 +1,33 @@
+// Datei: ./werkzeuge/paketoperationen/neue-pakete-anzeigen.txt
+
+// Baustelle: Fertig
+
+[[neue-pakete-anzeigen]]
+
+=== Neue Pakete anzeigen ===
+
+Zu den neuen Paketen zählen die Pakete, die derzeit nicht installiert
+sind bzw. die noch nie installiert waren. Wurde ein Paket gelöscht, aber
+die Konfigurationsdatei blieb erhalten, gilt das entsprechende Paket
+nicht mehr als neu. 
+
+// Stichworte für den Index
+(((aptitude, search ~N])))
+(((aptitude, search ?new)))
+`aptitude` verfügt mit `~N` (Langform `?new`) über ein Suchmuster, um
+diese Pakete aufzuspüren. Als Kennung beginnt jede ausgegebene Zeile mit
+dem Kleinbuchstaben `p`, gefolgt vom Paketnamen und der
+Kurzbeschreibung zum Paket.
+
+//.Auflistung aller neuen Pakete mittels `aptitude` (Auszug)
+----
+$ aptitude search ~N
+p   0ad              - Echtzeit-Strategiespiel über antike Kriegs
+p   0ad-data         - Real-time strategy game of ancient warfare
+p   0ad-dbg          - Echtzeit-Strategiespiel über antike Kriegs
+p   2ping            - Ping-Hilfswerkzeug, um gerichteten Paketve
+p   2vcard           - Perl-Skript zur Konvertierung eines Adress
+...
+$
+----
+// Datei (Ende): ./werkzeuge/paketoperationen/neue-pakete-anzeigen.txt

@@ -1,0 +1,17 @@
+digraph "apt" {
+	rankdir=LR;
+	node [shape=box];
+	"apt" -> "libapt-pkg4.12" [color=blue,label="(>= 1.0.9.9)"];
+	"libapt-pkg4.12" -> "libbz2-1.0" [color=blue];
+	"libapt-pkg4.12" -> "liblzma5" [color=blue,label="(>= 5.1.1alpha+20120614)"];
+	"apt" -> "debian-archive-keyring" [color=blue];
+	"debian-archive-keyring" -> "gpgv" [color=blue];
+	"gpgv" -> "libbz2-1.0" [color=blue];
+	"apt" -> "gnupg" [color=blue];
+	"apt" [style="setlinewidth(2)"]
+	"gnupg" [shape=diamond];
+}
+// Excluded dependencies:
+// libc6 libgcc1 libstdc++6 multiarch-support zlib1g
+// total size of all shown packages: 7990272
+// download size of all shown packages: 2385438

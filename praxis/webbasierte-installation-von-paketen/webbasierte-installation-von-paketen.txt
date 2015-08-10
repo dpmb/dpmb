@@ -1,0 +1,30 @@
+// Datei: ./praxis/webbasierte-installation-von-paketen/webbasierte-installation-von-paketen.txt
+
+// Baustelle: Rohtext
+
+[[webbasierte-installation-von-paketen-mit-apturl]]
+== Webbasierte Installation von Paketen mit `apturl` ==
+
+In diesem Abschnitt beleuchten wir die Installation von `deb`-Paketen
+über das `apturl`-Protokoll (Langfassung: APT Protocol). Dahinter
+verbirgt sich eine Erweiterung für die Webbrowser Firefox/Iceweasel,
+Chromium, Konqueror, Opera und Epiphany (ab Gnome 3.6 umbenannt in Web).
+Voraussetzung dafür ist das Paket 'apturl' (<<Ubuntu-apturl>>) von
+Michael Vogt (<<Vogt-apturl>>). 
+
+Das Paket ist bislang nicht in Debian enthalten, aber für Ubuntu als PPA
+verfügbar. Voraussetzung dafür ist mindestens Ubuntu 7 'Feisty Fawn'
+(veröffentlicht im Frühjahr 2007), in den neueren Veröffentlichungen
+gehört es bisher zur Basisinstallation.
+
+// Sinn und Zweck
+include::sinn-und-zweck.txt[]
+
+// Risiken und Bedenken
+include::risiken-und-bedenken.txt[]
+
+// apturl in der Praxis
+include::apturl-in-der-praxis.txt[]
+
+
+// Datei (Ende): ./praxis/webbasierte-installation-von-paketen/webbasierte-installation-von-paketen.txt

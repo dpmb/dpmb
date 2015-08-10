@@ -1,0 +1,52 @@
+// Datei: ./praxis/debtags/pakete-um-schlagworte-ergaenzen.txt
+
+// Baustelle: Fertig
+
+[[pakete-um-schlagworte-ergaenzen]]
+
+=== Pakete um Schlagworte ergänzen ===
+
+// Stichworte für den Index
+(((Debtags Editor)))
+Nach dem derzeitigen Entwicklungsstand besteht keine Möglichkeit, über
+die Kommandozeile oder über graphische Werkzeuge die bereits vergebenen
+Schlagworte zu einem Paket zu verändern. Dafür ist der webbasierte
+'Debtags Editor'{empty}footnote:[http://debtags.debian.net/edit/] das
+Mittel der Wahl.
+
+In <<fig.debtags-gimp>> sehen Sie diesen im Webbrowser Firefox/Iceweasel
+und darin beispielhaft die Informationen des Pakets 'gimp' zur
+gleichnamigen Bildbearbeitungssoftware. Die Darstellung umfaßt zwei
+Spalten – links die Informationen zum ausgewählten Paket und rechts die
+vergebenen Schlagwörter.
+
+.Webseite zum Debtags-Projekt mit den Informationen zum Paket 'gimp'
+image::praxis/debtags/debtags-gimp.png[id="fig.debtags-gimp", width="50%"]
+
+Unter der Paketinformation stehen die verfügbaren und automatisch
+vorgeschlagenen Schlagwörter (Reiter `All tags` und `Suggested tags`).
+Letzteres umfaßt die Schlagworte, die eventuell noch fehlen und die Sie
+ergänzen können, sofern Ihnen diese passend erscheinen. Die Vorschläge
+basieren auf einem Automatismus, der sich auf ähnliche Pakete und deren
+bereits bestehende Klassifikation stützt und lediglich Empfehlungen für
+noch fehlende Schlagwörter gibt. Daher ist es hilfreich, die Vorschläge
+kritisch zu prüfen und danach ggf. die gesamte Liste der Eigenschaften
+des Pakets durchzugehen. Dabei prüfen Sie am besten Schritt für Schritt,
+ob alle Schlagworte stimmig vergeben wurden. Alle verfügbaren
+Schlagworte verbergen sich hinter dem Reiter `All tags`.
+
+In der rechten Leiste erscheinen zunächst die derzeit vergebenen Tags
+(bezeichnet mit `Current tags`). Darunter finden Sie die vorbereiteten
+Änderungen, bezeichnet mit `Changes`.
+
+Nachdem Sie in der linken Spalte ein Schlagwort mit einem Mausklick
+ausgewählt haben, wird dieses zunächst nur zur Liste der vorbereiteten
+Änderungen hinzugefügt. Um eine dieser vorbereiteten Änderungen wieder
+rückgängig  zu machen, wählen Sie das entsprechende Schlagwort aus der
+Liste der vorbereiteten Änderungen aus und entfernen es mit einem Klick
+darauf. Sind ihre vorbereiteten Änderungen vollständig, klicken Sie auf
+den Knopf `Submit` und übertragen damit die Ergänzungen zum jeweiligen
+Paket zur Debtags-Datenbank. Danach sind ihre Änderungen sofort für alle
+Benutzer verfügbar.
+
+// Datei (Ende): ./praxis/debtags/pakete-um-schlagworte-ergaenzen.txt

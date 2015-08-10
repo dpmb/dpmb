@@ -1,0 +1,159 @@
+// Datei: ./praxis/debtags/vergebene-schlagworte-anzeigen.txt
+
+// Baustelle: Fertig
+
+[[vergebene-schlagworte-anzeigen]]
+
+=== Vergebene Schlagworte anzeigen ===
+
+==== Auf der Kommandozeile ====
+
+// Stichworte für den Index
+(((debtags, cat)))
+(((debtags, show)))
+(((debtags, tag)))
+(((Debtags, Schlagworte anzeigen)))
+(((Debtags, Suche anhand von Schlagworten)))
+Hier ist das Programm `debtags` mit Hilfe der Unterkommandos `cat`,
+`show` und `tag` am besten geeignet. Während `cat` für 'alle' Pakete
+deren hinterlegte Schlagworte auflistet, erfordern `show` und `tag` als
+weitere Angabe im Aufruf noch den Namen des gewünschten Pakets. Zu
+diesem stellt `debtags` dann alle Informationen detailliert dar. In den
+ersten beiden Fällen kommt zusätzlich das UNIX-Werkzeug `grep` ins
+Spiel, welches Ihnen aus der Ausgabe jeweils die spezifische Zeile mit
+den Debtags herausfischt. Im ersten Fall benötigt `grep` den Paketnamen,
+hier beispielhaft am Paket 'xpdf' zu sehen.
+
+//.Auflistung der vergebenen Schlagwörter samt Wert für das Paket 'xpdf' anhand von `debtags cat`
+----
+$ debtags cat | grep xpdf
+xpdf: implemented-in::c++, interface::x11, role::program, scope::application, uitoolkit::motif, use::viewing, works-with-format::pdf, works-with::text, x11::application
+$
+----
+
+Im zweiten Fall ist lediglich die Zeile mit dem Stichwort `Tag`
+interessant – nachfolgend wiederum beispielhaft am Paket 'xpdf' zu
+sehen.
+
+//.Auflistung der vergebenen Schlagwörter samt Wert für das Paket 'xpdf' anhand von `debtags show`
+----
+$ debtags show xpdf | grep Tag
+Tag: implemented-in::c++, interface::x11, role::program, scope::application, uitoolkit::motif, use::viewing, works-with-format::pdf, works-with::text, x11::application
+$
+----
+
+Im dritten Fall erhalten Sie eine Auflistung mit einem Schlagwort pro
+Zeile in alphabetisch aufsteigender Abfolge, was bspw. im Rahmen einer
+Weiterverarbeitung durch Skripte nützlich ist. Für das Paket `xpdf`
+sieht das wie folgt aus:
+
+//.Auflistung der vergebenen Schlagwörter samt Wert für das Paket 'xpdf' anhand von `debtags tag ls`
+----
+$ debtags tag ls xpdf
+implemented-in::c++
+interface::x11
+role::program
+scope::application
+uitoolkit::motif
+use::viewing
+works-with-format::pdf
+works-with::text
+x11::application
+$
+----
+
+Obige Ausgaben besagen, daß 'xpdf' als X11-Programm mit einer
+entsprechenden graphischen Schnittstelle einsortiert ist
+(`interface::x11`, `x11::application`), welches zu den Anwendungen zählt
+(`role::program`, `scope::application`) und genauer gesagt zu den
+Betrachtern für PDF und Text gehört (`use::viewing`,
+`works-with-format::pdf`, `works-with::text`). Ersichtlich ist außerdem,
+daß 'xpdf' das Motif-Toolkit verwendet (`uitoolkit::motif`) und in der
+Sprache C++ entwickelt wurde (`implemented-in::c++`).
+
+// Stichworte für den Index
+(((debtags, grep --facets)))
+(((Debtags, Schlagworte anzeigen)))
+Benötigen Sie zu einem Paket stattdessen lediglich die Namen der
+vergebenen Schlagworte ohne deren konkreten Wert, erreichen Sie das über
+den Aufruf von `debtags` mit Hilfe dessen Unterkommandos `grep` und des
+Schalters `--facets`, welches Sie wiederum über das UNIX-Kommando `grep`
+und dem Paketnamen filtern. Nachfolgend sehen Sie das für die Recherche
+zum Paket 'apt-move'{empty}footnote:[https://packages.debian.org/de/stable/apt-move].
+
+//.Auflistung der vergebenen Schlagwörter ohne Wert für das Paket 'apt-move'
+----
+$ debtags grep --facets | grep apt-move
+apt-move: hardware, implemented-in, interface, role, scope, suite, use, works-with
+$
+----
+
+==== Integration in `aptitude` ====
+
+// Stichworte für den Index
+(((Debtags, Schlagworte in aptitude anzeigen)))
+
+Sofern das Paket 'debtags' auf ihrem System installiert ist, stellt auch
+`aptitude` die hinterlegten Schlagworte als Zusatzinformationen zum gerade
+von Ihnen ausgewählten Paket dar. <<fig.aptitude-xpdf-debtags>> zeigt
+dies ebenfalls für den PDF-Betrachter `xpdf` und das gleichnamige Paket
+dazu.
+
+.Darstellung der Schlagworte zum Paket 'xpdf' in `aptitude`
+image::praxis/debtags/aptitude-xpdf-debtags.png[id="fig.aptitude-xpdf-debtags", width="50%"]
+
+Daß die Übersetzung von Begriffen keine triviale Aufgabe ist, sehen Sie
+in der Paketbeschreibung. Anstatt von Schlagwörtern wird in der
+deutschen Version von `aptitude` der Begriff Markierungen benutzt, was
+ebenfalls zutreffend ist.
+
+==== Graphische Programme ====
+
+// Stichworte für den Index
+(((Debianpaket, ara)))
+(((Debianpaket, goplay)))
+(((PackageSearch)))
+(((Xara)))
+Debtags zeigen Ihnen PackageSearch und Xara an, ebenso die bereits oben
+genannten Programme aus dem Paket 'goplay'. Alle Werkzeuge haben
+gemeinsam, daß die Debtags-Informationen auf der rechten Seite der
+Benutzeroberfläche zu finden sind – entweder in der oberen oder unteren
+Hälfte.
+
+Bei PackageSearch tragen Sie zuerst das gewünschte Paket über das
+Suchfeld unten rechts ein und sehen danach die Debtags-Informationen im
+darunter angeordneten Reiter `Details`. Bei Xara ist ihr Ziel das
+Informationsfeld oben rechts, welches gefüllt wird, nachdem Sie zuvor
+links unten das Paket und danach links oben den Eintrag `Tag` aus der
+Liste der Paketdetails ausgewählt haben.
+
+<<fig.xara-show-debtags>> zeigt Ihnen das Suchergebnis zum Paket 'ara'.
+Dieses Softwarepaket wurde in den beiden Sprachen C++ und Ocaml
+entwickelt (`implemented-in::c++`, `implemented-in::ocaml`), verfügt
+über eine Kommandozeilenschnittstelle (`interface::commandline`) und
+zählt ebenfalls zu den Anwendungen (`role::program`,
+`scope::application`). `ara` dient zur Suche in den Softwarepaketen
+(`use::searching`, `works-with::software-package`) und ist mit dem
+Debtag `suite::debian` als Debian-spezifisches Programm gekennzeichnet.
+
+.Darstellung der Schlagworte zum Paket 'xara-gtk' in Xara
+image::praxis/debtags/xara-show-debtags.png[id="fig.xara-show-debtags", width="50%"]
+
+==== Über den Webbrowser ====
+
+// Stichworte für den Index
+(((Paketsuche)))
+
+Für diese Aktivität ist zunächst die Webseite des Debian-Projekts und
+insbesondere der Unterpunkt
+`Paketsuche`{empty}footnote:[https://www.debian.org/distrib/packages#search_contents]
+ein zentraler Anlaufpunkt. Wie bereits eingangs erwähnt, listet Ihnen
+die Paketsuche automatisch die vergebenen Schlagwörter für ein Paket auf
+(siehe dazu <<fig.debtags-xara-gtk>>).
+
+Ebenso aufschlußreich und noch deutlich ausführlicher ist der 'Debtags
+Editor'. Darüber sehen Sie nicht nur die vergebenen Schlagwörter für ein
+Paket, sondern korrigieren diese bei Bedarf direkt. Mehr dazu erfahren
+Sie in <<pakete-um-schlagworte-ergaenzen>>.
+
+// Datei (Ende): ./praxis/debtags/vergebene-schlagworte-anzeigen.txt

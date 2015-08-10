@@ -1,0 +1,36 @@
+// Datei: ./anhang/anhang-debian-architekturen/architekturen-zukunft.txt
+// Baustelle: Fertig
+
+[[anhang-debian-architekturen-zukunft]]
+=== Architekturen, deren Unterstützung vorgesehen ist ===
+
+// Stichworte für den Index
+(((Debian, Architekturen)))
+(((Debian, Ports)))
+Folgende Architekturen werden vom Debian-Ports-Projekt bereits
+unterstützt und auf eine Aufnahme in Debian vorbereitet:
+
+powerpcspe (powerpc-linux-gnuspe)::
+PowerPC-Prozessoren mit Signal Processing Engine.
+
+ppc64 (powerpc64-linux-gnu)::
+64-Bit-PowerPC-Prozessoren mit VMX-Einheit.
+
+sh4::
+SuperH, eine Portierung auf Hitachis SuperH-Prozessoren.
+
+sparc64 (sparc64-linux-gnu)::
+SPARC, vollständig 64-Bit.
+
+x32 (x86_64-linux-gnux32)::
+x86 (PC) 32-Bit auf AMD 64-Bit-CPUs mit AMD64-Erweiterung und Intel CPUs
+mit EM64T-Erweiterung.
+
+Folgende Architektur existiert und wird von einzelnen Entwicklern
+aufgebaut, ist aber beim Debian-Ports-Projekt noch nicht verfügbar:
+
+avr32 (avr32-linux-gnu)::
+Atmel 32-Bit RISC. Portierung auf Atmels 32-Bit RISC-Architektur AVR32;
+scheint teilweise wieder eingeschlafen zu sein.
+
+// Datei (Ende): ./anhang/anhang-debian-architekturen/architekturen-zukunft.txt

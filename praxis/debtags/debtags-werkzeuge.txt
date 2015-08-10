@@ -1,0 +1,171 @@
+// Datei: ./praxis/debtags/debtags-werkzeuge.txt
+
+// Baustelle: Fertig
+
+[[debtags-werkzeuge]]
+=== Debtags-Werkzeuge ===
+
+Mittlerweile hat das Debtags-Konzept entsprechende Verbreitung gefunden
+und ist in einer ganzen Reihe von Werkzeugen verfügbar. Der
+Funktionsumfang variiert dabei erheblich.
+
+// Stichworte für den Index
+(((Debianpaket, debtags)))
+(((debtags)))
+(((debtags-fetch)))
+(((debtags-submit-patch)))
+(((Debtags, Schlagworte aktualisieren)))
+(((Debtags, Schlagworte anzeigen)))
+(((Debtags, Suche anhand von Schlagworten)))
+Das Herzstück auf der _Kommandozeile_ bildet das Paket 'debtags'
+{empty}footnote:[http://packages.debian.org/de/stable/debtags]. Dieses
+beinhaltet die Programme `debtags`, `debtags-fetch` und
+`debtags-submit-patch`. Ersteres zeigt Ihnen die bereits vergebenen
+Schlagworte für ein Paket an und ermöglicht Ihnen anhand der Schlagworte
+in der Paketdatenbank eine Suche (siehe dazu
+<<suche-anhand-der-schlagworte>>). Mit den anderen beiden Programmen
+stöbern Sie im gesamten Vokabular (``Schlagwortschatz''), nehmen darin
+Veränderungen vor und laden ihre Änderungen zur zentralen
+Vokabulardatenbank hoch (siehe
+<<verwendetes-vokabular-bearbeiten-und-erweitern>>).
+
+// Stichworte für den Index
+(((Debianpaket, dctrl-tools)))
+(((Debtags, Schlagworte anzeigen)))
+(((grep-aptavail)))
+(((grep-available)))
+(((grep-debtags)))
+(((grep-dctrl)))
+(((grep-status)))
+Ebenso unverzichtbar ist das Paket
+'dctrl-tools'{empty}footnote:[http://packages.debian.org/de/stable/dctrl-tools],
+welches Ihnen die Recherche im Paketbestand erleichtert und dabei die
+vergebenen Schlagworte der Pakete auswertet. Es stellt mehrere Programme
+bereit, die jedoch stets als symbolische Links auf das
+Kommandozeilenwerkzeug `grep-dctrl` ausgeführt sind und dieses mit
+spezifischen Parametern aufrufen. Dazu zählen `grep-available`,
+`grep-aptavail`, `grep-debtags` und `grep-status`. Anwendungsbeispiele
+zu `grep-available` sind das Auflisten bekannter Paketnamen (siehe
+<<bekannte-paketnamen-auflisten>>) sowie das Finden von Paketen anhand
+der Begriffe, die in der Paketbeschreibung enthalten sind (siehe dazu
+<<pakete-ueber-die-paketbeschreibung-finden>>). Während Sie mittels
+`grep-aptavail` lediglich in der Liste der verfügbaren Pakete und über
+den Namen der darin enthaltenen Dateien stöbern (siehe ebenfalls
+<<bekannte-paketnamen-auflisten>> und
+<<paketinhalte-anzeigen-apt-file>>), benutzt `grep-debtags` stattdessen
+die vergebenen Debtags als Grundlage zur Recherche. Mit dem Werkzeug
+`grep-status` erfragen Sie hingegen den aktuellen Status eines Pakets
+(siehe dazu mehr in <<paketstatus-erfragen>>).
+
+// Stichworte für den Index
+(((ara)))
+(((Debianpaket, ara)))
+(((Debtags, Suche anhand von Schlagworten)))
+Eine kleine und zunächst unscheinbar wirkende Anwendung ist `ara` aus
+dem gleichnamigen
+Debianpaket{empty}footnote:[http://packages.debian.org/de/stable/ara].
+Ebenso wie das vorgenannte `grep-dctrl` stöbern Sie damit im
+Paketbestand. Mittels boolescher Ausdrücke kombinieren Sie die
+gewünschten Suchfelder. Die nachfolgende Ausgabe präsentiert einen
+Ausschnitt des Suchergebnisses in tabellarischer Form bestehend aus dem
+Paketnamen, dessen Größe und dem Paketmaintainer beispielhaft zu allen
+Debianpaketen, die zur Kategorie 'utils' (Werkzeuge) gehören, zudem vom
+Window Manager XFCE abhängen oder kleiner als 10000 Bytes sind und bzgl.
+der Priorität als 'optional' eingestuft sind (siehe dazu
+<<paket-prioritaet-und-essentielle-pakete>>).
+
+//.Recherche mittels `ara` nach optionalen Paketen zum Window Manager XFCE (Auswahl)
+----
+$ ara -fields Package,Size,Maintainer:30 -table 'section=utils & (depends:(xfce) | size<10000) & priority=optional'
++--------------------------------+------+--------------------------------+
+| Package                        | Size | Maintainer                     |
++--------------------------------+------+--------------------------------+
+| acpitail                       | 8340 | Debian Acpi Team <pkg-acpi-... |
+| athena-jot                     | 9876 | Francesco Paolo Lovergine <... |
+| autotrash                      | 9796 | Lorenzo De Liso <blackz@ubu... |
+| binclock                       | 9540 | Nico Golde <nion@debian.org>   |
+| colortest-python               | 9052 | Jari Aalto <jari.aalto@cant... |
+| createfp                       | 9982 | Rene Engelhard <rene@debian... |
+| ddir                           | 9776 | Jari Aalto <jari.aalto@cant... |
+| eatmydata                      | 7778 | Modestas Vainius <modax@deb... |
+| ksshaskpass                    | 9426 | Armin Berres <armin+debian@... |
+| laptop-detect                  | 5212 | Otavio Salvador <otavio@deb... |
+| leave                          | 7584 | Josip Rodin <joy-packages@d... |
+| zeitgeist                      | 7570 | Siegfried-Angel Gevatter Pu... |
+| zinnia-utils                   | 5336 | IME Packaging Team <pkg-ime... |
+| ziptorrent                     | 7714 | Fathi Boudra <fabo@debian.org> |
++--------------------------------+------+--------------------------------+
+$
+----
+
+// Stichworte für den Index
+(((Adept)))
+(((Ara)))
+(((Debianpaket, adept)))
+(((Debianpaket, ara)))
+(((Debianpaket, packagesearch)))
+(((Debianpaket, xara-gtk)))
+(((PackageSearch)))
+(((Xara)))
+Die in <<gui-zur-paketverwaltung>> bereits vorgestellten _graphischen
+Werkzeuge_ Synaptic, SmartPM, das Ubuntu Software Center, Gdebi und
+PackageKit können bislang nicht mit dem Thema Debtags umgehen.
+Stattdessen entstanden auf der Grundlage der Bibliotheken zu Debtags
+mehrere Alternativen, die von Ihnen zum Teil ein sehr unübliches
+Bedienritual erfordern. Dazu gehören
+PackageSearch{empty}footnote:[http://packages.debian.org/de/stable/packagesearch],
+Adept{empty}footnote:[http://packages.debian.org/de/stable/adept] und
+Xara{empty}footnote:[http://packages.debian.org/de/stable/xara-gtk].
+Letzteres ist die X11-Version des bereits oben gezeigten
+Kommandozeilenwerkzeugs `ara`. Alle Programme bieten die Suche anhand
+der Debtags über die Paketdatenbank an und verfügen darüberhinaus auch
+über eine einfache Schnittstelle zur Paketverwaltung.
+
+// Stichworte für den Index
+(((Debianpaket, goplay)))
+(((goadmin)))
+(((golearn)))
+(((gonet)))
+(((gooffice)))
+(((goplay)))
+(((gosafe)))
+(((goscience)))
+(((goweb)))
+Im Paket 'goplay'{empty}footnote:[https://packages.debian.org/de/stable/goplay]
+verbergen sich die einzelnen Werkzeuge `goadmin`, `golearn`, `gonet`,
+`gooffice`, `goplay`, `gosafe`, `goscience` und `goweb`. Jedes der
+genannten Programme ist auf eine spezifische Paketkategorie von Debian
+ausgerichtet, so z.B. `goplay` auf Spiele (siehe <<fig.goplay>>),
+`golearn` auf Lernprogramme und `goscience` auf wissenschaftliche
+Werkzeuge (siehe dazu <<sortierung-der-pakete-nach-verwendungszweck>>).
+
+.Suche nach Spielen anhand von Debtags
+image::praxis/debtags/goplay.png[id="fig.goplay", width="50%"]
+
+// Stichworte für den Index
+(((Debianpaket, debtags-edit)))
+(((Debtags, Debtags Editor)))
+(((Debtags, Enrico Zini)))
+Zur vereinfachten Bearbeitung des Vokabulars hat Enrico Zini vor Jahren
+eine graphische Benutzeroberfläche namens 'Debtags Editor' entworfen (Paket
+'debtags-edit'{empty}footnote:[http://packages.debian.org/de/stable/debtags-edit]).
+Diese befindet sich derzeit im Dornröschenschlaf und darauf gehen wir in
+<<verwendetes-vokabular-bearbeiten-und-erweitern>> ein.
+
+// Stichworte für den Index
+(((Debtags, Debtags Editor)))
+(((Debtags, Schnittstellen)))
+(((Debtags, Suche anhand von Schlagworten)))
+Als _Schnittstellen über den Webbrowser_ stehen Ihnen als Variante eins
+die Paketsuche über die Debian-Webseite zur
+Verfügung{empty}footnote:[http://debtags.debian.net/search]. Bei den
+Suchergebnissen werden die Debtags des jeweiligen Pakets von vornherein
+mit angezeigt (siehe <<fig.debtags-xara-gtk>>). Variante zwei ist der
+'Debtags Editor', welchen wir in <<pakete-um-schlagworte-ergaenzen>>
+genauer besprechen.
+
+.Debian Tags zum Paket 'xara-gtk'
+image::praxis/debtags/debtags-xara-gtk.png[id="fig.debtags-xara-gtk", width="50%"]
+
+
+// Datei (Ende): ./praxis/debtags/debtags-werkzeuge.txt

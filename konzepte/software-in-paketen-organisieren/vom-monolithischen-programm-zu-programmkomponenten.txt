@@ -1,0 +1,95 @@
+// Datei: ./konzepte/software-in-paketen-organisieren/vom-monolithischen-programm-zu-programmkomponenten.txt
+
+// Baustelle: Fertig
+// Axel: Fertig
+
+[[vom-monolithischen-programm-zu-programmkomponenten]]
+=== Vom monolithischen Programm zu Programmkomponenten ===
+
+Computerprogramme sind vergleichbar mit Kochrezepten und umfassen eine
+Folge von Anweisungen, die nacheinander abgearbeitet werden. Einfachere,
+kleine Programme sind häufig noch überschaubar und somit monolithisch.
+Sie beinhalten den gesamten Programmcode, der in einer einzigen Datei
+bereitgestellt wird.
+
+//  ** heute: mehrteilig, d.h. aus vielen Einzelteilen, bspw. Binärcode, Shared Libraries/Shared Objects (Bibliotheken), Konfigurationsdateien, plattformspezifischen Erweiterungen
+//
+//  ** Software ist komplex und besteht aus vielen, unterschiedlichen Komponenten, die voneinander abhängig sind, bspw.
+//    *** Kompilierte Programme (Programme geschrieben in C, C++, Haskell, …)
+//    *** Skripte (Programme geschrieben in Perl, Python, Ruby, Tcl, …)
+//    *** Bibliotheken (kompilierte wie auch in Skriptsprachen)
+//    *** Daten (Wörterbücher, Grafiken, Musik, Bücher, …)
+//    *** Konfigurationsdateien
+
+// Stichworte für den Index
+(((Debianpaket, apt)))
+(((Debianpaket, apt-doc)))
+(((Debianpaket, apt-transport-https)))
+(((Debianpaket, apt-utils)))
+(((Debianpaket, libapt-inst)))
+(((Debianpaket, libapt-pkg)))
+(((Debianpaket, libapt-pkg-dev)))
+(((Debianpaket, libapt-pkg-doc)))
+(((Paketbeschreibung)))
+(((Paketkategorie)))
+(((Paketname)))
+(((Softwarekomponenten)))
+(((Softwarekomponenten, Zerlegung in Pakete)))
+Während zu Beginn der Informationsverarbeitung noch eine Tontafel, ein
+Holzstab mit Einkerbungen oder auch nur ein Lochstreifen zur Erfassung
+einer Folge von Anweisungen ausreichte, paßt heutiger Programmcode nur
+noch selten auf eine einzige Bildschirmseite{empty}footnote:[Dr.
+Friedrich Naumann: Vom Abakus zum Internet: die Geschichte der
+Informatik. Darmstadt, Primus-Verlag, 2001, ISBN 3-89678-224-X]. Ein
+Großteil der aktuell genutzten Software ist daher mehrteilig und überaus
+komplex. Dabei spielen viele, unterschiedliche Komponenten zusammen,
+erfüllen verschiedene Aufgaben und bedingen einander. Dazu gehören
+kompilierte Programme, Skripte, Bibliotheken, Daten und
+Konfigurationsdateien. Die Paketierung der einzelnen Komponenten folgt
+eigenen Regeln, deren Konventionen nur zum Teil festgeschrieben sind und
+sich auch von Distribution zu Distribution etwas unterscheiden.
+<<tab.paketierung-apt>> zeigt die Zerlegung in einzelnen Pakete am
+Beispiel von APT. Dabei beinhaltet die linke Spalte den generischen
+Paketnamen ohne Nennung von Versionsnummer und Architektur, die mittlere
+Spalte die Kategorie, der das Paket zugeordnet ist (siehe
+<<sortierung-der-pakete-nach-verwendungszweck>>) und die rechte Spalte
+eine kurze Paketbeschreibung.
+
+.Paketierung der Komponenten am Beispiel von APT
+[frame="topbot",options="header",id="tab.paketierung-apt"]
+|====
+| Paketname | Paketkategorie | Komponente und Bedeutung
+| 'apt' | Administration ('admin') | Paketmanager für die Kommandozeile (siehe <<apt>>)
+| 'apt-doc' | Dokumentation ('doc') | Dokumentation zum Paket 'apt'
+| 'apt-transport-https' | Administration ('admin') | APT-Plugin für HTTPS-Support
+| 'apt-utils' | Administration ('admin') | Hilfsprogramme für APT
+| 'libapt-inst' | Bibliotheken ('libs') | Laufzeitbibliothek zum Paketformat (siehe <<apt-und-bibliotheken>>)
+| 'libapt-pkg-dev' | Bibliotheken zur Entwicklung ('libdevel') | Entwicklerdateien zu 'libapt-pkg' (siehe <<apt-und-bibliotheken>>)
+| 'libapt-pkg-doc' | Dokumentation ('doc') | Dokumentation zur Laufzeitbibliothek 'libapt-pkg' (siehe <<apt-und-bibliotheken>>)
+| 'libapt-pkg' | Bibliotheken ('libs') | Laufzeitbibliothek zur Paketverwaltung (siehe <<apt-und-bibliotheken>>)
+|====
+
+[TIP]
+.Benennung eines Debianpaketes und Paketkategorien
+====
+In <<benennung-eines-debian-pakets>> beleuchten wir die Benennung und
+Abfolge der Komponenten in den Paketnamen. Eine genaue Auflistung und
+Bedeutung der Paketkategorien lesen Sie in
+<<sortierung-der-pakete-nach-verwendungszweck>>.
+====
+
+//  ** Idee dahinter:
+//    *** bestehende Komponenten und erfolgte Entwicklungsarbeit nutzen
+//    *** nicht das Rad jedesmal neu erfinden
+
+Die Ideen hinter der Zerlegung in einzelne Komponenten sind ganz
+unterschiedlich und ergeben sich aus der Entwicklung, dem Ausrollen und
+der nachfolgenden Pflege einer Software. Hauptmotivation ist dabei
+häufig, nicht das Rad jedes Mal neu erfinden zu müssen und stattdessen
+bereits bestehende Komponenten zu integrieren, die etabliert und
+bekanntermaßen einen gewissen Qualitätsstandard erfüllen. Im
+Open-Source-Bereich erfolgt die Entwicklung weltweit verteilt, daher ist
+hier eine Zerlegung in kleinere Einheiten und ``Bausteine'' häufig von
+großem Nutzen. Damit können Aufgaben und Komponenten besser an kleine,
+spezialisierte Teams verteilt werden.
+// Datei (Ende): ./konzepte/software-in-paketen-organisieren/vom-monolithischen-programm-zu-programmkomponenten.txt

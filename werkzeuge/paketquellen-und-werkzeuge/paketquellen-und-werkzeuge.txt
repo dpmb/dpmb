@@ -1,0 +1,78 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/paketquellen-und-werkzeuge.txt
+
+// Baustelle: Fertig
+
+[[paketquellen-und-werkzeuge]]
+
+== Paketquellen und Werkzeuge ==
+
+// .Ziele:
+// ****
+// 
+// * Was ist eine Paketquelle
+// * Paketquellen eintragen und ändern
+// * Paketmirror festlegen
+//   - allgemein
+//   - netselect + apt-spy
+//   - automatisiert
+// * Werkzeuge zum Ändern der Paketliste
+//   - während der Installation (ggf. veraltet)
+//   - im Nachgang, Images hinzufügen
+//   - im Nachgang, automatisiert
+//   - im Nachgang, über graphische Oberfläche
+//   - im Nachgang, webbasiert
+// * Paketquelle überprüfen
+// * Liste der Paketquellen und verfügbare Pakete aktualisieren
+// * Empfehlung zum Ablauf für das Hinzufügen und Ändern von Paketquellen
+// * Paketliste - Zusammenhang Liste und Cache
+// * Paketliste reparieren
+// 
+// ****
+
+// Was ist eine Paketquelle
+include::paketquellen.txt[]
+
+// Empfehlung zum Ablauf für das Hinzufügen und Ändern von Paketquellen
+include::empfehlung-zum-ablauf-fuer-das-hinzufuegen-und-aendern-von-paketquellen.txt[]
+
+// Paketquellen eintragen und ändern
+include::etc-apt-sources.list-verstehen/etc-apt-sources.list-verstehen.txt[]
+
+// Paketmirror festlegen
+// - allgemein
+include::geeigneten-paket-mirror-auswaehlen.txt[]
+
+// - netselect + apt-spy
+include::am-besten-erreichbaren-paketmirror-finden/am-besten-erreichbaren-paketmirror-finden.txt[]
+
+// - automatisiert
+include::automatisiertes-auswaehlen-von-paketquellen.txt[]
+
+// Werkzeuge zum Ändern der Paketliste
+// - während der Installation (ggf. veraltet)
+include::apt-setup.txt[]
+
+// - im Nachgang, Images hinzufügen
+include::physische-installationsmedien-mit-apt-cdrom-einbinden.txt[]
+
+// - im Nachgang, automatisiert
+include::eintraege-mit-add-apt-repository-im-griff-behalten.txt[]
+
+// - im Nachgang, über graphische Oberfläche
+include::einstellungen-synaptic.txt[]
+
+// - im Nachgang, webbasiert
+include::debian-und-ubuntu-sources-list-generator.txt[]
+
+// Paketquelle auf Echtheit überprüfen
+include::paketquelle-auf-echtheit-ueberpruefen.txt[]
+
+// Liste der Paketquellen und verfügbare Pakete aktualisieren
+include::liste-der-verfuegbaren-pakete-aktualisieren.txt[]
+
+// Paketliste - Zusammenhang Liste und Cache
+include::lokale-paketliste-und-paketcache.txt[]
+
+// Paketliste reparieren
+include::lokale-paketliste-reparieren.txt[]
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/paketquellen-und-werkzeuge.txt

@@ -1,0 +1,105 @@
+// Datei: ./praxis/debtags/debtags-projekt.txt
+
+// Baustelle: Fertig
+
+[[debtags-projekt]]
+
+=== Kurzinfo zum Debtags-Projekt ===
+
+// Stichworte für den Index
+(((DebConf)))
+(((Debtags)))
+(((Debtags, Enrico Zini)))
+(((Paketbeschreibung, Debtags)))
+(((Paketklassifikation)))
+Um den eingangs zunehmend stärker ins Gewicht fallenden Widrigkeiten zu
+begegnen, nahm sich der italienische Debian-Entwickler Enrico Zini im
+Jahre 2003 des Problems an. Er orientierte sich dabei an der Art und
+Weise, wie Bücher und Dokumente von je her anhand von Schlüsselworten
+und Kategorien indexiert und klassifiziert werden. Zur
+Debian-Entwicklerkonferenz DebConf im Jahre 2005 in
+Helsinki{empty}footnote:[http://debconf5.debconf.org/] stellte er sein
+Projekt 'Debtags'{empty}footnote:[http://debtags.debian.net/] vor,
+welches die Debianpakete und deren Beschreibung um geeignete Stichworte
+oder Attribute ergänzt und damit die Granularität der Suche deutlich
+erhöht.
+
+// Stichworte für den Index
+(((Debianpaket, debtags)))
+Der Projektname 'Debtags' leitet sich von den beiden Worten _Debian_ und
+_tags_ ab, wobei sich letzteres mit Schlagwort, Markierung, Stichwort,
+Etikettierung oder Attribut ins Deutsche übersetzen läßt. Enrico Zini
+pflegt dazu das gleichnamige Paket
+'debtags'{empty}footnote:[http://packages.debian.org/de/stable/debtags],
+welches sehr schnell in den regulären Paketbestand aufgenommen wurde.
+Seit Debian 4.0 _Etch_ sind die Debtags ein regulärer Bestandteil jeder
+Paketbeschreibung.
+
+// Stichworte für den Index
+(((Debtags, Facetten)))
+(((Debtags, Klassifikationsschema)))
+(((Debtags, Schlagworte)))
+Den hier angestoßenen Vorgang kennen Bibliothekare sowie Spezialisten
+zum Information Retrieval und zur Suchmaschinenoptimierung – engl. SEO
+als Abkürzung für Search Engine Optimization – unter dem Fachbegriff
+Verschlagwortung von Inhalten und Indexierung von Dokumenten. Gleiche
+Sachverhalte werden dabei durch einheitliche Begriffe repräsentiert. In
+Enrico Zinis Klassifikationsschema entspricht ein verwendeter Begriff
+einem Aspekt oder einer spezifischen Eigenschaft eines Pakets.
+
+Jedes Paket kann beliebig viele Schlagworte besitzen, sogenannte
+Mehrfachattribute oder Facetten. Daher heißt das Klassifikationsschema
+auch Facettenklassifikation – englisch _faceted classification_. Die im
+Schema verwendeten Begriffe orientieren sich an der Umgangssprache und
+umfassen bspw. 'interface' (Benutzerschnittstelle des Programms),
+'protocol' (verwendetes oder unterstütztes Netzwerkprotokoll) oder
+'works-with-format' (unterstütztes bzw. akzeptiertes Datenformat).
+Sowohl die Liste der verwendeten Schlagworte, als auch die bereits
+vergebenen Schlagworte für ein Paket können bei Bedarf von jedem
+Interessierten unkompliziert ergänzt und korrigiert werden.
+
+// Stichworte für den Index
+(((Debtags, /var/lib/debtags/vocabulary)))
+Als Datenbank zu den Schlagworten fungiert eine Textdatei, die sich
+unter `/var/lib/debtags/vocabulary` befindet. Neben dem Hauptbegriff 
+(``Facette'') finden Sie eine Beschreibung und ggf. auch eine
+Statusinformation. Nachfolgend sehen Sie einen Ausschnitt aus dem
+Abschnitt `interface`.
+
+.Klassifikation der Benutzerschnittstelle über die Facette `interface` (Ausschnitt)
+----
+Facet: interface
+Description: User Interface
+ What kind of user interface the package provides
+Status: needing-review
+
+Tag: interface::3d
+Description: Three-Dimensional
+
+Tag: interface::commandline
+Description: Command Line
+
+Tag: interface::text-mode
+Description: Text-based Interactive
+----
+
+Wurden die Debian-Pakete entsprechend markiert, vereinfacht sich darüber
+die Suche nach passenden Paketen erheblich (siehe Vergebene Schlagworte
+anzeigen in <<vergebene-schlagworte-anzeigen>> und Suche anhand der
+Schlagworte in <<suche-anhand-der-schlagworte>>). Damit profitieren Sie
+als Nutzer sofort von dem Klassifikationsschema und können bei Interesse
+gleichzeitig zu dessen Komplettierung beitragen, indem Sie Debianpakete,
+die noch unvollständig kategorisiert oder gänzlich ohne Attribute sind,
+um weitere Schlagworte ergänzen. In Folge haben alle Debian-Benutzer
+kurzfristig einen spürbaren Vorteil davon.
+
+// Schlagworte für den Index
+(((Debtags, Integration in die Paketmanager)))
+Innerhalb kürzester Zeit erfolgte zudem eine nahtlose Integration von
+Debtags in die bestehenden Paketmanager, sodaß das Feature allgemein
+verfügbar wurde. Leider ist diese nützliche Eigenschaft bislang nicht
+allen Benutzern präsent. Wir erhoffen uns einen höheren Verbreitungs-
+und Nutzungsgrad, indem wir nachfolgend das Projekt und insbesondere
+dessen Werkzeuge ausführlicher beleuchten.
+
+// Datei (Ende): ./praxis/debtags/debtags-projekt.txt

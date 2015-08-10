@@ -1,0 +1,126 @@
+// Datei: ./werkzeuge/paketoperationen/paketstatusdatenbank-reparieren.txt
+
+// Baustelle: Fertig
+
+[[paketstatusdatenbank-reparieren]]
+
+=== Paketstatusdatenbank reparieren ===
+
+// Stichworte für den Index
+(((Paketstatusdatenbank, /var/lib/dpkg/status)))
+`dpkg` führt permanent Buch über alle Pakete auf einem Debian-System. Es
+merkt sich in seiner Paketstatusdatenbank den Zustand jedes einzelnen
+`deb`-Pakets, welches es jemals in den Fingern hatte (siehe dazu auch
+<<paketstatus-erfragen>> und
+<<liste-der-installierten-pakete-anzeigen-und-deuten>>). Die
+Paketstatusdatenbank befindet sich in der Datei
+`/var/lib/dpkg/status`.
+
+Daraus ersehen Sie ganz eindeutig, ob ein Paket schon einmal installiert
+war, ob alle notwendigen Schritte vollständig und fehlerfrei abgelaufen
+sind, ob das Paket auf `hold` gesetzt wurde, ob es wieder entfernt wurde
+und ob bspw. noch Reste aus dem Paket auf ihrem System verblieben sind.
+Zu letzterem zählen z.B. die Konfigurationsdateien eines Pakets.
+
+==== Bit-Dreher reparieren ====
+
+Die Einträge in der Paketstatusdatenbank sind 7-Bit-Werte, d.h. das
+achte Bit ist nicht gesetzt. Mittlerweile ist `dpkg` recht robust gegen
+unbekannte Felder, auch wenn diese 8-Bit-Werte enthalten. Trotzdem
+funktioniert vieles nicht mehr, wenn die Paketstatusdatenbank außerhalb
+des Formates gemäß der Spezifikation nach RFC 822
+vorliegt{empty}footnote:[RFC 822: Standard For The Format Of Text
+Messages, IETF, https://www.ietf.org/rfc/rfc0822.txt].
+
+Die Ursache für dieses gedrehte Bit kann sowohl ein Hardware-Crash sein,
+während `dpkg` werkelte, als auch ein Bit-Dreher auf dem Speichermedium
+selbst. Das nachfolgende Beispiel demonstriert das anhand des Eintrags
+zum Paket 'geekcode'. In Zeile 10 liegt ein solcher Bitfehler vor – das
+achte Bit für den Doppelpunkt `:` ist hier gesetzt.
+
+//.Bit-Dreher in der Datei `/var/lib/dpkg/status` für das Paket 'geekcode' (Ausschnitt)
+----
+Package: geekcode
+Status: install ok installed
+Priority: optional
+Section: games
+Installed-Size: 166
+Maintainer: Eric Dorland <eric@debian.org>
+Architecture: amd64
+Multi-Arch: foreign
+Version: 1.7.3-6
+Dependsº libc6 (>= 2.7)
+Description: Program for generating geekcode
+ This is a program for generating the geekcode.
+ See http://www.geekcode.com for more info and for discovering
+ if you need the geekcode.
+Homepage: http://sourceforge.net/projects/geekcode/
+----
+
+Verarbeitet `dpkg` diese Daten, kann es mit diesem Wert nichts anfangen
+und bringt seine Verärgerung darüber mit einer deutlichen Fehlermeldung
+zum Ausdruck. Dieser Fall ist noch vergleichsweise leicht zu reparieren,
+indem Sie das ISO-Latin-1-Zeichen `º` mit Hilfe ihres Texteditors wieder
+durch einen Doppelpunkt ersetzen. Daraufhin ist `dpkg` wieder glücklich.
+
+//.`dpkg` bricht nach einem Bit-Dreher in der Statusdatenbank ab
+----
+# dpkg --configure --pending
+dpkg: error: parsing file '/var/lib/dpkg/status' near line 9 package 'geekcode':
+ field name `Dependsº' must be followed by colon
+----
+
+==== Die Paketstatusdatenbank aus dem lokalen Backup wiederherstellen ====
+
+Anspruchsvoller wird es jedoch bspw. dann, wenn mehr als nur ein
+einzelnes Bit oder Byte kaputt ging, plötzlich ganze Blöcke fehlen, oder
+sich diese nach einer Reparatur des Dateisystems in ganz anderen
+Formaten in dieser Datei wiederfinden. Dann hilft meist nur noch ein
+Wiederherstellen der Paketstatusdatenbank aus ihrem Backup.
+
+// Stichworte für den Index
+(((Paketstatusdatenbank, /var/lib/dpkg/status-old)))
+
+Zum Glück gibt es auf einem Debian-System mehrere Backups der
+Paketstatusdatenbank. Ging die Datei erst gerade eben kaputt, so ist die
+Chance sehr hoch, daß die vorhergehende Sicherheitskopie namens
+`/var/lib/dpkg/status-old` noch intakt ist. Dieses Backup
+entspricht dem Zustand der Paketstatusdatenbank 'vor der letzten
+Änderung' und hinkt somit nur um eine einzige Aktion hinterher. Kopieren
+Sie diese zurück nach `/var/lib/dpkg/status`, so fehlt `dpkg`
+nur das Wissen über die letzte Installation oder Deinstallation eines
+Pakets. Führen Sie diese letzte Aktion erneut durch, ist alles gerettet.
+
+Ist hingegen auch `/var/lib/dpkg/status-old` defekt, so gibt es
+unter `/var/backups/dpkg.status.*` tlw. komprimierte
+Schnappschüsse der Paketstatusdatenbank. Diese beziehen sich auf die
+letzten sieben Tage, an denen ihr Rechnersystem eingeschaltet war.
+
+Ersetzen Sie die aktuelle Paketstatusdatenbank durch eine ältere
+Version, so weiß `dpkg` nichts mehr von sämtlichen Aktionen, die Sie
+seitdem durchgeführt haben. Insbesondere denkt es, ein Paket sei noch
+installiert, wenn es seit dem Backup der Datei deinstalliert wurde. In
+diesem Fall führen Sie die Entfernung des entsprechenden Pakets nochmals
+durch. Schlägt diese Aktion fehl, weil die dazu erwarteten Dateien
+bereits nicht mehr da sind, so kann es helfen, das entsprechende Paket
+mittels `dpkg -i` vorher nochmals zu installieren, um wieder einen
+konsistenten Zustand zu erreichen.
+
+==== Die Paketstatusdatenbanken von APT und `aptitude` ====
+
+// Stichworte für den Index
+(((Paketstatusdatenbank, apt-get update)))
+(((Paketstatusdatenbank, aptitude update)))
+Auch APT und `aptitude` führen eigene Archive über ihre Aktionen, zu
+denen ebenfalls unter `/var/backups/` tägliche Schnappschüsse
+existieren. Allerdings ist ein Verlust dieser Statusdatenbanken weniger
+kritisch, da die meisten Informationen darin durch ein `apt-get update`
+bzw. `aptitude update` schnell wiederherstellbar sind. Grundlage dafür
+sind jedoch die Daten aus der Paketstatusdatenbank von `dpkg`.
+
+Das einzige, was auf diese Art und Weise nicht wiederhergestellt werden
+kann, sind APT- und `aptitude`-spezifische Informationen. Dazu zählen
+bspw. die Markierungen 'automatisch installiert' sowie die Vormerkungen
+und User-Tags von `aptitude` (siehe <<mit-aptitude-vormerkungen-machen>>).
+
+// Datei (Ende): ./werkzeuge/paketoperationen/paketstatusdatenbank-reparieren.txt

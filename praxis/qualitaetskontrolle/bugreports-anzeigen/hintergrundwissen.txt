@@ -1,0 +1,79 @@
+// Datei: ./praxis/qualitaetskontrolle/bugreports-anzeigen/hintergrundwissen.txt
+
+// Baustelle: Fertig
+
+[[bugreports-hintergrundwissen]]
+==== Hintergrundwissen ====
+
+// Stichworte für den Index
+(((Bugreport)))
+(((Debian Bug Tracking System)))
+(((Debian BTS)))
+
+Allgemein gesprochen, ist ein Bugreport ein *Fehlerbericht* zu einem
+aufgetretenen bzw. von Ihnen bemerkten Fehler einer Soft- oder Hardware.
+Bei Debian ist der Bericht und dessen Einreichung vom Ablauf und der
+Form her standardisiert, damit dieser entdeckte Fehler möglichst
+automatisiert über das 'Debian Bug Tracking System (Debian
+BTS)'{empty}footnote:[https://www.debian.org/Bugs/] verarbeitet und von
+allen Benutzern nachverfolgt werden kann. Somit ordnen Sie einen
+Fehlerbericht leichter einem bestimmten Paket oder einer spezifischen
+Systemkonstellation zu.
+
+Generelles Ziel ist dabei, die bereits bestehenden Softwarepakete zu
+verbessern und auch noch nicht als stabil gekennzeichnete Pakete auf
+Fehler hin zu überprüfen und zu bereinigen. Dazu zählen auch Verstöße
+gegen (Debian)Richtlinien und Qualitätsvorgaben. Vor der Bereitstellung
+(Veröffentlichung) eines Pakets wird dann automatisch geprüft, ob das
+Paket den Anforderungen (Richtlinien) entspricht. 
+
+// Stichworte für den Index
+(((apt-listbugs)))
+
+Weiterhin zählt dazu auch eine Prüfung auf kritische Fehler vor der
+Installation eines Paketes. `apt-get` wertet dazu das Ergebnis von
+`apt-listbugs` (siehe <<bugreports-apt-listbugs>>) aus und warnt Sie,
+falls für das Paket kritische Fehler im Debian BTS hinterlegt sind. Die
+Entscheidung liegt dann bei Ihnen, ob Sie das Paket wirklich
+installieren möchten oder lieber nicht.
+
+// Stichworte für den Index
+(((Debian BTS)))
+(((Fehlerdatenbank)))
+
+An der *Recherche nach Fehlern* darf sich jeder Debian-Benutzer
+beteiligen. Dafür benutzen Sie das Debian BTS, um darin einerseits nach
+bestehenden Softwarefehlern und deren Lösungen zu recherchieren und
+andererseits weitere Fehler zu berichten, die Ihnen aufgefallen sind.
+Für ersteres muß das ganze reproduzierbar sein und es darf sich nicht um
+einen Bedienfehler handeln.
+
+// Stichworte für den Index
+(((apt-listbugs)))
+(((lintian)))
+(((popbugs)))
+
+Wie bereits oben benannt, finden Sie bereits bekannte und eingetragene
+Fehler in der Fehlerdatenbank des Debian BTS. Über das webbasierte
+System suchen Sie anhand des Paketnamens, der Veröffentlichung, des
+Schweregrads, der Betreffzeile der Fehlerberichts, der Fehlernummer, dem
+Namen des Einreichenden, dem Status der Bearbeitung des Fehlers oder dem
+Bearbeiter -- also demjenigen, der sich um die Bereinigung des Fehlers
+kümmert. Auf der Kommandozeile stehen Ihnen die Werkzeuge `lintian`
+(siehe <<bugreports-lintian>>), `apt-listbugs` (siehe
+<<bugreports-apt-listbugs>>) und `popbugs` (siehe
+<<bugreports-popbugs>>) zur Verfügung.
+
+// Stichworte für den Index
+(((Debianpaket, reportbug)))
+(((reportbug)))
+
+Finden Sie einen Fehler bezüglich eines Debianpakets, schreiben Sie am
+besten einen Fehlerbericht ('bug report'). Eine ausführliche
+Beschreibung dessen, auf welche Punkte Sie bei dem Fehlerbericht
+wertlegen sollten, finden Sie auf der Webseite des Debian BTS. Bei der
+Zusammenstellung des Fehlerberichts hilft Ihnen das Werkzeug `reportbug`
+aus dem gleichnamigen
+Debianpaket{empty}footnote:[https://packages.debian.org/de/stable/reportbug].
+
+// Datei (Ende): ./praxis/qualitaetskontrolle/bugreports-anzeigen/hintergrundwissen.txt

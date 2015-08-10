@@ -1,0 +1,21 @@
+Source: debian-paketmanagement-buch
+Section: doc
+Priority: optional
+Maintainer: Axel Beckert <abe@debian.org>
+Uploaders: Frank Hofmann <frank.hofmann@efho.de>
+Build-Depends: asciidoc,
+               dblatex,
+               debhelper (>= 9)
+Standards-Version: 3.9.6
+Homepage: http://www.debian-paketmanagement.de/
+Vcs-Git: git://github.com/debian-paketmanagement/TODO
+Vcs-Browser: https://github.com/debian-paketmanagement/TODO
+
+Package: debian-paketmanagement-buch
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: www-browser | pdf-reader
+Description: German-written book about package management with Debian
+ This package includes the book "Debian Paketmanagement" by Axel
+ Beckert and Frank Hofmann in as single HTML page, PDF document and
+ e-book in the epub format.

@@ -1,0 +1,15 @@
+Document: debian-paketmanagement-buch
+Title: Debian-Paketmanagement Buch
+Author: Axel Beckert, Frank Hofmannn
+Abstract: German-written book about Debian package management
+Section: Debian
+
+Format: html
+Files: /usr/share/doc/debian-paketmanagement-buch/debian-paketmanagement.html
+Index: /usr/share/doc/debian-paketmanagement-buch/debian-paketmanagement.html
+
+Format: pdf
+Files: /usr/share/doc/debian-paketmanagement-buch/debian-paketmanagement.pdf
+
+Format: epub
+Files: /usr/share/doc/debian-paketmanagement-buch/debian-paketmanagement.epub

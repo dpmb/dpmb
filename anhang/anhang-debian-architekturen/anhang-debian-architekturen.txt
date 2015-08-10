@@ -1,0 +1,15 @@
+// Datei: ./anhang/anhang-debian-architekturen/anhang-debian-architekturen.txt
+// Baustelle: Rohtext
+
+== Debian-Architekturen ==
+
+// offizielle Architekturen
+include::offizielle-architekturen.txt[]
+
+// veraltete Architekturen
+include::veraltete-architekturen.txt[]
+
+// Architekturen, deren Unterstützung in der Zukunft vorgesehen ist
+include::architekturen-zukunft.txt[]
+
+// Datei (Ende): ./anhang/anhang-debian-architekturen/anhang-debian-architekturen.txt

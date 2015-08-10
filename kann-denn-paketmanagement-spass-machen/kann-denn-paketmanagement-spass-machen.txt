@@ -1,0 +1,7 @@
+// Datei: ./kann-denn-paketmanagement-spass-machen/kann-denn-paketmanagement-spass-machen.txt
+
+// Baustelle: Fertig
+
+include::kapitel-kann-denn-paketmanagement-spass-machen.txt[]
+
+// Datei (Ende): ./kann-denn-paketmanagement-spass-machen/kann-denn-paketmanagement-spass-machen.txt

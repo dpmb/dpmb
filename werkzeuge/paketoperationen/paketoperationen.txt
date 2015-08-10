@@ -1,0 +1,114 @@
+// Datei: ./werkzeuge/paketoperationen/paketoperationen.txt
+
+// Baustelle: Rohtext
+
+[[paketoperationen]]
+
+== Paketoperationen ==
+
+// Einführung
+// - Paketoperationen und deren Abfolge
+include::paketoperationen-und-deren-abfolge.txt[]
+
+// - Pakete als Parameter
+include::paketlisten-und-muster.txt[]
+
+// Paketoperationen im Detail
+// ohne Bestandsänderung
+include::bekannte-paketnamen-auflisten.txt[]
+
+include::paketstatus-erfragen.txt[]
+
+include::liste-der-installierten-pakete-anzeigen-und-deuten.txt[]
+
+include::liste-der-installierten-kernelpakete-anzeigen.txt[]
+
+include::neue-pakete-anzeigen.txt[]
+
+include::pakete-nach-prioritaeten-finden.txt[]
+
+include::automatisch-installierte-pakete-anzeigen.txt[]
+
+include::obsolete-pakete-anzeigen.txt[]
+
+include::aktualisierbare-pakete-anzeigen.txt[]
+
+include::installationsgroesse-eines-paketes.txt[]
+
+include::groesstes-installiertes-paket-finden.txt[]
+
+include::warum-ist-ein-paket-installiert.txt[]
+
+include::liste-der-zuletzt-installierten-pakete-anzeigen.txt[]
+
+include::paketabhaengigkeiten-anzeigen.txt[]
+
+include::aus-welchem-repo-kommen-die-pakete.txt[]
+
+// include::verfuegbare-paketversionen-ermitteln.txt[]
+
+// in Pakete hineinschauen
+include::pakete-ueber-den-namen-finden.txt[]
+
+include::pakete-ueber-die-paketbeschreibung-finden.txt[]
+
+include::paket-nach-maintainer-finden.txt[]
+
+// include::multiarch-pakete-finden.txt[]
+
+include::paket-zu-datei-finden.txt[]
+
+include::paketinhalte-anzeigen-apt-file.txt[]
+
+include::nach-muster-in-einem-paket-suchen.txt[]
+
+include::ausfuehrbare-dateien-anzeigen.txt[]
+
+include::manpages-anzeigen.txt[]
+
+include::konfigurationsdateien-eines-paketes-anzeigen.txt[]
+
+// - Veränderungen zur vorherigen Version
+include::paketaenderungen-nachlesen.txt[]
+
+// - Veränderungen zwischen dem Paket auf dem Paketmirror und den lokalen Dateien
+include::paket-auf-veraenderungen-pruefen.txt[]
+
+include::liste-der-zuletzt-geaenderten-abhaengigkeiten.txt[]
+
+include::paketdatei-nur-herunterladen.txt[]
+
+// mit Bestandsänderung
+// neue Pakete hinzufügen
+
+include::installation-zwischengespeicherter-pakete-aus-dem-paketcache.txt[]
+
+include::sourcepakete-beziehen.txt[]
+
+include::sourcepakete-anzeigen.txt[]
+
+include::bezogenes-paket-verifizieren.txt[]
+
+include::pakete-installieren.txt[]
+
+include::pakete-erneut-installieren.txt[]
+
+include::pakete-konfigurieren.txt[]
+
+include::pakete-aktualisieren.txt[]
+
+include::pakete-downgraden.txt[]
+
+// Pakete entfernen und aufräumen
+include::pakete-deinstallieren.txt[]
+
+include::umgang-mit-waisen.txt[]
+
+include::paketoperationen-erzwingen.txt[]
+
+include::paketstatusdatenbank-reparieren.txt[]
+
+// ganze Distribution anpassen
+include::distribution-aktualisieren.txt[]
+
+// Datei (Ende): ./werkzeuge/paketoperationen/paketoperationen.txt

@@ -1,0 +1,17 @@
+digraph "dpkg" {
+	rankdir=LR;
+	node [shape=box];
+	"dpkg" -> "libbz2-1.0" [color=purple,style=bold];
+	"dpkg" -> "liblzma5" [color=purple,style=bold,label="(>= 5.1.1alpha+20120614)"];
+	"dpkg" -> "libselinux1" [color=purple,style=bold,label="(>= 2.3)"];
+	"libselinux1" -> "libpcre3" [color=blue,label="(>= 8.10)"];
+	"dpkg" -> "tar" [color=purple,style=bold,label="(>= 1.23)"];
+	"tar" -> "libacl1" [color=purple,style=bold,label="(>= 2.2.51-8)"];
+	"libacl1" -> "libattr1" [color=blue,label="(>= 1:2.4.46-8)"];
+	"tar" -> "libselinux1" [color=purple,style=bold,label="(>= 1.32)"];
+	"dpkg" [style="setlinewidth(2)"]
+}
+// Excluded dependencies:
+// libc6 multiarch-support zlib1g
+// total size of all shown packages: 11501568
+// download size of all shown packages: 4358750

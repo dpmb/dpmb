@@ -1,0 +1,46 @@
+// Datei: ./kann-denn-paketmanagement-spass-machen/zum-buch/zum-buch.txt
+
+// Baustelle: Fertig
+
+=== Zum Buch ===
+
+include::autoren.txt[]
+
+include::wie-entstand-dieses-buch.txt[]
+
+// warum ist dieses Buch relevant?
+
+include::grundlagenwissen-fuer-administratoren.txt[]
+
+include::dokumentation-zu-aptitude.txt[]
+
+include::dokumentation-deb-vs-rpm.txt[]
+
+// was ist das buch -- und was ist es nicht?
+
+include::was-ist-das-buch.txt[]
+
+// Zielgruppe und Lernziele
+
+include::zielgruppe.txt[]
+
+// Vorkenntnisse
+
+include::vorausgesetztes-wissen-des-lesers.txt[]
+
+// Und das können Sie nach der Lektüre
+
+include::was-koennen-sie-als-leser-am-ende.txt[]
+
+// Buchinfo
+
+include::buchinfo.txt[]
+
+// Konventionen im Buch
+// entfällt
+// include::konventionen-im-buch.txt[]
+
+// Danksagung
+include::danksagung.txt[]
+
+// Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/zum-buch.txt

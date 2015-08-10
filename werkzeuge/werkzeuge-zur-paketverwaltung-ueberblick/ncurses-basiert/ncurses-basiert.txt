@@ -1,0 +1,12 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/ncurses-basiert.txt
+
+// Baustelle: Fertig
+
+[[ncurses-basiert]]
+
+=== ncurses-basierte Programme ===
+
+include::tasksel.txt[]
+
+include::aptitude.txt[]
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/ncurses-basiert.txt

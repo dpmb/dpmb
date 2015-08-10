@@ -1,0 +1,67 @@
+// Datei: ./praxis/mobile-geraete/localepurge.txt
+
+// Baustelle: Rohtext
+
+[[mobile-geraete-localepurge]]
+
+=== localepurge ===
+
+// Stichworte für den Index
+(((Debianpaket, localepurge)))
+(((Konfigurationsdatei, /etc/locale.nopurge)))
+(((localepurge)))
+
+Ist Speicherplatz auf dem Datenträger knapp, kann das Werkzeug
+`localepurge`{empty}footnote:[http://linuxwiki.de/localepurge]
+weiterhelfen. Es steht Ihnen über die Paketverwaltung in dem
+gleichnamigen Debianpaket{empty}footnote:[http://packages.debian.org/stable/localepurge]
+zur Verfügung.
+
+`localepurge` entfernt alle Sprachpakete aus ihrer Installation, die
+nicht von Ihnen benötigt werden. Die Sprachpakete sind locales-Pakete
+und umfassen Übersetzungen der Sprachdateien und Handbücher (Manpages).
+Vor dem Aufräumen legen Sie fest, welche Sprachen Sie wirklich im Alltag
+benötigen -- nicht immer gehören Japanisch oder Arabisch dazu. Die von
+Ihnen gewählte Einstellung speichert `localepurge` in der Datei
+`/etc/locale.nopurge`.
+
+Nach der ersten Benutzung wird `localepurge` automatisch nach jedem
+Aufuf von APT ausgeführt, d.h. wenn Sie ein bereits genutztes Paket
+aktualisieren oder ein neues Paket hinzufügen. Bislang unklar ist, ob
+das auch für `aptitude` und die anderen Werkzeuge zur Paketverwaltung
+gilt. Im nachfolgenden Beispiel hat `localepurge` immerhin über 23 MB
+Platz geschaffen.
+
+.Entfernen nicht benötigter Sprachpakete mit `localepurge`
+----
+# localepurge
+localepurge: processing locale files ...
+   Purging /usr/share/locale/az
+   Purging /usr/share/locale/bg
+   Purging /usr/share/locale/ca
+   Purging /usr/share/locale/cs
+  ...
+localepurge: Disk space freed in /usr/share/locale: 23528K
+#
+----
+
+// Stichworte für den Index
+(((debsum)))
+
+Nach unserer Beobachtung werkelt `localepurge` anstandsfrei. Wir
+betrachten es als hilfreich für Installationen, die selten modifiziert
+werden, auch wenn es etwas in Konflikt mit der Paketverwaltung steht:
+
+* Bei der Aktualisierung und Deinstallation von Paketen verursacht die
+Benutzung von `localepurge` Fehlermeldungen, da in diesem Moment das
+Paket nicht mehr vollständig installiert ist. Die Überprüfung mittels
+`debsum` schlägt fehl (siehe dazu die Prüfung eines Pakets auf
+Veränderungen in <<paket-auf-veraenderungen-pruefen>>).
+
+* Das Programm bietet keine Möglichkeit an, die gelöschten Dateien
+wieder herzustellen. Daher bleibt Ihnen nur eine Neuinstallation aller
+bereinigten Pakete, für die Sie die entsprechenden Sprachdateien doch
+wieder benötigen (siehe dazu Pakete erneut installieren in
+<<pakete-erneut-installieren>>).
+
+// Datei (Ende): ./praxis/mobile-geraete/localepurge.txt

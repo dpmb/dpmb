@@ -1,0 +1,46 @@
+// Datei: ./werkzeuge/dokumentation/apt-doc.txt
+
+// Baustelle: Fertig
+
+[[apt-doc]]
+
+=== `apt-doc` -- das Benutzerhandbuch zu APT ===
+
+// Stichworte für den Index
+(((Debianpaket, apt-doc)))
+Das Paket 'apt-doc'{empty}footnote:[http://packages.debian.org/de/stable/apt-dpkg-ref]
+beinhaltet das Benutzerhandbuch zu APT. Es wurde bereits 1998 von Jason
+Gunthorpe begonnen und zwischenzeitlich mehrfach aktualisiert und in
+diverse Sprachen übersetzt. Es steht Ihnen als HTML- und Textversion in
+englisch, deutsch, spanisch, französisch, polnisch und portugiesisch zur
+Verfügung. Alle Übersetzungen finden Sie im gleichen Paket.
+
+Nach der Installation finden Sie die deutsche Dokumentation als
+HTML-Dokument im Verzeichnis `/usr/share/doc/apt-doc/guide.de.html/`
+wieder. Zur Nutzung von APT in einem ``Turnschuhnetzwerk'' (offline)
+hilft Ihnen die Beschreibung unter 
+`/usr/share/doc/apt-doc/offline.de.html/index.html` weiter.
+
+// Stichworte für den Index
+(((APT)))
+(((apt-dselect)))
+(((dselect)))
+Es umfaßt eine Einführung in die Paketverwaltung und beschreibt recht
+knapp die Werkzeuge `dselect`, `apt-deselect` und APT sowie deren
+verschiedene Aufrufparameter. Nützlich sind in der Dokumentation die
+Ausgaben der Programme im Terminal, die Ihnen auch dabei helfen, die
+diversen Statusanzeigen und Fehlermeldungen der Programme zu überblicken
+und zu verstehen. <<fig.apt-doc>> zeigt Ihnen dazu einen Ausschnitt der
+Dokumentation im Webbrowser Iceweasel an.
+
+.Ausschnitt aus der APT-Dokumentation mit `apt-doc`
+image::werkzeuge/dokumentation/apt-doc.png[id="fig.apt-doc", width="50%"]
+
+[TIP]
+.Pflege ohne Internetzugang
+====
+Hier im Buch beschäftigen wir uns ausführlicher mit diesem Thema in
+<<paketverwaltung-ohne-internet>>.
+====
+
+// Datei (Ende): ./werkzeuge/dokumentation/apt-doc.txt

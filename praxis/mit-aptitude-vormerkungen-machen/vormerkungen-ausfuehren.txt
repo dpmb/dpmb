@@ -1,0 +1,41 @@
+// Datei: ./praxis/mit-aptitude-vormerkungen-machen/vormerkungen-ausfuehren.txt
+
+// Baustelle: Fertig
+
+[[vormerkungen-ausfuehren]]
+
+=== Vormerkungen ausführen ===
+
+// Stichworte für den Index
+(((aptitude, install)))
+(((aptitude, Vormerkungen ausführen)))
+Nachdem Sie die gewünschten Paketoperationen zusammengestellt,
+vorgemerkt und überprüft haben, fehlt noch der abschließende Schritt –
+die Umsetzung. In der _Kommandozeile_ genügt es vollkommen, wenn Sie
+`aptitude` mit dem Unterkommando `install` ohne weitere Paketnamen
+aufrufen. Zusätzliche Parameter sind in diesem Fall nicht erforderlich.
+
+//.Ausführung der vorbereiteten Paketoperationen
+----
+# aptitude install
+Die folgenden NEUEN Pakete werden zusätzlich installiert:
+  cssed 
+Die folgenden Pakete werden ENTFERNT:
+  apt-doc 
+Die folgenden Pakete werden aktualisiert:
+  iceweasel libmozjs24d xulrunner-24.0 
+3 Pakete aktualisiert, 1 zusätzlich installiert, 1 werden entfernt und 19 nicht aktualisiert.
+22,9 MB/23,7 MB an Archiven müssen heruntergeladen werden. Nach dem Entpacken werden 1.909 kB zusätzlich belegt sein.
+Möchten Sie fortsetzen? [Y/n/?] y
+Holen: 1 http://security.debian.org/ wheezy/updates/main iceweasel i386 24.8.1esr-1~deb7u1 [2.873 kB]
+Holen: 2 http://security.debian.org/ wheezy/updates/main xulrunner-24.0 i386 24.8.1esr-1~deb7u1 [18,4 MB]
+69% [2 xulrunner-24.0 12,9 MB/18,4 MB 70%]                            699 kB/s 10 s
+...
+Aktueller Status: 19 aktualisierbare Pakete [-3].
+#
+----
+
+In der _Textoberfläche_ erfolgt das mit der Taste key:[g]. Daraufhin
+arbeitet `aptitude` ihre vorbereitete Liste der Vormerkungen ab.
+
+// Datei (Ende): ./praxis/mit-aptitude-vormerkungen-machen/vormerkungen-ausfuehren.txt

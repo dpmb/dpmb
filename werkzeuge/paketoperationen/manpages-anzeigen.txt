@@ -1,0 +1,69 @@
+// Datei: ./werkzeuge/paketoperationen/manpages-anzeigen.txt
+
+// Baustelle: Fertig
+
+[[manpages-anzeigen]]
+
+=== Manpages anzeigen ===
+
+// Stichworte für den Index
+(((dlocate)))
+(((dlocate, -man)))
+(((whereis)))
+(((whereis, -m)))
+(((Debianpaket, dlocate)))
+(((Debianpaket, util-linux)))
+Für die meisten UNIX/Linux-Werkzeuge bestehen Informations- und
+Hilfeseiten, auch genannt 'Info und Man(ual) Pages'. Um in Erfahrung zu
+bringen, ob diese vorhanden und installiert sind, bieten sich die beiden
+UNIX-Kommandos `whereis` aus dem essentiellen Paket
+'util-linux'{empty}footnote:[http://packages.debian.org/de/stable/util-linux]
+sowie das bereits mehrfach genutzte
+`dlocate`{empty}footnote:[https://packages.debian.org/de/stable/dlocate]
+an.
+
+Mit der Option `-m Programmname` sucht `whereis` nach den passenden
+Hilfeseiten zum genannten Paketnamen:
+
+//.Verfügbare Manpages für das Paket 'aptitude' mittels `whereis` lokalisieren
+----
+$ whereis -m aptitude
+aptitude: /usr/share/man/man8/aptitude.8.gz
+$
+----
+
+Ähnliches leistet auch das Kommando `dlocate` mit dem Schalter `-man`
+gefolgt vom Paketnamen. Das Ergebnis des Aufrufs für das Programm
+`aptitude` sieht wie folgt aus:
+
+//.Verfügbare Manpages für das Paket 'aptitude' mittels `dlocate` aufspüren
+----
+$ dlocate -man aptitude
+8 aptitude-curses
+$
+----
+
+// Stichworte für den Index
+(((dlocate, -lsman)))
+Benötigen Sie zusätzlich den exakten Pfad zur Manpage, nutzen Sie
+stattdessen den Schalter `-lsman`. Damit erfahren Sie bspw. aus dem
+nachfolgenden Aufruf, daß die Manpage für mehrere Sprachen wie bspw.
+Deutsch (de), Spanisch (es) und Polnisch (pl) im Verzeichnis
+`/usr/share/man` bereitsteht.
+
+//.Verfügbare Manpages für das Paket 'aptitude' mit vollständigem Pfad
+----
+$ dlocate -lsman aptitude
+/usr/share/man/cs/man8/aptitude-curses.8.gz
+/usr/share/man/es/man8/aptitude-curses.8.gz
+/usr/share/man/ja/man8/aptitude-curses.8.gz
+/usr/share/man/fr/man8/aptitude-curses.8.gz
+/usr/share/man/gl/man8/aptitude-curses.8.gz
+/usr/share/man/fi/man8/aptitude-curses.8.gz
+/usr/share/man/man8/aptitude-curses.8.gz
+/usr/share/man/it/man8/aptitude-curses.8.gz
+/usr/share/man/pl/man8/aptitude-curses.8.gz
+/usr/share/man/de/man8/aptitude-curses.8.gz
+$
+----
+// Datei (Ende): ./werkzeuge/paketoperationen/manpages-anzeigen.txt

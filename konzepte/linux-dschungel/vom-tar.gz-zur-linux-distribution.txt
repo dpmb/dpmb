@@ -1,0 +1,47 @@
+// Datei: ./konzepte/linux-dschungel/vom-tar.gz-zur-linux-distribution.txt
+
+// Baustelle: Fertig
+// Axel: Fertig
+
+=== Vom `tar.gz` zur Linux-Distribution ===
+
+// Text basiert auf dem +aptsh+-Artikel
+
+// Stichworte für den Index
+(((Linux-Distribution, Debian)))
+(((Linux-Distribution, Entwicklung)))
+(((Linux-Distribution, Paketierung)))
+(((Linux-Distribution, Softwarestrukturen)))
+(((Linux-Distribution, Verwaltung)))
+Der Begriff Linux-Distribution bezeichnet die Zusammenfassung von
+Softwarepaketen aus unterschiedlichen Quellen und deren gemeinsame
+Verteilung unter einem Distributionsnamen. Einen hohen Bekanntheitsgrad
+haben heute z.B. RedHat/Fedora, Debian, SuSE-Linux, Ubuntu, Knoppix und
+Linux Mint erreicht.
+
+Die Vorteile einer Distribution liegen klar auf der Hand: aktuelle,
+stabile Versionen der Programme und insbesondere die Abstimmung der
+einzelnen Pakete aufeinander. Letzteres leistet der Distributor und
+nimmt damit Ihnen als Nutzer erhebliche Arbeit ab. Sie können sich
+darauf konzentrieren, die Distribution bzw. die Programme daraus zu
+verwenden.
+
+Die ersten Linux-Distributionen entstanden zu Beginn der 1990er Jahre.
+Zu den Pionieren zählen Yggdrasil, SLS, Slackware, SuSE, RedHat und
+Debian. Bis dahin gab es kaum spezifische Pakete für jedes System –
+jeder Anwender passte die Software nach seinen eigenen Bedürfnissen an
+und pflegte diese Version dann kontinuierlich weiter. Zumeist waren das
+einfache `tar.gz`-Archive, die von Hand ergänzt und vorrangig für das
+eigene System übersetzt wurden.
+
+Ein automatisiertes Verwalten der Software war zu diesem Zeitpunkt noch
+nicht möglich, weil die Strukturen nicht erdacht und umgesetzt waren.
+Abhängigkeiten der Software ließen sich nicht automatisch auflösen. Als
+Benutzer mussten Sie einerseits wissen, welche Software einander bedingte,
+und andererseits, welche Versionen und Varianten sich miteinander
+vertrugen. Namensgleiche Dateien und Verzeichnisse waren problematisch.
+Die große Kunst bestand im Wissen, in welcher Reihenfolge Sie zueinander
+passende Versionen von Software auswählen sowie diese nachfolgend auf
+Ihrem Linuxsystem installieren und konfigurieren mussten.
+
+// Datei (Ende): ./konzepte/linux-dschungel/vom-tar.gz-zur-linux-distribution.txt

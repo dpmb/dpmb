@@ -1,0 +1,33 @@
+// Datei: ./praxis/automatisierte-installation/automatisierte-installation.txt
+
+// Baustelle: Notizen
+
+[[automatisierte-installation]]
+
+== Automatisierte Installation ==
+
+* ganze Rechnerverbünde (Schulungs- und Klassenräume) mit identischer Hardware
+* Vorbereitung von Schulungsrechnern
+
+* https://wiki.debian.org/AutomatedInstallation
+
+* Historie
+** jumpstart (Sun OS) -- http://en.wikipedia.org/wiki/Jumpstart_(Solaris)
+** Kickstart und Cobbler -- http://www.cobblerd.org/
+** FAI
+** Preseeding -- Beantworten der Fragen des Debian Installers im Vorfeld
+
+=== FAI ===
+
+* Eintrag im Debian Wiki <<Debian-Wiki-FAI>>
+
+=== Kickstart ===
+
+* http://cobbler.github.com/
+* http://www.debian.itopstube.com/2011/11/automating-installation-with-kickstart.html
+* https://fak3r.com/2011/08/18/howto-automate-debian-installs-with-preseed/
+
+=== Erfahrungen aus der Praxis ===
+
+ToDo
+// Datei (Ende): ./praxis/automatisierte-installation/automatisierte-installation.txt

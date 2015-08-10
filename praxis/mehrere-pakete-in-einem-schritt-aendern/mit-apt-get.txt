@@ -1,0 +1,32 @@
+// Datei: ./praxis/mehrere-pakete-in-einem-schritt-aendern/mit-apt-get.txt
+
+// Baustelle: Rohtext
+
+=== Mit `apt-get` ===
+
+// Stichworte für den Index
+(((apt-get, install)))
+(((Paketaktionen, Paketliste)))
+(((Paketaktionen, Muster)))
+
+APT kennt mehrere Varianten für diesen Schritt. In Variante eins geben
+Sie beim Aufruf einfach mehrere Paketnamen in beliebiger Reihenfolge
+hintereinander an. Dabei erfolgt die Trennung der Paketnamen durch
+Leerzeichen. In Variante zwei schreiben Sie den Paketnamen nicht
+explizit aus, sondern als Muster. APT löst dieses Muster auf und liefert
+eine Liste der Paketnamen zurück, die auf das angegebene Muster passen.
+
+In beiden Varianten erfolgt eine automatische Auflösung der
+Paketabhängigkeiten durch APT -- es wird halt nur aufwendiger. Bei der
+Abarbeitung sortiert APT selbst und zwar automatisch so, daß die
+Paketabhängigkeiten möglichst problemlos aufgelöst werden können.
+
+.Installation der drei Pakete 'goplay', 'xara-gtk' und 'debtags' in einem Rutsch
+----
+# apt-get install goplay xara-gtk debtags
+...
+#
+----
+
+
+// Datei (Ende): ./praxis/mehrere-pakete-in-einem-schritt-aendern/mit-apt-get.txt

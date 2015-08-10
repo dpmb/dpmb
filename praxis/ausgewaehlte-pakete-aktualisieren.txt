@@ -1,0 +1,95 @@
+// Datei: ./praxis/ausgewaehlte-pakete-aktualisieren.txt
+
+// Baustelle: Rohtext
+
+[[ausgewahlte-pakete-aktualisieren]]
+
+== Ausgewählte Pakete aktualisieren ==
+
+In <<pakete-aktualisieren>> beleuchteten wir, wie Sie alle bereits
+bestehenden Pakete auf ihrem Linuxsystem aktualisieren. Das hilft Ihnen
+dabei, daß alle Pakete aus einem in etwa ähnlichen
+Veröffentlichungszeitraum stammen und die Abstimmung der Pakete
+aufeinander weitestgehend konfliktfrei bleibt. 
+
+Nun zeigen wir Ihnen, wie Sie nur einzelne, ausgewählte Pakete auf einen
+bestimmten Stand bringen. Dieses Vorgehen bringt es mit sich, daß die
+Anzahl der Softwarepakete zunimmt, die explizit auf einem ausgewählten
+Stand gehalten werden bzw. werden müssen, um die Paketabhängigkeiten zu
+erfüllen. Für die Paketverwaltung heißt das, daß bei einer Veränderung
+des Paketbestands mehr und insbesondere komplexere Bedingungen zu
+berücksichtigen sind. Sie als Betreuer planen daher sicherheitshalber
+etwas mehr Zeit für die Wartung ein.
+
+[[nur-ein-einzelnes-paket-aktualisieren]]
+=== Nur ein einzelnes Paket aktualisieren ===
+
+Im Alltag sind häufig für mehrere Pakete gleichzeitig Aktualisierungen
+verfügbar. Sowohl APT, als auch `aptitude` gestatten es Ihnen daher, nur
+die Pakete zu erneuern, die Sie wünschen. Stets werden dabei die
+Paketabhängigkeiten berücksichtigt und nur die Softwarepakete mit
+einbezogen, die es betrifft.
+
+Auf der *Kommandozeile* verstehen `apt-get` und `aptitude` die beiden
+Unterkommandos `upgrade` und `dist-upgrade`, jeweils gefolgt von einer
+Liste von Paketnamen. Ältere Versionen von APT bis Version XYZ können
+noch nicht damit umgehen und ignorieren diese Liste.
+
+.Beispiel für Einzelaktualisierung mit `apt-get upgrade`
+----
+ToDo: Beispiel
+----
+
+[NOTE]
+.Automatische Aktualisierung bei der Installation
+====
+Ist ein Paket bereits installiert und Sie führen erneut das Kommando
+`aptitude install Paketname` aus, wird es nach Möglichkeit durch eine
+neuere Version ersetzt. Es entspricht in diesem Fall dem Aufruf
+`aptitude upgrade Paketname`.
+
+//ToDo: Beispiel
+====
+
+`aptitude` mit seinen Unterkommandos `safe-upgrade` und `full-upgrade`
+nimmt hingegen schon länger Parameter entgegen. Dabei sind nicht nur
+Paketnamen, sondern auch Suchausdrücke möglich. Bspw. erneuert der
+Aufruf `aptitude full-upgrade '?section(libs)'` alle aktualisierbaren
+Pakete aus der Kategorie 'libs' (Bibliotheken).
+
+.Beispiel für Einzelaktualisierung mit `aptitude safe-upgrade`
+----
+ToDo: Beispiel
+----
+
+* Durchführung über die *Textoberfläche* von `aptitude`
+** Zweig/Kategorie ospmenu:[Sicherheitsaktualisierungen]
+*** Paket markieren mit ospkey:[+]
+*** Paketvorschau mit ospkey:[g]
+*** Paketaktualisierung mit ospkey:[g]
+** ToDo: da muß aber noch mehr sein ....
+
+* Durchführung bei *Synaptic* (siehe <<gui-synaptic>>)
+** Auswahl der Kategorie ospmenu:[Aktualisierbar (Upstream)]
+** Rechtsklick auf Eintrag in der Paketliste
+** Auswahl ospmenu:[Zum Aktualisieren vormerken]
+
+=== Aktualisierung mit Wechsel der Veröffentlichung ===
+
+'Frage/Problem:' Ich möchte alle Abhängigkeiten von 'kdegames' von
+'unstable' auf 'experimental' heben (da es noch kein neues
+kdegames-Metapaket gibt, das von diesen Versionen abhängt und daher
+`apt-get -t experimental kdegames` gar nix macht).
+
+Bisherige Lösung: 
+
+.Aufruf zur Auswahl
+----
+apt-get install -t experimental $( apt-cache depends kdegames | awk '{ print$4 }' )
+----
+
+Status: 
+
+* geht, ist aber umständlich
+* kann man das einfacher machen? (ist eine Art pinning für ein einzelnes Paket)
+// Datei (Ende): ./praxis/ausgewaehlte-pakete-aktualisieren.txt

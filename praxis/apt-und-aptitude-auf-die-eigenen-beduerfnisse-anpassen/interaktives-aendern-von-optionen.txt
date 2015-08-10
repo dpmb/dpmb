@@ -1,0 +1,13 @@
+// Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/interaktives-aendern-von-optionen.txt
+
+// Baustelle: Notizen
+
+[[interaktives-aendern-von-optionen]]
+
+=== Interaktives Ändern von Optionen ===
+
+* `.aptitude/config` (root vs non-root; interaktives Ändern von Optionen) (1)
+* Überschreiben von Optionen während des Aufrufs
+** Schalter und Parameter überschreiben Standardwerte
+** wie gebe ich diese beim Aufruf an?
+// Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/interaktives-aendern-von-optionen.txt

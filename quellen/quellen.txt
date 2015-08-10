@@ -1,0 +1,657 @@
+// Datei: ./quellen/quellen.txt
+
+// Baustelle: Rohtext
+
+[[quellen]]
+
+== Bibliography
+
+// [bibliography]
+
+- [[[alien]]] Joey Hess: Projektseite zu 'alien', http://joeyh.name/code/alien/
+
+//- [[[Allbery-Debian-Popularity]]] Debian and popularity, Blog-Posting von Russ Allbery, http://www.eyrie.org/~eagle/journal/2012-01/004.html
+
+// - [[[Aoki-Debian-Referenz]]] Osamu Aoki: Debian Referenz, deutsche Übersetzung, http://www.debian.org/doc/manuals/debian-reference/index.de.html
+
+- [[[Aoki-Debian-Referenz-Mirror]]] Osamu Aoki: Debian Referenz, deutsche Übersetzung, http://qref.sourceforge.net/quick/index.de.html
+
+- [[[apper]]] Apper, http://kde-apps.org/content/show.php/Apper?content=84745
+
+- [[[appnr]]] Appnr, http://appnr.com/
+
+- [[[apt2]]] APT 2.0, http://wiki.debian.org/Apt2
+
+- [[[apt4rpm]]] `apt4rpm`: http://apt4rpm.sourceforge.net/
+
+- [[[aptitude-categorical-browser-to-be-removed]]] Kategorie-Browser in Aptitude wird voraussichtlich entfernt, https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=686124#44
+
+- [[[aptitude-dokumentation]]] Dokumentation zu `aptitude` in allen bisher verfügbaren Sprachen, http://aptitude.alioth.debian.org/doc/
+
+- [[[aptitude-dokumentation-package-list]]] Dokumentation zu `aptitude`: Darstellung der Paketliste, http://aptitude.alioth.debian.org/doc/en/ch02s05s01.html
+
+- [[[aptitude-dokumentation-paketdarstellung]]] Dokumentation zu `aptitude`: Paketdarstellung, http://aptitude.alioth.debian.org/doc/en/ch02s05s01.html#secDisplayFormat
+
+- [[[aptitude-dokumentation-text-colors-and-styles]]] Dokumentation zu `aptitude`: Text colors and Styles, http://aptitude.alioth.debian.org/doc/en/ch02s05s03.html
+
+- [[[aptitude-dokumentation-themes]]] Dokumentation zu `aptitude`: Themes, http://aptitude.alioth.debian.org/doc/en/ch02s05s06.html
+
+- [[[aptitude-dokumentation-veraltet]]] veraltete Dokumentation zu `aptitude`, http://www.algebraicthunk.net/~dburrows/projects/aptitude/doc/
+
+- [[[Aptosid]]] Aptosid, http://aptosidusers.de/
+
+- [[[aptsh-Projekt]]] `aptsh`-Projektseite bei BerliOS, http://developer.berlios.de/projects/aptsh/
+
+- [[[apt-cacher-ng-Projektseite]]] Projektseite zu 'apt-cacher-ng', http://www.unix-ag.uni-kl.de/~bloch/acng/
+
+- [[[apt-dater-Projektseite]]] Projektseite zu `apt-dater`, http://www.ibh.de/apt-dater/
+
+- [[[apt-fast]]] Projektseite zu `apt-fast` auf Github, https://github.com/ilikenwf/apt-fast
+
+- [[[apt-get.org]]] Suche nach inoffiziellen Debian-Paketen, http://www.apt-get.org/
+
+- [[[apt-mirror-Projektseite]]] Projektseite zu 'apt-mirror', http://apt-mirror.github.io/
+
+- [[[apt-mirror-ubuntu]]] Felipe Alfaro Solana: Create a local mirror of Ubuntu packages using `apt-mirror`, http://blog.felipe-alfaro.com/2014/05/30/create-a-local-mirror-of-ubuntu-packages-using-apt-mirror/
+
+- [[[apt-mirror-ubuntu2]]] Create a Local Ubuntu Repository using Apt-Mirror and Apt-Cacher, Packt Publishing, https://www.packtpub.com/books/content/create-local-ubuntu-repository-using-apt-mirror-and-apt-cacher
+
+- [[[apt-offline-Projektseite]]] Projektseite zu 'apt-offline', http://apt-offline.alioth.debian.org/
+
+- [[[APT-Repo-PostgreSQL]]] APT-Repositories von PostgreSQL, https://wiki.postgresql.org/wiki/Apt
+
+- [[[APT-Repo-X2Go]]] APT-Repositories von X2Go, http://wiki.x2go.org/doku.php/wiki:repositories:debian
+
+- [[[apt-rpm]]] `apt-rpm`, http://apt-rpm.org/
+
+- [[[Arch-Linux-pacapt]]] `pacapt` auf GitHub: https://github.com/icy/pacapt
+
+//- [[[AsciiDoc]]] AsciiDoc, Text-basierte Dokumenten-Generierung, http://www.methods.co.nz/asciidoc/
+
+- [[[awk]]] Al Aho, Brian Kernighan, und Peter Weinberger: The AWK Programming Language, Addison-Wesley, 1988, ISBN 0-201-07981-X
+
+- [[[backports.org-moved-to-backports.debian.org]]] backports.org moved to backports.debian.org, http://backports.debian.org/news/backports.org_moved_to_backports.debian.org/
+
+- [[[Backports-Mailingliste]]] Backports-Mailingliste, https://lists.debian.org/debian-backports/
+
+- [[[BackTrack]]] BackTrack, http://www.backtrack-linux.org/
+
+// - [[[Bailey-Maximum-RPM]]] Edward C. Bailey: Maximum RPM. Taking the Red Hat Package Manager to the Limit, Red Hat Inc., 2000, ISBN 1-888172-78-9, http://www.rpm.org/max-rpm/
+
+- [[[Beckert-Aptitude-Textmodus]]], Axel Beckert: Aptitude. Pakete komfortabel im Text-Modus verwalten, Vortrag im Rahmen des Linuxday Dornbirn, November 2013, http://fileshare.lugv.at/public/vortraege2013/linuxday/aptitude-linuxday.html
+
+- [[[Beckert-Blog]]] Axel Beckerts Blog, http://noone.org/blog
+
+- [[[Beckert-Blog-Aptitude-Gtk-Will-Vanish]]] Axel Beckert: `aptitude-gtk` will likely vanish, http://noone.org/blog/English/Computer/Debian/aptitude-gtk%20will%20likely%20vanish.futile
+
+- [[[Beckert-Blog-Finding-Libraries]]] Axel Beckert: Finding libraries not marked as automatically installed with `aptitude`, http://noone.org/blog/English/Computer/Debian/CoolTools/Finding%20libraries%20not%20marked%20as%20automatically%20installed%20with%20aptitude.futile
+
+- [[[Beckert-Blog-Hardlinking-Duplicate-Files]]] Axel Beckert: Automatically hardlinking duplicate files under `/usr/share/doc` with APT, http://noone.org/blog/English/Computer/Debian/Automatically%20hardlinking%20duplicate%20documentation%20files%20with%20APT.futile
+
+- [[[Beckert-Hofmann-Aptitude-1-LinuxUser]]] Axel Beckert, Frank Hofmann: Dynamisches Duo. Apt-get und Aptitude (Teil 1), LinuxUser 04/2013, S. 90ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2013/04/Apt-get-und-Aptitude-Teil-1
+
+- [[[Beckert-Hofmann-Aptitude-2-LinuxUser]]] Axel Beckert, Frank Hofmann: Paarweise. Apt-get und Aptitude (Teil 2), LinuxUser 06/2013, S. 90ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2013/06/Apt-Get-und-Aptitude-im-Einsatz
+
+//- [[[Beckert-Webseite]]] Axel Beckerts Webseite, http://axel.beckert.ch/
+
+- [[[biarch]]] Fedora Project: Biarch Spin, http://fedoraproject.org/wiki/Biarch_Spin
+
+//- [[[Buero2.0]]] Büro 2.0, Berlin, http://www.buero20.org/
+
+- [[[bugs-found-during-book-writing]]] Bugs, die während dem
+  bzw. durch das Schreiben dieses Buches gefunden wurden,
+  https://bugs.debian.org/cgi-bin/pkgreport.cgi?tag=found-during-book-writing;users=abe%40debian.org
+
+- [[[Canonical-builder]]] Canonical: builder - Construct a branch from a recipe, http://doc.bazaar.canonical.com/plugins/en/builder-plugin.html
+
+- [[[checkinstall]]] Projektseite zu 'checkinstall', http://asic-linux.com.mx/~izto/checkinstall/
+
+- [[[Click-Paket-Format]]] Canonicals 'Click' Paketformat, https://click.readthedocs.org/en/latest/
+
+- [[[CLT]]] Chemnitzer Linux-Tage, http://chemnitzer.linux-tage.de/
+
+- [[[Communtu]]] Webseite des Communtu-Projekts, http://de.communtu.org/
+
+- [[[Cupt-Tutorial]]] Cupt Tutorial, http://people.debian.org/~jackyf/cupt2/tutorial.html
+
+- [[[curses-apt-key]]] curses-apt-key, https://github.com/xtaran/curses-apt-key
+
+- [[[curses-apt-key-braucht-gui-apt-key-aufsplittung]]] Aufsplittung von gui-apt-key in Bibliothek und Frontend gewünscht, https://bugs.debian.org/675199
+
+- [[[curses-apt-key-itp]]] Intent to package curses-apt-key, https://bugs.debian.org/675187
+
+- [[[Damienoh-apt-offline]]] Damien Oh: How to Update/Upgrade Your Ubuntu Without Internet Connection, http://www.maketecheasier.com/update-upgrade-ubuntu-without-internet-connection/
+
+- [[[DamnSmallLinux]]] Damn Small Linux, http://www.damnsmalllinux.org/
+
+- [[[DebConf]]] Debian Entwicklerkonferenz (DebConf), http://www.debconf.org/
+
+- [[[Debdelta]]] Debdelta, Pakete als Differenzen zur vorherigen Paket-Version, http://debdelta.debian.net/
+
+- [[[DebianAlternatives]]] Debian Wiki: Debian Alternatives, https://wiki.debian.org/DebianAlternatives
+
+- [[[DebianDerivativeCensus]]] Debian-Derivate-Zensus, http://wiki.debian.org/Derivatives/Census
+
+- [[[Debianforum-Wiki-Backports]]] Debian Backports im Debianforum Wiki: http://wiki.debianforum.de/Backports
+
+- [[[DebianLiveSystem]]] The Debian Live Systems project, http://live.debian.net/
+
+- [[[DebianMaintainer]]] Debian Maintainer im Debian Wiki, https://wiki.debian.org/DebianMaintainer
+
+- [[[Debian-Anwenderhandbuch]]] Frank Ronneburg: Das Debiananwenderhandbuch, http://debiananwenderhandbuch.de/
+
+- [[[Debian-Anwenderhandbuch-apt-offline]]] Frank Ronneburg: Das
+  Debiananwenderhandbuch, APT offline benutzen, http://debiananwenderhandbuch.de/apt-offline.html
+
+- [[[Debian-Anwenderhandbuch-apt-optionen]]] Frank Ronneburg: Das Debiananwenderhandbuch, Die Optionen von APT, http://debiananwenderhandbuch.de/apt-get.html
+
+- [[[Debian-Architekturen]]] Liste der von Debian unterstützten Architekturen, http://www.debian.org/ports/
+
+- [[[Debian-Archive]]] Archiv der von Debian nicht mehr unterstützten Veröffentlichungen, http://archive.debian.org/
+
+- [[[Debian-Backports]]] Debian Backports: http://backports-master.debian.org/
+
+- [[[Debian-besorgen]]], Debian besorgen. Installationsmedien und ISO-Images auf der Debian-Webseite, http://www.debian.org/distrib/
+
+- [[[Debian-Bug-Tracking-System]]], Debian Bug Tracking System (Debian BTS), https://www.debian.org/Bugs/
+
+- [[[Debian-DebSrc3.0]]] Projects DebSrc3.0, http://wiki.debian.org/Projects/DebSrc3.0
+
+- [[[Debian-Debtags]]] Debtags Projekt, http://debtags.debian.net/
+
+- [[[Debian-Debtags-Editor]]] Debtags Editor, http://debtags.debian.net/edit/
+
+- [[[Debian-Debtags-Search]]] Debtags Projekt, Suche, http://debtags.debian.net/search
+
+- [[[Debian-Debtags-Search-By-Tags]]] Debtags Projekt, Suche anhand der Schlagworte, http://debtags.debian.net/search/bytag
+
+- [[[Debian-Debtags-Statistics]]] Debtags Projekt, Statistische Daten, http://debtags.debian.net/reports/stats/
+
+- [[[Debian-Developers-Reference]]] Developer's Reference Team: Debian Developer's Reference, deutsche Übersetzung, http://www.debian.org/doc/manuals/developers-reference/index.html
+
+//- [[[Debian-Donations]]] Spenden an Debian, http://www.debian.org/donations
+
+- [[[Debian-History]]] Debian Documentation Team: A Brief History of Debian, Chapter 3, Debian Releases, http://www.debian.org/doc/manuals/project-history/ch-releases.de.html
+
+- [[[Debian-Mirror-Checker]]] Debian Mirror Checker, http://mirror.debian.org/status.html
+
+- [[[Debian-Mirror-Doku]]] Dokumentation zur Auswahl eines Netzwerk-Spiegel-Servers, http://www.debian.org/releases/stable/i386/ch06s03.html#apt-setup-mirror-selection
+
+- [[[Debian-Package-Basics]]] What is a Debian package? http://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html
+
+- [[[Debian-Paketsuche]]] Debian-Webseite, Paketsuche, https://www.debian.org/distrib/packages#search_contents
+
+- [[[Debian-Paket-adept]]] Debian-Paket 'adept', http://packages.debian.org/adept
+
+- [[[Debian-Paket-adequate]]] Debian-Paket 'adequate', http://packages.debian.org/de/jessie/adequate
+
+- [[[Debian-Paket-alien]]] Debian-Paket 'alien', http://packages.debian.org/de/stable/alien
+
+- [[[Debian-Paket-approx]]] Debian-Paket 'approx', http://packages.debian.org/de/stable/approx
+
+- [[[Debian-Paket-apt]]] Debian-Paket 'apt', https://packages.debian.org/de/stable/apt
+
+- [[[Debian-Paket-aptoncd]]] Debian-Paket 'aptoncd', http://packages.debian.org/de/stable/aptoncd
+
+- [[[Debian-Paket-apt-cacher]]] Debian-Paket 'apt-cacher', http://packages.debian.org/de/stable/apt-cacher
+
+- [[[Debian-Paket-apt-cacher-ng]]] Debian-Paket 'apt-cacher-ng', http://packages.debian.org/de/stable/apt-cacher-ng
+
+- [[[Debian-Paket-apt-cdrom-setup]]] Debian-Paket 'apt-cdrom-setup', http://packages.debian.org/de/stable/apt-cdrom-setup
+
+- [[[Debian-Paket-apt-dater]]] Debian-Paket 'apt-dater', https://packages.debian.org/de/stable/apt-dater
+
+- [[[Debian-Paket-apt-dpkg-ref]]] Debian-Paket 'apt-dpkg-ref', http://packages.debian.org/de/stable/apt-dpkg-ref
+
+- [[[Debian-Paket-apt-doc]]] Debian-Paket 'apt-doc', http://packages.debian.org/de/stable/apt-doc
+
+- [[[Debian-Paket-apt-fast]]] Debian-Paket 'apt-fast', http://packages.debian.org/de/stable/apt-fast
+
+- [[[Debian-Paket-apt-listbugs]]] Debian-Paket 'apt-listbugs', https://packages.debian.org/de/stable/apt-listbugs
+
+- [[[Debian-Paket-apt-listchanges]]] Debian-Paket 'apt-listchanges', https://packages.debian.org/de/stable/apt-listchanges
+
+- [[[Debian-Paket-apt-mirror]]] Debian-Paket 'apt-mirror', https://packages.debian.org/de/stable/apt-mirror
+
+- [[[Debian-Paket-apt-move]]] Debian-Paket 'apt-move', https://packages.debian.org/de/stable/apt-move
+
+- [[[Debian-Paket-apt-offline]]] Debian-Paket 'apt-offline', http://packages.debian.org/de/stable/apt-offline
+
+- [[[Debian-Paket-apt-offline-gui]]] Debian-Paket 'apt-offline-gui', http://packages.debian.org/de/stable/apt-offline-gui
+
+- [[[Debian-Paket-apt-rdepends]]] Debian-Paket 'apt-rdepends', http://packages.debian.org/de/stable/apt-rdepends
+
+- [[[Debian-Paket-apt-setup]]] 'apt-setup', http://packages.debian.org/de/stable/apt-setup-udeb
+
+- [[[Debian-Paket-apt-show-versions]]] Debian-Paket 'apt-show-versions', http://packages.debian.org/de/stable/apt-show-versions
+
+- [[[Debian-Paket-apt-spy]]] Debian-Paket 'apt-spy', http://packages.debian.org/de/stable/apt-spy
+
+- [[[Debian-Paket-apt-transport-debtorrent]]] Debian-Paket 'apt-transport-debtorrent', http://packages.debian.org/de/stable/apt-transport-debtorrent
+
+- [[[Debian-Paket-apt-zip]]] Debian-Paket 'apt-zip', http://packages.debian.org/de/stable/apt-zip
+
+- [[[Debian-Paket-ara]]] Debian-Paket 'ara', http://packages.debian.org/de/stable/ara
+
+- [[[Debian-Paket-aria2]]] Debian-Paket 'aria2', http://packages.debian.org/de/stable/aria2
+
+- [[[Debian-Paket-autopkgtest]]] Debian-Paket 'autopkgtest', https://packages.debian.org/de/stable/autopkgtest
+
+- [[[Debian-Paket-auto-apt]]] Debian-Paket 'auto-apt', https://packages.debian.org/de/stable/auto-apt
+
+- [[[Debian-Paket-checkinstall]]] Debian-Paket 'checkinstall', http://packages.debian.org/de/stable/checkinstall
+
+- [[[Debian-Paket-cupt]]] Debian-Paket 'cupt', http://packages.debian.org/de/stable/cupt
+
+- [[[Debian-Paket-dctrl-tools]]] Debian-Paket 'dctrl-tools', http://packages.debian.org/de/stable/dctrl-tools
+
+- [[[Debian-Paket-debdelta]]] Debian-Paket 'debdelta', http://packages.debian.org/de/stable/debdelta
+
+- [[[Debian-Paket-debfoster]]] Debian-Paket 'debfoster', http://packages.debian.org/de/stable/debfoster
+
+- [[[Debian-Paket-debian-goodies]]] Debian-Paket 'debian-goodies', http://packages.debian.org/de/stable/debian-goodies
+
+- [[[Debian-Paket-debian-handbook]]] Debian-Paket 'debian-handbook', http://packages.debian.org/de/stable/debian-handbook
+
+- [[[Debian-Paket-debian-security-support]]] Debian-Paket 'debian-security-support', https://packages.debian.org/wheezy-backports/debian-security-support
+
+- [[[Debian-Paket-debmirror]]] Debian-Paket 'debmirror', https://packages.debian.org/de/stable/debmirror
+
+- [[[Debian-Paket-deborphan]]] Debian-Paket 'deborphan', http://packages.debian.org/de/stable/deborphan
+
+- [[[Debian-Paket-debpartial-mirror]]] Debian-Paket 'debpartial-mirror',  https://packages.debian.org/de/stable/debpartial-mirror
+
+- [[[Debian-Paket-debtags]]] Debian-Paket 'debtags', http://packages.debian.org/de/stable/debtags
+
+- [[[Debian-Paket-debtags-edit]]] Debian-Paket 'debtags-edit', http://packages.debian.org/de/stable/debtags-edit
+
+- [[[Debian-Paket-debtorrent]]] Debian-Paket 'debtorrent', http://packages.debian.org/sid/debtorrent
+
+- [[[Debian-Paket-devscripts]]] Debian-Paket 'devscripts', http://packages.debian.org/de/stable/devscripts
+
+- [[[Debian-Paket-debsums]]] Debian-Paket 'debsums', http://packages.debian.org/de/stable/debsums
+
+- [[[Debian-Paket-dgit]]] Debian-Paket 'dgit', https://packages.debian.org/testing/dgit
+
+- [[[Debian-Paket-dkms]]] Debian-Paket 'dkms' (Dynamic Kernel Modules Support), http://packages.debian.org/de/stable/dkms
+
+- [[[Debian-Paket-dlocate]]] Debian-Paket 'dlocate', https://packages.debian.org/de/stable/dlocate
+
+- [[[Debian-Paket-dpkg-www]]] Debian-Paket 'dpkg-www', https://packages.debian.org/de/stable/dpkg-www
+
+- [[[Debian-Paket-galternatives]]] Debian-Paket 'galternatives', http://packages.debian.org/de/stable/galternatives
+
+- [[[Debian-Paket-gawk]]] Debian-Paket 'gawk', http://packages.debian.org/de/stable/gawk
+
+- [[[Debian-Paket-geoip-database]]] Debian-Paket 'geoip-database', https://packages.debian.org/de/stable/geoip-database
+
+- [[[Debian-Paket-git-dpm]]] Debian-Paket 'git-dpm', https://packages.debian.org/de/stable/git-dpm
+
+- [[[Debian-Paket-goplay]]] Debian-Paket 'goplay', https://packages.debian.org/de/stable/goplay
+
+- [[[Debian-Paket-gui-apt-key]]] Debian-Paket 'gui-apt-key', https://packages.debian.org/de/stable/gui-apt-key
+
+- [[[Debian-Paket-how-can-i-help]]] Debian-Paket 'how-can-i-help', https://packages.debian.org/jessie/how-can-i-help
+
+- [[[Debian-Paket-ia32-libs]]] Debian-Paket 'ia32-libs', https://packages.debian.org/de/stable/ia32-libs
+
+- [[[Debian-Paket-isenkram]]] Debian-Paket 'isenkram', https://packages.debian.org/de/testing/isenkram
+
+- [[[Debian-Paket-isenkram-cli]]] Debian-Paket 'isenkram-cli', https://packages.debian.org/de/testing/isenkram-cli
+
+- [[[Debian-Paket-libapache2-mod-authn-yubikey]]] Debian-Paket 'libapache2-mod-authn-yubikey', http://packages.debian.org/de/stable/libapache2-mod-authn-yubikey
+
+- [[[Debian-Paket-lintian]]] Debian-Paket 'lintian', http://packages.debian.org/de/stable/lintian
+
+- [[[Debian-Paket-localepurge]]] Debian-Paket 'localepurge', http://packages.debian.org/stable/localepurge
+
+- [[[Debian-Paket-module-assistant]]] Debian-Paket 'module-assistant', http://packages.debian.org/de/stable/module-assistant
+
+- [[[Debian-Paket-netselect]]] Debian-Paket 'netselect', http://packages.debian.org/de/stable/netselect
+
+- [[[Debian-Paket-netselect-apt]]] Debian-Paket 'netselect-apt', http://packages.debian.org/de/stable/netselect-apt
+
+- [[[Debian-Paket-packagekit]]] Debian-Paket 'packagekit', http://packages.debian.org/de/stable/packagekit
+
+- [[[Debian-Paket-packagesearch]]] Debian-Paket 'packagesearch', http://packages.debian.org/de/stable/packagesearch
+
+- [[[Debian-Paket-piuparts]]] Debian-Paket 'piuparts', http://packages.debian.org/de/stable/piuparts
+
+- [[[Debian-Paket-python-software-properties]]] Debian-Paket 'python-software-properties', http://packages.debian.org/de/stable/python-software-properties
+
+- [[[Debian-Paket-reportbug]]] Debian-Paket 'reportbug', https://packages.debian.org/de/stable/reportbug
+
+- [[[Debian-Paket-reprepro]]] Debian-Paket 'reprepro', https://packages.debian.org/de/stable/reprepro
+
+- [[[Debian-Paket-sensible-utils]]] Debian-Paket 'sensible-utils', http://packages.debian.org/de/stable/sensible-utils
+
+- [[[Debian-Paket-smartpm]]] Debian-Paket 'smartpm', http://packages.debian.org/de/stable/smartpm
+
+// ACHTUNG: Absichtlich "wheezy" und nicht "stable", weil ab Jessie nicht mehr in Debian!
+- [[[Debian-Paket-software-center]]] Debian-Paket 'software-center', http://packages.debian.org/de/wheezy/software-center
+
+- [[[Debian-Paket-synaptic]]] Debian-Paket 'synaptic', http://packages.debian.org/de/stable/synaptic
+
+- [[[Debian-Paket-tasksel]]] Debian-Paket 'tasksel', http://packages.debian.org/de/stable/tasksel
+
+- [[[Debian-Paket-util-linux]]] Debian-Paket 'util-linux', http://packages.debian.org/de/stable/util-linux
+
+- [[[Debian-Paket-wajig]]] Debian-Paket 'wajig', http://packages.debian.org/de/stable/wajig
+
+- [[[Debian-Paket-wget]]] Debian-Paket 'wget', http://packages.debian.org/de/stable/wget
+
+- [[[Debian-Paket-xara-gtk]]] Debian-Paket 'xara-gtk', http://packages.debian.org/de/stable/xara-gtk
+
+- [[[Debian-Paket-zutils]]] Debian-Paket 'zutils', http://packages.debian.org/de/stable/zutils
+
+- [[[Debian-Policy-Manual]]] Debian Policy Manual, http://www.debian.org/doc/debian-policy/
+
+- [[[Debian-Policy-Subsections]]] Debian Policy Manual, Bereich Subsections, http://www.debian.org/doc/debian-policy/ch-archive.html#s-subsections
+
+- [[[Debian-Popularity-Contest]]] Debian Popularity Contest, http://popcon.debian.org/
+
+- [[[Debian-Ports-Projekt]]] Debian-Ports Projekt, http://www.ports.debian.org/
+
+- [[[Debian-Pure-Blends]]] Andreas Tille, Ben Armstrong, Emmanouil Kiagias: Debian Pure Blends, http://blends.debian.org/blends/
+
+- [[[DebianQA]]] Debian Quality Assurance (QA) Team, https://qa.debian.org/
+
+- [[[Debian-Redirector]]] The Debian Redirector, http://http.debian.net/
+
+- [[[Debian-Security]]] Debian-Sicherheitsinformationen, https://www.debian.org/security/
+
+- [[[Debian-Sources-List-Generator]]] Debian Sources List Generator, http://debgen.simplylinux.ch/
+
+- [[[Debian-Spiegel-Informationen]]] Spiegel-Informationen einreichen, http://www.debian.org/mirror/submit
+
+- [[[Debian-Spiegel-Liste]]] Liste der Debian-Mirror, http://www.debian.org/mirror/list
+
+- [[[Debian-udeb]]] Debian-Dokumentation zu 'udeb', http://d-i.alioth.debian.org/doc/internals/ch03.html
+
+- [[[Debian-Release-Notes]]] Veröffentlichungshinweise zur
+  Debian-Distribution, https://www.debian.org/releases/stable/releasenotes
+
+- [[[Debian-Social-Contract]]] Debian-Gesellschaftsvertrag, http://www.debian.org/social_contract.de.html
+
+- [[[Debian-Virtual-Packages-List]]] Liste aller offiziell verwendeten virtuellen Pakete, http://www.debian.org/doc/packaging-manuals/virtual-package-names-list.txt
+
+- [[[Debian-Webseite]]] Webseite des Debian-Projekts, http://www.debian.org/
+
+- [[[Debian-Wiki-AptConf]]] Debian Wiki: Eintrag zu AptConf, https://wiki.debian.org/AptConf
+
+- [[[Debian-Wiki-ARM-EABI-Port]]] Debian Wiki: ARM EABI Port, http://wiki.debian.org/ArmPorts
+
+//- [[[Debian-Wiki-chroot]]] `chroot` (deutschsprachig) im Debian Wiki, http://wiki.debian.org/de/chroot
+
+- [[[Debian-Wiki-cupt]]] Debian Wiki: Eintrag zu `cupt`, https://wiki.debian.org/Cupt
+
+//- [[[Debian-Wiki-Debian-Entwickler]]] Debian Wiki: Wie werde ich ein Debian-Entwickler?, http://wiki.debian.org/DebianDeveloper
+
+// - [[[Debian-Wiki-FHS]]] Filesystem Hierarchy Standard (FHS) im Debian Wiki, http://wiki.debian.org/FilesystemHierarchyStandard
+
+- [[[Debian-Wiki-Debian-GNUHurd]]] Wiki zu Debian GNU/Hurd, https://wiki.debian.org/Debian_GNU/Hurd
+
+- [[[Debian-Wiki-Debian-GNUkFreeBSD]]] Wiki zu Debian GNU/kFreeBSD, https://wiki.debian.org/Debian_GNU/kFreeBSD
+
+- [[[Debian-Wiki-DebTorrent]]] Debian Wiki: DebTorrent, https://wiki.debian.org/DebTorrent
+
+- [[[Debian-Wiki-DiskImage]]] Debian Wiki: Diskimage, https://wiki.debian.org/DiskImage
+
+- [[[Debian-Wiki-FAI]]] Debian Wiki: FAI (Fully Automatic Installation) for Debian GNU/Linux, https://wiki.debian.org/FAI
+
+- [[[Debian-Wiki-git-dpm]]] Debian Wiki: `git-dpm` -- debian packages in git manager, http://git-dpm.alioth.debian.org/
+
+- [[[Debian-Wiki-git-dpm-packaging]]] Debian Wiki: Maintaining Debian source packages in git with git-dpm, https://wiki.debian.org/PackagingWithGit/GitDpm
+
+- [[[Debian-Wiki-how-can-i-help]]] Debian Wiki: How Can I Help?, https://wiki.debian.org/how-can-i-help
+
+- [[[Debian-Wiki-multiarch]]] Debian Wiki: Debian multiarch support, https://wiki.debian.org/Multiarch
+
+- [[[Debian-Wiki-SecureApt]]] Debian Wiki: SecureApt, https://wiki.debian.org/SecureApt
+
+- [[[Debian-Wiki-WNPP]]] Debian Wiki: Work-Needing and Prospective Packages (WNPP), https://wiki.debian.org/WNPP
+
+- [[[debtorrent-Projektseite]]] Webseite zum DebTorrent-Projekt, http://debtorrent.alioth.debian.org/
+
+- [[[debtree-Projektseite]]] Webseite zum debtree-Projekt, http://collab-maint.alioth.debian.org/debtree/
+
+- [[[DEP-8]]] Debian Enhancement Proposal 'DEP 8': automatic as-installed package testing, http://dep.debian.net/deps/dep8/
+
+- [[[DFSG]]] Debian Free Software Guidelines (DFSG), https://www.debian.org/social_contract#guidelines
+
+- [[[dinstall-status]]] dinstall Status, https://ftp-master.debian.org/dinstall.status
+
+- [[[Drilling-APT-Pinning-LinuxUser]]] Thomas Drilling: Festgenagelt. Tricks zum Mischen von Debian-Releases, LinuxUser 06/2012, LinuxNewMedia AG, München, 2012, S. 35ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2012/06/Tricks-zum-Mischen-von-Debian-Releases
+
+- [[[Drilling-Checkinstall-LinuxUser]]] Thomas Drilling: Gut geschnürt. Paketbau in Eigenregie mit Checkinstall, LinuxUser 06/2012, LinuxNewMedia AG, München, 2012, S. 38ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2012/06/Paketbau-in-Eigenregie-mit-Checkinstall
+
+- [[[DysonOS]]] Dyson OS, http://osdyson.org/
+
+- [[[Edubuntu]]] Edubuntu, http://www.edubuntu.org/
+
+- [[[Emdebian]]] Debian für Embedded Devices, http://www.emdebian.org/
+
+//- [[[FHS-Linux-Foundation]]] Filesystem Hierarchy Standard (FHS), Linux Foundation, https://wiki.linuxfoundation.org/en/FHS
+
+- [[[Finkproject]]] Fink-Projekt, http://www.finkproject.org/
+
+// - [[[Foster-Johnson-RPM-Guide]]] Eric Foster-Johnson, Stuart Ellis und Ben Cotton: RPM Guide, 2005/2011, Fedora Project Contributors, Edition 0, http://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/RPM_Guide/index.html
+
+- [[[FreeBSD]]] FreeBSD-Projekt, http://www.freebsd.org/
+
+- [[[gambaru-rc-alert]]] gambaru.de: Wie man veröffentlichungskritische Bugs in Debian beseitigt, http://www.gambaru.de/blog/2012/09/19/wie-man-veroffentlichungskritische-bugs-in-debian-beseitigt/
+
+- [[[gdebi]]] Gdebi, https://launchpad.net/gdebi
+
+- [[[geoiptool]]] Geo IP Tool, http://www.geoiptool.com/
+
+//- [[[GNU-Linux-Distribution-Timeline]]] GNU Linux Distribution Timeline, http://futurist.se/gldt
+
+- [[[Graphviz]]] Graphviz -- Graph Visualization Software, http://www.graphviz.org/
+
+- [[[Grml]]] Grml, http://www.grml.org/
+
+- [[[Gtkorphan]]] Gtkorphan, Webseite zum Programm, http://www.marzocca.net/linux/gtkorphan.html
+
+- [[[Hackerfunk]]] Hackerfunk Zürich, Folge 65, Fachliteratur Schreiben, http://www.hackerfunk.ch/?id=127
+
+//- [[[Heinlein-LPIC-1]]] Peer Heinlein: LPIC-1. Vorbereitung auf die Prüfung des Linux Professional Institute, OpenSource Press, 5. Auflage, ISBN 978-3-95539-012-9, deutsch, 501 Seiten, http://www.opensourcepress.de/de/produkte/LPIC-1/452/978-3-95539-012-9
+
+- [[[Hertzog-Mas-Debian-Administrators-Handbook]]] Raphael Hertzog, Roland Mas: The Debian Administrator's Handbook, 2012, ISBN 979-10-91414-00-5, http://debian-handbook.info/
+
+- [[[Hertzog-Obsolete-Packages]]] Raphael Hertzog: Debian Cleanup Tip #2: Get rid of obsolete packages, http://raphaelhertzog.com/2011/02/07/debian-cleanup-tip-2-get-rid-of-obsolete-packages/
+
+- [[[Hofmann-Debtags-LinuxUser]]] Frank Hofmann: Dschungelführer. Pakete zielgenau finden mit Debtags, LinuxUser 06/2012, LinuxNewMedia AG, München, 2012, S. 22ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2012/06/Pakete-zielgenau-finden-mit-Debtags
+
+- [[[Hofmann-Debtags-Vortrag]]] Frank Hofmann: Debian-Pakete zielgenau finden mit Debtags, Vortrag im Rahmen des Linuxday Dornbirn, November 2013, http://fileshare.lugv.at/public/vortraege2013/linuxday/debian-debtags.pdf
+
+- [[[Hofmann-Osterried-Alien-LinuxUser]]] Frank Hofmann, Thomas Osterried: Gestaltwandler. Programmpakete richtig konvertieren, LinuxUser 1/2010, LinuxNewMedia AG, München, 2010, S. 32ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2010/01/Programmpakete-richtig-konvertieren
+
+- [[[Hofmann-Smartpm-LinuxUser]]] Frank Hofmann: Mit allen Extras. Debian-Pakete verwalten mit dem Smart Package Manager, LinuxUser 07/2013, LinuxNewMedia AG, München, 2013, S. 68ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2013/07/Debian-Pakete-verwalten-mit-dem-Smart-Package-Manager
+
+//- [[[Hofmann-Webseite]]] Frank Hofmanns Webseite, http://www.efho.de/
+
+- [[[Hofmann-Winde-Aptsh-LinuxUser]]] Frank Hofmann, Thomas Winde: Zentraler Zugangspunkt. Komfortabel Pakete managen mit der Apt-Shell, LinuxUser 06/2012, LinuxNewMedia AG, München, 2012, S. 30ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2012/06/Komfortabel-Pakete-managen-mit-der-Apt-Shell
+
+- [[[Hurd]]] GNU Hurd Projekt, http://www.gnu.org/software/hurd/
+
+- [[[Huy-Tran-Apt-Mirror]]] Huy Tran: How to update and upgrade with fastest mirror from the command line, http://www.namhuy.net/1040/how-to-update-and-upgrade-with-fastest-mirror-from-the-command-line.html
+
+- [[[Illumian]]] Illumian, http://illumian.org/
+
+- [[[ipbrick]]] IPBRICK, http://www.ipbrick.de/
+
+- [[[ipkg]]] Itsy Package Management System (IPKG) bei Wikipedia, http://de.wikipedia.org/wiki/IPKG
+
+- [[[Isenkram-Reinholdtsen]]] Isenkram im Blog von Petter Reinholdtsen, http://people.skolelinux.org/pere/blog/tags/isenkram/
+
+- [[[Java-Apt]]] Java Annotation Processing Tool, https://metro.java.net/1.5/docs/apt.html
+
+- [[[Jurzik-Debian-Handbuch]]] Heike Jurzik: Debian GNU/Linux: Das umfassende Handbuch, Verlag: Galileo Computing; 5. Auflage, 2013, ISBN-13: 978-3-8362-2661-5
+
+- [[[Kali-Linux]]] Kali Linux, http://www.kali.org/
+
+- [[[Kemp-dget]]] Steve Kemp: Downloading Debian source packages easily, http://www.debian-administration.org/article/504/Downloading_Debian_source_packages_easily
+
+- [[[Keryx]]] Keryx im Ubuntu Launchpad, https://launchpad.net/keryx
+
+- [[[Knoppix]]] Knoppix, http://www.knopper.net/knoppix/
+
+- [[[Kofler-Linux-2013]]] Michael Kofler: Linux 2013. Das Desktop- und Server-Handbuch für Ubuntu, Debian, CentOS und Co. (Open Source Library), Addison-Wesley Verlag, 2013, ISBN 978-3827332080, S. 480-490, S. 1112-1115
+
+- [[[Krafft-Debian-System]]] Martin F. Krafft: Das Debian-System. Konzepte und Methoden, Open Source Press München, 2006, deutsche Ausgabe, Erstauflage, S.
+140 f.
+
+- [[[Krafft-Debian-System144]]] Ebd., S. 144 ff.
+
+- [[[Krafft-Debian-System137ff]]] Ebd., Kapitel 5, S. 137-294
+
+- [[[Lemberg-Linux-Server-Praxishandbuch]]] Eric Amberg: Linux-Server mit Debian 6 GNU/Linux: Das   umfassende Praxishandbuch -- Aktuell für die Versionen Debian 6.0 (Squeeze) und Debian 5.0 (Lenny), mitp; Auflage: 2012 (24. April 2012), Sprache: Deutsch, ISBN-10: 3826655346, ISBN-13: 978-3826655340
+
+- [[[LernStick]]] LernStick, Fachhochschule Nordwestschweiz, Solothurn, http://www.imedias.ch/projekte/lernstick/index.cfm
+
+- [[[LiMux]]] LiMux -- Linux in der Stadtverwaltung München, http://www.muenchen.de/rathaus/Stadtverwaltung/Direktorium/LiMux.html
+
+- [[[Lintian]]] Lintian-Projekt, https://lintian.debian.org/
+
+- [[[LinuxMint]]] Linux Mint, http://www.linuxmint.com/
+
+- [[[localepurge]]] 'localepurge', Projektseite im Linux Wiki, http://linuxwiki.de/localepurge
+
+- [[[Loschwitz-Sourceformat]]] Martin Loschwitz: Zusammenpacken! Das neue Sourceformat für Debian-Pakete, Linux-Magazin 06/2011, http://www.linux-magazin.de/Ausgaben/2011/06/Debian-Src-3.0
+
+- [[[Maemo]]] Maemo Community, http://maemo.org/
+
+- [[[Mageia-urpmi]]] `urpmi` -- Werkzeuge zur Paketverwaltung bei Mageia, Mageia Wiki, https://wiki.mageia.org/de/URPMI
+
+- [[[Mandriva-Wiki]]] Mandriva Control Center im Mandriva Wiki, http://wiki.mandriva.com/en/Tools/Control_Center
+
+- [[[MeeGo]]] MeeGo, https://meego.com/
+
+- [[[mime-applications-associations]]] MIME Application Associations, http://www.freedesktop.org/wiki/Specifications/mime-apps-spec/
+
+- [[[mime-applications-associations-default-applications]]] Default Applications, http://standards.freedesktop.org/mime-apps-spec/latest/ar01s04.html
+
+- [[[Naumann-Abakus-Internet]]] Dr. Friedrich Naumann: Vom Abakus zum Internet: die Geschichte der Informatik. Darmstadt, Primus-Verlag, 2001, ISBN 3-89678-224-X
+
+- [[[Ncurses]]] Ncurses-Projektseite beim GNU-Projekt, http://www.gnu.org/software/ncurses/
+
+- [[[Neo900]]] Neo900-Projekt, http://neo900.org/
+
+- [[[NexentaOS]]] Wikipedia-Eintrag zu Nexenta OS, http://en.wikipedia.org/wiki/Nexenta_OS
+
+- [[[nixcraft-apt-get]]] `apt-get`-Spickzettel im Nixcraft-Blog, http://www.cyberciti.biz/howto/question/linux/apt-get-cheat-sheet.php
+
+- [[[nixcraft-blog]]] Nixcraft-Blog, http://www.cyberciti.biz/tips/linux-debian-package-management-cheat-sheet.html
+
+- [[[nixcraft-dpkg]]] `dpkg`-Spickzettel im Nixcraft-Blog, http://www.cyberciti.biz/howto/question/linux/dpkg-cheat-sheet.php
+
+- [[[OpenMoko]]] OpenMoko-Projekt, http://www.openmoko.org/
+
+- [[[opkg]]] OpenMoko Package Format, http://wiki.openmoko.org/wiki/Opkg
+
+- [[[PackageKit]]] Webseite zu PackageKit, http://www.packagekit.org/
+
+- [[[Pacman-Rosetta]]] Pacman Rosetta -- Vergleich der Kommandozeilenparameter von `pacman`, `yum`, `apt-get`, `rug`, `zypper` und `emerge`, ArchLinux-Wiki, https://wiki.archlinux.org/index.php/Pacman_Rosetta
+
+- [[[Piuparts]]] Piuparts (Package Installation, UPgrading And Removal Testing Suite), https://piuparts.debian.org/
+
+// - [[[Plenz-Haenel-Git]]] Julius Plenz und Valentin Haenel: Git. Verteilte Versionsverwaltung für Code und Dokumente, Open Source Press, München, 1. Auflage Juni 2011, ISBN 978-3-941841-42-0
+
+- [[[RaspberryPi]]] Webseite zur Hardwareplattform Raspberry Pi, http://www.raspberrypi.org/
+
+- [[[Raspbian]]] Debian für das Raspberry Pi, http://www.raspbian.org/
+
+- [[[RFC822]]] RFC 822: Standard For The Format Of Text Messages, IETF, https://www.ietf.org/rfc/rfc0822.txt
+
+- [[[Ritesh-apt-offline]]] Ritesh Sarraf: Offline Package Management for
+  APT, https://www.debian-administration.org/article/648/Offline_Package_Management_for_APT
+
+- [[[RM-software-center]]] Entfernung von Ubuntu Software Center aus Debian, https://bugs.debian.org/755452
+
+- [[[RMLL]]] Rencontres Mondiales du Logiciel Libre, http://rmll.info/
+
+- [[[rpmseek]]] Rpmseek, http://www.rpmseek.com/
+
+- [[[RPM-Webseite]]] Dokumentation auf rpm.org, http://www.rpm.org/wiki/Docs
+
+- [[[RPM-Verify]]] When Verification Fails — rpm -V Output, http://www.rpm.org/max-rpm/s1-rpm-verify-output.html
+
+- [[[Schnober-Checkinstall-LinuxUser]]] Carsten Schnober: Wie am Schnürchen. Debian-Pakete bauen von einfach bis anspruchsvoll, LinuxUser 02/2008, LinuxNewMedia AG, München, 2008, S. 88ff., https://www.linux-user.de/ausgabe/2008/02/088/index.html
+
+- [[[screenshots.debian.net]]], Screenshot-Sammlung von Debian- und Ubuntu-Paketen, https://screenshots.debian.net/
+
+- [[[Sentinel4Mobile]]] Sentinel4Mobile Berlin, Werner Heuser, http://sentinel4mobile.de/
+
+- [[[Siduction]]] Siduction, http://siduction.org/
+
+- [[[Skolelinux]]] Skolelinux, http://skolelinux.de/
+
+- [[[SmartPM]]] Smart Package Manager, Projektseite, http://labix.org/smart
+
+- [[[Stapelberg-Debian-Repo]]] Michael Stapelberg: Kurz-Howto: Eigenes
+  Debian-Repository aufbauen, http://michael.stapelberg.de/Artikel/Debian_Repository/
+
+- [[[SteamOS]]] Steam OS, http://store.steampowered.com/steamos/
+
+- [[[StormOS]]] StormOS, Wiki-Seite im Debian Derivative Census, http://wiki.debian.org/Derivatives/Census/StormOS
+
+- [[[Suter-apt-offline]]] Samuel Suter: apt offline benutzen, http://www.lugs.ch/lib/doc/apt-offline.phtml
+
+- [[[SWITCH]]] SWITCH, das Hochleistungsnetzwerk der Schweizer Hochschulen, http://www.switch.ch/
+
+- [[[Tanglu]]] Tanglu GNU/Linux, http://www.tanglu.org/de/
+
+//- [[[Thalmayr-LUGA2012]]] Dieter Thalmayr in: Oberflächliches -- Enlightenment als Alternative zu Gnome und KDE, Vortrag im Rahmen des 11. Linux-Infotages Augsburg, 24. März 2012, http://www.luga.de/Aktionen/LIT-2012/
+
+- [[[ToyStory]]] Toy Story im Disney Wiki, http://disney.wikia.com/wiki/Toy_Story
+
+- [[[Ubuntu]]] Ubuntu Linux, http://www.ubuntu.com/
+
+- [[[Ubuntu-apturl]]] AptURL im Ubuntu Apps Directory, https://apps.ubuntu.com/cat/applications/apturl/
+
+- [[[Ubuntu-Landscape]]] Ubuntu Landscape System Management, https://landscape.canonical.com/
+
+- [[[Ubuntu-Launchpad]]] Ubuntu Launchpad, https://launchpad.net/ubuntu
+
+- [[[Ubuntu-One]]] Ubuntu One, http://ubuntuone.com
+
+- [[[Ubuntu-One-Wikipedia]]] Ubuntu One, Wikipedia-Eintrag, http://de.wikipedia.org/wiki/Ubuntu_One
+
+- [[[Ubuntu-Software-Center]]] Ubuntu Software Center, Projektseite/Wiki, https://wiki.ubuntu.com/SoftwareCenter
+
+- [[[Ubuntu-Sources-List-Generator]]] Ubuntu Sources List Generator, http://repogen.simplylinux.ch/
+
+- [[[Ultimate-Debian-Database]]] Ultimate Debian Database, https://udd.debian.org/
+
+- [[[UCS]]] Univention Corporate Server (UCS), http://www.univention.de/produkte/ucs/
+
+- [[[univention-errata]]] Aktualisierungen bei UCS, https://errata.univention.de/
+
+- [[[Vogt-apturl]]] Michael Vogt: apturl bei Ubuntu Users, http://wiki.ubuntuusers.de/apturl
+
+- [[[Vogt-Apt-1.0]]] Michael Vogt: apt 1.0, http://mvogt.wordpress.com/2014/04/04/apt-1-0/
+
+- [[[Vogt-Apt-Mirror]]] Michael Vogt: The apt mirror method, https://mvogt.wordpress.com/2011/03/21/the-apt-mirror-method/
+
+- [[[Vogt-gdebi]]] Michael Vogt: Using gdebi to install build-dependencies, http://mvogt.wordpress.com/2013/03/22/using-gdebi-to-install-build-dependencies/
+
+- [[[wajig-Webseite]]] Webseite des wajig-Projekts, http://wajig.togaware.com/
+
+- [[[Wheezy-Paketliste]]] Paketliste zu Debian 'Wheezy', http://packages.debian.org/wheezy/
+
+- [[[Wizards-of-Foss]]] Wizards of FOSS, Berlin, http://wizards-of-foss.de/
+
+- [[[Wizards-of-Foss-Blog]]] Blog der Wizards of FOSS, http://wizards-of-foss.de/de/weblog/
+
+- [[[xfce]]] XFCE Window Manager, http://www.xfce.org/
+
+- [[[xtronics-Wiki]]] Wiki bei xtronics, http://wiki.xtronics.com/index.php/Wajig
+
+- [[[xubuntu-apt-offline]]] xubuntu Offline Documentation, http://docs.xubuntu.org/1304/offline-packages.html
+
+- [[[YUM]]] Yellowdog Updater, Modified (YUM), Projektseite, http://yum.baseurl.org/
+
+- [[[Zypper]]] Zypper, Projektseite, http://de.opensuse.org/Zypper
+
+// Datei (Ende): ./quellen/quellen.txt

@@ -1,0 +1,28 @@
+// Datei: ./main.txt
+Debian-Paketmanagement
+======================
+:doctype: book
+:lang: de
+:ascii-ids:
+
+// Baustelle: Rohtext
+
+[preface]
+include::kann-denn-paketmanagement-spass-machen/kann-denn-paketmanagement-spass-machen.txt[]
+
+include::konzepte/konzepte.txt[]
+
+include::werkzeuge/werkzeuge.txt[]
+
+include::praxis/praxis.txt[]
+
+include::ausblick/ausblick.txt[]
+
+[appendix]
+include::quellen/quellen.txt[]
+
+include::anhang/anhang.txt[]
+
+include::index/index.txt[]
+
+// Datei (Ende): ./main.txt

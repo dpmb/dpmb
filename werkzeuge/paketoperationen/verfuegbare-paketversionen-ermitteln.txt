@@ -1,0 +1,54 @@
+// Datei: ./werkzeuge/paketoperationen/verfuegbare-paketversionen-ermitteln.txt
+
+// Baustelle: Rohtext
+
+[[verfuegbare-paketversionen-ermitteln]]
+
+=== Verfügbare Paketversionen ermitteln ===
+
+// vereinigen mit aus-welchem-repo-kommen-die-pakete
+
+// Stichworte für den Index
+(((apt-cache, madison)))
+(((Paketversion anzeigen)))
+Das Werkzeug `apt-cache` verfügt über das Unterkommando `madison`. Damit
+finden Sie heraus, welche Pakete derzeit von den Spiegelservern in einer
+neueren Version verfügbar sind. Nachfolgender Ausdruck zeigt das für das
+Paket 'apt-doc'.
+
+//.Ausgabe von `apt-cache` mit dem Unterkommando `madison` für 'apt-doc'
+----
+$ apt-cache madison apt-doc
+   apt-doc | 0.9.7.9+deb7u2 | http://ftp.de.debian.org/debian/ wheezy/main i386 Packages
+   apt-doc | 0.9.7.9+deb7u2 | http://security.debian.org/ wheezy/updates/main i386 Packages
+       apt | 0.9.7.9+deb7u2 | http://ftp.de.debian.org/debian/ wheezy/main Sources
+       apt | 0.9.7.9+deb7u2 | http://security.debian.org/ wheezy/updates/main Sources
+$
+----
+
+// Stichworte für den Index
+(((aptitude, search '~U')))
+(((aptitude, search '?upgradable')))
+(((Paketversion anzeigen)))
+`aptitude` kann Ihnen dieses ebenfalls darstellen. Dazu kennt es den
+Suchfilter `search '~U'` bzw. `search '?upgradable'` in der Langform.
+Ergebnis ist eine Liste der Pakete, welche den Installationsstatus, den
+Paketnamen und die kurze Paketbeschreibung umfaßt.
+
+//.Ausgabe von `aptitude` zur Liste der aktualisierbaren Pakete
+----
+$ aptitude search '~U'
+i   acpi-support      - Skripte zur Verwaltung von ACPI-Ereignissen           
+i   acpi-support-base - Skripte zur Verarbeitung grundlegender ACPI-Ereignisse
+i   iceweasel         - Webbrowser auf Basis von Firefox                      
+i A libc-bin          - Die »Embedded GNU C Library«: Binärdateien            
+i A libc-dev-bin      - Embedded GNU C Library: Entwicklungsbinärdaten        
+i   libc6             - Die »Embedded GNU C Library«: Laufzeitbibliotheken    
+i A libc6-dev         - Die »Embedded GNU C Library«: Entwicklungsbibliotheken
+i   libc6-i686        - »Embedded GNU C Library«: Laufzeitbibliotheken [optimi
+i A libmozjs24d       - Mozilla SpiderMonkey JavaScript library               
+i A xulrunner-24.0    - XUL + XPCOM application runner
+$
+----
+
+// Datei (Ende): ./werkzeuge/paketoperationen/verfuegbare-paketversionen-ermitteln.txt

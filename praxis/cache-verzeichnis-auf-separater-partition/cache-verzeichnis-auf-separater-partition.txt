@@ -1,0 +1,199 @@
+// Datei: ./praxis/cache-verzeichnis-auf-separater-partition/cache-verzeichnis-auf-separater-partition.txt
+
+// Baustelle: Rohtext
+
+[[cache-verzeichnis-auf-separater-partition]]
+
+== Cache-Verzeichnis auf separater Partition ==
+
+// Stichworte für den Index
+indexterm:[Paketcache]
+indexterm:[/var/cache/apt/archives]
+
+Es gibt die unterschiedlichsten Gründe, entweder das gesamte Verzeichnis
+`/var` oder nur den Paketcache unter
+`/var/cache/apt/archives` von den restlichen Partitionen in
+ihrem Linuxsystem zu trennen. Die darin abgespeicherten variablen Daten
+sind in Bezug auf deren Größe und Menge (d.h. die Anzahl der Inodes für
+die Dateien) nicht vorhersehbar und schwanken. Aktualisieren Sie Software
+auf ihrem Linuxsystem, möchten Sie verhindern, daß das Herunterladen der
+neuen Pakete ihren Rechner durch ein vollbelegtes Dateisystem in der
+Benutzung ausbremst.
+
+Auf Computern, bei denen das Betriebssystem entweder auf einer Solid
+State Disk (SSD), einer CompactFlash- oder Secure Digital Memory Card
+(kurz CF- bzw. SD-Karte) als einzigem Medium bereitsteht, möchten Sie
+die Anzahl der Schreibzugriffe möglichst reduzieren. Je seltener diese
+stattfinden, umso länger bleibt Ihnen der malträtierte Datenträger
+erhalten. Entsprechend lohnt sich hier ein Auslagern in einen externen
+Bereich. Das kann beispielsweise ein Share eines NFS-Servers sein, aber
+auch eine nur im Arbeitsspeicher existierende
+`tmpfs`-Partition{empty}footnote:[`tmpfs` (englisch für 'temporary
+file system') ist ein
+Dateisystem, das in vielen unix-artigen Betriebssystemen als
+verbesserter Ersatz für eine RAM-Disk eingesetzt wird. Im Gegensatz zur
+RAM-Disk, bei der realer Arbeitsspeicher verwendet wird, wird bei
+`tmpfs` virtueller Arbeitsspeicher statt der Festplatte als Speicher
+benutzt. (Quelle: Wikipedia)]. Während für erstgenanntes ein schnelles
+lokales Netzwerk sowie die passende Infrastruktur Voraussetzung ist,
+zählt für die `tmpfs`-Partition im wesentlichen der verfügbare RAM.
+
+Als erstes stellen wir Ihnen vor, wie Sie aus dem Verzeichnis
+`/var/cache/apt/archives` eine RAM-basierte `tmpfs`-Partition
+erstellen. Danach besprechen wir, wie Sie einen Paketcache als separate
+Partition oder lediglich als Unterverzeichnis auf einer anderen
+Partition einrichten.
+
+=== Paketarchiv als `tmpfs`-Partition ===
+
+// TODO: Ausprobieren ob ausreichend (ist von Axel aus dem Kopf
+// runtergeschrieben :-)
+// ... und mir korrigiert (fho)
+
+In *Schritt eins* überdenken Sie dazu die Größe der Partition. Wägen Sie
+dabei zwischen dem potentiellem und dem maximal zu erwartendem
+RAM-Verbrauch ab. Dabei helfen Ihnen diese Fragen:
+
+* Wieviel RAM hat mein Rechner? 
+* Wieviel RAM kann ich im Zweifelsfall entbehren? 
+* Welche Größe haben die Pakete, die ich herunterladen will?
+
+**Beispiel:** Bei einigen installierten Spielen, dem Officeprogramm LibreOffice, dem
+Webbrowser Chromium, dem Netzwerkanalysetool Wireshark und dem
+Texteditor GNU Emacs kann ein Satz Paketaktualisierungen schnell mal ein
+knappes Gigabyte ausmachen. Axel hat sich daher bei seinem
+Laptop mit 8 GB RAM für maximal 2 GB Platz für heruntergeladene Pakete
+entschieden.
+
+*Schritt zwei* betrifft die Integration in die Verzeichnishierarchie.
+Tragen Sie dazu den neuen Einhängepunkt (engl. 'mount point') am Ende
+der Datei `/etc/fstab` ein. Bei Axels Laptop sieht dies
+wie folgt aus:
+
+.`/etc/fstab`-Eintrag für `/var/cache/apt/archives`
+----
+# Gerät  Einhängepunkt            Dateisystemtyp  Optionen         fsck
+none     /var/cache/apt/archives  tmpfs           size=2147483648  0  0
+----
+
+Alternativ können Sie anstatt einer festen Größe in Bytes (mit
+`size=<Größe in Bytes>`) auch einen prozentualen Wert angeben
+(`size=<Größe in Prozent der RAM-Größe>%`). Bei 8 MB RAM ist eine feste
+Größe von 2 MB mit der Angabe `size=25%` identisch. 
+
+Nur mit dem Eintrag selbst ist das Dateisystem aber noch nicht
+eingehängt. Um eventuell bereits heruntergeladene Pakete nicht zu
+verwerfen, verschieben Sie in *Schritt drei* als Benutzer `root` den
+aktuellen Inhalt des Verzeichnisses `/var/cache/apt/archives/`
+temporär woanders hin, hängen das `tmpfs`-Dateisystem aus dem RAM ein
+(es wird dabei automatisch erzeugt) und verschieben die vorher
+gesicherten Dateien an die alte Position im Dateibaum zurück.
+
+.Einhängen von `/var/cache/apt/archives` als `tmpfs`-Dateisystem
+----
+# mkdir /var/cache/apt/archives.temp
+# mv /var/cache/apt/archives/* /var/cache/apt/archives.temp/
+# mount /var/cache/apt/archives
+# mv /var/cache/apt/archives.temp/* /var/cache/apt/archives/
+#
+----
+
+Zum Testen rufen Sie am besten einmal das Kommando `apt-get update` auf.
+Wenn sich das Kommando nicht mit Fehlermeldungen gegen die aktuellen
+Einstellungen wehrt, haben Sie sehr wahrscheinlich alles richtig gemacht
+und die Einrichtung ist erfolgreich abgeschlossen.
+
+Die Einrichtung als `tmpfs`-Dateisystem im RAM macht sich auch nach
+einem Neustart ihres Linuxsystems bemerkbar. In diesem Fall verschwinden
+sämtliche heruntergeladenen Paketdateien wieder aus dem Cache. Ein
+Neustart hat somit den gleichen Effekt wie der Aufruf `apt-get clean`
+auf der Kommandozeile -- nur: sie müssen seltener von Hand aufräumen.
+
+=== Paketcache als separate Partition einrichten ===
+
+Möchten Sie `/var/cache/apt/archives/` statt im RAM auf einer
+echten Partition oder einem NFS-Server haben, so ist der Ablauf zu
+obigem Beispiel nahezu identisch. Stattdessen ist zunächst noch die
+Partition und das Dateisystem anzulegen, welches als Paketcache dienen
+soll. Danach tragen Sie in der Datei `/etc/fstab` anstatt `none`
+den Gerätenamen oder NFS-Server plus Exportnamen. Anstatt von `tmpfs`
+setzen Sie den gewählten Dateisystemtyp (oder `nfs`) sowie die passenden
+Optionen (oder `default`). Da es an dieser Stelle viel zu viel Varianten
+gibt, um ein allgemeingültiges Beispiel zu geben, sei dies dem Leser als
+Übung überlassen.
+
+=== Cache-Verzeichnis als Unterverzeichnis auf anderer Partition ===
+
+// TODO: Ausprobieren!
+
+Möchten Sie den Paketcache weder ins RAM verlagern noch dafür eine
+eigene Partition anlegen, sondern stattdessen einfach nur ein
+Unterverzeichnis auf einer anderen Partition benutzen, so bietet Ihnen
+APT diese Möglichkeit auch an. Dazu teilen Sie das APT mit und tragen
+ihren Wunschpfad in der Konfigurationsdatei `/etc/apt/apt.conf`
+über die Option `Dir::Cache::archives` mit. Für den neuen Pfad
+`/scratch/paketcache/` zum Paketcache sieht der Eintrag
+beispielsweise wie folgt aus:
+
+.Beispiel für einen umgebogenen Paketcache in der Datei `/etc/apt/apt.conf`
+----
+Dir::Cache::archives "/scratch/paketcache/";
+----
+
+APT kann dieses Verzeichnis nicht selbst anlegen. Es verläßt sich daher
+darauf, daß dieses von Ihnen benannte Verzeichnis bereits existiert und
+nur Schreibrechte für den Benutzer `root` besitzt. Sollte das
+Verzeichnis noch nicht bestehen, legen Sie dieses wie folgt an:
+
+.Anlegen eines alternativen Verzeichnisses für den Paketcache
+----
+# mkdir /scratch/paketcache/
+# chown root:root /scratch/paketcache/
+# chmod 755 /scratch/paketcache/
+#
+----
+
+Abschließend überprüfen Sie, ob ihre Eintragung wie erhofft
+funktioniert. Dabei hilft Ihnen der kombinierte Aufruf von `apt-config`
+und `fgrep`. `apt-config` mit der Option `dump` liefert Ihnen die
+aktuelle Konfiguration von APT, aus der Sie mittels `fgrep` nach dem
+Eintrag `Dir::Cache` suchen.
+
+.Überprüfen der geänderten `Dir::Cache`-Einstellung für APT
+----
+$ apt-config dump | fgrep Dir::Cache
+Dir::Cache "var/cache/apt/";
+Dir::Cache::archives "/scratch/paketcache/";
+Dir::Cache::srcpkgcache "srcpkgcache.bin";
+Dir::Cache::pkgcache "pkgcache.bin";
+$
+----
+
+Es ist nicht auszuschließen, daß das eine oder andere Programm den
+üblichen Pfad `/var/cache/apt/archives/` hart verdrahtet hat und
+gar nicht in der APT-Konfiguration nach einem geänderten Pfad schaut
+(was ein Bug wäre). Daher ist es empfehlenswert, zusätzlich einen
+entsprechenden Hinweis zu hinterlegen. Am einfachsten ist ein
+symbolischer Verweis (engl. kurz: 'Symlink') vom üblichen Pfad
+`/var/cache/apt/archives` zum neuen Ort{empty}footnote:[Im Normalfall
+sollte sogar der Symlink alleine auch ausreichen, damit APT einen
+alternativen Cache findet. APT folgt dann einfach auch dem Symlink.].
+Auch hier gilt wieder: Am besten gleich nach dem Einrichten mit dem
+Kommando `apt-get update` testen und ggf. korrigieren.
+
+.Symlink zum neuen Paketcache anlegen
+----
+# ln -s /scratch/paketcache/ /var/cache/apt/archives/
+#
+----
+
+[TIP]
+.Konfiguration von APT und `apt-config`
+====
+Wie Sie APT auf ihre spezifischen Bedürfnisse anpassen, lesen Sie in
+<<apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen>>.
+Detaillierter gehen wir auf das oben genutzte Kommando `apt-config`
+unter Konfiguration von APT anzeigen in
+<<konfiguration-von-apt-anzeigen>> ein.
+====
+// Datei (Ende): ./praxis/cache-verzeichnis-auf-separater-partition/cache-verzeichnis-auf-separater-partition.txt

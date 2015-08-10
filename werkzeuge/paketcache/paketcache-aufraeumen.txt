@@ -1,0 +1,193 @@
+// Datei: ./werkzeuge/paketcache/paketcache-aufraeumen.txt
+
+// Baustelle: Fertig
+
+[[paketcache-aufraeumen]]
+
+=== Paketcache aufräumen ===
+
+==== Weshalb aufräumen? ====
+
+Der Paketcache belegt Speicherplatz auf dem Datenträger ihres
+Debian-Systems. Da dieser Bereich lediglich temporäre Daten beinhaltet,
+raten wir Ihnen, diesen regelmäßig aufzuräumen.
+
+Sie finden den Paketcache im Verzeichnis `/var`. Je nach
+Partitionierung ihres Datenträgers ist der Bereich nicht separat und
+somit Bestandteil der `/`-Partition. Wenn diese vollständig mit
+Daten gefüllt ist, funktioniert vieles auf ihrem Linuxsystem nicht mehr.
+
+Bei ausgefeilteren Installationen bestehen häufig separate Partitionen
+für `/var`, `/var/cache` oder gar
+`/var/cache/apt/archives`. Läuft nur einer dieser Bereiche voll,
+können im einfachsten Fall keine weiteren Pakete zwischengespeichert und
+auch nicht temporär entpackt werden. Falls der Bereich `/var`
+vollständig belegt ist, können auch keine Logdateien mehr angelegt oder
+weitere Informationen daran angehängt werden.
+
+Einen Ausweg aus diesem Dilemma gelingt Ihnen mit dem Anlegen einer
+separaten Partition für `/var/cache/apt/archives`. Wie Sie diese
+einrichten und mit welchen Vor- und Nachteilen dieser Schritt verbunden
+ist, zeigen wir Ihnen unter Cache-Verzeichnis auf separater Partition in
+<<cache-verzeichnis-auf-separater-partition>>.
+
+==== Kommandos zum Aufräumen ====
+
+Die Programme `dpkg`, `apt-get`, `aptitude` und Synaptic räumen in der
+Standardeinstellung nicht eigenständig auf. Ob überhaupt, wann und
+insbesondere wie aufgeräumt wird, entscheiden Sie als Systembetreuer
+selbst und müssen dazu das Werkzeug entsprechend konfigurieren.
+
+Grundsätzlich gibt es mehrere, unterschiedlich radikale Ansätze zum
+Aufräumen des Paketcaches. Die *Variante eins* umfaßt das Löschen von
+Paketen aus dem Cache, die in keinem der verwendeten APT-Repositories
+mehr verfügbar sind. Die beiden Aufrufe `apt-get autoclean` und
+`aptitude autoclean` implementieren diesen Ansatz. Bei Synaptic nutzen
+Sie dazu den Menüpunkt ospmenu:[Einstellungen, Dateien] und selektieren
+im Dialogfenster den Eintrag ``Nur Pakete löschen, die nicht länger
+verfügbar sind'' (siehe <<fig.synaptic-paketcache-leeren>>). In der
+Standardeinstellung erleichtern diese Kommandos den Cache auch um
+Pakete, die Sie in der vorliegenden Version nicht mehr vom Spiegelserver
+beziehen können, die aber noch auf ihrem Linuxsystem installiert sind.
+
+Um hingegen lediglich die Pakete aus dem Cache zu löschen, die auch
+nicht, oder nicht mehr installiert sind, hilft Ihnen die
+Konfigurationsoption `APT::Clean-Installed=off` in der Konfiguration von
+APT. Alternativ teilen Sie das `apt-get` mit diesem Aufruf explizit mit:
+
+.Aufruf von `apt-get` mit ausdrücklicher Konfiguration
+----
+# apt-get -o APT::Clean-Installed=off autoclean
+...
+#
+----
+
+Allerdings besteht keine Möglichkeit mehr, diese Pakete mittels APT zu
+einem späteren Zeitpunkt wieder zu installieren, da sie ja in keiner
+Paketliste mehr vorkommen. Benötigen Sie eines der Pakete später doch
+wieder, hilft Ihnen nur der Rückgriff auf `dpkg` in Kombination mit dem
+dazugehörigen `deb`-Paket weiter. Dazu benutzen Sie den Aufruf `dpkg -i
+Paketname`. `Paketname` bezeichnet den Namen und Pfad der lokalen Datei
+für das benötigte `deb`-Paket (siehe <<pakete-installieren>>).
+
+*Variante zwei* umfaßt das Löschen sämtlicher Pakete aus dem Paketcache
+-- damit schaffen Sie radikal Platz. Die passenden Kommandos dazu lauten
+`apt-get clean` und `aptitude clean`. Übrig bleiben danach nur die
+beiden Verzeichniseinträge für die Sperrdatei `lock` und das
+Unterverzeichnis `partial`, in dem die Fragmente für Pakete
+landen, die nur teilweise bezogen wurden.
+
+.Aufräumen mittels `apt-get clean`
+----
+# apt-get clean
+# ls /var/cache/apt/archives/
+lock  partial
+----
+
+Bei Synaptic bildet zunächst der Eintrag ospmenu:[Einstellungen,
+Dateien] den Ausgangspunkt. Über den Knopf ``Alle Paketdateien im
+Zwischenspeicher löschen'' lösen Sie die Aufräumaktion aus (siehe
+<<fig.synaptic-paketcache-leeren>>).
+
+.Großreinemachen mit Hilfe von Synaptic
+image::werkzeuge/paketcache/synaptic-paketcache-leeren.png[id="fig.synaptic-paketcache-leeren", width="50%"]
+
+Selbstverständlich können Sie auch als *Administrator* agieren und dabei
+gezielt nur ausgewählte oder auch alle vorliegenden `deb`-Dateien
+manuell aus dem Verzeichnis `/var/cache/apt/archives/` mittels
+`rm Paketdatei` löschen. Gerade bei den Paketen, die Daten für Spiele
+beinhalten -- z.B. '0ad-data' mit ca. 530 MB Paketdateigröße -- , reicht
+es oft aus, diese einzelnen Dateien aus dem Paketcache zu entfernen, um
+dort wieder ausreichend Platz zu haben.
+
+Alle derzeit von Debian unterstützten Versionen von APT klagen nicht,
+wenn Sie das gesamte Verzeichnis
+`/var/cache/apt/archives/partial/` klammheimlich hinter dem
+Rücken der beiden Programme einfach komplett entsorgen. APT und
+`aptitude` legen es bei einem späteren Bedarf einfach von selbst wieder
+an. Anders sieht es hingegen bei älteren Veröffentlichungen wie z.B.
+Debian 4.0 'Etch' oder Debian 5.0 'Lenny', Ubuntu 10.04 LTS 'Lucid Lynx'
+sowie Debian-Derivaten aus der Zeit vor Mitte 2010 aus. Beachten Sie
+bitte, daß APT vor Version 0.8 beim Löschen eines der beiden
+Verzeichnisse `/var/cache/apt/archives/partial/` oder
+`/var/lib/apt/lists/partial/` dann einfach den Dienst
+verweigert. Sie beheben das Problem flink, indem Sie die genannten
+Verzeichnisse manuell wieder anlegen. Haben Sie `/var/cache/`
+als `tmpfs`-Dateisystem eingehängt (siehe
+<<cache-verzeichnis-auf-separater-partition>>), so können Sie mit dem
+Aufruf `mkdir -p /var/cache/apt/archives/partial` als Eintrag in der
+Datei `/etc/rc.local` dauerhaft Abhilfe schaffen.
+
+==== Empfehlungen zum Zeitpunkt des Aufräumens ====
+
+Wann Sie am besten aufräumen, hängt etwas von der Nutzung und dem
+verfügbaren Plattenplatz ab. In den meisten Fällen ist _nach_ dem
+Installieren und Aktualisieren der Pakete ein guter Zeitpunkt.
+`aptitude` bietet dies sogar über die Option
+`Aptitude::Autoclean-After-Update` an (siehe unten).
+
+Ist jedoch der Plattenplatz recht knapp, so kann auch es auch helfen,
+den Cache bereits _vor_ dem Installieren und Aktualisieren aufzuräumen.
+Das ist insbesondere dann sinnvoll, wenn Sie dies selbst nicht
+regelmäßig machen und diese Aktion stattdessen per Cron-Job oder über
+die Konfiguration der Paketverwaltung ausführen lassen. Es macht jedoch
+keinen Sinn, wenn Sie beispielsweise gleichzeitig die APT-Option 
+`APT::Periodic::Download-Upgradeable-Packages` eingeschaltet haben und
+damit nachts automatisch alle aktualisierbaren Pakete herunterladen
+lassen. Leeren Sie den Paketcache danach mit `apt-get clean` komplett, hat
+das zur Folge, daß die frisch bezogenen Pakete wieder gelöscht werden
+und ein nachfolgendes `apt-get upgrade` diese erneut herunterladen muß.
+
+==== Automatisch und regelmäßig Aufräumen ====
+
+Das manuelle Aufrufen der o.g. Kommandos kostet Zeit. Daher bieten APT
+und `aptitude` unterschiedliche Möglichkeiten, um diese Vorgänge zu
+automatisieren.
+
+Das Paket 'apt' bringt mit dem Skript `/etc/cron.daily/apt`
+einen Cron-Job mit, der diverse Aufgaben einmal pro Tag ausführen kann.
+Konfiguriert wird das Skript ebenfalls über die Datei
+`/etc/apt/apt.conf`. Den Paketcache betreffen die beiden
+Einstellungen `APT::Periodic::Download-Upgradeable-Packages` und
+`APT::Periodic::AutocleanInterval`.
+
+Einstellung `APT::Periodic::Download-Upgradeable-Packages`::
+Damit legen Sie die Regelmäßigkeit der Aktualisierung fest. Setzen Sie
+den Wert auf `1`, so füllt der Cron-Job den Paketcache einmal pro Tag,
+falls Paketaktualisierungen verfügbar sind. Setzen Sie den Wert hingegen
+auf `7`, so lädt er verfügbare Paketaktualisierungen nur einmal die
+Woche herunter. Der Wert `0` (Null) ist die Standardeinstellung und
+deaktiviert die Funktionalität vollständig.
+
+Einstellung `APT::Periodic::AutocleanInterval`::
+Damit regeln Sie die Häufigkeit, mit der das Kommando `apt-get
+autoclean` ausgeführt wird. Auch hier steht der Wert für den Abstand in
+Tagen zwischen zwei Ausführungen. Der Wert `0` (Null) schaltet das
+nächtliche Aufräumen ganz ab und ist auch die Standardvorgabe.
+
+Die Dokumentation zu diesem Skript finden Sie in den Kommentarzeilen am
+Anfang der Datei `/etc/cron.daily/apt`. Dort finden sich noch
+weitere und feinere Einstellmöglichkeiten zum automatischen Aufräumen
+des Paketcaches, z.B. anhand des Alters der Pakete.
+
+`aptitude` dagegen bietet eine Zeitsteuerung über Schalter und Optionen
+an. Damit erfolgt das Aufräumen via `autoclean` oder `clean` vor oder
+nach der Installation von Paketen automatisch:
+
+Schalter `--clean-on-startup`::
+entspricht dem Aufruf `aptitude autoclean`
+
+Schalter `--autoclean-on-startup`::
+entspricht dem Aufruf `aptitude clean`
+
+Ähnliches ermöglicht Ihnen `aptitude` auch über die
+Text-Modus-Bedienoberfläche. Setzen Sie in den Einstellungen unter
+``Veraltete Paketdateien nach dem Laden von neuen Paketlisten löschen''
+ein Häkchen, entspricht das der Konfigurationsoption
+`Aptitude::AutoClean-After-Update`. Damit löscht Aptitude nach jeder
+Aktualisierung der Paketlisten (durch `aptitude`) alle Paketdateien aus
+dem Paketcache, die nicht mehr von einem in
+`/etc/apt/sources.list` aufgeführten Paketmirror heruntergeladen
+werden können.
+
+// Datei (Ende): ./werkzeuge/paketcache/paketcache-aufraeumen.txt

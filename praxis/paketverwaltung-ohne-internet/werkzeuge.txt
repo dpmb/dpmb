@@ -1,0 +1,211 @@
+// Datei: ./praxis/paketverwaltung-ohne-internet/werkzeuge.txt
+
+// Baustelle: Notizen
+
+[[paketverwaltung-offline-werkzeuge]]
+=== Werkzeuge ===
+
+==== Offline-Verwaltung mit 'apt-get' und 'wget' ====
+
+// Stichworte für den Index
+(((apt-get, dist-upgrade)))
+(((apt-get, update)))
+(((awk)))
+(((wget)))
+
+In diesem Szenario kombinieren wir aus APT das Werkzeug `apt-get` mit
+`awk` und `wget`. Die wunderbare Idee und Beschreibung ist entlehnt aus
+Frank Ronneburgs
+Debian-Anwenderhandbuch{empty}footnote:[http://debiananwenderhandbuch.de/apt-offline.html]
+sowie dem Beitrag von Samuel
+Suter{empty}footnote:[http://www.lugs.ch/lib/doc/apt-offline.phtml],
+hier jedoch nur für ausgewählte Pakete.
+
+`awk` ist ein Analyse- und Filterprogramm für
+Textdaten{empty}footnote:[http://packages.debian.org/de/stable/gawk].
+`wget` ist hingegen ein Kommandozeilenprogramm, um Dateien über das
+Netzwerk zu beziehen{empty}footnote:[http://packages.debian.org/de/stable/wget].
+Während 'gawk' zu den essentiellen Paketen zählt, ist 'wget' optional und daher
+ihrerseits vor dessen Verwendung gegebenenfalls noch zu installieren.
+
+Der Ablauf ist wie folgt:
+
+. Einhängen (``mounten'') eines externen, mobilen Datenträgers im
+Verzeichnis `/medium`
+. Aktualisieren der lokalen Paketdatenbank mittels `apt-get update`
+. Erzeugen der URLs mittels `apt-get` für die Pakete, die zu aktualisieren sind, und Umleitung der Ausgabe in die lokale Datei `uris`
+. Generieren der passenden `wget`-Aufrufe aus den zuvor gespeicherten
+URLs mittels `awk`. Ausgabe auf `stdout` und Umleitung der Ausgabe in
+die lokale Skriptdatei `/medium/wget-script`.
+. Ausführung der der Skriptdatei zum Bezug der bezeichneten Pakete vom
+Spiegelserver und der Speicherung der bezogenen Pakete im lokalen
+Verzeichnis.
+
+.Aufrufreihenfolge mittels `apt-get`, `awk` und `wget`
+----
+# apt-get update
+# apt-get -qq --print-uris dist-upgrade > uris
+# awk '{print "wget -O " $2 " " $1}' < uris > /medium/wget-script
+# cd /medium
+# sh -x ./wget-script
+----
+
+Als Ergebnis dieser Aufrufe finden Sie auf dem mobilen Datenträger alle
+`deb`-Pakete, die zur Aktualisierung mittels `apt-get dist-upgrade`
+erforderlich sind. Unmounten Sie den mobilen Datenträger auf dem ersten
+System und mounten Sie diesen auf dem Zielsystem. Als finalen Schritt
+erfolgt auf dem Zielsystem ein Aufruf von `apt-get dist-upgrade` mit dem
+Paketcache auf dem mobilen Medium. Dazu verwenden Sie den Schalter `-o`
+mit der APT-Direktive `dir::cache::archives` und dem passenden Pfad zum
+Paketcache. Der Einfachheit halber heißt dieser hier ebenfalls
+`/medium`.
+
+.Eine Distributionsaktualisierung mit einem externen Paketcache
+----
+# apt-get -o dir::cache::archives="/medium/" dist-upgrade
+----
+
+==== Das Projekt 'apt-offline' ====
+
+// Stichworte für den Index
+(((Debianpaket, apt-offline)))
+(((Debianpaket, apt-offline-gui)))
+
+* Projektseite{empty}footnote:[http://apt-offline.alioth.debian.org/]
+* Debian-Paket 'apt-offline'{empty}footnote:[http://packages.debian.org/de/stable/apt-offline]
+* GUI-Version zum Paket: 'apt-offline-gui'{empty}footnote:[http://packages.debian.org/de/stable/apt-offline-gui]
+* setzt auf der Programmiersprache Python auf
+
+* Beschreibungen: Offline Package Management for APT (<<Ritesh-apt-offline>>, <<xubuntu-apt-offline>>, <<Damienoh-apt-offline>>)
+
+// Stichworte für den Index
+(((apt-offline, get)))
+(((apt-offline, install)))
+(((apt-offline, set)))
+(((apt-offline, --update)))
+(((apt-offline, --upgrade)))
+
+* Ablauf:
+** Signatur für die Maschine erzeugen, die aktualisierte
+Paketinformationen und Pakete bekommen soll (auf der Maschine, die
+offline ist)
+
+----
+# apt-offline set /tmp/apt-offline.sig
+----
+
+*** Option `--update`: nur Updates
+*** Option `--upgrade`: nur Upgrades
+*** ohne Optionen: alles auf den allerneuesten Stand bringen
+
+** Paketinfo für die offline-Maschine holen, inkl. Bug-Reports und als
+parallele 5 Threads (auf einer Maschine, die Netz hat)
+
+----
+# apt-offline get apt-offline.sig --bug-reports --threads 5
+----
+
+** bezogene Paketinfo auf der offline-Maschine einspielen
+
+----
+# apt-offline install /media/USB/apt-offline.zip
+----
+
+*** aktualisiert den APT-Cache, sodaß alles daher kommt und nichts von
+extern bezogen werden muß
+
+// apt-zip hat es nicht nach Jessie geschafft, sollten wir für die
+// erste Ausgabe ignorieren.
+//
+// ==== apt-zip ====
+// * APT-basierte Systeme ohne Internet warten (maintainen):
+// ** 'apt-zip' (<<Debian-Paket-apt-zip>>)
+// ** baut ein fetch-Skript, welches die benötigten Pakete vom Mirror
+// bezieht
+// ** die bezogenen Daten/Pakete können dann lokal eingespielt werden
+// * Beschreibung: http://svn.laiskiainen.org/apt-rpm/trunk/doc/offline.sgml
+// ** externer Datenträger als lokaler Paketcache für apt-get
+// ** Erzeugen eines wget-Skripts, welches die benötigten Pakete bezieht
+
+==== aptoncd ====
+
+// Stichworte für den Index
+(((Debianpaket, aptoncd)))
+(((aptoncd)))
+
+* 'aptoncd' (<<Debian-Paket-aptoncd>>)
+* Erstellt Installations-CDs von Paketen
+** die vorher explizit mittels APT heruntergeladenen wurden 
+** über den aktuellen Paketbestand (eine Art Schnappschuß) und baut daraus ein ISO-Image bzw. Repository mit allen aktuell genutzten Paketen 
+** beschreibt sich selbst als Debian Packages Backup Tool
+** nutzbar als Installationsimage
+** setzt auf GNOME/GTK und Python 2.6 auf
+*** seit längerem keine neuere Version verfügbar
+*** letzte Release von 2007
+
+.`aptoncd` im Einsatz
+image::praxis/paketverwaltung-ohne-internet/aptoncd.png[id="fig.aptoncd", width="50%"]
+
+* Modi
+** Installations-CD erstellen
+** Dateien von der CD wieder herstellen
+
+* Arbeitsweise
+** liest Paketdatenbank aus (Taste: F5)
+** erstellt Übersicht aus den verfügbaren und den installierten Paketen
+*** Darstellung: 3 Spalten (Paketname+Version+Kurzbeschreibung, Version,
+Größe)
+** Darstellung der Gesamtmenge bzw. ausgewählt am unteren Fensterrand
+** erstellt Image daraus (Knopf: Brennen)
+
+* Optionen und Parameter
+
+// Stichworte für den Index
+(((aptoncd, -c)))
+(((aptoncd, --packages-list)))
+
+`-c` (Langform `--packages-list=FILE`)::
+`aptoncd` liest die Pakete aus der angegebenen Datei ein
+
+// Stichworte für den Index
+(((aptoncd, -l)))
+(((aptoncd, --cache-dir)))
+
+`-l` (Langform `--cache-dir=PATH`)::
+Verwendet den angegebenen Pfad zum Paketcache anstatt dem Standardpfad
+`/var/cache/apt/archives`
+
+// Stichworte für den Index
+(((aptoncd, -r)))
+(((aptoncd, --temp-dir)))
+
+`-r` (Langform `--temp-dir=PATH`)::
+verwendet den angegebenen Pfad als temporäres Verzeichnis, um Dateien zu
+kopieren und Images zu mounten
+
+===== Keryx ===== 
+
+// Stichworte für den Index
+(((Keryx)))
+
+* Projekt: <<Keryx>> 
+* ``Keryx is a free, open source application for updating Linux. The
+Keryx Project started as a way for users with dialup, or low-bandwidth
+internet to be able to download and update packages on their debian
+based distribution of linux. Mainly built for Ubuntu, Keryx allows users
+to select packages to install, check for updates, and download these
+packages onto a USB portable storage device. The packages are saved onto
+the device and are then taken back to the Linux box that it originated
+from and are then installed.''
+
+* ``a portable, cross platform offline package manager for Debian based
+Linux distributions (Ubuntu and derivatives).''
+* ``Download software on computer connected to internet (it may be on
+Linux or Windows) and then install them to offline PC.''
+* basiert auf dem Gimp Tool Kit
+* letzte Veröffentlichung als Ubuntu PPA: 2011 (Version 1)
+
+* (Stichwort Turnschuhnetzwerk, Sneakernet: https://de.wikipedia.org/wiki/Turnschuhnetzwerk)
+
+
+// Datei (Ende): ./praxis/paketverwaltung-ohne-internet/werkzeuge.txt

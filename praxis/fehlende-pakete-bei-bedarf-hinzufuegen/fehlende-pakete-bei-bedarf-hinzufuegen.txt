@@ -1,0 +1,11 @@
+// Datei: ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/fehlende-pakete-bei-bedarf-hinzufuegen.txt
+
+// Baustelle: Rohtext
+
+[[fehlende-pakete-bei-bedarf-hinzufuegen]]
+== Fehlende Pakete bei Bedarf hinzufügen ==
+
+include::neue-hardware.txt[]
+
+include::neue-software.txt[]
+// Datei (Ende): ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/fehlende-pakete-bei-bedarf-hinzufuegen.txt

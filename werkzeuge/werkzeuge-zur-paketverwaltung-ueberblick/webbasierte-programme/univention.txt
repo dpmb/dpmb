@@ -1,0 +1,83 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/univention.txt
+
+// Baustelle: Rohtext
+
+[[webbasierte-programme-ucs]]
+==== Univention Corporate Server (UCS) ====
+
+Der Univention Corporate Server (UCS) <<UCS>> ist ein auf kommerzieller
+Basis vertriebenes OpenSource-Produkt für Infrastrukturlösungen in
+Unternehmen und Behörden. Neben dem Univention (Linux) Client werden
+alle ``domänenfähigen Betriebssysteme'' (Windows, Mac OS, Linux) via
+Samba 4 unterstützt.
+
+Die Erweiterung 'UCS at School' ist für den Einsatz in Lehr- und
+Forschungseinrichtungen verfügbar, welche spezielle Softwarekomponenten
+für die Unterstützung des Lehrbetriebes enthält und damit die
+Infrastruktur für Bildungseinrichtungen abdeckt. Dazu zählt bspw.
+Klassenraummanagement, Verteilung und Einsammeln von Arbeitsmaterialien
+sowie die Moderation von Druckern und Druckaufträgen. Die Entwicklung
+von UCS begann 2002, der Server ist seit 2004 und der Client seit 2009
+verfügbar.
+
+Basis des vom Bremer Unternehmen Univention GmbH zusammengestellten,
+entwickelten und vertriebenen Produktes ist Debian GNU/Linux, welche um
+einige Komponenten erweitert wurde. Mit diesen Komponenten werden
+Skalierbarkeit, Konfigurationsmanagement und weitere Möglichkeiten zur
+Verfügung gestellt, die in dieser Form in der Linux-Distribution nicht
+vorhanden sind. Durch regionale Kooperationspartner vor Ort und den
+Hersteller Univention GmbH werden die Kunden technisch betreut und der
+Support sichergestellt. 
+
+Den Ausgangspunkt bildet stets ein aktuelles Debian -- derzeit die
+Version 7 'Wheezy'. Für diese Softwarebasis pflegt Univention eine Reihe
+von Eigenentwicklungen und Anpassungen.
+
+Konkret zeigt sich das bereits im Paketnamen. Alle von Univention
+modifizierten Pakete tragen das Präfix 'univention', so bspw.
+'univention-dns' zur Einrichtung des Domain Name Systems. Weiterhin
+besteht eine geänderte Konfiguration der bereitgestellten Softwarepakete
+über zusätzliche Vorlagen, sogenannte 'univention templates'. Diese
+Vorlagen und deren Einstellungen richten sich nach der von Ihnen
+vergebenen Systemrolle und damit der Funktion der jeweiligen,
+spezifischen UCS-Instanz.
+
+Die *Paketverwaltung* ist mehrstufig und setzt auf den bereits bewährten
+und beschriebenen Mechanismen von Debian mittels `dpkg` und APT auf.
+Univention ergänzt diese Werkzeuge um eine zusätzliche Ebene, um die
+Softwarepakete passend zur vorher festgelegten Systemrolle und den
+Vorlagen zu installieren und automatisch konfigurieren zu können. 
+
+Die Basis bildet der 'Univention Installer', welcher im Prinzip ein
+modifizierter Debian-Installer ist. Bei der Grundinstallation wählen Sie
+danach ihre gewünschten Softwarekomponenten über ein modifiziertes
+Tasksel <<tasksel>> aus. Installieren Sie zu einem späteren Zeitpunkt
+Software nach, stehen Ihnen auf der *Kommandozeile* die beiden Werkzeuge
+`univention-install` und `univention-remove` zur Verfügung. Diese
+akzeptieren Paketnamen als Parameter und versorgen `dpkg` und APT mit
+den zusätzlichen Daten aus den dazugehörigen, von Univention
+bereitgestellten Vorlagen.
+
+`dpkg` und APT können Sie jederzeit für die grundlegenden
+Paketoperationen nutzen, um beispielsweise nach Paketen zu suchen, deren
+Installationszustand zu erfragen oder um die Paketinhalte anzuzeigen.
+Installieren Sie hingegen Pakete mit `dpkg` und APT eigenhändig nach,
+müssen Sie die Angaben aus den Vorlagen selbständig in die Konfiguration
+des Pakets und die zentrale Konfigurationsdatei namens 'Univention
+Configuration Registry (UCR)' übertragen.
+
+*Erweiterungen und Werkzeuge von Drittanbietern* wählen Sie webbasiert
+über das sogenannte 'Univention App Centre' (siehe
+<<fig.univention-app-centre>>) aus. In der darüber angebotenen
+Paketmenge sind Programme enthalten, die zuvor von Univention
+freigegeben wurden. Das beinhaltet bspw. Software für Wikis, Groupwares
+oder auch Werkzeuge zur Inventarisierung. Die Konfiguration der Pakete
+erfolgt nicht direkt über die Webschnittstelle, sondern ist
+programmspezifisch. Das gilt auch für Aktualisierungen der Pakete, die
+hier nicht Updates, sondern 'Errata' heißen (siehe
+<<univention-errata>>).
+
+.Univention App Centre
+image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/univention-app-centre.png[id="fig.univention-app-centre", width="50%"]
+
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/univention.txt

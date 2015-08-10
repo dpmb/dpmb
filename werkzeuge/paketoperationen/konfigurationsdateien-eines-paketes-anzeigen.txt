@@ -1,0 +1,56 @@
+// Datei: ./werkzeuge/paketoperationen/konfigurationsdateien-eines-paketes-anzeigen.txt
+
+// Baustelle: Fertig
+
+[[konfigurationsdateien-eines-paketes-anzeigen]]
+
+=== Konfigurationsdateien eines Paketes anzeigen ===
+
+Die meisten Programme verfügen über Konfigurationsdateien, mit denen Sie
+das jeweilige Programm auf ihre Bedürfnisse individuell einstellen
+können. Dazu hilft es Ihnen, zu wissen, welche das überhaupt sind und an
+welcher Stelle sich diese Dateien befinden. 
+
+// Stichworte für den Index
+(((apt-file, show)))
+Mit den beiden Werkzeugen `apt-file` und `dlocate` bringen Sie Licht ins
+Dunkel. Dabei werden jedoch nur die Konfigurationsdateien aufgespürt,
+die im jeweiligen Paket bereits mitgeliefert werden. Zusätzliche
+Dateien, die Sie selbst angelegt haben oder im laufenden Betrieb
+entstanden, kann keines der beiden Werkzeuge erahnen.
+
+Als _Variante 1_ nutzen Sie den Aufruf `apt-file show Paketname` und
+lassen sich den Inhalt des Pakets ausgeben. Ausführlich erklären wir
+Ihnen das Vorgehen unter <<paketinhalte-anzeigen-apt-file>>.
+
+// Stichworte für den Index
+(((dlocate, -conf)))
+Für _Variante 2_ nutzen Sie das Programm `dlocate` aus dem gleichnamigen
+Paket{empty}footnote:[https://packages.debian.org/de/stable/dlocate].
+`dlocate` kennt dazu den Schalter `-conf` gefolgt vom Paketnamen.
+Nachfolgend zeigen wir das für den PDF-Betrachter 'xpdf'.
+
+//.Ermittlung der Konfigurationsdateien zum Paket 'xpdf' mittels `dlocate`
+----
+$ dlocate -conf xpdf
+/etc/xpdf/xpdfrc
+/etc/X11/Xresources/xpdf
+$
+----
+
+// Stichworte für den Index
+(((dlocate, -lsconf)))
+Benötigen Sie zusätzlich die Benutzerrechte der Konfigurationsdateien,
+deren Besitzer und Eigentümer sowie deren Größe und Zugriffsdatum, ist der
+Schalter `-lsconf` von großem Nutzen. Dieser bewirkt eine Ausgabe wie
+das Kommando `ls -la`, wie die nachfolgende Ausgabe deutlich macht:
+
+//.Ermittlung der Konfigurationsdateien zum Paket 'xpdf' mittels `dlocate` (ausführliche Ansicht)
+----
+$ dlocate -lsconf xpdf
+-rw-r--r-- 1 root root   43 Aug 21  2010 /etc/X11/Xresources/xpdf
+-rw-r--r-- 1 root root 2215 Apr 17  2012 /etc/xpdf/xpdfrc
+$
+----
+
+// Datei (Ende): ./werkzeuge/paketoperationen/konfigurationsdateien-eines-paketes-anzeigen.txt

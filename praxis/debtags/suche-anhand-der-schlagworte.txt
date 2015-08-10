@@ -1,0 +1,228 @@
+// Datei: ./praxis/debtags/suche-anhand-der-schlagworte.txt
+
+// Baustelle: Fertig
+
+[[suche-anhand-der-schlagworte]]
+=== Suche anhand der Schlagworte ===
+
+==== Über die Kommandozeile ====
+
+// Stichworte für den Index
+(((debtags, grep)))
+(((debtags, search)))
+Hier spielt wiederum das bereits zuvor eingesetzte Werkzeug `debtags`
+seine Stärken aus – diesmal mit den beiden Unterkommandos `grep` und
+`search` gefolgt von Schaltern und einer Liste der Suchbegriffe. Während
+der Aufruf von `debtags grep` dabei lediglich die gesamte Zeile aus der
+Paketdatenbank extrahiert, in der der von Ihnen gewählte Suchbegriff
+vorkommt, liefert Ihnen `debtags search` lediglich den Paketnamen und
+die Kurzbeschreibung zum Paket in einer einzigen Zeile zurück. Je nach
+konkretem Anwendungsfall ist das ausgesprochen praktisch.
+
+// Stichworte für den Index
+(((Debtags-Eintrag, Aufbau)))
+Dabei bestehen die *Suchbegriffe* aus einem Debtags-Eintrag. Dieser
+Eintrag besteht wiederum aus drei Teilen – einem Schlagwort (Tag),
+gefolgt von zwei Doppelpunkten (`::`) als Trennzeichen und dem
+gewünschten Wert für das vorher benannte Tag. Korrekt sind bspw.
+`role::program`, `suite::debian` und `use::searching`. Im ersten
+Beispielaufruf sehen Sie eine Suche nach den Paketen, die mit dem
+Datenformat PDF umgehen können und daher entsprechend mit dem Schlagwort
+`works-with-format::pdf` markiert sind. Da die Liste recht lang ist,
+umfaßt das nachfolgende gezeigte Ergebnis lediglich die beiden Pakete
+'pdfgrep' und 'pdfjam' mit ihren jeweiligen Schlagworten.
+
+//.Filtern anhand von Schlagworten nach Paketen, die mit dem Format PDF umgehen können (Auszug)
+----
+$ debtags grep "works-with-format::pdf"
+...
+pdfgrep: implemented-in::c++, role::program, scope::utility, use::searching, works-with-format::pdf, works-with::file
+pdfjam: implemented-in::shell, interface::commandline, role::program, scope::utility, use::converting, works-with-format::pdf, works-with::text
+...
+$
+----
+
+// Stichworte für den Index
+(((debtags, grep -names)))
+Wie bereits oben angesprochen, sind im Aufruf ebenfalls verschiedene
+Schalter zulässig. Geht es Ihnen ausschließlich um die Paketnamen, ist
+für Sie der Schalter `--names` interessant. Damit beschränken Sie die
+Ausgabe nur auf die Liste der Paketnamen. Die vergebenen Schlagworte
+werden nicht mit ausgegeben. Die untenstehende Ausgabe enthält eine
+Auswahl der Pakete, die Debian-spezifisch sind und daher das Schlagwort
+`suite::debian` tragen.
+
+//.Filtern anhand von Schlagworten nach Paketen und Begrenzung der Ausgabe auf die Paketnamen (Auswahl)
+----
+$ debtags grep --names "suite::debian"
+adduser
+alien
+approx
+apt
+apt-build
+apt-cacher
+apt-cacher-ng
+apt-doc
+apt-dpkg-ref
+apt-file
+...
+$
+----
+
+// Stichworte für den Index
+(((debtags, grep --facets)))
+(((debtags, grep -i)))
+(((debtags, grep --invert)))
+Über den Schalter `-i` (Langform `--invert`) erhalten Sie das umgekehrte
+Suchergebnis, d.h. alle Treffer, in denen ihr Suchbegriff _nicht_
+enthalten ist. Benötigen Sie zu einem Paket stattdessen lediglich die
+Namen der vergebenen Schlagworte ohne deren konkreten Wert, erreichen
+Sie das über den Schalter `--facets` (siehe dazu
+<<vergebene-schlagworte-anzeigen>>).
+
+Für die Suche anhand mehrerer Schlagworte kombinieren Sie diese im
+Aufruf mit zwei Kaufmanns-Und. Im nachfolgenden Beispiel sehen Sie eine
+Suche nach den Spielen, die einerseits X11-tauglich sind und
+andererseits als Simulation einsortiert wurden. Daher umfaßt die
+Recherche die beiden Tags `interface::x11` und `game::simulation`.
+
+// Stichworte für den Index
+(((debtags, search)))
+
+//.Suche anhand von Schlagworten nach X11-tauglichen Spielen
+----
+$ debtags search "game::simulation && interface::x11"
+billard-gl - 3D billiards game
+cultivation - game about the interactions within a gardening community
+foobillard - 3D billiards game using OpenGL
+gtkpool - simple pool billiard game written with GTK+
+libopenscenegraph-dev - 3D scene graph, development files
+libopenscenegraph80 - 3D scene graph, shared libs
+lincity-ng - City simulator game with polished graphics
+oolite - space sim game, inspired by Elite
+opencity - 3D city simulator game
+openssn - modern submarine tactical simulator
+openttd - reimplementation of Transport Tycoon Deluxe with enhancements
+pinball-dev - Development files for the Emilia Pinball Emulator
+searchandrescue - fly aircraft to search (for) and rescue people in distress
+simutrans - transportation simulator
+singularity - game where one becomes the singularity
+stormbaancoureur - simulated obstacle course for automobiles
+$
+----
+
+// Stichworte für den Index
+(((Debianpaket, dctrl-tools)))
+(((grep-debtags, -d)))
+(((grep-debtags, -n)))
+(((grep-debtags, -s)))
+An dieser Stelle hilft Ihnen auch das Paket
+'dctrl-tools'{empty}footnote:[http://packages.debian.org/de/stable/dctrl-tools]
+weiter – jetzt jedoch mit dem Programm `grep-debtags`. Mit dem
+nachfolgendem Aufruf erhalten Sie eine Liste aller verfügbaren Pakete zu
+leichtgewichtigen Webbrowsern, die keinen Bezug zum Kool Desktop
+Environment (KDE) haben. Über die beiden Schalter `-sPackage` und `-d`
+reduzieren Sie die Ausgabe auf den Paketnamen und die einzeilige
+Paketbeschreibung, `-n` unterdrückt zusätzlich die Feldnamen. Mehrere
+Suchkriterien kombinieren Sie mittels `-a` für ein boolesches AND sowie
+`-a -!` für ein boolesches NAND.
+
+//.Suche nach leichtgewichtigen Webbrowsern mittels `grep-debtags` (Auswahl)
+----
+$ grep-debtags -sPackage -d -n web::browser -a interface::x11 -a -! suite::kde
+arora
+simple cross platform web browser
+
+chimera2
+Web browser for X
+
+dillo
+Small and fast web browser
+
+midori
+fast, lightweight graphical web browser
+
+xxxterm
+Minimalist's web browser
+
+$
+----
+
+==== Textoberfläche von `aptitude` ====
+
+`aptitude` gruppiert die Pakete ebenfalls anhand ihrer Schlagworte.
+Diese zugegebenermaßen etwas versteckte Darstellung finden Sie im
+Programm unter ospmenu:[Ansichten, Neuer Debtags-Browser] (siehe
+<<fig.aptitude-debtags-browser>>). Danach erhalten Sie eine Auswahlliste
+anhand der Debtags und wählen darüber ihre Pakete wie gewohnt aus.
+
+.Auswahl des Debtags-Browsers in `aptitude`
+image::praxis/debtags/aptitude-debtags-browser.png[id="fig.aptitude-debtags-browser", width="50%"]
+
+==== Graphische Programme ====
+
+// Stichworte für den Index
+(((PackageSearch)))
+(((Xara)))
+In dieser Kategorie bleiben aus der Liste der Werkzeuge zur
+Paketverwaltung nur die beiden Kandidaten PackageSearch und Xara übrig
+(siehe <<fig.packagesearch>> und <<fig.xara>>). Bei ersterem stöbern Sie
+über Liste oben rechts und selektieren daraus die gewünschten Einträge.
+Bei Xara tragen Sie eine Suchanfrage in das Eingabefeld unter dem Reiter
+`Advanced` rechts unten ein und lösen danach mit `Run query` die
+Recherche aus. Alternativ wählen Sie den Reiter `Simple` aus und
+befüllen die (vielen) Eingabefelder entsprechend.
+
+.PackageSearch im Einsatz
+image::praxis/debtags/packagesearch.png[id="fig.packagesearch", width="50%"]
+
+.Xara im Einsatz
+image::praxis/debtags/xara.png[id="fig.xara", width="50%"]
+
+==== Suche über den Webbrowser ====
+
+// Stichworte für den Index
+(((Debtags Browser)))
+(((Debtags Cloud)))
+Eine webbasierte Recherche anhand der Debtags geht derzeit (noch) nicht
+über die Paketsuche, auch wenn die Debtags im Suchergebnis bereits
+angezeigt werden und anklickbar sind. Stattdessen stehen Ihnen der
+'Debtags Browser'{empty}footnote:[http://debtags.debian.net/search] und
+die 'Debtags Cloud'{empty}footnote:[http://debtags.debian.net/search/bytag] 
+zur Verfügung.
+
+Die Schreibweise der Suchanfrage im Debtags Browser orientiert sich
+dabei an den Gepflogenheiten im Web. Das Formular nimmt eine direkte
+Eingabe der Debtags entgegen. In <<fig.debtags-suche>> sehen Sie das
+Ergebnis einer Suche nach den Paketen, bei denen das Schlagwort
+`interface::commandline` hinterlegt ist und verifiziert wurde.
+
+.Suche anhand der Debtags über den Webbrowser
+image::praxis/debtags/debtags-suche.png[id="fig.debtags-suche", width="50%"]
+
+// Stichworte für den Index
+(((Debtags Cloud)))
+(((Debtags Editor)))
+Die Recherche mit Hilfe der Debtags Cloud funktioniert etwas anders.
+Die Grundlage dafür bilden bereits überprüfte, validierte Schlagworte
+(sogenannte _reviewed tags_). Zunächst wählen Sie aus der ``Wolke'' das
+gewünschte Schlagwort aus, woraufhin in der Ergebnisliste darunter alle
+Pakete aufgeführt werden, die mit diesem Schlagwort versehen sind (siehe
+<<fig.debtags-suche-nach-tags>>). Jeder Listeneintrag umfaßt den
+Paketnamen, eine kurze Paketbeschreibung und alle bereits vergebenen
+Schlagwörter. Der Paketname des Listeneintrags ist dabei ein Link, der
+Sie direkt zum Debtags Editor bringt. 
+
+Aktivieren Sie einen Link in der ``Wolke'' mit der Maus, erscheinen zwei
+zusätzliche Symbole – ein zustimmender und ein abwertender Daumen.
+Gleiches gilt für die Darstellung der ausgewählten Schlagworte in den
+beiden linken Spalten, die mit 'Good Tags' bzw. 'Bad Tags' betitelt
+sind. Über diese Symbole steuern Sie die Auswahl innerhalb der Wolke und
+grenzen ihren Suchbereich genauer ein. Ein zustimmender Daumen erweitert
+den Suchbereich, während ein abwertender Daumen den Suchbereich
+entsprechend verringert.
+
+.Auswahl der Pakete anhand der Debtags Cloud
+image::praxis/debtags/debtags-suche-nach-tags.png[id="fig.debtags-suche-nach-tags", width="50%"]
+
+// Datei (Ende): ./praxis/debtags/suche-anhand-der-schlagworte.txt

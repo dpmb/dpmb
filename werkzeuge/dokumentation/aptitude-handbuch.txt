@@ -1,0 +1,38 @@
+// Datei: ./werkzeuge/dokumentation/aptitude-handbuch.txt
+
+// Baustelle: Fertig
+
+[[aptitude-handbuch]]
+
+=== Handbuch zu `aptitude` ===
+
+// Stichworte für den Index
+(((aptitude)))
+(((aptitude-Handbuch)))
+`aptitude` ist ein recht komplexes Programm und bedarf daher einiges an
+Dokumentation. Diese steht bislang in 7 Sprachen als HTML-Datei bereit,
+so in englisch, tschechisch, spanisch, finnisch, französisch,
+italienisch und japanisch. Eine deutsche Übersetzung fehlt leider
+bisher.
+
+Seit 2013 ist die Zusammenstellung für `aptitude` in der Version 0.6.8.2
+wieder in allen 7 Sprachen
+verfügbar{empty}footnote:[http://aptitude.alioth.debian.org/doc/]. Zuvor
+war es längere Zeit recht ruhig um die Dokumentation, da der bisherige
+Maintainer nicht mehr erreichbar war. Nachdem das neue `aptitude`-Team
+vollen Zugriff auf die Daten bei Alioth – Debians
+FusionForge-Installation – hatte, ging es flink voran. Leider verweisen
+etliche Suchmaschinen auch heute noch auf die vorherige Version 0.4.11.2
+aus dem Jahr 2008{empty}footnote:[http://www.algebraicthunk.net/~dburrows/projects/aptitude/doc/].
+
+// Stichworte für den Index
+(((Debianpaket, aptitude-doc-en)))
+(((Debianpaket, aptitude-doc-fr)))
+Die Dokumentation ist auch als sprachspezifisches Debianpaket
+verfügbar. Bspw. enthält 'aptitude-doc-en' die englische und
+'aptitude-doc-fr' die französische Übersetzung.
+
+.Dokumentation zu `aptitude`
+image::werkzeuge/dokumentation/aptitude-handbuch.png[id="fig.aptitude-handbuch", width="50%"]
+
+// Datei (Ende): ./werkzeuge/dokumentation/aptitude-handbuch.txt

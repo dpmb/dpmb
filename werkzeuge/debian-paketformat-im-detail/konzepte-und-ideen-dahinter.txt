@@ -1,0 +1,312 @@
+// Datei: ./werkzeuge/debian-paketformat-im-detail/konzepte-und-ideen-dahinter.txt
+
+// Baustelle: Fertig
+
+[[konzepte-und-ideen-dahinter]]
+
+=== Konzepte und Ideen dahinter ===
+
+// Stichworte für den Index
+(((Paketbeschreibung, Basisformat)))
+Die Paketbeschreibung ist eine Textdatei{empty}footnote:[früher teilweise im
+Encoding ISO 8859-1, heute nur noch in UTF-8]. Die Paketbeschreibung in
+den Paketen selbst erfolgt in englischer Sprache, wird aber für die
+Paketlisten auf den Spiegelservern von Debians Übersetzungsteams auch in
+andere Sprachen übersetzt.
+
+Jedes Element der Beschreibung ist ein Schlüssel-Wert-Paar, wobei die
+Trennung zwischen Schlüssel und Wert durch einen Doppelpunkt erfolgt.
+Der 'Schlüssel' ist ein aus der Umgangssprache abgeleiteter Begriff, der
+die Relation zwischen zwei oder mehr Paketen näher beschreibt. 'Wert'
+ist hingegen eine Aufzählung von Paketen, die mit einem Komma
+voneinander getrennt werden. Ein ähnliches Konzept kommt bei den
+Kopfzeilen von E-Mails zum Tragen.
+
+Zusätzlich kann ein Wert mit einer Aussage zu einer bestimmten
+Softwareversion ergänzt worden sein. Eine solche 'versionierte
+Abhängigkeit' kann unterschiedliche Relationen umfassen. 
+<<tab.relationen-fuer-versionierte-abhaengigkeiten>> zeigt die derzeit
+zulässigen Operatoren samt einem Beispiel aus der Praxis.
+
+.Relationen für versionierte Abhängigkeiten
+[options="header",cols="2,4,4", id="tab.relationen-fuer-versionierte-abhaengigkeiten"]
+|=============================
+| Operator | Beschreibung | Beispiel
+| `<<` | früher als | `xpdf-utils (<< 3.00)`
+| `<=` | früher oder gleich | `python-cairo (<= 1.85)`
+| `=` | exakt gleich | `xfwm4 (= 4.1)`
+| `>=` | gleich oder später | `libc6 (>= 2.4)`
+| `>>` | später als | `libaa1 (>> 1.4)`
+|=============================
+
+==== Binärpakete ====
+
+// Stichworte für den Index
+(((Paketbeschreibung, Schlüsselworte für Binärpakete)))
+Die folgenden Schlüsselworte werden in Binärpaketen (siehe
+<<binaerpakete>>) und den Paketlisten von diesen verwendet:
+
+`Package`:: 
+zu dt.: Paket; Name des Paketes ohne Versionsnummer und Architektur,
+siehe auch Benennung eines Debian-Pakets in
+<<benennung-eines-debian-pakets>>
+
+`Source`:: 
+zu dt.: Quelle; Name des Quellpakets (``source package''), aus dem das
+Binärpaket gebaut wurde, siehe auch Sourcepakete in <<sourcepakete>>
+
+`Version`:: 
+zu dt.: Version oder Variante; Versionsnummer des Pakets, siehe
+Benennung eines Debian-Pakets in <<benennung-eines-debian-pakets>>
+
+`Architecture`:: 
+zu dt. Architektur oder Plattform; Basis, für die das Paket gebaut wurde
+oder 'all', falls das Paket architekturunabhängig ist, siehe
+Debian-Architekturen in <<debian-architekturen>>
+
+`Maintainer`:: 
+zu dt.: Betreuer, Verantwortlicher; Für das Paket verantwortliche Person
+oder Gruppe (``Maintainer'' des Pakets) und dessen Erreichbarkeit als
+E-Mail-Adresse (siehe auch Paket nach Maintainer finden in
+<<paket-nach-maintainer-finden>>)
+
+`Homepage`:: 
+zu dt.: Internetpräsenz; Webseite des Projekts der paketierten Software
+oder Daten
+
+`Installed-Size`:: 
+zu dt.: Installationsgröße; Speicherplatz, den das Paket auf dem
+Zielsystem belegen wird, nachdem es dort installiert wurde
+
+`Depends`:: 
+zu dt.: hängt ab von; Name der installierten und konfigurierten Pakete
+und ggf. deren Versionsnummer, von dem das vorliegende Paket abhängt
+
+`Pre-Depends`:: 
+zu dt.: hängt ab vorher von; Name der installierten und konfigurierten
+Pakete und ggf. deren Versionsnummer, von dem das vorliegende Paket und
+dessen Installationsskripte abhängen. Dies bedeutet, daß diese
+Abhängigkeiten vollständig installiert und ausgepackt sein müssen, bevor
+das Paket von `dpkg` ausgepackt werden darf.
+
+`Recommends`:: 
+zu dt.: empfiehlt; Name der Pakete, welche als Ergänzung empfohlen
+werden und in den meisten Fällen ebenfalls gebraucht werden. Es ist ein
+Gegenstück zum Schlüsselwort `Enhances`.
+
+`Suggests`:: 
+zu dt.: schlägt vor; Name der Pakete, welche als Ergänzung empfohlen
+werden. Es ist ein Gegenstück zum Schlüsselwort `Enhances`
+
+`Conflicts`:: 
+zu dt.: kollidiert bzw. steht in Konflikt mit; Name der Pakete und ggf.
+deren Versionsnummer, mit denen es nicht gleichzeitig installiert sein
+darf
+
+`Breaks`:: 
+zu dt.: bricht, verhindert, beschädigt; Name der Pakete und ggf. deren
+Versionsnummer, mit denen es nicht gleichzeitig verwendet werden kann
+
+`Enhances`:: 
+zu dt.: erweitert, ergänzt, wertet auf; Benennt das Paket, welches es
+erweitert. Es ist das Gegenstück zu den Schlüsselworten `Suggests` und
+`Recommends`
+
+`Replaces`:: 
+zu dt.: ersetzt; Name der Pakete, dessen Dateien es (teilweise) ersetzt
+
+`Provides`:: 
+zu dt.: stellt bereit; Name der virtuellen Pakete, welche es
+bereitstellt, siehe Virtuelle Pakete in <<virtuelle-pakete>>
+
+`Section`:: 
+zu dt.: Sektion oder Paketkategorie, in die das Paket einsortiert ist,
+siehe Paketkategorien in <<sortierung-der-pakete-nach-verwendungszweck>>
+
+`Priority`:: 
+zu dt.: Priorität; Prioritätsstufe des Paketes, siehe Paket-Priorität
+und essentielle Pakete in <<paket-prioritaet-und-essentielle-pakete>>
+
+`Essential`:: 
+zu dt.: essentiell; ihr Debian-System kann kaputt gehen, wenn dieses
+Paket entfernt wird, siehe dazu auch Markierung Essentiell in
+<<markierung-essentiell>>
+
+`Description`:: 
+zu dt.: Beschreibung; Dieses Feld enthält die Paketbeschreibung. Dabei
+ist die erste Zeile ein kurzer, einzeiliger Text und die darauf
+folgenden, eingerückten Zeilen beinhalten eine lange und ggf. über
+mehrere Absätze gehende, ausführlichere Beschreibung. Zwischen der Kurz-
+und Langbeschreibung kann auch ein Punkt (`.`) stehen.
+
+`Built-Using`:: 
+zu dt.: gebaut mit; Dieses Feld muß gemäß Debian Policy Manual
+§7.8{empty}footnote:[http://www.debian.org/doc/debian-policy/] vorhanden
+sein, sofern der Inhalt des Binärpaketes nicht nur aus Quellcode aus
+dessen Quellpaket besteht und die Lizenz dieses Quellpakets vorschreibt,
+daß auch sämtlicher mit einkompilierter Quellcode frei verfügbar sein
+muß. Dies ist z.B. der Fall, wenn eine unter GNU GPL stehende Software
+statisch kompiliert wird oder Quellcode unter GNU GPL aus einem anderen
+Paket in das Binärpaket hineinkopiert wird (bspw. bei Stylesheets oder
+Hintergrundbildern für generierte Dokumentationen im HTML-Format).
+
+Das nachfolgende Beispiel zeigt alle genutzten Elemente anhand der
+PDF-Bibliothek 'poppler-utils':
+
+//.Paketbeschreibung für das Paket 'poppler-utils'
+----
+ Package: poppler-utils
+ Source: poppler
+ Version: 0.18.4-6
+ Architecture: amd64
+ Maintainer: Loic Minier <lool@dooz.org>
+ Installed-Size: 445
+ Depends: libc6 (>= 2.4), libcairo2 (>= 1.10.0), libfreetype6 (>= 2.2.1), liblcms1 (>= 1.15-1), libpoppler19 (>= 0.18.4), libstdc++6 (>= 4.1.1)
+ Recommends: ghostscript
+ Conflicts: pdftohtml
+ Breaks: xpdf-utils (<< 3.02-2~)
+ Replaces: pdftohtml, xpdf-reader, xpdf-utils (<< 3.02-2~)
+ Provides: pdftohtml, xpdf-utils
+ Section: utils
+ Priority: optional
+ Multi-Arch: foreign
+ Homepage: http://poppler.freedesktop.org/
+ Description: PDF utilities (based on Poppler)
+  Poppler is a PDF rendering library based on Xpdf PDF viewer.
+  .
+  This package contains command line utilities (based on Poppler) for getting
+  information of PDF documents, convert them to other formats, or manipulate
+  them:
+   * pdffonts -- font analyzer
+   * pdfimages -- image extractor
+   * pdfinfo -- document information
+   * pdfseparate -- page extraction tool
+   * pdftocairo -- PDF to PNG/JPEG/PDF/PS/EPS/SVG converter using Cairo
+   * pdftohtml -- PDF to HTML converter
+   * pdftoppm -- PDF to PPM/PNG/JPEG image converter
+   * pdftops -- PDF to PostScript (PS) converter
+   * pdftotext -- text extraction
+   * pdfunite -- document merging tool
+----
+
+==== Sourcepakete ====
+
+// Stichworte für den Index
+(((Paketbeschreibung, Schlüsselworte für Sourcepakete)))
+In Sourcepaketen (siehe <<sourcepakete>>) sind neben den weiter oben
+genannten Schlüsselworten auch die folgenden Einträge zulässig:
+
+`Source`:: 
+zu dt.: Quelle; Name des Quellpakets.
+
+`Binary`:: 
+zu dt.: Binärdatei; Liste aller Binärpakete, die aus diesem Quellpaket
+gebaut werden.
+
+`Package-List`:: 
+zu dt. Paketliste; Auflistung aller Binärpakete, die aus diesem
+Quellpaket gebaut werden. Zusätzlich werden das Paketformat (`deb` oder
+`udeb`), die Paketkategorie (``Sektion''), die Priorität und die
+Architektur benannt.
+
+`Format`:: 
+zu dt.: Format; verwendetes Format des Quellpakets, z.B. `1.0`, `3.0
+(quilt)` oder `3.0 (native)` (siehe Aufbau und Format in
+<<aufbau-und-format>>).
+
+`Architecture`:: 
+zu dt. Architektur oder Plattform; Im Gegensatz zu den Binärpaketen sind
+hier mehr als nur eine einzige Architektur zulässig. Es beinhaltet alle
+Architekturen, auf denen das Paket gebaut werden kann. Der Wert 'any'
+bedeutet, daß das Paket auf jeder Architektur gebaut werden kann und
+soll (siehe <<debian-architekturen>>).
+
+`Uploaders`:: 
+zu dt.: Hochlader; bezeichnet die Liste der Co-Maintainer und
+Beitragenden des Pakets.
+
+`Standards-Version`:: 
+zu dt.: Version der Standardisierung; Angabe, welcher Version des Debian
+Policy Manuals{empty}footnote:[http://www.debian.org/doc/debian-policy/]
+dieses Paket entspricht.
+
+`Vcs-Git`, `Vcs-Svn`, `Vcs-Hg`, `Vcs-Cvs`, `Vcs-Mtn`:: 
+zu dt.: Versionskontrollsystem; Angabe, von wo Sie eine aktuelle
+Entwicklungskopie des Quellpakets aus einem Versionskontrollsystems
+auschecken können.
+
+`Vcs-Browser`:: 
+zu dt.: Versionskontrollsystem und Webbrowser; URL einer Webansicht des
+unter 'Vcs-Git' u.a. genannten Repositories des Versionskontrollsystems.
+
+`Build-Depends`:: 
+zu dt.: Abhängigkeiten beim Bauen von Paketen; Pakete, die notwendig
+sind, um alle architektur-abhängigen Binärpakete aus diesem Quellpaket
+zu bauen, sowie um das Build-Verzeichnis zu säubern (``clean''-Ziel).
+Pakete, die als ``essential'' (unbedingt notwendig) oder
+``build-essential'' (für den Bau von Paketen unbedingt notwendig)
+markiert sind, müssen nicht aufgelistet werden (Kommt fast immer vor.)
+
+`Build-Depends-Indep`:: 
+zu dt.: Abhängigkeiten beim Bauen von Paketen (architekturunabhängig);
+Pakete, die zusätzlich zu den unter `Build-Depends` aufgelisteten
+Paketen notwendig sind, um auch die architektur-unabhängigen Pakete aus
+diesem Quellpaket zu bauen. Hier sind meist die Pakete aufgelistet, die
+notwendig sind, um die Dokumentation oder Übersetzungsdateien zu bauen.
+(Kommt meist nur bei komplexeren Quellpaketen vor.)
+
+`Build-Conflicts`:: 
+zu dt. Bau-Konflikte; Pakete, die nicht installiert sein dürfen, wenn
+die architektur-abhängigen Binärpakete aus diesem Quellpaket gebaut
+werden sollen. Dies sind meistens Pakete, die das `configure`-Skript
+beim Testen der notwendigen Bibliotheken stören oder aber Pakete, die
+zusätzliche, unerwünschte Abhängigkeiten in den gebauten Binärpaketen
+verursachen würden. (Kommt selten vor.)
+
+`Build-Conflicts-Indep`:: 
+zu dt. Bau-Konflikte (architekturunabhängig); Pakete, die nicht
+installiert sein dürfen, wenn die architektur-unabhängigen Binärpakete
+aus diesem Quellpaket gebaut werden sollen. (Kommt sehr selten vor.)
+
+`Files`, `Checksums-Sha1`, `Checksums-Sha256`:: 
+MD5-, SHA1- und SHA256-Checksummen sowie Dateinamen und -größen der
+enthaltenen Quellcode-Archive.
+
+`Testsuite`:: 
+Optionales Feld, das angibt, mit welchem Programm das installierte Paket
+auf Funktionalität getestet werden kann. Derzeit ist der einzige
+mögliche Wert `autopkgtest` (siehe Debian Enhancement Proposal 'DEP
+8'{empty}footnote:[http://dep.debian.net/deps/dep8/] und das
+gleichnamige Debianpaket
+dazu{empty}footnote:[https://packages.debian.org/de/stable/autopkgtest]
+
+==== Weitere Metadaten ====
+
+// Stichworte für den Index
+(((/var/lib/apt/lists/)))
+In den Paketlisten unter `/var/lib/apt/lists/` sind außerdem noch
+weitere generierte Metadaten zu den Paketen enthalten. Das beinhaltet
+bspw. die Debian Tags (siehe
+<<erweiterte-paketklassifikation-mit-debtags>>), den Pfad und Dateinamen
+im Paketmirror, die Paketgröße und verschiedene Prüfsummen. Letztere
+dienen dazu, sicherzustellen, daß die Pakete fehlerfrei zwischen dem
+Paketmirror und ihrem Debian-System übertragen wurden und es
+zwischenzeitlich keine Veränderungen gab (siehe dazu Paketquelle
+überprüfen in <<paketquelle-auf-echtheit-ueberpruefen>> und Bezogenes
+Paket verifizieren in <<bezogenes-paket-verifizieren>>).
+
+Das Paket 'poppler-utils' umfaßt beispielsweise die folgenden Metadaten:
+
+//.Metadaten für das Paket 'poppler-utils'
+----
+Description-md5: cd43e3ed14322253876488d6f9911888
+Tag: implemented-in::c++, interface::commandline, role::program,
+ scope::utility, use::converting, use::filtering,
+ works-with-format::pdf, works-with-format::xml, works-with::text
+Filename: pool/main/p/poppler/poppler-utils_0.18.4-6_amd64.deb
+Size: 162034
+MD5sum: 0f0254920f85b6190ba7b03f4d2a7d73
+SHA1: 77fb9d39145c60421462a8fe8315d0adaa49a38c
+SHA256: 38f2d13ccddac9e3d05abff7c5fab353d3fea550c8f39293850651e03c3f8be4
+----
+// Datei (Ende): ./werkzeuge/debian-paketformat-im-detail/konzepte-und-ideen-dahinter.txt

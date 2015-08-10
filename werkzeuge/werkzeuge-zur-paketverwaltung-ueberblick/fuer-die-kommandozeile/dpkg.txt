@@ -1,0 +1,43 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/dpkg.txt
+
+// Baustelle: Fertig
+
+[[dpkg]]
+
+==== `dpkg` ====
+
+`dpkg` ist das Debian-Programm für grundlegende Paketoperationen und
+bildet in Bezug auf Funktionsumfang und Handhabung das Äquivalent zu
+`rpm` auf RedHat-basierten Linuxsystemen. Es kürzt den Namen 'Debian
+GNU/Linux package manager' ab. 
+
+Das Programm agiert nur mit Paketen, die schon auf ihrem Linuxsystem
+lokal vorliegen -- entweder als `deb`-Datei in einem Verzeichnis oder
+als bereits installiertes Paket. `dpkg` kann keine Pakete von einem
+Paketmirror beziehen.
+
+Sie erreichen `dpkg` ausschließlich über die Kommandozeile und starten
+es mit diversen Schaltern und Optionen. Die wichtigsten Parameter für
+den Gebrauch im Alltag sind{empty}footnote:[Weitere Optionen zu `dpkg`
+entnehmen Sie bitte der Manpage zum Programm]:
+
+* Paketliste ausgeben (<<liste-der-installierten-pakete-anzeigen-und-deuten>>)
+(`dpkg -l`)
+* Paketstatus erfragen (<<paketstatus-erfragen>>) mit `dpkg -s Paketname`
+* Inhalt eines installierten Pakets anzeigen
+(<<paketinhalte-anzeigen-apt-file>>) mit `dpkg -L Paketname`
+* Inhalt eines nicht installierten Pakets anzeigen
+(<<paketinhalte-anzeigen-apt-file>>) mit `dpkg -c Paketname`
+* Paket zu Datei finden (<<paket-zu-datei-finden>>) mit `dpkg -S Paketname` und 
+* Pakete konfigurieren (<<pakete-konfigurieren>>) (Option `--configure`)
+
+Mit `dpkg` zeigen Sie die installierten Pakete und deren Zustand an, suchen
+nach Paketinhalten und konfigurieren im Bedarfsfall ein Paket nach.
+
+Für alle anderen Aktionen sind hingegen die Werkzeuge `apt-get` (<<apt>>),
+`apt-cache`, `aptitude` (<<aptitude>>) und `apt-file` oder die 
+Benutzeroberflächen via Ncurses oder GTK besser geeignet (siehe
+<<ncurses-basiert>> und <<gui-zur-paketverwaltung>>). Diese fassen viele
+Einzelschritte von `dpkg` zusammen und vereinfachen Ihnen die Wartung
+ihres Systems erheblich.
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/dpkg.txt

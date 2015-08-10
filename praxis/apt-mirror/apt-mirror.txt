@@ -1,0 +1,81 @@
+// Datei: ./praxis/apt-mirror/apt-mirror.txt
+
+// Baustelle: Notizen
+
+[[apt-mirror]]
+
+=== apt-mirror ===
+
+* Paket 'apt-mirror' <<Debian-Paket-apt-mirror>>
+** bei Ubuntu verfügbar im Zweig 'universe'
+* Projektseite <<apt-mirror-Projektseite>>
+* geeignet zum Spiegeln der Debian-Distribution oder einer beliebigen APT-Quelle
+* Funktionsumfang (aus der Paketbeschreibung):
+** Es verwendet eine gleichartige Konfiguration wie die
+`/etc/apt/sources.list` von APT
+** Es stimmt vollständig mit dem Paket-Pool überein.
+** Es kann beim Herunterladen mit mehreren Threads arbeiten.
+** Es unterstützt mehrere Architekturen gleichzeitig.
+** Es kann nicht benötigte Dateien automatisch entfernen.
+** Es funktioniert auch mit überlasteten Internetverbindungen gut.
+** Es erstellt nie einen inkonsistenten Spiegel, sogar während des Spiegelns.
+** Es funktioniert auf allen POSIX-konformen Systemen mit `perl` und
+`wget` <<Debian-Paket-wget>>
+
+==== Wichtige Dateien aus dem Paket ====
+* `/etc/apt/mirror.list`
+* `/etc/cron.d/apt-mirror` oder `crontab`
+* `apt-mirror`
+
+==== Ablauf ====
+* Paket 'apt-mirror' beziehen und installieren
+* `/etc/apt/mirror.list` anpassen
+
+.Beispielkonfiguration für `/etc/apt/mirror.list`
+----
+set nthreads     5
+set _tilde 0
+
+deb http://ftp.de.debian.org/debian/ wheezy main contrib non-free
+deb http://security.debian.org/ wheezy/updates main contrib non-free
+
+# backports
+deb http://ftp.de.debian.org/debian wheezy-backports main contrib non-free
+
+# cleaning section
+clean http://ftp.de.debian.org/debian/
+clean http://security.debian.org/
+clean http://ftp.de.debian.org/debian
+----
+
+* `/etc/cron.d/apt-mirror` oder `crontab` anpassen
+
+.Eintrag für eine tägliche Aktualisierung des Paketmirrors
+----
+@daily /usr/bin/apt-mirror
+----
+
+* das Kommando `apt-mirror` ausführen
+** Pakete landen danach in `/var/spool/apt-mirror`
+
+* Mirror via http verfügbar machen
+** Symlink zum Apache-Verzeichnis anlegen
+
+----
+# ln -s /var/spool/apt-mirror/mirror/ftp.de.debian.org/debian/ /var/www/html/debian
+----
+
+* `/etc/apt/sources.list` der Clienten entsprechend anpassen :)
+
+==== Beispiel/HowTo ====
+* nur 'apt-mirror': <<apt-mirror-ubuntu>>
+* 'apt-mirror' und 'apt-cacher': <<apt-mirror-ubuntu2>>
+
+==== Hinweise ====
+* nur die Bereiche und Architekturen auswählen, die Sie tatsächlich
+benötigen -- alles andere braucht 'sehr viel' Platz
+** Ubuntu: etwa 15G pro Architektur
+* initialer Bezug kann sehr lang dauern
+** bei einem Folgebezug werden nur die Änderungen übertragen -- daher
+geht das deutlich schneller
+// Datei (Ende): ./praxis/apt-mirror/apt-mirror.txt
