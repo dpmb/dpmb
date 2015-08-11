@@ -1,7 +1,7 @@
 # Buch "Debian-Paketmanagement"
 
 Dies ist der frei verfügbare Quelltext zum
-[Buch Debian-Paketmanagement] von
+[Buch Debian-Paketmanagement](http://www.dpmb.org/) von
 [Axel Beckert](http://axel.beckert.ch/) und
 [Frank Hofmann](http://www.efho.de/).
 
