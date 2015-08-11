@@ -5,9 +5,9 @@ before_install:
 script:
    - make
 
-after_failure:
-   - sudo apt-get install libxml2-utils
-   - make xmllint
+#after_failure:
+#   - sudo apt-get install libxml2-utils
+#   - make xmllint
 
 notifications:
   irc: "irc.lugs.ch#kivamon"
