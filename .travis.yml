@@ -1,11 +1,12 @@
 before_install:
    - sudo apt-get update
-   - sudo apt-get install asciidoc dblatex debhelper make libxml2-utils
+   - sudo apt-get install asciidoc dblatex debhelper make
 
 script:
    - make
 
 after_failure:
+   - sudo apt-get install libxml2-utils
    - make xmllint
 
 notifications:
