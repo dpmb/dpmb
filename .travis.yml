@@ -1,0 +1,12 @@
+before_install:
+   - sudo apt-get update
+   - sudo apt-get install asciidoc dblatex debhelper make libxml2-utils
+
+script:
+   - make
+
+after_failure:
+   - make xmllint
+
+notifications:
+  irc: "irc.lugs.ch#kivamon"
