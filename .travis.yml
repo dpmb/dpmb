@@ -3,7 +3,7 @@ before_install:
    - sudo apt-get install asciidoc dblatex debhelper make
 
 script:
-   - make
+   - make verbose
 
 #after_failure:
 #   - sudo apt-get install libxml2-utils
