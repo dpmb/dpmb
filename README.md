@@ -1,5 +1,7 @@
 # Buch "Debian-Paketmanagement"
 
+[![Build Status](https://travis-ci.org/dpmb/dpmb.svg?branch=master)](https://travis-ci.org/dpmb/dpmb)
+
 Dies ist der frei verfügbare Quelltext zum
 [Buch Debian-Paketmanagement](http://www.dpmb.org/) von
 [Axel Beckert](http://axel.beckert.ch/) und
