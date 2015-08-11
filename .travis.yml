@@ -3,7 +3,7 @@ before_install:
    - sudo apt-get install debhelper make moreutils
    - echo deb http://us.archive.ubuntu.com/ubuntu/ trusty main | sudo sponge /etc/apt/sources.list.d/trusty.list
    - sudo apt-get update
-   - sudo apt-get install -t trusty dblatex asciidoc
+   - sudo apt-get install -t trusty dblatex asciidoc texlive-lang-german
 
 script:
    - make verbose
