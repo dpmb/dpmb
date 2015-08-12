@@ -10,7 +10,7 @@ This is the freely available source code for the (for now German written)
 [Axel Beckert](http://axel.beckert.ch/) and
 [Frank Hofmann](http://www.efho.de/).
 
-The book is written in [AsciiDoc](http://asciidoc.org/) and can be
+The book is written in [AsciiDoc](http://asciidoc.org/) format and can be
 rendered to e.g. HTML, EPub or PDF using [AsciiDoc](http://asciidoc.org/) or
 [Asciidoctor](http://asciidoctor.org/).
 
