@@ -1,0 +1,99 @@
+// Datei: ./notizen.txt
+TODO für Axel
+=============
+
+(absteigend geordnet nach Priorität)
+
+* Erweiterungen: Qualitätskontrolle (Korrekturlesen)
+* Erweiterungen: Veröffentlichungen mischen (Korrekturlesen)
+* Erweiterungen: aptitude-Formatstrings (Korrekturlesen)
+* Grundlagen: Bezogenes Paket-Verifizieren
+* Grundlagen: Paket konfigurieren
+* Grundlagen: Paket downgraden
+* Grundlagen: /var/lib/dpkg/status (Paketdatenbank reparieren)
+* Erweiterungen: PDiffs
+* Erweiterungen: debdelta
+* Erweiterungen: systeme-mit-schlechter-anbindung-warten
+
+TODO für Frank (will auch welche haben)
+=======================================
+
+* Erweiterungen: Paketformate mischen (Rohtext erstellen)
+* Erweiterungen: Debtags: Vokabular anpassen
+* Erweiterungen: aptitude-Farbschema
+* Erweiterungen: Qualitätskontrolle via Iceweasel-Erweiterung (Paket xul-ext-debianbuttons)
+
+Ggf. nettes Beispiel für debdelta:
+
+# debdelta-upgrade
+Delta is not present: dpkg_1.17.24_1.17.25_amd64.debdelta
+Delta is not present: dpkg-dev_1.17.24_1.17.25_all.debdelta
+Delta is not present: libdpkg-perl_1.17.24_1.17.25_all.debdelta
+Created,    time  0.18sec, speed 218kB/sec, libgudev-1.0-0_215-15_amd64.deb
+Created,    time  0.14sec, speed 210kB/sec, libsystemd-daemon-dev_215-15_amd64.deb
+Delta is not present: lintian_2.5.30+deb8u3_2.5.30+deb8u4_all.debdelta
+Created,    time  0.24sec, speed 372kB/sec, libsystemd-dev_215-15_amd64.deb
+Delta is not present: python-nose_1.3.4-2_1.3.6-1_all.debdelta
+Created,    time  0.17sec, speed 496kB/sec, libsystemd0_215-15_amd64.deb
+Created,    time  0.13sec, speed 400kB/sec, libudev1_215-15_amd64.deb
+Delta is not present: udev_215-14_215-15_amd64.debdelta
+Created,    time  0.14sec, speed 227kB/sec, systemd-sysv_215-15_amd64.deb
+Delta is not present: wesnoth_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Delta is not present: wesnoth-1.10_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Delta is too big: wesnoth-1.10-core_1%3a1.10.7-1+b1_1%3a1.10.7-2_amd64.debdelta
+Delta is not present: wesnoth-1.10-data_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Created,    time  1.95sec, speed 1712kB/sec, wesnoth-1.10-aoi_1%3a1.10.7-2_all.deb
+Delta is not present: wesnoth-core_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Delta is not present: wesnoth-music_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Downloaded, time  0.04sec, speed 3762B/sec, virtualbox-qt_4.3.26-dfsg-1_4.3.26-dfsg-2_amd64.debdelta
+Downloaded, time  0.04sec, speed 26kB/sec, wesnoth-1.10-nr_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Downloaded, time  0.04sec, speed 37kB/sec, wesnoth-1.10-tsg_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Downloaded, time  0.04sec, speed 45kB/sec, wesnoth-1.10-l_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Downloaded, time  0.05sec, speed 55kB/sec, wesnoth-1.10-sotbe_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Downloaded, time  0.04sec, speed 57kB/sec, wesnoth-1.10-ei_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Downloaded, time  0.04sec, speed 58kB/sec, virtualbox-dkms_4.3.26-dfsg-1_4.3.26-dfsg-2_all.debdelta
+Downloaded, time  0.04sec, speed 58kB/sec, wesnoth-1.10-did_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Downloaded, time  0.04sec, speed 64kB/sec, wesnoth-1.10-dm_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Downloaded, time  0.04sec, speed 79kB/sec, wesnoth-1.10-low_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Downloaded, time  0.04sec, speed 81kB/sec, wesnoth-1.10-dw_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Downloaded, time  0.04sec, speed 129kB/sec, wesnoth-1.10-httt_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Downloaded, time  0.04sec, speed 144kB/sec, wesnoth-1.10-thot_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Downloaded, time  0.09sec, speed 78kB/sec, wesnoth-1.10-sof_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Downloaded, time  0.09sec, speed 97kB/sec, wesnoth-1.10-trow_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Downloaded, time  0.09sec, speed 170kB/sec, libpam-systemd_215-14_215-15_amd64.debdelta
+Downloaded, time  0.21sec, speed 97kB/sec, virtualbox_4.3.26-dfsg-1_4.3.26-dfsg-2_amd64.debdelta
+Downloaded, time  0.19sec, speed 120kB/sec, wesnoth-1.10-utbs_1%3a1.10.7-1_1%3a1.10.7-2_all.debdelta
+Downloaded, time  3.85sec, speed 303kB/sec, systemd_215-14_215-15_amd64.debdelta
+Downloaded, time  0.44sec, speed  8MB/sec, wesnoth-1.10-core_1.10.7-2_amd64.deb
+Downloaded, time  5.20sec, speed 7907kB/sec, opera-beta_29.0.1795.35_amd64.deb
+Downloaded, time  0.41sec, speed 682kB/sec, conkeror_1.0~~pre-1+git150409+2207-~nightly1_all.deb
+Created,    time 65.71sec, speed 2133kB/sec, wesnoth-1.10-music_1%3a1.10.7-2_all.deb
+Created,    time  1.55sec, speed 1773kB/sec, wesnoth-1.10-ttb_1%3a1.10.7-2_all.deb
+Created,    time  9.67sec, speed 471kB/sec, virtualbox-qt_4.3.26-dfsg-2_amd64.deb
+Created,    time  3.45sec, speed 782kB/sec, wesnoth-1.10-nr_1%3a1.10.7-2_all.deb
+Created,    time  2.75sec, speed 1388kB/sec, wesnoth-1.10-tsg_1%3a1.10.7-2_all.deb
+Created,    time  3.36sec, speed 1735kB/sec, wesnoth-1.10-l_1%3a1.10.7-2_all.deb
+Created,    time  3.36sec, speed 1533kB/sec, wesnoth-1.10-sotbe_1%3a1.10.7-2_all.deb
+Created,    time  2.96sec, speed 1513kB/sec, wesnoth-1.10-ei_1%3a1.10.7-2_all.deb
+Created,    time  2.24sec, speed 252kB/sec, virtualbox-dkms_4.3.26-dfsg-2_all.deb
+Created,    time  3.06sec, speed 1787kB/sec, wesnoth-1.10-did_1%3a1.10.7-2_all.deb
+Created,    time  3.56sec, speed 1416kB/sec, wesnoth-1.10-dm_1%3a1.10.7-2_all.deb
+Created,    time  4.87sec, speed 1674kB/sec, wesnoth-1.10-low_1%3a1.10.7-2_all.deb
+Created,    time  2.35sec, speed 1608kB/sec, wesnoth-1.10-dw_1%3a1.10.7-2_all.deb
+Created,    time  5.77sec, speed 955kB/sec, wesnoth-1.10-httt_1%3a1.10.7-2_all.deb
+Created,    time  2.26sec, speed 1479kB/sec, wesnoth-1.10-thot_1%3a1.10.7-2_all.deb
+Created,    time  2.45sec, speed 1291kB/sec, wesnoth-1.10-sof_1%3a1.10.7-2_all.deb
+Created,    time  6.68sec, speed 1472kB/sec, wesnoth-1.10-trow_1%3a1.10.7-2_all.deb
+Created,    time  0.23sec, speed 513kB/sec, libpam-systemd_215-15_amd64.deb
+Created,    time 29.14sec, speed 532kB/sec, virtualbox_4.3.26-dfsg-2_amd64.deb
+Created,    time  9.28sec, speed 559kB/sec, wesnoth-1.10-utbs_1%3a1.10.7-2_all.deb
+ Error: applying of delta for systemd failed:  : Error, 5 locale files are absent. (non retriable)
+Delta-upgrade statistics:
+ total resulting debs, size 277MB time 171sec virtual speed 1658kB/sec
+Sorry, no forensic logs were generated
+
+User-Bild auf https://github.com/dpmb ist
+/usr/share/icons/nuvola/128x128/mimetypes/application-x-deb.png aus
+dem Paket nuvola-icon-theme, Version 4:15.04.3-1.
+
+// Datei (Ende): ./notizen.txt
