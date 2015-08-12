@@ -86,18 +86,7 @@ einzusetzen. Dazu fassen wir den aktuellen Stand der Entwicklung
 zusammen und beleuchten darüber hinaus die angrenzenden Programme bzw.
 die damit verbundenen Fragestellungen im Alltag der Systembetreuung.
 
-//////////
-//Done:fho
-//Dr. Markus Wirtz, 2015-05-20 17:03
-//Abgesehen davon, dass mir in den folgenden Abschnitten "textovia"
-//deutlich zu kurz kommt ;), plädiere ich _sehr_ dafür, sie einfach
-//wegzulassen. So viel "Making of" ist einfach zu viel des Guten und macht
-//den Leser auf der Suche nach den technischen Informationen mürbe.
-//////////
-
 ==== Technische Basis ====
-
-// TODO: Github muss da für die Zukunft rein
 
 Rein technisch setzt das Buch auf
 AsciiDoc{empty}footnote:[http://www.methods.co.nz/asciidoc/] auf --
@@ -118,6 +107,19 @@ Plenz und Valentin Haenel (Julius Plenz und Valentin Haenel: Git.
 Verteilte Versionsverwaltung für Code und Dokumente, Open Source Press,
 München, 2. Auflage November 2014, ISBN 978-3-95539-119-5).
 ====
+
+==== Quellcode und Lizenz ====
+
+Der o.g. Quellcode des Buches findet sich auf GitHub unter
+https://github.com/dpmb/dpmb und ist unter der
+http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons
+Namensnennung - Weitergabe unter gleichen Bedingungen 4.0
+International Lizenz] frei verfügbar.
+
+Änderungswünsche oder -vorschläge zum Buch am liebsten dort als
+https://github.com/dpmb/dpmb/issues/new[Issue] oder sogar noch besser,
+als https://github.com/dpmb/dpmb/compare[Pull-Request mitsamt Patch]
+einsenden.
 
 ==== Organisatorisch ====
 
