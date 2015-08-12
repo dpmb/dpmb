@@ -14,6 +14,7 @@ TODO für Axel
 * Erweiterungen: PDiffs
 * Erweiterungen: debdelta
 * Erweiterungen: systeme-mit-schlechter-anbindung-warten
+* https://juliank.wordpress.com/2012/01/24/managing-system-package-selections-using-custom-meta-packages/
 
 TODO für Frank (will auch welche haben)
 =======================================
