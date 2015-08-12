@@ -1,5 +1,6 @@
 # Book "Debian Package Management" / Buch "Debian-Paketmanagement"
 
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License Contract" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" align="right" /></a>
 [![Build Status](https://travis-ci.org/dpmb/dpmb.svg?branch=master)](https://travis-ci.org/dpmb/dpmb)
 
 ## English
@@ -13,7 +14,7 @@ The book is written in [AsciiDoc](http://asciidoc.org/) and can be
 rendered to e.g. HTML, EPub or PDF using [AsciiDoc](http://asciidoc.org/) or
 [Asciidoctor](http://asciidoctor.org/).
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License Contract" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" align="right" /></a><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">The book "Debian Package Management"</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.dpmb.org/" property="cc:attributionName" rel="cc:attributionURL">Frank Hofmann and Axel Beckert</a> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution - Share Alike 4.0 International License</a>.
+<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">The book "Debian Package Management"</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.dpmb.org/" property="cc:attributionName" rel="cc:attributionURL">Frank Hofmann and Axel Beckert</a> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution - Share Alike 4.0 International License</a>.
 
 ## German
 
@@ -27,4 +28,4 @@ und kann mit [AsciiDoc](http://asciidoc.org/) oder
 [Asciidoctor](http://asciidoctor.org/) nach z.B. HTML, EPub oder PDF
 gerendert werden.
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" align="right" /></a><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Das Buch "Debian-Paketmanagement"</span> von <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.debian-paketmanagement.de/" property="cc:attributionName" rel="cc:attributionURL">Frank Hofmann und Axel Beckert</a> ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
+<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Das Buch "Debian-Paketmanagement"</span> von <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.debian-paketmanagement.de/" property="cc:attributionName" rel="cc:attributionURL">Frank Hofmann und Axel Beckert</a> ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
