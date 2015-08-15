@@ -4,6 +4,8 @@ Debian-Paketmanagement
 :doctype: book
 :lang: de
 :ascii-ids:
+:numbered:
+:subtitle: Konzepte -- Werkzeuge - Praxis
 
 // Baustelle: Rohtext
 
