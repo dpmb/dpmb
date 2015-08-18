@@ -32,7 +32,7 @@ Damit bleiben die eingerichteten Debian-Systeme von Beginn an
 überschaubar und pflegeleicht und enthalten möglichst wenig Ballast.
 
 Die Auswahl eines Spiegelservers, der zu Ihren technischen Gegebenheiten
-und Gewohnheiten in der Benutzung Ihres Debian-Systems paßt, ist eine
+und Gewohnheiten in der Benutzung Ihres Debian-Systems passt, ist eine
 Philosophie für sich. Auf die unterschiedlichen Varianten für bereits
 bestehende Spiegelserver gehen wir genauer in
 <<geeigneten-paketmirror-auswaehlen>> ein. Was Sie tun müssen, um
@@ -74,7 +74,7 @@ die jeweilige Paketkategorie (siehe
 Veröffentlichungen (siehe <<veroeffentlichungen>>), den Maintainer
 (siehe <<paket-nach-maintainer-finden>>), den Paketinhalt (siehe
 <<paket-zu-datei-finden>>) oder einem Fragment aus dem Paket (siehe
-<<nach-muster-in-einem-paket-suchen>>) suchen. Darüberhinaus gibt es
+<<nach-muster-in-einem-paket-suchen>>) suchen. Darüber hinaus gibt es
 eine konzept- und facettenbasierte Suche mit Hilfe von Debtags.
 Letzteres besprechen wir detailliert unter Erweiterte
 Paketklassifikation mit Debtags in

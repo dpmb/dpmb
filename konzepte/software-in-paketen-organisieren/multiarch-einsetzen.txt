@@ -24,11 +24,11 @@ Architektur als Parameter an, bspw. `dpkg --add-architecture amd64` für
 [NOTE]
 .Installation von Paketen für fremde Architekturen
 ====
-Bitte berücksichtigen Sie bei Ihrer Softwareplanung, daß nicht jedes
+Bitte berücksichtigen Sie bei Ihrer Softwareplanung, dass nicht jedes
 Paket für alle Plattformen verfügbar ist. Wenn es verfügbar ist und Sie
 es erfolgreich auf Ihrem System installieren konnten, heißt das nicht
-automatisch, daß es auch auf Ihrer Architektur funktioniert, sondern
-nur, daß die Paketverwaltung alle benannten Paketabhängigkeiten erfüllen
+automatisch, dass es auch auf Ihrer Architektur funktioniert, sondern
+nur, dass die Paketverwaltung alle benannten Paketabhängigkeiten erfüllen
 konnte.
 ====
 
@@ -98,7 +98,7 @@ pforth:i386:
 
 // Stichworte für den Index
 (((apt-get, install)))
-Sie ersehen aus der obigen Ausgabe, daß das Paket bislang noch nicht
+Sie ersehen aus der obigen Ausgabe, dass das Paket bislang noch nicht
 auf Ihrem System installiert ist. Es steht für die Architektur _i386_
 und die Veröffentlichung Debian 8 _Jessie_ bereit. Nun können Sie das
 Paket 'pforth' installieren. Das zieht u.a. das essentielle Paket
@@ -155,7 +155,7 @@ Processing triggers for libc-bin (2.19-11) ...
 Abschließend überprüfen Sie mittels `dpkg`, für welche Architekturen das
 Paket auf Ihrem System installiert ist. In o.g. Fall ist das Paket
 `libc6` sowohl für _amd64_, als auch für _i386_ installiert. Sie
-erkennen das daran, daß neben dem Namen des Pakets auch die Architektur
+erkennen das daran, dass neben dem Namen des Pakets auch die Architektur
 angegeben wird. Als Trennzeichen in der Ausgabe fungiert hier ein
 Doppelpunkt.
 

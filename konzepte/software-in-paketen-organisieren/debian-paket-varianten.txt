@@ -98,13 +98,13 @@ Beispiele dafür sind:
 (((Communtu)))
 (((Paketkombinationen)))
 (((Paketvarianten, Metapaket)))
-_Metapakete_ sind hingegen bewußt installierte Pakete, die Ihnen die
+_Metapakete_ sind hingegen bewusst installierte Pakete, die Ihnen die
 Installation einer ganzen Gruppe von Paketen erleichtern. Als
 Abhängigkeiten zieht ein Metapaket eine Gruppe von verwendeten Paketen
 hinter sich her. Auf diese Art und Weise installieren Sie durch die
 Auswahl eines einzelnen Pakets eine ganze Gruppe an weiteren Paketen,
 die thematisch zusammengehören und sich häufig auch einander bedingen.
-Das ist sehr nützlich, wenn Sie sich sicher sind, daß Sie eine bestimmte
+Das ist sehr nützlich, wenn Sie sich sicher sind, dass Sie eine bestimmte
 Zusammenstellung von Programmen benötigen. Für die Desktop-Umgebung XFCE
 genügt es beispielsweise, das Metapaket 'xfce4' zu selektieren. Andere
 Programmzusammenstellungen wie 'gnome' (GNOME-Window-Manager), 'lxde'
@@ -206,7 +206,7 @@ finden Sie unter Aufbau und Format von Sourcepaketen in
 
 // Stichworte für den Index
 (((Paketvarianten, virtuelles Paket)))
-Reale Binärpakete können zusätzlich deklarieren, daß sie die
+Reale Binärpakete können zusätzlich deklarieren, dass sie die
 Funktionalität eines weiteren Pakets ebenfalls bereitstellen. Existiert
 dieses weitere Paket nicht auch als reales Binärpaket, wird es als
 virtuelles Paket bezeichnet. Das gleiche virtuelle Paket kann hierbei

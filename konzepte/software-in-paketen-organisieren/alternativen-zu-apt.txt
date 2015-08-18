@@ -36,7 +36,7 @@ mehr (liegt quasi im Wachkoma) und wird daher im Buch nicht weiter
 besprochen.
 
 Potentielle Nachfolger:: 
-APT ist nicht mehr ganz jung und es wurden in der Vergangenheit
+APT ist nicht mehr ganz jung, und es wurden in der Vergangenheit
 Design-Entscheidungen getroffen, welche aus heutiger Sicht eher als
 weniger gelungen gelten, sich aber nicht mehr oder zumindest nur mit
 sehr viel Aufwand korrigieren lassen. Eugene V. Lyubimkin war einer der

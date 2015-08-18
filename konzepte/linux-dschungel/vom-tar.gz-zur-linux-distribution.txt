@@ -41,7 +41,7 @@ Benutzer mussten Sie einerseits wissen, welche Software einander bedingte,
 und andererseits, welche Versionen und Varianten sich miteinander
 vertrugen. Namensgleiche Dateien und Verzeichnisse waren problematisch.
 Die große Kunst bestand im Wissen, in welcher Reihenfolge Sie zueinander
-passende Versionen von Software auswählen sowie diese nachfolgend auf
+passende Versionen von Software auswählen, sowie diese nachfolgend auf
 Ihrem Linuxsystem installieren und konfigurieren mussten.
 
 // Datei (Ende): ./konzepte/linux-dschungel/vom-tar.gz-zur-linux-distribution.txt

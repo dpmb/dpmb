@@ -66,7 +66,7 @@ Paket im Bereich _contrib_ einsortiert wurde, sind:
   funktionieren.
 * Die Software ist nur zum Herunterladen (und ggf. installieren
   und/oder paketieren) von nicht-freier Software da.
-* Die Software muß mit einem nicht-freien Compiler übersetzt werden.
+* Die Software muss mit einem nicht-freien Compiler übersetzt werden.
 
 Im Zweig _non-free_ finden sich Pakete, die nicht den
 Debian-Richtlinien für Freie Software entsprechen, aber trotzdem immer
@@ -85,7 +85,7 @@ für Ihre gewünschten Zwecke einsetzen dürfen.
 
 // Stichworte für den Index
 (((Debianpaket, skype)))
-Für Software in _non-free_ gilt außerdem, daß keine Unterstützung
+Für Software in _non-free_ gilt außerdem, dass keine Unterstützung
 seitens Debian für diese Pakete möglich ist. Das trifft insbesondere
 dann zu, wenn der Quellcode nicht veröffentlicht wurde, wie das bspw.
 bei der Firmware zu bestimmten WLAN-Chipsätzen der Fall ist. 
@@ -150,7 +150,7 @@ Distributionsbereiche haben.
 
 ==== Handhabung von geschützten Namen und Logos ====
 
-Der Begriff ``Software'' wird hier recht weit gefaßt und beinhaltet neben
+Der Begriff ``Software'' wird hier recht weit gefasst und beinhaltet neben
 Programmcode auch Firmware, Dokumentation oder künstlerische
 Elemente wie beispielsweise Grafiken und Logos. Letztere stehen in
 manchen Fällen unter anderen Lizenzen als der Rest der Software und
@@ -204,7 +204,7 @@ Die Nutzung der Software hängt von den Bedürfnissen und dem Einsatzzweck
 ab. Viele Prozesse und Arbeitsabläufe bedingen eine bestimmte Menge von
 Eigenschaften (``Featureset''), welche sich nicht immer adäquat und
 vollständig mit bestehender freier Software bzw. deren aktuellem
-Entwicklungsstand abbilden läßt. Dabei spielen die Faktoren
+Entwicklungsstand abbilden lässt. Dabei spielen die Faktoren
 Produktivität, Anbindung an bereits bestehende Software, Schnittstellen
 und unterstützte Hardware oder Protokolle eine große Rolle. Desweiteren sind das
 Budget, der Zeitrahmen und die Dokumentation bzw. der Support
@@ -213,7 +213,7 @@ finanzielle Rahmen für eine Lösung zur Verfügung steht, welcher Zeitraum
 zur Inbetriebnahme gesetzt ist und wie gut die Dokumentation und der
 Support zur ausgewählten Software ist. Eine Software, die frei ist, aber
 nicht oder nur ungenügend zum tatsächlichen Einsatzzweck passt, ist an
-dieser Stelle zu hinterfragen und muß sich mit einer passenden
+dieser Stelle zu hinterfragen und muss sich mit einer passenden
 Alternative messen lassen, auch wenn diese als unfrei eingestuft ist,
 aber damit im Nutzungszeitraum eine funktionierende und stabile Lösung
 erreicht wird.

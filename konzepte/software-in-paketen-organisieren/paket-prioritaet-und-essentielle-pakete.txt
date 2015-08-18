@@ -12,7 +12,7 @@
 Jede Paketbeschreibung beinhaltet ein Feld namens `priority` – englisch
 für ``Priorität''. Dabei geht es aber weniger um eine Rangfolge von
 Paketen, sondern um die Wichtigkeit eines Paketes bzw. um die
-Wahrscheinlichkeit, daß Sie dieses Paket installieren möchten.
+Wahrscheinlichkeit, dass Sie dieses Paket installieren möchten.
 
 Debian kennt die folgenden fünf Prioritätsstufen:
 
@@ -51,7 +51,7 @@ und 'sysvinit') und die C-Standard-Bibliotheken ('libc6' auf den meisten
 Architekturen).
 
 Entfernen Sie eines oder mehrere Pakete mit dieser Prioritätsstufe, kann
-das Ihr Betriebssystem so stark beschädigen, daß selbst das Werkzeug
+das Ihr Betriebssystem so stark beschädigen, dass selbst das Werkzeug
 `dpkg` nicht mehr funktioniert. Unproblematisch ist hingegen der
 Austausch eines solchen Paketes durch funktionsgleiche Alternativen,
 bspw. beim Wechsel des Init-Systems.
@@ -125,7 +125,7 @@ Dies ist in gewisser Weise der Standardwert für die Priorisierung eines
 Paketes. Alle Pakete, die in keine der anderen Stufen gehören, werden
 dieser Prioritätsstufe zugeordnet. Sie enthält deswegen auch den
 Großteil aller Pakete in Debian. Optional bedeutet in diesem Kontext,
-daß diese Pakete nicht von jedermann benötigt werden.
+dass diese Pakete nicht von jedermann benötigt werden.
 
 ==== Prioritätsstufe ``extra'' (_extra_) ====
 
@@ -172,7 +172,7 @@ das alte Paket entfernt wird, um für das neue Paket Platz zu machen oder
 weil es nicht mehr gebraucht wird (d.h. irgendwann nicht mehr notwendig
 ist).
 
-Diese Markierung hat den Effekt, daß sich beispielsweise `dpkg` weigert,
+Diese Markierung hat den Effekt, dass sich beispielsweise `dpkg` weigert,
 dieses Paket zu entfernen (siehe <<pakete-deinstallieren>>). Mit dem
 zusätzlichen Parameter `--force-remove-essential` übergehen Sie diese
 Voreinstellung und können die Aktion trotzdem durchführen (siehe dazu
@@ -182,7 +182,7 @@ Paketoperationen erzwingen in <<paketoperationen-erzwingen>>).
 (((Debianpaket, core-utils)))
 `apt-get` und `aptitude` entfernen diese Pakete nur nach Eingabe des
 vollständigen Satzes ``Ja, tue was ich sage!'' (`apt-get`) bzw. ``Mir ist
-klar, daß das eine sehr schlechte Idee ist.'' (`aptitude`). Diese Sätze
+klar, dass das eine sehr schlechte Idee ist.'' (`aptitude`). Diese Sätze
 werden jeweils in der eingestellten Sprache ihres Debiansystems
 angezeigt (Lokalisierung), sofern eine Übersetzung vorhanden ist.
 Nachfolgendes Beispiel zeigt die Bildschirmausgabe vor der Entfernung
