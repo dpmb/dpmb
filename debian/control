@@ -1,4 +1,4 @@
-Source: debian-paketmanagement-buch
+Source: dpmb
 Section: doc
 Priority: optional
 Maintainer: Axel Beckert <abe@debian.org>
@@ -7,9 +7,9 @@ Build-Depends: asciidoc,
                dblatex,
                debhelper (>= 9)
 Standards-Version: 3.9.6
-Homepage: http://www.debian-paketmanagement.de/
-Vcs-Git: git://github.com/debian-paketmanagement/TODO
-Vcs-Browser: https://github.com/debian-paketmanagement/TODO
+Homepage: http://www.dpmb.org/
+Vcs-Git: git://github.com/dpmb/dpmb.git
+Vcs-Browser: https://github.com/dpmb/dpmb
 
 Package: debian-paketmanagement-buch
 Architecture: all
