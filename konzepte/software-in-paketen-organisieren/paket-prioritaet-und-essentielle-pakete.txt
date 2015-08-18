@@ -14,7 +14,7 @@ für ``Priorität''. Dabei geht es aber weniger um eine Rangfolge von
 Paketen, sondern um die Wichtigkeit eines Paketes bzw. um die
 Wahrscheinlichkeit, daß Sie dieses Paket installieren möchten.
 
-Debian kennt di folgenden fünf Prioritätsstufen:
+Debian kennt die folgenden fünf Prioritätsstufen:
 
 * erforderlich (_required_)
 * wichtig (_important_)
