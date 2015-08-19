@@ -257,15 +257,15 @@ verschiedenen Aktualisierungsstufen.
 Folgende Schritte führen zu neuen Paketen über die graphische
 Oberfläche:
 
-. Wählen Sie als erstes den Knopf ospmenu:[Status, Installiert
+. Wählen Sie als erstes den Knopf menu:[Status, Installiert
 (aktualisierbar)] aus.
 
 . Danach selektieren Sie das gewünschte Paket aus der Liste.
 
-. Über den Menüeintrag ospmenu:[Paket, Zum Aktualisieren vormerken]
+. Über den Menüeintrag menu:[Paket, Zum Aktualisieren vormerken]
 fügen Sie dieses zu ihrer Vorauswahl hinzu.
 
-. Über den Menüpunkt ospmenu:[Bearbeiten, Vorgemerkte Änderungen
+. Über den Menüpunkt menu:[Bearbeiten, Vorgemerkte Änderungen
 anwenden] lösen Sie die Aktualisierung aus.
 
 Ein Distributionswechsel ist nur über vorherige Änderung der

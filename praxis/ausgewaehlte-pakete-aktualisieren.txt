@@ -63,16 +63,16 @@ ToDo: Beispiel
 ----
 
 * Durchführung über die *Textoberfläche* von `aptitude`
-** Zweig/Kategorie ospmenu:[Sicherheitsaktualisierungen]
-*** Paket markieren mit ospkey:[+]
-*** Paketvorschau mit ospkey:[g]
-*** Paketaktualisierung mit ospkey:[g]
+** Zweig/Kategorie menu:[Sicherheitsaktualisierungen]
+*** Paket markieren mit kbd:[+]
+*** Paketvorschau mit kbd:[g]
+*** Paketaktualisierung mit kbd:[g]
 ** ToDo: da muß aber noch mehr sein ....
 
 * Durchführung bei *Synaptic* (siehe <<gui-synaptic>>)
-** Auswahl der Kategorie ospmenu:[Aktualisierbar (Upstream)]
+** Auswahl der Kategorie menu:[Aktualisierbar (Upstream)]
 ** Rechtsklick auf Eintrag in der Paketliste
-** Auswahl ospmenu:[Zum Aktualisieren vormerken]
+** Auswahl menu:[Zum Aktualisieren vormerken]
 
 === Aktualisierung mit Wechsel der Veröffentlichung ===
 

@@ -83,7 +83,7 @@ Mit dieser Schrittfolge erhalten Sie eine entsprechend sortierte Liste in
 aufsteigender Reihenfolge in der Text-Modus-Oberfläche:
 
 . Mit key:[Ctrl,t] oder key:[F10] öffnen Sie die Menüleiste.
-. Dort wählen Sie den Eintrag ospmenu:[Ansichten,Neue einfache
+. Dort wählen Sie den Eintrag menu:[Ansichten,Neue einfache
   Paketansicht] aus. 
 . Darin schränken Sie nun die Ansicht auf die installierten Pakete ein.
   Dazu drücken Sie key:[l] (für ``limit'') und geben als Filter `~i` für

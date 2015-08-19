@@ -137,7 +137,7 @@ Gründen besteht noch ein Synonym zu `dist-upgrade`, welches Sie derzeit
 ebenfalls noch benutzen können.
 
 Über die Textoberfläche gelingt Ihnen gleiches nur über einen kleinen
-Umweg. Dazu markieren Sie zunächst mittels ospmenu:[Aktionen,
+Umweg. Dazu markieren Sie zunächst mittels menu:[Aktionen,
 Aktualisierbare markieren] alle Pakete, für die eine neuere Variante
 verfügbar ist (Kurzform: Taste key:[U]). In Folge lösen Sie mittels
 key:[g] die Erneuerung der zuvor markierten Pakete aus.

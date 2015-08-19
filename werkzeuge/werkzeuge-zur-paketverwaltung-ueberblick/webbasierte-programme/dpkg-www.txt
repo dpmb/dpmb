@@ -46,7 +46,7 @@ dazugehörigen Paketnamen und mit der Angabe der bereitstehenden Formate
 der Dokumentation oder der weiterführenden Dokumente aufgelistet. In der
 Regel sind das HTML, Plaintext, PDF, Postscript oder SGML.
 
-.Auswahl der Hilfeseiten zum Menüpunkt ospmenu:Netzwerkkommunikation[]
+.Auswahl der Hilfeseiten zum Menüpunkt menu:Netzwerkkommunikation[]
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/dpkg-www.png[id="fig.dpkg-www", width="50%"]
 
 Wählen Sie ein Paket aus der Liste aus, erhalten Sie detailliertere

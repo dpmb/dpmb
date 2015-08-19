@@ -163,7 +163,7 @@ image::werkzeuge/paketoperationen/aptitude-limit-xpdf.png[id="fig.aptitude-limit
 Synaptic aus <<gui-synaptic>> bietet Ihnen zwei Varianten zur Suche an
 – einerseits eine Schnellsuche und andererseits eine ausführliche
 Suche. Die _Schnellsuche_ verbirgt sich hinter dem Suchfenster oben
-rechts und ist mit dem Begriff ospmenu:[Schnellauswahl-Filter] betitelt.
+rechts und ist mit dem Begriff menu:[Schnellauswahl-Filter] betitelt.
 Geben Sie dort einen Text ein, durchsucht Synaptic die Paketliste und
 filtert nur die heraus, deren Paketname mit dem Text beginnen. Dabei
 werden Platzhalter und Reguläre Ausdrücke nicht unterstützt. Als

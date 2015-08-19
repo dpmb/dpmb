@@ -61,10 +61,10 @@ Um hingegen über die *Ncurses-basierte Bedienoberfläche* zu agieren,
 starten Sie zunächst `aptitude` ohne weitere Optionen. Die mehrfarbige
 Bedienoberfläche enthält mehrere Elemente. Ganz oben finden Sie die
 verfügbaren, aktiven Tasten und deren Funktion. Über die Funktionstaste
-ospkey:[F10] oder alternativ mit Hilfe der Tastenkombination ospkey:[CTRL,T]
+kbd:[F10] oder alternativ mit Hilfe der Tastenkombination kbd:[CTRL,T]
 aktivieren Sie bspw. die Menüleiste. Einige Terminals wie bspw. das
 Gnome-Terminal fangen die Funktionstaste ab und belegen diese für die
-eigene Menüleiste. Über den Eintrag ospmenu:[Bearbeiten,
+eigene Menüleiste. Über den Eintrag menu:[Bearbeiten,
 Tastenkombinationen, Menütastenkombinationen aktivieren] (de)aktivieren
 Sie das Verhalten. Mit Hilfe der Pfeiltasten navigieren Sie zwischen den
 einzelnen Menüeinträgen hin und her bzw. wählen die gewünschte Aktion
@@ -77,9 +77,9 @@ den Distributionsbereich (<<distributionsbereiche>>) und den Paketnamen
 mit Versionsnummer dar. Sichtbar wird dabei die Version des
 installierten Pakets sowie der möglichen Aktualisierung
 (<<benennung-versionsnummer>>). Die Auswahl in der Baumstruktur erfolgt
-analog zu vi(m) mittels ospkey:[j] und ospkey:[k] (oder über die
-Pfeiltasten) und ospkey:[Enter]. Die einzelnen Strukturebenen klappen
-Sie mit den Tasten ospkey:[Enter], ospkey:["["] und ospkey:["]"] auf und
+analog zu vi(m) mittels kbd:[j] und kbd:[k] (oder über die
+Pfeiltasten) und kbd:[Enter]. Die einzelnen Strukturebenen klappen
+Sie mit den Tasten kbd:[Enter], kbd:["["] und kbd:["]"] auf und
 zu. 
 
 Dabei hinterlegt `aptitude` die einzelnen Pakete mit verschiedenen
@@ -102,7 +102,7 @@ erhalten, kann jedoch aktualisiert werden
 
 Im unteren Fenster erhalten Sie eine Beschreibung -- entweder zur
 ausgewählten Paketkategorie oder zum jeweiligen Paket. Zwischen den
-beiden Fensterhälften wechseln Sie mittels der ospkey:[Tab]-Taste hin
+beiden Fensterhälften wechseln Sie mittels der kbd:[Tab]-Taste hin
 und her. Die Belegung weiterer Tasten entnehmen Sie bitte
 <<tab.aptitude-tasten>>.
 
@@ -110,26 +110,26 @@ und her. Die Belegung weiterer Tasten entnehmen Sie bitte
 [options="header", cols="5,2", id="tab.aptitude-tasten"]
 |=============================
 | Aktion | Tastenbelegung
-| Hilfe | ospkey:[?]
-| `aptitude` beenden (Vormerkungen werden gespeichert) | ospkey:[Shift,q]
-| `aptitude` abbrechen (alle Vormerkungen gehen verloren) | ospkey:[Ctrl,c]
-| Info-Fenster ein- und ausblenden | ospkey:[Shift,d]
-| Zwischen den Info-Ansichten wechseln | ospkey:[i]
-| Zwischen beiden Fenstern hin- und herwechseln | ospkey:[Tab]
-| In das Menü von `aptitude` wechseln | ospkey:[Ctrl,t] oder ospkey:[F10]
-| Paketlisten aktualisieren | ospkey:[u]
-| Ausgewähltes Paket auswählen | ospkey:[+]
-| Ausgewähltes Paket entfernen | ospkey:[-]
+| Hilfe | kbd:[?]
+| `aptitude` beenden (Vormerkungen werden gespeichert) | kbd:[Shift,q]
+| `aptitude` abbrechen (alle Vormerkungen gehen verloren) | kbd:[Ctrl,c]
+| Info-Fenster ein- und ausblenden | kbd:[Shift,d]
+| Zwischen den Info-Ansichten wechseln | kbd:[i]
+| Zwischen beiden Fenstern hin- und herwechseln | kbd:[Tab]
+| In das Menü von `aptitude` wechseln | kbd:[Ctrl,t] oder kbd:[F10]
+| Paketlisten aktualisieren | kbd:[u]
+| Ausgewähltes Paket auswählen | kbd:[+]
+| Ausgewähltes Paket entfernen | kbd:[-]
 |=============================
 
 // * Weitere Tasten:
-// ** Hilfe: ospkey:[?]
-// ** Beenden (Vormerkungen werden gespeichert): ospkey:[Q] (Shift-q)
-// ** Abbrechen (alle Vormerkungen gehen verloren): ospkey:[Ctrl,c]
-// ** Info-Fenster ein- und ausblenden: ospkey:[D] (Shift-d)
-// ** Zwischen den Info-Ansichten wechseln: ospkey:[i]
-// ** Ins Menü wechseln: ospkey:[Ctrl,t] oder ospkey:[F10]
-// ** Paketlisten aktualisieren: ospkey:[u]
+// ** Hilfe: kbd:[?]
+// ** Beenden (Vormerkungen werden gespeichert): kbd:[Q] (Shift-q)
+// ** Abbrechen (alle Vormerkungen gehen verloren): kbd:[Ctrl,c]
+// ** Info-Fenster ein- und ausblenden: kbd:[D] (Shift-d)
+// ** Zwischen den Info-Ansichten wechseln: kbd:[i]
+// ** Ins Menü wechseln: kbd:[Ctrl,t] oder kbd:[F10]
+// ** Paketlisten aktualisieren: kbd:[u]
 
 Auch wenn sich APT und `aptitude` größtenteils sehr ähnlich sind,
 bestehen eine Reihe von feinen Unterschieden, die erst während der
@@ -160,14 +160,14 @@ image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/aptitu
 [options="header", cols="5,2", id="tab.aptitude-konflikte-loesen"]
 |=============================
 | Aktion | Tastenbelegung
-| Vorschläge zur Konfliktlösung anzeigen | ospkey:[e]
-| Nächsten Vorschlag anzeigen | ospkey:[.]
-| Vorherigen Vorschlag anzeigen | ospkey:[","]
-| Ersten Vorschlag anzeigen | ospkey:[<]
-| Letzten Vorschlag anzeigen | ospkey:[>]
-| Teilvorschlag akzeptieren | ospkey:[a]
-| Teilvorschlag ablehnen (``reject'') | ospkey:[r]
-| Vorschlag anwenden | ospkey:[!]
+| Vorschläge zur Konfliktlösung anzeigen | kbd:[e]
+| Nächsten Vorschlag anzeigen | kbd:[.]
+| Vorherigen Vorschlag anzeigen | kbd:[","]
+| Ersten Vorschlag anzeigen | kbd:[<]
+| Letzten Vorschlag anzeigen | kbd:[>]
+| Teilvorschlag akzeptieren | kbd:[a]
+| Teilvorschlag ablehnen (``reject'') | kbd:[r]
+| Vorschlag anwenden | kbd:[!]
 |=============================
 
 Darüberhinaus verfügt `aptitude` über eine Ansicht, in der Sie Pakete

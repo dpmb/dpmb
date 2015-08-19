@@ -35,7 +35,7 @@ auf der Kommandozeile benutzen, ohne daß eine der beiden graphischen
 Komponenten installiert sein muß. Rufen Sie dazu GDebi auf der
 *Kommandozeile* mit einem `deb`-Paket als Parameter auf, erhalten Sie
 die Paketbeschreibung. Stimmen Sie danach der abschließenden Frage zur
-Installation mit ospkey:[j] zu, führt `gdebi` ihren Wunsch aus und das
+Installation mit kbd:[j] zu, führt `gdebi` ihren Wunsch aus und das
 `deb`-Paket landet auf ihrem Linux-System. 
 
 .Anzeige der Paketbeschreibung bei manuellem Aufruf von `gdebi`
@@ -70,7 +70,7 @@ auf eine `deb`-Datei im Dateimanager ihrer Desktop-Umgebung. In
 letzterem Fall wird das von Ihnen angeklickte Paket jedoch nicht sofort
 installiert. Sie erhalten zunächst ein Fenster mit vielfältigen
 Informationen über das ausgewählte Paket (analog zu <<fig.gdebi-gtk>>).
-Erst mit einem weiteren Klick auf ospmenu:[Paket installieren] lösen Sie
+Erst mit einem weiteren Klick auf menu:[Paket installieren] lösen Sie
 die Installation tatsächlich aus. Dieses Vorgehen hilft Ihnen dabei,
 herum(f)liegende Pakete nicht aus Versehen zu installieren. Somit
 vergewissern Sie sich nochmals, aus welcher ggf. auch unverifizierten
@@ -83,7 +83,7 @@ Paketcache unter `/var/cache/apt/archives/` herumdümpeln (siehe
 <<paketcache>>).
 
 Das Begutachten von Paketen gelingt Ihnen über die einzelnen Reiter
-ospmenu:[Beschreibung], ospmenu:[Details] und ospmenu:[enthaltene
+menu:[Beschreibung], menu:[Details] und menu:[enthaltene
 Dateien]. Neben der Paketbeschreibung zeigt Ihnen GDebi alle sonstigen
 Metadaten aus der Control-Datei (siehe <<aufbau-und-format>>) sowie den
 tatsächlichen Paketinhalt an, sofern es sich dabei um Textdateien
