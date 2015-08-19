@@ -1,7 +1,7 @@
 all: html epub pdf
 
 html debianpaketmanagement.html: *.txt */*.txt */*/*.txt Makefile
-	asciidoc debian-paketmanagement.txt
+	a2x -L -f xhtml debian-paketmanagement.txt
 
 epub debianpaketmanagement.epub: *.txt */*.txt */*/*.txt Makefile
 	a2x -L -f epub debian-paketmanagement.txt
