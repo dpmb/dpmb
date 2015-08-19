@@ -5,7 +5,10 @@ Zum Buch "Debian Paketmanagement" beitragen
 * Für Tippfehler reicht locker auch ein Hinweis via GitHub Issues.
 * Bitte keine Tippfehler per E-Mail melden (außer man möchte
   vermeiden, einen GitHub-Konto zu eröffenen).
-* Commit-Messages bitte auf Englisch, falls möglich.
+* Commit-Messages zu Änderungen an der Infrastruktur bitte auf
+  Englisch, falls möglich.
+* Commit-Messages zu Änderungen an deutschsprachigen Inhalten können
+  auf Deutsch gemacht werden.
 
 Contributing to the book "Debian Package Management"
 ====================================================

@@ -29,3 +29,34 @@ und kann mit [AsciiDoc](http://asciidoc.org/) oder
 gerendert werden.
 
 <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Das Buch "Debian-Paketmanagement"</span> von <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.debian-paketmanagement.de/" property="cc:attributionName" rel="cc:attributionURL">Frank Hofmann und Axel Beckert</a> ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
+
+### Klappentext
+
+> Die Debian-Distribution setzt sich aus mehreren zehntausend Bausteinen
+> zusammen, die alle aufeinander abgestimmt sind und sich bei Bedarf in
+> eine Installation integrieren. Diese sogenannten Pakete (Packages)
+> sind so eigenständig, dass sie von einem oder mehreren
+> Debian-Entwicklern für das Debian-Projekt gepflegt werden,
+> interagieren aber zugleich so intensiv mit allen anderen, dass
+> wechselseitige Abhängigkeiten erkannt und bei Bedarf automatisch
+> aufgelöst werden. Nur so ist die Modularität des komplexen
+> Gesamtsystems gewährleistet, die Administratoren weltweit die
+> Möglichkeit bietet, Debian-Installationen sehr genau für die jeweilige
+> Anforderung vom Embedded-Gerät über den Desktop bis zum Großrechner zu
+> konfigurieren.
+>
+> Effizientes Paketmanagement ist also für jeden Debian-Administrator
+> ein ebenso interessantes wie lohnendes Feld, das in der Praxis aber
+> oft nicht ausreichend beachtet und mit wenigen Standardbefehlen
+> "erledigt" wird. Zwei ausgewiesene Debian-Experten nehmen dies zum
+> Anlass, das Debian-Paketmanagement erstmals derart umfassend
+> darzustellen. Das Buch kommt von den Konzepten, die der Struktur und
+> dem Zusammenspiel der Pakete zugrunde liegen, über die Werkzeuge zu
+> deren Nutzung immer auch zu den Best Practices der professionellen
+> Systemadministration. Es wendet sich an Einsteiger ebenso wie an
+> Berufsadministratoren, indem es, ausgehend von den Grundlagen, das
+> Optimierungspotential in zunehmend umfangreichen Szenarien
+> ausschöpft. So entsteht ein aktuelles Handbuch der
+> Debian-Administration, das als praxisorientiertes HowTo ebenso dient
+> wie als Nachschlagewerk für die unerwartet zahlreichen Optionen und
+> Kombinationsmöglichkeiten.
