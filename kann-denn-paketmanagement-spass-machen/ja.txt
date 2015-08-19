@@ -1,7 +1,6 @@
 // Datei: ./kann-denn-paketmanagement-spass-machen/ja.txt
 
 // Baustelle: Fertig
-// Axel: Fertig Fussnoten-vs-Referenzen
 
 [[kann-paketmanagement-spass-machen]]
 === Kann Paketmanagement Spaß machen? ===
