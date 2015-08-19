@@ -19,7 +19,7 @@ xmllint:
 verbose: html-verbose epub-verbose pdf-verbose
 
 html-verbose: *.txt */*.txt */*/*.txt Makefile
-	asciidoc -v debian-paketmanagement.txt
+	a2x -v -v -L -f xhtml debian-paketmanagement.txt
 
 epub-verbose: *.txt */*.txt */*/*.txt Makefile
 	a2x -v -v -L -f epub debian-paketmanagement.txt
