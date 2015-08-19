@@ -92,11 +92,11 @@
 
 - [[[Beckert-Hofmann-Aptitude-2-LinuxUser]]] Axel Beckert, Frank Hofmann: Paarweise. Apt-get und Aptitude (Teil 2), LinuxUser 06/2013, S. 90ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2013/06/Apt-Get-und-Aptitude-im-Einsatz
 
-//- [[[Beckert-Webseite]]] Axel Beckerts Webseite, http://axel.beckert.ch/
+- [[[Beckert-Webseite]]] Axel Beckerts Webseite, http://axel.beckert.ch/
 
 - [[[biarch]]] Fedora Project: Biarch Spin, http://fedoraproject.org/wiki/Biarch_Spin
 
-//- [[[Buero2.0]]] Büro 2.0, Berlin, http://www.buero20.org/
+- [[[Buero2.0]]] Büro 2.0, Berlin, http://www.buero20.org/
 
 - [[[bugs-found-during-book-writing]]] Bugs, die während dem
   bzw. durch das Schreiben dieses Buches gefunden wurden,
@@ -469,7 +469,7 @@
 
 - [[[Hofmann-Smartpm-LinuxUser]]] Frank Hofmann: Mit allen Extras. Debian-Pakete verwalten mit dem Smart Package Manager, LinuxUser 07/2013, LinuxNewMedia AG, München, 2013, S. 68ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2013/07/Debian-Pakete-verwalten-mit-dem-Smart-Package-Manager
 
-//- [[[Hofmann-Webseite]]] Frank Hofmanns Webseite, http://www.efho.de/
+- [[[Hofmann-Webseite]]] Frank Hofmanns Webseite, http://www.efho.de/
 
 - [[[Hofmann-Winde-Aptsh-LinuxUser]]] Frank Hofmann, Thomas Winde: Zentraler Zugangspunkt. Komfortabel Pakete managen mit der Apt-Shell, LinuxUser 06/2012, LinuxNewMedia AG, München, 2012, S. 30ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2012/06/Komfortabel-Pakete-managen-mit-der-Apt-Shell
 
@@ -519,6 +519,8 @@
 - [[[localepurge]]] 'localepurge', Projektseite im Linux Wiki, http://linuxwiki.de/localepurge
 
 - [[[Loschwitz-Sourceformat]]] Martin Loschwitz: Zusammenpacken! Das neue Sourceformat für Debian-Pakete, Linux-Magazin 06/2011, http://www.linux-magazin.de/Ausgaben/2011/06/Debian-Src-3.0
+
+- [[[lug.berlin]]] Das Berliner Community-Portal lug.berlin, http://lug.berlin/
 
 - [[[Maemo]]] Maemo Community, http://maemo.org/
 

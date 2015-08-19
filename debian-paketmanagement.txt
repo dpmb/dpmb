@@ -5,7 +5,7 @@ Debian-Paketmanagement
 :lang: de
 :ascii-ids:
 :numbered:
-:subtitle: Konzepte -- Werkzeuge - Praxis
+:subtitle: Konzepte - Werkzeuge - Praxis
 
 // Baustelle: Rohtext
 
