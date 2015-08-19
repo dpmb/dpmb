@@ -16,7 +16,7 @@ clean:
 	rm -rvf *.html *.epub *.epub.d *.xml *.fls *.log *.pdf *.css
 
 xmllint:
-	asciidoc -a toc -a toclevels=3 -d book -b docbook debian-paketmanagement.txt
+	asciidoc -d book -b docbook debian-paketmanagement.txt
 	xmllint debian-paketmanagement.xml
 
 verbose: VERBOSE=-v -v
