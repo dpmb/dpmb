@@ -1,5 +1,6 @@
 DEFAULTDEPENDENCIES=*.txt */*.txt */*/*.txt Makefile
 DEFAULTOPTIONS=-L debian-paketmanagement.txt
+DOCTORDEFAULTOPTIONS=-a experimental -a toc -a toclevels=4 debian-paketmanagement.txt
 
 all: html epub pdf
 
@@ -21,3 +22,8 @@ xmllint:
 
 verbose: VERBOSE=-v -v
 verbose: all
+
+asciidoctor: doctor-html
+
+doctor-html: $(DEFAULTDEPENDENCIES)
+	asciidoctor $(DOCTORDEFAULTOPTIONS)
