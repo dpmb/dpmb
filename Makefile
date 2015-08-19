@@ -1,13 +1,16 @@
+DEFAULTDEPENDENCIES=*.txt */*.txt */*/*.txt Makefile
+DEFAULTOPTIONS=-L debian-paketmanagement.txt
+
 all: html epub pdf
 
-html debianpaketmanagement.html: *.txt */*.txt */*/*.txt Makefile
-	a2x -L -f xhtml debian-paketmanagement.txt
+html debianpaketmanagement.html: $(DEFAULTDEPENDENCIES)
+	a2x $(VERBOSE) -f xhtml $(DEFAULTOPTIONS)
 
-epub debianpaketmanagement.epub: *.txt */*.txt */*/*.txt Makefile
-	a2x -L -f epub debian-paketmanagement.txt
+epub debianpaketmanagement.epub: $(DEFAULTDEPENDENCIES)
+	a2x $(VERBOSE) -f epub $(DEFAULTOPTIONS)
 
-pdf debianpaketmanagement.pdf: *.txt */*.txt */*/*.txt Makefile
-	a2x -L -f pdf debian-paketmanagement.txt
+pdf debianpaketmanagement.pdf: $(DEFAULTDEPENDENCIES)
+	a2x $(VERBOSE) -f pdf $(DEFAULTOPTIONS)
 
 clean:
 	rm -rvf *.html *.epub *.epub.d debian-paketmanagement.xml *.fls *.log debian-paketmanagement.pdf
@@ -16,13 +19,5 @@ xmllint:
 	asciidoc -a toc -a toclevels=3 -d book -b docbook debian-paketmanagement.txt
 	xmllint debian-paketmanagement.xml
 
-verbose: html-verbose epub-verbose pdf-verbose
-
-html-verbose: *.txt */*.txt */*/*.txt Makefile
-	a2x -v -v -L -f xhtml debian-paketmanagement.txt
-
-epub-verbose: *.txt */*.txt */*/*.txt Makefile
-	a2x -v -v -L -f epub debian-paketmanagement.txt
-
-pdf-verbose: *.txt */*.txt */*/*.txt Makefile
-	a2x -v -v -L -f pdf debian-paketmanagement.txt
+verbose: VERBOSE=-v -v
+verbose: all
