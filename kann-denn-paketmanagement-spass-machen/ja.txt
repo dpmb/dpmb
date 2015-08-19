@@ -46,16 +46,13 @@ Paketmanagement wäre dies unmöglich.
 (((Debian,Entwicklungszweige)))
 (((Debian,Lizenzen)))
 (((Debian,Veröffentlichungszyklus)))
-Debian GNU/Linux und davon abgeleitete Betriebssysteme – wie
-Ubuntu{empty}footnote:[http://www.ubuntu.com/], Linux
-Mint{empty}footnote:[http://www.linuxmint.com/],
-Knoppix{empty}footnote:[http://www.knopper.net/knoppix/] oder
-Grml{empty}footnote:[http://www.grml.org/] – setzen auf dem Paketformat
-`deb` und der Paketverwaltung mit `dpkg` und APT auf. Neben dem
-RPM-Paketformat (siehe <<varianten-und-formate-fuer-softwarepakete>>)
-ist die Kombination aus dem `deb`-Format und seinen Werkzeugen am
-weitesten unter den verschiedenen Linux-Distributionen verbreitet. Das
-hat mehrere Gründe:
+Debian GNU/Linux und davon abgeleitete Betriebssysteme – wie Ubuntu
+<<Ubuntu>>, Linux Mint <<LinuxMint>>, Knoppix <<Knoppix>> oder Grml
+<<Grml>> – setzen auf dem Paketformat `deb` und der Paketverwaltung mit
+`dpkg` und APT auf. Neben dem RPM-Paketformat (siehe
+<<varianten-und-formate-fuer-softwarepakete>>) ist die Kombination aus
+dem `deb`-Format und seinen Werkzeugen am weitesten unter den
+verschiedenen Linux-Distributionen verbreitet. Das hat mehrere Gründe:
 
 * Es funktioniert verlässlich.
 
@@ -86,15 +83,6 @@ Alle anderen Pakete werden in die Bereiche 'contrib' oder
 'non-free' einsortiert. Ubuntu kennt kein Äquivalent zu 'contrib' und
 verwendet statt 'non-free' die beiden Bereiche 'restricted' und
 'multiverse' (siehe <<distributionsbereiche>>).
-
-
-//////////
-//Done:fho
-//Dr. Markus Wirtz, 2015-05-20 10:22
-//Hier ist aptitude erwähnt, von dem bislang aber noch nicht die Rede
-//war; man müsste also erklären (oder verweisen), was es tut.
-//////////
-
 
 * Die beiden Debian-Entwicklungszweige 'unstable' und 'testing' (siehe
 <<veroeffentlichungen>>) wie auch der Bereich 'Debian Backports' (siehe
