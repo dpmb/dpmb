@@ -13,7 +13,7 @@ pdf debianpaketmanagement.pdf: $(DEFAULTDEPENDENCIES)
 	a2x $(VERBOSE) -f pdf $(DEFAULTOPTIONS)
 
 clean:
-	rm -rvf *.html *.epub *.epub.d debian-paketmanagement.xml *.fls *.log debian-paketmanagement.pdf
+	rm -rvf *.html *.epub *.epub.d *.xml *.fls *.log *.pdf *.css
 
 xmllint:
 	asciidoc -a toc -a toclevels=3 -d book -b docbook debian-paketmanagement.txt
