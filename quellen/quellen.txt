@@ -76,7 +76,7 @@
 
 - [[[BackTrack]]] BackTrack, http://www.backtrack-linux.org/
 
-// - [[[Bailey-Maximum-RPM]]] Edward C. Bailey: Maximum RPM. Taking the Red Hat Package Manager to the Limit, Red Hat Inc., 2000, ISBN 1-888172-78-9, http://www.rpm.org/max-rpm/
+- [[[Bailey-Maximum-RPM]]] Edward C. Bailey: Maximum RPM. Taking the Red Hat Package Manager to the Limit, Red Hat Inc., 2000, ISBN 1-888172-78-9, http://www.rpm.org/max-rpm/
 
 - [[[Beckert-Aptitude-Textmodus]]], Axel Beckert: Aptitude. Pakete komfortabel im Text-Modus verwalten, Vortrag im Rahmen des Linuxday Dornbirn, November 2013, http://fileshare.lugv.at/public/vortraege2013/linuxday/aptitude-linuxday.html
 
@@ -435,7 +435,7 @@
 
 - [[[Finkproject]]] Fink-Projekt, http://www.finkproject.org/
 
-// - [[[Foster-Johnson-RPM-Guide]]] Eric Foster-Johnson, Stuart Ellis und Ben Cotton: RPM Guide, 2005/2011, Fedora Project Contributors, Edition 0, http://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/RPM_Guide/index.html
+- [[[Foster-Johnson-RPM-Guide]]] Eric Foster-Johnson, Stuart Ellis und Ben Cotton: RPM Guide, 2005/2011, Fedora Project Contributors, Edition 0, http://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/RPM_Guide/index.html
 
 - [[[FreeBSD]]] FreeBSD-Projekt, http://www.freebsd.org/
 
