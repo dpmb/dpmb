@@ -21,18 +21,16 @@ Menschen gebürt unser Dank:
 //////////
 
 * Elmar Heeb (für `aptitude-robot` und viele interessante Diskussionen)
-* Dirk Deimeke (für Tipps zum Autor-Werden){empty}footnote:[Hackerfunk
-Zürich, Folge 65, Fachliteratur Schreiben,
-http://www.hackerfunk.ch/?id=127]
+* Dirk Deimeke (für Tipps zum Autor-Werden) <<Hackerfunk>>
 * Arne Wichmann (für das Diagramm der Vertrauenskette in Debian – unter GPL)
 * Annette Kalbow (für inhaltliche Vorschläge mit `apt-file`, `dpkg -l` und `dpkg -L`)
-* Mechtilde Stehmann (für Vorschläge für die FAQ)
+* Mechtilde Stehmann (für die Sprachkorrekuren und die Vorschläge für die FAQ)
 * Marco Uhl (für die Idee zum FAQ-Eintrag über `snapshot.debian.org` bei Testing- vs. Produktiv-Umgebung)
 * Werner Heuser (für die Installation und den Umgang auf Embedded und Mobile Devices)
 * Claude Becker (für Ideen und Korrekturlesen rund um das Parsen von
   Debian-Versionsnummern und APT-Pinning)
 * Christoph Berg (für Tipps und Tricks rund um `reprepro` und seine
-Erfahrungen mit `apt.postgresql.org`){empty}footnote:[https://wiki.postgresql.org/wiki/Apt]
+Erfahrungen mit `apt.postgresql.org`) <<APT-Repo-PostgreSQL>>
 * Dr. Thomas Fricke (für Ergänzungen rund um die Verteilung von Paketen auf mehrere Maschinen)
 * Jens Wilke (Konfigurationsmanagement)
 * Martin Schütte (`reprepro`)
