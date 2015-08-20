@@ -41,9 +41,9 @@ ein.
 Bei unserer Arbeit am Buch entdeckten wir zahlreiche Lücken in den
 Programmbeschreibungen, den Manpages und den beigefügten,
 weiterführenden
-Dokumentation{empty}footnote:[https://bugs.debian.org/cgi-bin/pkgreport.cgi?tag=found-during-book-writing;users=abe%40debian.org].
+Dokumentationen{empty}footnote:[https://bugs.debian.org/cgi-bin/pkgreport.cgi?tag=found-during-book-writing;users=abe%40debian.org].
 Dabei wurde uns auch bewusst, welche Bedeutung dem persönlichen
-Erfahrungsschatz und insbesondere dem passiven Wissen zukommen. Wir
+Erfahrungsschatz und insbesondere dem passiven Wissen zukommt. Wir
 haben uns bemüht, davon möglichst viel in dieses Buch einfließen zu
 lassen.
 

@@ -33,7 +33,7 @@ Ersteres entspricht dem Kommandozeilenaufruf `dpkg -i Paketdatei`, das
 zweite hingegen `dpkg -r Paketdatei` (siehe <<pakete-installieren>> und
 <<pakete-deinstallieren>>).
 
-Außerdem verifiziert es dabei, daß alle Abhängigkeiten zu anderen
+Außerdem verifiziert es dabei, dass alle Abhängigkeiten zu anderen
 Paketen erfüllt sind. Ist dies nicht der Fall, bricht es die jeweilige
 Aktion ab.
 
@@ -110,7 +110,7 @@ Setup Tool (YaST) sowie bei Mageia
 
 // Stichworte für den Index
 (((smartpm)))
-Darüberhinaus gibt es Programme, die mit mehreren unterschiedlichen
+Darüber hinaus gibt es Programme, die mit mehreren unterschiedlichen
 Paketformaten umgehen können. Dazu zählen der Smart Package Manager
 (siehe <<gui-smartpm>>) und PackageKit (siehe <<gui-packagekit>>).
 SmartPM kann die Paketformate `deb`, `rpm` und `tar.gz` (Slackware)

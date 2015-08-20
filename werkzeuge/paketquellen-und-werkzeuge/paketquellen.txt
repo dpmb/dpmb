@@ -22,7 +22,7 @@ Verfügung stehen. Alternativ und gleichbedeutend werden dafür auch die
 Begriffe _APT-Repository_, _Repository_ oder ganz kurz nur _Repo_
 benutzt. Der Begriff _Paketmirror_ – oder auch komplett eingedeutscht
 als _Paketspiegel_ – wird ebenfalls gerne verwendet. Letzteres
-impliziert aber zusätzlich, daß es sich dabei um eine vollständige Kopie
+impliziert aber zusätzlich, dass es sich dabei um eine vollständige Kopie
 einer Paketquelle handelt, also z.B. um einen offiziellen Spiegelserver
 von Debian oder Ubuntu.
 

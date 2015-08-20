@@ -24,7 +24,7 @@ abgegrenzt werden, plus einem Punkt und der Dateiendung. Gemäß den
 Debian-Richtlinien{empty}footnote:[http://www.debian.org/doc/debian-policy/]
 sind in o.g. Feldern nur ASCII-Zeichen zulässig. Unterstriche,
 Leerzeichen und Umlaute sind nicht gestattet. Das hilft dabei,
-Mißverständnissen vorzubeugen und die Paketenamen mit allen
+Missverständnissen vorzubeugen und die Paketenamen mit allen
 Zeichensätzen anzeigen zu können.
 
 [[benennung-paketname]]
@@ -91,11 +91,11 @@ Zeichen (Ziffern), als auch nichtnumerische Zeichen wie Punkte, Tilden
 und Buchstaben beinhalten.
 
 Handelt es sich um ein _nicht-natives Debian-Paket_, besteht die
-Versionsnummer aus der Upstream-Version und der Debian-Revision.  Bei
+Versionsnummer aus der Upstream-Version und der Debian-Revision. Bei
 dem Paket 'smartpm_1.4-2_all.deb' für 'smartpm' (siehe
 <<gui-smartpm>>) ist die Angabe 1.4 die Upstreamversion und die
 darauffolgende mit einem Minus `-` abgetrennte `2` steht für die
-zweite Debian-Revision.  Hier liegt also das zweite Debianpaket vor,
+zweite Debian-Revision. Hier liegt also das zweite Debianpaket vor,
 welches auf der Upstreamversion 1.4 basiert. Beinhaltet die
 Versionsnummer mehrere Bindestriche, ist immer der letzte Bindestrich
 der Trenner zwischen der Upstream-Version und der

@@ -12,8 +12,8 @@
 (((Debianpaket, netselect-apt)))
 (((Paketmirror, Auswahl)))
 Jeder Paketmirror hat eine spezifische Leistungsfähigkeit, die sich an
-den beiden Kriterien Netzanbindung und Hardwareausstattung messen läßt.
-Auf diese Merkmale haben Sie zwar nur begrenzt Einfluß, steuern jedoch
+den beiden Kriterien Netzanbindung und Hardwareausstattung messen lässt.
+Auf diese Merkmale haben Sie zwar nur begrenzt Einfluss, steuern jedoch
 über die Einträge in der Datei `/etc/apt/sources.list` (siehe
 <<etc-apt-sources.list-verstehen>>), welchen verfügbaren Paketmirror Sie
 benutzen.

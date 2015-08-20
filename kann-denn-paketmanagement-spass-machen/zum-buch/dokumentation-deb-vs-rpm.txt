@@ -26,7 +26,7 @@ Fedora-Projekts{empty}footnote:[Eric Foster-Johnson, Stuart Ellis und
 Ben Cotton: RPM Guide, 2005/2011, Fedora Project Contributors, Edition
 0,
 http://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/RPM_Guide/index.html]
-und weiterführende Dokumentation auf der
+und weiterführende Dokumentationen auf der
 `rpm`-Projektseite{empty}footnote:[http://www.rpm.org/wiki/Docs].
 
 Ein vergleichbares Buch zur Debian-basierten Paketverwaltung fehlte

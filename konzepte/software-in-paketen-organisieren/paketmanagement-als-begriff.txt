@@ -60,7 +60,7 @@ individuelle Sicherheitsaktualisierung sein, das Installieren eines
 sogenannten 'Debian Backports', d.h. eine neuere Paketversion wird für
 eine vorherige Veröffentlichung zurückportiert, aber auch im Rahmen
 einer Aktualisierung auf eine neue Veröffentlichung der Distribution
-(siehe <<veroeffentlichungen>>) stattfinden. Daß letzteres überhaupt
+(siehe <<veroeffentlichungen>>) stattfinden. Dass letzteres überhaupt
 möglich ist, ist noch lange nicht bei allen Distributionen
 selbstverständlich. Lange Zeit war dies ein Alleinstellungsmerkmal von
 Debian und auch heute noch bieten einige Debian-Derivate diese

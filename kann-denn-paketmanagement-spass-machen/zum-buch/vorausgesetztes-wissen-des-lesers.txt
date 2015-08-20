@@ -22,7 +22,7 @@ _Graphische Werkzeuge_ spielen hier nur eine untergeordnete Rolle. Sie
 kommen nur dann zum Einsatz, wenn etwas nicht anders möglich ist oder es
 um genau deren Besonderheiten geht. Wir gehen davon aus, dass Sie auf
 einem Serversystem arbeiten und dieses ggf. sogar aus der Ferne
-betreuen. In dieser Konstellation bilden graphische Werkzeuge  die
+betreuen. In dieser Konstellation bilden graphische Werkzeuge die
 absolute Ausnahme.
 
 //Stichworte, Index
