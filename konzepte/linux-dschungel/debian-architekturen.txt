@@ -12,20 +12,17 @@
 (((Debian, Ports)))
 Debian kommt mit den unterschiedlichsten Hardware-Architekturen zurecht.
 Die offizielle Liste der aktuell unterstützten Architekturen finden Sie
-auf der Debian-Webseite{empty}footnote:[http://www.debian.org/ports/]
-sowie im Anhang dieses Buches (siehe
-<<anhang-offizielle-debian-architekturen>>). Neben den veralteten
-Architekturen (siehe <<anhang-veraltete-debian-architekturen>>) werfen
-wir auch einen Blick in die Zukunft (siehe
-<<anhang-debian-architekturen-zukunft>>).
+auf der Debian-Webseite <<Debian-Architekturen>> sowie im Anhang dieses
+Buches (siehe <<anhang-offizielle-debian-architekturen>>). Neben den
+veralteten Architekturen (siehe
+<<anhang-veraltete-debian-architekturen>>) werfen wir auch einen Blick
+in die Zukunft (siehe <<anhang-debian-architekturen-zukunft>>).
 
 Nicht alle ``Architekturen'' sind wirklich nur von der
 Hardware-Architektur abhängig, auf der die Programme einsetzbar sind,
 sondern auch von weiteren Punkten. Dazu zählen etwa der
-Betriebssystemkern, wie Linux, GNU
-Hurd{empty}footnote:[http://www.gnu.org/software/hurd/] oder
-FreeBSD{empty}footnote:[http://www.freebsd.org/], aber auch die Art, wie
-die Programme kompiliert wurden ('Application Binary Interface', ABI).
+Betriebssystemkern, wie Linux, GNU Hurd <<Hurd>> oder FreeBSD
+<<FreeBSD>>, aber auch die Art, wie die Programme kompiliert wurden ('Application Binary Interface', ABI).
 Daher bezeichnen Entwickler dies als 'Portierung' ('Port') und sich
 selbst als 'Porters'. Hier verwenden wir durchgängig den Begriff
 'Architektur', da das entsprechende Feld in den Metadaten eines Pakets
