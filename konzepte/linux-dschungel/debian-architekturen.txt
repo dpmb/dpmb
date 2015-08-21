@@ -167,10 +167,10 @@ auch noch als eigenes 'amd64'-Binärpaket anzubieten, ist immens. Pakete
 dieser Form tragen üblicherweise das Präfix 'ia32-' im Paketnamen. Vor
 der Entstehung von 'multiarch' wurden daher _alle_ notwendigen
 32-Bit-Bibliotheken in ein einziges 'amd64'-Binärpaket namens
-`ia32-libs`{empty}footnote:[https://packages.debian.org/de/stable/ia32-libs]
-gepackt. Dieses Paket umfasste am Ende etwa stolze 800{nbsp}MB und wurde in
-regelmäßigen Abständen mit den Sicherheitsaktualisierungen der
-entsprechenden Bibliotheken aufgefrischt.
+`ia32-libs` <<Debian-Paket-ia32-libs>> gepackt. Dieses Paket umfasste am
+Ende etwa stolze 800{nbsp}MB und wurde in regelmäßigen Abständen mit den
+Sicherheitsaktualisierungen der entsprechenden Bibliotheken
+aufgefrischt.
 
 Allein die Pflege dieses Pakets war schon recht mühsam. Ab der
 Einführung von 'multiarch' wurde es gegenstandslos. Darum ist es seit
