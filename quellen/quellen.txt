@@ -388,7 +388,7 @@
 
 - [[[Debian-Wiki-cupt]]] Debian Wiki: Eintrag zu `cupt`, https://wiki.debian.org/Cupt
 
-//- [[[Debian-Wiki-Debian-Entwickler]]] Debian Wiki: Wie werde ich ein Debian-Entwickler?, http://wiki.debian.org/DebianDeveloper
+- [[[Debian-Wiki-Debian-Entwickler]]] Debian Wiki: Wie werde ich ein Debian-Entwickler?, http://wiki.debian.org/DebianDeveloper
 
 // - [[[Debian-Wiki-FHS]]] Filesystem Hierarchy Standard (FHS) im Debian Wiki, http://wiki.debian.org/FilesystemHierarchyStandard
 
