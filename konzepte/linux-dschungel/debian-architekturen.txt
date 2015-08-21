@@ -22,18 +22,20 @@ Nicht alle ``Architekturen'' sind wirklich nur von der
 Hardware-Architektur abhängig, auf der die Programme einsetzbar sind,
 sondern auch von weiteren Punkten. Dazu zählen etwa der
 Betriebssystemkern, wie Linux, GNU Hurd <<Hurd>> oder FreeBSD
-<<FreeBSD>>, aber auch die Art, wie die Programme kompiliert wurden ('Application Binary Interface', ABI).
-Daher bezeichnen Entwickler dies als 'Portierung' ('Port') und sich
-selbst als 'Porters'. Hier verwenden wir durchgängig den Begriff
-'Architektur', da das entsprechende Feld in den Metadaten eines Pakets
-(siehe <<debian-paketformat-im-detail>>) 'architecture' heißt und Debian
-selbst die Begriffe bislang nicht konsistent verwendet.
+<<FreeBSD>>, aber auch die Art, wie die Programme kompiliert wurden
+('Application Binary Interface', ABI).  Daher bezeichnen Entwickler dies
+als 'Portierung' ('Port') und sich selbst als 'Porters'. Hier verwenden
+wir durchgängig den Begriff 'Architektur', da das entsprechende Feld in
+den Metadaten eines Pakets (siehe <<debian-paketformat-im-detail>>)
+'architecture' heißt und Debian selbst die Begriffe bislang nicht
+konsistent verwendet.
 
 // Stichworte für den Index
 (((dpkg-architecture, -L)))
 Eine vollständige Liste der von `dpkg` verstandenen Architekturen gibt
 Ihnen der Aufruf `dpkg-architecture -L` aus. Viele der in der Ausgabe
-genannten Architekturen existieren allerdings nur in der Theorie.
+des Kommandos genannten Architekturen existieren allerdings nur in der
+Theorie.
 
 //.Architekturen, die das Werkzeug `dpkg` unterstützt (Ausschnitt)
 ----
@@ -73,15 +75,15 @@ $
 // Stichworte für den Index
 (((Debian, Architekturen)))
 (((Debian, Ports)))
-Das Debian-Ports-Projekt{empty}footnote:[http://www.ports.debian.org/]
-stellt die Infrastruktur für APT-Archive und automatisiertes Bauen von
-Paketen für Architekturen bereit, die Debian noch nicht oder nicht
-mehr unterstützt. Typischerweise gibt es dort nur zwei Kategorien
-von Veröffentlichungen: 'unstable' und 'unreleased'. Ersteres sind die
-gleichen Pakete wie in Debian 'unstable', nur wurden diese aus demselben Quellcode für diese spezifische Architektur übersetzt. Letzteres
-sind speziell für diese Architektur entwickelte oder modifizierte
-Pakete, die in den offiziellen APT-Archiven von Debian auch nicht im
-Quellcode zu finden sind.
+Das Debian-Ports-Projekt <<Debian-Ports-Projekt>> stellt die
+Infrastruktur für APT-Archive und automatisiertes Bauen von Paketen für
+Architekturen bereit, die Debian noch nicht oder nicht mehr unterstützt.
+Typischerweise gibt es dort nur zwei Kategorien von Veröffentlichungen:
+'unstable' und 'unreleased'. Ersteres sind die gleichen Pakete wie in
+Debian 'unstable', nur wurden diese aus demselben Quellcode für diese
+spezifische Architektur übersetzt. Letzteres sind speziell für diese
+Architektur entwickelte oder modifizierte Pakete, die in den offiziellen
+APT-Archiven von Debian auch nicht im Quellcode zu finden sind.
 
 In gewisser Weise stellt das Debian-Ports-Projekt dadurch gleichzeitig
 den Kreißsaal und das Altersheim für Debian-Architekturen dar – Anfang
