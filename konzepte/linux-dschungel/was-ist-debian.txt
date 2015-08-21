@@ -81,9 +81,9 @@ Aus diesen Grundsätzen folgen weitere Eigenschaften, die sich
 insbesondere im Einsatzzweck von Debian und der Einordnung in die
 Distributionsvielfalt widerspiegeln. Die typischen Anwendungsbereiche
 sind Server, Systeme für die Infrastruktur sowie Low-End Systeme wie
-etwa die Hardware-Lernplattform Raspberry
-Pi <<RaspberryPi>>. Dennoch hat sich Debian (nicht nur bei den Autoren)
-auch einen festen Platz auf dem Desktop erobert.
+etwa die Hardware-Lernplattform Raspberry Pi <<RaspberryPi>>. Dennoch
+hat sich Debian (nicht nur bei den Autoren) auch einen festen Platz auf
+dem Desktop erobert.
 
 // Stichworte für den Index
 (((Debian, Derivate)))
@@ -91,7 +91,7 @@ Zudem leiten sich aus Debian sehr viele Derivate für ausgewählte
 Zielgruppen oder Einsatzzwecke ab, z.B. Ubuntu, Linux Mint, Knoppix,
 Grml oder Damn Small Linux (DSL). Einen vollständigen Überblick
 (``Stammbaum'') erhalten Sie in der GNU Linux Distribution
-Timeline{empty}footnote:[http://futurist.se/gldt] sowie in
+Timeline <<GNU-Linux-Distribution-Timeline>> sowie in
 <<welche-unix-artigen-betriebssysteme-verwenden-das>>.
 
 // Datei (Ende): ./konzepte/linux-dschungel/was-ist-debian.txt
