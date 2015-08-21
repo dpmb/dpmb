@@ -16,6 +16,7 @@ TODO für Axel
 * Erweiterungen: systeme-mit-schlechter-anbindung-warten
 * https://juliank.wordpress.com/2012/01/24/managing-system-package-selections-using-custom-meta-packages/
 * EPUB3 and KF8/MOBI: https://github.com/asciidoctor/asciidoctor-epub3
+  <pere> do you plan to publish mobi versions?  I create those using ebook-convert.
 * Workflow for translations:
   <pere> I would suggest to use docbook -> po4a -> po -> docbook like we do in debian edu and I use for my book.
   <pere> this way the original and translation will stay in sync.
