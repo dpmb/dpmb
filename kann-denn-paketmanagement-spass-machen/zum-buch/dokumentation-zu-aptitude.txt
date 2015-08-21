@@ -27,8 +27,7 @@ erhielt also ausreichend Nahrung, zumal auch die an recht prominenter
 Stelle verlinkte Online-Dokumentation zu `aptitude` veraltet war (Stand:
 2008). Auf Axels Initiative wurde sie aber mittlerweile auf den neuesten
 Stand gebracht und steht seit August 2013 wieder in sämtliche
-verfügbaren Übersetzungen zur
-Verfügung.{empty}footnote:[http://aptitude.alioth.debian.org/doc/]
+verfügbaren Übersetzungen zur Verfügung <<aptitude-dokumentation>>.
 
 // Schlagworte für den Index
 (((aptitude,Dokumentationspakete)))
