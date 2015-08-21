@@ -384,13 +384,13 @@
 
 - [[[Debian-Wiki-ARM-EABI-Port]]] Debian Wiki: ARM EABI Port, http://wiki.debian.org/ArmPorts
 
-//- [[[Debian-Wiki-chroot]]] `chroot` (deutschsprachig) im Debian Wiki, http://wiki.debian.org/de/chroot
+- [[[Debian-Wiki-chroot]]] `chroot` (deutschsprachig) im Debian Wiki, http://wiki.debian.org/de/chroot
 
 - [[[Debian-Wiki-cupt]]] Debian Wiki: Eintrag zu `cupt`, https://wiki.debian.org/Cupt
 
 - [[[Debian-Wiki-Debian-Entwickler]]] Debian Wiki: Wie werde ich ein Debian-Entwickler?, http://wiki.debian.org/DebianDeveloper
 
-// - [[[Debian-Wiki-FHS]]] Filesystem Hierarchy Standard (FHS) im Debian Wiki, http://wiki.debian.org/FilesystemHierarchyStandard
+- [[[Debian-Wiki-FHS]]] Filesystem Hierarchy Standard (FHS) im Debian Wiki, http://wiki.debian.org/FilesystemHierarchyStandard
 
 - [[[Debian-Wiki-Debian-GNUHurd]]] Wiki zu Debian GNU/Hurd, https://wiki.debian.org/Debian_GNU/Hurd
 
@@ -436,7 +436,7 @@
 
 - [[[Emdebian]]] Debian für Embedded Devices, http://www.emdebian.org/
 
-//- [[[FHS-Linux-Foundation]]] Filesystem Hierarchy Standard (FHS), Linux Foundation, https://wiki.linuxfoundation.org/en/FHS
+- [[[FHS-Linux-Foundation]]] Filesystem Hierarchy Standard (FHS), Linux Foundation, https://wiki.linuxfoundation.org/en/FHS
 
 - [[[Finkproject]]] Fink-Projekt, http://www.finkproject.org/
 
