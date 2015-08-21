@@ -97,11 +97,9 @@ München, 2. Auflage November 2014, ISBN 978-3-95539-119-5).
 
 ==== Quellcode und Lizenz ====
 
-Der o.g. Quellcode des Buches findet sich auf GitHub unter
-https://github.com/dpmb/dpmb <<dpmb-github>> und ist unter der
-http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons
-Namensnennung -- Weitergabe unter gleichen Bedingungen 4.0
-International Lizenz] frei verfügbar.
+Der o.g. Quellcode des Buches findet sich auf GitHub <<dpmb-github>> und ist unter der
+Creative Commons Namensnennung -- Weitergabe unter gleichen Bedingungen 4.0
+International Lizenz <<CreativeCommons>> frei verfügbar.
 
 Änderungswünsche oder -vorschläge zum Buch senden Sie bitte dort als
 https://github.com/dpmb/dpmb/issues/new[Issue] -- oder sogar noch besser
