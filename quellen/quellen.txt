@@ -172,7 +172,7 @@
 
 - [[[Debian-Developers-Reference]]] Developer's Reference Team: Debian Developer's Reference, deutsche Übersetzung, http://www.debian.org/doc/manuals/developers-reference/index.html
 
-//- [[[Debian-Donations]]] Spenden an Debian, http://www.debian.org/donations
+- [[[Debian-Donations]]] Spenden an Debian, http://www.debian.org/donations
 
 - [[[Debian-History]]] Debian Documentation Team: A Brief History of Debian, Chapter 3, Debian Releases, http://www.debian.org/doc/manuals/project-history/ch-releases.de.html
 
