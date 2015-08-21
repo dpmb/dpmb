@@ -39,11 +39,9 @@ ein.
 
 Bei unserer Arbeit am Buch entdeckten wir zahlreiche Lücken in den
 Programmbeschreibungen, den Manpages und den beigefügten,
-weiterführenden
-Dokumentationen{empty}footnote:[https://bugs.debian.org/cgi-bin/pkgreport.cgi?tag=found-during-book-writing;users=abe%40debian.org].
+weiterführenden Dokumentationen <<bugs-found-during-book-writing>>.
 Dabei wurde uns auch bewusst, welche Bedeutung dem persönlichen
-Erfahrungsschatz und insbesondere dem passiven Wissen zukommt. Wir
-haben uns bemüht, davon möglichst viel in dieses Buch einfließen zu
-lassen.
+Erfahrungsschatz und insbesondere dem passiven Wissen zukommt. Wir haben
+uns bemüht, davon möglichst viel in dieses Buch einfließen zu lassen.
 
 // Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/dokumentation-zu-aptitude.txt
