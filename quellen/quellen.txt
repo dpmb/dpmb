@@ -10,7 +10,7 @@
 
 - [[[alien]]] Joey Hess: Projektseite zu 'alien', http://joeyh.name/code/alien/
 
-//- [[[Allbery-Debian-Popularity]]] Debian and popularity, Blog-Posting von Russ Allbery, http://www.eyrie.org/~eagle/journal/2012-01/004.html
+- [[[Allbery-Debian-Popularity]]] Debian and popularity, Blog-Posting von Russ Allbery, http://www.eyrie.org/~eagle/journal/2012-01/004.html
 
 // - [[[Aoki-Debian-Referenz]]] Osamu Aoki: Debian Referenz, deutsche Übersetzung, http://www.debian.org/doc/manuals/debian-reference/index.de.html
 
