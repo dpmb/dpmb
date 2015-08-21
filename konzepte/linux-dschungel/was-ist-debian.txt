@@ -19,12 +19,10 @@ Betriebssystem gemeinsam entwickeln und veröffentlichen
 oder
 
 * das vom Debian-Projekt entwickelte Betriebssystem ``Debian GNU/Linux''
-bzw. dessen Varianten. Dazu zählen derzeit auch Debian
-GNU/kFreeBSD{empty}footnote:[https://wiki.debian.org/Debian_GNU/kFreeBSD]
-und Debian
-GNU/Hurd{empty}footnote:[https://wiki.debian.org/Debian_GNU/Hurd], die
-statt eines Linux-Kerns einen FreeBSD- bzw. GNU-Hurd-Betriebssystemkern
-nutzen.
+bzw. dessen Varianten. Dazu zählen derzeit auch Debian GNU/kFreeBSD
+<<Debian-Wiki-Debian-GNUkFreeBSD>> und Debian GNU/Hurd
+<<Debian-Wiki-Debian-GNUHurd>>, die statt eines Linux-Kerns einen
+FreeBSD- bzw. GNU-Hurd-Betriebssystemkern nutzen.
 
 // Stichworte für den Index
 (((Debian, DFSG)))
@@ -34,13 +32,11 @@ nutzen.
 (((Debian, Softwareauswahl)))
 Einer der Eckpunkte des vom Debian-Projekt entwickelten Betriebssystems
 ist die ausschließliche Verwendung freier Software. Dafür sind die
-_Debian Free Software Guidelines_
-(DFSG){empty}footnote:[https://www.debian.org/social_contract#guidelines]
-maßgeblich, die im _Debian-Gesellschaftsvertrag_ festgelegt
-sind{empty}footnote:[http://www.debian.org/social_contract.de.html].
-Sichtbar wird das auch darin, dass Pakete in den beiden
-Entwicklungszweigen 'contrib' und 'non-free' offiziell kein Bestandteil
-von Debian GNU/Linux sind. Genauer gehen wir darauf in
+_Debian Free Software Guidelines_ (DFSG) <<DFSG>> maßgeblich, die im
+_Debian-Gesellschaftsvertrag_ festgelegt sind
+<<Debian-Social-Contract>>. Sichtbar wird das auch darin, dass Pakete in
+den beiden Entwicklungszweigen 'contrib' und 'non-free' offiziell kein
+Bestandteil von Debian GNU/Linux sind. Genauer gehen wir darauf in
 <<distributionsbereiche>> ein.
 
 // Stichworte für den Index
