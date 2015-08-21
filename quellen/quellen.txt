@@ -450,6 +450,10 @@
 
 - [[[geoiptool]]] Geo IP Tool, http://www.geoiptool.com/
 
+- [[[github-issue]]] Issue auf GitHub, https://github.com/dpmb/dpmb/issues/new 
+
+- [[[github-pull-request]]] Pull-Request mitsamt Patch auf GitHub, https://github.com/dpmb/dpmb/compare
+
 //- [[[GNU-Linux-Distribution-Timeline]]] GNU Linux Distribution Timeline, http://futurist.se/gldt
 
 - [[[Graphviz]]] Graphviz -- Graph Visualization Software, http://www.graphviz.org/
