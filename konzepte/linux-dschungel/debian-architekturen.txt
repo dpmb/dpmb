@@ -95,13 +95,12 @@ und Ende.
 // Stichworte für den Index
 (((Debian, Architekturen)))
 (((Debian, architekturunabhängig)))
-Neben den bereits genannten Architekturen gibt es noch Pakete
-mit dem Eintrag 'all'. Dies sind architekturunabhängige Pakete, z.B.
-Pakete von Programmen, die vollständig in den Skriptsprachen Perl,
-Python oder Ruby geschrieben wurden. Zu dieser Gruppe gehören auch
-Pakete, die lediglich Daten enthalten, die auf jeder Architektur identisch sind (z.B. Grafiken oder Musik).
-
-Solche Pakete können auf beliebigen Architekturen
+Neben den bereits genannten Architekturen gibt es noch Pakete mit dem
+Eintrag 'all'. Dies sind architekturunabhängige Pakete, z.B. Pakete von
+Programmen, die vollständig in den Skriptsprachen Perl, Python oder Ruby
+geschrieben wurden. Zu dieser Gruppe gehören auch Pakete, die lediglich
+Daten enthalten, die auf jeder Architektur identisch sind (z.B. Grafiken
+oder Musik). Solche Pakete können auf beliebigen Architekturen
 installiert werden.
 
 [[debian-architekturen-multiarch]]
@@ -111,10 +110,9 @@ installiert werden.
 (((Debian, Architekturen)))
 (((Debian, multiarch)))
 Seit etwa 2004 läuft unter den Debian-Entwicklern die Diskussion um den
-Support für 'multiarch'{empty}footnote:[https://wiki.debian.org/Multiarch]. 
-Unterstützung dafür gibt es in Debian seit Version 7 'Wheezy' und in
-Ubuntu seit Version 11.10 'Oneiric Ocelot'.
-Es beschreibt zwei Dinge:
+Support für 'multiarch' <<Debian-Wiki-multiarch>>. Unterstützung dafür
+gibt es in Debian seit Version 7 'Wheezy' und in Ubuntu seit Version
+11.10 'Oneiric Ocelot'. Es beschreibt zwei Dinge:
 
 * Systeme, auf denen Sie Pakete unterschiedlicher Architekturen
   nebeneinander benutzen können.
@@ -129,7 +127,7 @@ Die Gründe für diese Mischung sind vielfältig:
 zählen z.B. 'i386'/'x86_64', 'ppc'/'ppc64', 'sparc'/'sparc64' und
 's390'/'s390x'. Unterstützung hierfür gibt es bei RedHat/Fedora unter
 dem Namen 'biarch' bereits
-länger{empty}footnote:[http://fedoraproject.org/wiki/Biarch_Spin].
+länger <<biarch>>.
 +
 Dies ist insbesondere relevant bei proprietärer, nicht-quelloffener
 Software, die für 32-Bit-Linux kompiliert wurde, aber auf
