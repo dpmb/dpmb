@@ -12,22 +12,12 @@ entdeckten wir zunächst unabhängig voneinander immer wieder neue
 Aspekte, die sich schrittweise zu einem komplexen Gesamtbild ergänzten.
 
 Beim gemeinsamen Fachsimpeln entstanden aus dieser Begeisterung heraus
-zunächst Beiträge für die Zeitschrift LinuxUser.{empty}footnote:[Frank
-Hofmann, Thomas Osterried: Gestaltwandler.  Programmpakete richtig
-konvertieren, LinuxUser 1/2010, LinuxNewMedia AG, München, 2010, S.
-32ff,
-http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2010/01/Programmpakete-richtig-konvertieren.
-– Frank Hofmann, Thomas Winde: Zentraler Zugangspunkt. Komfortabel
-Pakete managen mit der Apt-Shell, LinuxUser 06/2012, LinuxNewMedia AG,
-München, 2012, S. 30ff.,
-http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2012/06/Komfortabel-Pakete-managen-mit-der-Apt-Shell
-– Frank Hofmann: Dschungelführer. Pakete zielgenau finden mit Debtags,
-LinuxUser 06/2012, LinuxNewMedia AG, München, 2012, S. 22ff.,
-http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2012/06/Pakete-zielgenau-finden-mit-Debtags]
-Parallel dazu arbeiteten wir weitere Aspekte digital auf und veröffentlichten entsprechende
-Blogbeiträge{empty}footnote:[http://noone.org/blog], hielten Vorträge
-bei Linux-Veranstaltungen und versuchten uns in einem Screencast zum
-Thema.
+zunächst Beiträge für die Zeitschrift LinuxUser
+<<Hofmann-Osterried-Alien-LinuxUser>> <<Hofmann-Winde-Aptsh-LinuxUser>>
+<<Hofmann-Debtags-LinuxUser>>. Parallel dazu arbeiteten wir weitere
+Aspekte digital auf und veröffentlichten entsprechende Blogbeiträge
+<<Beckert-Blog>>, hielten Vorträge bei Linux-Veranstaltungen und
+versuchten uns in einem Screencast zum Thema.
 
 Im Herbst 2012 hatte Axel die Idee, einen LinuxUser-Artikel zu
 `aptitude` im Alltagsgebrauch zu schreiben. Dazu kam es bisher noch
@@ -35,20 +25,16 @@ nicht{empty}footnote:[Jörg, bitte nicht böse sein!], denn eine Reihe von
 Vorarbeiten war dazu notwendig. Wir einigten uns daher auf einen Beitrag
 zu den Unterschieden zwischen `apt-get` und `aptitude`, der jedoch immer
 länger und länger wurde und schließlich im Frühjahr 2013 in einen
-Zweiteiler mündete.{empty}footnote:[Axel Beckert, Frank Hofmann:
-Dynamisches Duo. Apt-get und Aptitude, LinuxUser 04/2013, S.  90ff.,
-http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2013/04/Apt-get-und-Aptitude-Teil-1
-– Axel Beckert, Frank Hofmann: Paarweise. Apt-get und Aptitude,
-LinuxUser 06/2013, S. 90ff.,
-http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2013/06/Apt-Get-und-Aptitude-im-Einsatz]
+Zweiteiler mündete <<Beckert-Hofmann-Aptitude-1-LinuxUser>>
+<<Beckert-Hofmann-Aptitude-2-LinuxUser>>.
 
 Bevor wir uns daran machten, Passagen aus diesen umfangreichen Beiträgen
 wieder herauszustreichen, fiel irgendwann der Satz: ``Wenn wir so
-weitermachen, können wir eigentlich gleich ein Buch schreiben''. Seitdem ließ uns
-diese Idee nicht mehr los. Teile der Texte und Abbildungen wurden aus
-den erwähnten Veröffentlichungen übernommen und nach Bedarf für das
-vorliegende Werk überarbeitet. Das Ergebnis halten Sie nun in Ihren
-Händen.
+weitermachen, können wir eigentlich gleich ein Buch schreiben''. Seitdem
+ließ uns diese Idee nicht mehr los. Teile der Texte und Abbildungen
+wurden aus den erwähnten Veröffentlichungen übernommen und nach Bedarf
+für das vorliegende Werk überarbeitet. Das Ergebnis halten Sie nun in
+Ihren Händen.
 
 ==== Motivation ====
 
@@ -88,16 +74,17 @@ die damit verbundenen Fragestellungen im Alltag der Systembetreuung.
 
 ==== Technische Basis ====
 
-Rein technisch setzt das Buch auf
-AsciiDoc{empty}footnote:[http://www.methods.co.nz/asciidoc/] auf --
-einem Textformat, aus welchem dann über mehrere Zwischenstufen diverse
-Ausgabeformate wie PDF, ePub oder HTML entstehen. Basierend auf einer
-einzigen Quelle stehen damit passende Ergebnisse für die verschiedenen
-Ausgabegeräte zur Verfügung. Die AsciiDoc-Dateien liegen in einem
-Versionskontrollsystem namens Git. Neben der Möglichkeit, während des
-Arbeitens auch auf eine frühere Revision zurückgreifen zu können,
-ermöglicht Git ein paralleles, verteiltes Arbeiten von verschiedenen
-Standorten aus.
+Rein technisch setzt das Buch auf AsciiDoc <<AsciiDoc>> auf -- einem
+Textformat, aus welchem dann über mehrere Zwischenstufen diverse
+Ausgabeformate wie PDF, ePub oder HTML entstehen.
+Basierend auf einer einzigen Quelle stehen damit passende Ergebnisse für
+die verschiedenen Ausgabegeräte zur Verfügung. Die AsciiDoc-Dateien
+liegen in einem Versionskontrollsystem namens Git und sind auf der
+Plattform GitHub verfügbar <<dpmb-github>>. Neben der Möglichkeit,
+während des Arbeitens auch auf eine frühere Revision zurückgreifen zu
+können, ermöglicht das ein paralleles, verteiltes Arbeiten von
+verschiedenen Standorten aus. Zudem kann jeder Interessierte am Buch in
+Form von Vorschlägen und Korrekturen beitragen.
 
 [TIP]
 .Versionsverwaltung mit Git
@@ -111,15 +98,15 @@ München, 2. Auflage November 2014, ISBN 978-3-95539-119-5).
 ==== Quellcode und Lizenz ====
 
 Der o.g. Quellcode des Buches findet sich auf GitHub unter
-https://github.com/dpmb/dpmb und ist unter der
+https://github.com/dpmb/dpmb <<dpmb-github>> und ist unter der
 http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons
-Namensnennung - Weitergabe unter gleichen Bedingungen 4.0
+Namensnennung -- Weitergabe unter gleichen Bedingungen 4.0
 International Lizenz] frei verfügbar.
 
-Änderungswünsche oder -vorschläge zum Buch am liebsten dort als
-https://github.com/dpmb/dpmb/issues/new[Issue] oder sogar noch besser,
-als https://github.com/dpmb/dpmb/compare[Pull-Request mitsamt Patch]
-einsenden.
+Änderungswünsche oder -vorschläge zum Buch senden Sie bitte dort als
+https://github.com/dpmb/dpmb/issues/new[Issue] -- oder sogar noch besser
+-- als https://github.com/dpmb/dpmb/compare[Pull-Request mitsamt Patch]
+ein.
 
 ==== Organisatorisch ====
 

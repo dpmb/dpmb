@@ -66,7 +66,7 @@
 
 - [[[Arch-Linux-pacapt]]] `pacapt` auf GitHub: https://github.com/icy/pacapt
 
-//- [[[AsciiDoc]]] AsciiDoc, Text-basierte Dokumenten-Generierung, http://www.methods.co.nz/asciidoc/
+- [[[AsciiDoc]]] AsciiDoc, Text-basierte Dokumenten-Generierung, http://www.methods.co.nz/asciidoc/
 
 - [[[awk]]] Al Aho, Brian Kernighan, und Peter Weinberger: The AWK Programming Language, Addison-Wesley, 1988, ISBN 0-201-07981-X
 
@@ -420,6 +420,8 @@
 - [[[DFSG]]] Debian Free Software Guidelines (DFSG), https://www.debian.org/social_contract#guidelines
 
 - [[[dinstall-status]]] dinstall Status, https://ftp-master.debian.org/dinstall.status
+
+- [[[dpmb-github]]] Debian Package Management Book, GitHub-Repository, https://github.com/dpmb
 
 - [[[Drilling-APT-Pinning-LinuxUser]]] Thomas Drilling: Festgenagelt. Tricks zum Mischen von Debian-Releases, LinuxUser 06/2012, LinuxNewMedia AG, München, 2012, S. 35ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2012/06/Tricks-zum-Mischen-von-Debian-Releases
 
