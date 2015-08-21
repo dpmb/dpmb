@@ -464,7 +464,7 @@
 
 - [[[Hackerfunk]]] Hackerfunk Zürich, Folge 65, Fachliteratur Schreiben, http://www.hackerfunk.ch/?id=127
 
-//- [[[Heinlein-LPIC-1]]] Peer Heinlein: LPIC-1. Vorbereitung auf die Prüfung des Linux Professional Institute, OpenSource Press, 5. Auflage, ISBN 978-3-95539-012-9, deutsch, 501 Seiten, http://www.opensourcepress.de/de/produkte/LPIC-1/452/978-3-95539-012-9
+- [[[Heinlein-LPIC-1]]] Peer Heinlein: LPIC-1. Vorbereitung auf die Prüfung des Linux Professional Institute, OpenSource Press, 5. Auflage, ISBN 978-3-95539-012-9, deutsch, 501 Seiten, http://www.opensourcepress.de/de/produkte/LPIC-1/452/978-3-95539-012-9
 
 - [[[Hertzog-Mas-Debian-Administrators-Handbook]]] Raphael Hertzog, Roland Mas: The Debian Administrator's Handbook, 2012, ISBN 979-10-91414-00-5, http://debian-handbook.info/
 
@@ -528,6 +528,8 @@
 - [[[localepurge]]] 'localepurge', Projektseite im Linux Wiki, http://linuxwiki.de/localepurge
 
 - [[[Loschwitz-Sourceformat]]] Martin Loschwitz: Zusammenpacken! Das neue Sourceformat für Debian-Pakete, Linux-Magazin 06/2011, http://www.linux-magazin.de/Ausgaben/2011/06/Debian-Src-3.0
+
+- [[[lpic-101]]] Linux Professional Institute, Unterlagen für LPIC 101, https://www.lpi.org/study-resources/lpic-1-101-exam-objectives/
 
 - [[[lug.berlin]]] Das Berliner Community-Portal lug.berlin, http://lug.berlin/
 
