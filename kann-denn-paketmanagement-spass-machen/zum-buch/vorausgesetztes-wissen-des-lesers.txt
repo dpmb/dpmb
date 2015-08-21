@@ -7,6 +7,7 @@
 
 // Stichworte für den Index
 (((Buch, Kommandozeile)))
+(((Buch, Shell)))
 Der Umgang mit der _Kommandozeile_ sollte Ihnen vertraut sein. Wir legen
 uns nicht auf eine bestimmte Shell oder eine Terminalemulation fest.
 Alle Beispiele wurden unter `bash` getestet, funktionieren aber auch
@@ -28,13 +29,10 @@ absolute Ausnahme.
 //Stichworte, Index
 (((Filesystem Hierarchy Standard (FHS))))
 Für Teil 1 ('Konzepte') ist Linux-Grundwissen unabdingbar: neben der
-Arbeit auf der Kommandozeile also auch grundlegende Kenntnisse über den _Filesystem
-Hierarchy Standard_ (FHS), der die Struktur der Hauptverzeichnisse und
-deren Inhalte definiert.{empty}footnote:[Allgemeine Informationen dazu
-liefert die Übersichtsseite der Linux Foundation
-(https://wiki.linuxfoundation.org/en/FHS), eine detaillierte Aufstellung
-für Debian GNU/Linux das Debian Wiki
-(http://wiki.debian.org/FilesystemHierarchyStandard).]
+Arbeit auf der Kommandozeile also auch grundlegende Kenntnisse über den
+_Filesystem Hierarchy Standard_ (FHS), der die Struktur der
+Hauptverzeichnisse und deren Inhalte definiert (siehe dazu
+<<FHS-Linux-Foundation>> und <<Debian-Wiki-FHS>>).
 
 Teil 2 ('Werkzeuge') bespricht neben Strukturen zur Paketverwaltung alle
 Paketoperationen im Alltag und setzt dafür zumindest das Wissen aus Teil
@@ -62,7 +60,8 @@ Konfiguration Ihres Systems über die Kommandos `su` oder `sudo` – oder
 indem Sie sich als Benutzer `root` auf Ihrem System anmelden.]. In den
 Beispielen für die Kommandozeile erkennen Sie anhand des
 Prompt-Zeichens, ob administrative Rechte notwendig sind oder nicht (`#`
-vs. `$`). Auf Ausnahmen weisen wir explizit hin.
+falls ja, und `$`, falls nicht). Auf Ausnahmen weisen wir Sie an der
+bestreffenden Stelle explizit hin.
 
 // Stichworte für den Index
 (((Werkzeuge,Administratorrechte-Umgebung)))
@@ -72,11 +71,12 @@ funktionieren – gerade in der Rolle und mit den Berechtigungen eines
 Administrators können falsche Befehle viel kaputt machen. Wir empfehlen
 Ihnen darum, die vorgestellten Beispiele zunächst auf einem separaten
 _Testsystem_ auszuprobieren – sei dies ein eigener Rechner, eine
-virtuelle Maschine oder auch nur eine
-`chroot`-Umgebung{empty}footnote:[http://wiki.debian.org/de/chroot].
+virtuelle Maschine oder auch nur eine `chroot`-Umgebung
+<<Debian-Wiki-chroot>>.
+
 Dabei spielt es kaum eine Rolle, welches APT-basierte System Sie
 verwenden. Die meisten Beispiele im Buch stammen von einem Debian 7
 'Wheezy' ('oldstable') oder einem Debian 8 'Jessie' ('stable').
-Ausnahmen sind gekennzeichnet.
+Alle Ausnahmen sind entsprechend gekennzeichnet.
 
 // Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/vorausgesetztes-wissen-des-lesers.txt
