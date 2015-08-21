@@ -116,16 +116,15 @@ $
 (((grep-debtags, -d)))
 (((grep-debtags, -n)))
 (((grep-debtags, -s)))
-An dieser Stelle hilft Ihnen auch das Paket
-'dctrl-tools'{empty}footnote:[http://packages.debian.org/de/stable/dctrl-tools]
-weiter – jetzt jedoch mit dem Programm `grep-debtags`. Mit dem
-nachfolgendem Aufruf erhalten Sie eine Liste aller verfügbaren Pakete zu
-leichtgewichtigen Webbrowsern, die keinen Bezug zum Kool Desktop
-Environment (KDE) haben. Über die beiden Schalter `-sPackage` und `-d`
-reduzieren Sie die Ausgabe auf den Paketnamen und die einzeilige
-Paketbeschreibung, `-n` unterdrückt zusätzlich die Feldnamen. Mehrere
-Suchkriterien kombinieren Sie mittels `-a` für ein boolesches AND sowie
-`-a -!` für ein boolesches NAND.
+An dieser Stelle hilft Ihnen auch das Paket 'dctrl-tools'
+<<Debian-Paket-dctrl-tools>> weiter – jetzt jedoch mit dem Programm
+`grep-debtags`. Mit dem nachfolgendem Aufruf erhalten Sie eine Liste
+aller verfügbaren Pakete zu leichtgewichtigen Webbrowsern, die keinen
+Bezug zum Kool Desktop Environment (KDE) haben. Über die beiden Schalter
+`-sPackage` und `-d` reduzieren Sie die Ausgabe auf den Paketnamen und
+die einzeilige Paketbeschreibung, `-n` unterdrückt zusätzlich die
+Feldnamen. Mehrere Suchkriterien kombinieren Sie mittels `-a` für ein
+boolesches AND sowie `-a -!` für ein boolesches NAND.
 
 //.Suche nach leichtgewichtigen Webbrowsern mittels `grep-debtags` (Auswahl)
 ----

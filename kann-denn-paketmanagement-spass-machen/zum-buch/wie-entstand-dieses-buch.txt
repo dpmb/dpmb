@@ -117,16 +117,16 @@ Linux-Tage <<CLT>>, die Rencontres Mondiales du Logiciel Libre
 <<RMLL>> und die Debian Entwicklerkonferenz <<DebConf>>. Viele Texte
 entstanden von unterwegs aus, bspw. in Andorra, Augsburg, Beauvais
 (Picardie), Bergneustadt, Berlin, Besançon, Bottighofen (Bodensee,
-Schweiz), Chemnitz, Frankfurt/Main, Friedrichshafen, Genf, Goizueta
-(Baskenland, Spanien), Hamburg, Heidelberg, Koblenz, Lauchringen (Baden,
-Wutachtal), Lausanne, Meersburg, Montpellier, München, Port del Cantó
-(Katalanische Pyrenäen, Spanien), Radebeul bei Dresden,
-Rostock-Warnemünde, Saint Cergue (Jura, Schweiz), Saint-Jouin-Bruneval
-(Normandie), Tübingen und Zürich. Wir nahmen uns dabei an der
-Philosophie von Debian GNU/Linux ein Beispiel: ohne Hektik, mit dem
-Blick fürs Detail und zumeist pedantisch bis ins letzte i-Tüpfelchen,
-aber trotzdem mit viel Freude, Neugierde und unserem Entdeckerdrang
-folgend.
+Schweiz), Chemnitz, Delémont, Frankfurt/Main, Friedrichshafen, Genf,
+Goizueta (Baskenland, Spanien), Hamburg, Heidelberg, Koblenz,
+Lauchringen (Baden, Wutachtal), Lausanne, Meersburg, Montpellier,
+München, Port del Cantó (Katalanische Pyrenäen, Spanien), Radebeul bei
+Dresden, Rostock-Warnemünde, Saint Cergue (Jura, Schweiz),
+Saint-Jouin-Bruneval (Normandie), Tübingen und Zürich. Wir nahmen uns
+dabei an der Philosophie von Debian GNU/Linux ein Beispiel: ohne Hektik,
+mit dem Blick fürs Detail und zumeist pedantisch bis ins letzte
+i-Tüpfelchen, aber trotzdem mit viel Freude, Neugierde und unserem
+Entdeckerdrang folgend.
 
 // TODO: Karte einbauen :-D
 
