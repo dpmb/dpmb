@@ -35,7 +35,9 @@ automatisch anstößt. Mehr Informationen dazu finden Sie in
 <<aufbau-und-format>>.
 
 // Stichworte für den Index
+(((Paketbeschreibung)))
 (((Paketmanagement, Auflösung von Paketabhängigkeiten)))
+(((Paketmanagement, Paketmaintainer)))
 Die Distribution selbst bzw. die verantwortlichen Paketmaintainer
 kümmern sich bei der Übersetzung und Bereitstellung der Pakete darum,
 dass die nachfolgende Zusammenstellung der Paketliste harmonisch ist und
