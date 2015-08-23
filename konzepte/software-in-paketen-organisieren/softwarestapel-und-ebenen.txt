@@ -100,11 +100,9 @@ steuern `dpkg` und die o.g. Bibliotheken bei.
 (((Yellowdog Updater Modified (YUM))))
 (((Zypper)))
 Bei `rpm`-basierten Distributionen RedHat, Fedora und CentOS heißen die
-Werkzeuge Yellowdog Updater, Modified
-(YUM){empty}footnote:[http://yum.baseurl.org/], bei SuSE und openSUSE
-Zypper{empty}footnote:[http://de.opensuse.org/Zypper] und Yet another
-Setup Tool (YaST) sowie bei Mageia
-`urpmi`{empty}footnote:[https://wiki.mageia.org/de/URPMI].
+Werkzeuge Yellowdog Updater, Modified (YUM) <<YUM>>, bei SuSE und
+openSUSE Zypper <<Zypper>> und Yet another Setup Tool (YaST) sowie bei
+Mageia `urpmi` <<Mageia-urpmi>>.
 
 ==== Werkzeuge, die verschiedene Paketformate unterstützen ====
 
