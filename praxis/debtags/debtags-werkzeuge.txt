@@ -109,14 +109,12 @@ Werkzeuge_ Synaptic, SmartPM, das Ubuntu Software Center, Gdebi und
 PackageKit können bislang nicht mit dem Thema Debtags umgehen.
 Stattdessen entstanden auf der Grundlage der Bibliotheken zu Debtags
 mehrere Alternativen, die von Ihnen zum Teil ein sehr unübliches
-Bedienritual erfordern. Dazu gehören
-PackageSearch{empty}footnote:[http://packages.debian.org/de/stable/packagesearch],
-Adept{empty}footnote:[http://packages.debian.org/de/stable/adept] und
-Xara{empty}footnote:[http://packages.debian.org/de/stable/xara-gtk].
-Letzteres ist die X11-Version des bereits oben gezeigten
-Kommandozeilenwerkzeugs `ara`. Alle Programme bieten die Suche anhand
-der Debtags über die Paketdatenbank an und verfügen darüberhinaus auch
-über eine einfache Schnittstelle zur Paketverwaltung.
+Bedienritual erfordern. Dazu gehören PackageSearch
+<<Debian-Paket-packagesearch>>, Adept <<Debian-Paket-adept>> und Xara
+<<Debian-Paket-xara-gtk>>. Letzteres ist die X11-Version des bereits
+oben gezeigten Kommandozeilenwerkzeugs `ara`. Alle Programme bieten die
+Suche anhand der Debtags über die Paketdatenbank an und verfügen
+darüberhinaus auch über eine einfache Schnittstelle zur Paketverwaltung.
 
 // Stichworte für den Index
 (((Debianpaket, goplay)))
@@ -128,13 +126,13 @@ der Debtags über die Paketdatenbank an und verfügen darüberhinaus auch
 (((gosafe)))
 (((goscience)))
 (((goweb)))
-Im Paket 'goplay'{empty}footnote:[https://packages.debian.org/de/stable/goplay]
-verbergen sich die einzelnen Werkzeuge `goadmin`, `golearn`, `gonet`,
-`gooffice`, `goplay`, `gosafe`, `goscience` und `goweb`. Jedes der
-genannten Programme ist auf eine spezifische Paketkategorie von Debian
-ausgerichtet, so z.B. `goplay` auf Spiele (siehe <<fig.goplay>>),
-`golearn` auf Lernprogramme und `goscience` auf wissenschaftliche
-Werkzeuge (siehe dazu <<sortierung-der-pakete-nach-verwendungszweck>>).
+Im Paket 'goplay' <<Debian-Paket-goplay>> verbergen sich die einzelnen
+Werkzeuge `goadmin`, `golearn`, `gonet`, `gooffice`, `goplay`, `gosafe`,
+`goscience` und `goweb`. Jedes der genannten Programme ist auf eine
+spezifische Paketkategorie von Debian ausgerichtet, so z.B. `goplay` auf
+Spiele (siehe <<fig.goplay>>), `golearn` auf Lernprogramme und
+`goscience` auf wissenschaftliche Werkzeuge (siehe dazu
+<<sortierung-der-pakete-nach-verwendungszweck>>).
 
 .Suche nach Spielen anhand von Debtags
 image::praxis/debtags/goplay.png[id="fig.goplay", width="50%"]
