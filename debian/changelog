@@ -1,5 +1,5 @@
-debian-paketmanagement-buch (0~2015.07.11) UNRELEASED; urgency=low
+dpmb (0~2015.08.24) UNRELEASED; urgency=low
 
   * Initial release (Closes: #TODO)
 
- -- Axel Beckert <abe@debian.org>  Sat, 11 Jul 2015 15:08:21 +0200
+ -- Axel Beckert <abe@debian.org>  Mon, 24 Aug 2015 17:15:02 +0200
