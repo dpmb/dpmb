@@ -143,8 +143,8 @@ image::praxis/debtags/goplay.png[id="fig.goplay", width="50%"]
 (((Debtags, Enrico Zini)))
 Zur vereinfachten Bearbeitung des Vokabulars hat Enrico Zini vor Jahren
 eine graphische Benutzeroberfläche namens 'Debtags Editor' entworfen (Paket
-'debtags-edit'{empty}footnote:[http://packages.debian.org/de/stable/debtags-edit]).
-Diese befindet sich derzeit im Dornröschenschlaf und darauf gehen wir in
+'debtags-edit' <<Debian-Paket-debtags-edit>>. Diese befindet sich
+derzeit im Dornröschenschlaf und darauf gehen wir in
 <<verwendetes-vokabular-bearbeiten-und-erweitern>> ein.
 
 // Stichworte für den Index
@@ -152,15 +152,13 @@ Diese befindet sich derzeit im Dornröschenschlaf und darauf gehen wir in
 (((Debtags, Schnittstellen)))
 (((Debtags, Suche anhand von Schlagworten)))
 Als _Schnittstellen über den Webbrowser_ stehen Ihnen als Variante eins
-die Paketsuche über die Debian-Webseite zur
-Verfügung{empty}footnote:[http://debtags.debian.net/search]. Bei den
-Suchergebnissen werden die Debtags des jeweiligen Pakets von vornherein
-mit angezeigt (siehe <<fig.debtags-xara-gtk>>). Variante zwei ist der
-'Debtags Editor', welchen wir in <<pakete-um-schlagworte-ergaenzen>>
-genauer besprechen.
+die Paketsuche über die Debian-Webseite zur Verfügung
+<<Debian-Debtags-Search>>. Bei den Suchergebnissen werden die Debtags
+des jeweiligen Pakets von vornherein mit angezeigt (siehe
+<<fig.debtags-xara-gtk>>). Variante zwei ist der 'Debtags Editor',
+welchen wir in <<pakete-um-schlagworte-ergaenzen>> genauer besprechen.
 
 .Debian Tags zum Paket 'xara-gtk'
 image::praxis/debtags/debtags-xara-gtk.png[id="fig.debtags-xara-gtk", width="50%"]
-
 
 // Datei (Ende): ./praxis/debtags/debtags-werkzeuge.txt
