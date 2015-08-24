@@ -11,7 +11,7 @@ This is the freely available source code for the (for now German written)
 [Frank Hofmann](http://www.efho.de/).
 
 The book is written in [AsciiDoc](http://asciidoc.org/) format and can
-be rendered to e.g. HTML, EPub, PDF, Mobipocket or `.lit` using
+be rendered to e.g. HTML, EPub, PDF, or Mobipocket using
 [AsciiDoc](http://asciidoc.org/) or
 [Asciidoctor](http://asciidoctor.org/), and
 [DocBook to LaTeX Publishing (dblatex)](http://dblatex.sourceforge.net/)
@@ -31,7 +31,7 @@ und kann mit [AsciiDoc](http://asciidoc.org/) oder
 [Asciidoctor](http://asciidoctor.org/), und je nach Format via
 [DocBook to LaTeX Publishing (dblatex)](http://dblatex.sourceforge.net/)
 und [Calibre](http://calibre-ebook.com/)s `ebook-convert` nach
-z.B. HTML, EPub, PDF, Mobipocket und `.lit` gerendert werden.
+z.B. HTML, EPub, PDF und Mobipocket gerendert werden.
 
 <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Das Buch "Debian-Paketmanagement"</span> von <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.debian-paketmanagement.de/" property="cc:attributionName" rel="cc:attributionURL">Frank Hofmann und Axel Beckert</a> ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
 
@@ -102,7 +102,6 @@ make html
 make pdf
 make epub
 make mobi
-make lit
 ```
 
 #### .deb-Paket bauen und installieren

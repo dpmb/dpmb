@@ -2,7 +2,7 @@ DEFAULTDEPENDENCIES=*.txt */*.txt */*/*.txt Makefile
 DEFAULTOPTIONS=-L debian-paketmanagement.txt
 DOCTORDEFAULTOPTIONS=-a experimental -a toc -a toclevels=4 debian-paketmanagement.txt
 
-all: html epub pdf mobi lit
+all: html epub pdf mobi
 
 html debianpaketmanagement.html: $(DEFAULTDEPENDENCIES)
 	a2x $(VERBOSE) -f xhtml $(DEFAULTOPTIONS)
