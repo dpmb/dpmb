@@ -69,7 +69,7 @@ Zuerst sollten mit Root-Rechten (z.B. via `sudo`, `su` oder `ssh
 root@…`) alle zum Bau notwendigen Abhängigkeiten installiert werden:
 
 ```sh
-apt-get install asciidoc dblatex texlive-lang-german xmlto
+apt-get install asciidoc dblatex texlive-lang-german xmlto calibre
 ```
 
 Dann als Benutzer das entsprechende Git-Repository klonen und ins
@@ -96,6 +96,8 @@ Will man nur eines der Formate bauen, so reicht einer dieser Befehle:
 make html
 make pdf
 make epub
+make mobi
+make lit
 ```
 
 #### .deb-Paket bauen und installieren

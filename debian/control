@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: Axel Beckert <abe@debian.org>
 Uploaders: Frank Hofmann <frank.hofmann@efho.de>
 Build-Depends: asciidoc,
+               calibre,
                dblatex,
                debhelper (>= 9),
                texlive-lang-german,
