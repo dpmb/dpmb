@@ -60,3 +60,60 @@ gerendert werden.
 > Debian-Administration, das als praxisorientiertes HowTo ebenso dient
 > wie als Nachschlagewerk für die unerwartet zahlreichen Optionen und
 > Kombinationsmöglichkeiten.
+
+### Bau-Anleitung
+
+#### Alle notwendigen Pakete installieren und das Git-Repository klonen
+
+Zuerst sollten mit Root-Rechten (z.B. via `sudo`, `su` oder `ssh
+root@…`) alle zum Bau notwendigen Abhängigkeiten installiert werden:
+
+```sh
+apt-get install asciidoc dblatex texlive-lang-german xmlto
+```
+
+Dann als Benutzer das entsprechende Git-Repository klonen und ins
+entsprechende Verzeichnis wechseln:
+
+```sh
+git clone git://github.com/dpmb/dpmb.git
+cd dpmb
+```
+
+#### Alle E-Book-Formate bauen
+
+Will man alle verfügbaren E-Book-Formate bauen reicht nun ein simples
+
+```sh
+make
+```
+
+#### Nur eines der E-Book-Formate bauen
+
+Will man nur eines der Formate bauen, so reicht einer dieser Befehle:
+
+```sh
+make html
+make pdf
+make epub
+```
+
+#### .deb-Paket bauen und installieren
+
+Will man das ganze gleich als Debian-Paket bauen und installieren, so
+ruft man in o.g. Verzeichnis als Benutzer anstatt `make` folgenden
+Befehl (aus dem Paket `dpkg-dev`, das Paket `build-essential` auch
+installiert sein) ein:
+
+```sh
+dpkg-buildpackage -b
+```
+
+Das fertige Paket liegt danach unter
+`../debian-paketmanagement-buch_…_all.deb` und man kann es mit
+Root-Rechten (siehe oben) entsprechend installieren, z.B. mittels
+`sudo`:
+
+```sh
+sudo dpkg -i ../debian-paketmanagement-buch_*_all.deb
+```
