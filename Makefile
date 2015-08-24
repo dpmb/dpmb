@@ -19,8 +19,11 @@ mobi debian-paketmanagement.mobi: debianpaketmanagement.epub
 lit debian-paketmanagement.lit: debianpaketmanagement.epub
 	ebook-convert debian-paketmanagement.epub debian-paketmanagement.lit
 
+fb2 debian-paketmanagement.fb2: debianpaketmanagement.epub
+	ebook-convert debian-paketmanagement.epub debian-paketmanagement.fb2
+
 clean:
-	rm -rvf *.html *.epub *.epub.d *.xml *.fls *.log *.pdf *.css *.tex *.mobi *.lit
+	rm -rvf *.html *.epub *.epub.d *.xml *.fls *.log *.pdf *.css *.tex *.mobi *.lit *.fb2
 
 xmllint:
 	asciidoc -d book -b docbook debian-paketmanagement.txt
