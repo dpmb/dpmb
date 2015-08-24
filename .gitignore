@@ -3,4 +3,7 @@
 *.html
 *.epub
 *.pdf
+*.mobi
+*.lit
+*.fb2
 /docbook-xsl.css
