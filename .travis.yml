@@ -1,7 +1,7 @@
 before_install:
    - sudo apt-get update
    - sudo apt-get install debhelper make moreutils
-   - echo deb http://us.archive.ubuntu.com/ubuntu/ trusty main | sudo sponge /etc/apt/sources.list.d/trusty.list
+   - sudo sed -e s/precise/trusty/g -i /etc/apt/sources.list
    - sudo apt-get update
    - sudo apt-get install -t trusty dblatex asciidoc texlive-lang-german calibre calibre-bin python-sip
 
