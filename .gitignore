@@ -4,3 +4,5 @@
 *.epub
 *.pdf
 /docbook-xsl.css
+*.ods
+*.ods#
