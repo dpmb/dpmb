@@ -60,16 +60,15 @@ die vergebenen Debtags als Grundlage zur Recherche. Mit dem Werkzeug
 (((Debianpaket, ara)))
 (((Debtags, Suche anhand von Schlagworten)))
 Eine kleine und zunächst unscheinbar wirkende Anwendung ist `ara` aus
-dem gleichnamigen
-Debianpaket{empty}footnote:[http://packages.debian.org/de/stable/ara].
-Ebenso wie das vorgenannte `grep-dctrl` stöbern Sie damit im
-Paketbestand. Mittels boolescher Ausdrücke kombinieren Sie die
-gewünschten Suchfelder. Die nachfolgende Ausgabe präsentiert einen
-Ausschnitt des Suchergebnisses in tabellarischer Form bestehend aus dem
-Paketnamen, dessen Größe und dem Paketmaintainer beispielhaft zu allen
-Debianpaketen, die zur Kategorie 'utils' (Werkzeuge) gehören, zudem vom
-Window Manager XFCE abhängen oder kleiner als 10000 Bytes sind und bzgl.
-der Priorität als 'optional' eingestuft sind (siehe dazu
+dem gleichnamigen Debianpaket <<Debian-Paket-ara>>. Ebenso wie das
+vorgenannte `grep-dctrl` stöbern Sie damit im Paketbestand. Mittels
+boolescher Ausdrücke kombinieren Sie die gewünschten Suchfelder. Die
+nachfolgende Ausgabe präsentiert einen Ausschnitt des Suchergebnisses in
+tabellarischer Form bestehend aus dem Paketnamen, dessen Größe und dem
+Paketmaintainer beispielhaft zu allen Debianpaketen, die zur Kategorie
+'utils' (Werkzeuge) gehören, zudem vom Window Manager XFCE abhängen oder
+kleiner als 10000 Bytes sind und bzgl. der Priorität als 'optional'
+eingestuft sind (siehe dazu
 <<paket-prioritaet-und-essentielle-pakete>>).
 
 //.Recherche mittels `ara` nach optionalen Paketen zum Window Manager XFCE (Auswahl)
