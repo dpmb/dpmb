@@ -19,5 +19,5 @@ Recommends: www-browser | pdf-reader | fbreader | calibre
 Suggests: www-browser, pdf-reader, fbreader | calibre
 Description: German-written book about package management with Debian
  This package includes the book "Debian Paketmanagement" by Axel
- Beckert and Frank Hofmann in as single HTML page, PDF document and
+ Beckert and Frank Hofmann as single HTML page, as PDF document and as
  e-book in the epub format.
