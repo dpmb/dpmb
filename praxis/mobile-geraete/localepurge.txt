@@ -12,10 +12,9 @@
 (((localepurge)))
 
 Ist Speicherplatz auf dem Datenträger knapp, kann das Werkzeug
-`localepurge`{empty}footnote:[http://linuxwiki.de/localepurge]
-weiterhelfen. Es steht Ihnen über die Paketverwaltung in dem
-gleichnamigen Debianpaket{empty}footnote:[http://packages.debian.org/stable/localepurge]
-zur Verfügung.
+`localepurge` <<localepurge>> weiterhelfen. Es steht Ihnen über die
+Paketverwaltung in dem gleichnamigen Debianpaket
+<<Debian-Paket-localepurge>> zur Verfügung.
 
 `localepurge` entfernt alle Sprachpakete aus ihrer Installation, die
 nicht von Ihnen benötigt werden. Die Sprachpakete sind locales-Pakete
