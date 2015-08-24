@@ -61,7 +61,7 @@ indem Sie sich als Benutzer `root` auf Ihrem System anmelden.]. In den
 Beispielen für die Kommandozeile erkennen Sie anhand des
 Prompt-Zeichens, ob administrative Rechte notwendig sind oder nicht (`#`
 falls ja, und `$`, falls nicht). Auf Ausnahmen weisen wir Sie an der
-bestreffenden Stelle explizit hin.
+betreffenden Stelle explizit hin.
 
 // Stichworte für den Index
 (((Werkzeuge,Administratorrechte-Umgebung)))

@@ -53,7 +53,7 @@ immer einen kurzen Weg, das Malheur wieder zu beseitigen.
 
 Sich hingegen in dem vielschichtigen Geflecht aus `dpkg`, APT und
 `aptitude` zurechtzufinden und ein Verständnis für die einzelnen
-Programme und Mechanismen zu entwickeln, bedarf ihrerseits ein wenig
+Programme und Mechanismen zu entwickeln, bedarf Ihrerseits ein wenig
 Geduld: Ohne nachzulesen und intensiv auszuprobieren, geht es nicht –
 und auf eben diesem Weg möchte Sie unser Buch begleiten.
 
