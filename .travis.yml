@@ -2,8 +2,9 @@ before_install:
    - sudo apt-get update
    - sudo apt-get install debhelper make moreutils
    - echo deb http://us.archive.ubuntu.com/ubuntu/ trusty main | sudo sponge /etc/apt/sources.list.d/trusty.list
+   - echo 'APT::Default-Release "trusty";' | sudo sponge /etc/apt/apt.conf.d/trusty.conf
    - sudo apt-get update
-   - sudo apt-get install -t trusty dblatex asciidoc texlive-lang-german calibre calibre-bin
+   - sudo apt-get install -t trusty dblatex asciidoc texlive-lang-german calibre
 
 script:
    - make verbose
