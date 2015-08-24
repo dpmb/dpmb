@@ -18,11 +18,10 @@ Funktionsumfang variiert dabei erheblich.
 (((Debtags, Schlagworte anzeigen)))
 (((Debtags, Suche anhand von Schlagworten)))
 Das Herzstück auf der _Kommandozeile_ bildet das Paket 'debtags'
-{empty}footnote:[http://packages.debian.org/de/stable/debtags]. Dieses
-beinhaltet die Programme `debtags`, `debtags-fetch` und
-`debtags-submit-patch`. Ersteres zeigt Ihnen die bereits vergebenen
-Schlagworte für ein Paket an und ermöglicht Ihnen anhand der Schlagworte
-in der Paketdatenbank eine Suche (siehe dazu
+<<Debian-Paket-debtags>>. Dieses beinhaltet die Programme `debtags`,
+`debtags-fetch` und `debtags-submit-patch`. Ersteres zeigt Ihnen die
+bereits vergebenen Schlagworte für ein Paket an und ermöglicht Ihnen
+anhand der Schlagworte in der Paketdatenbank eine Suche (siehe dazu
 <<suche-anhand-der-schlagworte>>). Mit den anderen beiden Programmen
 stöbern Sie im gesamten Vokabular (``Schlagwortschatz''), nehmen darin
 Veränderungen vor und laden ihre Änderungen zur zentralen
