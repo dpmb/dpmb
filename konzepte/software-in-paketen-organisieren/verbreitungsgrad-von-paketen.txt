@@ -39,14 +39,14 @@ Chance, auf die ersten Installationsimages zu gelangen.
 (((Debianpaket, popularity-contest)))
 (((Nutzungsgrad von Paketen)))
 (((Popcon)))
-Grundlage für die erfaßten Daten ist das Projekt Popcon – der 'Debian
+Grundlage für die erfassten Daten ist das Projekt Popcon – der 'Debian
 Popularity Contest'{empty}footnote:[http://popcon.debian.org/]. Die
 Benutzung ist freiwillig und über dessen Teilnahme entscheiden Sie als
 Benutzer selbst. Voraussetzung dafür ist die Installation des Paketes
 'popularity-contest' und dessen Aktivierung.
 
 Danach wird in regelmäßigen Abständen (wöchentlich) der Softwarebestand
-(d.h. die installierten Pakete) erfaßt, an das Popcon-Projekt übertragen
+(d.h. die installierten Pakete) erfasst, an das Popcon-Projekt übertragen
 und danach anonymisiert ausgewertet. Über die Projektwebseite erfolgt
 eine tabellarische Übersicht und eine graphische Auswertung.
 <<fig.popcon-nginx>> zeigt beispielhaft das Ergebnis für das Paket

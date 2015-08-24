@@ -10,7 +10,7 @@
 
 - [[[alien]]] Joey Hess: Projektseite zu 'alien', http://joeyh.name/code/alien/
 
-//- [[[Allbery-Debian-Popularity]]] Debian and popularity, Blog-Posting von Russ Allbery, http://www.eyrie.org/~eagle/journal/2012-01/004.html
+- [[[Allbery-Debian-Popularity]]] Debian and popularity, Blog-Posting von Russ Allbery, http://www.eyrie.org/~eagle/journal/2012-01/004.html
 
 // - [[[Aoki-Debian-Referenz]]] Osamu Aoki: Debian Referenz, deutsche Übersetzung, http://www.debian.org/doc/manuals/debian-reference/index.de.html
 
@@ -66,7 +66,7 @@
 
 - [[[Arch-Linux-pacapt]]] `pacapt` auf GitHub: https://github.com/icy/pacapt
 
-//- [[[AsciiDoc]]] AsciiDoc, Text-basierte Dokumenten-Generierung, http://www.methods.co.nz/asciidoc/
+- [[[AsciiDoc]]] AsciiDoc, Text-basierte Dokumenten-Generierung, http://www.methods.co.nz/asciidoc/
 
 - [[[awk]]] Al Aho, Brian Kernighan, und Peter Weinberger: The AWK Programming Language, Addison-Wesley, 1988, ISBN 0-201-07981-X
 
@@ -76,7 +76,7 @@
 
 - [[[BackTrack]]] BackTrack, http://www.backtrack-linux.org/
 
-// - [[[Bailey-Maximum-RPM]]] Edward C. Bailey: Maximum RPM. Taking the Red Hat Package Manager to the Limit, Red Hat Inc., 2000, ISBN 1-888172-78-9, http://www.rpm.org/max-rpm/
+- [[[Bailey-Maximum-RPM]]] Edward C. Bailey: Maximum RPM. Taking the Red Hat Package Manager to the Limit, Red Hat Inc., 2000, ISBN 1-888172-78-9, http://www.rpm.org/max-rpm/
 
 - [[[Beckert-Aptitude-Textmodus]]], Axel Beckert: Aptitude. Pakete komfortabel im Text-Modus verwalten, Vortrag im Rahmen des Linuxday Dornbirn, November 2013, http://fileshare.lugv.at/public/vortraege2013/linuxday/aptitude-linuxday.html
 
@@ -111,6 +111,9 @@
 - [[[CLT]]] Chemnitzer Linux-Tage, http://chemnitzer.linux-tage.de/
 
 - [[[Communtu]]] Webseite des Communtu-Projekts, http://de.communtu.org/
+
+- [[[CreativeCommons]]] Creative Commons Namensnennung -- Weitergabe
+  unter gleichen Bedingungen 4.0 International Lizenz, http://creativecommons.org/licenses/by-sa/4.0/
 
 - [[[Cupt-Tutorial]]] Cupt Tutorial, http://people.debian.org/~jackyf/cupt2/tutorial.html
 
@@ -169,7 +172,7 @@
 
 - [[[Debian-Developers-Reference]]] Developer's Reference Team: Debian Developer's Reference, deutsche Übersetzung, http://www.debian.org/doc/manuals/developers-reference/index.html
 
-//- [[[Debian-Donations]]] Spenden an Debian, http://www.debian.org/donations
+- [[[Debian-Donations]]] Spenden an Debian, http://www.debian.org/donations
 
 - [[[Debian-History]]] Debian Documentation Team: A Brief History of Debian, Chapter 3, Debian Releases, http://www.debian.org/doc/manuals/project-history/ch-releases.de.html
 
@@ -381,13 +384,13 @@
 
 - [[[Debian-Wiki-ARM-EABI-Port]]] Debian Wiki: ARM EABI Port, http://wiki.debian.org/ArmPorts
 
-//- [[[Debian-Wiki-chroot]]] `chroot` (deutschsprachig) im Debian Wiki, http://wiki.debian.org/de/chroot
+- [[[Debian-Wiki-chroot]]] `chroot` (deutschsprachig) im Debian Wiki, http://wiki.debian.org/de/chroot
 
 - [[[Debian-Wiki-cupt]]] Debian Wiki: Eintrag zu `cupt`, https://wiki.debian.org/Cupt
 
-//- [[[Debian-Wiki-Debian-Entwickler]]] Debian Wiki: Wie werde ich ein Debian-Entwickler?, http://wiki.debian.org/DebianDeveloper
+- [[[Debian-Wiki-Debian-Entwickler]]] Debian Wiki: Wie werde ich ein Debian-Entwickler?, http://wiki.debian.org/DebianDeveloper
 
-// - [[[Debian-Wiki-FHS]]] Filesystem Hierarchy Standard (FHS) im Debian Wiki, http://wiki.debian.org/FilesystemHierarchyStandard
+- [[[Debian-Wiki-FHS]]] Filesystem Hierarchy Standard (FHS) im Debian Wiki, http://wiki.debian.org/FilesystemHierarchyStandard
 
 - [[[Debian-Wiki-Debian-GNUHurd]]] Wiki zu Debian GNU/Hurd, https://wiki.debian.org/Debian_GNU/Hurd
 
@@ -421,6 +424,8 @@
 
 - [[[dinstall-status]]] dinstall Status, https://ftp-master.debian.org/dinstall.status
 
+- [[[dpmb-github]]] Debian Package Management Book, GitHub-Repository, https://github.com/dpmb
+
 - [[[Drilling-APT-Pinning-LinuxUser]]] Thomas Drilling: Festgenagelt. Tricks zum Mischen von Debian-Releases, LinuxUser 06/2012, LinuxNewMedia AG, München, 2012, S. 35ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2012/06/Tricks-zum-Mischen-von-Debian-Releases
 
 - [[[Drilling-Checkinstall-LinuxUser]]] Thomas Drilling: Gut geschnürt. Paketbau in Eigenregie mit Checkinstall, LinuxUser 06/2012, LinuxNewMedia AG, München, 2012, S. 38ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2012/06/Paketbau-in-Eigenregie-mit-Checkinstall
@@ -431,11 +436,11 @@
 
 - [[[Emdebian]]] Debian für Embedded Devices, http://www.emdebian.org/
 
-//- [[[FHS-Linux-Foundation]]] Filesystem Hierarchy Standard (FHS), Linux Foundation, https://wiki.linuxfoundation.org/en/FHS
+- [[[FHS-Linux-Foundation]]] Filesystem Hierarchy Standard (FHS), Linux Foundation, https://wiki.linuxfoundation.org/en/FHS
 
 - [[[Finkproject]]] Fink-Projekt, http://www.finkproject.org/
 
-// - [[[Foster-Johnson-RPM-Guide]]] Eric Foster-Johnson, Stuart Ellis und Ben Cotton: RPM Guide, 2005/2011, Fedora Project Contributors, Edition 0, http://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/RPM_Guide/index.html
+- [[[Foster-Johnson-RPM-Guide]]] Eric Foster-Johnson, Stuart Ellis und Ben Cotton: RPM Guide, 2005/2011, Fedora Project Contributors, Edition 0, http://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/RPM_Guide/index.html
 
 - [[[FreeBSD]]] FreeBSD-Projekt, http://www.freebsd.org/
 
@@ -445,7 +450,11 @@
 
 - [[[geoiptool]]] Geo IP Tool, http://www.geoiptool.com/
 
-//- [[[GNU-Linux-Distribution-Timeline]]] GNU Linux Distribution Timeline, http://futurist.se/gldt
+- [[[github-issue]]] Issue auf GitHub, https://github.com/dpmb/dpmb/issues/new 
+
+- [[[github-pull-request]]] Pull-Request mitsamt Patch auf GitHub, https://github.com/dpmb/dpmb/compare
+
+- [[[GNU-Linux-Distribution-Timeline]]] GNU Linux Distribution Timeline, http://futurist.se/gldt
 
 - [[[Graphviz]]] Graphviz -- Graph Visualization Software, http://www.graphviz.org/
 
@@ -455,7 +464,7 @@
 
 - [[[Hackerfunk]]] Hackerfunk Zürich, Folge 65, Fachliteratur Schreiben, http://www.hackerfunk.ch/?id=127
 
-//- [[[Heinlein-LPIC-1]]] Peer Heinlein: LPIC-1. Vorbereitung auf die Prüfung des Linux Professional Institute, OpenSource Press, 5. Auflage, ISBN 978-3-95539-012-9, deutsch, 501 Seiten, http://www.opensourcepress.de/de/produkte/LPIC-1/452/978-3-95539-012-9
+- [[[Heinlein-LPIC-1]]] Peer Heinlein: LPIC-1. Vorbereitung auf die Prüfung des Linux Professional Institute, OpenSource Press, 5. Auflage, ISBN 978-3-95539-012-9, deutsch, 501 Seiten, http://www.opensourcepress.de/de/produkte/LPIC-1/452/978-3-95539-012-9
 
 - [[[Hertzog-Mas-Debian-Administrators-Handbook]]] Raphael Hertzog, Roland Mas: The Debian Administrator's Handbook, 2012, ISBN 979-10-91414-00-5, http://debian-handbook.info/
 
@@ -519,6 +528,8 @@
 - [[[localepurge]]] 'localepurge', Projektseite im Linux Wiki, http://linuxwiki.de/localepurge
 
 - [[[Loschwitz-Sourceformat]]] Martin Loschwitz: Zusammenpacken! Das neue Sourceformat für Debian-Pakete, Linux-Magazin 06/2011, http://www.linux-magazin.de/Ausgaben/2011/06/Debian-Src-3.0
+
+- [[[lpic-101]]] Linux Professional Institute, Unterlagen für LPIC 101, https://www.lpi.org/study-resources/lpic-1-101-exam-objectives/
 
 - [[[lug.berlin]]] Das Berliner Community-Portal lug.berlin, http://lug.berlin/
 

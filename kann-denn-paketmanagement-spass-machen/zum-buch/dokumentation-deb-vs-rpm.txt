@@ -17,17 +17,11 @@ mangelt es: So liegt trotz des hohen Nutzungsgrades beispielsweise die
 // Schlagworte für den Index
 (((RPM,Dokumentation)))
 Im Vergleich steht das Paketformat RPM etwas besser da. In seinem Buch
-``Maximum RPM''{empty}footnote:[Edward C. Bailey: Maximum RPM. Taking
-the Red Hat Package Manager to the Limit, Red Hat Inc., 2000, ISBN
-1-888172-78-9, http://www.rpm.org/max-rpm/] hat Edward C. Bailey im Jahr
+``Maximum RPM'' <<Bailey-Maximum-RPM>> hat Edward C. Bailey im Jahr
 2000 die Regieanweisungen für den Umgang mit diesem Format
 veröffentlicht. Aktueller sind der ``RPM Guide'' des
-Fedora-Projekts{empty}footnote:[Eric Foster-Johnson, Stuart Ellis und
-Ben Cotton: RPM Guide, 2005/2011, Fedora Project Contributors, Edition
-0,
-http://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/RPM_Guide/index.html]
-und weiterführende Dokumentation auf der
-`rpm`-Projektseite{empty}footnote:[http://www.rpm.org/wiki/Docs].
+Fedora-Projekts <<Foster-Johnson-RPM-Guide>> und weiterführende
+Dokumentationen auf der `rpm`-Projektseite <<RPM-Webseite>>.
 
 Ein vergleichbares Buch zur Debian-basierten Paketverwaltung fehlte
 bislang. Viele hervorragende Kompendien (siehe dazu <<weitere-buecher>>)

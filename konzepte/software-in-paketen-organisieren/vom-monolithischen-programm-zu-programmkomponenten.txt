@@ -37,7 +37,7 @@ bereitgestellt wird.
 (((Softwarekomponenten, Zerlegung in Pakete)))
 Während zu Beginn der Informationsverarbeitung noch eine Tontafel, ein
 Holzstab mit Einkerbungen oder auch nur ein Lochstreifen zur Erfassung
-einer Folge von Anweisungen ausreichte, paßt heutiger Programmcode nur
+einer Folge von Anweisungen ausreichte, passt heutiger Programmcode nur
 noch selten auf eine einzige Bildschirmseite{empty}footnote:[Dr.
 Friedrich Naumann: Vom Abakus zum Internet: die Geschichte der
 Informatik. Darmstadt, Primus-Verlag, 2001, ISBN 3-89678-224-X]. Ein

@@ -85,7 +85,7 @@ experimental::
 Dies ist der einzige Entwicklungsstand, der keine alleinstehende
 Veröffentlichung ist, sondern ein nur ein Zusatz-Repository. Es fungiert als Zusatz
 zu _unstable_ und beinhaltet Pakete, bei denen der Paketbetreuer davon
-ausgeht, daß sie noch und ggf. sogar grobe Fehler beinhalten.
+ausgeht, dass sie noch und ggf. sogar grobe Fehler beinhalten.
 _experimental_ wird genutzt, um Pakete im größeren Umfeld zu testen,
 bevor diese nach _unstable_ hochgeladen werden.
 
@@ -229,11 +229,11 @@ Bedingungen erfüllt sind:
   durchaus üblich, daß die Dringlichkeit auf ``hoch'' gesetzt wird und
   damit nur 2 Tage beträgt.
 
-* Das Paket muß auf allen Architekturen, auf denen es gebaut wird, in
+* Das Paket muss auf allen Architekturen, auf denen es gebaut wird, in
   der aktuellsten Version verfügbar sein.
 
-* Das Paket muß auf allen Architekturen bereitstehen, auf denen es
-  vorher bereits gebaut wurde. Für Ausnahmen muß zuerst das alte
+* Das Paket muss auf allen Architekturen bereitstehen, auf denen es
+  vorher bereits gebaut wurde. Für Ausnahmen muss zuerst das alte
   Paket aus dem Archiv manuell entfernt werden.
 
 Das Debian-Release-Team kann allerdings diese Bedingungen individuell
@@ -247,7 +247,7 @@ Zu einem bestimmten Zeitpunkt im Entwicklungszyklus einer neuen
 stabilen Veröffentlichung friert das Release-Team die
 _testing_-Veröffentlichung ein – auch genannt _Freeze_ (engl. für
 Einfrieren). Ab diesem Moment wandern keine Pakete mehr automatisch von
-_unstable_ nach _testing_ und das Debian-Release-Team muß jeden
+_unstable_ nach _testing_ und das Debian-Release-Team muss jeden
 einzelnen, weiteren Übergang eines Paketes explizit abnicken. Je länger
 der Freeze andauert, desto schärfer werden die Bedingungen, unter denen
 das Debian-Release-Team einen Übergang nach _testing_ akzeptiert. Im
@@ -281,7 +281,7 @@ betreffenden Paketes von einer Paketliste in eine andere umgetragen. Das
 Paket selbst liegt immer noch an gleicher Stelle und nur einmal im
 sogenannten Paketpool.
 
-So kann es vorkommen, daß ein Paket, welches nur selten aktualisiert
+So kann es vorkommen, dass ein Paket, welches nur selten aktualisiert
 wird, in allen aktuellen Veröffentlichungen in der gleichen Version
 vorkommt und dafür auch nur einmal auf jedem Spiegel des
 Debian-APT-Archivs liegt. Welches Paket dann aus den verschiedenen

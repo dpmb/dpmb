@@ -26,9 +26,8 @@ Nachschlagewerk zur Paketverwaltung mit `dpkg`, APT und `aptitude`
 erhielt also ausreichend Nahrung, zumal auch die an recht prominenter
 Stelle verlinkte Online-Dokumentation zu `aptitude` veraltet war (Stand:
 2008). Auf Axels Initiative wurde sie aber mittlerweile auf den neuesten
-Stand gebracht und steht seit August 2013 wieder in sämtliche
-verfügbaren Übersetzungen zur
-Verfügung.{empty}footnote:[http://aptitude.alioth.debian.org/doc/]
+Stand gebracht und steht seit August 2013 wieder in sämtlichen
+bisherigen Übersetzungen zur Verfügung <<aptitude-dokumentation>>.
 
 // Schlagworte für den Index
 (((aptitude,Dokumentationspakete)))
@@ -40,11 +39,9 @@ ein.
 
 Bei unserer Arbeit am Buch entdeckten wir zahlreiche Lücken in den
 Programmbeschreibungen, den Manpages und den beigefügten,
-weiterführenden
-Dokumentation{empty}footnote:[https://bugs.debian.org/cgi-bin/pkgreport.cgi?tag=found-during-book-writing;users=abe%40debian.org].
+weiterführenden Dokumentationen <<bugs-found-during-book-writing>>.
 Dabei wurde uns auch bewusst, welche Bedeutung dem persönlichen
-Erfahrungsschatz und insbesondere dem passiven Wissen zukommen. Wir
-haben uns bemüht, davon möglichst viel in dieses Buch einfließen zu
-lassen.
+Erfahrungsschatz und insbesondere dem passiven Wissen zukommt. Wir haben
+uns bemüht, davon möglichst viel in dieses Buch einfließen zu lassen.
 
 // Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/dokumentation-zu-aptitude.txt

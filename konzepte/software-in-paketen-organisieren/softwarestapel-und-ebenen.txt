@@ -33,7 +33,7 @@ Ersteres entspricht dem Kommandozeilenaufruf `dpkg -i Paketdatei`, das
 zweite hingegen `dpkg -r Paketdatei` (siehe <<pakete-installieren>> und
 <<pakete-deinstallieren>>).
 
-Außerdem verifiziert es dabei, daß alle Abhängigkeiten zu anderen
+Außerdem verifiziert es dabei, dass alle Abhängigkeiten zu anderen
 Paketen erfüllt sind. Ist dies nicht der Fall, bricht es die jeweilige
 Aktion ab.
 
@@ -100,22 +100,21 @@ steuern `dpkg` und die o.g. Bibliotheken bei.
 (((Yellowdog Updater Modified (YUM))))
 (((Zypper)))
 Bei `rpm`-basierten Distributionen RedHat, Fedora und CentOS heißen die
-Werkzeuge Yellowdog Updater, Modified
-(YUM){empty}footnote:[http://yum.baseurl.org/], bei SuSE und openSUSE
-Zypper{empty}footnote:[http://de.opensuse.org/Zypper] und Yet another
-Setup Tool (YaST) sowie bei Mageia
-`urpmi`{empty}footnote:[https://wiki.mageia.org/de/URPMI].
+Werkzeuge Yellowdog Updater, Modified (YUM) <<YUM>>, bei SuSE und
+openSUSE Zypper <<Zypper>> und Yet another Setup Tool (YaST) sowie bei
+Mageia `urpmi` <<Mageia-urpmi>>.
 
 ==== Werkzeuge, die verschiedene Paketformate unterstützen ====
 
 // Stichworte für den Index
 (((smartpm)))
-Darüberhinaus gibt es Programme, die mit mehreren unterschiedlichen
+Darüber hinaus gibt es Programme, die mit mehreren unterschiedlichen
 Paketformaten umgehen können. Dazu zählen der Smart Package Manager
 (siehe <<gui-smartpm>>) und PackageKit (siehe <<gui-packagekit>>).
 SmartPM kann die Paketformate `deb`, `rpm` und `tar.gz` (Slackware)
-verarbeiten sowie die Verwaltungen APT, YUM und `urpmi` ansprechen.
-Weitere Informationen dazu finden Sie unter Frontends für das
-Paketmanagement in <<frontends-fuer-das-paketmanagement>>.
+verarbeiten sowie die bereits oben genannten Verwaltungen APT, YUM und
+`urpmi` ansprechen. Weitere Informationen dazu finden Sie unter
+Frontends für das Paketmanagement in
+<<frontends-fuer-das-paketmanagement>>.
 
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/softwarestapel-und-ebenen.txt

@@ -35,7 +35,9 @@ automatisch anstößt. Mehr Informationen dazu finden Sie in
 <<aufbau-und-format>>.
 
 // Stichworte für den Index
+(((Paketbeschreibung)))
 (((Paketmanagement, Auflösung von Paketabhängigkeiten)))
+(((Paketmanagement, Paketmaintainer)))
 Die Distribution selbst bzw. die verantwortlichen Paketmaintainer
 kümmern sich bei der Übersetzung und Bereitstellung der Pakete darum,
 dass die nachfolgende Zusammenstellung der Paketliste harmonisch ist und
@@ -44,15 +46,11 @@ abgestimmt sind. Jedes `deb`-Paket verfügt über eine Beschreibung in
 Textform sowie eine Liste der Pakete, von denen es abhängt – bei Bedarf
 sogar samt Versionsangabe.
 
-//////////
-//Done:fho
-//Dr. Markus Wirtz, 2015-06-10 15:03
-//bis HIER
-//////////
-
 // Stichworte für den Index
 (((Paketmanagement, Auflösung von Paketaktualisierung)))
 (((Veröffentlichung, Debian Backports)))
+(((Versionswechsel, Aktualisierung)))
+(((Versionswechsel, Downgrade)))
 Die Aktualisierung einer bereits bestehenden, installierten
 Softwareversion durch eine andere Version beinhaltet i.d.R. eine
 fehlerbereinigte oder erweiterte Variante des Programms. Das kann eine
@@ -60,7 +58,7 @@ individuelle Sicherheitsaktualisierung sein, das Installieren eines
 sogenannten 'Debian Backports', d.h. eine neuere Paketversion wird für
 eine vorherige Veröffentlichung zurückportiert, aber auch im Rahmen
 einer Aktualisierung auf eine neue Veröffentlichung der Distribution
-(siehe <<veroeffentlichungen>>) stattfinden. Daß letzteres überhaupt
+(siehe <<veroeffentlichungen>>) stattfinden. Dass letzteres überhaupt
 möglich ist, ist noch lange nicht bei allen Distributionen
 selbstverständlich. Lange Zeit war dies ein Alleinstellungsmerkmal von
 Debian und auch heute noch bieten einige Debian-Derivate diese
@@ -83,9 +81,9 @@ Beispiel von `dpkg` und die ausführliche Übersicht auf der Basis von
 `apt-cache`. Ersteres listet alle installierten Pakete zur
 Textverarbeitung Abiword auf. Ersichtlich ist der Installationsstatus
 (erste Spalte), der Paketname und die Paketversion (zweite und dritte
-Spalte) sowie eine Paketbeschreibung (vierte Spalte){empty}footnote:[Auf
-`dpkg` gehen wir en detail in den beiden Abschnitten Softwarestapel und Ebenen
-(<<softwarestapel-und-ebenen>>) und dpkg (<<dpkg>>) ein]. 
+Spalte) sowie eine Paketbeschreibung (vierte Spalte). Auf das Werkzeug
+`dpkg` gehen wir en detail in den beiden Abschnitten Softwarestapel und
+Ebenen (<<softwarestapel-und-ebenen>>) und dpkg (<<dpkg>>) ein.
 
 //.Ausgabe aller derzeit installierten Pakete für Abiword mit `dpkg` 
 ----
@@ -106,6 +104,8 @@ $
 // Stichworte für den Index
 (((apt-cache, showpkg)))
 (((Paketcache)))
+(((Paketabhängigkeiten, Auflistung)))
+(((Paketsignaturen, Auflistung)))
 In Beispiel zwei nutzen wir `apt-cache` mit dem Parameter `showpkg`, um
 weitere Details zum Paket 'abiword-common' zu erhalten. Neben der
 Versionsnummer sind auch die Paketquelle, die Paketsignaturen sowie die

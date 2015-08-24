@@ -22,11 +22,11 @@ Weise bei der Installation eines Paketes widerspiegeln.
 automatisch installiert (_automatic_):: 
 das Paket wurde automatisch installiert, i.d.R. als direkte Abhängigkeit
 zu einem anderen Paket (siehe <<paketabhaengigkeiten-anzeigen>>). Diese
-Markierung veranlaßt, daß dieses Paket entfernt wird, wenn keine
+Markierung veranlasst, dass dieses Paket entfernt wird, wenn keine
 weiteren, manuell installierten Pakete von diesem abhängen.
 
 manuell installiert (_manual_):: 
-das Paket wurde manuell, d.h. explizit installiert. Das verhindert, daß
+das Paket wurde manuell, d.h. explizit installiert. Das verhindert, dass
 dieses Paket automatisch mit entfernt wird, wenn kein weiteres Paket von
 diesem abhängt.
 
@@ -99,7 +99,7 @@ des installierten und gehaltenen Paketes 'wireshark'.
 
 Auf der Kommandozeile verwenden Sie hierfür `aptitude` mit dem
 Unterkommando `show` gefolgt vom Paketnamen. In den Zeilen 2 und 3 der
-nachfolgenden Ausgabe erfahren Sie einerseits, daß 'wireshark'
+nachfolgenden Ausgabe erfahren Sie einerseits, dass 'wireshark'
 zurückgehalten wird und andererseits nicht automatisch installiert
 wurde.
 
@@ -218,8 +218,8 @@ diese Aufgabe der Package Dependency Solver (siehe <<aptitude>>).
 // Stichworte für den Index
 (((Paketflags, explizit setzen)))
 (((Paketflags, explizit entfernen)))
-Setzen oder Entfernen Sie bewußt ein Paketflag und legen somit eine
-Version explizit fest, nehmen Sie Einfluß auf den Zustand Ihres Systems.
+Setzen oder Entfernen Sie bewusst ein Paketflag und legen somit eine
+Version explizit fest, nehmen Sie Einfluss auf den Zustand Ihres Systems.
 Wobei Ihnen das von Nutzen sein kann, erklären wir unter Ausgewählte
 Pakete nicht aktualisieren (<<ausgewaehlte-pakete-nicht-aktualisieren>>)
 ausführlicher.

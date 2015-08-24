@@ -18,13 +18,13 @@ administrativen Aufgaben vor Ort betreut. Viele Spiegelserver werden
 automatisch über neue Pakete informiert und abgeglichen und stellen
 somit stets aktuelle Pakete bereit.
 
-Mit dieser dezentralen Verteilung ist gewährleistet, daß Sie bei einem
+Mit dieser dezentralen Verteilung ist gewährleistet, dass Sie bei einem
 Ausfall oder der Nichtverfügbarkeit eines Paketmirrors problemlos auf
 eine Alternative zurückgreifen können, auch wenn diese netztechnisch
 etwas weiter von ihrem aktuellen Standort entfernt ist. Für die
-Infrastruktur des Debian-Projekts heißt das außerdem, daß sich die
+Infrastruktur des Debian-Projekts heißt das außerdem, dass sich die
 Anfrage- oder Netzlast auf unterschiedliche Mirrors und deren Standorte
-verteilt. Für Sie bedeutet das konkret, daß sich neben der Verringerung
+verteilt. Für Sie bedeutet das konkret, dass sich neben der Verringerung
 eines Ausfalls insbesondere die Bezugszeiten für Debianpakete erheblich
 verringern, da Sie nicht auf einen einzigen Spiegelserver angewiesen
 sind. Verwenden Sie einen Spiegelserver in ihrer Nähe, merken Sie das
@@ -70,11 +70,11 @@ Debian-Paketmirrors für Deutschland an der TU Dresden.
 // Indexeinträge
 (((Paketmirror, sekundäre)))
 _Sekundäre Mirrors_ unterscheiden sich dahingehend von primären Mirrors,
-daß nicht garantiert ist, daß das volle Spektrum an Debianpaketen und
+dass nicht garantiert ist, dass das volle Spektrum an Debianpaketen und
 Architekturen (siehe <<debian-architekturen>>) geboten wird. Hintergrund
 kann bspw. eine Begrenzung des verfügbaren Speicherplatzes auf dem
-Server sein. Das bedeutet jedoch nicht zwangsläufig, daß dieser Mirror
-schlechter erreichbar sein muß. Im deutschsprachigen Raum betreiben
+Server sein. Das bedeutet jedoch nicht zwangsläufig, dass dieser Mirror
+schlechter erreichbar sein muss. Im deutschsprachigen Raum betreiben
 entsprechende Paketmirror bspw. die Uni Erlangen, die TU Graz und
 SWITCH, das Schweizer Hochleistungsnetzwerk für die
 Wissenschaft{empty}footnote:[http://www.switch.ch/].
@@ -165,7 +165,7 @@ Darüberhinaus bietet
 `apt-get.org`{empty}footnote:[http://www.apt-get.org/] die Möglichkeit
 zur Recherche nach einem möglichen inoffiziellen Repository (siehe
 <<fig.apt-get-org>>). Bitte beachten Sie bei der Auswahl der Paketquelle
-über diesen Dienst, daß nicht jedes der angezeigten Repositories Pakete
+über diesen Dienst, dass nicht jedes der angezeigten Repositories Pakete
 für alle Architekturen (siehe <<debian-architekturen>>) und
 Veröffentlichungen (siehe <<veroeffentlichungen>>) bereithält.
 

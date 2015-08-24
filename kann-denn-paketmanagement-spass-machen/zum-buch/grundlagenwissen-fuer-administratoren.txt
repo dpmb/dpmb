@@ -21,18 +21,14 @@ Alltag ebenso unverzichtbar.
 Unabdingbar ist die Auseinandersetzung mit dem Paketmanagement für
 Zertifizierungen. Das Linux Professional Institute (LPI) widmet dem
 Thema in der Zertifikatsstufe LPIC-1 einen eigenen Schwerpunkt mit hoher
-Gewichtung.{empty}footnote:[https://www.lpi.org/study-resources/lpic-1-101-exam-objectives/]
+Gewichtung <<lpic-101>>.
 
 [TIP]
 .Material für Ihre LPIC-Prüfungen
 ======
 Ihre Vorbereitung auf die anspruchsvollen Tests des LPI ergänzt das Buch
 ``LPIC-1. Vorbereitung auf die Prüfungen des Linux Professional
-Institute'' von Peer Heinlein.{empty}footnote:[Open Source Press, 5.
-Auflage, ISBN 978-3-95539-012-9, deutsch, 501 Seiten,
-http://www.opensourcepress.de/de/produkte/LPIC-1/452/978-3-95539-012-9
-oder mittlerweile erschienene Neuauflagen zu den aktualisierten
-Prüfungsfragen des LPI.]
+Institute'' von Peer Heinlein <<Heinlein-LPIC-1>>.
 ======
 
 // Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/grundlagenwissen-fuer-administratoren.txt

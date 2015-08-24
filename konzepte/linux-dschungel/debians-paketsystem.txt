@@ -13,15 +13,14 @@
 (((Linux-Distribution, Paketabhängigkeiten)))
 (((Linux-Distribution, Paketierung)))
 Aus diesen Erfahrungen heraus startete 1993 das Debian-Projekt unter Ian
-Murdock{empty}footnote:[http://www.debian.org/doc/manuals/project-history/ch-releases.de.html]
-mit einer revolutionären Idee: dem Bereitstellen kompilierter,
-vorkonfigurierter und sauber aufeinander abgestimmter Softwarepakete.
-Es folgte die Entwicklung von `dpkg` ('d' für 'Debian' und 'pkg' für
-'Package'), das bis heute ein robuster Grundstein des Systems geblieben
-ist. Das verwendete `deb`-Paketformat und die dazugehörigen Werkzeuge
-wurden später von etlichen Linux-Distributionen übernommen.
-Ausführlicher beleuchten wir diesen Aspekt in
-<<welche-unix-artigen-betriebssysteme-verwenden-das>>.
+Murdock <<Debian-History>> mit einer revolutionären Idee: dem
+Bereitstellen kompilierter, vorkonfigurierter und sauber aufeinander
+abgestimmter Softwarepakete. Es folgte die Entwicklung von `dpkg` ('d'
+für 'Debian' und 'pkg' für 'Package'), welches bis heute ein robuster
+Grundstein des Systems geblieben ist. Das verwendete `deb`-Paketformat
+und die dazugehörigen Werkzeuge wurden später von etlichen
+Linux-Distributionen übernommen. Ausführlicher beleuchten wir diesen
+Aspekt in <<welche-unix-artigen-betriebssysteme-verwenden-das>>.
 
 Bald aber stieß das Werkzeug `dpkg` an Grenzen: Es installiert lediglich
 `deb`-Pakete, löst aber die Abhängigkeiten zwischen einzelnen Paketen
@@ -41,7 +40,7 @@ beziehen.
 (((Synaptic)))
 (((tasksel)))
 (((xara)))
-Daraufhin begann die Entwicklung von `dselect`, das aus dem
+Daraufhin begann die Entwicklung von `dselect`, welches aus dem
 Quellcode von `dpkg` gebaut wird, aber als eigenständiges Programm
 gilt. Später folgten `console-apt` (inzwischen aufgegeben) und
 `tasksel` (siehe <<tasksel>>), ab 1998 APT (_Advanced Packaging Tool_)
@@ -60,8 +59,8 @@ Heute stehen weitere textbasierte und graphische Benutzeroberflächen für
 `dpkg` zur Verfügung. Neben `aptitude` sind das Synaptic (siehe
 <<gui-synaptic>>), PackageKit (siehe <<gui-packagekit>>) – als Basis für
 Gnome-PackageKit und Apper bei KDE – sowie PackageSearch,
-Xara{empty}footnote:[http://packages.debian.org/de/stable/xara-gtk] und
-SmartPM (siehe <<gui-smartpm>>). Einen genaueren Blick werfen wir auf
-diese Programme in <<werkzeuge-zur-paketverwaltung>>.
+Xara <<Debian-Paket-xara-gtk>> und SmartPM (siehe <<gui-smartpm>>).
+Einen genaueren Blick werfen wir auf diese Programme in
+<<werkzeuge-zur-paketverwaltung>>.
 
 // Datei (Ende): ./konzepte/linux-dschungel/debians-paketsystem.txt
