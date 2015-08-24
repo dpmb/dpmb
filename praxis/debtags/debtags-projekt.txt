@@ -17,9 +17,8 @@ begegnen, nahm sich der italienische Debian-Entwickler Enrico Zini im
 Jahre 2003 des Problems an. Er orientierte sich dabei an der Art und
 Weise, wie Bücher und Dokumente von je her anhand von Schlüsselworten
 und Kategorien indexiert und klassifiziert werden. Zur
-Debian-Entwicklerkonferenz DebConf im Jahre 2005 in
-Helsinki{empty}footnote:[http://debconf5.debconf.org/] stellte er sein
-Projekt 'Debtags'{empty}footnote:[http://debtags.debian.net/] vor,
+Debian-Entwicklerkonferenz DebConf im Jahre 2005 in Helsinki
+<<DebConf5>> stellte er sein Projekt 'Debtags' <<Debian-Debtags>> vor,
 welches die Debianpakete und deren Beschreibung um geeignete Stichworte
 oder Attribute ergänzt und damit die Granularität der Suche deutlich
 erhöht.
@@ -29,8 +28,7 @@ erhöht.
 Der Projektname 'Debtags' leitet sich von den beiden Worten _Debian_ und
 _tags_ ab, wobei sich letzteres mit Schlagwort, Markierung, Stichwort,
 Etikettierung oder Attribut ins Deutsche übersetzen läßt. Enrico Zini
-pflegt dazu das gleichnamige Paket
-'debtags'{empty}footnote:[http://packages.debian.org/de/stable/debtags],
+pflegt dazu das gleichnamige Paket 'debtags' <<Debian-Paket-debtags>>,
 welches sehr schnell in den regulären Paketbestand aufgenommen wurde.
 Seit Debian 4.0 _Etch_ sind die Debtags ein regulärer Bestandteil jeder
 Paketbeschreibung.
