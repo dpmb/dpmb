@@ -11,14 +11,13 @@
 (((Debtags, Projektseite)))
 (((Debtags, Statistik)))
 (((Debtags, Vokabular)))
-Koordiniert wird Debtags über die Webseite zum
-Projekt{empty}footnote:[http://debtags.debian.net/]. Darauf finden Sie
-neben den Basisdaten eine ausführliche Dokumentation inklusive der
-Informationen zum Application Programming Interface (API) sowie zum
-genutzten Vokabular, d.h. den verwendeten Schlagworten. Weiterhin gehört
-auch eine statistische Auswertung dazu, um die Menge und die Verteilung
-der genutzten Schlagworte nachvollziehen zu
-können{empty}footnote:[http://debtags.debian.net/reports/stats/].
+Koordiniert wird Debtags über die Webseite zum Projekt
+<<Debian-Debtags>>. Darauf finden Sie neben den Basisdaten eine
+ausführliche Dokumentation inklusive der Informationen zum Application
+Programming Interface (API) sowie zum genutzten Vokabular, d.h. den
+verwendeten Schlagworten. Weiterhin gehört auch eine statistische
+Auswertung dazu, um die Menge und die Verteilung der genutzten
+Schlagworte nachvollziehen zu können <<Debian-Debtags-Statistics>>.
 
 // Schlagworte für den Index
 (((Debianpaket, debtags)))
