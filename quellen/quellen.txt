@@ -129,6 +129,8 @@
 
 - [[[DebConf]]] Debian Entwicklerkonferenz (DebConf), http://www.debconf.org/
 
+- [[[DebConf5]]] Debian Entwicklerkonferenz (DebConf) in Helsinki, http://debconf5.debconf.org/
+
 - [[[Debdelta]]] Debdelta, Pakete als Differenzen zur vorherigen Paket-Version, http://debdelta.debian.net/
 
 - [[[DebianAlternatives]]] Debian Wiki: Debian Alternatives, https://wiki.debian.org/DebianAlternatives
