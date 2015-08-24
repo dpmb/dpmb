@@ -5,7 +5,8 @@ Maintainer: Axel Beckert <abe@debian.org>
 Uploaders: Frank Hofmann <frank.hofmann@efho.de>
 Build-Depends: asciidoc,
                dblatex,
-               debhelper (>= 9)
+               debhelper (>= 9),
+               texlive-lang-german
 Standards-Version: 3.9.6
 Homepage: http://www.dpmb.org/
 Vcs-Git: git://github.com/dpmb/dpmb.git
