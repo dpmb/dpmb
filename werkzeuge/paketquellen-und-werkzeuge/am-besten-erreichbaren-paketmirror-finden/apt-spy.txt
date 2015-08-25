@@ -29,12 +29,12 @@ Dazu untersucht `apt-spy` die Paketmirrors für die angefragte Region
 bzgl. ihrer Bandbreite, Erreichbarkeit und damit indirekt zur
 Verlustrate der übertragenen Netzwerkpakete. Ohne Belang ist dabei, wie
 weit der Paketmirror netztechnisch von ihrem Standort entfernt ist. Das
-kann auch dazu führen, daß schwächere, lokale Paketmirror außen vor
+kann auch dazu führen, dass schwächere, lokale Paketmirror außen vor
 bleiben, wenn ein anderer, erreichbarer Paketmirror schneller und mit
 einer höheren Bandbreite verfügbar ist. Um einen Paketmirror einschätzen
 zu können, lädt `apt-spy` pro Spiegelserver etwa 10 MB an Daten herunter.
 Da die Liste der verfügbaren Paketmirror mehr als einhundert Einträge
-umfaßt, können Sie damit durchaus an das Limit ihrer Transferrate
+umfasst, können Sie damit durchaus an das Limit ihrer Transferrate
 stoßen (wie bei uns im Test geschehen).
 
 Im Ergebnis verringert sich die Bezugszeit von Paketen insgesamt.
@@ -171,7 +171,7 @@ deb-src ftp://ftp.uni-erlangen.de/debian/ stable main #contrib non-free
 deb http://security.debian.org/ stable/updates main
 ----
 
-Bitte beachten Sie, daß die ermittelten Paketmirror stets von ihrem
+Bitte beachten Sie, dass die ermittelten Paketmirror stets von ihrem
 aktuellen Standort und der dort vorliegenden Netzwerkanbindung abhängen.
 Führen Sie das gleiche Kommando auf ihrem Linuxsystem aus, können die
 Ergebnisse von der Ausgabe im Buch abweichen.

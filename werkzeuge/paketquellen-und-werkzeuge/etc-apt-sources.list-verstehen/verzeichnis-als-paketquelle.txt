@@ -10,7 +10,7 @@
 Pakete können Sie auch aus einem Verzeichnis ihres Debian-Systems
 integrieren. Dabei sind Sie nicht auf lokale Einträge beschränkt,
 sondern können auch auf entfernte Ressourcen zugreifen, bspw. ein NFS-
-oder SMB-Share. Voraussetzung ist allerdings, daß die angegebene
+oder SMB-Share. Voraussetzung ist allerdings, dass die angegebene
 Ressource vorab in den Verzeichnisbaum eingehängt wurde (auf engl. 
 _mounted_) und APT darauf zugreifen darf. Eine lokale Ressource geben
 Sie über das Schlüsselwort `file` an, hier am Beispiel des
@@ -25,7 +25,7 @@ deb file:/home/benutzer/debian stable main contrib non-free
 Ein Eintrag für einen externen Datenträger, bspw. eine CD, DVD oder
 Blueray, sieht ähnlich wie die vorhergehenden Beispiele aus. Nach dem
 Schlüsselwort `deb` folgt der Wert `cdrom` mit der Kennung des
-Datenträgers zur Installation. Am Schluß des Eintrags finden Sie die
+Datenträgers zur Installation. Am Schluss des Eintrags finden Sie die
 Veröffentlichung und den Distributionsbereich. Nachfolgend sehen Sie
 einen Eintrag für eine CD, auf dem Ubuntu 12.04 LTS _Precise Pangolin_
 enthalten ist:

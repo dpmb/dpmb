@@ -183,7 +183,7 @@ Veröffentlichung (siehe <<veroeffentlichungen>>) und den
 Distributionsbereich (siehe <<distributionsbereiche>>), in die das
 gefundene Paket einsortiert ist. <<fig.apt-get-org-search>> zeigt das
 Suchergebnis nach dem Paket 'libdvdcss' an, welches bei älteren
-Veröffentlichungen wie Debian 4 _Woody_, Debian 5 _Sarge_ oder auch bei
+Veröffentlichungen wie Debian 3 _Woody_, Debian 3.1 _Sarge_ oder auch bei
 _Sid_ für die drei Debian-Architekturen _all_, _i386_ und _powerpc_
 benötigt wird und hierüber zur Verfügung steht.
 

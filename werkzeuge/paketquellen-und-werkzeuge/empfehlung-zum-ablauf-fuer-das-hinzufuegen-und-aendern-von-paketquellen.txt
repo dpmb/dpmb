@@ -35,7 +35,7 @@ Anmerkungen unter Liste der verfügbaren Pakete aktualisieren in
 Distributionsupgrade, lesen Sie bitte dazu zusätzlich unter Distribution
 aktualisieren in <<distribution-aktualisieren>> nach.
 
-Mit dieser Vorgehensweise ist sichergestellt, daß die Paketverwaltung
+Mit dieser Vorgehensweise ist sichergestellt, dass die Paketverwaltung
 über ihre Veränderungen in der Liste der Paketquellen Bescheid weiß. Nun
 können Sie die Pakete aus den geänderten oder neuen Paketquellen zu
 ihrem System hinzufügen.

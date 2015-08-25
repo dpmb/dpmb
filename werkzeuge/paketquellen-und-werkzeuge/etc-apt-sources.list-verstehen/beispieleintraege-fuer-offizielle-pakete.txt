@@ -30,7 +30,7 @@ die lokale Paketdatenbank (siehe Distribution aktualisieren in
 <<distribution-aktualisieren>>).
 
 Um hingegen zusätzlich die Pakete aus weiteren Paketbereichen wie bspw.
-_contrib_ und _non-free_ zu verwenden, ändern Sie der Eintrag auf das
+_contrib_ und _non-free_ zu verwenden, ändern Sie den Eintrag auf das
 Folgende, hier wiederum mit expliziter Angabe des Aliasnamens _jessie_.
 In welcher Reihenfolge Sie die Paketbereiche angeben, spielt keine
 Rolle. Üblich ist jedoch die Abfolge anhand des Freiheitsgrades der

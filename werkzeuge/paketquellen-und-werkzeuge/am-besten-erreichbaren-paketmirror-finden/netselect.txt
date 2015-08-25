@@ -11,9 +11,9 @@
 Die beiden Programme `netselect` und `netselect-apt` überprüfen den von
 Ihnen benannten Spiegelserver anhand von mehreren Kriterien. Dazu gehört
 primär die grundsätzliche Erreichbarkeit über das Netzwerk, die Pingzeit
-– d.h. wieviel Zeit benötigt ein Netzwerkpaket vom Paketmirror zu ihrem
+– d.h. wieviel Zeit benötigt ein Netzwerkpaket vom Paketmirror zu Ihrem
 Computer – , sowie die Verlustrate der Netzwerkpakete vom Spiegelserver
-zu Ihnen. Gleichzeitig wird die Anzahl der Zwischenknoten von ihrem
+zu Ihnen. Gleichzeitig wird die Anzahl der Zwischenknoten von Ihrem
 Computer zum Spiegelserver gezählt, auch genannt 'Hops'. Bevorzugt
 werden lokale Paketmirror, was sich auch im daraus errechneten
 Zahlenwert niederschlägt. Je kleiner der ermittelte Wert ist, umso
@@ -29,8 +29,8 @@ als neue Liste der Paketquellen benutzt werden.
 [NOTE]
 .Aktualisierung der Liste der Paketquellen
 ====
-Zur Änderungen an den Paketquellen beachten Sie bitte auch unsere
-Hinweise unter `/etc/apt/sources.list` verstehen in
+Zu Änderungen an den Paketquellen beachten Sie bitte auch unsere
+Hinweise unter `/etc/apt/sources.list verstehen in`
 <<etc-apt-sources.list-verstehen>>. Wir raten Ihnen dazu, die neue Liste
 der Paketquellen zuerst lokal zu erstellen und danach manuell in das
 Verzeichnis `/etc/apt/` zu verschieben.
@@ -86,8 +86,8 @@ In der Ausgabe erscheinen die IP-Adresse bzw. der Hostname (Spalte 1),
 nachdem aufgelöst wird, die durchschnittliche Paketlaufzeit (Spalte 2),
 die Anzahl der Zwischenknoten (Spalte 3) sowie die Verlustrate der
 Pakete auf dem Transportweg (Spalte 4 bis 6). Die Angabe `ok` besagt
-dabei, daß der Paketmirror über das Netz erreichbar ist. Die Angabe
-`9999ms` für die Paketlaufzeit besagt hingegen, daß der Paketmirror zum
+dabei, dass der Paketmirror über das Netz erreichbar ist. Die Angabe
+`9999ms` für die Paketlaufzeit besagt hingegen, dass der Paketmirror zum
 Testzeitpunkt leider nicht erreichbar war.
 
 Die Werte in den runden Klammern in Spalte 6 zeigen, wie der Prozentwert
@@ -192,7 +192,7 @@ der Ausgabe und zeigen hier den Wert 73 für den Server `ftp.debian.org`.
 Die angegebene Zahl errechnet sich aus den bereits zu Beginn genannten
 Kriterien und ist vergleichbar mit einem Punktwert, hat jedoch offiziell
 keine Einheit. Je höher der Wert ist, umso schlechter ist der
-Paketmirror von ihrem aktuellen Standort im Netz zu erreichen.
+Paketmirror von Ihrem aktuellen Standort im Netz zu erreichen.
 
 Ist der Paketmirror von einer Firewall geschützt und blockiert
 UDP-Pakete, kann die Option `-I` von größerem Nutzen sein. Damit werden
@@ -238,7 +238,7 @@ _Wheezy_ oder _Sid_.
 // Stichworte für den Index
 (((netselect-apt, -o)))
 Im nachfolgenden Beispiel kommt zusätzlich die Option `-o test.list` zum
-Einsatz, was dazu führt, daß `netselect-apt` die ermittelten Paketmirror
+Einsatz, was dazu führt, dass `netselect-apt` die ermittelten Paketmirror
 in diese Datei speichert. Ohne diese Angabe überschreibt es die aktuelle
 Paketliste unter `/etc/apt/sources.list`.
 

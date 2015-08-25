@@ -16,7 +16,7 @@ ergänzt bzw. korrigiert die Einträge und überprüft diese zusätzlich auf
 Echtheit (siehe <<paketquelle-auf-echtheit-ueberpruefen>>). Fehlende
 GPG-Schlüssel trägt es dabei automatisch in ihrem lokalen Schlüsselring
 nach. Indem es die vielen Einzelschritte kombiniert, spart es Zeit und
-läßt sich darüberhinaus auch problemlos zur Automatisierung in ihre
+lässt sich darüber hinaus auch problemlos zur Automatisierung in ihre
 eigenen Skripte integrieren.
 
 // Stichworte für den Index

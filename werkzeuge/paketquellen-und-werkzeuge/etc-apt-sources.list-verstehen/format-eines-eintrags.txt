@@ -31,7 +31,7 @@ Detail in <<debian-paketformat-im-detail>> ein.
 URI:: 
 legt die Art der Installationsquelle fest. Hierbei stehen:
 * `file`: Installationsquelle ist ein Verzeichnis. Dieses kann sowohl
-lokal vorliegen als auch von extern eingebunden sein, bspw. über ein
+lokal vorliegen, als auch von extern eingebunden sein, bspw. über ein
 Netzwerkdateisystem wie AFS, NFS oder SMB
 * `cdrom`: CD, DVD oder Blueray
 * `http`: HTTP-Server

@@ -22,7 +22,7 @@ image::werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/sourc
 (((/etc/apt/sources.list,Änderungen)))
 Änderungen nehmen Sie mit Hilfe eines beliebigen Texteditors als
 Benutzer `root` vor, bspw. mittels 'vim', 'emacs' oder 'nano' (siehe
-<<fig.sources-list-nano>>). Aktivieren Sie an dieser Stelle in ihrem
+<<fig.sources-list-nano>>). Aktivieren Sie an dieser Stelle in Ihrem
 Texteditor die Syntaxhervorhebung, erfassen Sie die Struktur der
 einzelnen Einträge leichter und bemerken sofort fehlerhafte Änderungen
 durch eine entsprechende Einfärbung des Textes.
@@ -35,7 +35,7 @@ durch eine entsprechende Einfärbung des Textes.
 (((Paketquelle,ändern)))
 Sie fügen eine weitere Paketquelle hinzu, indem Sie die Liste ergänzen.
 Tragen Sie dazu in einer freien oder zusätzlichen Zeile die gewünschte
-Paketquelle nach. Um eine bereits erfaßte Paketquelle zu modifizieren,
+Paketquelle nach. Um eine bereits erfasste Paketquelle zu modifizieren,
 ändern Sie den entsprechenden Listeneintrag. Mit Hilfe des `#`-Zeichens
 zu Beginn einer Zeile kommentieren Sie den jeweiligen Eintrag aus. Eine
 Paketquelle entfernen Sie endgültig aus der Liste, indem Sie die
@@ -48,7 +48,7 @@ betreffende Zeile löschen.
 .Anzahl der Einträge
 ====
 Es gibt keine Begrenzung für die Anzahl der Einträge. Bitte beachten Sie
-aber, daß die Zeit und das Übertragungsvolumen für die Aktualisierung
+aber, dass die Zeit und das Übertragungsvolumen für die Aktualisierung
 der Paketlisten umso größer wird, je mehr Einträge vorhanden sind.
 ====
 
