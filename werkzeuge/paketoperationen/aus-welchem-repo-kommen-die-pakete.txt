@@ -155,11 +155,10 @@ $
 Wollen Sie diese Informationen nicht nur für die auf Ihrem System
 genutzten Architekturen und Veröffentlichungen sehen, sondern für alle
 Architekturen und Veröffentlichungen von Debian, so können Sie das
-Programm `rmadison` aus dem Paket
-'devscripts'{empty}footnote:[http://packages.debian.org/de/stable/devscripts]
-verwenden. Es fragt dazu per HTTP eine regelmäßig aktualisierte Quelle
-im Internet ab, d.h. Sie brauchen Internetzugriff, um `rmadison` zu
-nutzen.
+Programm `rmadison` aus dem Paket 'devscripts'
+<<Debian-Paket-devscripts>> verwenden. Es fragt dazu per HTTP eine
+regelmäßig aktualisierte Quelle im Internet ab, d.h. Sie brauchen
+Internetzugriff, um `rmadison` zu nutzen.
 
 Als Parameter erwartet `rmadison` einen oder mehrere Paketnamen, nach
 denen es dann recherchiert. Als Ergebnis sehen Sie in der linken Spalte
@@ -207,13 +206,13 @@ jedermann zu benutzen.
 (((Debianpaket, apt-show-versions)))
 (((Debianpaket, zsh)))
 (((apt-show-versions)))
-'apt-show-versions'{empty}footnote:[http://packages.debian.org/de/stable/apt-show-versions]
-ist ein Paket, welches jedoch nicht zur Standardinstallation von Debian
-zählt. Als Parameter geben Sie dem gleichnamigen Programm den Namen des
-gewünschten Pakets an, für welches Sie Informationen zu den verfügbaren
-Varianten wünschen. Das Programm ist insbesondere in gemischten
-Umgebungen interessant, d.h. wenn Pakete aus verschiedenen
-Veröffentlichungen gleichzeitig verwendet werden.
+'apt-show-versions' <<Debian-Paket-apt-show-versions>> ist ein Paket,
+welches jedoch nicht zur Standardinstallation von Debian zählt. Als
+Parameter geben Sie dem gleichnamigen Programm den Namen des gewünschten
+Pakets an, für welches Sie Informationen zu den verfügbaren Varianten
+wünschen. Das Programm ist insbesondere in gemischten Umgebungen
+interessant, d.h. wenn Pakete aus verschiedenen Veröffentlichungen
+gleichzeitig verwendet werden.
 
 Nachfolgendes Beispiel zeigt die Ausgabe für das Paket 'zsh' auf einem
 Debian 7 'Wheezy':
