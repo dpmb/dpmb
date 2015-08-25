@@ -116,12 +116,12 @@ $
 (((Enrico Zini)))
 
 An *graphischen Werkzeugen* existiert nur das Programm
-`debtags-edit`{empty}footnote:[http://packages.debian.org/de/stable/debtags-edit] 
-von Enrico Zini. Aus Zeitmangel wurde das Werkzeug bislang nicht mehr
-von ihm weiterentwickelt und ist daher nicht mehr für die
-Veröffentlichung Debian 'stable' verfügbar. Da die Quellen des Paketes
-aber frei zugänglich sind, dürfen Sie sich gern der Aufgabe annehmen,
-dieses Projekt fortzuführen.
+`debtags-edit` <<Debian-Paket-debtags-edit>> von Enrico Zini. Aus
+Zeitmangel wurde das Werkzeug bislang nicht mehr von ihm
+weiterentwickelt und ist daher nicht mehr für die Veröffentlichung
+Debian 'stable' verfügbar. Da die Quellen des Paketes aber frei
+zugänglich sind, dürfen Sie sich gern der Aufgabe annehmen, dieses
+Projekt fortzuführen.
 
 .`debtags-edit` im Einsatz
 image::praxis/debtags/debtags-edit.png[id="fig.debtags-edit", width="50%"]
