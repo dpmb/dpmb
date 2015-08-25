@@ -32,12 +32,11 @@ $
 (((Paketmarkierung, essentiell)))
 (((whereis, -b)))
 Eine weitere Möglichkeit stellt das UNIX-Kommandos `whereis` aus dem
-essentiellen Paket
-'util-linux'{empty}footnote:[http://packages.debian.org/de/stable/util-linux]
-dar. Mit der Option `-b Programmname` sucht `whereis` nach den passenden
-Binärdateien zum genannten Paketnamen.
+essentiellen Paket 'util-linux' <<Debian-Paket-util-linux>> dar. Mit der
+Option `-b Programmname` sucht `whereis` nach den passenden Binärdateien
+zum genannten Paketnamen.
 
-//.Binärdateien mit dem Namen `aptitude` mittels `whereis` anzeigen
+.Binärdateien mit dem Namen `aptitude` mittels `whereis` anzeigen
 ----
 $ whereis -b aptitude
 aptitude: /usr/bin/aptitude /usr/bin/X11/aptitude /usr/share/aptitude
