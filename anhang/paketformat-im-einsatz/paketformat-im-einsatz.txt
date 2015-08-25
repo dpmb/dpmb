@@ -134,6 +134,8 @@ iPod und iPad benutzen.
 (((ipkg)))
 (((OpenWrt)))
 (((opkg)))
+(((Paketformat, ipkg)))
+(((Paketformat, opkg)))
 Gerade in der Embedded-Szene, wo es auf Kompaktheit ankommt, sind
 `dpkg` und APT oft zu groß und komplex. Dennoch sind die Grundideen
 von Debians Paketmanagement-System auch in dieser Community beliebt und
@@ -145,7 +147,8 @@ dessen Fork _OpenMoko Package Management System_
 Linux-Distribution für WLAN-Router.
 
 // Stichworte für den Index
-(((Click-Pakete)))
+(((Paketformat, Click-Pakete)))
+(((Paketformat, Snappy)))
 Auch Canonical – das Unternehmen hinter Ubuntu – versucht sich seit 2013
 in einem Derivat von Debians Paketsystem. Ihre sogenannten
 'Click-Pakete' (siehe <<Click-Paket-Format>> und <<SingleClickInstall>>)
@@ -160,7 +163,8 @@ Software in möglichst einem Paket bereitzustellen.
 Wie sich in der Diskussion zeigt, ist der Einsatz der Click-Pakete recht
 umstritten (siehe <<Click-Paket-Format-Diskussionen>> und
 <<Watson-App-Design>>). Möglicherweise wird dieses Format vor dessen
-Verbreitung durch den Nachfolger Snappy <<Ubuntu-Snappy>> überholht.
+größerer Verbreitung bereits durch den für den Herbst 2015 angekündigten
+Nachfolger Snappy <<Ubuntu-Snappy>> überholt.
 
 === Weitere Debian-Derivate ===
 
