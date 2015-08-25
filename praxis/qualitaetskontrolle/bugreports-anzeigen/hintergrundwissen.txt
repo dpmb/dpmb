@@ -14,11 +14,10 @@ Allgemein gesprochen, ist ein Bugreport ein *Fehlerbericht* zu einem
 aufgetretenen bzw. von Ihnen bemerkten Fehler einer Soft- oder Hardware.
 Bei Debian ist der Bericht und dessen Einreichung vom Ablauf und der
 Form her standardisiert, damit dieser entdeckte Fehler möglichst
-automatisiert über das 'Debian Bug Tracking System (Debian
-BTS)'{empty}footnote:[https://www.debian.org/Bugs/] verarbeitet und von
-allen Benutzern nachverfolgt werden kann. Somit ordnen Sie einen
-Fehlerbericht leichter einem bestimmten Paket oder einer spezifischen
-Systemkonstellation zu.
+automatisiert über das 'Debian Bug Tracking System (Debian BTS)
+<<Debian-Bug-Tracking-System>> verarbeitet und von allen Benutzern
+nachverfolgt werden kann. Somit ordnen Sie einen Fehlerbericht leichter
+einem bestimmten Paket oder einer spezifischen Systemkonstellation zu.
 
 Generelles Ziel ist dabei, die bereits bestehenden Softwarepakete zu
 verbessern und auch noch nicht als stabil gekennzeichnete Pakete auf
@@ -73,7 +72,6 @@ besten einen Fehlerbericht ('bug report'). Eine ausführliche
 Beschreibung dessen, auf welche Punkte Sie bei dem Fehlerbericht
 wertlegen sollten, finden Sie auf der Webseite des Debian BTS. Bei der
 Zusammenstellung des Fehlerberichts hilft Ihnen das Werkzeug `reportbug`
-aus dem gleichnamigen
-Debianpaket{empty}footnote:[https://packages.debian.org/de/stable/reportbug].
+aus dem gleichnamigen Debianpaket <<Debian-Paket-reportbug>>.
 
 // Datei (Ende): ./praxis/qualitaetskontrolle/bugreports-anzeigen/hintergrundwissen.txt
