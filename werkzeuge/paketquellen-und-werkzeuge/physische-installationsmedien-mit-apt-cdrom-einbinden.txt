@@ -12,12 +12,12 @@
 (((Debianpaket, apt-cdrom-setup)))
 (((/etc/apt/sources.list)))
 Nutzen Sie keine netzbasierte Installation, sondern greifen auf die
-altbewährte Form anfaßbarer Installationsmedien zurück, ist in diesem
+altbewährte Form anfassbarer Installationsmedien zurück, ist in diesem
 Fall das Programm `apt-cdrom` aus dem Paket 'apt' die richtige Wahl (das
 Paket mit dem ähnlichen Namen
 'apt-cdrom-setup'{empty}footnote:[http://packages.debian.org/de/stable/apt-cdrom-setup]
 ist für den Debian Installer vorgesehen). Damit fügen Sie ein
-bereitstehendes Installationsmedium zu ihrer Liste der Paketquellen in
+bereitstehendes Installationsmedium zu Ihrer Liste der Paketquellen in
 der Datei `/etc/apt/sources.list` (siehe
 <<etc-apt-sources.list-verstehen>>) hinzu.
 
@@ -33,7 +33,7 @@ erleichtert Ihnen die Arbeit und übernimmt folgende Schritte:
 * Medium (CD, DVD, Blueray, ISO-Image) auf Vollständigkeit und dessen Struktur überprüfen
 * Validierung der Indexdateien des Mediums
 
-Voraussetzung dafür ist jedoch, daß sich das Medium bereits im Laufwerk
+Voraussetzung dafür ist jedoch, dass sich das Medium bereits im Laufwerk
 befindet, das Medium eingehängt ist und das dazugehörige Gerät
 (DVD-Laufwerk, etc.) einen passenden Mountpoint in der Datei
 `/etc/fstab` hat.
