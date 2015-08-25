@@ -21,11 +21,11 @@ ARM-Architekturen einen aufgeräumten Befehlssatz hat und auf den
 Servermarkt zielt. Hardware-Architektur des iPhone 5.
 
 armel (arm-linux-gnueabi)::
-ARM (EABI{empty}footnote:[http://wiki.debian.org/ArmPorts]).
+ARM (EABI) <<Debian-Wiki-ARM-EABI-Port>>.
 
 armhf (arm-linux-gnueabihf)::
-ARM. Hardware Floating Point ABI, ab Debian 7.0 'Wheezy'
-unterstützt{empty}footnote:[http://wiki.debian.org/ArmPorts].
+ARM. Hardware Floating Point ABI, ab Debian 7.0 'Wheezy' unterstützt
+<<Debian-Wiki-ARM-EABI-Port>>.
 
 hurd-i386 (i486-gnu)::
 32-Bit-PC (i386) mit GNU-Hurd-Kernel (nur in Debian 'unstable').
