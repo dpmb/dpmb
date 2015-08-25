@@ -13,7 +13,7 @@ script:
 #   - make xmllint
 
 notifications:
-  irc: "irc.lugs.ch#kivamon"
+  irc: irc.lugs.ch#kivamon
 
 before_deploy: make deploy
 
