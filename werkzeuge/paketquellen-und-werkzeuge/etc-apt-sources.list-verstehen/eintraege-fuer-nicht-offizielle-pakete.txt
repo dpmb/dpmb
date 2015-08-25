@@ -30,7 +30,7 @@ des gleichnamigen skandinavischen Herstellers einzubinden, hilft Ihnen
 folgender Verweis{empty}footnote:[Die aktuelle Konfiguration des
 APT-Repositories erlaubt nur die Verwendung von _stable_ als
 Veröffentlichung. Verwenden Sie z.B. _jessie_ anstatt von _stable_, so
-beschwert sich APT, daß dies nicht vorgesehen sei.] auf den Bereich
+beschwert sich APT, dass dies nicht vorgesehen sei.] auf den Bereich
 _non-free_ auf dessen Paketserver:
 
 ----
