@@ -1,0 +1,5 @@
+{
+  "name": "dpmb",
+  "root": "deploy/",
+  "clean_urls": false,
+}
