@@ -169,8 +169,7 @@ Nachfolger Snappy <<Ubuntu-Snappy>> überholt.
 === Weitere Debian-Derivate ===
 
 Einen ausführlichen Überblick zu weiteren Debian-Derivaten gibt der
-Debian-Derivate-Zensus. Er ist ein Bestandteil des
-Debian-Wikis{empty}footnote:[http://wiki.debian.org/Derivatives/Census].
-
+Debian-Derivate-Zensus. Er ist ein Bestandteil des Debian-Wikis
+<<DebianDerivativeCensus>>.
 
 // Datei (Ende): ./anhang/paketformat-im-einsatz/paketformat-im-einsatz.txt
