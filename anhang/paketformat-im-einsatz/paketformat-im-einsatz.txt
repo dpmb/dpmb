@@ -15,8 +15,8 @@
 // releases." emdebian-archive-keyring ist jedoch grade wieder frisch
 // nach Debian Unstable gekommen → Im Auge behalten.
 
-Emdebian:: Debian für Embedded Devices{empty}footnote:[http://www.emdebian.org/]
-Raspbian:: Debian speziell für den Raspberry Pi{empty}footnote:[http://www.raspbian.org/]
+Emdebian:: Debian für Embedded Devices <<Emdebian>>
+Raspbian:: Debian speziell für den Raspberry Pi <<Raspbian>>
 
 === Bildung ===
 
@@ -25,9 +25,9 @@ Raspbian:: Debian speziell für den Raspberry Pi{empty}footnote:[http://www.rasp
 (((LernStick)))
 (((Skolelinux)))
 
-Skolelinux:: früher Debian-Edu, für den Einsatz in Schulen{empty}footnote:[http://skolelinux.de/]
-Edubuntu:: Ubuntu für Schule und Bildung{empty}footnote:[http://www.edubuntu.org/]
-LernStick:: Live-Distribution auf einem USB-Stick{empty}footnote:[http://www.imedias.ch/projekte/lernstick/index.cfm]
+Skolelinux:: früher Debian-Edu, für den Einsatz in Schulen <<Skolelinux>>
+Edubuntu:: Ubuntu für Schule und Bildung <<Edubuntu>>
+LernStick:: Live-Distribution auf einem USB-Stick <<LernStick>>
 
 === Desktop ===
 
