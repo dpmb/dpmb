@@ -12,19 +12,17 @@
 (((Ultimate Debian Database (UDD))))
 
 Das Programm `how-can-i-help` aus dem gleichnamigen Paket
-{empty}footnote:[https://packages.debian.org/jessie/how-can-i-help] geht
-genau dieser Frage nach und listet Ihnen auf, welche konkrete Art der
-Unterstützung ein Paket benötigt. Es ergänzt den Eintrag von
-`how-can-i-help` im Debian
-Wiki{empty}footnote:[https://wiki.debian.org/how-can-i-help] um die dazu
-passende Funktionalität auf der Kommandozeile. Obwohl es erst offiziell
-ab Debian 8 'Jessie' verfügbar ist, gibt es bereits ein Paket aus
-'Debian Backports' für Debian 7 'Wheezy' (für 'Debian Backports' siehe
-<<debian-backports>>).
+<<Debian-Paket-how-can-i-help>> geht genau dieser Frage nach und listet
+Ihnen auf, welche konkrete Art der Unterstützung ein Paket benötigt. Es
+ergänzt den Eintrag von `how-can-i-help` im Debian Wiki
+<<Debian-Wiki-how-can-i-help>> um die dazu passende Funktionalität auf
+der Kommandozeile. Obwohl es erst offiziell ab Debian 8 'Jessie'
+verfügbar ist, gibt es ebenso ein Paket aus 'Debian Backports' für
+Debian 7 'Wheezy' (für 'Debian Backports' siehe <<debian-backports>>).
 
 Als Datenquelle für seine Aussagen nutzt es die Ultimate Debian Database
-(UDD){empty}footnote:[https://udd.debian.org/]. Dabei handelt es sich um
-eine PostgreSQL-Datenbank, die `how-can-i-help` über eine webbasierte
+(UDD) <<Ultimate-Debian-Database>>. Dabei handelt es sich um eine
+PostgreSQL-Datenbank, die `how-can-i-help` über eine webbasierte
 Schnittstelle abfragt. Beachten Sie daher, daß das Programm für
 brauchbare Ergebnisse eine Internetverbindung voraussetzt.
 
@@ -60,7 +58,7 @@ Eine kompaktere Darstellung ohne Kopf- und Fußzeilen.
 In Benutzung sind zudem eine Reihe von Abkürzungen für die konkrete
 Hilfe, die sich auf den Zustand eines Paketes beziehen. Diese
 Abkürzungen haben wir der Übersicht der 'Work-Needing and Prospective
-Packages (WNPP)' entnommen{empty}footnote:[https://wiki.debian.org/WNPP]:
+Packages (WNPP)' entnommen <<Debian-Wiki-WNPP>>:
 
 Orphaned (O)::
 Kennzeichnung für ein verwaistes Paket, d.h. derzeit ohne Paketmaintainer.
