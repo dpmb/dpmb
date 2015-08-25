@@ -8,11 +8,10 @@
 Ihre Debian-Installation besteht aus recht vielen Paketen, an denen
 etliche Entwickler beteiligt sind. Wie in
 <<verbreitungsgrad-von-paketen>> schon deutlich wurde, kümmert sich das
-'Debian Quality Assurance Team' (kurz 'QA
-Team'){empty}footnote:[https://qa.debian.org/] darum, daß die Qualität
-der Debian-Pakete gewährleistet ist. Dazu gehört, daß auch alle vorab
-festgelegten Regeln eingehalten werden. Um das automatisiert zu prüfen,
-kommen dafür eine ganze Reihe von Programmen zum Einsatz.
+'Debian Quality Assurance Team' (kurz 'QA Team') <<DebianQA>> darum, daß
+die Qualität der Debian-Pakete gewährleistet ist. Dazu gehört, daß auch
+alle vorab festgelegten Regeln eingehalten werden. Um das automatisiert
+zu prüfen, kommen dafür eine ganze Reihe von Programmen zum Einsatz.
 
 // Stichworte für den Index
 (((Debianpaket, adequate)))
@@ -38,13 +37,11 @@ der Betreuung älterer Installationen ist das Programm
 (((Package Installation UPgrading And Removal Testing Suite (Piuparts))))
 Möchten Sie den gesamten Installationsvorgang eines Paketes testen,
 steht Ihnen die _Package Installation, UPgrading And Removal Testing
-Suite (Piuparts)_{empty}footnote:[https://piuparts.debian.org/] aus dem
-gleichnamigen
-Debianpaket{empty}footnote:[http://packages.debian.org/de/stable/piuparts]
-zur Seite. Die drei Werkzeuge `piuparts`, `lintian` und `adequate`
-ergänzen einander und helfen Ihnen insbesondere bei der aktiven
-Verifikation von Paketen aus dem eigenen Paketlabor, bevor Sie diese in
-die freie Wildbahn entlassen.
+Suite (Piuparts)_ <<Piuparts>> aus dem gleichnamigen Debianpaket
+<<Debian-Paket-piuparts>> zur Seite. Die drei Werkzeuge `piuparts`,
+`lintian` und `adequate` ergänzen einander und helfen Ihnen insbesondere
+bei der aktiven Verifikation von Paketen aus dem eigenen Paketlabor,
+bevor Sie diese in die freie Wildbahn entlassen.
 
 // nicht installierte, einzelne Pakete: 'lintian'
 include::nicht-installierte-pakete-mit-lintian-pruefen/lintian.txt[]
