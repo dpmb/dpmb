@@ -136,15 +136,13 @@ iPod und iPad benutzen.
 (((opkg)))
 (((Paketformat, ipkg)))
 (((Paketformat, opkg)))
-Gerade in der Embedded-Szene, wo es auf Kompaktheit ankommt, sind
-`dpkg` und APT oft zu groß und komplex. Dennoch sind die Grundideen
-von Debians Paketmanagement-System auch in dieser Community beliebt und
-werden genutzt. So ist das _Itsy Package Management System_
-(`ipkg`){empty}footnote:[http://de.wikipedia.org/wiki/IPKG] und später
-dessen Fork _OpenMoko Package Management System_
-(`opkg`){empty}footnote:[http://wiki.openmoko.org/wiki/Opkg] entstanden.
-`opkg` ist heute noch u.a. bei OpenWrt im Einsatz, einer bekannten
-Linux-Distribution für WLAN-Router.
+Gerade in der Embedded-Szene, wo es auf Kompaktheit ankommt, sind `dpkg`
+und APT oft zu groß und komplex. Dennoch sind die Grundideen von Debians
+Paketmanagement-System auch in dieser Community beliebt und werden
+genutzt. So ist das _Itsy Package Management System_ (`ipkg`) <<ipkg>>
+und später dessen Fork _OpenMoko Package Management System_ (`opkg`)
+<<opkg>> entstanden. `opkg` ist heute noch u.a. bei OpenWrt im Einsatz,
+einer bekannten Linux-Distribution für WLAN-Router.
 
 // Stichworte für den Index
 (((Paketformat, Click-Pakete)))
