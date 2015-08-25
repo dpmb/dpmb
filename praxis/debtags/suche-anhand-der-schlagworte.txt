@@ -186,9 +186,8 @@ image::praxis/debtags/xara.png[id="fig.xara", width="50%"]
 Eine webbasierte Recherche anhand der Debtags geht derzeit (noch) nicht
 über die Paketsuche, auch wenn die Debtags im Suchergebnis bereits
 angezeigt werden und anklickbar sind. Stattdessen stehen Ihnen der
-'Debtags Browser'{empty}footnote:[http://debtags.debian.net/search] und
-die 'Debtags Cloud'{empty}footnote:[http://debtags.debian.net/search/bytag] 
-zur Verfügung.
+'Debtags Browser' <<Debian-Debtags-Search>> und die 'Debtags Cloud'
+<<Debian-Debtags-Search-By-Tags>> zur Verfügung.
 
 Die Schreibweise der Suchanfrage im Debtags Browser orientiert sich
 dabei an den Gepflogenheiten im Web. Das Formular nimmt eine direkte
