@@ -11,10 +11,9 @@
 (((lintian)))
 
 Im Gegensatz zu `lintian` (siehe <<bugreports-lintian>>) validieren Sie mit
-`adequate`{empty}footnote:[http://packages.debian.org/de/jessie/adequate]
-die Pakete, die bereits auf ihrem System installiert sind. `adequate`
-steht Ihnen ab Debian 8 'Jessie' oder über die 'Debian Backports' für
-Debian 7 'Wheezy' bereit.
+`adequate` <<Debian-Paket-adequate>> die Pakete, die bereits auf ihrem
+System installiert sind. `adequate` steht Ihnen ab Debian 8 'Jessie'
+oder über die 'Debian Backports' für Debian 7 'Wheezy' bereit.
 
 // Stichworte für den Index
 (((adequate, Paketname)))
