@@ -9,15 +9,15 @@
 
 Paketquellen und Repositories sind im Prinzip Fileserver mit einer vorab
 festgelegten Struktur, deren Inhalt öffentlich zugänglich ist.
-Vereinfacht betrachtet muß bei dessen Abruf sichergestellt werden, daß
+Vereinfacht betrachtet muss bei dessen Abruf sichergestellt werden, dass
 die von dort bezogenen Daten echt sind und auch mit den Originaldaten
 übereinstimmen, aus denen die Distribution besteht. Daher sind in der
 Paketverwaltung Mechanismen integriert, welche die Echtheit und
 Vollständigkeit der empfangenen Paketlisten und Pakete überprüfen
 (Authentizität).
 
-Hintergrund ist einerseits, daß eine Paketquelle Paketarchive
-unterschiedlichster Herkunft umfaßt. Die Daten könnten aus einer wenig
+Hintergrund ist einerseits, dass eine Paketquelle Paketarchive
+unterschiedlichster Herkunft umfasst. Die Daten könnten aus einer wenig
 vertrauenswürdigen Quelle stammen und auch Schadcode enthalten. Die
 Zuverlässigkeit von Speichermedien (Datenträger) nimmt mit der Zeit ab
 und sorgt für fehlerhafte Bitfolgen. Andererseits erfolgt der Transport
@@ -85,12 +85,12 @@ Debian-Ports-Projekt (<<debian-architekturen-ports-projekt>>.
 Mit `apt-key` können Sie sich bspw. die gemerkten Schlüssel anzeigen
 sowie neue Schlüssel zum Schlüsselring hinzufügen oder auch daraus
 wieder entfernen. Diese Vorgänge kommen meist dann zum tragen, wenn Sie
-ihr Debian-System von Ballast befreien und nicht mehr benötigte
+Ihr Debian-System von Ballast befreien und nicht mehr benötigte
 Schlüssel austragen oder weitere Paketquellen einbinden möchten, deren
 Schlüssel (noch) nicht offiziell hinterlegt ist.
 
 Die vier Unterkommandos `list`, `finger`, `export` und `exportall` haben
-rein informativen Charakter. Mit den ersten beiden zeigen Sie zu den
+rein informativen Charakter. Mit den ersten beiden zeigen sie zu den
 gespeicherten, vertrauenswürdigen Schlüsseln deren Erstell- und
 Verfallsdatum sowie den Eigentümer bzw. Aussteller des Schlüssels an. Im
 vorliegenden Fall ist dieser keine Person, sondern eine
@@ -155,17 +155,17 @@ In »»archive.key«« speichern.
 [IMPORTANT]
 .Unverschlüsselte Übertragung von Schlüsseln
 ====
-Bitte beachten Sie, daß dieser Schlüssel jedoch nicht über gesicherte
+Bitte beachten Sie, dass dieser Schlüssel jedoch nicht über gesicherte
 Kanäle (z.B. per HTTPS) heruntergeladen wurde und Sie damit nicht
-hundertprozentig sicher sein können, daß dieser Schlüssel wirklich von
+hundertprozentig sicher sein können, dass dieser Schlüssel wirklich von
 Opera ist. Leider scheint der Schlüssel auch nicht mit allzuvielen
-Signaturen ausgestattet zu sein, sodaß eine Verifizierung über die
+Signaturen ausgestattet zu sein, sodass eine Verifizierung über die
 Signaturen ebenfalls nicht möglich ist.
 ====
 
 Der bezogene Schlüssel befindet sich nun im aktuellen Verzeichnis in der
 Datei `archive.key`. Diesen Schlüssel fügen Sie nun über den
-Aufruf `apt-key add archive.key` ihrem lokalen Schlüsselbund hinzu:
+Aufruf `apt-key add archive.key` Ihrem lokalen Schlüsselbund hinzu:
 
 .Hinzufügen des bezogenen Schlüssels mittels `apt-key`
 ----
