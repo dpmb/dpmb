@@ -146,21 +146,18 @@ Linux-Distribution für WLAN-Router.
 
 // Stichworte für den Index
 (((Click-Pakete)))
-Auch Canonical – die Firma hinter Ubuntu – versucht sich seit 2013 in
-einem Derivat von Debians Paketsystem. Ihre sogenannten
-'Click-Pakete'{empty}footnote:[https://click.readthedocs.org/en/latest/]
-funktionieren ähnlich wie `deb`-Pakete, jedoch ohne große Abhängigkeiten,
-und sind optimiert auf den Einsatz bei mobilen Geräten von
-Drittanbietern. Das hervorgehobene Merkmal ist die direkte Installation
-des Pakets aus dem Webbrowser (siehe auch
-<<webbasierte-installation-von-paketen-mit-apturl>>).
-
-// TODO:
-// https://click.readthedocs.org/en/latest/
-// https://www.linux.com/news/software/applications/799449-can-ubuntu-click-address-linus-torvalds-binary-problems/
-// https://blueprints.launchpad.net/ubuntu/+spec/foundations-1305-click-package
-// https://wiki.ubuntu.com/SingleClickInstall
-// https://lists.ubuntu.com/archives/ubuntu-devel/2013-May/037074.html
+Auch Canonical – das Unternehmen hinter Ubuntu – versucht sich seit 2013
+in einem Derivat von Debians Paketsystem. Ihre sogenannten
+'Click-Pakete' (siehe <<Click-Paket-Format>> und <<SingleClickInstall>>)
+funktionieren ähnlich wie `deb`-Pakete, jedoch ohne große
+Abhängigkeiten, und sind optimiert auf den Einsatz bei mobilen Geräten
+von Drittanbietern. Die hervorgehobenen Merkmale sind die direkte
+Installation des Pakets aus dem Webbrowser (siehe auch
+<<webbasierte-installation-von-paketen-mit-apturl>>) und die geringen
+Paketabhängigkeiten. Das Ziel besteht darin, alle benötigten Daten einer
+Software in möglichst einem Paket bereitzustellen. Wie sich in der
+Diskussion zeigt, ist der Einsatz der Click-Pakete recht umstritten
+(siehe <<Click-Paket-Format-Diskussionen>> und <<Watson-App-Design>>).
 
 === Weitere Debian-Derivate ===
 
