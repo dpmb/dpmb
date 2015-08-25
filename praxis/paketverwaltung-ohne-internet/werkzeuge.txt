@@ -14,18 +14,15 @@
 (((wget)))
 
 In diesem Szenario kombinieren wir aus APT das Werkzeug `apt-get` mit
-`awk` und `wget`. Die wunderbare Idee und Beschreibung ist entlehnt aus
-Frank Ronneburgs
-Debian-Anwenderhandbuch{empty}footnote:[http://debiananwenderhandbuch.de/apt-offline.html]
-sowie dem Beitrag von Samuel
-Suter{empty}footnote:[http://www.lugs.ch/lib/doc/apt-offline.phtml],
-hier jedoch nur für ausgewählte Pakete.
+`awk` und `wget`. Diese wunderbare Idee und Beschreibung ist entlehnt
+aus Frank Ronneburgs Debian-Anwenderhandbuch
+<<Debian-Anwenderhandbuch-apt-offline>> sowie dem Beitrag von Samuel
+Suter <<Suter-apt-offline>>, hier jedoch nur für ausgewählte Pakete.
 
-`awk` ist ein Analyse- und Filterprogramm für
-Textdaten{empty}footnote:[http://packages.debian.org/de/stable/gawk].
-`wget` ist hingegen ein Kommandozeilenprogramm, um Dateien über das
-Netzwerk zu beziehen{empty}footnote:[http://packages.debian.org/de/stable/wget].
-Während 'gawk' zu den essentiellen Paketen zählt, ist 'wget' optional und daher
+`awk` ist ein Analyse- und Filterprogramm für Textdaten
+<<Debian-Paket-gawk>>. `wget` ist hingegen ein Kommandozeilenprogramm,
+um Dateien über das Netzwerk zu beziehen <<Debian-Paket-wget>>. Während
+'gawk' zu den essentiellen Paketen zählt, ist 'wget' optional und daher
 ihrerseits vor dessen Verwendung gegebenenfalls noch zu installieren.
 
 Der Ablauf ist wie folgt:
@@ -71,9 +68,9 @@ Paketcache. Der Einfachheit halber heißt dieser hier ebenfalls
 (((Debianpaket, apt-offline)))
 (((Debianpaket, apt-offline-gui)))
 
-* Projektseite{empty}footnote:[http://apt-offline.alioth.debian.org/]
-* Debian-Paket 'apt-offline'{empty}footnote:[http://packages.debian.org/de/stable/apt-offline]
-* GUI-Version zum Paket: 'apt-offline-gui'{empty}footnote:[http://packages.debian.org/de/stable/apt-offline-gui]
+* Projektseite <<apt-offline-Projektseite>>
+* Debian-Paket 'apt-offline' <<Debian-Paket-apt-offline>>
+* GUI-Version zum Paket: 'apt-offline-gui' <<Debian-Paket-apt-offline-gui>>
 * setzt auf der Programmiersprache Python auf
 
 * Beschreibungen: Offline Package Management for APT (<<Ritesh-apt-offline>>, <<xubuntu-apt-offline>>, <<Damienoh-apt-offline>>)
