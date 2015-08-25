@@ -116,9 +116,9 @@ z.B. Nexenta OS <<NexentaOS>>, Illumian <<Illumian>> und Dyson OS
 <<DysonOS>>. Das mit Nexenta OS verwandte StormOS <<StormOS>> wurde
 allerdings bereits 2012 wieder eingestellt.
 
-Unter Mac OS X existieren mit Fink{empty}footnote:[http://www.finkproject.org/] 
-zusätzliche, freie Pakete. Diese können Sie über einen Jailbreak auch
-auf Ihrem iPhone, iPod und iPad benutzen.
+Unter Mac OS X existieren mit Fink <<Finkproject>> zusätzliche, freie
+Pakete. Diese können Sie über einen Jailbreak auch auf Ihrem iPhone,
+iPod und iPad benutzen.
 
 //[TIP] 
 //.Mischen von Paketformaten
