@@ -11,16 +11,16 @@
 (((popbugs)))
 (((popcon)))
 
-Mit dem Werkzeug `popbugs` aus dem Paket
-'debian-goodies'{empty}footnote:[http://packages.debian.org/de/stable/debian-goodies]
-finden Sie release-kritische Fehler (``release critical bugs'',
-abgekürzt mit 'RC bugs') in Paketen, die Sie hauptsächlich einsetzen.
-Dazu bezieht `popbugs` zunächst die Liste der 'RC bugs' vom Debian BTS
-von der URL http://bugs.debian.org/release-critical/other/all.html und
-gleicht danach die gefundenen Fehler mit den Paketen ab, die auf ihrem
-System installiert sind. Beachten Sie daher, daß das Programm darauf
-aufbaut und für brauchbare Ergebnisse eine Internetverbindung benötigt.
-Die Grundlage des nachfolgenden, lokalen Vergleichs ist der allgemeine
+Mit dem Werkzeug `popbugs` aus dem Paket 'debian-goodies'
+<<Debian-Paket-debian-goodies>> finden Sie release-kritische Fehler
+(``release critical bugs'', abgekürzt mit 'RC bugs') in Paketen, die Sie
+hauptsächlich einsetzen. Dazu bezieht `popbugs` zunächst die Liste der
+'RC bugs' vom Debian BTS von der URL
+http://bugs.debian.org/release-critical/other/all.html und gleicht
+danach die gefundenen Fehler mit den Paketen ab, die auf ihrem System
+installiert sind. Beachten Sie daher, daß das Programm darauf aufbaut
+und für brauchbare Ergebnisse eine Internetverbindung benötigt. Die
+Grundlage des nachfolgenden, lokalen Vergleichs ist der allgemeine
 Installationsgrad der Debianpakete und die gesammelten Daten des
 'popularity contest'.
 
