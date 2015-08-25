@@ -78,14 +78,14 @@ Festplatte installieren und sind damit nicht nur Live-CDs.
 // Stichworte für den Index
 (((Damn Small Linux (DSL))))
 
-Damn Small Linux:: wird seit Mitte 2012 nicht weiterentwickelt{empty}footnote:[http://www.damnsmalllinux.org/]
+Damn Small Linux:: wird seit Mitte 2012 nicht mehr weiterentwickelt <<DamnSmallLinux>>
 
 === Spieleplattform ===
 
 // Stichworte für den Index
 (((Steam OS)))
 
-Steam OS:: ausgelegt für Spiele und die Verwendung großer Bildschirme{empty}footnote:[http://store.steampowered.com/steamos/]
+Steam OS:: ausgelegt für Spiele und die Verwendung großer Bildschirme <<SteamOS>>
 
 === Mobile Architekturen ===
 
@@ -95,12 +95,10 @@ Steam OS:: ausgelegt für Spiele und die Verwendung großer Bildschirme{empty}fo
 (((OpenMoko)))
 Desweiteren kommt das `deb`-Paketformat auf mobilen Architekturen und
 Plattformen zum Einsatz. Dazu zählen etwa die Mobiltelefone Nokia N900
-mit Maemo{empty}footnote:[http://maemo.org/], Nokia N9 mit
-Meego{empty}footnote:[https://meego.com/] sowie diverse Distributionen
-für das OpenMoko{empty}footnote:[http://www.openmoko.org/]. Auch der
-community-getragene, inoffizielle N900-Nachfolger
-Neo900{empty}footnote:[http://neo900.org/] soll u.a. mit Maemo und damit
-ebenfalls mit dem `deb`-Paketformat laufen.
+mit Maemo <<Maemo>>, Nokia N9 mit Meego <<MeeGo>> sowie diverse
+Distributionen für das OpenMoko <<OpenMoko>>. Auch der
+community-getragene, inoffizielle N900-Nachfolger Neo900 <<Neo900>> soll
+u.a. mit Maemo und damit ebenfalls mit dem `deb`-Paketformat laufen.
 
 === Anstatt Linux ===
 
