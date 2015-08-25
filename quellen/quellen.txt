@@ -108,6 +108,9 @@
 
 - [[[Click-Paket-Format]]] Canonicals 'Click' Paketformat, https://click.readthedocs.org/en/latest/
 
+- [[[Click-Paket-Format-Diskussionen]]] Can Ubuntu Click Address Linus
+  Torvalds’ Binary Problems?, https://www.linux.com/news/software/applications/799449-can-ubuntu-click-address-linus-torvalds-binary-problems/
+
 - [[[CLT]]] Chemnitzer Linux-Tage, http://chemnitzer.linux-tage.de/
 
 - [[[Communtu]]] Webseite des Communtu-Projekts, http://de.communtu.org/
@@ -600,6 +603,8 @@
 
 - [[[Siduction]]] Siduction, http://siduction.org/
 
+- [[[SingleClickInstall]]], https://wiki.ubuntu.com/SingleClickInstall
+
 - [[[Skolelinux]]] Skolelinux, http://skolelinux.de/
 
 - [[[SmartPM]]] Smart Package Manager, Projektseite, http://labix.org/smart
@@ -633,6 +638,8 @@
 
 - [[[Ubuntu-One-Wikipedia]]] Ubuntu One, Wikipedia-Eintrag, http://de.wikipedia.org/wiki/Ubuntu_One
 
+- [[[Ubuntu-Snappy]]] Ubuntu Package Format Snappy, https://developer.ubuntu.com/en/snappy/
+
 - [[[Ubuntu-Software-Center]]] Ubuntu Software Center, Projektseite/Wiki, https://wiki.ubuntu.com/SoftwareCenter
 
 - [[[Ubuntu-Sources-List-Generator]]] Ubuntu Sources List Generator, http://repogen.simplylinux.ch/
@@ -652,6 +659,9 @@
 - [[[Vogt-gdebi]]] Michael Vogt: Using gdebi to install build-dependencies, http://mvogt.wordpress.com/2013/03/22/using-gdebi-to-install-build-dependencies/
 
 - [[[wajig-Webseite]]] Webseite des wajig-Projekts, http://wajig.togaware.com/
+
+- [[[Watson-App-Design]]] Colin Watson: App installer design: click
+  packages, https://lists.ubuntu.com/archives/ubuntu-devel/2013-May/037074.html
 
 - [[[Wheezy-Paketliste]]] Paketliste zu Debian 'Wheezy', http://packages.debian.org/wheezy/
 

@@ -155,9 +155,12 @@ von Drittanbietern. Die hervorgehobenen Merkmale sind die direkte
 Installation des Pakets aus dem Webbrowser (siehe auch
 <<webbasierte-installation-von-paketen-mit-apturl>>) und die geringen
 Paketabhängigkeiten. Das Ziel besteht darin, alle benötigten Daten einer
-Software in möglichst einem Paket bereitzustellen. Wie sich in der
-Diskussion zeigt, ist der Einsatz der Click-Pakete recht umstritten
-(siehe <<Click-Paket-Format-Diskussionen>> und <<Watson-App-Design>>).
+Software in möglichst einem Paket bereitzustellen. 
+
+Wie sich in der Diskussion zeigt, ist der Einsatz der Click-Pakete recht
+umstritten (siehe <<Click-Paket-Format-Diskussionen>> und
+<<Watson-App-Design>>). Möglicherweise wird dieses Format vor dessen
+Verbreitung durch den Nachfolger Snappy <<Ubuntu-Snappy>> überholht.
 
 === Weitere Debian-Derivate ===
 
