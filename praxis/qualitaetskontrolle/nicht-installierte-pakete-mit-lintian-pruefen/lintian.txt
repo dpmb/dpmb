@@ -13,15 +13,12 @@
 (((lintian)))
 (((Paketinhalt, Bestandteile)))
 (((Paketvalidierung, lintian)))
-
-Das Werkzeug `lintian`{empty}footnote:[https://lintian.debian.org/]
-steht in dem gleichnamigen
-Paket{empty}footnote:[http://packages.debian.org/de/stable/lintian]
-bereit. Der Name leitet sich von engl. 'lint' für Fussel und dem 'ian'
-aus 'Debian' ab. Es analysiert die verschiedenen Bestandteile eines
-einzelnen Debianpakets hinsichtlich typischer Fehler und insbesondere
-auch bzgl. häufig vorkommender Verstöße gegen die Debian-Richtlinien
-('Debian Policy Violations').
+Das Werkzeug `lintian` <<Lintian>> steht in dem gleichnamigen Paket
+<<Debian-Paket-lintian>> bereit. Der Name leitet sich von engl. 'lint'
+für Fussel und dem 'ian' aus 'Debian' ab. Es analysiert die
+verschiedenen Bestandteile eines einzelnen Debianpakets hinsichtlich
+typischer Fehler und insbesondere auch bzgl. häufig vorkommender
+Verstöße gegen die Debian-Richtlinien ('Debian Policy Violations').
 
 Als Systemadministrator hilft Ihnen `lintian` primär dabei, sowohl
 eigene als auch die Pakete von Drittparteien aus nicht-Debian-eigenen
