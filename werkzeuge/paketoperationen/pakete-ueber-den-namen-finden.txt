@@ -6,6 +6,9 @@
 
 === Pakete über den Namen finden ===
 
+// Stichworte für den Index
+(((Paketsuche, anhand Regulärer Ausdrücke)))
+(((Paketsuche, über den Paketnamen)))
 Diese Suchvariante ist der häufigste Weg zur Recherche nach gewünschten
 Paketen. Alle Werkzeuge zur Paketverwaltung bieten eine entsprechende
 Suchfunktion an, variieren dabei jedoch stark in der Form sowie der
@@ -74,8 +77,8 @@ ausführliche Paketbeschreibung.
 
 `apt-cache` erwartet nach dem Unterkommando `search` ein Textfragment
 als Suchbegriff. Nachfolgend sehen Sie das Suchergebnis zum Paket
-'lintian'{empty}footnote:[http://packages.debian.org/de/stable/lintian]. 
-Es zeigt das gefundene Paket sowie dessen Kurzbeschreibung dazu an.
+'lintian' <<Debian-Paket-lintian>>. Es zeigt das gefundene Paket sowie
+dessen Kurzbeschreibung dazu an.
 
 //.Suche nach einem Paket
 ----
@@ -244,10 +247,9 @@ Bereits oben angesprochene Suche über die Webseite des Debian-Projekts
 beinhaltet nur Pakete, die in den offiziellen Repositories enthalten
 sind. Für andere, externe Pakete existieren hingegen spezielle
 Suchmaschinen und Verzeichnisdienste. Für `deb`-Pakete sind das bspw.
-apt-get.org{empty}footnote:[http://www.apt-get.org/] und
-Rpmseek{empty}footnote[http://www.rpmseek.com/]. Letzeres kann sowohl
-`rpm`- als auch `deb`-Pakete erstöbern. Gefundene Pakete können Sie
-direkt von der angegebenen Quelle beziehen und installieren. Bitte
+apt-get.org <<apt-get.org>> und Rpmseek <<rpmseek>>. Letzeres kann
+sowohl `rpm`- als auch `deb`-Pakete erstöbern. Gefundene Pakete können
+Sie direkt von der angegebenen Quelle beziehen und installieren. Bitte
 beachten Sie aber, daß mit diesen Suchmaschinen gefundene Pakete oft
 nicht den Qualitätsansprüchen von Debian entsprechen, einer nicht-freien
 Lizenz unterliegen oder schlicht nicht auf Ihrem System installierbar
