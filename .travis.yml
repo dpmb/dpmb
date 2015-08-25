@@ -3,10 +3,11 @@ before_install:
    - sudo apt-get install debhelper make moreutils
    - sudo sed -e s/precise/trusty/g -i /etc/apt/sources.list
    - sudo apt-get update
-   - sudo apt-get install -t trusty dblatex asciidoc texlive-lang-german calibre calibre-bin python-sip
+   - sudo apt-get install -t trusty dblatex asciidoc texlive-lang-german calibre calibre-bin python-sip epubcheck
 
 script:
    - make verbose
+   - epubcheck debian-paketmanagement.epub
 
 #after_failure:
 #   - sudo apt-get install libxml2-utils
