@@ -74,7 +74,7 @@ Zuerst sollten mit Root-Rechten (z.B. via `sudo`, `su` oder `ssh
 root@…`) alle zum Bau notwendigen Abhängigkeiten installiert werden:
 
 ```sh
-apt-get install asciidoc dblatex texlive-lang-german xmlto calibre
+apt-get install asciidoc dblatex texlive-lang-german xmlto calibre epubcheck
 ```
 
 Dann als Benutzer das entsprechende Git-Repository klonen und ins
