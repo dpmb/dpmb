@@ -44,7 +44,7 @@ Bei diesem Verfahren wird einer IP-Adresse ein geographischer Standort
 zugeordnet. Die Genauigkeit dieser Funktion schwankt je nach
 Internet-Anbieter, Datenbank und eingesetztem Verfahren. 
 
-Zu beachten ist dabei, daß der angegebene Standort nicht
+Zu beachten ist dabei, dass der angegebene Standort nicht
 notwendigerweise dem tatsächlichen Standort des Rechners mit dieser
 IP-Adresse entspricht. Meistens ist das der Standort des Providers, von
 dem Sie diese IP-Adresse bezogen haben bzw. der diese IP-Adresse
@@ -58,7 +58,7 @@ Eine Offline-Zuordnung ermöglicht beispielsweise das Paket
 entsprechende Datenbank mit stets bestehenden, festen IP-Adressen.
 Darüberhinaus existieren jedoch auch deutlich exaktere Alternativen.
 
-Diese Funktionalitat läßt sich nutzen, um anhand der anfragenden
+Diese Funktionalitat lässt sich nutzen, um anhand der anfragenden
 IP-Adresse automatisiert einen geographisch nahen Paketmirror zu
 finden. Bei Debian ist dies an mehreren Stellen im Einsatz.
 
@@ -177,7 +177,7 @@ deb http://http.debian.net/debian/ wheezy main contrib non-free
 Interessant ist auch die Netzwerkkommunikation, die (unbemerkt) im
 Hintergrund abläuft. Wir zeigen das anhand eines Beispiels aus der
 Schweiz genauer. Zur Analyse kommt das Kommando `GET` aus dem Paket
-'libwww-perl' zum Einsatz. Zu sehen ist, daß die Anfrage an
+'libwww-perl' zum Einsatz. Zu sehen ist, dass die Anfrage an
 `http.debian.net` aufgelöst wird und eine Weiterleitung (Redirect) zum
 Debian-Paketmirror an der ETH Zürich erfolgt.
 
@@ -227,7 +227,7 @@ passieren. So werden z.B. Anfragen nach Paketen aus dem Bereich
 'Backports' nur an Paketmirror weitergeleitet, die auch die Paketquellen
 für 'Backports' spiegeln{empty}footnote:[Dies ist nur noch für Debian 6
 'Squeeze' relevant. Ab Debian 7 'Wheezy' sind die Backports in den
-normalen Debian-Paketquellen enthalten.]. Darüberhinaus muß die
+normalen Debian-Paketquellen enthalten.]. Darüber hinaus muss die
 Paketquelle nicht auf jeden Paketspiegel unter dem gleichen Pfad liegen.
 Möglich sind z.B. statt der Empfehlung `/debian/` auch
 `/pub/debian/` oder `/mirror/debian/`.
@@ -270,7 +270,7 @@ herunter.
 Clientseitig nutzt dieses Verfahren keinerlei GeoIP-Informationen,
 sondern wählt pro Maschine einen zufälligen Paketspiegel aus. Zunächst
 deutet o.g. URL auf eine simple Textdatei hin. Diese Datei wird jedoch
-beim jedem Aufruf automatisch neu generiert und -- ähnlich wie die Weiterleitungen
+bei jedem Aufruf automatisch neu generiert und -- ähnlich wie die Weiterleitungen
 beim Debian Redirector -- je nach anfragender IP dynamisch mit URLs
 anderer Spiegel gefüllt. Laden Sie diese Datei aus der Schweiz herunter,
 kann sie z.B. so aussehen:
@@ -301,7 +301,7 @@ der bei dem deutschen Internetdienstleister Hetzner gehostet wird, ergab
 Beispiele abzudrucken, wurden hier absichtlich die beiden Beispiele aus
 dem deutschsprachigen Raum gewählt, die relativ kurze Listen ergeben.].
 
-Auffällig ist allerdings, daß als letzter Paketmirror in dieser Liste
+Auffällig ist allerdings, dass als letzter Paketmirror in dieser Liste
 jeweils immer auch noch `archive.ubuntu.com` angegeben wird. Unter
 diesem Hostnamen sind per DNS Round Robin wiederum zur Zeit sechs
 verschiedene Server von Canonical erreichbar.
@@ -331,7 +331,7 @@ Trafficvolumen zählen. Der passende Eintrag in der
 deb mirror://www.debian-paketmanagement.de/hetzner-mirrors.txt wheezy main contrib non-free
 ----
 
-==== Welcher Paketmirror wird schlußendlich benutzt? ====
+==== Welcher Paketmirror wird schlussendlich benutzt? ====
 
 Egal, ob Sie eine der o.g. Methoden zur automatischen Auswahl des
 Paketspiegels verwendet haben oder ob Sie einen bestimmten Hostnamen in
@@ -340,7 +340,7 @@ sich die Frage: Von welchem Paketspiegel bezieht APT denn nun die
 Paketlisten und Pakete tatsächlich? APT gibt diese Information leider
 nicht allzu leicht preis.
 
-Falls einem der schlußendlich verwendeten Hostnamen mehr als eine IP
+Falls einem der schlussendlich verwendeten Hostnamen mehr als eine IP
 zugewiesen ist, wird eine davon zufällig ausgewählt. APT und
 `aptitude` verwenden diese IP-Adresse intern, zeigen sie aber erst
 dann an, wenn Sie eines der Programme zur Paketverwaltung benutzen und
