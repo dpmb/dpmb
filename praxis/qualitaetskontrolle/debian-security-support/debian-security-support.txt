@@ -10,15 +10,13 @@
 (((Debianpaket, debian-security-support)))
 (((Debian Security Team)))
 (((Veröffentlichung, oldstable)))
-
 Mit Hilfes des Werkzeugs `check-support-status` aus dem Paket
-'debian-security-support'{empty}footnote:[https://packages.debian.org/jessie/debian-security-support]
-lesen Sie die Informationen des Debian Security
-Teams{empty}footnote:[https://www.debian.org/security/] im Terminal.
-Hilfreich ist es vor allem bei Installationen von Debian 'oldstable', da
-es Ihnen berichtet, für welche Pakete bereits jetzt schon bekannt ist,
-daß deren Security-Support in zukünftigen Veröffentlichungen nicht
-fortgesetzt wird. 
+'debian-security-support' <<Debian-Paket-debian-security-support>> lesen
+Sie die Informationen des Debian Security Teams <<Debian-Security>> im
+Terminal. Hilfreich ist es vor allem bei Installationen von Debian
+'oldstable', da es Ihnen berichtet, für welche Pakete bereits jetzt
+schon bekannt ist, daß deren Security-Support in zukünftigen
+Veröffentlichungen nicht fortgesetzt wird.
 
 Als Basis nutzt `check-support-status` zwei textbasierte Datenbanken,
 die sich unter
