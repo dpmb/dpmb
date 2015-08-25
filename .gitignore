@@ -7,3 +7,5 @@
 *.lit
 *.fb2
 /docbook-xsl.css
+*.ods
+*.ods#
