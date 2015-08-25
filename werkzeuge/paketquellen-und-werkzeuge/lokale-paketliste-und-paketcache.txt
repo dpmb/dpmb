@@ -60,7 +60,7 @@ Architektur (<<debian-architekturen>>), das Format des Debianpakets
 sowie die Checksummen der Pakete und das Sourcepaket
 (<<debian-pakete-varianten>>), aus der das Paket entstanden ist. Danach
 folgen die Projektwebseite sowie das Verzeichnis, in dem das Paket auf
-dem Paketmirror abgelegt ist. Zum Schluß stehen die Priorität, der
+dem Paketmirror abgelegt ist. Zum Schluss stehen die Priorität, der
 Distributionsbereich (<<distributionsbereiche>>) und die Paketkategorie
 (<<sortierung-der-pakete-nach-verwendungszweck>>). Nachfolgender Kasten zeigt die Informationen
 anhand des Pakets 'easyspice' aus der Paketkategorie Elektronik

@@ -6,7 +6,7 @@
 
 === Lokale Paketliste reparieren ===
 
-Es kann vorkommen, daß eine lokale Paketliste, die im Verzeichnis
+Es kann vorkommen, dass eine lokale Paketliste, die im Verzeichnis
 `/var/lib/apt/lists` liegt, bei deren Aktualisierung (siehe
 <<liste-der-verfuegbaren-pakete-aktualisieren>>) kaputtgeht. Das kommt
 sehr selten vor, aber bspw. dann, wenn nicht mehr genügend freier
@@ -37,12 +37,12 @@ der Debian-Paketquellen auf den Paketmirrors (siehe
 <<geeigneten-paketmirror-auswaehlen>>). Diese Erneuerung erfolgt
 automatisiert alle sechs Stunden und bereinigt auch eventuelle
 Inkonsistenzen der Paketlisten auf dem Paketmirror. Um auch
-sicherzugehen, daß die Liste der Paketquellen auf dem neuesten Stand
+sicherzugehen, dass die Liste der Paketquellen auf dem neuesten Stand
 ist, warten Sie lieber einen kleinen Moment länger.
 
 ==== Aktualität des Mirrors überprüfen ====
 
-Sollten die Fehler trotz ihrer intensiven Bemühungen bestehen bleiben,
+Sollten die Fehler trotz Ihrer intensiven Bemühungen bestehen bleiben,
 bleibt noch eine Überprüfung, ob der angefragte Spiegelserver auch
 aktuell ist. Eine Zustandsübersicht über alle offiziellen Spiegelserver,
 die bei Debian registriert sind, finden Sie unter dem Debian Mirror
@@ -64,12 +64,12 @@ Wenn die gefundene Datei deutlich älter als sechs Stunden ist, prüfen
 Sie bitte zuerst, wann die letzte Aktualisierung des Mirror-Netzwerkes
 stattgefunden hat{empty}footnote:[Bei Ausfällen oder Umbauten in der
 Infrastruktur wie auch kurz vor neuen Veröffentlichungen kann es
-durchaus vorkommen, daß der Abstand zwischen zwei Aktualisierungen des
+durchaus vorkommen, dass der Abstand zwischen zwei Aktualisierungen des
 Mirrors deutlich mehr als sechs Stunden dauert, teilweise auch einen
 oder wenige Tage.]. Unter <<dinstall-status>> finden Sie eine Datei, in
 der festgehalten wird, in welchem Schritt der Aktualisierung und Zustand
 sich der Master-Mirror gerade befindet. Ein Eintrag ``all done''
-bedeutet, daß zur Zeit keine Aktualisierung läuft. Das Endedatum zeigt
+bedeutet, dass zur Zeit keine Aktualisierung läuft. Das Endedatum zeigt
 den Zeitpunkt an, an dem die erste Stufe des Mirror-Netzwerkes mit den
 neuen Paketlisten und Paketen versorgt wurde.
 
