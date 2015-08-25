@@ -11,11 +11,11 @@
 (((Paketmirror, Abgleich zwischen Paketversionen)))
 
 Während Ihnen `apt-listbugs` alle Bugreports anzeigt, vergleicht
-`apt-listchanges` aus dem gleichnamigen
-Paket{empty}footnote:[https://packages.debian.org/de/stable/apt-listchanges]
-die Änderungen zwischen dem lokal installierten Paket und der neuen,
-verfügbaren Version auf dem Spiegelserver. Dazu wertet es die beiden
-Dateien `NEWS.Debian` und `changelog.gz` bzw. `changelog.Debian.gz` aus.
+`apt-listchanges` aus dem gleichnamigen Paket
+<<Debian-Paket-apt-listchanges>> die Änderungen zwischen dem lokal
+installierten Paket und der neuen, verfügbaren Version auf dem
+Spiegelserver. Dazu wertet es die beiden Dateien `NEWS.Debian` und
+`changelog.gz` bzw. `changelog.Debian.gz` aus.
 
 Die Ausgabe von `apt-listchanges` steuern Sie dabei über mehrere
 Schalter (Auswahl):
