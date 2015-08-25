@@ -38,15 +38,15 @@ LernStick:: Live-Distribution auf einem USB-Stick <<LernStick>>
 (((Ubuntu)))
 (((Univention Corporate Server (UCS))))
 
-LiMux:: Linux-Distribution, die im Rahmen der Migration der Stadtverwaltung München zum Einsatz kommt{empty}footnote:[http://www.muenchen.de/rathaus/Stadtverwaltung/Direktorium/LiMux.html]
+LiMux:: Linux-Distribution, die im Rahmen der Migration der Stadtverwaltung München zum Einsatz kommt <<LiMux>>
 
-Linux Mint, Linux Mint Debian Edition (LMDE):: basiert auf Ubuntu bzw. Debian 'testing'{empty}footnote:[http://www.linuxmint.com/]
+Linux Mint, Linux Mint Debian Edition (LMDE):: basiert auf Ubuntu bzw. Debian 'testing' <<LinuxMint>>
 
-Tanglu:: Rein community-basiertes Desktop-Linux{empty}footnote:[http://www.tanglu.org/de/]
+Tanglu:: Rein community-basiertes Desktop-Linux <<Tanglu>>
 
-Ubuntu (und dessen Ableger):: Linux für Einsteiger und den Desktop{empty}footnote:[http://www.ubuntu.com/]
+Ubuntu (und dessen Ableger):: Linux für Einsteiger und den Desktop <<Ubuntu>>
 
-Univention Corporate Server (UCS):: Linux mit integriertem Managementsystem für die zentrale und plattformübergreifende Verwaltung von Servern, Diensten, Clients, Desktops und Benutzern sowie von unter UCS betriebenen virtualisierten Computern{empty}footnote:[http://www.univention.de/produkte/ucs/]
+Univention Corporate Server (UCS):: Linux mit integriertem Managementsystem für die zentrale und plattformübergreifende Verwaltung von Servern, Diensten, Clients, Desktops und Benutzern sowie von unter UCS betriebenen virtualisierten Computern <<UCS>>
 
 === Live-CD ===
 
