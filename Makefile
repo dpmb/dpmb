@@ -48,6 +48,10 @@ asciidoctor: doctor-html
 doctor-html: $(DEFAULTDEPENDENCIES)
 	asciidoctor $(DOCTORDEFAULTOPTIONS)
 
+test: test-epub
+test-epub: debian-paketmanagement.epub
+	epubcheck debian-paketmanagement.epub
+
 deploy: allpure
 	for suffix in $(FORMATS); do cp -pvf debian-paketmanagement.$$suffix deploy/; done
 	cd deploy && asciidoc index.txt

@@ -7,7 +7,7 @@ before_install:
 
 script:
    - make verbose
-   - epubcheck debian-paketmanagement.epub
+   - make test
 
 #after_failure:
 #   - sudo apt-get install libxml2-utils

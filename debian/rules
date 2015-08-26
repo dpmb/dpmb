@@ -7,3 +7,8 @@ override_dh_auto_build:
 
 override_dh_compress:
 	dh_compress -X.pdf
+
+# Don't run epubcheck during build to avoid tons of additional
+# build-dependencies. Build-profiles would be an option, but are only
+# supported from Debian 8 Jessie onwards.
+override_dh_auto_test:
