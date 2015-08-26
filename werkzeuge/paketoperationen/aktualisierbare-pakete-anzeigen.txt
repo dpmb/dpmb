@@ -23,7 +23,7 @@ Ausgabe, die der nachfolgenden ähnelt. Die mögliche Option `-s`
 Letzteres ist nützlich, um zu sehen, was sich ändern wird, wenn Sie das
 Kommando ausführen.
 
-//.Anzeige aller Pakete, für die eine neue Version bereitsteht
+.Anzeige aller Pakete, für die eine neue Version bereitsteht
 ----
 # apt-get upgrade -u -s
 Paketlisten werden gelesen...
@@ -48,7 +48,7 @@ Conf libc-bin (2.13-38+deb7u4 Debian-Security:7.0/stable [i386]) [libc6:i386 ]
 `aptitude` kennt für diesen Zweck die Suchoption `~U`. Diese steht als
 Kurzform für `?upgradable`.
 
-//.Aktualisierbare Pakete mit `aptitude` anzeigen
+.Aktualisierbare Pakete mit `aptitude` anzeigen
 ----
 $ aptitude search ~U
 i A cups-common                - Common UNIX Printing System(tm) - gemeinsa
@@ -71,6 +71,7 @@ hier ausschließlich aus _stable_ bezogen werden. Die erste Spalte zeigt
 den Paketstatus an, danach die Versionsnummer, die Veröffentlichung und
 als letztes die Priorität (siehe dazu <<veroeffentlichungen-mischen>>).
 
+.Die verfügbaren Versionen zum Paket 'aptitude' anzeigen
 ----
 $ aptitude versions 'aptitude'
 Paket aptitude:
