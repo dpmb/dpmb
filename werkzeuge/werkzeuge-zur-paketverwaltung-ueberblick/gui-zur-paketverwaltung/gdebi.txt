@@ -31,8 +31,8 @@ image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltun
 Dabei dient das Kommandozeilenprogramm `gdebi` den beiden graphischen
 Werkzeugen als Backend und wird von diesen intern aufgerufen, um die
 jeweiligen Paketoperationen auszuführen. Sie können es aber auch alleine
-auf der Kommandozeile benutzen, ohne daß eine der beiden graphischen
-Komponenten installiert sein muß. Rufen Sie dazu GDebi auf der
+auf der Kommandozeile benutzen, ohne dass eine der beiden graphischen
+Komponenten installiert sein muss. Rufen Sie dazu GDebi auf der
 *Kommandozeile* mit einem `deb`-Paket als Parameter auf, erhalten Sie
 die Paketbeschreibung. Stimmen Sie danach der abschließenden Frage zur
 Installation mit kbd:[j] zu, führt `gdebi` ihren Wunsch aus und das
@@ -110,7 +110,7 @@ Paketmirrors (siehe <<etc-apt-sources.list-verstehen>>) nachgezogen.
 Diese Eigenschaft hebt GDebi deutlich von `dpkg` ab, das nur meckern
 kann, falls es auf nicht-erfüllte Abhängigkeiten stößt.
 
-Einziger Wermutstropfen bei GDebi ist, daß sowohl die beiden graphischen
+Einziger Wermutstropfen bei GDebi ist, dass sowohl die beiden graphischen
 Tools, als auch `gdebi` bislang pro Aufruf nur ein einziges `deb`-Paket
 akzeptieren. APT ab Version 1.1 kann allerdings ebenfalls mit lokalen
 Paketen umgehen und dabei deren Abhängigkeiten über APT-Repositories
