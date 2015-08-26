@@ -17,7 +17,7 @@ Die nachfolgende Ausgabe listet die Pakete zusätzlich alphabetisch
 aufsteigend sortiert und seitenweise auf. Im Aufruf kommen dazu die
 beiden UNIX-Kommandos `sort` und `more` zum Einsatz.
 
-//.Seitenweise und alphabetisch sortierte Ausgabe der Paketnamen, die APT kennt
+.Seitenweise und alphabetisch sortierte Ausgabe der Paketnamen, die APT kennt
 ----
 $ apt-cache pkgnames | sort | more
 0ad
@@ -38,17 +38,16 @@ $
 (((grep-aptavail, -PX)))
 (((grep-available)))
 In eine ähnliche Richtung gehen die beiden Werkzeuge `grep-available`
-und `grep-aptavail` aus dem Paket
-'dctrl-tools'{empty}footnote:[http://packages.debian.org/de/stable/dctrl-tools].
-Beide liefern Ihnen Informationen darüber, ob und in welcher Version das
-von Ihnen angefragte Paket aus den Paketquellen zur Verfügung steht.
-Während `grep-available` weitestgehend die Informationen ausgibt, die
-Sie mittels `dpkg -s` erhalten, liefert Ihnen `grep-aptavail` die
-vollständigen Informationen, so bspw. auch, wo Sie das Paket in der
-Verzeichnishierarchie der Paketquellen finden. Nachfolgendes Beispiel
-zeigt die Recherche anhand des Paketes 'xpdf'.
+und `grep-aptavail` aus dem Paket 'dctrl-tools'
+<<Debian-Paket-dctrl-tools>>. Beide liefern Ihnen Informationen darüber,
+ob und in welcher Version das von Ihnen angefragte Paket aus den
+Paketquellen zur Verfügung steht. Während `grep-available` weitestgehend
+die Informationen ausgibt, die Sie mittels `dpkg -s` erhalten, liefert
+Ihnen `grep-aptavail` die vollständigen Informationen, so bspw. auch, wo
+Sie das Paket in der Verzeichnishierarchie der Paketquellen finden.
+Nachfolgendes Beispiel zeigt die Recherche anhand des Paketes 'xpdf'.
 
-//.Paketinformationen zu 'xpdf'
+.Paketinformationen zu 'xpdf'
 ----
 $ grep-aptavail -PX xpdf
 Package: xpdf
@@ -83,7 +82,7 @@ Kennen Sie jedoch nur ein Fragment eines Paketnamens, gibt es einen
 'Muster' bezeichnet hier das Ihnen bereits bekannte Fragment.
 Nachfolgend sehen Sie die Recherche nach dem Muster `aptitude`.
 
-//.Suche nach dem Muster `aptitude`
+.Suche nach dem Muster `aptitude`
 ----
 $ apt-cache pkgnames | grep aptitude
 aptitude
@@ -104,9 +103,9 @@ $
 (((Debianpaket, debian-goodies)))
 (((dglob, -a)))
 Die _Abkürzung_ führt über das Werkzeug `dglob` aus dem Paket
-'debian-goodies'{empty}footnote:[http://packages.debian.org/de/stable/debian-goodies]. 
-Es setzt auf `apt-file` auf und liefert eine identische Ausgabe – aber
-der Tippaufwand ist geringer. Nachfolgende Ausgabe zeigt Ihnen das
+'debian-goodies' <<Debian-Paket-debian-goodies>>. Es setzt auf
+`apt-file` auf und liefert eine identische Ausgabe – aber der
+Tippaufwand ist geringer. Nachfolgende Ausgabe zeigt Ihnen das
 Suchergebnis zu den Paketen, die das Muster `ttd` beinhalten. Damit
 finden Sie beispielsweise alle Pakete, die zum Spiel Open Transport
 Tycoon Deluxe (openttd) gehören.
@@ -116,7 +115,7 @@ alphabetisch aufsteigender Reihenfolge auf – unabhängig davon, ob diese
 jeweils auf ihrem System installiert sind oder nicht. Ohne die Option
 beschränkt sich `dglob` nur auf die bereits installierten Pakete.
 
-//.Rechercheergebnis von `dglob` mit dem Muster `ttd`
+.Rechercheergebnis von `dglob` mit dem Muster `ttd`
 ----
 $ dglob -a ttd
 liblttd-dev
