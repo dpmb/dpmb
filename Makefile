@@ -4,6 +4,10 @@ DOCTORDEFAULTOPTIONS=-a experimental -a toc -a toclevels=4
 FORMATS=html epub pdf mobi
 
 all: $(FORMATS)
+allpure: pure$(FORMATS)
+
+purehtml: $(DEFAULTDEPENDENCIES)
+	asciidoc $(VERBOSE) debian-paketmanagement.txt
 
 html: debian-paketmanagement.html
 %.html: %.txt $(DEFAULTDEPENDENCIES)
@@ -44,6 +48,6 @@ asciidoctor: doctor-html
 doctor-html: $(DEFAULTDEPENDENCIES)
 	asciidoctor $(DOCTORDEFAULTOPTIONS)
 
-deploy: all
+deploy: allpure
 	for suffix in $(FORMATS); do cp -pvf debian-paketmanagement.$$suffix deploy/; done
 	cd deploy && asciidoc index.txt

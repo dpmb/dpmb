@@ -2,5 +2,8 @@
 %:
 	dh $@ --parallel
 
+override_dh_auto_build:
+	$(MAKE) -j5 allpure
+
 override_dh_compress:
 	dh_compress -X.pdf
