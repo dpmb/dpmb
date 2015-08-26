@@ -93,7 +93,7 @@ beispielhaft die Signaturen zum Opera Software Archive, dem Mendeley
 Desktop Team und dem Debian Archive für die beiden Veröffentlichungen
 _Wheezy_ und _Jessie_.
 
-//.Liste der Signaturen (Ausschnitt)
+.Liste der Signaturen (Ausschnitt)
 ----
 # apt-key finger
 /etc/apt/trusted.gpg
@@ -136,14 +136,13 @@ uid                  Wheezy Stable Release Key <debian-release@lists.debian.org>
 <<paketquelle-auf-echtheit-ueberpruefen>> aufgeführt.
 
 Für eine graphische Darstellung nutzen Sie stattdessen das Werkzeug
-`gui-apt-key` aus den gleichnamigen
-Paket{empty}footnote:[https://packages.debian.org/de/stable/gui-apt-key].
-Es existiert auch eine TUI-Variante namens
-`curses-apt-key`{empty}footnote:[https://github.com/xtaran/curses-apt-key].
-Diese ist aber zur Zeit noch nicht offizieller Bestandteil von Debian,
-da dazu zuerst das Paket `gui-apt-key` in Bibliothek und Frontend
-aufgespalten werden müsste. Details dazu finden Sie im
-Debian-Bugtracker{empty}footnote:[https://bugs.debian.org/675199]. In
+`gui-apt-key` aus den gleichnamigen Paket <<Debian-Paket-gui-apt-key>>.
+Es existiert auch eine TUI-Variante namens `curses-apt-key`
+<<curses-apt-key>>. Diese ist aber zur Zeit noch nicht offizieller
+Bestandteil von Debian, da dazu zuerst das Paket `gui-apt-key` in
+Bibliothek und Frontend aufgespalten werden müsste. Details dazu finden
+Sie im Debian-Bugtracker
+<<curses-apt-key-braucht-gui-apt-key-aufsplittung>>. In
 <<fig.gui-apt-key2-gpg>> sehen Sie `gui-apt-key` mit der Überprüfung des
 (inzwischen abgelaufenen) Schlüssels für das Opera Software Archive.
 
