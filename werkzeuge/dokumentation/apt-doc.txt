@@ -8,10 +8,10 @@
 
 // Stichworte für den Index
 (((Debianpaket, apt-doc)))
-Das Paket 'apt-doc'{empty}footnote:[http://packages.debian.org/de/stable/apt-dpkg-ref]
-beinhaltet das Benutzerhandbuch zu APT. Es wurde bereits 1998 von Jason
-Gunthorpe begonnen und zwischenzeitlich mehrfach aktualisiert und in
-diverse Sprachen übersetzt. Es steht Ihnen als HTML- und Textversion in
+Das Paket 'apt-doc' <<Debian-Paket-apt-doc>> beinhaltet das
+Benutzerhandbuch zu APT. Es wurde bereits 1998 von Jason Gunthorpe
+begonnen und zwischenzeitlich mehrfach aktualisiert und in diverse
+Sprachen übersetzt. Es steht Ihnen als HTML- und Textversion in
 englisch, deutsch, spanisch, französisch, polnisch und portugiesisch zur
 Verfügung. Alle Übersetzungen finden Sie im gleichen Paket.
 
