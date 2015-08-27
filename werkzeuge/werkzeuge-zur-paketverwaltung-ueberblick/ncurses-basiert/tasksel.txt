@@ -31,7 +31,7 @@ image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/taskse
 
 Über die textbasierte Benutzeroberfläche und der dargestellten Liste
 wählen Sie zunächst mittels Pfeil- und Leertaste die gewünschten
-Aufgaben aus. Daraufhin werden alle Pakete ``in einem Rutsch'' auf ihrem
+Aufgaben aus. Daraufhin werden alle Pakete ``in einem Rutsch'' auf Ihrem
 Linuxsystem installiert, die diesen Aufgaben zugeordnet sind.
 
 Bei Debian und Ubuntu existieren viele Aufgaben als separate,

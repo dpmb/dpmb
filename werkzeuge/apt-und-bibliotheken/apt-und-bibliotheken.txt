@@ -18,7 +18,7 @@ Paketverwaltung entwickeln.
 === Bibliothek `libapt-pkg` ===
 
 Diese Bibliothek enthält die Basiskomponenten zum Zugriff auf die
-einzelnen Softwarepakete. Das umfaßt Funktionen zur Suche nach Paketen,
+einzelnen Softwarepakete. Das umfasst Funktionen zur Suche nach Paketen,
 deren Verwaltung sowie die Ausgabe der Paketinformationen. Dazu gehören:
 
 * der Abruf von Informationen zu einem Paket aus den verschiedenen Paketquellen

@@ -15,12 +15,12 @@
 Debianpakete beinhalten stets zwei Komponenten – Daten und
 Metainformationen. Die _Daten_ sind die tatsächlichen Inhalte des
 Pakets, d.h. entweder der Quellcode oder die übersetzten
-Programmdateien, die bei der Installation auf ihr System kopiert werden.
+Programmdateien, die bei der Installation auf Ihr System kopiert werden.
 
 Die _Metainformationen_ sind zusätzliche Informationen zu einem Paket,
 die dieses näher beschreiben. Dazu zählen erstens die Relationen zu
 anderen Paketen. Diese legen die Voraussetzungen fest, nach denen das
-Paket überhaupt übersetzt (``gebaut'') und später auf ihrem Linux-System
+Paket überhaupt übersetzt (``gebaut'') und später auf Ihrem Linux-System
 installiert werden kann. Insbesondere zählen dazu die Abhängigkeiten und
 Konflikte zu anderen Paketen. Diese Relationen beschreiben wir
 ausführlich in Konzepte und Ideen dahinter
@@ -30,7 +30,7 @@ Zweitens gehören die sogenannten Maintainer-Skripte namens `preinst`,
 `postinst`, `prerm` und `postrm` dazu. Die beiden Skripte `preinst` und
 `postinst` regeln alle Aktivitäten vor und nach der Installation,
 `prerm` und `postrm` hingegen vor und nach der Entfernung des Pakets von
-ihrem System. Diese vier Skripte sind üblicherweise
+Ihrem System. Diese vier Skripte sind üblicherweise
 distributionsspezifische Shellskripte, die der Maintainer des jeweiligen
 Pakets pflegt.
 
@@ -78,7 +78,7 @@ Der Originalquellcode der paketierten Software. Es wird versucht, diesen
 soweit wie möglich unverändert zu lassen. Es muss sich jedoch dabei um
 ein `tar`-Archiv handeln. Andere Container-Formate wie z.B. `zip` werden
 nicht unterstützt. Offerieren die Entwickler der Software den Quellcode
-z.B. nur als `zip`- oder `rar`-Archiv, so muß der Quellcode zunächst in
+z.B. nur als `zip`- oder `rar`-Archiv, so muss der Quellcode zunächst in
 ein `tar`-Archiv umgepackt werden. Der Dateiname des `tar`-Archivs endet
 dabei in `orig.tar.endung`, wobei das Suffix `endung` vom
 Komprimierungsformat abhängt. Erlaubt sind ebenfalls wieder `gzip`,
@@ -164,7 +164,7 @@ Steuerdateien werden in der Komponente `control.tar.gz`
 aufbewahrt und bestehen aus diesen Dateien:
 
 `control`::
-Das ist eine Steuerdatei und diese muß immer vorhanden sein. Sie
+Das ist eine Steuerdatei und diese muss immer vorhanden sein. Sie
 beinhaltet die Metainformationen für die Paketverwaltung, bspw. zur
 Prüfung der Paketabhängigkeiten vor der Installation. Diese Steuerdatei
 kann beim Bauen des Pakets generiert worden sein, z.B. aus der Datei
@@ -175,7 +175,7 @@ Das ist eine Liste mit Konfigurationsdateien zum Paket. Erfolgt eine
 Paketaktualisierung, werden die Dateien, die in dieser Liste aufgeführt
 sind, auf dem System beibehalten und nicht durch die Daten aus dem neuen
 Paket überschrieben. Damit bleiben bereits bestehende lokale Änderungen
-erhalten, bspw. von spezifisch angepaßten Konfigurationsdateien. Diese
+erhalten, bspw. von spezifisch angepassten Konfigurationsdateien. Diese
 Liste wird meist automatisiert generiert.
 
 `preinst`::
@@ -199,7 +199,7 @@ wurde.
 
 `md5sums`::
 MD5-Summen der Dateien, welche im Paket enthalten sind. Damit wird
-sichergestellt, daß beispielsweise keine Übertragungsfehler (Bitfehler)
+sichergestellt, dass beispielsweise keine Übertragungsfehler (Bitfehler)
 oder Änderungen zwischen dem Paketmirror und ihrem lokalen System
 erfolgt sind (siehe auch Bezogenes Paket verifizieren in
 <<bezogenes-paket-verifizieren>>).
@@ -226,9 +226,9 @@ auch an die richtige Position in der Dateisystemhierarchie kopieren
 kann, spiegelt der Inhalt dieser Komponente die entsprechende
 Verzeichnisstruktur auf dem Zielsystem vollständig wieder.
 
-Diese Struktur, die zu installierenden Dateien sowie deren Typ und Größe
+Diese Struktur, die zu installierenden Dateien sowie deren Typ und Größe,
 zeigen Sie mit dem Kommando `dpkg-deb -c Paketdatei` an. Am Beispiel von
-'vnstat' sehen Sie damit, daß im Debianpaket sowohl Programme
+'vnstat' sehen Sie damit, dass im Debianpaket sowohl Programme
 (ausführbare Dateien in `/usr/bin` und `/usr/sbin`) als
 auch Dokumentation (in `/usr/share/doc` und
 `/usr/share/man`), Konfigurationsdateien (in `/etc`) und
@@ -300,7 +300,7 @@ ersetzt werden, falls diese aus dem gleichen Sourcepaket gebaut wurden.
 
 Darüberhinaus können die Pakete einen Wrapper oder einen symbolischen
 Link zur Wahrung der Rückwärtskompatibilität beinhalten. Beispielsweise
-umfaßt das Paket 'ash' nur eine Abhängigkeit auf das Paket 'dash' und
+umfasst das Paket 'ash' nur eine Abhängigkeit auf das Paket 'dash' und
 einen symbolischen Verweis (Symlink) von `/bin/ash` zu
 `/bin/dash`:
 

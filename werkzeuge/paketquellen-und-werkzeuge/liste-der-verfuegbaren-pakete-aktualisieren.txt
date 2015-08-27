@@ -46,7 +46,7 @@ Aktualisierung für alle Paketquellen über den Menüpunkt `File -> Update
 channels` aus. Möchten Sie nur eine einzige Paketquelle auf den
 neuesten Stand bringen, wählen Sie stattdessen zunächst `File -> Update
 selected channels ...` aus und entscheiden danach, welche Paketquelle
-ihres Erachtens eine Auffrischung verdient hat (siehe dazu
+Ihres Erachtens eine Auffrischung verdient hat (siehe dazu
 <<fig.smartpm-paketquellen-auswaehlen>>).
 
 .Auflistung der verfügbaren Paketquellen in SmartPM

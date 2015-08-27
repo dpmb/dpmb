@@ -11,7 +11,7 @@ Canonical bietet mit dem Ubuntu Software Center
 Auswahl und Pflege ihres Softwarebestands an. Dieses Paket wurde 2010
 auch in den Bestand von Debian übernommen (Paket 'software-center',
 <<Debian-Paket-software-center>>), aber bereits 2014 wieder aus Debian
-entfernt. Die Begründung ist, daß das Programm nicht mehr aktuell in
+entfernt. Die Begründung ist, dass das Programm nicht mehr aktuell in
 Debian sei und auch bessere Alternativen existieren
 (<<RM-software-center>>).  Es ist daher in Debian 6 'Squeeze' und Debian
 7 'Wheezy' enthalten, aber nicht mehr in Debian 8 'Jessie'.
@@ -41,7 +41,7 @@ Pakete anzeigen in <<liste-der-zuletzt-installierten-pakete-anzeigen>>.
 .Verlauf der Änderungen im Paketbestand
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/ubuntu-software-center-verlauf.png[id="fig.ubuntu-software-center-verlauf", width="50%"]
 
-Bei der Benutzung des Programms beachten Sie bitte, daß das Programm
+Bei der Benutzung des Programms beachten Sie bitte, dass das Programm
 viele graphische Elemente und Inhalte enthält, die über das Internet
 bereitgestellt werden. Daher empfehlen wir Ihnen zur Benutzung eine
 Internetverbindung, da ansonsten viele Informationen in der
