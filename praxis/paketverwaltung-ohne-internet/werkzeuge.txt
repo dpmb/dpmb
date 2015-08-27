@@ -17,29 +17,7 @@ include::apt-zip.txt[]
 // Offline-Verwaltung mit 'aptoncd'
 include::aptoncd.txt[]
 
-===== Keryx ===== 
-
-// Stichworte für den Index
-(((Keryx)))
-
-* Projekt: <<Keryx>> 
-* ``Keryx is a free, open source application for updating Linux. The
-Keryx Project started as a way for users with dialup, or low-bandwidth
-internet to be able to download and update packages on their debian
-based distribution of linux. Mainly built for Ubuntu, Keryx allows users
-to select packages to install, check for updates, and download these
-packages onto a USB portable storage device. The packages are saved onto
-the device and are then taken back to the Linux box that it originated
-from and are then installed.''
-
-* ``a portable, cross platform offline package manager for Debian based
-Linux distributions (Ubuntu and derivatives).''
-* ``Download software on computer connected to internet (it may be on
-Linux or Windows) and then install them to offline PC.''
-* basiert auf dem Gimp Tool Kit
-* letzte Veröffentlichung als Ubuntu PPA: 2011 (Version 1)
-
-* (Stichwort Turnschuhnetzwerk, Sneakernet: https://de.wikipedia.org/wiki/Turnschuhnetzwerk)
-
+// Offline-Verwaltung mit 'keryx'
+include::keryx.txt[]
 
 // Datei (Ende): ./praxis/paketverwaltung-ohne-internet/werkzeuge.txt
