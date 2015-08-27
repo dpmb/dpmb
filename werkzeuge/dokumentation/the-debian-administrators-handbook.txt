@@ -34,9 +34,9 @@ vollständig und daher nicht in gedruckter Form verfügbar.
 (((Debianpaket, debian-handbook)))
 Das Buch wird jeweils für die aktuelle Debian-Veröffentlichung angepaßt.
 Gleichzeitig entsteht daraus auch ein reguläres Debianpakete namens
-'debian-handbook'{empty}footnote:[http://packages.debian.org/de/stable/debian-handbook],
-welches in die Distribution wieder einfließt. Das Paket beinhaltet
-derzeit den französischen, englischen und spanischen Text.
+'debian-handbook' <<Debian-Paket-debian-handbook>> welches in die
+Distribution wieder einfließt. Das Paket beinhaltet derzeit den
+französischen, englischen und spanischen Text.
 
 // Stichworte für den Index
 (((aptitude)))
