@@ -15,12 +15,11 @@
 (((Yellowdog Updater Modified (YUM))))
 (((Zypper)))
 Eine ausführliche Zusammenstellung der Kommandozeilenparameter und
-Funktionen populärer Paketverwaltungen beinhaltet die Pacman
-Rosetta{empty}footnote:[https://wiki.archlinux.org/index.php/Pacman_Rosetta]
-aus dem Wiki zu Arch Linux. Anhand von Aufrufen aus der Praxis stellt es
-Pacman (Arch Linux), YUM (RedHat/Fedora), `dpkg` und `apt-get` (Debian,
-Ubuntu) sowie `rug` (älteres Suse), Zypper (openSUSE) und `emerge`
-(Gentoo Linux) gegenüber.
+Funktionen populärer Paketverwaltungen beinhaltet die Pacman Rosetta
+<<Pacman-Rosetta>> aus dem Wiki zu Arch Linux. Anhand von Aufrufen aus
+der Praxis stellt es Pacman (Arch Linux), YUM (RedHat/Fedora), `dpkg`
+und `apt-get` (Debian, Ubuntu) sowie `rug` (älteres Suse), Zypper
+(openSUSE) und `emerge` (Gentoo Linux) gegenüber.
 
 .Die Pacman Rosetta (Ausschnitt)
 image::werkzeuge/dokumentation/pacman-rosetta.png[id="fig.pacman-rosetta", width="50%"]
