@@ -9,8 +9,8 @@ In diesem Abschnitt beleuchten wir die Installation von `deb`-Paketen
 über das `apturl`-Protokoll (Langfassung: APT Protocol). Dahinter
 verbirgt sich eine Erweiterung für die Webbrowser Firefox/Iceweasel,
 Chromium, Konqueror, Opera und Epiphany (ab Gnome 3.6 umbenannt in Web).
-Voraussetzung dafür ist das Paket 'apturl' (<<Ubuntu-apturl>>) von
-Michael Vogt (<<Vogt-apturl>>). 
+Voraussetzung dafür ist das Paket 'apturl' <<Ubuntu-apturl>> von
+Michael Vogt <<Vogt-apturl>>. 
 
 Das Paket ist bislang nicht in Debian enthalten, aber für Ubuntu als PPA
 verfügbar. Voraussetzung dafür ist mindestens Ubuntu 7 'Feisty Fawn'
@@ -25,6 +25,5 @@ include::risiken-und-bedenken.txt[]
 
 // apturl in der Praxis
 include::apturl-in-der-praxis.txt[]
-
 
 // Datei (Ende): ./praxis/webbasierte-installation-von-paketen/webbasierte-installation-von-paketen.txt
