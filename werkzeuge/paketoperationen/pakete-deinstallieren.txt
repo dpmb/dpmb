@@ -146,7 +146,7 @@ $
 (((aptitude, search ?config-files)))
 Auch `aptitude` kann in diese Richtung recherchieren. Es kennt zu diesem
 Zweck zum Schalter `search` die Option `~c` bzw. die Langform
-`?config-files`. Das Ergebnis umfaßt jedoch _alle_ konfigurierten
+`?config-files`. Das Ergebnis umfasst jedoch _alle_ konfigurierten
 Pakete – unabhängig davon, ob diese als gelöscht markiert sind oder
 nicht.
 

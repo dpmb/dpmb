@@ -19,7 +19,7 @@ bei.
 Releases und entsprechende Pakete beziehen Sie von der jeweiligen
 Webseite des Projekts. Leider gibt es seit längerem keine neueren
 Veröffentlichungen mehr -- 'apt4rpm' schweigt seit 2005, 'apt-rpm' seit
-2008. 2012 verkündete 'apt4rpm', daß es die weitere Entwicklung
+2008. 2012 verkündete 'apt4rpm', dass es die weitere Entwicklung
 einstellt.
 
 // - Entwicklungsstand

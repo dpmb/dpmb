@@ -8,18 +8,18 @@
 // Stichworte für den Index
 (((Paketinstallation, Paket auf Vertrauenswürdigkeit prüfen)))
 Installieren Sie ein Paket von einer Paketquelle, greifen eine ganze
-Reihe von automatischen Überprüfungen, die sicherstellen, daß die von
+Reihe von automatischen Überprüfungen, die sicherstellen, dass die von
 Ihnen bezogenen Daten vertrauenswürdig sind. Mit den nachfolgend
 beschriebenen Vorgehensweisen können Sie die entsprechenden
 Einzelschritte selbst nachvollziehen und durchführen.
 
-Diese Überprüfungen stellen sicher, daß ein von Ihnen bezogenenes
+Diese Überprüfungen stellen sicher, dass ein von Ihnen bezogenenes
 Debianpaket dem Paketmirror so entnommen wurde, wie es von der
 Distribution in der Veröffentlichung zur Verfügung gestellt wurde. Sie
-schließen damit aus, daß zwischenzeitlich Veränderungen von einer
+schließen damit aus, dass zwischenzeitlich Veränderungen von einer
 dritten Partei oder auf dem Paketmirror stattgefunden haben. Weiterhin
-wissen Sie danach ebenfalls, daß das Paket vollständig zu Ihnen
-übertragen wurde und daß das Paket auf dem Weg vom Paketmirror zu Ihnen
+wissen Sie danach ebenfalls, dass das Paket vollständig zu Ihnen
+übertragen wurde und dass das Paket auf dem Weg vom Paketmirror zu Ihnen
 nicht verändert wurde. U.a. bilden diese Schritte die Vertrauensbasis
 für die von Ihnen bezogene Software.
 
@@ -50,13 +50,13 @@ Namen der Paketlisten (heutzutage meist `Packages`,
 `Packages.gz` und `Packages.xz`, früher oft auch noch
 `Packages.bz2`) sowie deren Hashsummen als MD5-, SHA1- und
 SHA256-Variante. Mit der digitalen Signatur der Release-Datei und den
-darin enthalten Hashsummen wird sichergestellt, daß diese Dateien
+darin enthalten Hashsummen wird sichergestellt, dass diese Dateien
 nicht verändert wurden.
 
 Die Datei `Packages` (wie auch deren komprimierten Varianten)
 beinhaltet wiederum eine Liste von Paketen bzw. deren Dateien, die für
 diese Veröffentlichung zur Verfügung stehen – und deren Hash-Summen.
-Dies stellt wiederum sicher, daß die Paketdateien aus der Liste nicht
+Dies stellt wiederum sicher, dass die Paketdateien aus der Liste nicht
 verändert wurden.
 
 Durch die gesamte Kette aus Paket-Hashsummen in den Paketlisten und
@@ -87,7 +87,7 @@ alleinige Quelle zur Überprüfung von Veröffentlichungssignaturen.
 (((apt-key, finger)))
 Die Signaturen der von Ihnen verwendeten Paketquellen zeigen Sie mit dem
 Aufruf `apt-key finger'{empty}footnote:[Da die Datei `/etc/apt/trusted.gpg`
-teilweise für normale User nicht lesbar ist, kann es sein, daß Sie dieses
+teilweise für normale User nicht lesbar ist, kann es sein, dass Sie dieses
 Kommando mit Root-Rechten ausführen müssen.] an. Nachfolgend sehen Sie
 beispielhaft die Signaturen zum Opera Software Archive, dem Mendeley
 Desktop Team und dem Debian Archive für die beiden Veröffentlichungen

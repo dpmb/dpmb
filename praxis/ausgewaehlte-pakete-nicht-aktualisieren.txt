@@ -6,7 +6,7 @@
 
 == Ausgewählte Pakete nicht aktualisieren ==
 
-Die Paketverwaltung muß darüber Bescheid wissen, wenn Sie ein
+Die Paketverwaltung muss darüber Bescheid wissen, wenn Sie ein
 ausgewähltes Paket auf dem aktuellen Stand belassen möchten. Dazu
 existiert das Paketflag 'hold', welches Sie in dem Fall explizit
 festklopfen müssen (siehe auch Paketflags unter <<paketflags>>). Haben
@@ -14,7 +14,7 @@ Sie das Flag gesetzt, wird das Paket somit nicht weiter aktualisiert
 oder gelöscht, sondern in dem derzeit bestehenden Zustand und der
 Version gehalten.
 
-Ergebnis dieses Vorgehens ist, daß das Paket auf ihrem Linuxsystem so
+Ergebnis dieses Vorgehens ist, dass das Paket auf ihrem Linuxsystem so
 erhalten bleibt, wie es aktuell ist. Es gibt keine Veränderungen bzgl.
 genutzter Schnittstellen und Abhängigkeiten zu anderen Paketen. Das ist
 insbesondere dann sinnvoll, wenn eine ganz bestimmte Komponente benötigt
@@ -25,7 +25,7 @@ Paketflag dann wieder entfernt werden.
 
 Dieses Vorgehen hat Fallstricke. Je länger Sie warten und das Paket
 zurückhalten, umso stärker entwickelt sich das Drumherum weiter. In
-Folge heißt das, daß Aktualisierungen schwieriger und insbesondere
+Folge heißt das, dass Aktualisierungen schwieriger und insbesondere
 aufwendiger werden. Bedenken Sie diesen Schritt daher gut.
 
 === Auf der Kommandozeile ===

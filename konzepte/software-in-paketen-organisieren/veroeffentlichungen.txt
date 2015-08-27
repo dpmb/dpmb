@@ -199,7 +199,7 @@ Status der Veröffentlichung der zukünftigen Distribution sehr treffend
 umschreibt.
 
 Die Paketklassifikation _experimental_ hat keinen eigenen
-Alias-Namen. Das rührt daher, daß es keine eigenständige
+Alias-Namen. Das rührt daher, dass es keine eigenständige
 Veröffentlichung von Debian GNU/Linux darstellt.
 
 ==== Pakete auf Wanderschaft von einem Entwicklungsstand in den nächsten ====
@@ -226,7 +226,7 @@ Bedingungen erfüllt sind:
   Dringlichkeit) im aktuellen Changelog-Eintrag ab und beträgt entweder
   10, 5 oder 2 Tage. Die Dringlichkeit wird dabei vom Paketmaintainer
   entschieden. Bei Korrekturen von sicherheitsrelevanten Fehlern ist es
-  durchaus üblich, daß die Dringlichkeit auf ``hoch'' gesetzt wird und
+  durchaus üblich, dass die Dringlichkeit auf ``hoch'' gesetzt wird und
   damit nur 2 Tage beträgt.
 
 * Das Paket muss auf allen Architekturen, auf denen es gebaut wird, in

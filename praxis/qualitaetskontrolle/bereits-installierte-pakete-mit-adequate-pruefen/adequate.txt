@@ -45,7 +45,7 @@ der Manpage zum Programm.
 
 Im ersten Beispiel sehen Sie das Ergebnis der Validierung des Pakets
 'pdfstudio', welches aus einer nicht-Debian-eigenen Paketquelle stammt.
-In diesem Fall hat `adequate` entdeckt, daß die Informationen zum
+In diesem Fall hat `adequate` entdeckt, dass die Informationen zum
 Copyright des Werkzeugs fehlen.
 
 .Überprüfung des Pakets 'pdfstudio' mit Fehlermeldung

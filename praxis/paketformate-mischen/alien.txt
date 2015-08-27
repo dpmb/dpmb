@@ -31,7 +31,7 @@ ist.
 bei deb-Paketen und 'x86_64' bei rpm.
 
 Bei der Umwandlung des Paketformats bestehen mehrere Fallstricke. Diese
-führen regelmäßig dazu, daß die gewünschte Software nicht wie erhofft
+führen regelmäßig dazu, dass die gewünschte Software nicht wie erhofft
 funktioniert:
 
 * die referenzierten Bibliotheken passen nicht oder sind nicht

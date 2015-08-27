@@ -12,7 +12,7 @@ Initial nur für Ubuntu entwickelt, verbirgt sich unter dem Namen GDebi
 Auf den ersten Blick wirkt GDebi recht unscheinbar, füllt aber genau die
 kleine Lücke zwischen den Kommandos `dpkg -i` und `apt-get install`
 (siehe <<dpkg>>, <<apt>> und <<pakete-installieren>>). Die Besonderheit
-von GDebi liegt darin, daß es lokal vorliegende `deb`-Pakete
+von GDebi liegt darin, dass es lokal vorliegende `deb`-Pakete
 installieren kann, während es deren Abhängigkeiten aus den Repositories
 via APT auflöst und daraus die zusätzlich benötigten Pakete bezieht.
 Damit eignet es sich besonders gut, um zugesandte, selbst erstellte oder
@@ -87,7 +87,7 @@ menu:[Beschreibung], menu:[Details] und menu:[enthaltene
 Dateien]. Neben der Paketbeschreibung zeigt Ihnen GDebi alle sonstigen
 Metadaten aus der Control-Datei (siehe <<aufbau-und-format>>) sowie den
 tatsächlichen Paketinhalt an, sofern es sich dabei um Textdateien
-handelt. Dies umfaßt auch die Maintainer-Skripte.
+handelt. Dies umfasst auch die Maintainer-Skripte.
 
 Darüberhinaus zeigt Ihnen GDebi ab Version 0.9{empty}footnote:[Verfügbar
 ab Debian 8 'Jessie' und Ubuntu 14.04 LTS 'Trusty Tahr'] auch sämtliche

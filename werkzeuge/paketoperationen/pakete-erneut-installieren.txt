@@ -13,7 +13,7 @@ Kommandozeile passieren mitunter auch Tippfehler, die im Nachhinein
 nicht mehr reparabel sind.
 
 In anderen Fällen möchten Sie eine Software temporär deinstallieren, um
-diese später wieder zu installieren. Es ist dabei nicht unüblich, daß
+diese später wieder zu installieren. Es ist dabei nicht unüblich, dass
 bestehende, selbst angepaßte Konfigurationsdateien später
 wiederverwendet werden. Auch das Ersetzen von bereits veränderten
 Konfigurationsdateien durch ihre Originale aus dem Paket wird oft durch
@@ -21,7 +21,7 @@ eine Wiederinstallation versucht – nur leider hat dies nur selten den
 erwünschten Effekt. Warum das nicht immer so funktioniert wie erhofft,
 erklären wir gleich.
 
-Alle diese Fälle haben gemeinsam, daß ein Paket erneut installiert wird.
+Alle diese Fälle haben gemeinsam, dass ein Paket erneut installiert wird.
 Dabei unterscheiden wir hier drei verschiedene Ausgangszustände:
 
 * Das Paket wurde mitsamt Konfigurationsdateien entfernt, d.h.
@@ -40,8 +40,8 @@ lesen sie in den folgenden Abschnitten.
 (((aptitude, reinstall)))
 
 Im letztgenannten Fall teilen Ihnen die meisten Programme, die auf APT
-basieren, mit, daß besagtes Paket bereits installiert ist. Deswegen
-braucht es dort den expliziten Hinweis, daß das Paket nochmals
+basieren, mit, dass besagtes Paket bereits installiert ist. Deswegen
+braucht es dort den expliziten Hinweis, dass das Paket nochmals
 installiert werden soll. Zum Einsatz kommt dabei meist die Option
 `--reinstall` (APT) oder das Unterkommando `reinstall` (`aptitude`,
 `cupt`).
@@ -56,7 +56,7 @@ Die einzige Ausnahme davon bilden Pakete, die Teile ihrer
 Konfiguration über `debconf` erfragen. Das Kommando `dpkg --purge`
 entfernt alle Bestandteile außer den in der Debconf-Datenbank
 gespeicherten Antworten des zu entfernenden Pakets. Dies kann dazu
-führen, daß Ihnen die `debconf`-Fragen zur Konfiguration des Pakets
+führen, dass Ihnen die `debconf`-Fragen zur Konfiguration des Pakets
 nicht wieder gestellt werden. Im Endeffekt wird die gleiche
 Konfiguration wie bei der vorherigen Installation des Pakets generiert.
 
@@ -72,7 +72,7 @@ Paketes herum (siehe auch <<pakete-konfigurieren>>).
 
 Auch dieser Fall funktioniert meist ganz unspektakulär und so wie Sie es
 erwarten. Neben den bereits oben erwähnten Stolperstellen kommt jedoch
-in diesem Fall noch hinzu, daß `dpkg` vorherige Änderungen an den noch
+in diesem Fall noch hinzu, dass `dpkg` vorherige Änderungen an den noch
 vorhandenen Konfigurationsdateien beachtet. Falls sich diese Dateien in
 der aktuell zu installierenden Paketversion nicht gegenüber denen in der
 vorher installierten Variante geändert haben, fragt `dpkg` gar nicht
@@ -86,7 +86,7 @@ aus dem neuen Paket ebenfalls nicht wieder.
 (((apt-get, purge)))
 (((aptitude, purge)))
 (((dpkg, --purge)))
-Wurde eine Wiederherstellung erwartet, so muß das Paket vorher von Ihnen
+Wurde eine Wiederherstellung erwartet, so muss das Paket vorher von Ihnen
 mit `purge` (`dpkg --purge`, `apt-get purge` oder `aptitude purge`)
 entfernt werden. Damit installiert `dpkg` die Konfigurationsdateien aus
 dem Paket erneut.
@@ -94,7 +94,7 @@ dem Paket erneut.
 ==== Wiederinstallieren bereits installierter Pakete ====
 
 Der dritte Fall unterscheidet sich von den ersten beiden dahingehend,
-daß er einerseits erzwungen werden muß und andererseits, daß die gleiche
+dass er einerseits erzwungen werden muss und andererseits, dass die gleiche
 Version wie die bereits vorhandene wieder installiert wird. Andernfalls
 würde es sich ja um eine Paketaktualisierung handeln.
 
@@ -131,7 +131,7 @@ vorgenannten Fällen.
 ==== Typische Stolperfallen bei Wiederinstallieren mehrerer Pakete ====
 
 Die vermutlich häufigste Stolperfalle beim Wiederinstallieren von
-Paketen ist, daß Sie das falsche Paket erwischen. Dies passiert
+Paketen ist, dass Sie das falsche Paket erwischen. Dies passiert
 im Alltag leider häufiger, als Sie das erwarten würden.
 
 Sind Dateien kaputtgegangen, bei denen Sie sowieso nicht genau wissen,
@@ -143,7 +143,7 @@ Wissen Sie den Paketnamen jedoch nur ungefähr, wird oft bereits der
 erste Versuch, das Paket mit dem Namen der Software zu Reinstallieren,
 ein Fehlschlag. Gerade die größeren Software-Suiten bestehen häufig aus
 mehreren Paketen und das Paket mit dem Namen der Suite ist meist nur ein
-Metapaket ohne eigentlichen Inhalt. Zu bedenken ist außerdem, daß eine
+Metapaket ohne eigentlichen Inhalt. Zu bedenken ist außerdem, dass eine
 Wiederinstallation eines bereits installierten Paketes dessen
 Abhängigkeiten unangetastet läßt.
 

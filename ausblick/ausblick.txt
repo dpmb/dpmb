@@ -61,7 +61,7 @@ man grade ist:
 * Kommandozeile: `apt`. Es ist einfach und intuitive, schnell getippt,
   hat angenehme farbliche Hervorhebugen in der Ausgabe und kann
   praktisch alles, womit man im Alltag zu tun hat. Bei älteren
-  Veröffentlichungen ohne `apt` als Befehl muß man auf die Befehle
+  Veröffentlichungen ohne `apt` als Befehl muss man auf die Befehle
   `apt-get` und `apt-cache` ausweichen, aber die Nachteile sind nur
   geringfügig (mehr Tippen, je nach Aufgabe passendes Programm
   auswählen, keine Farbe in der Standard-Einstellung).

@@ -10,7 +10,7 @@
 Immer wieder taucht die Frage auf, ob APT und `aptitude` identisch sind
 oder sich beide Werkzeuge im Alltag miteinander kombinieren lassen. Aus
 unserer Sicht sollte Ihnen als Leser bisher mehr als deutlich geworden
-sein, daß zwar beide Werkzeuge das gleiche Ziel verfolgen, jedoch etwas
+sein, dass zwar beide Werkzeuge das gleiche Ziel verfolgen, jedoch etwas
 anders ``ticken''. Zu klären ist daher, ob sich beide Werkzeuge bei
 deren gemischter Verwendung wechselseitig ins Gehege kommen und welche
 Situationen unkritisch sind.
@@ -28,7 +28,7 @@ verwenden. Es hilft Ihnen auch dabei, zu wissen, wie Sie die
 beschriebenen Aktionen in die Handlungsschritte für den Paketmanager
 übersetzen, den Sie bevorzugen.
 
-Darüber nachdenken führt dazu, daß Sie ihren Arbeitsfluß Revue passieren
+Darüber nachdenken führt dazu, dass Sie ihren Arbeitsfluß Revue passieren
 lassen und die Handhabung der Programme im Alltag hinterfragen. Dabei
 können sich Gewohnheiten verändern und Blickwinkel erweitern. Eine
 Antwort auf die Fragen ``Welches Programm erleichtert mir die Aufgaben?

@@ -24,9 +24,9 @@ den Vormerkungen anwenden (siehe <<mit-aptitude-vormerkungen-machen>>).
 | `=paket` | Paketversion dauerhaft beibehalten ('hold')
 |====
 
-Jeder der nachfolgend genannten Aufrufe sorgt dafür, daß Sie das Paket
+Jeder der nachfolgend genannten Aufrufe sorgt dafür, dass Sie das Paket
 'goplay' installieren, 'xara-gtk' deinstallieren und 'debtags' so
-belassen (es auf 'hold' setzen). Bitte beachten Sie, daß diese
+belassen (es auf 'hold' setzen). Bitte beachten Sie, dass diese
 Zusatzoptionen stets in Bezug zu den Unterkommandos zu sehen sind.
 
 .Installation mit `aptitude` und Zusatzoptionen

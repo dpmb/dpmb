@@ -12,7 +12,7 @@
 (((aptitude, bestehende Vormerkungen anzeigen)))
 `aptitude` kennt zwei Wege, um Ihnen diese Informationen anzuzeigen –
 einerseits über die Kommandozeile und andererseits über die
-Textoberfläche. Nachfolgend gehen wir davon aus, daß Sie die gewünschten
+Textoberfläche. Nachfolgend gehen wir davon aus, dass Sie die gewünschten
 Aktionen bereits vorbereitet haben (siehe dazu
 <<vormerkungen-ueber-die-kommandozeile-durchfuehren>> und
 <<vormerkungen-ueber-die-textoberflaeche-durchfuehren>>).
@@ -44,7 +44,7 @@ listet alle Pakete auf, deren Version explizit beibehalten wird (siehe <<paketfl
 listet alle Pakete auf, die automatisch beibehalten werden (siehe <<paketflags>>)
 
 Die nachfolgende Ausgabe ist das Äquivalent zu
-<<fig.aptitude-vormerkungen>> im Terminal. Bitte beachten Sie dabei, daß
+<<fig.aptitude-vormerkungen>> im Terminal. Bitte beachten Sie dabei, dass
 Sie die zusätzliche `aptitude`-Option mit der Kategorie in
 Anführungszeichen einschließen, damit die ausführende Shell diese Option
 nicht interpretiert und ggf. verändert.

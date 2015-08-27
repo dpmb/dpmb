@@ -22,7 +22,7 @@ Das hilft Ihnen insbesondere auch dabei, die Ursache zu lokalisieren,
 wenn ein Programm sich entgegen ihrer Erwartungen verhält. 
 
 Viele Entwickler weisen der Dokumentation ihrer Software häufig einen
-niedrigen Stellenwert zu. Es kommt daher vor, daß die Dokumentation
+niedrigen Stellenwert zu. Es kommt daher vor, dass die Dokumentation
 unvollständig, fehlerhaft bzw. veraltet ist oder in einer Sprache
 vorliegt, die sie nicht beherrschen. Schwachpunkte sind zudem die
 Verfahren, welche implementiert wurden, aber auch die Parameter,

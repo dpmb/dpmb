@@ -7,7 +7,7 @@
 === Obsolete Pakete anzeigen ===
 
 Softwarepakete und insbesondere deren Verfügbarkeit unterliegen einem
-stetigen Wandel. Im Alltag kommt es ab und zu vor, daß ein Paket,
+stetigen Wandel. Im Alltag kommt es ab und zu vor, dass ein Paket,
 welches Sie auf ihrem System installiert haben, nicht mehr von einem
 Paketmirror in aktualisierter Form beziehen können. Die Ursachen dafür
 können vielfältig sein{empty}footnote:[Raphael Hertzog: Debian Cleanup
@@ -22,7 +22,7 @@ wurden die Übergangspakete entfernt.
 
 * Die letzte verfügbare Version der Software könnte unter einem anderen
 Namen paketiert worden sein. Entweder waren die Menge der Änderungen so
-wichtig, daß eine automatische Aktualisierung auf die letzte verfügbare
+wichtig, dass eine automatische Aktualisierung auf die letzte verfügbare
 Version nicht bevorzugt wurde, oder einfach weil der Maintainer Ihnen
 als Benutzer die Möglichkeit geben möchte, mehrere Versionen parallel zu
 installieren. Ersteres betrifft beispielsweise 'request-tracker' und
@@ -56,7 +56,7 @@ APT-Paketquelle verfügbar.
 Diese Pakete werden als 'obsolete Pakete' bezeichnet und profitieren
 nicht oder nicht mehr von den regelmäßigen Sicherheitsaktualisierungen.
 Je länger diese Pakete auf ihrem System erhalten bleiben, um
-wahrscheinlicher wird es, daß sich aufgrund der Abhängigkeiten zu
+wahrscheinlicher wird es, dass sich aufgrund der Abhängigkeiten zu
 anderen Paketen die Aktualisierung ihres gesamten Softwarebestands
 verzögert und vor allem schwieriger gestaltet. Die Probleme bei der
 Auflösung von Paketabhängigkeiten nehmen zu.
@@ -75,8 +75,8 @@ und selbst erstellte Pakete' (engl.: ``Obsolete and Locally Created
 Packages'') aufgelistet. Dies wird insbesondere dem letzten o.g. Punkt
 gerecht.
 
-Die nachfolgende Ausgabe umfaßt den Paketstatus, den Paketnamen und die
-entsprechende Kurzbeschreibung zum Paket. Sie sehen dabei auch, daß
+Die nachfolgende Ausgabe umfasst den Paketstatus, den Paketnamen und die
+entsprechende Kurzbeschreibung zum Paket. Sie sehen dabei auch, dass
 hierbei für das Paket 'pdfstudio' keine Kurzbeschreibung vorliegt und
 dieses damit nicht die üblichen Qualitätsstandards von Debian erfüllt.
 

@@ -108,7 +108,7 @@ Rücken der beiden Programme einfach komplett entsorgen. APT und
 an. Anders sieht es hingegen bei älteren Veröffentlichungen wie z.B.
 Debian 4.0 'Etch' oder Debian 5.0 'Lenny', Ubuntu 10.04 LTS 'Lucid Lynx'
 sowie Debian-Derivaten aus der Zeit vor Mitte 2010 aus. Beachten Sie
-bitte, daß APT vor Version 0.8 beim Löschen eines der beiden
+bitte, dass APT vor Version 0.8 beim Löschen eines der beiden
 Verzeichnisse `/var/cache/apt/archives/partial/` oder
 `/var/lib/apt/lists/partial/` dann einfach den Dienst
 verweigert. Sie beheben das Problem flink, indem Sie die genannten

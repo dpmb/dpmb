@@ -8,15 +8,15 @@
 
 In <<pakete-aktualisieren>> beleuchteten wir, wie Sie alle bereits
 bestehenden Pakete auf ihrem Linuxsystem aktualisieren. Das hilft Ihnen
-dabei, daß alle Pakete aus einem in etwa ähnlichen
+dabei, dass alle Pakete aus einem in etwa ähnlichen
 Veröffentlichungszeitraum stammen und die Abstimmung der Pakete
 aufeinander weitestgehend konfliktfrei bleibt. 
 
 Nun zeigen wir Ihnen, wie Sie nur einzelne, ausgewählte Pakete auf einen
-bestimmten Stand bringen. Dieses Vorgehen bringt es mit sich, daß die
+bestimmten Stand bringen. Dieses Vorgehen bringt es mit sich, dass die
 Anzahl der Softwarepakete zunimmt, die explizit auf einem ausgewählten
 Stand gehalten werden bzw. werden müssen, um die Paketabhängigkeiten zu
-erfüllen. Für die Paketverwaltung heißt das, daß bei einer Veränderung
+erfüllen. Für die Paketverwaltung heißt das, dass bei einer Veränderung
 des Paketbestands mehr und insbesondere komplexere Bedingungen zu
 berücksichtigen sind. Sie als Betreuer planen daher sicherheitshalber
 etwas mehr Zeit für die Wartung ein.
@@ -67,7 +67,7 @@ ToDo: Beispiel
 *** Paket markieren mit kbd:[+]
 *** Paketvorschau mit kbd:[g]
 *** Paketaktualisierung mit kbd:[g]
-** ToDo: da muß aber noch mehr sein ....
+** ToDo: da muss aber noch mehr sein ....
 
 * Durchführung bei *Synaptic* (siehe <<gui-synaptic>>)
 ** Auswahl der Kategorie menu:[Aktualisierbar (Upstream)]

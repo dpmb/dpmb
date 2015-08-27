@@ -7,14 +7,14 @@
 Vollkommen berechtigt ist die Frage, ob eine Paketverwaltung heute
 überhaupt noch ohne Internet bzw. eine bestehende Netzwerkverbindung
 möglich ist. Wenn Sie etwas zurückdenken, erinnern Sie sich vielleicht
-daran, daß bis vor wenigen Jahren CDs und später DVDs und USB-Sticks als
+daran, dass bis vor wenigen Jahren CDs und später DVDs und USB-Sticks als
 Installationsmedien üblich waren und ein Netzzugang eher die Ausnahme
 darstellte. Aufgrund der Allgegenwärtigkeit des Internets und der
 flächendeckenden Funkvernetzung ist die Situation heutzutage genau
 umgekehrt und eine netzbasierte Installation stellt den Standardfall
 dar. Nachfolgend sprechen wir die Fälle an, bei denen etwas Planung
 hilft, Momente ohne Netz zu überbrücken. Ob das ganze sinnvoll ist, ist
-projekt- und situationsabhängig. Wenn es sein muß, stellt sich diese
+projekt- und situationsabhängig. Wenn es sein muss, stellt sich diese
 Frage eigentlich nicht, sondern nur, ob und insbesondere mit welchen
 Mitteln Sie ein aufgetretenes Problem möglichst zeitnah lösen können.
 

@@ -18,7 +18,7 @@ und lassen sich nicht nacheinander installieren. In dieser Situation
 hilft Ihnen Spezialwissen weiter, zu dem die Möglichkeiten von `dpkg`,
 `apt` und `aptitude` gehören, um Sicherheitschecks und Warnungen zu
 ignorieren und Aktionen trotzdessen durchzuführen. Bitte behalten Sie
-dabei stets im Hinterkopf, daß diese Schritte und Optionen ihr System
+dabei stets im Hinterkopf, dass diese Schritte und Optionen ihr System
 auch unbenutzbar machen kann.
 
 // Stichworte für den Index

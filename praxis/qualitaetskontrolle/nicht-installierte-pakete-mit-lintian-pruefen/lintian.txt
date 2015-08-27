@@ -40,7 +40,7 @@ Bei Debian wird `lintian` primär an drei verschiedenen Stellen genutzt:
 (((lintian, Tests)))
 
 Dazu führt `lintian` eine ganze Reihe vorbereiteter Tests mit dem Paket
-durch. Das Ergebnis umfaßt Fehlermeldungen mit unterschiedlichem
+durch. Das Ergebnis umfasst Fehlermeldungen mit unterschiedlichem
 Schweregrad, deren Kategorien wir für Sie in <<tab.lintian-fehler>>
 zusammengestellt haben.
 

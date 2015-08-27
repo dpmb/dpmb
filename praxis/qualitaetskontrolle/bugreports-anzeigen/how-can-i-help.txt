@@ -23,7 +23,7 @@ Debian 7 'Wheezy' (für 'Debian Backports' siehe <<debian-backports>>).
 Als Datenquelle für seine Aussagen nutzt es die Ultimate Debian Database
 (UDD) <<Ultimate-Debian-Database>>. Dabei handelt es sich um eine
 PostgreSQL-Datenbank, die `how-can-i-help` über eine webbasierte
-Schnittstelle abfragt. Beachten Sie daher, daß das Programm für
+Schnittstelle abfragt. Beachten Sie daher, dass das Programm für
 brauchbare Ergebnisse eine Internetverbindung voraussetzt.
 
 `how-can-i-help` integriert sich zudem über einen APT-Hook in APT und
@@ -108,7 +108,7 @@ veröffentlichungskritischer Fehler ('RC bugs') passiert sein, aber auch
 weil der Paketbetreuer oder jemand anderes explizit die Entfernung des
 Paketes beantragt hat. Letzteres passiert häufiger, als Sie sich
 vorstellen können, z.B. wenn bei einer Bibliothek wegen einer
-`SONAME`-Änderung auch der Paketname korrigiert werden muß, bspw. von
+`SONAME`-Änderung auch der Paketname korrigiert werden muss, bspw. von
 `libfoo7` zu `libfoo8`.
 
 Über die letzten beiden Markierungen hat `how-can-i-help` eine Art
@@ -117,9 +117,9 @@ ersehen Sie Tendenzen dahingehend, welche Pakete im Bestand bleiben. Das
 hat direkte Auswirkungen, welche Software zukünftig als Debian-Paket
 verfügbar bleibt und gepflegt wird. Haben Sie gerade ein Paket aus
 Debian 'stable' installiert und `how-can-i-help` zeigt Ihnen im Anschluß
-zu ihrer Installation an, daß das Paket aus Debian 'testing'
+zu ihrer Installation an, dass das Paket aus Debian 'testing'
 herausgeflogen ist, klären Sie für sich, ob Sie längerfristig auf dieses
-Paket setzen wollen. Bei einer solchen Meldung ist die Chance groß, daß
+Paket setzen wollen. Bei einer solchen Meldung ist die Chance groß, dass
 dieses Paket in der nächsten Veröffentlichung von Debian 'stable' nicht
 mehr enthalten ist.
 

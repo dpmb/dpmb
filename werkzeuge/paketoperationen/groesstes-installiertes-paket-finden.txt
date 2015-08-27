@@ -165,7 +165,7 @@ $
 
 Für eine umgekehrte, absteigende Darstellung kommt noch das
 UNIX-Kommando `tac` ins Spiel. Über eine Pipe leiten Sie die Ausgabe von
-`tail` and `tac` weiter. Dieses dreht die Ausgabe um, sodaß die
+`tail` and `tac` weiter. Dieses dreht die Ausgabe um, sodass die
 letzte Zeile zuerst ausgegeben wird, danach die vorletzte u.s.w. Die
 nachfolgende Ausgabe zeigt eine Auflistung der fünf größten Pakete in
 absteigender Reihenfolge. Da `tail` ohne Parameter stets 10 Zeilen

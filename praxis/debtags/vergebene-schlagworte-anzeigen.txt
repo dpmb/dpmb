@@ -62,13 +62,13 @@ x11::application
 $
 ----
 
-Obige Ausgaben besagen, daß 'xpdf' als X11-Programm mit einer
+Obige Ausgaben besagen, dass 'xpdf' als X11-Programm mit einer
 entsprechenden graphischen Schnittstelle einsortiert ist
 (`interface::x11`, `x11::application`), welches zu den Anwendungen zählt
 (`role::program`, `scope::application`) und genauer gesagt zu den
 Betrachtern für PDF und Text gehört (`use::viewing`,
 `works-with-format::pdf`, `works-with::text`). Ersichtlich ist außerdem,
-daß 'xpdf' das Motif-Toolkit verwendet (`uitoolkit::motif`) und in der
+dass 'xpdf' das Motif-Toolkit verwendet (`uitoolkit::motif`) und in der
 Sprache C++ entwickelt wurde (`implemented-in::c++`).
 
 // Stichworte für den Index
@@ -116,7 +116,7 @@ ebenfalls zutreffend ist.
 (((Xara)))
 Debtags zeigen Ihnen PackageSearch und Xara an, ebenso die bereits oben
 genannten Programme aus dem Paket 'goplay'. Alle Werkzeuge haben
-gemeinsam, daß die Debtags-Informationen auf der rechten Seite der
+gemeinsam, dass die Debtags-Informationen auf der rechten Seite der
 Benutzeroberfläche zu finden sind – entweder in der oberen oder unteren
 Hälfte.
 

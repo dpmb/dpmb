@@ -38,7 +38,7 @@ Installieren eines Pakets (siehe <<paketdatei-nur-herunterladen>>,
 bestehender Pakete (siehe <<pakete-deinstallieren>> und
 <<umgang-mit-waisen>>).
 
-Im Alltag hat sich besipielsweise bewährt, daß Sie zunächst über die
+Im Alltag hat sich besipielsweise bewährt, dass Sie zunächst über die
 Textoberfläche von `aptitude` oder die Debian-Webseite nach dem
 passenden Paket suchen. In Folge installieren Sie die konkreten,
 gewünschten Pakete via `apt-get` oder `apt` nach. Damit kombinieren Sie

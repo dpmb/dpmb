@@ -23,7 +23,7 @@ zur Suche.
 
 Die drei Kommandos finden alle Pfade, in denen das angegebene ``Muster''
 vorkommt. Der Unterschied zwischen den drei Programmen besteht darin,
-daß `dpkg` und `dlocate` nur in bereits installierten Paketen suchen,
+dass `dpkg` und `dlocate` nur in bereits installierten Paketen suchen,
 `apt-file` hingegen hingegen in allen verfügbaren Paketen, d.h.
 unabhängig davon, ob diese bereits auf ihrem System installiert sind
 oder nicht. Verfügbare Pakete bezeichnet die Menge von Paketen, die APT
@@ -197,7 +197,7 @@ Zeichenkette aufgefasst.
 `-v` (Langform `--verbose`):: 
 verbose, d.h. die Ausgabe wird deutlich ausführlicher.
 
-Etwas nachteilig an `apt-file` ist, daß es alle Paketquellen durchsucht
+Etwas nachteilig an `apt-file` ist, dass es alle Paketquellen durchsucht
 und Ihnen dabei nicht anzeigt, in welcher davon es den Treffer gefunden
 hat. Das führt zu Verwirrung, bspw. wenn in der Liste der Paketquellen
 die Veröffentlichungen _stable_ und _stable-backports_ eingetragen sind.

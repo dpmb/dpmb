@@ -6,7 +6,7 @@
 
 === Paketinhalte anzeigen (`apt-file`) ===
 
-In einem Paket sind stets mehrere Dateien zusammengefaßt. Mit den drei
+In einem Paket sind stets mehrere Dateien zusammengefasst. Mit den drei
 Werkzeugen `dpkg`, `dlocate` und `apt-file` zeigen Sie den Inhalt eines
 Pakets an. Dabei sind mehrere Fälle zu unterscheiden, die jeweils
 unterschiedliche Aufrufe nachsichziehen:
@@ -28,7 +28,7 @@ das Paket ist nicht installiert::
 `dpkg -c` 'deb-Datei'. Der Parameter 'deb-Datei' ist eine Datei
 (Paketarchiv) im aktuellen Verzeichnis.
 
-das Paket muß nicht installiert sein, kann aber:: 
+das Paket muss nicht installiert sein, kann aber:: 
 `apt-file show` 'Paketname' und `apt-file list` 'Paketname'. Der
 Parameter 'Paketname' bezeichnet hier lediglich den  Namen eines Pakets
 (siehe <<benennung-eines-debian-pakets>>) ohne Angabe der
@@ -104,7 +104,7 @@ $
 (((dpkg, --contents)))
 Sie verwenden den Schalter `-c`, um sich den Inhalt eines `deb`-Pakets
 anzeigen zu lassen. Dieses Paket wird `dpkg` als Parameter übergeben. Im
-Gegensatz zu `dpkg -L` muß das Paket nicht auf ihrem System installiert
+Gegensatz zu `dpkg -L` muss das Paket nicht auf ihrem System installiert
 sein, sondern liegt als Datei in einem Verzeichnis.
 
 //.Auflistung des Paketinhalts mit allen Informationen via `dpkg`

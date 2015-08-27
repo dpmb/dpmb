@@ -108,8 +108,8 @@ parallele 5 Threads (auf einer Maschine, die Netz hat)
 # apt-offline install /media/USB/apt-offline.zip
 ----
 
-*** aktualisiert den APT-Cache, sodaß alles daher kommt und nichts von
-extern bezogen werden muß
+*** aktualisiert den APT-Cache, sodass alles daher kommt und nichts von
+extern bezogen werden muss
 
 // apt-zip hat es nicht nach Jessie geschafft, sollten wir für die
 // erste Ausgabe ignorieren.

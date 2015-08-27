@@ -47,7 +47,7 @@ un  xpdf-utils     <keine>                   (keine Beschreibung vorhanden)
 $
 ----
 
-Obiger Ausgabe entnehmen Sie, daß nur das Paket 'xpdf' installiert ist.
+Obiger Ausgabe entnehmen Sie, dass nur das Paket 'xpdf' installiert ist.
 Die beiden anderen Pakete namens 'xpdf-reader' und 'xpdf-utils' waren
 schon einmal installiert und sind daher `dpkg` bereits bekannt. Deswegen
 erscheint als Paketstatus die Buchstabenfolge `un` für ``nicht mehr
@@ -106,7 +106,7 @@ $
 `aptitude` berücksichtigt bei der Suche üblicherweise nur den
 Paketnamen. Es sucht jedoch auf Wunsch auch in der Paketliste und der
 Paketbeschreibung. Beinhaltet der Paketname eine Tilde (`~`) oder ein
-Fragezeichen (`?`), wird der Paketname als Suchmuster aufgefaßt. In
+Fragezeichen (`?`), wird der Paketname als Suchmuster aufgefasst. In
 Folge werden alle Pakete berücksichtigt, die diesem Suchmuster
 entsprechen. Dazu füttern Sie `aptitude` mit den folgenden Optionen:
 
@@ -135,7 +135,7 @@ auch hier folgt auf das Unterkommando `search` die Suchoption oder nur
 das Textfragment zur Recherche. Beispielhaft interessierte uns das Paket
 'xpdf'. Wie Sie der nachfolgenden Ausgabe entnehmen können, sucht
 `aptitude` per Default nur in den Paketnamen. Das Suchergebnis zeigt,
-daß insgesamt drei Pakete verfügbar sind, die 'xpdf' im Namen tragen.
+dass insgesamt drei Pakete verfügbar sind, die 'xpdf' im Namen tragen.
 Davon ist nur das erste auf dem System installiert.
 
 //.Suche nach 'xpdf' mittels `aptitude`
@@ -250,7 +250,7 @@ Suchmaschinen und Verzeichnisdienste. Für `deb`-Pakete sind das bspw.
 apt-get.org <<apt-get.org>> und Rpmseek <<rpmseek>>. Letzeres kann
 sowohl `rpm`- als auch `deb`-Pakete erstöbern. Gefundene Pakete können
 Sie direkt von der angegebenen Quelle beziehen und installieren. Bitte
-beachten Sie aber, daß mit diesen Suchmaschinen gefundene Pakete oft
+beachten Sie aber, dass mit diesen Suchmaschinen gefundene Pakete oft
 nicht den Qualitätsansprüchen von Debian entsprechen, einer nicht-freien
 Lizenz unterliegen oder schlicht nicht auf Ihrem System installierbar
 sind, weil z.B. manche Abhängigkeiten nicht erfüllt werden.
