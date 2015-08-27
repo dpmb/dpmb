@@ -9,6 +9,12 @@ Zum Buch "Debian Paketmanagement" beitragen
   Englisch, falls möglich.
 * Commit-Messages zu Änderungen an deutschsprachigen Inhalten können
   auf Deutsch gemacht werden.
+* Auch, wenn's weh tut, haben wir uns dann doch auf die neue deutsche
+  Rechtschreibung einigen können, da die meisten Leser mittlerweile
+  wohl doch diese gewöhnt sind. Wir behalten uns jedoch vor, einige
+  Wörter oder Wortkombinationen in neuer Rechtschreibung
+  auszuschließen (z.B. "Des Weiteren") und durch weniger schmerzhafte
+  Synonme zu ersetzen.
 
 Contributing to the book "Debian Package Management"
 ====================================================
