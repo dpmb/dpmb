@@ -34,13 +34,12 @@ ihrem System. Diese vier Skripte sind üblicherweise
 distributionsspezifische Shellskripte, die der Maintainer des jeweiligen
 Pakets pflegt.
 
-Für das Paket
-'dpkg-www'{empty}footnote:[https://packages.debian.org/de/stable/dpkg-www]
-beinhaltet das bspw. das Starten des Webservers nach der Installation
-des Pakets, das Anhalten (vorher) und Neustarten (nachher) im Zuge einer
-Aktualisierung des Paketes und das Anhalten des Dienstes, bevor das
-Paket vom System wieder entfernt wird. In <<fig.postinst>> sehen Sie
-einen Ausschnitt aus dem `postinst`-Skript zu besagtem Paket.
+Für das Paket 'dpkg-www' <<Debian-Paket-dpkg-www>> beinhaltet das bspw.
+das Starten des Webservers nach der Installation des Pakets, das
+Anhalten (vorher) und Neustarten (nachher) im Zuge einer Aktualisierung
+des Paketes und das Anhalten des Dienstes, bevor das Paket vom System
+wieder entfernt wird. In <<fig.postinst>> sehen Sie einen Ausschnitt aus
+dem `postinst`-Skript zu besagtem Paket.
 
 .Auszug aus dem `postinst`-Skript zum Paket 'dpkg-www'
 image::werkzeuge/debian-paketformat-im-detail/postinst.png[id="fig.postinst", width="50%"]
