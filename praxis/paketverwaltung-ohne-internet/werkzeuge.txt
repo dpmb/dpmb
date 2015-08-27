@@ -91,18 +91,24 @@ offline ist)
 # apt-offline set /tmp/apt-offline.sig
 ----
 
-*** Option `--update`: nur Updates
-*** Option `--upgrade`: nur Upgrades
-*** ohne Optionen: alles auf den allerneuesten Stand bringen
+*** Option `--update`: nur Updates (Einspielen aktualisierter,
+fehlerbereinigter Pakete mit der gleichen Versionsnummer)
+*** Option `--upgrade`: nur Upgrades (Einspielen aktualisierter,
+fehlerbereinigter Pakete mit einer neueren Version)
+*** ohne Optionen: alles auf den allerneuesten Stand bringen (entspricht
+einem `dist-upgrade`)
 
-** Paketinfo für die offline-Maschine holen, inkl. Bug-Reports und als
-parallele 5 Threads (auf einer Maschine, die Netz hat)
+** Paketinfo für die offline-Maschine holen, inkl. Bug-Reports und
+Ausführung als parallele 5 Threads (auf einer Maschine, die über eine
+Netzanbindung verfügt)
 
 ----
 # apt-offline get apt-offline.sig --bug-reports --threads 5
 ----
 
-** bezogene Paketinfo auf der offline-Maschine einspielen
+** bezogene Paketinformationen auf der offline-Maschine einspielen, hier
+beispielhaft als Datei von einem Speichermedium, welches über USB
+eingehängt ist (USB-Stick oder USB-Festplatte)
 
 ----
 # apt-offline install /media/USB/apt-offline.zip
@@ -111,18 +117,16 @@ parallele 5 Threads (auf einer Maschine, die Netz hat)
 *** aktualisiert den APT-Cache, sodaß alles daher kommt und nichts von
 extern bezogen werden muß
 
-// apt-zip hat es nicht nach Jessie geschafft, sollten wir für die
-// erste Ausgabe ignorieren.
-//
-// ==== apt-zip ====
-// * APT-basierte Systeme ohne Internet warten (maintainen):
-// ** 'apt-zip' (<<Debian-Paket-apt-zip>>)
-// ** baut ein fetch-Skript, welches die benötigten Pakete vom Mirror
-// bezieht
-// ** die bezogenen Daten/Pakete können dann lokal eingespielt werden
-// * Beschreibung: http://svn.laiskiainen.org/apt-rpm/trunk/doc/offline.sgml
-// ** externer Datenträger als lokaler Paketcache für apt-get
-// ** Erzeugen eines wget-Skripts, welches die benötigten Pakete bezieht
+==== apt-zip ====
+* 'apt-zip' (<<Debian-Paket-apt-zip>>)
+* baut ein fetch-Skript, welches die benötigten Pakete vom Mirror bezieht
+** die bezogenen Daten/Pakete können dann lokal eingespielt werden
+* Beschreibung: http://svn.laiskiainen.org/apt-rpm/trunk/doc/offline.sgml
+** externer Datenträger als lokaler Paketcache für apt-get
+** Erzeugen eines wget-Skripts, welches die benötigten Pakete bezieht
+* Hinweis:
+apt-zip hat es nicht nach Jessie geschafft, sollten wir für die erste
+Ausgabe ignorieren.
 
 ==== aptoncd ====
 
