@@ -118,7 +118,12 @@ eingehängt ist (USB-Stick oder USB-Festplatte)
 extern bezogen werden muß
 
 ==== apt-zip ====
-* 'apt-zip' (<<Debian-Paket-apt-zip>>)
+
+// Stichworte für den Index
+(((apt-zip)))
+(((Debianpaket, apt-zip)))
+
+* 'apt-zip' <<Debian-Paket-apt-zip>>
 * baut ein fetch-Skript, welches die benötigten Pakete vom Mirror bezieht
 ** die bezogenen Daten/Pakete können dann lokal eingespielt werden
 * Beschreibung: http://svn.laiskiainen.org/apt-rpm/trunk/doc/offline.sgml
