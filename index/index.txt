@@ -8,7 +8,7 @@ ifdef::backend-docbook[]
 == Stichwortverzeichnis
 
 ////////////////////////////////////////////////////////////////
-The index is normally left completely empty, it's contents being
+The index is normally left completely empty, its contents being
 generated automatically by the DocBook toolchain.
 ////////////////////////////////////////////////////////////////
 endif::backend-docbook[]
