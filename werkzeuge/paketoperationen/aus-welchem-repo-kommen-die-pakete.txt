@@ -31,7 +31,7 @@ Veröffentlichung oder des Distributionsbereichs. Nachfolgende
 Darstellung zeigt die Ausgabe für eine Standardinstallation von Debian
 'Wheezy' in der Version 7.5 mit dem Nutzungsschwerpunkt Deutschland.
 
-//.Bewertung der Paketquellen mit `apt-cache policy`
+.Bewertung der Paketquellen mit `apt-cache policy`
 ----
 $ apt-cache policy
 Paketdateien:
@@ -76,7 +76,7 @@ Beispiel 1 zeigt das Vorgehen anhand des Pakets 'gdm3'. Im vorliegenden
 Fall ist dieses bereits installiert (Status von `dpkg`) Falls es das
 noch nicht wäre, käme das Paket aus dem deutschen Debian-Repository.
 
-//.Verfügbarkeit für das Paket 'gdm3' feststellen
+.Verfügbarkeit für das Paket 'gdm3' feststellen
 ----
 $ apt-cache policy gdm3
 gdm3:
@@ -96,7 +96,7 @@ Version 3.2.51-1 installiert, aber es gibt eine aktuellere Variante
 ist die Version 3.2.57-3 der Installationskandidat, da dieses Paket die
 aktuellste Variante darstellt.
 
-//.Verfügbarkeit für das Paket 'linux-libc-dev' feststellen
+.Verfügbarkeit für das Paket 'linux-libc-dev' feststellen
 ----
 $ apt-cache policy linux-libc-dev
 linux-libc-dev:
@@ -116,7 +116,7 @@ Als Beispiel 3 steht das Paket 'kteatime' im Fokus. Dieses ist noch
 nicht installiert und könnte nachgezogen werden. Dabei käme das Paket
 aus dem deutschen Debian-Repository.
 
-//.Verfügbarkeit für das Paket 'kteatime' feststellen
+.Verfügbarkeit für das Paket 'kteatime' feststellen
 ----
 $ apt-cache policy kteatime
 kteatime:
@@ -139,7 +139,7 @@ Damit finden Sie heraus, welche Pakete derzeit von den Spiegelservern in
 einer neueren Version verfügbar sind. Nachfolgender Ausdruck zeigt das
 für das Paket 'apt-doc'.
 
-//.Ausgabe von `apt-cache` mit dem Unterkommando `madison` für 'apt-doc'
+.Ausgabe von `apt-cache` mit dem Unterkommando `madison` für 'apt-doc'
 ----
 $ apt-cache madison apt-doc
    apt-doc | 0.9.7.9+deb7u2 | http://ftp.de.debian.org/debian/ wheezy/main i386 Packages
@@ -168,7 +168,7 @@ verfügbar ist. Im nachfolgenden Beispielaufruf ist die Architektur
 'all', da es sich um das Dokumentationspaket 'apt-doc' handelt, welches
 auf allen Plattformen gleich ist.
 
-//.Ausgabe von `rmadison` für 'apt-doc'
+.Ausgabe von `rmadison` für 'apt-doc'
 ----
 $ rmadison apt-doc
  apt-doc | 0.8.10.3+squeeze1 | squeeze         | all
@@ -217,7 +217,7 @@ gleichzeitig verwendet werden.
 Nachfolgendes Beispiel zeigt die Ausgabe für das Paket 'zsh' auf einem
 Debian 7 'Wheezy':
 
-//.Versionen anzeigen für das Paket 'zsh'
+.Versionen anzeigen für das Paket 'zsh'
 ----
 $ apt-show-versions zsh
 zsh/wheezy uptodate 4.3.17-1
@@ -243,7 +243,7 @@ genutzte Architektur (hier 'amd64'). In den Klammern sehen Sie neben dem
 Installationsstatus eine kurze Angabe, auf welche Version Sie das Paket
 aktualisieren können.
 
-//.Neue Möglichkeiten mit APT 1.0
+.Neue Möglichkeiten mit APT 1.0
 ----
 $ apt list zsh
 Listing... Done

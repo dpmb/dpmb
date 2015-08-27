@@ -21,16 +21,16 @@ gleich zwei Varianten auf dem Terminal bereit.
 (((apt-mark, showauto)))
 (((Debianpaket, apt)))
 (((Paketflags, automatic)))
-Das Paket 'apt'{empty}footnote:[https://packages.debian.org/de/stable/apt]
-beinhaltet das Werkzeug `apt-mark`. Über das Unterkommando `showauto`
-erhalten Sie alle entsprechend markierten Pakete. Möchten Sie die Liste
-einschränken, akzeptiert `apt-mark` als weiteren Parameter ein
-Textfragment des Paketnamens oder einen passenden regulären Ausdruck.
-Das nachfolgende Beispiel zeigt Ihnen alle automatisch installierten
-Pakete, deren Paketnamen auf die Zeichenfolge `tex` enden. Das Muster
-ist als regulärer Ausdruck formuliert.
+Das Paket 'apt' <<Debian-Paket-apt>> beinhaltet das Werkzeug `apt-mark`.
+Über das Unterkommando `showauto` erhalten Sie alle entsprechend
+markierten Pakete. Möchten Sie die Liste einschränken, akzeptiert
+`apt-mark` als weiteren Parameter ein Textfragment des Paketnamens oder
+einen passenden regulären Ausdruck. Das nachfolgende Beispiel zeigt
+Ihnen alle automatisch installierten Pakete, deren Paketnamen auf die
+Zeichenfolge `tex` enden. Das Muster ist als regulärer Ausdruck
+formuliert.
 
-//.Automatisch installierte Pakete mit `apt-mark` anzeigen
+.Automatisch installierte Pakete mit `apt-mark` anzeigen
 ----
 $ apt-mark showauto '.*tex$'
 jadetex
@@ -53,7 +53,7 @@ den Paketstatus, den Paketnamen und eine kurze Paketbeschreibung
 enthält. Alle Pakete sind mit dem Buchstaben `A` für _automatisch
 installiert_ gekennzeichnet.
 
-//.Automatisch installierte Pakete mit `aptitude` anzeigen
+.Automatisch installierte Pakete mit `aptitude` anzeigen
 ----
 $ aptitude search ~M | more
 i A a2ps                            - GNU a2ps - »Alles nach PostScript«-Konvert

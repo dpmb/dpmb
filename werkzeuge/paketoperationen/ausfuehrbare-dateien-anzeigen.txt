@@ -18,7 +18,7 @@ das Paket durchforsten (siehe Paketinhalte anzeigen in
 Ihnen ausführlich Auskunft. Die nachfolgende Ausgabe zeigt die
 ausführbaren Dateien zum Paket 'aptitude' an:
 
-//.Ausführbare Dateien zum Paket 'aptitude' anzeigen
+.Ausführbare Dateien zum Paket 'aptitude' anzeigen
 ----
 $ dlocate -lsbin aptitude
 /etc/cron.daily/aptitude

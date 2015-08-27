@@ -20,6 +20,13 @@ TODO für Axel
 * Workflow for translations:
   <pere> I would suggest to use docbook -> po4a -> po -> docbook like we do in debian edu and I use for my book.
   <pere> this way the original and translation will stay in sync.
+* APT 1.1 kann SRV Records!
+
+  apt (1.1~exp10) experimental; urgency=medium
+   .
+      [ Michael Vogt ]
+         * add support for SRV record lookup before connect
+
 
 TODO für Frank (will auch welche haben)
 =======================================
