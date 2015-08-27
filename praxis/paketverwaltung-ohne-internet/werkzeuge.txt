@@ -124,14 +124,16 @@ extern bezogen werden muß
 (((Debianpaket, apt-zip)))
 
 * 'apt-zip' <<Debian-Paket-apt-zip>>
+
 * baut ein fetch-Skript, welches die benötigten Pakete vom Mirror bezieht
 ** die bezogenen Daten/Pakete können dann lokal eingespielt werden
+
 * Beschreibung: http://svn.laiskiainen.org/apt-rpm/trunk/doc/offline.sgml
 ** externer Datenträger als lokaler Paketcache für apt-get
 ** Erzeugen eines wget-Skripts, welches die benötigten Pakete bezieht
+
 * Hinweis:
-apt-zip hat es nicht nach Jessie geschafft, sollten wir für die erste
-Ausgabe ignorieren.
+** apt-zip hat es nicht nach Jessie geschafft, sollten wir für die erste Ausgabe ignorieren.
 
 ==== aptoncd ====
 
