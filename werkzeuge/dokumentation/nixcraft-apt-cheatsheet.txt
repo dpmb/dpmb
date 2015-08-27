@@ -9,14 +9,15 @@
 // Stichworte für den Index
 (((Dokumentation, apt-get)))
 (((Dokumentation, dpkg)))
-Auf der Webseite des
-Nixcraft-Blogs{empty}footnote:[http://www.cyberciti.biz/tips/linux-debian-package-management-cheat-sheet.html] finden Sie eine Übersicht, welches die beiden 
-Programme `dpkg` und `apt-get` mit vielen Erklärungen und aussagekräftigen 
-Beispielen gegenüberstellt. Zu beiden Programmen gibt es einen
-Spickzettel für den Webbrowser (auf englisch 'cheat sheet'), welcher
-Ihnen auch in vielen Situationen weiterhilft. Der Spickzettel steht zu
-`dpkg`{empty}footnote:[http://www.cyberciti.biz/howto/question/linux/dpkg-cheat-sheet.php] und `apt-get`{empty}footnote:[http://www.cyberciti.biz/howto/question/linux/apt-get-cheat-sheet.php] zur Verfügung. Letzteres zeigt Ihnen <<fig.apt-get-cheat-sheet>>.
+Im Nixcraft-Blog <<nixcraft-blog>> finden Sie eine Übersicht, welches
+die beiden Programme `dpkg` und `apt-get` mit vielen Erklärungen und
+aussagekräftigen  Beispielen gegenüberstellt. Zu beiden Programmen gibt
+es einen Spickzettel für den Webbrowser (auf englisch 'cheat sheet'),
+welcher Ihnen auch in vielen Situationen weiterhilft. Der Spickzettel
+steht zu `dpkg` <<nixcraft-dpkg>> und `apt-get` <<nixcraft-apt-get>> zur
+Verfügung. Letzteres zeigt Ihnen <<fig.apt-get-cheat-sheet>>.
 
 .Spickzettel zu `apt-get`
 image::werkzeuge/dokumentation/apt-get-cheat-sheet.png[id="fig.apt-get-cheat-sheet", width="50%"]
+
 // Datei (Ende): ./werkzeuge/dokumentation/nixcraft-apt-cheatsheet.txt
