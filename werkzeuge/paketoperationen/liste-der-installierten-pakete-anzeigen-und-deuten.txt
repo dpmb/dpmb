@@ -119,7 +119,7 @@ Konfiguration ('failed') |
 //** (leer): kein Fehler
 //** `R`: eine Neuinstallation ist notwendig ('reinstall')
 
-Kleinbuchstaben zeigen dabei an, daß alles im grünen Bereich ist.
+Kleinbuchstaben zeigen dabei an, dass alles im grünen Bereich ist.
 Großbuchstaben heben hingegen Fehlerfälle oder auch Zustände hervor, die
 ihrerseits eine genauere Begutachtung und eine Aktion zu diesem Paket
 erfordern. Obige Darstellung mit Buchstaben verwendet sowohl `dpkg`, als

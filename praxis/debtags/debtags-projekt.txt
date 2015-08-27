@@ -94,7 +94,7 @@ kurzfristig einen spürbaren Vorteil davon.
 // Schlagworte für den Index
 (((Debtags, Integration in die Paketmanager)))
 Innerhalb kürzester Zeit erfolgte zudem eine nahtlose Integration von
-Debtags in die bestehenden Paketmanager, sodaß das Feature allgemein
+Debtags in die bestehenden Paketmanager, sodass das Feature allgemein
 verfügbar wurde. Leider ist diese nützliche Eigenschaft bislang nicht
 allen Benutzern präsent. Wir erhoffen uns einen höheren Verbreitungs-
 und Nutzungsgrad, indem wir nachfolgend das Projekt und insbesondere

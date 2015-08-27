@@ -20,7 +20,7 @@ teilweise heruntergeladene Pakete unter
 Erst wenn alle zur Installation oder Aktualisierung benötigten Pakete
 von APT oder `aptitude` heruntergeladen wurden und auch im Paketcache
 liegen, wird mit dem Auspacken und Installieren der Pakete begonnen. So
-ist garantiert, daß alle durch Abhängigkeiten notwendigen Pakete auch
+ist garantiert, dass alle durch Abhängigkeiten notwendigen Pakete auch
 lokal verfügbar sind und nichts mehr fehlt. Die Pakete werden daraufhin
 von `dpkg` bzw. den Bibliotheken (siehe <<apt-und-bibliotheken>>)
 ausgepackt, die Dateien an die angegebene Stelle im Verzeichnisbaum
@@ -32,10 +32,10 @@ kopiert und abschließend ggf. noch automatisch konfiguriert (siehe dazu
 // TODO: Gehört evtl. woanders hin. Wenn, dann gehört aber im
 // o.g. Absatz ein Verweis auf jene Stelle.
 
-Es kann jedoch vorkommen, daß das Herunterladen eines oder mehrerer
-Pakete fehlschlägt. Ursachen können beispielsweise sein, daß die
+Es kann jedoch vorkommen, dass das Herunterladen eines oder mehrerer
+Pakete fehlschlägt. Ursachen können beispielsweise sein, dass die
 Netzwerkverbindung unterbrochen oder der Spiegelserver neugestartet
-wurde. Möglich ist auch, daß just zwischen dem letzten Aufruf von
+wurde. Möglich ist auch, dass just zwischen dem letzten Aufruf von
 `apt-get update` und dem Herunterladen der Pakete eine Aktualisierung
 des Paketspiegels stattfindet und genau das Paket durch ein neueres
 ersetzt wird, welches Sie gerade zum installieren oder aktualisieren

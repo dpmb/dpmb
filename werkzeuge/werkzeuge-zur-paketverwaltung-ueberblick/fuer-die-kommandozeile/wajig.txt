@@ -28,7 +28,7 @@ wurden.
 Sie bedienen `wajig` ausschließlich über die Tastatur. Möglich sind zwei
 Modi -- mit dem gewünschten Unterkommando beim Aufruf, oder ohne. Bei
 ersterem erfolgt die Ausgabe direkt im Terminal, bei letzterem öffnet
-sich dann zunächst die `wajig`-Shell und wartet auf ihre Eingabe. In
+sich dann zunächst die `wajig`-Shell und wartet auf Ihre Eingabe. In
 dieser können Sie dann alle Unterkommandos zur Paketverwaltung benutzen.
 Dazu zählen bspw. `install` zur Paketinstallation, `detail` zur
 Darstellung der Paketinformationen, `listfiles` zu Auflistung des

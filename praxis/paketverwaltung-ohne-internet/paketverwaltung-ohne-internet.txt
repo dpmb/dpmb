@@ -7,7 +7,7 @@
 == Paketverwaltung ohne Internet ==
 
 Bisher haben wir bei nahezu allen im Buch besprochenen Szenarien zumeist
-stillschweigend vorausgesetzt, daß die von Ihnen betreuten
+stillschweigend vorausgesetzt, dass die von Ihnen betreuten
 Rechnersysteme Zugriff auf das Internet haben. Die Informationen zu
 einem Debianpaket und auch das Paket selbst haben Sie entweder online
 recherchiert oder bereits von einem vertrauenswürdigen Spiegelserver

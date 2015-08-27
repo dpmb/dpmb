@@ -9,7 +9,7 @@
 (((Paketsuche, anhand des Maintainers)))
 Als 'Debian Maintainer' versteht sich diejenige Einzelperson oder das
 Team, welche(s) eine Software betreut und für das entsprechende
-Debian-Paket verantwortlich zeichnet. Maintainer kümmern sich darum, daß
+Debian-Paket verantwortlich zeichnet. Maintainer kümmern sich darum, dass
 das Paket gepflegt wird, d.h. Änderungen und Verbesserungen aus dem
 Upstream in das Paket unter Berücksichtigung der Debian-Spezifika
 einfließen, dieses dabei weiterhin den Debian-Richtlinien entspricht und

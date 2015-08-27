@@ -21,7 +21,7 @@ key:[q], speichert es die Vormerkungen. Brechen Sie `aptitude` hingegen
 mit key:[Ctrl,c] ab, werden die Vormerkungen nicht aktualisiert und
 bleiben so, wie sie bisher sind.
 
-. Nutzen Sie `aptitude` eher selten, ist nicht auszuschließen, daß Sie
+. Nutzen Sie `aptitude` eher selten, ist nicht auszuschließen, dass Sie
 die vorher gemerkten Aktionen inzwischen nicht mehr präsent haben. In
 Folge können Änderungen des Paketbestands passieren, die Sie (nicht
 mehr) zuordnen können. Wir raten Ihnen daher, vorher die eventuell

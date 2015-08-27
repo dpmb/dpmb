@@ -40,7 +40,7 @@ das Paket die Markierung 'hold' (siehe dazu <<paketflags>>).
 ** damit kann ein erstelltes Paket auch wieder restefrei vom System heruntergekratzt werden
 ** installiert automatisch die zusätzlichen, bisher noch nicht installierten Header-Files nach
 ** Paket passt zu den anderen Softwarekomponenten
-** Paketverwaltung hat eine Information darüber, daß das Paket als solches installiert wurde
+** Paketverwaltung hat eine Information darüber, dass das Paket als solches installiert wurde
 
 * Nachteile:
 ** Paket unterläuft die Qualitätskontrolle von Debian -- die Kontrolle

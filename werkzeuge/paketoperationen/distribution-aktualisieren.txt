@@ -18,14 +18,14 @@ Aufwand soll schließlich nicht umsonst gewesen sein.
 Eine Aktualisierung sind stets größere Umbauarbeiten, bei dem sich
 vergleichsweise viel ändert und durchaus auch etliches schief gehen
 kann, womit Sie nicht unbedingt rechnen. An der Stelle sei jedoch zu
-ihrer Beruhigung angemerkt, daß der Wechsel von Debian 6 _Squeeze_ auf
+ihrer Beruhigung angemerkt, dass der Wechsel von Debian 6 _Squeeze_ auf
 Debian 7 _Wheezy_ recht unspektakulär verlief und vielfach problemlos
 über die Bühne ging. Die Tests für den Umzug auf Debian 8 _Jessie_
 liefen bislang ähnlich gut.
 
 Trotzdem halten wir es für ganz praktisch, wenn wir Ihnen eine
 Schritt-für-Schritt-Abfolge zur Verfügung stellen, der Sie folgen
-können. Das verringert die Wahrscheinlichkeit, daß bei der
+können. Das verringert die Wahrscheinlichkeit, dass bei der
 Aktualisierung etwas vergessen wird. Empfehlenswert ist auch, den
 Vorgang zu zweit mit einem Sparringspartner vorzunehmen. Das mindert die
 Anspannung und hilft Situationen zu umschiffen, in denen etwas

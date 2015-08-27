@@ -17,7 +17,7 @@ Ansteuerung bereit.
 Nutzergruppe von Ubuntu Landscape sind weniger die Endbenutzer, sondern
 Unternehmen und deren gesamte Infrastruktur. Das Ziel besteht dabei in
 der möglichst vollständigen, weitestgehend automatisierten und zentralen
-Systemadministration für bis zu 40000 Computer. Das Angebot umfaßt daher
+Systemadministration für bis zu 40000 Computer. Das Angebot umfasst daher
 eine webbasierte Schnittstelle für das Patch- und Änderungsmanagement,
 die rollenbasierte Verwaltung für Einzelbenutzer und Gruppen sowie
 Sicherheitseinstellungen von Ubuntu-Desktop-Systemen und -Servern (siehe

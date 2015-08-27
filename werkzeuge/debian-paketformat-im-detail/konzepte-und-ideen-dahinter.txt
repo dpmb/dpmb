@@ -85,7 +85,7 @@ und ggf. deren Versionsnummer, von dem das vorliegende Paket abhängt
 `Pre-Depends`:: 
 zu dt.: hängt ab vorher von; Name der installierten und konfigurierten
 Pakete und ggf. deren Versionsnummer, von dem das vorliegende Paket und
-dessen Installationsskripte abhängen. Dies bedeutet, daß diese
+dessen Installationsskripte abhängen. Dies bedeutet, dass diese
 Abhängigkeiten vollständig installiert und ausgepackt sein müssen, bevor
 das Paket von `dpkg` ausgepackt werden darf.
 
@@ -128,7 +128,7 @@ zu dt.: Priorität; Prioritätsstufe des Paketes, siehe Paket-Priorität
 und essentielle Pakete in <<paket-prioritaet-und-essentielle-pakete>>
 
 `Essential`:: 
-zu dt.: essentiell; ihr Debian-System kann kaputt gehen, wenn dieses
+zu dt.: essentiell; Ihr Debian-System kann kaputt gehen, wenn dieses
 Paket entfernt wird, siehe dazu auch Markierung Essentiell in
 <<markierung-essentiell>>
 
@@ -140,11 +140,11 @@ mehrere Absätze gehende, ausführlichere Beschreibung. Zwischen der Kurz-
 und Langbeschreibung kann auch ein Punkt (`.`) stehen.
 
 `Built-Using`:: 
-zu dt.: gebaut mit; Dieses Feld muß gemäß Debian Policy Manual
+zu dt.: gebaut mit; Dieses Feld muss gemäß Debian Policy Manual
 §7.8 <<Debian-Policy-Manual>> vorhanden sein, sofern der Inhalt des
 Binärpaketes nicht nur aus Quellcode aus dessen Quellpaket besteht und
-die Lizenz dieses Quellpakets vorschreibt, daß auch sämtlicher mit
-einkompilierter Quellcode frei verfügbar sein muß. Dies ist z.B. der
+die Lizenz dieses Quellpakets vorschreibt, dass auch sämtlicher mit
+einkompilierter Quellcode frei verfügbar sein muss. Dies ist z.B. der
 Fall, wenn eine unter GNU GPL stehende Software statisch kompiliert wird
 oder Quellcode unter GNU GPL aus einem anderen Paket in das Binärpaket
 hineinkopiert wird (bspw. bei Stylesheets oder Hintergrundbildern für
@@ -218,7 +218,7 @@ zu dt.: Format; verwendetes Format des Quellpakets, z.B. `1.0`, `3.0
 zu dt. Architektur oder Plattform; Im Gegensatz zu den Binärpaketen sind
 hier mehr als nur eine einzige Architektur zulässig. Es beinhaltet alle
 Architekturen, auf denen das Paket gebaut werden kann. Der Wert 'any'
-bedeutet, daß das Paket auf jeder Architektur gebaut werden kann und
+bedeutet, dass das Paket auf jeder Architektur gebaut werden kann und
 soll (siehe <<debian-architekturen>>).
 
 `Uploaders`:: 
@@ -287,13 +287,13 @@ weitere generierte Metadaten zu den Paketen enthalten. Das beinhaltet
 bspw. die Debian Tags (siehe
 <<erweiterte-paketklassifikation-mit-debtags>>), den Pfad und Dateinamen
 im Paketmirror, die Paketgröße und verschiedene Prüfsummen. Letztere
-dienen dazu, sicherzustellen, daß die Pakete fehlerfrei zwischen dem
+dienen dazu, sicherzustellen, dass die Pakete fehlerfrei zwischen dem
 Paketmirror und ihrem Debian-System übertragen wurden und es
 zwischenzeitlich keine Veränderungen gab (siehe dazu Paketquelle
 überprüfen in <<paketquelle-auf-echtheit-ueberpruefen>> und Bezogenes
 Paket verifizieren in <<bezogenes-paket-verifizieren>>).
 
-Das Paket 'poppler-utils' umfaßt beispielsweise die folgenden Metadaten:
+Das Paket 'poppler-utils' umfasst beispielsweise die folgenden Metadaten:
 
 //.Metadaten für das Paket 'poppler-utils'
 ----

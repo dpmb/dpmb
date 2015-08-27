@@ -12,7 +12,7 @@ Initial nur für Ubuntu entwickelt, verbirgt sich unter dem Namen GDebi
 Auf den ersten Blick wirkt GDebi recht unscheinbar, füllt aber genau die
 kleine Lücke zwischen den Kommandos `dpkg -i` und `apt-get install`
 (siehe <<dpkg>>, <<apt>> und <<pakete-installieren>>). Die Besonderheit
-von GDebi liegt darin, daß es lokal vorliegende `deb`-Pakete
+von GDebi liegt darin, dass es lokal vorliegende `deb`-Pakete
 installieren kann, während es deren Abhängigkeiten aus den Repositories
 via APT auflöst und daraus die zusätzlich benötigten Pakete bezieht.
 Damit eignet es sich besonders gut, um zugesandte, selbst erstellte oder
@@ -31,8 +31,8 @@ image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltun
 Dabei dient das Kommandozeilenprogramm `gdebi` den beiden graphischen
 Werkzeugen als Backend und wird von diesen intern aufgerufen, um die
 jeweiligen Paketoperationen auszuführen. Sie können es aber auch alleine
-auf der Kommandozeile benutzen, ohne daß eine der beiden graphischen
-Komponenten installiert sein muß. Rufen Sie dazu GDebi auf der
+auf der Kommandozeile benutzen, ohne dass eine der beiden graphischen
+Komponenten installiert sein muss. Rufen Sie dazu GDebi auf der
 *Kommandozeile* mit einem `deb`-Paket als Parameter auf, erhalten Sie
 die Paketbeschreibung. Stimmen Sie danach der abschließenden Frage zur
 Installation mit kbd:[j] zu, führt `gdebi` ihren Wunsch aus und das
@@ -87,7 +87,7 @@ menu:[Beschreibung], menu:[Details] und menu:[enthaltene
 Dateien]. Neben der Paketbeschreibung zeigt Ihnen GDebi alle sonstigen
 Metadaten aus der Control-Datei (siehe <<aufbau-und-format>>) sowie den
 tatsächlichen Paketinhalt an, sofern es sich dabei um Textdateien
-handelt. Dies umfaßt auch die Maintainer-Skripte.
+handelt. Dies umfasst auch die Maintainer-Skripte.
 
 Darüberhinaus zeigt Ihnen GDebi ab Version 0.9{empty}footnote:[Verfügbar
 ab Debian 8 'Jessie' und Ubuntu 14.04 LTS 'Trusty Tahr'] auch sämtliche
@@ -110,7 +110,7 @@ Paketmirrors (siehe <<etc-apt-sources.list-verstehen>>) nachgezogen.
 Diese Eigenschaft hebt GDebi deutlich von `dpkg` ab, das nur meckern
 kann, falls es auf nicht-erfüllte Abhängigkeiten stößt.
 
-Einziger Wermutstropfen bei GDebi ist, daß sowohl die beiden graphischen
+Einziger Wermutstropfen bei GDebi ist, dass sowohl die beiden graphischen
 Tools, als auch `gdebi` bislang pro Aufruf nur ein einziges `deb`-Paket
 akzeptieren. APT ab Version 1.1 kann allerdings ebenfalls mit lokalen
 Paketen umgehen und dabei deren Abhängigkeiten über APT-Repositories

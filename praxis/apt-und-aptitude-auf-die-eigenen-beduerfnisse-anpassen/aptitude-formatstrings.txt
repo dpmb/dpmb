@@ -31,7 +31,7 @@ Paket sichtbar sind.
 | `%I` | Installationsgröße ('installed size')
 |====
 
-Die Voreinstellung von `aptitude` umfaßt den Paketstatus, die Aktion,
+Die Voreinstellung von `aptitude` umfasst den Paketstatus, die Aktion,
 das 'Automatic Flag', den Paketnamen und die Paketbeschreibung. Bei der
 eigenen Auflistung bestehend aus der Installationsgröße und dem
 Paketnamen helfen Ihnen die beiden Schalter `-F` und `--sort` weiter.
@@ -40,7 +40,7 @@ Schalter um die Sortierung der Ausgabe.
 
 Nachfolgend sehen Sie eine dreispaltige Ausgabe, die aus der
 Installationsgröße nach der Installation, dem Paketnamen und dem
-Paketmaintainer besteht. Die Recherche umfaßt alle Pakete, die im Namen
+Paketmaintainer besteht. Die Recherche umfasst alle Pakete, die im Namen
 die Zeichenkette `debtags` beinhalten.
 
 .Suche nach `debtags`-Paketen mit spezifischer Formatierung der Ausgabe

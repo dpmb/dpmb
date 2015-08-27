@@ -28,12 +28,12 @@ ihrer gesamten Installation durchführen zu müssen (siehe
 möglichst stabil zu halten. Das ganze ist ein Balanceakt ohne die
 Garantie von Debian 'stable'.
 
-Problematisch ist dabei, daß Abhängigkeiten zwischen den verschiedenen
+Problematisch ist dabei, dass Abhängigkeiten zwischen den verschiedenen
 Paketversionen aus den genutzten Veröffentlichungen bestehen. Aus der
-Erfahrung heraus wissen wir jedoch, daß das ganze zwischen zwei
+Erfahrung heraus wissen wir jedoch, dass das ganze zwischen zwei
 aufeinanderfolgenden Veröffentlichungen weitestgehend reibungslos
 funktioniert, bspw. aus der Kombination von Debian 'stable' und
-'testing'. Der Hintergrund liegt darin, daß in diesem Fall die
+'testing'. Der Hintergrund liegt darin, dass in diesem Fall die
 Unterschiede zwischen den Paketen aus den Veröffentlichungen noch nicht
 ganz so groß sind (<<Jurzik-Debian-Handbuch>>,
 <<Drilling-APT-Pinning-LinuxUser>>). Sollte Ihnen das Ergebnis nach dem

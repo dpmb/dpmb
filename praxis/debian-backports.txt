@@ -33,18 +33,18 @@ bekommen:
 Der erste Lösungsansatz -- das lokale Kompilieren und Installieren --
 geht am Paketsystem vorbei und Sie verlieren damit sämtliche Vorteile
 der Paketverwaltung. Handelt es sich um ein Programm, von dem andere
-Pakete abhängen, kommt noch das Problem hinzu, daß diese Abhängigkeiten
+Pakete abhängen, kommt noch das Problem hinzu, dass diese Abhängigkeiten
 dann im Paketsystem nicht mehr erfüllt sein müssen. Wir gehen daher auf
 diese Option nicht näher ein, auch wenn es sicher Fälle gibt, in denen
 dies nicht die schlechteste Variante ist.
 
 Das Nutzen von Debians 'testing'- oder 'unstable'-Zweigen anstatt
-'stable' bedingt, daß nicht nur die benötigte Software, sondern das
+'stable' bedingt, dass nicht nur die benötigte Software, sondern das
 komplette Betriebssystem mit allen Anwendungen in einer neueren
-Version verwendet wird. Dabei nehmen Sie das Risiko in Kauf, daß die
+Version verwendet wird. Dabei nehmen Sie das Risiko in Kauf, dass die
 Pakete noch nicht die Stabilitätskriterien von Debian erfüllen und
 daher durchaus Fehler, bei 'unstable' sogar Inkonsistenzen und
-Uninstallierbarkeit einzelner Pakete auftreten können. Dazu kommt, daß
+Uninstallierbarkeit einzelner Pakete auftreten können. Dazu kommt, dass
 sich Pakete aus 'testing' und 'unstable' im dauernden Fluß befinden und
 sich daher relativ oft bezüglich der Konfigurationsformate oder ihrer
 unterstützten Funktionen ändern -- wie bei einem sogenannten 'Rolling
@@ -53,7 +53,7 @@ Release'.
 Manchmal, aber lange nicht immer, sind die Abhängigkeiten eines Paketes
 aus 'testing' oder 'unstable' nicht allzu restriktiv und Sie können
 dieses -- z.B. mit dem Aufruf `dpkg -i` -- einfach so auch auf einem
-'stable'-System installieren. Das bedeutet aber nicht zwangsläufig, daß
+'stable'-System installieren. Das bedeutet aber nicht zwangsläufig, dass
 die nächste Version dieses Paketes aus Debians Entwicklungszweigen dies
 immer noch tut. Sie gehen damit das Risiko ein, das Paket nicht
 aktualisieren zu können oder es weiter benutzen zu können.
@@ -63,7 +63,7 @@ Um nicht auf die Stabilität und die Sicherheitsupdates von Debians
 neueren Versionen nutzen zu können, ist der sauberste Weg die
 Rückportierung (engl. 'to backport'). Die Grundlage stellen die
 Versionszweige 'testing', 'unstable' und auch 'experimental' dar. Damit
-erreichen Sie, daß sich das ausgewählte Paket auch auf dem
+erreichen Sie, dass sich das ausgewählte Paket auch auf dem
 'stable'-Zweig bauen und installieren läßt. Es gehört meistens eine
 kleine Portion Glück dazu, das Paket ohne Murren zu portieren. Solche
 Backports sind nicht immer trivial in der Entwicklung und können auch
@@ -101,10 +101,10 @@ offiziellen Backport gibt, hängt von zwei Dingen ab -- dem Bedarf
 (wesentliche Änderungen gegenüber der Version im 'stable'-Zweig) und
 jemanden, der den Backport initial macht und dann auch weiterhin pflegt.
 
-Letzteres muß nicht der eigentliche Paketbetreuer des Paketes in
-Debian sein. Es kommt durchaus vor, daß dieser kein Bedarf bzw.
+Letzteres muss nicht der eigentliche Paketbetreuer des Paketes in
+Debian sein. Es kommt durchaus vor, dass dieser kein Bedarf bzw.
 Interesse an einem Backport hat. In diesem Fall ist es nicht unüblich,
-daß sich jemand anderes um den (nach wie vor offiziellen) Backport
+dass sich jemand anderes um den (nach wie vor offiziellen) Backport
 kümmert. U.a. aus diesem Grund sollten Sie Bug-Reports gegen Pakete aus
 den Debian Backports stets an die Backports-Mailingliste
 <<Backports-Mailingliste>> senden und nicht an das normale
@@ -117,7 +117,7 @@ erlaubt, die momentan in Debians 'testing'-Zweig enthalten sind. Für den
 'oldstable-backports'-Zweig -- quasi als Backports für die vorletzte
 'stable'-Veröffentlichung von Debian -- sind nur Paketversionen aus der
 aktuellen 'stable'-Veröffentlichung  zugelassen. Diese Varianten haben
-die Bezeichnung 'oldstable'. Hintergrund für diese Zuordnung ist, daß
+die Bezeichnung 'oldstable'. Hintergrund für diese Zuordnung ist, dass
 es möglich sein soll, bei der Aktualisierung eines Systems mit
 (offiziellen) Backports auf die jeweils nächste
 'stable'-Veröffentlichung alle bestehenden Backports automatisch durch
@@ -129,7 +129,7 @@ abweichen. Aus diesem Grund gibt es für die
 'oldstable'-Veröffentlichungen von Debian neben den
 'oldstable-backports' auch noch 'oldstable-backports-sloppy'. Das
 englische Wort 'sloppy' steht für ``schlampig'', ``schluderig'' oder
-``nachlässig'' und besagt, daß diese Backports o.g. Anforderung an eine
+``nachlässig'' und besagt, dass diese Backports o.g. Anforderung an eine
 saubere Aktualisierbarkeit auf die nächste 'stable'-Veröffentlichung
 nicht entsprechen.
 

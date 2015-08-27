@@ -9,14 +9,14 @@
 Unter einem 'Frontend' verstehen wir ein Programm oder ein Werkzeug mit
 einer Bedienoberfläche, welches im Alltag von Ihnen für die Verwaltung
 der Softwarepakete verwendet wird. Es deckt alle dafür notwendigen
-Aktionen auf ihrem System ab und umfaßt die grundsätzliche Pflege des
+Aktionen auf ihrem System ab und umfasst die grundsätzliche Pflege des
 Paketbestands. Dazu zählen bspw. die Installation, die Aktualisierung
 und die restlose Entfernung von Softwarepaketen, wobei das Gesamtsystem
 stets in einem konsistenten, benutzbaren Zustand verbleibt.
 
 Frontends existieren in recht unterschiedlichen Varianten und folgen
 divergierenden Bedienkonzepten. Die nachfolgende Übersicht orientiert
-sich daher an der Benutzerschnittstelle und dem Paketformat, für daß Sie
+sich daher an der Benutzerschnittstelle und dem Paketformat, für das Sie
 das jeweilige Programm benutzen können. Einige Programme sind Zwitter
 und stellen mehrere Bedienmodi zur Verfügung, so bspw. SmartPM
 (<<gui-smartpm>>), welches Sie sowohl über die Kommandozeile, als auch
@@ -68,7 +68,7 @@ oder Mandriva Linux Control Center (MCC) <<Mandriva-Wiki>> bzw. Mageia Control C
 ==== Aufgaben, Sinn und Zweck des Frontends ====
 
 Basierend auf der Einordnung in die unterschiedlichen Softwarestapel und
-Ebenen (siehe <<softwarestapel-und-ebenen>>) läßt sich der
+Ebenen (siehe <<softwarestapel-und-ebenen>>) lässt sich der
 Aufgabenbereich und damit der Funktionsumfang eines Programms zur
 Paketverwaltung konkreter fassen. Dabei kommen häufig die
 UNIX-Prinzipien ``Ein Werkzeug für eine Aufgabe'' und ``Keep it simple,
@@ -77,7 +77,7 @@ tragen.
 
 Zur 'unteren Ebene' gehört das Programm `dpkg`. Es bietet grundsätzliche
 Funktionen, die ein erforderliches Minimum abdecken. Die Funktionen
-betreffen nur das lokale System und setzen voraus, daß alle notwendigen
+betreffen nur das lokale System und setzen voraus, dass alle notwendigen
 Informationen und `deb`-Pakete bereits vorliegen. Dazu gehören die
 Fähigkeiten, Informationen über installierte und noch zur Verfügung
 stehende Pakete und Paketdateien anzuzeigen sowie bereits lokal als
@@ -116,7 +116,7 @@ Gewohnheiten und Vorlieben im Umgang mit Software zu unterschiedlich
 (siehe auch Ausblick und Empfehlung für Einsteiger in
 <<ausblick-empfehlung-fuer-einsteiger>>).
 
-In der Praxis zeigt sich, daß `apt-get` häufig die schnellste und
+In der Praxis zeigt sich, dass `apt-get` häufig die schnellste und
 effizienteste Variante ist, sofern Sie den exakten Namen eines
 Debian-Pakets (siehe dazu <<benennung-eines-debian-pakets>>) oder
 zumindest einen Großteil davon wissen. Die Kommandozeilenwerkzeuge sind
@@ -141,7 +141,7 @@ Die Komplexität der Kommandozeilenwerkzeuge kann Einsteiger überfordern
 -- gleiches gilt aber auch für graphische Oberflächen. In jedem Fall
 setzt es bei Ihnen den Willen zur Einarbeitung voraus -- gleich welches
 Werkzeug es auch ist. Der Vorteil der Kommandozeilenwerkzeuge liegt
-darin, daß sie meist zur Basisinstallation ihres Debian-Systems gehören
+darin, dass sie meist zur Basisinstallation Ihres Debian-Systems gehören
 und somit auch auf ferngewarteten Serversystemen zur Verfügung stehen.
 Graphische Werkzeuge sind in der Regel nur auf Desktopsystemen
 installiert. Webbasierte Benutzerschnittstellen sind deutlich in der

@@ -29,7 +29,7 @@ gewünschten Wert für das vorher benannte Tag. Korrekt sind bspw.
 Beispielaufruf sehen Sie eine Suche nach den Paketen, die mit dem
 Datenformat PDF umgehen können und daher entsprechend mit dem Schlagwort
 `works-with-format::pdf` markiert sind. Da die Liste recht lang ist,
-umfaßt das nachfolgende gezeigte Ergebnis lediglich die beiden Pakete
+umfasst das nachfolgende gezeigte Ergebnis lediglich die beiden Pakete
 'pdfgrep' und 'pdfjam' mit ihren jeweiligen Schlagworten.
 
 //.Filtern anhand von Schlagworten nach Paketen, die mit dem Format PDF umgehen können (Auszug)
@@ -83,7 +83,7 @@ Sie das über den Schalter `--facets` (siehe dazu
 Für die Suche anhand mehrerer Schlagworte kombinieren Sie diese im
 Aufruf mit zwei Kaufmanns-Und. Im nachfolgenden Beispiel sehen Sie eine
 Suche nach den Spielen, die einerseits X11-tauglich sind und
-andererseits als Simulation einsortiert wurden. Daher umfaßt die
+andererseits als Simulation einsortiert wurden. Daher umfasst die
 Recherche die beiden Tags `interface::x11` und `game::simulation`.
 
 // Stichworte für den Index
@@ -206,7 +206,7 @@ Die Grundlage dafür bilden bereits überprüfte, validierte Schlagworte
 (sogenannte _reviewed tags_). Zunächst wählen Sie aus der ``Wolke'' das
 gewünschte Schlagwort aus, woraufhin in der Ergebnisliste darunter alle
 Pakete aufgeführt werden, die mit diesem Schlagwort versehen sind (siehe
-<<fig.debtags-suche-nach-tags>>). Jeder Listeneintrag umfaßt den
+<<fig.debtags-suche-nach-tags>>). Jeder Listeneintrag umfasst den
 Paketnamen, eine kurze Paketbeschreibung und alle bereits vergebenen
 Schlagwörter. Der Paketname des Listeneintrags ist dabei ein Link, der
 Sie direkt zum Debtags Editor bringt. 

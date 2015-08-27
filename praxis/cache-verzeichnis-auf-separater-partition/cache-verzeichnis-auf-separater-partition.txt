@@ -16,7 +16,7 @@ Es gibt die unterschiedlichsten Gründe, entweder das gesamte Verzeichnis
 ihrem Linuxsystem zu trennen. Die darin abgespeicherten variablen Daten
 sind in Bezug auf deren Größe und Menge (d.h. die Anzahl der Inodes für
 die Dateien) nicht vorhersehbar und schwanken. Aktualisieren Sie Software
-auf ihrem Linuxsystem, möchten Sie verhindern, daß das Herunterladen der
+auf ihrem Linuxsystem, möchten Sie verhindern, dass das Herunterladen der
 neuen Pakete ihren Rechner durch ein vollbelegtes Dateisystem in der
 Benutzung ausbremst.
 
@@ -141,7 +141,7 @@ Dir::Cache::archives "/scratch/paketcache/";
 ----
 
 APT kann dieses Verzeichnis nicht selbst anlegen. Es verläßt sich daher
-darauf, daß dieses von Ihnen benannte Verzeichnis bereits existiert und
+darauf, dass dieses von Ihnen benannte Verzeichnis bereits existiert und
 nur Schreibrechte für den Benutzer `root` besitzt. Sollte das
 Verzeichnis noch nicht bestehen, legen Sie dieses wie folgt an:
 
@@ -169,7 +169,7 @@ Dir::Cache::pkgcache "pkgcache.bin";
 $
 ----
 
-Es ist nicht auszuschließen, daß das eine oder andere Programm den
+Es ist nicht auszuschließen, dass das eine oder andere Programm den
 üblichen Pfad `/var/cache/apt/archives/` hart verdrahtet hat und
 gar nicht in der APT-Konfiguration nach einem geänderten Pfad schaut
 (was ein Bug wäre). Daher ist es empfehlenswert, zusätzlich einen

@@ -29,7 +29,7 @@ Paketliste anhand von Debtags (siehe
 <<erweiterte-paketklassifikation-mit-debtags>>).
 
 Nachfolgend sehen Sie sie Arbeitsweise von `rc-alert` anhand des Paketes
-'apt'. Das Ergebnis umfaßt neben der Nummer des Bugreports ('Bug')
+'apt'. Das Ergebnis umfasst neben der Nummer des Bugreports ('Bug')
 dessen Titel ('Title'), die hinterlegten Flags ('Flags') und die
 Veröffentlichung, für die der Fehler relevant ist ('Dists'). Der erste
 Bug gilt nur für Debian 'stable', während der zweite Bug für zukünftige
@@ -97,7 +97,7 @@ Dists:   [TU] (testing, unstable)
 ----
 
 Mit dem zweiten Schalter legen Sie mittels `--include-dist-op and` fest,
-daß die Angabe der Veröffentlichung von `rc-bugs` als logisches 'und' zu
+dass die Angabe der Veröffentlichung von `rc-bugs` als logisches 'und' zu
 interpretieren ist. Damit begrenzen Sie die Ausgabe nur auf die
 angegebenen Veröffentlichungen.
 

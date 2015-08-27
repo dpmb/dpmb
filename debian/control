@@ -3,12 +3,12 @@ Section: doc
 Priority: optional
 Maintainer: Axel Beckert <abe@debian.org>
 Uploaders: Frank Hofmann <frank.hofmann@efho.de>
-Build-Depends: asciidoc,
-               calibre,
-               dblatex,
-               debhelper (>= 9),
-               texlive-lang-german,
-               xmlto
+Build-Depends: debhelper (>= 9)
+Build-Depends-Indep: asciidoc,
+                     calibre,
+                     dblatex,
+                     texlive-lang-german,
+                     xmlto
 Standards-Version: 3.9.6
 Homepage: http://www.dpmb.org/
 Vcs-Git: git://github.com/dpmb/dpmb.git

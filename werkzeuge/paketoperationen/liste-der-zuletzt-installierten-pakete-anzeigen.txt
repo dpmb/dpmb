@@ -12,7 +12,7 @@
 Als Verantwortlicher für ihr Linuxsystem möchten Sie ab und an wissen,
 was zuletzt auf dem System passiert ist. Dazu zählt insbesondere das
 Auswerten der Logdateien und beinhaltet die Änderungen der Paketliste –
-was wurde installiert, gelöscht bzw. aktualisiert etc. `dpkg` erfaßt
+was wurde installiert, gelöscht bzw. aktualisiert etc. `dpkg` erfasst
 alle Änderungen im Paketbestand in der Logdatei `/var/log/dpkg.log`.
 Ältere `dpkg`-Logdateien werden vom Programm `logrotate` nach dem
 Rotationsprinzip archiviert und irgendwann auch komprimiert. Die zweit-
@@ -71,7 +71,7 @@ Paket 'zutils' installiert, ist die Option `-f` nicht mehr
 erforderlich.]
 
 Alternativ können Sie auch `zgrep` verwenden, das spart ein klein wenig
-Tipparbeit. Damit die Sortierung gelingt, muß dort allerdings die
+Tipparbeit. Damit die Sortierung gelingt, muss dort allerdings die
 Ausgabe von vorangestellten Dateinamen mit der Option `-h` unterdrückt
 werden:
 

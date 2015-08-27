@@ -170,7 +170,7 @@ image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/aptitu
 | Vorschlag anwenden | kbd:[!]
 |=============================
 
-Darüberhinaus verfügt `aptitude` über eine Ansicht, in der Sie Pakete
+Darüber hinaus verfügt `aptitude` über eine Ansicht, in der Sie Pakete
 nach *Debian-Tags (Debtags)* (siehe dazu
 <<erweiterte-paketklassifikation-mit-debtags>>) sortiert betrachten
 können. Damit stöbern Sie sehr effizient im Paketbestand. Das ist

@@ -25,7 +25,7 @@ hilft Ihnen die Beschreibung unter
 (((APT)))
 (((apt-dselect)))
 (((dselect)))
-Es umfaßt eine Einführung in die Paketverwaltung und beschreibt recht
+Es umfasst eine Einführung in die Paketverwaltung und beschreibt recht
 knapp die Werkzeuge `dselect`, `apt-deselect` und APT sowie deren
 verschiedene Aufrufparameter. Nützlich sind in der Dokumentation die
 Ausgaben der Programme im Terminal, die Ihnen auch dabei helfen, die

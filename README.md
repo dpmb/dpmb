@@ -108,7 +108,7 @@ make mobi
 
 Will man das ganze gleich als Debian-Paket bauen und installieren, so
 ruft man in o.g. Verzeichnis als Benutzer anstatt `make` folgenden
-Befehl (aus dem Paket `dpkg-dev`, das Paket `build-essential` auch
+Befehl (aus dem Paket `dpkg-dev`, das Paket `build-essential` muss auch
 installiert sein) ein:
 
 ```sh

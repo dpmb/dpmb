@@ -27,7 +27,7 @@ von Ihnen zu aktualisieren sind.
 
 * Misten Sie den Softwarebestand regelmäßig aus. Lassen Sie daher nur
 die Softwarepakete installiert, die Sie auch tatsächlich benötigen. Dies
-setzt allerdings voraus, daß Sie wissen, was Sie oder die von Ihnen
+setzt allerdings voraus, dass Sie wissen, was Sie oder die von Ihnen
 betreuten Benutzer tatsächlich verwenden. Als Admin sollten Sie das aber
 wissen bzw. können das sicher herausfinden. Vergessen Sie beim Aufräumen
 nicht die Konfigurationsdateien der Pakete (siehe

@@ -13,7 +13,7 @@ und mindestens gleichwertiges Pendant zu Synaptic (siehe
 <<gui-synaptic>>).
 
 SmartPM verfügt über drei Bedienmodi. Erstens hat es ebenfalls eine
-graphische Bedienoberfläche auf der Basis des Gimp Toolkits (GTK2), läßt
+graphische Bedienoberfläche auf der Basis des Gimp Toolkits (GTK2), lässt
 sich jedoch zweitens auch über die Kommandozeile mit mehreren Schaltern
 steuern und verfügt als drittes noch über eine Paketverwaltungsshell
 analog zur 'aptsh' (<<aptsh>>), zu 'wajig' (<<wajig>>) und zu 'cupt'

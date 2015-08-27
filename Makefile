@@ -1,21 +1,25 @@
 DEFAULTDEPENDENCIES=*.txt */*.txt */*/*.txt Makefile
-DEFAULTOPTIONS=-L debian-paketmanagement.txt
+DEFAULTOPTIONS=-L
 DOCTORDEFAULTOPTIONS=-a experimental -a toc -a toclevels=4
 FORMATS=html epub pdf mobi
 
 all: $(FORMATS)
+allpure: pure$(FORMATS)
+
+purehtml: $(DEFAULTDEPENDENCIES)
+	asciidoc $(VERBOSE) debian-paketmanagement.txt
 
 html: debian-paketmanagement.html
 %.html: %.txt $(DEFAULTDEPENDENCIES)
-	a2x $(VERBOSE) -f xhtml $(DEFAULTOPTIONS)
+	a2x $(VERBOSE) -f xhtml $(DEFAULTOPTIONS) $<
 
 epub: debian-paketmanagement.epub
 %.epub: %.txt $(DEFAULTDEPENDENCIES)
-	a2x $(VERBOSE) -f epub $(DEFAULTOPTIONS)
+	a2x $(VERBOSE) -f epub $(DEFAULTOPTIONS) $<
 
 pdf: debian-paketmanagement.pdf
 %.pdf: %.txt $(DEFAULTDEPENDENCIES)
-	a2x $(VERBOSE) -f pdf $(DEFAULTOPTIONS)
+	a2x $(VERBOSE) -f pdf $(DEFAULTOPTIONS) $<
 
 mobi: debian-paketmanagement.mobi
 %.mobi: %.epub
@@ -44,6 +48,10 @@ asciidoctor: doctor-html
 doctor-html: $(DEFAULTDEPENDENCIES)
 	asciidoctor $(DOCTORDEFAULTOPTIONS)
 
-deploy: all
+test: test-epub
+test-epub: debian-paketmanagement.epub
+	epubcheck debian-paketmanagement.epub
+
+deploy: allpure
 	for suffix in $(FORMATS); do cp -pvf debian-paketmanagement.$$suffix deploy/; done
 	cd deploy && asciidoc index.txt
