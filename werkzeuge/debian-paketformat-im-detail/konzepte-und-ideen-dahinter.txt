@@ -141,14 +141,14 @@ und Langbeschreibung kann auch ein Punkt (`.`) stehen.
 
 `Built-Using`:: 
 zu dt.: gebaut mit; Dieses Feld muß gemäß Debian Policy Manual
-§7.8{empty}footnote:[http://www.debian.org/doc/debian-policy/] vorhanden
-sein, sofern der Inhalt des Binärpaketes nicht nur aus Quellcode aus
-dessen Quellpaket besteht und die Lizenz dieses Quellpakets vorschreibt,
-daß auch sämtlicher mit einkompilierter Quellcode frei verfügbar sein
-muß. Dies ist z.B. der Fall, wenn eine unter GNU GPL stehende Software
-statisch kompiliert wird oder Quellcode unter GNU GPL aus einem anderen
-Paket in das Binärpaket hineinkopiert wird (bspw. bei Stylesheets oder
-Hintergrundbildern für generierte Dokumentationen im HTML-Format).
+§7.8 <<Debian-Policy-Manual>> vorhanden sein, sofern der Inhalt des
+Binärpaketes nicht nur aus Quellcode aus dessen Quellpaket besteht und
+die Lizenz dieses Quellpakets vorschreibt, daß auch sämtlicher mit
+einkompilierter Quellcode frei verfügbar sein muß. Dies ist z.B. der
+Fall, wenn eine unter GNU GPL stehende Software statisch kompiliert wird
+oder Quellcode unter GNU GPL aus einem anderen Paket in das Binärpaket
+hineinkopiert wird (bspw. bei Stylesheets oder Hintergrundbildern für
+generierte Dokumentationen im HTML-Format).
 
 Das nachfolgende Beispiel zeigt alle genutzten Elemente anhand der
 PDF-Bibliothek 'poppler-utils':
@@ -227,8 +227,7 @@ Beitragenden des Pakets.
 
 `Standards-Version`:: 
 zu dt.: Version der Standardisierung; Angabe, welcher Version des Debian
-Policy Manuals{empty}footnote:[http://www.debian.org/doc/debian-policy/]
-dieses Paket entspricht.
+Policy Manuals <<Debian-Policy-Manual>> dieses Paket entspricht.
 
 `Vcs-Git`, `Vcs-Svn`, `Vcs-Hg`, `Vcs-Cvs`, `Vcs-Mtn`:: 
 zu dt.: Versionskontrollsystem; Angabe, von wo Sie eine aktuelle
@@ -276,9 +275,8 @@ enthaltenen Quellcode-Archive.
 Optionales Feld, das angibt, mit welchem Programm das installierte Paket
 auf Funktionalität getestet werden kann. Derzeit ist der einzige
 mögliche Wert `autopkgtest` (siehe Debian Enhancement Proposal 'DEP
-8'{empty}footnote:[http://dep.debian.net/deps/dep8/] und das
-gleichnamige Debianpaket
-dazu{empty}footnote:[https://packages.debian.org/de/stable/autopkgtest]
+8' <<DEP-8>> und das gleichnamige Debianpaket dazu
+<<Debian-Paket-autopkgtest>>.
 
 ==== Weitere Metadaten ====
 
