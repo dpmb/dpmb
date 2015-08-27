@@ -14,7 +14,7 @@ Zum Buch "Debian Paketmanagement" beitragen
   wohl doch diese gewöhnt sind. Wir behalten uns jedoch vor, einige
   Wörter oder Wortkombinationen in neuer Rechtschreibung
   auszuschließen (z.B. "Des Weiteren") und durch weniger schmerzhafte
-  Synonme zu ersetzen.
+  Synonyme zu ersetzen.
 
 Contributing to the book "Debian Package Management"
 ====================================================
