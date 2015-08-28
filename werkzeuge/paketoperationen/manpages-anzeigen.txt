@@ -16,11 +16,9 @@
 Für die meisten UNIX/Linux-Werkzeuge bestehen Informations- und
 Hilfeseiten, auch genannt 'Info und Man(ual) Pages'. Um in Erfahrung zu
 bringen, ob diese vorhanden und installiert sind, bieten sich die beiden
-UNIX-Kommandos `whereis` aus dem essentiellen Paket
-'util-linux'{empty}footnote:[http://packages.debian.org/de/stable/util-linux]
-sowie das bereits mehrfach genutzte
-`dlocate`{empty}footnote:[https://packages.debian.org/de/stable/dlocate]
-an.
+UNIX-Kommandos `whereis` aus dem essentiellen Paket 'util-linux'
+<<Debian-Paket-util-linux>> sowie das bereits mehrfach genutzte
+`dlocate` <<Debian-Paket-dlocate>> an.
 
 Mit der Option `-m Programmname` sucht `whereis` nach den passenden
 Hilfeseiten zum genannten Paketnamen:
