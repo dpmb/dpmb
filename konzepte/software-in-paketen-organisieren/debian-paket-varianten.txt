@@ -51,7 +51,7 @@ als solches erkannt. Nachfolgende Ausgabe zeigt dieses Verhalten am
 Beispiel des Paketes 'vnstat', eines Programms zur Analyse des
 Netzwerktraffics.
 
-//.`file` identifiziert die `deb`-Datei als Debianpaket
+.`file` identifiziert die `deb`-Datei als Debianpaket
 ----
 $ file vnstat_1.10-1_i386.deb
 vnstat_1.10-1_i386.deb: Debian binary package (format 2.0)
@@ -238,10 +238,9 @@ ist installiert'' in der ersten Spalte der Darstellung (siehe auch
 image::konzepte/software-in-paketen-organisieren/aptitude-virtuelle-pakete.png[id="fig.aptitude-virtuelle-pakete",width="50%"]
 
 Eine Liste aller offiziell verwendeten virtuellen Pakete in Debian gibt
-es im Paketierungshandbuch auf der
-Debian-Webseite{empty}footnote:[http://www.debian.org/doc/packaging-manuals/virtual-package-names-list.txt].
-Andere Distributionen nutzen dieses Konzept auch, jedoch in
-unterschiedlicher Intensität.
+es im Paketierungshandbuch auf der Debian-Webseite
+<<Debian-Virtual-Packages-List>>. Andere Distributionen nutzen dieses
+Konzept auch, jedoch in unterschiedlicher Intensität.
 
 [[pseudopakete]]
 
