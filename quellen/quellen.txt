@@ -348,6 +348,8 @@
 
 - [[[Debian-Paket-util-linux]]] Debian-Paket 'util-linux', http://packages.debian.org/de/stable/util-linux
 
+- [[[Debian-Paket-vrms]]] Debian-Paket 'vrms', https://packages.debian.org/stable/vrms
+
 - [[[Debian-Paket-wajig]]] Debian-Paket 'wajig', http://packages.debian.org/de/stable/wajig
 
 - [[[Debian-Paket-wget]]] Debian-Paket 'wget', http://packages.debian.org/de/stable/wget
