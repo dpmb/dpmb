@@ -28,9 +28,7 @@ Die Einträge in der Paketstatusdatenbank sind 7-Bit-Werte, d.h. das
 achte Bit ist nicht gesetzt. Mittlerweile ist `dpkg` recht robust gegen
 unbekannte Felder, auch wenn diese 8-Bit-Werte enthalten. Trotzdem
 funktioniert vieles nicht mehr, wenn die Paketstatusdatenbank außerhalb
-des Formates gemäß der Spezifikation nach RFC 822
-vorliegt{empty}footnote:[RFC 822: Standard For The Format Of Text
-Messages, IETF, https://www.ietf.org/rfc/rfc0822.txt].
+des Formates gemäß der Spezifikation nach RFC 822 vorliegt <<RFC822>>.
 
 Die Ursache für dieses gedrehte Bit kann sowohl ein Hardware-Crash sein,
 während `dpkg` werkelte, als auch ein Bit-Dreher auf dem Speichermedium
