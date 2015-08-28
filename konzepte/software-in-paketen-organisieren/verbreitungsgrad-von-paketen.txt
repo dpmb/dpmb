@@ -12,16 +12,15 @@ die Interessen der Benutzer sehr deutlich wieder.
 
 // Stichworte für den Index
 (((Paketqualität)))
-Das 'Debian Quality Assurance Team' (kurz QA
-Team){empty}footnote:[https://qa.debian.org/] sorgt für eine möglichst
-hohe Softwarequalität. Neben den Werkzeugen zur Qualitätssicherung
-(siehe <<qualitaetskontrolle>>) gehören dazu die Trendforschung, die
-Bestandsaufnahme und eine Auswertung darüber, ob und vor allem wie
-häufig ein Paket installiert wird. Das sagt zwar nicht unbedingt etwas
-darüber aus, ob es tatsächlich verwendet wird, aber es zeigt, ob an
-einem Softwarepaket prinzipiell Interesse besteht. Dieser Aspekt fließt
-mit ein, um zu entscheiden, ob ein Paket weiterhin Bestandteil des
-Softwareumfangs von Debian bleibt.
+Das 'Debian Quality Assurance Team' (kurz QA Team) <<DebianQA>>
+sorgt für eine möglichst hohe Softwarequalität. Neben den Werkzeugen zur
+Qualitätssicherung (siehe <<qualitaetskontrolle>>) gehören dazu die
+Trendforschung, die Bestandsaufnahme und eine Auswertung darüber, ob und
+vor allem wie häufig ein Paket installiert wird. Das sagt zwar nicht
+unbedingt etwas darüber aus, ob es tatsächlich verwendet wird, aber es
+zeigt, ob an einem Softwarepaket prinzipiell Interesse besteht. Dieser
+Aspekt fließt mit ein, um zu entscheiden, ob ein Paket weiterhin
+Bestandteil des Softwareumfangs von Debian bleibt.
 
 Diese Analyse geht direkt auf den Ursprung von Debian zurück und
 versucht eine Antwort darauf zu geben, welche Software die Benutzer
@@ -40,9 +39,9 @@ Chance, auf die ersten Installationsimages zu gelangen.
 (((Nutzungsgrad von Paketen)))
 (((Popcon)))
 Grundlage für die erfassten Daten ist das Projekt Popcon – der 'Debian
-Popularity Contest'{empty}footnote:[http://popcon.debian.org/]. Die
-Benutzung ist freiwillig und über dessen Teilnahme entscheiden Sie als
-Benutzer selbst. Voraussetzung dafür ist die Installation des Paketes
+Popularity Contest' <<Debian-Popularity-Contest>>. Die Benutzung ist
+freiwillig und über dessen Teilnahme entscheiden Sie als Benutzer
+selbst. Voraussetzung dafür ist die Installation des Paketes
 'popularity-contest' und dessen Aktivierung.
 
 Danach wird in regelmäßigen Abständen (wöchentlich) der Softwarebestand
