@@ -37,7 +37,7 @@ Ihnen der Aufruf `dpkg-architecture -L` aus. Viele der in der Ausgabe
 des Kommandos genannten Architekturen existieren allerdings nur in der
 Theorie.
 
-//.Architekturen, die das Werkzeug `dpkg` unterstützt (Ausschnitt)
+.Architekturen, die das Werkzeug `dpkg` unterstützt (Ausschnitt)
 ----
 $ dpkg-architecture -L
 uclibc-linux-armel
@@ -58,7 +58,7 @@ bestehend aus Hardware-Plattform, Kernel und ABI – an, sofern es bekannt
 ist. Mit Hilfe des Perl-Moduls `Dpkg::Arch` ermitteln Sie diese
 Bezeichnungen ohne viel Aufwand selbst.
 
-//.Perl-Aufruf zur Ermittlung der GNU-Triplets einer Debian-Architektur
+.Perl-Aufruf zur Ermittlung der GNU-Triplets einer Debian-Architektur
 ----
 $ perl -MDpkg::Arch=debarch_to_gnutriplet -E 'map { say "$_ = ".debarch_to_gnutriplet($_) } @ARGV' ppc64 powerpcspe arm armel armhf
 ppc64 = powerpc64-linux-gnu
