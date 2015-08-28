@@ -10,6 +10,7 @@
 
 // Stichworte für den Index
 (((Paketbezug)))
+(((Paketquellen)))
 (((Paketsuche)))
 Debianpakete sind von verschiedenen Orten und Medien verfügbar. Dazu
 zählen sowohl Online- als auch Offline-Quellen, bspw. offizielle,
@@ -17,19 +18,20 @@ private und unternehmenseigene Repositories und Paketspiegel. Für die
 Recherche und Installation ohne Internetanbindung stehen bspw.
 vorbereitete Distributionsimages in unterschiedlichen Größen und
 Zusammenstellungen für CD, DVD, Blueray und USB-Stick über die Webseite
-des Debian-Projekts bereit{empty}footnote:[http://www.debian.org/distrib/].
+des Debian-Projekts bereit <<Debian-besorgen>>.
 
 // Stichworte für den Index
 (((Installationsvarianten)))
 Je nach den persönlichen Vorlieben sowie der Bandbreite der lokalen
 Internetanbindung ist jeweils die eine oder andere Variante zur
 Installation empfehlenswert – eine pauschale Empfehlung können wir
-Ihnen an dieser Stelle leider nicht geben. Für uns hat sich die
-Reihenfolge _Bezug und Installation über ein kleines Installationsimage_
-(genannt _Netinst-ISO_) und die nachfolgende, individuelle Auswahl der
-benötigten Programme über eine Netzwerkinstallation vielfach bewährt.
-Damit bleiben die eingerichteten Debian-Systeme von Beginn an
-überschaubar und pflegeleicht und enthalten möglichst wenig Ballast.
+Ihnen an dieser Stelle leider nicht geben. Für eine Erstinstallation hat
+sich bei uns die Reihenfolge _Bezug und Installation über ein kleines
+Installationsimage_ (genannt _Netinst-ISO_) und die nachfolgende,
+individuelle Auswahl der benötigten Programme über eine
+Netzwerkinstallation vielfach bewährt. Damit bleiben die eingerichteten
+Debian-Systeme von Beginn an überschaubar und pflegeleicht und enthalten
+möglichst wenig Ballast.
 
 Die Auswahl eines Spiegelservers, der zu Ihren technischen Gegebenheiten
 und Gewohnheiten in der Benutzung Ihres Debian-Systems passt, ist eine
