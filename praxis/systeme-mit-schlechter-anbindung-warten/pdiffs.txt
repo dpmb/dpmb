@@ -21,7 +21,7 @@ Konfiguration von APT ein, bspw. über einen Eintrag in der Datei
 
 .Konfigurationseintrag für PDiffs
 ----
-Acquire::PDiffs
+Acquire::PDiffs "true";
 ----
 
 [NOTE]
