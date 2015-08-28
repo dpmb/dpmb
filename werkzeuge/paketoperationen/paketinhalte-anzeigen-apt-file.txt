@@ -43,7 +43,7 @@ Mit dieser Option listen Sie den Paketinhalt mit allen Pfaden auf. Jede
 Verzeichnisebene ist separat aufgeführt. Das nachfolgende Beispiel
 verdeutlicht das am Paket 'xara-gtk'.
 
-//.Auflistung des Paketinhalts mit allen Pfaden via `dpkg`
+.Auflistung des Paketinhalts mit allen Pfaden via `dpkg`
 ----
 $ dpkg -L xara-gtk 
 /.
@@ -68,13 +68,13 @@ $
 
 // Stichworte für den Index
 (((dlocate, -ls)))
-Gleiches ermöglicht der Aufruf des Programms
-`dlocate`{empty}footnote:[https://packages.debian.org/de/stable/dlocate]
-mit der Option `-L`. Sie erhalten damit eine identische Ausgabe. Nutzen
-Sie hingegen die Option `-ls`, wird die Ausgabe sehr ausführlich und
-entspricht dem Kommando `ls -ldF` bezogen auf alle Dateien des Pakets.
+Gleiches ermöglicht der Aufruf des Programms `dlocate`
+<<Debian-Paket-dlocate>> mit der Option `-L`. Sie erhalten damit eine
+identische Ausgabe. Nutzen Sie hingegen die Option `-ls`, wird die
+Ausgabe sehr ausführlich und entspricht dem Kommando `ls -ldF` bezogen
+auf alle Dateien des Pakets.
 
-//.Auflistung des Paketinhalts in kompakterer Form via `dlocate`
+.Auflistung des Paketinhalts in kompakterer Form via `dlocate`
 ----
 $ dlocate -ls xara-gtk
 drwxr-xr-x   24 root root    4096 Mär 13 09:44 /./
@@ -107,7 +107,7 @@ anzeigen zu lassen. Dieses Paket wird `dpkg` als Parameter übergeben. Im
 Gegensatz zu `dpkg -L` muss das Paket nicht auf ihrem System installiert
 sein, sondern liegt als Datei in einem Verzeichnis.
 
-//.Auflistung des Paketinhalts mit allen Informationen via `dpkg`
+.Auflistung des Paketinhalts mit allen Informationen via `dpkg`
 ----
 $ dpkg -c /var/cache/apt/archives/xara-gtk_1.0.31_i386.deb 
 drwxr-xr-x root/root         0 2012-05-21 01:04 ./
@@ -139,7 +139,7 @@ Die beiden Optionen `show` und `list` sind synonym zueinander und
 liefern den gleichen Inhalt wie `dpkg -L`. Dabei ist die Darstellung
 von `apt-file` jedoch deutlich kompakter.
 
-//.Paketinhalt in kompakter Form mittels `apt-file`
+.Paketinhalt in kompakter Form mittels `apt-file`
 ----
 $ apt-file show xara-gtk
 xara-gtk: /etc/xara-gtkrc-2.0
@@ -158,13 +158,12 @@ $
 (((dglob, -f)))
 (((Debianpaket, debian-goodies)))
 Analog zu `apt-file` arbeitet das Werkzeug `dglob` aus dem Paket
-'debian-goodies'{empty}footnote:[http://packages.debian.org/de/stable/debian-goodies].
-Es setzt auf `apt-file` auf und liefert eine ähnlich kompakte Ausgabe.
-Die Option `-f` dient dabei zur Ausgabe der Dateien im angefragten
-Paket, was wir nachfolgend erneut anhand des Pakets 'xara-gtk'
-illustrieren.
+'debian-goodies' <<Debian-Paket-debian-goodies>>. Es setzt auf
+`apt-file` auf und liefert eine ähnlich kompakte Ausgabe. Die Option
+`-f` dient dabei zur Ausgabe der Dateien im angefragten Paket, was wir
+nachfolgend erneut anhand des Pakets 'xara-gtk' illustrieren.
 
-//.Ergebnis der Recherche zum Paket 'xara-gtk'
+.Ergebnis der Recherche zum Paket 'xara-gtk'
 ----
 $ dglob -f xara-gtk
 /etc/xara.config
@@ -185,10 +184,8 @@ $
 Das Kommando `dglob` agiert üblicherweise nur auf den bereits
 installierten Paketen. Mit der Option `-a` weiten Sie ihre Recherche auf
 alle verfügbaren Pakete aus. Für diesen Schritt setzt `dglob` auf das
-Programm `grep-aptavail` aus dem Paket
-'dctrl-tools'{empty}footnote:[http://packages.debian.org/de/stable/dctrl-tools]
-auf. Nähere Informationen zu 'dctrl-tools' erfahren Sie unter
-<<erweiterte-paketklassifikation-mit-debtags>>.
-
+Programm `grep-aptavail` aus dem Paket 'dctrl-tools'
+<<Debian-Paket-dctrl-tools>> auf. Nähere Informationen zu 'dctrl-tools'
+erfahren Sie unter <<erweiterte-paketklassifikation-mit-debtags>>.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/paketinhalte-anzeigen-apt-file.txt
