@@ -5,7 +5,7 @@
 [[webbasierte-programme-dpkg-www]]
 ==== In Paketen blättern mittels `dpkg-www` ====
 
-Das Projekt `dpkg-www` umfaßt ein CGI-Skript und stellt Ihnen damit den
+Das Projekt `dpkg-www` umfasst ein CGI-Skript und stellt Ihnen damit den
 Zugang zu sämtlicher Dokumentation zu den einzelnen Paketen zur
 Verfügung, die auf ihrem eigenen oder einem fremden Debian-System
 installiert sind. Dazu analysiert es das Verzeichnis
@@ -20,12 +20,12 @@ insbesondere nach den darin enthaltenen Dateien suchen.
 Die Grundlage bildet das gleichnamige Paket 'dpkg-www'
 (<<Debian-Paket-dpkg-www>>). Obwohl dieses seine letzte reguläre
 Aktualisierung bereits 2008 erhielt und derzeit als verwaist eingestuft
-ist (d.h, daß das Paket keinen Maintainer mehr hat), sind gemäß
+ist (d.h, dass das Paket keinen Maintainer mehr hat), sind gemäß
 Popularity Contest (<<Debian-Popularity-Contest>>) noch etwa 350
 Installationen in Benutzung (siehe dazu auch
 <<verbreitungsgrad-von-paketen>>).
 
-Bitte beachten Sie, daß Sie ohne Anpassung der Konfiguration lediglich
+Bitte beachten Sie, dass Sie ohne Anpassung der Konfiguration lediglich
 im Paketbestand des Systems stöbern können. Aus der Bedienoberfläche
 heraus können Sie im Auslieferungszustand keine Veränderung ihres
 Paketbestands vornehmen. Auch die Autoren raten davon ab, da sie es als
@@ -60,7 +60,7 @@ image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/
 *Kommandozeile*. Darüber fragen Sie sowohl Informationen zu ihrem
 eigenen System, als auch zu entfernten Rechnern ab. Letzteres gelingt
 nur, sofern dort `dpkg-www` auch installiert und über das Netzwerk
-erreichbar ist. Nutzen Sie den Apache Webserver, muß diese
+erreichbar ist. Nutzen Sie den Apache Webserver, muss diese
 Funktionalität zuvor in der Datei `/etc/apache2/conf.d/dpkg-www`
 freigeschaltet worden sein.
 

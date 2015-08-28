@@ -8,7 +8,7 @@
 
 Allgemein gesprochen, steht der Begriff 'Downgrade' für einen
 Niedergang, eine Abwertung oder einen Rückschritt. Bezogen auf die
-Verwaltung von Softwarepaketen umfaßt es das Einspielen einer vorherigen
+Verwaltung von Softwarepaketen umfasst es das Einspielen einer vorherigen
 Paketversion. Es stellt damit das Gegenstück zu einer Aktualisierung
 mittels `apt-get upgrade` dar (siehe dazu <<pakete-aktualisieren>>).
 

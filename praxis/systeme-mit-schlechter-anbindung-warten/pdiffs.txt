@@ -9,7 +9,7 @@ indexterm:[Konfigurationsdatei, /etc/apt/apt.conf]
 indexterm:[PDiffs]
 
 PDiffs ist die Abkürzung für 'Package list diff' und eine sehr nützliche
-Option von APT. Diese Option bewirkt, daß nicht mehr die gesamte
+Option von APT. Diese Option bewirkt, dass nicht mehr die gesamte
 aktuelle Paketliste zu ihrem System übertragen wird, sondern nur noch
 die Änderungen zum aktuellen Stand. Da diese Änderungen überschaubar
 sind, spart das a) Zeit, b) genutzte Bandbreite und c) schont ihren
@@ -27,7 +27,7 @@ Acquire::PDiffs
 [NOTE]
 .Einsatzfeld der Option
 ====
-Bitte beachten Sie, daß diese Option nur für die
+Bitte beachten Sie, dass diese Option nur für die
 Debian-Veröffentlichungen 'testing', 'experimental' und 'Sid' besteht.
 Für die stabile Veröffentlichung hat die Option keinen Effekt.
 ====

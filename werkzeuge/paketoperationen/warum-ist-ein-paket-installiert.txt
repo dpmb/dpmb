@@ -24,7 +24,7 @@ aus (siehe <<konzepte-und-ideen-dahinter>>). Über diese vorgenannten
 Felder legt der Paketmaintainer die Beziehungen zu anderen Paketen fest.
 
 Nachfolgendes Beispiel zeigt den Aufruf zum Paket 'xpdf'. Ersichtlich
-wird daraus, daß das Paket 'texpower' wiederum 'xpdf' oder ein Paket aus
+wird daraus, dass das Paket 'texpower' wiederum 'xpdf' oder ein Paket aus
 der Gruppe 'pdf-viewer' empfiehlt. Die Alternative wird hier durch einen
 senkrechten Strich – das Pipe-Symbol – dargestellt. Das Paket 'xpdf' ist
 bereits installiert, wird jedoch wiederum auch vom Paket
@@ -43,7 +43,7 @@ $
 Für eine wesentlich ausführlichere Ausgabe nutzen Sie den Schalter `-v`.
 Dieser besitzt die übliche Langform `--verbose` und ergänzt die Ausgabe
 um alle Pakete, die zur Installation führen können. Hintergrund dafür
-ist, daß `aptitude` aus den Paketinformationen sämtliche Abhängigkeits-
+ist, dass `aptitude` aus den Paketinformationen sämtliche Abhängigkeits-
 und Installationspfade errechnet und Ihnen diese auflistet.
 
 // Stichworte für den Index
@@ -154,7 +154,7 @@ damit den Grund auf, warum das Paket 'bislang nicht' installiert oder
 des Audioprogramms `mplayer`. Dieses Paket wird von 'rtmpdump'
 vorgeschlagen, welches automatisch installiert wurde und vom Paket 
 'youtube-dl' empfohlen wird. Außerdem kollidieren die beiden Pakete
-'mplayer' und 'mplayer2' miteinander, sodaß im Bedarfsfall nur eines
+'mplayer' und 'mplayer2' miteinander, sodass im Bedarfsfall nur eines
 von beiden auf ihrem System installiert sein darf.
 
 //.Ausgabe von `aptitude` zur Klärung der Installation (Variante 3)

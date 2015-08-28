@@ -15,7 +15,7 @@ d.h. der dafür verwendete Wortschatz zur Klassifizierung der Pakete.
 
 Die Federführung bei der Pflege übernimmt derzeit Enrico Zini, der Autor
 des Debtags-Projekts. Zu beobachten ist jedoch über die letzten Jahre,
-daß das Thema Verschlagwortung von den Benutzern verstärkt wahrgenommen
+dass das Thema Verschlagwortung von den Benutzern verstärkt wahrgenommen
 wird und ein größeres Interesse besteht, daran mitzuwirken. Die
 vorgenommenen Veränderungen im Wortschatz reflektieren dabei einerseits
 den Wandel im Paketbestand und andererseits das gestiegene Bedürfnis der

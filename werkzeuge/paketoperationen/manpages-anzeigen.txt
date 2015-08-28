@@ -47,7 +47,7 @@ $
 (((dlocate, -lsman)))
 Benötigen Sie zusätzlich den exakten Pfad zur Manpage, nutzen Sie
 stattdessen den Schalter `-lsman`. Damit erfahren Sie bspw. aus dem
-nachfolgenden Aufruf, daß die Manpage für mehrere Sprachen wie bspw.
+nachfolgenden Aufruf, dass die Manpage für mehrere Sprachen wie bspw.
 Deutsch (de), Spanisch (es) und Polnisch (pl) im Verzeichnis
 `/usr/share/man` bereitsteht.
 

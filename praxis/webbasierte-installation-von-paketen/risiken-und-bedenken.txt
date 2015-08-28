@@ -1,8 +1,14 @@
 // Datei: ./praxis/webbasierte-installation-von-paketen/risiken-und-bedenken.txt
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
+[[webbasierte-installation-von-paketen-mit-apturl-risiken]]
 === Risiken und Bedenken ===
+
+Obwohl die Bereitstellung des Dienstes die Installation von Paketen über
+den Webbrowser sehr leicht macht, haben wir Bedenken im Umgang damit.
+Die nachfolgend genannten Punkte sind kaum durchführbar und bergen daher
+Risiken für die Integrität ihres Systems:
 
 * Überprüfung der Paketabhängigkeiten
 * Überprüfung auf Vertrauenswürdigkeit der Paketquelle (siehe
@@ -10,5 +16,11 @@
 * Überprüfung auf Echtheit und Fehlerfreiheit des Pakets (siehe
 <<bezogenes-paket-verifizieren>>)
 
+Bitte beachten Sie, daß alle Benutzer und jedes Programm oben genannte
+URL ansurfen und darüber eine Installation auslösen kann. Administrative
+Rechte sind zur Paketverwaltung in diesem Fall nicht mehr erforderlich
+und legen den Grundstein dafür, dass Aktivitäten außerhalb ihres
+Sichtfeldes und ohne ihr Wissen als Systemverantwortlicher passieren
+können.
 
 // Datei (Ende): ./praxis/webbasierte-installation-von-paketen/risiken-und-bedenken.txt

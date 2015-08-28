@@ -50,7 +50,7 @@ zur Suche, die wir Ihnen nicht ebenfalls vorenthalten möchten.
 (((Umgang mit Waisen, APT und aptitude)))
 Zwischen der Standardkonfiguration von APT und `aptitude` gibt es
 subtile Unterschiede, die sich über die Zeit herausgebildet haben und
-die es im Alltag zu beachten gilt. Kurz gefaßt, beläßt APT verwaiste
+die es im Alltag zu beachten gilt. Kurz gefasst, beläßt APT verwaiste
 Pakete, während `aptitude` diese automatisch entfernt.
 
 APT-Versionen aus der Prä-Lenny-Ära – d.h. vor Debian 5.0 _Lenny_
@@ -400,7 +400,7 @@ $
 
 Für das Paket 'gnome-screenshot' aus obiger Ergebnisliste ergibt eine
 Suche über `dpkg` die nachfolgende Ausgabe. Die Buchstaben `rc` zu
-Beginn der Zeile mit den Paketdetails zeigen, daß dieses Paket bereits
+Beginn der Zeile mit den Paketdetails zeigen, dass dieses Paket bereits
 auf dem System installiert war und zwischenzeitlich wieder entfernt
 wurde (Buchstabe `r` für `removed` in der ersten Spalte). Die
 Konfigurationsdateien des Programms sind noch verfügbar (Buchstabe `c`
@@ -592,7 +592,7 @@ installierten Paket benötigt werden. Andere Pakete werden bei der
 Recherche nicht berücksichtigt.
 
 Die Analyse basiert auf dem Werkzeug `deborphan` (siehe <<deborphan>>).
-Daher muß das entsprechende Paket installiert sein, wenn Sie dieses
+Daher muss das entsprechende Paket installiert sein, wenn Sie dieses
 Kommando verwenden möchten. <<fig.wajig-orphans>> zeigt das Ergebnis der
 Suche nach Waisen in der `wajig`-Shell.
 

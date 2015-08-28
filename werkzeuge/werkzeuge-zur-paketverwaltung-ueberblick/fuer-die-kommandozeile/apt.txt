@@ -9,7 +9,7 @@
 APT ist das Debian-Programm für etwas komplexere Paketoperationen und
 steht als Abkürzung für 'Advanced Packaging Tool'. Sie finden es im
 Paket 'apt' <<Debian-Paket-apt>>, welches zur Standardinstallation
-ihres Debian-Systems gehört. 
+Ihres Debian-Systems gehört. 
 
 APT ist für den Alltagseinsatz konzipiert. Es eignet sich sowohl für
 Recherchezwecke (Abfrage von Status- und Zustandsinformationen), als
@@ -22,13 +22,13 @@ insbesondere den benötigten Speicher für die Ausführung. APT hat zudem
 eine deutlich höhere Ausführungsgeschwindigkeit als `aptitude`.
 
 APT ist sehr mächtig und kann mit Paketen umgehen, die sich entweder
-bereits lokal auf ihrem System befinden, oder noch auf einem Paketmirror
+bereits lokal auf Ihrem System befinden, oder noch auf einem Paketmirror
 vorliegen. Es kombiniert i.d.R. mehrere Einzelaktionen von `dpkg`,
 greift dabei aber nicht direkt auf `dpkg` zurück, sondern kapselt dafür
 die Aufrufe mit Hilfe der Bibliothek `libapt-pkg` (siehe dazu APT und
 Bibliotheken unter <<apt-und-bibliotheken>>).
 
-APT umfaßt ausschließlich Programme für die Kommandozeile. Dazu zählen
+APT umfasst ausschließlich Programme für die Kommandozeile. Dazu zählen
 `apt-cache`, `apt-cdrom` (siehe
 <<physische-installationsmedien-mit-apt-cdrom-einbinden>>), `apt-config`
 zur Konfiguration von APT (siehe
@@ -165,7 +165,7 @@ Die Unterkommandos von `apt-mark` lauten `auto`, `manual`, `showauto`
 und `showmanual`. Dazu gehen wir unter <<paketstatus-erfragen>>
 detailliert ein.
 
-// Absatz zusammengefaßt -- ist ein Gedanke, der zusammengehört
+// Absatz zusammengefasst -- ist ein Gedanke, der zusammengehört
 
 Die *Weiterentwicklung von APT* geht stetig voran. Seit mehreren Jahren
 gibt es Bestrebungen, APT grundlegend zu erneuern bzw. dessen verteilte
@@ -191,7 +191,7 @@ Unterkommandos `list`, `search`, `show`, `update`, `install` und
 `upgrade` kennt es auch die neuen Aktionen `full-upgrade` als Ersatz
 für `dist-upgrade` und `edit-sources` zur direkten Veränderung der Datei
 `/etc/apt/sources.list` (siehe <<pakete-aktualisieren>> und
-<<etc-apt-sources.list-verstehen>>). Darüberhinaus verfügt es ab *APT
+<<etc-apt-sources.list-verstehen>>). Darüber hinaus verfügt es ab *APT
 Version 1.1* über die Fähigkeit, lokal vorliegende `deb`-Pakete zu
 installieren und dabei die dazugehörigen Paketabhängigkeiten mit zu
 berücksichtigen.footnote:[Diese Eigenschaft stammt vom Programm

@@ -25,7 +25,7 @@ Pin: release a=stable
 Pin-Priority: 50
 ----
 
-Obiger Eintrag besagt, daß APT nur Pakete aus dem Bereich Debian
+Obiger Eintrag besagt, dass APT nur Pakete aus dem Bereich Debian
 'stable' und nicht aus Debian 'testing' oder 'unstable' installiert.
 Dabei stehen die einzelnen Schlüsselworte jeweils für:
 

@@ -20,7 +20,7 @@ das lokale Netzwerk für die Arbeitsgruppe oder Wirtschaftseinheit
 möglichst zu verringern. 
 
 Der Unterschied zwischen einem Paketcache und einem Paketmirror besteht
-darin, daß bei ersterem nur die bereits nachgefragten Pakete vorgehalten
+darin, dass bei ersterem nur die bereits nachgefragten Pakete vorgehalten
 werden, während ein Paketmirror i.d.R. die gesamte Distribution inkl.
 ausgewählter Veröffentlichungen bereitstellt. Ein lokaler Paketmirror
 spiegelt den offiziellen Paketbestand und macht ihn in für die Benutzer,
@@ -28,7 +28,7 @@ Dienste und Geräte in einem lokalen Netzwerk verfügbar. Damit geht eine
 Entlastung der offiziellen Paketmirror und eine Verringerung des
 Netzwerkverkehrs zu diesem einher -- die verfügbare Bandbreite der
 Außenanbindung kann anderweitig genutzt werden. Es ist an der Stelle
-jedoch dafür zu sorgen, daß der lokale Paketmirror stets aktuelle Pakete
+jedoch dafür zu sorgen, dass der lokale Paketmirror stets aktuelle Pakete
 vorhält.
 
 Nachfolgend stellen wir Ihnen mehrere Varianten anhand der Pakete

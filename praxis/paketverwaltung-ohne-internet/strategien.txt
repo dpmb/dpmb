@@ -32,7 +32,7 @@ Sie einen genaueren Blick auf die Projekte `apt-offline`, `apt-zip`,
 (((apt-get, --no-download install)))
 (((Paket, nur herunterladen)))
 
-Dieser Weg setzt voraus, daß Sie wissen, was Sie brauchen werden. Das
+Dieser Weg setzt voraus, dass Sie wissen, was Sie brauchen werden. Das
 gelingt nicht immer und läßt sich auch nicht in allen Fällen exakt
 vorhersagen. Bitte testen Sie das daher im Vorfeld aus.
 
@@ -54,7 +54,7 @@ beiden Aufrufe notwendig:
 Ausführlicher besprechen wir jeden der beiden Einzelschritte in
 <<paketdatei-nur-herunterladen>> und
 <<installation-zwischengespeicherter-pakete-aus-dem-paketcache>>. Das
-betrifft sowohl APT, als auch `aptitude`.
+betrifft nicht nur APT, sondern auch `aptitude`.
 
 ==== Einbindung fester Installationsmedien ====
 
@@ -63,11 +63,10 @@ betrifft sowohl APT, als auch `aptitude`.
 (((Paketquelle, Versionskonflikte)))
 
 Vorbereitete Installationsmedien bekommen Sie von der Webseite des
-Debian-Projekts als ISO-Image und Live-CD bzw.
--DVD{empty}footnote:[http://www.debian.org/distrib/]. Alternativ können
-Sie auch selbst Diskimages erstellen und
-benutzen{empty}footnote:[https://wiki.debian.org/DiskImage]. Ein solches
-Installationsmedium binden Sie als lokales Paketarchiv wie folgt ein:
+Debian-Projekts als ISO-Image und Live-CD bzw. -DVD <<Debian-besorgen>>.
+Alternativ können Sie auch selbst Diskimages erstellen und benutzen
+<<Debian-Wiki-DiskImage>>. Ein solches Installationsmedium binden Sie
+als lokales Paketarchiv wie folgt ein:
 
 .Einbindung eines lokalen CD/DVD-Images namens `image.iso` als `loop device` unter `/mnt/iso`
 ----
@@ -76,10 +75,10 @@ Installationsmedium binden Sie als lokales Paketarchiv wie folgt ein:
 #
 ----
 
-Bitte beachten Sie dabei, daß der Paketbestand zwischen dem
+Bitte beachten Sie dabei, dass der Paketbestand zwischen dem
 eingebundenen Diskimage und ihrer lokalen Installation bezüglich ihrer
 benötigten Architektur und der genutzten Veröffentlichung harmonieren
-muß. Passen beide nicht zusammen, provozieren Sie Versionskonflikte
+muss. Passen beide nicht zusammen, provozieren Sie Versionskonflikte
 zwischen den beiden Paketbeständen und mit hoher Wahrscheinlichkeit
 werden Sie die benötigten Pakete von dem Diskimage nicht auf ihr lokales
 System einspielen können.
@@ -116,7 +115,7 @@ Fügen Sie nun Pakete zu ihrem lokalen System hinzu, sucht die
 Paketverwaltung die Pakete auf der angegebenen Paketquelle und bezieht
 diese von dort.
 
-Dieser Schritt setzt voraus, daß Sie über eine genügend großen,
+Dieser Schritt setzt voraus, dass Sie über eine genügend großen,
 zusätzlichen, mobilen Datenträger verfügen, um einen solchen Paketmirror
 vorzubereiten (meist unproblematisch). Weiterhin probieren Sie zuvor
 aus, ob die Paketinstallation von diesem Paketmirror klappt, um im

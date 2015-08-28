@@ -99,7 +99,7 @@ Zur Auswahl stehen `apt`, `list` und `rss`. Bei ersterem liest
 Argumente zum Aufruf und bei letzterem im RSS-Format. Den Abschluß des
 Aufrufs bildet der Paketname, an den Sie zudem eine spezifische
 Paketversion anfügen können. Als Trennzeichen fungiert hier der
-Schrägstrich, sodaß bspw. die Spezifikation für das Paket
+Schrägstrich, sodass bspw. die Spezifikation für das Paket
 'apt-listbugs' in der Version 0.1.5 `apt-listbugs/0.1.5` lautet.
 
 .Berichtete Fehler zum Paket 'coreutils' auflisten

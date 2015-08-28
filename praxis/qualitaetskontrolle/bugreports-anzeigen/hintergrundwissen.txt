@@ -44,7 +44,7 @@ An der *Recherche nach Fehlern* darf sich jeder Debian-Benutzer
 beteiligen. Dafür benutzen Sie das Debian BTS, um darin einerseits nach
 bestehenden Softwarefehlern und deren Lösungen zu recherchieren und
 andererseits weitere Fehler zu berichten, die Ihnen aufgefallen sind.
-Für ersteres muß das ganze reproduzierbar sein und es darf sich nicht um
+Für ersteres muss das ganze reproduzierbar sein und es darf sich nicht um
 einen Bedienfehler handeln.
 
 // Stichworte für den Index

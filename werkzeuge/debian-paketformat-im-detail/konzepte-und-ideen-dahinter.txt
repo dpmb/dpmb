@@ -85,7 +85,7 @@ und ggf. deren Versionsnummer, von dem das vorliegende Paket abhängt
 `Pre-Depends`:: 
 zu dt.: hängt ab vorher von; Name der installierten und konfigurierten
 Pakete und ggf. deren Versionsnummer, von dem das vorliegende Paket und
-dessen Installationsskripte abhängen. Dies bedeutet, daß diese
+dessen Installationsskripte abhängen. Dies bedeutet, dass diese
 Abhängigkeiten vollständig installiert und ausgepackt sein müssen, bevor
 das Paket von `dpkg` ausgepackt werden darf.
 
@@ -128,7 +128,7 @@ zu dt.: Priorität; Prioritätsstufe des Paketes, siehe Paket-Priorität
 und essentielle Pakete in <<paket-prioritaet-und-essentielle-pakete>>
 
 `Essential`:: 
-zu dt.: essentiell; ihr Debian-System kann kaputt gehen, wenn dieses
+zu dt.: essentiell; Ihr Debian-System kann kaputt gehen, wenn dieses
 Paket entfernt wird, siehe dazu auch Markierung Essentiell in
 <<markierung-essentiell>>
 
@@ -140,15 +140,15 @@ mehrere Absätze gehende, ausführlichere Beschreibung. Zwischen der Kurz-
 und Langbeschreibung kann auch ein Punkt (`.`) stehen.
 
 `Built-Using`:: 
-zu dt.: gebaut mit; Dieses Feld muß gemäß Debian Policy Manual
-§7.8{empty}footnote:[http://www.debian.org/doc/debian-policy/] vorhanden
-sein, sofern der Inhalt des Binärpaketes nicht nur aus Quellcode aus
-dessen Quellpaket besteht und die Lizenz dieses Quellpakets vorschreibt,
-daß auch sämtlicher mit einkompilierter Quellcode frei verfügbar sein
-muß. Dies ist z.B. der Fall, wenn eine unter GNU GPL stehende Software
-statisch kompiliert wird oder Quellcode unter GNU GPL aus einem anderen
-Paket in das Binärpaket hineinkopiert wird (bspw. bei Stylesheets oder
-Hintergrundbildern für generierte Dokumentationen im HTML-Format).
+zu dt.: gebaut mit; Dieses Feld muss gemäß Debian Policy Manual
+§7.8 <<Debian-Policy-Manual>> vorhanden sein, sofern der Inhalt des
+Binärpaketes nicht nur aus Quellcode aus dessen Quellpaket besteht und
+die Lizenz dieses Quellpakets vorschreibt, dass auch sämtlicher mit
+einkompilierter Quellcode frei verfügbar sein muss. Dies ist z.B. der
+Fall, wenn eine unter GNU GPL stehende Software statisch kompiliert wird
+oder Quellcode unter GNU GPL aus einem anderen Paket in das Binärpaket
+hineinkopiert wird (bspw. bei Stylesheets oder Hintergrundbildern für
+generierte Dokumentationen im HTML-Format).
 
 Das nachfolgende Beispiel zeigt alle genutzten Elemente anhand der
 PDF-Bibliothek 'poppler-utils':
@@ -218,7 +218,7 @@ zu dt.: Format; verwendetes Format des Quellpakets, z.B. `1.0`, `3.0
 zu dt. Architektur oder Plattform; Im Gegensatz zu den Binärpaketen sind
 hier mehr als nur eine einzige Architektur zulässig. Es beinhaltet alle
 Architekturen, auf denen das Paket gebaut werden kann. Der Wert 'any'
-bedeutet, daß das Paket auf jeder Architektur gebaut werden kann und
+bedeutet, dass das Paket auf jeder Architektur gebaut werden kann und
 soll (siehe <<debian-architekturen>>).
 
 `Uploaders`:: 
@@ -227,8 +227,7 @@ Beitragenden des Pakets.
 
 `Standards-Version`:: 
 zu dt.: Version der Standardisierung; Angabe, welcher Version des Debian
-Policy Manuals{empty}footnote:[http://www.debian.org/doc/debian-policy/]
-dieses Paket entspricht.
+Policy Manuals <<Debian-Policy-Manual>> dieses Paket entspricht.
 
 `Vcs-Git`, `Vcs-Svn`, `Vcs-Hg`, `Vcs-Cvs`, `Vcs-Mtn`:: 
 zu dt.: Versionskontrollsystem; Angabe, von wo Sie eine aktuelle
@@ -276,9 +275,8 @@ enthaltenen Quellcode-Archive.
 Optionales Feld, das angibt, mit welchem Programm das installierte Paket
 auf Funktionalität getestet werden kann. Derzeit ist der einzige
 mögliche Wert `autopkgtest` (siehe Debian Enhancement Proposal 'DEP
-8'{empty}footnote:[http://dep.debian.net/deps/dep8/] und das
-gleichnamige Debianpaket
-dazu{empty}footnote:[https://packages.debian.org/de/stable/autopkgtest]
+8' <<DEP-8>> und das gleichnamige Debianpaket dazu
+<<Debian-Paket-autopkgtest>>.
 
 ==== Weitere Metadaten ====
 
@@ -289,13 +287,13 @@ weitere generierte Metadaten zu den Paketen enthalten. Das beinhaltet
 bspw. die Debian Tags (siehe
 <<erweiterte-paketklassifikation-mit-debtags>>), den Pfad und Dateinamen
 im Paketmirror, die Paketgröße und verschiedene Prüfsummen. Letztere
-dienen dazu, sicherzustellen, daß die Pakete fehlerfrei zwischen dem
+dienen dazu, sicherzustellen, dass die Pakete fehlerfrei zwischen dem
 Paketmirror und ihrem Debian-System übertragen wurden und es
 zwischenzeitlich keine Veränderungen gab (siehe dazu Paketquelle
 überprüfen in <<paketquelle-auf-echtheit-ueberpruefen>> und Bezogenes
 Paket verifizieren in <<bezogenes-paket-verifizieren>>).
 
-Das Paket 'poppler-utils' umfaßt beispielsweise die folgenden Metadaten:
+Das Paket 'poppler-utils' umfasst beispielsweise die folgenden Metadaten:
 
 //.Metadaten für das Paket 'poppler-utils'
 ----

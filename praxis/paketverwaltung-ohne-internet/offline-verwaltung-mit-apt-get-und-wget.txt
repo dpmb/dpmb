@@ -1,0 +1,64 @@
+// Datei: ./praxis/paketverwaltung-ohne-internet/offline-verwaltung-mit-apt-get-und-wget.txt
+
+// Baustelle: Notizen
+
+[[paketverwaltung-offline-apt-get-und-wget]]
+
+==== Offline-Verwaltung mit 'apt-get' und 'wget' ====
+
+// Stichworte für den Index
+(((apt-get, dist-upgrade)))
+(((apt-get, update)))
+(((awk)))
+(((wget)))
+
+In diesem Szenario kombinieren wir aus APT das Werkzeug `apt-get` mit
+`awk` und `wget`. Diese wunderbare Idee und Beschreibung ist entlehnt
+aus Frank Ronneburgs Debian-Anwenderhandbuch
+<<Debian-Anwenderhandbuch-apt-offline>> sowie dem Beitrag von Samuel
+Suter <<Suter-apt-offline>>, hier jedoch nur für ausgewählte Pakete.
+
+`awk` ist ein Analyse- und Filterprogramm für Textdaten
+<<Debian-Paket-gawk>>. `wget` ist hingegen ein Kommandozeilenprogramm,
+um Dateien über das Netzwerk zu beziehen <<Debian-Paket-wget>>. Während
+'gawk' zu den essentiellen Paketen zählt, ist 'wget' optional und daher
+ihrerseits vor dessen Verwendung gegebenenfalls noch zu installieren.
+
+Der Ablauf ist wie folgt:
+
+. Einhängen (``mounten'') eines externen, mobilen Datenträgers im
+Verzeichnis `/medium`
+. Aktualisieren der lokalen Paketdatenbank mittels `apt-get update`
+. Erzeugen der URLs mittels `apt-get` für die Pakete, die zu aktualisieren sind, und Umleitung der Ausgabe in die lokale Datei `uris`
+. Generieren der passenden `wget`-Aufrufe aus den zuvor gespeicherten
+URLs mittels `awk`. Ausgabe auf `stdout` und Umleitung der Ausgabe in
+die lokale Skriptdatei `/medium/wget-script`.
+. Ausführung der der Skriptdatei zum Bezug der bezeichneten Pakete vom
+Spiegelserver und der Speicherung der bezogenen Pakete im lokalen
+Verzeichnis.
+
+.Aufrufreihenfolge mittels `apt-get`, `awk` und `wget`
+----
+# apt-get update
+# apt-get -qq --print-uris dist-upgrade > uris
+# awk '{print "wget -O " $2 " " $1}' < uris > /medium/wget-script
+# cd /medium
+# sh -x ./wget-script
+----
+
+Als Ergebnis dieser Aufrufe finden Sie auf dem mobilen Datenträger alle
+`deb`-Pakete, die zur Aktualisierung mittels `apt-get dist-upgrade`
+erforderlich sind. Unmounten Sie den mobilen Datenträger auf dem ersten
+System und mounten Sie diesen auf dem Zielsystem. Als finalen Schritt
+erfolgt auf dem Zielsystem ein Aufruf von `apt-get dist-upgrade` mit dem
+Paketcache auf dem mobilen Medium. Dazu verwenden Sie den Schalter `-o`
+mit der APT-Direktive `dir::cache::archives` und dem passenden Pfad zum
+Paketcache. Der Einfachheit halber heißt dieser hier ebenfalls
+`/medium`.
+
+.Eine Distributionsaktualisierung mit einem externen Paketcache
+----
+# apt-get -o dir::cache::archives="/medium/" dist-upgrade
+----
+
+// Datei (Ende): ./praxis/paketverwaltung-ohne-internet/offline-verwaltung-mit-apt-get-und-wget.txt

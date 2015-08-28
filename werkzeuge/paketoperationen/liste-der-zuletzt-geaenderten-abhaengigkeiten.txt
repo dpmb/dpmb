@@ -49,7 +49,7 @@ libbz2-1.0:amd64                           Fri Aug  1 14:45:59 2014
 $
 ----
 
-Die Ausgabe umfaßt in der linken Spalte den Paketnamen 
+Die Ausgabe umfasst in der linken Spalte den Paketnamen 
 (siehe <<benennung-eines-debian-pakets>>) und ggf. die Architektur
 (siehe <<debian-architekturen>>) sowie in der rechten Spalte den
 Zeitpunkt der erfolgten Änderung. Sie ersehen daraus, welche der

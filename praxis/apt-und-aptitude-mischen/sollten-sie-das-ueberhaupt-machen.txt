@@ -14,12 +14,12 @@ für die es am besten paßt. Zudem hat jedes Werkzeug Eigenschaften, mit
 denen es sich von anderen abhebt und womit Sie bestimmte Aufgaben
 besonders schnell oder möglichst gut erledigen können.
 
-Dagegen spricht, daß die Programme in kleinen Details verschieden sind,
+Dagegen spricht, dass die Programme in kleinen Details verschieden sind,
 auch wenn sie in der Gesamtheit das gleiche Ergebnis liefern. Ins
 Gewicht fällt hierbei insbesondere die Synchronisation der Informationen
 bzgl. Status und Vormerkungen zu den Softwarepaketen zwischen `dpkg`,
 APT und `aptitude`, was bislang nicht vollständig erfolgt. Damit Sie
-zwischen den verschiedenen Programmen wechseln können, muß jedes wissen,
+zwischen den verschiedenen Programmen wechseln können, muss jedes wissen,
 was das andere macht bzw. gemacht hat, oder eben nicht macht. Das ist
 derzeit noch nicht gegeben und wächst erst Stück für Stück zusammen.
 

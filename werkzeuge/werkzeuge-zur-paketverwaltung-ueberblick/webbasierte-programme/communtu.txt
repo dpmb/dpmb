@@ -39,12 +39,12 @@ Schule.
 Die technische Basis hinter dem Angebot der Plattform bilden Metapakete
 (siehe <<uebergangs-und-metapakete>>) sowie
 <<webbasierte-installation-von-paketen-mit-apturl>>). Nachdem Sie über
-die Webseite ihre gewünschte Software ausgewählt haben, wird automatisch
+die Webseite Ihre gewünschte Software ausgewählt haben, wird automatisch
 ein erstes passendes Metapaket erzeugt. Dieses beinhaltet lediglich die
 Abhängigkeiten zu den von Ihnen zuvor ausgewählten Softwarepaketen.
 Gleichzeitig stellt die Plattform ein weiteres, spezifisches Metapaket
-bereit, welches ihre Liste der Paketquellen entsprechend anpaßt, um
+bereit, welches ihre Liste der Paketquellen entsprechend anpasst, um
 damit die Anbindung von weiteren Paketquellen zu ermöglichen. Mittels
 'apturl' beziehen Sie die erzeugten Metapakete über ihrem Webbrowser, so
-daß die Paketverwaltung diese Pakete einspielen kann.
+dass die Paketverwaltung diese Pakete einspielen kann.
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/communtu.txt

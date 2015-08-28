@@ -33,7 +33,7 @@ $
 `aptitude` kann Ihnen dieses ebenfalls darstellen. Dazu kennt es den
 Suchfilter `search '~U'` bzw. `search '?upgradable'` in der Langform.
 Ergebnis ist eine Liste der Pakete, welche den Installationsstatus, den
-Paketnamen und die kurze Paketbeschreibung umfaßt.
+Paketnamen und die kurze Paketbeschreibung umfasst.
 
 //.Ausgabe von `aptitude` zur Liste der aktualisierbaren Pakete
 ----

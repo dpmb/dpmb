@@ -189,7 +189,7 @@ $
 Sowohl das `apt-cache`-Unterkommando `madison` als auch `rmadison`
 sind benannt nach `madison`, einem Programm welches beim Verwalten der
 Debian-APT-Archive zum Einsatz kommt. Da das originale `madison` aber
-direkt auf dem Server aufgerufen werden muß, auf dem das
+direkt auf dem Server aufgerufen werden muss, auf dem das
 Debian-APT-Archiv zusammengebaut wurde, ist es nur für
 Debian-Entwickler nutzbar – und selbst für diese eher umständlich, da
 sie sich erst per SSH auf jenem Server einloggen müssen. Diese beiden

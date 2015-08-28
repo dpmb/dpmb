@@ -22,16 +22,15 @@ denn diese Bücher haben Substanz – auch wenn diese zum Teil bereits etwas
 mit `dpkg` in Kombination mit APT, `aptitude` oder `synaptic`:
 
 * Frank Ronneburg ``Das Debian-Anwenderhandbuch'' – 1999 bis 2008 als
-Buch aufgelegt und danach nur noch als Online-Dokumentation
-weitergeführt{empty}footnote:[http://debiananwenderhandbuch.de/].
-Fokussiert ausschließlich auf Debian GNU/Linux.
+Buch aufgelegt und danach nur noch als Online-Dokumentation weitergeführt
+<<Debian-Anwenderhandbuch>>. Fokussiert ausschließlich auf Debian
+GNU/Linux.
 
 * Martin F. Krafft ``Das Debian-System. Konzepte und Methoden'' – 2006
 als Buch auf der Basis von Debian 3.1 _Sarge_ veröffentlicht. Eine
-Fortsetzung und Aktualisierung ist bislang nicht
-erfolgt{empty}footnote:[Martin F. Krafft: Das Debian-System. Konzepte
-und Methoden, Open Source Press München, 2006, deutsche Ausgabe,
-Erstauflage] . Fokussiert ausschließlich auf Debian GNU/Linux.
+Fortsetzung und Aktualisierung ist bislang nicht erfolgt
+<<Krafft-Debian-System>>. Fokussiert ausschließlich auf Debian
+GNU/Linux.
 
 // Stichworte für den Index
 (((RPM, Dokumentation)))
@@ -39,28 +38,20 @@ Erstauflage] . Fokussiert ausschließlich auf Debian GNU/Linux.
 * Michael Kofler ``Linux – das umfassende Handbuch'' –
 Erstveröffentlichung 1995 mit jährlicher Aktualisierung. Nicht
 distributionsspezifisch, sondern für `deb`- und `rpm`-basierte
-Linux-Distributionen gleichermaßen gut geeignet{empty}footnote:[Michael
-Kofler: Linux 2013. Das Desktop- und Server-Handbuch für Ubuntu, Debian,
-CentOS und Co. (Open Source Library), Addison-Wesley Verlag, 2013, ISBN
-978-3827332080].
+Linux-Distributionen gleichermaßen gut geeignet <<Kofler-Linux-2013>>.
 
 * Heike Jurzik ``Debian GNU/Linux: Das umfassende Handbuch'' –
 Erstveröffentlichung als Buch 2006 zu Debian 3.1 _Sarge_, danach
-regelmäßige Aktualisierung und Erweiterung{empty}footnote:[Heike Jurzik:
-Debian GNU/Linux: Das umfassende Handbuch, Verlag: Galileo
-Computing/Rheinwerk; 5. Auflage, 2013, ISBN-13: 978-3-8362-2661-5]. Das
-Buch richtet sich an Ein- und Umsteiger, die ihr Wissen Stück für Stück
-erweitern – vom Einstieg über die Installation bishin zum Betrieb
+regelmäßige Aktualisierung und Erweiterung <<Jurzik-Debian-Handbuch>>.
+Das Buch richtet sich an Ein- und Umsteiger, die ihr Wissen Stück für
+Stück erweitern – vom Einstieg über die Installation bishin zum Betrieb
 eigener Dienste und Server. Fokussierung auf `deb`-basierte
 Distributionen mit dem Schwerpunkt Debian GNU/Linux.
 
 * Eric Amberg ``Linux-Server mit Debian 6 GNU/Linux: Das umfassende
 Praxishandbuch'' – erschienen 2012 zu Debian 5 _Lenny_ und Debian 6
 _Squeeze_, im Februar 2014 fortgesetzt mit einer aktualisierten Fassung
-für Debian 7 _Wheezy_{empty}footnote:[Eric Amberg: Linux-Server mit
-Debian 6 GNU/Linux: Das umfassende Praxishandbuch – Aktuell für die
-Versionen Debian 6.0 (Squeeze) und Debian 5.0 (Lenny), mitp; Auflage:
-2012 (24. April 2012), Sprache: Deutsch, ISBN-10: 3826655346, ISBN-13:
-978-3826655340]. Fokussiert ausschließlich auf Debian GNU/Linux.
+für Debian 7 _Wheezy_ <<Amberg-Linux-Server-Praxishandbuch>>. Fokussiert
+ausschließlich auf Debian GNU/Linux.
 
 // Datei (Ende): ./werkzeuge/dokumentation/weitere-buecher.txt

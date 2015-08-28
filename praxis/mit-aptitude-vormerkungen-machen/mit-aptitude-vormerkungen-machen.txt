@@ -39,14 +39,14 @@ Paketnamen aufrufen.
 [IMPORTANT]
 .Vormerkungen mit Synaptic
 ====
-Nicht verschweigen möchten wir Ihnen, daß Synaptic (siehe
+Nicht verschweigen möchten wir Ihnen, dass Synaptic (siehe
 <<gui-synaptic>>) ein ähnliches benanntes Konzept bietet. Unter dem
 Menüpunkt `Datei` verbergen sich die drei Einträge `Vorgemerkte
 Änderungen Speichern`, `Vorgemerkte Änderungen Einlesen` und
 `Vorgemerkte Änderungen Speichern unter`. Hier werden ihre Vormerkungen
 in einer von Ihnen festgelegten, lokalen Datei gespeichert, die Sie
 jederzeit wieder einlesen und durch Synaptic ausführen lassen können.
-Beachten Sie bitte, daß diese Vormerkungen in keinerlei Zusammenhang zu
+Beachten Sie bitte, dass diese Vormerkungen in keinerlei Zusammenhang zu
 den Vormerkungen durch `aptitude` stehen.
 ====
 

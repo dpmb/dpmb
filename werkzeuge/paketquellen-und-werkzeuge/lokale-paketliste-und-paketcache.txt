@@ -8,7 +8,7 @@
 
 Die Paketverwaltung -- genauer APT -- pflegt lokale Paketlisten im
 Verzeichnis `/var/lib/apt/lists`. Diese Paketlisten dienen als
-Nachschlagewerk für APT. Wollen Sie den Paketbestand auf ihrem
+Nachschlagewerk für APT. Wollen Sie den Paketbestand auf Ihrem
 Debian-System ändern, benutzt APT diese Paketliste, um die Existenz, die
 Verfügbarkeit von einer Paketquelle und die Abhängigkeiten eines Paketes
 zu bestimmen, bevor diese tatsächlich bezogen werden. Installieren Sie ein
@@ -60,7 +60,7 @@ Architektur (<<debian-architekturen>>), das Format des Debianpakets
 sowie die Checksummen der Pakete und das Sourcepaket
 (<<debian-pakete-varianten>>), aus der das Paket entstanden ist. Danach
 folgen die Projektwebseite sowie das Verzeichnis, in dem das Paket auf
-dem Paketmirror abgelegt ist. Zum Schluß stehen die Priorität, der
+dem Paketmirror abgelegt ist. Zum Schluss stehen die Priorität, der
 Distributionsbereich (<<distributionsbereiche>>) und die Paketkategorie
 (<<sortierung-der-pakete-nach-verwendungszweck>>). Nachfolgender Kasten zeigt die Informationen
 anhand des Pakets 'easyspice' aus der Paketkategorie Elektronik

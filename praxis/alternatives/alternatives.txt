@@ -88,7 +88,7 @@ Weiterhin gibt es von einigen Programmen mehr als eine
 Programmgeneration in Debian, so z.B. verschiedene Veröffentlichungen
 von GCC und Automake. In Debian 8 'Jessie' ist GCC in den beiden
 Versionen 4.8 und 4.9 enthalten, Automake in den Versionen 1.14 und
-1.11. Einer der Gründe für die verschiedenen Versionen ist, daß manche
+1.11. Einer der Gründe für die verschiedenen Versionen ist, dass manche
 Pakete in Debian z.B. nur mit einer bestimmten Generation eines
 Compilers kompiliert werden können. So werden z.B. alle Linux-Kernel in
 Debian 8 'Jessie' mit GCC 4.8 kompiliert, während GCC 4.9 der

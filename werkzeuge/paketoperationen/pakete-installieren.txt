@@ -17,8 +17,8 @@ Für APT und `aptitude` läßt sich der Vorgang mit ``Aufruf von `dpkg -i
 Paketname` in der richtigen Reihenfolge'' umschreiben. Dabei erfolgt
 zudem die Beachtung der jeweiligen Paketabhängigkeiten – noch fehlende
 und zusätzlich benötigte Pakete werden erkannt und vom Paketmirror
-mitbezogen. Die Voraussetzung, daß das angegebene Paket bereits im
-(lokalen) Verzeichnis liegt, muß nicht erfüllt sein. 
+mitbezogen. Die Voraussetzung, dass das angegebene Paket bereits im
+(lokalen) Verzeichnis liegt, muss nicht erfüllt sein. 
 
 Wir empfehlen Ihnen, `dpkg` nur im Ausnahmefall zu benutzen. Der Umgang
 mit `dpkg` bzw. das Wissen um die Bibliotheken dahinter (siehe
@@ -93,7 +93,7 @@ Option `--simulate` und als Alternativen dazu auch `--just-print`,
 `-s` bzw. `--simulate` in der Langform. Die nachfolgende Ausgabe zeigt
 die Simulation anhand von APT und des Paketes 'kdm'. Dabei bezeichnen
 die Zeilen der Ausgabe eine Installation eines Pakets, die mit `Inst`
-beginnen. Das Schlüsselwort `Conf` besagt, daß das entsprechende Paket
+beginnen. Das Schlüsselwort `Conf` besagt, dass das entsprechende Paket
 konfiguriert wird.
 
 //.Simulation der Paketinstallation von 'kdm'
@@ -122,9 +122,9 @@ Conf kdm (4:4.8.4-6 Debian:7.6/stable [i386])
 
 Als Schritt 4 bringen Sie die Paketliste ihres Linuxsystems auf den
 aktuellen Stand. Wie das im Detail vorsichgeht, erfahren Sie in
-<<pakete-aktualisieren>>. Damit stellen Sie sicher, daß Sie mit einer
+<<pakete-aktualisieren>>. Damit stellen Sie sicher, dass Sie mit einer
 aktuellen Paketliste arbeiten und darüber nur Pakete auswählen, die sich
-auf dem neuesten Stand befinden. Sie verhindern damit insbesondere, daß
+auf dem neuesten Stand befinden. Sie verhindern damit insbesondere, dass
 Sie veraltete Varianten auf ihr System einpflegen und reduzieren
 gleichzeitig den Aufwand bei einer späteren Aktualisierung.
 
@@ -266,7 +266,7 @@ gehen wir zu dieser Thematik in <<mit-aptitude-vormerkungen-machen>>
 ein.
 
 Bei der Benutzung von Ubuntu besteht eine weitere Besonderheit. Diese
-betrifft die Voreinstellungen, in der festgelegt ist, daß auch die
+betrifft die Voreinstellungen, in der festgelegt ist, dass auch die
 Empfehlungen eines Pakets mit berücksichtigt werden. Verwenden Sie zum
 Schalter `install` die Option `-R`, werden nur die direkten
 Abhängigkeiten mit installiert. Das Verhalten von `aptitude` regeln Sie

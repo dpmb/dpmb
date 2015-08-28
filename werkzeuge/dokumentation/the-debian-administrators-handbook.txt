@@ -9,19 +9,19 @@
 // Stichworte für den Index
 (((Debian Administrator's Handbook)))
 Seit 2003 setzen Raphaël Hertzog und Roland Mas mit ihrem Kompendium ``The 
-Debian Administrator's Handbook'' Maßstäbe{empty}footnote:[Raphael
-Hertzog, Roland Mas: The Debian Administrator's Handbook, 2012, ISBN
-979-10-91414-00-5, http://debian-handbook.info/] (französischer
+Debian Administrator's Handbook'' Maßstäbe
+<<Hertzog-Mas-Debian-Administrators-Handbook>> (französischer
 Originaltitel: ``Cahiers de l'Admin''). Das Buch spielt in der gleichen
-Liga wie Frank Ronneburgs ``Debian-Anwenderhandbuch'' Michael Koflers
-``Linux – das umfassende Handbuch''{empty}footnote:[das Werk basiert
-von jeher auf SuSE-Linux, reißt aber alle Bereiche des Linux-Alltags mit
-an] und Martin Kraffts Buch ``Das Debian-System. Konzepte und
-Methoden''. Aufgrund seiner Einzigartigkeit im französischen Sprachraum
-erreichen Neuauflagen regelmäßig einen Spitzenplatz in den
-Verkaufslisten des Buchhandels.
+Liga wie Frank Ronneburgs ``Debian-Anwenderhandbuch''
+<<Debian-Anwenderhandbuch>>, Michael Koflers ``Linux – das umfassende
+Handbuch''{empty}footnote:[das Werk basiert von jeher auf SuSE-Linux,
+reißt aber alle Bereiche des Linux-Alltags mit an] <<Kofler-Linux-2013>>
+und Martin Kraffts Buch ``Das Debian-System. Konzepte und Methoden''
+<<Krafft-Debian-System>>. Aufgrund seiner Einzigartigkeit im
+französischen Sprachraum erreichen Neuauflagen regelmäßig einen
+Spitzenplatz in den Verkaufslisten des Buchhandels.
 
-Ursprünglich nur in französischer Sprache verfaßt, steht es mittlerweile
+Ursprünglich nur in französischer Sprache verfasst, steht es mittlerweile
 auch in einer englischen und spanischen Übersetzung bereit. Diese drei
 Varianten sind sowohl als kostenfreie, digitale Version (PDF und eBook),
 als auch als kostenpflichtige, gedruckte Variante (Paperback, Print on
@@ -35,9 +35,9 @@ vollständig und daher nicht in gedruckter Form verfügbar.
 (((Debianpaket, debian-handbook)))
 Das Buch wird jeweils für die aktuelle Debian-Veröffentlichung angepaßt.
 Gleichzeitig entsteht daraus auch ein reguläres Debianpakete namens
-'debian-handbook'{empty}footnote:[http://packages.debian.org/de/stable/debian-handbook],
-welches in die Distribution wieder einfließt. Das Paket beinhaltet
-derzeit den französischen, englischen und spanischen Text.
+'debian-handbook' <<Debian-Paket-debian-handbook>> welches in die
+Distribution wieder einfließt. Das Paket beinhaltet derzeit den
+französischen, englischen und spanischen Text.
 
 // Stichworte für den Index
 (((aptitude)))

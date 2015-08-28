@@ -52,7 +52,7 @@ eine tabellarische Übersicht und eine graphische Auswertung.
 <<fig.popcon-nginx>> zeigt beispielhaft das Ergebnis für das Paket
 'nginx'.
 
-.Erfaßter Verbreitungsgrad für das Paket 'nginx'
+.Erfasster Verbreitungsgrad für das Paket 'nginx'
 image::konzepte/software-in-paketen-organisieren/popcon-nginx.png[id="fig.popcon-nginx", width="50%"]
 
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/verbreitungsgrad-von-paketen.txt

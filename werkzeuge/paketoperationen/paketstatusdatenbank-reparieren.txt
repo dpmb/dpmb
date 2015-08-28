@@ -83,7 +83,7 @@ Wiederherstellen der Paketstatusdatenbank aus ihrem Backup.
 
 Zum Glück gibt es auf einem Debian-System mehrere Backups der
 Paketstatusdatenbank. Ging die Datei erst gerade eben kaputt, so ist die
-Chance sehr hoch, daß die vorhergehende Sicherheitskopie namens
+Chance sehr hoch, dass die vorhergehende Sicherheitskopie namens
 `/var/lib/dpkg/status-old` noch intakt ist. Dieses Backup
 entspricht dem Zustand der Paketstatusdatenbank 'vor der letzten
 Änderung' und hinkt somit nur um eine einzige Aktion hinterher. Kopieren
