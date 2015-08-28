@@ -85,7 +85,7 @@ Spalte) sowie eine Paketbeschreibung (vierte Spalte). Auf das Werkzeug
 `dpkg` gehen wir en detail in den beiden Abschnitten Softwarestapel und
 Ebenen (<<softwarestapel-und-ebenen>>) und dpkg (<<dpkg>>) ein.
 
-//.Ausgabe aller derzeit installierten Pakete für Abiword mit `dpkg` 
+.Ausgabe aller derzeit installierten Pakete für Abiword mit `dpkg` 
 ----
 $ dpkg -l "abiword*"
 Gewünscht=Unbekannt/Installieren/R=Entfernen/P=Vollständig Löschen/Halten
@@ -114,7 +114,7 @@ Abhängigkeiten zu weiteren Paketen genannt. Die Pakete stammen aus dem
 und wurden vom deutschen FTP-Server des Debian-Projekts bezogen. Die
 einzige Abhängigkeit besteht zum Paket 'abiword'.
 
-//.Auflistung der Paketdetails zum Paket 'abiword-common' mittels `apt-cache`
+.Auflistung der Paketdetails zum Paket 'abiword-common' mittels `apt-cache`
 ----
 $ apt-cache showpkg abiword-common
 Package: abiword-common
