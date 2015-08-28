@@ -9,7 +9,7 @@
 // Stichworte für den Index
 (((Paketflags, automatic)))
 Darunter fallen Pakete, die automatisch von der Paketverwaltung auf
-ihrem System installiert wurden. Das geschieht, wenn Abhängigkeiten von
+Ihrem System installiert wurden. Das geschieht, wenn Abhängigkeiten von
 anderen Paketen erfüllt werden müssen. `dpkg` kann diese Information
 nicht auswerten, jedoch stehen Ihnen mit `apt-mark` und `aptitude`
 gleich zwei Varianten auf dem Terminal bereit.
@@ -46,7 +46,7 @@ $
 (((aptitude, search ~M)))
 (((aptitude, search ?automatic)))
 (((Paketflags, automatic)))
-Auf der Kommandozeile suchen Sie im Paketbestand ihres Linuxsystems
+Auf der Kommandozeile suchen Sie im Paketbestand Ihres Linuxsystems
 mittels `aptitude` über das Unterkommando `search` und dem speziellen
 Muster `~M` (Langform `?automatic`). Sie erhalten danach eine Liste, die
 den Paketstatus, den Paketnamen und eine kurze Paketbeschreibung

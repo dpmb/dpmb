@@ -21,7 +21,7 @@ Kriterien (<<bekannte-paketnamen-auflisten>> bis
 den Paketbestand verändern, d.h. neue Pakete hinzufügen und einrichten
 sowie Pakete deinstallieren und der Umgang mit Waisen
 (<<installation-zwischengespeicherter-pakete-aus-dem-paketcache>> bis
-<<paketstatusdatenbank-reparieren>>). Den Abschluß bildet der Vorgang,
+<<paketstatusdatenbank-reparieren>>). Den Abschluss bildet der Vorgang,
 eine ganze Distribution auf den neuen Stand zu bringen oder zu einer
 anderen Veröffentlichung zu wechseln (siehe
 <<distribution-aktualisieren>>).

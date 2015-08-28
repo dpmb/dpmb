@@ -12,7 +12,7 @@
 (((dlocate, -K)))
 Bei dieser Aufgabe hilft Ihnen das Werkzeug `dlocate`
 <<Debian-Paket-dlocate>> und zeigt Ihnen an, welche Linux-Kernel und
-dazugehörigen Pakete auf ihrem Linuxsystem installiert sind. Es kennt
+dazugehörigen Pakete auf Iihrem Linuxsystem installiert sind. Es kennt
 dazu zwei Aufrufvarianten – `dlocate -k` für die Basisinformationen und
 `dlocate -K` für eine ausführlichere Darstellung.
 
