@@ -67,7 +67,7 @@ erfolgreich war, zeigt Ihnen der Parameter
 Übersicht zu allen ``Fremdarchitekturen'', die ihr Debiansystem derzeit
 akzeptiert.
 
-//.Hinzufügen einer weiteren genutzten Paketarchitektur mittels `dpkg`
+.Hinzufügen einer weiteren genutzten Paketarchitektur mittels `dpkg`
 ----
 # dpkg --print-architecture
 amd64
@@ -84,7 +84,7 @@ welche akzeptierte Architektur das von Ihnen gewünschte Paket
 bereitsteht. Die Details zum Aufruf von `apt-cache` finden Sie in
 <<aus-welchem-repo-kommen-die-pakete>>.
 
-//.Prüfung auf Verfügbarkeit für eine Architektur mittels `apt-cache`
+.Prüfung auf Verfügbarkeit für eine Architektur mittels `apt-cache`
 ----
 # apt-cache policy pforth
 pforth:i386:
@@ -105,7 +105,7 @@ Paket 'pforth' installieren. Das zieht u.a. das essentielle Paket
 'libc6' für die Architektur 'i386' nach sich, um die Abhängigkeiten zum
 Paket 'pforth' zu erfüllen.
 
-//.Installation des 'i386'-Pakets 'pforth' auf 'amd64'-Debian
+.Installation des 'i386'-Pakets 'pforth' auf 'amd64'-Debian
 ----
 # apt-get install pforth
 Reading package lists... Done
@@ -159,7 +159,7 @@ erkennen das daran, dass neben dem Namen des Pakets auch die Architektur
 angegeben wird. Als Trennzeichen in der Ausgabe fungiert hier ein
 Doppelpunkt.
 
-//.Installationsstatus für das Paket 'libc6'
+.Installationsstatus für das Paket 'libc6'
 ----
 # dpkg -l pforth libc6
 Desired=Unknown/Install/Remove/Purge/Hold
@@ -177,7 +177,7 @@ Im letzten Schritt probieren Sie aus, ob das frisch installierte
 32-Bit-Programm auch unter Ihrem 64-Bit-Betriebssystem funktioniert.
 Dazu rufen Sie das Programm auf.
 
-//.Ausführung von `pforth`
+.Ausführung von `pforth`
 ----
 $ pforth
 PForth V21
@@ -191,6 +191,5 @@ Begin AUTO.INIT ------
 ...
 $
 ----
-
 
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/multiarch-einsetzen.txt
