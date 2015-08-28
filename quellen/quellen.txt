@@ -14,7 +14,7 @@
 
 - [[[Amberg-Linux-Server-Praxishandbuch]]] Eric Amberg: Linux-Server mit Debian 6 GNU/Linux: Das   umfassende Praxishandbuch -- Aktuell für die Versionen Debian 6.0 (Squeeze) und Debian 5.0 (Lenny), mitp; Auflage: 2012 (24. April 2012), Sprache: Deutsch, ISBN-10: 3826655346, ISBN-13: 978-3826655340
 
-// - [[[Aoki-Debian-Referenz]]] Osamu Aoki: Debian Referenz, deutsche Übersetzung, http://www.debian.org/doc/manuals/debian-reference/index.de.html
+- [[[Aoki-Debian-Referenz]]] Osamu Aoki: Debian Referenz, deutsche Übersetzung, http://www.debian.org/doc/manuals/debian-reference/index.de.html
 
 - [[[Aoki-Debian-Referenz-Mirror]]] Osamu Aoki: Debian Referenz, deutsche Übersetzung, http://qref.sourceforge.net/quick/index.de.html
 

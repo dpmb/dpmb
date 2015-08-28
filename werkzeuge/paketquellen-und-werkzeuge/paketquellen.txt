@@ -67,13 +67,11 @@ Internetzugangs oder der Wartung des bevorzugten Paketspiegels.
 
 // Stichworte für den Index
 (((Paketquelle,Aufbau)))
-Jede Paketquelle folgt einer festgelegten
-Verzeichnisstruktur{empty}footnote:[Osamu Aoki: Debian Referenz,
-deutsche Übersetzung,
-http://www.debian.org/doc/manuals/debian-reference/index.de.html],
-auf die sich die einzelnen Programme zur Paketverwaltung stützen.
-Interessant wird diese Struktur genau dann, wenn Sie eine Paketquelle
-mit selbsterstellten Paketen oder einen eigenen Paketmirror aufsetzen
-und betreiben möchten (siehe <<eigenen-apt-mirror-aufsetzen>>).
+Jede Paketquelle folgt einer festgelegten Verzeichnisstruktur
+<<Aoki-Debian-Referenz>>, auf die sich die einzelnen Programme zur
+Paketverwaltung stützen. Interessant wird diese Struktur genau dann,
+wenn Sie eine Paketquelle mit selbsterstellten Paketen oder einen
+eigenen Paketmirror aufsetzen und betreiben möchten (siehe
+<<eigenen-apt-mirror-aufsetzen>>).
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/paketquellen.txt
