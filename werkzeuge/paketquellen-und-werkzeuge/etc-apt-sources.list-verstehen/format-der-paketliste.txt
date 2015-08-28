@@ -12,8 +12,8 @@
 (((/etc/apt/sources.list`,Paketquelle)))
 Wie auf UNIX/Linux-Systemen üblich, ist die Datei
 `/etc/apt/sources.list` eine reine Textdatei. Die Einträge darin
-erfolgen zeilenweise. Jede Paketquelle beschreiben Sie vollständig
-in einer einzigen Zeile.
+erfolgen zeilenweise. Jede einzelne Paketquelle beschreiben Sie
+vollständig in einer separaten Zeile.
 
 .`/etc/apt/sources.list` im Texteditor 'nano'
 image::werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/sources-list-nano.png[id="fig.sources-list-nano", width="50%"]
