@@ -48,7 +48,7 @@ Die vorgenannten Paketflags werden von `dpkg` (nur _hold_) und
 werden die Paketflags in der Datei `/var/lib/apt/extended_states`
 gespeichert.
 
-//.Informationen zu jedem Paket in der Datei `/var/lib/apt/extended_states` (Ausschnitt)
+.Informationen zu jedem Paket in der Datei `/var/lib/apt/extended_states` (Ausschnitt)
 ----
 ...
 
@@ -72,7 +72,7 @@ Architecture: i386
 `aptitude` speichert weitere Informationen zu den Paketen eigenständig
 in der Datei `/var/lib/aptitude/pkgstates`:
 
-//.Zusatzinformationen zu den Paketen (Ausschnitt)
+.Zusatzinformationen zu den Paketen (Ausschnitt)
 ----
 ...
 
@@ -103,7 +103,7 @@ nachfolgenden Ausgabe erfahren Sie einerseits, dass 'wireshark'
 zurückgehalten wird und andererseits nicht automatisch installiert
 wurde.
 
-//.Darstellung der Markierungen zum Paket 'wireshark' mittels `aptitude`
+.Darstellung der Markierungen zum Paket 'wireshark' mittels `aptitude`
 ----
 $ aptitude show wireshark
 Paket: wireshark
@@ -150,7 +150,7 @@ wir genauer in <<automatisch-installierte-pakete-anzeigen>> ein. Dem
 Umgang mit dem _hold_-Flag in der Praxis ist
 <<ausgewaehlte-pakete-nicht-aktualisieren>> gewidmet.
 
-//.Auflistung aller manuell installierten Pakete mittels `apt-mark`
+.Auflistung aller manuell installierten Pakete mittels `apt-mark`
 ----
 # apt-mark showmanual
 abiword
@@ -188,7 +188,7 @@ können. Dazu erwartet `apt-mark` als Parameter ein einzelnes Paket oder
 eine Paketliste. Die nachfolgende Ausgabe zeigt das Setzen der
 Markierung _manual_ für das Paket 'wireshark'.
 
-//.Setzen des Paketflags 'manual' für das Paket 'wireshark'
+.Setzen des Paketflags 'manual' für das Paket 'wireshark'
 ----
 # apt-mark manual wireshark
 wireshark wurde als manuell installiert festgelegt.
