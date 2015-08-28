@@ -34,16 +34,14 @@ als weitere Ebene in der Anzeigehierachie konfiguriert werden.
 image::konzepte/software-in-paketen-organisieren/aptitude-paketbereiche.png[id="fig.aptitude-paketbereiche", width="50%"]
 
 Nachfolgende Übersicht listet die derzeit verwendeten Kategorien mit
-Beispielpaketen auf. Der Begriff in Klammern benennt die Kurzbezeichnung der
-Kategorie. Diese Zusammenstellung basiert auf Frank Ronneburgs
-Auflistung aus dem Debiananwenderhandbuch{empty}footnote:[Frank
-Ronneburg: Das Debiananwenderhandbuch,
-http://debiananwenderhandbuch.de/] sowie der Übersicht auf der
-Debian-Webseite{empty}footnote:[https://packages.debian.org/de/jessie/].
-Die Kategorien _introspection_, _Debian_/_tasks_, _education_ und
+Beispielpaketen auf. Der Begriff in Klammern benennt die Kurzbezeichnung
+der Kategorie. Diese Zusammenstellung basiert auf Frank Ronneburgs
+Auflistung aus dem Debiananwenderhandbuch <<Debian-Anwenderhandbuch>>
+sowie der Übersicht auf der Debian-Webseite <<Debian-Paketliste>>. Die
+Kategorien _introspection_, _Debian_/_tasks_, _education_ und
 _metapackages_ sind derzeit noch nicht in allen Übersichten eingepflegt.
-Die einzige Referenz hierfür ist das Debian Policy
-Manual{empty}footnote:[http://www.debian.org/doc/debian-policy/ch-archive.html#s-subsections].
+Die einzige Referenz hierfür ist das Debian Policy Manual
+<<Debian-Policy-Subsections>>.
 
 Administration (_admin_)::
 Programme zur Systemadministration ('dpkg', 'apt', 'aptitude', 'adduser')
@@ -114,7 +112,7 @@ Haskell (_haskell_)::
 alles rund um die Programmiersprache Haskell ('haskell-platform', 'happy')
 
 GObject Introspection (_introspection_)::
-GObject Introspection Middleware, Schnittstellen zwischen GObject-C-Bibliotheken und anderen Programmiersprachen{empty}footnote:[https://wiki.gnome.org/Projects/GObjectIntrospection] ('gir1.2-ebook-1.2')
+GObject Introspection Middleware, Schnittstellen zwischen GObject-C-Bibliotheken und anderen Programmiersprachen <<GObject-Introspection>> ('gir1.2-ebook-1.2')
 
 Interpreter (_interpreters_)::
 Interpretierte Programmiersprachen wie bspw. Tcl/Tk ('luajit', 'm4', 'tcl')
@@ -228,4 +226,5 @@ Schlagworte ergänzt. Dieses Konzept und die dazugehörigen Werkzeuge
 stehen unter Erweiterte Paketklassifikation mit Debtags (siehe
 <<erweiterte-paketklassifikation-mit-debtags>>) im Mittelpunkt.
 ====
+
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/sortierung-der-pakete-nach-verwendungszweck.txt

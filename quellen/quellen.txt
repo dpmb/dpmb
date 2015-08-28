@@ -189,6 +189,8 @@
 
 - [[[Debian-Package-Basics]]] What is a Debian package? http://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html
 
+- [[[Debian-Paketliste]]] Debian-Webseite, Paketliste, https://packages.debian.org/de/jessie/
+
 - [[[Debian-Paketsuche]]] Debian-Webseite, Paketsuche, https://www.debian.org/distrib/packages#search_contents
 
 - [[[Debian-Paket-adept]]] Debian-Paket 'adept', http://packages.debian.org/adept
@@ -462,6 +464,8 @@
 - [[[github-pull-request]]] Pull-Request mitsamt Patch auf GitHub, https://github.com/dpmb/dpmb/compare
 
 - [[[GNU-Linux-Distribution-Timeline]]] GNU Linux Distribution Timeline, http://futurist.se/gldt
+
+- [[[GObject-Introspection]]] GObject Introspection Middleware, https://wiki.gnome.org/Projects/GObjectIntrospection
 
 - [[[Graphviz]]] Graphviz -- Graph Visualization Software, http://www.graphviz.org/
 
