@@ -47,13 +47,10 @@ wegen nicht-freier Firmware für bestimmte Hardwarekomponenten),
 _contrib_ und/oder _non-free_ dazuzunehmen.
 
 Pakete, die in _main_ eingeordnet werden, unterliegen einer Lizenz, die
-den Debian-Richtlinien für Freie Software{empty}footnote:[Debian Free
-Software Guidelines, kurz DFSG,
-https://www.debian.org/social_contract#guidelines] entspricht. Diese
-Richtlinien sind im Debian-Gesellschaftsvertrag
-festgelegt{empty}footnote:[http://www.debian.org/social_contract.de.html]
-und weisen starke inhaltliche Gemeinsamkeiten zur Free Software
-Foundation (FSF) und zum GNU-Projekt auf.
+den Debian-Richtlinien für Freie Software <<DFSG>> entspricht. Diese
+Richtlinien sind im Debian-Gesellschaftsvertrag festgelegt
+<<Debian-Social-Contract>> und weisen starke inhaltliche Gemeinsamkeiten
+zur Free Software Foundation (FSF) und zum GNU-Projekt auf.
 
 Pakete im Zweig _contrib_ stehen zwar genauso unter einer freien Lizenz
 wie die Pakete in _main_, bedingen jedoch weitere Software oder Inhalte,
@@ -100,14 +97,14 @@ image::konzepte/software-in-paketen-organisieren/aptitude-unfreie-pakete.png[id=
 // Stichworte für den Index
 (((Debianpaket, vrms)))
 (((vrms, -e)))
-Mit dem Kommando `vrms` aus dem gleichnamigen Paket
-'vrms'{empty}footnote:['vrms' steht als Abkürzung für ``Virtual Richard M.
-Stallman''] erhalten Sie eine Übersicht, welche nicht-freien Pakete auf
-Ihrem System installiert sind. Die im nachfolgenden Beispiel verwendete
-Option `-e` gibt eine zusätzliche Kurzbeschreibung zu jedem gefundenen
-Paket aus.
+Mit dem Kommando `vrms` aus dem gleichnamigen Paket 'vrms'
+<<Debian-Paket-vrms>> erhalten Sie eine Übersicht, welche nicht-freien
+Pakete auf Ihrem System installiert sind. 'vrms' steht dabei als
+Abkürzung für ``Virtual Richard M. Stallman''. Die im nachfolgenden
+Beispiel verwendete Option `-e` gibt eine zusätzliche Kurzbeschreibung
+zu jedem gefundenen Paket aus.
 
-//.Ausgabe von `vrms` auf einem Desktop-System
+.Ausgabe von `vrms` auf einem Desktop-System
 ----
 $ vrms -e
 
@@ -150,25 +147,24 @@ Distributionsbereiche haben.
 
 ==== Handhabung von geschützten Namen und Logos ====
 
-Der Begriff ``Software'' wird hier recht weit gefasst und beinhaltet neben
-Programmcode auch Firmware, Dokumentation oder künstlerische
+Der Begriff ``Software'' wird hier recht weit gefasst und beinhaltet
+neben Programmcode auch Firmware, Dokumentation oder künstlerische
 Elemente wie beispielsweise Grafiken und Logos. Letztere stehen in
 manchen Fällen unter anderen Lizenzen als der Rest der Software und
 dürfen aus markenrechtlichen Gründen nicht für abgeänderte Programme
-verwendet werden. Aus diesem Grund wurden
-einige Programme abgewandelt, bspw. der
-Webbrowser Iceweasel und das Mailprogramm Icedove, die im Original die
-Namen Firefox und Thunderbird tragen. Neben den anderen Namen werden in
-Debian auch alternative Logos genutzt.
+verwendet werden. Aus diesem Grund wurden einige Programme abgewandelt,
+bspw. der Webbrowser Iceweasel und das Mailprogramm Icedove, die im
+Original die Namen Firefox und Thunderbird tragen. Neben den anderen
+Namen werden in Debian auch alternative Logos genutzt.
 
 ==== Softwareverteilung ====
 
 Vom Größenverhältnis her findet sich der überwiegende Teil der Pakete in
 _main_, danach folgen _contrib_ und _non-free_. Für die Architektur
-_amd64_ in Debian 8 'Jessie' ist das Verhältnis 42987 (_main_) zu 250 (_contrib_) zu 470
-(_non-free_), d.h. bezogen auf die Gesamtanzahl sind das fast genau
-ein Prozent unfreie Pakete. Für die Plattform i386 ist die Verteilung
-ähnlich.
+_amd64_ in Debian 8 'Jessie' ist das Verhältnis 42987 (_main_) zu 250
+(_contrib_) zu 470 (_non-free_), d.h. bezogen auf die Gesamtanzahl sind
+das fast genau ein Prozent unfreie Pakete. Für die Plattform i386 ist
+die Verteilung ähnlich.
 
 ==== Hintergrund der Einteilung in Distributionsbereiche ====
 
