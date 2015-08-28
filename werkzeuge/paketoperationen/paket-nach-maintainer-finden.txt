@@ -13,8 +13,7 @@ Debian-Paket verantwortlich zeichnet. Maintainer kümmern sich darum, dass
 das Paket gepflegt wird, d.h. Änderungen und Verbesserungen aus dem
 Upstream in das Paket unter Berücksichtigung der Debian-Spezifika
 einfließen, dieses dabei weiterhin den Debian-Richtlinien entspricht und
-in möglichst stabiler Form verfügbar
-bleibt{empty}footnote:[https://wiki.debian.org/DebianMaintainer].
+in möglichst stabiler Form verfügbar bleibt <<DebianMaintainer>>.
 
 ==== Welche Pakete betreut ein Debian-Maintainer ====
 
@@ -36,7 +35,7 @@ seine Emailadresse `abe@debian.org` lautet der komplette Aufruf
 `aptitude` sehr tolerant – es gestattet den Aufruf mit und auch ohne
 Leerzeichen zwischen der Option und der Emailadresse.
 
-//.Paketfilterung nach der Emailadresse des Maintainers mittels `aptitude`
+.Paketfilterung nach der Emailadresse des Maintainers mittels `aptitude`
 ----
 $ aptitude search '~m abe@debian.org'
 p   aha                               - Konvertiert ANSI-Farben nach HTML
@@ -61,14 +60,15 @@ Aktion des Paketes (`%a`), automatische Installation (`%M`), den
 Paketnamen (`%p`) und die Paketbeschreibung (`%d`). Eine detaillierte
 Übersicht zu allen zulässigen Formatoptionen erklären wir Ihnen unter
 `aptitude` Format Strings in <<aptitude-format-strings>>. Eine
-Alternative bietet zudem das Aptitude Handbuch{empty}footnote:[http://aptitude.alioth.debian.org/doc/en/ch02s05s01.html#secDisplayFormat].
+Alternative bietet zudem das Aptitude Handbuch
+<<aptitude-dokumentation-paketdarstellung>>.
 
 Möchten Sie in der Ausgabe stattdesen nur den Paketnamen, die
 Paketbeschreibung und den Paketmaintainer ausgeben, helfen Ihnen dabei
 die drei Optionen `%p`, `%d` und `%m` weiter. Letztgenanntes steht als
 Abkürzung für 'maintainer'.
 
-//.Paketsuche nach Paketnamen, Paketbeschreibung und Paketmaintainer
+.Paketsuche nach Paketnamen, Paketbeschreibung und Paketmaintainer
 ----
 $ aptitude search -F '%p - %d - %m' '~mabe@debian.org' 
 aha            - Konvertiert ANSI-Farben nach HTML  - Axel Beckert <abe@debian.org>
@@ -92,7 +92,7 @@ Paketliste für den Paketmirror `ftp.de.debian.org` für die Distribution
 Debian 7 _Wheezy_ sowie daraus der Bereich _main_ und die Architektur
 _i386_.
 
-//.Suche nach Maintainer und Uploader in der lokalen Paketliste (Ausschnitt)
+.Suche nach Maintainer und Uploader in der lokalen Paketliste (Ausschnitt)
 ----
 $ grep-dctrl -F Maintainer,Uploaders abe@debian.org -s Package,Maintainer,Uploaders /var/lib/apt/lists/ftp.de.debian.org_debian_dists_wheezy_main_binary-i386_Packages 
 Package: aha
@@ -116,17 +116,17 @@ $
 (((Debianpaket, ara)))
 (((Paketsuche, anhand des Maintainers)))
 (((Paketsuche, anhand des Uploaders)))
-Das Programm `ara` aus dem gleichnamigen
-Paket{empty}footnote:[http://packages.debian.org/de/stable/ara] erlaubt
-eine sehr kompakte Schreibweise. Es sucht dabei in den Binär- und den
-Sourcepaketen, sofern diese vorhanden sind und gibt dabei trotzdem die
-Namen der dazugehörigen Binärpakete aus. Nachfolgender Aufruf zeigt die
-Recherche nach den Feldern 'uploaders' und 'maintainer' für den Benutzer
-mit der Emailadresse `abe@debian.org`. Bitte berücksichtigen Sie bei
-eigenen Experimenten die unterschiedlichen Trennzeichen zwischen den
-Komponenten und den abschließenden Schrägstrich nach der Emailadresse.
+Das Programm `ara` aus dem gleichnamigen Paket <<Debian-Paket-ara>>
+erlaubt eine sehr kompakte Schreibweise. Es sucht dabei in den Binär-
+und den Sourcepaketen, sofern diese vorhanden sind und gibt dabei
+trotzdem die Namen der dazugehörigen Binärpakete aus. Nachfolgender
+Aufruf zeigt die Recherche nach den Feldern 'uploaders' und 'maintainer'
+für den Benutzer mit der Emailadresse `abe@debian.org`. Bitte
+berücksichtigen Sie bei eigenen Experimenten die unterschiedlichen
+Trennzeichen zwischen den Komponenten und den abschließenden
+Schrägstrich nach der Emailadresse.
 
-//.Einfache Recherche nach Paketen mit Hilfe von `ara`
+.Einfache Recherche nach Paketen mit Hilfe von `ara`
 ----
 $ ara uploaders,maintainer:/abe@debian.org/
 aha
@@ -148,7 +148,7 @@ untersuchte Paketquelle an, sondern zeichnen auch noch eine hübsche
 Tabelle ringsrum. Zu jedem gefundenen Source-Paket werden in der
 jeweiligen Spalte die dazugehörigen Binärpakete aufgelistet.
 
-//.Recherche nach Paketen mittels `ara`
+.Recherche nach Paketen mittels `ara`
 image::werkzeuge/paketoperationen/ara-suche.png[id="fig.ara-suche", width="50%"]
 
 // Stichworte für den Index
@@ -176,12 +176,11 @@ image::werkzeuge/paketoperationen/synaptic-suche-nach-maintainer.png[id="fig.syn
 Interessant ist natürlich auch die Rückrichtung: das Ausgeben aller
 Maintainer und Co-Maintainer zu einer Liste von Source- und
 Binärpaketen. Das gelingt Ihnen mit dem Kommando `dd-list` aus dem Paket
-'devscripts'{empty}footnote:[http://packages.debian.org/de/stable/devscripts].
-Als Parameter geben Sie die Namen der Pakete an, die Sie interessieren.
-Leider werden in der Ausgabe die Co-Maintainer irreführend als Uploader
-mit einem großen `U` benannt.
+'devscripts' <<Debian-Paket-devscripts>>. Als Parameter geben Sie die
+Namen der Pakete an, die Sie interessieren. Leider werden in der Ausgabe
+die Co-Maintainer irreführend als Uploader mit einem großen `U` benannt.
 
-//.Ausgabe der Maintainer und Co-Maintainer mittels `dd-list`
+.Ausgabe der Maintainer und Co-Maintainer mittels `dd-list`
 ----
 $ dd-list screen xymon fping ack-grep
 Anibal Monsalve Salazar <anibal@debian.org>
