@@ -74,11 +74,10 @@ Distributionswechsel. Darin ist beispielsweise beschrieben, welche
 Veränderungen Sie bezüglich interner Strukturen und Dienste erwartet.
 Diese Informationen finden Sie unter dem Stichwort
 Veröffentlichungshinweise – auf englisch _Release Notes_ – einerseits
-auf der Webseite des
-Debian-Projekts{empty}footnote:[https://www.debian.org/releases/stable/releasenotes]
-sowie als Bestandteil der offiziellen, verfügbaren Debian-Images.
+auf der Webseite des Debian-Projekts <<Debian-Release-Notes>> sowie als
+Bestandteil der offiziellen, verfügbaren Debian-Images.
 
-. Halten Sie ihre Zugangsdaten für administrative Zwecke bereit.
+. Halten Sie ihre Zugangsdaten für administrative Zwecke bereit. 
 
 . Sofern noch nicht vorhanden, erzeugen Sie ein Backup ihrer wichtigen
 Daten auf ein möglichst externes Medium. Dazu zählen neben den
@@ -90,8 +89,7 @@ enttäuschender als eine Datensicherung, welche sich im Nachhinein als
 unvollständig herausstellt.
 
 . Setzen Sie die Veröffentlichung _testing_ oder _unstable_ ein, fahnden
-Sie mit Hilfe des Pakets
-`apt-listbugs`{empty}footnote:[https://packages.debian.org/de/stable/apt-listbugs]
+Sie mit Hilfe des Pakets `apt-listbugs` <<Debian-Paket-apt-listbugs>>
 nach möglicherweise kritischen Fehlern in der Debian-Fehlerdatenbank
 (siehe <<bugreports-apt-listbugs>>).
 
