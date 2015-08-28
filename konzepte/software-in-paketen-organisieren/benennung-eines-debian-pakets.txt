@@ -12,20 +12,17 @@
 Während der Benutzung von `dpkg`, APT oder `aptitude` sind Sie sicher
 schon mit den etwas langen und auf den ersten Blick kurios anmutenden
 Dateinamen der einzelnen Pakete in Berührung gekommen. Die Benennung
-einer Paketdatei folgt einem ausgeklügelten Schema{empty}footnote:[Martin F.
-Krafft: Das Debian-System. Konzepte und Methoden, Open Source Press
-München, 2006, deutsche Ausgabe, Erstauflage, S. 144 f.]. Dieses Schema
-ist eine Konvention, die leider bei Paketen aus Drittquellen oft nicht
-eingehalten wird.
+einer Paketdatei folgt einem ausgeklügelten Schema
+<<Krafft-Debian-System144>>. Dieses Schema ist eine Konvention, die
+leider bei Paketen aus Drittquellen oft nicht eingehalten wird.
 
 Der Dateinamen besteht aus den drei Felder _Paketname_, _Version_ und
 _Architektur_, welche durch einen Unterstrich '_' voneinander
 abgegrenzt werden, plus einem Punkt und der Dateiendung. Gemäß den
-Debian-Richtlinien{empty}footnote:[http://www.debian.org/doc/debian-policy/]
-sind in o.g. Feldern nur ASCII-Zeichen zulässig. Unterstriche,
-Leerzeichen und Umlaute sind nicht gestattet. Das hilft dabei,
-Missverständnissen vorzubeugen und die Paketenamen mit allen
-Zeichensätzen anzeigen zu können.
+Debian-Richtlinien <<Debian-Policy-Manual>> sind in o.g. Feldern nur
+ASCII-Zeichen zulässig. Unterstriche, Leerzeichen und Umlaute sind nicht
+gestattet. Das hilft dabei, Missverständnissen vorzubeugen und die
+Paketenamen mit allen Zeichensätzen anzeigen zu können.
 
 [[benennung-paketname]]
 ==== Paketname ====
@@ -34,13 +31,14 @@ Zeichensätzen anzeigen zu können.
 (((Debianpaket, iceweasel)))
 (((Paketname, Software)))
 _Feld 1_ bezeichnet den Namen des Pakets, welche durch die Paketdatei
-bereitgestellt wird. Die Paketdatei `iceweasel_3.5.16-12_i386.deb` ist ein
-Binärpaket (Dateiendung `.deb`) und beinhaltet den Webbrowser Iceweasel.
-
-Darüberhinaus existieren bei der Benennung eine Reihe von Gepflogenheiten in
-Form von Präfixen und Suffixen. Diese stellen kein ``muss'' dar, vereinfachen
-aber die Handhabung insgesamt sowie die Paketklassifikation und die spätere
-Recherche nach Paketen.
+bereitgestellt wird. Die Paketdatei `iceweasel_3.5.16-12_i386.deb` ist
+ein Binärpaket (Dateiendung `.deb`) und beinhaltet den Webbrowser
+Iceweasel.
+ 
+Darüberhinaus existieren bei der Benennung eine Reihe von
+Gepflogenheiten in Form von Präfixen und Suffixen. Diese stellen kein
+``muss'' dar, vereinfachen aber die Handhabung insgesamt sowie die
+Paketklassifikation und die spätere Recherche nach Paketen.
 
 // Stichworte für den Index
 (((Debianpaket, libreoffice-writer)))
@@ -48,12 +46,12 @@ Recherche nach Paketen.
 (((Debianpaket, libxml2)))
 (((Debianpaket, libxml2-utils)))
 (((Paketname, Präfix)))
-Beginnt der Paketname mit der Zeichenkette `lib`, handelt es sich meist um eine
-Bibliothek, auf englisch _library_. Als Beispiel seien hier die beiden
-XML-Bibliotheken 'libxml2-utils' und 'libxml2' genannt. Aus dem Schema
-fallen allerdings die Komponenten zu LibreOffice wie 'libreoffice-writer'
-(Textverarbeitung 'Writer') und 'libreoffice-calc' (Tabellenkalkulation
-'Calc') heraus.
+Beginnt der Paketname mit der Zeichenkette `lib`, handelt es sich meist
+um eine Bibliothek, auf englisch _library_. Als Beispiel seien hier die
+beiden XML-Bibliotheken 'libxml2-utils' und 'libxml2' genannt. Aus dem
+Schema fallen allerdings die Komponenten zu LibreOffice wie
+'libreoffice-writer' (Textverarbeitung 'Writer') und 'libreoffice-calc'
+(Tabellenkalkulation 'Calc') heraus.
 
 // Stichworte für den Index
 (((Debianpaket, aptitude-doc-es)))
@@ -72,11 +70,11 @@ einer Abkürzung für die jeweilige Sprache gefolgt wird. Der Paketname
 'aptitude-doc-es' beinhaltet bspw. die spanische Übersetzung der
 Dokumentation zu `aptitude`.
 
-Die Suffixe `-common` und `-data` deuten an, dass das Paket Dateien beinhaltet, die von mehreren Teilen eines
-Programms gemeinsam genutzt werden. Als Beispiel sei hier
-'wireshark-common' genannt, welches sowohl die Daten für die graphische
-Variante des Netzwerktools 'wireshark', als auch für die textbasierte
-Version 'tshark' beinhaltet.
+Die Suffixe `-common` und `-data` deuten an, dass das Paket Dateien
+beinhaltet, die von mehreren Teilen eines Programms gemeinsam genutzt
+werden. Als Beispiel sei hier 'wireshark-common' genannt, welches sowohl
+die Daten für die graphische Variante des Netzwerktools 'wireshark', als
+auch für die textbasierte Version 'tshark' beinhaltet.
 
 [[benennung-versionsnummer]]
 ==== Versionsnummer ====
@@ -190,8 +188,8 @@ vorliegende Paket übersetzt wurde. Die Benennung entspricht den
 Bezeichnungen, wie sie unter Debian-Architekturen in
 <<debian-architekturen>> aufgelistet sind. Die Angabe
 `asterisk_1.8.13.1~dfsg-3+deb7u1_armhf.deb` beschreibt die Paketierung
-der Telefoniesoftware Asterisk für die ARM-Plattform mit Hardware-Floating-Point-Unterstützung. Im
-Gegensatz dazu ist das Paket `asciidoc_8.5.2-1_all.deb`
-plattformunabhängig einsetzbar.
+der Telefoniesoftware Asterisk für die ARM-Plattform mit
+Hardware-Floating-Point-Unterstützung. Im Gegensatz dazu ist das Paket
+`asciidoc_8.5.2-1_all.deb` plattformunabhängig einsetzbar.
 
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/benennung-eines-debian-pakets.txt
