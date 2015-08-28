@@ -112,11 +112,10 @@ prüfen.
 // Stichworte für den Index
 (((debfoster)))
 (((Debianpaket, debfoster)))
-Das Paket
-`debfoster`{empty}footnote:[http://packages.debian.org/de/stable/debfoster]
-ist ein Wrapper für die beiden Werkzeuge `dpkg` und APT. `debfoster`
-pflegt eine Liste mit den Paketen, die Sie auf ihrem System behalten
-möchten und auf die Sie Wert legen.
+Das Paket `debfoster` <<Debian-Paket-debfoster>> ist ein Wrapper für die
+beiden Werkzeuge `dpkg` und APT. `debfoster` pflegt eine Liste mit den
+Paketen, die Sie auf ihrem System behalten möchten und auf die Sie Wert
+legen.
 
 Mit Hilfe dieser Liste findet es Pakete, die automatisch installiert
 wurden, nur weil andere Pakete davon abhängen. Falls diese
@@ -257,14 +256,14 @@ Die folgenden Pakete stehen auf der Aufbewahrungsliste:
 
 // Stichworte für den Index
 (((Debianpaket, deborphan)))
-Das Programm `deborphan` aus dem gleichnamigen
-Debian-Paket{empty}footnote:[http://packages.debian.org/de/stable/deborphan]
-findet ungenutzte Pakete, die keine weiteren Abhängigkeiten zu anderen
-Paketen (siehe <<paketabhaengigkeiten-anzeigen>>) aufweisen. Es gibt
-Ihnen eine Liste aller gefundenen Pakete aus, die Sie entfernen
-'sollten', aber nicht 'müssen'. Grundlage für die Liste sind die
-Paketabhängigkeiten, die `deborphan` über `dpkg` und über die Angaben in
-der Paketbeschreibung zur Verfügung stehen.
+Das Programm `deborphan` aus dem gleichnamigen Debian-Paket
+<<Debian-Paket-deborphan>> findet ungenutzte Pakete, die keine weiteren
+Abhängigkeiten zu anderen Paketen (siehe
+<<paketabhaengigkeiten-anzeigen>>) aufweisen. Es gibt Ihnen eine Liste
+aller gefundenen Pakete aus, die Sie entfernen  'sollten', aber nicht
+'müssen'. Grundlage für die Liste sind die Paketabhängigkeiten, die
+`deborphan` über `dpkg` und über die Angaben in der Paketbeschreibung
+zur Verfügung stehen.
 
 Rufen Sie `deborphan` ohne Optionen auf, beschränkt es sich auf die
 beiden Paketkategorien _libs_ und _oldlibs_, um unbenutzte oder
