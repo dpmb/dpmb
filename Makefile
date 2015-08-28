@@ -1,3 +1,4 @@
+BASE=debian-paketmanagement
 DEFAULTDEPENDENCIES=*.txt */*.txt */*/*.txt Makefile
 DEFAULTOPTIONS=-L
 DOCTORDEFAULTOPTIONS=-a experimental -a toc -a toclevels=4
@@ -7,29 +8,29 @@ all: $(FORMATS)
 allpure: pure$(FORMATS)
 
 purehtml: $(DEFAULTDEPENDENCIES)
-	asciidoc $(VERBOSE) debian-paketmanagement.txt
+	asciidoc $(VERBOSE) $(BASE).txt
 
-html: debian-paketmanagement.html
+html: $(BASE).html
 %.html: %.txt $(DEFAULTDEPENDENCIES)
 	a2x $(VERBOSE) -f xhtml $(DEFAULTOPTIONS) $<
 
-epub: debian-paketmanagement.epub
+epub: $(BASE).epub
 %.epub: %.txt $(DEFAULTDEPENDENCIES)
 	a2x $(VERBOSE) -f epub $(DEFAULTOPTIONS) $<
 
-pdf: debian-paketmanagement.pdf
+pdf: $(BASE).pdf
 %.pdf: %.txt $(DEFAULTDEPENDENCIES)
 	a2x $(VERBOSE) -f pdf $(DEFAULTOPTIONS) $<
 
-mobi: debian-paketmanagement.mobi
+mobi: $(BASE).mobi
 %.mobi: %.epub
 	ebook-convert $< $@
 
-lit: debian-paketmanagement.lit
+lit: $(BASE).lit
 %.lit: %.epub
 	ebook-convert $< $@
 
-fb2: debian-paketmanagement.fb2
+fb2: $(BASE).fb2
 %.fb2: %.epub
 	ebook-convert $< $@
 
@@ -37,8 +38,8 @@ clean:
 	rm -rvf *.html *.epub *.epub.d *.xml *.fls *.log *.pdf *.css *.tex *.mobi *.lit *.fb2
 
 xmllint:
-	asciidoc -d book -b docbook debian-paketmanagement.txt
-	xmllint debian-paketmanagement.xml
+	asciidoc -d book -b docbook $(BASE).txt
+	xmllint $(BASE).xml
 
 verbose: VERBOSE=-v -v
 verbose: all
@@ -49,9 +50,9 @@ doctor-html: $(DEFAULTDEPENDENCIES)
 	asciidoctor $(DOCTORDEFAULTOPTIONS)
 
 test: test-epub
-test-epub: debian-paketmanagement.epub
-	epubcheck debian-paketmanagement.epub
+test-epub: $(BASE).epub
+	epubcheck $(BASE).epub
 
 deploy: allpure
-	for suffix in $(FORMATS); do cp -pvf debian-paketmanagement.$$suffix deploy/; done
+	for suffix in $(FORMATS); do cp -pvf $(BASE).$$suffix deploy/; done
 	cd deploy && asciidoc index.txt
