@@ -38,22 +38,20 @@ bereitgestellt wird.
 Während zu Beginn der Informationsverarbeitung noch eine Tontafel, ein
 Holzstab mit Einkerbungen oder auch nur ein Lochstreifen zur Erfassung
 einer Folge von Anweisungen ausreichte, passt heutiger Programmcode nur
-noch selten auf eine einzige Bildschirmseite{empty}footnote:[Dr.
-Friedrich Naumann: Vom Abakus zum Internet: die Geschichte der
-Informatik. Darmstadt, Primus-Verlag, 2001, ISBN 3-89678-224-X]. Ein
-Großteil der aktuell genutzten Software ist daher mehrteilig und überaus
-komplex. Dabei spielen viele, unterschiedliche Komponenten zusammen,
-erfüllen verschiedene Aufgaben und bedingen einander. Dazu gehören
-kompilierte Programme, Skripte, Bibliotheken, Daten und
-Konfigurationsdateien. Die Paketierung der einzelnen Komponenten folgt
-eigenen Regeln, deren Konventionen nur zum Teil festgeschrieben sind und
-sich auch von Distribution zu Distribution etwas unterscheiden.
-<<tab.paketierung-apt>> zeigt die Zerlegung in einzelnen Pakete am
-Beispiel von APT. Dabei beinhaltet die linke Spalte den generischen
-Paketnamen ohne Nennung von Versionsnummer und Architektur, die mittlere
-Spalte die Kategorie, der das Paket zugeordnet ist (siehe
-<<sortierung-der-pakete-nach-verwendungszweck>>) und die rechte Spalte
-eine kurze Paketbeschreibung.
+noch selten auf eine einzige Bildschirmseite
+<<Naumann-Abakus-Internet>>. Ein Großteil der aktuell genutzten Software
+ist daher mehrteilig und überaus komplex. Dabei spielen viele,
+unterschiedliche Komponenten zusammen, erfüllen verschiedene Aufgaben
+und bedingen einander. Dazu gehören kompilierte Programme, Skripte,
+Bibliotheken, Daten und Konfigurationsdateien. Die Paketierung der
+einzelnen Komponenten folgt eigenen Regeln, deren Konventionen nur zum
+Teil festgeschrieben sind und sich auch von Distribution zu Distribution
+etwas unterscheiden. <<tab.paketierung-apt>> zeigt die Zerlegung in
+einzelnen Pakete am Beispiel von APT. Dabei beinhaltet die linke Spalte
+den generischen Paketnamen ohne Nennung von Versionsnummer und
+Architektur, die mittlere Spalte die Kategorie, der das Paket zugeordnet
+ist (siehe <<sortierung-der-pakete-nach-verwendungszweck>>) und die
+rechte Spalte eine kurze Paketbeschreibung.
 
 .Paketierung der Komponenten am Beispiel von APT
 [frame="topbot",options="header",id="tab.paketierung-apt"]
@@ -92,4 +90,5 @@ Open-Source-Bereich erfolgt die Entwicklung weltweit verteilt, daher ist
 hier eine Zerlegung in kleinere Einheiten und ``Bausteine'' häufig von
 großem Nutzen. Damit können Aufgaben und Komponenten besser an kleine,
 spezialisierte Teams verteilt werden.
+
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/vom-monolithischen-programm-zu-programmkomponenten.txt
