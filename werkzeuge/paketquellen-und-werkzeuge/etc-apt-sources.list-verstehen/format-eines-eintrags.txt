@@ -42,10 +42,9 @@ abgelegt
 * `mirror`: Auswahl einer Installationsquelle anhand der GeoIP des
 Servers (siehe <<paketquellen-ueber-geoip-auswaehlen>>)
 * `debtorrent`: die Pakete werden über DebTorrent auf der Basis des
-BitTorrent-Protokolls
-bezogen{empty}footnote:[https://wiki.debian.org/DebTorrent]. Basis dafür
-ist das Debianpaket
-'debtorrent'{empty}footnote:[http://packages.debian.org/de/stable/apt-transport-debtorrent].
+BitTorrent-Protokolls bezogen <<Debian-Wiki-DebTorrent>>. Basis dafür
+ist das Debianpaket 'apt-transport-debtorrent'
+<<Debian-Paket-apt-transport-debtorrent>>.
 
 Distribution:: 
 benennt die Veröffentlichung (siehe <<veroeffentlichungen>>), aus der
