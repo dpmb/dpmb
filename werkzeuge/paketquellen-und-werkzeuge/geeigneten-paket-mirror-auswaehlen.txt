@@ -37,16 +37,16 @@ diesen einrichten, erfahren Sie unter Einen eigenen APT-Mirror aufsetzen
 in <<eigenen-apt-mirror-aufsetzen>>. Möchten Sie Ihren eigenen
 Paketmirror auch öffentlich zugänglich machen, nutzen Sie dazu am besten
 das bereits dafür vorbereitete Formular auf der Webseite des
-Debian-Projekts{empty}footnote:[http://www.debian.org/mirror/submit].
+Debian-Projekts <<Debian-Spiegel-Informationen>>.
 
 ==== Paketmirror bei Debian ====
 
 // Indexeinträge
 (((Paketmirror, Namensschema)))
 (((Paketmirror, primäre)))
-Das Debian-Projekt pflegt eine offizielle Liste seiner
-Paketmirrors{empty}footnote:[http://www.debian.org/mirror/list]. Diese
-Liste ist in _primäre_ und _sekundäre_ Mirrors gegliedert.
+Das Debian-Projekt pflegt eine offizielle Liste seiner Paketmirrors
+<<Debian-Spiegel-Liste>>. Diese Liste ist in _primäre_ und _sekundäre_
+Mirrors gegliedert.
 
 _Primäre Mirrors_ sind dabei als zentrale, stets aktuelle Bezugspunkte
 mit hoher Last ausgelegt. Neben einer guten Netzanbindung bieten diese
@@ -54,7 +54,9 @@ auch eine hohe Verfügbarkeit. Sie werden automatisch aktualisiert,
 sofern es Änderungen im Debian-Projekt bzw. dessen Paketarchiv gibt. Ein
 Mirror dieser Kategorie ist nach dem folgenden Namensschema erreichbar:
 
-`ftp.Länderkennung.debian.org`
+----
+ftp.Länderkennung.debian.org
+----
 
 Die Länderkennung richtet sich nach dem ISO-Namensschema. Für
 Deutschland ist das `de`, für Österreich `at` und für die Schweiz `ch`.
@@ -77,7 +79,7 @@ Server sein. Das bedeutet jedoch nicht zwangsläufig, dass dieser Mirror
 schlechter erreichbar sein muss. Im deutschsprachigen Raum betreiben
 entsprechende Paketmirror bspw. die Uni Erlangen, die TU Graz und
 SWITCH, das Schweizer Hochleistungsnetzwerk für die
-Wissenschaft{empty}footnote:[http://www.switch.ch/].
+Wissenschaft <<SWITCH>>.
 
 // Indexeinträge
 (((Paketmirror, Beschreibung)))
@@ -87,13 +89,13 @@ Paketmirrors, die darüber verfügbaren Architekturen (siehe
 <<debian-architekturen>>) sowie die Informationen zum genauen Standort,
 zum Betreuer bzw. Betreiber und der Anbindung (IPv4 oder IPv6).
 Nachfolgender Auszug zeigt die Details für den Paketmirror
-`ftp.de.debian.org`, der an der TU Dresden beheimatet
-ist.{empty}footnote:[Die Auswahl des Mirrors erfolgte aus zwei Gründen –
+`ftp.de.debian.org`, der an der TU Dresden beheimatet ist.
+{empty}footnote:[Die Auswahl des Mirrors erfolgte aus zwei Gründen –
 erstens tief verwurzeltem Lokalpatriotismus von Frank, und zweitens aus
 dem angebotenen Leistungsumfang heraus. Von diesem Mirror bekommen Sie
 das ganze Debian-Spektrum.]
 
-//.Informationen zum Paketmirror ftp.de.debian.org (TU Dresden)
+.Informationen zum Paketmirror ftp.de.debian.org (TU Dresden)
 ----
 Site: ftp.de.debian.org
 Alias: ftp1.de.debian.org
@@ -159,15 +161,14 @@ Komponenten, die von externen Bestandteilen und Diensten abhängig sind.
 // TODO: Eigener Abschnitt über apt-get?
 
 Sollten Sie nur über einen Zugang mittels Webbrowser verfügen, steht
-Ihnen die Webseite des
-Debian-Projekts{empty}footnote:[http://www.debian.org/] zur Verfügung.
-Darüberhinaus bietet
-`apt-get.org`{empty}footnote:[http://www.apt-get.org/] die Möglichkeit
-zur Recherche nach einem möglichen inoffiziellen Repository (siehe
-<<fig.apt-get-org>>). Bitte beachten Sie bei der Auswahl der Paketquelle
-über diesen Dienst, dass nicht jedes der angezeigten Repositories Pakete
-für alle Architekturen (siehe <<debian-architekturen>>) und
-Veröffentlichungen (siehe <<veroeffentlichungen>>) bereithält.
+Ihnen die Webseite des Debian-Projekts <<Debian-Webseite>> zur
+Verfügung. Darüberhinaus bietet `apt-get.org` <<apt-get.org>> die
+Möglichkeit zur Recherche nach einem möglichen inoffiziellen Repository
+(siehe <<fig.apt-get-org>>). Bitte beachten Sie bei der Auswahl der
+Paketquelle über diesen Dienst, dass nicht jedes der angezeigten
+Repositories Pakete  für alle Architekturen (siehe
+<<debian-architekturen>>) und Veröffentlichungen (siehe
+<<veroeffentlichungen>>) bereithält.
 
 .Auswahl der Paketmirror für bei `apt-get.org`
 image::werkzeuge/paketquellen-und-werkzeuge/apt-get-org.png[id="fig.apt-get-org", width="50%"]
