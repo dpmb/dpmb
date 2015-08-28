@@ -157,7 +157,7 @@ die Markierung _essential_. Diese Markierung tragen nur grundlegende
 Pakete. In <<pakete-nach-prioritaeten-finden>> lesen Sie, welche Pakete
 zu dieser Gruppe dazugehören und wie Sie diese auflisten.
 
-//.Eintrag in der Paketbeschreibung
+.Eintrag in der Paketbeschreibung
 ----
 Essential: yes
 ----
@@ -188,7 +188,7 @@ angezeigt (Lokalisierung), sofern eine Übersetzung vorhanden ist.
 Nachfolgendes Beispiel zeigt die Bildschirmausgabe vor der Entfernung
 des Paketes 'core-utils'.
 
-//.Eingabeaufforderung von `apt-get` vor der Entfernung des essentiellen Pakets 'core-utils'
+.Eingabeaufforderung von `apt-get` vor der Entfernung des essentiellen Pakets 'core-utils'
 ----
 # apt-get remove core-utils
 Paketlisten werden gelesen... Fertig
@@ -212,6 +212,5 @@ Zum Fortfahren geben Sie bitte »Ja, tue was ich sage!« ein.
 Abbruch.
 #
 ----
-
 
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/paket-prioritaet-und-essentielle-pakete.txt
