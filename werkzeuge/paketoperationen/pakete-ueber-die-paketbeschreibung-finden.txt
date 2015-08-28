@@ -14,8 +14,8 @@
 Bleibt ihre Recherche über den Paketnamen ohne Erfolg, dehnen Sie ihre
 Suche am besten auf die gesamte Paketbeschreibung aus. Zur Recherche
 darin helfen Ihnen die darauf spezialisierten Programme `grep-available`
-und `grep-status` aus dem Paket
-'dctrl-tools'{empty}footnote:[http://packages.debian.org/de/stable/dctrl-tools].
+und `grep-status` aus dem Paket 'dctrl-tools'
+<<Debian-Paket-dctrl-tools>>.
 
 // Stichworte für den Index
 (((grep-available, -F)))
@@ -30,7 +30,7 @@ unabhängig von der Groß- und Kleinschreibung. Das abschließende
 `sort`-Kommando sorgt darüberhinaus für eine Ausgabe in alphabetisch
 aufsteigender Abfolge.
 
-//.Verfügbare Pakete anzeigen, bei denen in der Beschreibung und im Paketnamen die Zeichenfolge `xpdf` enthalten ist
+.Verfügbare Pakete anzeigen, bei denen in der Beschreibung und im Paketnamen die Zeichenfolge `xpdf` enthalten ist
 ----
 $ grep-available -F Description -F Package -i xpdf | grep Package | sort
 Package: flpsed
@@ -56,7 +56,7 @@ System installiert sind, oder nicht. Mit dem nachfolgenden Aufruf
 reduzieren Sie die Liste entsprechend. Dabei kommt der Schalter `-s` zum
 tragen, der den Paketstatus passend auswertet.
 
-//.Lediglich die installierten Pakete anzeigen, bei denen in der Beschreibung und im Paketnamen die Zeichenfolge `xpdf` enthalten ist
+.Lediglich die installierten Pakete anzeigen, bei denen in der Beschreibung und im Paketnamen die Zeichenfolge `xpdf` enthalten ist
 ----
 $ grep-status -F Description -F Package -i -s Package xpdf | grep Package | sort
 Package: flpsed
