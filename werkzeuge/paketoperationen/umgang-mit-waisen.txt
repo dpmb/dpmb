@@ -491,10 +491,10 @@ von `apt-get` automatisch mit ``ja'':
 (((Debianpaket, deborphan)))
 `orphaner` und `editkeep` sind beides Benutzeroberflächen für
 `deborphan` (siehe <<deborphan>>) und Bestandteil des gleichnamigen
-Pakets{empty}footnote:[http://packages.debian.org/de/stable/deborphan].
-Ersteres findet und entfernt verwaiste Pakete, das Zweite hilft Ihnen
-bei der Pflege und Zusammenstellung der Liste der Pakete, die _nie_ von
-`deborphan` entfernt werden.
+Pakets <<Debian-Paket-deborphan>>. Ersteres findet und entfernt
+verwaiste Pakete, das Zweite hilft Ihnen bei der Pflege und
+Zusammenstellung der Liste der Pakete, die _nie_ von `deborphan`
+entfernt werden.
 
 `orphaner` und `editkeep` sind beides Shellskripte und rufen nach der
 Auswahl direkt `apt-get` bzw. `deborphan` mit den passenden Optionen
@@ -519,10 +519,10 @@ image::werkzeuge/paketoperationen/orphaner-editkeep.png[id="fig.orphaner-editkee
 // Stichworte für den Index
 (((gtkorphan)))
 (((Debianpaket, gtkorphan)))
-`gtkorphan`{empty}footnote:[http://www.marzocca.net/linux/gtkorphan.html]
-ist ein graphisches Programm auf der Basis von GTK, welches `deborphan`
-(siehe <<deborphan>>) direkt ansteuert. Die Ausgaben stammen daher
-direkt von `deborphan` und somit aus der Paketbeschreibung.
+`gtkorphan` <<Gtkorphan>> ist ein graphisches Programm auf der Basis von
+GTK, welches `deborphan` (siehe <<deborphan>>) direkt ansteuert. Die
+Ausgaben stammen daher direkt von `deborphan` und somit aus der
+Paketbeschreibung.
 
 In der Mitte sehen Sie die Paketliste, wobei Sie über den Reiter
 zwischen der Darstellung für die verwaisten und nicht verwaisten Pakete
@@ -580,9 +580,8 @@ image::werkzeuge/paketoperationen/aptsh-orphans-all.png[id="fig.aptsh-orphans-al
 
 // Stichworte für den Index
 (((wajig, orphans)))
-(((wajig, list-orphans)))
-Ähnlich wie die `aptsh` verfügt
-`wajig`{empty}footnote:[http://packages.debian.org/de/stable/wajig] über
+(((wajig, list-orphans))) 
+Ähnlich wie die `aptsh` verfügt `wajig` <<Debian-Paket-wajig>> über
 Kommandos zur Suche nach Waisen – `orphans` und `list-orphans`. Beide
 liefern Ihnen das gleiche Ergebnis. Möglich ist ein Aufruf mittels
 `wajig orphans` oder die Eingabe des Kommandos in der `wajig`-Shell.
