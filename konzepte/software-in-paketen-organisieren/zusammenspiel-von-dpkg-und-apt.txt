@@ -38,10 +38,10 @@ Version bestehen.
 (((Ncurses)))
 Bei `aptitude` und den meisten anderen Frontends ist dies anders, denn
 diese sind alle um eine ganze Spur komplexer. Bei `aptitude` kommt z.B.
-noch die Benutzeroberfläche auf der Basis von
-Ncurses{empty}footnote:[http://www.gnu.org/software/ncurses/] hinzu.
+noch die Benutzeroberfläche auf der Basis von Ncurses <<Ncurses>> hinzu.
 <<fig.apt-dot>>, <<fig.dpkg-dot>> und <<fig.aptitude-dot>> zeigen die
-minimalen Paketabhängigkeiten für das jeweilige Programm in graphischer Form.
+minimalen Paketabhängigkeiten für das jeweilige Programm in graphischer
+Form.
 
 .Paketabhängigkeiten von APT
 image::konzepte/software-in-paketen-organisieren/apt.png[id="fig.apt-dot", width="50%"]
@@ -57,17 +57,17 @@ image::konzepte/software-in-paketen-organisieren/aptitude+apt.png[id="fig.aptitu
 (((dot)))
 (((Graphviz)))
 Die Grafiken in den obigen Abbildungen erzeugen Sie mit Hilfe der beiden
-Programme `debtree`{empty}footnote:[http://collab-maint.alioth.debian.org/debtree/]
-und `dot`{empty}footnote:[http://www.graphviz.org/]. Ersteres berechnet
-über die Metadaten in den Paketlisten die Abhängigkeiten zu anderen
-Paketen nach und erzeugt daraus eine entsprechende Beschreibung des
-Abhängigkeitsgraphen in der Sprache 'dot'.
+Programme `debtree` <<debtree-Projektseite>> und `dot` <<Graphviz>>.
+Ersteres berechnet über die Metadaten in den Paketlisten die
+Abhängigkeiten zu anderen Paketen nach und erzeugt daraus eine
+entsprechende Beschreibung des Abhängigkeitsgraphen in der Sprache
+'dot'.
 
-//.Erzeugung der Abhängigkeitsgraphen zu `dpkg` mittels `debtree`
+.Erzeugung der Abhängigkeitsgraphen zu `dpkg` mittels `debtree`
 ----
 $ debtree dpkg
 Paketlisten werden gelesen... Fertig
-Abhängigkeitsbaum wird aufgebaut       
+Abhängigkeitsbaum wird aufgebaut
 Statusinformationen werden eingelesen... Fertig
 digraph "dpkg" {
         rankdir=LR;
@@ -103,7 +103,7 @@ Die Ausgabe von `dot` – die erzeugte Bilddatei – wird mit dem
 Umleitungsoperator `>` in die Datei `dpkg.png` im aktuelle Verzeichnis
 umgeleitet.
 
-//.Erzeugung der Abhängigkeitsgraphen und Speicherung als Rastergrafik
+.Erzeugung der Abhängigkeitsgraphen und Speicherung als Rastergrafik
 ----
 $ debtree dpkg | dot -Tpng > dpkg.png
 $
