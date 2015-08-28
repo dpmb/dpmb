@@ -9,8 +9,7 @@
 (((Debian Security Team)))
 (((Security Updates)))
 Häufig, aber in unregelmäßigen Abständen – d.h. wenn es erforderlich
-ist – kündigt das Debian
-Security-Team{empty}footnote:[https://www.debian.org/security/]
+ist – kündigt das Debian Security-Team <<Debian-Security>>
 Sicherheitsaktualisierungen an und stellt diese bereit. Um von diesen
 Aktualisierungen zu profitieren, ergänzen Sie die Datei
 `/etc/apt/sources.list` um den folgenden Eintrag:
