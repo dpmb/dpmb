@@ -42,7 +42,6 @@ weniger gelungen gelten, sich aber nicht mehr oder zumindest nur mit
 sehr viel Aufwand korrigieren lassen. Eugene V. Lyubimkin war einer der
 APT-Entwickler und hat sich aus o.g. Grund aus der APT-Entwicklung
 zurückgezogen und eine Re-Implementierung von APT namens
-Cupt{empty}footnote:[https://wiki.debian.org/Cupt] geschrieben (siehe
-<<Cupt>>).
+Cupt <<Debian-Wiki-cupt>> geschrieben (siehe <<Cupt>>).
 
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/alternativen-zu-apt.txt
