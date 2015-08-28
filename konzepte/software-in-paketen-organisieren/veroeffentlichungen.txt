@@ -145,9 +145,9 @@ Drucklegung festgelegt, voraussichtlich 2017; benannt nach dem lila Kraken)
 Drucklegung festgelegt, voraussichtlich 2019; benannt nach dem Welpen aus 'Toy Story 2')
 
 Mehr Details zu den einzelnen Veröffentlichungen finden sich in der
-Debian-Historie{empty}footnote:[http://www.debian.org/doc/manuals/project-history/ch-releases.de.html].
-Die Figuren aus Toy Story und insbesondere deren Charakterzüge sind
-ausführlich im Disney Wiki{empty}footnote:[http://disney.wikia.com/wiki/Toy_Story] dokumentiert.
+Debian-Historie <<Debian-History>>. Die Figuren aus Toy Story und
+insbesondere deren Charakterzüge sind ausführlich im Disney Wiki
+<<ToyStory>> dokumentiert.
 
 .Beschreibung der Filmserie 'Toy Story' im Disney Wiki
 image::konzepte/software-in-paketen-organisieren/toystory.png[id="fig.toystory", width="50%"]
@@ -182,9 +182,8 @@ _oldoldstable_.
 
 Ist eine Veröffentlichung — sei es als 'oldstable' oder als
 'oldoldstable' — am Ende ihrer Unterstützung angelangt, wird sie in das
-Debian-Archiv{empty}footnote:[http://archive.debian.org/] übertragen.
-Dieses Archiv beinhaltet alle nicht mehr unterstützten
-Veröffentlichungen.
+Debian-Archiv <<Debian-Archive>> übertragen. Dieses Archiv beinhaltet
+alle nicht mehr unterstützten Veröffentlichungen.
 
 // Stichworte für den Index
 (((Veröffentlichung, Ausnahmen)))
@@ -198,9 +197,9 @@ _still in development_ – zu deutsch ``noch in Entwicklung'' –, was den
 Status der Veröffentlichung der zukünftigen Distribution sehr treffend
 umschreibt.
 
-Die Paketklassifikation _experimental_ hat keinen eigenen
-Alias-Namen. Das rührt daher, dass es keine eigenständige
-Veröffentlichung von Debian GNU/Linux darstellt.
+Die Paketklassifikation _experimental_ hat keinen eigenen Alias-Namen.
+Das rührt daher, dass es keine eigenständige Veröffentlichung von Debian
+GNU/Linux darstellt.
 
 ==== Pakete auf Wanderschaft von einem Entwicklungsstand in den nächsten ====
 
