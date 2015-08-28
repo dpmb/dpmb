@@ -47,7 +47,7 @@ verbose: all
 asciidoctor: doctor-html
 
 doctor-html: $(DEFAULTDEPENDENCIES)
-	asciidoctor $(DOCTORDEFAULTOPTIONS)
+	asciidoctor $(DOCTORDEFAULTOPTIONS) $(BASE).txt
 
 test: test-epub
 test-epub: $(BASE).epub
