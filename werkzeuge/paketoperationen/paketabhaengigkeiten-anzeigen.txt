@@ -170,8 +170,7 @@ Diese Aktivität übersetzen Sie mit der Frage ``Welche anderen Pakete
 benötigt Paket 'x'?'', auch genannt 'Rückwärtsabhängigkeit'. Zur
 Beantwortung der Frage helfen Ihnen einerseits wiederum `apt-cache` mit
 dem Unterkommando `rdepends`, andererseits das Kommando `apt-rdepends`
-aus dem gleichnamigen Paket
-'apt-rdepends'{empty}footnote:[http://packages.debian.org/de/stable/apt-rdepends]
+aus dem gleichnamigen Paket 'apt-rdepends' <<Debian-Paket-apt-rdepends>>
 und auch `aptitude` selbst weiter.
 
 .Ausgabe der umgekehrten Paketabhängigkeiten mit `apt-cache` für das Paket 'xfce4'
