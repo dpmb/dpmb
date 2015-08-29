@@ -49,7 +49,7 @@ Sie die zusätzliche `aptitude`-Option mit der Kategorie in
 Anführungszeichen einschließen, damit die ausführende Shell diese Option
 nicht interpretiert und ggf. verändert.
 
-//.Ausgabe der vorgemerkten Paketoperationen über die Kommandozeile
+.Ausgabe der vorgemerkten Paketoperationen über die Kommandozeile
 ----
 # aptitude search '~ainstall'
 pi  cssed                          - graphical CSS editor
@@ -72,7 +72,7 @@ deckungsgleich mit dem Ergebnis aus obiger Liste. In der linken Spalte
 der Ausgabe sehen Sie den Paketstatus, gefolgt vom Paketnamen und der
 Kurzbeschreibung des Pakets in der rechten Spalte.
 
-//.Pakete darstellen, die nicht in dem bestehenden Zustand gehalten werden
+.Pakete darstellen, die nicht in dem bestehenden Zustand gehalten werden
 ----
 # aptitude search '!~akeep'
 id  apt-doc              - Dokumentation für APT
