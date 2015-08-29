@@ -71,7 +71,7 @@ kleiner als 10000 Bytes sind und bzgl. der Priorität als 'optional'
 eingestuft sind (siehe dazu
 <<paket-prioritaet-und-essentielle-pakete>>).
 
-//.Recherche mittels `ara` nach optionalen Paketen zum Window Manager XFCE (Auswahl)
+.Recherche mittels `ara` nach optionalen Paketen zum Window Manager XFCE (Auswahl)
 ----
 $ ara -fields Package,Size,Maintainer:30 -table 'section=utils & (depends:(xfce) | size<10000) & priority=optional'
 +--------------------------------+------+--------------------------------+
