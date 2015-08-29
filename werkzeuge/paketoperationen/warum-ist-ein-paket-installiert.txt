@@ -32,7 +32,7 @@ bereits installiert, wird jedoch wiederum auch vom Paket
 installiert, was Sie anhand des Buchstabens `A` in der dritten Spalte
 der dritten Zeile in nachfolgender Ausgabe sehen können.
 
-//.Ausgabe von `aptitude` zur Klärung der Installation (Variante 1)
+.Ausgabe von `aptitude` zur Klärung der Installation (Variante 1)
 ----
 $ aptitude why xpdf
 i   texlive-latex-extra Empfiehlt texpower (>= 0.2-2)
@@ -50,7 +50,7 @@ und Installationspfade errechnet und Ihnen diese auflistet.
 (((aptitude, -v why)))
 (((aptitude, --verbose why)))
 
-//.Ausführliche Darstellung der Installationspfade (Ausschnitt)
+.Ausführliche Darstellung der Installationspfade (Ausschnitt)
 ----
 $ aptitude --verbose why xpdf
 i   mc Schlägt vor xpdf | pdf-viewer
@@ -79,7 +79,7 @@ Spezifizieren Sie keinen Wert für `show-summary`, wird hingegen
 `first-package` angenommen. Damit erhalten Sie bei einem Aufruf die
 folgende Ausgabe – hier beispielhaft für das Paket 'foomatic-db':
 
-//.Zusammenfassung für das Paket 'foomatic-db'
+.Zusammenfassung für das Paket 'foomatic-db'
 ----
 $ aptitude -v --show-summary why foomatic-db
 Pakete, die foomatic-db erfordern:
@@ -92,7 +92,7 @@ $
 Der Wert `first-package-and-type` liefert Ihnen zudem eine Begründung
 für die Abhängigkeit:
 
-//.Zusammenfassung für das Paket 'foomatic-db' (mit Begründung)
+.Zusammenfassung für das Paket 'foomatic-db' (mit Begründung)
 ----
 $ aptitude -v --show-summary=first-package-and-type why foomatic-db
 Pakete, die foomatic-db erfordern:
@@ -111,7 +111,7 @@ Buchstaben hinter den Paketnamen für `Recommends` (`R`), `Conflicts`
 // * H
 // * E
 
-//.Zusammenfassung für das Paket 'foomatic-db' (ausführlicher)
+.Zusammenfassung für das Paket 'foomatic-db' (ausführlicher)
 ----
 $ aptitude -v --show-summary=all-packages why foomatic-db
 Pakete, die foomatic-db erfordern:
@@ -125,7 +125,7 @@ Benötigen Sie zudem noch die Versionsnummer, von der dieses Paket
 abhängt, setzen Sie den Wert von `--show-summary` auf den Wert
 `all-packages-with-dep-versions`:
 
-//.Zusammenfassung für das Paket 'foomatic-db' (ausführlicher mit Versionsangabe)
+.Zusammenfassung für das Paket 'foomatic-db' (ausführlicher mit Versionsangabe)
 ----
 $ aptitude -v --show-summary=all-packages-with-dep-versions why foomatic-db
 Pakete, die foomatic-db erfordern:
@@ -139,7 +139,7 @@ Bestehen hingegen keine Gründe für eine Installation oder `aptitude`
 kann diese nicht zweifelsfrei ermitteln, liefert es die nachfolgende
 Ausgabe – hier am Beispiel des Paketes 'libruby-extras':
 
-//.Ausgabe von `aptitude` zur Klärung der Installation (Variante 2)
+.Ausgabe von `aptitude` zur Klärung der Installation (Variante 2)
 ----
 $ aptitude why libruby-extras 
 Kann keinen Grund für die Installation von libruby-extras finden.
@@ -157,7 +157,7 @@ vorgeschlagen, welches automatisch installiert wurde und vom Paket
 'mplayer' und 'mplayer2' miteinander, sodass im Bedarfsfall nur eines
 von beiden auf ihrem System installiert sein darf.
 
-//.Ausgabe von `aptitude` zur Klärung der Installation (Variante 3)
+.Ausgabe von `aptitude` zur Klärung der Installation (Variante 3)
 ----
 $ aptitude why-not mplayer
 i   youtube-dl Empfiehlt      rtmpdump
@@ -171,10 +171,11 @@ Kann `aptitude` keinen Grund für die Entfernung finden, meldet es sich
 mit einer kurzen Meldung dazu rück – hier am Beispiel des KDE Desktop
 Managers aus dem Paket 'kdm':
 
-//.Ausgabe von `aptitude` zur Klärung der Installation (Variante 4)
+.Ausgabe von `aptitude` zur Klärung der Installation (Variante 4)
 ----
 $ aptitude why-not kdm
 Kann keinen Grund für die Entfernung von kdm finden.
 $
 ----
+
 // Datei (Ende): ./werkzeuge/paketoperationen/warum-ist-ein-paket-installiert.txt
