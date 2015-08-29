@@ -23,7 +23,7 @@ UNIX-Kommandos `whereis` aus dem essentiellen Paket 'util-linux'
 Mit der Option `-m Programmname` sucht `whereis` nach den passenden
 Hilfeseiten zum genannten Paketnamen:
 
-//.Verfügbare Manpages für das Paket 'aptitude' mittels `whereis` lokalisieren
+.Verfügbare Manpages für das Paket 'aptitude' mittels `whereis` lokalisieren
 ----
 $ whereis -m aptitude
 aptitude: /usr/share/man/man8/aptitude.8.gz
@@ -34,7 +34,7 @@ $
 gefolgt vom Paketnamen. Das Ergebnis des Aufrufs für das Programm
 `aptitude` sieht wie folgt aus:
 
-//.Verfügbare Manpages für das Paket 'aptitude' mittels `dlocate` aufspüren
+.Verfügbare Manpages für das Paket 'aptitude' mittels `dlocate` aufspüren
 ----
 $ dlocate -man aptitude
 8 aptitude-curses
@@ -49,7 +49,7 @@ nachfolgenden Aufruf, dass die Manpage für mehrere Sprachen wie bspw.
 Deutsch (de), Spanisch (es) und Polnisch (pl) im Verzeichnis
 `/usr/share/man` bereitsteht.
 
-//.Verfügbare Manpages für das Paket 'aptitude' mit vollständigem Pfad
+.Verfügbare Manpages für das Paket 'aptitude' mit vollständigem Pfad
 ----
 $ dlocate -lsman aptitude
 /usr/share/man/cs/man8/aptitude-curses.8.gz
@@ -64,4 +64,5 @@ $ dlocate -lsman aptitude
 /usr/share/man/de/man8/aptitude-curses.8.gz
 $
 ----
+
 // Datei (Ende): ./werkzeuge/paketoperationen/manpages-anzeigen.txt
