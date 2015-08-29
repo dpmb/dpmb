@@ -7,17 +7,16 @@
 === Installationsgröße eines Paketes ===
 
 // Stichworte für den Index
-indexterm:[Paket, Installationsgröße]
-indexterm:[dlocate, -du]
+(((dlocate, -du)))
+(((Paket, Installationsgröße anzeigen)))
 Die Frage, wieviel Platz ein installiertes Paket auf der Platte belegt,
-beantworten Sie am besten mit dem Aufruf `dlocate -du
-Paketname`{empty}footnote:[https://packages.debian.org/de/stable/dlocate]. 
-Als Ergebnis erhalten Sie eine Auflistung mit einer Datei pro Zeile, bei
-der die jeweilige Größe in der ersten Spalte in Kilobyte angegeben ist.
-Die letzte Zeile summiert die Einzelwerte auf. Nachfolgendes Listing
-zeigt den Aufruf für das Paket 'htop'.
+beantworten Sie am besten mit dem Aufruf `dlocate -du Paketname`
+<<Debian-Paket-dlocate>>. Als Ergebnis erhalten Sie eine Auflistung mit
+einer Datei pro Zeile, bei der die jeweilige Größe in der ersten Spalte
+in Kilobyte angegeben ist. Die letzte Zeile summiert die Einzelwerte
+auf. Nachfolgendes Listing zeigt den Aufruf für das Paket 'htop'.
 
-//.Ermittlung der Installationsgröße eines Pakets mit `dlocate`
+.Ermittlung der Installationsgröße eines Pakets mit `dlocate`
 ----
 $ dlocate -du htop
 136	/usr/bin/htop
