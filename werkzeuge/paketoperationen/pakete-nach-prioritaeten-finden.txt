@@ -9,6 +9,7 @@
 // Stichworte für den Index
 (((aptitude, search ~p)))
 (((aptitude, search ?priority)))
+(((Pakete, nach Prioritäten finden)))
 (((Paketprioritäten)))
 Wie bereits in Paket-Priorität und essentielle Pakete in
 <<paket-prioritaet-und-essentielle-pakete>> beschrieben, ist jedem
@@ -24,7 +25,7 @@ entsprechende englische Schlüsselwort ein, bspw. `extra` für
 `?priority(extra)`. Nachfolgend sehen Sie die Pakete, die entsprechend
 markiert wurden.
 
-//.Auflistung der `extra`-Pakete durch `aptitude`
+.Auflistung der `extra`-Pakete durch `aptitude`
 ----
 $ aptitude search '?priority(extra)'
 p   0ad-dbg          - Echtzeit-Strategiespiel über antike Kriegs
@@ -45,7 +46,7 @@ Langform `?essential`), um diese essentiellen Pakete anzuzeigen. Dazu
 rufen Sie es wiederum mit dem Unterkommando `search` auf und erhalten
 eine Ausgabe auf dem Terminal, die ähnlich zu nachfolgender ist:
 
-//.Auflistung der essentiellen Pakete durch `aptitude`
+.Auflistung der essentiellen Pakete durch `aptitude`
 ----
 $ aptitude search ~E
 i A apt              - Paketverwaltung für die Befehlszeile
@@ -76,6 +77,5 @@ i   tar              - GNU-Version des tar-Archivierungsprogramms
 i   util-linux       - Verschiedene System-Kommandos
 $
 ----
-
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-nach-prioritaeten-finden.txt
