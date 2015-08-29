@@ -6,6 +6,8 @@
 
 === Paketstatus erfragen ===
 
+// Stichworte für den Index
+(((Paketstatus anzeigen)))
 Diese Aktion betrifft meist nur ein einzelnes Paket, welches auf dem
 System installiert ist oder war. Im Alltag ergeben sich mehrere
 Situationen, in denen das Wissen über den Zustand eines Paketes wichtig
@@ -41,17 +43,17 @@ Mit diesem Aufruf ermitteln Sie den Status eines installierten Paketes.
 `dpkg` gibt bspw. die Paketfelder Paketname
 (<<benennung-eines-debian-pakets>>), Status, Priorität
 (<<paket-prioritaet-und-essentielle-pakete>>), Paketkategorie
-(<<sortierung-der-pakete-nach-verwendungszweck>>), installierte Größe, Maintainer, Architektur
-(<<debian-architekturen>>) und Version
+(<<sortierung-der-pakete-nach-verwendungszweck>>), installierte Größe,
+Maintainer, Architektur (<<debian-architekturen>>) und Version
 (<<benennung-eines-debian-pakets>>) aus. Darunter listet `dpkg` die
-dazugehörige, hinterlegte Paketbeschreibung auf. 
+dazugehörige, hinterlegte Paketbeschreibung auf.
 
 Der Aufruf ist identisch zu `grep-status -F Package -X htop`, wobei Sie
 mit `-F` das entsprechende Paketfeld und mit `-X` den Paketnamen
 angeben. Das Kommando `grep-status` ist Bestandteil des Pakets
-'dctrl-tools'{empty}footnote:[http://packages.debian.org/de/stable/dctrl-tools].
+'dctrl-tools' <<Debian-Paket-dctrl-tools>>.
 
-//.Status des Pakets 'htop' mittels `dpkg` ermitteln
+.Status des Pakets 'htop' mittels `dpkg` ermitteln
 ----
 $ dpkg -s htop
 Package: htop
@@ -81,17 +83,16 @@ $
 // Stichworte für den Index
 (((apt-cache, show)))
 (((Debianpaket, apt)))
-`apt-cache` ist Bestandteil des Debian-Pakets
-'apt'{empty}footnote:[https://packages.debian.org/de/stable/apt]. Der
-Aufruf `apt-cache show Paketname` liefert ein ähnliches Ergebnis wie
-obiges `dpkg -s Paketname`, ist jedoch noch ausführlicher. Neben einer
-übersetzten Paketbeschreibung (Lokalisierung, sofern vorhanden)
-erscheinen zusätzlich die Debtags (siehe
+`apt-cache` ist Bestandteil des Debian-Pakets 'apt'
+<<Debian-Paket-apt>>. Der Aufruf `apt-cache show Paketname` liefert ein
+ähnliches Ergebnis wie obiges `dpkg -s Paketname`, ist jedoch noch
+ausführlicher. Neben einer übersetzten Paketbeschreibung (Lokalisierung,
+sofern vorhanden) erscheinen zusätzlich die Debtags (siehe
 <<erweiterte-paketklassifikation-mit-debtags>>) zum Paket, der Dateiname
 und Pfad im Paketmirror und die GPG-Keys zur Validierung des Pakets
 (siehe <<bezogenes-paket-verifizieren>>).
 
-//.Status des Paketes 'htop' mit `apt-cache` ermitteln
+.Status des Paketes 'htop' mit `apt-cache` ermitteln
 ----
 $ apt-cache show htop
 Package: htop
@@ -133,7 +134,7 @@ Sie Paketabhängigkeiten und die verfügbaren Übersetzungen ermitteln
 können. Detaillierter gehen wir auf die Ermittlung der einfachen und
 umgekehrten Paketabhängigkeiten in <<paketabhaengigkeiten-anzeigen>> ein.
 
-//.Detailansicht zum Paket 'htop' via `apt-cache showpkg`
+.Detailansicht zum Paket 'htop' via `apt-cache showpkg`
 ----
 $ apt-cache showpkg htop
 Package: htop
@@ -192,7 +193,7 @@ automatisch bzw. manuell installierten Pakete an. Die nachfolgende
 Ausgabe zeigt letzteres, auf automatisch installierte Pakete gehen wir
 in <<automatisch-installierte-pakete-anzeigen>> genauer ein.
 
-//.Manuell installierte Pakete anzeigen
+.Manuell installierte Pakete anzeigen
 ----
 $ apt-mark showmanual '.*tex$'
 dblatex
@@ -200,12 +201,16 @@ texlive-xetex
 $
 ----
 
+// Stichworte für den Index
+(((apt-mark, hold)))
+(((apt-mark, unhold)))
+(((apt-mark, showhold)))
 Für Pakete, deren aktueller Zustand gehalten werden soll, hilft Ihnen
 dieser Aufruf mit dem Schalter `showhold`. Hier sehen Sie das in
 Kombination mit den beiden Schaltern `hold` und `unhold` zum Setzen und
 Entfernen der Markierung am Beispiel des Pakets 'xpdf'.
 
-//.Pakete, deren Zustand gehalten wird
+.Pakete, deren Zustand gehalten wird
 ----
 # apt-mark hold xpdf
 xpdf auf Halten gesetzt.
