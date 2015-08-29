@@ -19,7 +19,7 @@ werden, bietet Ihnen das Programm daher die entsprechende Option `-s`
 der Simulation für die vorgemerkten Paketoperationen analog zu
 <<fig.aptitude-vormerkungen>> in <<bestehende-vormerkungen-anzeigen>>.
 
-//.Zukünftige Aktionen auflisten durch Simulation
+.Zukünftige Aktionen auflisten durch Simulation
 ----
 # aptitude install -s
 Die folgenden NEUEN Pakete werden zusätzlich installiert:
