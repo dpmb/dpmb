@@ -32,7 +32,7 @@ Bitte schließen Sie den Suchausdruck in einfache oder doppelte
 Hochkommata ein, damit die Shell nicht versucht, den Platzhalter selbst
 auszuwerten.
 
-//.Fahndung nach den Paketen für 'xpdf' mittels `dpkg`
+.Fahndung nach den Paketen für 'xpdf' mittels `dpkg`
 ----
 $ dpkg -l 'xpdf*'
 Gewünscht=Unbekannt/Installieren/R=Entfernen/P=Vollständig Löschen/Halten
@@ -80,7 +80,7 @@ als Suchbegriff. Nachfolgend sehen Sie das Suchergebnis zum Paket
 'lintian' <<Debian-Paket-lintian>>. Es zeigt das gefundene Paket sowie
 dessen Kurzbeschreibung dazu an.
 
-//.Suche nach einem Paket
+.Suche nach einem Paket
 ----
 $ apt-cache search lintian
 dput - Debian package upload tool
@@ -138,7 +138,7 @@ das Textfragment zur Recherche. Beispielhaft interessierte uns das Paket
 dass insgesamt drei Pakete verfügbar sind, die 'xpdf' im Namen tragen.
 Davon ist nur das erste auf dem System installiert.
 
-//.Suche nach 'xpdf' mittels `aptitude`
+.Suche nach 'xpdf' mittels `aptitude`
 ----
 $ aptitude search xpdf
 i   xpdf          - Leseprogramm für das Portable Document Format (PDF)
