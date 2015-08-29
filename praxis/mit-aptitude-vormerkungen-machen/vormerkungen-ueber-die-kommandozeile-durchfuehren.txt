@@ -21,7 +21,7 @@ abschließende Kommando 'search' gibt Ihnen eine Übersicht zu den
 Paketoperationen, die sich `aptitude` nun gemerkt hat und welche Pakete
 zur Änderung anstehen (siehe auch <<bestehende-vormerkungen-anzeigen>>).
 
-//.Vormerkungen über die Kommandozeile durchführen
+.Vormerkungen über die Kommandozeile durchführen
 ----
 # aptitude --schedule-only install cssed
 # aptitude --schedule-only remove apt-doc
