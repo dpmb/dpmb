@@ -13,7 +13,7 @@ bestehenden Vormerkungen wieder aufzuheben. Für die _Kommandozeile_
 verfügt `aptitude` über ein Unterkommando namens `keep-all`. Sie rufen
 es ohne weitere Optionen auf, wie Ihnen die nachfolgende Ausgabe zeigt.
 
-//.Aufheben der Vormerkungen
+.Aufheben der Vormerkungen
 ----
 # aptitude keep-all
 Es werden keine Pakete installiert, aktualisiert oder entfernt.
