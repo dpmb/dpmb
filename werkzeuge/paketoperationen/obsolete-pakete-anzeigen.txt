@@ -10,13 +10,11 @@ Softwarepakete und insbesondere deren Verfügbarkeit unterliegen einem
 stetigen Wandel. Im Alltag kommt es ab und zu vor, dass ein Paket,
 welches Sie auf ihrem System installiert haben, nicht mehr von einem
 Paketmirror in aktualisierter Form beziehen können. Die Ursachen dafür
-können vielfältig sein{empty}footnote:[Raphael Hertzog: Debian Cleanup
-Tip #2: Get rid of obsolete packages,
-http://raphaelhertzog.com/2011/02/07/debian-cleanup-tip-2-get-rid-of-obsolete-packages/]:
+können sehr vielfältig sein <<Hertzog-Obsolete-Packages>>:
 
 * Das Paket wurde umbenannt und ist inzwischen unter einem anderen Namen
-verfügbar. Der Maintainer des Pakets hat die Übergangspakete
-(``transitional packages'' in <<uebergangs-und-metapakete>>) für die
+verfügbar. Der Maintainer des Pakets hat die Übergangspakete (siehe
+``transitional packages'' in <<uebergangs-und-metapakete>>) für die
 aktuelle Veröffentlichung unter dem bisherigen Namen belassen. Später
 wurden die Übergangspakete entfernt.
 
@@ -40,10 +38,10 @@ des Pakets angenommen und zusätzlich gab es nur wenige Nutzer. Das
 Debian-Team zur Qualitätssicherung könnte um dessen Entfernung gebeten
 haben.
 
-* Das Paket ist ein Kernel-Modul und wurde mit dem Werkzeug
-`module-assistant`{empty}footnote:[http://packages.debian.org/de/stable/module-assistant]
-gebaut und installiert{empty}footnote:[`module-assistant` war lange Zeit
-_die_ Methode, um Kernel-Module für den aktuell laufenden Kernel zu
+* Das Paket ist ein Kernel-Modul und wurde mit dem Werkzeug `module-assistant`
+<<Debian-Paket-module-assistant>> gebaut und
+installiert{empty}footnote:[`module-assistant` war lange Zeit _die_
+Methode, um Kernel-Module für den aktuell laufenden Kernel zu
 kompilieren und installieren, die lediglich als Quellcode verfügbar
 waren. Mittlerweile wurde es größtenteils durch `dkms` (für 'Dynamic
 Kernel Modules Support', dt.: Dynamische Kernel-Modul-Unterstützung)
@@ -80,7 +78,7 @@ entsprechende Kurzbeschreibung zum Paket. Sie sehen dabei auch, dass
 hierbei für das Paket 'pdfstudio' keine Kurzbeschreibung vorliegt und
 dieses damit nicht die üblichen Qualitätsstandards von Debian erfüllt.
 
-//.Suche nach obsoleten Paketen mittels `aptitude`
+.Suche nach obsoleten Paketen mittels `aptitude`
 ----
 $ aptitude search ~o
 i   cupswrapperhl2250dn - Brother HL2250DN CUPS wrapper driver
@@ -131,6 +129,5 @@ anderer Pakete über die definierten Paketabhängigketen verhindert.
 Dieser Schritt ist genauso abzuwägen wie der Wechsel zu einer anderen
 Software, welche vielleicht nicht in allen Punkten ihren Erwartungen und
 Bedürfnissen entspricht.
-
 
 // Datei (Ende): ./werkzeuge/paketoperationen/obsolete-pakete-anzeigen.txt
