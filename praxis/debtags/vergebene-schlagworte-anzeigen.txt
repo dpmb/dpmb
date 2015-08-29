@@ -24,7 +24,7 @@ Spiel, welches Ihnen aus der Ausgabe jeweils die spezifische Zeile mit
 den Debtags herausfischt. Im ersten Fall benötigt `grep` den Paketnamen,
 hier beispielhaft am Paket 'xpdf' zu sehen.
 
-//.Auflistung der vergebenen Schlagwörter samt Wert für das Paket 'xpdf' anhand von `debtags cat`
+.Auflistung der vergebenen Schlagwörter samt Wert für das Paket 'xpdf' anhand von `debtags cat`
 ----
 $ debtags cat | grep xpdf
 xpdf: implemented-in::c++, interface::x11, role::program, scope::application, uitoolkit::motif, use::viewing, works-with-format::pdf, works-with::text, x11::application
@@ -35,7 +35,7 @@ Im zweiten Fall ist lediglich die Zeile mit dem Stichwort `Tag`
 interessant – nachfolgend wiederum beispielhaft am Paket 'xpdf' zu
 sehen.
 
-//.Auflistung der vergebenen Schlagwörter samt Wert für das Paket 'xpdf' anhand von `debtags show`
+.Auflistung der vergebenen Schlagwörter samt Wert für das Paket 'xpdf' anhand von `debtags show`
 ----
 $ debtags show xpdf | grep Tag
 Tag: implemented-in::c++, interface::x11, role::program, scope::application, uitoolkit::motif, use::viewing, works-with-format::pdf, works-with::text, x11::application
@@ -47,7 +47,7 @@ Zeile in alphabetisch aufsteigender Abfolge, was bspw. im Rahmen einer
 Weiterverarbeitung durch Skripte nützlich ist. Für das Paket `xpdf`
 sieht das wie folgt aus:
 
-//.Auflistung der vergebenen Schlagwörter samt Wert für das Paket 'xpdf' anhand von `debtags tag ls`
+.Auflistung der vergebenen Schlagwörter samt Wert für das Paket 'xpdf' anhand von `debtags tag ls`
 ----
 $ debtags tag ls xpdf
 implemented-in::c++
@@ -81,7 +81,7 @@ Schalters `--facets`, welches Sie wiederum über das UNIX-Kommando `grep`
 und dem Paketnamen filtern. Nachfolgend sehen Sie das für die Recherche
 zum Paket 'apt-move' <<Debian-Paket-apt-move>>.
 
-//.Auflistung der vergebenen Schlagwörter ohne Wert für das Paket 'apt-move'
+.Auflistung der vergebenen Schlagwörter ohne Wert für das Paket 'apt-move'
 ----
 $ debtags grep --facets | grep apt-move
 apt-move: hardware, implemented-in, interface, role, scope, suite, use, works-with
