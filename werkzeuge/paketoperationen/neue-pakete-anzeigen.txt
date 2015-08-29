@@ -14,12 +14,13 @@ nicht mehr als neu.
 // Stichworte für den Index
 (((aptitude, search ~N])))
 (((aptitude, search ?new)))
+(((Pakete, neue Pakete anzeigen)))
 `aptitude` verfügt mit `~N` (Langform `?new`) über ein Suchmuster, um
 diese Pakete aufzuspüren. Als Kennung beginnt jede ausgegebene Zeile mit
 dem Kleinbuchstaben `p`, gefolgt vom Paketnamen und der
 Kurzbeschreibung zum Paket.
 
-//.Auflistung aller neuen Pakete mittels `aptitude` (Auszug)
+.Auflistung aller neuen Pakete mittels `aptitude` (Auszug)
 ----
 $ aptitude search ~N
 p   0ad              - Echtzeit-Strategiespiel über antike Kriegs
@@ -30,4 +31,5 @@ p   2vcard           - Perl-Skript zur Konvertierung eines Adress
 ...
 $
 ----
+
 // Datei (Ende): ./werkzeuge/paketoperationen/neue-pakete-anzeigen.txt
