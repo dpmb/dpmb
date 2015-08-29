@@ -15,7 +15,7 @@ einen oder mehrere exakte Paketnamen angeben. Diese Liste trennen Sie
 durch Leerzeichen, wobei die Reihenfolge der genannten Pakete im
 Allgemeinen keine Rolle spielt:
 
-//.Installation mehrerer Pakete mittels APT
+.Installation der Pakete `xpdf`, `kile` und `cssed` mittels APT in einem Aufruf
 ----
 # apt-get install xpdf kile cssed
 ...
@@ -29,7 +29,7 @@ insbesondere die Kommandozeilenwerkzeuge `dpkg`, APT, `aptitude` und
 `ara`. Bei den graphischen Programmen wird das sehr unterschiedlich
 gehandhabt.
 
-//.Auflistung aller Dokumentationspakete zu `aptitude` über ein Muster
+.Auflistung aller Dokumentationspakete zu `aptitude` über ein Muster
 ----
 # dpkg -l aptitude-doc*
 Gewünscht=Unbekannt/Installieren/R=Entfernen/P=Vollständig Löschen/Halten
@@ -58,7 +58,7 @@ werden nur die Pakete berücksichtigt, die für die angegebene Architektur
 bereitstehen. Benennen Sie keine Architektur explizit, werden die Pakete
 ihrer Systemarchitektur benutzt.
 
-//.Suche nach Paketen für die Architektur 'i386'
+.Suche nach Paketen für die Architektur 'i386'
 ----
 # dpkg -l "*:i386"
 Desired=Unknown/Install/Remove/Purge/Hold
