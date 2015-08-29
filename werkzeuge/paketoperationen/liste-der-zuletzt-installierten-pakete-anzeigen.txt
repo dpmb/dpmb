@@ -9,6 +9,7 @@
 // Stichworte für den Index
 (((Logdatei, /var/log/dpkg.log])))
 (((logrotate)))
+(((Paket installieren, zuletzt installierte Pakete anzeigen)))
 Als Verantwortlicher für ihr Linuxsystem möchten Sie ab und an wissen,
 was zuletzt auf dem System passiert ist. Dazu zählt insbesondere das
 Auswerten der Logdateien und beinhaltet die Änderungen der Paketliste –
@@ -21,7 +22,7 @@ Dateien `/var/log/dpkg.log.1` und `/var/log/dpkg.log.2.gz` wieder.
 Nachfolgender Auszug zeigt die Suche in der aktuellen Logdatei von
 `dpkg` mittels `grep` anhand des Schlüsselwortes ``install''.
 
-//.Recherche in den Logdateien von `dpkg` mittels `grep`
+.Recherche in den Logdateien von `dpkg` mittels `grep`
 ----
 $ grep " install " /var/log/dpkg.log
 2014-08-06 15:12:19 install texlive-games:all <keine> 2012.20120611-2
@@ -36,8 +37,8 @@ Reicht Ihnen dieses Ergebnis noch nicht aus, suchen Sie zusätzlich noch
 in allen wegrotierten Logdateien. In Anwendung kommt hier das Kommando
 `zcat` aus dem Paket 'gzip', welches ein 'essentielles' Paket darstellt.
 Dies ist auf einer Standard-Installation der Fall. Es gibt jedoch auch
-noch eine alternative Implementation im Paket
-`zutils`{empty}footnote:[http://packages.debian.org/de/stable/zutils].
+noch eine alternative Implementation im Paket `zutils`
+<<Debian-Paket-zutils>>.
 
 Untenstehende Ausgabe wurde zusätzlich mittels `sort` aufsteigend nach
 Datum sortiert, d.h. die untersten Einträge enthalten die jüngsten
@@ -48,7 +49,7 @@ die Ausgabe des Rechercheergebnisses auf lediglich zehn Einträge.
 (((Debianpaket, zutils)))
 (((zcat, -f)))
 
-//.Recherche in den Logdateien von `dpkg` mittels `zcat`
+.Recherche in den Logdateien von `dpkg` mittels `zcat`
 ----
 $ zcat -f /var/log/dpkg.log* | grep " install " | sort | tail
 2014-07-23 20:18:35 install libparse-debianchangelog-perl:all <keine> 1.2.0-1
@@ -78,7 +79,7 @@ werden:
 // Stichworte für den Index
 (((zgrep, -h)))
 
-//.Recherche in den Logdateien von `dpkg` mittels `zgrep`
+.Recherche in den Logdateien von `dpkg` mittels `zgrep`
 ----
 $ zgrep -h " install " /var/log/dpkg.log* | sort | tail -7
 2014-07-23 20:18:37 install lintian:all <keine> 2.5.10.4
@@ -90,4 +91,5 @@ $ zgrep -h " install " /var/log/dpkg.log* | sort | tail -7
 2014-08-08 19:42:14 install ocrad:i386 <keine> 0.22~rc1-2
 $
 ----
+
 // Datei (Ende): ./werkzeuge/paketoperationen/liste-der-zuletzt-installierten-pakete-anzeigen.txt
