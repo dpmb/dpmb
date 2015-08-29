@@ -14,14 +14,14 @@
 (((Debianpaket, debian-goodies)))
 Zur Lösung dieser Aufgabe steht Ihnen das Programm `dgrep` mit seinen
 drei Varianten `degrep`, `dfgrep` und `dzgrep` aus dem Paket
-'debian-goodies'{empty}footnote:[http://packages.debian.org/de/stable/debian-goodies]
- zur Verfügung. Dieses Shellskript kombiniert das Programm `dpkg` mit
-dem Suchwerkzeug `grep` und dessen Kollegen `egrep`, `fgrep` und `zgrep`
-miteinander. Je nach Bedarf suchen Sie darüber entweder in den Dateien
-aller bereits installierten Pakete oder lediglich in einer Auswahl
-davon. Nutzen Sie `dzgrep`, werden auch komprimierte Dateien in die
-Recherche mit einbezogen. Die Auflösung, welche Datei zu einem Paket
-gehört, erfolgt über das Programm `dglob` aus dem gleichen Paket.
+'debian-goodies' <<Debian-Paket-debian-goodies>> zur Verfügung. Dieses
+Shellskript kombiniert das Programm `dpkg` mit dem Suchwerkzeug `grep`
+und dessen Kollegen `egrep`, `fgrep` und `zgrep` miteinander. Je nach
+Bedarf suchen Sie darüber entweder in den Dateien aller bereits
+installierten Pakete oder lediglich in einer Auswahl davon. Nutzen Sie
+`dzgrep`, werden auch komprimierte Dateien in die Recherche mit
+einbezogen. Die Auflösung, welche Datei zu einem Paket gehört, erfolgt
+über das Programm `dglob` aus dem gleichen Paket.
 
 Aufgrund der Verknüpfung der Programme können Sie zur Recherche nach dem
 gesuchten Muster auch die meisten der Optionen, die Sie von den
@@ -38,7 +38,7 @@ auftrat, und in der rechten Spalte das Muster samt Kontext drumherum.
 // Stichworte für den Index
 (((dgrep, --color regular)))
 
-//.Suche nach dem Vorkommen des Musters `regular` im Paket 'bash-doc'
+.Suche nach dem Vorkommen des Musters `regular` im Paket 'bash-doc'
 ----
 $ dgrep --color regular bash-doc
 /usr/share/doc/bash/examples/scripts.v2/where:    # Find all pattern matches that are executable regular files.
@@ -59,7 +59,7 @@ Suchergebnisses nach dem Muster `regular` über alle installierten Pakete
 ohne Berücksichtigung der Groß- und Kleinschreibung (Option `-i` bzw.
 `--ignore-case` in der Langfassung).
 
-//.Suche nach dem Vorkommen des Musters `regular` in allen installierten Paketen (Kurzfassung)
+.Suche nach dem Vorkommen des Musters `regular` in allen installierten Paketen (Kurzfassung)
 ----
 $ dgrep -l -i regular bash-doc
 /usr/lib/perl5/XML/LibXML/Error.pm
@@ -76,4 +76,5 @@ $ dgrep -l -i regular bash-doc
 ...
 $
 ----
+
 // Datei (Ende): ./werkzeuge/paketoperationen/nach-muster-in-einem-paket-suchen.txt
