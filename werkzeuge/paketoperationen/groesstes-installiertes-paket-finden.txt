@@ -17,12 +17,10 @@
 Mit dem Programm `dpigs`{empty}footnote:[``pig'' ist Englisch für
 Schwein bzw. Sau. Es geht sozusagen um Debianpakete, die den
 Plattenplatz versauen, auch bekannt als ``Plattenplatzschweine''.] aus
-dem Paket
-'debian-goodies'{empty}footnote:[http://packages.debian.org/de/stable/debian-goodies]
-zeigen Sie die Programme bzw. Programmpakete an, die den meisten
-Speicherplatz auf ihrem Debiansystem belegen. Es wertet dazu die Ausgabe
-des Kommandos `grep-status` aus dem Paket
-'dctrl-tools'{empty}footnote:[http://packages.debian.org/de/stable/dctrl-tools]
+dem Paket 'debian-goodies' <<Debian-Paket-debian-goodies>> zeigen Sie
+die Programme bzw. Programmpakete an, die den meisten Speicherplatz auf
+ihrem Debiansystem belegen. Es wertet dazu die Ausgabe des Kommandos
+`grep-status` aus dem Paket 'dctrl-tools' <<Debian-Paket-dctrl-tools>>
 aus. Ausführlicher besprechen wir die Werkzeuge im Abschnitt Schlagworte
 verwenden (Debtags) (siehe <<suche-anhand-der-schlagworte>>)].
 
@@ -30,7 +28,7 @@ Ein Aufruf ohne weitere Parameter listet Ihnen die zehn größten
 Speicherfresser auf ihrem System auf. Dabei enthält die erste Spalte die
 Größe in Kilobyte und die zweite Spalte den Paketnamen.
 
-//.Ausgabe von `dpigs`
+.Ausgabe von `dpigs`
 ----
 $ dpigs
 399871 texlive-fonts-extra
@@ -62,7 +60,7 @@ readable'. Kombinieren Sie die drei genannten Schalter, sieht die
 Recherche nach den fünf großen Paketen auf einem Desktopsystem in etwa
 folgendermaßen aus:
 
-//.Ausgabe von `dpigs` mit Einschränkung auf die fünf Spitzenreiter in menschenlesbarer Form
+.Ausgabe von `dpigs` mit Einschränkung auf die fünf Spitzenreiter in menschenlesbarer Form
 ----
 $ dpigs -S --lines=5 -H
    1.0G texlive-extra
@@ -111,7 +109,7 @@ anschließende Aufruf des Kommandos `tail` ohne weitere Optionen
 beschränkt die Darstellung auf die letzten zehn Zeilen der Ausgabe von
 `aptitude` und somit die zehn größten Pakete.
 
-//.Suche nach den größten installierten Paketen mit `aptitude` (Namensliste)
+.Suche nach den größten installierten Paketen mit `aptitude` (Namensliste)
 ----
 $ aptitude search --sort installsize '~i' | tail
 i A cube2-data                 - demo game and content for the Cube2 engine
@@ -147,7 +145,7 @@ name''). Nachfolgende Darstellung ist aufsteigend, d.h. das
 zehntkleinste Paket sehen Sie in der ersten und das größte in der
 letzten Zeile der Auflistung.
 
-//.Suche nach den größten Paketen mit `aptitude` (Größe und Paketname), aufsteigende Sortierung
+.Suche nach den größten Paketen mit `aptitude` (Größe und Paketname), aufsteigende Sortierung
 ----
 $ aptitude search -F '%I %p' --sort installsize '~i' | tail
 272 MB   cube2-data
@@ -163,15 +161,15 @@ $ aptitude search -F '%I %p' --sort installsize '~i' | tail
 $
 ----
 
-Für eine umgekehrte, absteigende Darstellung kommt noch das
+Für eine umgekehrte, absteigende Darstellung kommt noch das hilfreiche
 UNIX-Kommando `tac` ins Spiel. Über eine Pipe leiten Sie die Ausgabe von
-`tail` and `tac` weiter. Dieses dreht die Ausgabe um, sodass die
-letzte Zeile zuerst ausgegeben wird, danach die vorletzte u.s.w. Die
+`tail` and `tac` weiter. Dieses dreht die Ausgabe um, sodass die letzte
+Zeile zuerst ausgegeben wird, danach die vorletzte u.s.w. Die
 nachfolgende Ausgabe zeigt eine Auflistung der fünf größten Pakete in
 absteigender Reihenfolge. Da `tail` ohne Parameter stets 10 Zeilen
 ausgibt, wurde dessen Aufruf noch um die Angabe `-5` ergänzt.
 
-//.Suche nach den größten Paketen mit `aptitude` (Größe und Paketname), absteigende Sortierung
+.Suche nach den größten Paketen mit `aptitude` (Größe und Paketname), absteigende Sortierung
 ----
 $ aptitude search -F '%I %p' --sort installsize '~i' | tail -5 | tac
 1359 MB  0ad-data
