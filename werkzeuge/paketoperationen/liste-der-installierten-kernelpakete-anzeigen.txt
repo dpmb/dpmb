@@ -10,19 +10,18 @@
 (((Debianpaket, dlocate)))
 (((dlocate, -k)))
 (((dlocate, -K)))
-Bei dieser Aufgabe hilft Ihnen das Werkzeug
-`dlocate`{empty}footnote:[https://packages.debian.org/de/stable/dlocate]
-und zeigt Ihnen an, welche Linux-Kernel und dazugehörigen Pakete auf
-ihrem Linuxsystem installiert sind. Es kennt dazu zwei Aufrufvarianten –
-`dlocate -k` für die Basisinformationen und `dlocate -K` für eine
-ausführlichere Darstellung.
+Bei dieser Aufgabe hilft Ihnen das Werkzeug `dlocate`
+<<Debian-Paket-dlocate>> und zeigt Ihnen an, welche Linux-Kernel und
+dazugehörigen Pakete auf ihrem Linuxsystem installiert sind. Es kennt
+dazu zwei Aufrufvarianten – `dlocate -k` für die Basisinformationen und
+`dlocate -K` für eine ausführlichere Darstellung.
 
 Die Basisvariante enthält lediglich eine Auflistung der installierten
 Pakete und zeigt daher nur den Paketnamen (siehe
 <<benennung-eines-debian-pakets>>) an. Die Ausgabe erfolgt dabei ohne
 Sortierung.
 
-//.Auflistung der installierten Kernelpakete mit `dlocate`
+.Auflistung der installierten Kernelpakete mit `dlocate`
 ----
 $ dlocate -k
 linux-image-686-pae
@@ -38,7 +37,7 @@ Die ausführliche Darstellung entspricht einer Ausgabe von `dpkg`
 und zeigt den Installationsstatus, den Paketnamen, die Version und die
 Paketbeschreibung.
 
-//.Auflistung der installierten Kernelpakete analog zu `dpkg`
+.Auflistung der installierten Kernelpakete analog zu `dpkg`
 ----
 $ dlocate -K
 Desired=Unknown/Install/Remove/Purge/Hold
