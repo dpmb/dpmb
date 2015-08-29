@@ -6,6 +6,8 @@
 
 === Paketabhängigkeiten anzeigen ===
 
+// Stichworte für den Index
+(((Paketabhängigkeiten, verstehen)))
 Wie in der Einführung zum Buch bereits genannt, besteht Debian aus einer
 riesigen Menge einzelner Pakete. Dabei werden größere, komplexe
 Funktionalitäten in kleine, separate Bausteine zerlegt. Diese Bausteine
@@ -25,23 +27,26 @@ Aufrechterhaltung eines sauberen Paketbestands durchzuführen sind.
 
 ==== Paketabhängigkeiten auflisten ====
 
+// Stichworte für den Index
+(((apt-cache, depends)))
+(((apt-cache, show)))
+(((Paketabhängigkeiten, auflisten)))
 Dazu stehen Ihnen einerseits das Werkzeug `apt-cache` mit den beiden
 Unterkommandos `show` und `depends` zur Verfügung, andererseits auch
 `aptitude` mit speziellen Suchoptionen. Als weitere Information
 benötigen beide Programme noch den Namen des Pakets, zu dem es die
 Paketabhängigkeiten ausgeben sollen.
 
-Die nachfolgenden Ausgaben illustrieren die Wirkung zum Paket 'xpdf'.
-Während die erste Ausgabe auf `apt-cache show` in Verbindung mit dem
-UNIX-Kommando `grep` und einer Pipe zurückgreift, um aus der
+Die beiden nachfolgenden Ausgaben illustrieren die Wirkung zum Paket
+'xpdf'. Die erste Ausgabe greift auf `apt-cache show` in Verbindung mit
+dem UNIX-Kommando `grep` und einer Pipe zurück, um aus der
 Paketbeschreibung die entsprechende Zeile mit den Abhängigkeiten
-herauszufiltern, sehen Sie in der zweiten Darstellung das Unterkommando
-`depends`.
+herauszufiltern.
 
 // Stichworte für den Index
 (((apt-cache, show)))
 
-//.Suche mittels `grep` in der Ausgabe von `apt-cache`
+.Suche mittels `grep` in der Ausgabe von `apt-cache`
 ----
 $ apt-cache show xpdf | grep Depends
 Depends: lesstif2 (>= 1:0.94.4), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libpoppler19 (>= 0.18.4), libstdc++6 (>= 4.1.1), libx11-6, libxt6
@@ -51,7 +56,12 @@ $
 // Stichworte für den Index
 (((apt-cache, depends)))
 
-//.Detaillierte Ausgabe der Paketabhängigkeiten
+In der zweiten Darstellung sehen Sie den Einsatz des Unterkommandos
+`depends`. Jedes benötigte Debianpaket wird in einer einzelnen Zeile
+in alphabetisch aufsteigender Reihenfolge und ohne die Versionsnummer
+ausgegeben.
+
+.Detaillierte Ausgabe der Paketabhängigkeiten
 ----
 $ apt-cache depends xpdf
 xpdf
@@ -69,9 +79,11 @@ xpdf
 $
 ----
 
-Ohne weitere Optionen werden in der Ausgabe alle Abhängigkeiten und
-Empfehlungen zu dem Paket sichtbar. Mit den folgenden Optionen
-spezifizieren Sie die Ausgabe noch genauer:
+// Stichworte für den Index
+(((Paketabhängigkeiten, Auflistung einschränken)))
+Ohne weitere Optionen enthält die Ausgabe alle Abhängigkeiten und
+Empfehlungen zu dem Paket. Mit den folgenden Optionen spezifizieren Sie
+die Ausgabe noch genauer.
 
 `-i` (Langform `--important`):: 
 Einschränkung auf die wichtigen Abhängigkeiten, d.h. nur unerfüllte
@@ -108,7 +120,7 @@ Eine Anwendung der Optionen zeigt die nachfolgende Ausgabe, hier für das
 Paket 'xfce4' und mit der Option `--no-depends`. Angezeigt werden nur
 die vorgeschlagenen und empfohlenen Pakete zu 'xfce4'.
 
-//.Ausgabe der vorgeschlagenen und empfohlenen Pakete zu 'xfce4'
+.Ausgabe der vorgeschlagenen und empfohlenen Pakete zu 'xfce4'
 ----
 $ apt-cache depends xfce4 --no-depends
 xfce4
@@ -136,7 +148,7 @@ der Pakete mit deren Installationsstatus, Paketnamen und
 Kurzbeschreibung (siehe dazu Liste der installierten Pakete anzeigen und
 deuten in <<liste-der-installierten-pakete-anzeigen-und-deuten>>).
 
-//.Ausgabe der Paketabhängigkeiten mit `aptitude`
+.Ausgabe der Paketabhängigkeiten mit `aptitude`
 ----
 $ aptitude search ~Dxpdf
 p   eficas               - Graphical editor for Code Aster command files
@@ -153,6 +165,7 @@ $
 (((apt-cache, rdepends)))
 (((apt-rdepends)))
 (((Debianpaket, apt-rdepends)))
+(((Paketabhängigkeiten, Rückwärtsabhängigkeiten auflisten)))
 Diese Aktivität übersetzen Sie mit der Frage ``Welche anderen Pakete
 benötigt Paket 'x'?'', auch genannt 'Rückwärtsabhängigkeit'. Zur
 Beantwortung der Frage helfen Ihnen einerseits wiederum `apt-cache` mit
@@ -161,7 +174,7 @@ aus dem gleichnamigen Paket
 'apt-rdepends'{empty}footnote:[http://packages.debian.org/de/stable/apt-rdepends]
 und auch `aptitude` selbst weiter.
 
-//.Ausgabe der umgekehrten Paketabhängigkeiten mit `apt-cache` für das Paket 'xfce4'
+.Ausgabe der umgekehrten Paketabhängigkeiten mit `apt-cache` für das Paket 'xfce4'
 ----
 $ apt-cache rdepends xfce4
 xfce4
@@ -179,7 +192,7 @@ Deutlicher wird `apt-rdepends`, da es die Abhängigkeiten noch weitaus
 stärker auflöst. Nachfolgende Darstellung zeigt daher nur einen
 Ausschnitt.
 
-//.Ausgabe der umgekehrten Paketabhängigkeiten mit `apt-rdepends` (Ausschnitt)
+.Ausgabe der umgekehrten Paketabhängigkeiten mit `apt-rdepends` (Ausschnitt)
 ----
 $ apt-rdepends xfce4 | more
 Reading package lists... Done
@@ -209,13 +222,13 @@ $
 (((apt-rdepends, -d)))
 (((dotty)))
 (((Debianpaket, graphviz)))
+(((Paketabhängigkeiten, graphisch darstellen)))
 Das Ergebnis von `apt-rdepends` wird vielleicht leichter verständlich,
 wenn Sie die Paketabhängigkeiten graphisch darstellen. Dabei hilft Ihnen
-das Programm `dotty` aus dem Paket
-'graphviz'{empty}footnote:[http://www.graphviz.org/]. Für das Paket
-'tcpdump' sieht der Aufruf wie folgt aus:
+das Programm `dotty` aus dem Paket 'graphviz' <<Graphviz>>. Für das
+Paket 'tcpdump' sieht der Aufruf wie folgt aus.
 
-//.Erzeugung der Abhängigkeiten als Dot-Datei
+.Erzeugung der Abhängigkeiten als Dot-Datei
 ----
 $ apt-rdepends -d tcpdump | dot > tcpdump.dot
 Reading package lists... Done
@@ -228,7 +241,7 @@ Das Ergebnis der von `apt-rdepends` zu `dot` weitergeleiteten und in der
 Datei `tcpdump.dot` abgespeicherten Relationsmenge zeigen Sie
 mit dem Programm `dotty` an (siehe <<fig.tcpdump-apt-rdepends>>).
 
-//.Aufruf von `dotty`
+.Aufruf von `dotty`
 ----
 $ dotty tcpdump.dot
 $
@@ -240,13 +253,14 @@ image::werkzeuge/paketoperationen/tcpdump-apt-rdepends.png[id="fig.tcpdump-apt-r
 // Stichworte für den Index
 (((aptitude, search reverse-depends)))
 (((aptitude, search ~R)))
+(((Paketabhängigkeiten, Rückwärtsabhängigkeiten auflisten)))
 Zur Suche nach umgekehrten Paketabhängigkeiten hilft Ihnen `aptitude`
 mit dem Suchmuster `~Rmuster` als Abkürzung für 'reverse-depends'.
 Dieses Suchmuster kombinieren Sie wieder mit dem Unterkommando `search`
 und dem Namen oder Textfragment eines Pakets. Für das Paket 'xfce4'
 erhalten Sie nachfolgende Ausgabe:
 
-//.Ausgabe der umgekehrten Paketabhängigkeiten mit `aptitude` (Ausschnitt)
+.Ausgabe der umgekehrten Paketabhängigkeiten mit `aptitude` (Ausschnitt)
 ----
 $ aptitude search ~Rxfce4
 p   aterm                - Afterstep XVT - ein VT102 Emulatur für das
@@ -270,7 +284,7 @@ direkt bedingen, hilft Ihnen `apt-rdepends` mit der Option `-r`.
 Nachfolgend zeigt es die definierte Abhängigkeit zwischen den beiden
 Paketen 'xfce4' und 'task-xfce-desktop'.
 
-//.Ausgabe sich gegenseitig bedingender Pakete mit `apt-rdepends`
+.Ausgabe sich gegenseitig bedingender Pakete mit `apt-rdepends`
 ----
 $ apt-rdepends xfce4 -r
 Reading package lists... Done
@@ -286,16 +300,15 @@ $
 
 // Stichworte für den Index
 (((apt-get, check)))
+(((Paketabhängigkeiten, des gesamten Systems überprüfen)))
 APT liefert über das Werkzeug `apt-get` und dessen Unterkommando `check`
 ein kleines Diagnosewerkzeug mit. Es aktualisiert den
 Paketzwischenspeicher (siehe <<paketcache>>) und prüft, ob auf ihrem
 Linuxsystem beschädigte Abhängigkeiten vorliegen. Das beinhaltet alle
 installierten Pakete sowie die bereits entpackten, aber noch nicht
-konfigurierten Pakete{empty}footnote:[Frank Ronneburg: Das
-Debiananwenderhandbuch, Die Optionen von APT,
-http://debiananwenderhandbuch.de/apt-get.html].
+konfigurierten Pakete <<Debian-Anwenderhandbuch-apt-optionen>>.
 
-//.Prüfung auf beschädigte Abhängigkeiten mit `apt-get check`
+.Prüfung auf beschädigte Abhängigkeiten mit `apt-get check`
 ----
 # apt-get check
 Paketlisten werden gelesen... Fertig
@@ -310,6 +323,7 @@ Statusinformationen werden eingelesen.... Fertig
 
 // Stichworte für den Index
 (((apt-cache, unmet)))
+(((Paketabhängigkeiten, unerfüllten Abhängigkeiten auflisten)))
 Das Werkzeug `apt-cache` zeigt Ihnen eine Zusammenfassung aller
 unerfüllten Abhängigkeiten im Paketzwischenspeicher (siehe
 <<paketcache>>). Dazu bietet es das Unterkommando `unmet`, welches Sie
@@ -317,7 +331,7 @@ auch noch um einen Paketnamen bzw. eine Liste davon ergänzen können. Die
 dargestellte Liste zeigt die Funktionalität zum Paket 'wireshark' und
 beinhaltet auch die nicht installierten Vorschläge der Pakete.
 
-//.Auflistung aller unerfüllten Abhängigkeiten für Pakete, die mit 'wireshark' beginnen
+.Auflistung aller unerfüllten Abhängigkeiten für Pakete, die mit 'wireshark' beginnen
 ----
 $ apt-cache unmet wireshark*
 Paket wireshark Version 1.8.2-5wheezy10 hat eine unerfüllte Abhängigkeit:
@@ -337,4 +351,5 @@ Paket wireshark Version 1.8.2-5wheezy10 hat eine unerfüllte Abhängigkeit:
  Ersetzt: ethereal (< 1.0.0-3)
 $
 ----
+
 // Datei (Ende): ./werkzeuge/paketoperationen/paketabhaengigkeiten-anzeigen.txt
