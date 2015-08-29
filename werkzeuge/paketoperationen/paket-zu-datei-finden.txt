@@ -14,12 +14,11 @@
 Häufig ist Ihnen nur der Dateiname bekannt, aber nicht das Paket, aus
 dem diese Datei stammt. Das wird insofern spannend, wenn das Paket
 anders als die gesuchte Datei heißt. Es gibt vier Möglichkeiten, diese
-Zuordnung zu ermitteln – einerseits über `dpkg` oder
-`dlocate`{empty}footnote:[https://packages.debian.org/de/stable/dlocate]
-mit deren Option `-S Muster`, andererseits mittels `apt-file` und dessen
-Option `search Muster` und viertens über die Webseite des
-Debian-Projekts. `aptitude` verfügt nicht über einen solchen Schalter
-zur Suche.
+Zuordnung zu ermitteln – einerseits über `dpkg` oder `dlocate`
+<<Debian-Paket-dlocate>> mit deren Option `-S Muster`, andererseits
+mittels `apt-file` und dessen Option `search Muster` und viertens über
+die Webseite des Debian-Projekts. `aptitude` verfügt nicht über einen
+solchen Schalter zur Suche.
 
 Die drei Kommandos finden alle Pfade, in denen das angegebene ``Muster''
 vorkommt. Der Unterschied zwischen den drei Programmen besteht darin,
@@ -52,7 +51,7 @@ suchen. Beginnt das Textfragment mit einem `/`, wird die
 Zeichenkette als absoluter Pfad interpretiert. Nachfolgendes Beispiel
 illustriert den Aufruf nach dem Muster `aptsh` mittels `dpkg`.
 
-//.Suche nach dem Muster `aptsh` mittels `dpkg`
+.Suche nach dem Muster `aptsh` mittels `dpkg`
 ----
 $ dpkg -S aptsh
 aptsh: /usr/lib/aptsh/aptsh_ls
@@ -74,7 +73,7 @@ $
 Trefferrate. Nachfolgendes Beispiel zeigt die Suche nach dem absoluten
 Pfad `/xara-gtk` – sowohl für `dpkg`, als auch zu `dlocate` im Vergleich.
 
-//.Suche nach der Pfadangabe `/xara-gtk`
+.Suche nach der Pfadangabe `/xara-gtk`
 ----
 $ dpkg -S /xara-gtk
 dpkg-query: Kein Pfad gefunden, der auf Muster /xara-gtk passt
@@ -97,7 +96,7 @@ Paketquellen in `/etc/apt/sources.list/` und die Liste der Dateien in
 jedem der Pakete, die von dort bezogen werden. Letztere befindet sich im
 Verzeichnis `/var/cache/apt/apt-file/`.
 
-//.Liste der Paketquellen anzeigen
+.Liste der Paketquellen anzeigen
 ----
 $ ls /var/cache/apt/apt-file
 ftp.de.debian.org_debian_dists_wheezy_contrib_Contents-i386.gz
@@ -123,7 +122,7 @@ dynamisch ausgewählt, siehe dazu `/etc/apt/sources.list` verstehen
 (<<etc-apt-sources.list-verstehen>>) und Paketquellen über GeoIP auswählen
 (<<paketquellen-ueber-geoip-auswaehlen>>):
 
-//.Suchdatenbank von APT aktualisieren
+.Suchdatenbank von APT aktualisieren
 ----
 # apt-file update
 Downloading complete file http://http.debian.net/debian/dists/wheezy/main/Contents-i386.gz
@@ -224,7 +223,7 @@ Das nachfolgende Beispiel zeigt die Suche der Zeichenkette `aptsh`.
 Zusätzlich kommt der Schalter `-v` (Langform `--verbose`) zum Einsatz,
 um eine ausführlichere Ausgabe zu erhalten.
 
-//.Suche über die Strukturdatenbank mittels `apt-file`
+.Suche über die Strukturdatenbank mittels `apt-file`
 ----
 # apt-file -v show aptsh
 D: Using cache directory /var/cache/apt/apt-file
@@ -275,6 +274,5 @@ gewählten Veröffentlichung bzw. Architektur weiter ein.
 
 .Suche nach dem Paket 'xara-gtk' über die Webseite des Debian-Projekts (Suchergebnis)
 image::werkzeuge/paketoperationen/paketsuche-web2.png[id="fig.paketsuche-web2", width="50%"]
-
 
 // Datei (Ende): ./werkzeuge/paketoperationen/paket-zu-datei-finden.txt
