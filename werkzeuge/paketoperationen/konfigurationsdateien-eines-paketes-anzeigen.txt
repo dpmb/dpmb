@@ -13,6 +13,7 @@ welcher Stelle sich diese Dateien befinden.
 
 // Stichworte für den Index
 (((apt-file, show)))
+(((Paket, Konfigurationsdateien anzeigen)))
 Mit den beiden Werkzeugen `apt-file` und `dlocate` bringen Sie Licht ins
 Dunkel. Dabei werden jedoch nur die Konfigurationsdateien aufgespürt,
 die im jeweiligen Paket bereits mitgeliefert werden. Zusätzliche
@@ -26,11 +27,11 @@ Ihnen das Vorgehen unter <<paketinhalte-anzeigen-apt-file>>.
 // Stichworte für den Index
 (((dlocate, -conf)))
 Für _Variante 2_ nutzen Sie das Programm `dlocate` aus dem gleichnamigen
-Paket{empty}footnote:[https://packages.debian.org/de/stable/dlocate].
-`dlocate` kennt dazu den Schalter `-conf` gefolgt vom Paketnamen.
-Nachfolgend zeigen wir das für den PDF-Betrachter 'xpdf'.
+Paket <<Debian-Paket-dlocate>>. `dlocate` kennt dazu den Schalter
+`-conf` gefolgt vom Paketnamen. Nachfolgend zeigen wir das für den
+PDF-Betrachter 'xpdf'.
 
-//.Ermittlung der Konfigurationsdateien zum Paket 'xpdf' mittels `dlocate`
+.Ermittlung der Konfigurationsdateien zum Paket 'xpdf' mittels `dlocate`
 ----
 $ dlocate -conf xpdf
 /etc/xpdf/xpdfrc
@@ -45,7 +46,7 @@ deren Besitzer und Eigentümer sowie deren Größe und Zugriffsdatum, ist der
 Schalter `-lsconf` von großem Nutzen. Dieser bewirkt eine Ausgabe wie
 das Kommando `ls -la`, wie die nachfolgende Ausgabe deutlich macht:
 
-//.Ermittlung der Konfigurationsdateien zum Paket 'xpdf' mittels `dlocate` (ausführliche Ansicht)
+.Ermittlung der Konfigurationsdateien zum Paket 'xpdf' mittels `dlocate` (ausführliche Ansicht)
 ----
 $ dlocate -lsconf xpdf
 -rw-r--r-- 1 root root   43 Aug 21  2010 /etc/X11/Xresources/xpdf
