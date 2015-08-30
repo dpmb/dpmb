@@ -14,11 +14,10 @@
 Nutzen Sie keine netzbasierte Installation, sondern greifen auf die
 altbewährte Form anfassbarer Installationsmedien zurück, ist in diesem
 Fall das Programm `apt-cdrom` aus dem Paket 'apt' die richtige Wahl (das
-Paket mit dem ähnlichen Namen
-'apt-cdrom-setup'{empty}footnote:[http://packages.debian.org/de/stable/apt-cdrom-setup]
-ist für den Debian Installer vorgesehen). Damit fügen Sie ein
-bereitstehendes Installationsmedium zu Ihrer Liste der Paketquellen in
-der Datei `/etc/apt/sources.list` (siehe
+Paket mit dem ähnlichen Namen 'apt-cdrom-setup'
+<<Debian-Paket-apt-cdrom-setup>> ist lediglich für den Debian Installer
+vorgesehen). Damit fügen Sie ein bereitstehendes Installationsmedium zu
+Ihrer Liste der Paketquellen in der Datei `/etc/apt/sources.list` (siehe
 <<etc-apt-sources.list-verstehen>>) hinzu.
 
 Während vor wenigen Jahren noch eine CD gebräuchlich war, ist es heute
@@ -66,7 +65,7 @@ Beispielausgabe)
 Umbenennen eines Mediums. Ändert den Namen eines Mediums oder
 überschreibt den Namen, der dem Medium gegeben wurde.
 
-//.Identifikation eines Installationsmediums
+.Identifikation eines Installationsmediums
 ----
 # apt-cdrom ident
 Verwendeter CD-ROM-Einbindungspunkt: /media/cdrom/
