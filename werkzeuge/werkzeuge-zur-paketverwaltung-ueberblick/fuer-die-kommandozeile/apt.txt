@@ -6,6 +6,9 @@
 
 ==== APT ====
 
+// Stichworte für den Index
+(((Advanced Packaging Tool)))
+(((Debianpaket, apt)))
 APT ist das Debian-Programm für etwas komplexere Paketoperationen und
 steht als Abkürzung für 'Advanced Packaging Tool'. Sie finden es im
 Paket 'apt' <<Debian-Paket-apt>>, welches zur Standardinstallation
@@ -28,6 +31,13 @@ greift dabei aber nicht direkt auf `dpkg` zurück, sondern kapselt dafür
 die Aufrufe mit Hilfe der Bibliothek `libapt-pkg` (siehe dazu APT und
 Bibliotheken unter <<apt-und-bibliotheken>>).
 
+// Stichworte für den Index
+(((apt-cache)))
+(((apt-cdrom)))
+(((apt-config)))
+(((apt-get)))
+(((apt-key)))
+(((apt-mark)))
 APT umfasst ausschließlich Programme für die Kommandozeile. Dazu zählen
 `apt-cache`, `apt-cdrom` (siehe
 <<physische-installationsmedien-mit-apt-cdrom-einbinden>>), `apt-config`
@@ -58,6 +68,23 @@ die einzelnen APT-Werkzeuge bereithalten. Neben dem jeweiligen
 Unterkommando finden Sie den Verweis auf den entsprechenden Abschnitt im
 Buch, in dem wir auf dieses genauer eingehen.
 
+// Stichworte für den Index
+(((apt-cache, depends)))
+(((apt-cache, dotty)))
+(((apt-cache, dump)))
+(((apt-cache, dumpavail)))
+(((apt-cache, gencaches)))
+(((apt-cache, madison)))
+(((apt-cache, pkgnames)))
+(((apt-cache, policy)))
+(((apt-cache, rdepends)))
+(((apt-cache, search)))
+(((apt-cache, show)))
+(((apt-cache, showpkg)))
+(((apt-cache, showsrc)))
+(((apt-cache, stats)))
+(((apt-cache, unmet)))
+(((apt-cache, xvcg)))
 `apt-cache` bietet die folgenden Unterkommandos:
 
 `depends`:: 
@@ -96,11 +123,11 @@ Paket über den Namen finden (siehe <<pakete-ueber-den-namen-finden>>)
 `show`:: 
 Paketinformationen ausgeben und Paketstatus erfragen siehe (<<paketstatus-erfragen>>)
 
-`showpkg`:: 
-Informationen über das Paket anzeigen (siehe <<paketstatus-erfragen>>)
-
 `showsrc`:: 
 Informationen zum Sourcepaket anzeigen (siehe <<sourcepakete-anzeigen>>)
+
+`showpkg`:: 
+Informationen über das Paket anzeigen (siehe <<paketstatus-erfragen>>)
 
 `stats`:: 
 Statistik zum Paketcache ausgeben (siehe <<paketcache-status>>)
@@ -111,6 +138,21 @@ ausgeben (siehe Paketstatus erfragen in <<paketstatus-erfragen>>)
 
 `xvcg`:: einen Abhängigkeitsgraphen für 'xvcg' für die benannten Pakete erzeugen
 
+// Stichworte für den Index
+(((apt-get, autoclean)))
+(((apt-get, autoremove)))
+(((apt-get, build-dep)))
+(((apt-get, check)))
+(((apt-get, clean)))
+(((apt-get, dist-upgrade)))
+(((apt-get, download)))
+(((apt-get, dselect-upgrade)))
+(((apt-get, install)))
+(((apt-get, purge)))
+(((apt-get, remove)))
+(((apt-get, source)))
+(((apt-get, update)))
+(((apt-get, upgrade)))
 `apt-get` gehört mit Sicherheit zur Menge der gebräuchlichsten Kommandos
 der APT-Familie und verfügt über die folgenden Unterkommandos:
 
@@ -156,17 +198,34 @@ Paketliste aktualisieren (siehe <<liste-der-verfuegbaren-pakete-aktualisieren>>)
 `upgrade`:: 
 Pakete auf eine neue Version aktualisieren (siehe <<pakete-aktualisieren>>)
 
+// Stichworte für den Index
+(((apt-key, add)))
+(((apt-key, adv)))
+(((apt-key, del)))
+(((apt-key, export)))
+(((apt-key, exportall))
+(((apt-key, finger)))
+(((apt-key, list)))
+(((apt-key, netupdate)))
+(((apt-key, update)))
 Für `apt-key` sind die Unterkommandos `add`, `adv`, `del`, `export`,
 `exportall`, `finger`, `list`, `netupdate` und `update` zulässig. Diese
 besprechen wir ausführlich unter Paketquelle auf Echtheit überprüfen in
 <<paketquelle-auf-echtheit-ueberpruefen>>.
 
+// Stichworte für den Index
+(((apt-mark, auto)))
+(((apt-mark, manual)))
+(((apt-mark, showauto)))
+(((apt-mark, showmanual)))
 Die Unterkommandos von `apt-mark` lauten `auto`, `manual`, `showauto`
 und `showmanual`. Dazu gehen wir unter <<paketstatus-erfragen>>
 detailliert ein.
 
 // Absatz zusammengefasst -- ist ein Gedanke, der zusammengehört
 
+// Stichworte für den Index
+(((APT2)))
 Die *Weiterentwicklung von APT* geht stetig voran. Seit mehreren Jahren
 gibt es Bestrebungen, APT grundlegend zu erneuern bzw. dessen verteilte
 Funktionalität unter einer einzigen Benutzeroberfläche zusammenzufassen.
@@ -174,6 +233,15 @@ Unter dem Namen APT2 <<apt2>> existiert zwar ein Prototyp mit neuer API,
 jedoch gab es dort nach unserer Recherche seit 2011 keine weitere
 Entwicklung mehr.
 
+// Stichworte für den Index
+(((apt, edit-sources)))
+(((apt, full-upgrade)))
+(((apt, install)))
+(((apt, list)))
+(((apt, search)))
+(((apt, show)))
+(((apt, update)))
+(((apt, upgrade)))
 Eine weniger tiefgreifende, aber dennoch erfrischende Modernisierung
 gibt es seit *APT Version 1.0*. Von da an enthält das Paket 'apt' das
 zusätzliche, gleichnamige Kommandozeilenprogramm `apt`. Dieser
