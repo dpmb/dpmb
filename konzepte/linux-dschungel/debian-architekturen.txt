@@ -60,7 +60,11 @@ Bezeichnungen ohne viel Aufwand selbst.
 
 .Perl-Aufruf zur Ermittlung der GNU-Triplets einer Debian-Architektur
 ----
-$ perl -MDpkg::Arch=debarch_to_gnutriplet -E 'map { say "$_ = ".debarch_to_gnutriplet($_) } @ARGV' ppc64 powerpcspe arm armel armhf
+$ perl \
+    -MDpkg::Arch=debarch_to_gnutriplet \
+    -E 'map { say "$_ = ".debarch_to_gnutriplet($_) } @ARGV' \
+    ppc64 powerpcspe arm armel armhf
+
 ppc64 = powerpc64-linux-gnu
 powerpcspe = powerpc-linux-gnuspe
 arm = arm-linux-gnu
