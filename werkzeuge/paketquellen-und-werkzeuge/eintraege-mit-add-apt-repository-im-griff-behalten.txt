@@ -24,15 +24,14 @@ eigenen Skripte integrieren.
 (((Debianpaket, python-software-common)))
 (((Debianpaket, python-software-properties)))
 `add-apt-repository` ist bis Debian 7 _Wheezy_ Bestandteil des Pakets
-'python-software-properties'{empty}footnote:[http://packages.debian.org/de/stable/python-software-properties]
-und ab Debian 8 _Jessie_ in
-'software-properties-common'{empty}footnote:[https://packages.debian.org/jessie/software-properties-common].
-Es stellt graphische Komponenten bereit, die bspw. auch im Rahmen von
-Synaptic (siehe <<gui-synaptic>>) und dem Ubuntu Software Center (siehe
-<<gui-ubuntu-software-center>>) zum Einsatz kommen. Diese graphischen
-Komponenten beschreiben wir ausführlich unter Einstellungen mit Synaptic
-und im Ubuntu Software Center in
-<<einstellungen-mit-synaptic-und-im-ubuntu-software-center>>.
+'python-software-properties' <<Debian-Paket-python-software-properties>>
+und ab Debian 8 _Jessie_ in 'software-properties-common'
+<<software-properties-common>>. Es stellt graphische Komponenten bereit,
+die bspw. auch im Rahmen von Synaptic (siehe <<gui-synaptic>>) und dem
+Ubuntu Software Center (siehe <<gui-ubuntu-software-center>>) zum
+Einsatz kommen. Diese graphischen Komponenten beschreiben wir
+ausführlich unter Einstellungen mit Synaptic und im Ubuntu Software
+Center in <<einstellungen-mit-synaptic-und-im-ubuntu-software-center>>.
 
 // Stichworte für den Index
 (((add-apt-repository)))
@@ -48,10 +47,10 @@ ist durch einen symbolischen Link auf `add-apt-repository` realisiert.
 (((add-apt-repository, Nutzung von PPAs)))
 `add-apt-repository` akzeptiert als Parameter neben der Angabe des
 Repositories in Form einer vollständigen Zeile in korrekter Quotierung
-ebenso Personal Package Archives (PPAs) aus dem Ubuntu
-Launchpad{empty}footnote:[https://launchpad.net/ubuntu]. Der Aufruf ist
-von der Abfolge her analog zum manuellen Eintrag in der Liste der
-Paketquellen (siehe <<etc-apt-sources.list-verstehen>>):
+ebenso Personal Package Archives (PPAs) aus dem Ubuntu Launchpad
+<<Ubuntu-Launchpad>>. Der Aufruf ist von der Abfolge her analog zum
+manuellen Eintrag in der Liste der Paketquellen (siehe
+<<etc-apt-sources.list-verstehen>>):
 
 ----
 add-apt-repository deb uri distribution [component1] [component2] [...]
