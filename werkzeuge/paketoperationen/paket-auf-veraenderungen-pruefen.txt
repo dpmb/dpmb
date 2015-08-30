@@ -33,8 +33,7 @@ war, d.h. ob die Dateien nach wie vor den erwarteten Inhalt haben.
 (((Debianpaket, debsums)))
 (((Debianpaket, dlocate)))
 Bei der Klärung dieser Fragen helfen Ihnen u.a. die Werkzeuge
-`debsums`{empty}footnote:[http://packages.debian.org/de/stable/debsums],
-`dlocate`{empty}footnote:[https://packages.debian.org/de/stable/dlocate] 
+`debsums` <<Debian-Paket-debsums>>, `dlocate` <<Debian-Paket-dlocate>>
 und auch `dpkg` selbst weiter. Letzteres steht Ihnen in der Version 1.17
 ab Debian 8 _Jessie_ und Ubuntu 14.04 LTS _Trusty Tahr_ zur Verfügung.
 
@@ -76,7 +75,7 @@ befindet und in der rechten Spalte die dazugehörige Datei mit ihrem
 vollständigem Pfad. Die Angaben entsprechen dem Inhalt der Datei
 `/var/lib/dpkg/info/htop.md5sums`.
 
-//.Darstellung der MD5-Summen für alle Dateien aus dem Paket 'htop'
+.Darstellung der MD5-Summen für alle Dateien aus dem Paket 'htop'
 ----
 $ dlocate -md5sum htop
 292b696a5b879f1068f7c15073c245cd  usr/bin/htop
@@ -105,7 +104,7 @@ Bitte beachten Sie dabei, dass `dlocate -md5check` keine
 Konfigurationsdateien überprüft und auch nur die Dateien von explizit
 angegebenen Paketen überprüfen kann.
 
-//.Überprüfung der MD5-Summen für jede einzelne Datei aus dem Paket 'htop'
+.Überprüfung der MD5-Summen für jede einzelne Datei aus dem Paket 'htop'
 ----
 $ dlocate -md5check htop
 usr/bin/htop: OK
@@ -129,7 +128,7 @@ Genauso wie `dlocate` kann auch `debsums` die Dateien eines Paketes auf
 Integrität überprüfen. Dazu braucht es jedoch keine weitere Option, da
 das Überprüfen von Dateien die einzige Aufgabe von `debsums` ist:
 
-//.`debsums` beim Prüfen des Paketes `htop`
+.`debsums` beim Prüfen des Paketes `htop`
 ----
 $ debsums htop
 /usr/bin/htop                                   OK
@@ -154,7 +153,7 @@ für unverändert und `FAILED` für modifizierte Daten aus. Dieser Schritt
 eignet sich gut, um ihr gesamtes System einer Integritätsprüfung zu
 unterziehen.
 
-//.`debsums` bei der Arbeit
+.`debsums` bei der Arbeit
 ----
 # debsums
 /usr/bin/a2ps                         OK
@@ -183,7 +182,7 @@ Desweiteren hat `debsums` noch ein paar nützliche Schalter:
 `-c` (Langform `--changed`):: 
 Nur die Dateien anzeigen, die sich geändert haben.
 
-//.Auflistung der Dateien, die sich geändert haben
+.Auflistung der Dateien, die sich geändert haben
 ----
 # debsums --changed
 /usr/local/Brother/Printer/HL2250DN/inf/brHL2250DNfunc
@@ -203,7 +202,7 @@ debsums: missing file //opt/PDFStudio/jre/lib/charsets.jar.pack (from pdfstudio 
 vom Paket ausgeliefert werden und somit vorab deklariert wurden. Diese
 befinden sich fast immer unterhalb des Verzeichnisses `/etc/`.
 
-//.Auflistung aller 'Conffiles' des Paketes 'unburden-home-dir' mit Zustand:
+.Auflistung aller 'Conffiles' des Paketes 'unburden-home-dir' mit Zustand:
 ----
 $ debsums -e unburden-home-dir
 /etc/unburden-home-dir.list                 FAILED
@@ -220,7 +219,7 @@ beiden Schalter `-c` und `-e` miteinander:
 // Stichworte für den Index
 (((debsums, -ce)))
 
-//.Auflistung geänderter 'Conffiles' des Paketes 'unburden-home-dir'
+.Auflistung geänderter 'Conffiles' des Paketes 'unburden-home-dir'
 ----
 $ debsums -ce unburden-home-dir
 /etc/default/unburden-home-dir
@@ -245,7 +244,7 @@ Bei der Benutzung von `debsums` spielen die Berechtigungen des Benutzers
 eine Rolle. Die Integrität von Dateien, die für normale Benutzer nicht
 lesbar sind, können nur vom Benutzer 'root' geprüft werden.
 
-//.Auflistung geänderter 'Conffiles' des Paketes `sudo` geht nur `root`-Rechten:
+.Auflistung geänderter 'Conffiles' des Paketes `sudo` geht nur `root`-Rechten:
 ----
 $ debsums -e sudo
 /etc/pam.d/sudo                                 OK
@@ -275,7 +274,7 @@ Die passende Option dazu ist `-V` bzw. in der Langform `--verify`. Geben
 Sie zum Aufruf einen oder mehrere Paketnamen als Parameter mit, so
 werden nur die Dateien dieser Pakete überprüft:
 
-//.Dateien der Pakete 'unburden-home-dir' und 'ack-grep' mit `dpkg -V` überprüfen
+.Dateien der Pakete 'unburden-home-dir' und 'ack-grep' mit `dpkg -V` überprüfen
 ----
 $ dpkg -V unburden-home-dir ack-grep
 ??5?????? c /etc/unburden-home-dir.list
