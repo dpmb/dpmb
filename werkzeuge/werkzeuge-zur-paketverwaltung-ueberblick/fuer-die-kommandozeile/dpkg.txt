@@ -6,6 +6,8 @@
 
 ==== `dpkg` ====
 
+// Stichworte für den Index
+(((dpkg)))
 `dpkg` ist das Debian-Programm für grundlegende Paketoperationen und
 bildet in Bezug auf Funktionsumfang und Handhabung das Äquivalent zu
 `rpm` auf RedHat-basierten Linuxsystemen. Es kürzt den Namen 'Debian
@@ -21,6 +23,13 @@ es mit diversen Schaltern und Optionen. Die wichtigsten Parameter für
 den Gebrauch im Alltag sind{empty}footnote:[Weitere Optionen zu `dpkg`
 entnehmen Sie bitte der Manpage zum Programm]:
 
+// Stichworte für den Index
+(((dpkg, -c)))
+(((dpkg, -l)))
+(((dpkg, -L)))
+(((dpkg, -s)))
+(((dpkg, -S)))
+(((dpkg, --configure)))
 * Paketliste ausgeben (<<liste-der-installierten-pakete-anzeigen-und-deuten>>)
 (`dpkg -l`)
 * Paketstatus erfragen (<<paketstatus-erfragen>>) mit `dpkg -s Paketname`
@@ -40,4 +49,5 @@ Benutzeroberflächen via Ncurses oder GTK besser geeignet (siehe
 <<ncurses-basiert>> und <<gui-zur-paketverwaltung>>). Diese fassen viele
 Einzelschritte von `dpkg` zusammen und vereinfachen Ihnen die Wartung
 ihres Systems erheblich.
+
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/dpkg.txt
