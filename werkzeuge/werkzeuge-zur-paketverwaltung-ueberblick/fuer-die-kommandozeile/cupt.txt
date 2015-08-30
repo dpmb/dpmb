@@ -6,6 +6,9 @@
 
 ==== Cupt ====
 
+// Stichworte für den Index
+(((Cupt)))
+(((cupt, --satisfy)))
 Cupt beschreibt sich selbst als 'High-level Package Manager' und
 integriert Kommandos unter einem Dach, die Sie von den Werkzeugen `dpkg`
 und APT her kennen. Dafür nutzt es auf der Serverseite die gleiche
