@@ -77,6 +77,9 @@ root@…`) alle zum Bau notwendigen Abhängigkeiten installiert werden:
 apt-get install asciidoc dblatex texlive-lang-german xmlto calibre
 ```
 
+(Hinweis für Gentoo-Nutzer: Es gibt ein
+[Gentoo-Overlay für dblatex](http://gpo.zugaina.org/app-text/dblatex).)
+
 Dann als Benutzer das entsprechende Git-Repository klonen und ins
 entsprechende Verzeichnis wechseln:
 
