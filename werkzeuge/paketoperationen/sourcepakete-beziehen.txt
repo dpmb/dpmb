@@ -54,7 +54,7 @@ diese ebenfalls bezogen und nacheinander auf den entpackten Quellcode
 angewendet. Nachfolgendes Beispiel zeigt diesen Vorgang anhand des
 Pakets 'libapache2-mod-authn-yubikey' für den Webserver Apache:
 
-//.Bezug des Sourcepakets 'libapache2-mod-authn-yubikey' mit APT
+.Bezug des Sourcepakets 'libapache2-mod-authn-yubikey' mit APT
 ----
 $ apt-get source libapache2-mod-authn-yubikey
 Paketlisten werden gelesen... Fertig
@@ -79,16 +79,13 @@ $
 (((Debianpaket, devscripts)))
 (((dget)))
 Desweiteren existiert auch eine Alternative namens `dget` aus dem Paket
-'devscripts'{empty}footnote:[http://packages.debian.org/de/stable/devscripts].
-Darüber kombinieren Sie den Bezug der Paketinhalte. `dget` akzeptiert
-als Parameter eine Liste von Paketnamen, die es nacheinander vom
-Paketmirror bezieht und im lokalen Verzeichnis speichert. Liegt das
-betreffende Paket bereits im Paketcache, entnimmt `dget` dieses von
-dort{empty}footnote:[Steve Kemp: Downloading Debian source packages
-easily,
-http://www.debian-administration.org/article/504/Downloading_Debian_source_packages_easily].
+'devscripts' <<Debian-Paket-devscripts>>. Darüber kombinieren Sie den
+Bezug der Paketinhalte. `dget` akzeptiert als Parameter eine Liste von
+Paketnamen, die es nacheinander vom Paketmirror bezieht und im lokalen
+Verzeichnis speichert. Liegt das betreffende Paket bereits im
+Paketcache, entnimmt `dget` dieses von dort <<Kemp-dget>>.
 
-//.Bezug der beiden Pakete `bash-doc` und `libbash-doc` via `dget`
+.Bezug der beiden Pakete `bash-doc` und `libbash-doc` via `dget`
 ----
 # dget bash-doc
 dget: using /var/cache/apt/archives/bash-doc_4.2+dfsg-0.1_all.deb (copy)
