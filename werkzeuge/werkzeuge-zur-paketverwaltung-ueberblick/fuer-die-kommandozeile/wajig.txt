@@ -6,6 +6,8 @@
 
 ==== `wajig` ====
 
+// Stichworte für den Index
+(((wajig)))
 Das in der Programmiersprache Python geschriebene Programm 'wajig'
 <<Debian-Paket-wajig>> ist vorrangig ein Wrapper um `dpkg` (<<dpkg>>)
 und APT (<<apt>>). Es zählt zur gleichen Kategorie wie die `aptsh`
@@ -25,6 +27,13 @@ auch Funktionen bereit, die von den separaten Werkzeugen wie bspw.
 oder `alien` (siehe <<fremdformate-mit-alien-hinzufuegen>>) entlehnt
 wurden.
 
+// Stichworte für den Index
+(((wajig, detail)))
+(((wajig, find-file)))
+(((wajig, install)))
+(((wajig, listfiles)))
+(((wajig, list-orphans)))
+(((wajig, remove)))
 Sie bedienen `wajig` ausschließlich über die Tastatur. Möglich sind zwei
 Modi -- mit dem gewünschten Unterkommando beim Aufruf, oder ohne. Bei
 ersterem erfolgt die Ausgabe direkt im Terminal, bei letzterem öffnet
@@ -37,6 +46,9 @@ Paketinhalts und `remove` zum Entfernen eines Pakets. Mittels
 installierten Paketen, wohingegen Ihnen `list-orphans` die Paketwaisen
 (siehe <<umgang-mit-waisen>>) anzeigt. 
 
+// Stichworte für den Index
+(((wajig, rpm2deb)))
+(((wajig, rpminstall)))
 Als Besonderheit ist einerseits die Anbindung an 'apt-get.org'
 <<apt-get.org>> zu nennen, um den Paketmirror dynamisch auszuwählen
 (siehe <<generischen-mirror-verwenden>>). Ebenso ist die Umwandlung und
@@ -68,4 +80,5 @@ Weitere Informationen zum Programm finden Sie auf der Webseite des
 Projekts <<wajig-Webseite>>. Um die Feinheiten der Kommandos zwischen
 `dpkg`, APT und `wajig` besser vergleichen zu können, hilft ein Blick
 in das Wiki von xtronics <<xtronics-Wiki>>.
+
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/wajig.txt
