@@ -43,9 +43,9 @@ an, werden alle daraus nacheinander überprüft. Die nachfolgende Ausgabe
 zeigt das Ergebnis für fünf angefragte Paketmirrors.
 
 // Stichworte für den Index
-((([netselect, -v)))
+(((netselect, -v)))
 
-//.Aufruf von `netselect` mit fünf verschiedenen Paketmirrors
+.Aufruf von `netselect` mit fünf verschiedenen Paketmirrors
 ----
 # netselect -v ftp.debian.org http.us.debian.org ftp.at.debian.org download.unesp.br ftp.debian.org.br
 netselect: unknown host ftp.debian.org.br
@@ -64,7 +64,7 @@ Manpage zu den Programmen.
 // Stichworte für den Index
 (((netselect, -vv)))
 
-//.Etwas ausführlichere Ausgabe zu den Paketmirrors
+.Etwas ausführlichere Ausgabe zu den Paketmirrors
 ----
 # netselect -vv ftp.debian.org http.us.debian.org ftp.at.debian.org download.unesp.br ftp.debian.org.br
 netselect: unknown host ftp.debian.org.br
@@ -100,7 +100,7 @@ Wert, den `netselect` für den jeweiligen Paketmirror ermittelt hat.
 // Stichworte für den Index
 (((netselect, -vvv)))
 
-//.Noch mehr Informationen zu den Paketmirrors
+.Noch mehr Informationen zu den Paketmirrors
 ----
 # netselect -vvv ftp.debian.org http.us.debian.org ftp.at.debian.org download.unesp.br ftp.debian.org.br
 netselect: unknown host ftp.debian.org.br
@@ -202,7 +202,7 @@ nachfolgenden Ausgabe:
 // Stichworte für den Index
 (((netselect, -I)))
 
-//.Höchste Stufe der Ausführlichkeit zu den Paketmirrors
+.Höchste Stufe der Ausführlichkeit zu den Paketmirrors
 ----
 # netselect -I -vvv ftp.de.debian.org
 Running netselect to choose 1 out of 1 address.         
@@ -242,7 +242,7 @@ Einsatz, was dazu führt, dass `netselect-apt` die ermittelten Paketmirror
 in diese Datei speichert. Ohne diese Angabe überschreibt es die aktuelle
 Paketliste unter `/etc/apt/sources.list`.
 
-//.Speicherung der ermittelten Paketmirror in einer separaten Datei
+.Speicherung der ermittelten Paketmirror in einer separaten Datei
 ----
 # netselect-apt stable -o test.list
 Using distribution stable.
@@ -292,7 +292,7 @@ Die von `netselect-apt` erzeugte Datei `test.list` enthält neben
 den Paketmirrors auch eine ganze Reihe Kommentare. Diese helfen Ihnen
 dabei, zu verstehen, wofür jeder einzelne Eintrag gedacht ist.
 
-//.Inhalt der automatisch generierten Liste der Paketmirror
+.Inhalt der automatisch generierten Liste der Paketmirror
 ----
 # cat test.list
 
