@@ -14,14 +14,14 @@ Maintainer zum Originalquellcode vorgenommen hat.
 
 // Stichworte für den Index
 (((apt-get, changelog)))
-
+(((Paket, Änderungen nachlesen)))
 Für APT bietet `apt-get` das Unterkommando `changelog`. Es bezieht das
 Protokoll der Änderungen für das angefragte Paket direkt vom Paketmirror
 und gibt dieses im Terminal aus. Die nachfolgenden Ausgaben zeigen den
 Vorgang für `apt-get` und `aptitude` sowie einen Ausschnitt des
 Changelogs zum Paket 'smartpm'.
 
-//.Beziehen der Changelog-Informationen zum Paket 'smartpm'
+.Beziehen der Changelog-Informationen zum Paket 'smartpm'
 ----
 $ apt-get changelog smartpm
 Holen: 1 Änderungsprotokoll (Changelog) für smartpm (http://packages.debian.org/changelogs/pool/main/s/smart/smart_1.4-2/changelog) [8.573 B]
@@ -31,13 +31,12 @@ $
 
 // Stichworte für den Index
 (((aptitude, changelog)))
-
 `aptitude` verfügt dazu ebenfalls über den Schalter `changelog`. Als
 zusätzlichen Parameter erwartet es den Namen eines Paketes, zudem diese
 Informationen bezogen und ausgegeben werden. Das angefragte Paket muss
 dazu nicht auf ihrem Debiansystem installiert sein.
 
-//.Die Paketänderungen zum Paket 'smartpm' ausgeben
+.Die Paketänderungen zum Paket 'smartpm' ausgeben
 ----
 $ aptitude changelog smartpm
 
@@ -60,4 +59,5 @@ smart (1.4-1) unstable; urgency=low
 
 $
 ----
+
 // Datei (Ende): ./werkzeuge/paketoperationen/paketaenderungen-nachlesen.txt
