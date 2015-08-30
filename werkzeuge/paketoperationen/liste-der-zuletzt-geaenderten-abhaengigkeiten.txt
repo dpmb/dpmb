@@ -14,12 +14,12 @@
 Um herauszufinden, welche Abhängigkeiten eines Paketes sich zuletzt
 geändert haben und ob vielleicht dabei ein Bug zum Vorschein kam, sparen
 Sie sich mit dem Programm `which-pkg-broke` aus dem Paket
-'debian-goodies'{empty}footnote:[http://packages.debian.org/de/stable/debian-goodies]
-einiges an Arbeit. Übersetzt heißt der Programmname sinngemäß ``welches
-Paket machte [es] kaputt''. Nachfolgende Übersicht zeigt Ihnen die
-zuletzt geänderten Abhängigkeiten von `apt`.
+'debian-goodies' <<Debian-Paket-debian-goodies>> einiges an Arbeit.
+Übersetzt heißt der Programmname sinngemäß ``welches Paket machte [es]
+kaputt''. Nachfolgende Übersicht zeigt Ihnen die zuletzt geänderten
+Abhängigkeiten von `apt`.
 
-//.Anzeige der zuletzt geänderten Abhängigkeiten von `apt`
+.Anzeige der zuletzt geänderten Abhängigkeiten von `apt`
 ----
 $ which-pkg-broke apt
 libacl1:amd64                              Tue Apr  8 18:57:57 2014
