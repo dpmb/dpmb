@@ -23,7 +23,7 @@ Paketspiegeln ist `ftp.us.debian.org`. Aufgrund der Größe der USA wird
 die Last des dortigen primären Debian-Paketmirrors auf drei Server
 aufgeteilt.
 
-IP-Verteilung des primären Debian-Paketmirrors für die USA
+.IP-Verteilung des primären Debian-Paketmirrors für die USA
 ----
 $ host ftp.us.debian.org
 ftp.us.debian.org has address 64.50.236.52
