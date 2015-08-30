@@ -8,6 +8,7 @@
 
 // Stichworte für den Index
 (((apt-get, install --no-download)))
+(((Paket, Installation aus dem Paketcache)))
 (((Paketcache)))
 Liegt das Paket bereits oder noch im Paketcache, kann APT dieses von
 dort entnehmen und sofort installieren. Ein Bezug vom Paketmirror ist in
@@ -16,7 +17,7 @@ Bandbreite. Dazu benötigt `apt-get` die Option `--no-download` zum
 Unterkommando `install`. Nachfolgende Ausgabe zeigt das anhand des
 Pakets 'bash-doc', welches bereits im Paketcache liegt.
 
-//.Installation des Paketes 'bash-doc' via `apt-get` aus dem Paketcache
+.Installation des Paketes 'bash-doc' via `apt-get` aus dem Paketcache
 ----
 # apt-get --no-download install bash-doc
 Paketlisten werden gelesen... Fertig
@@ -46,4 +47,5 @@ Pakete landen danach automatisch im Paketcache unter
 Pakete installieren in <<pakete-installieren>> und Paketcache wieder
 aufräumen in <<paketcache-aufraeumen>> ein.
 ====
+
 // Datei (Ende): ./werkzeuge/paketoperationen/installation-zwischengespeicherter-pakete-aus-dem-paketcache.txt
