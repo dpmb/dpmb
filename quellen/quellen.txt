@@ -342,6 +342,8 @@
 // ACHTUNG: Absichtlich "wheezy" und nicht "stable", weil ab Jessie nicht mehr in Debian!
 - [[[Debian-Paket-software-center]]] Debian-Paket 'software-center', http://packages.debian.org/de/wheezy/software-center
 
+- [[[software-properties-common]]] Debian-Paket 'software-properties-common', https://packages.debian.org/jessie/software-properties-common
+
 - [[[Debian-Paket-synaptic]]] Debian-Paket 'synaptic', http://packages.debian.org/de/stable/synaptic
 
 - [[[Debian-Paket-tasksel]]] Debian-Paket 'tasksel', http://packages.debian.org/de/stable/tasksel
