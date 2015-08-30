@@ -5,14 +5,16 @@
 [[einstellungen-mit-synaptic-und-im-ubuntu-software-center]]
 === Einstellungen mit Synaptic und im Ubuntu Software Center ===
 
+// Stichworte für den Index
+(((Synaptic)))
+(((Ubuntu Software Center)))
 Auch mittels Synaptic (siehe <<gui-synaptic>>) und dem Ubuntu Software
 Center (siehe <<gui-ubuntu-software-center>>) können Sie die Datei
 `/etc/apt/sources.list` anpassen. Dazu öffnen Sie den entsprechenden
 Dialog unter dem Menüpunkt menu:[Einstellungen,Paketquellen]. Unter
 Gnome/GTK erfolgt daraufhin ein Aufruf des Programms
 `software-properties-gtk` aus dem bereits weiter oben genannten Projekt
-Python Software Properties
-{empty}footnote:[http://packages.debian.org/de/stable/python-software-properties].
+Python Software Properties <<Debian-Paket-python-software-properties>>.
 Das Pendant unter KDE heißt `software-properties-kde`.
 
 Über die verschiedenen Reiter stellen Sie die gewünschten Paketquellen
@@ -25,6 +27,5 @@ image::werkzeuge/paketquellen-und-werkzeuge/synaptic-paketquellen.png[id="fig.sy
 
 .Festlegung der Paketquellen für andere Software im Ubuntu Software Center
 image::werkzeuge/paketquellen-und-werkzeuge/ubuntu-software-center-repositories.png[id="fig.ubuntu-software-center-repositories", width="50%"]
-
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/einstellungen-synaptic.txt
