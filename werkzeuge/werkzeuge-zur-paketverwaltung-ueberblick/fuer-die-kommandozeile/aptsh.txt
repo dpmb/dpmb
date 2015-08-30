@@ -6,6 +6,8 @@
 
 ==== Die `aptsh` ====
 
+// Stichworte für den Index
+(((aptsh)))
 Bei der `aptsh` handelt es sich um eine Shell für die Paketverwaltung.
 Die Grundlage dafür bildet die Bibliothek 'libapt-dpkg' (siehe
 <<apt-und-bibliotheken>>). Als Inspirationsquelle für die Shellkommandos
@@ -13,6 +15,22 @@ dienen die Unterkommandos von APT und `aptitude`, die hiermit in einem
 Werkzeug zusammengefasst wurden, somit die Handhabung erleichtern und den
 Tippaufwand deutlich verringern.
 
+// Stichworte für den Index
+(((aptsh, changelog)))
+(((aptsh, depends)))
+(((aptsh, install)))
+(((aptsh, ls)))
+(((aptsh, purge)))
+(((aptsh, remove)))
+(((aptsh, rdepends)))
+(((aptsh, rls)))
+(((aptsh, search)))
+(((aptsh, show)))
+(((aptsh, showsrc)))
+(((aptsh, showpkg)))
+(((aptsh, update)))
+(((aptsh, upgrade)))
+(((aptsh, whatis)))
 Vom Umfang her kombiniert die `aptsh` eine Vielzahl der Unterkommandos
 von `apt-get`, `apt-cache` und `aptitude`. Einerseits agiert es als
 Shell, andererseits kann es die Aufrufe mit den Optionen über die
