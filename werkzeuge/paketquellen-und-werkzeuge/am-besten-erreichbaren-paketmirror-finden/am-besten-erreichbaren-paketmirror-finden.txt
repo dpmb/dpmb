@@ -28,9 +28,9 @@ aktuellen Standort aus am besten erreichbar ist.
 // Stichworte für den Index
 (((Debianpaket, apt-spy)))
 Bis einschließlich Debian 7 _Wheezy_ war das Programm `apt-spy`
-{empty}footnote:[http://packages.debian.org/de/stable/apt-spy] fester
-Bestandteil der Veröffentlichung. Es wurde nicht in Debian 8 _Jessie_
-übernommen, steht jedoch weiterhin für _unstable_ zur Verfügung.
+<<Debian-Paket-apt-spy>> fester Bestandteil der Veröffentlichung. Es
+wurde nicht in Debian 8 _Jessie_ übernommen, steht jedoch weiterhin für
+_unstable_ zur Verfügung.
 
 // netselect und netselect-apt
 include::netselect.txt[]
