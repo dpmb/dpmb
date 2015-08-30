@@ -28,7 +28,7 @@ Beschreibung bilden die Projektwebseite (`Homepage`), die Paketliste
 Paketpriorität (`Priority`) und die Einsortierung in die Paketkategorie
 (`Section`).
 
-//.Ausgabe der Informationen zum Sourcepaket zu 'htop'
+.Ausgabe der Informationen zum Sourcepaket zu 'htop'
 ----
 $ apt-cache showsrc htop
 Package: htop
