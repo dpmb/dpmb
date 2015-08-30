@@ -21,12 +21,13 @@ beides existieren verschiedene Unterkommandos und Aufrufmöglichkeiten.
 // Stichworte für den Index
 (((aptitude, download)))
 (((apt-get, download)))
+(((Paket, nur herunterladen)))
 Für den Modus 1 akzeptieren `apt-get` und `aptitude` das Unterkommando
 `download`. Das Paket 'bash-doc' beinhaltet die Dokumentation zur Bash
 – ein Bezug des Paketes via `apt-get` liefert Ihnen das folgende
 Ergebnis:
 
-//.Bezug des Paketes 'bash-doc' via `apt-get` und Speicherung im lokalen Verzeichnis
+.Bezug des Paketes 'bash-doc' via `apt-get` und Speicherung im lokalen Verzeichnis
 ----
 # apt-get download bash-doc
 Holen: 1 Herunterladen von bash-doc 4.2+dfsg-0.1 [696 kB]
@@ -58,7 +59,7 @@ Paketcache unter `/var/cache/apt/archives` abgespeichert, sofern es
 vollständig bezogen wurde. Nur teilweise heruntergeladene Pakete liegen
 unter `/var/cache/apt/archives/partial/`.
 
-//.Bezug des Paketes 'bash-doc' via `aptitude` und Speicherung im Paketcache
+.Bezug des Paketes 'bash-doc' via `aptitude` und Speicherung im Paketcache
 ----
 # aptitude --download-only install bash-doc
 Die folgenden NEUEN Pakete werden zusätzlich installiert:
