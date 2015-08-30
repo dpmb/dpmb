@@ -45,6 +45,7 @@ Corporate Server, UCS)
 * Dr. Markus Wirtz für die lange Unterstützung und Hilfe, das Buch auf
   seinen Weg zu bringen, für den Klappentext sowie fürs Lektorat der
   Einleitung und dem erstem Kapitel.
+* Oliver Rath für seine Vorschläge zur besseren Lesbarkeit von Programmcode
 
 Nicht zu vergessen sind die Probeleser, die sich durch unser Manuskript
 gekämpft haben: Arne Wichmann, Thomas Winde, Jana Pirat, Jörg Dölz,
