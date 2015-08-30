@@ -20,12 +20,10 @@ benutzen.
 
 Anstatt diese Schritte aufwendig über die Kombination einzelner
 Werkzeuge wie `ping` oder `traceroute` zu ermitteln, sind hier
-`netselect`{empty}footnote:[http://packages.debian.org/de/stable/netselect]
-und
-`netselect-apt`{empty}footnote:[http://packages.debian.org/de/stable/netselect-apt]
-die besseren Mittel der Wahl. Damit finden Sie den Spiegelserver heraus,
-der netztechnisch von ihrem aktuellen Standort aus am besten erreichbar
-ist.
+`netselect` <<Debian-Paket-netselect>> und `netselect-apt`
+<<Debian-Paket-netselect-apt>> die besseren Mittel der Wahl. Damit
+finden Sie den Spiegelserver heraus, der netztechnisch von ihrem
+aktuellen Standort aus am besten erreichbar ist.
 
 // Stichworte für den Index
 (((Debianpaket, apt-spy)))
