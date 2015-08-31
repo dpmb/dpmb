@@ -6,6 +6,8 @@
 
 ==== PackageKit ====
 
+// Stichworte für den Index
+(((PackageKit)))
 PackageKit ist eine allgemeine, distributionsneutrale Schnittstelle für
 unterschiedliche Paketverwaltungen, eine sogenannte Abstraktionsebene
 für die Paketverwaltung ('package management abstraction layer'). Das
@@ -17,7 +19,7 @@ DBus-Protokoll untereinander regelt] umzustellen. PackageKit ist nicht
 dafür gedacht, hochspezialisierte Paketverwaltungssoftware zu ersetzen.
 
 Seit 2009 nutzt die Linuxdistribution Kubuntu diese Schnittstelle für
-seine Paketverwaltung. Weitere Anwendungen, die auf 'packagekit'
+seine Paketverwaltung. Weitere Anwendungen, die auf PackageKit
 aufsetzen, sind z.B. das Paket 'apper' für den KDE, das Paket
 'gnome-packagekit' für GNOME (siehe <<fig.gnome-packagekit>>) und der
 Openmoko Installer.
@@ -29,4 +31,5 @@ PackageKit kann über die Interfaces APT und `aptcc` (Paket
 'packagekit-backend-aptcc') an APT andocken. Ähnliches liefert das Paket
 'packagekit-backend-smart' für die Zusammenarbeit mit SmartPM
 (<<gui-smartpm>>).
+
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/packagekit.txt
