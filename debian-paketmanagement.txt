@@ -6,6 +6,7 @@ Debian-Paketmanagement
 :ascii-ids:
 :numbered:
 :subtitle: Konzepte - Werkzeuge - Praxis
+include::version.txt[]
 
 // Baustelle: Rohtext
 
