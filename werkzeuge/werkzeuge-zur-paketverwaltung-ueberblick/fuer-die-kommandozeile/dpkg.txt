@@ -30,14 +30,16 @@ entnehmen Sie bitte der Manpage zum Programm]:
 (((dpkg, -s)))
 (((dpkg, -S)))
 (((dpkg, --configure)))
-* Paketliste ausgeben (<<liste-der-installierten-pakete-anzeigen-und-deuten>>)
-(`dpkg -l`)
+* Paketliste ausgeben (<<liste-der-installierten-pakete-anzeigen-und-deuten>>) (`dpkg -l`)
+
 * Paketstatus erfragen (<<paketstatus-erfragen>>) mit `dpkg -s Paketname`
-* Inhalt eines installierten Pakets anzeigen
-(<<paketinhalte-anzeigen-apt-file>>) mit `dpkg -L Paketname`
-* Inhalt eines nicht installierten Pakets anzeigen
-(<<paketinhalte-anzeigen-apt-file>>) mit `dpkg -c Paketname`
+
+* Inhalt eines installierten Pakets anzeigen (<<paketinhalte-anzeigen-apt-file>>) mit `dpkg -L Paketname`
+
+* Inhalt eines nicht installierten Pakets anzeigen (<<paketinhalte-anzeigen-apt-file>>) mit `dpkg -c Paketname`
+
 * Paket zu Datei finden (<<paket-zu-datei-finden>>) mit `dpkg -S Paketname` und 
+
 * Pakete konfigurieren (<<pakete-konfigurieren>>) (Option `--configure`)
 
 Mit `dpkg` zeigen Sie die installierten Pakete und deren Zustand an, suchen
