@@ -6,6 +6,8 @@
 
 ==== tasksel ====
 
+// Stichworte für den Index
+(((tasksel)))
 `tasksel` gehört zu den Anwendungen, die Sie vielleicht nur aus der
 textbasierten Installation von Debian her kennen. Nach der
 Zusammenstellung des Debian-Basissystems wird dieses Werkzeug
@@ -51,6 +53,14 @@ Aufgaben an. Aptitude verwendet dafür einen eigenen Ast als Sektion
 heißt der Bereich (Sektion) ``Tasks''.
 ====
 
+// Stichworte für den Index
+(((tasksel, install)))
+(((tasksel, --list-tasks)))
+(((tasksel, --task-desc)))
+(((tasksel, --task-packages)))
+(((tasksel, -t)))
+(((tasksel, --test)))
+(((tasksel, remove)))
 Die textbasierte Benutzeroberfläche von `tasksel` ist jedoch nur eine
 Seite der Medaille. Das Programm ist ebenso für eine Steuerung über die
 Kommandozeile empfänglich. Die nachfolgende Liste zeigt die möglichen
@@ -138,4 +148,5 @@ ssh-import-id
 ...
 $
 ----
+
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/tasksel.txt
