@@ -50,7 +50,7 @@ doctor-html: $(DEFAULTDEPENDENCIES)
 	asciidoctor $(DOCTORDEFAULTOPTIONS) $(BASE).txt
 
 version.txt: debian-paketmanagement.txt *-docinfo.xml */*.txt */*/*.txt Makefile
-	echo ":revdate: "`env LC_TIME=de_DE.UTF-8 date '+%x'` > version.txt
+	echo ":revdate: "`date '+%F'` > version.txt
 	echo -n ":revnumber: " >> version.txt; \
 	if [ -d .git ] && `which git >/dev/null`; then \
 	    if ! git describe --tags >/dev/null; then git fetch --tags; fi; \
