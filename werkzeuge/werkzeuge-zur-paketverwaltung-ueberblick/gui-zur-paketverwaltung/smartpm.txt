@@ -6,6 +6,8 @@
 
 ==== Smart Package Management (SmartPM) ====
 
+// Stichworte für den Index
+(((smartpm)))
 Im Paket 'smartpm' <<Debian-Paket-smartpm>> verbirgt sich das
 gleichnamige Programm zur Paketverwaltung. Zunächst etwas unscheinbar,
 entpuppt es sich aber bei näherer Betrachtung als eine Art Alleskönner
@@ -35,6 +37,11 @@ dem Reiter menu:[URLs] verbergen sich weitere Referenzen zum Paket.
 .Softwareauswahl in `smartpm`
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/smartpm.png[id="fig.smartpm", width="50%"]
 
+// Stichworte für den Index
+(((smart, install)))
+(((smart, remove)))
+(((smart, upgrade)))
+(((smart, --shell)))
 Für die Benutzung von SmartPM über die 'Kommandozeile' starten Sie das
 Programm über den Aufruf `smart` mit der gewünschten Aktion und dem
 Paketname. Analog zu APT bzw. `aptitude` stehen bspw. die Unterkommandos
@@ -110,4 +117,5 @@ Eine ausführliche Beschreibung zum Programm mit weiteren Beispielen zur
 Konfiguration und zur Handhabung entnehmen Sie bitte dem
 Linux-User-Artikel zum gleichen Thema <<Hofmann-Smartpm-LinuxUser>>.
 ====
+
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/smartpm.txt
