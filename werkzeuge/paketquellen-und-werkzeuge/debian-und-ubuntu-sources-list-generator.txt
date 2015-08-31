@@ -6,15 +6,17 @@
 
 === Debian und Ubuntu Sources List Generator ===
 
+// Stichworte für den Index
+(((Debian Sources List Generator)))
+(((Ubuntu Sources List Generator)))
 Möchten Sie ihre Liste der Paketquellen nicht von Hand zusammentragen,
 sondern stattdessen über eine Software erstellen lassen, bieten sich der
-Debian Sources List
-Generator{empty}footnote:[http://debgen.simplylinux.ch/] und der Ubuntu
-Sources List Generator{empty}footnote:[http://repogen.simplylinux.ch/]
-von Jonhnatha Trigueiro an. Dabei handelt es sich um eine
+Debian Sources List Generator <<Debian-Sources-List-Generator>> und der
+Ubuntu Sources List Generator <<Ubuntu-Sources-List-Generator>> von
+Jonhnatha Trigueiro an. Dabei handelt es sich um eine
 JavaScript-Anwendung, die Sie über ihren Webbrowser benutzen. Als
-Ergebnis erhalten Sie am Ende eine Textdatei, die Sie überprüfen und in Ihr
-System einpflegen können. Vor der Übernahme empfehlen wir, für alle
+Ergebnis erhalten Sie am Ende eine Textdatei, die Sie überprüfen und in
+Ihr System einpflegen können. Vor der Übernahme empfehlen wir, für alle
 Fälle von der derzeit genutzten Datei eine Sicherheitskopie anzulegen,
 sodass Sie im Bedarfsfall darauf zurückgreifen können.
 
@@ -53,4 +55,5 @@ System übernehmen können.
 
 .Auswahl der Komponenten im Ubuntu Sources List Generator
 image::werkzeuge/paketquellen-und-werkzeuge/ubuntu-sources-list-generator.png[id="fig.ubuntu-sources-list-generator",width="50%"]
+
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/debian-und-ubuntu-sources-list-generator.txt
