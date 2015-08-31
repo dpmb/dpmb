@@ -1,5 +1,5 @@
 BASE=debian-paketmanagement
-DEFAULTDEPENDENCIES=*.txt */*.txt */*/*.txt Makefile version.txt
+DEFAULTDEPENDENCIES=*.txt */*.txt */*/*.txt Makefile version.txt *-docinfo.xml
 DEFAULTOPTIONS=-L
 DOCTORDEFAULTOPTIONS=-a experimental -a toc -a toclevels=4
 FORMATS=html epub pdf mobi
