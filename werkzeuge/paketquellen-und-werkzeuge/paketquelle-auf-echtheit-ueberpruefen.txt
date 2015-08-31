@@ -47,11 +47,17 @@ eine deutliche Warnung.
 
 ==== Schlüsselverwaltung mit `apt-key` (Überblick) ====
 
+// Stichworte für den Index
+(((apt-key, Schlüsselverwaltung)))
+(((Debianpaket, debian-archive-keyring)))
+(((Schlüsselring, /etc/apt/trusted.gpg
+(((Ubuntupaket, ubuntu-keyring)))
 Die Verwaltung der Schlüssel erfolgt mit dem Programm `apt-key`. Dazu
 gehört ein Schlüsselring mit allen GPG-Schlüsseln der Paketquellen, aus
 denen Pakete bezogen wurden. Bei Debian sind diese Schlüssel Bestandteil des
-Paketes 'debian-archive-keyring', bei Ubuntu heißt das Paket
-'ubuntu-keyring'.
+Paketes 'debian-archive-keyring'
+<<Debian-Paket-debian-archive-keyring>>, bei Ubuntu heißt das Paket
+hingegen 'ubuntu-keyring' <<Ubuntu-Paket-ubuntu-keyring>>.
 
 **TODO:** `/etc/apt/trustdb.gpg` erklären. Gemäß gpg-Manpage sind
 Dateien mit dem Namen "trustdb.gpg" nur Caches.
@@ -82,6 +88,11 @@ Debian-Ports-Projekt (<<debian-architekturen-ports-projekt>>.
 
 ==== Unterkommandos von `apt-key` ====
 
+// Stichworte für den Index
+(((apt-key, export)))
+(((apt-key, exportall)))
+(((apt-key, finger)))
+(((apt-key, list)))
 Mit `apt-key` können Sie sich bspw. die gemerkten Schlüssel anzeigen
 sowie neue Schlüssel zum Schlüsselring hinzufügen oder auch daraus
 wieder entfernen. Diese Vorgänge kommen meist dann zum tragen, wenn Sie
@@ -108,10 +119,15 @@ image::werkzeuge/paketquellen-und-werkzeuge/apt-key-list.png[id="fig.apt-key-lis
 .Darstellung der Fingerabdrücke der vertrauenswürdigen Schlüssel
 image::werkzeuge/paketquellen-und-werkzeuge/apt-key-finger.png[id="fig.apt-key-finger", width="50%"]
 
-Mit `apt-key add Schlüsseldatei` und `apt-key del Schlüssel-ID` verändern Sie
-den Inhalt des Schlüsselbundes. Mit ersterem fügen Sie einen neuen
-Schlüssel aus einer Datei hinzu, mit letzterem löschen Sie den
-Schlüssel mit der angegebenen Schlüssel-ID ausdem Schlüsselring.
+// Stichworte für den Index
+(((apt-key, add)))
+(((apt-key, del)))
+(((apt-key, update)))
+(((apt-key, net-update)))
+Mit `apt-key add Schlüsseldatei` und `apt-key del Schlüssel-ID`
+verändern Sie den Inhalt des Schlüsselbundes. Mit ersterem fügen Sie
+einen neuen Schlüssel aus einer Datei hinzu, mit letzterem löschen Sie
+den Schlüssel mit der angegebenen Schlüssel-ID aus dem Schlüsselring.
 
 Die Option `update` synchronisiert hingegen den lokalen Schlüsselbund
 mit dem Archivschlüsselbund. Dabei werden die Schlüssel aus dem lokalen
@@ -187,6 +203,9 @@ Man-in-the-Middle-Attacke im Gange ist.
 
 ==== Alternative Benutzerschnittstellen zur APT-Schlüsselverwaltung ====
 
+// Stichworte für den Index
+(((curses-apt-key)))
+(((gui-apt-key)))
 Neben dem Kommandozeilenprogramm `apt-key` existieren auch noch zwei
 interaktive Bedienoberflächen dazu: das auf
 GTK aufbauende `gui-apt-key` aus dem gleichnamigen Paket
@@ -217,4 +236,5 @@ image::werkzeuge/paketquellen-und-werkzeuge/curses-apt-key.png[id="fig.curses-ap
 Derzeit ist `curses-apt-key` noch nicht Bestandteil von Debian und nur
 auf GitHub verfügbar (<<curses-apt-key>>). Eine Aufnahme in Debian ist
 jedoch geplant (<<curses-apt-key-itp>>).
+
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/paketquelle-auf-echtheit-ueberpruefen.txt

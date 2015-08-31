@@ -261,6 +261,8 @@
 
 - [[[Debian-Paket-debfoster]]] Debian-Paket 'debfoster', http://packages.debian.org/de/stable/debfoster
 
+- [[[Debian-Paket-debian-archive-keyring]]] Debian-Paket 'debian-archive-keyring', http://packages.debian.org/de/stable/debian-archive-keyring
+
 - [[[Debian-Paket-debian-goodies]]] Debian-Paket 'debian-goodies', http://packages.debian.org/de/stable/debian-goodies
 
 - [[[Debian-Paket-debian-handbook]]] Debian-Paket 'debian-handbook', http://packages.debian.org/de/stable/debian-handbook
@@ -637,6 +639,8 @@
 - [[[Ubuntu]]] Ubuntu Linux, http://www.ubuntu.com/
 
 - [[[Ubuntu-apturl]]] AptURL im Ubuntu Apps Directory, https://apps.ubuntu.com/cat/applications/apturl/
+
+- [[[Debian-Paket-ubuntu-keyring]]] Ubuntu-Paket 'ubuntu-keyring', http://packages.ubuntu.com/de/trusty/ubuntu-keyring
 
 - [[[Ubuntu-Landscape]]] Ubuntu Landscape System Management, https://landscape.canonical.com/
 
