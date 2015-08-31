@@ -35,7 +35,7 @@ fb2: $(BASE).fb2
 	ebook-convert $< $@
 
 clean:
-	rm -rvf version.txt *.html *.epub *.epub.d *.xml *.fls *.log *.pdf *.css *.tex *.mobi *.lit *.fb2
+	rm -rvf version.txt *.html *.epub *.epub.d $(BASE).xml *.fls *.log *.pdf *.css *.tex *.mobi *.lit *.fb2
 
 xmllint:
 	asciidoc -d book -b docbook $(BASE).txt
