@@ -207,10 +207,10 @@ Man-in-the-Middle-Attacke im Gange ist.
 (((curses-apt-key)))
 (((gui-apt-key)))
 Neben dem Kommandozeilenprogramm `apt-key` existieren auch noch zwei
-interaktive Bedienoberflächen dazu: das auf
-GTK aufbauende `gui-apt-key` aus dem gleichnamigen Paket
-<<Debian-Paket-gui-apt-key>> und das auf Ncurses aufbauende
-`curses-apt-key` <<curses-apt-key>>. Beide besprechen wir hier nur kurz.
+interaktive Bedienoberflächen dazu: das auf GTK aufbauende `gui-apt-key`
+aus dem gleichnamigen Paket <<Debian-Paket-gui-apt-key>> und das auf
+Ncurses aufbauende `curses-apt-key` <<curses-apt-key>>. Beide besprechen
+wir hier nur kurz.
 
 `gui-apt-key` starten Sie zunächst als Benutzer `root` oder mittels
 `sudo`. Im Dialogfenster (<<fig.gui-apt-key>>) sehen Sie die Inhaber und
@@ -234,7 +234,7 @@ insbesondere für die Nutzung auf Servern (siehe
 image::werkzeuge/paketquellen-und-werkzeuge/curses-apt-key.png[id="fig.curses-apt-key", width="50%"]
 
 Derzeit ist `curses-apt-key` noch nicht Bestandteil von Debian und nur
-auf GitHub verfügbar (<<curses-apt-key>>). Eine Aufnahme in Debian ist
-jedoch geplant (<<curses-apt-key-itp>>).
+auf GitHub verfügbar <<curses-apt-key>>. Eine Aufnahme in Debian ist
+jedoch geplant <<curses-apt-key-itp>>.
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/paketquelle-auf-echtheit-ueberpruefen.txt
