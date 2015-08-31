@@ -13,9 +13,8 @@ Programmversionen als `deb`-Pakete bereit, die sich in der Version her
 von der stabilen Veröffentlichung von Debian unterscheiden.
 
 Im folgenden Beispiel sehen Sie die Einbindung der Paketquellen des
-PostgreSQL-Projekts{empty}footnote:[https://wiki.postgresql.org/wiki/Apt]
-und des X2Go-Projekts{empty}footnote:[http://wiki.x2go.org/doku.php/wiki:repositories:debian]
-für Debian 7 _Wheezy_:
+PostgreSQL-Projekts <<APT-Repo-PostgreSQL>> und des X2Go-Projekts
+<<APT-Repo-X2Go>> für Debian 7 _Wheezy_:
 
 ----
 deb http://apt.postgresql.org/pub/repos/apt/ wheezy-pgdg main
