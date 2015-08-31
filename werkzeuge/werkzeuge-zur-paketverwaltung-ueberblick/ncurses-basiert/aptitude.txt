@@ -6,6 +6,8 @@
 
 ==== `aptitude` ====
 
+// Stichworte für den Index
+(((aptitude)))
 Im Vergleich mit den anderen vorgestellten Programmen zur
 Paketverwaltung ist `aptitude` eine recht komplexe und umfangreiche
 Anwendung. Es ermöglicht Ihnen zwei unterschiedliche Wege der Bedienung
@@ -28,6 +30,19 @@ vorliegen und vor der Installation noch von dort bezogen werden.
 Desweiteren bietet Ihnen das Programm die folgenden Funktionen (Auswahl,
 jeweils Angabe der Unterkommandos auf der Kommandozeile):
 
+// Stichworte für den Index
+(((aptitude, download)))
+(((aptitude, full-upgrade)))
+(((aptitude, install)))
+(((aptitude, reinstall)))
+(((aptitude, remove)))
+(((aptitude, safe-upgrade)))
+(((aptitude, search ~i)))
+(((aptitude, show)))
+(((aptitude, update)))
+(((aptitude, why)))
+(((aptitude, why-not)))
+
 * die Liste der installierten Pakete anzeigen und ausgeben
 (<<liste-der-installierten-pakete-anzeigen-und-deuten>>) mit `aptitude search ~i`
 * Recherche und Paketliste filtern anhand von Paketkategorien,
@@ -42,7 +57,7 @@ der Metadaten und der Paketbeschreibung
 * Pakete erneut installieren (<<pakete-erneut-installieren>>) mit `aptitude reinstall Paketname`
 * installierte Paketliste oder die Veröffentlichung aktualisieren (<<pakete-aktualisieren>>) mit `aptitude update`, `aptitude safe-upgrade` und `aptitude full-upgrade`
 * klären, warum ein Paket (nicht) installiert ist (<<warum-ist-ein-paket-installiert>>) mit `aptitude why Paketname` bzw. `aptitude why-not Paketname`
-* Paketabhängigkeiten anzeigen (<<paketabhaengigkeiten-anzeigen>>)
+* Paketabhängigkeiten mit `aptitude search ?depends Paketname` anzeigen (<<paketabhaengigkeiten-anzeigen>>)
 
 [TIP]
 .Dokumentation zu `aptitude`
@@ -72,15 +87,15 @@ aus.
 
 Die beiden Fensterhälften darunter geben Ihnen eine Übersicht zu den
 Softwarepaketen. In der oberen Hälfte stellt `aptitude` in einer
-aufklappbaren Baumstruktur die Paketkategorien (<<sortierung-der-pakete-nach-verwendungszweck>>),
-den Distributionsbereich (<<distributionsbereiche>>) und den Paketnamen
-mit Versionsnummer dar. Sichtbar wird dabei die Version des
-installierten Pakets sowie der möglichen Aktualisierung
+aufklappbaren Baumstruktur die Paketkategorien
+(<<sortierung-der-pakete-nach-verwendungszweck>>), den
+Distributionsbereich (<<distributionsbereiche>>) und den Paketnamen mit
+Versionsnummer dar. Sichtbar wird dabei die Version des installierten
+Pakets sowie der möglichen Aktualisierung
 (<<benennung-versionsnummer>>). Die Auswahl in der Baumstruktur erfolgt
-analog zu vi(m) mittels kbd:[j] und kbd:[k] (oder über die
-Pfeiltasten) und kbd:[Enter]. Die einzelnen Strukturebenen klappen
-Sie mit den Tasten kbd:[Enter], kbd:["["] und kbd:["]"] auf und
-zu. 
+analog zu vi(m) mittels kbd:[j] und kbd:[k] (oder über die Pfeiltasten)
+und kbd:[Enter]. Die einzelnen Strukturebenen klappen Sie mit den Tasten
+kbd:[Enter], kbd:["["] und kbd:["]"] auf und zu.
 
 Dabei hinterlegt `aptitude` die einzelnen Pakete mit verschiedenen
 Farben, deren Bedeutung Sie <<tab.aptitude-farben>> entnehmen. Das
@@ -192,4 +207,5 @@ Im Erweiterungsteil gehen wir darauf ein, was passiert, wenn Sie APT und
 Konfiguration des Programms ist ein eigener Abschnitt gewidmet (siehe
 APT und `aptitude` auf die eigenen Bedürfnisse anpassen in
 <<apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen>>).
+
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/aptitude.txt
