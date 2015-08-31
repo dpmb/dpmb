@@ -84,12 +84,10 @@ dem Terminal aus. Diese bedeuten:
 
 * `Holen:1 Bezugsquelle Release.gpg`: beziehe den GPG-Schlüssel zur
 Veröffentlichung (siehe <<veroeffentlichungen>>) von der als URL
-angegebenen Paketquelle (siehe auch Paketquelle auf Echtheit überprüfen
-in <<paketquelle-auf-echtheit-ueberpruefen>>)
+angegebenen Paketquelle (siehe <<paketquelle-auf-echtheit-ueberpruefen>>)
 
 * `OK Bezugsquelle [Datenmenge]`: der GPG-Schlüssel ist in Ordnung, die
-Signatur stimmt (siehe auch Paketquelle auf Echtheit überprüfen in 
-<<paketquelle-auf-echtheit-ueberpruefen>>)
+Signatur stimmt (siehe auch <<paketquelle-auf-echtheit-ueberpruefen>>)
 
 * `Holen:2 Bezugsquelle [Datenmenge]`: beziehe die Paketliste von der unter 1
 als URL angegebenen Paketquelle
@@ -101,7 +99,7 @@ Am Ende der Ausgabe erfolgt noch eine Zusammenfassung, welche Datenmenge
 in welcher Zeitspanne bezogen wurde. Nachfolgend sehen Sie die Ausgabe
 am Beispiel von `apt-get update`:
 
-//.Aktualisierung der Paketliste durch `apt-get update`
+.Aktualisierung der Paketliste durch `apt-get update`
 ----
 # apt-get update
 OK   http://ftp.de.debian.org wheezy Release.gpg
