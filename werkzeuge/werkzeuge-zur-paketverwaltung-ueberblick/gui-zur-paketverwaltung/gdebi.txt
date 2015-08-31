@@ -6,6 +6,8 @@
 
 ==== GDebi ====
 
+// Stichworte für den Index
+(((gdebi)))
 // Überblick
 Initial nur für Ubuntu entwickelt, verbirgt sich unter dem Namen GDebi
 <<gdebi>> ein kleines, seit 2004 von Michael Vogt betreutes Programm.
@@ -18,12 +20,18 @@ via APT auflöst und daraus die zusätzlich benötigten Pakete bezieht.
 Damit eignet es sich besonders gut, um zugesandte, selbst erstellte oder
 auch manuell heruntergeladene Pakete zu installieren.
 
+// Stichworte für den Index
+(((Debianpaket, gdebi)))
+(((Debianpaket, gdebi-core)))
+(((Debianpaket, gdebi-kde)))
 // Komponenten
 GDebi besteht aus drei *Komponenten* -- einem Kommandozeilenprogramm
-namens `gdebi` (aus dem Paket 'gdebi-core') und zwei graphischen
-Bedienoberflächen. Es existiert eine GTK-basierte Variante namens
-`gdebi-gtk` (aus dem Paket 'gdebi' -- siehe <<fig.gdebi-gtk>>) und eine
-KDE-Variante namens `gdebi-kde` (aus dem gleichnamigen Paket 'gdebi-kde'). 
+namens `gdebi` (aus dem Paket 'gdebi-core' <<Debian-Paket-gdebi-core>>)
+und zwei graphischen Bedienoberflächen. Es existiert eine GTK-basierte
+Variante namens `gdebi-gtk` (aus dem Paket 'gdebi'
+<<Debian-Paket-gdebi>> -- siehe <<fig.gdebi-gtk>>) und eine
+KDE-Variante namens `gdebi-kde` (aus dem gleichnamigen Paket 'gdebi-kde'
+<<Debian-Paket-gdebi-kde>>). 
 
 .`gdebi` mit den Informationen zum Paket 'apt-doc'
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/gdebi-gtk.png[id="fig.gdebi-gtk", width="50%"]
