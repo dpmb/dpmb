@@ -297,6 +297,12 @@
 
 - [[[Debian-Paket-gawk]]] Debian-Paket 'gawk', http://packages.debian.org/de/stable/gawk
 
+- [[[Debian-Paket-gdebi]]] Debian-Paket 'gdebi', http://packages.debian.org/de/stable/gdebi
+
+- [[[Debian-Paket-gdebi-core]]] Debian-Paket 'gdebi-core', http://packages.debian.org/de/stable/gdebi-core
+
+- [[[Debian-Paket-gdebi-kde]]] Debian-Paket 'gdebi-kde', http://packages.debian.org/de/stable/gdebi-kde
+
 - [[[Debian-Paket-geoip-database]]] Debian-Paket 'geoip-database', https://packages.debian.org/de/stable/geoip-database
 
 - [[[Debian-Paket-git-dpm]]] Debian-Paket 'git-dpm', https://packages.debian.org/de/stable/git-dpm
