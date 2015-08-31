@@ -4,6 +4,7 @@ Frank Hofmann, Axel Beckert
 :subtitle:
 :backend: html5
 :lang: en
+include::../version.txt[]
 
 On this page you can read or download generated development snapshots
 of the http://www.dpmb.org/[Debian Package Management Book] by

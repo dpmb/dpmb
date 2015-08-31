@@ -1,5 +1,5 @@
 BASE=debian-paketmanagement
-DEFAULTDEPENDENCIES=*.txt */*.txt */*/*.txt Makefile
+DEFAULTDEPENDENCIES=*.txt */*.txt */*/*.txt Makefile version.txt *-docinfo.xml
 DEFAULTOPTIONS=-L
 DOCTORDEFAULTOPTIONS=-a experimental -a toc -a toclevels=4
 FORMATS=html epub pdf mobi
@@ -35,7 +35,7 @@ fb2: $(BASE).fb2
 	ebook-convert $< $@
 
 clean:
-	rm -rvf *.html *.epub *.epub.d *.xml *.fls *.log *.pdf *.css *.tex *.mobi *.lit *.fb2
+	rm -rvf version.txt *.html *.epub *.epub.d *.xml *.fls *.log *.pdf *.css *.tex *.mobi *.lit *.fb2
 
 xmllint:
 	asciidoc -d book -b docbook $(BASE).txt
@@ -49,10 +49,19 @@ asciidoctor: doctor-html
 doctor-html: $(DEFAULTDEPENDENCIES)
 	asciidoctor $(DOCTORDEFAULTOPTIONS) $(BASE).txt
 
+version.txt: debian-paketmanagement.txt *-docinfo.xml */*.txt */*/*.txt Makefile
+	echo ":revdate: "`env LC_TIME=de_DE.UTF-8 date '+%x'` > version.txt
+	echo -n ":revnumber: " >> version.txt; \
+	if [ -d .git ] && `which git >/dev/null`; then \
+	    git describe --tags >> version.txt; \
+	elif [ -d debian/changelog ] && `which dpkg-parsechangelog >/dev/null`; then \
+	    dpkg-parsechangelog | fgrep Version | awk '{print $2}' >> version.txt; \
+	fi
+
 test: test-epub
 test-epub: $(BASE).epub
 	epubcheck $(BASE).epub
 
-deploy: allpure
+deploy: allpure version.txt
 	for suffix in $(FORMATS); do cp -pvf $(BASE).$$suffix deploy/; done
 	cd deploy && asciidoc index.txt
