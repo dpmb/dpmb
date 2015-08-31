@@ -53,6 +53,7 @@ version.txt: debian-paketmanagement.txt *-docinfo.xml */*.txt */*/*.txt Makefile
 	echo ":revdate: "`env LC_TIME=de_DE.UTF-8 date '+%x'` > version.txt
 	echo -n ":revnumber: " >> version.txt; \
 	if [ -d .git ] && `which git >/dev/null`; then \
+	    if ! git describe --tags >/dev/null; then git fetch --tags; fi; \
 	    git describe --tags >> version.txt; \
 	elif [ -d debian/changelog ] && `which dpkg-parsechangelog >/dev/null`; then \
 	    dpkg-parsechangelog | fgrep Version | awk '{print $2}' >> version.txt; \
