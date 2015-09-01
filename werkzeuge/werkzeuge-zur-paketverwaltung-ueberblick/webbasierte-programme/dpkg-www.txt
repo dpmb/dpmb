@@ -5,6 +5,9 @@
 [[webbasierte-programme-dpkg-www]]
 ==== In Paketen blättern mittels `dpkg-www` ====
 
+// Stichworte für den Index
+(((Debianpaket, dctrl-tools)))
+(((dpkg-www)))
 Das Projekt `dpkg-www` umfasst ein CGI-Skript und stellt Ihnen damit den
 Zugang zu sämtlicher Dokumentation zu den einzelnen Paketen zur
 Verfügung, die auf ihrem eigenen oder einem fremden Debian-System
@@ -17,6 +20,8 @@ Ist ebenfalls das Paket 'dctrl-tools' <<Debian-Paket-dctrl-tools>>
 installiert, können Sie mittels `dpkg-www` auch nach anderen Paketen und
 insbesondere nach den darin enthaltenen Dateien suchen.
 
+// Stichworte für den Index
+(((Debianpaket, dpkg-www)))
 Die Grundlage bildet das gleichnamige Paket 'dpkg-www'
 (<<Debian-Paket-dpkg-www>>). Obwohl dieses seine letzte reguläre
 Aktualisierung bereits 2008 erhielt und derzeit als verwaist eingestuft
@@ -35,16 +40,20 @@ zunächst noch Änderungen an den beiden Konfigurationsdateien
 (Webserver) erforderlich. Die Informationen dazu entnehmen Sie bitte der
 Dokumentation zu `dpkg-www`.
 
+// Stichworte für den Index
+(((dpkg-www, Webserver Apache)))
+(((dpkg-www, Webserver Nginx)))
 `dpkg-www` setzt auf einem installierten Webserver wie Apache oder Nginx
 auf. Daher ist die primäre Schnittstelle zur Bedienung des Programms
 auch ihr *Webbrowser*. Das Analyseergebnis stellt `dpkg-www` zweispaltig
 dar. Links stehen die verschiedenen Paketkategorien (siehe
-<<sortierung-der-pakete-nach-verwendungszweck>>), rechts finden Sie die einzelnen Pakete, die der
-jeweiligen Kategorie zugeordnet sind (siehe <<fig.dpkg-www>>). Jedes
-Paket wird dabei mit seinem Titel, einer Kurzbeschreibung, dem
-dazugehörigen Paketnamen und mit der Angabe der bereitstehenden Formate
-der Dokumentation oder der weiterführenden Dokumente aufgelistet. In der
-Regel sind das HTML, Plaintext, PDF, Postscript oder SGML.
+<<sortierung-der-pakete-nach-verwendungszweck>>), rechts finden Sie die
+einzelnen Pakete, die der jeweiligen Kategorie zugeordnet sind (siehe
+<<fig.dpkg-www>>). Jedes Paket wird dabei mit seinem Titel, einer
+Kurzbeschreibung, dem dazugehörigen Paketnamen und mit der Angabe der
+bereitstehenden Formate der Dokumentation oder der weiterführenden
+Dokumente aufgelistet. In der Regel sind das HTML, Plaintext, PDF,
+Postscript oder SGML.
 
 .Auswahl der Hilfeseiten zum Menüpunkt menu:Netzwerkkommunikation[]
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/dpkg-www.png[id="fig.dpkg-www", width="50%"]
@@ -64,6 +73,10 @@ erreichbar ist. Nutzen Sie den Apache Webserver, muss diese
 Funktionalität zuvor in der Datei `/etc/apache2/conf.d/dpkg-www`
 freigeschaltet worden sein.
 
+// Stichworte für den Index
+(((dpkg-www, -h)))
+(((dpkg-www, -s)))
+(((dpkg-www, -stdout)))
 Neben dem Paketnamen versteht das Programm die folgenden beiden
 Optionen:
 
@@ -73,6 +86,10 @@ die Ausgabe erfolgt nicht im Webbrowser, sondern auf dem Terminal.
 `-h Hostname` ::
 Hostname des angefragten Rechners.
 
+// Stichworte für den Index
+(((dpkg-query, -l)))
+(((dpkg-query, -L)))
+(((dpkg-query, -S)))
 Für das Paket 'bash' auf dem 'lokalen Rechner' und der späteren Ausgabe
 im Webbrowser nutzen Sie den nachfolgenden Aufruf. Dazu aggregiert
 `dpkg-www` nacheinander die Ergebnisse drei Kommandos `dpkg-query -S
