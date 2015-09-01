@@ -5,6 +5,9 @@
 [[webbasierte-programme-communtu]]
 ==== Communtu ====
 
+// Stichworte für den Index
+(((Communtu)))
+(((Debian Pure Blends)))
 Communtu ist eine Plattform, die seit 2008 vom Bremer Verein 'Natur,
 Geist und Technik -- Verein zur Förderung der Allgemeinbildung e.V.'
 betrieben und gepflegt wird. Über die Webseite stellen Sie sich
@@ -36,6 +39,9 @@ Pakete von Fremdquellen und erleichtert somit die sich wiederholende
 Installation gleichartiger Systeme, bspw. für einen Klassenraum in einer
 Schule.
 
+// Stichworte für den Index
+(((Ubuntupaket, apturl)))
+(((Paketvarianten, Metapaket)))
 Die technische Basis hinter dem Angebot der Plattform bilden Metapakete
 (siehe <<uebergangs-und-metapakete>>) sowie
 <<webbasierte-installation-von-paketen-mit-apturl>>). Nachdem Sie über
@@ -47,4 +53,5 @@ bereit, welches ihre Liste der Paketquellen entsprechend anpasst, um
 damit die Anbindung von weiteren Paketquellen zu ermöglichen. Mittels
 'apturl' beziehen Sie die erzeugten Metapakete über ihrem Webbrowser, so
 dass die Paketverwaltung diese Pakete einspielen kann.
+
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/communtu.txt
