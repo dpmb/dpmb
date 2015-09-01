@@ -34,8 +34,11 @@ fb2: $(BASE).fb2
 %.fb2: %.epub
 	ebook-convert $< $@
 
-clean:
+clean: deployclean
 	rm -rvf version.txt *.html *.epub *.epub.d $(BASE).xml *.fls *.log *.pdf *.css *.tex *.mobi *.lit *.fb2
+
+deployclean:
+	rm -rvf deploy/*/ deploy/$(BASE)* deploy/*.html
 
 xmllint:
 	asciidoc -d book -b docbook $(BASE).txt
