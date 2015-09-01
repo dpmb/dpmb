@@ -50,7 +50,7 @@ eine deutliche Warnung.
 // Stichworte für den Index
 (((apt-key, Schlüsselverwaltung)))
 (((Debianpaket, debian-archive-keyring)))
-(((Schlüsselring, /etc/apt/trusted.gpg
+(((Schlüsselring, /etc/apt/trusted.gpg)))
 (((Ubuntupaket, ubuntu-keyring)))
 Die Verwaltung der Schlüssel erfolgt mit dem Programm `apt-key`. Dazu
 gehört ein Schlüsselring mit allen GPG-Schlüsseln der Paketquellen, aus

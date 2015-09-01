@@ -646,7 +646,9 @@
 
 - [[[Ubuntu-apturl]]] AptURL im Ubuntu Apps Directory, https://apps.ubuntu.com/cat/applications/apturl/
 
-- [[[Debian-Paket-ubuntu-keyring]]] Ubuntu-Paket 'ubuntu-keyring', http://packages.ubuntu.com/de/trusty/ubuntu-keyring
+- [[[Ubuntu-Paket-software-center]]] Ubuntu-Paket 'software-center', https://launchpad.net/software-center
+
+- [[[Ubuntu-Paket-ubuntu-keyring]]] Ubuntu-Paket 'ubuntu-keyring', http://packages.ubuntu.com/de/trusty/ubuntu-keyring
 
 - [[[Ubuntu-Landscape]]] Ubuntu Landscape System Management, https://landscape.canonical.com/
 
