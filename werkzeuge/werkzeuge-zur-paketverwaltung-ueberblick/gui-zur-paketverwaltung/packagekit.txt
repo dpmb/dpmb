@@ -30,9 +30,14 @@ Openmoko <<OpenMoko>>.
 .Gnome Packagekit mit ausgewähltem Paket 'dctrl-tools'
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/gnome-packagekit.png[id="fig.gnome-packagekit", width="50%"]
 
+// Stichworte für den Index
+(((Debianpaket, packagekit-backend-aptcc)))
+(((Debianpaket, packagekit-backend-smart)))
+(((SmartPM)))
 PackageKit kann über die Interfaces APT und `aptcc` (Paket
-'packagekit-backend-aptcc') an APT andocken. Ähnliches liefert das Paket
-'packagekit-backend-smart' für die Zusammenarbeit mit SmartPM
-(<<gui-smartpm>>).
+'packagekit-backend-aptcc' <<Debian-Paket-packagekit-backend-aptcc>>) an
+APT andocken. Ähnliches liefert das Paket 'packagekit-backend-smart'
+<<Debian-Paket-packagekit-backend-smart>> für die Zusammenarbeit mit
+SmartPM (<<gui-smartpm>>).
 
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/packagekit.txt

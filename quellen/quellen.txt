@@ -199,6 +199,8 @@
 
 - [[[Debian-Paket-alien]]] Debian-Paket 'alien', http://packages.debian.org/de/stable/alien
 
+- [[[Debian-Paket-apper]]] Debian-Paket 'apper', https://packages.debian.org/jessie/apper
+
 - [[[Debian-Paket-approx]]] Debian-Paket 'approx', http://packages.debian.org/de/stable/approx
 
 - [[[Debian-Paket-apt]]] Debian-Paket 'apt', https://packages.debian.org/de/stable/apt
@@ -307,6 +309,8 @@
 
 - [[[Debian-Paket-git-dpm]]] Debian-Paket 'git-dpm', https://packages.debian.org/de/stable/git-dpm
 
+- [[[Debian-Paket-gnome-packagekit]]] Debian-Paket 'gnome-packagekit', https://packages.debian.org/jessie/gnome-packagekit
+
 - [[[Debian-Paket-goplay]]] Debian-Paket 'goplay', https://packages.debian.org/de/stable/goplay
 
 - [[[Debian-Paket-gui-apt-key]]] Debian-Paket 'gui-apt-key', https://packages.debian.org/de/stable/gui-apt-key
@@ -332,6 +336,10 @@
 - [[[Debian-Paket-netselect-apt]]] Debian-Paket 'netselect-apt', http://packages.debian.org/de/stable/netselect-apt
 
 - [[[Debian-Paket-packagekit]]] Debian-Paket 'packagekit', http://packages.debian.org/de/stable/packagekit
+
+- [[[Debian-Paket-packagekit-backend-aptcc]]] Debian-Paket 'packagekit-backend-aptcc', http://packages.debian.org/de/wheezy/packagekit-backend-aptcc
+
+- [[[Debian-Paket-packagekit-backend-smart]]] Debian-Paket 'packagekit-backend-smart', http://packages.debian.org/de/wheezy/packagekit-backend-smart
 
 - [[[Debian-Paket-packagesearch]]] Debian-Paket 'packagesearch', http://packages.debian.org/de/stable/packagesearch
 
