@@ -5,10 +5,12 @@
 [[webbasierte-programme-appnr]]
 ==== Appnr ====
 
+// Stichworte für den Index
+(((appnr)))
 Seit 2008 betreibt der Japaner Akira Ohgaki in Eigenregie seine
-nichtkommerzielle Plattform Appnr (<<appnr>>). Darüber stehen
-`deb`-Pakete verschiedener Repositories bereit, die Sie für ihr
-jeweiliges Ubuntu-Linuxsystem beziehen und installieren können (siehe
+nichtkommerzielle Plattform Appnr <<appnr>>. Darüber stehen `deb`-Pakete
+verschiedener Repositories bereit, die Sie für ihr jeweiliges
+Ubuntu-Linuxsystem beziehen und installieren können (siehe
 <<fig.appnr>>). Der Name des Projekts orientiert sich am Neusprech
 ``App'', da Sie die Installation im Webbrowser beginnen und die
 Handhabung der Nutzung einer ``App'' auf Geräten mit einem
@@ -35,8 +37,11 @@ Häufigkeit der Installation. Letzteres bezieht sich auf die
 Informationen, die Ubuntu im Rahmen seiner statistischen Erhebung durch
 den 'Popularity Contest' gesammelt hat.
 
+// Stichworte für den Index
+(((Ubuntupaket, apturl)))
 Zum Bezug der ausgewählten Pakete und sofortiger Installation benötigen
 Sie das Paket 'apturl' (<<Ubuntu-apturl>> und <<Vogt-apturl>>), welches
 wir Ihnen in <<webbasierte-installation-von-paketen-mit-apturl>> genauer
 vorstellen.
+
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/appnr.txt
