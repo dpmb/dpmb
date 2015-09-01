@@ -7,6 +7,8 @@
 ==== PackageKit ====
 
 // Stichworte für den Index
+(((Debianpaket, apper)))
+(((Debianpaket, gnome-packagekit)))
 (((PackageKit)))
 PackageKit ist eine allgemeine, distributionsneutrale Schnittstelle für
 unterschiedliche Paketverwaltungen, eine sogenannte Abstraktionsebene
@@ -20,9 +22,10 @@ dafür gedacht, hochspezialisierte Paketverwaltungssoftware zu ersetzen.
 
 Seit 2009 nutzt die Linuxdistribution Kubuntu diese Schnittstelle für
 seine Paketverwaltung. Weitere Anwendungen, die auf PackageKit
-aufsetzen, sind z.B. das Paket 'apper' für den KDE, das Paket
-'gnome-packagekit' für GNOME (siehe <<fig.gnome-packagekit>>) und der
-Openmoko Installer.
+aufsetzen, sind z.B. das Paket 'apper' <<Debian-Paket-apper>> für den
+KDE, das Paket 'gnome-packagekit' <<Debian-Paket-gnome-packagekit>> für
+GNOME (siehe <<fig.gnome-packagekit>>) und das Installationsprogramm zu
+Openmoko <<OpenMoko>>.
 
 .Gnome Packagekit mit ausgewähltem Paket 'dctrl-tools'
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/gnome-packagekit.png[id="fig.gnome-packagekit", width="50%"]
