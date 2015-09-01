@@ -5,6 +5,8 @@
 [[webbasierte-programme-ubuntu-landscape]]
 ==== Ubuntu Landscape ====
 
+// Stichworte für den Index
+(((Ubuntu Landscape)))
 Canonical stellt mit Ubuntu Landscape <<Ubuntu-Landscape>> seit 2008
 eine zentrale Administrationsoberfläche für Einzelrechner und
 Serversysteme bereit. Ubuntu Landscape ist Teil des kostenpflichtigen
@@ -14,13 +16,14 @@ oder auch lokal installierbar{empty}footnote:[Die Pakete dafür heißen
 und 'landscape-common']. Darüberhinaus steht eine API zur individuellen
 Ansteuerung bereit.
 
-Nutzergruppe von Ubuntu Landscape sind weniger die Endbenutzer, sondern
-Unternehmen und deren gesamte Infrastruktur. Das Ziel besteht dabei in
-der möglichst vollständigen, weitestgehend automatisierten und zentralen
-Systemadministration für bis zu 40000 Computer. Das Angebot umfasst daher
-eine webbasierte Schnittstelle für das Patch- und Änderungsmanagement,
-die rollenbasierte Verwaltung für Einzelbenutzer und Gruppen sowie
-Sicherheitseinstellungen von Ubuntu-Desktop-Systemen und -Servern (siehe
+Die erhoffte Nutzergruppe von Ubuntu Landscape sind weniger die
+Endbenutzer, sondern Unternehmen und deren gesamte Infrastruktur. Das
+Ziel besteht dabei in der möglichst vollständigen, weitestgehend
+automatisierten und zentralen Systemadministration für bis zu 40000
+Computer. Das Angebot umfasst daher eine webbasierte Schnittstelle für
+das Patch- und Änderungsmanagement, die rollenbasierte Verwaltung für
+Einzelbenutzer und Gruppen sowie Sicherheitseinstellungen von
+Ubuntu-Desktop-Systemen und -Servern (siehe
 <<fig.ubuntu-landscape-rollback>>).
 
 // ToDo: Nutzung der Abbildung klären
@@ -35,4 +38,5 @@ gepflegten Computern deren Installationsstatus. Wie bei Communtu (siehe
 <<uebergangs-und-metapakete>>) verstärkt zum Einsatz. Darüber werden
 Paketgruppen und ganze Softwareprofile für die betreuten System
 realisiert und abgebildet.
+
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/ubuntu-landscape.txt
