@@ -28,7 +28,7 @@ Veröffentlichung (siehe <<veroeffentlichungen>>), die Architektur (siehe
 (siehe <<distributionsbereiche>>). In der rechten Spalte wählen Sie die
 gewünschten Repositories von Drittanbietern aus, sofern Sie dazu Bedarf
 haben (siehe <<fig.debian-sources-list-generator>>). Über den Knopf
-menu:[Generate sources list] erstellt Ihnen das Programm eine
+menu:Generate sources list[] erstellt Ihnen das Programm eine
 passende Liste der Paketquellen (siehe
 <<fig.debian-sources-list-generator-list>>). Diese Datei können Sie nun
 als neue `/etc/apt/sources.list` in Ihr System übernehmen.
@@ -49,7 +49,7 @@ bezeichnet werden. Hinter den Fragezeichen verbergen sich Erläuterungen,
 welche den ausgewählten Distributionsbereich näher beschreiben. Danach
 können Sie neben der Architektur (siehe <<debian-architekturen>>) auch
 etliche zusätzliche Paketquellen von Ubuntu-Partnern hinzufügen. Am
-Schluß erstellen Sie mit einem Klick auf den Knopf menu:[Generate]
+Schluß erstellen Sie mit einem Klick auf den Knopf menu:Generate[]
 die entsprechende Liste der ausgewählten Paketquellen, die Sie in ihr
 System übernehmen können.
 

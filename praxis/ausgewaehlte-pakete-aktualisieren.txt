@@ -63,16 +63,16 @@ ToDo: Beispiel
 ----
 
 * Durchführung über die *Textoberfläche* von `aptitude`
-** Zweig/Kategorie menu:[Sicherheitsaktualisierungen]
+** Zweig/Kategorie menu:Sicherheitsaktualisierungen[]
 *** Paket markieren mit kbd:[+]
 *** Paketvorschau mit kbd:[g]
 *** Paketaktualisierung mit kbd:[g]
 ** ToDo: da muss aber noch mehr sein ....
 
 * Durchführung bei *Synaptic* (siehe <<gui-synaptic>>)
-** Auswahl der Kategorie menu:[Aktualisierbar (Upstream)]
+** Auswahl der Kategorie menu:Aktualisierbar (Upstream)[]
 ** Rechtsklick auf Eintrag in der Paketliste
-** Auswahl menu:[Zum Aktualisieren vormerken]
+** Auswahl menu:Zum Aktualisieren vormerken[]
 
 === Aktualisierung mit Wechsel der Veröffentlichung ===
 

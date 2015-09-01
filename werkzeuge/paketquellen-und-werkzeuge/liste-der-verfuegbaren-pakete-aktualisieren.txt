@@ -32,14 +32,14 @@ das Kommando `apt` kennen, funktioniert auch `apt update` (siehe
 Kommandozeile mittels `aptitude update`. Möchten Sie die Paketliste
 aktualisieren und danach interaktiv im Text-Modus weiterarbeiten, so
 rufen Sie `aptitude -u` auf. Sind Sie bereits im interaktiven Text-Modus
-von `aptitude`, sorgt der Tastendruck key:[u] für frische Paketlisten
+von `aptitude`, sorgt der Tastendruck kbd:[u] für frische Paketlisten
 und die aktualisierte Darstellung in `aptitude`. Alternativ stoßen Sie
 die Aktion über den Menüeintrag `Aktionen -> Paketlisten aktualisieren`
 an.
 
 * Bei Synaptic (siehe <<gui-synaptic>>) verbirgt sich dieser Vorgang
 hinter dem Menüeintrag `Bearbeiten -> Paketinformationen neu laden`.
-Alternativ nutzen Sie dafür die Tastenkombination key:[Ctrl,R].
+Alternativ nutzen Sie dafür die Tastenkombination kbd:[Ctrl,R].
 
 * Im Programm SmartPM (siehe <<gui-smartpm>>) lösen Sie die
 Aktualisierung für alle Paketquellen über den Menüpunkt `File -> Update

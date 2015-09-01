@@ -67,7 +67,7 @@ $
 ----
 
 Die gleiche Liste erhalten Sie über die Textoberfläche. Dazu filtern Sie
-die Paketliste mit der Taste key:[l] und tragen im Suchfeld entweder die
+die Paketliste mit der Taste kbd:[l] und tragen im Suchfeld entweder die
 Kurzform `~M` oder die Langvariante `?automatic` ein. Das Ergebnis
 entspricht <<fig.aptitude-automatisch-installiert>>.
 

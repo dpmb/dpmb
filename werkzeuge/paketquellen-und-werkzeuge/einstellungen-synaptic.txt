@@ -11,7 +11,7 @@
 Auch mittels Synaptic (siehe <<gui-synaptic>>) und dem Ubuntu Software
 Center (siehe <<gui-ubuntu-software-center>>) können Sie die Datei
 `/etc/apt/sources.list` anpassen. Dazu öffnen Sie den entsprechenden
-Dialog unter dem Menüpunkt menu:[Einstellungen,Paketquellen]. Unter
+Dialog unter dem Menüpunkt menu:Einstellungen[Paketquellen]. Unter
 Gnome/GTK erfolgt daraufhin ein Aufruf des Programms
 `software-properties-gtk` aus dem bereits weiter oben genannten Projekt
 Python Software Properties <<Debian-Paket-python-software-properties>>.

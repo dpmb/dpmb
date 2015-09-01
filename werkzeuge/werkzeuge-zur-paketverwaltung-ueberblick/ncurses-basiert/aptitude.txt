@@ -76,11 +76,12 @@ Um hingegen über die *Ncurses-basierte Bedienoberfläche* zu agieren,
 starten Sie zunächst `aptitude` ohne weitere Optionen. Die mehrfarbige
 Bedienoberfläche enthält mehrere Elemente. Ganz oben finden Sie die
 verfügbaren, aktiven Tasten und deren Funktion. Über die Funktionstaste
-kbd:[F10] oder alternativ mit Hilfe der Tastenkombination kbd:[CTRL,T]
+kbd:[F10] oder alternativ mit Hilfe der Tastenkombination kbd:[Ctrl,T]
 aktivieren Sie bspw. die Menüleiste. Einige Terminals wie bspw. das
 Gnome-Terminal fangen die Funktionstaste ab und belegen diese für die
-eigene Menüleiste. Über den Eintrag menu:[Bearbeiten,
-Tastenkombinationen, Menütastenkombinationen aktivieren] (de)aktivieren
+eigene Menüleiste. Über den Eintrag
+menu:Bearbeiten[Tastenkombinationen, Menütastenkombinationen aktivieren]
+(de)aktivieren
 Sie das Verhalten. Mit Hilfe der Pfeiltasten navigieren Sie zwischen den
 einzelnen Menüeinträgen hin und her bzw. wählen die gewünschte Aktion
 aus.

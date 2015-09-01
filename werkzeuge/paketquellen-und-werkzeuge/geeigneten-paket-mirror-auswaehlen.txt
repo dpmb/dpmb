@@ -174,7 +174,7 @@ Repositories Pakete  für alle Architekturen (siehe
 image::werkzeuge/paketquellen-und-werkzeuge/apt-get-org.png[id="fig.apt-get-org", width="50%"]
 
 Sehr hilfreich und zumeist auch der erste Anlaufpunkt für inoffizielle
-Debian-Pakete ist die Paketsuche unter dem Menüpunkt menu:[Search].
+Debian-Pakete ist die Paketsuche unter dem Menüpunkt menu:Search[].
 Im Eingabefeld geben Sie ein Textfragment aus dem Namen eines Paketes
 ein, nachdem dann `apt-get.org` seine Liste der Spiegelserver
 durchforstet. Ergebnis ist eine Liste, von der Sie entnehmen können, von

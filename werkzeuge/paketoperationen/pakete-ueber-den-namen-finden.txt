@@ -148,7 +148,7 @@ $
 ----
 
 In der Textoberfläche von `aptitude` begrenzen Sie zunächst die Auswahl
-mit der Taste key:[l]. In das Eingabefeld tragen Sie den Suchtext
+mit der Taste kbd:[l]. In das Eingabefeld tragen Sie den Suchtext
 oder das o.g. Suchmuster ein. Daraufhin erscheinen in der Übersicht alle
 Pakete, die diesem Muster entsprechen (siehe <<fig.aptitude-limit-xpdf>>).
 
@@ -166,14 +166,14 @@ image::werkzeuge/paketoperationen/aptitude-limit-xpdf.png[id="fig.aptitude-limit
 Synaptic aus <<gui-synaptic>> bietet Ihnen zwei Varianten zur Suche an
 – einerseits eine Schnellsuche und andererseits eine ausführliche
 Suche. Die _Schnellsuche_ verbirgt sich hinter dem Suchfenster oben
-rechts und ist mit dem Begriff menu:[Schnellauswahl-Filter] betitelt.
+rechts und ist mit dem Begriff menu:Schnellauswahl-Filter[] betitelt.
 Geben Sie dort einen Text ein, durchsucht Synaptic die Paketliste und
 filtert nur die heraus, deren Paketname mit dem Text beginnen. Dabei
 werden Platzhalter und Reguläre Ausdrücke nicht unterstützt. Als
 Ergebnis wird die dargestellte Paketliste auf die gefundenen Pakete
 eingeschränkt.
 
-Die _ausführlichere Suche_ erreichen Sie mittels key:[CTRL,F] oder
+Die _ausführlichere Suche_ erreichen Sie mittels kbd:[Ctrl,F] oder
 alternativ über den Knopf mit der Lupe. Es öffnet sich ein Fenster mit
 einem Eingabefeld für den Suchtext. Darunter befindet sich ein
 Auswahlfeld, wo Sie die Suche nach Name, Beschreibung und Name, Betreuer
@@ -193,7 +193,7 @@ image::werkzeuge/paketoperationen/synaptic-suche-nach-namen.png[id="fig.synaptic
 SmartPM (<<gui-smartpm>>) besitzt nur eine einfachere Suchfunktion.
 Diese ist als Suchfeld in die graphische Bedienoberfläche integriert.
 Das Suchfeld erreichen Sie ebenfalls über die Tastenkombination
-key:[Ctrl,F]. SmartPM versteht auch Fragmente, d.h. es interpretiert
+kbd:[Ctrl,F]. SmartPM versteht auch Fragmente, d.h. es interpretiert
 den Suchtext als Teilstring, sucht bislang jedoch nur im Paketnamen.
 
 .Ergebnis der Suche nach dem Fragment `top` in SmartPM

@@ -151,7 +151,7 @@ $
 
 `aptitude` gruppiert die Pakete ebenfalls anhand ihrer Schlagworte.
 Diese zugegebenermaßen etwas versteckte Darstellung finden Sie im
-Programm unter menu:[Ansichten, Neuer Debtags-Browser] (siehe
+Programm unter menu:Ansichten[Neuer Debtags-Browser] (siehe
 <<fig.aptitude-debtags-browser>>). Danach erhalten Sie eine Auswahlliste
 anhand der Debtags und wählen darüber ihre Pakete wie gewohnt aus.
 

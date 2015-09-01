@@ -84,7 +84,7 @@ auf eine `deb`-Datei im Dateimanager ihrer Desktop-Umgebung. In
 letzterem Fall wird das von Ihnen angeklickte Paket jedoch nicht sofort
 installiert. Sie erhalten zunächst ein Fenster mit vielfältigen
 Informationen über das ausgewählte Paket (analog zu <<fig.gdebi-gtk>>).
-Erst mit einem weiteren Klick auf menu:[Paket installieren] lösen Sie
+Erst mit einem weiteren Klick auf menu:Paket installieren[] lösen Sie
 die Installation tatsächlich aus. Dieses Vorgehen hilft Ihnen dabei,
 herum(f)liegende Pakete nicht aus Versehen zu installieren. Somit
 vergewissern Sie sich nochmals, aus welcher ggf. auch unverifizierten
@@ -99,8 +99,8 @@ Paketcache unter `/var/cache/apt/archives/` herumdümpeln (siehe
 <<paketcache>>).
 
 Das Begutachten von Paketen gelingt Ihnen über die einzelnen Reiter
-menu:[Beschreibung], menu:[Details] und menu:[enthaltene
-Dateien]. Neben der Paketbeschreibung zeigt Ihnen GDebi alle sonstigen
+menu:Beschreibung[], menu:Details[] und menu:enthaltene Dateien[].
+Neben der Paketbeschreibung zeigt Ihnen GDebi alle sonstigen
 Metadaten aus der Control-Datei (siehe <<aufbau-und-format>>) sowie den
 tatsächlichen Paketinhalt an, sofern es sich dabei um Textdateien
 handelt. Dies umfasst auch die Maintainer-Skripte.

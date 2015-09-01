@@ -43,7 +43,7 @@ Aufräumen des Paketcaches. Die *Variante eins* umfasst das Löschen von
 Paketen aus dem Cache, die in keinem der verwendeten APT-Repositories
 mehr verfügbar sind. Die beiden Aufrufe `apt-get autoclean` und
 `aptitude autoclean` implementieren diesen Ansatz. Bei Synaptic nutzen
-Sie dazu den Menüpunkt menu:[Einstellungen, Dateien] und selektieren
+Sie dazu den Menüpunkt menu:Einstellungen[Dateien] und selektieren
 im Dialogfenster den Eintrag ``Nur Pakete löschen, die nicht länger
 verfügbar sind'' (siehe <<fig.synaptic-paketcache-leeren>>). In der
 Standardeinstellung erleichtern diese Kommandos den Cache auch um
@@ -84,8 +84,8 @@ landen, die nur teilweise bezogen wurden.
 lock  partial
 ----
 
-Bei Synaptic bildet zunächst der Eintrag menu:[Einstellungen,
-Dateien] den Ausgangspunkt. Über den Knopf ``Alle Paketdateien im
+Bei Synaptic bildet zunächst der Eintrag menu:Einstellungen[Dateien]
+den Ausgangspunkt. Über den Knopf ``Alle Paketdateien im
 Zwischenspeicher löschen'' lösen Sie die Aufräumaktion aus (siehe
 <<fig.synaptic-paketcache-leeren>>).
 

@@ -155,9 +155,9 @@ image::werkzeuge/paketoperationen/ara-suche.png[id="fig.ara-suche", width="50%"]
 (((Synaptic)))
 Das graphische Programm Synaptic (<<gui-synaptic>>) handhabt das ganze
 etwas anders und bietet Ihnen einen passenden Menüeintrag an. Unter dem
-Eintrag menu:[Bearbeiten, Suchen] bzw. mit der Tastenkombination
-key:[Ctrl,F] erreichen Sie den Suchdialog. Im Auswahlfeld selektieren
-Sie den Eintrag menu:[Betreuer] und tragen im Eingabefeld dessen
+Eintrag menu:Bearbeiten[Suchen] bzw. mit der Tastenkombination
+kbd:[Ctrl,F] erreichen Sie den Suchdialog. Im Auswahlfeld selektieren
+Sie den Eintrag menu:Betreuer[] und tragen im Eingabefeld dessen
 Namen ein. Daraufhin liefert Ihnen Synaptic ein Ergebnis wie in
 <<fig.synaptic-suche-nach-maintainer>>. In der linken Spalte der
 Paketauswahl erscheint zudem ein zusätzlicher Eintrag mit dem Namen des

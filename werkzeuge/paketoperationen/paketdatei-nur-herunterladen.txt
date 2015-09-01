@@ -39,7 +39,7 @@ Es wurden 696 kB in 0 s geholt (1.549 kB/s).
 
 Dieser Aufruf ist identisch mit der Benutzung eines Webbrowsers. Dazu
 wählen Sie beispielsweise im Debian-Paketarchiv das gewünschte Paket aus
-und legen es über menu:[Datei speichern unter] in einem lokalen
+und legen es über menu:Datei speichern unter[] in einem lokalen
 Verzeichnis ab (siehe <<fig.webbrowser-paket-download>>).
 
 .Bezug des Pakets 'bash-doc' über den Webbrowser

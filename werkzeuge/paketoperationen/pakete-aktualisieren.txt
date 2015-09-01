@@ -230,18 +230,18 @@ Für das interaktive Arbeiten in der Text-Modus-Oberfläche von
 . Starten Sie zunächst `aptitude` mit der Option `-u`. Damit
 aktualisieren Sie zu Beginn die Paketlisten.
 
-. Mit key:["["] öffnen Sie die Äste ``Aktualisierbare Pakete'' und
+. Mit kbd:["["] öffnen Sie die Äste ``Aktualisierbare Pakete'' und
 ``Sicherheitsaktualisierungen'', um zu sehen, welche Pakete zur
 Aktualisierung anstehen.
 
-. Mit key:[U] merken Sie alle aktualisierbaren Pakete vor.
+. Mit kbd:[U] merken Sie alle aktualisierbaren Pakete vor.
 
 . Eventuelle Konflikte lösen Sie, indem Sie z.B. den ersten
-Lösungsvorschlag mit key:[!] akzeptieren.
+Lösungsvorschlag mit kbd:[!] akzeptieren.
 
-. Mit key:[g] sehen Sie die Vorschau der anstehenden Aktionen an.
+. Mit kbd:[g] sehen Sie die Vorschau der anstehenden Aktionen an.
 
-. Drücken Sie nochmals key:[g], um die vorbereiteten Aktionen
+. Drücken Sie nochmals kbd:[g], um die vorbereiteten Aktionen
 auszuführen.
 
 ==== Aktualisierung mit Synaptic ====
@@ -257,16 +257,15 @@ verschiedenen Aktualisierungsstufen.
 Folgende Schritte führen zu neuen Paketen über die graphische
 Oberfläche:
 
-. Wählen Sie als erstes den Knopf menu:[Status, Installiert
-(aktualisierbar)] aus.
+. Wählen Sie als erstes den Knopf menu:Status[Installiert (aktualisierbar)] aus.
 
 . Danach selektieren Sie das gewünschte Paket aus der Liste.
 
-. Über den Menüeintrag menu:[Paket, Zum Aktualisieren vormerken]
+. Über den Menüeintrag menu:Paket[Zum Aktualisieren vormerken]
 fügen Sie dieses zu ihrer Vorauswahl hinzu.
 
-. Über den Menüpunkt menu:[Bearbeiten, Vorgemerkte Änderungen
-anwenden] lösen Sie die Aktualisierung aus.
+. Über den Menüpunkt menu:Bearbeiten[Vorgemerkte Änderungen anwenden]
+lösen Sie die Aktualisierung aus.
 
 Ein Distributionswechsel ist nur über vorherige Änderung der
 Paketquellen möglich. Dabei ergänzen Sie zunächst eine weitere

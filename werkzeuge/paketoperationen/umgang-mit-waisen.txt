@@ -66,7 +66,7 @@ installiertes Paket abhängt (keine 'reverse dependencies' bestehen).
 
 Über die `aptitude`-Option `aptitude::Delete-Unused` schalten Sie dieses
 Verhalten zu oder ab – entweder über die Benutzeroberfläche unter
-menu:[Optionen,Einstellungen], oder direkt in der Konfigurationsdatei
+menu:Optionen[Einstellungen], oder direkt in der Konfigurationsdatei
 von `aptitude`.
 
 .Nicht verwendete Pakete automatisch entfernen in `aptitude`
@@ -539,7 +539,7 @@ sind, und andererseits um Pakete aus allen anderen Paketkategorien
 (siehe <<sortierung-der-pakete-nach-verwendungszweck>>). Um den bereits
 weiter oben angesprochenen Ratemodus zu verwenden, wählen Sie im
 Auswahlfeld den gewünschten Eintrag aus der Liste der Möglichkeiten aus.
-Mit einem Klick auf menu:[OK] werden alle Waisen von ihrem System
+Mit einem Klick auf menu:OK[] werden alle Waisen von ihrem System
 entfernt, die Sie zuvor aus der Paketliste ausgewählt haben.
 
 .`gtkorphan` bei der Arbeit

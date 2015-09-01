@@ -27,12 +27,12 @@ Desktop-Umgebung aus. In <<fig.smartpm>> sehen Sie die zweispaltige
 Darstellung -- links die Paketkategorien, rechts oben die Paketliste mit
 Paketname samt Versionsnummer und rechts unten die ausführliche
 Paketbeschreibung -- hier am Beispiel des Pakets 'kexi'. Unter dem
-Reiter menu:[General] verbergen sich die Basisinformationen zum
-Paket, menu:[Description] bietet die Paketbeschreibung,
-menu:[Content] die Dateien aus dem Paket, menu:[Changelog] die
-Veränderungen zur vorherigen Version, menu:[Relations] die darüber
+Reiter menu:General[] verbergen sich die Basisinformationen zum
+Paket, menu:Description[] bietet die Paketbeschreibung,
+menu:Content[] die Dateien aus dem Paket, menu:Changelog[] die
+Veränderungen zur vorherigen Version, menu:Relations[] die darüber
 bereitgestellten, verfügbaren und zusätzlich benötigten Pakete. Unter
-dem Reiter menu:[URLs] verbergen sich weitere Referenzen zum Paket.
+dem Reiter menu:URLs[] verbergen sich weitere Referenzen zum Paket.
 
 .Softwareauswahl in `smartpm`
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/smartpm.png[id="fig.smartpm", width="50%"]

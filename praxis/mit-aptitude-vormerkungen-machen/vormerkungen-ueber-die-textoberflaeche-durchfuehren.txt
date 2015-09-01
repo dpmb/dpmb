@@ -27,9 +27,9 @@ die Sie dafür benutzen können.
 | `U`   | alle aktualisierbaren Pakete zur Aktualisierung vormerken
 |====
 
-Drücken Sie die Taste key:[g], erhalten Sie danach zunächst nur eine
+Drücken Sie die Taste kbd:[g], erhalten Sie danach zunächst nur eine
 Vorschau ihrer Vormerkungen (siehe
-<<bestehende-vormerkungen-anzeigen>>). Drücken Sie die Taste key:[g]
+<<bestehende-vormerkungen-anzeigen>>). Drücken Sie die Taste kbd:[g]
 erneut führt `aptitude` ihre Vormerkungen auch tatsächlich aus (siehe
 <<vormerkungen-ausfuehren>>).
 

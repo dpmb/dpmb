@@ -19,15 +19,15 @@ image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltun
 
 Synaptic bedienen Sie über die Menüleiste, eine Reihe von Knöpfen
 darunter und eine dreispaltige Paketübersicht. Die Darstellung
-konfigurieren Sie über die Menüpunkte menu:[Einstellungen,Einstellungen]
-und menu:[Einstellungen,Werkzeugleiste]. <<fig.synaptic-setup-farben>>
+konfigurieren Sie über die Menüpunkte menu:Einstellungen[Einstellungen]
+und menu:Einstellungen[Werkzeugleiste]. <<fig.synaptic-setup-farben>>
 zeigt als Beispiel das Dialogfenster, über welches Sie die Farben zum
 jeweiligen Installationsstatus eines Paketes festlegen.
 
 .Farbige Markierungen der Pakete gemäß ihrem Installationsstatus (Synaptic)
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/synaptic-setup-farben.png[id="fig.synaptic-setup-farben", width="50%"]
 
-Über den Knopf menu:[Eigenschaften] erfahren Sie mehr über das gerade von
+Über den Knopf menu:Eigenschaften[] erfahren Sie mehr über das gerade von
 Ihnen ausgewählte Paket. Dazu zählen Allgemeine Informationen, die
 Paketabhängigkeiten, die installierten Dateien, die verfügbaren
 Paketversionen sowie eine ausführliche Paketbeschreibung.
@@ -58,22 +58,22 @@ Spaltenkopf sortieren Sie die Paketliste nach der jeweiligen
 Eigenschaft.
 
 Die 'rechte untere Spalte' zeigt die ausführliche Paketbeschreibung an.
-Über den linken Knopf (menu:[Bildschirmfoto herunterladen]) beziehen
+Über den linken Knopf (menu:Bildschirmfoto herunterladen[]) beziehen
 Sie ein Bildschirmfoto, sofern dieses hinterlegt ist{empty}footnote:[Die
 Bildschirmfotos kommen von <<screenshots.debian.net>>. Falls für Ihr
 Lieblingspaket ein Screenshot fehlt, können Sie selbst einen
 anfertigen und dort hochladen. Nach einem Review wird das hochgeladene
 Bild im Normalfall freigeschaltet und ist dann für alle Nutzer der
 Webseite und der Programme, die die Daten von dort verwenden, sichtbar.].
-Über den rechten Knopf (menu:[Änderungsprotokoll abrufen]) zeigt
+Über den rechten Knopf (menu:Änderungsprotokoll abrufen[]) zeigt
 Ihnen Synaptic die Änderungsdatei (engl. 'Changelog') zum ausgewählten
 Paket an.
 
 Um ein Paket zu installieren, wählen Sie dieses zuerst über den
-Menüeintrag menu:[Paket,Zum installieren vormerken] (alternativ
+Menüeintrag menu:Paket[Zum installieren vormerken] (alternativ
 kbd:[Strg,I] oder einen Rechtsklick) aus. Über den Menüeintrag
-menu:[Bearbeiten,Vorgemerkte Änderungen anwenden] (alternativ
-kbd:[Strg,P] oder den Knopf menu:[Anwenden]) lösen Sie die
+menu:Bearbeiten[Vorgemerkte Änderungen anwenden] (alternativ
+kbd:[Strg,P] oder den Knopf menu:Anwenden[]) lösen Sie die
 Installation aus. In ähnlicher Art und Weise verfahren Sie beim Löschen
 und Aktualisieren von Paketen. Synaptic prüft bei jeder Aktion die
 Paketabhängigkeiten und bezieht die weiteren Pakete in die Verarbeitung
@@ -82,12 +82,13 @@ bleibt.
 
 Möchten Sie hingegen eine ganze Paketgruppe installieren, bietet
 Synaptic die gleiche Funktionalität wie das Werkzeug 'tasksel' (siehe
-<<tasksel>>). Dazu nutzen Sie den Menüpunkt menu:[Bearbeiten, Pakete
-nach Aufgaben vormerken]. Daraufhin erscheint ein ähnliches
+<<tasksel>>). Dazu nutzen Sie den Menüpunkt
+menu:Bearbeiten[Pakete nach Aufgaben vormerken]. Daraufhin erscheint
+ein ähnliches
 Auswahlfenster wie in <<fig.synaptic-tasksel>>, aus deren Liste sie die
 gewünschte Aktion markieren. Alle Pakete, die der ausgewählten Aufgabe
 zugeordnet sind, gelangen damit in die Vorauswahl und können daraufhin
-über den Knopf menu:[Anwenden] installiert werden.
+über den Knopf menu:Anwenden[] installiert werden.
 
 .Paketauswahl einer ganzen Aufgabengruppe (Synaptic)
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/synaptic-tasksel.png[id="fig.synaptic-tasksel", width="50%"]

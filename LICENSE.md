@@ -2,7 +2,16 @@
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Das Buch "Debian-Paketmanagement"</span> von <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.debian-paketmanagement.de/" property="cc:attributionName" rel="cc:attributionURL">Frank Hofmann und Axel Beckert</a> ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
 
-Volltext der Lizenz:
+Siehe unten für einen Volltext der Lizenz.
+
+## Files under different licenses
+
+There is a small number of files included which originate from other
+projects and are under different licenses. See the (machine-readable)
+file [debian/copyright](debian/copyright) for a full declaration which
+file is under which license.
+
+New contributions to this project are always under the CC BY-SA 4.0 license.
 
 ## Creative Commons Attribution-ShareAlike 4.0 International Public License
 

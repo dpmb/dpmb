@@ -6,6 +6,7 @@ Debian-Paketmanagement
 :ascii-ids:
 :numbered:
 :subtitle: Konzepte - Werkzeuge - Praxis
+:conf-files: asciidoc.conf|asciidoc-macros/asciidoctor-compat.conf
 include::version.txt[]
 
 // Baustelle: Rohtext

@@ -107,8 +107,8 @@ obsoleten Pakete anzeigen. Bei den anderen Programmen fehlt bislang
 diese Möglichkeit.
 
 Dazu wählen Sie zunächst aus der linken Spalte den Knopf
-menu:[Status] aus. Aus der darüberliegenden Liste selektieren Sie
-danach den Eintrag menu:[installiert (lokal oder veraltet)]. Als
+menu:Status[] aus. Aus der darüberliegenden Liste selektieren Sie
+danach den Eintrag menu:installiert (lokal oder veraltet)[]. Als
 Ergebnis erhalten Sie eine Paketliste, welche nur noch die obsoleten
 Pakete enthält. In <<fig.synaptic-obsolete-pakete>> wurden daraus
 beispielhaft 'foxitreader' und 'libdvdcss2' markiert.

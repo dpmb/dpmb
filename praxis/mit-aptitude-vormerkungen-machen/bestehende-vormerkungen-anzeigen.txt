@@ -91,7 +91,7 @@ Sie das Vorgehen unter Aktualisierbare Pakete anzeigen in
 <<aktualisierbare-pakete-anzeigen>> nach.
 ====
 
-In der _Textoberfläche_ drücken Sie hingegen die Taste key:[g].
+In der _Textoberfläche_ drücken Sie hingegen die Taste kbd:[g].
 Daraufhin sehen Sie eine Darstellung ähnlich zu
 <<fig.aptitude-vormerkungen>>, in der die einzelnen Paketoperationen
 gruppiert sind. Als Kategorien bestehen derzeit:

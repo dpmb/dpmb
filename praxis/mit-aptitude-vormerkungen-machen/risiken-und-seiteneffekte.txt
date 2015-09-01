@@ -17,8 +17,8 @@ Fallen, die durchaus für Überraschungen sorgen können.
 
 . `aptitude` merkt sich, welche Vormerkungen Sie über die
 _Textoberfläche_ vorgenommen haben. Beenden Sie `aptitude` mittels
-key:[q], speichert es die Vormerkungen. Brechen Sie `aptitude` hingegen
-mit key:[Ctrl,c] ab, werden die Vormerkungen nicht aktualisiert und
+kbd:[q], speichert es die Vormerkungen. Brechen Sie `aptitude` hingegen
+mit kbd:[Ctrl,c] ab, werden die Vormerkungen nicht aktualisiert und
 bleiben so, wie sie bisher sind.
 
 . Nutzen Sie `aptitude` eher selten, ist nicht auszuschließen, dass Sie

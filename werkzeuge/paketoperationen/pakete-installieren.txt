@@ -43,7 +43,7 @@ genau. In der vorletzten Zeile zeigt es Ihnen den benötigten
 Speicherplatz für die neuen Pakete an – im nachfolgenden Beispiel für
 das Paket 'kdm' sind es immerhin 36MB. Da im Moment nur der benötigte
 Speicherplatz von Interesse ist, brechen Sie die Installation ab, indem
-Sie bei der abschließenden Frage die Taste key:[n] drücken.
+Sie bei der abschließenden Frage die Taste kbd:[n] drücken.
 
 //.Abgebrochene Installation von 'kdm' mittels APT
 ----

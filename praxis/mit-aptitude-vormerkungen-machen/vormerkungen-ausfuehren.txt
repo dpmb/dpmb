@@ -35,7 +35,7 @@ Aktueller Status: 19 aktualisierbare Pakete [-3].
 #
 ----
 
-In der _Textoberfläche_ erfolgt das mit der Taste key:[g]. Daraufhin
+In der _Textoberfläche_ erfolgt das mit der Taste kbd:[g]. Daraufhin
 arbeitet `aptitude` ihre vorbereitete Liste der Vormerkungen ab.
 
 // Datei (Ende): ./praxis/mit-aptitude-vormerkungen-machen/vormerkungen-ausfuehren.txt

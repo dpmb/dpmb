@@ -80,17 +80,16 @@ Informationen zu erhalten.
 Mit dieser Schrittfolge erhalten Sie eine entsprechend sortierte Liste in
 aufsteigender Reihenfolge in der Text-Modus-Oberfläche:
 
-. Mit key:[Ctrl,t] oder key:[F10] öffnen Sie die Menüleiste.
-. Dort wählen Sie den Eintrag menu:[Ansichten,Neue einfache
-  Paketansicht] aus. 
+. Mit kbd:[Ctrl,t] oder kbd:[F10] öffnen Sie die Menüleiste.
+. Dort wählen Sie den Eintrag menu:Ansichten[Neue einfache Paketansicht] aus.
 . Darin schränken Sie nun die Ansicht auf die installierten Pakete ein.
-  Dazu drücken Sie key:[l] (für ``limit'') und geben als Filter `~i` für
+  Dazu drücken Sie kbd:[l] (für ``limit'') und geben als Filter `~i` für
 ``nur installierte Pakete'' ein. Den Vorgang schließen Sie mit der
   Eingabetaste ab.
 . Nun fehlt nur noch die passende Sortierung. Diese erhalten Sie durch
-  das Drücken von key:[S] und der Eingabe von `installsize`. Mit
+  das Drücken von kbd:[S] und der Eingabe von `installsize`. Mit
   der Eingabetaste schließen Sie den Vorgang ab.
-. Jetzt springen Sie mit der key:[Ende]-Taste ans Ende der Liste und
+. Jetzt springen Sie mit der kbd:[Ende]-Taste ans Ende der Liste und
   sehen die schlimmsten Plattenplatzverbraucher ihres Systems.
 
 // Stichworte für den Index
