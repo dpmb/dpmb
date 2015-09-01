@@ -36,6 +36,9 @@ KDE-Variante namens `gdebi-kde` (aus dem gleichnamigen Paket 'gdebi-kde'
 .`gdebi` mit den Informationen zum Paket 'apt-doc'
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/gdebi-gtk.png[id="fig.gdebi-gtk", width="50%"]
 
+// Stichworte für den Index
+(((gdebi, Backend)))
+(((gdebi, Frontend)))
 Dabei dient das Kommandozeilenprogramm `gdebi` den beiden graphischen
 Werkzeugen als Backend und wird von diesen intern aufgerufen, um die
 jeweiligen Paketoperationen auszuführen. Sie können es aber auch alleine
@@ -44,7 +47,7 @@ Komponenten installiert sein muss. Rufen Sie dazu GDebi auf der
 *Kommandozeile* mit einem `deb`-Paket als Parameter auf, erhalten Sie
 die Paketbeschreibung. Stimmen Sie danach der abschließenden Frage zur
 Installation mit kbd:[j] zu, führt `gdebi` ihren Wunsch aus und das
-`deb`-Paket landet auf ihrem Linux-System. 
+`deb`-Paket landet auf ihrem Linuxsystem. 
 
 .Anzeige der Paketbeschreibung bei manuellem Aufruf von `gdebi`
 ----
@@ -71,6 +74,9 @@ Wollen Sie das Software-Paket installieren? [j/N]:
 #
 ----
 
+// Stichworte für den Index
+(((gdebi, gdebi-gtk)))
+(((gdebi, gdebi-kde)))
 // Graphische Werkzeuge
 Die *graphischen Werkzeuge* starten Sie entweder über den Aufruf
 `gdebi-gtk` bzw. `gdebi-kde` im Terminal, oder aber durch Doppelklicken
@@ -84,6 +90,8 @@ herum(f)liegende Pakete nicht aus Versehen zu installieren. Somit
 vergewissern Sie sich nochmals, aus welcher ggf. auch unverifizierten
 Quelle dieses Paket stammt, bevor Sie es auf Ihrem Rechner installieren.
 
+// Stichworte für den Index
+(((gdebi, Paketcache aufräumen)))
 Neben der Installation und Aktualisierung ermöglicht Ihnen GDebi auch
 das Begutachten und Löschen von lokal vorliegenden Paketen. Dies können
 auch bereits vorher via APT heruntergeladene Pakete sein, die noch im
@@ -97,6 +105,10 @@ Metadaten aus der Control-Datei (siehe <<aufbau-und-format>>) sowie den
 tatsächlichen Paketinhalt an, sofern es sich dabei um Textdateien
 handelt. Dies umfasst auch die Maintainer-Skripte.
 
+// Stichworte für den Index
+(((Debianpaket, lintian)))
+(((gdebi, Anbindung an lintian)))
+(((lintian)))
 Darüberhinaus zeigt Ihnen GDebi ab Version 0.9{empty}footnote:[Verfügbar
 ab Debian 8 'Jessie' und Ubuntu 14.04 LTS 'Trusty Tahr'] auch sämtliche
 Warnungen des Programms `lintian` (<<Debian-Paket-lintian>>) an, die von
