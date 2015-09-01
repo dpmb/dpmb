@@ -58,7 +58,7 @@ version.txt: debian-paketmanagement.txt *-docinfo.xml */*.txt */*/*.txt Makefile
 	if [ -d .git ] && `which git >/dev/null`; then \
 	    git describe --tags --always >> version.txt; \
 	elif [ -d debian/changelog ] && `which dpkg-parsechangelog >/dev/null`; then \
-	    dpkg-parsechangelog | fgrep Version | awk '{print $2}' >> version.txt; \
+	    dpkg-parsechangelog | fgrep Version | awk '{print $$2}' >> version.txt; \
 	fi
 
 test: test-epub
