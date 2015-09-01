@@ -33,6 +33,8 @@ aktualisieren diese (siehe <<fig.ubuntu-software-center>>).
 .Softwareauswahl im Ubuntu Software Center (aus Xubuntu 13.04)
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/ubuntu-software-center.png[id="fig.ubuntu-software-center", width="50%"]
 
+// Stichworte für den Index
+(((Ubuntu One)))
 Bis zur Jahresmitte 2014 bestand seitens Canonical der
 Datenaustauschdienst Ubuntu One (siehe dazu <<Ubuntu-One>> und
 <<Ubuntu-One-Wikipedia>>). Das Ubuntu Software Center war in diesen
