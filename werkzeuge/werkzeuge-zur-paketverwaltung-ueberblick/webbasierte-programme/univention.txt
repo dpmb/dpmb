@@ -5,6 +5,8 @@
 [[webbasierte-programme-ucs]]
 ==== Univention Corporate Server (UCS) ====
 
+// Stichworte für den Index
+(((Univention Corporate Server)))
 Der Univention Corporate Server (UCS) <<UCS>> ist ein auf kommerzieller
 Basis vertriebenes OpenSource-Produkt für Infrastrukturlösungen in
 Unternehmen und Behörden. Neben dem Univention (Linux) Client werden
@@ -58,6 +60,8 @@ akzeptieren Paketnamen als Parameter und versorgen `dpkg` und APT mit
 den zusätzlichen Daten aus den dazugehörigen, von Univention
 bereitgestellten Vorlagen.
 
+// Stichworte für den Index
+(((Univention Corporate Server, Configuration Registry)))
 `dpkg` und APT können Sie jederzeit für die grundlegenden
 Paketoperationen nutzen, um beispielsweise nach Paketen zu suchen, deren
 Installationszustand zu erfragen oder um die Paketinhalte anzuzeigen.
@@ -66,6 +70,8 @@ müssen Sie die Angaben aus den Vorlagen selbständig in die Konfiguration
 des Pakets und die zentrale Konfigurationsdatei namens 'Univention
 Configuration Registry (UCR)' übertragen.
 
+// Stichworte für den Index
+(((Univention Corporate Server, App Centre)))
 *Erweiterungen und Werkzeuge von Drittanbietern* wählen Sie webbasiert
 über das sogenannte 'Univention App Centre' (siehe
 <<fig.univention-app-centre>>) aus. In der darüber angebotenen
