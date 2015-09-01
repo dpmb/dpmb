@@ -1,9 +1,19 @@
 #!/usr/bin/make -f
+
+P=$(shell dh_listpackages)
+
 %:
 	dh $@ --parallel
 
 override_dh_auto_build:
 	$(MAKE) -j5 allpure
+
+override_dh_auto_install:
+	# Install all images manually for now.
+	for i in `find . '(' -name deploy -o -name debian ')' -prune -o -name '*.png'`; do \
+	    mkdir -pv `dirname "debian/tmp/usr/share/doc/$(P)/$$i"`; \
+	    cp -pv "$$i" "debian/tmp/usr/share/doc/$(P)/$$i"; \
+	done
 
 override_dh_compress:
 	dh_compress -X.pdf -X.mobi
