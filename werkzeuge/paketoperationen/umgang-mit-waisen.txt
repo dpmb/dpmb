@@ -80,7 +80,7 @@ Um den Vorgang der Paketentfernung explizit anzustoßen, verfügen APT und
 ebenfalls dieses Feature besitzt, hat die Bedeutung von `deborphan` und
 `debfoster` deutlich abgenommen.
 
-//.Pakete automatisch entfernen mit dem Unterkommando `autoremove`
+.Pakete automatisch entfernen mit dem Unterkommando `autoremove`
 ----
 # apt-get autoremove
 Paketlisten werden gelesen... Fertig
@@ -142,7 +142,7 @@ Abhängigkeiten aufweisen plus möglicherweise nicht mehr benötigte
 Pakete. `debfoster` warnt bei unerfüllten Abhängigkeiten ('warning'),
 wenn diese Pakete in der Liste der ``zu behaltenden Pakete'' stehen.
 
-//.Auflistung der unerfüllten Abhängigkeiten mit `debfoster`
+.Auflistung der unerfüllten Abhängigkeiten mit `debfoster`
 ----
 # debfoster -qv
 
@@ -195,7 +195,7 @@ Gegenstück zur Option `-e` und vergleichbar mit dem Unterkommando
 `depends` des Programms `apt-cache` (siehe
 <<paketabhaengigkeiten-anzeigen>>).
 
-//.Ausgabe aller Abhängigkeiten mittels `debfoster`
+.Ausgabe aller Abhängigkeiten mittels `debfoster`
 ----
 # debfoster -d vim
 Paket vim hängt ab von:
@@ -215,7 +215,7 @@ Gegenstück zur Option `-d` und vergleichbar mit dem Unterkommando
 `rdepends` des Programms `apt-cache` (siehe
 <<paketabhaengigkeiten-anzeigen>>).
 
-//.Ausgabe aller umgekehrten Abhängigkeiten mit `debfoster`
+.Ausgabe aller umgekehrten Abhängigkeiten mit `debfoster`
 ----
 # debfoster -e apt
 Die folgenden 9 Pakete auf der Aufbewahrungsliste verlassen sich auf apt:
@@ -241,7 +241,7 @@ durch alle Pakete gehen, die explizit installiert wurden
 `-a` (Langform `--show-keepers`):: 
 Ausgabe der `debfoster`-Datenbank
 
-//.Ausgabe der Pakete, die sich `debfoster` gemerkt hat
+.Ausgabe der Pakete, die sich `debfoster` gemerkt hat
 ----
 # debfoster -a
 Die folgenden Pakete stehen auf der Aufbewahrungsliste:
@@ -270,7 +270,7 @@ beiden Paketkategorien _libs_ und _oldlibs_, um unbenutzte oder
 veraltete Bibliotheken zu ermitteln. Das nachfolgende Beispiel zeigt
 diesen Aufruf beispielhaft.
 
-//.Ausgabe von `deborphan` bei der Suche nach verwaisten Paketen
+.Ausgabe von `deborphan` bei der Suche nach verwaisten Paketen
 ----
 $ deborphan
 mktemp
@@ -325,7 +325,7 @@ zeigt die Paketkategorie (siehe
 Paket befindet. Ist die Option standardmäßig aktiviert, können Sie das
 Verhalten mit der Option `--no-show-section` wieder abschalten.
 
-//.Auflistung der verwaisten Bibliotheken inkl. Paketkategorie und Größe mittels `deborphan`
+.Auflistung der verwaisten Bibliotheken inkl. Paketkategorie und Größe mittels `deborphan`
 ----
 $ deborphan -P -z -s
   20 main/oldlibs  mktemp      extra
@@ -356,7 +356,7 @@ zur genaueren Eingrenzung kombinieren können. Dazu zählen bspw.
 `python` und `ruby` für die entsprechenden Programmiersprachen. Eine
 ausführliche Auflistung ist in der Manpage dokumentiert.
 
-//.`deborphan` errät nicht mehr nützliche Pakete
+.`deborphan` errät nicht mehr nützliche Pakete
 ----
 # deborphan --guess-perl | sort
 gqview
@@ -384,7 +384,7 @@ Paketdatenbank. Das nachfolgende Beispiel sortiert zusätzlich die
 Paketliste alphabetisch aufsteigend und gibt die Ausgabe seitenweise
 über den Pager `more` auf dem Terminal aus.
 
-//.Aufspüren nicht mehr benötigter Konfigurationsdateien über die Option `--find-config`
+.Aufspüren nicht mehr benötigter Konfigurationsdateien über die Option `--find-config`
 ----
 $ deborphan --find-config | sort | more
 baobab
@@ -405,7 +405,7 @@ wurde (Buchstabe `r` für `removed` in der ersten Spalte). Die
 Konfigurationsdateien des Programms sind noch verfügbar (Buchstabe `c`
 für `configured` in der zweiten Spalte).
 
-//.Aufspüren verbliebener Konfigurationsdateien mittels `dpkg`
+.Aufspüren verbliebener Konfigurationsdateien mittels `dpkg`
 ----
 $ dpkg -l gnome-screenshot
 Gewünscht=Unbekannt/Installieren/R=Entfernen/P=Vollständig Löschen/Halten
@@ -448,7 +448,7 @@ alle Pakete, die Waisen sind. Indem Sie das als Parameter an APT
 übermitteln, sparen Sie einerseits Tipparbeit und können darüberhinaus
 auf die Rückfragen von APT reagieren.
 
-//.Kombinieren von APT und `deborphan`
+.Kombinieren von APT und `deborphan`
 ----
 # apt-get --purge remove $(deborphan)
 Paketlisten werden gelesen... Fertig
@@ -475,7 +475,7 @@ dessen sicher sind. Das Kommando entsorgt kompromisslos alle Waisen und deren
 Konfigurationsdateien. Die Option `-y` beantwortet alle Nachfragen
 von `apt-get` automatisch mit ``ja'':
 
-//.Komplexer Aufruf von `deborphan`
+.Komplexer Aufruf von `deborphan`
 ----
 # deborphan | xargs apt-get --purge remove -y
 ----
@@ -596,4 +596,5 @@ Suche nach Waisen in der `wajig`-Shell.
 
 .`wajig` mit der Ausgabe des Kommandos `orphans`
 image::werkzeuge/paketoperationen/wajig-orphans.png[id="fig.wajig-orphans", width="50%"]
+
 // Datei (Ende): ./werkzeuge/paketoperationen/umgang-mit-waisen.txt
