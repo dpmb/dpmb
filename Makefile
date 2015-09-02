@@ -71,7 +71,7 @@ test-epub: $(BASE).epub
 
 deploy: all version.txt
 	for suffix in $(FORMATS); do cp -pvf $(BASE).$$suffix deploy/; done
-	for i in `find . -name deploy -prune -o -name '*.png'`; do \
+	for i in `find . -name '*.png' -not -path './deploy/*'`; do \
 	    mkdir -pv `dirname "deploy/$$i"`; \
 	    cp -pv "$$i" "deploy/$$i"; \
 	done
