@@ -10,6 +10,8 @@
 (((apt-file, search)))
 (((Debianpaket, dlocate)))
 (((dlocate, -S)))
+(((dpkg, -S)))
+(((dpkg, --search)))
 
 Häufig ist Ihnen nur der Dateiname bekannt, aber nicht das Paket, aus
 dem diese Datei stammt. Das wird insofern spannend, wenn das Paket
@@ -42,6 +44,7 @@ jederzeit entsprechend über die Auswahlfelder einschränken.
 (((dpkg, -S)))
 (((dpkg, --search)))
 (((dlocate)))
+(((dlocate, -S)))
 Dafür genügen der Aufruf `dpkg -S Muster` oder die flinke Abkürzung
 `dlocate Muster`. Zur Suche ist bei `dlocate` der Schalter `-S`
 optional, `dpkg` kennt hingegen dafür die Langform `--search`. Als
@@ -118,9 +121,9 @@ größeres Archiv (20 MB) von den angegebenen Paketmirrors und legt diese
 Dateien im Verzeichnis `/var/cache/apt/apt-file/` ab.
 
 Im nachfolgenden Beispiel zu `apt-file update` wird der Paketmirror
-dynamisch ausgewählt, siehe dazu `/etc/apt/sources.list` verstehen
-(<<etc-apt-sources.list-verstehen>>) und Paketquellen über GeoIP auswählen
-(<<paketquellen-ueber-geoip-auswaehlen>>):
+dynamisch ausgewählt. Hintergrundinformationen dazu finden Sie in
+<<etc-apt-sources.list-verstehen>> und
+<<paketquellen-ueber-geoip-auswaehlen>>:
 
 .Suchdatenbank von APT aktualisieren
 ----
