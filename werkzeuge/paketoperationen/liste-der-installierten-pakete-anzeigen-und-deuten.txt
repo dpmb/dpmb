@@ -9,7 +9,7 @@
 // Stichworte für den Index
 (((installierte Pakete anzeigen)))
 Diese Aktion betrifft häufig nicht nur ein einzelnes Paket, sondern den
-Gesamtbestand an Software, die auf ihrem Linuxsystem installiert sind
+Gesamtbestand an Software, die auf Ihrem Linuxsystem installiert sind
 oder waren. Im Alltag ergeben sich eine ganze Reihe von
 Anwendungsfällen, bei denen diese Aktion durchgeführt wird.
 

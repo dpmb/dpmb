@@ -14,7 +14,7 @@ Situationen, in denen das Wissen über den Zustand eines Paketes wichtig
 ist. 
 
 Die Grundfrage ist häufig, ob derzeit ein bestimmtes Paket oder Programm
-auf ihrem Linuxsystem installiert ist, und falls ja, in welchem Zustand
+auf Ihrem Linuxsystem installiert ist, und falls ja, in welchem Zustand
 befindet sich dieses Paket. Es kann vollständig oder nur teilweise
 installiert sein, liegt in nicht konfiguriertem Status vor oder wurde
 möglicherweise bereits wieder entfernt. Zu klären ist in dem Fall auch,

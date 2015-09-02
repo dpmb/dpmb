@@ -112,7 +112,7 @@ Tycoon Deluxe (openttd) gehören.
 
 Die im Aufruf verwendete Option `-a` listet Ihnen alle Pakete in
 alphabetisch aufsteigender Reihenfolge auf – unabhängig davon, ob diese
-jeweils auf ihrem System installiert sind oder nicht. Ohne die Option
+jeweils auf Ihrem System installiert sind oder nicht. Ohne die Option
 beschränkt sich `dglob` nur auf die bereits installierten Pakete.
 
 .Rechercheergebnis von `dglob` mit dem Muster `ttd`
