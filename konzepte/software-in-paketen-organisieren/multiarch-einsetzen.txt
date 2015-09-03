@@ -6,14 +6,28 @@
 === Multiarch einsetzen ===
 
 // Stichworte für den Index
-Architektur, Multiarch]
+(((Architektur, Multiarch)))
 (((dpkg, --add-architecture)))
 (((dpkg, --print-architecture)))
 (((dpkg, --print-foreign-architectures)))
 (((dpkg, --remove-architecture)))
+(((dpkg, /var/lib/dpkg/arch)))
+(((dpkg, /var/lib/dpkg/arch-new)))
 `dpkg` führt eine Liste mit den Architekturen, für die es Pakete
-installiert bzw. installieren darf. Diese Liste geben Sie mit den beiden
-Optionen `--print-architecture` und `--print-foreign-architectures` aus.
+installiert bzw. installieren darf. Die Liste für die Basisarchitektur
+ihres Systems ist in der Datei `/var/lib/dpkg/arch` hinterlegt, die der
+zusätzlichen Fremdarchitekturen in `/var/lib/dpkg/arch-new`. Letztere
+existiert nur, sofern Sie zuvor Fremdarchitekturen ergänzt haben. Den
+Inhalt dieser Listen geben Sie mit den beiden `dpkg`-Optionen
+`--print-architecture` und `--print-foreign-architectures` aus.
+
+.Inhalt der Liste der Basisarchitekturen, hier `i386` und `amd64`
+----
+$ cat /var/lib/dpkg/arch
+i386
+amd64
+$
+----
 
 Über die beiden `dpkg`-Optionen `--add-architecture` und
 `--remove-architecture` erweitern bzw. reduzieren Sie die Liste
