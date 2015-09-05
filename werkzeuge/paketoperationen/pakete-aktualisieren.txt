@@ -161,7 +161,7 @@ und `aptitude` hingegen `full-upgrade`. Beide Unterkommandos sind
 
 Sie kommen in zwei Situationen zum Einsatz. Fall eins umfasst das
 Einspielen von Sicherheitsaktualisierungen, sodass auch neue
-Abhängigkeiten oder Paketkonflikte Beachtung finden, ohne das dabei auf
+Abhängigkeiten oder Paketkonflikte Beachtung finden, ohne dass dabei auf
 die Aktualisierung verzichtet wird. Fall zwei ist der Wechsel von einer
 Veröffentlichung einer Distribution zur nachfolgenden, so bspw. von
 _stable_ nach _unstable_ oder von Debian 7 _Wheezy_ nach Debian 8
@@ -203,7 +203,7 @@ Pakete. Dieses Verhalten können Sie in der Konfiguration von `aptitude`
 (((apt-get, update)))
 (((apt-get, upgrade)))
 
-Um Ihnen die Aktualisierung ihrer Softwarezusammenstellung zu
+Um Ihnen die Aktualisierung Ihrer Softwarezusammenstellung zu
 vereinfachen, haben wir nachfolgend eine Schrittfolge zusammengestellt,
 die Ihnen als Orientierung dienen kann. Sind Sie auf der *Kommandozeile*
 unterwegs, hilft Ihnen diese Abfolge bei den Werkzeugen `apt-get`, `apt`

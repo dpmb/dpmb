@@ -22,9 +22,9 @@ Entwicklungsbibliotheken (_libdevel_).
 
 Der Umgang mit Waisen ist im Allgemeinen recht unproblematisch. Waisen
 können Sie bedenkenlos löschen, um unnötigerweise belegten Speicherplatz
-auf ihrem System wieder freizugeben. Wir empfehlen Ihnen, diesen
+auf Ihrem System wieder freizugeben. Wir empfehlen Ihnen, diesen
 Aufräumvorgang bei der Systempflege als weiteren Schritt mit
-durchzuführen. Das hält ihr System sauber und befreit es von unnützen
+durchzuführen. Das hält Ihr System sauber und befreit es von unnützen
 Lasten.
 
 // Stichworte für den Index
@@ -42,7 +42,7 @@ Für die Kommandozeile sind das `debfoster` (siehe <<debfoster>>) und
 Editkeep (siehe <<orphaner-und-editkeep>>) und auf GTK+ das Pendant
 Gtkorphan (siehe <<Gtkorphan>>). Darüberhinaus bieten die `aptsh` (siehe
 <<aptsh-orphans>>) und `wajig` (<<wajig>>) entsprechende Möglichkeiten
-zur Suche, die wir Ihnen nicht ebenfalls vorenthalten möchten.
+zur Suche, die wir Ihnen ebenfalls nicht vorenthalten möchten.
 
 ==== APT und `aptitude` ====
 
@@ -50,7 +50,7 @@ zur Suche, die wir Ihnen nicht ebenfalls vorenthalten möchten.
 (((Umgang mit Waisen, APT und aptitude)))
 Zwischen der Standardkonfiguration von APT und `aptitude` gibt es
 subtile Unterschiede, die sich über die Zeit herausgebildet haben und
-die es im Alltag zu beachten gilt. Kurz gefasst, beläßt APT verwaiste
+die es im Alltag zu beachten gilt. Kurz gefasst, belässt APT verwaiste
 Pakete, während `aptitude` diese automatisch entfernt.
 
 APT-Versionen aus der Prä-Lenny-Ära – d.h. vor Debian 5.0 _Lenny_
@@ -114,7 +114,7 @@ prüfen.
 (((Debianpaket, debfoster)))
 Das Paket `debfoster` <<Debian-Paket-debfoster>> ist ein Wrapper für die
 beiden Werkzeuge `dpkg` und APT. `debfoster` pflegt eine Liste mit den
-Paketen, die Sie auf ihrem System behalten möchten und auf die Sie Wert
+Paketen, die Sie auf Ihrem System behalten möchten und auf die Sie Wert
 legen.
 
 Mit Hilfe dieser Liste findet es Pakete, die automatisch installiert
