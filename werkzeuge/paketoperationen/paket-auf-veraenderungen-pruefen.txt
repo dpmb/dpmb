@@ -8,11 +8,11 @@
 
 Installieren Sie ein Debianpaket, landen die darin enthaltenen Dateien
 üblicherweise eins-zu-eins auf dem Speichermedium. Als Administrator
-gehört zu ihren Aufgaben, das System und die Dateien auf Integrität zu
+gehört zu Ihren Aufgaben, das System und die Dateien auf Integrität zu
 prüfen. Das umfasst das Nachschauen, ob die lokalen Dateien aus einem
 installierten Paket verändert wurden, d.h. ob zwischen der Version vom
 Paketmirror und der lokalen Version Unterschiede bestehen. Falls ja,
-ist von ihnen zu klären, welche Dateien verändert wurden. Es gibt
+ist von Ihnen zu klären, welche Dateien verändert wurden. Es gibt
 mehrere Situationen, in denen das wichtig ist, gewollte oder
 unerwünschte Änderungen von Daten festzustellen.
 
@@ -55,7 +55,7 @@ Datei-Ersetzungen entsprechen, auch wenn diese mit hoher krimineller
 Energie ausgeführt wurden. Sie können jedoch durchaus helfen, von
 dilettantischen Einbrechern durchgeführte Datei-Ersetzungen zu finden.
 Bedenken Sie jedoch dabei, dass die Einbrecher genauso gut auch die o.g.
-Dateien mit den MD5-Summen angepaßt haben könnten. Möchten Sie sich
+Dateien mit den MD5-Summen angepasst haben könnten. Möchten Sie sich
 jedoch stärker gegen Datei-Ersetzungen oder Änderungen durch
 professionelle Angreifer schützen, so reichen die hier genannten
 Techniken nicht aus. Dazu gibt es spezialisierte Pakete wie z. B.

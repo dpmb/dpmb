@@ -16,7 +16,7 @@ nicht mehr reparabel sind.
 
 In anderen Fällen möchten Sie eine Software temporär deinstallieren, um
 diese später wieder zu installieren. Es ist dabei nicht unüblich, dass
-bestehende, selbst angepaßte Konfigurationsdateien später
+bestehende, selbst angepasste Konfigurationsdateien später
 wiederverwendet werden. Auch das Ersetzen von bereits veränderten
 Konfigurationsdateien durch ihre Originale aus dem Paket wird oft durch
 eine Wiederinstallation versucht – nur leider hat dies nur selten den
@@ -35,7 +35,7 @@ Dabei unterscheiden wir hier drei verschiedene Ausgangszustände:
 Jeder dieser Fälle hat dabei seine Eigenheiten. In den ersten beiden
 Fällen können Sie das Paket ganz einfach auf den üblichen Wegen
 installieren. Welche Besonderheiten Sie dabei dennoch beachten sollten,
-lesen sie in den folgenden Abschnitten.
+lesen Sie in den folgenden Abschnitten.
 
 // Stichworte für den Index
 (((apt, --reinstall)))
@@ -117,7 +117,7 @@ Backup zu bemühen.
 Ist die entsprechende Paketdatei noch in `/var/cache/apt/archives/`
 vorhanden, so reicht zum Wiederinstallieren ein simples `dpkg -i` mit
 der richtigen Datei als Parameter. Da das Paket bereits installiert war,
-müssen auch alle Abhängigkeiten bereits vorliegen und es ist nicht
+müssen auch alle Abhängigkeiten bereits vorliegen, und es ist nicht
 notwendig, Abhängigkeiten nochmals aufzulösen.
 
 Muss die Paketdatei neu heruntergeladen werden, so nutzen Sie besser
@@ -149,7 +149,7 @@ ein Fehlschlag. Gerade die größeren Software-Suiten bestehen häufig aus
 mehreren Paketen und das Paket mit dem Namen der Suite ist meist nur ein
 Metapaket ohne eigentlichen Inhalt. Zu bedenken ist außerdem, dass eine
 Wiederinstallation eines bereits installierten Paketes dessen
-Abhängigkeiten unangetastet läßt.
+Abhängigkeiten unangetastet lässt.
 
 // Stichworte für den Index
 (((dpkg, -S)))

@@ -6,7 +6,7 @@
 
 === Warum ist ein Paket installiert ===
 
-Mit der Zeit sammeln sich auf ihrem System recht viele Pakete an.
+Mit der Zeit sammeln sich auf Ihrem System recht viele Pakete an.
 Bedingt durch die vorab definierten Paketabhängigkeiten schaufelt die
 Paketverwaltung etliches an Daten auf die Platte und füllt den
 verfügbaren Speicherplatz stetig, aber gnadenlos.
@@ -168,7 +168,7 @@ $
 ----
 
 Kann `aptitude` keinen Grund für die Entfernung finden, meldet es sich
-mit einer kurzen Meldung dazu rück – hier am Beispiel des KDE Desktop
+mit einer kurzen Meldung dazu zurück – hier am Beispiel des KDE Desktop
 Managers aus dem Paket 'kdm':
 
 .Ausgabe von `aptitude` zur Klärung der Installation (Variante 4)

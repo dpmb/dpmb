@@ -19,7 +19,7 @@ Detail in <<debian-paketformat-im-detail>>.
 Vor der Veränderung des Paketbestands – d.h. dem Hinzufügen, Entfernen
 und Aktualisieren eines oder mehrerer Pakete – prüfen APT und
 `aptitude`, ob diese Abhängigkeiten nach den Änderungen weiterhin
-erfüllt sind. Die Abhängigkeiten müssen erfüllt sein, damit ihr
+erfüllt sind. Die Abhängigkeiten müssen erfüllt sein, damit Ihr
 Linuxsystem weiterhin funktioniert und dieses für Sie benutzbar bleibt.
 Sind die Abhängigkeiten jedoch nicht erfüllt, werden Ihnen die Pakete
 und die erforderlichen Paketoperationen angezeigt, die zur
@@ -302,7 +302,7 @@ $
 (((Paketabhängigkeiten, des gesamten Systems überprüfen)))
 APT liefert über das Werkzeug `apt-get` und dessen Unterkommando `check`
 ein kleines Diagnosewerkzeug mit. Es aktualisiert den
-Paketzwischenspeicher (siehe <<paketcache>>) und prüft, ob auf ihrem
+Paketzwischenspeicher (siehe <<paketcache>>) und prüft, ob auf Ihrem
 Linuxsystem beschädigte Abhängigkeiten vorliegen. Das beinhaltet alle
 installierten Pakete sowie die bereits entpackten, aber noch nicht
 konfigurierten Pakete <<Debian-Anwenderhandbuch-apt-optionen>>.

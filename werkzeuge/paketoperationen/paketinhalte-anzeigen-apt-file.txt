@@ -182,7 +182,7 @@ $
 (((Debianpaket, debian-goodies)))
 (((grep-aptavail)))
 Das Kommando `dglob` agiert üblicherweise nur auf den bereits
-installierten Paketen. Mit der Option `-a` weiten Sie ihre Recherche auf
+installierten Paketen. Mit der Option `-a` weiten Sie Ihre Recherche auf
 alle verfügbaren Pakete aus. Für diesen Schritt setzt `dglob` auf das
 Programm `grep-aptavail` aus dem Paket 'dctrl-tools'
 <<Debian-Paket-dctrl-tools>> auf. Nähere Informationen zu 'dctrl-tools'

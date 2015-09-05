@@ -271,8 +271,8 @@ image::werkzeuge/paketoperationen/paketsuche-web1.png[id="fig.paketsuche-web1", 
 Die <<fig.paketsuche-web2>> zeigt das Suchergebnis für die
 Veröffentlichung _Wheezy_, welches hier recht übersichtlich ausfällt.
 Beide Treffer zeigen das Paket 'xara-gtk' samt der dazu gefundenen
-Dateien mit dem Suchmuster. Klicken Sie auf einen der Links zwischen der
-Suchfeld und dem Sichergebnis, schränken Sie die Suche anhand der
+Dateien mit dem Suchmuster. Klicken Sie auf einen der Links zwischen dem
+Suchfeld und dem Suchergebnis, schränken Sie die Suche anhand der
 gewählten Veröffentlichung bzw. Architektur weiter ein.
 
 .Suche nach dem Paket 'xara-gtk' über die Webseite des Debian-Projekts (Suchergebnis)
