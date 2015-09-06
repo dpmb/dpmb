@@ -12,7 +12,7 @@
 === Ausgangssituation ===
 
 Debian handhabt die Pakete seiner stabilen Veröffentlichung 'stable'
-(siehe <<veroeffentlichungen>>) äußerst konservativ und läßt (mit extrem
+(siehe <<veroeffentlichungen>>) äußerst konservativ und lässt (mit extrem
 wenig Ausnahmen) keinerlei neue Funktionalitäten zu. Die einzigen
 vorgesehenen Aktualisierungen in 'stable' sind Sicherheitsupdates oder
 die Behebung gröberer Bugs.
@@ -64,7 +64,7 @@ neueren Versionen nutzen zu können, ist der sauberste Weg die
 Rückportierung (engl. 'to backport'). Die Grundlage stellen die
 Versionszweige 'testing', 'unstable' und auch 'experimental' dar. Damit
 erreichen Sie, dass sich das ausgewählte Paket auch auf dem
-'stable'-Zweig bauen und installieren läßt. Es gehört meistens eine
+'stable'-Zweig bauen und installieren lässt. Es gehört meistens eine
 kleine Portion Glück dazu, das Paket ohne Murren zu portieren. Solche
 Backports sind nicht immer trivial in der Entwicklung und können auch
 vergleichsweise aufwendig in der Pflege sein, z.B. wenn neuere Versionen
@@ -74,7 +74,7 @@ referenzierten Abhängigkeiten benötigt werden.
 
 === Debian Backports ===
 
-Daß o.g. Bedürfnisse, Gedanken und Lösungen nichts Neues sind, können
+Dass o.g. Bedürfnisse, Gedanken und Lösungen nichts Neues sind, können
 Sie sich sicher denken. Deswegen hat Norbert Tretowski 2003
 'backports.org', kurz 'bpo', ins Leben gerufen -- einen zentralen
 Platz für solche Rückportierungen.

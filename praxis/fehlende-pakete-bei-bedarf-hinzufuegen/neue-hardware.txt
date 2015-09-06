@@ -6,13 +6,13 @@
 
 === Neue Hardware ===
 
-Die Auswahl der installierten Pakete auf ihrem System orientiert sich an
+Die Auswahl der installierten Pakete auf Ihrem System orientiert sich an
 den Hardwarekomponenten, die im System verbaut wurden und in Benutzung
 sind. Ändert sich daran etwas -- bspw. Hardware wird ausgetauscht oder
 hinzugefügt -- werden auch andere Module zur Unterstützung dieser
 Komponente benötigt. 
 
-Etwas mühselig ist es, durch eigene Experimente Gewißheit zu bekommen,
+Etwas mühselig ist es, durch eigene Experimente Gewissheit zu bekommen,
 welche Pakete aufgrund des Komponentenwechsels entfernt und ergänzt
 werden müssen. In diesem Fall kommt das Paket 'isenkram'
 <<Debian-Paket-isenkram>> des norwegischen Entwicklers Petter

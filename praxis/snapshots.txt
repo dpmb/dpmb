@@ -15,7 +15,7 @@ auf den Test- und Produktivumgebungen. Es gibt bei uns die Anforderung,
 das wir Patche erst auf der Testumgebung installieren und testen und
 erst nach Freigabe der Patche auf der Produktivumgebung einspielen
 dürfen. Hier vergehen häufig 2-3 Wochen. Ich müsste also quasi heute auf
-der Testumgebung sagen Patche einspielen und in 3 Wochen dann auf der
+der Testumgebung sagen, Patche einspielen und in 3 Wochen dann auf der
 Produktivumgebung, Patche bis zum 25.03.2013 15:36 einspielen. Alle
 neueren Patche müssten jetzt erst wieder auf die Testumgebung gespielt
 werden und neu freigegeben werden.
@@ -32,7 +32,7 @@ Konfigurationsdateien wird gesichert/gemerkt, bspw. über eine Paketliste oder
 
 * Variante 2: eine Art 'Package Freeze'. Das Datum, bis zu dem noch
 Aktualisierungen von Paketen einfließen können, wird festgelegt. Das Zauberwort
-heisst http://snapshot.debian.org/. In der `/etc/apt/sources.list`
+heißt http://snapshot.debian.org/. In der `/etc/apt/sources.list`
 stehen dann Einträge der Form
 
 ----
@@ -47,5 +47,5 @@ vereinfacht `yyyymmdd`. Steht für ein angegebenes Datum kein Snapshot bereit,
 wird der zeitlich entsprechend vorherige ausgewählt.
 
 // wofür steht das `Z` in `yyyymmddThhmmssZ` ? Für Zeitzone? Falls ja, welche
-anderen Buchstaben gehen noch?
+// anderen Buchstaben gehen noch?
 // Datei (Ende): ./praxis/snapshots.txt
