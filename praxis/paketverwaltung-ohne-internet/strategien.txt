@@ -22,7 +22,7 @@ hier anbieten:
 Diese drei Wege basieren auf Werkzeugen und Verfahren, die wir bislang
 im Buch bereits angesprochen haben. Sagen Ihnen diese nicht zu, werfen
 Sie einen genaueren Blick auf die Projekte `apt-offline`, `apt-zip`,
-`aptoncd` und Keryx, die wir im Anschluß unter Werkzeuge in
+`aptoncd` und Keryx, die wir im Anschluss unter Werkzeuge in
 <<paketverwaltung-offline-werkzeuge>> genauer vorstellen.
 
 ==== Benötigte Pakete vorher explizit herunterladen ====
@@ -33,14 +33,14 @@ Sie einen genaueren Blick auf die Projekte `apt-offline`, `apt-zip`,
 (((Paket, nur herunterladen)))
 
 Dieser Weg setzt voraus, dass Sie wissen, was Sie brauchen werden. Das
-gelingt nicht immer und läßt sich auch nicht in allen Fällen exakt
+gelingt nicht immer und lässt sich auch nicht in allen Fällen exakt
 vorhersagen. Bitte testen Sie das daher im Vorfeld aus.
 
 Wenn jedoch feststeht, welche Pakete erforderlich sind, laden Sie diese
 zunächst explizit mittels APT oder `aptitude` herunter. Damit landen die
 neuen Pakete inklusive der zusätzlich benötigten Abhängigkeiten im
-lokalen Paketcache ihres Systems. Zu einem späteren Zeitpunkt können Sie
-die dort hinterlegten Pakete hervorholen und auf ihrem System
+lokalen Paketcache Ihres Systems. Zu einem späteren Zeitpunkt können Sie
+die dort hinterlegten Pakete hervorholen und auf Ihrem System
 installieren. Für das Paket 'debtags' mittels APT sind bspw. diese
 beiden Aufrufe notwendig:
 
@@ -76,11 +76,11 @@ als lokales Paketarchiv wie folgt ein:
 ----
 
 Bitte beachten Sie dabei, dass der Paketbestand zwischen dem
-eingebundenen Diskimage und ihrer lokalen Installation bezüglich ihrer
+eingebundenen Diskimage und Ihrer lokalen Installation bezüglich Ihrer
 benötigten Architektur und der genutzten Veröffentlichung harmonieren
 muss. Passen beide nicht zusammen, provozieren Sie Versionskonflikte
 zwischen den beiden Paketbeständen und mit hoher Wahrscheinlichkeit
-werden Sie die benötigten Pakete von dem Diskimage nicht auf ihr lokales
+werden Sie die benötigten Pakete von dem Diskimage nicht auf Ihr lokales
 System einspielen können.
 
 // Stichworte für den Index
@@ -102,7 +102,7 @@ lokal vorliegen (siehe <<eigenen-apt-mirror-aufsetzen>>), aber auch als
 mobile Kopie auf einer externen (USB-)Festplatte überall zum Einsatz
 kommen. Diesen Datenträger mounten Sie zunächst und tragen den
 Paketmirror danach als zusätzliche Paketquelle ('Repository') in der
-Datei `/etc/apt/sources.list` auf ihrem lokalen System ein. Ist der
+Datei `/etc/apt/sources.list` auf Ihrem lokalen System ein. Ist der
 Datenträger bspw. als `/mnt/mirror` gemounted, sieht der Eintrag in der
 Liste der Paketquellen wie folgt aus:
 
@@ -111,7 +111,7 @@ Liste der Paketquellen wie folgt aus:
 deb file:/mnt/mirror/debian stable main contrib non-free
 ----
 
-Fügen Sie nun Pakete zu ihrem lokalen System hinzu, sucht die
+Fügen Sie nun Pakete zu Ihrem lokalen System hinzu, sucht die
 Paketverwaltung die Pakete auf der angegebenen Paketquelle und bezieht
 diese von dort.
 
