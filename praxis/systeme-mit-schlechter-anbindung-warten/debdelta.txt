@@ -23,7 +23,7 @@ nur die jeweiligen Unterschiede zwischen beiden Versionen -- genannt
 geschriebene Programm ist das Werkzeug `diff`, welches zeilenweise die
 Unterschiede zwischen zwei Dateien anzeigt.
 
-In dem nachfolgenden Beispiel sehen einen `debdelta-upgrade`-Lauf mit
+In dem nachfolgenden Beispiel sehen wir einen `debdelta-upgrade`-Lauf mit
 einer virtuellen Übertragungsrate von 60kB/s über eine EDGE-Verbindung,
 deren Download-Raten zwischen 15kB/s und 25kB/s liegen. Das Ergebnis ist
 eine Verbesserung um den Faktor 2.5.
