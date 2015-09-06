@@ -27,7 +27,7 @@ Schnittstelle abfragt. Beachten Sie daher, dass das Programm für
 brauchbare Ergebnisse eine Internetverbindung voraussetzt.
 
 `how-can-i-help` integriert sich zudem über einen APT-Hook in APT und
-wird somit nach jeder Paketinstallation erneut ausgeführt. Im Folge
+wird somit nach jeder Paketinstallation erneut ausgeführt. In Folge
 sehen Sie damit stets nur neu hinzugekommene Pakete, Fehler und den
 Bedarf an Hilfe. Ebenso können Sie das Programm über die Kommandozeile
 mit etlichen Schaltern aufrufen (Auswahl).
@@ -92,7 +92,7 @@ Eingeführt und früher bekannt unter der Markierung 'gift' (engl. für
 'Geschenk'). Bugreports mit dieser Markierung gelten als ``leichte
 Beute'' für Einsteiger in die Paketierung oder Entwicklung von
 Debian-eigenen Paketen. Diese Aufgaben sind i.d.R. ohne besondere
-Kenntnisse in der Paketierung lösbar, aber den Aufwand sollten sie
+Kenntnisse in der Paketierung lösbar, aber den Aufwand sollten Sie
 trotzdem nicht unterschätzen.
 
 testing-autorm::
@@ -116,7 +116,7 @@ Glaskugel-Funktion bzgl. zukünftiger Debian-Veröffentlichungen. Daraus
 ersehen Sie Tendenzen dahingehend, welche Pakete im Bestand bleiben. Das
 hat direkte Auswirkungen, welche Software zukünftig als Debian-Paket
 verfügbar bleibt und gepflegt wird. Haben Sie gerade ein Paket aus
-Debian 'stable' installiert und `how-can-i-help` zeigt Ihnen im Anschluß
+Debian 'stable' installiert und `how-can-i-help` zeigt Ihnen im Anschluss
 zu ihrer Installation an, dass das Paket aus Debian 'testing'
 herausgeflogen ist, klären Sie für sich, ob Sie längerfristig auf dieses
 Paket setzen wollen. Bei einer solchen Meldung ist die Chance groß, dass

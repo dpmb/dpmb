@@ -55,7 +55,7 @@ einen Bedienfehler handeln.
 Wie bereits oben benannt, finden Sie bereits bekannte und eingetragene
 Fehler in der Fehlerdatenbank des Debian BTS. Über das webbasierte
 System suchen Sie anhand des Paketnamens, der Veröffentlichung, des
-Schweregrads, der Betreffzeile der Fehlerberichts, der Fehlernummer, dem
+Schweregrads, der Betreffzeile des Fehlerberichts, der Fehlernummer, dem
 Namen des Einreichenden, dem Status der Bearbeitung des Fehlers oder dem
 Bearbeiter -- also demjenigen, der sich um die Bereinigung des Fehlers
 kümmert. Auf der Kommandozeile stehen Ihnen die Werkzeuge `lintian`
