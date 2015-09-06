@@ -8,7 +8,7 @@
 
 Die Idee hinter 'apt-url' ist die Installation von Paketen aus den
 eingetragenen Repositories (bzw. Channels bei Ubuntu) über die
-Adresszeile ihres Webbrowsers. Für Installationen auf Servern und
+Adresszeile Ihres Webbrowsers. Für Installationen auf Servern und
 Desktops ist das nicht unbedingt der geeignete Weg, jedoch Tablet
 Computer, die Sie im wesentlichen via Webbrowser benutzen. Mitunter ist
 das die einzige Möglichkeit, auf dem Gerät eine Softwareerweiterung oder

@@ -8,7 +8,7 @@
 Obwohl die Bereitstellung des Dienstes die Installation von Paketen über
 den Webbrowser sehr leicht macht, haben wir Bedenken im Umgang damit.
 Die nachfolgend genannten Punkte sind kaum durchführbar und bergen daher
-Risiken für die Integrität ihres Systems:
+Risiken für die Integrität Ihres Systems:
 
 * Überprüfung der Paketabhängigkeiten
 * Überprüfung auf Vertrauenswürdigkeit der Paketquelle (siehe
@@ -16,11 +16,11 @@ Risiken für die Integrität ihres Systems:
 * Überprüfung auf Echtheit und Fehlerfreiheit des Pakets (siehe
 <<bezogenes-paket-verifizieren>>)
 
-Bitte beachten Sie, daß alle Benutzer und jedes Programm oben genannte
+Bitte beachten Sie, dass alle Benutzer und jedes Programm oben genannte
 URL ansurfen und darüber eine Installation auslösen kann. Administrative
 Rechte sind zur Paketverwaltung in diesem Fall nicht mehr erforderlich
-und legen den Grundstein dafür, dass Aktivitäten außerhalb ihres
-Sichtfeldes und ohne ihr Wissen als Systemverantwortlicher passieren
+und legen den Grundstein dafür, dass Aktivitäten außerhalb Ihres
+Sichtfeldes und ohne Ihr Wissen als Systemverantwortlicher passieren
 können.
 
 // Datei (Ende): ./praxis/webbasierte-installation-von-paketen/risiken-und-bedenken.txt
