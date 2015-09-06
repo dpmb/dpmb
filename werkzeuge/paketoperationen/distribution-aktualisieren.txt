@@ -18,7 +18,7 @@ Aufwand soll schließlich nicht umsonst gewesen sein.
 Eine Aktualisierung sind stets größere Umbauarbeiten, bei dem sich
 vergleichsweise viel ändert und durchaus auch etliches schief gehen
 kann, womit Sie nicht unbedingt rechnen. An der Stelle sei jedoch zu
-ihrer Beruhigung angemerkt, dass der Wechsel von Debian 6 _Squeeze_ auf
+Ihrer Beruhigung angemerkt, dass der Wechsel von Debian 6 _Squeeze_ auf
 Debian 7 _Wheezy_ recht unspektakulär verlief und vielfach problemlos
 über die Bühne ging. Die Tests für den Umzug auf Debian 8 _Jessie_
 liefen bislang ähnlich gut.
@@ -33,9 +33,9 @@ Unbekanntes auftritt, wo Sie vielleicht allein nicht ohne Hilfe
 weiterkommen.
 
 Desweiteren sind mehrere Hilfsmittel von Nutzen. Dazu gehören neben
-einem vollständigen und verfügbaren Backup ihrer Daten eine CD/DVD oder ein
-USB-Stick mit einem Live-System für alle Fälle, um ihr System bei
-Mißgeschicken davon booten zu können und darüber wieder Zugriff auf ihr
+einem vollständigen und verfügbaren Backup Ihrer Daten eine CD/DVD oder ein
+USB-Stick mit einem Live-System für alle Fälle, um Ihr System bei
+Missgeschicken davon booten zu können und darüber wieder Zugriff auf Ihr
 System zu erhalten. Ein weiteres Gerät mit Internetzugang hilft dabei,
 Lösungen zu aufkommenden Fragen oder Unklarheiten zu recherchieren.
 Stift und Papier klingen trivial, ermöglichen aber flinke Notizen, falls
@@ -66,7 +66,7 @@ Veröffentlichung.
 (((Distribution aktualisieren, Release Notes)))
 (((Distribution aktualisieren, Veröffentlichungshinweise)))
 (((Distributionswechsel, Release Notes)))
-Wir empfehlen Ihnen, bei der Aktualisierung ihrer Distribution die
+Wir empfehlen Ihnen, bei der Aktualisierung Ihrer Distribution die
 nachfolgenden Schritte nicht außer Acht zu lassen.
 
 . Lesen Sie zuerst die Dokumentation und die Hinweise zum
@@ -77,14 +77,14 @@ Veröffentlichungshinweise – auf englisch _Release Notes_ – einerseits
 auf der Webseite des Debian-Projekts <<Debian-Release-Notes>> sowie als
 Bestandteil der offiziellen, verfügbaren Debian-Images.
 
-. Halten Sie ihre Zugangsdaten für administrative Zwecke bereit. 
+. Halten Sie Ihre Zugangsdaten für administrative Zwecke bereit. 
 
-. Sofern noch nicht vorhanden, erzeugen Sie ein Backup ihrer wichtigen
+. Sofern noch nicht vorhanden, erzeugen Sie ein Backup Ihrer wichtigen
 Daten auf ein möglichst externes Medium. Dazu zählen neben den
-Nutzerdaten insbesondere die Konfigurationseinstellungen ihrer
+Nutzerdaten insbesondere die Konfigurationseinstellungen Ihrer
 Programme. Häufig werden dabei Inhalte von Datenbanksystemen und
 Webpräsenzen übersehen, die sich unter dem Verzeichnis `/var` tummeln.
-Überprüfen Sie danach ihr Backup auf Vollständigkeit. Nicht ist
+Überprüfen Sie danach Ihr Backup auf Vollständigkeit. Nicht ist
 enttäuschender als eine Datensicherung, welche sich im Nachhinein als
 unvollständig herausstellt.
 
@@ -106,7 +106,7 @@ Zeit und Festplattenplatz, es müssen somit weniger Datenpakete über die
 Leitung geschubst werden und anderseits danach eine geringere Anzahl
 Pakete aktualisiert werden.
 
-. Spielen Sie die letzten Paketversionen ihrer aktuell genutzten
+. Spielen Sie die letzten Paketversionen Ihrer aktuell genutzten
 Veröffentlichung mittels `apt-get upgrade` ein. Damit verringern Sie die
 Unterschiede zum Versionswechsel weiter.
 

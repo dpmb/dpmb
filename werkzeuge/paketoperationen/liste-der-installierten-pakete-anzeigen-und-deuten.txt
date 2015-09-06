@@ -9,7 +9,7 @@
 // Stichworte für den Index
 (((installierte Pakete anzeigen)))
 Diese Aktion betrifft häufig nicht nur ein einzelnes Paket, sondern den
-Gesamtbestand an Software, die auf ihrem Linuxsystem installiert sind
+Gesamtbestand an Software, die auf Ihrem Linuxsystem installiert sind
 oder waren. Im Alltag ergeben sich eine ganze Reihe von
 Anwendungsfällen, bei denen diese Aktion durchgeführt wird.
 
@@ -26,7 +26,7 @@ Sie überprüfen, ob diese korrekt abgelaufen sind. _Fall 3_ betrifft die
 Entwicklung, hier ist die Fehlersuche bei den Paketwerkzeugen zu nennen.
 
 Zu den konkreten Aktionen zählt weiterhin das Herausfinden, ob ein
-bestimmtes Paket oder Programm auf ihrem Rechnersystem überhaupt
+bestimmtes Paket oder Programm auf Ihrem Rechnersystem überhaupt
 installiert ist, und falls ja, ob dieses vollständig installiert und
 (bereits) konfiguriert wurde. Wurde es hingegen entfernt, ist zu klären,
 ob es vollständig entfernt wurde oder noch ``Reste'' übrig sind, bspw.
@@ -43,7 +43,7 @@ genauer.
 (((dpkg, -l)))
 (((dpkg, --list)))
 `dpkg` wird für diese Aufgabe sehr häufig genutzt. Ohne die Angabe des
-Paketnamens zeigen Sie alle Pakete und Paketreste an, die auf ihrem
+Paketnamens zeigen Sie alle Pakete und Paketreste an, die auf Ihrem
 System derzeit installiert sind. Geben Sie ein oder mehrere Pakete als
 Parameter durch Leerzeichen getrennt an, erhalten Sie nur Informationen
 zu diesen benannten Paketen. In nachfolgender Paketliste zeigen die
@@ -76,7 +76,7 @@ $
 Die ersten drei Spalten jeder ausgegebenen Zeile interpretieren Sie
 anhand der <<tab.paketzustand>>. Die Begriffe in Klammern nennen die
 englischen Übersetzungen – i.d.R. ist das die Langform der jeweiligen
-Option. Mit Ausnahme von von `W` für 'aWaited trigger' entspricht dabei
+Option. Mit Ausnahme von `W` für 'aWaited trigger' entspricht dabei
 der verwendete Buchstabe in der Spalte jeweils dem Anfangsbuchstaben der
 Langform der Option.
 

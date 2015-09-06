@@ -9,11 +9,11 @@
 Die Installation von Paketen und die dazugehörigen Aufrufe gehören aus
 unserer Sicht zu den Aktionen bei der Paketverwaltung, welche am
 häufigsten genutzt werden. Nachfolgend beschreiben wir, mit welchen
-Aufrufen Sie Pakete vom Paketmirror beziehen und danach sofort auf ihrem
+Aufrufen Sie Pakete vom Paketmirror beziehen und danach sofort auf Ihrem
 System installieren. Wie Sie die Paketdateien nur herunterladen, ohne
 diese zu installieren, lesen Sie in <<paketdatei-nur-herunterladen>>.
 
-Für APT und `aptitude` läßt sich der Vorgang mit ``Aufruf von `dpkg -i
+Für APT und `aptitude` lässt sich der Vorgang mit ``Aufruf von `dpkg -i
 Paketname` in der richtigen Reihenfolge'' umschreiben. Dabei erfolgt
 zudem die Beachtung der jeweiligen Paketabhängigkeiten – noch fehlende
 und zusätzlich benötigte Pakete werden erkannt und vom Paketmirror
@@ -24,13 +24,13 @@ Wir empfehlen Ihnen, `dpkg` nur im Ausnahmefall zu benutzen. Der Umgang
 mit `dpkg` bzw. das Wissen um die Bibliotheken dahinter (siehe
 <<apt-und-bibliotheken>>) zählt zum notwendigen Hintergrundwissen, um zu
 verstehen, was die anderen Werkzeuge wie APT und `aptitude` überhaupt
-veranstalten. APT und `aptitude` erleichtern ihren Alltag als
+veranstalten. APT und `aptitude` erleichtern Ihren Alltag als
 Systembetreuer jedoch deutlich.
 
 ==== Vorbereitungen ====
 
 Bevor es mit der Installation von Paketen losgeht, prüfen Sie in Schritt
-1, ob noch genügend freier Speicherplatz auf ihrem Linuxsystem
+1, ob noch genügend freier Speicherplatz auf Ihrem Linuxsystem
 verfügbar ist. Damit schließen Sie von vornherein unvollständig im
 Paketcache zwischengespeicherte und entpackte Pakete (und insbesondere
 den damit verbundenen Unmut über den sich daraus ergebenden
@@ -120,12 +120,12 @@ Conf kdm (4:4.8.4-6 Debian:7.6/stable [i386])
 #
 ----
 
-Als Schritt 4 bringen Sie die Paketliste ihres Linuxsystems auf den
+Als Schritt 4 bringen Sie die Paketliste Ihres Linuxsystems auf den
 aktuellen Stand. Wie das im Detail vorsichgeht, erfahren Sie in
 <<pakete-aktualisieren>>. Damit stellen Sie sicher, dass Sie mit einer
 aktuellen Paketliste arbeiten und darüber nur Pakete auswählen, die sich
 auf dem neuesten Stand befinden. Sie verhindern damit insbesondere, dass
-Sie veraltete Varianten auf ihr System einpflegen und reduzieren
+Sie veraltete Varianten auf Ihr System einpflegen und reduzieren
 gleichzeitig den Aufwand bei einer späteren Aktualisierung.
 
 ==== Durchführung ====
@@ -184,7 +184,7 @@ berechnet.
 
 Bestehen keine Unklarheiten über die zu installierenden Pakete, setzen
 APT bzw. `aptitude` mit ihrer Arbeit ohne Rückfrage fort. Andernfalls
-wartet das Programm noch auf ihr Einverständnis.
+wartet das Programm noch auf Ihr Einverständnis.
 
 // Stichworte für den Index
 (((Security Updates)))

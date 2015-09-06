@@ -15,7 +15,7 @@ mittels `apt-get upgrade` dar (siehe dazu <<pakete-aktualisieren>>).
 Ein solcher Rückschritt ist in Betracht zu ziehen, wenn die aktuelle
 Version eines Softwarepakets nicht das leistet, was sie verspricht,
 dabei Fehler auftreten oder Inkompatibilitäten mit anderen
-Softwarepaketen deren Benutzung unmöglich machen. Häufig fallen in
+Softwarepaketen und deren Benutzung unmöglich machen. Häufig fallen in
 letztere Kategorie geänderte Schnittstellen, die noch nicht auf allen
 Ebenen konsequent umgesetzt wurden.
 

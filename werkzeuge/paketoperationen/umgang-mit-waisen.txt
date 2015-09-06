@@ -125,11 +125,11 @@ die Abhängigkeit benannte Paket ebenfalls mit entfernen möchten.
 
 // Stichworte für den Index
 (((debfoster, /var/lib/debfoster/keepers)))
-Zu Beginn erstellt `debfoster` auf der Basis ihrer Rückmeldung eine
+Zu Beginn erstellt `debfoster` auf der Basis Ihrer Rückmeldung eine
 Liste mit den derzeit installierten Paketen. Diese Liste speichert
 `debfoster` in der Datei `/var/lib/debfoster/keepers`. Darin vermerkt
 es, ob Sie das betreffende Paket behalten oder entfernen möchten. Zum
-Schluß löscht es die Pakete, die in der Liste als ``entfernen''
+Schluss löscht es die Pakete, die in der Liste als ``entfernen''
 gekennzeichnet sind. Ein Aufruf zur Aktualisierung der Liste ist nach
 jeder Änderung des Paketbestandes sinnvoll, d.h. einer Installation,
 Löschung und Aktualisierung eines oder mehrerer Pakete.
@@ -338,7 +338,7 @@ $
 [TIP]
 .Kompakte Schreibweise der Optionen
 ====
-Für den obigen Aufruf existiert eine Kurschreibweise, in der Sie
+Für den obigen Aufruf existiert eine Kurzschreibweise, in der Sie
 die Optionen in kompakter Form schreiben können. Der Aufruf `deborphan
 -Pzs` bewirkt das gleiche wie `deborphan -P -z -s`.
 ====

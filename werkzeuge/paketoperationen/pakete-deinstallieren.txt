@@ -9,7 +9,7 @@
 Weitaus anspruchsvoller als die Installation eines Paketes ist hingegen
 deren rückstandsfreie und saubere Entfernung. Dazu zählt nicht nur das
 Löschen der Dateien des eigentlichen Pakets, sondern auch das Aufräumen
-und Entsorgen der dazugehörigen Konfigurationsdateien aus ihrem
+und Entsorgen der dazugehörigen Konfigurationsdateien aus Ihrem
 Linuxsystem.
 
 Wir unterscheiden daher an dieser Stelle vier Fälle. Fall 1 ist das
@@ -166,7 +166,7 @@ $
 // Stichworte für den Index
 (((aptitude, purge)))
 (((apt-get, remove --purge)))
-Haben Sie die aus ihrer Sicht unnützen Konfigurationsdateien eines
+Haben Sie die aus Ihrer Sicht unnützen Konfigurationsdateien eines
 bereits deinstallierten Paketes ausfindig gemacht und möchten diese
 endgültig ins digitale Nirwana befördern, sind Ihnen APT und `aptitude`
 gern dabei behilflich. APT unterstützt Sie mit der Kombination aus dem

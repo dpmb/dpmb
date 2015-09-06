@@ -14,7 +14,7 @@ Im Normalfall liegen die Debianpakete entweder bereits fertig
 konfiguriert oder mit einer vorbereiteten Konfiguration auf dem
 Spiegelserver. Dafür zeichnet der Paketmaintainer verantwortlich. Diese
 Basiseinstellungen funktionieren im Allgemeinen, haben aber nicht immer
-einen Bezug zum konkreten Einsatzfall. Dieser läßt sich kaum
+einen Bezug zum konkreten Einsatzfall. Dieser lässt sich kaum
 vorhersehen. Daher folgt im Rahmen der Paketinstallation ein
 individuelles Feintuning seitens des Administrators (Voreinstellungen
 für alle Benutzer) oder durch Sie als Benutzer selbst (individuelle,
@@ -28,7 +28,7 @@ des neuen Pakets und der bereits bestehenden Konfiguration Unterschiede
 vorliegen, werden Sie durch das Programm gefragt, welche der beiden
 Einstellungen zukünftig genutzt werden soll. Das ist sinnvoll und
 berücksichtigt insbesondere den Fall, dass das Paket bereits installiert
-ist und von Ihnen händisch auf ihre individuellen Gegebenheiten angepaßt
+ist und von Ihnen händisch auf ihre individuellen Gegebenheiten angepasst
 wurde. Als Möglichkeiten werden Ihnen angeboten: 
 
 * die mitgelieferte Konfiguration des neuen Pakets zu benutzen
@@ -41,8 +41,8 @@ Sicherheitskopie der bestehenden Konfiguration anzulegen, bevor diese
 verändert wird. Sollte diese neue Konfiguration nicht ihren Erwartungen
 entsprechen, können Sie somit jederzeit auf die Sicherheitskopie
 zurückgreifen. Bei diesem Vorgehen haben Sie als Administrator die
-Möglichkeit, zu sehen, dass Unterschiede bestehen, welche Unterschiede
-das konkret sind, ihre Konfiguration beizubehalten und im Zweifelsfall
+Möglichkeit zu sehen, dass Unterschiede bestehen, welche Unterschiede
+das konkret sind, Ihre Konfiguration beizubehalten und im Zweifelsfall
 die Konfiguration auf neue (Standard)Werte zurückzusetzen.
 
 In seltenen Fällen geht dieser Prozess schief, d.h. das Paket wurde zwar

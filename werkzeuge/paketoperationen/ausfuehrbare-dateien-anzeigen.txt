@@ -9,7 +9,7 @@
 // Stichworte für den Index
 (((dlocate, -lsbin)))
 (((Paketinhalt, ausführbare Dateien)))
-Die ausführbaren Dateien ihres Linuxsystems befinden sich üblicherweise
+Die ausführbaren Dateien Ihres Linuxsystems befinden sich üblicherweise
 im Verzeichnis `/usr/bin` bzw. `/usr/sbin`. Um herauszufinden, welche
 ausführbaren Dateien sich in einem Paket befinden, können Sie einerseits
 das Paket durchforsten (siehe Paketinhalte anzeigen in

@@ -68,7 +68,7 @@ $
 ----
 
 Geben Sie hingegen beim Aufruf als Parameter einen Paketnamen an, prüft
-`apt-cache`, ob das Paket bereits auf ihrem System installiert ist oder
+`apt-cache`, ob das Paket bereits auf Ihrem System installiert ist oder
 ob es ein neueres Paket gibt und falls ja, von welchem Paketmirror das
 Paket in diesem Fall käme.
 
@@ -163,7 +163,7 @@ Internetzugriff, um `rmadison` zu nutzen.
 Als Parameter erwartet `rmadison` einen oder mehrere Paketnamen, nach
 denen es dann recherchiert. Als Ergebnis sehen Sie in der linken Spalte
 den Paketnamen, gefolgt von der Versionsnummer des Pakets, der
-Veröffentlichung und am Schluß der Architektur, für die das Paket
+Veröffentlichung und am Schluss die Architektur, für die das Paket
 verfügbar ist. Im nachfolgenden Beispielaufruf ist die Architektur
 'all', da es sich um das Dokumentationspaket 'apt-doc' handelt, welches
 auf allen Plattformen gleich ist.
@@ -234,7 +234,7 @@ Basis der Version 1.0 ausgeliefert. Ab dieser Version verlieren die
 zuvor vorgestellten Kommandos `apt-cache` und `apt-show-versions` etwas
 an Bedeutung, da das Kommando `apt` mit dem neuen Unterkommando `list`
 und einem Paketnamen als Parameter ähnliches leistet. Die Ausgabe auf
-dem Terminal erfolgt in Farbe, nur läßt sich das hier im Buch leider
+dem Terminal erfolgt in Farbe, nur lässt sich das hier im Buch leider
 weniger gut illustrieren.
 
 Nachfolgend sehen Sie wiederum die Ausgabe für das Paket 'zsh'. Nach dem

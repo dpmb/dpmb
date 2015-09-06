@@ -46,7 +46,7 @@ von dem angegebenen Paketmirror – den Debian Source Code (`dsc`) plus
 Paketierung (siehe <<aufbau-und-format-source>>) – , aus denen das
 Binärpaket zusammengebaut wurde und überprüft diese Komponenten (siehe
 <<bezogenes-paket-verifizieren>>) anhand deren öffentlichem Schlüssel.
-Am Schluß werden die drei Archive `dsc`, `tar` und `diff` im aktuellen
+Am Schluss werden die drei Archive `dsc`, `tar` und `diff` im aktuellen
 Verzeichnis entpackt. 
 
 Gibt es zusätzliche Änderungen am Quellcode in Form von Patches, werden

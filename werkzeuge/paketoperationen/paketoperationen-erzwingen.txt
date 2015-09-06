@@ -7,7 +7,7 @@
 === Paketoperationen erzwingen ===
 
 Die vorgestellten Werkzeuge zur Paketverwaltung sind als sehr pingeling
-bekannt, um den Zustand ihres Systems möglichst stabil und benutzbar zu
+bekannt, um den Zustand Ihres Systems möglichst stabil und benutzbar zu
 halten. Dazu zählen beispielsweise eine saubere Installation, keine
 Konflikte zwischen den installierten Paketen, das Einspielen von
 Aktualisierungen und Patches sowie keine offenen Paketabhängigkeiten.
@@ -18,8 +18,8 @@ und lassen sich nicht nacheinander installieren. In dieser Situation
 hilft Ihnen Spezialwissen weiter, zu dem die Möglichkeiten von `dpkg`,
 `apt` und `aptitude` gehören, um Sicherheitschecks und Warnungen zu
 ignorieren und Aktionen trotzdessen durchzuführen. Bitte behalten Sie
-dabei stets im Hinterkopf, dass diese Schritte und Optionen ihr System
-auch unbenutzbar machen kann.
+dabei stets im Hinterkopf, dass diese Schritte und Optionen Ihr System
+auch unbenutzbar machen können.
 
 // Stichworte für den Index
 (((dpkg, --force-help)))

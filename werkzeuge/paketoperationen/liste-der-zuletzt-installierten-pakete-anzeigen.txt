@@ -10,7 +10,7 @@
 (((Logdatei, /var/log/dpkg.log])))
 (((logrotate)))
 (((Paket installieren, zuletzt installierte Pakete anzeigen)))
-Als Verantwortlicher für ihr Linuxsystem möchten Sie ab und an wissen,
+Als Verantwortlicher für Ihr Linuxsystem möchten Sie ab und an wissen,
 was zuletzt auf dem System passiert ist. Dazu zählt insbesondere das
 Auswerten der Logdateien und beinhaltet die Änderungen der Paketliste –
 was wurde installiert, gelöscht bzw. aktualisiert etc. `dpkg` erfasst
@@ -34,7 +34,7 @@ $
 ----
 
 Reicht Ihnen dieses Ergebnis noch nicht aus, suchen Sie zusätzlich noch
-in allen wegrotierten Logdateien. In Anwendung kommt hier das Kommando
+in allen wegrotierten Logdateien. Zur Anwendung kommt hier das Kommando
 `zcat` aus dem Paket 'gzip', welches ein 'essentielles' Paket darstellt.
 Dies ist auf einer Standard-Installation der Fall. Es gibt jedoch auch
 noch eine alternative Implementation im Paket `zutils`
