@@ -14,7 +14,7 @@ Sie das Flag gesetzt, wird das Paket somit nicht weiter aktualisiert
 oder gelöscht, sondern in dem derzeit bestehenden Zustand und der
 Version gehalten.
 
-Ergebnis dieses Vorgehens ist, dass das Paket auf ihrem Linuxsystem so
+Ergebnis dieses Vorgehens ist, dass das Paket auf Ihrem Linuxsystem so
 erhalten bleibt, wie es aktuell ist. Es gibt keine Veränderungen bzgl.
 genutzter Schnittstellen und Abhängigkeiten zu anderen Paketen. Das ist
 insbesondere dann sinnvoll, wenn eine ganz bestimmte Komponente benötigt
@@ -52,7 +52,7 @@ Halten-Markierung für wireshark entfernt.
 ----
 
 `apt-mark` kennt zudem das Unterkommando `showhold`. Damit lassen Sie
-sich auflisten, welche Pakete auf ihrem System derzeit auf 'hold'
+sich auflisten, welche Pakete auf Ihrem System derzeit auf 'hold'
 gesetzt sind. Geben Sie keine Pakete als Parameter an, werden alle
 Pakete untersucht. Ansonsten berücksichtigt `apt-mark` nur die von Ihnen
 spezifizierten Pakete.

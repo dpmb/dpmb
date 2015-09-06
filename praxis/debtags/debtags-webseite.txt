@@ -31,7 +31,7 @@ modifiziert werden (siehe <<fig.debtags-gimp>>). Alle darüber
 vorgenommenen Änderungen fließen in das genutzte Vokabular und die
 Datenbank zur Verwaltung und Speicherung der Schlagworte ein und werden
 sofort wirksam. Bei einer späteren Veröffentlichung des 'debtags'-Pakets
-sind dann auch ihre Beiträge ganz offiziell im aktualisierten Paket
+sind dann auch Ihre Beiträge ganz offiziell im aktualisierten Paket
 enthalten und somit für alle Benutzer verfügbar.
 
 Die Webseite ist hervorragend konzipiert und bildet im Vergleich zu den

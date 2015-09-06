@@ -10,7 +10,7 @@ Paketverwaltung vertraut sind.
 
 Dafür spricht die grundlegende Philosophie, auf der UNIX/Linux-Systeme
 basieren. Setzen Sie ein Programm stets genau für die Aufgabe(n) ein,
-für die es am besten paßt. Zudem hat jedes Werkzeug Eigenschaften, mit
+für die es am besten passt. Zudem hat jedes Werkzeug Eigenschaften, mit
 denen es sich von anderen abhebt und womit Sie bestimmte Aufgaben
 besonders schnell oder möglichst gut erledigen können.
 

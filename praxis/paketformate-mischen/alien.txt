@@ -11,7 +11,7 @@
 Den Begriff 'alien' übersetzen Sie am ehesten mit 'fremd', 'Fremdling'
 oder 'Ausländer'. So heißt auch das Debianpaket <<Debian-Paket-alien>>,
 welches Ihnen hilft, eine Software, welche nicht als deb-Paket vorliegt,
-entsprechend umzuwandeln und für ihre Debian-Installation vorzubereiten.
+entsprechend umzuwandeln und für Ihre Debian-Installation vorzubereiten.
 
 Wie bereits in <<Hofmann-Osterried-Alien-LinuxUser>> beschrieben,
 sollten bei der Umwandlung des Pakets nach Möglichkeit die folgenden
@@ -36,16 +36,16 @@ funktioniert:
 
 * die referenzierten Bibliotheken passen nicht oder sind nicht
 auffindbar
-* die angegebenen Pfade im Originalpaket stimmen nicht mit ihrer lokalen
+* die angegebenen Pfade im Originalpaket stimmen nicht mit Ihrer lokalen
 Verzeichnisstruktur überein
-* der Binärcode paßt nicht zu ihrer genutzten Plattform und Architektur
+* der Binärcode passt nicht zu Ihrer genutzten Plattform und Architektur
 * das Format der Konfiguration sorgt für Ärger, bspw. die verfügbaren
 Optionen und Schalter
 * es bestehen Konflikte mit anderer, bereits installierter Software
 
 Verwenden Sie daher möglichst die Version der Software, die auch zu
-ihrer Distribution und Architektur paßt. Diese läßt sich i.d.R. am
-einfachsten in ihren Softwarebestand integrieren. Weitere Informationen
+Ihrer Distribution und Architektur passt. Diese lässt sich i.d.R. am
+einfachsten in Ihren Softwarebestand integrieren. Weitere Informationen
 dazu finden auf der Projektwebseite von 'alien' <<alien>>.
 
 ==== Pakete umwandeln ====
@@ -61,7 +61,7 @@ dazu finden auf der Projektwebseite von 'alien' <<alien>>.
 ** `-c`: Bestehende Pre- und Post-Install- sowie Remove-Skripte bleiben erhalten
 ** `--generate` und `--veryverbose`: Optionen zur Fehlersuche
 
-* Paket überprüfen, ob es zur bestehenden Installation paßt
+* Paket überprüfen, ob es zur bestehenden Installation passt
 
 ==== Umgewandelte Pakete einspielen ====
 

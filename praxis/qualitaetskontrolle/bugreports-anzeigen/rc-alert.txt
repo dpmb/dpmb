@@ -28,7 +28,7 @@ gehört u.a. eine distributionsspezifische Suche und die Filterung der
 Paketliste anhand von Debtags (siehe
 <<erweiterte-paketklassifikation-mit-debtags>>).
 
-Nachfolgend sehen Sie sie Arbeitsweise von `rc-alert` anhand des Paketes
+Nachfolgend sehen Sie die Arbeitsweise von `rc-alert` anhand des Paketes
 'apt'. Das Ergebnis umfasst neben der Nummer des Bugreports ('Bug')
 dessen Titel ('Title'), die hinterlegten Flags ('Flags') und die
 Veröffentlichung, für die der Fehler relevant ist ('Dists'). Der erste

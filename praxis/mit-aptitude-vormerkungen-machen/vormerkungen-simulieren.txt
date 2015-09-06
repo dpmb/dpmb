@@ -13,7 +13,7 @@
 Insbesondere bei vielen Vormerkungen oder wenn Sie grundlegende Pakete
 ändern, geht mitunter die Übersicht verloren, welche Pakete in der
 Gesamtheit überhaupt betroffen sind. Um vorher auszuprobieren, was
-passieren wird, wenn ihre Vormerkungen durch `aptitude` ausgeführt
+passieren wird, wenn Ihre Vormerkungen durch `aptitude` ausgeführt
 werden, bietet Ihnen das Programm daher die entsprechende Option `-s`
 (Langform `--simulate`) an. Die nachfolgende Ausgabe zeigt das Ergebnis
 der Simulation für die vorgemerkten Paketoperationen analog zu

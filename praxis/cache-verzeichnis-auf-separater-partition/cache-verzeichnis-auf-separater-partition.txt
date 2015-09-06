@@ -13,11 +13,11 @@ indexterm:[/var/cache/apt/archives]
 Es gibt die unterschiedlichsten Gründe, entweder das gesamte Verzeichnis
 `/var` oder nur den Paketcache unter
 `/var/cache/apt/archives` von den restlichen Partitionen in
-ihrem Linuxsystem zu trennen. Die darin abgespeicherten variablen Daten
+Ihrem Linuxsystem zu trennen. Die darin abgespeicherten variablen Daten
 sind in Bezug auf deren Größe und Menge (d.h. die Anzahl der Inodes für
 die Dateien) nicht vorhersehbar und schwanken. Aktualisieren Sie Software
-auf ihrem Linuxsystem, möchten Sie verhindern, dass das Herunterladen der
-neuen Pakete ihren Rechner durch ein vollbelegtes Dateisystem in der
+auf Ihrem Linuxsystem, möchten Sie verhindern, dass das Herunterladen der
+neuen Pakete Ihren Rechner durch ein vollbelegtes Dateisystem in der
 Benutzung ausbremst.
 
 Auf Computern, bei denen das Betriebssystem entweder auf einer Solid
@@ -104,7 +104,7 @@ Einstellungen wehrt, haben Sie sehr wahrscheinlich alles richtig gemacht
 und die Einrichtung ist erfolgreich abgeschlossen.
 
 Die Einrichtung als `tmpfs`-Dateisystem im RAM macht sich auch nach
-einem Neustart ihres Linuxsystems bemerkbar. In diesem Fall verschwinden
+einem Neustart Ihres Linuxsystems bemerkbar. In diesem Fall verschwinden
 sämtliche heruntergeladenen Paketdateien wieder aus dem Cache. Ein
 Neustart hat somit den gleichen Effekt wie der Aufruf `apt-get clean`
 auf der Kommandozeile -- nur: sie müssen seltener von Hand aufräumen.
@@ -130,7 +130,7 @@ Möchten Sie den Paketcache weder ins RAM verlagern noch dafür eine
 eigene Partition anlegen, sondern stattdessen einfach nur ein
 Unterverzeichnis auf einer anderen Partition benutzen, so bietet Ihnen
 APT diese Möglichkeit auch an. Dazu teilen Sie das APT mit und tragen
-ihren Wunschpfad in der Konfigurationsdatei `/etc/apt/apt.conf`
+Ihren Wunschpfad in der Konfigurationsdatei `/etc/apt/apt.conf`
 über die Option `Dir::Cache::archives` mit. Für den neuen Pfad
 `/scratch/paketcache/` zum Paketcache sieht der Eintrag
 beispielsweise wie folgt aus:
@@ -153,7 +153,7 @@ Verzeichnis noch nicht bestehen, legen Sie dieses wie folgt an:
 #
 ----
 
-Abschließend überprüfen Sie, ob ihre Eintragung wie erhofft
+Abschließend überprüfen Sie, ob Ihre Eintragung wie erhofft
 funktioniert. Dabei hilft Ihnen der kombinierte Aufruf von `apt-config`
 und `fgrep`. `apt-config` mit der Option `dump` liefert Ihnen die
 aktuelle Konfiguration von APT, aus der Sie mittels `fgrep` nach dem
@@ -190,7 +190,7 @@ Kommando `apt-get update` testen und ggf. korrigieren.
 [TIP]
 .Konfiguration von APT und `apt-config`
 ====
-Wie Sie APT auf ihre spezifischen Bedürfnisse anpassen, lesen Sie in
+Wie Sie APT auf Ihre spezifischen Bedürfnisse anpassen, lesen Sie in
 <<apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen>>.
 Detaillierter gehen wir auf das oben genutzte Kommando `apt-config`
 unter Konfiguration von APT anzeigen in

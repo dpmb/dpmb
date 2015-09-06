@@ -14,7 +14,7 @@ Version mit der höchsten ``Vorrangstufe'' aus. Liegt keine explizite
 Angabe vor, kommen die Standardeinstellungen zum Tragen (siehe auch
 <<aus-welchem-repo-kommen-die-pakete>>).
 
-ie Steuerung der Vorrangstufe erfolgt über einzelne Zahlenwerte, genannt
+Die Steuerung der Vorrangstufe erfolgt über einzelne Zahlenwerte, genannt
 'Pins'. Anhand dieser wird ausgewählt, aus welchen Paketquellen die
 Pakete bezogen werden. Das ganze kann beliebig verkompliziert werden, da
 APT über den Zahlenwert entscheidet, was es installiert, nicht

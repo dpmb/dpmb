@@ -30,7 +30,7 @@ die Sie dafür benutzen können.
 Drücken Sie die Taste kbd:[g], erhalten Sie danach zunächst nur eine
 Vorschau ihrer Vormerkungen (siehe
 <<bestehende-vormerkungen-anzeigen>>). Drücken Sie die Taste kbd:[g]
-erneut führt `aptitude` ihre Vormerkungen auch tatsächlich aus (siehe
+erneut, führt `aptitude` ihre Vormerkungen auch tatsächlich aus (siehe
 <<vormerkungen-ausfuehren>>).
 
 Ihre bereits gewählten Vormerkungen können Sie jederzeit wieder

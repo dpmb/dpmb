@@ -7,7 +7,7 @@
 
 Das Projekt `checkinstall` <<checkinstall>> hat sich zum Ziel gesetzt,
 die direkte Erstellung von Binärpaketen aus dem dazugehörigen, aktuellen
-Quellcode zu ermöglichen, die zu ihrer Installation passen. Vereinfacht
+Quellcode zu ermöglichen, die zu Ihrer Installation passen. Vereinfacht
 gesagt, erstellt es ein Paket direkt aus dem Quellcode und übergeht den
 Paketmanager dabei aber nicht. Es beobachtet den Erstellprozess und
 bindet alle Dateien in das neue Paket ein, die bei der Übersetzung

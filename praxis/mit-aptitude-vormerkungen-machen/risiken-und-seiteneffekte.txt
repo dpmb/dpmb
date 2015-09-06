@@ -8,7 +8,7 @@
 
 Die Idee, die `aptitude` mit dem Konzept der Vormerkungen transportiert,
 ist toll und ungemein praktisch. Es erleichtert komplexe Veränderungen
-des Paketbestands auf ihrem Debian-System. Es hilft Ihnen dabei, den
+des Paketbestands auf Ihrem Debian-System. Es hilft Ihnen dabei, den
 ganzen Arbeitsberg in handhabbare Einzelschritte zu zerlegen und später
 ``alles in einem Rutsch'' ablaufen zu lassen.
 

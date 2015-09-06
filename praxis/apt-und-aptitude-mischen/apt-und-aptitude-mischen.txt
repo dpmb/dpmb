@@ -28,7 +28,7 @@ verwenden. Es hilft Ihnen auch dabei, zu wissen, wie Sie die
 beschriebenen Aktionen in die Handlungsschritte für den Paketmanager
 übersetzen, den Sie bevorzugen.
 
-Darüber nachdenken führt dazu, dass Sie ihren Arbeitsfluß Revue passieren
+Darüber nachdenken führt dazu, dass Sie Ihren Arbeitsfluss Revue passieren
 lassen und die Handhabung der Programme im Alltag hinterfragen. Dabei
 können sich Gewohnheiten verändern und Blickwinkel erweitern. Eine
 Antwort auf die Fragen ``Welches Programm erleichtert mir die Aufgaben?

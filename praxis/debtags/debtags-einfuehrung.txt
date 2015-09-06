@@ -32,14 +32,14 @@ die inzwischen erfreulicherweise für Debian zur Verfügung stehen.
 bestimmten Paketes gerät mehr oder weniger zum zufälligen Ereignis.
 
 * Das Klassifikationsraster zur Einordnung der Pakete in die bestehenden
-Softwarekategorien ist zu grob und läßt nur einen einzigen, vorher
+Softwarekategorien ist zu grob und lässt nur einen einzigen, vorher
 bestimmten Blickwinkel zu. Der Maintainer eines Paketes muss daher genau
-abwägen, welche Paketkategorie überwiegt oder am besten paßt und trägt
+abwägen, welche Paketkategorie überwiegt oder am besten passt und trägt
 diese Kategorie in der `control`-Datei des Debian-Pakets ein (siehe
 Aufbau eines Debian-Pakets in <<aufbau-und-format-binaer>>).
 
 * Es ist keine Mehrfachzuordnung möglich, wenn ein Programm verschiedene
-Aspekte umfasst und thematisch in unterschiedliche Kategorien paßt.
+Aspekte umfasst und thematisch in unterschiedliche Kategorien passt.
 
 * Die Suche mittels APT und `aptitude` gelingt nur in der korrekten
 Schreibweise über den Paketnamen bzw. einem Fragment daraus, alternativ
@@ -60,7 +60,7 @@ das, dass Sie ungefähr wissen müssen, wo das betreffende Paket derzeit in
 der Hierarchie eingeordnet wurde. Das Gefühl dafür erlangen Sie meist
 erst im Laufe der Zeit. So toll es auch ist, dass Debian so vielfältig
 bezüglich seiner Pakete ist, wird es doch zunehmend anspruchsvoller,
-sich den den Überblick über die Komponenten zu erarbeiten und diesen zu
+sich den Überblick über die Komponenten zu erarbeiten und diesen zu
 behalten.
 
 // Datei (Ende): ./praxis/debtags/debtags-einfuehrung.txt

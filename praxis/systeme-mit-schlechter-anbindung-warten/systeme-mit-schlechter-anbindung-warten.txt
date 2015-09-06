@@ -28,7 +28,7 @@ Sie leben müssen:
 * geringe Bandbreite bei einem Analog-Modem, bei ISDN und bei GSM-Verbindungen (2G)
 
 Die Situation ist dabei durchaus ähnlich wie ohne Internet, nur mit
-wenigstens ein bißchen Internet.
+wenigstens ein bisschen Internet.
 
 Bei der Paketverwaltung stört am ehesten eine zu geringe Bandbreite.
 Latenz ist dabei nahezu irrelevant und bei instabilen Verbindungen

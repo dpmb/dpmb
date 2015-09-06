@@ -96,7 +96,7 @@ Pin-Priorität).
 Als weiteren Wert zum Aufruf benötigt `apt-listbugs` noch ein Kommando.
 Zur Auswahl stehen `apt`, `list` und `rss`. Bei ersterem liest
 `apt-listbugs` von `stdin`, bei `list` erwartet es die Paketnamen als
-Argumente zum Aufruf und bei letzterem im RSS-Format. Den Abschluß des
+Argumente zum Aufruf und bei letzterem im RSS-Format. Den Abschluss des
 Aufrufs bildet der Paketname, an den Sie zudem eine spezifische
 Paketversion anfügen können. Als Trennzeichen fungiert hier der
 Schrägstrich, sodass bspw. die Spezifikation für das Paket
