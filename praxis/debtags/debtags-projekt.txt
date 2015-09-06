@@ -27,7 +27,7 @@ erhöht.
 (((Debianpaket, debtags)))
 Der Projektname 'Debtags' leitet sich von den beiden Worten _Debian_ und
 _tags_ ab, wobei sich letzteres mit Schlagwort, Markierung, Stichwort,
-Etikettierung oder Attribut ins Deutsche übersetzen läßt. Enrico Zini
+Etikettierung oder Attribut ins Deutsche übersetzen lässt. Enrico Zini
 pflegt dazu das gleichnamige Paket 'debtags' <<Debian-Paket-debtags>>,
 welches sehr schnell in den regulären Paketbestand aufgenommen wurde.
 Seit Debian 4.0 _Etch_ sind die Debtags ein regulärer Bestandteil jeder

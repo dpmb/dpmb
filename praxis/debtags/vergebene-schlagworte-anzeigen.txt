@@ -93,7 +93,7 @@ $
 // Stichworte für den Index
 (((Debtags, Schlagworte in aptitude anzeigen)))
 
-Sofern das Paket 'debtags' auf ihrem System installiert ist, stellt auch
+Sofern das Paket 'debtags' auf Ihrem System installiert ist, stellt auch
 `aptitude` die hinterlegten Schlagworte als Zusatzinformationen zum gerade
 von Ihnen ausgewählten Paket dar. <<fig.aptitude-xpdf-debtags>> zeigt
 dies ebenfalls für den PDF-Betrachter `xpdf` und das gleichnamige Paket
@@ -102,7 +102,7 @@ dazu.
 .Darstellung der Schlagworte zum Paket 'xpdf' in `aptitude`
 image::praxis/debtags/aptitude-xpdf-debtags.png[id="fig.aptitude-xpdf-debtags", width="50%"]
 
-Daß die Übersetzung von Begriffen keine triviale Aufgabe ist, sehen Sie
+Dass die Übersetzung von Begriffen keine triviale Aufgabe ist, sehen Sie
 in der Paketbeschreibung. Anstatt von Schlagwörtern wird in der
 deutschen Version von `aptitude` der Begriff Markierungen benutzt, was
 ebenfalls zutreffend ist.
@@ -122,7 +122,7 @@ Hälfte.
 
 Bei PackageSearch tragen Sie zuerst das gewünschte Paket über das
 Suchfeld unten rechts ein und sehen danach die Debtags-Informationen im
-darunter angeordneten Reiter `Details`. Bei Xara ist ihr Ziel das
+darunter angeordneten Reiter `Details`. Bei Xara ist Ihr Ziel das
 Informationsfeld oben rechts, welches gefüllt wird, nachdem Sie zuvor
 links unten das Paket und danach links oben den Eintrag `Tag` aus der
 Liste der Paketdetails ausgewählt haben.
@@ -150,7 +150,7 @@ zentraler Anlaufpunkt. Wie bereits eingangs erwähnt, listet Ihnen die
 Paketsuche automatisch die vergebenen Schlagwörter für ein Paket auf
 (siehe dazu <<fig.debtags-xara-gtk>>).
 
-Ebenso aufschlußreich und noch deutlich ausführlicher ist der 'Debtags
+Ebenso aufschlussreich und noch deutlich ausführlicher ist der 'Debtags
 Editor'. Darüber sehen Sie nicht nur die vergebenen Schlagwörter für ein
 Paket, sondern korrigieren diese bei Bedarf direkt. Mehr dazu erfahren
 Sie in <<pakete-um-schlagworte-ergaenzen>>.

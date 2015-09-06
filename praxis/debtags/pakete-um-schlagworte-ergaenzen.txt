@@ -43,9 +43,9 @@ ausgewählt haben, wird dieses zunächst nur zur Liste der vorbereiteten
 Änderungen hinzugefügt. Um eine dieser vorbereiteten Änderungen wieder
 rückgängig  zu machen, wählen Sie das entsprechende Schlagwort aus der
 Liste der vorbereiteten Änderungen aus und entfernen es mit einem Klick
-darauf. Sind ihre vorbereiteten Änderungen vollständig, klicken Sie auf
+darauf. Sind Ihre vorbereiteten Änderungen vollständig, klicken Sie auf
 den Knopf `Submit` und übertragen damit die Ergänzungen zum jeweiligen
-Paket zur Debtags-Datenbank. Danach sind ihre Änderungen sofort für alle
+Paket zur Debtags-Datenbank. Danach sind Ihre Änderungen sofort für alle
 Benutzer verfügbar.
 
 // Datei (Ende): ./praxis/debtags/pakete-um-schlagworte-ergaenzen.txt
