@@ -35,7 +35,7 @@ listet alle Pakete auf, die durch eine ältere Version ersetzt werden (siehe <<p
 listet alle Pakete auf, die gelöscht werden (siehe <<pakete-deinstallieren>>)
 
 `purge`::
-listet alle Pakete auf, vollständig gelöscht werden (siehe <<pakete-deinstallieren>>)
+listet alle Pakete auf, die vollständig gelöscht werden (siehe <<pakete-deinstallieren>>)
 
 `hold`::
 listet alle Pakete auf, deren Version explizit beibehalten wird (siehe <<paketflags>>)
