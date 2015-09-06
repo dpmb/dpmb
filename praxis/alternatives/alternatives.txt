@@ -23,11 +23,11 @@ Umgebungsvariablen wie `$EDITOR`, `$BROWSER` und `$PAGER` aus und leiten
 daraus die Programmauswahl ab. Viele Einzelanwendungen, die wiederum
 andere Standardprogramme aufrufen, ermitteln bspw. die Information nicht
 selbst, welchen Editor Sie als Benutzer bevorzugen und verwenden. Sie
-verlassen sich stattdessen auf die Rückgabewerte, die ihnen an dieser
+verlassen sich stattdessen auf die Rückgabewerte, die Ihnen an dieser
 Stelle vom Werkzeug `sensible-editor` geliefert werden. Gleiches gilt
 für die anderen drei Werkzeuge.
 
-Gleiches funktioniert auch in ihrem Terminal. Rufen Sie darin die
+Gleiches funktioniert auch in Ihrem Terminal. Rufen Sie darin die
 Programme namens `editor` oder `x-www-browser` auf, werden ebenfalls
 diese Variablen ausgewertet und das darüber referenzierte Werkzeug
 ausgeführt.
@@ -102,7 +102,7 @@ desselben Sourcepakets sind unterschiedliche Konfigurationen oder
 unterschiedlich umfangreiche Abhängigkeiten. Beispiel eins ist GNU
 Emacs, welcher in drei Varianten vorliegt:
 
-* basierend auf auf dem Gimp Tool Kit (GTK+) und mit voller
+* basierend auf dem Gimp Tool Kit (GTK+) und mit voller
 Unterstützung moderner Desktops (`emacs23` bzw. `emacs24`). Dieses Paket
 hängt u.a. von D-Bus ab.
 * basierend auf dem schlankeren Lucid-Toolkit (`emacs23-lucid` bzw.
@@ -125,7 +125,7 @@ Programmnamen aufgerufen werden.
 
 Mit dem Aufruf `update-alternatives --get-selections` listen Sie alle
 generischen Programme oder Dateien auf, für die es Alternativen auf
-ihrem lokalen System gibt. Ebenfalls mit ausgegeben werden dabei die
+Ihrem lokalen System gibt. Ebenfalls mit ausgegeben werden dabei die
 aktuell ausgewählte Alternative sowie die konkrete Auswahlform --
 automatisch anhand der installierten Pakete und Prioritäten oder manuell
 durch den lokalen Administrator.
