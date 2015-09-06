@@ -27,7 +27,7 @@ nutzen und diese in der genannten Reihenfolge Verwendung finden.
 Mit diesen Schritten steigt das Verständnis des Kommandoaufrufs und
 vereinfacht es nicht nur Einsteigern, vorab zu verstehen, was da
 passieren soll. Der vollständige Aufruf mit Beschreibung klärt
-Mißverständnisse und hilft Ihnen auch dabei, Fehler zu vermeiden.
+Missverständnisse und hilft Ihnen auch dabei, Fehler zu vermeiden.
 
 Bei der Benennung und Auswahl der Werkzeuge spielen Gewohnheit und die
 Faulheit beim Tippen des Aufrufs eine Rolle. Nutzen Sie einen expliziten
