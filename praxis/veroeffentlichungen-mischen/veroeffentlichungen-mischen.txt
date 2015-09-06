@@ -7,8 +7,8 @@
 
 Debian reglementiert die Erweiterung der vorhandenen Funktionalität für
 die Veröffentlichung eines Paketes aus Debian 'stable' deutlich. Besteht
-ihrerseits jedoch die Notwendigkeit für eine neuere Paketversion mit
-zusätzlichen Funktionen, prüfen Sie als erstes, ob es für ihr Paket
+Ihrerseits jedoch die Notwendigkeit für eine neuere Paketversion mit
+zusätzlichen Funktionen, prüfen Sie als erstes, ob es für Ihr Paket
 bereits einen Kandidaten aus dem Bereich 'Debian Backports' gibt (siehe
 <<debian-backports>>). Ein solches Paket ist dann auch auf Debian
 'stable' zugeschnitten.
@@ -23,7 +23,7 @@ der paketweisen Festlegung von Prioritäten, genannt APT-Pinning (siehe
 
 Bei beiden Wegen werden zwei Dinge angestrebt -- einerseits eine neuere
 Programmversion einzuspielen, ohne eine vollständige Aktualisierung
-ihrer gesamten Installation durchführen zu müssen (siehe
+Ihrer gesamten Installation durchführen zu müssen (siehe
 <<distribution-aktualisieren>>), und andererseits das Gesamtsystem
 möglichst stabil zu halten. Das ganze ist ein Balanceakt ohne die
 Garantie von Debian 'stable'.
