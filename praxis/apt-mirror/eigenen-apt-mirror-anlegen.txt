@@ -23,7 +23,7 @@ Der Unterschied zwischen einem Paketcache und einem Paketmirror besteht
 darin, dass bei ersterem nur die bereits nachgefragten Pakete vorgehalten
 werden, während ein Paketmirror i.d.R. die gesamte Distribution inkl.
 ausgewählter Veröffentlichungen bereitstellt. Ein lokaler Paketmirror
-spiegelt den offiziellen Paketbestand und macht ihn in für die Benutzer,
+spiegelt den offiziellen Paketbestand und macht ihn für die Benutzer,
 Dienste und Geräte in einem lokalen Netzwerk verfügbar. Damit geht eine
 Entlastung der offiziellen Paketmirror und eine Verringerung des
 Netzwerkverkehrs zu diesem einher -- die verfügbare Bandbreite der
