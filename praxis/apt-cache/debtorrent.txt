@@ -6,6 +6,11 @@
 
 === debtorrent ===
 
+// Stichworte für den Index
+(((BitTorrent-Protokoll)))
+(((Debian-Paket, apt-transport-debtorrent)))
+(((Debian-Paket, debtorrent)))
+
 * Debianpaket 'debtorrent' <<Debian-Paket-debtorrent>>
 * Projektseite <<debtorrent-Projektseite>>
 * Idee:
@@ -14,5 +19,7 @@
 ** Nutzung des Peer-to-Peer-Ansatzes
 ** gemeinsames Ausnutzen der verfügbaren Bandbreite der Benutzer
 
-* Paket, welches thematisch dazugehört: 'apt-transport-debtorrent' <<Debian-Paket-apt-transport-debtorrent>>
+* Paket, welches thematisch dazugehört: 
+** 'apt-transport-debtorrent' <<Debian-Paket-apt-transport-debtorrent>>
+
 // Datei (Ende): ./praxis/apt-cache/debtorrent.txt
