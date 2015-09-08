@@ -130,8 +130,7 @@ Die Gründe für diese Mischung sind vielfältig:
 ('Instruction Set'), aber unterschiedlicher Verarbeitungsbreite. Dazu
 zählen z.B. 'i386'/'x86_64', 'ppc'/'ppc64', 'sparc'/'sparc64' und
 's390'/'s390x'. Unterstützung hierfür gibt es bei RedHat/Fedora unter
-dem Namen 'biarch' bereits
-länger <<biarch>>.
+dem Namen 'biarch' bereits länger <<biarch>>.
 +
 Dies ist insbesondere relevant bei proprietärer, nicht-quelloffener
 Software, die für 32-Bit-Linux kompiliert wurde, aber auf
@@ -145,14 +144,21 @@ mittels Hardware-Emulation und 'arm'/jede Plattform (via Qemu).
 Ausführung von Binärcode anderer Plattformen über eine
 Kompatibilitätsebene. Beispiele dafür sind Linux/'i386' auf
 FreeBSD/'i386', Solaris/'sparc' auf Linux/'sparc' und Virtualisierer wie
-Qemu, Bochs und VMWare.
+Qemu, Bochs, VirtualBox und VMWare.
 
 * Cross-Kompilieren. Darunter fällt das Übersetzen von Programmcode für
 eine andere Zielplattform.
 
-Um diese Eigenschaft einzusetzen, bedarf es z.T. erheblicher Änderungen
-in den Übersetzungswerkzeugen und der Integration von Daten in der
-Dateistruktur.
+Um diese Eigenschaft zu ermöglichen, bedarf es z.T. erheblicher
+Änderungen in den Übersetzungswerkzeugen und der Integration von Daten
+in der Dateistruktur. Dieser Vorgang ist bislang noch nicht vollständig
+abgeschlossen. 
+
+Benötigen Sie Pakete von einer anderen Architektur -- bspw. ein
+'i386'-Paket (32 bit) auf einer 'amd64'-Installation (64 bit) -- ist
+diese parallele Installation und Benutzung der Software durchaus
+möglich. Wir zeigen Ihnen in <<multiarch-einsetzen>>, wie Sie diesen
+Schritt mit `dpkg` und `apt` erfolgreich bewerkstelligen.
 
 [[bevor-es-multiarch-gab]]
 ==== Bevor es Multiarch gab ====
