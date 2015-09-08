@@ -6,6 +6,9 @@
 
 === apt-cacher-ng ===
 
+// Stichworte für den Index
+(((Debian-Paket, apt-cacher-ng)))
+
 * Programmpaket: 'apt-cacher-ng' <<Debian-Paket-apt-cacher-ng>>
 * Projektwebseite <<apt-cacher-ng-Projektseite>>
 
@@ -20,6 +23,5 @@ entwickelt (siehe <<apt-cacher>>)
 *** maximaler Durchsatz mit geringen Systemanforderungen
 *** Ersatz für `apt-proxy` und `approx` (<<approx>>) verwendet werden,
 ohne die Datei `/etc/apt/sources.list` der Clients zu ändern.
-
 
 // Datei (Ende): ./praxis/apt-cache/apt-cacher-ng.txt
