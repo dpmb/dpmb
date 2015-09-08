@@ -3,9 +3,13 @@
 // Baustelle: Fertig
 
 [[alternatives]]
-
 == Alternative Standard-Programme mit Debians Alternativen-System ==
 
+// Stichworte für den Index
+(((Debians Alternativen-System))
+(((freedesktop.org)))
+(((X Desktop Group)))
+(((XDG)))
 Moderne Benutzeroberflächen regeln die Auswahl des Standard-Webbrowsers
 und des Standard-Editors über XDG{empty}footnote:[X Desktop Group (XDG), seit
 dem Jahr 2000 freedesktop.org]. Die Basis dafür bildet die Zuordnung der
@@ -16,6 +20,13 @@ Standardanwendungen (engl. 'Default Applications')
 Konfiguration steht Ihnen meist eine passende grafische Oberfläche zur
 Verfügung.
 
+// Stichworte für den Index
+(((Debianpaket, sensible-utils)))
+(((select-editor)))
+(((sensible-browser)))
+(((sensible-editor)))
+(((sensible-pager)))
+(((x-www-browser)))
 Ähnliches leisten die Programme `select-editor`, `sensible-browser`,
 `sensible-editor` und `sensible-pager` aus dem Paket 'sensible-utils'
 <<Debian-Paket-sensible-utils>>. Diese werten primär die
@@ -27,7 +38,7 @@ verlassen sich stattdessen auf die Rückgabewerte, die Ihnen an dieser
 Stelle vom Werkzeug `sensible-editor` geliefert werden. Gleiches gilt
 für die anderen drei Werkzeuge.
 
-Gleiches funktioniert auch in Ihrem Terminal. Rufen Sie darin die
+Ebenso funktioniert das auch in Ihrem Terminal. Rufen Sie darin die
 Programme namens `editor` oder `x-www-browser` auf, werden ebenfalls
 diese Variablen ausgewertet und das darüber referenzierte Werkzeug
 ausgeführt.
@@ -35,7 +46,7 @@ ausgeführt.
 Leider funktionieren diese beiden o.g. Arten der Auswahl des
 Standardprogramms nicht für alle Einsatzzwecke, sei es, weil es keinen
 passenden MIME-Typ für eine bestimmte Aufgabe gibt -- z.B. das
-Standard-Desktop-Hintergrund-Bild -- oder weil niemand bislang eine
+Standard-Desktop-Hintergrundbild -- oder weil niemand bislang eine
 allgemein gültige Umgebungsvariable dafür definiert hat. Letzteres
 betrifft bspw. das Ballerspiel Doom, für das mehrere, unterschiedliche
 Spieleengines verfügbar sind.
@@ -53,6 +64,12 @@ präferiert hingegen XDG und greift vor allem dann auf das Debian
 Alternativen-System zurück, wenn es die Pakete unverändert von Debian
 übernimmt.
 
+// Stichworte für den Index
+(((Debianpaket, galternatives)))
+(((Debians Alternativen-System, Prioritäten))
+(((galternatives)))
+(((Konfigurationsdatei, /etc/alternatives/)))
+(((update-alternatives)))
 Es basiert auf symbolischen Verweisen (kurz 'Symlink') nach und in das
 Verzeichnis `/etc/alternatives/` sowie gemäß der vom
 Paketbetreuer zuvor festgelegten Priorität pro Alternative. Folgen Sie
@@ -87,20 +104,20 @@ originalen Awk-Implementation <<awk>>.
 Weiterhin gibt es von einigen Programmen mehr als eine
 Programmgeneration in Debian, so z.B. verschiedene Veröffentlichungen
 von GCC und Automake. In Debian 8 'Jessie' ist GCC in den beiden
-Versionen 4.8 und 4.9 enthalten, Automake in den Versionen 1.14 und
-1.11. Einer der Gründe für die verschiedenen Versionen ist, dass manche
+Versionen 4.8 und 4.9 enthalten, Automake in den Versionen 1.11 und
+1.14. Einer der Gründe für die verschiedenen Versionen ist, dass manche
 Pakete in Debian z.B. nur mit einer bestimmten Generation eines
-Compilers kompiliert werden können. So werden z.B. alle Linux-Kernel in
+Compilers kompiliert werden können. So werden z.B. alle Linuxkernel in
 Debian 8 'Jessie' mit GCC 4.8 kompiliert, während GCC 4.9 der
-Standard-Compiler ist. Je nach Einsatzzweck eines Systems kann es
-entsprechend auch hilfreich sein, den Standard-Compiler systemweit auf
-eine bestimmte Generation zu setzen.
+Standardcompiler ist. Je nach Einsatzzweck eines Systems kann es
+entsprechend auch hilfreich sein, den Standardcompiler systemweit auf
+eine bestimmte Generation festzulegen.
 
-Eine weiterer Grund für die Verwendung des Alternativen-Systems
+Ein weiterer Grund für die Verwendung des Alternativen-Systems
 innerhalb desselben Binärpakets oder von Binärpaketen auf der Basis
 desselben Sourcepakets sind unterschiedliche Konfigurationen oder
-unterschiedlich umfangreiche Abhängigkeiten. Beispiel eins ist GNU
-Emacs, welcher in drei Varianten vorliegt:
+variierende Abhängigkeiten. Beispiel eins ist GNU Emacs, welcher in drei
+Varianten vorliegt:
 
 * basierend auf dem Gimp Tool Kit (GTK+) und mit voller
 Unterstützung moderner Desktops (`emacs23` bzw. `emacs24`). Dieses Paket
@@ -112,10 +129,10 @@ allzuviele sonstige Abhängigkeiten.
 
 Ein zweites Beispiel ist der Windowmanager `dwm`, bei welchem die
 Konfiguration zum Kompilierzeitpunkt festgelegt wird. Das Paket 'dwm'
-enthält daher vier Programme mit einer jeweils unterschiedlichen
-Konfiguration -- `dwm.default`, `dwm.maintainer`, `dwm.web` und
-`dwm.winkey`. Über das Alternativen-System legen Sie fest, welches davon
-verwendet wird, wenn Sie nur `dwm` aufrufen.
+<<Debian-Paket-dwm>> enthält daher vier Programme mit einer jeweils
+unterschiedlichen Konfiguration -- `dwm.default`, `dwm.maintainer`,
+`dwm.web` und `dwm.winkey`. Über das Alternativen-System legen Sie fest,
+welches davon verwendet wird, wenn Sie lediglich `dwm` aufrufen.
 
 Viele Administratoren haben zudem sehr genaue Vorstellungen, welche
 Programme verwendet werden sollten, wenn sie unter dem generischen
@@ -123,6 +140,8 @@ Programmnamen aufgerufen werden.
 
 === Standardprogramme anzeigen ===
 
+// Stichworte für den Index
+(((update-alternatives, --get-selections)))
 Mit dem Aufruf `update-alternatives --get-selections` listen Sie alle
 generischen Programme oder Dateien auf, für die es Alternativen auf
 Ihrem lokalen System gibt. Ebenfalls mit ausgegeben werden dabei die
@@ -184,6 +203,8 @@ x-www-browser                  manual   /usr/bin/conkeror
 $
 ----
 
+// Stichworte für den Index
+(((update-alternatives, --list)))
 Welche Alternativen für ein generisches Kommando verfügbar sind,
 erfahren Sie mit dem Schalter `--list`. Nachfolgend sehen Sie das für
 die Skriptsprache Awk.
@@ -197,6 +218,8 @@ $ update-alternatives --list awk
 $
 ----
 
+// Stichworte für den Index
+(((update-alternatives, --display)))
 Über den Schalter `--display` erfahren Sie die derzeit festgelegte
 Alternative für ein generisches Kommando mitsamt den verfügbaren,
 weiteren Möglichkeiten und allen ebenfalls umgebogenen Referenzen auf
@@ -223,6 +246,9 @@ Gegenwärtig »beste« Version ist »/usr/bin/gawk«.
 $
 ----
 
+// Stichworte für den Index
+(((update-alternatives, --query)))
+
 [NOTE]
 .Alternative Darstellung
 ========================================================
@@ -234,6 +260,8 @@ einzelnen Blöcken zusätzliche Leerzeilen eingefügt.
 
 === Standardprogramm ändern ===
 
+// Stichworte für den Index
+(((update-alternatives, --config)))
 Ist nur ein Paket installiert, welches für ein generisches Programm
 eine einzige Alternative anbietet, so wird automatisch dieses verwendet
 und es gibt keine Auswahl zur Konfiguration.

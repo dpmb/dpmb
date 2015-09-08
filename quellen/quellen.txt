@@ -295,6 +295,8 @@
 
 - [[[Debian-Paket-dpkg-www]]] Debian-Paket 'dpkg-www', https://packages.debian.org/de/stable/dpkg-www
 
+- [[[Debian-Paket-dwm]]] Debian-Paket 'dwm', http://packages.debian.org/de/stable/dwm
+
 - [[[Debian-Paket-galternatives]]] Debian-Paket 'galternatives', http://packages.debian.org/de/stable/galternatives
 
 - [[[Debian-Paket-gawk]]] Debian-Paket 'gawk', http://packages.debian.org/de/stable/gawk
