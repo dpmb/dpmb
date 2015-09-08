@@ -6,16 +6,20 @@
 
 === approx ===
 
+// Stichworte für den Index
+(((Debian-Paket, approx)))
+
 * 'approx' <<Debian-Paket-approx>>
-* aus der Selbstbeschrreibung:
+* aus der Selbstbeschreibung:
 ** HTTP-Proxyserver für debian-artige Paketarchive
 ** Paketdepots müssen nur in den Konfigurationsdateien von 'approx'
 geändert werden, und nicht in der `/etc/apt/sources.list`-Datei
 jedes Clients
-** Approx kann ... 
-*** ... vorher verfügbare Konzepte wie 'apt-proxy' ersetzen, ohne die
+
+* Approx kann ... 
+** ... vorher verfügbare Konzepte wie 'apt-proxy' ersetzen, ohne die
 `/etc/apt/sources.list`-Dateien der Clients zu ändern,
-*** ... oder als Alternative zu 'apt-cacher' eingesetzt werden (siehe
+** ... oder als Alternative zu 'apt-cacher' eingesetzt werden (siehe
 <<apt-cacher>>).
 
 // Datei (Ende): ./praxis/apt-cache/approx.txt
