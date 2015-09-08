@@ -6,6 +6,10 @@
 
 === Begriff ===
 
+// Stichworte für den Index
+(((Cache, Paketcache)))
+(((Cache, APT-Cache)))
+(((Paketmirror)))
 Im Allgemeinen bezeichnet ein 'cache' einen Datenpuffer oder
 Zwischenspeicher, der bereits angefragte Daten weiter vorhält und auf
 den im Bedarfsfall zurückgegriffen wird, wenn die Daten angefordert
