@@ -6,6 +6,9 @@
 
 === apt-cacher ===
 
+// Stichworte für den Index
+(((Debian-Paket, apt-cacher)))
+
 * Paket 'apt-cacher' <<Debian-Paket-apt-cacher>>
 
 * Beispiel:
@@ -19,7 +22,7 @@ aufgesetzt wurden
 ** `apt-cacher` ermöglicht einen Paketcache, d.h. es merkt sich, welche
 Pakete bereits angefragt wurden und liefert diese an den Anfragenden aus
 dem Cache, sofern sich das Paket bereits im Cache befindet, ansonsten
-holt es das zuvor vom Paketmirror
+holt es das Paket zuvor vom Paketmirror
 
 * empfohlene Schritte, um das zu nutzen:
 ** Installation der Pakete 'apt-cacher', idealerweise in Kombination mit
