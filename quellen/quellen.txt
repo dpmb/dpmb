@@ -441,6 +441,8 @@
 
 - [[[Debian-Wiki-SecureApt]]] Debian Wiki: SecureApt, https://wiki.debian.org/SecureApt
 
+- [[[Debian-Wiki-Skype]]] Debian Wiki: Skype, https://wiki.debian.org/skype
+
 - [[[Debian-Wiki-WNPP]]] Debian Wiki: Work-Needing and Prospective Packages (WNPP), https://wiki.debian.org/WNPP
 
 - [[[debtorrent-Projektseite]]] Webseite zum DebTorrent-Projekt, http://debtorrent.alioth.debian.org/
@@ -630,6 +632,8 @@
 - [[[SingleClickInstall]]], https://wiki.ubuntu.com/SingleClickInstall
 
 - [[[Skolelinux]]] Skolelinux, http://skolelinux.de/
+
+- [[[Skype]]] Skype, www.skype.com/
 
 - [[[SmartPM]]] Smart Package Manager, Projektseite, http://labix.org/smart
 

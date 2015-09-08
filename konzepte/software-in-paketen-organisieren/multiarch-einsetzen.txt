@@ -66,20 +66,22 @@ Wie Sie Pakete architekturbezogen deinstallieren, lesen Sie in
 Ein _vollständiges Beispiel_ für den Einsatz von _multiarch_ ist die
 Nutzung des Forth-Interpreters `pforth` auf einem 64-bittigen Debian
 (Architektur _amd64_). `pforth` ist über das gleichnamige Paket bislang
-nur nativ für 32-Bit-Betriebssysteme verfügbar. Im Folgenden zeigen wir
-Ihnen anhand des vorgenannten Paketes, wie eine solche Installation
-abläuft und insbesondere, welche Einzelschritte wir dabei für
-beachtenswert halten.
+nur nativ für 32-Bit-Betriebssysteme verfügbar. Gleiches betrifft das
+recht weit verbreitete, aber nicht-quelloffene Kommunikationsprogramm
+Skype <<Skype>>. Eine passende Schritt-für-Schritt-Anleitung finden Sie
+im Debian Wiki <<Debian-Wiki-Skype>>.
 
-Im ersten Schritt überprüfen Sie mittels `dpkg` und dessen Option
-`--print-architecture` die derzeit benutzte Architektur Ihres Systems –
-im hier betrachteten Fall ist es 'amd64'. Danach ergänzen Sie die Liste
-der Architekturen via `dpkg --add-architecture i386` um _i386_ als
-weitere Plattform, für die Ihr System Pakete akzeptiert. Ob der Vorgang
-erfolgreich war, zeigt Ihnen der Parameter
-`--print-foreign-architectures` von `dpkg` an. Damit erhalten Sie eine
-Übersicht zu allen ``Fremdarchitekturen'', die ihr Debiansystem derzeit
-akzeptiert.
+Im Folgenden zeigen wir Ihnen anhand des vorgenannten Paketes `pforth`,
+wie eine solche Installation abläuft und insbesondere, welche
+Einzelschritte wir dabei für beachtenswert halten. Zunächst überprüfen
+Sie mittels `dpkg` und dessen Option `--print-architecture` die derzeit
+benutzte Architektur Ihres Systems – im hier betrachteten Fall ist es
+'amd64'. Danach ergänzen Sie die Liste der Architekturen via `dpkg
+--add-architecture i386` um _i386_ als weitere Plattform, für die Ihr
+System Pakete akzeptiert. Ob der Vorgang erfolgreich war, zeigt Ihnen
+der Parameter `--print-foreign-architectures` von `dpkg` an. Damit
+erhalten Sie eine Übersicht zu allen ``Fremdarchitekturen'', die ihr
+Debiansystem derzeit akzeptiert.
 
 .Hinzufügen einer weiteren genutzten Paketarchitektur mittels `dpkg`
 ----
