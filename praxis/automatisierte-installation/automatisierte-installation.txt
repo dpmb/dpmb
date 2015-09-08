@@ -6,6 +6,13 @@
 
 == Automatisierte Installation ==
 
+// Stichworte für den Index
+(((cobbler)))
+(((FAI)))
+(((jumpstart)))
+(((kickstart)))
+(((Preseeding)))
+
 * ganze Rechnerverbünde (Schulungs- und Klassenräume) mit identischer Hardware
 * Vorbereitung von Schulungsrechnern
 
