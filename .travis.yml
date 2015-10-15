@@ -1,6 +1,11 @@
 sudo: required
 dist: trusty
-language: generic
+
+# *sigh* "make deploy" for Divshot uses Travis CI's ruby, not Ubuntu's
+# ruby. To be reverted again, when we have an alternative for Divshot.
+
+#language: generic
+language: ruby
 
 before_install:
    - sudo apt-get update
