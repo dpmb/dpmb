@@ -3,8 +3,13 @@
 
 include::teil-anhang.txt[]
 
+// welche Architekturen unterstützt Debian
 include::anhang-debian-architekturen/anhang-debian-architekturen.txt[]
 
+// Vergleich zwischen den Paketkommandos von RPM, YUM und dpkg/APT
+include::anhang-paketkommando/rpm-yum-dpkg.txt[]
+
+// welche Distributionen setzen das deb-Paketformat ein
 include::paketformat-im-einsatz/paketformat-im-einsatz.txt[]
 
 // Datei (Ende): ./anhang/anhang.txt
