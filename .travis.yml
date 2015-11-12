@@ -1,9 +1,15 @@
+sudo: required
+dist: trusty
+
+# *sigh* "make deploy" for Divshot uses Travis CI's ruby, not Ubuntu's
+# ruby. To be reverted again, when we have an alternative for Divshot.
+
+#language: generic
+language: ruby
+
 before_install:
    - sudo apt-get update
-   - sudo apt-get install debhelper make moreutils
-   - sudo sed -e s/precise/trusty/g -i /etc/apt/sources.list
-   - sudo apt-get update
-   - sudo apt-get install -t trusty dblatex asciidoc texlive-lang-german calibre calibre-bin python-sip epubcheck
+   - sudo apt-get install -y debhelper make moreutils dblatex asciidoc texlive-lang-german calibre calibre-bin python-sip epubcheck
 
 script:
    - make verbose
