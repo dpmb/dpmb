@@ -96,14 +96,16 @@ steuern `dpkg` und die o.g. Bibliotheken bei.
 ==== Paketformate und -werkzeuge anderer Distributionen ====
 
 // Stichworte für den Index
+(((rpm)))
+(((RPM)))
 (((urpmi)))
-(((YaST)))
+(((Yet another Setup Tool (YaST))))
 (((Yellowdog Updater Modified (YUM))))
 (((Zypper)))
 Bei `rpm`-basierten Distributionen RedHat, Fedora und CentOS heißen die
 Werkzeuge Yellowdog Updater, Modified (YUM) <<YUM>>, bei SuSE und
-openSUSE Zypper <<Zypper>> und Yet another Setup Tool (YaST) sowie bei
-Mageia `urpmi` <<Mageia-urpmi>>.
+openSUSE Zypper <<Zypper>> und Yet another Setup Tool (YaST). Mageia
+Linux und Rosa Linux nutzen hingegen `urpmi` <<Mageia-urpmi>>.
 
 ==== Werkzeuge, die verschiedene Paketformate unterstützen ====
 
