@@ -7,6 +7,7 @@
 === Paketabhängigkeiten anzeigen ===
 
 // Stichworte für den Index
+(((Paket, Abhängigkeiten anzeigen)))
 (((Paketabhängigkeiten, verstehen)))
 Wie in der Einführung zum Buch bereits genannt, besteht Debian aus einer
 riesigen Menge einzelner Pakete. Dabei werden größere, komplexe
@@ -165,6 +166,7 @@ $
 (((apt-cache, rdepends)))
 (((apt-rdepends)))
 (((Debianpaket, apt-rdepends)))
+(((Paket, Rückwärtsabhängigkeiten auflisten)))
 (((Paketabhängigkeiten, Rückwärtsabhängigkeiten auflisten)))
 Diese Aktivität übersetzen Sie mit der Frage ``Welche anderen Pakete
 benötigt Paket 'x'?'', auch genannt 'Rückwärtsabhängigkeit'. Zur
@@ -322,7 +324,7 @@ Statusinformationen werden eingelesen.... Fertig
 
 // Stichworte für den Index
 (((apt-cache, unmet)))
-(((Paketabhängigkeiten, unerfüllten Abhängigkeiten auflisten)))
+(((Paketabhängigkeiten, unerfüllte Abhängigkeiten auflisten)))
 Das Werkzeug `apt-cache` zeigt Ihnen eine Zusammenfassung aller
 unerfüllten Abhängigkeiten im Paketzwischenspeicher (siehe
 <<paketcache>>). Dazu bietet es das Unterkommando `unmet`, welches Sie
