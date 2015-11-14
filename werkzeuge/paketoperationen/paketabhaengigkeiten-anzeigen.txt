@@ -254,6 +254,7 @@ image::werkzeuge/paketoperationen/tcpdump-apt-rdepends.png[id="fig.tcpdump-apt-r
 // Stichworte für den Index
 (((aptitude, search reverse-depends)))
 (((aptitude, search ~R)))
+(((Paket, Rückwärtsabhängigkeiten auflisten)))
 (((Paketabhängigkeiten, Rückwärtsabhängigkeiten auflisten)))
 Zur Suche nach umgekehrten Paketabhängigkeiten hilft Ihnen `aptitude`
 mit dem Suchmuster `~Rmuster` als Abkürzung für 'reverse-depends'.
