@@ -6,10 +6,17 @@
 
 === Zusammenfassung ===
 
+// Stichworte für den Index
+(((APT)))
+(((Aptitude)))
+(((dpkg)))
+(((RPM)))
+(((Yellowdog Updater Modified (YUM))))
 Hier stellen wir die jeweiligen Kommandos zur Paketverwaltung gegenüber,
-wie sie von RPM, YUM, dpkg, APT und Aptitude verwendet werden. Wir
-betrachten die Installation und die Entfernung von Paketen, das
-Auflisten von Paketen und das Anzeigen von Paketabhängigkeiten.
+wie sie von RPM, Yellowdog Updater Modified (YUM), dpkg, APT und
+Aptitude verwendet werden. Wir betrachten die Installation und die
+Entfernung von Paketen, das Auflisten der installierten und verfügbaren
+Pakete sowie das Anzeigen von Paketabhängigkeiten.
 
 === Paket installieren ===
 
@@ -46,6 +53,7 @@ die Kommandozeile.
 (((dpkg, -r)))
 (((Paket, deinstallieren)))
 (((Paket, entfernen)))
+(((Paket, Konfigurationsdateien löschen)))
 (((Paket, löschen)))
 (((rpm, -e)))
 (((yum, erase)))
