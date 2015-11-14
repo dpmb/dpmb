@@ -6,7 +6,7 @@
 === Bezogenes Paket verifizieren (GPG-Key) ===
 
 // Stichworte für den Index
-(((Paketinstallation, Paket auf Vertrauenswürdigkeit prüfen)))
+(((Paket, auf Vertrauenswürdigkeit prüfen)))
 Installieren Sie ein Paket von einer Paketquelle, greifen eine ganze
 Reihe von automatischen Überprüfungen, die sicherstellen, dass die von
 Ihnen bezogenen Daten vertrauenswürdig sind. Mit den nachfolgend
@@ -24,7 +24,7 @@ nicht verändert wurde. U.a. bilden diese Schritte die Vertrauensbasis
 für die von Ihnen bezogene Software.
 
 // Stichworte für den Index
-(((Debian-Vertrauenskette)))
+(((Debian, Vertrauenskette)))
 (((Paketsignaturen)))
 Aus diesem Grund sind sowohl die offiziellen Paketquellen von Debian,
 als auch die darüber referenzierten Quellpakete signiert (siehe dazu
