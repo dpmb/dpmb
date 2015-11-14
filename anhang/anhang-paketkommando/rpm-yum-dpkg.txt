@@ -14,8 +14,13 @@ Auflisten von Paketen und das Anzeigen von Paketabhängigkeiten.
 === Paket installieren ===
 
 // Stichworte für den Index
+(((apt-get, install)))
+(((aptitude, install)))
 (((Paket, installieren)))
-
+(((rpm, -i)))
+(((rpm, -ihv)))
+(((yum, install)))
+(((yum, localinstall)))
 Mit den nachfolgenden Aufrufen installieren Sie ein Softwarepaket über
 die Kommandozeile.
 
@@ -35,9 +40,16 @@ die Kommandozeile.
 === Paket löschen / entfernen ===
 
 // Stichworte für den Index
+(((apt-get, --purge remove)))
+(((apt-get, remove)))
+(((aptitude, remove)))
+(((dpkg, -r)))
 (((Paket, deinstallieren)))
 (((Paket, entfernen)))
 (((Paket, löschen)))
+(((rpm, -e)))
+(((yum, erase)))
+(((yum, remove)))
 Mit den nachfolgenden Aufrufen entfernen Sie ein Softwarepaket über
 die Kommandozeile.
 
@@ -57,11 +69,17 @@ die Kommandozeile.
 === Alle Pakete auflisten ===
 
 // Stichworte für den Index
+(((apt-cache, search)))
+(((aptitude, search)))
+(((dpkg, -l)))
 (((Paket, installiertes anzeigen)))
 (((Paket, Status anzeigen)))
 (((Paket, Zustand anzeigen)))
 (((Paketstatus)))
 (((Paketzustand)))
+(((rpm, -qa)))
+(((yum, list all)))
+(((yum, list available)))
 Mit den nachfolgenden Aufrufen listen Sie die vorhandenen Softwarepakete
 über die Kommandozeile auf.
 
@@ -80,10 +98,15 @@ Mit den nachfolgenden Aufrufen listen Sie die vorhandenen Softwarepakete
 === Einzelpaket auflisten ===
 
 // Stichworte für den Index
+(((aptitude, show)))
+(((dpkg, -l)))
+(((dpkg, -s)))
 (((Paket, Status anzeigen)))
 (((Paket, Zustand anzeigen)))
 (((Paketstatus)))
 (((Paketzustand)))
+(((rpm, -q)))
+(((rpm, -qp)))
 Mit den nachfolgenden Aufrufen listen Sie die Informationen bzw. den
 Installationsstatus zu einem einzelnen Softwarepaket auf.
 
@@ -101,10 +124,15 @@ Installationsstatus zu einem einzelnen Softwarepaket auf.
 === Abhängigkeiten anzeigen ===
 
 // Stichworte für den Index
+(((apt-cache, depends)))
+(((apt-cache, rdepends)))
 (((Paket, Abhängigkeiten anzeigen)))
 (((Paket, Rückwärtsabhängigkeiten auflisten)))
 (((Paketabhängigkeiten, auflisten)))
 (((Paketabhängigkeiten, Rückwärtsabhängigkeiten auflisten)))
+(((rpm, -R)))
+(((yum, deplist)))
+(((yum, info)))
 Mit den nachfolgenden Aufrufen zeigen Sie die Abhängigkeiten zu anderen
 Paketen an.
 
