@@ -10,6 +10,7 @@
 (((Debianpaket, dlocate)))
 (((dlocate, -k)))
 (((dlocate, -K)))
+(((Paket, Liste der installierten Kernelpakete anzeigen)))
 Bei dieser Aufgabe hilft Ihnen das Werkzeug `dlocate`
 <<Debian-Paket-dlocate>> und zeigt Ihnen an, welche Linux-Kernel und
 dazugehörigen Pakete auf Ihrem Linuxsystem installiert sind. Es kennt
