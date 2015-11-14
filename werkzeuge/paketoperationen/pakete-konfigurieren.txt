@@ -7,8 +7,8 @@
 === Pakete konfigurieren ===
 
 // Stichworte für den Index
-(((Paket konfigurieren)))
-(((Paket erneut konfigurieren)))
+(((Paket, konfigurieren)))
+(((Paket, erneut konfigurieren)))
 
 Im Normalfall liegen die Debianpakete entweder bereits fertig
 konfiguriert oder mit einer vorbereiteten Konfiguration auf dem
@@ -52,7 +52,7 @@ ein benötigtes Paket nicht konfiguriert und be- bzw. verhindert damit
 die Installation und Einrichtung weiterer, davon abhängiger Pakete,
 teilt Ihnen `dpkg` das mit:
 
-//.Fehler in der Konfiguration am Beispiel des Pakets 'mysql-server'
+.Fehler in der Konfiguration am Beispiel des Pakets 'mysql-server'
 ----
 ...
 mysql-server hängt ab von mysql-server-5.5; aber:
@@ -79,7 +79,7 @@ Hilfreich ist es in diesem Fall, dass Sie zunächst herausbekommen, welche
 Pakete unvollständig installiert sind. Dabei hilft Ihnen der Aufruf
 `dpkg -C`, wobei `dpkg` für letzteres auch die Langform `--audit` kennt.
 
-//.Auflistung der unvollständig installierten Pakete mittels `dpkg`
+.Auflistung der unvollständig installierten Pakete mittels `dpkg`
 ----
 # dpkg --audit
 Für die folgenden Pakete fehlt die MD5-Prüfsummen-Datei in der Datenbank,
@@ -123,11 +123,14 @@ bereits installiertes und konfiguriertes Paket an (siehe dazu
 (((debconf)))
 (((dpkg-reconfigure)))
 (((Konfigurationsdatei, /var/cache/debconf)))
+(((Paket, erneut konfigurieren)))
 
 * Aufruf: `dpkg-reconfigure Paket`
 * konfiguriert ein bereits installiertes Paket erneut
 * verwendet wird dazu `debconf`, welches eine Datenbank mit den
 Konfigurationseinträgen der Pakete unter `/var/cache/debconf` speichert
 
+* Beispiel:
+** locale-Einstellungen (Sprache, Lokalisierung, Zeichensatz)
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-konfigurieren.txt
