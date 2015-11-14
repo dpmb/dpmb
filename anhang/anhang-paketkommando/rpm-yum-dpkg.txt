@@ -2,14 +2,16 @@
 
 // Baustelle: Rohtext
 
-== Zusammenfassung ==
+== Kommandos zur Paketverwaltung im Vergleich ==
+
+=== Zusammenfassung ===
 
 Hier stellen wir die jeweiligen Kommandos zur Paketverwaltung gegenüber,
 wie sie von RPM, YUM, dpkg, APT und Aptitude verwendet werden. Wir
 betrachten die Installation und die Entfernung von Paketen, das
 Auflisten von Paketen und das Anzeigen von Paketabhängigkeiten.
 
-== Paket installieren ==
+=== Paket installieren ===
 
 Mit den nachfolgenden Aufrufen installieren Sie ein Softwarepaket über
 die Kommandozeile.
@@ -27,7 +29,7 @@ die Kommandozeile.
 | `Aptitude` | `aptitude install paket` | Paket wird dem Paketrepository entnommen
 |====
 
-== Paket löschen / entfernen ==
+=== Paket löschen / entfernen ===
 
 Mit den nachfolgenden Aufrufen entfernen Sie ein Softwarepaket über
 die Kommandozeile.
@@ -45,7 +47,7 @@ die Kommandozeile.
 | `Aptitude` | `aptitude remove paket` | 
 |====
 
-== Alle Pakete auflisten ==
+=== Alle Pakete auflisten ===
 
 Mit den nachfolgenden Aufrufen listen Sie die vorhandenen Softwarepakete
 über die Kommandozeile auf.
@@ -62,7 +64,7 @@ Mit den nachfolgenden Aufrufen listen Sie die vorhandenen Softwarepakete
 | `Aptitude` | `aptitude search ~i`|
 |====
 
-== Einzelpaket auflisten ==
+=== Einzelpaket auflisten ===
 
 Mit den nachfolgenden Aufrufen listen Sie die Informationen bzw. den
 Installationsstatus zu einem einzelnen Softwarepaket auf.
@@ -78,7 +80,7 @@ Installationsstatus zu einem einzelnen Softwarepaket auf.
 | `Aptitude` | `aptitude show paket`|
 |====
 
-== Abhängigkeiten anzeigen ==
+=== Abhängigkeiten anzeigen ===
 
 Mit den nachfolgenden Aufrufen zeigen Sie die Abhängigkeiten zu anderen
 Paketen an.
