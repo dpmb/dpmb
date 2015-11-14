@@ -3,8 +3,10 @@
 // Baustelle: Rohtext
 
 [[pakete-installieren]]
-
 === Pakete installieren ===
+
+// Stichworte für den Index
+(((Paket, installieren)))
 
 Die Installation von Paketen und die dazugehörigen Aufrufe gehören aus
 unserer Sicht zu den Aktionen bei der Paketverwaltung, welche am
@@ -45,7 +47,7 @@ das Paket 'kdm' sind es immerhin 36MB. Da im Moment nur der benötigte
 Speicherplatz von Interesse ist, brechen Sie die Installation ab, indem
 Sie bei der abschließenden Frage die Taste kbd:[n] drücken.
 
-//.Abgebrochene Installation von 'kdm' mittels APT
+.Abgebrochene Installation von 'kdm' mittels APT
 ----
 # apt-get install kdm
 Paketlisten werden gelesen... Fertig
@@ -65,7 +67,7 @@ Abbruch.
 #
 ----
 
-//.Abgebrochene Installation von 'kdm' mittels `aptitude`
+.Abgebrochene Installation von 'kdm' mittels `aptitude`
 ----
 # aptitude install kdm
 Die folgenden NEUEN Pakete werden zusätzlich installiert:
@@ -96,7 +98,7 @@ die Zeilen der Ausgabe eine Installation eines Pakets, die mit `Inst`
 beginnen. Das Schlüsselwort `Conf` besagt, dass das entsprechende Paket
 konfiguriert wird.
 
-//.Simulation der Paketinstallation von 'kdm'
+.Simulation der Paketinstallation von 'kdm'
 ----
 # apt-get install --simulate kdm
 Paketlisten werden gelesen... Fertig
@@ -147,7 +149,7 @@ nicht den Parameter mit dem Quantifizierungsoperator interpretiert und
 nach Dateien mit dem entsprechenden Namen sucht, schließen Sie das
 Suchmuster in einfache Anführungszeichen ein.
 
-//.Aufruf von `apt-get install` mit dem Quantifizierungsoperator `*`
+.Aufruf von `apt-get install` mit dem Quantifizierungsoperator `*`
 ----
 # apt-get install 'aptitude-doc*'
 Paketlisten werden gelesen... Fertig
@@ -290,12 +292,11 @@ ein einziges Paket, sondern es gelten die weiter oben benannten
 Möglichkeiten zur Spezifikation von Paketen. Ein Beispielaufruf sieht
 wie folgt aus:
 
-//.Installation eines zweier `deb`-Pakete ab APT 1.1
+.Installation eines zweier `deb`-Pakete ab APT 1.1
 ----
 # apt install /tmp/foo.deb ./bar.deb
 ...
 #
 ----
-
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-installieren.txt
