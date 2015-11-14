@@ -6,7 +6,7 @@
 == Alternative Standard-Programme mit Debians Alternativen-System ==
 
 // Stichworte für den Index
-(((Debians Alternativen-System))
+(((Debians Alternativen-System)))
 (((freedesktop.org)))
 (((X Desktop Group)))
 (((XDG)))
@@ -66,7 +66,7 @@ Alternativen-System zurück, wenn es die Pakete unverändert von Debian
 
 // Stichworte für den Index
 (((Debianpaket, galternatives)))
-(((Debians Alternativen-System, Prioritäten))
+(((Debians Alternativen-System, Prioritäten)))
 (((galternatives)))
 (((Konfigurationsdatei, /etc/alternatives/)))
 (((update-alternatives)))
