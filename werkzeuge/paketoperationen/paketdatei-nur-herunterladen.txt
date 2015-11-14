@@ -8,7 +8,7 @@
 
 APT und `aptitude` sind dafür gedacht, Softwarepakete vom Paketmirror zu
 beziehen und diese danach sofort auf ihrem System einzuspielen. Es
-besteht natürlich auch die Möglichkeit, diesen Vorgang in die
+besteht natürlich auch die Möglichkeit, diesen Vorgang in die beiden
 Einzelschritte zu zerlegen, d.h. Herunterladen des Pakets und die
 Installation aus dem Paketcache (siehe
 <<installation-zwischengespeicherter-pakete-aus-dem-paketcache>>).
@@ -57,7 +57,7 @@ Paketcache (siehe <<paketcache>>) abspeichern möchten. Dazu verstehen
 `aptitude` dabei verhält. Das Paket wird nicht installiert, sondern im
 Paketcache unter `/var/cache/apt/archives` abgespeichert, sofern es
 vollständig bezogen wurde. Nur teilweise heruntergeladene Pakete liegen
-unter `/var/cache/apt/archives/partial/`.
+hingegen unter `/var/cache/apt/archives/partial/`.
 
 .Bezug des Paketes 'bash-doc' via `aptitude` und Speicherung im Paketcache
 ----
