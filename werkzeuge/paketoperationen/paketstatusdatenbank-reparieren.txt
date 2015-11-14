@@ -47,7 +47,7 @@ Maintainer: Eric Dorland <eric@debian.org>
 Architecture: amd64
 Multi-Arch: foreign
 Version: 1.7.3-6
-Depends: libc6 (>= 2.7)
+Depends° libc6 (>= 2.7)
 Description: Program for generating geekcode
  This is a program for generating the geekcode.
  See http://www.geekcode.com for more info and for discovering
