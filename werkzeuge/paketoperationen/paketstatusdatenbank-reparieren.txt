@@ -36,7 +36,7 @@ selbst. Das nachfolgende Beispiel demonstriert das anhand des Eintrags
 zum Paket 'geekcode'. In Zeile 10 liegt ein solcher Bitfehler vor – das
 achte Bit für den Doppelpunkt `:` ist hier gesetzt.
 
-//.Bit-Dreher in der Datei `/var/lib/dpkg/status` für das Paket 'geekcode' (Ausschnitt)
+.Bit-Dreher in der Datei `/var/lib/dpkg/status` für das Paket 'geekcode' (Ausschnitt)
 ----
 Package: geekcode
 Status: install ok installed
@@ -47,7 +47,7 @@ Maintainer: Eric Dorland <eric@debian.org>
 Architecture: amd64
 Multi-Arch: foreign
 Version: 1.7.3-6
-Dependsº libc6 (>= 2.7)
+Depends: libc6 (>= 2.7)
 Description: Program for generating geekcode
  This is a program for generating the geekcode.
  See http://www.geekcode.com for more info and for discovering
@@ -61,7 +61,7 @@ zum Ausdruck. Dieser Fall ist noch vergleichsweise leicht zu reparieren,
 indem Sie das ISO-Latin-1-Zeichen `º` mit Hilfe ihres Texteditors wieder
 durch einen Doppelpunkt ersetzen. Daraufhin ist `dpkg` wieder glücklich.
 
-//.`dpkg` bricht nach einem Bit-Dreher in der Statusdatenbank ab
+.`dpkg` bricht nach einem Bit-Dreher in der Statusdatenbank ab
 ----
 # dpkg --configure --pending
 dpkg: error: parsing file '/var/lib/dpkg/status' near line 9 package 'geekcode':
