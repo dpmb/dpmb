@@ -7,7 +7,7 @@
 === Liste der installierten Pakete anzeigen und deuten ===
 
 // Stichworte für den Index
-(((installierte Pakete anzeigen)))
+(((Paket, installiertes anzeigen)))
 Diese Aktion betrifft häufig nicht nur ein einzelnes Paket, sondern den
 Gesamtbestand an Software, die auf Ihrem Linuxsystem installiert sind
 oder waren. Im Alltag ergeben sich eine ganze Reihe von
@@ -51,7 +51,7 @@ einzelnen Spalten nacheinander den Paketzustand, den Namen des Pakets
 (siehe <<benennung-eines-debian-pakets>>), dessen Version und die
 Kurzbeschreibung dazu.
 
-//.Vollständige Paketliste mit `dpkg`
+.Vollständige Paketliste mit `dpkg`
 ----
 $ dpkg -l
 Gewünscht=Unbekannt/Installieren/R=Entfernen/P=Vollständig Löschen/Halten
@@ -71,6 +71,8 @@ $
 ----
 
 // Stichworte für den Index
+(((Paket, Status anzeigen)))
+(((Paket, Zustand anzeigen)))
 (((Paketstatus)))
 (((Paketzustand)))
 Die ersten drei Spalten jeder ausgegebenen Zeile interpretieren Sie
@@ -159,7 +161,7 @@ automatisch erfüllte Paketabhängigkeit hin (siehe dazu
 <<automatisch-installierte-pakete-anzeigen>>). Daneben sehen Sie in der
 Ausgabe noch den Namen und die Kurzbeschreibung zum jeweiligen Paket.
 
-//.`aptitude` listet die installierten LaTeX-Pakete auf
+.`aptitude` listet die installierten LaTeX-Pakete auf
 ----
 $ aptitude search ~i | grep texlive
 i   texlive                         - TeX Live: Eine anständige Auswahl der TeX-
