@@ -286,8 +286,7 @@ $
 // Stichworte für den Index
 (((dpkg, --verify-format)))
 Das Ausgabeformat stellen Sie über die Option `--verify-format` ein. Das
-Standardformat ist von 'RPM'
-übernommen{empty}footnote:[http://www.rpm.org/max-rpm/s1-rpm-verify-output.html].
+Standardformat ist von 'RPM' übernommen <<Bailey-Maximum-RPM-verify>>.
 Da `dpkg` bisher nur die MD5-Summe überprüft, werden alle anderen
 Spalten nur als Fragezeichen ausgegeben. Erscheint ein einzelnes 'c' in
 der Ausgabe, handelt es sich hierbei um 'Conffiles'.

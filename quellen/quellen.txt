@@ -80,6 +80,8 @@
 
 - [[[Bailey-Maximum-RPM]]] Edward C. Bailey: Maximum RPM. Taking the Red Hat Package Manager to the Limit, Red Hat Inc., 2000, ISBN 1-888172-78-9, http://www.rpm.org/max-rpm/
 
+- [[[Bailey-Maximum-RPM-verify]]] When Verification Fails — rpm -V Output in Edward C. Bailey: Maximum RPM. Taking the Red Hat Package Manager to the Limit, Red Hat Inc., 2000, ISBN 1-888172-78-9, http://www.rpm.org/max-rpm/
+
 - [[[Beckert-Aptitude-Textmodus]]], Axel Beckert: Aptitude. Pakete komfortabel im Text-Modus verwalten, Vortrag im Rahmen des Linuxday Dornbirn, November 2013, http://fileshare.lugv.at/public/vortraege2013/linuxday/aptitude-linuxday.html
 
 - [[[Beckert-Blog]]] Axel Beckerts Blog, http://noone.org/blog
