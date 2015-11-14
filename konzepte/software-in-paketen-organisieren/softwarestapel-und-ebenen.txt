@@ -56,8 +56,9 @@ Ihnen damit viele Schritte.
 Das Analogon bei `rpm`-basierten Distributionen ist `rpm`, bei Arch
 Linux ist es Pacman und bei Gentoo erreichen Sie die Funktionalität
 durch die beiden Programme `emerge` und `equery`. Eine komplette
-Übersicht finden Sie in der Pacman-Rosetta (siehe
-<<pacman-rosetta-beschreibung>>).
+Übersicht zu den verschiedenen Programmen finden Sie einerseits in 
+der Pacman-Rosetta (siehe <<pacman-rosetta-beschreibung>>) sowie in
+der Übersicht im Anhang (siehe <<kommandos-zur-paketverwaltung-im-vergleich>>).
 ====
 
 ==== Obere Ebene ====
