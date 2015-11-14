@@ -3,9 +3,12 @@
 // Baustelle: Fertig
 
 [[pakete-deinstallieren]]
-
 === Pakete deinstallieren ===
 
+// Stichworte für den Index
+(((Paket, deinstallieren)))
+(((Paket, entfernen)))
+(((Paket, löschen)))
 Weitaus anspruchsvoller als die Installation eines Paketes ist hingegen
 deren rückstandsfreie und saubere Entfernung. Dazu zählt nicht nur das
 Löschen der Dateien des eigentlichen Pakets, sondern auch das Aufräumen
@@ -34,7 +37,7 @@ Aufruf `dpkg -r Paketname` in der richtigen Reihenfolge der
 Paketabhängigkeiten. Der nachfolgende Aufruf zeigt das Vorgehen anhand
 des Paketes 'cssed' für `apt-get`.
 
-//.Löschen eines Paketes 'cssed' mittels APT
+.Löschen eines Paketes 'cssed' mittels APT
 ----
 # apt-get remove cssed
 Paketlisten werden gelesen... Fertig
@@ -69,7 +72,7 @@ eine zusätzliche, deutliche Warnung (siehe nachfolgendes Beispiel sowie
 Paketprioritäten und essentielle Pakete in
 <<paket-prioritaet-und-essentielle-pakete>>).
 
-//.Ausgabe einer deutlichen Warnung vor dem Löschen des essentiellen Pakets 'base-files'
+.Ausgabe einer deutlichen Warnung vor dem Löschen des essentiellen Pakets 'base-files'
 ----
 # apt-get remove base-files
 Paketlisten werden gelesen... Fertig
@@ -98,13 +101,13 @@ ausgewählt, um die Paketabhängigkeit zu erfüllen. Bestes Beispiel ist
 das virtuelle Paket 'pdf-viewer', welches beispielsweise auf 'epdfview',
 'evince', 'okular', 'xpdf' und 'zathura' verweist.
 
-//.Ersetzung durch ein alternatives Paket
+.Ersetzung durch ein alternatives Paket
 ----
 ToDo: Beispiel mit Ersetzung durch alternatives Paket
 ----
 
-Bei Möglichkeit drei entstehen Waisen – Pakete, die keine
-Abhängigkeiten zu anderen Paketen mehr aufweisen. Unter Umgang mit
+Bei der Möglichkeit drei entstehen Waisen – Pakete, die keine
+Abhängigkeiten mehr zu anderen Paketen mehr aufweisen. Unter Umgang mit
 Waisen in <<umgang-mit-waisen>> beleuchten wir dieses Thema näher.
 
 ==== Fall 2: Suche von Konfigurationsdateien bereits deinstallierter Pakete ====
@@ -117,7 +120,7 @@ bleiben unberührt.
 
 Die passenden Werkzeuge sind dafür die Kombination aus `dpkg` mit `grep`
 sowie `aptitude`. APT hat u.E. bislang keinen entsprechenden Schalter
-dafür. 
+dafür.
 
 // Stichworte für den Index
 (((dpkg, -l)))
@@ -130,7 +133,7 @@ einem Leerzeichen gefolgt werden. Damit erhalten Sie eine Liste aller
 verbliebenen Konfigurationsdateien, die `dpkg` einem Paket zuordnen
 kann.
 
-//.Suche nach gelöschten, aber noch konfigurierten Paketen mittels `dpkg`
+.Suche nach gelöschten, aber noch konfigurierten Paketen mittels `dpkg`
 ----
 $ dpkg -l | grep "^rc "
 rc  akonadi-backend-mysql 1.7.2-3   all   MySQL storage backend for Akonadi
@@ -150,7 +153,7 @@ Zweck zum Schalter `search` die Option `~c` bzw. die Langform
 Pakete – unabhängig davon, ob diese als gelöscht markiert sind oder
 nicht.
 
-//.Suche nach konfigurierten Paketen mittels `aptitude`
+.Suche nach konfigurierten Paketen mittels `aptitude`
 ----
 $ aptitude search ~c
 c   akonadi-backend-mysql   - MySQL-Speicher-Backend für Akonadi
@@ -174,7 +177,7 @@ Kommando `apt-get`, dessen Schalter `remove` und der Option `--purge
 Paketname`. Bei `aptitude` besteht kein separater Schalter für den
 Schritt – stattdessen genügt hier der Schalter `purge` vollkommen.
 
-//.Löschen der Konfigurationsdateien mittels APT
+.Löschen der Konfigurationsdateien mittels APT
 ----
 # apt-get remove --purge cssed
 Paketlisten werden gelesen... Fertig
@@ -208,7 +211,7 @@ Für diese Aktion kombinieren Sie entweder `apt-get` mit dem Schalter
 `remove` und der Option `--purge Paketname`. `aptitude` kennt
 stattdessen nur den Schalter `purge`.
 
-//.Löschen des Pakets 'cssed' samt Konfigurationsdateien in einem Schritt
+.Löschen des Pakets 'cssed' samt Konfigurationsdateien in einem Schritt
 ----
 # aptitude purge cssed
 Die folgenden Pakete werden ENTFERNT:
@@ -233,7 +236,7 @@ experimentieren (siehe <<debian-architekturen-multiarch>>). Um alle
 Pakete für die Architektur 'i386' vollständig zu entfernen, nutzen Sie
 diesen Aufruf:
 
-//.Vollständiges Entfernen aller installierten Pakete für die Architektur 'i386'
+.Vollständiges Entfernen aller installierten Pakete für die Architektur 'i386'
 ----
 # apt-get remove --purge ".*:i386"
 ----
