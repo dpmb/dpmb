@@ -32,7 +32,7 @@ Mit den nachfolgenden Aufrufen installieren Sie ein Softwarepaket über
 die Kommandozeile.
 
 .Installation eines Paketes
-[frame="topbot",options="header",id="tab.paketinstallation"]
+[frame="topbot",options="header",cols="2,4,4",id="tab.paketinstallation"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -i paket` | Paket liegt lokal vor
@@ -62,7 +62,7 @@ Mit den nachfolgenden Aufrufen entfernen Sie ein Softwarepaket über
 die Kommandozeile.
 
 .Entfernen eines Paketes
-[frame="topbot",options="header",id="tab.paketentfernung"]
+[frame="topbot",options="header",cols="2,4,4",id="tab.paketentfernung"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -e paket` | 
@@ -92,7 +92,7 @@ Mit den nachfolgenden Aufrufen listen Sie die vorhandenen Softwarepakete
 über die Kommandozeile auf.
 
 .Softwarepakete auflisten
-[frame="topbot",options="header",id="tab.paketeauflisten"]
+[frame="topbot",options="header",cols="2,4,4",id="tab.paketeauflisten"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -qa` |
@@ -119,7 +119,7 @@ Mit den nachfolgenden Aufrufen listen Sie die Informationen bzw. den
 Installationsstatus zu einem einzelnen Softwarepaket auf.
 
 .Einzelnes Softwarepaket auflisten
-[frame="topbot",options="header",id="tab.paketinfo"]
+[frame="topbot",options="header",cols="2,4,4",id="tab.paketinfo"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -q paket` |
@@ -145,7 +145,7 @@ Mit den nachfolgenden Aufrufen zeigen Sie die Abhängigkeiten zu anderen
 Paketen an.
 
 .Paketabhängigkeiten anzeigen
-[frame="topbot",options="header",id="tab.paketabhaengigkeiten"]
+[frame="topbot",options="header",cols="2,4,4",id="tab.paketabhaengigkeiten"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -R paket` |
