@@ -1,7 +1,7 @@
 // Datei: ./anhang/anhang.paketkommando/rpm-yum-dpkg.txt
-
 // Baustelle: Rohtext
 
+[[kommandos-zur-paketverwaltung-im-vergleich]]
 == Kommandos zur Paketverwaltung im Vergleich ==
 
 === Zusammenfassung ===
@@ -12,6 +12,9 @@ betrachten die Installation und die Entfernung von Paketen, das
 Auflisten von Paketen und das Anzeigen von Paketabhängigkeiten.
 
 === Paket installieren ===
+
+// Stichworte für den Index
+(((Paket, installieren)))
 
 Mit den nachfolgenden Aufrufen installieren Sie ein Softwarepaket über
 die Kommandozeile.
@@ -31,6 +34,10 @@ die Kommandozeile.
 
 === Paket löschen / entfernen ===
 
+// Stichworte für den Index
+(((Paket, deinstallieren)))
+(((Paket, entfernen)))
+(((Paket, löschen)))
 Mit den nachfolgenden Aufrufen entfernen Sie ein Softwarepaket über
 die Kommandozeile.
 
@@ -49,6 +56,12 @@ die Kommandozeile.
 
 === Alle Pakete auflisten ===
 
+// Stichworte für den Index
+(((Paket, installiertes anzeigen)))
+(((Paket, Status anzeigen)))
+(((Paket, Zustand anzeigen)))
+(((Paketstatus)))
+(((Paketzustand)))
 Mit den nachfolgenden Aufrufen listen Sie die vorhandenen Softwarepakete
 über die Kommandozeile auf.
 
@@ -66,6 +79,11 @@ Mit den nachfolgenden Aufrufen listen Sie die vorhandenen Softwarepakete
 
 === Einzelpaket auflisten ===
 
+// Stichworte für den Index
+(((Paket, Status anzeigen)))
+(((Paket, Zustand anzeigen)))
+(((Paketstatus)))
+(((Paketzustand)))
 Mit den nachfolgenden Aufrufen listen Sie die Informationen bzw. den
 Installationsstatus zu einem einzelnen Softwarepaket auf.
 
@@ -82,6 +100,11 @@ Installationsstatus zu einem einzelnen Softwarepaket auf.
 
 === Abhängigkeiten anzeigen ===
 
+// Stichworte für den Index
+(((Paket, Abhängigkeiten anzeigen)))
+(((Paket, Rückwärtsabhängigkeiten auflisten)))
+(((Paketabhängigkeiten, auflisten)))
+(((Paketabhängigkeiten, Rückwärtsabhängigkeiten auflisten)))
 Mit den nachfolgenden Aufrufen zeigen Sie die Abhängigkeiten zu anderen
 Paketen an.
 
