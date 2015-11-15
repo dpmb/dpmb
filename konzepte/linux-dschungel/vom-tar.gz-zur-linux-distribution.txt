@@ -9,6 +9,7 @@
 
 // Stichworte für den Index
 (((Linux-Distribution, Debian)))
+(((Linux-Distribution, Distributor)))
 (((Linux-Distribution, Entwicklung)))
 (((Linux-Distribution, Paketierung)))
 (((Linux-Distribution, Softwarestrukturen)))
@@ -41,7 +42,7 @@ Benutzer mussten Sie einerseits wissen, welche Software einander bedingte,
 und andererseits, welche Versionen und Varianten sich miteinander
 vertrugen. Namensgleiche Dateien und Verzeichnisse waren problematisch.
 Die große Kunst bestand im Wissen, in welcher Reihenfolge Sie zueinander
-passende Versionen von Software auswählen, sowie diese nachfolgend auf
-Ihrem Linuxsystem installieren und konfigurieren mussten.
+passende Versionen von Software zunächst auswählen und diese nachfolgend
+auf Ihrem Linuxsystem installieren und konfigurieren mussten.
 
 // Datei (Ende): ./konzepte/linux-dschungel/vom-tar.gz-zur-linux-distribution.txt
