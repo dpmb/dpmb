@@ -6,7 +6,11 @@
 
 ==== Muon ====
 
-* Klon von Synaptic
+// Stichworte für den Index
+(((Debianpaket, muon)))
+(((muon)))
+(((Synaptic)))
+* Klon von Synaptic (siehe <<gui-synaptic>>)
 * setzt auf GTK auf
 * bislang speziell genutzt in Kubuntu
 * Debianpaket 'muon' <<Debian-Paket-muon>>
