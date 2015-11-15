@@ -335,6 +335,8 @@
 
 - [[[Debian-Paket-module-assistant]]] Debian-Paket 'module-assistant', http://packages.debian.org/de/stable/module-assistant
 
+- [[[Debian-Paket-muon]]] Debian-Paket 'muon', http://packages.debian.org/de/stretch/muon
+
 - [[[Debian-Paket-netselect]]] Debian-Paket 'netselect', http://packages.debian.org/de/stable/netselect
 
 - [[[Debian-Paket-netselect-apt]]] Debian-Paket 'netselect-apt', http://packages.debian.org/de/stable/netselect-apt
