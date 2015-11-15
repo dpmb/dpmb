@@ -1,0 +1,15 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/muon.txt
+
+// Baustelle: Idee
+
+[[gui-muon]]
+
+==== Muon ====
+
+* Klon von Synaptic
+* setzt auf GTK auf
+* bislang speziell genutzt in Kubuntu
+* Debianpaket 'muon' <<Debian-Paket-muon>>
+
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/muon.txt
+
