@@ -173,7 +173,6 @@ Schritt mit `dpkg` und `apt` erfolgreich bewerkstelligen.
 // Stichworte für den Index
 (((Debian, Architekturen)))
 (((Debian, multiarch)))
-
 Wie oben bereits beschrieben, ist einer der Gründe hinter 'multiarch' das
 Nutzen bereits kompilierter 32-Bit-Software auf 64-Bit-Systemen. Der Bedarf
 hierfür war auch schon vor der Entstehung von 'multiarch' sehr groß.
