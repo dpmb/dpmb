@@ -63,14 +63,15 @@ der Übersicht im Anhang (siehe <<kommandos-zur-paketverwaltung-im-vergleich>>).
 // Stichworte für den Index
 (((Softwarestapel, APT)))
 (((Softwarestapel, aptitude)))
+(((Softwarestapel, Muon)))
 (((Softwarestapel, PackageKit)))
 (((Softwarestapel, Synaptic)))
 (((Softwarestapel, Ubuntu Software Center)))
 (((Softwarestapel, obere Ebene)))
 Bei `deb`-basierten Distributionen besteht die obere Ebene
 typischerweise aus dem Programm APT sowie den weiteren Programmen
-`aptitude`, Synaptic, Ubuntu Software Center (siehe
-<<gui-ubuntu-software-center>>) oder auch PackageKit (siehe
+`aptitude`, Muon (siehe <<gui-muon>>), Synaptic, Ubuntu Software Center
+(siehe <<gui-ubuntu-software-center>>) oder auch PackageKit (siehe
 <<gui-packagekit>>). Diese Programme haben die Aufgabe, Ihnen die
 Installation und die Aktualisierung der einzelnen Programmpakete auf
 Ihrem System zu vereinfachen. Dazu gehört die Aktualisierung der Liste
