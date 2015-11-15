@@ -106,12 +106,13 @@ und Ende.
 (((Debian, Architekturen)))
 (((Debian, architekturunabhängig)))
 Neben den bereits genannten Architekturen gibt es noch Pakete mit dem
-Eintrag 'all'. Dies sind architekturunabhängige Pakete, z.B. Pakete von
-Programmen, die vollständig in den Skriptsprachen Perl, Python oder Ruby
-geschrieben wurden. Zu dieser Gruppe gehören auch Pakete, die lediglich
-Daten enthalten, die auf jeder Architektur identisch sind (z.B. Grafiken
-oder Musik). Solche Pakete können auf beliebigen Architekturen
-installiert werden.
+Eintrag 'all'. Dies sind architekturunabhängige Pakete und Sie können
+diese auf beliebigen Architekturen installieren. 
+
+Dazu zählen z.B. Pakete von Programmen, die vollständig in den
+Skriptsprachen Perl, Python, Ruby oder Tcl geschrieben wurden. Ebenfalls
+gehören zu dieser Gruppe Pakete, die lediglich Daten enthalten, die auf
+jeder Architektur identisch sind. Das betrifft z.B. Bilder und Musik.
 
 [[debian-architekturen-multiarch]]
 ==== Multiarch: Mehrere Architekturen gleichzeitig auf einem System ====
