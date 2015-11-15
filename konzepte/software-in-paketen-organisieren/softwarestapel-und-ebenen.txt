@@ -26,23 +26,20 @@ image::konzepte/software-in-paketen-organisieren/werkzeugebenen-2.png[id="fig.we
 (((dpkg, -r)))
 (((Softwarestapel, dpkg)))
 (((Softwarestapel, untere Ebene)))
-Die Basis bildet `dpkg`. Es dient dazu, a) ein neues `deb`-Paket
-auszupacken und auf dem System einzuspielen und b) die Inhalte eines
-bereits installierten `deb`-Pakets wieder aus dem System zu entfernen.
-Ersteres entspricht dem Kommandozeilenaufruf `dpkg -i Paketdatei`, das
-zweite hingegen `dpkg -r Paketdatei` (siehe <<pakete-installieren>> und
+Die Basis bildet `dpkg`. Es dient dazu, a) ein `deb`-Paket auszupacken
+und auf dem System einzuspielen und b) die Inhalte eines bereits
+installierten `deb`-Pakets wieder aus dem System zu entfernen. Ersteres
+entspricht dem Kommandozeilenaufruf `dpkg -i Paketdatei`, das zweite
+hingegen `dpkg -r Paketdatei` (siehe <<pakete-installieren>> und
 <<pakete-deinstallieren>>).
-
-Außerdem verifiziert es dabei, dass alle Abhängigkeiten zu anderen
-Paketen erfüllt sind. Ist dies nicht der Fall, bricht es die jeweilige
-Aktion ab.
 
 Mit `dpkg` können Sie Ihre Pakete verwalten und das System vollständig
 pflegen. Jedoch müssen Sie sich dann aber um alle Komfortfunktionen
-wie die automatische Auflösung von Paketabhängigkeiten und die
-richtige Reihenfolge bei der Installation selbst kümmern. Die
-Werkzeuge der oberen Ebene nehmen Ihnen diese Mühe ab und erleichtern
-Ihnen damit viele Schritte.
+selbst kümmern. `dpkg` prüft nur, ob alle Abhängigkeiten zu anderen
+Paketen erfüllt sind und beendet die Aktion im Fehlerfall. Es nimmt
+Ihnen weder die automatische Auflösung von Paketabhängigkeiten, noch die
+richtige Reihenfolge bei der Installation der Pakete ab. Diese Mühe
+erleichtern Ihnen die Werkzeuge der oberen Ebene.
 
 // Stichworte für den Index
 (((emerge)))
