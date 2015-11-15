@@ -6,9 +6,12 @@
 [[paketmanagement-als-begriff]]
 === Was ist Paketmanagement ===
 
-Ziel des Paketmanagements ist es, dass Ihr Linux-System funktionstüchtig
-und benutzbar bleibt, insbesondere wenn Sie vorhandene Software
-aktualisieren oder entfernen und neue Software hinzufügen.
+// Stichworte für den Index
+(((Paketmanagement, Begriff)))
+Paketmanagement beschreibt die geordnete Verwaltung der einzelnen
+Softwarepakete auf ihrem System. Ziel ist dabei, dass Ihr Linux-System
+funktionstüchtig und benutzbar bleibt, insbesondere wenn Sie vorhandene
+Software aktualisieren, entfernen oder auch neue Software ergänzen.
 
 // Stichworte für den Index
 (((Paketmanagement, Paketstatus)))
