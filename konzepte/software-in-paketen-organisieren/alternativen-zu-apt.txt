@@ -13,17 +13,19 @@ Funktionalitäten wie APT implementieren. Dabei gibt es verschiedene
 Kategorien von Alternativen:
 
 // Stichworte für den Index
+(((APT-Alternativen)))
 (((APT-Nachfolger, Cupt)))
 (((APT-Vorgänger, dselect)))
 (((Cupt)))
 (((dselect)))
+(((Muon))
 
 Alternative Benutzerschnittstellen:: 
-Hierzu zählen u.a. die im Buch vorgestellten Programme `aptitude` und
-Synaptic (siehe <<aptitude>> und <<gui-synaptic>>). Diese setzen auf den
-APT-Bibliotheken auf und sind nur Alternativen zu den
-Kommandozeilentools `apt-get` und `apt-cache`, nicht aber zu APT als
-Ganzes.
+Hierzu zählen u.a. die im Buch vorgestellten Programme `aptitude`, Muon,
+Synaptic und wajig (siehe <<aptitude>>, <<gui-muon>>, <<gui-synaptic>>
+und <<wajig2>>). Diese setzen auf den APT-Bibliotheken auf und sind nur
+Alternativen zu den Kommandozeilentools `apt-get` und `apt-cache`, nicht
+aber zu APT als Ganzes.
 
 Vorgänger:: 
 Bevor es APT gab und an Popularität gewann, wurden Paketlisten und
