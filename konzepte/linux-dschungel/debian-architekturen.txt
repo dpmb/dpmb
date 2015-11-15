@@ -140,8 +140,8 @@ zählen z.B. 'i386'/'x86_64', 'ppc'/'ppc64', 'sparc'/'sparc64' und
 dem Namen 'biarch' bereits länger <<biarch>>.
 +
 Dies ist insbesondere relevant bei proprietärer, nicht-quelloffener
-Software, die für 32-Bit-Linux kompiliert wurde, aber auf
-64-Bit-Systemen installiert bzw. verwendet werden sollen.
+Software, die für 32-Bit-Linux kompiliert wurde, aber auf einem
+64-Bit-System installiert bzw. verwendet werden soll.
 
 * Systeme, die gemischte Prozessorbefehle verwenden – entweder als
 Emulation in Hardware oder Software. Dazu gehören z.B. 'i386'/'ia64'
@@ -159,7 +159,7 @@ eine andere Zielplattform.
 Um diese Eigenschaft zu ermöglichen, bedarf es z.T. erheblicher
 Änderungen in den Übersetzungswerkzeugen und der Integration von Daten
 in der Dateistruktur. Dieser Vorgang ist bislang noch nicht vollständig
-abgeschlossen. 
+abgeschlossen.
 
 Benötigen Sie Pakete von einer anderen Architektur -- bspw. ein
 'i386'-Paket (32 bit) auf einer 'amd64'-Installation (64 bit) -- ist
