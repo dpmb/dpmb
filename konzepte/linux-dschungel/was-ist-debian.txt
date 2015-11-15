@@ -15,7 +15,7 @@ Je nach Kontext bezeichnet ``Debian'' entweder
 * das Debian-Projekt, also den Zusammenschluss von mittlerweile um die
 1000 Entwicklern ('Debian Developers', kurz: DD) weltweit, die das freie
 Betriebssystem gemeinsam entwickeln und veröffentlichen
-  
+
 oder
 
 * das vom Debian-Projekt entwickelte Betriebssystem ``Debian GNU/Linux''
@@ -25,10 +25,11 @@ bzw. dessen Varianten. Dazu zählen derzeit auch Debian GNU/kFreeBSD
 FreeBSD- bzw. GNU-Hurd-Betriebssystemkern nutzen.
 
 // Stichworte für den Index
-(((Debian, DFSG)))
+(((Debian, Debian Free Software Guidelines (DFSG))))
 (((Debian, Distributionsbereiche)))
 (((Debian, Distributionsbestandteile)))
-(((Debian, Gesellschaftervertrag)))
+(((Debian, Entwicklungszweige)))
+(((Debian, Gesellschaftsvertrag)))
 (((Debian, Softwareauswahl)))
 Einer der Eckpunkte des vom Debian-Projekt entwickelten Betriebssystems
 ist die ausschließliche Verwendung freier Software. Dafür sind die
@@ -49,7 +50,7 @@ zählen nicht nur Geldspenden zufriedener Benutzer, sondern auch die
 Arbeitszeit von Entwicklern, Hardwarespenden oder das Betreiben eines
 Debian-Mirrors oder gar eines dedizierten Rechners für das
 Debian-Projekt.
- 
+
 // Stichworte für den Index
 (((Debian, Einsatzbereich)))
 (((Debian, Entwicklungsziel)))
@@ -63,6 +64,7 @@ Fortgeschrittene, Experten und Profis oder solche, die es wirklich
 werden wollen.
 
 // Stichworte für den Index
+(((Debian, Architekturen)))
 (((Debian, Einsatzzweck)))
 (((Debian, Plattformunterstützung)))
 (((Debian, Softwareauswahl)))
@@ -89,9 +91,8 @@ dem Desktop erobert.
 (((Debian, Derivate)))
 Zudem leiten sich aus Debian sehr viele Derivate für ausgewählte
 Zielgruppen oder Einsatzzwecke ab, z.B. Ubuntu, Linux Mint, Knoppix,
-Grml oder Damn Small Linux (DSL). Einen vollständigen Überblick
-(``Stammbaum'') erhalten Sie in der GNU Linux Distribution
-Timeline <<GNU-Linux-Distribution-Timeline>> sowie in
-<<welche-unix-artigen-betriebssysteme-verwenden-das>>.
+Grml oder Damn Small Linux (DSL). Einen vollständigen Überblick (``Stammbaum'') 
+erhalten Sie in <<welche-unix-artigen-betriebssysteme-verwenden-das>> sowie 
+der GNU Linux Distribution Timeline <<GNU-Linux-Distribution-Timeline>>.
 
 // Datei (Ende): ./konzepte/linux-dschungel/was-ist-debian.txt
