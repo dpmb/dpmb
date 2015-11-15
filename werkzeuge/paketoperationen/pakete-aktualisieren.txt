@@ -82,6 +82,7 @@ aktualisieren in <<liste-der-verfuegbaren-pakete-aktualisieren>> ein.
 // Stichworte für den Index
 (((apt, safe-upgrade)))
 (((aptitude, safe-upgrade)))
+(((aptitude, safe-upgrade --no-new-installs)))
 (((apt-get, upgrade)))
 Dem Unterkommando `upgrade` von `apt-get` entspricht `safe-upgrade` bei
 `apt` und `aptitude`. Sie aktualisieren damit alle installierten Pakete
@@ -102,8 +103,6 @@ Paket 'openssh-server' eine zusätzliche Abhängigkeit vom Paket
 * `apt safe-upgrade` läßt hingegen das Installieren neuer Pakete zu.
 Ähnlich wie `apt-get` entfernt es dabei keine Pakete.
 
-// Stichworte für den Index
-(((aptitude, safe-upgrade --no-new-installs)))
 * `aptitude safe-upgrade` geht im Gegensatz zu `apt-get` und `apt` noch
 einen Schritt weiter und erlaubt auch, dass Pakete entfernt werden. Das
 betrifft allerdings ausschließlich solche Pakete, die die Markierung
