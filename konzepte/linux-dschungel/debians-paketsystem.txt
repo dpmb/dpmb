@@ -10,6 +10,7 @@
 // Stichworte für den Index
 (((deb-Format)))
 (((dpkg)))
+(((Linux-Distribution, Debian)))
 (((Linux-Distribution, Paketabhängigkeiten)))
 (((Linux-Distribution, Paketierung)))
 Aus diesen Erfahrungen heraus startete 1993 das Debian-Projekt unter Ian
@@ -34,6 +35,7 @@ beziehen.
 (((console-apt)))
 (((deb-Format)))
 (((dselect)))
+(((muon)))
 (((PackageKit)))
 (((PackageSearch)))
 (((smartpm)))
@@ -58,9 +60,9 @@ Sie in <<softwarestapel-und-ebenen>>.
 Heute stehen weitere textbasierte und graphische Benutzeroberflächen für
 `dpkg` zur Verfügung. Neben `aptitude` sind das Synaptic (siehe
 <<gui-synaptic>>), PackageKit (siehe <<gui-packagekit>>) – als Basis für
-Gnome-PackageKit und Apper bei KDE – sowie PackageSearch,
-Xara <<Debian-Paket-xara-gtk>> und SmartPM (siehe <<gui-smartpm>>).
-Einen genaueren Blick werfen wir auf diese Programme in
-<<werkzeuge-zur-paketverwaltung>>.
+Gnome-PackageKit und Apper bei KDE – sowie Muon (siehe <<gui-muon>>),
+PackageSearch, Xara <<Debian-Paket-xara-gtk>> und SmartPM (siehe
+<<gui-smartpm>>). Einen genaueren Blick werfen wir auf diese Programme
+in <<werkzeuge-zur-paketverwaltung>>.
 
 // Datei (Ende): ./konzepte/linux-dschungel/debians-paketsystem.txt
