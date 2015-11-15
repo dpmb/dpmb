@@ -7,9 +7,11 @@
 
 // Stichworte für den Index
 (((Debian, Architekturen)))
+(((Debian, Betriebssystemkern)))
 (((Debian, Hardware)))
 (((Debian, Plattformen)))
 (((Debian, Ports)))
+(((Debian, Porters)))
 Debian kommt mit den unterschiedlichsten Hardware-Architekturen zurecht.
 Die offizielle Liste der aktuell unterstützten Architekturen finden Sie
 auf der Debian-Webseite <<Debian-Architekturen>> sowie im Anhang dieses
@@ -23,7 +25,7 @@ Hardware-Architektur abhängig, auf der die Programme einsetzbar sind,
 sondern auch von weiteren Punkten. Dazu zählen etwa der
 Betriebssystemkern, wie Linux, GNU Hurd <<Hurd>> oder FreeBSD
 <<FreeBSD>>, aber auch die Art, wie die Programme kompiliert wurden
-('Application Binary Interface', ABI).  Daher bezeichnen Entwickler dies
+('Application Binary Interface', ABI). Daher bezeichnen Entwickler dies
 als 'Portierung' ('Port') und sich selbst als 'Porters'. Hier verwenden
 wir durchgängig den Begriff 'Architektur', da das entsprechende Feld in
 den Metadaten eines Pakets (siehe <<debian-paketformat-im-detail>>)
@@ -33,9 +35,9 @@ konsistent verwendet.
 // Stichworte für den Index
 (((dpkg-architecture, -L)))
 Eine vollständige Liste der von `dpkg` verstandenen Architekturen gibt
-Ihnen der Aufruf `dpkg-architecture -L` aus. Viele der in der Ausgabe
-des Kommandos genannten Architekturen existieren allerdings nur in der
-Theorie.
+Ihnen der Aufruf `dpkg-architecture -L` im Terminal aus. Viele der in
+der Ausgabe des Kommandos genannten Architekturen existieren allerdings
+nur in der Theorie und zeigen auf, welche Möglichkeiten bestehen.
 
 .Architekturen, die das Werkzeug `dpkg` unterstützt (Ausschnitt)
 ----
@@ -52,11 +54,15 @@ $
 
 // Stichworte für den Index
 (((Perl-Modul Dpkg::Arch)))
-Die nachfolgende Übersicht beschreibt die einzelnen Architekturen näher.
-Die Bezeichnungen in Klammern geben das entsprechende GNU-Triplet –
-bestehend aus Hardware-Plattform, Kernel und ABI – an, sofern es bekannt
-ist. Mit Hilfe des Perl-Moduls `Dpkg::Arch` ermitteln Sie diese
-Bezeichnungen ohne viel Aufwand selbst.
+Die Übersicht im Anhang <<anhang--debian-architekturen>> beschreibt die
+einzelnen Architekturen näher. Die verwendeten Bezeichnungen in Klammern
+geben dabei das entsprechende GNU-Triplet an, sofern dieses bekannt ist.
+Das GNU-Triplet besteht aus der Hardware-Plattform, dem Kernel und dem
+ABI.
+
+Mit Hilfe des Perl-Moduls `Dpkg::Arch` ermitteln Sie diese Bezeichnungen
+im Handumdrehen selbst. Nachfolgend sehen Sie einen Aufruf für die
+Plattformen PPC64, PowerPC-spe, Arm, Armel und Armhf.
 
 .Perl-Aufruf zur Ermittlung der GNU-Triplets einer Debian-Architektur
 ----

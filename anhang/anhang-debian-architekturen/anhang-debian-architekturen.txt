@@ -1,6 +1,7 @@
 // Datei: ./anhang/anhang-debian-architekturen/anhang-debian-architekturen.txt
 // Baustelle: Rohtext
 
+[[anhang--debian-architekturen]]
 == Debian-Architekturen ==
 
 // offizielle Architekturen
