@@ -1,0 +1,133 @@
+// Datei: ./praxis/systeme-mit-schlechter-anbindung-warten/debdelta.adoc
+
+// Baustelle: Fertig
+
+=== debdelta ===
+
+// Stichworte für den Index
+indexterm:[Debianpaket, debdelta]
+indexterm:[debdelta-upgrade]
+indexterm:[debdeltas]
+indexterm:[debpatch]
+
+Interessant für Sie ist das Werkzeug `debdelta-upgrade` aus dem
+Debdelta-Projekt (<<Debdelta>>). Es steht im Paket 'debdelta'
+<<Debian-Paket-debdelta>> bereit, welches ebenfalls die drei weiteren
+Programme `debdelta`, `debdeltas` und `debpatch` enthält. Falls Sie das
+Werkzeug `cupt` installiert haben, ist `debdelta-upgrade` ebenfalls dort
+integriert (siehe <<Cupt>>).
+
+`debdelta-upgrade` überträgt nicht die Pakete vollumfänglich, sondern
+nur die jeweiligen Unterschiede zwischen beiden Versionen -- genannt
+'deltas'. Der Ideengeber für das in der Programmiersprache Python
+geschriebene Programm ist das Werkzeug `diff`, welches zeilenweise die
+Unterschiede zwischen zwei Dateien anzeigt.
+
+In dem nachfolgenden Beispiel sehen wir einen `debdelta-upgrade`-Lauf mit
+einer virtuellen Übertragungsrate von 60kB/s über eine EDGE-Verbindung,
+deren Download-Raten zwischen 15kB/s und 25kB/s liegen. Das Ergebnis ist
+eine Verbesserung um den Faktor 2.5.
+
+.Optimiertes Herunterladen von Daten mit `debdelta`
+----
+# debdelta-upgrade
+Created,    time  6.46sec, speed 31kB/sec, gir1.2-gtk-3.0_3.8.5-1_i386.deb
+Created,    time  0.81sec, speed 75kB/sec, libgail-3-0_3.8.5-1_i386.deb
+Created,    time  0.71sec, speed 82kB/sec, libgtk-3-bin_3.8.5-1_i386.deb
+Created,    time  1.15sec, speed 72kB/sec, libio-socket-ssl-perl_1.955-1_all.deb
+Created,    time  0.66sec, speed 15kB/sec, libmodule-build-tiny-perl_0.030-1_all.deb
+Created,    time  3.36sec, speed 5672B/sec, libmodule-metadata-perl_1.000019-1_all.deb
+Created,    time  0.72sec, speed 54kB/sec, libmodule-scandeps-perl_1.11-1_all.deb
+Created,    time  0.51sec, speed 82kB/sec, libqt4-dbus_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Created,    time  3.82sec, speed 61kB/sec, libqt4-help_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Created,    time  8.99sec, speed 90kB/sec, libqt4-script_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Created,    time  3.09sec, speed 82kB/sec, libqt4-scripttools_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Created,    time  1.41sec, speed 94kB/sec, libqt4-sql_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Created,    time  0.58sec, speed 101kB/sec, libqt4-sql-sqlite_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Created,    time  1.52sec, speed 112kB/sec, libqt4-svg_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Created,    time  1.05sec, speed 90kB/sec, libqt4-test_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Delta is not present: libstring-flogger-perl_1.101242-1_1.101243-1_all.debdelta
+Delta is not present: libsub-exporter-progressive-perl_0.001009-1_0.001010-1_all.debdelta
+Created,    time 17.33sec, speed 59kB/sec, libqt4-xmlpatterns_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Created,    time  3.49sec, speed 61kB/sec, libqtdbus4_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Created,    time  1.38sec, speed 43kB/sec, librose-object-perl_0.860-1_all.deb
+Created,    time  0.70sec, speed 17kB/sec, libstring-toidentifier-en-perl_0.11-1_all.deb
+Created,    time  1.13sec, speed 43kB/sec, libsub-exporter-perl_0.986-1_all.deb
+Created,    time  1.02sec, speed 14kB/sec, libsystem-command-perl_1.105-1_all.deb
+Created,    time  0.62sec, speed 28kB/sec, libtest-file-perl_1.35-1_all.deb
+Downloaded, time  0.42sec, speed 2580B/sec, libtext-hunspell-perl_2.05-1+b1_2.08-1_i386.debdelta
+Downloaded, time  0.49sec, speed 2764B/sec, libqt4-opengl_4%3a4.8.5+git121-g2a9ea11+dfsg-1_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.debdelta
+Created,    time  0.84sec, speed 45kB/sec, libtest-spec-perl_0.47-1_all.deb
+Downloaded, time  0.38sec, speed 4031B/sec, librose-db-perl_0.769-1_0.771-1_all.debdelta
+Created,    time  0.51sec, speed 41kB/sec, libxml-compile-cache-perl_0.995-1_all.deb
+Downloaded, time  1.04sec, speed 1507B/sec, librt-client-rest-perl_1%3a0.43-2_1%3a0.44-1_all.debdelta
+Created,    time  0.89sec, speed 72kB/sec, qdbus_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Downloaded, time  0.51sec, speed 3708B/sec, libavresample1_6%3a9.8-2+b2_6%3a9.10-1_i386.debdelta
+Created,    time  0.50sec, speed 85kB/sec, qt4-default_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Downloaded, time  0.46sec, speed 5070B/sec, libavdevice53_6%3a9.8-2+b2_6%3a9.10-1_i386.debdelta
+Downloaded, time  0.41sec, speed 5990B/sec, libavutil52_6%3a9.8-2+b2_6%3a9.10-1_i386.debdelta
+Downloaded, time  0.60sec, speed 7016B/sec, libqt4-network_4%3a4.8.5+git121-g2a9ea11+dfsg-1_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.debdelta
+Downloaded, time  0.62sec, speed  9kB/sec, libxml-compile-perl_1.35-1_1.39-1_all.debdelta
+Downloaded, time  1.82sec, speed 7299B/sec, libswscale2_6%3a9.8-2+b2_6%3a9.10-1_i386.debdelta
+Downloaded, time  5.09sec, speed 2790B/sec, libyaml-libyaml-perl_0.38-3+b1_0.41-1_i386.debdelta
+Downloaded, time  2.18sec, speed  8kB/sec, python3-sip_4.14.7-4_4.15.2-2_i386.debdelta
+Downloaded, time  1.90sec, speed 10kB/sec, libavfilter3_6%3a9.8-2+b2_6%3a9.10-1_i386.debdelta
+Downloaded, time  5.04sec, speed 3941B/sec, python-sip_4.14.7-4_4.15.2-2_i386.debdelta
+Downloaded, time  1.82sec, speed 10kB/sec, libqt4-xml_4%3a4.8.5+git121-g2a9ea11+dfsg-1_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.debdelta
+Downloaded, time  5.24sec, speed 3954B/sec, libqt4-declarative_4%3a4.8.5+git121-g2a9ea11+dfsg-1_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.debdelta
+Created,    time 31.47sec, speed 120kB/sec, qt4-dev-tools_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Created,    time 11.64sec, speed 72kB/sec, qt4-linguist-tools_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Created,    time  1.50sec, speed 86kB/sec, qt4-qtconfig_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Downloaded, time 21.87sec, speed 1090B/sec, libgtk-3-common_3.8.4-1_3.8.5-1_all.debdelta
+Downloaded, time  6.28sec, speed 4569B/sec, libqtcore4_4%3a4.8.5+git121-g2a9ea11+dfsg-1_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.debdelta
+Downloaded, time  4.94sec, speed 6927B/sec, libqt4-qt3support_4%3a4.8.5+git121-g2a9ea11+dfsg-1_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.debdelta
+Created,    time 15.00sec, speed 39kB/sec, qtcore4-l10n_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_all.deb
+Created,    time  0.49sec, speed 38kB/sec, libtext-hunspell-perl_2.08-1_i386.deb
+Downloaded, time  3.40sec, speed 11kB/sec, qt4-qmake_4%3a4.8.5+git121-g2a9ea11+dfsg-1_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.debdelta
+Downloaded, time  2.64sec, speed 16kB/sec, librose-db-object-perl_1%3a0.806-1_1%3a0.807-1_all.debdelta
+Created,    time  4.11sec, speed 80kB/sec, libqt4-opengl_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Created,    time  1.84sec, speed 69kB/sec, librose-db-perl_0.771-1_all.deb
+Downloaded, time  2.54sec, speed 18kB/sec, libqt4-dev-bin_4%3a4.8.5+git121-g2a9ea11+dfsg-1_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.debdelta
+Created,    time  1.74sec, speed 40kB/sec, librt-client-rest-perl_1%3a0.44-1_all.deb
+Created,    time  1.20sec, speed 75kB/sec, libavresample1_6%3a9.10-1_i386.deb
+Created,    time  0.79sec, speed 101kB/sec, libavdevice53_6%3a9.10-1_i386.deb
+Created,    time  1.41sec, speed 89kB/sec, libavutil52_6%3a9.10-1_i386.deb
+Downloaded, time  5.43sec, speed 14kB/sec, libqt4-dev_4%3a4.8.5+git121-g2a9ea11+dfsg-1_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.debdelta
+Created,    time  8.74sec, speed 65kB/sec, libqt4-network_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Downloaded, time 13.47sec, speed 15kB/sec, gtk3-engines-oxygen_1.1.4-1_1.2.0-1_i386.debdelta
+Created,    time  9.57sec, speed 22kB/sec, libxml-compile-perl_1.39-1_all.deb
+Created,    time  2.59sec, speed 56kB/sec, libswscale2_6%3a9.10-1_i386.deb
+Created,    time  0.98sec, speed 64kB/sec, libyaml-libyaml-perl_0.41-1_i386.deb
+Created,    time  1.08sec, speed 72kB/sec, python3-sip_4.15.2-2_i386.deb
+Created,    time  2.00sec, speed 79kB/sec, libavfilter3_6%3a9.10-1_i386.deb
+Created,    time  1.08sec, speed 73kB/sec, python-sip_4.15.2-2_i386.deb
+Created,    time  1.10sec, speed 116kB/sec, libqt4-xml_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Downloaded, time 14.62sec, speed 15kB/sec, libqt4-designer_4%3a4.8.5+git121-g2a9ea11+dfsg-1_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.debdelta
+Created,    time 20.09sec, speed 54kB/sec, libqt4-declarative_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+ Error: applying of delta for libgtk-3-common failed:  : Error, 220 locale files are absent. (non retriable)
+Downloaded, time 25.98sec, speed 11kB/sec, libavformat54_6%3a9.8-2+b2_6%3a9.10-1_i386.debdelta
+Created,    time 18.78sec, speed 82kB/sec, libqtcore4_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Created,    time 14.29sec, speed 73kB/sec, libqt4-qt3support_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Downloaded, time 36.54sec, speed 15kB/sec, libav-tools_6%3a9.8-2+b2_6%3a9.10-1_i386.debdelta
+Created,    time 26.96sec, speed 45kB/sec, qt4-qmake_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Created,    time 23.77sec, speed 22kB/sec, librose-db-object-perl_1%3a0.807-1_all.deb
+Downloaded, time 54.52sec, speed 12kB/sec, libgtk-3-0_3.8.4-1_3.8.5-1_i386.debdelta
+Created,    time 36.84sec, speed 43kB/sec, libqt4-dev-bin_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Downloaded, time 54.63sec, speed 14kB/sec, libavcodec54_6%3a9.8-2+b2_6%3a9.10-1_i386.debdelta
+Created,    time 58.14sec, speed 14kB/sec, libqt4-dev_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Created,    time  4.72sec, speed 70kB/sec, gtk3-engines-oxygen_1.2.0-1_i386.deb
+Downloaded, time 48.70sec, speed 16kB/sec, libqtgui4_4%3a4.8.5+git121-g2a9ea11+dfsg-1_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.debdelta
+Created,    time 25.46sec, speed 140kB/sec, libqt4-designer_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Created,    time 10.35sec, speed 63kB/sec, libavformat54_6%3a9.10-1_i386.deb
+Created,    time 40.21sec, speed 80kB/sec, libav-tools_6%3a9.10-1_i386.deb
+Created,    time 19.10sec, speed 93kB/sec, libgtk-3-0_3.8.5-1_i386.deb
+Created,    time 59.42sec, speed 48kB/sec, libavcodec54_6%3a9.10-1_i386.deb
+Created,    time 58.16sec, speed 69kB/sec, libqtgui4_4%3a4.8.5+git121-g2a9ea11+dfsg1-2_i386.deb
+Downloaded, time 228.14sec, speed 12kB/sec, libgtk-3-common_3.8.5-1_all.deb
+Delta-upgrade statistics:
+ total resulting debs, size 37MB time 637sec virtual speed 60kB/sec
+Sorry, no forensic logs were generated
+debdelta-upgrade  331.64s user 50.87s system 56% cpu 11:15.57 total
+#
+----
+// Datei (Ende): ./praxis/systeme-mit-schlechter-anbindung-warten/debdelta.adoc

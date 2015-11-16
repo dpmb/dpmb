@@ -1,0 +1,294 @@
+// Datei: ./werkzeuge/paketoperationen/paket-auf-veraenderungen-pruefen.adoc
+
+// Baustelle: Fertig
+
+[[paket-auf-veraenderungen-pruefen]]
+
+=== Paket auf Veränderungen prüfen ===
+
+Installieren Sie ein Debianpaket, landen die darin enthaltenen Dateien
+üblicherweise eins-zu-eins auf dem Speichermedium. Als Administrator
+gehört zu Ihren Aufgaben, das System und die Dateien auf Integrität zu
+prüfen. Das umfasst das Nachschauen, ob die lokalen Dateien aus einem
+installierten Paket verändert wurden, d.h. ob zwischen der Version vom
+Paketmirror und der lokalen Version Unterschiede bestehen. Falls ja,
+ist von Ihnen zu klären, welche Dateien verändert wurden. Es gibt
+mehrere Situationen, in denen das wichtig ist, gewollte oder
+unerwünschte Änderungen von Daten festzustellen.
+
+* Welche Unterschiede bestehen zwischen der offiziell verfügbaren
+Version (und dessen Konfiguration) und den lokalen Einstellungen,
+sprich: welche Änderungen haben Sie vorgenommen und müssen ggf. bei
+einer Aktualisierung der Pakete oder des Systems berücksichtigt werden?
+
+* Vorher hat ein anderer Administrator den Rechner betreut. Sie
+  möchten wissen, an welchen Dateien Änderungen von demjenigen
+  vorgenommen wurden.
+
+* Nach einer Reparatur des Dateisystems, bei der zu Paketen gehörende
+Dateien verändert wurden, prüfen Sie nach, ob die Reparatur erfolgreich
+war, d.h. ob die Dateien nach wie vor den erwarteten Inhalt haben.
+
+// Stichworte für den Index
+(((Debianpaket, debsums)))
+(((Debianpaket, dlocate)))
+Bei der Klärung dieser Fragen helfen Ihnen u.a. die Werkzeuge
+`debsums` <<Debian-Paket-debsums>>, `dlocate` <<Debian-Paket-dlocate>>
+und auch `dpkg` selbst weiter. Letzteres steht Ihnen in der Version 1.17
+ab Debian 8 _Jessie_ und Ubuntu 14.04 LTS _Trusty Tahr_ zur Verfügung.
+
+// siehe dazu: http://debiananwenderhandbuch.de/debsums.html
+
+==== MD5-Summen zur Erkennung von Änderungen ====
+
+Während Debian bei der Verifizierung der bezogenen Pakete auch SHA1-
+und SHA256-Hashsummen zur kryptografischen Absicherung verwendet (siehe
+dazu <<bezogenes-paket-verifizieren>>), werden zum Erkennen von
+Änderungen an installierten Paketdateien nur MD5-Summen verwendet. Diese
+sind pro Paket in den Dateien `/var/lib/dpkg/info/*.md5sums`
+gespeichert. Alle o.g. Programme verwenden die Hashsummen aus diesen via
+`dpkg` bereitgestellten Dateien.
+
+Die ausschließliche Verwendung von MD5-Summen an dieser Stelle bedeutet,
+dass diese nicht mehr den heutigen Ansprüchen für das Aufdecken von
+Datei-Ersetzungen entsprechen, auch wenn diese mit hoher krimineller
+Energie ausgeführt wurden. Sie können jedoch durchaus helfen, von
+dilettantischen Einbrechern durchgeführte Datei-Ersetzungen zu finden.
+Bedenken Sie jedoch dabei, dass die Einbrecher genauso gut auch die o.g.
+Dateien mit den MD5-Summen angepasst haben könnten. Möchten Sie sich
+jedoch stärker gegen Datei-Ersetzungen oder Änderungen durch
+professionelle Angreifer schützen, so reichen die hier genannten
+Techniken nicht aus. Dazu gibt es spezialisierte Pakete wie z. B.
+'tripwire', 'samhain', 'aide', 'intergrit', 'fcheck', 'stealth' und
+'tiger'.
+
+===== MD5-Summen von Dateien mit `dlocate` anzeigen ===== 
+
+// Stichworte für den Index
+(((Debianpaket, dlocate)))
+(((dlocate, -md5sum)))
+Mit dem Schalter `-md5sum` des Werkzeugs `dlocate` zeigen Sie die
+MD5-Summen aller Dateien in einem bestimmten Paket an, so wie sie in
+o.g. Dateien von `dpkg` gespeichert werden. Nachfolgend sehen Sie die
+Ausgabe zum Paket 'htop', wobei sich in der linken Spalte die MD5-Summe
+befindet und in der rechten Spalte die dazugehörige Datei mit ihrem
+vollständigem Pfad. Die Angaben entsprechen dem Inhalt der Datei
+`/var/lib/dpkg/info/htop.md5sums`.
+
+.Darstellung der MD5-Summen für alle Dateien aus dem Paket 'htop'
+----
+$ dlocate -md5sum htop
+292b696a5b879f1068f7c15073c245cd  usr/bin/htop
+194b840f96d3e6bbf29229811a6195c2  usr/share/applications/htop.desktop
+75557092070931bcb0fb9a6d74575542  usr/share/doc/htop/AUTHORS
+0c9303726b090f478b383dd059b3265f  usr/share/doc/htop/README
+3adf8fa10448f27bb30385b37eb14231  usr/share/doc/htop/changelog.Debian.gz
+84555fa6bc74568aea8de2a18072d5b2  usr/share/doc/htop/changelog.gz
+ee7657b42989a83c9b04a179b35e59e1  usr/share/doc/htop/copyright
+58a889c99141c2945c1c50bb51d314c6  usr/share/man/man1/htop.1.gz
+f059e3f0159a5aeb761d41514a117310  usr/share/menu/htop
+5bbd19dc6cccaf0a74866a92f5cca75c  usr/share/pixmaps/htop.png
+$
+----
+
+==== Dateien paketbezogen mit `dlocate` überprüfen ====
+
+// Stichworte für den Index
+(((dlocate, -md5check)))
+`dlocate` kann nicht nur die MD5-Summe für eine Datei ausgeben, sondern
+diese auch überprüfen. Dazu benutzen Sie den Schalter `-md5check`. Falls
+die ermittelte MD5-Summe mit dem Original aus dem Paket übereinstimmt,
+ergänzt `dlocate` hinter dem Dateinamen ein `OK`, andernfalls ein `FAILED`.
+
+Bitte beachten Sie dabei, dass `dlocate -md5check` keine
+Konfigurationsdateien überprüft und auch nur die Dateien von explizit
+angegebenen Paketen überprüfen kann.
+
+.Überprüfung der MD5-Summen für jede einzelne Datei aus dem Paket 'htop'
+----
+$ dlocate -md5check htop
+usr/bin/htop: OK
+usr/share/applications/htop.desktop: OK
+usr/share/doc/htop/AUTHORS: OK
+usr/share/doc/htop/README: OK
+usr/share/doc/htop/changelog.Debian.gz: OK
+usr/share/doc/htop/changelog.gz: OK
+usr/share/doc/htop/copyright: OK
+usr/share/man/man1/htop.1.gz: OK
+usr/share/menu/htop: OK
+usr/share/pixmaps/htop.png: OK
+$
+----
+
+==== Dateien überprüfen mit `debsums` ====
+
+// Stichworte für den Index
+(((debsums)))
+Genauso wie `dlocate` kann auch `debsums` die Dateien eines Paketes auf
+Integrität überprüfen. Dazu braucht es jedoch keine weitere Option, da
+das Überprüfen von Dateien die einzige Aufgabe von `debsums` ist:
+
+.`debsums` beim Prüfen des Paketes `htop`
+----
+$ debsums htop
+/usr/bin/htop                                   OK
+/usr/share/applications/htop.desktop            OK
+/usr/share/doc/htop/AUTHORS                     OK
+/usr/share/doc/htop/README                      OK
+/usr/share/doc/htop/changelog.Debian.gz         OK
+/usr/share/doc/htop/changelog.gz                OK
+/usr/share/doc/htop/copyright                   OK
+/usr/share/man/man1/htop.1.gz                   OK
+/usr/share/menu/htop                            OK
+/usr/share/pixmaps/htop.png                     OK
+$
+----
+
+Im Gegensatz zu `dlocate` braucht `debsums` jedoch nicht
+notwendigerweise einen Paketnamen als Parameter. Rufen Sie das Werkzeug
+`debsums` ohne weitere Parameter auf, so prüft es alle Dateien (außer
+Konfigurationsdateien in `/etc/`) sämtlicher installierten Pakete auf
+Veränderungen zum Original und gibt hinter dem Dateinamen den Wert `OK`
+für unverändert und `FAILED` für modifizierte Daten aus. Dieser Schritt
+eignet sich gut, um ihr gesamtes System einer Integritätsprüfung zu
+unterziehen.
+
+.`debsums` bei der Arbeit
+----
+# debsums
+/usr/bin/a2ps                         OK
+/usr/bin/a2ps-lpr-wrapper             OK
+/usr/bin/card                         OK
+/usr/bin/pdiff                        OK
+/usr/bin/psmandup                     OK
+/usr/bin/psset                        OK
+/usr/bin/texi2dvi4a2ps                OK
+/usr/share/a2ps/README                OK
+/usr/share/a2ps/afm/fonts.map         OK
+...
+#
+----
+
+// Stichworte für den Index
+(((debsums, -a)))
+(((debsums, --all)))
+(((debsums, -c)))
+(((debsums, --changed)))
+Desweiteren hat `debsums` noch ein paar nützliche Schalter:
+
+`-a` (Langform `--all`):: 
+Überprüfung aller Dateien.
+
+`-c` (Langform `--changed`):: 
+Nur die Dateien anzeigen, die sich geändert haben.
+
+.Auflistung der Dateien, die sich geändert haben
+----
+# debsums --changed
+/usr/local/Brother/Printer/HL2250DN/inf/brHL2250DNfunc
+/usr/local/Brother/Printer/HL2250DN/inf/brHL2250DNrc
+debsums: missing file /usr/share/doc/hl2250dnlpr/copyright (from hl2250dnlpr package)
+debsums: missing file /usr/share/doc/hl2250dnlpr/changelog.Debian.gz (from hl2250dnlpr package)
+debsums: missing file //opt/PDFStudio/jre/lib/charsets.jar.pack (from pdfstudio package)
+#
+----
+
+// Stichworte für den Index
+(((debsums, -e)))
+(((debsums, --config)))
+
+`-e` (Langform `--config`):: 
+Überprüfung der 'Conffiles'. 'Conffiles' sind Konfigurationsdateien, die
+vom Paket ausgeliefert werden und somit vorab deklariert wurden. Diese
+befinden sich fast immer unterhalb des Verzeichnisses `/etc/`.
+
+.Auflistung aller 'Conffiles' des Paketes 'unburden-home-dir' mit Zustand:
+----
+$ debsums -e unburden-home-dir
+/etc/unburden-home-dir.list                 FAILED
+/etc/unburden-home-dir                          OK
+/etc/default/unburden-home-dir              FAILED
+/etc/X11/Xsession.d/95unburden-home-dir         OK
+$
+----
+
+Möchten Sie nur die Konfigurationsdateien (genauer 'Conffiles') eines
+Paketes auflisten, die lokal geändert wurden, so kombinieren Sie die
+beiden Schalter `-c` und `-e` miteinander:
+
+// Stichworte für den Index
+(((debsums, -ce)))
+
+.Auflistung geänderter 'Conffiles' des Paketes 'unburden-home-dir'
+----
+$ debsums -ce unburden-home-dir
+/etc/default/unburden-home-dir
+/etc/unburden-home-dir.list
+$
+----
+
+Möchten Sie die Originaldatei wiedereinspielen (und damit die Änderungen
+rückgängig machen), ermitteln Sie zuerst das Paket, in dem besagte Datei
+enthalten ist (siehe <<paket-zu-datei-finden>>) und installieren dieses
+dann erneut (siehe <<pakete-erneut-installieren>>).
+
+Bitte beachten Sie, dass das bei 'Conffiles' nicht funktioniert, da
+`dpkg` nur dann wegen geänderter (oder gelöschter) Konfigurationsdateien
+fragt, wenn sich die Konfigurationsdatei auch im Paket geändert hat.
+Dies ist bei einer Reinstallation nie der Fall. Hier hilft entweder, die
+Datei aus dem heruntergeladenen Paket manuell zu extrahieren oder
+zunächst das Paket mit 'dpkg --purge' vollständig zu entfernen und
+danach wieder zu installieren.
+
+Bei der Benutzung von `debsums` spielen die Berechtigungen des Benutzers
+eine Rolle. Die Integrität von Dateien, die für normale Benutzer nicht
+lesbar sind, können nur vom Benutzer 'root' geprüft werden.
+
+.Auflistung geänderter 'Conffiles' des Paketes `sudo` geht nur `root`-Rechten:
+----
+$ debsums -e sudo
+/etc/pam.d/sudo                                 OK
+/etc/init.d/sudo                                OK
+debsums: can't open sudo file /etc/sudoers (Permission denied)
+debsums: can't open sudo file /etc/sudoers.d/README (Permission denied)
+$ sudo debsums -e sudo
+/etc/pam.d/sudo                                 OK
+/etc/sudoers                                    OK
+/etc/init.d/sudo                                OK
+/etc/sudoers.d/README                           OK
+$
+----
+
+==== Dateien mit `dpkg -V` überprüfen ====
+
+// Stichworte für den Index
+(((dpkg, --verify)))
+(((dpkg, -V)))
+Ab 'dpkg' Version 1.17 kann auch `dpkg` selbst Dateien anhand der
+gespeicherten MD5-Summen auf Unversehrtheit überprüfen. Im Gegensatz
+zu `debsums` und `dlocate -md5check` überprüft es 'Conffiles' stets
+mit und zeigt auch immer nur Dateien an, die sich nicht mehr im
+Originalzustand befinden.
+
+Die passende Option dazu ist `-V` bzw. in der Langform `--verify`. Geben
+Sie zum Aufruf einen oder mehrere Paketnamen als Parameter mit, so
+werden nur die Dateien dieser Pakete überprüft:
+
+.Dateien der Pakete 'unburden-home-dir' und 'ack-grep' mit `dpkg -V` überprüfen
+----
+$ dpkg -V unburden-home-dir ack-grep
+??5?????? c /etc/unburden-home-dir.list
+??5?????? c /etc/default/unburden-home-dir
+??5??????   /usr/bin/ack
+$
+----
+
+// Stichworte für den Index
+(((dpkg, --verify-format)))
+Das Ausgabeformat stellen Sie über die Option `--verify-format` ein. Das
+Standardformat ist von 'RPM' übernommen <<Bailey-Maximum-RPM-verify>>.
+Da `dpkg` bisher nur die MD5-Summe überprüft, werden alle anderen
+Spalten nur als Fragezeichen ausgegeben. Erscheint ein einzelnes 'c' in
+der Ausgabe, handelt es sich hierbei um 'Conffiles'.
+
+// Datei (Ende): ./werkzeuge/paketoperationen/paket-auf-veraenderungen-pruefen.adoc

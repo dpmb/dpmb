@@ -1,0 +1,51 @@
+// Datei: ./praxis/apt-mirror/debmirror.adoc
+
+// Baustelle: Notizen
+
+[[debmirror]]
+
+=== debmirror ===
+
+* Paket: <<Debian-Paket-debmirror>>
+* Beschreibung von 'debmirror' unter http://debiananwenderhandbuch.de/debianmirror.html
+* keine Konfigurationsdatei
+** stattdessen: alles als Parameter für den Aufruf über die Kommandozeile
+
+* Parameter/Optionen (Auswahl):
+
+`-a`::
+Architektur
+
+`-s`::
+Section
+
+`-d`::
+Distribution bzw. Veröffentlichung
+
+`-h`::
+Host oder Server, von dem bezogen werden soll
+
+`--nosource`::
+keine Source-Pakete
+
+`--progress`::
+Verlauf anzeigen
+
+`-v`::
+ausführliche Ausgabe (verbose)
+
+`--method`::
+Methode, die zum Bezug verwendet werden soll
+
+.Beispielaufruf für `debmirror` in `/home/ftp/debian`
+----
+# debmirror -a i386 -s main -s contrib -s non-free \
+ -h ftp.debian.org \
+ -d wheezy
+ /home/ftp/debian \
+ --nosource \
+ --progress
+# 
+----
+
+// Datei (Ende): ./praxis/apt-mirror/debmirror.adoc

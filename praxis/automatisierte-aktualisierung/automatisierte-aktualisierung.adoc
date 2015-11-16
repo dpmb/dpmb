@@ -1,0 +1,25 @@
+// Datei: ./praxis/automatisierte-aktualisierung/automatisierte-aktualisierung.adoc
+
+// Baustelle: Notizen
+
+[[automatisierte-aktualisierung]]
+
+== Automatisierte Aktualisierung ==
+
+* Ziel:
+** eine ganze Menge von identisch aufgesetzten Rechnern aktualisieren,
+bspw. einen Schulungsraum oder Cluster
+
+=== `apt-dater` ===
+
+* Werkzeug/Paket: 'apt-dater' <<Debian-Paket-apt-dater>>
+* terminal-based remote package update manager 
+* Projektseite <<apt-dater-Projektseite>>
+* Kurzbeschreibung: "apt-dater provides an ncurses frontend for
+managing package updates on a large number of remote hosts using SSH. It
+supports Debian-based managed hosts as well as rug (e.g. openSUSE) and
+yum (e.g. CentOS) based systems."
+
+* benötigt SSH und Screen
+
+// Datei (Ende): ./praxis/automatisierte-aktualisierung/automatisierte-aktualisierung.adoc

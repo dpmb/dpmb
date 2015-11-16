@@ -1,0 +1,28 @@
+// Datei: ./praxis/teil-praxis.adoc
+
+// Baustelle: Fertig
+
+[[part.Teil_Praxis]]
+[[praxis]]
+
+= Praxis =
+
+// == Ziele ==
+// 
+// .Ziele:
+// ****
+// 
+// Kurz: Was geht über das Alltagswissen hinaus? -- Spezialwissen
+//
+//
+// * Wie pflege ich die Paketlisten mehrerer Systeme einheitlich?
+// * Wie mische ich Releases z.B. mit eigenen oder fremden Paketen?
+//   - stable mit Anpassungen, bspw. zusätzlichen Mirrors
+//   - stable mit neuen Paketen gemischt ("apt-pinning")
+// * Mehrere Aktionen miteinander kombinieren (effektiver sein und weniger tippen müssen)
+// * Effektives Managen der Pakete auf mehreren Maschinen
+// * Hintergrundwissen
+// 
+// ****
+
+// Datei (Ende): ./praxis/teil-praxis.adoc

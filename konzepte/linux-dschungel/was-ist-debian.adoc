@@ -1,0 +1,98 @@
+// Datei: ./konzepte/linux-dschungel/was-ist-debian.adoc
+
+// Baustelle: Fertig
+// Axel: Fertig
+
+[[was-ist-debian]]
+=== Was ist Debian? ===
+
+// Stichworte für den Index
+(((Debian, Betriebssystem)))
+(((Debian, Projekt)))
+(((Debian, Varianten)))
+Je nach Kontext bezeichnet ``Debian'' entweder
+
+* das Debian-Projekt, also den Zusammenschluss von mittlerweile um die
+1000 Entwicklern ('Debian Developers', kurz: DD) weltweit, die das freie
+Betriebssystem gemeinsam entwickeln und veröffentlichen
+
+oder
+
+* das vom Debian-Projekt entwickelte Betriebssystem ``Debian GNU/Linux''
+bzw. dessen Varianten. Dazu zählen derzeit auch Debian GNU/kFreeBSD
+<<Debian-Wiki-Debian-GNUkFreeBSD>> und Debian GNU/Hurd
+<<Debian-Wiki-Debian-GNUHurd>>, die statt eines Linux-Kerns einen
+FreeBSD- bzw. GNU-Hurd-Betriebssystemkern nutzen.
+
+// Stichworte für den Index
+(((Debian, Debian Free Software Guidelines (DFSG))))
+(((Debian, Distributionsbereiche)))
+(((Debian, Distributionsbestandteile)))
+(((Debian, Entwicklungszweige)))
+(((Debian, Gesellschaftsvertrag)))
+(((Debian, Softwareauswahl)))
+Einer der Eckpunkte des vom Debian-Projekt entwickelten Betriebssystems
+ist die ausschließliche Verwendung freier Software. Dafür sind die
+_Debian Free Software Guidelines_ (DFSG) <<DFSG>> maßgeblich, die im
+_Debian-Gesellschaftsvertrag_ festgelegt sind
+<<Debian-Social-Contract>>. Sichtbar wird das auch darin, dass Pakete in
+den beiden Entwicklungszweigen 'contrib' und 'non-free' offiziell kein
+Bestandteil von Debian GNU/Linux sind. Genauer gehen wir darauf in
+<<distributionsbereiche>> ein.
+
+// Stichworte für den Index
+(((Debian, Projektfinanzierung)))
+(((Debian, Projektstruktur)))
+(((Debian, Projektziel)))
+Debian ist weder kommerziell noch profitorientiert. Das gesamte Projekt
+finanziert sich ausschließlich durch Spenden <<Debian-Donations>>. Dazu
+zählen nicht nur Geldspenden zufriedener Benutzer, sondern auch die
+Arbeitszeit von Entwicklern, Hardwarespenden oder das Betreiben eines
+Debian-Mirrors oder gar eines dedizierten Rechners für das
+Debian-Projekt.
+
+// Stichworte für den Index
+(((Debian, Einsatzbereich)))
+(((Debian, Entwicklungsziel)))
+(((Debian, Zielgruppe)))
+Angestrebt wird ein universelles Betriebssystem, d.h. es gibt keinen
+Fokus auf einen spezifischen Einsatzbereich wie bei vielen Derivaten von
+Debian. Desweiteren werden dem Benutzer viele Entscheidungen selbst
+überlassen: Er muss – anders als z.B. in Ubuntu – wissen, was er möchte.
+Daher richtet sich Debian an zielorientierte, ambitionierte Einsteiger,
+Fortgeschrittene, Experten und Profis oder solche, die es wirklich
+werden wollen.
+
+// Stichworte für den Index
+(((Debian, Architekturen)))
+(((Debian, Einsatzzweck)))
+(((Debian, Plattformunterstützung)))
+(((Debian, Softwareauswahl)))
+Debian stellt dafür ein ausgereiftes, stabiles und zuverlässiges
+Betriebssystem inklusive aller Software dar. Es ist ein Betriebssystem,
+das die Debian-Entwickler selbst benutzen wollen{empty}footnote:[``The
+project consists of a group of people who are working together to create
+something that, primarily, we all want to use''
+<<Allbery-Debian-Popularity>>]. Daher unterstützt Debian viele
+verschiedene Architekturen und ermöglicht eine einheitliche
+Administration auf verschiedensten Plattformen (siehe
+<<debian-architekturen>>). Ausführliches Testen und das Bereinigen von
+Fehlern hat Vorrang vor brandaktueller Software.
+
+Aus diesen Grundsätzen folgen weitere Eigenschaften, die sich
+insbesondere im Einsatzzweck von Debian und der Einordnung in die
+Distributionsvielfalt widerspiegeln. Die typischen Anwendungsbereiche
+sind Server, Systeme für die Infrastruktur sowie Low-End Systeme wie
+etwa die Hardware-Lernplattform Raspberry Pi <<RaspberryPi>>. Dennoch
+hat sich Debian (nicht nur bei den Autoren) auch einen festen Platz auf
+dem Desktop erobert.
+
+// Stichworte für den Index
+(((Debian, Derivate)))
+Zudem leiten sich aus Debian sehr viele Derivate für ausgewählte
+Zielgruppen oder Einsatzzwecke ab, z.B. Ubuntu, Linux Mint, Knoppix,
+Grml oder Damn Small Linux (DSL). Einen vollständigen Überblick (``Stammbaum'') 
+erhalten Sie in <<welche-unix-artigen-betriebssysteme-verwenden-das>> sowie 
+der GNU Linux Distribution Timeline <<GNU-Linux-Distribution-Timeline>>.
+
+// Datei (Ende): ./konzepte/linux-dschungel/was-ist-debian.adoc

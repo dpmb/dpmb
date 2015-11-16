@@ -1,0 +1,12 @@
+// Datei: ./werkzeuge/debian-paketformat-im-detail/debian-paketformat-im-detail.adoc
+
+// Baustelle: Fertig
+
+[[debian-paketformat-im-detail]]
+
+== Debian-Paketformat im Detail ==
+
+include::konzepte-und-ideen-dahinter.adoc[]
+
+include::aufbau-und-format.adoc[]
+// Datei (Ende): ./werkzeuge/debian-paketformat-im-detail/debian-paketformat-im-detail.adoc

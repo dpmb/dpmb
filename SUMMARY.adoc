@@ -1,13 +1,13 @@
 = Summary
 
 [preface]
-. link:kann-denn-paketmanagement-spass-machen/kann-denn-paketmanagement-spass-machen.txt[Kann Paketmanagement Spaß machen?]
-. link:konzepte/konzepte.txt[Konzepte]
-. link:werkzeuge/werkzeuge.txt[Werkzeuge]
-. link:praxis/praxis.txt[Praxis]
-// . link:ausblick/ausblick.txt[Ausblick]
+. link:kann-denn-paketmanagement-spass-machen/kann-denn-paketmanagement-spass-machen.adoc[Kann Paketmanagement Spaß machen?]
+. link:konzepte/konzepte.adoc[Konzepte]
+. link:werkzeuge/werkzeuge.adoc[Werkzeuge]
+. link:praxis/praxis.adoc[Praxis]
+// . link:ausblick/ausblick.adoc[Ausblick]
 
 [appendix]
-. link:quellen/quellen.txt[Quellen]
-. link:anhang/anhang.txt[Anhang]
-// . link:index/index.txt[Index]
+. link:quellen/quellen.adoc[Quellen]
+. link:anhang/anhang.adoc[Anhang]
+// . link:index/index.adoc[Index]

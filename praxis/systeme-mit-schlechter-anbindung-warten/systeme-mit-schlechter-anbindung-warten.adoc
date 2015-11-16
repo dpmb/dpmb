@@ -1,0 +1,50 @@
+// Datei: ./praxis/systeme-mit-schlechter-anbindung-warten/systeme-mit-schlechter-anbindung-warten.adoc
+
+// Baustelle: Fertig
+
+// Ggf. Querverweise von
+// <<paketverwaltung-mit-eingeschraenkten-ressourcen-fuer-embedded-und-mobile-devices>>
+// und/oder <<moeglichkeiten-zur-beschleunigung>>
+
+[[systeme-mit-schlechter-internet-anbindung-warten]]
+
+== Systeme mit schlechter Internet-Anbindung warten ==
+
+Wir als Autoren und Systembetreuer haben uns mittlerweile an einen
+Internetzugang mit hoher Bandbreite gewöhnt. In der freien Wildbahn
+treffen wir aber durchaus auf Systeme, die mit weniger Bandbreite
+angebunden sind und auch gewartet werden möchten. Dazu gehört bspw. die
+Einwahl über ein Modem, via Integrated Services Digital Network (ISDN)
+oder eine volumenbeschränkte Internetanbindung. Auf mobilen Endgeräten
+erfolgt die Verbindung hingegen über GSM (2G, inkl. GPRS und EDGE), UMTS
+(3G), LTE (4G) oder auch Satellit und ist vom Standort und der
+Empfangsstärke abhängig.
+
+Grob betrachtet, gibt es dabei drei Arten von Einschränkungen, mit denen
+Sie leben müssen:
+
+* wackelige, unzuverlässige Verbindungen bei allen Funktechnologien,
+* hohe Latenz bei Satelliten- und manchen Mobilfunkverbindungen und
+* geringe Bandbreite bei einem Analog-Modem, bei ISDN und bei GSM-Verbindungen (2G)
+
+Die Situation ist dabei durchaus ähnlich wie ohne Internet, nur mit
+wenigstens ein bisschen Internet.
+
+Bei der Paketverwaltung stört am ehesten eine zu geringe Bandbreite.
+Latenz ist dabei nahezu irrelevant und bei instabilen Verbindungen
+stoßen Sie im Zweifelsfall den Download einfach nochmals an. Deswegen
+gehen wir im Folgenden vor allem auf Methoden zur Reduktion des
+Datenübertragungsvolumen ein.
+
+Dabei spielen bei der Aktualisierung genau die Programme ihre Stärken
+aus, die nicht den gesamten, aktuellen Stand der Dinge übertragen,
+sondern nur die jeweiligen Änderungen. In das Rampenlicht rücken wir
+daher nachfolgend Konzepte, welche für die Paketlisten und die
+Paketinhalte nur die relevanten Differenzen herunterladen.
+
+// debdelta
+include::debdelta.adoc[]
+
+// PDiffs
+include::pdiffs.adoc[]
+// Datei (Ende): ./praxis/systeme-mit-schlechter-anbindung-warten/systeme-mit-schlechter-anbindung-warten.adoc

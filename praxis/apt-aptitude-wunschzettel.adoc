@@ -1,0 +1,14 @@
+// Datei: ./praxis/apt-aptitude-wunschzettel.adoc
+
+// Baustelle: Notizen
+
+[[apt-aptitude-wunschzettel]]
+
+== Der APT- und `aptitude`-Wunschzettel ==
+
+Es existieren eine Reihe von Funktionen, die wir in APT und `aptitude`
+vermissen, aber die es schon woanders gibt:
+
+* `apt-get`: ausgewählte Paketquellen aktualisieren -- geht bereits mit
+SmartPM (<<gui-smartpm>>)
+// Datei (Ende): ./praxis/apt-aptitude-wunschzettel.adoc

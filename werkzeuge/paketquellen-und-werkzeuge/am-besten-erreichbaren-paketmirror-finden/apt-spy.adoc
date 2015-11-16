@@ -1,0 +1,180 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/apt-spy.adoc
+
+// Baustelle: Rohtext
+
+// ===== Paketquellen mit +apt-spy+ einstellen
+//
+// Das Werkzeug +apt-spy+ aus dem gleichnamigen Debian-Paket
+// <<Debian-Paket-apt-spy>> erstellt eine Liste der
+// <<etc-apt-sources.list-verstehen, Paketquellen>> für eine netzbasierte
+// Installation. Basis dafür sind die verfügbaren Paketmirror und deren
+// Erreichbarkeit. Im Detail gehen wir darauf im Abschnitt
+// <<paketquellen-mit-apt-spy-auswaehlen, Paketquelle mit +apt-spy+ nach
+// Bandbreite auswählen>> ein.
+
+[[paketquellen-mit-apt-spy-auswaehlen]]
+
+==== Paketquellen mit `apt-spy` nach Bandbreite auswählen ====
+
+In den meisten Fällen wissen Sie, welche Paketquellen Sie als
+Bezugspunkt für ihr Linuxsystem verwenden möchten, sei es aus
+Gewohnheit, langjähriger Erfahrung als Systembetreuer oder auf der
+Grundlage von Vorgaben für eine bereits bestehende Infrastruktur. Sind
+Sie hingegen frei in ihrer Entscheidung, kann Ihnen das Programm
+`apt-spy` <<Debian-Paket-apt-spy>> helfen, die Paketquellen für eine
+netzbasierte Installation zu ermitteln, die von ihrem Standort aus am
+besten erreichbar sind. 
+
+Dazu untersucht `apt-spy` die Paketmirrors für die angefragte Region
+bzgl. ihrer Bandbreite, Erreichbarkeit und damit indirekt zur
+Verlustrate der übertragenen Netzwerkpakete. Ohne Belang ist dabei, wie
+weit der Paketmirror netztechnisch von ihrem Standort entfernt ist. Das
+kann auch dazu führen, dass schwächere, lokale Paketmirror außen vor
+bleiben, wenn ein anderer, erreichbarer Paketmirror schneller und mit
+einer höheren Bandbreite verfügbar ist. Um einen Paketmirror einschätzen
+zu können, lädt `apt-spy` pro Spiegelserver etwa 10 MB an Daten herunter.
+Da die Liste der verfügbaren Paketmirror mehr als einhundert Einträge
+umfasst, können Sie damit durchaus an das Limit ihrer Transferrate
+stoßen (wie bei uns im Test geschehen).
+
+Im Ergebnis verringert sich die Bezugszeit von Paketen insgesamt.
+Insbesondere bei der Aktualisierung von Paketen
+(siehe <<pakete-aktualisieren>>) und im Rahmen eines
+Distributionsupgrades (siehe <<distribution-aktualisieren>>) ist das
+deutlich spürbar.
+
+`apt-spy` erzeugt eine spezifische Liste der Paketquellen in der Datei
+`/etc/apt/sources.list.d/apt-spy.list`. Den Ausgangspunkt dafür bildet
+die aktuelle Liste der Paketmirrors von ftp.debian.org. Jeder darin
+enthaltene Eintrag wird von `apt-spy` auf dessen Erreichbarkeit von
+ihrem aktuellen Standort aus überprüft. Die vielversprechendsten
+Einträge landen in o.g. Liste.
+
+// ====== `apt-spy` konfigurieren ======
+
+Zu `apt-spy` gehört eine *Konfigurationsdatei* unter
+`/etc/apt-spy.conf`. Diese enthält die Länderkennungen sowie die
+Zuordnung von Länderkennungen und Kontinenten. Nachfolgender Ausschnitt
+zeigt die Bereiche für Nordamerika und Ozeanien.
+
+.Konfiguration von `apt-spy` für Nordamerika und Ozeanien (Ausschnitt)
+----
+$ cat /etc/apt-spy.conf
+...
+North-America:
+
+CA
+US
+MX
+
+Oceania:
+
+AU
+NZ
+...
+$
+----
+
+// * schöne, ausführliche Beschreibung: 
+// ** http://debiananwenderhandbuch.de/apt-spy.html
+// ** scheint aber etwas veraltet zu sein
+
+// ====== Optionen und Beispiele ======
+
+`apt-spy` versteht eine ganze Reihe von *Optionen zur Konfiguration*,
+von denen wir Ihnen eine Auswahl vorstellen. Weitere Optionen entnehmen
+Sie bitte der Manpage zum Programm.
+
+`-d distribution`:: Debian-Veröffentlichung (<<veroeffentlichungen>>),
+für die die Paketliste erstellt werden soll
+
+`-a area`:: geographische Region, aus der die Paketmirror kommen sollen
+
+`-e Anzahl`:: 'early finish' -- legt die Anzahl der Paketmirror fest,
+die Sie abfragen möchten
+
+`-p proxy`:: Proxyserver in der Schreibweise `Hostname:Port`
+
+`-s Land`:: eine Komma-separierte Liste von Länderkürzeln, aus der die
+Paketmirror kommen sollen
+
+`update`:: Aktualisieren der Liste der Paketmirror
+
+Nun folgen eine Reihe von *Beispielen aus der Praxis*. Beispiel 1 zeigt
+Ihnen den schnellsten Debian-Paketmirror in Europa für die
+Veröffentlichung Debian 'stable':
+
+.Ermittlung der Debian-Paketmirror für die Region Europa
+----
+# apt-spy -d stable -a Europe
+
+SERVER:	ftp.at.debian.org
+Benchmarking FTP...
+		Downloaded 9001094 bytes in 3.22 seconds
+		Download speed: 2731.88 kB/sec
+
+SERVER:	debian.sil.at
+Benchmarking FTP...
+		Downloaded 9001094 bytes in 4.19 seconds
+		Download speed: 2096.46 kB/sec
+
+SERVER:	debian.sil.at
+Benchmarking FTP...
+		Downloaded 9001094 bytes in 3.66 seconds
+		Download speed: 2404.31 kB/sec
+
+SERVER:	gd.tuwien.ac.at
+Benchmarking HTTP...
+		Downloaded 9001094 bytes in 2.31 seconds
+		Download speed: 3810.42 kB/sec
+...
+Writing new sources.list file: /etc/apt/sources.list.d/apt-spy.list
+#
+----
+
+In Beispiel 2 sehen Sie, wie sie ähnliches für Deutschland ermitteln:
+
+.Ermittlung der Debian-Paketmirror für die Region Deutschland
+----
+# apt-spy -d stable -s de
+
+SERVER:	ftp.de.debian.org
+Benchmarking FTP...
+		Downloaded 8990025 bytes in 2.75 seconds
+		Download speed: 3190.72 kB/sec
+
+SERVER:	debian.inf.tu-dresden.de
+Benchmarking FTP...
+		Downloaded 8990025 bytes in 3.32 seconds
+		Download speed: 2643.16 kB/sec
+
+...
+Writing new sources.list file: /etc/apt/sources.list.d/apt-spy.list
+#
+----
+
+Die dazu von `apt-spy` erzeugte Datei unter
+`/etc/apt/sources.list.d/apt-spy.list` sieht bspw. so aus:
+
+.Erzeugte Datei `sources.list` für Deutschland
+----
+# sources.list generated by apt-spy v3.2.2
+#
+# Generated using:
+#
+# apt-spy \
+#       -d stable \
+#       -s de
+#
+deb ftp://ftp.uni-erlangen.de/debian/ stable main #contrib non-free
+deb-src ftp://ftp.uni-erlangen.de/debian/ stable main #contrib non-free
+deb http://security.debian.org/ stable/updates main
+----
+
+Bitte beachten Sie, dass die ermittelten Paketmirror stets von ihrem
+aktuellen Standort und der dort vorliegenden Netzwerkanbindung abhängen.
+Führen Sie das gleiche Kommando auf ihrem Linuxsystem aus, können die
+Ergebnisse von der Ausgabe im Buch abweichen.
+
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/apt-spy.adoc

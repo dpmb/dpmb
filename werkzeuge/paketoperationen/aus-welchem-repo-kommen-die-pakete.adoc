@@ -1,0 +1,260 @@
+// Datei: ./werkzeuge/paketoperationen/aus-welchem-repo-kommen-die-pakete.adoc
+
+// Baustelle: Fertig
+
+[[aus-welchem-repo-kommen-die-pakete]]
+=== Aus welchem Repo kommen die Pakete ===
+
+// Stichworte für den Index
+(((/etc/apt/sources.list)))
+Nutzen Sie Pakete aus verschiedenen Paketquellen in
+`/etc/apt/sources.list` (siehe <<etc-apt-sources.list-verstehen>>), ist
+es hilfreich zu wissen, woher APT ein Paket bei der Installation oder
+Aktualisierung entnehmen würde. Bei der Beantwortung dieser Frage helfen
+Ihnen die Programme `apt-cache`, `apt-show-versions`, `apt` und
+`aptitude` weiter – aber jedes auf seine Art.
+
+==== Paketquelle untersuchen mit `apt-cache policy` ====
+
+// Stichworte für den Index
+(((apt-cache, policy)))
+(((apt-pinning, Priorität eines Eintrags)))
+Rufen Sie `apt-cache` lediglich mit dem Schalter `policy` und _ohne_ die
+weitere Angabe eines Paketes auf, untersucht das Programm jede einzelne
+Paketquelle, die Sie in `/etc/apt/sources.list` eingetragen haben. Das
+Ergebnis der Analyse ist zweispaltig. In der linken Spalte erscheint ein
+Zahlenwert zur Priorität des jeweiligen Eintrags, wie er von
+`apt-pinning` genutzt wird (siehe dazu <<paketformate-mischen>>). In der
+rechten Spalte sehen Sie die Paketquelle anhand der heruntergeladenen,
+lokalen Paketliste mit zusätzlichen Informationen wie bspw. der
+Veröffentlichung oder des Distributionsbereichs. Nachfolgende
+Darstellung zeigt die Ausgabe für eine Standardinstallation von Debian
+'Wheezy' in der Version 7.5 mit dem Nutzungsschwerpunkt Deutschland.
+
+.Bewertung der Paketquellen mit `apt-cache policy`
+----
+$ apt-cache policy
+Paketdateien:
+ 100 /var/lib/dpkg/status
+     release a=now
+ 500 http://security.debian.org/ wheezy/updates/non-free Translation-en
+ 500 http://security.debian.org/ wheezy/updates/main Translation-en
+ 500 http://security.debian.org/ wheezy/updates/contrib Translation-en
+ 500 http://security.debian.org/ wheezy/updates/non-free i386 Packages
+     release v=7.0,o=Debian,a=stable,n=wheezy,l=Debian-Security,c=non-free
+     origin security.debian.org
+ 500 http://security.debian.org/ wheezy/updates/contrib i386 Packages
+     release v=7.0,o=Debian,a=stable,n=wheezy,l=Debian-Security,c=contrib
+     origin security.debian.org
+ 500 http://security.debian.org/ wheezy/updates/main i386 Packages
+     release v=7.0,o=Debian,a=stable,n=wheezy,l=Debian-Security,c=main
+     origin security.debian.org
+ 500 http://ftp.de.debian.org/debian/ wheezy/non-free Translation-en
+ 500 http://ftp.de.debian.org/debian/ wheezy/main Translation-en
+ 500 http://ftp.de.debian.org/debian/ wheezy/main Translation-de_DE
+ 500 http://ftp.de.debian.org/debian/ wheezy/main Translation-de
+ 500 http://ftp.de.debian.org/debian/ wheezy/contrib Translation-en
+ 500 http://ftp.de.debian.org/debian/ wheezy/non-free i386 Packages
+     release v=7.5,o=Debian,a=stable,n=wheezy,l=Debian,c=non-free
+     origin ftp.de.debian.org
+ 500 http://ftp.de.debian.org/debian/ wheezy/contrib i386 Packages
+     release v=7.5,o=Debian,a=stable,n=wheezy,l=Debian,c=contrib
+     origin ftp.de.debian.org
+ 500 http://ftp.de.debian.org/debian/ wheezy/main i386 Packages
+     release v=7.5,o=Debian,a=stable,n=wheezy,l=Debian,c=main
+     origin ftp.de.debian.org
+Mit Pinning verwaltete Pakete:
+$
+----
+
+Geben Sie hingegen beim Aufruf als Parameter einen Paketnamen an, prüft
+`apt-cache`, ob das Paket bereits auf Ihrem System installiert ist oder
+ob es ein neueres Paket gibt und falls ja, von welchem Paketmirror das
+Paket in diesem Fall käme.
+
+Beispiel 1 zeigt das Vorgehen anhand des Pakets 'gdm3'. Im vorliegenden
+Fall ist dieses bereits installiert (Status von `dpkg`) Falls es das
+noch nicht wäre, käme das Paket aus dem deutschen Debian-Repository.
+
+.Verfügbarkeit für das Paket 'gdm3' feststellen
+----
+$ apt-cache policy gdm3
+gdm3:
+  Installiert:           3.4.1-8
+  Installationskandidat: 3.4.1-8
+  Versionstabelle:
+ *** 3.4.1-8 0
+        500 http://ftp.de.debian.org/debian/ wheezy/main i386 Packages
+        100 /var/lib/dpkg/status
+$
+----
+
+Beispiel 2 betrifft das Paket 'linux-libc-dev'. Dieses ist bereits in
+Version 3.2.51-1 installiert, aber es gibt eine aktuellere Variante
+(3.2.57-3) sowie zusätzlich eine Sicherheitsaktualisierung
+(Security-Update) mit der Versionsnummer 3.2.46-1+deb7u1. In diesem Fall
+ist die Version 3.2.57-3 der Installationskandidat, da dieses Paket die
+aktuellste Variante darstellt.
+
+.Verfügbarkeit für das Paket 'linux-libc-dev' feststellen
+----
+$ apt-cache policy linux-libc-dev
+linux-libc-dev:
+  Installiert:           3.2.51-1
+  Installationskandidat: 3.2.57-3
+  Versionstabelle:
+     3.2.57-3 0
+        500 http://ftp.de.debian.org/debian/ wheezy/main i386 Packages
+ *** 3.2.51-1 0
+        100 /var/lib/dpkg/status
+     3.2.46-1+deb7u1 0
+        500 http://security.debian.org/ wheezy/updates/main i386 Packages
+$
+----
+
+Als Beispiel 3 steht das Paket 'kteatime' im Fokus. Dieses ist noch
+nicht installiert und könnte nachgezogen werden. Dabei käme das Paket
+aus dem deutschen Debian-Repository.
+
+.Verfügbarkeit für das Paket 'kteatime' feststellen
+----
+$ apt-cache policy kteatime
+kteatime:
+  Installiert:           (keine)
+  Installationskandidat: 4:4.8.4-1
+  Versionstabelle:
+     4:4.8.4-1 0
+        500 http://ftp.de.debian.org/debian/ wheezy/main i386 Packages
+$
+----
+
+[[verfuegbare-paketversionen-ermitteln]]
+==== Verfügbare Paketversionen mit `apt-cache madison` ermitteln ====
+
+// Stichworte für den Index
+(((apt-cache, madison)))
+(((Debianpaket, apt-doc)))
+`apt-cache` verfügt ebenso über ein Unterkommando namens `madison`.
+Damit finden Sie heraus, welche Pakete derzeit von den Spiegelservern in
+einer neueren Version verfügbar sind. Nachfolgender Ausdruck zeigt das
+für das Paket 'apt-doc'.
+
+.Ausgabe von `apt-cache` mit dem Unterkommando `madison` für 'apt-doc'
+----
+$ apt-cache madison apt-doc
+   apt-doc | 0.9.7.9+deb7u2 | http://ftp.de.debian.org/debian/ wheezy/main i386 Packages
+   apt-doc | 0.9.7.9+deb7u2 | http://security.debian.org/ wheezy/updates/main i386 Packages
+       apt | 0.9.7.9+deb7u2 | http://ftp.de.debian.org/debian/ wheezy/main Sources
+       apt | 0.9.7.9+deb7u2 | http://security.debian.org/ wheezy/updates/main Sources
+$
+----
+
+// Stichworte für den Index
+(((Debianpaket, devscripts)))
+(((rmadison)))
+Wollen Sie diese Informationen nicht nur für die auf Ihrem System
+genutzten Architekturen und Veröffentlichungen sehen, sondern für alle
+Architekturen und Veröffentlichungen von Debian, so können Sie das
+Programm `rmadison` aus dem Paket 'devscripts'
+<<Debian-Paket-devscripts>> verwenden. Es fragt dazu per HTTP eine
+regelmäßig aktualisierte Quelle im Internet ab, d.h. Sie brauchen
+Internetzugriff, um `rmadison` zu nutzen.
+
+Als Parameter erwartet `rmadison` einen oder mehrere Paketnamen, nach
+denen es dann recherchiert. Als Ergebnis sehen Sie in der linken Spalte
+den Paketnamen, gefolgt von der Versionsnummer des Pakets, der
+Veröffentlichung und am Schluss die Architektur, für die das Paket
+verfügbar ist. Im nachfolgenden Beispielaufruf ist die Architektur
+'all', da es sich um das Dokumentationspaket 'apt-doc' handelt, welches
+auf allen Plattformen gleich ist.
+
+.Ausgabe von `rmadison` für 'apt-doc'
+----
+$ rmadison apt-doc
+ apt-doc | 0.8.10.3+squeeze1 | squeeze         | all
+ apt-doc | 0.8.10.3+squeeze2 | squeeze-lts     | all
+ apt-doc | 0.9.7.9+deb7u2    | wheezy-security | all
+ apt-doc | 0.9.7.9+deb7u2    | wheezy          | all
+ apt-doc | 1.0.6             | jessie          | all
+ apt-doc | 1.0.6             | sid             | all
+ apt-doc | 1.1~exp1          | experimental    | all
+ apt-doc | 1.1~exp2          | experimental    | all
+$
+----
+
+// Schlagworte für den Index
+(((apt-cache, madison)))
+(((madison)))
+(((rmadison)))
+Sowohl das `apt-cache`-Unterkommando `madison` als auch `rmadison`
+sind benannt nach `madison`, einem Programm welches beim Verwalten der
+Debian-APT-Archive zum Einsatz kommt. Da das originale `madison` aber
+direkt auf dem Server aufgerufen werden muss, auf dem das
+Debian-APT-Archiv zusammengebaut wurde, ist es nur für
+Debian-Entwickler nutzbar – und selbst für diese eher umständlich, da
+sie sich erst per SSH auf jenem Server einloggen müssen. Diese beiden
+Ersatzkommandos sind da doch wesentlich einfacher und vor allem für
+jedermann zu benutzen.
+
+// TODO: Obiger Absatz könnte evtl. auch an den Anfang dieses
+// Abschnittes als Motivation. Und vermutlich braucht er nochmal eine
+// Entbandwurmsatzisierung. ;-)
+
+==== Verfügbare Paketversionen mit `apt-show-versions` ermitteln ====
+
+// Stichworte für den Index
+(((Debianpaket, apt-show-versions)))
+(((Debianpaket, zsh)))
+(((apt-show-versions)))
+'apt-show-versions' <<Debian-Paket-apt-show-versions>> ist ein Paket,
+welches jedoch nicht zur Standardinstallation von Debian zählt. Als
+Parameter geben Sie dem gleichnamigen Programm den Namen des gewünschten
+Pakets an, für welches Sie Informationen zu den verfügbaren Varianten
+wünschen. Das Programm ist insbesondere in gemischten Umgebungen
+interessant, d.h. wenn Pakete aus verschiedenen Veröffentlichungen
+gleichzeitig verwendet werden.
+
+Nachfolgendes Beispiel zeigt die Ausgabe für das Paket 'zsh' auf einem
+Debian 7 'Wheezy':
+
+.Versionen anzeigen für das Paket 'zsh'
+----
+$ apt-show-versions zsh
+zsh/wheezy uptodate 4.3.17-1
+$
+----
+
+==== APT 1.0 mit dem Unterkommando `list` ====
+
+// Stichworte für den Index
+(((Debianpaket, apt)))
+(((apt, list)))
+Ab Debian 8 'Jessie' und Ubuntu 14.04 LTS 'Trusty Tahr' wird APT auf der
+Basis der Version 1.0 ausgeliefert. Ab dieser Version verlieren die
+zuvor vorgestellten Kommandos `apt-cache` und `apt-show-versions` etwas
+an Bedeutung, da das Kommando `apt` mit dem neuen Unterkommando `list`
+und einem Paketnamen als Parameter ähnliches leistet. Die Ausgabe auf
+dem Terminal erfolgt in Farbe, nur lässt sich das hier im Buch leider
+weniger gut illustrieren.
+
+Nachfolgend sehen Sie wiederum die Ausgabe für das Paket 'zsh'. Nach dem
+Paketnamen erscheinen die Veröffentlichung, die Versionsnummer und die
+genutzte Architektur (hier 'amd64'). In den Klammern sehen Sie neben dem
+Installationsstatus eine kurze Angabe, auf welche Version Sie das Paket
+aktualisieren können.
+
+.Neue Möglichkeiten mit APT 1.0
+----
+$ apt list zsh
+Listing... Done
+zsh/unstable,testing,now 5.0.5-3 amd64 [installed,upgradable to: 5.0.5-4]
+$
+----
+
+==== Aktualisierbare Pakete mit `aptitude` ermitteln ====
+
+Auch `aptitude` hilft Ihnen dabei, die Pakete zu finden, für die es
+Neuerungen gibt. Näheres dazu lesen Sie unter Aktualisierbare Pakete
+anzeigen in <<aktualisierbare-pakete-anzeigen>>.
+
+// Datei (Ende): ./werkzeuge/paketoperationen/aus-welchem-repo-kommen-die-pakete.adoc

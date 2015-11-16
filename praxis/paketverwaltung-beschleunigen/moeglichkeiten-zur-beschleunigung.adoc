@@ -1,0 +1,37 @@
+// Datei: ./praxis/paketverwaltung-beschleunigen/moeglichkeiten-zur-beschleunigung.adoc
+
+// Baustelle: Notizen
+
+=== Möglichkeiten zur Beschleunigung ===
+
+* Internetzugang durch dickere Leitung ersetzen
+* Hardware (Router) durch leistungsstärkere Hardware ersetzen
+* Aktualisierung zu den Zeiten vornehmen, wo es die wenigsten (realen)
+Benutzer stört oder beeinträchtigt
+* eatmydata für (virtuelle) Wegwerfmaschinen
+* `/var/cache/apt/` als tmpfs mounten, siehe <<cache-verzeichnis-auf-separater-partition>>
+* debdelta, siehe <<systeme-mit-schlechter-internet-anbindung-warten>>
+* PDiffs (gibt's nur bei Testing, Experimental und Sid), siehe auch <<systeme-mit-schlechter-internet-anbindung-warten>>
+* lokalen Zwischenspeicher für Pakete einrichten:
+** Proxy, der bereits herunterladene Pakete puffert (siehe <<apt-cache>>)
+** eigener Mirror (siehe <<eigenen-apt-mirror-aufsetzen>>)
+
+* weitere Softwarepakete zur Beschleunigung
+** 'apt-fast' <<apt-fast>> und <<Debian-Paket-apt-fast>>
+*** Shell-Wrapper um APT und `aptitude`
+*** Download der Pakete über mehrere, parallele Verbindungen
+*** benötigt den Downloadhelfer 'aria2' <<Debian-Paket-aria2>> oder 'axel'
+*** weder in Debian noch in Ubuntu offiziell drin, nur per Launchpad-PPA
+*** `apt-fast` akzeptiert alle Aufrufparameter von APT und `aptitude`
+und reicht diese einfach durch
+*** Aufruf ändert sich in:
+
+.Aufruf der Paketinstallation mittels `apt-fast`
+----
+# apt-fast install cssed
+...
+#
+----
+
+
+// Datei (Ende): ./praxis/paketverwaltung-beschleunigen/moeglichkeiten-zur-beschleunigung.adoc

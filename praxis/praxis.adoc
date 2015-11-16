@@ -1,0 +1,112 @@
+// Datei: ./praxis/praxis.adoc
+
+// Baustelle: Rohtext
+
+include::teil-praxis.adoc[]
+
+// == Feinheiten von APT und aptitude ==
+
+// - APT und aptitude auf die eigenen Bedürfnisse anpassen
+include::apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen.adoc[]
+
+// - mit aptitude Vormerkungen machen
+include::mit-aptitude-vormerkungen-machen/mit-aptitude-vormerkungen-machen.adoc[]
+
+// - APT und aptitude mischen
+include::apt-und-aptitude-mischen/apt-und-aptitude-mischen.adoc[]
+
+
+// == Paketbezogene Aktionen vereinfachen ==
+
+// - Pakete leichter mit Debtags finden
+include::debtags/debtags.adoc[]
+
+// - Mehrere Pakete in einem Schritt ändern
+include::mehrere-pakete-in-einem-schritt-aendern/mehrere-pakete-in-einem-schritt-aendern.adoc[]
+
+// - nur bestimmte Pakete aktualisieren
+include::ausgewaehlte-pakete-aktualisieren.adoc[]
+
+// - bestimmte Pakete behalten
+include::ausgewaehlte-pakete-nicht-aktualisieren.adoc[]
+
+// - Pakete bei Bedarf ergänzen
+include::fehlende-pakete-bei-bedarf-hinzufuegen/fehlende-pakete-bei-bedarf-hinzufuegen.adoc[]
+
+// - Umgang mit /etc/alternatives (Debian alternatives system)
+include::alternatives/alternatives.adoc[]
+
+
+// == Auf andere Paketversionen zugreifen ==
+
+// - Zurückportierungen
+include::debian-backports.adoc[]
+
+// - Pakete unterschiedlicher Veröffentlichungen mischen
+include::veroeffentlichungen-mischen/veroeffentlichungen-mischen.adoc[]
+
+// - eigene Pakete passend zur Installation erstellen
+include::checkinstall.adoc[]
+
+// - unterschiedliche Paketformate mischen (deb, rpm)
+include::paketformate-mischen/paketformate-mischen.adoc[]
+
+
+// == Webbasierte Paketinstallation
+include::webbasierte-installation-von-paketen/webbasierte-installation-von-paketen.adoc[]
+
+
+// == Verarbeitung und Zugriffszeiten auf Pakete verringern ==
+
+// - Paketverwaltung beschleunigen
+include::paketverwaltung-beschleunigen/paketverwaltung-beschleunigen.adoc[]
+
+// - mit einem Paketcache
+include::apt-cache/apt-cache.adoc[]
+
+// - mit einem separaten Paketverzeichnis
+include::cache-verzeichnis-auf-separater-partition/cache-verzeichnis-auf-separater-partition.adoc[]
+
+// - mit Hilfe eines eigenen Mirrors
+include::apt-mirror/eigenen-apt-mirror-anlegen.adoc[]
+
+// - Plattenplatz sparen mit der Paketverwaltung
+include::plattenplatz-sparen-mit-der-paketverwaltung.adoc[]
+
+
+// == Ganze Systeminstallationen und die Pflege vereinfachen ==
+
+// - automatisierte Installation
+include::automatisierte-installation/automatisierte-installation.adoc[]
+
+// - automatisierte Aktualisierung
+include::automatisierte-aktualisierung/automatisierte-aktualisierung.adoc[]
+
+// - Qualitätskontrolle
+include::qualitaetskontrolle/qualitaetskontrolle.adoc[]
+
+// - Paketverwaltung als VCS
+include::versionierte-paketverwaltung.adoc[]
+
+// - Schnappschüsse einer Installation
+include::snapshots.adoc[]
+
+
+// == Paketverwaltung mit eingeschränkten Ressourcen für Embedded und Mobile Devices ==
+
+// - mobile Geräte
+include::mobile-geraete/mobile-geraete.adoc[]
+
+// - Paketverwaltung ganz ohne Internet
+include::paketverwaltung-ohne-internet/paketverwaltung-ohne-internet.adoc[]
+
+// - Paketveraltung mit schlechter Anbindung
+include::systeme-mit-schlechter-anbindung-warten/systeme-mit-schlechter-anbindung-warten.adoc[]
+
+
+// == Was fehlt uns noch ==
+
+include::apt-aptitude-wunschzettel.adoc[]
+
+
+// Datei (Ende): ./praxis/praxis.adoc

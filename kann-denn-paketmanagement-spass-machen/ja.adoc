@@ -1,0 +1,115 @@
+// Datei: ./kann-denn-paketmanagement-spass-machen/ja.adoc
+
+// Baustelle: Fertig
+
+[[kann-paketmanagement-spass-machen]]
+=== Kann Paketmanagement Spaß machen? ===
+
+Ja! Und wir werden Ihnen in diesem Buch zeigen, warum das so ist.
+
+// Stichworte für den Index
+(((Softwareentwicklung,Abhängigkeiten)))
+(((Softwareentwicklung,Ablauf)))
+(((Softwareentwicklung,Bausteine)))
+(((Softwareentwicklung,Modularität)))
+Software ist heute meist sehr komplex und darum modular aufgebaut. Das
+gilt nicht nur für das Betriebssystem Linux und andere freie
+Anwendungen, sondern hat sich als allgemeines Prinzip in der
+Softwareentwicklung durchgesetzt.
+
+Modularität hat mehrere Facetten: einzelne Bausteine für spezifische
+Aufgaben, klare Beschreibungen zu deren Funktion, definierte
+Schnittstellen und Protokolle zur Kommunikation untereinander. All dies
+gewährleistet die Kombination und Austauschbarkeit von Komponenten, also
+die flexible Anpassung der Software an konkrete Anforderungen.
+Modularität heißt aber auch Abhängigkeiten: Bausteine und Funktionen
+bedingen einander, bauen aufeinander auf, verlangen bei der Installation
+eine vorgegebene Reihenfolge – und stehen ggf. zueinander in Konflikt.
+Das betrifft insbesondere Varianten und Entwicklungsstufen einer
+Implementierung.
+
+// Stichworte für den Index
+(((Softwareentwicklung,Zerlegung in Pakete)))
+Auf die Verwaltung von Software übertragen, heißt das: Die einzelnen
+Module werden als _Pakete_ (_Packages_) bereitgestellt. Das setzt
+voraus, dass deren Bezug zueinander (_Relation_) klar geregelt ist; nur
+so kann ein Betriebssystem wie Debian GNU/Linux (siehe
+<<was-ist-debian>>) funktionieren und weiterentwickelt werden, an dem
+Hunderte Entwickler aus der ganzen Welt mitwirken und das inzwischen aus
+mehr als 40.000 Paketen besteht. Ohne ein leistungsfähiges
+Paketmanagement wäre dies unmöglich.
+
+// Stichworte für den Index
+(((Debian,Derivate)))
+(((Debian,Dokumentation)))
+(((Debian,Entwicklungszweige)))
+(((Debian,Lizenzen)))
+(((Debian,Veröffentlichungszyklus)))
+Debian GNU/Linux und davon abgeleitete Betriebssysteme – wie Ubuntu
+<<Ubuntu>>, Linux Mint <<LinuxMint>>, Knoppix <<Knoppix>> oder Grml
+<<Grml>> – setzen auf dem Paketformat `deb` und der Paketverwaltung mit
+`dpkg` und APT auf. Neben dem RPM-Paketformat (siehe
+<<varianten-und-formate-fuer-softwarepakete>>) ist die Kombination aus
+dem `deb`-Format und seinen Werkzeugen am weitesten unter den
+verschiedenen Linux-Distributionen verbreitet. Das hat mehrere Gründe:
+
+* Es funktioniert verlässlich.
+
+* Es ist ausführlich und meist auch verständlich dokumentiert. Leider
+ist die Dokumentation aber nicht ganz einheitlich und recht verstreut –
+weshalb nicht zuletzt auch dieses Buch entstanden ist.
+
+* Pakete für Debian GNU/Linux sind aufeinander abgestimmt, wurden vorab
+intensiv getestet und unterliegen strengen Qualitätskontrollen.
+
+* Pakete für Debian GNU/Linux werden nach ihrer Veröffentlichung
+(_Release_) bzw. ihrem Entwicklungszweig kategorisiert: 'oldoldstable',
+'oldstable', 'stable', 'testing', 'unstable' oder 'experimental'. Ein
+Paket für Debian GNU/Linux kann in mehreren dieser Zweige parallel
+vorliegen und unterscheidet sich nur in seinem jeweiligen ``Reifegrad''.
+Als Benutzer wissen Sie daher genau, worauf Sie sich einlassen, wenn Sie
+einen bestimmten Entwicklungsstand benutzen (falls nicht, lesen Sie in
+<<veroeffentlichungen>> nach). Das Debian-Derivat namens Ubuntu handhabt
+das etwas anders: Es unterscheidet nur zwischen mehreren stabilen
+Veröffentlichungen und dem Entwicklungszweig. Im Rahmen einer
+halbjährlichen Freigabe wird aus dem Entwicklungszweig die nachfolgende,
+stabile Veröffentlichung.
+
+* Kein Stress mit Lizenzen. Es ist klar geregelt, welche Bedingungen ein
+Paket erfüllen muss, damit es überhaupt in den offiziellen Bestand von
+Debian GNU/Linux unter den Distributionsbereich 'main' Eingang findet.
+Alle anderen Pakete werden in die Bereiche 'contrib' oder
+'non-free' einsortiert. Ubuntu kennt kein Äquivalent zu 'contrib' und
+verwendet statt 'non-free' die beiden Bereiche 'restricted' und
+'multiverse' (siehe <<distributionsbereiche>>).
+
+* Die beiden Debian-Entwicklungszweige 'unstable' und 'testing' (siehe
+<<veroeffentlichungen>>) wie auch der Bereich 'Debian Backports' (siehe
+<<debian-backports>>) bekommen regelmäßig neue Pakete, die das
+Paketverwaltungswerkzeug `aptitude` (siehe <<aptitude>>) in einer
+eigenen Liste übersichtlich darstellt. Das ist fast wie Weihnachten, nur
+günstiger und häufiger.
+
+// Stichworte für den Index
+(((Werkzeuge,Bordmittel)))
+All dies gewährleistet zwar nicht, dass Software fehlerfrei ist,
+allerdings reduziert dieses Vorgehen die Zahl der Fehlerquellen
+deutlich. Es stellt insbesondere sicher, dass sich Softwarepakete unter
+Berücksichtigung ihrer Abhängigkeiten konfliktfrei installieren,
+konfigurieren, ausprobieren und auch wieder vollständig aus dem System
+entfernen lassen. Der Fall, dass andere, bereits integrierte Komponenten
+Schaden nehmen, ist bei korrektem Vorgehen nahezu ausgeschlossen. Falls
+das Problem doch auftritt, ist es definitiv in überschaubarer Zeit mit
+Bordmitteln zu beheben. Diese Werkzeuge stehen im Mittelpunkt dieses
+Buches.
+
+Die Sorge, dass Sie durch Ausprobieren Ihr Arbeitsgerät unbenutzbar
+machen, ist unberechtigt – zumindest innerhalb von Debian 'stable'.
+Aber auch in Debian 'unstable' passiert das nur sehr selten.
+Ausführlicher gehen wir darauf im Zusammenhang mit
+Distributionsbereichen (siehe <<distributionsbereiche>>) und
+Veröffentlichungen (siehe <<veroeffentlichungen>>) ein. Fühlen Sie sich
+also ausdrücklich ermutigt, mit den Paketen Ihres Debian-Systems zu
+experimentieren!
+
+// Datei (Ende): ./kann-denn-paketmanagement-spass-machen/ja.adoc

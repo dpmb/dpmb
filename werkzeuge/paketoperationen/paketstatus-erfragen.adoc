@@ -1,0 +1,231 @@
+// Datei: ./werkzeuge/paketoperationen/paketstatus-erfragen.adoc
+
+// Baustelle: Fertig
+
+[[paketstatus-erfragen]]
+
+=== Paketstatus erfragen ===
+
+// Stichworte für den Index
+(((Paketstatus anzeigen)))
+Diese Aktion betrifft meist nur ein einzelnes Paket, welches auf dem
+System installiert ist oder war. Im Alltag ergeben sich mehrere
+Situationen, in denen das Wissen über den Zustand eines Paketes wichtig
+ist. 
+
+Die Grundfrage ist häufig, ob derzeit ein bestimmtes Paket oder Programm
+auf Ihrem Linuxsystem installiert ist, und falls ja, in welchem Zustand
+befindet sich dieses Paket. Es kann vollständig oder nur teilweise
+installiert sein, liegt in nicht konfiguriertem Status vor oder wurde
+möglicherweise bereits wieder entfernt. Zu klären ist in dem Fall auch,
+ob es vollständig entfernt wurde oder noch ``Reste'' übrig sind. Dazu
+zählen die Konfigurationsdateien zu den Paketen bzw. den Programmen
+daraus. Darüberhinaus ist interessant, welche zusätzlichen Dateien
+verfügbar sind, bspw. Übersetzungen bzw. Sprachpakete.
+
+// Stichworte für den Index
+(((dpkg, -l)))
+Eine kompakte Übersicht erhalten Sie mit Hilfe des Kommandos
+`dpkg -l Paketname` (siehe dazu
+<<liste-der-installierten-pakete-anzeigen-und-deuten>>). Ausführlicher
+sind die Ausgaben zur `dpkg`-Option `-s` sowie den Aufrufen von
+`aptitude show` und `apt-cache show`.
+
+[[paketstatus-dpkg]]
+==== `dpkg -s Paketname` (Langform `--status`) ====
+
+// Stichworte für den Index
+(((dpkg, -s)))
+(((dpkg, --status)))
+(((grep-status, -F)))
+(((grep-status, -X)))
+Mit diesem Aufruf ermitteln Sie den Status eines installierten Paketes.
+`dpkg` gibt bspw. die Paketfelder Paketname
+(<<benennung-eines-debian-pakets>>), Status, Priorität
+(<<paket-prioritaet-und-essentielle-pakete>>), Paketkategorie
+(<<sortierung-der-pakete-nach-verwendungszweck>>), installierte Größe,
+Maintainer, Architektur (<<debian-architekturen>>) und Version
+(<<benennung-eines-debian-pakets>>) aus. Darunter listet `dpkg` die
+dazugehörige, hinterlegte Paketbeschreibung auf.
+
+Der Aufruf ist identisch zu `grep-status -F Package -X htop`, wobei Sie
+mit `-F` das entsprechende Paketfeld und mit `-X` den Paketnamen
+angeben. Das Kommando `grep-status` ist Bestandteil des Pakets
+'dctrl-tools' <<Debian-Paket-dctrl-tools>>.
+
+.Status des Pakets 'htop' mittels `dpkg` ermitteln
+----
+$ dpkg -s htop
+Package: htop
+Status: install ok installed
+Priority: optional
+Section: utils
+Installed-Size: 195
+Maintainer: Eugene V. Lyubimkin <jackyf@debian.org>
+Architecture: i386
+Version: 1.0.1-1
+Depends: libc6 (>= 2.3.4), libncursesw5 (>= 5.6+20070908), libtinfo5
+Suggests: strace, ltrace
+Description: interactive processes viewer
+ Htop is an ncursed-based process viewer similar to top, but it
+ allows one to scroll the list vertically and horizontally to see
+ all processes and their full command lines.
+ .
+ Tasks related to processes (killing, renicing) can be done without
+ entering their PIDs.
+Homepage: http://htop.sourceforge.net
+$
+----
+
+[[paketstatus-apt-cache]]
+==== `apt-cache show Paketname` ====
+
+// Stichworte für den Index
+(((apt-cache, show)))
+(((Debianpaket, apt)))
+`apt-cache` ist Bestandteil des Debian-Pakets 'apt'
+<<Debian-Paket-apt>>. Der Aufruf `apt-cache show Paketname` liefert ein
+ähnliches Ergebnis wie obiges `dpkg -s Paketname`, ist jedoch noch
+ausführlicher. Neben einer übersetzten Paketbeschreibung (Lokalisierung,
+sofern vorhanden) erscheinen zusätzlich die Debtags (siehe
+<<erweiterte-paketklassifikation-mit-debtags>>) zum Paket, der Dateiname
+und Pfad im Paketmirror und die GPG-Keys zur Validierung des Pakets
+(siehe <<bezogenes-paket-verifizieren>>).
+
+.Status des Paketes 'htop' mit `apt-cache` ermitteln
+----
+$ apt-cache show htop
+Package: htop
+Version: 1.0.1-1
+Installed-Size: 195
+Maintainer: Eugene V. Lyubimkin <jackyf@debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.3.4), libncursesw5 (>= 5.6+20070908), libtinfo5
+Suggests: strace, ltrace
+Description-de: Interaktiver Prozessbetrachter
+ Htop ist ein ncurses-basierter Prozessbetrachter ähnlich wie top, jedoch
+ ermöglicht er Ihnen die Liste vertikal und horizontal zu durchlaufen, um
+ alle Prozesse und deren vollständige Kommandozeilen zu sehen.
+ .
+ Mit Prozessen verbundene Aufgaben wie das (zwangsweise) Beenden und die
+ Neufestlegung der Priorität können ohne Eingabe der PIDs erledigt werden.
+Homepage: http://htop.sourceforge.net
+Description-md5: 8eb5aa19b3c92a975dc78e2165f6688d
+Tag: admin::monitoring, interface::text-mode, role::program, scope::utility,
+ uitoolkit::ncurses, use::monitor, works-with::software:running
+Section: utils
+Priority: optional
+Filename: pool/main/h/htop/htop_1.0.1-1_i386.deb
+Size: 71634
+MD5sum: 9a12ed8d648a0b16a08f16aa06a6ee9c
+SHA1: 25eb706b210a165efae3a149338c129c383b82df
+SHA256: b41970322366d8a8fd174aa32b223dd54d05e4ab1dafddd97390e0fc5f17ed41
+$
+----
+
+[[paketstatus-apt-cache-showpkg]]
+==== `apt-cache showpkg` ====
+
+// Stichworte für den Index
+(((apt-cache, showpkg)))
+(((Debianpaket, apt)))
+Desweiteren verfügt `apt-cache` über das Unterkommando `showpkg`, mit dem
+Sie Paketabhängigkeiten und die verfügbaren Übersetzungen ermitteln
+können. Detaillierter gehen wir auf die Ermittlung der einfachen und
+umgekehrten Paketabhängigkeiten in <<paketabhaengigkeiten-anzeigen>> ein.
+
+.Detailansicht zum Paket 'htop' via `apt-cache showpkg`
+----
+$ apt-cache showpkg htop
+Package: htop
+Versions: 
+1.0.1-1 (/var/lib/apt/lists/ftp.de.debian.org_debian_dists_wheezy_main_binary-i386_Packages) (/var/lib/dpkg/status)
+ Description Language: 
+                 File: /var/lib/apt/lists/ftp.de.debian.org_debian_dists_wheezy_main_binary-i386_Packages
+                  MD5: 8eb5aa19b3c92a975dc78e2165f6688d
+ Description Language: de
+                 File: /var/lib/apt/lists/ftp.de.debian.org_debian_dists_wheezy_main_i18n_Translation-de
+                  MD5: 8eb5aa19b3c92a975dc78e2165f6688d
+ Description Language: en
+                 File: /var/lib/apt/lists/ftp.de.debian.org_debian_dists_wheezy_main_i18n_Translation-en
+                  MD5: 8eb5aa19b3c92a975dc78e2165f6688d
+
+
+Reverse Depends: 
+  education-common,htop
+Dependencies: 
+1.0.1-1 - libc6 (2 2.3.4) libncursesw5 (2 5.6+20070908) libtinfo5 (0 (null)) strace (0 (null)) ltrace (0 (null)) 
+Provides: 
+1.0.1-1 - 
+Reverse Provides:
+$
+----
+
+[[paketstatus-aptitude]]
+==== `aptitude show Paketname` ====
+
+// Stichworte für den Index
+(((aptitude, show)))
+(((Debianpaket, aptitude)))
+Das Ergebnis des Aufrufs von `aptitude show` kombiniert die Ausgabe
+von `dpkg -s` mit Teilen von `apt-cache show`. Hervorzuheben sind die
+vollständig übersetzte Ausgabe samt Paketbeschreibung (Lokalisierung),
+die Paketflags (siehe <<paketflags>>) und die Debtags (siehe
+<<erweiterte-paketklassifikation-mit-debtags>>) zum Paket.
+
+.Ausgabe der Statusinformationen zum Paket 'htop' mittels `aptitude`
+image::werkzeuge/paketoperationen/aptitude-show.png[id="fig.aptitude-show", width="50%"]
+
+[[paketstatus-apt-mark]]
+==== Anfragen mit `apt-mark` ====
+
+// Stichworte für den Index
+(((apt-mark, showauto)))
+(((apt-mark, showmanual)))
+(((Debianpaket, apt)))
+`apt-mark` ist ebenfalls ein Kommando aus dem Paket 'apt'. Es zeigt
+Ihnen einerseits die Pakete an, die bereits mit einem bestimmten
+Paketflag (siehe <<paketflags>>) versehen wurden, andererseits erlaubt
+es Ihnen auch, diese Paketflags explizit zu setzen.
+
+Mit den beiden Schaltern `showauto` und `showmanual` zeigen Sie die
+automatisch bzw. manuell installierten Pakete an. Die nachfolgende
+Ausgabe zeigt letzteres, auf automatisch installierte Pakete gehen wir
+in <<automatisch-installierte-pakete-anzeigen>> genauer ein.
+
+.Manuell installierte Pakete anzeigen
+----
+$ apt-mark showmanual '.*tex$'
+dblatex
+texlive-xetex
+$
+----
+
+// Stichworte für den Index
+(((apt-mark, hold)))
+(((apt-mark, unhold)))
+(((apt-mark, showhold)))
+Für Pakete, deren aktueller Zustand gehalten werden soll, hilft Ihnen
+dieser Aufruf mit dem Schalter `showhold`. Hier sehen Sie das in
+Kombination mit den beiden Schaltern `hold` und `unhold` zum Setzen und
+Entfernen der Markierung am Beispiel des Pakets 'xpdf'.
+
+.Pakete, deren Zustand gehalten wird
+----
+# apt-mark hold xpdf
+xpdf auf Halten gesetzt.
+# apt-mark showhold xpdf
+xpdf
+# apt-mark unhold xpdf
+Halten-Markierung für xpdf entfernt.
+#
+----
+
+Weiterführende Informationen zu den vier Schaltern `auto`, `manual`,
+`hold` und `unhold` erhalten Sie unter Paketflags (siehe
+<<paketflags>>), Festlegen einer Paketversion durch explizites Setzen
+einer Markierung mit `apt-mark` (siehe
+<<ausgewaehlte-pakete-nicht-aktualisieren>>) sowie in Warum ist ein
+Paket (nicht) installiert (siehe <<warum-ist-ein-paket-installiert>>).
+
+// Datei (Ende): ./werkzeuge/paketoperationen/paketstatus-erfragen.adoc

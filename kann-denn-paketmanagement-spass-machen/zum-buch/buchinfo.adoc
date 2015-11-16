@@ -1,0 +1,22 @@
+// Datei: ./kann-denn-paketmanagement-spass-machen/zum-buch/buchinfo.adoc
+
+// Baustelle: Fertig
+
+[[buchinfo]]
+
+==== Buchinfo ====
+
+// Stichworte für den Index
+(((Buch,Anmerkungen)))
+(((Buch,Errata)))
+(((Buch,Fragen)))
+(((Buch,Webseite dazu)))
+Wir pflegen eine buchbegleitende Webseite unter der URL:
+
+http://www.debian-paketmanagement.de/
+
+Darauf finden Sie neben einer Liste der Errata und deren Korrekturen
+auch inhaltliche Ergänzungen und Aktualisierungen. Natürlich freuen wir
+uns auch über Ihre Fragen und Anmerkungen!
+
+// Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/buchinfo.adoc

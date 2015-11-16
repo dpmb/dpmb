@@ -1,0 +1,10 @@
+// Datei: ./praxis/webbasierte-installation-von-paketen/apturl-in-der-praxis.adoc
+
+// Baustelle: Notizen
+
+=== apturl in der Praxis ===
+
+* Todo:
+** Einsatzszenario
+** Empfehlungen zur Nutzung
+// Datei (Ende): ./praxis/webbasierte-installation-von-paketen/apturl-in-der-praxis.adoc

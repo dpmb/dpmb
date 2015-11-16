@@ -1,0 +1,114 @@
+// Datei: ./werkzeuge/paketoperationen/paketoperationen.adoc
+
+// Baustelle: Rohtext
+
+[[paketoperationen]]
+
+== Paketoperationen ==
+
+// Einführung
+// - Paketoperationen und deren Abfolge
+include::paketoperationen-und-deren-abfolge.adoc[]
+
+// - Pakete als Parameter
+include::paketlisten-und-muster.adoc[]
+
+// Paketoperationen im Detail
+// ohne Bestandsänderung
+include::bekannte-paketnamen-auflisten.adoc[]
+
+include::paketstatus-erfragen.adoc[]
+
+include::liste-der-installierten-pakete-anzeigen-und-deuten.adoc[]
+
+include::liste-der-installierten-kernelpakete-anzeigen.adoc[]
+
+include::neue-pakete-anzeigen.adoc[]
+
+include::pakete-nach-prioritaeten-finden.adoc[]
+
+include::automatisch-installierte-pakete-anzeigen.adoc[]
+
+include::obsolete-pakete-anzeigen.adoc[]
+
+include::aktualisierbare-pakete-anzeigen.adoc[]
+
+include::installationsgroesse-eines-paketes.adoc[]
+
+include::groesstes-installiertes-paket-finden.adoc[]
+
+include::warum-ist-ein-paket-installiert.adoc[]
+
+include::liste-der-zuletzt-installierten-pakete-anzeigen.adoc[]
+
+include::paketabhaengigkeiten-anzeigen.adoc[]
+
+include::aus-welchem-repo-kommen-die-pakete.adoc[]
+
+// include::verfuegbare-paketversionen-ermitteln.adoc[]
+
+// in Pakete hineinschauen
+include::pakete-ueber-den-namen-finden.adoc[]
+
+include::pakete-ueber-die-paketbeschreibung-finden.adoc[]
+
+include::paket-nach-maintainer-finden.adoc[]
+
+// include::multiarch-pakete-finden.adoc[]
+
+include::paket-zu-datei-finden.adoc[]
+
+include::paketinhalte-anzeigen-apt-file.adoc[]
+
+include::nach-muster-in-einem-paket-suchen.adoc[]
+
+include::ausfuehrbare-dateien-anzeigen.adoc[]
+
+include::manpages-anzeigen.adoc[]
+
+include::konfigurationsdateien-eines-paketes-anzeigen.adoc[]
+
+// - Veränderungen zur vorherigen Version
+include::paketaenderungen-nachlesen.adoc[]
+
+// - Veränderungen zwischen dem Paket auf dem Paketmirror und den lokalen Dateien
+include::paket-auf-veraenderungen-pruefen.adoc[]
+
+include::liste-der-zuletzt-geaenderten-abhaengigkeiten.adoc[]
+
+include::paketdatei-nur-herunterladen.adoc[]
+
+// mit Bestandsänderung
+// neue Pakete hinzufügen
+
+include::installation-zwischengespeicherter-pakete-aus-dem-paketcache.adoc[]
+
+include::sourcepakete-beziehen.adoc[]
+
+include::sourcepakete-anzeigen.adoc[]
+
+include::bezogenes-paket-verifizieren.adoc[]
+
+include::pakete-installieren.adoc[]
+
+include::pakete-erneut-installieren.adoc[]
+
+include::pakete-konfigurieren.adoc[]
+
+include::pakete-aktualisieren.adoc[]
+
+include::pakete-downgraden.adoc[]
+
+// Pakete entfernen und aufräumen
+include::pakete-deinstallieren.adoc[]
+
+include::umgang-mit-waisen.adoc[]
+
+include::paketoperationen-erzwingen.adoc[]
+
+include::paketstatusdatenbank-reparieren.adoc[]
+
+// ganze Distribution anpassen
+include::distribution-aktualisieren.adoc[]
+
+// Datei (Ende): ./werkzeuge/paketoperationen/paketoperationen.adoc

@@ -1,0 +1,32 @@
+// Datei: ./praxis/paketverwaltung-ohne-internet/paketverwaltung-ohne-internet.adoc
+
+// Baustelle: Fertig
+
+[[paketverwaltung-ohne-internet]]
+
+== Paketverwaltung ohne Internet ==
+
+Bisher haben wir bei nahezu allen im Buch besprochenen Szenarien zumeist
+stillschweigend vorausgesetzt, dass die von Ihnen betreuten
+Rechnersysteme Zugriff auf das Internet haben. Die Informationen zu
+einem Debianpaket und auch das Paket selbst haben Sie entweder online
+recherchiert oder bereits von einem vertrauenswürdigen Spiegelserver
+bezogen.
+
+Im administrativen Alltag treten jedoch auch Situationen auf, in denen
+Sie versuchen müssen, ohne einen Zugang zum Internet auszukommen. Diese
+Situationen sind vielleicht etwas beschwerlich, aber Klagen und
+Hilflosigkeit löst das Problem im Ernstfall meist nicht wirklich. Bei
+den nachfolgend beschriebenen Lösungswegen sind vorausschauendes Denken
+und Handeln von Vorteil.
+
+// Hintergrund und Einsatzfelder
+include::hintergrund-und-einsatzfelder.adoc[]
+
+// Strategien
+include::strategien.adoc[]
+
+// Werkzeuge
+include::werkzeuge.adoc[]
+
+// Datei (Ende): ./praxis/paketverwaltung-ohne-internet/paketverwaltung-ohne-internet.adoc

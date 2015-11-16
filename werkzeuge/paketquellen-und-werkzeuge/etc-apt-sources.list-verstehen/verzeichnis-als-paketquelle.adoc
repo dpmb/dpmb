@@ -1,0 +1,50 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/verzeichnis-als-paketquelle.adoc
+
+// Baustelle: Fertig
+
+==== Verzeichnis als Paketquelle ====
+
+// Indexeinträge
+(((/etc/apt/sources.list,Einträge für Verzeichnisse)))
+(((/etc/apt/sources.list,Einträge für lokale Ressourcen)))
+Pakete können Sie auch aus einem Verzeichnis ihres Debian-Systems
+integrieren. Dabei sind Sie nicht auf lokale Einträge beschränkt,
+sondern können auch auf entfernte Ressourcen zugreifen, bspw. ein NFS-
+oder SMB-Share. Voraussetzung ist allerdings, dass die angegebene
+Ressource vorab in den Verzeichnisbaum eingehängt wurde (auf engl. 
+_mounted_) und APT darauf zugreifen darf. Eine lokale Ressource geben
+Sie über das Schlüsselwort `file` an, hier am Beispiel des
+Verzeichnisses `/home/benutzer/debian`:
+
+----
+deb file:/home/benutzer/debian stable main contrib non-free
+----
+
+// Indexeinträge
+(((/etc/apt/sources.list,Einträge für externe Ressourcen)))
+Ein Eintrag für einen externen Datenträger, bspw. eine CD, DVD oder
+Blueray, sieht ähnlich wie die vorhergehenden Beispiele aus. Nach dem
+Schlüsselwort `deb` folgt der Wert `cdrom` mit der Kennung des
+Datenträgers zur Installation. Am Schluss des Eintrags finden Sie die
+Veröffentlichung und den Distributionsbereich. Nachfolgend sehen Sie
+einen Eintrag für eine CD, auf dem Ubuntu 12.04 LTS _Precise Pangolin_
+enthalten ist:
+
+----
+deb cdrom:[Ubuntu 12.04 LTS _Precise Pangolin_ - Release i386 (20120423)]/ precise main restricted
+----
+
+// Indexeinträge
+(((apt-cdrom)))
+
+[TIP]
+.Automatisierung der Eintragung
+====
+Obige Einträge können Sie von Hand vornehmen. Das Werkzeug `apt-cdrom`
+vereinfacht den Vorgang jedoch erheblich. Unter Physische
+Installationsmedien mit `apt-cdrom` einbinden in
+<<physische-installationsmedien-mit-apt-cdrom-einbinden>> besprechen wir
+das Programm genauer.
+====
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/verzeichnis-als-paketquelle.adoc

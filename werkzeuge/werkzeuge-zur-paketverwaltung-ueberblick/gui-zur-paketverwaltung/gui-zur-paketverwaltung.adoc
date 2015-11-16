@@ -1,0 +1,20 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/gui-zur-paketverwaltung.adoc
+
+// Baustelle: Fertig
+
+[[gui-zur-paketverwaltung]]
+
+=== GUI zur Paketverwaltung ===
+
+include::synaptic.adoc[]
+
+include::muon.adoc[]
+
+include::smartpm.adoc[]
+
+include::ubuntu-software-center.adoc[]
+
+include::packagekit.adoc[]
+
+include::gdebi.adoc[]
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/gui-zur-paketverwaltung.adoc

@@ -1,0 +1,84 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/eintraege-mit-add-apt-repository-im-griff-behalten.adoc
+
+// Baustelle: Fertig
+
+[[eintraege-mit-add-apt-repository-im-griff-behalten]]
+=== Einträge mit `add-apt-repository` im Griff behalten ===
+
+// Stichworte für den Index
+(((Paketquelle, auf Echtheit überprüfen)))
+(((Paketquelle, ergänzen)))
+`add-apt-repository` ist ein Python-Skript, um Einträge automatisiert
+und damit leichter zur Liste der Paketquellen (siehe
+<<etc-apt-sources.list-verstehen>>) hinzuzufügen oder auch wieder
+auszutragen. Es öffnet dazu die bestehende Liste der Paketquellen,
+ergänzt bzw. korrigiert die Einträge und überprüft diese zusätzlich auf
+Echtheit (siehe <<paketquelle-auf-echtheit-ueberpruefen>>). Fehlende
+GPG-Schlüssel trägt es dabei automatisch in ihrem lokalen Schlüsselring
+nach. Indem es die vielen Einzelschritte kombiniert, spart es Zeit und
+lässt sich darüber hinaus auch problemlos zur Automatisierung in ihre
+eigenen Skripte integrieren.
+
+// Stichworte für den Index
+(((add-apt-repository)))
+(((Debianpaket, python-software-common)))
+(((Debianpaket, python-software-properties)))
+`add-apt-repository` ist bis Debian 7 _Wheezy_ Bestandteil des Pakets
+'python-software-properties' <<Debian-Paket-python-software-properties>>
+und ab Debian 8 _Jessie_ in 'software-properties-common'
+<<software-properties-common>>. Es stellt graphische Komponenten bereit,
+die bspw. auch im Rahmen von Synaptic (siehe <<gui-synaptic>>) und dem
+Ubuntu Software Center (siehe <<gui-ubuntu-software-center>>) zum
+Einsatz kommen. Diese graphischen Komponenten beschreiben wir
+ausführlich unter Einstellungen mit Synaptic und im Ubuntu Software
+Center in <<einstellungen-mit-synaptic-und-im-ubuntu-software-center>>.
+
+// Stichworte für den Index
+(((add-apt-repository)))
+(((apt-add-repository)))
+Um die Handhabung auf der Kommandozeile noch weiter zu vereinfachen und
+insbesondere die Vertauschung der beiden Begriffe 'apt' und 'add'
+abzufangen, existiert zusätzlich das Kommando `apt-add-repository`. Dies
+ist durch einen symbolischen Link auf `add-apt-repository` realisiert.
+
+==== Aufruf und Optionen ====
+
+// Stichworte für den Index
+(((add-apt-repository, Nutzung von PPAs)))
+`add-apt-repository` akzeptiert als Parameter neben der Angabe des
+Repositories in Form einer vollständigen Zeile in korrekter Quotierung
+ebenso Personal Package Archives (PPAs) aus dem Ubuntu Launchpad
+<<Ubuntu-Launchpad>>. Der Aufruf ist von der Abfolge her analog zum
+manuellen Eintrag in der Liste der Paketquellen (siehe
+<<etc-apt-sources.list-verstehen>>):
+
+----
+add-apt-repository deb uri distribution [component1] [component2] [...]
+----
+
+==== Beispiele ====
+
+Möchten Sie das Repository namens 'Petra' zu ihrer Installation von
+Linux Mint hinzufügen, funktioniert der folgende Aufruf:
+
+----
+add-apt-repository 'deb http://packages.linuxmint.com/ petra main'
+----
+
+Ein PPA-Archiv namens 'gnome-desktop' für Ubuntu fügen Sie wie folgt
+hinzu:
+
+----
+add-apt-repository ppa:gnome-desktop
+----
+
+Um ein Repository wieder auszutragen, rufen Sie `add-apt-repository` mit
+dem zusätzlichen Schalter `--remove` auf. Nachfolgendes Beispiel zeigt
+das für den Eintrag für Medibuntu, aus dem der Zweig _non-free_ wieder
+entfernt wird:
+
+----
+add-apt-repository --remove 'https://packages.medibuntu.org non-free'
+----
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/eintraege-mit-add-apt-repository-im-griff-behalten.adoc

@@ -1,0 +1,23 @@
+// Datei: ./praxis/apt-cache/apt-cache.adoc
+
+// Baustellenstatus: Fertig
+
+[[apt-cache]]
+
+== Einen APT-Cache einrichten ==
+
+// Begriff
+include::begriff.adoc[]
+
+// approx
+include::approx.adoc[]
+
+// apt-cacher
+include::apt-cacher.adoc[]
+
+// apt-cacher-ng
+include::apt-cacher-ng.adoc[]
+
+// debtorrent
+include::debtorrent.adoc[]
+// Datei (Ende): ./praxis/apt-cache/apt-cache.adoc

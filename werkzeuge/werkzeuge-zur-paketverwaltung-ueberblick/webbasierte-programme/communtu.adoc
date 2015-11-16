@@ -1,0 +1,57 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/communtu.adoc
+
+// Baustelle: Fertig
+
+[[webbasierte-programme-communtu]]
+==== Communtu ====
+
+// Stichworte für den Index
+(((Communtu)))
+(((Debian Pure Blends)))
+Communtu ist eine Plattform, die seit 2008 vom Bremer Verein 'Natur,
+Geist und Technik -- Verein zur Förderung der Allgemeinbildung e.V.'
+betrieben und gepflegt wird. Über die Webseite stellen Sie sich
+aufgabenbezogene `deb`-Pakete für Ubuntu zusammen, die Sie danach auf
+ihrem Linuxsystem einspielen können. Dabei löst die Paketverwaltung alle
+Abhängigkeiten zwischen den einzelnen Paketen auf. Den Quellcode der
+Plattform hat der Verein unter der Affero GNU Public License (AGPL)
+freigegeben. Für Debian GNU/Linux gibt es seit 2004 ein ähnliches
+Konzept unter dem Namen 'Debian Pure Blends' (siehe
+<<Debian-Pure-Blends>>).
+
+Hintergrund ist die Idee, alle benötigten Programme für eine Aufgabe zu
+kombinieren und als Paketbündel abzulegen. Ein solches ``Bündel'' ist
+stets einer Kategorie zugeordnet, beispielsweise Audio, Büro oder
+Komplettinstallation (siehe <<fig.communtu>>). Die Webseite stellt die
+Infrastruktur zur Zusammenstellung bereit und ermöglicht Ihnen
+einerseits, Detailinformationen zu den Paketbündeln abzurufen, erstellte
+Paketbündel zu hinterlegen und damit auch anderen Benutzer zugänglich zu
+machen sowie bestehende Paketbündel zu beziehen, online zu bewerten und
+auch zu verbessern.
+
+.Verfügbare Bündel auf der Webseite
+image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/communtu.png[id="fig.communtu", width="50%"]
+
+Es ``vereinfacht [Ihnen] damit die Auswahl und Installation von Software,
+die nicht durch die Standardinstallation des Ubuntu-Systems abgedeckt
+ist'' (Quelle: UbuntuUsers-Wiki <<Communtu>>). Zudem integriert es auch
+Pakete von Fremdquellen und erleichtert somit die sich wiederholende
+Installation gleichartiger Systeme, bspw. für einen Klassenraum in einer
+Schule.
+
+// Stichworte für den Index
+(((Ubuntupaket, apturl)))
+(((Paketvarianten, Metapaket)))
+Die technische Basis hinter dem Angebot der Plattform bilden Metapakete
+(siehe <<uebergangs-und-metapakete>>) sowie
+<<webbasierte-installation-von-paketen-mit-apturl>>). Nachdem Sie über
+die Webseite Ihre gewünschte Software ausgewählt haben, wird automatisch
+ein erstes passendes Metapaket erzeugt. Dieses beinhaltet lediglich die
+Abhängigkeiten zu den von Ihnen zuvor ausgewählten Softwarepaketen.
+Gleichzeitig stellt die Plattform ein weiteres, spezifisches Metapaket
+bereit, welches ihre Liste der Paketquellen entsprechend anpasst, um
+damit die Anbindung von weiteren Paketquellen zu ermöglichen. Mittels
+'apturl' beziehen Sie die erzeugten Metapakete über ihrem Webbrowser, so
+dass die Paketverwaltung diese Pakete einspielen kann.
+
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/communtu.adoc

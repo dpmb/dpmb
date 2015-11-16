@@ -1,0 +1,65 @@
+// Datei: ./werkzeuge/dokumentation/dokumentation.adoc
+
+// Baustelle: Fertig
+
+[[dokumentation]]
+
+== Dokumentation ==
+
+Ein einzelnes Werk, welches die Debian-Paketverwaltung in allen seinen
+Facetten behandelt, gibt es unseres Wissens bisher nicht. Das Know-How
+dazu ist über diverse Quellen in unterschiedlichen Qualitätsstufen
+verstreut.
+
+// Stichworte für den Index
+(((Dokumentation, Manpages)))
+(((Dokumentation, Infopages)))
+Um flink ein Kommando oder eine Option nachzuschlagen, geht daher der
+erste Griff zu den `man`- und `info`-pages der Werkzeuge `dpkg`, APT
+und `aptitude`. Diese Hilfeseiten sind zwar meist nur eine Kurzfassung
+der komplexen Werkzeuge, helfen aber im Bedarfsfall trotzdem weiter. Der
+nicht zu unterschätzende Vorteil besteht darin, dass Ihnen diese
+Informationen stets auf jedem Debian-System zur Verfügung stehen. Diese
+Hilfedokumente sind Bestandteil der Pakete und werden mitgeliefert.
+Ausgegliederte Pakete mit Dokumentation installieren Sie bei Bedarf
+einfach nach.
+
+// Stichworte für den Index
+(((Debianpaket, apt-doc)))
+(((Debianpaket, aptitude-doc)))
+(((Dokumentation, /usr/share/doc/)))
+Nummer zwei ist der Griff zur Dokumentation, welche im Verzeichnis
+`/usr/share/doc/` auf ihrem System liegt. Für APT und `aptitude` ist
+diese Dokumentation jeweils als separates Paket ausgelagert. Diese
+Pakete heißen 'apt-doc' sowie 'aptitude-doc'. Genauer gehen wir dazu in
+den beiden Abschnitten zu `apt-doc` in <<apt-doc>> und zum
+`aptitude`-Handbuch in <<aptitude-handbuch>> ein.
+
+Darüberhinaus werfen wir einen Blick auf weitere, passende Online- und
+Offline-Dokumentation zu diesem Thema. Diese Liste erhebt keinen
+Anspruch auf Vollständigkeit und soll Ihnen nur als Anregung dienen und
+zeigen, was uns als lesenswert erscheint und sich zur Ergänzung mit dem
+vorliegenden Werk eignet. Über den Tellerrand hinausblicken schadet nie.
+
+// dpkg und apt
+
+include::apt-dpkg-referenzliste.adoc[]
+
+include::apt-doc.adoc[]
+
+// apt-get
+
+include::nixcraft-apt-cheatsheet.adoc[]
+
+include::pacman-rosetta.adoc[]
+
+// aptitude
+
+include::aptitude-handbuch.adoc[]
+
+include::the-debian-administrators-handbook.adoc[]
+
+// Weiteres Material
+
+include::weitere-buecher.adoc[]
+// Datei (Ende): ./werkzeuge/dokumentation/dokumentation.adoc

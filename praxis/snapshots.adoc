@@ -1,0 +1,51 @@
+// Datei: ./praxis/snapshots.adoc
+
+// Baustelle: Rohtext
+
+[[pakete-und-patche-datumsbezogen-auswaehlen]]
+== Pakete und Patche datumsbezogen auswählen ==
+
+'Frage:' Ist es möglich, die Patche bis zu einem ganz speziellen Datum
+einzuspielen?
+
+'Problem:' Wir haben hier Entwicklungs-, Test- und Produktivumgebungen.
+Auf den Entwicklungsumgebungen werden immer die neuesten Patche
+eingespielt, das ist so gewünscht und wird gemacht. :) Das Problem ist
+auf den Test- und Produktivumgebungen. Es gibt bei uns die Anforderung,
+das wir Patche erst auf der Testumgebung installieren und testen und
+erst nach Freigabe der Patche auf der Produktivumgebung einspielen
+dürfen. Hier vergehen häufig 2-3 Wochen. Ich müsste also quasi heute auf
+der Testumgebung sagen, Patche einspielen und in 3 Wochen dann auf der
+Produktivumgebung, Patche bis zum 25.03.2013 15:36 einspielen. Alle
+neueren Patche müssten jetzt erst wieder auf die Testumgebung gespielt
+werden und neu freigegeben werden.
+
+Gedanken zur Antwort:
+
+* Problem tritt sehr häufig auf, bspw. in der Entwicklung. Ein Softwarestand
+wird zusammengestellt, ausführlich getestet und -- falls alles gutgeht und
+freigegeben wurde -- auf dem Produktivsystem ausgerollt.
+
+* Variante 1 zur Lösung: Zustand des Testsystems mit allen Paketen und den
+Konfigurationsdateien wird gesichert/gemerkt, bspw. über eine Paketliste oder
+über Puppet, `rsync` o.ä.
+
+* Variante 2: eine Art 'Package Freeze'. Das Datum, bis zu dem noch
+Aktualisierungen von Paketen einfließen können, wird festgelegt. Das Zauberwort
+heißt http://snapshot.debian.org/. In der `/etc/apt/sources.list`
+stehen dann Einträge der Form
+
+----
+deb http://snapshot.debian.org/archive/debian/20091004T111800Z/ lenny main
+deb-src http://snapshot.debian.org/archive/debian/20091004T111800Z/ lenny main
+deb http://snapshot.debian.org/archive/debian-security/20091004T121501Z/ lenny/updates main
+deb-src http://snapshot.debian.org/archive/debian-security/20091004T121501Z/ lenny/updates main
+----
+
+Der Zeitstring `20091004T121501Z` folgt der Form `yyyymmddThhmmssZ` oder
+vereinfacht `yyyymmdd`. Steht für ein angegebenes Datum kein Snapshot bereit,
+wird der zeitlich entsprechend vorherige ausgewählt.
+
+// wofür steht das `Z` in `yyyymmddThhmmssZ` ? Für Zeitzone? Falls ja, welche
+// anderen Buchstaben gehen noch?
+// Datei (Ende): ./praxis/snapshots.adoc

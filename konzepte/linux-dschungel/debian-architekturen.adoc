@@ -1,0 +1,196 @@
+// Datei: ./konzepte/linux-dschungel/debian-architekturen.adoc
+// Baustelle: Fertig
+// Axel: Fertig
+
+[[debian-architekturen]]
+=== Debian-Architekturen ===
+
+// Stichworte für den Index
+(((Debian, Architekturen)))
+(((Debian, Betriebssystemkern)))
+(((Debian, Hardware)))
+(((Debian, Plattformen)))
+(((Debian, Ports)))
+(((Debian, Porters)))
+Debian kommt mit den unterschiedlichsten Hardware-Architekturen zurecht.
+Die offizielle Liste der aktuell unterstützten Architekturen finden Sie
+auf der Debian-Webseite <<Debian-Architekturen>> sowie im Anhang dieses
+Buches (siehe <<anhang-offizielle-debian-architekturen>>). Neben den
+veralteten Architekturen (siehe
+<<anhang-veraltete-debian-architekturen>>) werfen wir auch einen Blick
+in die Zukunft (siehe <<anhang-debian-architekturen-zukunft>>).
+
+Nicht alle ``Architekturen'' sind wirklich nur von der
+Hardware-Architektur abhängig, auf der die Programme einsetzbar sind,
+sondern auch von weiteren Punkten. Dazu zählen etwa der
+Betriebssystemkern, wie Linux, GNU Hurd <<Hurd>> oder FreeBSD
+<<FreeBSD>>, aber auch die Art, wie die Programme kompiliert wurden
+('Application Binary Interface', ABI). Daher bezeichnen Entwickler dies
+als 'Portierung' ('Port') und sich selbst als 'Porters'. Hier verwenden
+wir durchgängig den Begriff 'Architektur', da das entsprechende Feld in
+den Metadaten eines Pakets (siehe <<debian-paketformat-im-detail>>)
+'architecture' heißt und Debian selbst die Begriffe bislang nicht
+konsistent verwendet.
+
+// Stichworte für den Index
+(((dpkg-architecture, -L)))
+Eine vollständige Liste der von `dpkg` verstandenen Architekturen gibt
+Ihnen der Aufruf `dpkg-architecture -L` im Terminal aus. Viele der in
+der Ausgabe des Kommandos genannten Architekturen existieren allerdings
+nur in der Theorie und zeigen auf, welche Möglichkeiten bestehen.
+
+.Architekturen, die das Werkzeug `dpkg` unterstützt (Ausschnitt)
+----
+$ dpkg-architecture -L
+uclibc-linux-armel
+uclibc-linux-alpha
+uclibc-linux-amd64
+m68k
+sparc
+sparc64
+...
+$
+----
+
+// Stichworte für den Index
+(((Perl-Modul Dpkg::Arch)))
+Die Übersicht im Anhang (siehe <<anhang-debian-architekturen>>)
+beschreibt die einzelnen Architekturen näher. Die verwendeten
+Bezeichnungen in Klammern geben dabei das entsprechende GNU-Triplet an,
+sofern dieses bekannt ist. Das GNU-Triplet besteht aus der
+Hardware-Plattform, dem Kernel und dem ABI.
+
+Mit Hilfe des Perl-Moduls `Dpkg::Arch` ermitteln Sie diese Bezeichnungen
+im Handumdrehen selbst. Nachfolgend sehen Sie einen Aufruf für die
+Plattformen PPC64, PowerPC-spe, Arm, Armel und Armhf.
+
+.Perl-Aufruf zur Ermittlung der GNU-Triplets einer Debian-Architektur
+----
+$ perl \
+    -MDpkg::Arch=debarch_to_gnutriplet \
+    -E 'map { say "$_ = ".debarch_to_gnutriplet($_) } @ARGV' \
+    ppc64 powerpcspe arm armel armhf
+
+ppc64 = powerpc64-linux-gnu
+powerpcspe = powerpc-linux-gnuspe
+arm = arm-linux-gnu
+armel = arm-linux-gnueabi
+armhf = arm-linux-gnueabihf
+$
+----
+
+[[debian-architekturen-ports-projekt]]
+==== Debian-Ports-Projekt ====
+
+// Stichworte für den Index
+(((Debian, Architekturen)))
+(((Debian, Ports)))
+Das Debian-Ports-Projekt <<Debian-Ports-Projekt>> stellt die
+Infrastruktur für APT-Archive und automatisiertes Bauen von Paketen für
+Architekturen bereit, die Debian noch nicht oder nicht mehr unterstützt.
+Typischerweise gibt es dort nur zwei Kategorien von Veröffentlichungen:
+'unstable' und 'unreleased'. Ersteres sind die gleichen Pakete wie in
+Debian 'unstable', nur wurden diese aus demselben Quellcode für diese
+spezifische Architektur übersetzt. Letzteres sind speziell für diese
+Architektur entwickelte oder modifizierte Pakete, die in den offiziellen
+APT-Archiven von Debian auch nicht im Quellcode zu finden sind.
+
+In gewisser Weise stellt das Debian-Ports-Projekt dadurch gleichzeitig
+den Kreißsaal und das Altersheim für Debian-Architekturen dar – Anfang
+und Ende.
+
+[[debian-architekturen-alle]]
+==== Pakete für alle Architekturen ====
+
+// Stichworte für den Index
+(((Debian, Architekturen)))
+(((Debian, architekturunabhängig)))
+Neben den bereits genannten Architekturen gibt es noch Pakete mit dem
+Eintrag 'all'. Dies sind architekturunabhängige Pakete und Sie können
+diese auf beliebigen Architekturen installieren. 
+
+Dazu zählen z.B. Pakete von Programmen, die vollständig in den
+Skriptsprachen Perl, Python, Ruby oder Tcl geschrieben wurden. Ebenfalls
+gehören zu dieser Gruppe Pakete, die lediglich Daten enthalten, die auf
+jeder Architektur identisch sind. Das betrifft z.B. Bilder und Musik.
+
+[[debian-architekturen-multiarch]]
+==== Multiarch: Mehrere Architekturen gleichzeitig auf einem System ====
+
+// Stichworte für den Index
+(((Debian, Architekturen)))
+(((Debian, multiarch)))
+Seit etwa 2004 läuft unter den Debian-Entwicklern die Diskussion um den
+Support für 'multiarch' <<Debian-Wiki-multiarch>>. Unterstützung dafür
+gibt es in Debian seit Version 7 'Wheezy' und in Ubuntu seit Version
+11.10 'Oneiric Ocelot'. Es beschreibt zwei Dinge:
+
+* Systeme, auf denen Sie Pakete unterschiedlicher Architekturen
+  nebeneinander benutzen können.
+
+* Architekturspezifische Pakete, die explizit auf mehreren
+  Architekturen installierbar sind.
+
+Die Gründe für diese Mischung sind vielfältig:
+
+* die Existenz von Systemen mit (nahezu) identischen Prozessorbefehlen
+('Instruction Set'), aber unterschiedlicher Verarbeitungsbreite. Dazu
+zählen z.B. 'i386'/'x86_64', 'ppc'/'ppc64', 'sparc'/'sparc64' und
+'s390'/'s390x'. Unterstützung hierfür gibt es bei RedHat/Fedora unter
+dem Namen 'biarch' bereits länger <<biarch>>.
++
+Dies ist insbesondere relevant bei proprietärer, nicht-quelloffener
+Software, die für 32-Bit-Linux kompiliert wurde, aber auf einem
+64-Bit-System installiert bzw. verwendet werden soll.
+
+* Systeme, die gemischte Prozessorbefehle verwenden – entweder als
+Emulation in Hardware oder Software. Dazu gehören z.B. 'i386'/'ia64'
+mittels Hardware-Emulation und 'arm'/jede Plattform (via Qemu).
+
+* gemischte Betriebssystemumgebungen. Darunter fallen die Verwendung und
+Ausführung von Binärcode anderer Plattformen über eine
+Kompatibilitätsebene. Beispiele dafür sind Linux/'i386' auf
+FreeBSD/'i386', Solaris/'sparc' auf Linux/'sparc' und Virtualisierer wie
+Qemu, Bochs, VirtualBox und VMWare.
+
+* Cross-Kompilieren. Darunter fällt das Übersetzen von Programmcode für
+eine andere Zielplattform.
+
+Um diese Eigenschaft zu ermöglichen, bedarf es z.T. erheblicher
+Änderungen in den Übersetzungswerkzeugen und der Integration von Daten
+in der Dateistruktur. Dieser Vorgang ist bislang noch nicht vollständig
+abgeschlossen.
+
+Benötigen Sie Pakete von einer anderen Architektur -- bspw. ein
+'i386'-Paket (32 bit) auf einer 'amd64'-Installation (64 bit) -- ist
+diese parallele Installation und Benutzung der Software durchaus
+möglich. Wir zeigen Ihnen in <<multiarch-einsetzen>>, wie Sie diesen
+Schritt mit `dpkg` und `apt` erfolgreich bewerkstelligen.
+
+[[bevor-es-multiarch-gab]]
+==== Bevor es Multiarch gab ====
+
+// Stichworte für den Index
+(((Debian, Architekturen)))
+(((Debian, multiarch)))
+Wie oben bereits beschrieben, ist einer der Gründe hinter 'multiarch' das
+Nutzen bereits kompilierter 32-Bit-Software auf 64-Bit-Systemen. Der Bedarf
+hierfür war auch schon vor der Entstehung von 'multiarch' sehr groß.
+
+Der Aufwand, alle üblicherweise genutzten 'Shared Libraries' (zu dt.:
+gemeinsam genutzte Bibliotheken) der 32-Bit-Architektur 'i386' zusätzlich
+auch noch als eigenes 'amd64'-Binärpaket anzubieten, ist immens. Pakete
+dieser Form tragen üblicherweise das Präfix 'ia32-' im Paketnamen. Vor
+der Entstehung von 'multiarch' wurden daher _alle_ notwendigen
+32-Bit-Bibliotheken in ein einziges 'amd64'-Binärpaket namens
+`ia32-libs` <<Debian-Paket-ia32-libs>> gepackt. Dieses Paket umfasste am
+Ende etwa stolze 800{nbsp}MB und wurde in regelmäßigen Abständen mit den
+Sicherheitsaktualisierungen der entsprechenden Bibliotheken
+aufgefrischt.
+
+Allein die Pflege dieses Pakets war schon recht mühsam. Ab der
+Einführung von 'multiarch' wurde es gegenstandslos. Darum ist es seit
+Debian 7.0 'Wheezy' ein (leeres) Übergangspaket auf die passenden
+'multiarch'-fähigen Einzelpakete der Architektur 'i386'.
+
+// Datei (Ende): ./konzepte/linux-dschungel/debian-architekturen.adoc

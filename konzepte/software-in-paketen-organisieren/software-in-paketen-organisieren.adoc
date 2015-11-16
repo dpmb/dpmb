@@ -1,0 +1,45 @@
+// Datei: ./konzepte/software-in-paketen-organisieren/software-in-paketen-organisieren.adoc
+
+// Baustelle: Fertig
+// Axel: Fertig
+
+[[software-in-paketen-organisieren]]
+
+== Software in Paketen organisieren ==
+
+// Paketmanagement als Begriff
+include::paketmanagement-als-begriff.adoc[]
+
+// Varianten und Formate für Softwarepakete
+include::varianten-und-formate-fuer-software-pakete.adoc[]
+
+include::softwarestapel-und-ebenen.adoc[]
+
+include::alternativen-zu-apt.adoc[]
+
+include::zusammenspiel-von-dpkg-und-apt.adoc[]
+
+// Vom monolithischen Programm zu Programmkomponenten
+include::vom-monolithischen-programm-zu-programmkomponenten.adoc[]
+
+include::debian-paket-varianten.adoc[]
+
+include::sortierung-der-pakete-nach-verwendungszweck.adoc[]
+
+include::distributionsbereiche.adoc[]
+
+include::veroeffentlichungen.adoc[]
+
+include::benennung-eines-debian-pakets.adoc[]
+
+include::multiarch-einsetzen.adoc[]
+
+include::paket-prioritaet-und-essentielle-pakete.adoc[]
+
+include::verbreitungsgrad-von-paketen.adoc[]
+
+include::paketflags.adoc[]
+
+// Wie finde ich passende Pakete
+include::wie-finde-ich-passende-pakete.adoc[]
+// Datei (Ende): ./konzepte/software-in-paketen-organisieren/software-in-paketen-organisieren.adoc

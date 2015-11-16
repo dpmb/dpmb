@@ -1,0 +1,66 @@
+// Datei: ./praxis/debtags/debtags-einfuehrung.adoc
+
+// Baustelle: Fertig
+
+[[debtags-einfuehrung]]
+
+=== Einführung ===
+
+// Stichworte für den Index
+(((Paketinhalt, Metadaten)))
+(((Paketkategorie, Zuordnung)))
+(((Paketklassifikation)))
+Wie bereits in der Einführung zum Buch in <<konzepte>> deutlich
+wurde, umfasst die Klassifikation der Pakete in Debian unterschiedliche
+Stufen. Neben der Verfügbarkeit verschiedener Veröffentlichungen (siehe
+<<veroeffentlichungen>>) erfolgt eine Paketzuordnung anhand der
+Distributionsbereiche (siehe <<distributionsbereiche>>) und lediglich
+'einer möglichen' Softwarekategorie (siehe
+<<sortierung-der-pakete-nach-verwendungszweck>>). Ein Paket können Sie
+auch auf der Grundlage des Paketnamens selektieren, sofern Sie sich mit
+dieser etwas doch recht eigenen Logik vertraut fühlen.
+
+// Stichworte für den Index
+(((Paketsuche)))
+(((Paketmaintainer, Aufgaben)))
+Obwohl sich diese Vorgehensweisen über die letzten 20 Jahre bewährt
+haben, ergeben sich daraus mittlerweile eine ganze Reihe von Problemen.
+Diese rühren schlicht und einfach aus der schieren Anzahl an Paketen,
+die inzwischen erfreulicherweise für Debian zur Verfügung stehen.
+
+* Der Paketüberblick geht verloren und die Auswahl und das Finden eines
+bestimmten Paketes gerät mehr oder weniger zum zufälligen Ereignis.
+
+* Das Klassifikationsraster zur Einordnung der Pakete in die bestehenden
+Softwarekategorien ist zu grob und lässt nur einen einzigen, vorher
+bestimmten Blickwinkel zu. Der Maintainer eines Paketes muss daher genau
+abwägen, welche Paketkategorie überwiegt oder am besten passt und trägt
+diese Kategorie in der `control`-Datei des Debian-Pakets ein (siehe
+Aufbau eines Debian-Pakets in <<aufbau-und-format-binaer>>).
+
+* Es ist keine Mehrfachzuordnung möglich, wenn ein Programm verschiedene
+Aspekte umfasst und thematisch in unterschiedliche Kategorien passt.
+
+* Die Suche mittels APT und `aptitude` gelingt nur in der korrekten
+Schreibweise über den Paketnamen bzw. einem Fragment daraus, alternativ
+über ein Muster oder einen Begriff aus der Paketbeschreibung. `aptitude`
+gestattet Ihnen zwar dazu auch die Verwendung Regulärer Ausdrücke, setzt
+aber den gekonnten Umgang damit voraus. Eine Recherche nach der
+thematischen Ähnlichkeit, einer konkreten Eigenschaft des Pakets oder
+dem Funktionsumfang ist nicht möglich. Ausführlich besprechen wir diese
+Recherchemöglichkeiten bereits unter Pakete über den Namen finden in
+<<pakete-ueber-den-namen-finden>>.
+
+Gelingt Ihnen die Recherche über die Paketkategorien oder den Namen des
+Paketes nicht, geht das Paket in der Masse der Möglichkeiten unter und
+bleibt letztendlich unentdeckt. Im Ergebnis führt das vor allem dazu, dass
+Sie als Debian-Benutzer mehr und mehr Experte sein müssen, um sich
+innerhalb der Debian-Paketliste zurechtzufinden. Für die Praxis heißt
+das, dass Sie ungefähr wissen müssen, wo das betreffende Paket derzeit in
+der Hierarchie eingeordnet wurde. Das Gefühl dafür erlangen Sie meist
+erst im Laufe der Zeit. So toll es auch ist, dass Debian so vielfältig
+bezüglich seiner Pakete ist, wird es doch zunehmend anspruchsvoller,
+sich den Überblick über die Komponenten zu erarbeiten und diesen zu
+behalten.
+
+// Datei (Ende): ./praxis/debtags/debtags-einfuehrung.adoc

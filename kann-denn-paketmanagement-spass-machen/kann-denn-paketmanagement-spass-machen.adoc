@@ -1,0 +1,7 @@
+// Datei: ./kann-denn-paketmanagement-spass-machen/kann-denn-paketmanagement-spass-machen.adoc
+
+// Baustelle: Fertig
+
+include::kapitel-kann-denn-paketmanagement-spass-machen.adoc[]
+
+// Datei (Ende): ./kann-denn-paketmanagement-spass-machen/kann-denn-paketmanagement-spass-machen.adoc

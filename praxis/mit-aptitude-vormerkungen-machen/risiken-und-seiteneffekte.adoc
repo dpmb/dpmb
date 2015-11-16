@@ -1,0 +1,40 @@
+// Datei: ./praxis/mit-aptitude-vormerkungen-machen/risiken-und-seiteneffekte.adoc
+
+// Baustelle: Fertig
+
+[[vormerkungen-risiken-und-seiteneffekte]]
+
+=== Risiken und Seiteneffekte ===
+
+Die Idee, die `aptitude` mit dem Konzept der Vormerkungen transportiert,
+ist toll und ungemein praktisch. Es erleichtert komplexe Veränderungen
+des Paketbestands auf Ihrem Debian-System. Es hilft Ihnen dabei, den
+ganzen Arbeitsberg in handhabbare Einzelschritte zu zerlegen und später
+``alles in einem Rutsch'' ablaufen zu lassen.
+
+Sind Sie jedoch mit dem Konzept noch weniger vertraut, lauern kleine
+Fallen, die durchaus für Überraschungen sorgen können. 
+
+. `aptitude` merkt sich, welche Vormerkungen Sie über die
+_Textoberfläche_ vorgenommen haben. Beenden Sie `aptitude` mittels
+kbd:[q], speichert es die Vormerkungen. Brechen Sie `aptitude` hingegen
+mit kbd:[Ctrl,c] ab, werden die Vormerkungen nicht aktualisiert und
+bleiben so, wie sie bisher sind.
+
+. Nutzen Sie `aptitude` eher selten, ist nicht auszuschließen, dass Sie
+die vorher gemerkten Aktionen inzwischen nicht mehr präsent haben. In
+Folge können Änderungen des Paketbestands passieren, die Sie (nicht
+mehr) zuordnen können. Wir raten Ihnen daher, vorher die eventuell
+bereits bestehenden Vormerkungen zu prüfen (siehe
+<<bestehende-vormerkungen-anzeigen>>) und erst danach weitere Änderungen
+im Paketbestand zu veranlassen.
+
+. Wechseln Sie in der Benutzung zwischen `aptitude` und anderen
+Paketverwaltungsprogrammen hin und her, wird es auch sehr spannend. APT
+weiß bspw. nichts von den Vormerkungen seitens `aptitude` und kann diese
+daher auch nicht berücksichtigen. Verwirrung auf allen Seiten ist hier
+zu erwarten und gegebenenfalls werden andere Paketoperationen
+ausgeführt, als sie beabsichtigt haben (siehe dazu auch
+<<apt-und-aptitude-mischen>>).
+
+// Datei (Ende): ./praxis/mit-aptitude-vormerkungen-machen/risiken-und-seiteneffekte.adoc

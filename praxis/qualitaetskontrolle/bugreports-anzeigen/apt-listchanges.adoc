@@ -1,0 +1,79 @@
+// Datei: ./praxis/qualitaetskontrolle/bugreports-anzeigen/apt-listchanges.adoc
+
+// Baustelle: Rohtext
+
+[[bugreports-apt-listchanges]]
+==== Ergänzende Bugreports mit `apt-listchanges` herausfiltern ====
+
+// Stichworte für den Index
+(((apt-listchanges)))
+(((Debianpaket, apt-listchanges)))
+(((Paketmirror, Abgleich zwischen Paketversionen)))
+
+Während Ihnen `apt-listbugs` alle Bugreports anzeigt, vergleicht
+`apt-listchanges` aus dem gleichnamigen Paket
+<<Debian-Paket-apt-listchanges>> die Änderungen zwischen dem lokal
+installierten Paket und der neuen, verfügbaren Version auf dem
+Spiegelserver. Dazu wertet es die beiden Dateien `NEWS.Debian` und
+`changelog.gz` bzw. `changelog.Debian.gz` aus.
+
+Die Ausgabe von `apt-listchanges` steuern Sie dabei über mehrere
+Schalter (Auswahl):
+
+// Stichworte für den Index
+(((apt-listchanges, -a)))
+(((apt-listchanges, --all)))
+
+`-a` (Langform `--all`)::
+Ausgabe aller Änderungen des Pakets.
+
+// Stichworte für den Index
+(((apt-listchanges, -f)))
+(((apt-listchanges, --frontend)))
+
+`-f` 'Ausgabegerät' (Langform `--frontend`)::
+Legt fest, an welches Ausgabegerät bzw. welche Ausgabeform
+`apt-listchanges` benutzt. Möglich sind derzeit `pager`, `browser`,
+`xterm-pager`, `xterm-browser` (für die Darstellung in einem
+Textbrowser in ihrem Terminal), `text`, `mail` (Versand als Email),
+`gtk` (graphische Darstellung) und `none` (keine Ausgabe).
+
+// Stichworte für den Index
+(((apt-listchanges, --reverse)))
+
+`--reverse`::
+Ausgabe der Änderungen in zeitlich umgekehrter Reihenfolge.
+
+// Stichworte für den Index
+(((apt-listchanges, --since)))
+
+`--since=`'version'::
+Ausgabe aller Änderungen ab der angegebenen Version des Pakets.
+
+// Stichworte für den Index
+(((apt-listchanges, -v)))
+(((apt-listchanges, --verbose)))
+
+`-v` (Langform `--verbose`)::
+Ausgabe in ausführlicher Form.
+
+Im nachfolgenden Beispiel sehen Sie den Aufruf für das Paket
+'ruby-json', wobei die Ausgabe als einfacher Text im Terminal erfolgt.
+
+.Aufrufbeispiel für `apt-listchanges`
+----
+# apt-listchanges -f text --which=both /var/cache/apt/archives/ruby-json_1.7.3-3_i386.deb 
+Lese Changelogs...
+ruby-json (1.7.3-3) unstable; urgency=high
+
+  * set urgency to high, as a security bug is fixed.
+  * Add 10-fix-CVE-2013-0269.patch, adapted from upstream to fix denial of
+    service and unsafe object creation vulnerability.
+    [CVE-2013-0269] (Closes: #700436).
+
+ -- Cédric Boutillier <cedric.boutillier@gmail.com>  Tue, 12 Feb 2013 23:14:48 +0100
+...
+#
+----
+
+// Datei (Ende): ./praxis/qualitaetskontrolle/bugreports-anzeigen/apt-listchanges.adoc

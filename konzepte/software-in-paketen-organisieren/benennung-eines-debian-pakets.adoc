@@ -1,0 +1,195 @@
+// Datei: ./konzepte/software-in-paketen-organisieren/benennung-eines-debian-pakets.adoc
+
+// Baustelle: Fertig
+// Axel: Fertig
+
+[[benennung-eines-debian-pakets]]
+
+=== Benennung einer Paketdatei ===
+
+// Stichworte für den Index
+(((Paketname, Namensschema)))
+Während der Benutzung von `dpkg`, APT oder `aptitude` sind Sie sicher
+schon mit den etwas langen und auf den ersten Blick kurios anmutenden
+Dateinamen der einzelnen Pakete in Berührung gekommen. Die Benennung
+einer Paketdatei folgt einem ausgeklügelten Schema
+<<Krafft-Debian-System144>>. Dieses Schema ist eine Konvention, die
+leider bei Paketen aus Drittquellen oft nicht eingehalten wird.
+
+Der Dateinamen besteht aus den drei Felder _Paketname_, _Version_ und
+_Architektur_, welche durch einen Unterstrich '_' voneinander
+abgegrenzt werden, plus einem Punkt und der Dateiendung. Gemäß den
+Debian-Richtlinien <<Debian-Policy-Manual>> sind in o.g. Feldern nur
+ASCII-Zeichen zulässig. Unterstriche, Leerzeichen und Umlaute sind nicht
+gestattet. Das hilft dabei, Missverständnissen vorzubeugen und die
+Paketenamen mit allen Zeichensätzen anzeigen zu können.
+
+[[benennung-paketname]]
+==== Paketname ====
+
+// Stichworte für den Index
+(((Debianpaket, iceweasel)))
+(((Paketname, Software)))
+_Feld 1_ bezeichnet den Namen des Pakets, welche durch die Paketdatei
+bereitgestellt wird. Die Paketdatei `iceweasel_3.5.16-12_i386.deb` ist
+ein Binärpaket (Dateiendung `.deb`) und beinhaltet den Webbrowser
+Iceweasel.
+ 
+Darüberhinaus existieren bei der Benennung eine Reihe von
+Gepflogenheiten in Form von Präfixen und Suffixen. Diese stellen kein
+``muss'' dar, vereinfachen aber die Handhabung insgesamt sowie die
+Paketklassifikation und die spätere Recherche nach Paketen.
+
+// Stichworte für den Index
+(((Debianpaket, libreoffice-writer)))
+(((Debianpaket, libreoffice-calc)))
+(((Debianpaket, libxml2)))
+(((Debianpaket, libxml2-utils)))
+(((Paketname, Präfix)))
+Beginnt der Paketname mit der Zeichenkette `lib`, handelt es sich meist
+um eine Bibliothek, auf englisch _library_. Als Beispiel seien hier die
+beiden XML-Bibliotheken 'libxml2-utils' und 'libxml2' genannt. Aus dem
+Schema fallen allerdings die Komponenten zu LibreOffice wie
+'libreoffice-writer' (Textverarbeitung 'Writer') und 'libreoffice-calc'
+(Tabellenkalkulation 'Calc') heraus.
+
+// Stichworte für den Index
+(((Debianpaket, aptitude-doc-es)))
+(((Debianpaket, libxslt1-dev)))
+(((Debianpaket, wireshark-common)))
+(((Paketname, Suffix)))
+Endet der Paketname mit dem Suffix `-dev` wie bspw. in 'libxslt1-dev',
+beinhaltet das Paket Kopfdateien (engl. _header files_), die nur
+notwendig sind, wenn Sie Programme unter Nutzung der dazugehörigen
+Bibliothek entwickeln. _dev_ ist die gebräuchliche englische Abkürzung
+für _development_). Im vorgenannten Beispiel befinden sich in dem Paket
+die Kopfdateien zur XSLT-1-Bibliothek.
+
+Das Suffix `-doc` weist auf Dokumentation hin, welches häufig noch von
+einer Abkürzung für die jeweilige Sprache gefolgt wird. Der Paketname
+'aptitude-doc-es' beinhaltet bspw. die spanische Übersetzung der
+Dokumentation zu `aptitude`.
+
+Die Suffixe `-common` und `-data` deuten an, dass das Paket Dateien
+beinhaltet, die von mehreren Teilen eines Programms gemeinsam genutzt
+werden. Als Beispiel sei hier 'wireshark-common' genannt, welches sowohl
+die Daten für die graphische Variante des Netzwerktools 'wireshark', als
+auch für die textbasierte Version 'tshark' beinhaltet.
+
+[[benennung-versionsnummer]]
+==== Versionsnummer ====
+
+// Stichworte für den Index
+(((Paketname, Versionsnummer)))
+(((Paketname, Versionsverlauf)))
+_Feld 2_ spiegelt eine Reihe unterschiedlicher Informationen und
+Zustände wieder, aus dem Sie den Versionsstand und -verlauf
+eines Paketes erkennen. Die Versionsangabe kann sowohl numerische
+Zeichen (Ziffern), als auch nichtnumerische Zeichen wie Punkte, Tilden
+und Buchstaben beinhalten.
+
+Handelt es sich um ein _nicht-natives Debian-Paket_, besteht die
+Versionsnummer aus der Upstream-Version und der Debian-Revision. Bei
+dem Paket 'smartpm_1.4-2_all.deb' für 'smartpm' (siehe
+<<gui-smartpm>>) ist die Angabe 1.4 die Upstreamversion und die
+darauffolgende mit einem Minus `-` abgetrennte `2` steht für die
+zweite Debian-Revision. Hier liegt also das zweite Debianpaket vor,
+welches auf der Upstreamversion 1.4 basiert. Beinhaltet die
+Versionsnummer mehrere Bindestriche, ist immer der letzte Bindestrich
+der Trenner zwischen der Upstream-Version und der
+Debian-Revisionsnummer.
+
+Handelt es sich hingegen um ein _natives Debian-Paket_, d.h. eine
+Software, die ausschließlich als Debian-Paket vertrieben wird, gibt es
+keine Debian-Revisionsnummer und die Versionsnummer des Paketes ist
+identisch mit der Versionsnummer der Software. Für das Paket
+'dpkg_1.17.25_i386.deb' zu `dpkg` ist das 1.17.25.
+
+// Stichworte für den Index
+(((Paketname, Epoche)))
+Ändert sich bei der Aktualisierung (Upstream) die Versionsangabe so
+grundlegend, dass die neuere Version eine kleinere Versionsnummer hat
+als die vorherige Version, so muss der Paketversion die Angabe einer
+mit einem Doppelpunkt abgetrennten _Epoche_ hinzugefügt werden. Ist
+bspw. die vorhergehende Versionsnummer 2013.06.06-4 (Upstreamversion
+2013.06.06 Revision 4), entspricht das der Epoche 0 und ist identisch zu
+0:2013.06.06-4. Die Folgeversion wird dann 1:1.0-1, d.h. Epoche 1,
+Upstreamversion 1.0 und Revision 1.
+
+Um eine spätere _alphanumerisch korrekte Sortierung anhand des
+Releasestatus_ zu ermöglichen, sind eine bzw. mehrere
+aufeinanderfolgende Tilden `~` zulässig. Damit wird bspw. die Version
+`1.0~beta1` vor der Version `1.0` einsortiert. Diese Schreibweise kam
+zuerst bei Debian auf, wurde mittlerweile aber auch von anderen
+Open-Source-Projekten übernommen.
+
+// Stichworte für den Index
+(((Paketname, Anpassung für Ubuntu)))
+(((Paketname, Backport)))
+(((Paketname, BinNMU)))
+(((Paketname, NMU)))
+(((Paketname, Suffix)))
+Zudem sind eine Reihe von _Suffixen_ gebräuchlich. Diese gelten zwar nur
+als Konvention, werden aber auch an einigen Stellen erwartet.
+
+`+nmu<n>` ::
+Non-Maintainer-Upload (NMU) eines nativen Pakets. Das bezeichnet eine
+Paketversion, die nicht vom Verantwortlichen (Maintainer) des Paketes
+stammt. Bspw. bezeichnet die Datei `adduser_3.113+nmu3_all.deb` das
+Paket 'adduser' als dritten Non-Maintainer-Upload basierend auf der
+Version 3.113 des Maintainers.
+
+`-<x>.<y>` ::
+Debian-Revisionsnummer eines Non-Maintainer-Upload (NMU) eines
+nicht-nativen Pakets. Dabei bezeichnet `<x>` die letzte Revision des
+Maintainers (oder `0`, falls es keine solche gab) und `<y>` die Nummer
+des NMU basierend auf dieser Revision des Maintainers. So ist z.B.
+die Datei `bash_4.2+dfsg-0.1_i386.deb` das Debianpaket 'bash' als
+Non-Maintainer-Upload einer neuen Upstreamversion basierend auf der
+Veröffentlichung 4.2. Hingegen bezeichnet die Angabe 4.2-2.1 den ersten
+Non-Maintainer-Upload, welcher auf der Basis der Maintainer-Version
+4.2-2 erstellt wurde.
+
+`+b<n>` ::
+Kennzeichnung eines Binären Non-Maintainer-Uploads (_BinNMU_). Das
+bezeichnet eine Übersetzung des Paketes ohne vorherige Änderung des
+Quellcodes. Das tritt bspw. dann auf, wenn sich die Abhängigkeiten zum
+Bauen des Paketes geändert haben (sogenannte _build-dependencies_). Die
+Angabe `123-4+b2` steht dabei für den zweiten Erstellungsdurchlauf des
+Paketes aus den Quellen der Version `123-4`. Ubuntu verwendet dafür
+stattdessen die Syntax `123-4build2`.
+
+`~bpo<x>+<y>` ::
+Backports (siehe <<debian-backports>>) bezeichnen eine Rückportierung
+einer neueren Version auf die aktuelle Veröffentlichung. Dabei steht
+das Kürzel `bpo` für `backports.org`, dem Namen des
+Backports-Projektes, bevor es in Debian integriert wurde. Die Angabe
+`123-3~bpo8+2` steht bspw. für eine Rückportierung der Upstreamversion 123-3
+auf Debian 8 _Jessie_. Die Ziffer 2 deklariert das Paket die zweite
+Backports-Revision des Paket.
+
+`+deb<x>u<y>` ::
+stabiles Update. Die Angabe `121-3+deb7u2` steht für das zweite stabile
+Update des Pakets mit der Version 121-3 in Debian 7 _Wheezy_ (<x>=7 und
+<y>=2).
+
+`ubuntu<n>` ::
+ein Debianpaket, welches für Ubuntu angepaßt wurde. `<n>` bezeichnet die
+Ubuntu-Revisionsnummer, so bspw. `121-3ubuntu4` für die vierte
+Ubuntu-Revision des Debian-Pakets mit der Versionsnummer `121-3`.
+
+[[benennung-architektur]]
+==== Architektur oder Plattform ====
+
+// Stichworte für den Index
+(((Paketname, Architektur)))
+_Feld 3_ in der Versionsangabe gibt an, für welche Architektur das
+vorliegende Paket übersetzt wurde. Die Benennung entspricht den
+Bezeichnungen, wie sie unter Debian-Architekturen in
+<<debian-architekturen>> aufgelistet sind. Die Angabe
+`asterisk_1.8.13.1~dfsg-3+deb7u1_armhf.deb` beschreibt die Paketierung
+der Telefoniesoftware Asterisk für die ARM-Plattform mit
+Hardware-Floating-Point-Unterstützung. Im Gegensatz dazu ist das Paket
+`asciidoc_8.5.2-1_all.deb` plattformunabhängig einsetzbar.
+
+// Datei (Ende): ./konzepte/software-in-paketen-organisieren/benennung-eines-debian-pakets.adoc

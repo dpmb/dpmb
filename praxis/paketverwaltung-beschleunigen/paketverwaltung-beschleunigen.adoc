@@ -1,0 +1,18 @@
+// Datei: ./praxis/paketverwaltung-beschleunigen/paketverwaltung-beschleunigen.adoc
+
+// Baustelle: Rohtext
+
+[[paketverwaltung-beschleunigen]]
+== Paketverwaltung beschleunigen ==
+
+// Hintergrund
+include::hintergrund.adoc[]
+
+// Möglichkeiten zur Beschleunigung
+include::moeglichkeiten-zur-beschleunigung.adoc[]
+
+// Empfehlungen zum Umgang im Alltag
+include::empfehlungen-zum-umgang-im-alltag.adoc[]
+
+
+// Datei (Ende): ./praxis/paketverwaltung-beschleunigen/paketverwaltung-beschleunigen.adoc

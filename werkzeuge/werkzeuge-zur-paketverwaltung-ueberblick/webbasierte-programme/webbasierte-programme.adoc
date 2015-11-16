@@ -1,0 +1,18 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/webbasierte-programme.adoc
+
+// Baustelle: Fertig
+
+[[webbasierte-programme]]
+
+=== Webbasierte Programme ===
+
+include::dpkg-www.adoc[]
+
+include::ubuntu-landscape.adoc[]
+
+include::appnr.adoc[]
+
+include::communtu.adoc[]
+
+include::univention.adoc[]
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/webbasierte-programme.adoc

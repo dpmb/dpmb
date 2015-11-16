@@ -1,0 +1,19 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/muon.adoc
+
+// Baustelle: Idee
+
+[[gui-muon]]
+
+==== Muon ====
+
+// Stichworte für den Index
+(((Debianpaket, muon)))
+(((muon)))
+(((Synaptic)))
+* Klon von Synaptic (siehe <<gui-synaptic>>)
+* setzt auf GTK auf
+* bislang speziell genutzt in Kubuntu
+* Debianpaket 'muon' <<Debian-Paket-muon>>
+
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/muon.adoc
+

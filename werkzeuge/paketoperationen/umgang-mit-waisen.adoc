@@ -1,0 +1,600 @@
+// Datei: ./werkzeuge/paketoperationen/umgang-mit-waisen.adoc
+
+// Baustelle: Fertig
+
+[[umgang-mit-waisen]]
+
+=== Umgang mit Waisen ===
+
+// Stichworte für den Index
+(((Paketwaise)))
+Während der Verwendung von APT und `aptitude` werden die
+Abhängigkeiten der Pakete automatisch aufgelöst und daher auch
+zusätzlich benötigte Pakete eingespielt. Löschen Sie zu einem späteren
+Zeitpunkt Pakete, werden i.d.R. alle nicht mehr benötigten Pakete wieder
+entfernt. Leider gelingt dieser Vorgang nicht immer vollständig und es
+verbleiben mitunter ``Reste'' auf dem System zurück, die ohne Bezug zu
+anderen Paketen sind. Hängt ein Paket von keinem weiteren mehr ab und
+bildet kein eigenständiges Programm, wird es daher zu einem Waisen –
+engl. _orphan_. Häufig betrifft das Pakete aus den Kategorien für
+Bibliotheken (_libs_), veraltete Bibliotheken (_oldlibs_) und
+Entwicklungsbibliotheken (_libdevel_).
+
+Der Umgang mit Waisen ist im Allgemeinen recht unproblematisch. Waisen
+können Sie bedenkenlos löschen, um unnötigerweise belegten Speicherplatz
+auf ihrem System wieder freizugeben. Wir empfehlen Ihnen, diesen
+Aufräumvorgang bei der Systempflege als weiteren Schritt mit
+durchzuführen. Das hält ihr System sauber und befreit es von unnützen
+Lasten.
+
+// Stichworte für den Index
+(((aptsh)))
+(((debfoster)))
+(((deborphan)))
+(((editkeep)))
+(((gtkorphan)))
+(((orphaner)))
+(((wajig)))
+Neben den Mechanismen von APT und `aptitude` existieren eine ganze Reihe
+von weiteren Programmen, um Waisen aufzuspüren und auch zu entfernen.
+Für die Kommandozeile sind das `debfoster` (siehe <<debfoster>>) und
+`deborphan` (siehe <<deborphan>>). Auf Ncurses basieren Orphaner und
+Editkeep (siehe <<orphaner-und-editkeep>>) und auf GTK+ das Pendant
+Gtkorphan (siehe <<Gtkorphan>>). Darüberhinaus bieten die `aptsh` (siehe
+<<aptsh-orphans>>) und `wajig` (<<wajig>>) entsprechende Möglichkeiten
+zur Suche, die wir Ihnen nicht ebenfalls vorenthalten möchten.
+
+==== APT und `aptitude` ====
+
+// Stichworte für den Index
+(((Umgang mit Waisen, APT und aptitude)))
+Zwischen der Standardkonfiguration von APT und `aptitude` gibt es
+subtile Unterschiede, die sich über die Zeit herausgebildet haben und
+die es im Alltag zu beachten gilt. Kurz gefasst, beläßt APT verwaiste
+Pakete, während `aptitude` diese automatisch entfernt.
+
+APT-Versionen aus der Prä-Lenny-Ära – d.h. vor Debian 5.0 _Lenny_
+(2009) – nehmen auf die Erzeugung von Waisen kaum Rücksicht. Spätere
+Veröffentlichungen von APT achten deutlich stärker darauf und weisen den
+Benutzer darauf hin. Ohne explizite Aufforderung entfernt APT keine
+Waisen. 
+
+Bei `aptitude` ist das ganze Prozedere ein klein wenig anders.
+`aptitude` räumt hinterher eigenständig auf. Das betrifft jedoch nur
+automatisch installierte Pakete, von denen wiederum kein manuell
+installiertes Paket abhängt (keine 'reverse dependencies' bestehen).
+
+Über die `aptitude`-Option `aptitude::Delete-Unused` schalten Sie dieses
+Verhalten zu oder ab – entweder über die Benutzeroberfläche unter
+menu:Optionen[Einstellungen], oder direkt in der Konfigurationsdatei
+von `aptitude`.
+
+.Nicht verwendete Pakete automatisch entfernen in `aptitude`
+image::werkzeuge/paketoperationen/aptitude-delete-unused.png[id="fig.aptitude-delete-unused", width="50%"]
+
+// Stichworte für den Index
+(((apt-get, autoremove)))
+(((aptitude, autoremove)))
+Um den Vorgang der Paketentfernung explizit anzustoßen, verfügen APT und
+`aptitude` über das Unterkommando `autoremove`. Seitdem `apt-get`
+ebenfalls dieses Feature besitzt, hat die Bedeutung von `deborphan` und
+`debfoster` deutlich abgenommen.
+
+.Pakete automatisch entfernen mit dem Unterkommando `autoremove`
+----
+# apt-get autoremove
+Paketlisten werden gelesen... Fertig
+Abhängigkeitsbaum wird aufgebaut.
+Statusinformationen werden eingelesen.... Fertig
+0 aktualisiert, 0 neu installiert, 0 zu entfernen und 13 nicht aktualisiert.
+#
+----
+
+// Stichworte für den Index
+(((aptitude, --purge-unused)))
+`aptitude` verfügt zudem über die Option `--purge-unused`, die noch
+einen Schritt weiter geht. Alle Pakete, die `aptitude` mangels
+Notwendigkeit entfernt, werden inklusive der dazugehörigen
+Konfigurationsdateien entsorgt. Diese Option können Sie über den Eintrag
+`aptitude::Purge-Unused` aktivieren.
+
+[IMPORTANT]
+.Verwendung der Option `--purge-unused`
+=====
+Diese Option ist sehr mächtig und kombiniert eine ganze Reihe von
+Einzelschritten. Wir raten Ihnen daher, die Anwendung vorab genau zu
+prüfen.
+=====
+
+[[debfoster]]
+==== `debfoster` ====
+
+// Stichworte für den Index
+(((debfoster)))
+(((Debianpaket, debfoster)))
+Das Paket `debfoster` <<Debian-Paket-debfoster>> ist ein Wrapper für die
+beiden Werkzeuge `dpkg` und APT. `debfoster` pflegt eine Liste mit den
+Paketen, die Sie auf ihrem System behalten möchten und auf die Sie Wert
+legen.
+
+Mit Hilfe dieser Liste findet es Pakete, die automatisch installiert
+wurden, nur weil andere Pakete davon abhängen. Falls diese
+Abhängigkeiten nicht mehr bestehen – d.h. ein entsprechendes Paket wurde
+entfernt – bekommt `debfoster` das mit und fragt Sie, ob Sie das über
+die Abhängigkeit benannte Paket ebenfalls mit entfernen möchten.
+
+// Stichworte für den Index
+(((debfoster, /var/lib/debfoster/keepers)))
+Zu Beginn erstellt `debfoster` auf der Basis Ihrer Rückmeldung eine
+Liste mit den derzeit installierten Paketen. Diese Liste speichert
+`debfoster` in der Datei `/var/lib/debfoster/keepers`. Darin vermerkt
+es, ob Sie das betreffende Paket behalten oder entfernen möchten. Zum
+Schluss löscht es die Pakete, die in der Liste als ``entfernen''
+gekennzeichnet sind. Ein Aufruf zur Aktualisierung der Liste ist nach
+jeder Änderung des Paketbestandes sinnvoll, d.h. einer Installation,
+Löschung und Aktualisierung eines oder mehrerer Pakete.
+
+// Stichworte für den Index
+(((debfoster, -qv)))
+Mit dem Kommando `debfoster -qv` erstellen Sie eine initiale Liste. Bei
+einem Folgeaufruf zeigt es Ihnen die Pakete, die die unerfüllte
+Abhängigkeiten aufweisen plus möglicherweise nicht mehr benötigte
+Pakete. `debfoster` warnt bei unerfüllten Abhängigkeiten ('warning'),
+wenn diese Pakete in der Liste der ``zu behaltenden Pakete'' stehen.
+
+.Auflistung der unerfüllten Abhängigkeiten mit `debfoster`
+----
+# debfoster -qv
+
+warning: package gnome-session-fallback: unsatisfied dependency on notification-daemon 0.7
+warning: package gnome-session-fallback: forcing depdency on notification-daemon
+warning: package timidity: unsatisfied dependency on libjack-jackd2-0 1.9.5~dfsg-14
+warning: package libreoffice-filter-mobiledev: unsatisfied dependency on default-jre
+warning: package libreoffice-filter-mobiledev: unsatisfied dependency on gcj-jre
+warning: package libreoffice-filter-mobiledev: unsatisfied dependency on java-gcj-compat
+...
+Paket wird behalten: gdm3
+Paket wird behalten: krita
+Paket wird behalten: xfce4-goodies
+Paket wird behalten: libreoffice
+Paket wird behalten: bluetooth
+Paket wird behalten: asciidoc
+...
+#
+----
+
+`debfoster` verfügt über eine Reihe von weiteren Optionen. Nachfolgende
+Liste ist eine Auswahl bzgl. der Thematik ``Waisen'', ausführlicher ist
+die Manpage zum Programm.
+
+// Stichworte für den Index
+(((debfoster, -q)))
+(((debfoster, --quiet)))
+(((debfoster, -f)))
+(((debfoster, --force)))
+(((debfoster, -v)))
+(((debfoster, --verbose)))
+(((apt-cache, depends)))
+(((debfoster, -d)))
+(((debfoster, --show-depends)))
+
+`-q` (Langform `--quiet`):: 
+keine Darstellung der Fragen und als Standardantwort 'yes'. Sinnvoll zur
+initialen Erzeugung der Paketliste.
+
+`-f` (Langform `--force`):: 
+keine Darstellung der Fragen und als Standardantwort 'no'. Installiert
+fehlende Pakete nach, wobei die Paketliste maßgeblich ist.
+
+`-v` (Langform `--verbose`):: 
+Statusmitteilung darüber, welche Pakete verschwunden sind, Waisen oder Abhängigkeiten wurden.
+
+`-d` (Langform `--show-depends`):: 
+gebe alle Pakete an, von denen das Paket abhängt. Die Option ist das
+Gegenstück zur Option `-e` und vergleichbar mit dem Unterkommando
+`depends` des Programms `apt-cache` (siehe
+<<paketabhaengigkeiten-anzeigen>>).
+
+.Ausgabe aller Abhängigkeiten mittels `debfoster`
+----
+# debfoster -d vim
+Paket vim hängt ab von:
+  gcc-4.7-base libacl1 libattr1 libc-bin libc6 libc6-i686 libgcc1 libgpm2 libselinux1 libtinfo5
+  multiarch-support vim-common vim-runtime
+#
+----
+
+// Stichworte für den Index
+(((apt-cache, rdepends)))
+(((debfoster, -e)))
+(((debfoster, --show-dependents)))
+
+`-e` (Langform `--show-dependents`):: 
+gebe alle Pakete an, die von dem Paket abhängen. Diese Option ist das
+Gegenstück zur Option `-d` und vergleichbar mit dem Unterkommando
+`rdepends` des Programms `apt-cache` (siehe
+<<paketabhaengigkeiten-anzeigen>>).
+
+.Ausgabe aller umgekehrten Abhängigkeiten mit `debfoster`
+----
+# debfoster -e apt
+Die folgenden 9 Pakete auf der Aufbewahrungsliste verlassen sich auf apt:
+  xara-gtk synaptic packagesearch gtkorphan debfoster asciidoc installation-report totem gdm3
+Pakete bewahrt durch Standardregeln sich verlassen auf apt.
+#
+----
+
+// Stichworte für den Index
+indexterm:[debfoster, -s]
+indexterm:[debfoster, --show-orphans]
+indexterm:[debfoster, -i]
+indexterm:[debfoster, --ignore-default-rules]
+indexterm:[debfoster, -a]
+indexterm:[debfoster, --show-keepers]
+
+`-s` (Langform `--show-orphans`):: 
+auflisten aller Paketwaisen
+
+`-i` (Langform `--ignore-default-rules`):: 
+durch alle Pakete gehen, die explizit installiert wurden
+
+`-a` (Langform `--show-keepers`):: 
+Ausgabe der `debfoster`-Datenbank
+
+.Ausgabe der Pakete, die sich `debfoster` gemerkt hat
+----
+# debfoster -a
+Die folgenden Pakete stehen auf der Aufbewahrungsliste:
+  abiword acpi acpi-support anacron apache2-utils apcalc apmd app-install-data apt-doc
+  apt-dpkg-ref apt-rdepends aptsh apvlv aqbanking-tools arora ascii asciidoc ash aspell-de at
+...
+#
+----
+
+[[deborphan]]
+==== deborphan ====
+
+// Stichworte für den Index
+(((Debianpaket, deborphan)))
+Das Programm `deborphan` aus dem gleichnamigen Debian-Paket
+<<Debian-Paket-deborphan>> findet ungenutzte Pakete, die keine weiteren
+Abhängigkeiten zu anderen Paketen (siehe
+<<paketabhaengigkeiten-anzeigen>>) aufweisen. Es gibt Ihnen eine Liste
+aller gefundenen Pakete aus, die Sie entfernen  'sollten', aber nicht
+'müssen'. Grundlage für die Liste sind die Paketabhängigkeiten, die
+`deborphan` über `dpkg` und über die Angaben in der Paketbeschreibung
+zur Verfügung stehen.
+
+Rufen Sie `deborphan` ohne Optionen auf, beschränkt es sich auf die
+beiden Paketkategorien _libs_ und _oldlibs_, um unbenutzte oder
+veraltete Bibliotheken zu ermitteln. Das nachfolgende Beispiel zeigt
+diesen Aufruf beispielhaft.
+
+.Ausgabe von `deborphan` bei der Suche nach verwaisten Paketen
+----
+$ deborphan
+mktemp
+liblwres40
+libdvd0
+libxapian15
+libdb4.6
+libdb4.5
+libevent1
+librrd4
+libbind9-40
+diff
+dhcp3-common
+$
+----
+
+`deborphan` verfügt über eine ganze Reihe nützlicher Optionen. Daraus
+zeigen wir die Optionen, die uns für die Thematik ``Waisen'' relevant
+erscheinen. Zu weiteren Optionen gibt Ihnen die Manpage des Programms
+Auskunft.
+
+// Stichworte für den Index
+(((deborphan, -a)))
+(((deborphan, --all-packages)))
+(((deborphan, --libdevel)))
+(((deborphan, -P)))
+(((deborphan, --show-priority)))
+(((deborphan, -z)))
+(((deborphan, --show-size)))
+(((deborphan, -s)))
+(((deborphan, --no-show-section)))
+(((deborphan, --show-section)))
+
+`-a` (Langform `--all-packages`):: 
+durchsucht die gesamte Paketdatenbank (siehe <<lokale-paketliste-und-paketcache>>)
+
+`--libdevel`:: 
+durchsucht nicht nur die Paketkategorien 'libs' und 'oldlibs', sondern zusätzlich auch die Liste der Entwicklerbibliotheken ('libdevel')
+
+`-z` (Langform `--show-size`):: 
+Ausgabe mit Größenangabe des Paketes. Daraus ersehen Sie, wieviel Platz
+das Paket auf der Festplatte belegt.
+
+`-P` (Langform `--show-priority`):: 
+Ausgabe zeigt die Priorität des Paketes (siehe
+<<paket-prioritaet-und-essentielle-pakete>>) an; Wert aus 'required',
+'important', 'standard', 'optional' oder 'extra'.
+
+`-s` (Langform `--show-section`):: 
+zeigt die Paketkategorie (siehe
+<<sortierung-der-pakete-nach-verwendungszweck>>) an, in dem sich das
+Paket befindet. Ist die Option standardmäßig aktiviert, können Sie das
+Verhalten mit der Option `--no-show-section` wieder abschalten.
+
+.Auflistung der verwaisten Bibliotheken inkl. Paketkategorie und Größe mittels `deborphan`
+----
+$ deborphan -P -z -s
+  20 main/oldlibs  mktemp      extra
+ 132 main/libs     liblwres40  standard
+ 172 main/libs     libdvd0     optional
+ ...
+$
+----
+
+[TIP]
+.Kompakte Schreibweise der Optionen
+====
+Für den obigen Aufruf existiert eine Kurzschreibweise, in der Sie
+die Optionen in kompakter Form schreiben können. Der Aufruf `deborphan
+-Pzs` bewirkt das gleiche wie `deborphan -P -z -s`.
+====
+
+// Stichworte für den Index
+(((deborphan, Ratemodus)))
+(((deborphan, --guess)))
+(((deborphan, --no-guess)))
+`deborphan` verfügt zudem über einen 'Ratemodus', um Pakete zu finden,
+die für Sie nicht mehr nützlich sein könnten. Es analysiert dazu den
+Paketnamen und die Paketbeschreibung. Die Basis bilden die Optionen
+`--guess-` und `--no-guess-`, die Sie mit entsprechenden Suffixen
+zur genaueren Eingrenzung kombinieren können. Dazu zählen bspw.
+`common`, `data`, `dev`, `doc` und `mono`, aber auch `perl`, `pike`,
+`python` und `ruby` für die entsprechenden Programmiersprachen. Eine
+ausführliche Auflistung ist in der Manpage dokumentiert.
+
+.`deborphan` errät nicht mehr nützliche Pakete
+----
+# deborphan --guess-perl | sort
+gqview
+libchromaprint0
+libconsole
+libcrypt-rc4-perl
+libgraphics-magick-perl
+libimage-exiftool-perl
+libindicate-gtk3
+libpdf-api2-perl
+librpcsecgss3
+librrd4
+libtext-pdf-perl
+...
+#
+----
+
+// Stichworte für den Index
+(((deborphan, -a)))
+(((deborphan, --find-config)))
+Mit der Option `--find-config` suchen Sie nach nicht installierten
+Paketen, von denen noch 'Konfigurationsdateien' auf dem System vorliegen.
+Das impliziert die Option `-a` und durchsucht die gesamte
+Paketdatenbank. Das nachfolgende Beispiel sortiert zusätzlich die
+Paketliste alphabetisch aufsteigend und gibt die Ausgabe seitenweise
+über den Pager `more` auf dem Terminal aus.
+
+.Aufspüren nicht mehr benötigter Konfigurationsdateien über die Option `--find-config`
+----
+$ deborphan --find-config | sort | more
+baobab
+bluez-utils
+dhcdbd
+dpatch
+dvipdfmx
+gnome-screenshot
+--More--
+$
+----
+
+Für das Paket 'gnome-screenshot' aus obiger Ergebnisliste ergibt eine
+Suche über `dpkg` die nachfolgende Ausgabe. Die Buchstaben `rc` zu
+Beginn der Zeile mit den Paketdetails zeigen, dass dieses Paket bereits
+auf dem System installiert war und zwischenzeitlich wieder entfernt
+wurde (Buchstabe `r` für `removed` in der ersten Spalte). Die
+Konfigurationsdateien des Programms sind noch verfügbar (Buchstabe `c`
+für `configured` in der zweiten Spalte).
+
+.Aufspüren verbliebener Konfigurationsdateien mittels `dpkg`
+----
+$ dpkg -l gnome-screenshot
+Gewünscht=Unbekannt/Installieren/R=Entfernen/P=Vollständig Löschen/Halten
+| Status=Nicht/Installiert/Config/U=Entpackt/halb konFiguriert/
+         Halb installiert/Trigger erWartet/Trigger anhängig
+|/ Fehler?=(kein)/R=Neuinstallation notwendig (Status, Fehler: GROSS=schlecht)
+||/ Name                Version             Beschreibung
++++-===================-===================-==================================
+rc  gnome-screenshot    2.30.0-2            screenshot application for GNOME
+$
+----
+
+// Stichworte für den Index
+(((apt-get, --purge remove)))
+(((Paket, Konfigurationsdateien löschen)))
+(((Paketstatus)))
+
+[TIP]
+.Darstellung des Paketstatus
+====
+Die ersten beiden Zeichen in der Zeile mit den Paketdetails haben
+eine besondere Bedeutung und geben den Status des Pakets an. Unter
+Paketstatus erfragen in <<paketstatus-erfragen>> stellen wir Ihnen alle
+weiteren Varianten und deren Bedeutung vor.
+====
+
+// Stichworte für den Index
+(((apt-get, --purge remove)))
+Um die verbliebenen Konfigurationsdateien eines Paketes auch noch
+zu entfernen, benutzen Sie üblicherweise das Kommando `apt-get --purge
+remove Paketname`. Für das oben genannte Paket 'gnome-screenshot' heißt
+der Aufruf `apt-get --purge remove gnome-screenshot`. Weitere Details
+dazu finden Sie unter Pakete deinstallieren in
+<<pakete-deinstallieren>>.
+
+Eine zusätzliche Möglichkeit bietet die Kombination aus `apt-get` und
+`deborphan`. Die Angabe `$(deborphan)` bewirkt die Ausführung des
+Kommandos `deborphan` in einer Subshell und liefert als Rückgabewert
+alle Pakete, die Waisen sind. Indem Sie das als Parameter an APT
+übermitteln, sparen Sie einerseits Tipparbeit und können darüberhinaus
+auf die Rückfragen von APT reagieren.
+
+.Kombinieren von APT und `deborphan`
+----
+# apt-get --purge remove $(deborphan)
+Paketlisten werden gelesen... Fertig
+Abhängigkeitsbaum wird aufgebaut.       
+Statusinformationen werden eingelesen.... Fertig
+Die folgenden Pakete werden ENTFERNT:
+  gqview* libchromaprint0* libconsole* libindicate-gtk3* librpcsecgss3* 
+  librrd4* linux-image-2.6-686* mktemp* pdfjam* qemulator* 
+  ttf-linux-libertine* virtualbox-ose* virtualbox-ose-dkms* 
+  virtualbox-ose-guest-source* virtualbox-ose-guest-utils* 
+  virtualbox-ose-source*
+0 aktualisiert, 0 neu installiert, 16 zu entfernen und 8 nicht aktualisiert.
+Nach dieser Operation werden 2.517 kB Plattenplatz freigegeben.
+Möchten Sie fortfahren [J/n]?
+...
+#
+----
+
+[IMPORTANT]
+.Entsorgen von Waisen
+==========
+Wenden Sie das Nachfolgende nur an, wenn Sie wissen, was Sie tun, und sich
+dessen sicher sind. Das Kommando entsorgt kompromisslos alle Waisen und deren
+Konfigurationsdateien. Die Option `-y` beantwortet alle Nachfragen
+von `apt-get` automatisch mit ``ja'':
+
+.Komplexer Aufruf von `deborphan`
+----
+# deborphan | xargs apt-get --purge remove -y
+----
+==========
+
+[[orphaner-und-editkeep]]
+
+==== Orphaner und Editkeep ====
+
+// Stichworte für den Index
+(((editkeep)))
+(((orphaner)))
+(((Debianpaket, deborphan)))
+`orphaner` und `editkeep` sind beides Benutzeroberflächen für
+`deborphan` (siehe <<deborphan>>) und Bestandteil des gleichnamigen
+Pakets <<Debian-Paket-deborphan>>. Ersteres findet und entfernt
+verwaiste Pakete, das Zweite hilft Ihnen bei der Pflege und
+Zusammenstellung der Liste der Pakete, die _nie_ von `deborphan`
+entfernt werden.
+
+`orphaner` und `editkeep` sind beides Shellskripte und rufen nach der
+Auswahl direkt `apt-get` bzw. `deborphan` mit den passenden Optionen
+auf. Diese beiden Programme verfügen über ein recht ähnliches
+Ncurses-Interface. Dargestellt werden zwei Spalten – links der Paketname
+und rechts der der Distributionsbereich (siehe
+<<distributionsbereiche>>) und die Kategorie (siehe
+<<sortierung-der-pakete-nach-verwendungszweck>>), in die das Paket
+eingeordnet ist. Über die Buchstabentasten bewegen Sie den Auswahlbalken
+zum entsprechenden Menüpunkt. Mit der Leertaste ergänzen bzw. entfernen
+Sie das betreffende Paket von der Auswahl. Mit der Eingabetaste legt das
+Programm los.
+
+.`orphaner` bei der Arbeit
+image::werkzeuge/paketoperationen/orphaner.png[id="fig.orphaner", width="50%"]
+
+.`editkeep` im Einsatz
+image::werkzeuge/paketoperationen/orphaner-editkeep.png[id="fig.orphaner-editkeep", width="50%"]
+
+==== `gtkorphan` ====
+
+// Stichworte für den Index
+(((gtkorphan)))
+(((Debianpaket, gtkorphan)))
+`gtkorphan` <<Gtkorphan>> ist ein graphisches Programm auf der Basis von
+GTK, welches `deborphan` (siehe <<deborphan>>) direkt ansteuert. Die
+Ausgaben stammen daher direkt von `deborphan` und somit aus der
+Paketbeschreibung.
+
+In der Mitte sehen Sie die Paketliste, wobei Sie über den Reiter
+zwischen der Darstellung für die verwaisten und nicht verwaisten Pakete
+umschalten können. Für jeden Eintrag ist der Paketname (siehe
+<<benennung-eines-debian-pakets>>), die Paketgröße, der
+Distributionsbereich (siehe <<distributionsbereiche>>), die
+Paketkategorie (siehe <<sortierung-der-pakete-nach-verwendungszweck>>)
+sowie die Paketpriorität (siehe
+<<paket-prioritaet-und-essentielle-pakete>>) aufgeführt.
+
+Als zusätzliche Optionen ergänzen Sie die Liste einerseits um bereits
+gelöschte Pakete, von denen aber noch Konfigurationsdateien vorhanden
+sind, und andererseits um Pakete aus allen anderen Paketkategorien
+(siehe <<sortierung-der-pakete-nach-verwendungszweck>>). Um den bereits
+weiter oben angesprochenen Ratemodus zu verwenden, wählen Sie im
+Auswahlfeld den gewünschten Eintrag aus der Liste der Möglichkeiten aus.
+Mit einem Klick auf menu:OK[] werden alle Waisen von ihrem System
+entfernt, die Sie zuvor aus der Paketliste ausgewählt haben.
+
+.`gtkorphan` bei der Arbeit
+image::werkzeuge/paketoperationen/gtkorphan.png[id="fig.gtkorphan", width="50%"]
+
+[[aptsh-orphans]]
+
+==== aptsh ====
+
+// Stichworte für den Index
+(((aptsh, orphans)))
+(((aptsh, orphans-all)))
+Die Terminalemulation `aptsh` (siehe <<aptsh>>) verfügt über die
+integrierten Kommandos `orphans` und `orphans-all`, mit denen Sie ebenso
+Waisen aufspüren können. Grundlage sind die Ergebnisse, die `deborphan`
+mit Hilfe der Paketbeschreibungen liefert.
+
+Während das erstgenannte Kommando nur nach vereinsamten Bibliotheken
+sucht und analog zu `deborphan` arbeitet, entspricht `orphans-all` eher
+dem Aufruf `deborphan -a` und bezieht alle installierten Pakete in die
+Suche mit ein. Als Ergebnis erhalten Sie eine unsortierte Liste, bei
+letzterem Kommando zweispaltig mit der Aufteilung aus
+Distributionsbereich (siehe <<distributionsbereiche>>) und Kategorie
+(siehe <<sortierung-der-pakete-nach-verwendungszweck>>) (linke Spalte)
+sowie dem Paketnamen (siehe <<benennung-eines-debian-pakets>>) (rechte
+Spalte). Die nachfolgenden Abbildungen stammen aus einem xubuntu 13.04
+und zeigen die beiden Aufrufe.
+
+.`aptsh` mit der Ausgabe des Kommandos `orphans`
+image::werkzeuge/paketoperationen/aptsh-orphans.png[id="fig.aptsh-orphans", width="50%"]
+
+.`aptsh` mit der Ausgabe des Kommandos `orphans-all`
+image::werkzeuge/paketoperationen/aptsh-orphans-all.png[id="fig.aptsh-orphans-all", width="50%"]
+
+[[wajig]]
+
+==== `wajig` ====
+
+// Stichworte für den Index
+(((wajig, orphans)))
+(((wajig, list-orphans))) 
+Ähnlich wie die `aptsh` verfügt `wajig` <<Debian-Paket-wajig>> über
+Kommandos zur Suche nach Waisen – `orphans` und `list-orphans`. Beide
+liefern Ihnen das gleiche Ergebnis. Möglich ist ein Aufruf mittels
+`wajig orphans` oder die Eingabe des Kommandos in der `wajig`-Shell.
+Damit listet es die Bibliotheken auf, die nicht (mehr) von einem
+installierten Paket benötigt werden. Andere Pakete werden bei der
+Recherche nicht berücksichtigt.
+
+Die Analyse basiert auf dem Werkzeug `deborphan` (siehe <<deborphan>>).
+Daher muss das entsprechende Paket installiert sein, wenn Sie dieses
+Kommando verwenden möchten. <<fig.wajig-orphans>> zeigt das Ergebnis der
+Suche nach Waisen in der `wajig`-Shell.
+
+.`wajig` mit der Ausgabe des Kommandos `orphans`
+image::werkzeuge/paketoperationen/wajig-orphans.png[id="fig.wajig-orphans", width="50%"]
+
+// Datei (Ende): ./werkzeuge/paketoperationen/umgang-mit-waisen.adoc

@@ -1,0 +1,32 @@
+// Datei: ./main.adoc
+Debian-Paketmanagement
+======================
+:doctype: book
+:lang: de
+:ascii-ids:
+:numbered:
+:subtitle: Konzepte - Werkzeuge - Praxis
+:conf-files: asciidoc.conf|asciidoc-macros/asciidoctor-compat.conf
+include::version.adoc[]
+
+// Baustelle: Rohtext
+
+[preface]
+include::kann-denn-paketmanagement-spass-machen/kann-denn-paketmanagement-spass-machen.adoc[]
+
+include::konzepte/konzepte.adoc[]
+
+include::werkzeuge/werkzeuge.adoc[]
+
+include::praxis/praxis.adoc[]
+
+include::ausblick/ausblick.adoc[]
+
+[appendix]
+include::quellen/quellen.adoc[]
+
+include::anhang/anhang.adoc[]
+
+include::index/index.adoc[]
+
+// Datei (Ende): ./main.adoc

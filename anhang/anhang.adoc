@@ -1,0 +1,15 @@
+// Datei: ./anhang/anhang.adoc
+// Baustelle: Rohtext
+
+include::teil-anhang.adoc[]
+
+// welche Architekturen unterstützt Debian
+include::anhang-debian-architekturen/anhang-debian-architekturen.adoc[]
+
+// Vergleich zwischen den Paketkommandos von RPM, YUM und dpkg/APT
+include::anhang-paketkommando/rpm-yum-dpkg.adoc[]
+
+// welche Distributionen setzen das deb-Paketformat ein
+include::paketformat-im-einsatz/paketformat-im-einsatz.adoc[]
+
+// Datei (Ende): ./anhang/anhang.adoc

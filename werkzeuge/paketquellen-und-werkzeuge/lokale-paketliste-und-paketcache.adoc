@@ -1,0 +1,113 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/lokale-paketliste-und-paketcache.adoc
+
+// Baustelle: Fertig
+
+[[lokale-paketliste-und-paketcache]]
+
+=== Lokale Paketliste und Paketcache ===
+
+Die Paketverwaltung -- genauer APT -- pflegt lokale Paketlisten im
+Verzeichnis `/var/lib/apt/lists`. Diese Paketlisten dienen als
+Nachschlagewerk für APT. Wollen Sie den Paketbestand auf Ihrem
+Debian-System ändern, benutzt APT diese Paketliste, um die Existenz, die
+Verfügbarkeit von einer Paketquelle und die Abhängigkeiten eines Paketes
+zu bestimmen, bevor diese tatsächlich bezogen werden. Installieren Sie ein
+Paket nach (<<pakete-installieren>>), weiß APT aus der lokalen
+Paketliste, von welcher Paketquelle und unter welcher URL es dieses
+herunterladen kann.
+
+Die hier verwendete mehrstufige Vorgehensweise hat ihren Ursprung in der
+Anfangszeit von Debian, bei der der Internetzugang und dessen (nahezu)
+permanenter Verfügbarkeit noch nicht so selbstverständlich wie heute
+waren. Lokal verfügbare Informationen waren (und sind) stets mit
+geringerer Verzögerung nutzbar als externe Ressourcen und reduzieren
+zudem die Netzlast.
+
+Die nachfolgende Auflistung ist typisch, wenn Sie als Paketmirror
+`ftp.de.debian.org` und die Distributionsbereiche 'main', 'contrib' und
+'non-free' benutzen:
+
+.Übersicht zu den lokalen Dateien, in denen die Paketlisten hinterlegt sind
+----
+$ ls /var/lib/apt/lists
+ftp.de.debian.org_debian_dists_wheezy_contrib_source_Sources
+ftp.de.debian.org_debian_dists_wheezy_main_source_Sources
+ftp.de.debian.org_debian_dists_wheezy_non-free_source_Sources
+ftp.de.debian.org_debian_dists_wheezy_Release
+ftp.de.debian.org_debian_dists_wheezy_Release.gpg
+lock
+partial/
+security.debian.org_dists_wheezy_updates_contrib_binary-i386_Packages
+security.debian.org_dists_wheezy_updates_contrib_i18n_Translation-en
+security.debian.org_dists_wheezy_updates_contrib_source_Sources
+security.debian.org_dists_wheezy_updates_main_binary-i386_Packages
+security.debian.org_dists_wheezy_updates_main_i18n_Translation-en
+security.debian.org_dists_wheezy_updates_main_source_Sources
+security.debian.org_dists_wheezy_updates_non-free_binary-i386_Packages
+security.debian.org_dists_wheezy_updates_non-free_i18n_Translation-en
+security.debian.org_dists_wheezy_updates_non-free_source_Sources
+security.debian.org_dists_wheezy_updates_Release
+security.debian.org_dists_wheezy_updates_Release.gpg
+$
+----
+
+Für jede Paketquelle aus `/etc/apt/sources.list` wird eine eigene,
+lokale Datei gepflegt. Diese ist eine Textdatei und beinhaltet alle
+Informationen zu den beziehbaren Paketen, bspw. den genauen Paketnamen
+und dessen Version (<<benennung-eines-debian-pakets>>), den Maintainer
+des Pakets, die Paketabhängigkeiten zum Bauen des Pakets, die genutzte
+Architektur (<<debian-architekturen>>), das Format des Debianpakets
+sowie die Checksummen der Pakete und das Sourcepaket
+(<<debian-pakete-varianten>>), aus der das Paket entstanden ist. Danach
+folgen die Projektwebseite sowie das Verzeichnis, in dem das Paket auf
+dem Paketmirror abgelegt ist. Zum Schluss stehen die Priorität, der
+Distributionsbereich (<<distributionsbereiche>>) und die Paketkategorie
+(<<sortierung-der-pakete-nach-verwendungszweck>>). Nachfolgender Kasten zeigt die Informationen
+anhand des Pakets 'easyspice' aus der Paketkategorie Elektronik
+('electronics').
+
+.Paketinformationen zum Paket 'easyspice'
+----
+Package: easyspice
+Binary: easyspice
+Version: 0.6.8-2
+Maintainer: Gudjon I. Gudjonsson <gudjon@gudjon.org>
+Build-Depends: debhelper (>= 5), autotools-dev, libgtk2.0-dev, quilt
+Architecture: any
+Standards-Version: 3.7.3
+Format: 1.0
+Files:
+ 2a6ef8e1bd3e38220d44754e107c55ca 1037 easyspice_0.6.8-2.dsc
+ 6ffaab8c2dcdfc30ecdca52f3c8bcded 201627 easyspice_0.6.8.orig.tar.gz
+ e4b3a00ad900341424cb6052e9f56a53 2607 easyspice_0.6.8-2.diff.gz
+Checksums-Sha1:
+ d76bcb68824a1866598bc453c81af2e0c4a4366d 1037 easyspice_0.6.8-2.dsc
+ 37ae8dea4522254c3de25f300f6fc9b568b87c10 201627 easyspice_0.6.8.orig.tar.gz
+ ec13581034d9ef441a2cd7acddc0f5289c5f6c57 2607 easyspice_0.6.8-2.diff.gz
+Checksums-Sha256:
+ 5b119deafa50846c6736b8b63e0be8c18e407e18b31c17a43590e2301cc39bec 1037 easyspice_0.6.8-2.dsc
+ 55158436e05e372d48e03e59edc2dc2b49fbf366629a2943b265eb4562f1e975 201627 easyspice_0.6.8.orig.tar.gz
+ 7c5d3460457e89f69d050e42d394a89d95536b1efd178c99c49e505e7807f3fa 2607 easyspice_0.6.8-2.diff.gz
+Homepage: http://easy-spice.sourceforge.net
+Directory: pool/contrib/e/easyspice
+Priority: source
+Section: contrib/electronics
+----
+
+TODO: Querverweis auf `cron-apt` und `/etc/cron.daily/apt`.
+
+Die Paketlisten ändern sich, wenn Aktualisierungen sowie neue Versionen
+von Paketen verfügbar werden und die Paketquellen auf den Spiegelservern
+entsprechend aktualisiert wurden. Daher raten wir Ihnen, die lokalen
+Paketlisten in regelmäßigen Abständen ebenfalls zu aktualisieren, bspw.
+mit den Aufrufen `apt-get update`, `aptitude update` oder einem anderen
+Werkzeug zur Paketverwaltung (<<werkzeuge-zur-paketverwaltung>>). Wie
+das genau vorsichgeht, erklären wir unter Liste der verfügbaren Pakete
+aktualisieren in <<liste-der-verfuegbaren-pakete-aktualisieren>>
+genauer.
+
+Sollte die Aktualisierung fehlschlagen, könnte sich die Paketliste in
+einem inkonsistenten Zustand befinden. Wie Sie mit dieser Situation
+umgehen, erklären wir Ihnen unter Lokale Paketliste reparieren in
+<<lokale-paketliste-reparieren>> genauer.
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/lokale-paketliste-und-paketcache.adoc

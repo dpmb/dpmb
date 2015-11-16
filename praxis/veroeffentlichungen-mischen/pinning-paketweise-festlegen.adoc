@@ -1,0 +1,69 @@
+// Datei: ./praxis/veroeffentlichungen-mischen/pinning-paketweise-festlegen.adoc
+
+// Baustelle: Rohtext
+
+[[pinning-paketweise-festlegen]]
+=== Paketweise festlegen ===
+
+Für diesen Fall besteht eine Liste mit Einträgen für einzelne Pakete und
+ganze Paketgruppen. Bis Debian 6 'Squeeze' beinhaltete die Datei
+`/etc/apt/preferences/` die Prioritäten für alle Paketnamen,
+Veröffentlichungen, Hersteller und Versionen. 
+
+Ab Debian 7 'Wheezy' wurde das in das Verzeichnis
+`/etc/apt/preferences.d/` ausgelagert. Jede Datei in diesem
+Verzeichnis darf beliebig viele Festlegungen beinhalten, wobei der
+Dateiname jeweils frei wählbar ist. Die Abarbeitung der einzelnen
+Einträge erfolgt von oben nach unten, wobei nachfolgende, mehrfache
+Einträge ignoriert werden. Jeder Eintrag, d.h. jede Festlegung, besteht
+aus den folgenden drei Zeilen:
+
+.Eintrag für ein Paket
+----
+Package: *
+Pin: release a=stable
+Pin-Priority: 50
+----
+
+Obiger Eintrag besagt, dass APT nur Pakete aus dem Bereich Debian
+'stable' und nicht aus Debian 'testing' oder 'unstable' installiert.
+Dabei stehen die einzelnen Schlüsselworte jeweils für:
+
+`Package`::
+Paketname, für welches die Zuordnung gilt. Ein `*` bezeichnet alle
+Pakete.
+
+`Pin`::
+Nach dem Schlüsselwort `release` spezifizieren Sie die Veröffentlichung
+(siehe <<veroeffentlichungen>>). Dabei ist hier die Angabe eines
+Aliasnamens wie 'Wheezy' oder 'Sid' nicht erlaubt. Zulässig sind aber
+bspw. die Versionsnummer, der Distributionsbereich und die Herkunft.
+Eine genaue Auflistung enthält <<tab.apt-pinning-parameter>>.
+
+`Pin-Priority`::
+Das bezeichnet den Zahlenwert für die Pin. Welche Werte zulässig sind,
+entnehmen Sie bitte <<tab.apt-pinning-prioritaeten>> in
+<<von-apt-zu-apt-pinning>>.
+
+.Zulässige Parameter beim APT-Pinning
+[frame="topbot",options="header",cols="3,5,3",id="tab.apt-pinning-parameter"]
+|====
+| Parameter und Schlüsselwort	| Bedeutung	| Beispiel
+| `a` (`archive`)	| Veröffentlichung (siehe <<veroeffentlichungen>>)| 'unstable'
+| `c` (`component`)	| Distributionsbereich (siehe <<distributionsbereiche>>) | 'main'
+| `l` (`label`)		| Bezeichner	| Debian
+| `n` (`name`)		| Aliasnamen der Veröffentlichung (siehe <<alias-namen>>) | 'Jessie'
+| `o` (`origin`)	| Herkunft	| Debian
+| `v` (`version`)	| explizite Versionsnummer (siehe <<benennung-eines-debian-pakets>>) | 6.0.3
+|====
+
+
+// * Hintergrund: ``Sie sollten grundsätzlich nur eine der Suiten stable,
+// testing oder unstable in der deb-Zeile integrieren. Wenn Sie
+// irgendeine Kombination von stable, testing und unstable in der
+// deb-Zeile verwenden, bremst dies die APT-Programme aus, wobei am Ende
+// aber nur das neueste Archiv verwendet wird. Eine Auflistung mehrerer
+// Einträge macht Sinn, wenn die /etc/apt/preferences-Datei genutzt wird
+// und dort klare Richtlinien festgelegt sind''
+
+// Datei (Ende): ./praxis/veroeffentlichungen-mischen/pinning-paketweise-festlegen.adoc

@@ -1,0 +1,230 @@
+// Datei: ./konzepte/software-in-paketen-organisieren/sortierung-der-pakete-nach-verwendungszweck.adoc
+
+// Baustelle: Fertig
+// Axel: Fertig
+
+[[sortierung-der-pakete-nach-verwendungszweck]]
+
+=== Sortierung der Pakete nach Verwendungszweck ===
+
+// Stichworte für den Index
+(((Distributionsbereiche)))
+(((Paketkategorie, Beschreibung)))
+(((Paketkategorie, Kurzbezeichnung)))
+(((Paketkategorie, Überblick)))
+(((Paketkategorie, Zuordnung)))
+(((Paketmaintainer, Aufgaben)))
+Für Debian sind inzwischen sehr viele unterschiedliche Pakete verfügbar.
+Um Ihnen die Orientierung in der Paketmenge sowie die Recherche und
+Auswahl daraus zu erleichtern, ordnet der Paketbetreuer – der
+Verantwortliche für das Paket – dieses Paket _genau einer_ bestimmten
+Kategorie zu. Die Auswahl der Kategorie basiert dabei auf dem
+hauptsächlichen Einsatzbereich der Software.
+
+<<fig.aptitude-paketbereiche>> zeigt die Sichtbarkeit der Kategorien bei
+der Paketauswahl in `aptitude`. In jeder Kategorie sind die Pakete
+zusätzlich nach ihrem Distributionsbereich (siehe
+<<distributionsbereiche>>) – _main_, _contrib_ und _non-free_ –
+gruppiert. Der jeweilige Entwicklungszweig (siehe
+<<veroeffentlichungen>>) – bspw. _stable_, _unstable_ oder _testing_ –
+wird in dieser Darstellung nicht angezeigt, kann aber bei Bedarf per
+als weitere Ebene in der Anzeigehierachie konfiguriert werden.
+
+.Auflistung der verschiedenen Paketkategorien in `aptitude`
+image::konzepte/software-in-paketen-organisieren/aptitude-paketbereiche.png[id="fig.aptitude-paketbereiche", width="50%"]
+
+Nachfolgende Übersicht listet die derzeit verwendeten Kategorien mit
+Beispielpaketen auf. Der Begriff in Klammern benennt die Kurzbezeichnung
+der Kategorie. Diese Zusammenstellung basiert auf Frank Ronneburgs
+Auflistung aus dem Debiananwenderhandbuch <<Debian-Anwenderhandbuch>>
+sowie der Übersicht auf der Debian-Webseite <<Debian-Paketliste>>. Die
+Kategorien _introspection_, _Debian_/_tasks_, _education_ und
+_metapackages_ sind derzeit noch nicht in allen Übersichten eingepflegt.
+Die einzige Referenz hierfür ist das Debian Policy Manual
+<<Debian-Policy-Subsections>>.
+
+Administration (_admin_)::
+Programme zur Systemadministration ('dpkg', 'apt', 'aptitude', 'adduser')
+
+Alte Bibliotheken und Übergangspakete (_oldlibs_)::
+Versionen von Bibliotheken, die nicht mehr verwendet werden sollten
+sowie Übergangspakete ('gcalctool', 'iproute', 'libgnome2-0')
+
+Amateurfunk/Ham Radio (_hamradio_)::
+Software für Amateurfunker ('ax25-tools', 'hamfax')
+
+Andere Betriebs- und Dateisysteme (_otherosfs_)::
+Software, um Programme zu benutzen, die für andere Betriebssysteme kompiliert wurden und um die Dateisysteme anderer Betriebssysteme zu benutzen ('avr-libc', 'bochs', 'cpmtools', 'dosemu', 'fatsort')
+
+Aufgaben (_Debian_/_tasks_)::
+Pakete, die Ihren Rechner für eine bestimmte Aufgabe vorbereiten (siehe
+<<debian-pakete-varianten>>) ('task-german-desktop', 'task-xfce-desktop')
+
+Bibliotheken (_libs_)::
+Programmbibliotheken (Libraries) ('libc6', 'e2fslibs')
+
+Bildung (_education_)::
+Lern- und Schulprogramme ('auto-multiple-choice', 'gcompris', 'scratch')
+
+Datenbanken (_database_)::
+Datenbankserver und -clients ('sqlite', 'mysql-server', 'mongodb')
+
+Debug-Pakete (_debug_)::
+Pakete, die Debug-Informationen für Programme und Laufzeitbibliotheken bereitstellen ('cups-dbg', 'evolution-data-server-dbg')
+
+Dienstprogramme (_utils_)::
+verschiedene Werkzeuge ('clamav', 'coreutils', 'debian-goodies')
+
+Dokumentation (_doc_)::
+HOWTOs, FAQs und andere Dokumentation sowie Programme, um diese zu lesen ('aptitude-doc-en', 'debian-faq', 'debian-handbook', 'zsh-doc')
+
+Editoren (_editors_)::
+Textverarbeitungsprogramme, Editoren für Programmierer und Entwickler ('abiword', 'emacs', 'kate', 'vim')
+
+Elektronik (_electronics_)::
+Programme zur Entwicklung und Simulation elektronischer Schaltungen ('arduino', 'verilog')
+
+Embedded (_embedded_)::
+Software, die für die Benutzung in oder mit Embedded Systemen geeignet ist ('gpe', 'matchbox', 'usbprog', 'urjtag')
+
+Entwicklung (_devel_)::
+Entwicklungswerkzeuge und -umgebungen, Compiler, usw. ('automake', 'binutils', 'g++')
+
+Entwicklungsbibliotheken (_libdevel_)::
+Header-Dateien zu Bibliotheken ('libc6-dev', 'okular-dev', 'zathura-dev')
+
+E-Mail (_mail_)::
+alles rund um E-Mail; Mailserver, Mailprogramme, Spamfilter, etc. ('postfix', 'mutt', 'spamassassin')
+
+GNOME (_gnome_)::
+Programme zur GNOME-Desktop-Umgebung ('etherape', 'evince', 'gnome-control-center', 'gnome-media')
+
+GNU R (_gnu-r_)::
+Programme um die freie Implementierung der Statistik-Sprache R ('r-base', 'r-mathlib')
+
+GNUstep (_gnustep_)::
+Programme zur GNUstep-Umgebung ('gnustep', 'gnustep-icons')
+
+Grafik (_graphics_)::
+Programme zur Bildbearbeitung ('dia', 'epub-utils', 'giftrans', 'gimp')
+
+Haskell (_haskell_)::
+alles rund um die Programmiersprache Haskell ('haskell-platform', 'happy')
+
+GObject Introspection (_introspection_)::
+GObject Introspection Middleware, Schnittstellen zwischen GObject-C-Bibliotheken und anderen Programmiersprachen <<GObject-Introspection>> ('gir1.2-ebook-1.2')
+
+Interpreter (_interpreters_)::
+Interpretierte Programmiersprachen wie bspw. Tcl/Tk ('luajit', 'm4', 'tcl')
+
+Java (_java_)::
+alles rund um die Programmiersprache Java ('ant', 'tomcat8', 'openjdk-7-jre')
+
+KDE (_kde_)::
+Programme zum KDE-Desktop ('apper', 'kdm', 'knotes')
+
+Kernel (_kernel_)::
+Betriebssystem-Kernel und zugehörige Module und Programme ('dkms', 'firmware-atheros', 'firmware-linux', 'kernel-package', 'linux-image-amd64')
+
+Klang (_sound_)::
+alles für den guten Ton ('alsa-utils', 'audacious', 'playmidi', 'xmms2')
+
+Kommunikation (_comm_)::
+Kommunikationsprogramme für externe Schnittstellen, Modems und Telefonanlagen ('cu', 'asterisk', 'hylafax-server', 'wvdial')
+
+Lisp (_lisp_)::
+alles zur Programmiersprache Lisp und Dialekten davon ('lush', 'mit-scheme', 'picolisp')
+
+Mathematik (_math_)::
+mathematische und wissenschaftliche Programme ('bc', 'concalc', 'euler', 'freemath')
+
+Metapakete (_metapackages_)::
+Paketgruppen (siehe <<debian-pakete-varianten>>) ('games-finest', 'gnome', 'kde-full', 'gis-devel')
+
+Mono/CLI (_cli-mono_)::
+alles rund um die C#-Implementierung Mono und die 'Common Language Infrastructure' ('monodoc-browser')
+
+Netzwerk (_net_)::
+Netzwerkserver und Clientprogramme, Programme zur Netzwerkkonfiguration ('bind9', 'centerim', 'debmirror', 'isc-dhcp-client')
+
+Usenet News (_news_)::
+Software für Usenet-Newsgruppen ('slrn', 'nget', 'tin')
+
+OCaml (_ocaml_)::
+alles zur Programmiersprache OCaml ('cameleon', 'libcurl-ocaml', 'ocamlwc')
+
+Perl (_perl_)::
+alles zur Programmiersprache Perl, CPAN-Module ('libaudio-file-perl', 'perl', 'perl-doc')
+
+PHP (_php_)::
+alles zur Programmiersprache PHP ('icinga-web', 'php5')
+
+Python (_python_)::
+alles zur Programmiersprache Python ('python3', 'idle')
+
+Ruby (_ruby_)::
+alles zur Programmiersprache Ruby ('ruby', 'ruby-xmmsclient')
+
+Schriften (_fonts_)::
+Schriften und Programme zum Verarbeiten von Schriften ('fontforge', 'fontconfig', 'xfonts-cyrillic')
+
+Shells (_shells_)::
+verschiedene Shells ('bash', 'fish', 'zsh')
+
+Spiele (_games_)::
+Spiele und Unterhaltung ('freeciv-server', 'gcompris', 'openttd')
+
+Sprachpakete (_localization_)::
+Lokalisierungsunterstützung für große Softwarepakete ('iceweasel-l10n-all', 'kde-l10n-es', 'libreoffice-l10n-ar')
+
+TeX (_tex_)::
+alles zum Schriftsatzsystem TeX, inkl. LaTeX und XeTeX ('dvi2ps', 'biblatex', 'gummi')
+
+Textverarbeitung (_text_)::
+Werkzeuge zum Umgang mit Textdateien ('a2ps', 'xpdf', 'wordnet', 'wogerman')
+
+udeb-Pakete des Debian-Installers (_debian-installer_)::
+spezielle Pakete zur Verwendung im Debian-Installer, siehe <<mikro-binaerpakete>> ('archdetect', 'cdrom-detect')
+
+Verschiedenes (_misc_)::
+Diverses, was sonst nirgends hineinpaßt ('bochsbios', 'cpuburn', 'screen')
+
+Versionskontrollsysteme (_vcs_)::
+Versionskontrollsysteme und zugehörige Hilfswerkzeuge ('bzr', 'cvs', 'git')
+
+Video (_video_)::
+Videobetrachter, -editoren, -rekorder, -sender ('dvb-apps', 'dvbstream', 'gnome-mplayer', 'mpv')
+
+Web (_web_)::
+Webbrowser, Download-Tools, HTML-Editoren, usw. ('bluefish', 'iceweasel')
+
+Webserver (_httpd_)::
+Webserver und ihre Module ('apache2', 'nginx', 'lighttpd', 'libapache2-mod-perl2', 'libapache2-mod-php5')
+
+Wissenschaft (_science_)::
+Programme zum wissenschaftlichen Arbeiten ('celestia', 'garlic')
+
+X Window (_x11_)::
+X-Server, Window-Manager und Anderes ('xterm', 'xsensors', 'xorg-xserver')
+
+XFCE (_xfce_)::
+Programme zum XFCE-Desktop ('thunar', 'xfwm4', 'xfwm4-themes')
+
+Zope/Plone (_zope_)::
+alles rund um das Zope-Framework ('zope-common', 'zope2.13')
+
+// Stichworte für den Index
+(((Debtags)))
+
+[TIP]
+.Erweiterung um Debtags
+====
+Das Kategorienkonzept hat eine Reihe von Limitierungen, insbesondere die
+Einordnung eines Pakets in nur eine einzige Kategorie. Um diese Grenzen
+aufzuheben, gibt es das Debtags-Projekt, welches jedes Paket um passende
+Schlagworte ergänzt. Dieses Konzept und die dazugehörigen Werkzeuge
+stehen unter Erweiterte Paketklassifikation mit Debtags (siehe
+<<erweiterte-paketklassifikation-mit-debtags>>) im Mittelpunkt.
+====
+
+// Datei (Ende): ./konzepte/software-in-paketen-organisieren/sortierung-der-pakete-nach-verwendungszweck.adoc

@@ -1,0 +1,357 @@
+// Datei: ./werkzeuge/paketoperationen/paketabhaengigkeiten-anzeigen.adoc
+
+// Baustelle: Fertig
+
+[[paketabhaengigkeiten-anzeigen]]
+
+=== Paketabhängigkeiten anzeigen ===
+
+// Stichworte für den Index
+(((Paket, Abhängigkeiten anzeigen)))
+(((Paketabhängigkeiten, verstehen)))
+Wie in der Einführung zum Buch bereits genannt, besteht Debian aus einer
+riesigen Menge einzelner Pakete. Dabei werden größere, komplexe
+Funktionalitäten in kleine, separate Bausteine zerlegt. Diese Bausteine
+sind als einzelne `deb`-Pakete verfügbar, die häufig einander bedingen.
+In der Paketbeschreibung jedes `deb`-Pakets ist der Bezug zu den anderen
+Paketen hinterlegt. Genaueres dazu lesen Sie unter Debian-Paketformat im
+Detail in <<debian-paketformat-im-detail>>.
+
+Vor der Veränderung des Paketbestands – d.h. dem Hinzufügen, Entfernen
+und Aktualisieren eines oder mehrerer Pakete – prüfen APT und
+`aptitude`, ob diese Abhängigkeiten nach den Änderungen weiterhin
+erfüllt sind. Die Abhängigkeiten müssen erfüllt sein, damit Ihr
+Linuxsystem weiterhin funktioniert und dieses für Sie benutzbar bleibt.
+Sind die Abhängigkeiten jedoch nicht erfüllt, werden Ihnen die Pakete
+und die erforderlichen Paketoperationen angezeigt, die zur
+Aufrechterhaltung eines sauberen Paketbestands durchzuführen sind.
+
+==== Paketabhängigkeiten auflisten ====
+
+// Stichworte für den Index
+(((apt-cache, depends)))
+(((apt-cache, show)))
+(((Paketabhängigkeiten, auflisten)))
+Dazu stehen Ihnen einerseits das Werkzeug `apt-cache` mit den beiden
+Unterkommandos `show` und `depends` zur Verfügung, andererseits auch
+`aptitude` mit speziellen Suchoptionen. Als weitere Information
+benötigen beide Programme noch den Namen des Pakets, zu dem es die
+Paketabhängigkeiten ausgeben sollen.
+
+Die beiden nachfolgenden Ausgaben illustrieren die Wirkung zum Paket
+'xpdf'. Die erste Ausgabe greift auf `apt-cache show` in Verbindung mit
+dem UNIX-Kommando `grep` und einer Pipe zurück, um aus der
+Paketbeschreibung die entsprechende Zeile mit den Abhängigkeiten
+herauszufiltern.
+
+// Stichworte für den Index
+(((apt-cache, show)))
+
+.Suche mittels `grep` in der Ausgabe von `apt-cache`
+----
+$ apt-cache show xpdf | grep Depends
+Depends: lesstif2 (>= 1:0.94.4), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libpoppler19 (>= 0.18.4), libstdc++6 (>= 4.1.1), libx11-6, libxt6
+$
+----
+
+// Stichworte für den Index
+(((apt-cache, depends)))
+
+In der zweiten Darstellung sehen Sie den Einsatz des Unterkommandos
+`depends`. Jedes benötigte Debianpaket wird in einer einzelnen Zeile
+in alphabetisch aufsteigender Reihenfolge und ohne die Versionsnummer
+ausgegeben.
+
+.Detaillierte Ausgabe der Paketabhängigkeiten
+----
+$ apt-cache depends xpdf
+xpdf
+  Hängt ab von: lesstif2
+  Hängt ab von: libc6
+  Hängt ab von: libgcc1
+  Hängt ab von: libpoppler19
+  Hängt ab von: libstdc++6
+  Hängt ab von: libx11-6
+  Hängt ab von: libxt6
+  Empfiehlt: poppler-utils
+  Empfiehlt: poppler-data
+  Empfiehlt: gsfonts-x11
+  Empfiehlt: cups-bsd
+$
+----
+
+// Stichworte für den Index
+(((Paketabhängigkeiten, Auflistung einschränken)))
+Ohne weitere Optionen enthält die Ausgabe alle Abhängigkeiten und
+Empfehlungen zu dem Paket. Mit den folgenden Optionen spezifizieren Sie
+die Ausgabe noch genauer.
+
+`-i` (Langform `--important`):: 
+Einschränkung auf die wichtigen Abhängigkeiten, d.h. nur unerfüllte
+('unmet') und direkte Abhängigkeiten ('depends')
+
+`--no-pre-depends`:: 
+blendet die Pakete aus, die vorher installiert sein müssen
+
+`--no-depends`:: 
+direkte Abhängigkeiten ausblenden
+
+`--no-recommends`:: 
+die Empfehlungen für weitere Pakete ausblenden
+
+`--no-suggests`:: 
+Angaben für Vorschläge werden unterdrückt
+
+`--no-conflicts`:: 
+blendet die Pakete aus, die mit dem Paket in Konflikt stehen, d.h. nicht gleichzeitig installiert sein dürfen
+
+`--no-breaks`:: 
+blendet die Pakete aus, die das Paket funktionsunfähig machen
+
+`--no-replaces`:: 
+Pakete, die das aktuelle Paket ersetzen, werden nicht angezeigt
+
+`--no-enhances`:: 
+Pakete, die das aktuelle Paket erweitern, werden nicht angezeigt
+
+`--installed`:: 
+begrenzt die Ausgabe nur auf die installierten Pakete
+
+Eine Anwendung der Optionen zeigt die nachfolgende Ausgabe, hier für das
+Paket 'xfce4' und mit der Option `--no-depends`. Angezeigt werden nur
+die vorgeschlagenen und empfohlenen Pakete zu 'xfce4'.
+
+.Ausgabe der vorgeschlagenen und empfohlenen Pakete zu 'xfce4'
+----
+$ apt-cache depends xfce4 --no-depends
+xfce4
+  Schlägt vor: xfprint4
+  Schlägt vor: xfce4-goodies
+  Empfiehlt: xorg
+  Empfiehlt: desktop-base
+  Empfiehlt: thunar-volman
+  Empfiehlt: tango-icon-theme
+  Empfiehlt: xfce4-notifyd
+$
+----
+
+// Stichworte für den Index
+(((aptitude, search ~D)))
+(((aptitude, search ?depends)))
+Wie oben schon angerissen, versteht `aptitude` eine Reihe von speziellen
+Suchmustern. Eines davon ist `~Dmuster` als Abkürzung für 'depends',
+welches Sie mit dem Unterkommando `search` kombinieren. 'muster' bezeichnet
+hier den Namen oder das Textfragment eines Pakets. Um beispielsweise
+alle Pakete aufzulisten, die eine Abhängigkeit auf das Paket 'xpdf' in
+der Paketbeschreibung deklariert haben, nutzen Sie das Kommando
+`aptitude search ~Dxpdf`. Das Ergebnis ist eine mehrspaltige Auflistung
+der Pakete mit deren Installationsstatus, Paketnamen und
+Kurzbeschreibung (siehe dazu Liste der installierten Pakete anzeigen und
+deuten in <<liste-der-installierten-pakete-anzeigen-und-deuten>>).
+
+.Ausgabe der Paketabhängigkeiten mit `aptitude`
+----
+$ aptitude search ~Dxpdf
+p   eficas               - Graphical editor for Code Aster command files
+p   impressive           - Werkzeug zur Präsentation von PDF-Dateien mit
+p   muttprint-manual     - Handbuch für muttprint
+p   page-crunch          - PDF and PS manipulation for printing needs
+p   wiipdf               - Präsentiert eine PDF-Datei mittels Wiimote
+$
+----
+
+==== Anzeige der umgekehrten Paketabhängigkeiten ====
+
+// Stichworte für den Index
+(((apt-cache, rdepends)))
+(((apt-rdepends)))
+(((Debianpaket, apt-rdepends)))
+(((Paket, Rückwärtsabhängigkeiten auflisten)))
+(((Paketabhängigkeiten, Rückwärtsabhängigkeiten auflisten)))
+Diese Aktivität übersetzen Sie mit der Frage ``Welche anderen Pakete
+benötigt Paket 'x'?'', auch genannt 'Rückwärtsabhängigkeit'. Zur
+Beantwortung der Frage helfen Ihnen einerseits wiederum `apt-cache` mit
+dem Unterkommando `rdepends`, andererseits das Kommando `apt-rdepends`
+aus dem gleichnamigen Paket 'apt-rdepends' <<Debian-Paket-apt-rdepends>>
+und auch `aptitude` selbst weiter.
+
+.Ausgabe der umgekehrten Paketabhängigkeiten mit `apt-cache` für das Paket 'xfce4'
+----
+$ apt-cache rdepends xfce4
+xfce4
+Reverse Depends:
+  xfwm4
+  task-xfce-desktop
+ |desktop-base
+  education-desktop-xfce
+$
+----
+
+Pakete, die von weiteren Paketen abhängen, sind in der Ausgabe von
+`apt-cache` mit einem senkrechten Strich (``Pipe'') gekennzeichnet.
+Deutlicher wird `apt-rdepends`, da es die Abhängigkeiten noch weitaus
+stärker auflöst. Nachfolgende Darstellung zeigt daher nur einen
+Ausschnitt.
+
+.Ausgabe der umgekehrten Paketabhängigkeiten mit `apt-rdepends` (Ausschnitt)
+----
+$ apt-rdepends xfce4 | more
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+xfce4
+  Depends: gtk2-engines-xfce (>= 2.8.0)
+  Depends: orage (>= 4.8.0)
+  Depends: thunar (>= 1.2.0)
+  Depends: xfce4-appfinder (>= 4.8.0)
+  Depends: xfce4-mixer (>= 4.8.0)
+  Depends: xfce4-panel (>= 4.8.0)
+  Depends: xfce4-session (>= 4.8.0)
+  Depends: xfce4-settings (>= 4.8.0)
+  Depends: xfce4-utils (>= 4.8.0)
+  Depends: xfconf (>= 4.8.0)
+  Depends: xfdesktop4 (>= 4.8.0)
+  Depends: xfwm4 (>= 4.8.0)
+gtk2-engines-xfce
+  Depends: libatk1.0-0 (>= 1.12.4)
+  Depends: libc6 (>= 2.3.6-6~)
+...
+$
+----
+
+// Stichworte für den Index
+(((apt-rdepends, -d)))
+(((dotty)))
+(((Debianpaket, graphviz)))
+(((Paketabhängigkeiten, graphisch darstellen)))
+Das Ergebnis von `apt-rdepends` wird vielleicht leichter verständlich,
+wenn Sie die Paketabhängigkeiten graphisch darstellen. Dabei hilft Ihnen
+das Programm `dotty` aus dem Paket 'graphviz' <<Graphviz>>. Für das
+Paket 'tcpdump' sieht der Aufruf wie folgt aus.
+
+.Erzeugung der Abhängigkeiten als Dot-Datei
+----
+$ apt-rdepends -d tcpdump | dot > tcpdump.dot
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+$
+----
+
+Das Ergebnis der von `apt-rdepends` zu `dot` weitergeleiteten und in der
+Datei `tcpdump.dot` abgespeicherten Relationsmenge zeigen Sie
+mit dem Programm `dotty` an (siehe <<fig.tcpdump-apt-rdepends>>).
+
+.Aufruf von `dotty`
+----
+$ dotty tcpdump.dot
+$
+----
+
+.Darstellung der umgekehrten Paketabhängigkeiten mit `dotty`
+image::werkzeuge/paketoperationen/tcpdump-apt-rdepends.png[id="fig.tcpdump-apt-rdepends", width="50%"]
+
+// Stichworte für den Index
+(((aptitude, search reverse-depends)))
+(((aptitude, search ~R)))
+(((Paket, Rückwärtsabhängigkeiten auflisten)))
+(((Paketabhängigkeiten, Rückwärtsabhängigkeiten auflisten)))
+Zur Suche nach umgekehrten Paketabhängigkeiten hilft Ihnen `aptitude`
+mit dem Suchmuster `~Rmuster` als Abkürzung für 'reverse-depends'.
+Dieses Suchmuster kombinieren Sie wieder mit dem Unterkommando `search`
+und dem Namen oder Textfragment eines Pakets. Für das Paket 'xfce4'
+erhalten Sie nachfolgende Ausgabe:
+
+.Ausgabe der umgekehrten Paketabhängigkeiten mit `aptitude` (Ausschnitt)
+----
+$ aptitude search ~Rxfce4
+p   aterm                - Afterstep XVT - ein VT102 Emulatur für das
+p   aterm-ml             - Afterstep XVT - ein VT102-Emulatur für das
+i   dpkg                 - Debian-Paketverwaltungssystem
+p   dunst                - Minimalistischer Benachrichtigungs-Daemon 
+p   eterm                - Enlightened Terminal Emulator
+p   evilvte              - Leichtgewichtiger Terminal-Emulator auf Ba
+i A exo-utils            - Werkzeugdateien für libex
+p   exo-utils-dbg        - Debuginformationen für exo-utils
+i   gnome-terminal       - GNOME-Terminalemulator
+i A gstreamer0.10-alsa   - GStreamer-Erweiterung für ALSA
+...
+$
+----
+
+// Stichworte für den Index
+(((apt-rdepends, -r)))
+Möchten Sie hingegen nur die Pakete anzeigen, die sich gegenseitig
+direkt bedingen, hilft Ihnen `apt-rdepends` mit der Option `-r`.
+Nachfolgend zeigt es die definierte Abhängigkeit zwischen den beiden
+Paketen 'xfce4' und 'task-xfce-desktop'.
+
+.Ausgabe sich gegenseitig bedingender Pakete mit `apt-rdepends`
+----
+$ apt-rdepends xfce4 -r
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+xfce4
+  Reverse Depends: task-xfce-desktop (3.14.1)
+task-xfce-desktop
+$
+----
+
+==== Prüfen, ob die Abhängigkeiten des gesamten Systems erfüllt sind ====
+
+// Stichworte für den Index
+(((apt-get, check)))
+(((Paketabhängigkeiten, des gesamten Systems überprüfen)))
+APT liefert über das Werkzeug `apt-get` und dessen Unterkommando `check`
+ein kleines Diagnosewerkzeug mit. Es aktualisiert den
+Paketzwischenspeicher (siehe <<paketcache>>) und prüft, ob auf Ihrem
+Linuxsystem beschädigte Abhängigkeiten vorliegen. Das beinhaltet alle
+installierten Pakete sowie die bereits entpackten, aber noch nicht
+konfigurierten Pakete <<Debian-Anwenderhandbuch-apt-optionen>>.
+
+.Prüfung auf beschädigte Abhängigkeiten mit `apt-get check`
+----
+# apt-get check
+Paketlisten werden gelesen... Fertig
+Abhängigkeitsbaum wird aufgebaut.
+Statusinformationen werden eingelesen.... Fertig
+#
+----
+
+// ToDo: besseres Beispiel finden
+
+==== Zusammenfassung aller unerfüllten Abhängigkeiten im Paketcache ====
+
+// Stichworte für den Index
+(((apt-cache, unmet)))
+(((Paketabhängigkeiten, unerfüllte Abhängigkeiten auflisten)))
+Das Werkzeug `apt-cache` zeigt Ihnen eine Zusammenfassung aller
+unerfüllten Abhängigkeiten im Paketzwischenspeicher (siehe
+<<paketcache>>). Dazu bietet es das Unterkommando `unmet`, welches Sie
+auch noch um einen Paketnamen bzw. eine Liste davon ergänzen können. Die
+dargestellte Liste zeigt die Funktionalität zum Paket 'wireshark' und
+beinhaltet auch die nicht installierten Vorschläge der Pakete.
+
+.Auflistung aller unerfüllten Abhängigkeiten für Pakete, die mit 'wireshark' beginnen
+----
+$ apt-cache unmet wireshark*
+Paket wireshark Version 1.8.2-5wheezy10 hat eine unerfüllte Abhängigkeit:
+ Ersetzt: ethereal (< 1.0.0-3)
+Paket libwireshark2 Version 1.8.2-5wheezy10 hat eine unerfüllte Abhängigkeit:
+ Ersetzt: wireshark-common (< 1.4.0~rc2-1)
+Paket libwireshark-data Version 1.8.2-5wheezy10 hat eine unerfüllte Abhängigkeit:
+ Ersetzt: wireshark-common (< 1.4.0~rc2-1)
+Paket wireshark-common Version 1.8.2-5wheezy10 hat eine unerfüllte Abhängigkeit:
+ Ersetzt: ethereal-common (< 1.0.0-3)
+Paket libwireshark-dev Version 1.8.2-5wheezy10 hat eine unerfüllte Abhängigkeit:
+ Ersetzt: wireshark-dev (< 1.4.0~rc2-1)
+Paket wireshark-dev Version 1.8.2-5wheezy10 hat eine unerfüllte Abhängigkeit:
+ Ersetzt: ethereal-dev (< 1.0.0-3)
+frank@efho-mobil:~$ apt-cache unmet wireshark
+Paket wireshark Version 1.8.2-5wheezy10 hat eine unerfüllte Abhängigkeit:
+ Ersetzt: ethereal (< 1.0.0-3)
+$
+----
+
+// Datei (Ende): ./werkzeuge/paketoperationen/paketabhaengigkeiten-anzeigen.adoc
