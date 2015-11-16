@@ -6,5 +6,5 @@
 *.mobi
 *.lit
 *.fb2
-/version.txt
+/version.adoc
 /docbook-xsl.css
