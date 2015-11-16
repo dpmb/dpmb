@@ -1,0 +1,13 @@
+= Summary
+
+[preface]
+. link:kann-denn-paketmanagement-spass-machen/kann-denn-paketmanagement-spass-machen.txt[Kann Paketmanagement Spaß machen?]
+. link:konzepte/konzepte.txt[Konzepte]
+. link:werkzeuge/werkzeuge.txt[Werkzeuge]
+. link:praxis/praxis.txt[Praxis]
+// . link:ausblick/ausblick.txt[Ausblick]
+
+[appendix]
+. link:quellen/quellen.txt[Quellen]
+. link:anhang/anhang.txt[Anhang]
+// . link:index/index.txt[Index]
