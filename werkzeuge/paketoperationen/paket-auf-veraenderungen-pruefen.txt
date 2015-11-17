@@ -6,6 +6,12 @@
 
 === Paket auf Veränderungen prüfen ===
 
+// Stichworte für den Index
+(((Paket, auf Veränderungen prüfen)))
+(((Paket, auf Vertrauenswürdigkeit prüfen)))
+(((Paket, Signatur überprüfen)))
+(((Paket, verifizieren)))
+(((Paketsignatur, überprüfen)))
 Installieren Sie ein Debianpaket, landen die darin enthaltenen Dateien
 üblicherweise eins-zu-eins auf dem Speichermedium. Als Administrator
 gehört zu Ihren Aufgaben, das System und die Dateien auf Integrität zu
@@ -124,6 +130,7 @@ $
 
 // Stichworte für den Index
 (((debsums)))
+(((Paket, Dateien auf Integrität prüfen)))
 Genauso wie `dlocate` kann auch `debsums` die Dateien eines Paketes auf
 Integrität überprüfen. Dazu braucht es jedoch keine weitere Option, da
 das Überprüfen von Dateien die einzige Aufgabe von `debsums` ist:
