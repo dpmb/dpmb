@@ -1,11 +1,6 @@
 sudo: required
 dist: trusty
-
-# *sigh* "make deploy" for Divshot uses Travis CI's ruby, not Ubuntu's
-# ruby. To be reverted again, when we have an alternative for Divshot.
-
-#language: generic
-language: ruby
+language: generic
 
 before_install:
    - sudo apt-get update
@@ -21,12 +16,3 @@ script:
 
 notifications:
   irc: irc.lugs.ch#kivamon
-
-before_deploy: make deploy
-
-deploy:
-  provider: divshot
-  environment: development
-  skip_cleanup: true
-  api_key:
-    secure: gGSYYf/SIo/S04tissAA3rzgCufW7uNrh0SxDPWTAxew8VGMjeyFa68+AZv8nIhIMf9YCiB7U9EgYAjPk/Xt6LHE7EAiylOrg9nM6cBdmyZWgWDyXLqvZIFCArpdPLa9Lvvvvb0JbShqfVfi8/JXXEEwQcM7dGprg8S9MgfSlJjGdWPq2KwGthcXWKVn4kNYH8ZEbrEs7bbJyTi9zKTkhgwvLN0Jls6OWL7dDtWvr/f+GZt0pCGaK0Ec6fpBQILa0Zl8973O/RE4dnwtaAlobkZgdxOtDqP1vZ1ZMJq5oJtjT5EPEijRiq50qcEPf5oaY69ZM/nlqfnSNvk23e/NzirLomCtbCKgSgY/rFcyrQCJxnaw3MEl5d/PJ0Mz/8IW2rNLyOfRQNGDiDAtE3t8xWwxB19DIeH9velS0r9sGWm+JXcoYmaZclS9urVVi5AZC7Rp9vd4M0bDMOjxgdn17BVqRXZ397QnsGnJcWCPl/V3lb6EQLxPNt8WpUOS87hsXcB5a/1oSOVNAn40fL2o295CxtJ6RI8J/FKNAKM+U1w/fZqNa+IIe3DEXUHMiVfRSKWim4Czr6p6rBSNw2Ofx71QKs9CzEVY9Vv2MfaaGUCKKRFysicpX2pXVpm9pZjW8jAqMgIPU2jjRDb7/38aCdlNfEhyy5iWUsBLyZm8Bnk=
