@@ -1,0 +1,34 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/cupt.adoc
+
+// Baustelle: Fertig
+
+[[Cupt]]
+
+==== Cupt ====
+
+// Stichworte für den Index
+(((Cupt)))
+(((cupt, --satisfy)))
+Cupt beschreibt sich selbst als 'High-level Package Manager' und
+integriert Kommandos unter einem Dach, die Sie von den Werkzeugen `dpkg`
+und APT her kennen. Dafür nutzt es auf der Serverseite die gleiche
+Infrastruktur wie APT. Die Clientseite wurde hingegen komplett neu
+entwickelt. Sie rufen das in der Programmiersprache C++ entwickelte
+Werkzeug über das gleichnamige Kommando `cupt` auf.
+
+Wie bereits oben angerissen, vereinigt Cupt zwar Kommandos aus `dpkg`
+und APT, jedoch bislang noch nicht alle davon. Offen ist bspw. der
+Support für 'multiarch' (<<debian-architekturen-multiarch>>).
+Gleichzeitig bietet es auch weitere Features, die APT noch fehlen (siehe
+<<Debian-Wiki-cupt>>), bspw. Debdelta <<Debdelta>> und die
+Synchronisation anhand der Version des Sourcepakets. Ebenso kennt es
+ein Kommando `satisfy`, um auf der Kommandozeile angegebene
+Paketbedingungen zu erfüllen, z.B. `cupt satisfy ``kmail (>= 4:4.2),
+wget (>= 1.10.0)''`.
+
+Cupt kann problemlos parallel zu APT verwendet werden, ist jedoch gemäß
+seinem Autor noch nicht sehr weit verbreitet und auch entsprechend wenig
+durch Benutzer in der Praxis getestet <<Cupt-Tutorial>>. Wir gehen im
+Buch nicht weiter darauf ein.
+
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/cupt.adoc

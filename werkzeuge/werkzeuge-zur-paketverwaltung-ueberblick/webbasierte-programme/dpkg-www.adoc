@@ -1,0 +1,171 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/dpkg-www.adoc
+
+// Baustelle: Fertig
+
+[[webbasierte-programme-dpkg-www]]
+==== In Paketen blättern mittels `dpkg-www` ====
+
+// Stichworte für den Index
+(((Debianpaket, dctrl-tools)))
+(((dpkg-www)))
+Das Projekt `dpkg-www` umfasst ein CGI-Skript und stellt Ihnen damit den
+Zugang zu sämtlicher Dokumentation zu den einzelnen Paketen zur
+Verfügung, die auf ihrem eigenen oder einem fremden Debian-System
+installiert sind. Dazu analysiert es das Verzeichnis
+`/usr/share/doc`. Als Ergebnis erhalten Sie zu jedem Paket eine
+graphische Auflistung der dazugehörigen, verfügbaren Textdateien,
+README-Dokumente, Manpages und GNU Info-Dokumente. Auch das manuelle
+Durchblättern des Verzeichnisses `/usr/share/doc` gehört dazu.
+Ist ebenfalls das Paket 'dctrl-tools' <<Debian-Paket-dctrl-tools>>
+installiert, können Sie mittels `dpkg-www` auch nach anderen Paketen und
+insbesondere nach den darin enthaltenen Dateien suchen.
+
+// Stichworte für den Index
+(((Debianpaket, dpkg-www)))
+Die Grundlage bildet das gleichnamige Paket 'dpkg-www'
+(<<Debian-Paket-dpkg-www>>). Obwohl dieses seine letzte reguläre
+Aktualisierung bereits 2008 erhielt und derzeit als verwaist eingestuft
+ist (d.h, dass das Paket keinen Maintainer mehr hat), sind gemäß
+Popularity Contest (<<Debian-Popularity-Contest>>) noch etwa 350
+Installationen in Benutzung (siehe dazu auch
+<<verbreitungsgrad-von-paketen>>).
+
+Bitte beachten Sie, dass Sie ohne Anpassung der Konfiguration lediglich
+im Paketbestand des Systems stöbern können. Aus der Bedienoberfläche
+heraus können Sie im Auslieferungszustand keine Veränderung ihres
+Paketbestands vornehmen. Auch die Autoren raten davon ab, da sie es als
+Sicherheitsrisiko einstufen. Um das dennoch zu ermöglichen, sind
+zunächst noch Änderungen an den beiden Konfigurationsdateien
+`/etc/dpkg-www.conf` (Apache) und `/etc/dwww/dwww.conf`
+(Webserver) erforderlich. Die Informationen dazu entnehmen Sie bitte der
+Dokumentation zu `dpkg-www`.
+
+// Stichworte für den Index
+(((dpkg-www, Webserver Apache)))
+(((dpkg-www, Webserver Nginx)))
+`dpkg-www` setzt auf einem installierten Webserver wie Apache oder Nginx
+auf. Daher ist die primäre Schnittstelle zur Bedienung des Programms
+auch ihr *Webbrowser*. Das Analyseergebnis stellt `dpkg-www` zweispaltig
+dar. Links stehen die verschiedenen Paketkategorien (siehe
+<<sortierung-der-pakete-nach-verwendungszweck>>), rechts finden Sie die
+einzelnen Pakete, die der jeweiligen Kategorie zugeordnet sind (siehe
+<<fig.dpkg-www>>). Jedes Paket wird dabei mit seinem Titel, einer
+Kurzbeschreibung, dem dazugehörigen Paketnamen und mit der Angabe der
+bereitstehenden Formate der Dokumentation oder der weiterführenden
+Dokumente aufgelistet. In der Regel sind das HTML, Plaintext, PDF,
+Postscript oder SGML.
+
+.Auswahl der Hilfeseiten zum Menüpunkt menu:Netzwerkkommunikation[]
+image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/dpkg-www.png[id="fig.dpkg-www", width="50%"]
+
+Wählen Sie ein Paket aus der Liste aus, erhalten Sie detailliertere
+Informationen dazu. Dieses zeigt <<fig.dpkg-www-synaptic>> anhand des
+Programms Synaptic.
+
+.Auswahl der Hilfeseiten zu Synaptic
+image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/dpkg-www-synaptic.png[id="fig.dpkg-www-synaptic", width="50%"]
+
+`dpkg-www` verfügt auch über eine sekundäre Schnittstelle -- die
+*Kommandozeile*. Darüber fragen Sie sowohl Informationen zu ihrem
+eigenen System, als auch zu entfernten Rechnern ab. Letzteres gelingt
+nur, sofern dort `dpkg-www` auch installiert und über das Netzwerk
+erreichbar ist. Nutzen Sie den Apache Webserver, muss diese
+Funktionalität zuvor in der Datei `/etc/apache2/conf.d/dpkg-www`
+freigeschaltet worden sein.
+
+// Stichworte für den Index
+(((dpkg-www, -h)))
+(((dpkg-www, -s)))
+(((dpkg-www, -stdout)))
+Neben dem Paketnamen versteht das Programm die folgenden beiden
+Optionen:
+
+`-s` (Langform `--stdout`) :: 
+die Ausgabe erfolgt nicht im Webbrowser, sondern auf dem Terminal.
+
+`-h Hostname` ::
+Hostname des angefragten Rechners.
+
+// Stichworte für den Index
+(((dpkg-query, -l)))
+(((dpkg-query, -L)))
+(((dpkg-query, -S)))
+Für das Paket 'bash' auf dem 'lokalen Rechner' und der späteren Ausgabe
+im Webbrowser nutzen Sie den nachfolgenden Aufruf. Dazu aggregiert
+`dpkg-www` nacheinander die Ergebnisse drei Kommandos `dpkg-query -S
+bash`, `dpkg-query -l bash` und `dpkg-query -L bash` zur Paketsuche und
+zur Bestimmung der Dateien in dem angefragten Paket (siehe auch
+<<paketinhalte-anzeigen-apt-file>>). Zur Ausgabe im Webbrowser wertet
+`dpkg-www` die Umgebungsvariable `$BROWSER` aus, startet das darüber
+benannte Programm und öffnet ein zusätzliches Fenster zur Darstellung
+(siehe dazu auch <<alternatives>>).
+
+.Lokale Hilfedokumente zum Paket 'bash' mittels `dpkg-www` anzeigen
+----
+$ dpkg-www bash
+$
+----
+
+Um die Informationen zu dem gleichen Paket zuerhalten, welches jedoch
+auf dem entfernten Rechner mit dem Hostnamen `kiste` installiert ist,
+funktioniert dieser Aufruf mit der zusätzlichen Option `-h`:
+
+.Entfernte Hilfedokumente zum Paket 'bash' mittels `dpkg-www` im Webbrowser anzeigen
+----
+$ dpkg-www -h kiste bash
+$
+----
+
+Möchten Sie diese Informationen stattdessen auf ihrem aktuellen Terminal
+ausgeben, ergänzen Sie den obigen Aufruf um den Parameter `-s` wie
+folgt (hier am Beispiel des Pakets 'htop'):
+
+.Entfernte Hilfedokumente zum Paket 'htop' mittels `dpkg-www` im Terminal anzeigen
+----
+$ dpkg-www -h kiste -s htop
+Package: htop
+Status: install ok installed
+Priority: optional
+Section: utils
+Installed-Size: 195
+Maintainer: Eugene V. Lyubimkin <jackyf@debian.org> [Debian Bug Report]
+Architecture: i386
+Version: 1.0.1-1
+Depends: libc6 (>= 2.3.4), libncursesw5 (>= 5.6+20070908), libtinfo5
+Suggests: strace, ltrace
+Description: interactive processes viewer
+ Htop is an ncursed-based process viewer similar to top, but it
+ allows one to scroll the list vertically and horizontally to see
+ all processes and their full command lines.
+
+ Tasks related to processes (killing, renicing) can be done without
+ entering their PIDs.
+
+Homepage: http://htop.sourceforge.net
+
+Files owned by package htop:
+
+/usr
+/usr/bin
+/usr/bin/htop
+/usr/share
+/usr/share/applications
+/usr/share/applications/htop.desktop
+/usr/share/doc
+/usr/share/doc/htop
+/usr/share/doc/htop/AUTHORS
+/usr/share/doc/htop/README
+/usr/share/doc/htop/changelog.Debian.gz
+/usr/share/doc/htop/changelog.gz
+/usr/share/doc/htop/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/htop.1.gz
+/usr/share/menu
+/usr/share/menu/htop
+/usr/share/pixmaps
+/usr/share/pixmaps/htop.png
+$
+----
+
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/dpkg-www.adoc

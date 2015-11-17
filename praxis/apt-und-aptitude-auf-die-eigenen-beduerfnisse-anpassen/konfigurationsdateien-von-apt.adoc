@@ -1,0 +1,57 @@
+// Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfigurationsdateien-von-apt.adoc
+
+// Baustelle: Rohtext
+
+[[konfigurationsdateien-von-apt]]
+=== Konfigurationsdateien von APT ===
+
+// Stichworte für den Index
+(((/etc/apt/apt.conf)))
+(((/etc/apt/apt.conf.d/)))
+
+APT greift bis einschließlich Debian 6 'Squeeze' auf die
+Hauptkonfigurationsdatei `/etc/apt/apt.conf` zu. Spätere
+Veröffentlichungen (siehe dazu <<veroeffentlichungen>>) nutzen das
+modulare Konzept unter `/etc/apt/apt.conf.d/` (siehe
+<<Debian-Wiki-AptConf>>). Üblicherweise enthält das letztgenannte
+Verzeichnis diese Module:
+
+.Modulare Konfigurationsdateien von APT
+----
+$ ls /etc/apt/apt.conf.d/
+00trustcdrom    10periodic           20packagekit           99synaptic
+01autoremove    20apt-show-versions  50unattended-upgrades
+10apt-listbugs  20dbus               70debconf
+$
+----
+
+// Stichworte für den Index
+(((~/.aptitude/config)))
+(((aptitude, lokale Konfigurationsdateien)))
+
+`aptitude` verwendet alle Konfigurationsdateien von APT plus seine
+eigenen. Diese finden Sie im Verzeichnis `~/.aptitude/config`.
+Änderungen an der Konfiguration von `aptitude` werden hier gespeichert.
+Die Konfigurationsdateien von `aptitude` verwenden dabei die gleiche
+Syntax wie die von APT.
+
+.Lokale Konfiguration von `aptitude`
+----
+aptitude "";
+aptitude::Keep-Unused-Pattern "";
+aptitude::Delete-Unused-Pattern "";
+----
+
+==== APT-Hooks ====
+
+* Begriff und Nutzen
+** Ergänzungen, kleine Erweiterungen, Eingriffe
+** standardisierte Abläufe um eigene, paketbezogene Schritte ergänzen
+* Festlegung in der APT-Konfiguration
+
+==== cron.daily/apt ====
+
+* Begriff und Nutzen
+
+
+// Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfigurationsdateien-von-apt.adoc

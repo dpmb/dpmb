@@ -1,0 +1,61 @@
+// Datei: ./praxis/apt-cache/begriff.adoc
+
+// Baustelle: Rohtext
+
+[[begriff]]
+
+=== Begriff ===
+
+// Stichworte für den Index
+(((Cache, Paketcache)))
+(((Cache, APT-Cache)))
+(((Paketmirror)))
+Im Allgemeinen bezeichnet ein 'cache' einen Datenpuffer oder
+Zwischenspeicher, der bereits angefragte Daten weiter vorhält und auf
+den im Bedarfsfall zurückgegriffen wird, wenn die Daten angefordert
+werden. Im vorliegenden Fall handelt es sich um eine Sonderform -- einen
+lokalen Zwischenspeicher häufig benötigter Softwarepakete. Diese werden
+gepuffert und erlauben damit im Vergleich zum Bezug von Paketmirror aus
+dem Internet eine wesentlich geringere Zugriffszeit, da die
+Transportwege kürzer sind und weniger Zwischenstationen miteinbezogen
+werden müssen.
+
+Das macht sich insbesondere dann deutlich bemerkbar, wenn mehrere
+Rechner diesen Datenpuffer verwenden und daraus die gleichen
+Softwarepakete beziehen. Liegt das angefragte Softwarepaket bereits im
+Cache vor, wird es von dort entnommen. Falls dieses jedoch noch nicht
+vorhanden sein sollte, wird es über das Internet vom Paketmirror bezogen
+und dem Cache hinzugefügt. Die nachfolgend Anfragenden erhalten dann das
+Softwarepaket deutlich schneller, da es dann bereits im Cache vorliegt
+und daraus bezogen werden kann.
+
+Der APT-Cache funktioniert ähnlich wie der Puffer aus <<paketcache>>,
+ist allerdings nicht rechnerspezifisch, sondern eher als Vorstufe für
+ein Netzwerk mit mehreren Clients gedacht und liegt meist auf einer
+eigenen Hardware (oder als Virtuelle Maschine) vor. Besonders zum Tragen
+kommt dieser Puffer bei einer von der Bandbreite her eher dünnen und
+stark schwankenden oder nur zeitweise verfügbaren Netzwerkanbindung.
+Erfolgt die Abrechnung Ihrer Internetanbindung entsprechend des
+transportierten Datenvolumens (sogenannte 'trafficbasierte Abrechnung'),
+ermöglicht der APT-Cache eine Verringerung der Last nach außen und spart
+Ihnen somit bares Geld. Zudem wird die Bezugszeit von Softwarepaketen
+deutlich kleiner, was Ihre Produktivität steigern kann. Da auch ein
+externer Paketmirror ausfallen kann, lässt sich mit einem Paketcache die
+lokale Ausfallrate verringern.
+
+.Schematische Darstellung mit Paketcache in der Netzwerkinfrastruktur
+----
+* ToDo: Bild
+----
+
+Vor der Einrichtung ist zwischen einem Paketcache und dem eigenem
+Paketmirror abzuwägen (siehe <<eigenen-apt-mirror-aufsetzen>>). Während
+letzterer stets alle Softwarepakete der Veröffentlichung vorhält -- also
+auch die, die Sie nicht benötigen -- landen im Paketcache hingegen nur
+die Pakete, die bisher tatsächlich angefragt wurden.
+
+Abzuschätzen ist noch der Betreuungsaufwand, der bei beiden Varianten
+einzuplanen ist.
+
+* ToDo: Betreuungsaufwand abschätzen
+// Datei (Ende): ./praxis/apt-cache/begriff.adoc

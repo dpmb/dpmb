@@ -1,0 +1,23 @@
+// Datei: ./praxis/paketverwaltung-ohne-internet/werkzeuge.adoc
+
+// Baustelle: Notizen
+
+[[paketverwaltung-offline-werkzeuge]]
+=== Werkzeuge ===
+
+// Offline-Verwaltung mit 'apt-get' und 'wget'
+include::offline-verwaltung-mit-apt-get-und-wget.adoc[]
+
+// Offline-Verwaltung mit 'apt-offline'
+include::apt-offline.adoc[]
+
+// Offline-Verwaltung mit 'apt-zip'
+include::apt-zip.adoc[]
+
+// Offline-Verwaltung mit 'aptoncd'
+include::aptoncd.adoc[]
+
+// Offline-Verwaltung mit 'keryx'
+include::keryx.adoc[]
+
+// Datei (Ende): ./praxis/paketverwaltung-ohne-internet/werkzeuge.adoc

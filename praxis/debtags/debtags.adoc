@@ -1,0 +1,43 @@
+// Datei: ./praxis/debtags/debtags.adoc
+
+// Baustelle: Fertig
+
+[[erweiterte-paketklassifikation-mit-debtags]]
+
+== Erweiterte Paketklassifikation mit Debtags ==
+
+//.Quelle und Basis
+//****
+//Dieses Kapitel basiert auf Franks Artikel aus dem LinuxUser
+//06/2012{empty}footnote:[Frank Hofmann: Dschungelführer. Pakete zielgenau
+//finden mit Debtags, LinuxUser 06/2012, LinuxNewMedia AG, München, 2012,
+//S. 22ff.,
+//http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2012/06/Pakete-zielgenau-finden-mit-Debtags]
+//und dem dazugehörigen Vortrag auf dem LinuxDay Dornbirn 2013.
+//****
+
+// Einführung
+include::debtags-einfuehrung.adoc[]
+
+// Kurzinfo zum Debtags-Projekt
+include::debtags-projekt.adoc[]
+
+// Webseite zum Projekt
+include::debtags-webseite.adoc[]
+
+// Werkzeuge
+include::debtags-werkzeuge.adoc[]
+
+// Vergebene Schlagworte anzeigen
+include::vergebene-schlagworte-anzeigen.adoc[]
+
+// Suche anhand der Schlagworte
+include::suche-anhand-der-schlagworte.adoc[]
+
+// Pakete um Schlagworte ergänzen
+include::pakete-um-schlagworte-ergaenzen.adoc[]
+
+// Verwendetes Vokabular bearbeiten und erweitern
+include::verwendetes-vokabular-bearbeiten-und-erweitern.adoc[]
+
+// Datei (Ende): ./praxis/debtags/debtags.adoc

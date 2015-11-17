@@ -1,0 +1,217 @@
+// Datei: ./konzepte/software-in-paketen-organisieren/distributionsbereiche.adoc
+
+// Baustelle: Fertig
+// Axel: Fertig Potentielle-Entsorgung-noch-offen
+
+[[distributionsbereiche]]
+
+=== Distributionsbereiche ===
+
+// Stichworte für den Index
+(((Distributionsbereiche, Begriff)))
+(((Distributionsbereiche, Unterteilung bei Debian)))
+(((Distributionsbereiche, Zuordnung)))
+
+Die Distributionsbereiche ordnen die Pakete anhand ihrer Lizenzen. Das
+hilft Ihnen dabei, die Kontrolle über die verwendeten Lizenzen auf
+Ihrem System zu behalten. Mit der Auswahl von Paketen aus
+bestimmten Distributionsbereichen legen Sie den ``Freiheitsgrad''
+Ihrer Installation fest.
+
+// Stichworte für den Index
+(((Distributionsbereiche, main)))
+(((Distributionsbereiche, contrib)))
+(((Distributionsbereiche, non-free)))
+In Debian sind die Softwarepakete in drei Bereiche unterteilt:
+
+main:: 
+Freie Software, die den Debian-Richtlinien für Freie Software entspricht.
+
+contrib:: 
+Freie Software, die von unfreier Software abhängt.
+
+non-free:: 
+Software, die _nicht_ den Debian-Richtlinien für freie Software
+entspricht, aber frei verteilbar ist.
+
+==== Einordnung der Distributionsbereiche in Debian ====
+
+// Stichworte für den Index
+(((DFSG)))
+(((Distributionsbereiche, Einordnung)))
+Zur Debian-Distribution zählt offiziell nur der Bereich _main_. Die
+anderen beiden Bereiche sind lediglich Ergänzungen, die zusätzlich
+bereitgestellt werden. Wir empfehlen Ihnen daher, soweit möglich nur
+Pakete aus _main_ zu verwenden, und nur wenn dies nicht ausreicht (z.B.
+wegen nicht-freier Firmware für bestimmte Hardwarekomponenten),
+_contrib_ und/oder _non-free_ dazuzunehmen.
+
+Pakete, die in _main_ eingeordnet werden, unterliegen einer Lizenz, die
+den Debian-Richtlinien für Freie Software <<DFSG>> entspricht. Diese
+Richtlinien sind im Debian-Gesellschaftsvertrag festgelegt
+<<Debian-Social-Contract>> und weisen starke inhaltliche Gemeinsamkeiten
+zur Free Software Foundation (FSF) und zum GNU-Projekt auf.
+
+Pakete im Zweig _contrib_ stehen zwar genauso unter einer freien Lizenz
+wie die Pakete in _main_, bedingen jedoch weitere Software oder Inhalte,
+die nicht frei gemäß obiger Festlegung ist. Typische Gründe, warum ein
+Paket im Bereich _contrib_ einsortiert wurde, sind:
+
+* Eine freie Spiele-Engine braucht die Spieldaten eines kommerziellen
+  Spiels.
+* Ein Emulator braucht Software für die zu emulierende Hardware, um zu
+  funktionieren.
+* Die Software ist nur zum Herunterladen (und ggf. installieren
+  und/oder paketieren) von nicht-freier Software da.
+* Die Software muss mit einem nicht-freien Compiler übersetzt werden.
+
+Im Zweig _non-free_ finden sich Pakete, die nicht den
+Debian-Richtlinien für Freie Software entsprechen, aber trotzdem immer
+noch frei verteilbar sind. Typische Gründe für die Nichterfüllung der
+DFSG im Bereich _non-free_ sind:
+
+* Der Quellcode liegt nicht (komplett) vor. 
+* Die Software oder Teile davon – z.B. Teile der Dokumentation – dürfen nicht modifiziert werden.
+* Die Software darf nur für nicht-kommerzielle Zwecke genutzt werden.
+* Die Software darf nur für ``Gutes'' verwendet werden.
+* Die Software darf nicht in kompilierter Form verteilt werden.
+
+Vor der Nutzung von Software aus diesem Bereich ist es ratsam, immer
+erst anhand der Lizenz zu überprüfen, ob Sie diese Software überhaupt
+für Ihre gewünschten Zwecke einsetzen dürfen.
+
+// Stichworte für den Index
+(((Debianpaket, skype)))
+Für Software in _non-free_ gilt außerdem, dass keine Unterstützung
+seitens Debian für diese Pakete möglich ist. Das trifft insbesondere
+dann zu, wenn der Quellcode nicht veröffentlicht wurde, wie das bspw.
+bei der Firmware zu bestimmten WLAN-Chipsätzen der Fall ist. 
+<<fig.aptitude-unfreie-pakete>> zeigt die Paketliste in Aptitude mit
+einem unfreien Paket aus dem Bereich Netzwerk – `skype`. Im
+abgebildeten Fall wurde es zudem nicht aus einem offiziellen
+Debian-Repository heruntergeladen, sondern manuell eingepflegt.
+
+.Paketliste mit Skype als unfreies Paket in Aptitude
+image::konzepte/software-in-paketen-organisieren/aptitude-unfreie-pakete.png[id="fig.aptitude-unfreie-pakete", width="50%"]
+
+// Stichworte für den Index
+(((Debianpaket, vrms)))
+(((vrms, -e)))
+Mit dem Kommando `vrms` aus dem gleichnamigen Paket 'vrms'
+<<Debian-Paket-vrms>> erhalten Sie eine Übersicht, welche nicht-freien
+Pakete auf Ihrem System installiert sind. 'vrms' steht dabei als
+Abkürzung für ``Virtual Richard M. Stallman''. Die im nachfolgenden
+Beispiel verwendete Option `-e` gibt eine zusätzliche Kurzbeschreibung
+zu jedem gefundenen Paket aus.
+
+.Ausgabe von `vrms` auf einem Desktop-System
+----
+$ vrms -e
+
+             Non-free packages installed on efho-mobil
+
+firmware-iwlwifi                    Binary firmware for Intel PRO/Wireless 3945 and 802.11
+nautilus-dropbox                    Dropbox integration for Nautilus
+openttd-opensfx                     sound set for use with the OpenTTD game
+opera                               Fast and secure web browser and Internet suite
+skype                               Skype
+unrar                               Unarchiver for .rar files (non-free version)
+
+             Contrib packages installed on efho-mobil
+
+flashplugin-nonfree                 Adobe Flash Player - browser plugin
+
+  6 non-free packages, 0.2% of 2696 installed packages.
+  1 contrib packages, 0.0% of 2696 installed packages.
+$
+----
+
+==== Einordnung der Distributionsbereiche bei anderen Distributionen ====
+
+// Stichworte für den Index
+(((Distributionsbereiche, Unterteilung bei Ubuntu)))
+(((Distributionsbereiche, main (Ubuntu))))
+(((Distributionsbereiche, restricted (Ubuntu))))
+(((Distributionsbereiche, universe (Ubuntu))))
+Bei Ubuntu sind die Distributionsbereiche etwas anders eingeteilt als
+bei Debian. Dort kommt neben den Lizenzen auch noch der Supportstatus
+zum Tragen. Dafür ist die Unterscheidung nach Softwarelizenzen auf
+frei oder unfrei reduziert: Es gibt _main_ (frei, von Canonical
+unterstützt), _restricted_ (unfrei, von Canonical unterstützt),
+_universe_ (frei, nur Community-Unterstützung) und _multiverse_
+(unfrei, nur Community-Unterstützung).
+
+Andere Derivate von Debian bzw. Ubuntu oder nicht-offizielle
+Paketquellen (siehe <<paketquellen>>) können ebenfalls ihre eigenen
+Distributionsbereiche haben.
+
+==== Handhabung von geschützten Namen und Logos ====
+
+Der Begriff ``Software'' wird hier recht weit gefasst und beinhaltet
+neben Programmcode auch Firmware, Dokumentation oder künstlerische
+Elemente wie beispielsweise Grafiken und Logos. Letztere stehen in
+manchen Fällen unter anderen Lizenzen als der Rest der Software und
+dürfen aus markenrechtlichen Gründen nicht für abgeänderte Programme
+verwendet werden. Aus diesem Grund wurden einige Programme abgewandelt,
+bspw. der Webbrowser Iceweasel und das Mailprogramm Icedove, die im
+Original die Namen Firefox und Thunderbird tragen. Neben den anderen
+Namen werden in Debian auch alternative Logos genutzt.
+
+==== Softwareverteilung ====
+
+Vom Größenverhältnis her findet sich der überwiegende Teil der Pakete in
+_main_, danach folgen _contrib_ und _non-free_. Für die Architektur
+_amd64_ in Debian 8 'Jessie' ist das Verhältnis 42987 (_main_) zu 250
+(_contrib_) zu 470 (_non-free_), d.h. bezogen auf die Gesamtanzahl sind
+das fast genau ein Prozent unfreie Pakete. Für die Plattform i386 ist
+die Verteilung ähnlich.
+
+==== Hintergrund der Einteilung in Distributionsbereiche ====
+
+In der Klassifikation spiegelt sich die Offenheit und Vielfalt der
+Debian-Nutzer und -Entwickler sowie deren Weltbild wieder. Es zeugt von
+dem Verständnis dahingehend, welche Software Sie tatsächlich verwenden
+und nach welchen Kriterien Sie Ihre Pakete auswählen.
+
+Je mehr Nutzer von Debian es gibt, umso vielschichtiger sind die
+Varianten der Verwendung. Jeder Nutzer pendelt sich bei der Paketauswahl
+irgendwo zwischen den beiden Polen ``nur freie Software'' und ``freie
+und unfreie Software gemischt'' ein.
+
+Erstere Gruppe versucht, ausschließlich freie Software zu verwenden und
+dazu auch unfreie in freie Software zu überführen, bspw. durch Nachbau,
+Neuentwicklung oder Anregen eines Lizenzwechsels. Dieser Schritt kann auch mit
+einem Funktionsverzicht einhergehen und ist vergleichbar mit der
+Überzeugung ``so lange eine Technologie nur kommerziell/unfrei zur
+Verfügung steht, verwende ich diese nicht und nutze stattdessen
+Alternativen''. Die zweite Gruppe ist deutlich pragmatischer und folgt
+dem Gedanken ``ich nutze die unfreie Variante, bis eine freie zur
+Verfügung steht, und steige dann um, wenn sie das kann, wie ich es
+brauche''. Dazwischen gibt es unendlich viele Abstufungen, die wiederum
+persönlichen Schwankungen unterliegen können.
+
+//////////
+Axel, 2015-06-18, 02:33
+Der folgende Absatz kann meiner Meinung nach ganz entfernt werden --
+ggf. auch noch mehr aus diesem Abschnitt.
+//////////
+
+Die Nutzung der Software hängt von den Bedürfnissen und dem Einsatzzweck
+ab. Viele Prozesse und Arbeitsabläufe bedingen eine bestimmte Menge von
+Eigenschaften (``Featureset''), welche sich nicht immer adäquat und
+vollständig mit bestehender freier Software bzw. deren aktuellem
+Entwicklungsstand abbilden lässt. Dabei spielen die Faktoren
+Produktivität, Anbindung an bereits bestehende Software, Schnittstellen
+und unterstützte Hardware oder Protokolle eine große Rolle. Desweiteren sind das
+Budget, der Zeitrahmen und die Dokumentation bzw. der Support
+entscheidend. Über die Auswahl einer Lösung entscheidet häufig, welcher
+finanzielle Rahmen für eine Lösung zur Verfügung steht, welcher Zeitraum
+zur Inbetriebnahme gesetzt ist und wie gut die Dokumentation und der
+Support zur ausgewählten Software ist. Eine Software, die frei ist, aber
+nicht oder nur ungenügend zum tatsächlichen Einsatzzweck passt, ist an
+dieser Stelle zu hinterfragen und muss sich mit einer passenden
+Alternative messen lassen, auch wenn diese als unfrei eingestuft ist,
+aber damit im Nutzungszeitraum eine funktionierende und stabile Lösung
+erreicht wird.
+
+// Datei (Ende): ./konzepte/software-in-paketen-organisieren/distributionsbereiche.adoc

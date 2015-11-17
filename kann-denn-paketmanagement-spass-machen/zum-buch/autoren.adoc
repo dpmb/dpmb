@@ -1,0 +1,31 @@
+// Datei: ./kann-denn-paketmanagement-spass-machen/zum-buch/autoren.adoc
+
+// Baustelle: Fertig
+// Axel: Fertig
+
+==== Über die Autoren ====
+
+*Dipl.-Inf. Axel Beckert* <<Beckert-Webseite>> hat Informatik mit
+Nebenfach Biologie an der Universität des Saarlandes studiert. Er
+arbeitet als Linux-Systemadministrator an der ETH Zürich, ist im
+Vorstand der Linux User Group Switzerland (LUGS) und Mitglied des
+Debian-Projekts. Er benutzt `aptitude` seit über 10 Jahren und ist seit
+der Neuformierung des `aptitude`-Teams zum Jahreswechsel 2011/2012 als
+Mentor, Versuchskaninchen für neue Versionen und Paketsponsor bei
+`aptitude` mit an Bord. Seit 2015 ist er auch offiziell einer der
+Maintainer des Paketes `aptitude` und kümmert sich primär um die
+Paketierung.
+
+*Dipl.-Inf. Frank Hofmann* hat Informatik mit Nebenfach Englisch an der
+Technischen Universität Chemnitz studiert. Derzeit arbeitet er in Berlin
+im Büro 2.0 <<Buero2.0>>, einem Open-Source Experten-Netzwerk, als
+Dienstleister mit Spezialisierung auf Druck und Satz
+<<Hofmann-Webseite>>. Weiterhin ist er Mitgründer des
+Schulungsunternehmens Wizards of FOSS <<Wizards-of-Foss>>. Seit 2008
+koordiniert er das Regionaltreffen der Linux User Groups aus der Region
+Berlin-Brandenburg und gehört zu den Ansprechpartnern rund um die
+Community-Plattform `lug.berlin` <<lug.berlin>>. Seit Sommer 2013 ist er
+Mitglied im Debtags-Projekt <<Debian-Debtags>>, das sich die
+Verschlagwortung der einzelnen Debian-Pakete zum Ziel gesetzt hat.
+
+// Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/autoren.adoc

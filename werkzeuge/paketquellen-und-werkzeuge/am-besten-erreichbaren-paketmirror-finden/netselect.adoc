@@ -1,0 +1,328 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/netselect.adoc
+
+// Baustelle: Rohtext
+
+[[paketquellen-netselect-auswaehlen]]
+==== Paketquellen mit `netselect` nach Pingzeiten und Entfernung auswählen ====
+
+// Stichworte für den Index
+(((netselect)))
+(((netselect-apt)))
+Die beiden Programme `netselect` und `netselect-apt` überprüfen den von
+Ihnen benannten Spiegelserver anhand von mehreren Kriterien. Dazu gehört
+primär die grundsätzliche Erreichbarkeit über das Netzwerk, die Pingzeit
+– d.h. wieviel Zeit benötigt ein Netzwerkpaket vom Paketmirror zu Ihrem
+Computer – , sowie die Verlustrate der Netzwerkpakete vom Spiegelserver
+zu Ihnen. Gleichzeitig wird die Anzahl der Zwischenknoten von Ihrem
+Computer zum Spiegelserver gezählt, auch genannt 'Hops'. Bevorzugt
+werden lokale Paketmirror, was sich auch im daraus errechneten
+Zahlenwert niederschlägt. Je kleiner der ermittelte Wert ist, umso
+besser ist das für Sie.
+
+Der Unterschied zwischen `netselect` und `netselect-apt` ist folgender:
+`netselect` gibt nur den ermittelten Zahlenwert für den evaluierten
+Spiegelserver aus, während `netselect-apt` eine Datei namens
+`sources.list` im aktuellen Verzeichnis erzeugt. Diese
+beinhaltet die besten gefundenen Spiegelserver und kann von Ihnen sofort
+als neue Liste der Paketquellen benutzt werden.
+
+[NOTE]
+.Aktualisierung der Liste der Paketquellen
+====
+Zu Änderungen an den Paketquellen beachten Sie bitte auch unsere
+Hinweise unter `/etc/apt/sources.list verstehen in`
+<<etc-apt-sources.list-verstehen>>. Wir raten Ihnen dazu, die neue Liste
+der Paketquellen zuerst lokal zu erstellen und danach manuell in das
+Verzeichnis `/etc/apt/` zu verschieben.
+====
+
+`netselect` und `netselect-apt` akzeptieren beim Aufruf eine Menge
+verschiedener Schalter und Parameter. Stets anzugeben ist mindestens ein
+Spiegelserver, der zu testen ist. Geben Sie hingegen eine ganze Liste
+an, werden alle daraus nacheinander überprüft. Die nachfolgende Ausgabe
+zeigt das Ergebnis für fünf angefragte Paketmirrors.
+
+// Stichworte für den Index
+(((netselect, -v)))
+
+.Aufruf von `netselect` mit fünf verschiedenen Paketmirrors
+----
+# netselect -v ftp.debian.org http.us.debian.org ftp.at.debian.org download.unesp.br ftp.debian.org.br
+netselect: unknown host ftp.debian.org.br
+Running netselect to choose 1 out of 8 addresses.
+...............................................................
+   73 ftp.debian.org
+#
+----
+
+Mit dem zusätzlichen Schalter `-v` regeln Sie die Ausführlichkeit der
+Ausgabe. Ohne den Schalter geben beide Programme nur den Paketmirror
+aus, der den besten Wert hat, mit `-vv` bzw. `-vvv` oder sogar `-vvvv`
+entsprechend mehr Details. Weitere Optionen entnehmen Sie bitte der
+Manpage zu den Programmen.
+
+// Stichworte für den Index
+(((netselect, -vv)))
+
+.Etwas ausführlichere Ausgabe zu den Paketmirrors
+----
+# netselect -vv ftp.debian.org http.us.debian.org ftp.at.debian.org download.unesp.br ftp.debian.org.br
+netselect: unknown host ftp.debian.org.br
+Running netselect to choose 1 out of 8 addresses.
+...............................................................
+128.61.240.89          141 ms   8 hops   88% ok ( 8/ 9) [  284]
+ftp.debian.org          41 ms   8 hops  100% ok (10/10) [   73]
+128.30.2.36            118 ms  19 hops  100% ok (10/10) [  342]
+64.50.233.100          112 ms  14 hops   66% ok ( 2/ 3) [  403]
+64.50.236.52           133 ms  15 hops  100% ok (10/10) [  332]
+ftp.at.debian.org       47 ms  13 hops  100% ok (10/10) [  108]
+download.unesp.br      314 ms  10 hops   75% ok ( 3/ 4) [  836]
+ftp.debian.org.br     9999 ms  30 hops    0% ok
+   73 ftp.debian.org
+#
+----
+
+In der Ausgabe erscheinen die IP-Adresse bzw. der Hostname (Spalte 1),
+nachdem aufgelöst wird, die durchschnittliche Paketlaufzeit (Spalte 2),
+die Anzahl der Zwischenknoten (Spalte 3) sowie die Verlustrate der
+Pakete auf dem Transportweg (Spalte 4 bis 6). Die Angabe `ok` besagt
+dabei, dass der Paketmirror über das Netz erreichbar ist. Die Angabe
+`9999ms` für die Paketlaufzeit besagt hingegen, dass der Paketmirror zum
+Testzeitpunkt leider nicht erreichbar war.
+
+Die Werte in den runden Klammern in Spalte 6 zeigen, wie der Prozentwert
+der Verlustrate der Pakete in Spalte 4 zustandekam. Dieser basiert auf
+der Anzahl Pakete, die der Paketmirror als empfangen bestätigt hat,
+jeweils gegenübergestellt der Anzahl gesendeter Pakete. Die Zahl in den
+eckigen Klammern am Ende jeder ausgegebenen Zeile (Spalte 7) ist der
+Wert, den `netselect` für den jeweiligen Paketmirror ermittelt hat.
+
+// Stichworte für den Index
+(((netselect, -vvv)))
+
+.Noch mehr Informationen zu den Paketmirrors
+----
+# netselect -vvv ftp.debian.org http.us.debian.org ftp.at.debian.org download.unesp.br ftp.debian.org.br
+netselect: unknown host ftp.debian.org.br
+Running netselect to choose 1 out of 8 addresses.
+128.30.2.36            122 ms   15 hops - HIGHER
+64.50.233.100          112 ms   15 hops - OK
+ftp.at.debian.org       49 ms   15 hops - OK
+min_lag is now 49
+64.50.236.52           140 ms   15 hops - OK
+ftp.debian.org          42 ms   15 hops - OK
+min_lag is now 42
+ftp.at.debian.org       48 ms    8 hops - HIGHER
+128.30.2.36            117 ms   23 hops - OK
+ftp.debian.org          41 ms    8 hops - OK
+min_lag is now 41
+64.50.233.100          112 ms    8 hops - HIGHER
+64.50.236.52           112 ms    8 hops - HIGHER
+ftp.debian.org          28 ms    4 hops - HIGHER
+ftp.at.debian.org       49 ms   12 hops - HIGHER
+ftp.debian.org          38 ms    6 hops - HIGHER
+ftp.at.debian.org       48 ms   14 hops - OK
+128.30.2.36            119 ms   19 hops - OK
+64.50.233.100          113 ms   12 hops - HIGHER
+ftp.debian.org          53 ms    7 hops - HIGHER
+ftp.at.debian.org       49 ms   13 hops - OK
+64.50.236.52           114 ms   12 hops - HIGHER
+ftp.debian.org          42 ms    8 hops - OK
+download.unesp.br      306 ms   15 hops - OK
+ftp.at.debian.org       48 ms   13 hops - OK
+ftp.debian.org          42 ms    8 hops - OK
+ftp.at.debian.org       49 ms   13 hops - OK
+64.50.233.100          114 ms   14 hops - OK
+128.30.2.36            118 ms   17 hops - HIGHER
+ftp.debian.org          42 ms    8 hops - OK
+64.50.236.52           138 ms   14 hops - HIGHER
+ftp.at.debian.org       49 ms   13 hops - OK
+ftp.debian.org          41 ms    8 hops - OK
+ftp.at.debian.org       49 ms   13 hops - OK
+ftp.debian.org          41 ms    8 hops - OK
+128.30.2.36            119 ms   18 hops - HIGHER
+ftp.debian.org          43 ms    8 hops - OK
+ftp.at.debian.org       48 ms   13 hops - OK
+64.50.236.52           132 ms   15 hops - OK
+ftp.debian.org          43 ms    8 hops - OK
+ftp.at.debian.org       48 ms   13 hops - OK
+ftp.debian.org          42 ms    8 hops - OK
+128.30.2.36            118 ms   19 hops - OK
+ftp.at.debian.org       48 ms   13 hops - OK
+download.unesp.br      313 ms    8 hops - HIGHER
+64.50.236.52           134 ms   15 hops - OK
+128.30.2.36            122 ms   19 hops - OK
+64.50.236.52           133 ms   15 hops - OK
+128.30.2.36            129 ms   19 hops - OK
+download.unesp.br      307 ms   12 hops - OK
+64.50.236.52           140 ms   15 hops - OK
+128.30.2.36            124 ms   19 hops - OK
+64.50.236.52           133 ms   15 hops - OK
+128.30.2.36            117 ms   19 hops - OK
+128.30.2.36            117 ms   19 hops - OK
+64.50.236.52           134 ms   15 hops - OK
+download.unesp.br      308 ms   10 hops - OK
+128.30.2.36            118 ms   19 hops - OK
+64.50.236.52           134 ms   15 hops - OK
+128.30.2.36            118 ms   19 hops - OK
+64.50.236.52           133 ms   15 hops - OK
+download.unesp.br      305 ms    9 hops - HIGHER
+64.50.236.52           131 ms   15 hops - OK
+
+
+download.unesp.br      307 ms  10 hops   75% ok ( 3/ 4) [  818]
+128.30.2.36            119 ms  19 hops  100% ok (10/10) [  345]
+64.50.233.100          113 ms  14 hops   66% ok ( 2/ 3) [  405]
+64.50.236.52           134 ms  15 hops  100% ok (10/10) [  335]
+128.61.240.89         9999 ms  30 hops    0% ok
+ftp.at.debian.org       48 ms  13 hops  100% ok (10/10) [  110]
+ftp.debian.org          41 ms   8 hops  100% ok (10/10) [   73]
+ftp.debian.org.br     9999 ms  30 hops    0% ok
+   73 ftp.debian.org
+#
+----
+
+Ergebnis des obigen Aufrufs ist eine Empfehlung für einen der
+Paketmirror, die Sie im Aufruf benannt haben. Dieser Paketmirror ist von
+ihrem Standort aus derzeit am besten erreichbar. Das ermittelte Ergebnis
+schwankt und hängt stets von der aktuellen Netzauslastung ab.
+
+Die Empfehlung und der ermittelte Zahlenwert stehen in der letzten Zeile
+der Ausgabe und zeigen hier den Wert 73 für den Server `ftp.debian.org`.
+Die angegebene Zahl errechnet sich aus den bereits zu Beginn genannten
+Kriterien und ist vergleichbar mit einem Punktwert, hat jedoch offiziell
+keine Einheit. Je höher der Wert ist, umso schlechter ist der
+Paketmirror von Ihrem aktuellen Standort im Netz zu erreichen.
+
+Ist der Paketmirror von einer Firewall geschützt und blockiert
+UDP-Pakete, kann die Option `-I` von größerem Nutzen sein. Damit werden
+stattdessen ICMP-Pakete gesendet. Das Ergebnis sehen Sie in der
+nachfolgenden Ausgabe:
+
+// Stichworte für den Index
+(((netselect, -I)))
+
+.Höchste Stufe der Ausführlichkeit zu den Paketmirrors
+----
+# netselect -I -vvv ftp.de.debian.org
+Running netselect to choose 1 out of 1 address.         
+ftp.de.debian.org            37 ms   15 hops - OK
+min_lag is now 37
+ftp.de.debian.org            36 ms    8 hops - OK
+min_lag is now 36
+ftp.de.debian.org            27 ms    4 hops - HIGHER
+ftp.de.debian.org            36 ms    6 hops - HIGHER
+ftp.de.debian.org            36 ms    7 hops - OK
+ftp.de.debian.org            36 ms    7 hops - OK
+ftp.de.debian.org            36 ms    7 hops - OK
+ftp.de.debian.org            36 ms    7 hops - OK
+ftp.de.debian.org            36 ms    7 hops - OK
+ftp.de.debian.org            36 ms    7 hops - OK
+ftp.de.debian.org            37 ms    7 hops - OK
+ftp.de.debian.org            38 ms    7 hops - OK
+
+
+ftp.de.debian.org            36 ms   7 hops  100% ok (10/10) [   61]
+   61 ftp.de.debian.org
+#
+----
+
+Wie oben bereits angesprochen, erzeugt `netselect-apt` eine Datei
+`sources.list` im aktuellen Verzeichnis. Dazu verfügt es über
+einen weiteren Schalter, mit dem Sie die entsprechende Veröffentlichung
+(siehe <<veroeffentlichungen>>) angeben und eine passende Liste dazu
+generieren lassen. `netselect-apt` akzeptiert dazu Angaben wie _stable_
+oder _unstable_, aber auch die Alternativnamen der Veröffentlichung wie
+_Wheezy_ oder _Sid_.
+
+// Stichworte für den Index
+(((netselect-apt, -o)))
+Im nachfolgenden Beispiel kommt zusätzlich die Option `-o test.list` zum
+Einsatz, was dazu führt, dass `netselect-apt` die ermittelten Paketmirror
+in diese Datei speichert. Ohne diese Angabe überschreibt es die aktuelle
+Paketliste unter `/etc/apt/sources.list`.
+
+.Speicherung der ermittelten Paketmirror in einer separaten Datei
+----
+# netselect-apt stable -o test.list
+Using distribution stable.
+Retrieving the list of mirrors from www.debian.org...
+
+--2014-02-13 14:55:02--  http://www.debian.org/mirror/mirrors_full
+Auflösen des Hostnamen »www.debian.org (www.debian.org)«... 5.153.231.4, 130.89.148.14, 2001:610:1908:b000::148:14, ...
+Verbindungsaufbau zu www.debian.org (www.debian.org)|5.153.231.4|:80... verbunden.
+HTTP-Anforderung gesendet, warte auf Antwort... 200 OK
+Länge: 338381 (330K) [text/html]
+In »»/tmp/netselect-apt.WrCIoS«« speichern.
+
+100%[============================================================>] 338.381      959K/s   in 0,3s    
+
+2014-02-13 14:55:03 (959 KB/s) - »»/tmp/netselect-apt.WrCIoS«« gespeichert [338381/338381]
+
+Choosing a main Debian mirror using netselect.
+netselect: 347 (23 active) nameserver request(s)...       
+Duplicate address 218.100.43.30 (http://ftp.au.debian.org/debian/, http://mirror.waia.asn.au/debian/); keeping only under first name.
+netselect: 343 (23 active) nameserver request(s)...       
+Duplicate address 195.222.33.229 (http://ftp.ba.debian.org/debian/, http://mirror.debian.com.ba/debian/); keeping only under first name.
+...
+Running netselect to choose 10 out of 333 addresses.
+...
+The fastest 10 servers seem to be:
+
+	http://artfiles.org/debian/
+	http://ftp.plusline.de/debian/
+	http://ftp5.gwdg.de/pub/linux/debian/debian/
+	http://debian.netcologne.de/debian/
+	http://ftp.uni-erlangen.de/debian/
+	http://deb-mirror.de/debian/
+	http://mirror.de.leaseweb.net/debian/
+	http://mirror.1und1.de/debian/
+	http://deb-mirror.de/debian/
+	http://ftp.uni-bayreuth.de/debian/
+
+Of the hosts tested we choose the fastest valid for HTTP:
+        http://artfiles.org/debian/
+
+Writing test.list.
+Done.
+#
+----
+
+Die von `netselect-apt` erzeugte Datei `test.list` enthält neben
+den Paketmirrors auch eine ganze Reihe Kommentare. Diese helfen Ihnen
+dabei, zu verstehen, wofür jeder einzelne Eintrag gedacht ist.
+
+.Inhalt der automatisch generierten Liste der Paketmirror
+----
+# cat test.list
+
+# Debian packages for stable
+deb http://artfiles.org/debian/ stable main contrib
+# Uncomment the deb-src line if you want 'apt-get source'
+# to work with most packages.
+# deb-src http://artfiles.org/debian/ stable main contrib
+
+# Security updates for stable
+deb http://security.debian.org/ stable/updates main contrib
+#
+----
+
+Aus unserer Sicht lohnt sich der Aufruf von `netselect` bzw.
+`netselect-apt` bei stationären Systemen (Servern) mit fester Anbindung
+nur bedingt. Hilfreich ist das Vorgehen bspw. nach der ersten
+Einrichtung, einem Standortwechsel des Gerätes oder der Änderung der
+Infrastruktur, da letztere in der Regel häufig recht konstant ist. Bei
+Endsystemen an einem festen Ort raten wir Ihnen, die Werkzeuge nur
+interessehalber auszuprobieren, weil die Zugriffszeiten in diesem
+Kontext nicht immer eine so große Relevanz haben. Bei Systemen für die
+Infrastruktur wirkt sich die Optimierung hingegen meist weitaus stärker
+aus.
+
+Bei mobilen Geräten sieht das hingegen deutlich anders aus. Mit Laptops
+oder Smartphones sind Sie variabler und damit den einhergehenden
+Schwankungen in der Netzanbindung stärker ausgesetzt. Auffällig wird die
+Anpassung dann, wenn Sie größere Entfernungen zurücklegen, bspw. ein
+Land oder einen Kontinent gewechselt haben.
+
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/netselect.adoc

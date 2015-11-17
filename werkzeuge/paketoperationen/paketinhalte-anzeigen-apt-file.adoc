@@ -1,0 +1,191 @@
+// Datei: ./werkzeuge/paketoperationen/paketinhalte-anzeigen-apt-file.adoc
+
+// Baustelle: Fertig
+
+[[paketinhalte-anzeigen-apt-file]]
+
+=== Paketinhalte anzeigen (`apt-file`) ===
+
+In einem Paket sind stets mehrere Dateien zusammengefasst. Mit den drei
+Werkzeugen `dpkg`, `dlocate` und `apt-file` zeigen Sie den Inhalt eines
+Pakets an. Dabei sind mehrere Fälle zu unterscheiden, die jeweils
+unterschiedliche Aufrufe nachsichziehen:
+
+// Stichworte für den Index
+(((apt-file, list)))
+(((apt-file, show)))
+(((dlocate, -ls)))
+(((dpkg, -L)))
+(((dpkg, --listfiles)))
+(((dpkg, -c)))
+(((dpkg, --contents)))
+das Paket ist installiert:: 
+`dpkg -L` 'Paketname' und `dlocate -ls` 'Paketname'. Der Parameter
+'Paketname' bezeichnet lediglich den Namen des Pakets (siehe
+<<benennung-eines-debian-pakets>>) ohne Angabe der Versionsnummer.
+
+das Paket ist nicht installiert:: 
+`dpkg -c` 'deb-Datei'. Der Parameter 'deb-Datei' ist eine Datei
+(Paketarchiv) im aktuellen Verzeichnis.
+
+das Paket muss nicht installiert sein, kann aber:: 
+`apt-file show` 'Paketname' und `apt-file list` 'Paketname'. Der
+Parameter 'Paketname' bezeichnet hier lediglich den  Namen eines Pakets
+(siehe <<benennung-eines-debian-pakets>>) ohne Angabe der
+Versionsnummer.
+
+==== `dpkg -L Paketname` (Langform `--listfiles`) ====
+
+// Stichworte für den Index
+(((dpkg, -L)))
+(((dpkg, --listfiles)))
+Mit dieser Option listen Sie den Paketinhalt mit allen Pfaden auf. Jede
+Verzeichnisebene ist separat aufgeführt. Das nachfolgende Beispiel
+verdeutlicht das am Paket 'xara-gtk'.
+
+.Auflistung des Paketinhalts mit allen Pfaden via `dpkg`
+----
+$ dpkg -L xara-gtk 
+/.
+/etc
+/etc/xara.config
+/etc/xara-gtkrc-2.0
+/usr
+/usr/bin
+/usr/bin/xara
+/usr/share
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/xara.1.gz
+/usr/share/menu
+/usr/share/menu/xara-gtk
+/usr/share/doc
+/usr/share/doc/xara-gtk
+/usr/share/doc/xara-gtk/copyright
+/usr/share/doc/xara-gtk/changelog.gz
+$
+----
+
+// Stichworte für den Index
+(((dlocate, -ls)))
+Gleiches ermöglicht der Aufruf des Programms `dlocate`
+<<Debian-Paket-dlocate>> mit der Option `-L`. Sie erhalten damit eine
+identische Ausgabe. Nutzen Sie hingegen die Option `-ls`, wird die
+Ausgabe sehr ausführlich und entspricht dem Kommando `ls -ldF` bezogen
+auf alle Dateien des Pakets.
+
+.Auflistung des Paketinhalts in kompakterer Form via `dlocate`
+----
+$ dlocate -ls xara-gtk
+drwxr-xr-x   24 root root    4096 Mär 13 09:44 /./
+drwxr-xr-x  182 root root   12288 Jun 22 23:21 /etc/
+-rw-r--r--    1 root root     658 Jun 11  2010 /etc/xara.config
+-rw-r--r--    1 root root     136 Jun 11  2010 /etc/xara-gtkrc-2.0
+drwxr-xr-x   11 root root    4096 Jan  8 00:44 /usr/
+drwxr-xr-x    2 root root  110592 Jun 13 16:34 /usr/bin/
+-rwxr-xr-x    1 root root 1828064 Mai 21  2012 /usr/bin/xara*
+drwxr-xr-x  396 root root   12288 Jun 13 16:34 /usr/share/
+drwxr-xr-x 2292 root root   77824 Jun 13 16:34 /usr/share/doc/
+drwxr-xr-x    2 root root    4096 Jan  8 01:55 /usr/share/doc/xara-gtk/
+-rw-r--r--    1 root root    5488 Mai 20  2012 /usr/share/doc/xara-gtk/changelog.gz
+-rw-r--r--    1 root root    1281 Apr 18  2011 /usr/share/doc/xara-gtk/copyright
+drwxr-xr-x   50 root root    4096 Jan  8 01:56 /usr/share/man/
+drwxr-xr-x    2 root root  131072 Jun 13 16:34 /usr/share/man/man1/
+-rw-r--r--    1 root root    6121 Mai 21  2012 /usr/share/man/man1/xara.1.gz
+drwxr-xr-x    2 root root    4096 Jun 13 16:34 /usr/share/menu/
+-rw-r--r--    1 root root     160 Apr 18  2011 /usr/share/menu/xara-gtk
+$
+----
+
+==== `dpkg -c deb-Datei` (Langform `--contents`) ====
+
+// Stichworte für den Index
+(((dpkg, -c)))
+(((dpkg, --contents)))
+Sie verwenden den Schalter `-c`, um sich den Inhalt eines `deb`-Pakets
+anzeigen zu lassen. Dieses Paket wird `dpkg` als Parameter übergeben. Im
+Gegensatz zu `dpkg -L` muss das Paket nicht auf ihrem System installiert
+sein, sondern liegt als Datei in einem Verzeichnis.
+
+.Auflistung des Paketinhalts mit allen Informationen via `dpkg`
+----
+$ dpkg -c /var/cache/apt/archives/xara-gtk_1.0.31_i386.deb 
+drwxr-xr-x root/root         0 2012-05-21 01:04 ./
+drwxr-xr-x root/root         0 2012-05-21 01:04 ./etc/
+-rw-r--r-- root/root       658 2011-04-18 19:29 ./etc/xara.config
+-rw-r--r-- root/root       136 2011-04-18 19:29 ./etc/xara-gtkrc-2.0
+drwxr-xr-x root/root         0 2012-05-21 01:04 ./usr/
+drwxr-xr-x root/root         0 2012-05-21 01:04 ./usr/bin/
+-rwxr-xr-x root/root   1828064 2012-05-21 01:04 ./usr/bin/xara
+drwxr-xr-x root/root         0 2012-05-21 01:04 ./usr/share/
+drwxr-xr-x root/root         0 2012-05-21 01:04 ./usr/share/man/
+drwxr-xr-x root/root         0 2012-05-21 01:04 ./usr/share/man/man1/
+-rw-r--r-- root/root      6121 2012-05-21 01:04 ./usr/share/man/man1/xara.1.gz
+drwxr-xr-x root/root         0 2012-05-21 01:04 ./usr/share/menu/
+-rw-r--r-- root/root       160 2011-04-18 19:28 ./usr/share/menu/xara-gtk
+drwxr-xr-x root/root         0 2012-05-21 01:04 ./usr/share/doc/
+drwxr-xr-x root/root         0 2012-05-21 01:04 ./usr/share/doc/xara-gtk/
+-rw-r--r-- root/root      1281 2011-04-18 19:28 ./usr/share/doc/xara-gtk/copyright
+-rw-r--r-- root/root      5488 2012-05-20 23:18 ./usr/share/doc/xara-gtk/changelog.gz
+$
+----
+
+==== `apt-file show Paketname` und `apt-file list Paketname` ====
+
+// Stichworte für den Index
+(((apt-file, list)))
+(((apt-file, show)))
+Die beiden Optionen `show` und `list` sind synonym zueinander und
+liefern den gleichen Inhalt wie `dpkg -L`. Dabei ist die Darstellung
+von `apt-file` jedoch deutlich kompakter.
+
+.Paketinhalt in kompakter Form mittels `apt-file`
+----
+$ apt-file show xara-gtk
+xara-gtk: /etc/xara-gtkrc-2.0
+xara-gtk: /etc/xara.config
+xara-gtk: /usr/bin/xara
+xara-gtk: /usr/share/doc/xara-gtk/changelog.gz
+xara-gtk: /usr/share/doc/xara-gtk/copyright
+xara-gtk: /usr/share/man/man1/xara.1.gz
+xara-gtk: /usr/share/menu/xara-gtk
+$
+----
+
+==== Einsatz von `dglob` ====
+
+// Stichworte für den Index
+(((dglob, -f)))
+(((Debianpaket, debian-goodies)))
+Analog zu `apt-file` arbeitet das Werkzeug `dglob` aus dem Paket
+'debian-goodies' <<Debian-Paket-debian-goodies>>. Es setzt auf
+`apt-file` auf und liefert eine ähnlich kompakte Ausgabe. Die Option
+`-f` dient dabei zur Ausgabe der Dateien im angefragten Paket, was wir
+nachfolgend erneut anhand des Pakets 'xara-gtk' illustrieren.
+
+.Ergebnis der Recherche zum Paket 'xara-gtk'
+----
+$ dglob -f xara-gtk
+/etc/xara.config
+/etc/xara-gtkrc-2.0
+/usr/bin/xara
+/usr/share/man/man1/xara.1.gz
+/usr/share/menu/xara-gtk
+/usr/share/doc/xara-gtk/copyright
+/usr/share/doc/xara-gtk/changelog.gz
+$
+----
+
+// Stichworte für den Index
+(((dglob, -a)))
+(((Debianpaket, dctrl-tools)))
+(((Debianpaket, debian-goodies)))
+(((grep-aptavail)))
+Das Kommando `dglob` agiert üblicherweise nur auf den bereits
+installierten Paketen. Mit der Option `-a` weiten Sie Ihre Recherche auf
+alle verfügbaren Pakete aus. Für diesen Schritt setzt `dglob` auf das
+Programm `grep-aptavail` aus dem Paket 'dctrl-tools'
+<<Debian-Paket-dctrl-tools>> auf. Nähere Informationen zu 'dctrl-tools'
+erfahren Sie unter <<erweiterte-paketklassifikation-mit-debtags>>.
+
+// Datei (Ende): ./werkzeuge/paketoperationen/paketinhalte-anzeigen-apt-file.adoc

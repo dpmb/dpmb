@@ -1,0 +1,58 @@
+// Datei: ./werkzeuge/paketoperationen/liste-der-installierten-kernelpakete-anzeigen.adoc
+
+// Baustelle: Fertig
+
+[[liste-der-installierten-kernelpakete-anzeigen]]
+
+=== Liste der installierten Kernelpakete anzeigen ===
+
+// Stichworte für den Index
+(((Debianpaket, dlocate)))
+(((dlocate, -k)))
+(((dlocate, -K)))
+(((Paket, Liste der installierten Kernelpakete anzeigen)))
+Bei dieser Aufgabe hilft Ihnen das Werkzeug `dlocate`
+<<Debian-Paket-dlocate>> und zeigt Ihnen an, welche Linux-Kernel und
+dazugehörigen Pakete auf Ihrem Linuxsystem installiert sind. Es kennt
+dazu zwei Aufrufvarianten – `dlocate -k` für die Basisinformationen und
+`dlocate -K` für eine ausführlichere Darstellung.
+
+Die Basisvariante enthält lediglich eine Auflistung der installierten
+Pakete und zeigt daher nur den Paketnamen (siehe
+<<benennung-eines-debian-pakets>>) an. Die Ausgabe erfolgt dabei ohne
+Sortierung.
+
+.Auflistung der installierten Kernelpakete mit `dlocate`
+----
+$ dlocate -k
+linux-image-686-pae
+linux-headers-3.2.0-4-686-pae
+linux-image-2.6-686
+linux-image-3.2.0-4-686-pae
+linux-headers-3.2.0-4-common
+linux-headers-686-pae
+$
+----
+
+Die ausführliche Darstellung entspricht einer Ausgabe von `dpkg`
+und zeigt den Installationsstatus, den Paketnamen, die Version und die
+Paketbeschreibung.
+
+.Auflistung der installierten Kernelpakete analog zu `dpkg`
+----
+$ dlocate -K
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Installed/Config-files/Unpacked/Failed-config/Half-installed
+|/ Err?=(none)/Hold/Reinst-required/X=both-problems (Status,Err: uppercase=bad)
+||/ Name                 Version              Description
++++-====================-====================-==========================================================
+ii  linux-headers-3.2.0- 3.2.51-1             i386 Header files for Linux 3.2.0-4-686-pae
+ii  linux-headers-3.2.0- 3.2.51-1             i386 Common header files for Linux 3.2.0-4
+ii  linux-headers-686-pa 3.2+46               i386 Header files for Linux 686-pae configuration (meta-pack
+ii  linux-image-2.6-686  3.2+46               i386 Linux for modern PCs (dummy package)
+ii  linux-image-3.2.0-4- 3.2.51-1             i386 Linux 3.2 for modern PCs
+ii  linux-image-686-pae  3.2+46               i386 Linux for modern PCs (meta-package)
+$
+----
+
+// Datei (Ende): ./werkzeuge/paketoperationen/liste-der-installierten-kernelpakete-anzeigen.adoc

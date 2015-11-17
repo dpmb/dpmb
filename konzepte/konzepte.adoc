@@ -1,0 +1,11 @@
+// Datei: ./konzepte/konzepte.adoc
+
+// Baustelle: Rohtext
+
+include::teil-konzepte.adoc[]
+
+include::linux-dschungel/linux-dschungel.adoc[]
+
+include::software-in-paketen-organisieren/software-in-paketen-organisieren.adoc[]
+
+// Datei (Ende): ./konzepte/konzepte.adoc

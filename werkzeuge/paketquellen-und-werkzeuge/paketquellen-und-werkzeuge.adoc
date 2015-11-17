@@ -1,0 +1,78 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/paketquellen-und-werkzeuge.adoc
+
+// Baustelle: Fertig
+
+[[paketquellen-und-werkzeuge]]
+
+== Paketquellen und Werkzeuge ==
+
+// .Ziele:
+// ****
+// 
+// * Was ist eine Paketquelle
+// * Paketquellen eintragen und ändern
+// * Paketmirror festlegen
+//   - allgemein
+//   - netselect + apt-spy
+//   - automatisiert
+// * Werkzeuge zum Ändern der Paketliste
+//   - während der Installation (ggf. veraltet)
+//   - im Nachgang, Images hinzufügen
+//   - im Nachgang, automatisiert
+//   - im Nachgang, über graphische Oberfläche
+//   - im Nachgang, webbasiert
+// * Paketquelle überprüfen
+// * Liste der Paketquellen und verfügbare Pakete aktualisieren
+// * Empfehlung zum Ablauf für das Hinzufügen und Ändern von Paketquellen
+// * Paketliste - Zusammenhang Liste und Cache
+// * Paketliste reparieren
+// 
+// ****
+
+// Was ist eine Paketquelle
+include::paketquellen.adoc[]
+
+// Empfehlung zum Ablauf für das Hinzufügen und Ändern von Paketquellen
+include::empfehlung-zum-ablauf-fuer-das-hinzufuegen-und-aendern-von-paketquellen.adoc[]
+
+// Paketquellen eintragen und ändern
+include::etc-apt-sources.list-verstehen/etc-apt-sources.list-verstehen.adoc[]
+
+// Paketmirror festlegen
+// - allgemein
+include::geeigneten-paket-mirror-auswaehlen.adoc[]
+
+// - netselect + apt-spy
+include::am-besten-erreichbaren-paketmirror-finden/am-besten-erreichbaren-paketmirror-finden.adoc[]
+
+// - automatisiert
+include::automatisiertes-auswaehlen-von-paketquellen.adoc[]
+
+// Werkzeuge zum Ändern der Paketliste
+// - während der Installation (ggf. veraltet)
+include::apt-setup.adoc[]
+
+// - im Nachgang, Images hinzufügen
+include::physische-installationsmedien-mit-apt-cdrom-einbinden.adoc[]
+
+// - im Nachgang, automatisiert
+include::eintraege-mit-add-apt-repository-im-griff-behalten.adoc[]
+
+// - im Nachgang, über graphische Oberfläche
+include::einstellungen-synaptic.adoc[]
+
+// - im Nachgang, webbasiert
+include::debian-und-ubuntu-sources-list-generator.adoc[]
+
+// Paketquelle auf Echtheit überprüfen
+include::paketquelle-auf-echtheit-ueberpruefen.adoc[]
+
+// Liste der Paketquellen und verfügbare Pakete aktualisieren
+include::liste-der-verfuegbaren-pakete-aktualisieren.adoc[]
+
+// Paketliste - Zusammenhang Liste und Cache
+include::lokale-paketliste-und-paketcache.adoc[]
+
+// Paketliste reparieren
+include::lokale-paketliste-reparieren.adoc[]
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/paketquellen-und-werkzeuge.adoc

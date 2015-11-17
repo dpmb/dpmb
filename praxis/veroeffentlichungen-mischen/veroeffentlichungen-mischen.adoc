@@ -1,0 +1,59 @@
+// Datei: ./praxis/veroeffentlichungen-mischen/veroeffentlichungen-mischen.adoc
+
+// Baustelle: Rohtext
+
+[[veroeffentlichungen-mischen]]
+== Veröffentlichungen mischen ==
+
+Debian reglementiert die Erweiterung der vorhandenen Funktionalität für
+die Veröffentlichung eines Paketes aus Debian 'stable' deutlich. Besteht
+Ihrerseits jedoch die Notwendigkeit für eine neuere Paketversion mit
+zusätzlichen Funktionen, prüfen Sie als erstes, ob es für Ihr Paket
+bereits einen Kandidaten aus dem Bereich 'Debian Backports' gibt (siehe
+<<debian-backports>>). Ein solches Paket ist dann auch auf Debian
+'stable' zugeschnitten.
+
+Bleibt diese Suche erfolglos, ist der nächste Schritt die Recherche nach
+neueren Paketen in den Veröffentlichungen Debian 'testing' und
+'unstable' sowie das nachfolgende Mischen der unterschiedlichen
+Veröffentlichungen. Dafür bestehen zwei Wege -- die Paketauswahl mit der
+expliziten Angabe der Veröffentlichung (siehe <<pinning-apt-get>>) und
+der paketweisen Festlegung von Prioritäten, genannt APT-Pinning (siehe
+<<pinning-paketweise-festlegen>>).
+
+Bei beiden Wegen werden zwei Dinge angestrebt -- einerseits eine neuere
+Programmversion einzuspielen, ohne eine vollständige Aktualisierung
+Ihrer gesamten Installation durchführen zu müssen (siehe
+<<distribution-aktualisieren>>), und andererseits das Gesamtsystem
+möglichst stabil zu halten. Das ganze ist ein Balanceakt ohne die
+Garantie von Debian 'stable'.
+
+Problematisch ist dabei, dass Abhängigkeiten zwischen den verschiedenen
+Paketversionen aus den genutzten Veröffentlichungen bestehen. Aus der
+Erfahrung heraus wissen wir jedoch, dass das ganze zwischen zwei
+aufeinanderfolgenden Veröffentlichungen weitestgehend reibungslos
+funktioniert, bspw. aus der Kombination von Debian 'stable' und
+'testing'. Der Hintergrund liegt darin, dass in diesem Fall die
+Unterschiede zwischen den Paketen aus den Veröffentlichungen noch nicht
+ganz so groß sind (<<Jurzik-Debian-Handbuch>>,
+<<Drilling-APT-Pinning-LinuxUser>>). Sollte Ihnen das Ergebnis nach dem
+APT-Pinning dennoch zu instabil sein, bleibt als Folgeschritt stets noch
+ein Distributionsupgrade übrig (siehe <<distribution-aktualisieren>>).
+
+// Die bevorzugte Veröffentlichung festlegen (für alle Pakete)
+include::pinning-default.adoc[]
+
+// `apt-get` mit expliziter Angabe der Veröffentlichung
+include::pinning-apt-get.adoc[]
+
+// Von APT zu APT-Pinning
+include::von-apt-zu-apt-pinning.adoc[]
+
+// APT-Pinning paketweise festlegen
+include::pinning-paketweise-festlegen.adoc[]
+
+// Praktische Beispiele
+include::pinning-praktische-beispiele.adoc[]
+
+
+// Datei (Ende): ./praxis/veroeffentlichungen-mischen/veroeffentlichungen-mischen.adoc

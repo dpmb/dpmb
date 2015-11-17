@@ -1,0 +1,49 @@
+// Datei: ./konzepte/software-in-paketen-organisieren/alternativen-zu-apt.adoc
+
+// Baustelle: Fertig
+// Axel: Fertig
+
+[[alternativen-zu-apt]]
+
+=== Alternativen zu APT ===
+
+APT mit `apt-get` und `apt-cache` ist erprobt, zuverlässig und daher
+weit verbreitet. Dennoch gibt es Programme, die die gleichen
+Funktionalitäten wie APT implementieren. Dabei gibt es verschiedene
+Kategorien von Alternativen:
+
+// Stichworte für den Index
+(((APT-Alternativen)))
+(((APT-Nachfolger, Cupt)))
+(((APT-Vorgänger, dselect)))
+(((Cupt)))
+(((dselect)))
+(((Muon))
+
+Alternative Benutzerschnittstellen:: 
+Hierzu zählen u.a. die im Buch vorgestellten Programme `aptitude`, Muon,
+Synaptic und wajig (siehe <<aptitude>>, <<gui-muon>>, <<gui-synaptic>>
+und <<wajig2>>). Diese setzen auf den APT-Bibliotheken auf und sind nur
+Alternativen zu den Kommandozeilentools `apt-get` und `apt-cache`, nicht
+aber zu APT als Ganzes.
+
+Vorgänger:: 
+Bevor es APT gab und an Popularität gewann, wurden Paketlisten und
+Pakete mit `dselect` heruntergeladen (Recherchen ergaben etwa das Jahr
+1998). `dselect` ist Bestandteil des `dpkg`-Projekts und wird heute noch
+aus den Quellen von `dpkg` gebaut. Allerdings benutzt es für viele
+Funktionalitäten mittlerweile ebenfalls APT als Backend, insbesondere
+für das Herunterladen von Paketen. `dselect` hat heute keine Relevanz
+mehr (liegt quasi im Wachkoma) und wird daher im Buch nicht weiter
+besprochen.
+
+Potentielle Nachfolger:: 
+APT ist nicht mehr ganz jung, und es wurden in der Vergangenheit
+Design-Entscheidungen getroffen, welche aus heutiger Sicht eher als
+weniger gelungen gelten, sich aber nicht mehr oder zumindest nur mit
+sehr viel Aufwand korrigieren lassen. Eugene V. Lyubimkin war einer der
+APT-Entwickler und hat sich aus o.g. Grund aus der APT-Entwicklung
+zurückgezogen und eine Re-Implementierung von APT namens
+Cupt <<Debian-Wiki-cupt>> geschrieben (siehe <<Cupt>>).
+
+// Datei (Ende): ./konzepte/software-in-paketen-organisieren/alternativen-zu-apt.adoc

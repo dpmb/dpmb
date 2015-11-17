@@ -1,0 +1,85 @@
+// Datei: ./konzepte/software-in-paketen-organisieren/wie-finde-ich-passende-pakete.adoc
+
+// Baustelle: Fertig
+
+[[wie-finde-ich-passende-pakete]]
+
+=== Wie finde ich passende Pakete ===
+
+==== Paketquellen ====
+
+// Stichworte für den Index
+(((Paketbezug)))
+(((Paketquellen)))
+(((Paketsuche)))
+Debianpakete sind von verschiedenen Orten und Medien verfügbar. Dazu
+zählen sowohl Online- als auch Offline-Quellen, bspw. offizielle,
+private und unternehmenseigene Repositories und Paketspiegel. Für die
+Recherche und Installation ohne Internetanbindung stehen bspw.
+vorbereitete Distributionsimages in unterschiedlichen Größen und
+Zusammenstellungen für CD, DVD, Blueray und USB-Stick über die Webseite
+des Debian-Projekts bereit <<Debian-besorgen>>.
+
+// Stichworte für den Index
+(((Installationsvarianten)))
+Je nach den persönlichen Vorlieben sowie der Bandbreite der lokalen
+Internetanbindung ist jeweils die eine oder andere Variante zur
+Installation empfehlenswert – eine pauschale Empfehlung können wir
+Ihnen an dieser Stelle leider nicht geben. Für eine Erstinstallation hat
+sich bei uns die Reihenfolge _Bezug und Installation über ein kleines
+Installationsimage_ (genannt _Netinst-ISO_) und die nachfolgende,
+individuelle Auswahl der benötigten Programme über eine
+Netzwerkinstallation vielfach bewährt. Damit bleiben die eingerichteten
+Debian-Systeme von Beginn an überschaubar und pflegeleicht und enthalten
+möglichst wenig Ballast.
+
+Die Auswahl eines Spiegelservers, der zu Ihren technischen Gegebenheiten
+und Gewohnheiten in der Benutzung Ihres Debian-Systems passt, ist eine
+Philosophie für sich. Auf die unterschiedlichen Varianten für bereits
+bestehende Spiegelserver gehen wir genauer in
+<<geeigneten-paketmirror-auswaehlen>> ein. Was Sie tun müssen, um
+hingegen einen eigenen Spiegelserver aufzusetzen und zu betreiben, geht
+über das Basiswissen deutlich hinaus. Wir erklären Ihnen die
+Vorgehensweise dazu in <<eigenen-apt-mirror-aufsetzen>>.
+
+==== Paketnamen ====
+
+// Stichworte für den Index
+(((Paketsuche, über den Paketnamen)))
+(((Paketsuche, mittels dpkg)))
+(((Paketsuche, mittels apt-cache)))
+(((Paketsuche, mittels aptitude)))
+(((Paketsuche, mittels PackageKit)))
+(((Paketsuche, mittels SmartPM)))
+(((Paketsuche, mittels Synaptic)))
+Ist Ihnen der Name eines Pakets oder ein Fragment daraus bekannt, stehen
+Ihnen alle Möglichkeiten offen. Einerseits helfen Ihnen die Werkzeuge
+`dpkg`, `apt-cache` sowie `aptitude` auf der Kommandozeile weiter.
+Desweiteren verfügen die graphischen Programme wie beispielsweise
+Synaptic (siehe <<gui-synaptic>>), SmartPM (siehe <<gui-smartpm>>) oder
+auch PackageKit (siehe <<gui-packagekit>>) über eine entsprechende
+Suchfunktion. Für eine Recherche über das Internet hilft Ihnen nicht nur
+die Webseite des Debian-Projekts weiter, sondern auch spezielle
+Suchmaschinen und Verzeichnisdienste. Alle genannten Varianten stellen
+wir Ihnen unter <<pakete-ueber-den-namen-finden>> genauer vor.
+
+==== Paketeigenschaften und Einordnung ====
+
+// Stichworte für den Index
+(((Paketsuche, anhand des Maintainers)))
+(((Paketsuche, anhand der Paketkategorie)))
+(((Paketsuche, über den Paketinhalt)))
+(((Paketsuche, anhand der Veröffentlichung)))
+Bei den oben angesprochenen Varianten können Sie neben der Einordnung in
+die jeweilige Paketkategorie (siehe
+<<sortierung-der-pakete-nach-verwendungszweck>>) bspw. auch über die
+Veröffentlichungen (siehe <<veroeffentlichungen>>), den Maintainer
+(siehe <<paket-nach-maintainer-finden>>), den Paketinhalt (siehe
+<<paket-zu-datei-finden>>) oder einem Fragment aus dem Paket (siehe
+<<nach-muster-in-einem-paket-suchen>>) suchen. Darüber hinaus gibt es
+eine konzept- und facettenbasierte Suche mit Hilfe von Debtags.
+Letzteres besprechen wir detailliert unter Erweiterte
+Paketklassifikation mit Debtags in
+<<erweiterte-paketklassifikation-mit-debtags>>.
+
+// Datei (Ende): ./konzepte/software-in-paketen-organisieren/wie-finde-ich-passende-pakete.adoc

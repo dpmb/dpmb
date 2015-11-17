@@ -1,0 +1,47 @@
+// Datei: ./kann-denn-paketmanagement-spass-machen/zum-buch/dokumentation-zu-aptitude.adoc
+
+// Baustelle: Fertig
+// Axel: Fertig
+
+===== Dokumentation zu `aptitude` =====
+
+// Schlagworte für den Index
+(((aptitude,Dokumentation)))
+(((aptitude,Dokumentation online)))
+(((aptitude,Dokumentation offline)))
+Das vorliegende Buch resultiert auch aus einem Ärgernis, das zur
+weltweit verteilten Zusammenarbeit über das Netz gehört: Das Internet
+vergisst nichts, und irgendwo ist immer noch eine veraltete
+Dokumentation verlinkt, deren Hinfälligkeit mangels Verfallsdatums auch
+nicht zu erkennen ist.
+
+Bei der Recherche nach `aptitude`-Optionen verzweigen Suchtreffer häufig
+auf unklare, überholte und vielfach verteilte Erläuterungen. Als erster
+Anhaltspunkt bei einer überschaubaren Fragestellung mag das helfen, kann
+aber auch in eine Sackgasse oder gar zu Fehlern führen, wenn sich die
+Software just in diesem Punkt weiterentwickelt hat.
+
+Der Wunsch nach einem aktuellen, konsistenten und einsprachigen
+Nachschlagewerk zur Paketverwaltung mit `dpkg`, APT und `aptitude`
+erhielt also ausreichend Nahrung, zumal auch die an recht prominenter
+Stelle verlinkte Online-Dokumentation zu `aptitude` veraltet war (Stand:
+2008). Auf Axels Initiative wurde sie aber mittlerweile auf den neuesten
+Stand gebracht und steht seit August 2013 wieder in sämtlichen
+bisherigen Übersetzungen zur Verfügung <<aptitude-dokumentation>>.
+
+// Schlagworte für den Index
+(((aptitude,Dokumentationspakete)))
+Das kommt insbesondere Anwendern entgegen, die Dokumentation lieber
+online lesen (oder ``ergooglen'') statt sich die (stets aktuellen)
+Dokumentationspakete aus den Repositories auf ihrem System zu
+installieren. Ausführlicher gehen wir auf das Thema in <<dokumentation>>
+ein.
+
+Bei unserer Arbeit am Buch entdeckten wir zahlreiche Lücken in den
+Programmbeschreibungen, den Manpages und den beigefügten,
+weiterführenden Dokumentationen <<bugs-found-during-book-writing>>.
+Dabei wurde uns auch bewusst, welche Bedeutung dem persönlichen
+Erfahrungsschatz und insbesondere dem passiven Wissen zukommt. Wir haben
+uns bemüht, davon möglichst viel in dieses Buch einfließen zu lassen.
+
+// Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/dokumentation-zu-aptitude.adoc

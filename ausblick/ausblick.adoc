@@ -1,0 +1,77 @@
+// Datei: ./ausblick/ausblick.adoc
+
+// Baustelle: Notizen
+
+[[part.Teil_Ausblick]]
+[[ausblick]]
+
+= Ausblick
+
+== Notizen ==
+
+TODO: Wollen wir hier ein wenig über die Zukunft von Paketmanagement
+unter Debian orakeln? CUPT könnte man hier nochmals erwähnen. Das
+web-basierte Zeugs vielleicht auch (Stichworte Tablets und
+Smartphones).
+
+* welche Fragen blieben bislang offen und unbeantwortet
+* hat Paketmanagement -- so wie es jetzt vorliegt und verwendet wird -- überhaupt eine Zukunft
+** Modell und Struktur wird langsam volljährig
+** falls ja, was spricht denn dafür
+** falls nein, was wäre denn eine geeignete Alternative dazu
+*** gibt es vllt. schon kreative Ansätze, die langsam vor sich hin köcheln
+* welche Punkte sind zu verbessern bzw. zu ergänzen
+** an welchen Punkten hakelt es immer wieder
+** hat das Modell Risiken und Schwachstellen
+** was wird derzeit nicht abgedeckt
+** Anwendungsfälle
+* was sind die häufigsten Vorkommnisse, an denen etwas schiefgeht
+* welche der im Buch vorgestellten Ansätze und Lösungen haben Potential
+für die Zukunft
+
+== Pakete selber bauen ==
+
+TODO: Evtl. woanders hin?
+
+== Ein eigenes Debian-Repository aufbauen ==
+
+* siehe dazu: Michael Stapelberg: Kurz-Howto: Eigenes Debian-Repository
+aufbauen <<Stapelberg-Debian-Repo>>
+
+== Zukunft von APT, `dpkg` und Freunden ==
+
+TODO: Drei-Weg-Konfigdatei-Mergen, siehe
+http://community.libelektra.org/wp/?p=145 (Libelektra ist IIRC eine
+generische Konfigdatei-Parser-Bibliothek) und
+https://bugs.debian.org/32877
+
+== Fazit / Zusammenfassung ==
+
+TODO: Mehr und Aufsplitten
+
+[[ausblick-empfehlung-fuer-einsteiger]]
+=== Empfehlungen für Einsteiger ===
+
+==== Mit welchem Programm zur Paketverwaltung soll ich anfangen? ====
+
+Das hängt sehr davon ab, welche Art von Benutzerschnittstelle man
+bevorzugt -- oder auch, in welcher Situation (Desktop, Server via ssh)
+man grade ist:
+
+* Kommandozeile: `apt`. Es ist einfach und intuitive, schnell getippt,
+  hat angenehme farbliche Hervorhebugen in der Ausgabe und kann
+  praktisch alles, womit man im Alltag zu tun hat. Bei älteren
+  Veröffentlichungen ohne `apt` als Befehl muss man auf die Befehle
+  `apt-get` und `apt-cache` ausweichen, aber die Nachteile sind nur
+  geringfügig (mehr Tippen, je nach Aufgabe passendes Programm
+  auswählen, keine Farbe in der Standard-Einstellung).
+
+* Interaktiver Textmodus: `aptitude`, nicht nur, weil's auch das
+  einzige Programm mit dieser Benutzerschnittstelle ist, sondern auch,
+  weil es einem sehr viel Möglichkeiten bietet.
+
+* Graphische Benutzerschnittstelle: Synaptic (siehe <<gui-synaptic>>)
+Synaptic bildet unserer Meinung nach das Debian-Paketsystem am besten ab
+und reduziert es nicht auf einen ``App-Store''.
+
+// Datei (Ende): ./ausblick/ausblick.adoc

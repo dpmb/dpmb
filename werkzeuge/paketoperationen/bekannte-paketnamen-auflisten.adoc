@@ -1,0 +1,132 @@
+// Datei: ./werkzeuge/paketoperationen/bekannte-paketnamen-auflisten.adoc
+
+// Baustelle: Fertig
+
+[[bekannte-paketnamen-auflisten]]
+
+=== Bekannte Paketnamen auflisten ===
+
+// Stichworte für den Index
+(((apt-cache, pkgnames)))
+APT kann Ihnen ausgeben, welche Pakete es überhaupt kennt. Dazu verfügt
+das Werkzeug `apt-cache` über das Unterkommando `pkgnames`. Die Ausgabe,
+die Sie nach dessen Aufruf erhalten, hängt von den von Ihnen genutzten
+Paketquellen und den darüber verfügbaren Paketen ab. 
+
+Die nachfolgende Ausgabe listet die Pakete zusätzlich alphabetisch
+aufsteigend sortiert und seitenweise auf. Im Aufruf kommen dazu die
+beiden UNIX-Kommandos `sort` und `more` zum Einsatz.
+
+.Seitenweise und alphabetisch sortierte Ausgabe der Paketnamen, die APT kennt
+----
+$ apt-cache pkgnames | sort | more
+0ad
+0ad-data
+0ad-dbg
+2ping
+2vcard
+3270-common
+389-console
+3dchess
+...
+$
+----
+
+// Stichworte für den Index
+(((Debianpaket, dctrl-tools)))
+(((dpkg, -s)))
+(((grep-aptavail, -PX)))
+(((grep-available)))
+In eine ähnliche Richtung gehen die beiden Werkzeuge `grep-available`
+und `grep-aptavail` aus dem Paket 'dctrl-tools'
+<<Debian-Paket-dctrl-tools>>. Beide liefern Ihnen Informationen darüber,
+ob und in welcher Version das von Ihnen angefragte Paket aus den
+Paketquellen zur Verfügung steht. Während `grep-available` weitestgehend
+die Informationen ausgibt, die Sie mittels `dpkg -s` erhalten, liefert
+Ihnen `grep-aptavail` die vollständigen Informationen, so bspw. auch, wo
+Sie das Paket in der Verzeichnishierarchie der Paketquellen finden.
+Nachfolgendes Beispiel zeigt die Recherche anhand des Paketes 'xpdf'.
+
+.Paketinformationen zu 'xpdf'
+----
+$ grep-aptavail -PX xpdf
+Package: xpdf
+Version: 3.03-10
+Installed-Size: 447
+Maintainer: Michael Gilbert <mgilbert@debian.org>
+Architecture: i386
+Provides: pdf-viewer
+Depends: lesstif2 (>= 1:0.94.4), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libpoppler19 (>= 0.18.4), libstdc++6 (>= 4.1.1), libx11-6, libxt6
+Recommends: poppler-utils, poppler-data, gsfonts-x11, cups-bsd
+Description: Portable Document Format (PDF) reader
+Homepage: http://www.foolabs.com/xpdf/
+Description-md5: fa7a14f325304cc49bbc0086a88d330e
+Tag: implemented-in::c++, interface::x11, role::program, scope::application,
+ uitoolkit::motif, use::viewing, works-with-format::pdf,
+ works-with::text, x11::application
+Section: text
+Priority: optional
+Filename: pool/main/x/xpdf/xpdf_3.03-10_i386.deb
+Size: 196690
+MD5sum: 02e96c8b0c4b82a496deb2c386ed1042
+SHA1: 233ddb2074f1694e8fda75c63fb714464d42e15b
+SHA256: 2cced2a99c1b028bd5b2c5e37c3a6206c643167b1a5465481e5621f2d3f390a3
+$
+----
+
+// Stichworte für den Index
+(((apt-cache, pkgnames)))
+Kennen Sie jedoch nur ein Fragment eines Paketnamens, gibt es einen
+üblichen Weg und eine Abkürzung. Der _übliche Weg_ kombiniert
+`apt-cache` und das UNIX-Kommando `grep` über eine Pipe miteinander.
+'Muster' bezeichnet hier das Ihnen bereits bekannte Fragment.
+Nachfolgend sehen Sie die Recherche nach dem Muster `aptitude`.
+
+.Suche nach dem Muster `aptitude`
+----
+$ apt-cache pkgnames | grep aptitude
+aptitude
+aptitude-common
+aptitude-doc-cs
+aptitude-doc-fi
+aptitude-doc-en
+aptitude-doc-es
+aptitude-doc-fr
+aptitude-doc-ja
+aptitude-doc-it
+aptitude-dbg
+$
+----
+
+// Stichworte für den Index
+(((apt-file)))
+(((Debianpaket, debian-goodies)))
+(((dglob, -a)))
+Die _Abkürzung_ führt über das Werkzeug `dglob` aus dem Paket
+'debian-goodies' <<Debian-Paket-debian-goodies>>. Es setzt auf
+`apt-file` auf und liefert eine identische Ausgabe – aber der
+Tippaufwand ist geringer. Nachfolgende Ausgabe zeigt Ihnen das
+Suchergebnis zu den Paketen, die das Muster `ttd` beinhalten. Damit
+finden Sie beispielsweise alle Pakete, die zum Spiel Open Transport
+Tycoon Deluxe (openttd) gehören.
+
+Die im Aufruf verwendete Option `-a` listet Ihnen alle Pakete in
+alphabetisch aufsteigender Reihenfolge auf – unabhängig davon, ob diese
+jeweils auf Ihrem System installiert sind oder nicht. Ohne die Option
+beschränkt sich `dglob` nur auf die bereits installierten Pakete.
+
+.Rechercheergebnis von `dglob` mit dem Muster `ttd`
+----
+$ dglob -a ttd
+liblttd-dev
+liblttd0
+openttd
+openttd-data
+openttd-dbg
+openttd-opengfx
+openttd-openmsx
+openttd-opensfx
+$
+----
+
+// Datei (Ende): ./werkzeuge/paketoperationen/bekannte-paketnamen-auflisten.adoc

@@ -1,0 +1,27 @@
+// Datei: ./praxis/plattenplatz-sparen-mit-der-paketverwaltung.adoc
+
+// Baustelle: Notizen
+
+[[plattenplatz-sparen-mit-der-paketverwaltung]]
+
+== Plattenplatz sparen mit der Paketverwaltung ==
+
+* Hardlink über `/usr/share/doc/` laufen lassen <<Beckert-Blog-Hardlinking-Duplicate-Files>>
+* `dpkg --path-exclude=…`
+* Paket 'localepurge', momentan noch unter <<paketverwaltung-mit-eingeschraenkten-ressourcen-fuer-embedded-und-mobile-devices>>
+* Ungenutzte Bibliotheken, denen aber das ``Automatisch installiert''-Flag fehlt <<Beckert-Blog-Finding-Libraries>>
+* Auch `/var/cache/apt` auf tmpfs gehört hier erwähnt, momentan unter <<cache-verzeichnis-auf-separater-partition>>
+* `logrotate` (sollte eigentlich installiert sein, sorgt aber für nicht
+  permanent wachsende Logfiles. Seine Konfiguration sollte angepasst
+  werden, wenn man manuell weitere Logfiles in Anwendungen (VHosts im
+  Apache z.B.) konfiguriert.
+* Keinen Syslogd (Default-Paket ist 'rsyslog', dieses entfernen)
+  verwenden und das Syslog nur in einen Ringbuffer laufen lassen.
+** Hat man systemd, kann man mit `journalctl` das Log im Ringbuffer
+   anschauen.
+** Hat man sysvinit, so kann man das Paket 'busybox-syslogd'
+   installieren und mit `logread` den Inhalt des Ringbuffers
+   anschauen.
+** Gehört eigentlich nicht zur Paketverwaltung... Kann man
+   entsprechend zum Kürzen wieder rauskippen.
+// Datei (Ende): ./praxis/plattenplatz-sparen-mit-der-paketverwaltung.adoc

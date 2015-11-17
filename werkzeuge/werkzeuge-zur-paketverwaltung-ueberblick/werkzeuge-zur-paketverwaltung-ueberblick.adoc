@@ -1,0 +1,26 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/werkzeuge-zur-paketverwaltung-ueberblick.adoc
+
+// Baustelle: Fertig
+
+[[werkzeuge-zur-paketverwaltung]]
+
+== Werkzeuge zur Paketverwaltung (Überblick) ==
+
+include::frontends-fuer-das-paketmanagement.adoc[]
+
+// Für die Kommandozeile
+
+include::fuer-die-kommandozeile/fuer-die-kommandozeile.adoc[]
+
+// Ncurses-basiert
+
+include::ncurses-basiert/ncurses-basiert.adoc[]
+
+// Graphische Programme (GUI)
+
+include::gui-zur-paketverwaltung/gui-zur-paketverwaltung.adoc[]
+
+// Webbasierte Programme
+
+include::webbasierte-programme/webbasierte-programme.adoc[]
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/werkzeuge-zur-paketverwaltung-ueberblick.adoc

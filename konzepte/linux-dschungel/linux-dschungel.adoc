@@ -1,0 +1,35 @@
+// Datei: ./konzepte/linux-dschungel/linux-dschungel.adoc
+
+// Baustelle: Fertig
+// Axel: Fertig
+
+== Willkommen im Linux-Dschungel! ==
+
+
+//////////
+//Done:fho
+//Architekturen verschoben in den Anhang
+//Dr. Markus Wirtz, 2015-05-22 10:22
+//Was mir hier einleitend fehlt, ist das "Warum": Die Zusammenstellung
+//ist sehr ausführlich/detailreich, aber es ist nicht klar (genug), warum
+//ich in einem Buch über das Paketmanagement zunächst eine Liste
+//unzähliger Derivate lesen soll, von der mich 95% vermutlich nicht
+//interessieren.
+//Wäre es nicht sogar sinnvoll, diese Liste als Nachschlagewerk in den
+//Anhang zu verschieben?
+//////////
+
+
+
+// Was ist Debian (Überblick)
+include::was-ist-debian.adoc[]
+
+include::debian-architekturen.adoc[]
+
+include::vom-tar.gz-zur-linux-distribution.adoc[]
+
+include::debians-paketsystem.adoc[]
+
+include::welche-unix-artigen-betriebssysteme-verwenden-das.adoc[]
+
+// Datei (Ende): ./konzepte/linux-dschungel/linux-dschungel.adoc

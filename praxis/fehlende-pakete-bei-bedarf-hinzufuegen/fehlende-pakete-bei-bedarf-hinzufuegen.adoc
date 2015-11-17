@@ -1,0 +1,11 @@
+// Datei: ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/fehlende-pakete-bei-bedarf-hinzufuegen.adoc
+
+// Baustelle: Rohtext
+
+[[fehlende-pakete-bei-bedarf-hinzufuegen]]
+== Fehlende Pakete bei Bedarf hinzufügen ==
+
+include::neue-hardware.adoc[]
+
+include::neue-software.adoc[]
+// Datei (Ende): ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/fehlende-pakete-bei-bedarf-hinzufuegen.adoc

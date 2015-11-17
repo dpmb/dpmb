@@ -1,0 +1,69 @@
+// Datei: ./konzepte/linux-dschungel/debians-paketsystem.adoc
+
+// Baustelle: Fertig
+// Axel: Fertig
+
+[[debians-paketsystem]]
+
+=== Debians Paketsystem ===
+
+// Stichworte für den Index
+(((deb-Format)))
+(((dpkg)))
+(((Linux-Distribution, Debian)))
+(((Linux-Distribution, Paketabhängigkeiten)))
+(((Linux-Distribution, Paketierung)))
+Aus diesen Erfahrungen heraus startete 1993 das Debian-Projekt unter Ian
+Murdock <<Debian-History>> mit einer revolutionären Idee: dem
+Bereitstellen kompilierter, vorkonfigurierter und sauber aufeinander
+abgestimmter Softwarepakete. Es folgte die Entwicklung von `dpkg` ('d'
+für 'Debian' und 'pkg' für 'Package'), welches bis heute ein robuster
+Grundstein des Systems geblieben ist. Das verwendete `deb`-Paketformat
+und die dazugehörigen Werkzeuge wurden später von etlichen
+Linux-Distributionen übernommen. Ausführlicher beleuchten wir diesen
+Aspekt in <<welche-unix-artigen-betriebssysteme-verwenden-das>>.
+
+Bald aber stieß das Werkzeug `dpkg` an Grenzen: Es installiert lediglich
+`deb`-Pakete, löst aber die Abhängigkeiten zwischen einzelnen Paketen
+nicht automatisch auf. Zudem muss das Paket bereits lokal vorliegen,
+d.h. `dpkg` kann es nicht direkt aus einem FTP- oder HTTP-Archiv
+beziehen.
+
+// Stichworte für den Index
+(((apt)))
+(((aptitude)))
+(((console-apt)))
+(((deb-Format)))
+(((dselect)))
+(((muon)))
+(((PackageKit)))
+(((PackageSearch)))
+(((smartpm)))
+(((Synaptic)))
+(((tasksel)))
+(((xara)))
+Daraufhin begann die Entwicklung von `dselect`, welches aus dem
+Quellcode von `dpkg` gebaut wird, aber als eigenständiges Programm
+gilt. Später folgten `console-apt` (inzwischen aufgegeben) und
+`tasksel` (siehe <<tasksel>>), ab 1998 APT (_Advanced Packaging Tool_)
+sowie ab 1999 `aptitude` als Ncurses-basierte Oberfläche für `dpkg`.
+`dselect` wurde später weiterentwickelt und konnte somit auch APT als
+Backend benutzen.
+
+Dabei lag die Zielrichtung auf der konsequenten Anwendung des
+UNIX-Prinzips ``Ein Werkzeug für eine Aufgabe''. Das zeigt sich
+insbesondere darin, dass sich APT und `aptitude` an `dpkg` andocken und
+die verfügbaren Funktionen integrieren, indem die Programme bereits
+bestehende `dpkg`-Bibliotheken mitnutzen. Weitere Details dazu finden
+Sie in <<softwarestapel-und-ebenen>>.
+
+Heute stehen weitere textbasierte und graphische Benutzeroberflächen für
+`dpkg` zur Verfügung. Neben `aptitude` sind das Synaptic (siehe
+<<gui-synaptic>>), PackageKit (siehe <<gui-packagekit>>) – als Basis für
+Gnome-PackageKit und Apper bei KDE – sowie Muon (siehe <<gui-muon>>),
+PackageSearch (siehe <<debtags-werkzeuge>>), Xara
+<<Debian-Paket-xara-gtk>> und SmartPM (siehe <<gui-smartpm>>). Einen
+genaueren Blick werfen wir auf diese Programme in
+<<werkzeuge-zur-paketverwaltung>>.
+
+// Datei (Ende): ./konzepte/linux-dschungel/debians-paketsystem.adoc

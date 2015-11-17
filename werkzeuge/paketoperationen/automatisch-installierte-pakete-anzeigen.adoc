@@ -1,0 +1,77 @@
+// Datei: ./werkzeuge/paketoperationen/automatisch-installierte-pakete-anzeigen.adoc
+
+// Baustelle: Fertig
+
+[[automatisch-installierte-pakete-anzeigen]]
+
+=== Automatisch installierte Pakete anzeigen ===
+
+// Stichworte für den Index
+(((Paketflags, automatic)))
+Darunter fallen Pakete, die automatisch von der Paketverwaltung auf
+Ihrem System installiert wurden. Das geschieht, wenn Abhängigkeiten von
+anderen Paketen erfüllt werden müssen. `dpkg` kann diese Information
+nicht auswerten, jedoch stehen Ihnen mit `apt-mark` und `aptitude`
+gleich zwei Varianten auf dem Terminal bereit.
+
+[[automatisch-installierte-pakete-mit-apt-mark]]
+==== `apt-mark` benutzen ====
+
+// Stichworte für den Index
+(((apt-mark, showauto)))
+(((Debianpaket, apt)))
+(((Paketflags, automatic)))
+Das Paket 'apt' <<Debian-Paket-apt>> beinhaltet das Werkzeug `apt-mark`.
+Über das Unterkommando `showauto` erhalten Sie alle entsprechend
+markierten Pakete. Möchten Sie die Liste einschränken, akzeptiert
+`apt-mark` als weiteren Parameter ein Textfragment des Paketnamens oder
+einen passenden regulären Ausdruck. Das nachfolgende Beispiel zeigt
+Ihnen alle automatisch installierten Pakete, deren Paketnamen auf die
+Zeichenfolge `tex` enden. Das Muster ist als regulärer Ausdruck
+formuliert.
+
+.Automatisch installierte Pakete mit `apt-mark` anzeigen
+----
+$ apt-mark showauto '.*tex$'
+jadetex
+luatex
+texlive-luatex
+$
+----
+
+[[automatisch-installierte-pakete-mit-aptitude]]
+==== `aptitude` benutzen ====
+
+// Stichworte für den Index
+(((aptitude, search ~M)))
+(((aptitude, search ?automatic)))
+(((Paketflags, automatic)))
+Auf der Kommandozeile suchen Sie im Paketbestand Ihres Linuxsystems
+mittels `aptitude` über das Unterkommando `search` und dem speziellen
+Muster `~M` (Langform `?automatic`). Sie erhalten danach eine Liste, die
+den Paketstatus, den Paketnamen und eine kurze Paketbeschreibung
+enthält. Alle Pakete sind mit dem Buchstaben `A` für _automatisch
+installiert_ gekennzeichnet.
+
+.Automatisch installierte Pakete mit `aptitude` anzeigen
+----
+$ aptitude search ~M | more
+i A a2ps                            - GNU a2ps - »Alles nach PostScript«-Konvert
+i A abiword-common                  - Effiziente, mächtige Textverarbeitung, unt
+i A abiword-plugin-grammar          - Grammatik-Prüfung für AbiWord
+i A abiword-plugin-mathview         - Gleichungs-Editor-Erweiterung für AbiWord
+i A accountsservice                 - Abfragen und Ändern von Informationen von
+i A acl                             - Programme für Zugriffskontroll-Listen
+...
+$
+----
+
+Die gleiche Liste erhalten Sie über die Textoberfläche. Dazu filtern Sie
+die Paketliste mit der Taste kbd:[l] und tragen im Suchfeld entweder die
+Kurzform `~M` oder die Langvariante `?automatic` ein. Das Ergebnis
+entspricht <<fig.aptitude-automatisch-installiert>>.
+
+.Ansicht der automatisch installierten Pakete in `aptitude`
+image::werkzeuge/paketoperationen/aptitude-automatisch-installiert.png[id="fig.aptitude-automatisch-installiert", width="50%"]
+
+// Datei (Ende): ./werkzeuge/paketoperationen/automatisch-installierte-pakete-anzeigen.adoc

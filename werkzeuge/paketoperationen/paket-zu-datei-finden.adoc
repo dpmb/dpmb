@@ -1,0 +1,281 @@
+// Datei: ./werkzeuge/paketoperationen/paket-zu-datei-finden.adoc
+
+// Baustelle: Fertig
+
+[[paket-zu-datei-finden]]
+
+=== Paket zu Datei finden ===
+
+// Stichworte für den Index
+(((apt-file, search)))
+(((Debianpaket, dlocate)))
+(((dlocate, -S)))
+(((dpkg, -S)))
+(((dpkg, --search)))
+
+Häufig ist Ihnen nur der Dateiname bekannt, aber nicht das Paket, aus
+dem diese Datei stammt. Das wird insofern spannend, wenn das Paket
+anders als die gesuchte Datei heißt. Es gibt vier Möglichkeiten, diese
+Zuordnung zu ermitteln – einerseits über `dpkg` oder `dlocate`
+<<Debian-Paket-dlocate>> mit deren Option `-S Muster`, andererseits
+mittels `apt-file` und dessen Option `search Muster` und viertens über
+die Webseite des Debian-Projekts. `aptitude` verfügt nicht über einen
+solchen Schalter zur Suche.
+
+Die drei Kommandos finden alle Pfade, in denen das angegebene ``Muster''
+vorkommt. Der Unterschied zwischen den drei Programmen besteht darin,
+dass `dpkg` und `dlocate` nur in bereits installierten Paketen suchen,
+`apt-file` hingegen hingegen in allen verfügbaren Paketen, d.h.
+unabhängig davon, ob diese bereits auf ihrem System installiert sind
+oder nicht. Verfügbare Pakete bezeichnet die Menge von Paketen, die APT
+über einen Eintrag in der Liste der Paketquellen unter
+`/etc/apt/sources.list` und aus der dazugehörigen Paketliste
+entnehmen kann (siehe dazu <<paketquellen>>). Pakete, die sich hingegen
+in Paketquellen befinden, die nicht in obiger Liste referenziert sind,
+kann `apt-file` nicht untersuchen.
+
+Bei der Suche über die Webseite bildet zunächst der gesamte
+Paketbestand aller Veröffentlichungen die Grundlage. Sie können das
+jederzeit entsprechend über die Auswahlfelder einschränken.
+
+==== Suche in bereits installierten Paketen ====
+
+// Stichworte für den Index
+(((dpkg, -S)))
+(((dpkg, --search)))
+(((dlocate)))
+(((dlocate, -S)))
+Dafür genügen der Aufruf `dpkg -S Muster` oder die flinke Abkürzung
+`dlocate Muster`. Zur Suche ist bei `dlocate` der Schalter `-S`
+optional, `dpkg` kennt hingegen dafür die Langform `--search`. Als
+weiteren Parameter akzeptieren `dpkg` und `dlocate` ein Textfragment
+oder Muster, nach dem sie in der Dateiliste der installierten Pakete
+suchen. Beginnt das Textfragment mit einem `/`, wird die
+Zeichenkette als absoluter Pfad interpretiert. Nachfolgendes Beispiel
+illustriert den Aufruf nach dem Muster `aptsh` mittels `dpkg`.
+
+.Suche nach dem Muster `aptsh` mittels `dpkg`
+----
+$ dpkg -S aptsh
+aptsh: /usr/lib/aptsh/aptsh_ls
+aptsh: /usr/share/doc/aptsh/changelog.gz
+aptsh: /usr/share/man/man1/aptsh.1.gz
+aptsh: /usr/share/doc/aptsh/copyright
+aptsh: /usr/share/doc/aptsh
+aptsh: /etc/aptsh.conf
+aptsh: /usr/lib/aptsh/aptsh_printer
+aptsh: /usr/bin/aptsh
+aptsh: /usr/share/doc/aptsh/HOWTO.gz
+aptsh: /usr/lib/aptsh/aptsh_rls
+aptsh: /usr/lib/aptsh
+$
+----
+
+`dlocate` liefert im Allgemeinen ein identisches Ergebnis zu `dpkg`. Da
+`dlocate` zur Suche auf `grep` zurückgreift, hat es mitunter eine höhere
+Trefferrate. Nachfolgendes Beispiel zeigt die Suche nach dem absoluten
+Pfad `/xara-gtk` – sowohl für `dpkg`, als auch zu `dlocate` im Vergleich.
+
+.Suche nach der Pfadangabe `/xara-gtk`
+----
+$ dpkg -S /xara-gtk
+dpkg-query: Kein Pfad gefunden, der auf Muster /xara-gtk passt
+$ dlocate -S /xara-gtk
+xara-gtk: /etc/xara-gtkrc-2.0
+xara-gtk: /usr/share/menu/xara-gtk
+xara-gtk: /usr/share/doc/xara-gtk
+xara-gtk: /usr/share/doc/xara-gtk/copyright
+xara-gtk: /usr/share/doc/xara-gtk/changelog.gz
+$
+----
+
+==== Suche in noch nicht installierten Paketen ====
+
+// Stichworte für den Index
+(((apt-file, update)))
+(((dpkg, --search)))
+Dafür gibt es `apt-file`. Grundlage seiner Aktivitäten ist die Liste der
+Paketquellen in `/etc/apt/sources.list/` und die Liste der Dateien in
+jedem der Pakete, die von dort bezogen werden. Letztere befindet sich im
+Verzeichnis `/var/cache/apt/apt-file/`.
+
+.Liste der Paketquellen anzeigen
+----
+$ ls /var/cache/apt/apt-file
+ftp.de.debian.org_debian_dists_wheezy_contrib_Contents-i386.gz
+ftp.de.debian.org_debian_dists_wheezy_main_Contents-i386.gz
+ftp.de.debian.org_debian_dists_wheezy_non-free_Contents-i386.gz
+http.debian.net_debian_dists_wheezy_contrib_Contents-i386.gz
+http.debian.net_debian_dists_wheezy_main_Contents-i386.gz
+http.debian.net_debian_dists_wheezy_non-free_Contents-i386.gz
+$
+----
+
+// Stichworte für den Index
+(((apt-file, update)))
+(((/var/cache/apt/apt-file/)))
+
+Sollte diese Liste noch nicht vorhanden sein, erhalten Sie diese mit dem
+Aufruf `apt-file update`. Danach bezieht `apt-file` ein durchaus
+größeres Archiv (20 MB) von den angegebenen Paketmirrors und legt diese
+Dateien im Verzeichnis `/var/cache/apt/apt-file/` ab.
+
+Im nachfolgenden Beispiel zu `apt-file update` wird der Paketmirror
+dynamisch ausgewählt. Hintergrundinformationen dazu finden Sie in
+<<etc-apt-sources.list-verstehen>> und
+<<paketquellen-ueber-geoip-auswaehlen>>:
+
+.Suchdatenbank von APT aktualisieren
+----
+# apt-file update
+Downloading complete file http://http.debian.net/debian/dists/wheezy/main/Contents-i386.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 20.6M  100 20.6M    0     0  3917k      0  0:00:05  0:00:05 --:--:-- 4111k
+Downloading complete file http://http.debian.net/debian/dists/wheezy/contrib/Contents-i386.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 73552  100 73552    0     0   302k      0 --:--:-- --:--:-- --:--:--  302k
+Downloading complete file http://http.debian.net/debian/dists/wheezy/non-free/Contents-i386.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100  723k  100  723k    0     0  1428k      0 --:--:-- --:--:-- --:--:-- 1428k
+Ignoring source without Contents File:
+  http://security.debian.org/dists/wheezy/updates/main/Contents-i386.gz
+Ignoring source without Contents File:
+  http://security.debian.org/dists/wheezy/updates/contrib/Contents-i386.gz
+Ignoring source without Contents File:
+  http://security.debian.org/dists/wheezy/updates/non-free/Contents-i386.gz
+#
+----
+
+`apt-file` verfügt über eine ganze Reihe von Unterkommandos und
+Schaltern, von denen wir Ihnen die wichtigsten vorstellen. Weitere
+Schalter entnehmen Sie bitte der Manpage zum Programm.
+
+// Stichworte für den Index
+(((apt-file, find)))
+(((apt-file, list)))
+(((apt-file, search)))
+(((apt-file, show)))
+(((dpkg, -L)))
+
+`search Muster`:: 
+Suche danach, in welchem Paket die als `Muster` angegebene Datei
+enthalten ist. Ergebnis ist eine Liste aller Pakete, die das angegebene
+`Muster` enthalten. `apt-file` sucht nur dabei nach Dateinamen, nicht
+jedoch nach Verzeichnisnamen.
+
+`find Muster`:: 
+Alias für den Schalter `search`.
+
+`list Muster`:: 
+gibt den Paketinhalt aus, auf den das Muster passt. Diese Aktion ist
+sehr ähnlich zum Aufruf `dpkg -L`, nur das hier die Pakete noch nicht
+installiert sein müssen.
+
+`show Muster`:: 
+Alias für den Schalter `list`.
+
+`-a` (Langform `--architecture`)::
+Einschränkung der Suche auf die angegebene Architektur (siehe
+<<debian-architekturen>>).
+
+`-i` (Langform `--ignore-case`):: 
+Suche unabhängig von Groß- und Kleinschreibung des Musters.
+
+`-l` (Langform `--package-only`):: 
+Das Ergebnis ist nur der Paketname, auf den das Muster passt. Dateinamen
+werden nicht berücksichtigt.
+
+`-x` (Langform `--regexp`):: 
+interpretiert das Muster als Regulären Ausdruck, so wie ihn Perl
+versteht (PCRE). Ohne diesen Schalter wird das Muster als schlichte
+Zeichenkette aufgefasst.
+
+`-v` (Langform `--verbose`):: 
+verbose, d.h. die Ausgabe wird deutlich ausführlicher.
+
+Etwas nachteilig an `apt-file` ist, dass es alle Paketquellen durchsucht
+und Ihnen dabei nicht anzeigt, in welcher davon es den Treffer gefunden
+hat. Das führt zu Verwirrung, bspw. wenn in der Liste der Paketquellen
+die Veröffentlichungen _stable_ und _stable-backports_ eingetragen sind.
+`apt-file` verfügt bislang nicht über einen Schalter, um die Ausgabe
+dementsprechend zu beeinflussen.
+
+// Stichwort für den Index
+(((apt-file, update)))
+
+[NOTE]
+.Aktuelle Strukturdatenbank
+===========================
+Um vernünftig mit `apt-file` arbeiten zu können, empfehlen wir Ihnen,
+zuerst mit `apt-file update` die bestehende Dateiliste zu aktualisieren
+und danach darin zu stöbern. Damit nutzen Sie eine aktuelle Datenbasis.
+===========================
+
+// Stichwort für den Index
+(((apt-file, show)))
+(((apt-file, -v)))
+(((apt-file, --verbose)))
+
+Das nachfolgende Beispiel zeigt die Suche der Zeichenkette `aptsh`.
+Zusätzlich kommt der Schalter `-v` (Langform `--verbose`) zum Einsatz,
+um eine ausführlichere Ausgabe zu erhalten.
+
+.Suche über die Strukturdatenbank mittels `apt-file`
+----
+# apt-file -v show aptsh
+D: Using cache directory /var/cache/apt/apt-file
+D: reading sources file /etc/apt/sources.list
+D: got 'deb http://http.debian.net/debian/ wheezy main contrib non-free'
+D: kept 'deb http://http.debian.net/debian/ wheezy main contrib non-free'
+D: got 'deb http://security.debian.org/ wheezy/updates main contrib non-free'
+D: kept 'deb http://security.debian.org/ wheezy/updates main contrib non-free'
+D: regexp: ^\s*(.*?)\s+(\S*/\S*aptsh\S*)\s*$
+D: Search in \/var\/cache\/apt\/apt\-file\/http\.debian\.net_debian_dists_wheezy_main_Contents\-i386\.gz using zfgrep  -- aptsh
+.........
+D: Search in \/var\/cache\/apt\/apt\-file\/http\.debian\.net_debian_dists_wheezy_contrib_Contents\-i386\.gz using zfgrep  -- aptsh
+
+D: Search in \/var\/cache\/apt\/apt\-file\/http\.debian\.net_debian_dists_wheezy_non\-free_Contents\-i386\.gz using zfgrep  -- aptsh
+
+aptsh: /etc/aptsh.conf
+aptsh: /usr/bin/aptsh
+aptsh: /usr/lib/aptsh/aptsh_ls
+aptsh: /usr/lib/aptsh/aptsh_printer
+aptsh: /usr/lib/aptsh/aptsh_rls
+aptsh: /usr/share/doc/aptsh/HOWTO.gz
+aptsh: /usr/share/doc/aptsh/changelog.gz
+aptsh: /usr/share/doc/aptsh/copyright
+aptsh: /usr/share/man/man1/aptsh.1.gz
+#
+----
+
+==== Suche über die Webseite des Debian-Projekts ====
+
+Die Webseite bietet ebenfalls eine Suche anhand einer Zeichenfolge an
+(siehe <<fig.paketsuche-web1>>). Über verschiedene Auswahlfelder grenzen
+Sie ein, ob die Zeichenfolge auf feste Verzeichnisse passen soll, die
+mit einem Suchwort enden oder Pakete mit Dateien beinhalten soll, die so
+benannt sind oder deren Namen das Suchwort enthalten. Desweiteren
+filtern Sie die Suchergebnisse nach der gewünschten Veröffentlichung und
+Architektur (siehe dazu <<veroeffentlichungen>> und
+<<debian-architekturen>>).
+
+.Suche nach `xara-gtk` über die Webseite
+image::werkzeuge/paketoperationen/paketsuche-web1.png[id="fig.paketsuche-web1", width="50%"]
+
+Die <<fig.paketsuche-web2>> zeigt das Suchergebnis für die
+Veröffentlichung _Wheezy_, welches hier recht übersichtlich ausfällt.
+Beide Treffer zeigen das Paket 'xara-gtk' samt der dazu gefundenen
+Dateien mit dem Suchmuster. Klicken Sie auf einen der Links zwischen dem
+Suchfeld und dem Suchergebnis, schränken Sie die Suche anhand der
+gewählten Veröffentlichung bzw. Architektur weiter ein.
+
+.Suche nach dem Paket 'xara-gtk' über die Webseite des Debian-Projekts (Suchergebnis)
+image::werkzeuge/paketoperationen/paketsuche-web2.png[id="fig.paketsuche-web2", width="50%"]
+
+// Datei (Ende): ./werkzeuge/paketoperationen/paket-zu-datei-finden.adoc

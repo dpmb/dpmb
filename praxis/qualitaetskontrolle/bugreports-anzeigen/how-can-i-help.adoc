@@ -1,0 +1,143 @@
+// Datei: ./praxis/qualitaetskontrolle/bugreports-anzeigen/how-can-i-help.adoc
+
+// Baustelle: Fertig
+
+[[bugreports-how-can-i-help]]
+==== Welche der von mir genutzten Pakete benötigen Hilfe? ====
+
+// Stichworte für den Index
+(((Debianpaket, how-can-i-help)))
+(((Debian Backports)))
+(((how-can-i-help)))
+(((Ultimate Debian Database (UDD))))
+
+Das Programm `how-can-i-help` aus dem gleichnamigen Paket
+<<Debian-Paket-how-can-i-help>> geht genau dieser Frage nach und listet
+Ihnen auf, welche konkrete Art der Unterstützung ein Paket benötigt. Es
+ergänzt den Eintrag von `how-can-i-help` im Debian Wiki
+<<Debian-Wiki-how-can-i-help>> um die dazu passende Funktionalität auf
+der Kommandozeile. Obwohl es erst offiziell ab Debian 8 'Jessie'
+verfügbar ist, gibt es ebenso ein Paket aus 'Debian Backports' für
+Debian 7 'Wheezy' (für 'Debian Backports' siehe <<debian-backports>>).
+
+Als Datenquelle für seine Aussagen nutzt es die Ultimate Debian Database
+(UDD) <<Ultimate-Debian-Database>>. Dabei handelt es sich um eine
+PostgreSQL-Datenbank, die `how-can-i-help` über eine webbasierte
+Schnittstelle abfragt. Beachten Sie daher, dass das Programm für
+brauchbare Ergebnisse eine Internetverbindung voraussetzt.
+
+`how-can-i-help` integriert sich zudem über einen APT-Hook in APT und
+wird somit nach jeder Paketinstallation erneut ausgeführt. In Folge
+sehen Sie damit stets nur neu hinzugekommene Pakete, Fehler und den
+Bedarf an Hilfe. Ebenso können Sie das Programm über die Kommandozeile
+mit etlichen Schaltern aufrufen (Auswahl).
+
+// Stichworte für den Index
+(((how-can-i-help, -a)))
+(((how-can-i-help, --all)))
+
+`-a` (Langform `--all`)::
+Möglichkeiten für alle Pakete anzeigen, nicht nur für die installierten Pakete.
+
+// Stichworte für den Index
+(((how-can-i-help, -o)))
+(((how-can-i-help, --old)))
+
+`-o` (Langform `--old`)::
+Zeige nicht nur die neu hinzugekommenen Möglichkeiten oder die
+Möglichkeiten zu den zuletzt installierten Paketen, sondern auch die
+Möglichkeiten, welche bereits in der Vergangenheit aufgelistet wurden.
+
+// Stichworte für den Index
+(((how-can-i-help, -q)))
+(((how-can-i-help, --quiet)))
+
+`-q` (Langform `--quiet`)::
+Eine kompaktere Darstellung ohne Kopf- und Fußzeilen.
+
+In Benutzung sind zudem eine Reihe von Abkürzungen für die konkrete
+Hilfe, die sich auf den Zustand eines Paketes beziehen. Diese
+Abkürzungen haben wir der Übersicht der 'Work-Needing and Prospective
+Packages (WNPP)' entnommen <<Debian-Wiki-WNPP>>:
+
+Orphaned (O)::
+Kennzeichnung für ein verwaistes Paket, d.h. derzeit ohne Paketmaintainer.
+
+Request For Adopter (RFA)::
+Der derzeitige Paketmaintainer möchte die Verantwortung für das Paket
+abgeben und sucht einen Nachfolger.
+
+Request For Help (RFH)::
+Der derzeitige Paketmaintainer braucht generell Hilfe bei der Pflege
+des Pakets, z.B. in Form eines Co-Maintainers oder auch nur jemand, der
+Bugreports vorsortiert. Welche Hilfe sich der Paketbetreuer genau
+wünscht, finden Sie im angegebenen Bugreport.
+
+Intent To Adopt (ITA)::
+Jemand hat vor, das Paket zu übernehmen (Paketadoption). Diese Übernahme
+ist aber noch nicht geschehen.
+
+Über die bereits bisher genannten Möglichkeiten zur Unterstützung haben
+sich die folgenden Wege bewährt, zur Weiterentwicklung und Verbesserung
+von Paketen beizutragen:
+
+Request For Sponsorship (RFS)::
+Jemand, der kein Debian-Entwickler ist, hat eine neue Version dieses
+Pakets vorbereitet und sucht einen Debian-Entwickler, der das Paket
+begutachtet und dann das Hochladen (den 'Upload') sponsort.
+
+newcomer::
+Pakete mit Bugreports, die mit der Markierung 'newcomer' versehen sind.
+Eingeführt und früher bekannt unter der Markierung 'gift' (engl. für
+'Geschenk'). Bugreports mit dieser Markierung gelten als ``leichte
+Beute'' für Einsteiger in die Paketierung oder Entwicklung von
+Debian-eigenen Paketen. Diese Aufgaben sind i.d.R. ohne besondere
+Kenntnisse in der Paketierung lösbar, aber den Aufwand sollten Sie
+trotzdem nicht unterschätzen.
+
+testing-autorm::
+Kennzeichnung für Pakete, die in Kürze aus dem Zweig Debian 'testing'
+entfernt werden. Hintergrund sind zumeist bisher nicht behobene,
+veröffentlichungskritische Fehler ('RC bugs') des Pakets oder eines
+ihrer Abhängigkeiten.
+
+no-testing:: 
+Kennzeichnung für Pakete, die vor kurzem aus dem Zweig Debian 'testing'
+entfernt wurden. Dies kann aufgrund bislang nicht behobener,
+veröffentlichungskritischer Fehler ('RC bugs') passiert sein, aber auch
+weil der Paketbetreuer oder jemand anderes explizit die Entfernung des
+Paketes beantragt hat. Letzteres passiert häufiger, als Sie sich
+vorstellen können, z.B. wenn bei einer Bibliothek wegen einer
+`SONAME`-Änderung auch der Paketname korrigiert werden muss, bspw. von
+`libfoo7` zu `libfoo8`.
+
+Über die letzten beiden Markierungen hat `how-can-i-help` eine Art
+Glaskugel-Funktion bzgl. zukünftiger Debian-Veröffentlichungen. Daraus
+ersehen Sie Tendenzen dahingehend, welche Pakete im Bestand bleiben. Das
+hat direkte Auswirkungen, welche Software zukünftig als Debian-Paket
+verfügbar bleibt und gepflegt wird. Haben Sie gerade ein Paket aus
+Debian 'stable' installiert und `how-can-i-help` zeigt Ihnen im Anschluss
+zu ihrer Installation an, dass das Paket aus Debian 'testing'
+herausgeflogen ist, klären Sie für sich, ob Sie längerfristig auf dieses
+Paket setzen wollen. Bei einer solchen Meldung ist die Chance groß, dass
+dieses Paket in der nächsten Veröffentlichung von Debian 'stable' nicht
+mehr enthalten ist.
+
+.Was gibt es zu tun? (Ausschnitt)
+----
+$ how-can-i-help
+New packages where help is needed, including orphaned ones (from WNPP):
+ - apt-rdepends - https://bugs.debian.org/487125 - O (Orphaned)
+ - ara - https://bugs.debian.org/450876 - O (Orphaned)
+ - dctrl-tools - https://bugs.debian.org/768834 - O (Orphaned)
+...
+
+New packages removed from Debian 'testing' (the maintainer might need help):
+ - apt-dpkg-ref - https://tracker.debian.org/pkg/apt-dpkg-ref
+ - cpp-4.4 - https://tracker.debian.org/pkg/gcc-4.4
+ - gcc-4.4 - https://tracker.debian.org/pkg/gcc-4.4
+...
+$
+----
+
+// Datei (Ende): ./praxis/qualitaetskontrolle/bugreports-anzeigen/how-can-i-help.adoc

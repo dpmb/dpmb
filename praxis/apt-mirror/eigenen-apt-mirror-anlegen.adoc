@@ -1,0 +1,50 @@
+// Datei: ./praxis/apt-mirror/eigenen-apt-mirror-anlegen.adoc
+
+// Baustelle: Rohtext
+
+[[eigenen-apt-mirror-aufsetzen]]
+
+== Einen eigenen APT-Mirror aufsetzen ==
+
+Wie bereits in <<geeigneten-paketmirror-auswaehlen>> deutlich wurde,
+stellen die offiziellen Paketmirrors stets aktuelle Debian-Pakete für
+alle Interessierten zur Verfügung. Diese Spiegelserver werden
+weitestgehend individuell betreut.
+
+Mit einem Paketmirror verfolgen Sie das gleiche Ziel wie mit einem
+Paketcache (siehe Einen APT-Cache einrichten in <<apt-cache>>). Darüber
+werden ebenfalls Debian-Softwarepakete in einer Art Puffer
+bereitgestellt. Ziele sind dabei einerseits die Unabhängigkeit zu
+externen Paketquellen und andererseits der Wunsch, die Bezugszeiten über
+das lokale Netzwerk für die Arbeitsgruppe oder Wirtschaftseinheit
+möglichst zu verringern. 
+
+Der Unterschied zwischen einem Paketcache und einem Paketmirror besteht
+darin, dass bei ersterem nur die bereits nachgefragten Pakete vorgehalten
+werden, während ein Paketmirror i.d.R. die gesamte Distribution inkl.
+ausgewählter Veröffentlichungen bereitstellt. Ein lokaler Paketmirror
+spiegelt den offiziellen Paketbestand und macht ihn für die Benutzer,
+Dienste und Geräte in einem lokalen Netzwerk verfügbar. Damit geht eine
+Entlastung der offiziellen Paketmirror und eine Verringerung des
+Netzwerkverkehrs zu diesem einher -- die verfügbare Bandbreite der
+Außenanbindung kann anderweitig genutzt werden. Es ist an der Stelle
+jedoch dafür zu sorgen, dass der lokale Paketmirror stets aktuelle Pakete
+vorhält.
+
+Nachfolgend stellen wir Ihnen mehrere Varianten anhand der Pakete
+'apt-mirror' (<<apt-mirror>>), 'debmirror' (<<debmirror>>),
+'debpartial-mirror' (<<debpartial-mirror>>) und 'reprepro'
+(<<reprepro>>) vor.
+
+// apt-mirror
+include::apt-mirror.adoc[]
+
+// debmirror
+include::debmirror.adoc[]
+
+// debpartial-mirror
+include::debpartial-mirror.adoc[]
+
+// reprepo
+include::reprepro.adoc[]
+// Datei (Ende): ./praxis/apt-mirror/eigenen-apt-mirror-anlegen.adoc

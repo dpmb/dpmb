@@ -1,0 +1,155 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/liste-der-verfuegbaren-pakete-aktualisieren.adoc
+
+// Baustelle: Fertig
+
+[[liste-der-verfuegbaren-pakete-aktualisieren]]
+
+=== Liste der verfügbaren Pakete aktualisieren ===
+
+// Stichworte für den Index
+(((Paketliste, aktualisieren)))
+Bevor Sie Veränderungen am Paketbestand veranlassen, empfehlen wir
+Ihnen, stets die Liste der lokal genutzten Pakete auf den neuesten Stand
+zu bringen. Damit arbeiten Sie mit den aktuellen Referenzen auf die
+bestehenden Softwarepakete. Diesen Schritt ermöglichen alle Werkzeuge
+zur Paketverwaltung.
+
+Dazu bestehen verschiedene Möglichkeiten, die im Endeffekt alle das
+gleiche bewirken:
+
+// Stichworte für den Index
+(((apt, update)))
+(((apt-get, update)))
+(((aptitude, update)))
+(((aptitude, -u)))
+
+* Das klassische Kommando, das auch stets auf älteren Veröffentlichungen
+funktioniert, ist `apt-get update`. Auf neueren Veröffentlichungen, die
+das Kommando `apt` kennen, funktioniert auch `apt update` (siehe
+<<apt>>).
+
+* `aptitude` (siehe <<aptitude>>) gestattet einen Aufruf über die
+Kommandozeile mittels `aptitude update`. Möchten Sie die Paketliste
+aktualisieren und danach interaktiv im Text-Modus weiterarbeiten, so
+rufen Sie `aptitude -u` auf. Sind Sie bereits im interaktiven Text-Modus
+von `aptitude`, sorgt der Tastendruck kbd:[u] für frische Paketlisten
+und die aktualisierte Darstellung in `aptitude`. Alternativ stoßen Sie
+die Aktion über den Menüeintrag `Aktionen -> Paketlisten aktualisieren`
+an.
+
+* Bei Synaptic (siehe <<gui-synaptic>>) verbirgt sich dieser Vorgang
+hinter dem Menüeintrag `Bearbeiten -> Paketinformationen neu laden`.
+Alternativ nutzen Sie dafür die Tastenkombination kbd:[Ctrl,R].
+
+* Im Programm SmartPM (siehe <<gui-smartpm>>) lösen Sie die
+Aktualisierung für alle Paketquellen über den Menüpunkt `File -> Update
+channels` aus. Möchten Sie nur eine einzige Paketquelle auf den
+neuesten Stand bringen, wählen Sie stattdessen zunächst `File -> Update
+selected channels ...` aus und entscheiden danach, welche Paketquelle
+Ihres Erachtens eine Auffrischung verdient hat (siehe dazu
+<<fig.smartpm-paketquellen-auswaehlen>>).
+
+.Auflistung der verfügbaren Paketquellen in SmartPM
+image::werkzeuge/paketquellen-und-werkzeuge/smartpm-paketquellen-auswaehlen.png[id="fig.smartpm-paketquellen-auswaehlen", width="50%"]
+
+// Stichworte für den Index
+(((dpkg, --merge-avail)))
+(((dpkg, --update-avail)))
+
+[NOTE]
+.Aktualisierung mit `dpkg`
+=========================
+`dpkg` kennt auch die beiden Schalter `--update-avail` und
+`--merge-avail`. Es setzt dafür lokal bereitstehende Paketlisten voraus,
+mit denen es dann seine Paketdatenbank unter `/var/lib/dpkg/available`
+aktualisiert. Diesen Schalter von `dpkg` betrachten wir hier nicht
+näher.
+=========================
+
+Führen Sie eines der o.g. Aufrufe aus, wird zunächst die Liste der
+Paketquellen in `/etc/apt/sources.list` (siehe
+<<etc-apt-sources.list-verstehen>>) gelesen. Jeder Eintrag darin
+bezeichnet eine Paketquelle. Von diesen Paketquellen wird nacheinander
+jeweils eine aktuelle Liste der Pakete bezogen, die von dieser
+angegebenen Paketquelle verfügbar sind.
+
+Jede bezogene Liste wird danach auf deren Echtheit geprüft. Dazu ist
+diese digital signiert (siehe <<paketquelle-auf-echtheit-ueberpruefen>>). 
+Mit Hilfe des GPG-Schlüssels für die Paketquelle prüfen `apt-get` bzw.
+`aptitude` automatisch deren Authentizität und falls ohne Beanstandung,
+vereinigen sie die bezogene Liste mit der bereits bestehenden, lokalen
+Paketliste (siehe <<lokale-paketliste-und-paketcache>>). Dabei geben
+insbesondere `apt-get` und `aptitude` eine Reihe von Mitteilungen auf
+dem Terminal aus. Diese bedeuten:
+
+* `Holen:1 Bezugsquelle Release.gpg`: beziehe den GPG-Schlüssel zur
+Veröffentlichung (siehe <<veroeffentlichungen>>) von der als URL
+angegebenen Paketquelle (siehe <<paketquelle-auf-echtheit-ueberpruefen>>)
+
+* `OK Bezugsquelle [Datenmenge]`: der GPG-Schlüssel ist in Ordnung, die
+Signatur stimmt (siehe auch <<paketquelle-auf-echtheit-ueberpruefen>>)
+
+* `Holen:2 Bezugsquelle [Datenmenge]`: beziehe die Paketliste von der unter 1
+als URL angegebenen Paketquelle
+
+* `Ign Bezugsquelle`: Ein beim Herunterladen aufgetretener Fehler wird
+  ignoriert (z.B. fehlende Übersetzungen)
+
+Am Ende der Ausgabe erfolgt noch eine Zusammenfassung, welche Datenmenge
+in welcher Zeitspanne bezogen wurde. Nachfolgend sehen Sie die Ausgabe
+am Beispiel von `apt-get update`:
+
+.Aktualisierung der Paketliste durch `apt-get update`
+----
+# apt-get update
+OK   http://ftp.de.debian.org wheezy Release.gpg
+Holen: 1 http://security.debian.org wheezy/updates Release.gpg [836 B]
+Holen: 2 http://security.debian.org wheezy/updates Release [102 kB]
+OK   http://ftp.de.debian.org wheezy Release            
+OK   http://ftp.de.debian.org wheezy/main Sources       
+Holen: 3 http://security.debian.org wheezy/updates/main Sources [79,2 kB]
+OK   http://ftp.de.debian.org wheezy/contrib Sources      
+OK   http://ftp.de.debian.org wheezy/non-free Sources     
+OK   http://ftp.de.debian.org wheezy/main i386 Packages                   
+Holen: 4 http://security.debian.org wheezy/updates/contrib Sources [14 B] 
+OK   http://ftp.de.debian.org wheezy/contrib i386 Packages                
+Holen: 5 http://security.debian.org wheezy/updates/non-free Sources [14 B]
+OK   http://ftp.de.debian.org wheezy/non-free i386 Packages               
+Holen: 6 http://security.debian.org wheezy/updates/main i386 Packages [150 kB]
+OK   http://ftp.de.debian.org wheezy/contrib Translation-en
+OK   http://ftp.de.debian.org wheezy/main Translation-de_DE
+OK   http://ftp.de.debian.org wheezy/main Translation-de                   
+Holen: 7 http://security.debian.org wheezy/updates/contrib i386 Packages [14 B]
+OK   http://ftp.de.debian.org wheezy/main Translation-en                   
+Holen: 8 http://security.debian.org wheezy/updates/non-free i386 Packages [14 B]
+OK   http://ftp.de.debian.org wheezy/non-free Translation-en               
+Holen: 9 http://security.debian.org wheezy/updates/contrib Translation-en [14 B]
+Holen: 10 http://security.debian.org wheezy/updates/main Translation-en [88,7 kB]
+Holen: 11 http://security.debian.org wheezy/updates/non-free Translation-en [14 B]
+Es wurden 421 kB in 0 s geholt (428 kB/s).                
+Paketlisten werden gelesen... Fertig
+#
+----
+
+[IMPORTANT]
+.Überprüfung der Paketsignaturen
+====
+Konnten bei der Aktualisierung für neue Paketlisten keine gültigen Signaturen
+gefunden werden, wird eine Warnung ausgegeben. Entsprechende Zeilen beginnen mit
+`W:`. Pakete, die nicht korrekt signiert sind, können Schadcode enthalten und
+sollten nicht installiert werden. Zur Überprüfung auf korrekte Pakete tragen Sie
+bitte den passenden GPG-Key nach. Näheres dazu finden Sie unter
+Bezogenes Paket verifizieren in <<bezogenes-paket-verifizieren>>.
+====
+
+[TIP]
+.Veröffentlichung wechseln
+====
+Möchten Sie neuere Versionen von Paketen installieren oder auf eine
+andere Veröffentlichung von Debian wechseln, ist zusätzlich ein
+'upgrade' bzw. 'dist-upgrade' erforderlich. Weitere Informationen dazu
+erhalten Sie unter Pakete aktualisieren in <<pakete-aktualisieren>> bzw.
+Distribution aktulisieren in <<distribution-aktualisieren>>.
+====
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/liste-der-verfuegbaren-pakete-aktualisieren.adoc

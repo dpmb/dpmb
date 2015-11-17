@@ -1,0 +1,30 @@
+// Datei: ./praxis/paketverwaltung-beschleunigen/hintergrund.adoc
+// Baustelle: Notizen
+
+=== Hintergrund ===
+
+* warum will man das:
+** Zeitersparnis
+** Menge der belegten Ressourcen möglichst verringern
+** Rechner wieder für die Aufgabe bereit haben, für die er gedacht ist
+** viele regelmäßige Updates ermöglichen
+** viele Rechner auf dem gleichen Stand halten und dabei den Aufwand möglichst minimieren
+
+* bisher üblich: 
+** jeder Rechner bezieht seine Pakete direkt vom Paketmirror und cacht
+diese selbst (lokal im Paketcache)
+** bei jedem Aufruf erfolgt eine separate Kommunikation mit dem
+Paketmirror
+** verfügbare Bandbreite der Internetanbindung/Leitung wird ausgelastet
+*** Bezug der Pakete dauert länger
+*** andere Transaktionen dauert auch länger (werden ausgebremst, sofern
+diese nicht mit höherer Priorität versehen sind)
+** Infrastruktur (Hardware) speichert Daten- und Netzwerkpakete zwischen
+
+* viele Rechner hinter einem einzelnen Netzwerkzugang
+** werden alle aktualisiert, werden jedes Mal die gleichen Pakete erneut
+vom Paketmirror bezogen
+** bspw. automatisierte Aktualisierung (siehe <<automatisierte-aktualisierung>>)
+
+
+// Datei (Ende): ./praxis/paketverwaltung-beschleunigen/hintergrund.adoc

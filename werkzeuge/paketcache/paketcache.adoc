@@ -1,0 +1,14 @@
+// Datei: ./werkzeuge/paketcache/paketcache.adoc
+
+// Baustelle: Fertig
+
+[[paketcache]]
+
+== Paketcache ==
+
+include::hintergrundwissen.adoc[]
+
+include::paketcache-status.adoc[]
+
+include::paketcache-aufraeumen.adoc[]
+// Datei (Ende): ./werkzeuge/paketcache/paketcache.adoc

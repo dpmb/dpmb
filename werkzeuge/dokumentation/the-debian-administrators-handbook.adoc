@@ -1,0 +1,61 @@
+// Datei: ./werkzeuge/dokumentation/the-debian-administrators-handbook.adoc
+
+// Baustelle: Fertig
+
+[[debian-administrators-handbook]]
+
+=== The Debian Administrator's Handbook ===
+
+// Stichworte für den Index
+(((Debian Administrator's Handbook)))
+Seit 2003 setzen Raphaël Hertzog und Roland Mas mit ihrem Kompendium ``The 
+Debian Administrator's Handbook'' Maßstäbe
+<<Hertzog-Mas-Debian-Administrators-Handbook>> (französischer
+Originaltitel: ``Cahiers de l'Admin''). Das Buch spielt in der gleichen
+Liga wie Frank Ronneburgs ``Debian-Anwenderhandbuch''
+<<Debian-Anwenderhandbuch>>, Michael Koflers ``Linux – das umfassende
+Handbuch''{empty}footnote:[das Werk basiert von jeher auf SuSE-Linux,
+reißt aber alle Bereiche des Linux-Alltags mit an] <<Kofler-Linux-2013>>
+und Martin Kraffts Buch ``Das Debian-System. Konzepte und Methoden''
+<<Krafft-Debian-System>>. Aufgrund seiner Einzigartigkeit im
+französischen Sprachraum erreichen Neuauflagen regelmäßig einen
+Spitzenplatz in den Verkaufslisten des Buchhandels.
+
+Ursprünglich nur in französischer Sprache verfasst, steht es mittlerweile
+auch in einer englischen und spanischen Übersetzung bereit. Diese drei
+Varianten sind sowohl als kostenfreie, digitale Version (PDF und eBook),
+als auch als kostenpflichtige, gedruckte Variante (Paperback, Print on
+demand) erhältlich. Die Finanzierung der Übersetzung ins Englische
+erfolgte über eine Crowdfunding-Kampagne. Übersetzungen in andere
+Sprachen wie bspw. Arabisch, Farsi, Deutsch, Griechisch und Russisch
+werden von Freiwilligen beigesteuert, sind aber derzeit noch nicht ganz
+vollständig und daher nicht in gedruckter Form verfügbar.
+
+// Stichworte für den Index
+(((Debianpaket, debian-handbook)))
+Das Buch wird jeweils für die aktuelle Debian-Veröffentlichung angepaßt.
+Gleichzeitig entsteht daraus auch ein reguläres Debianpakete namens
+'debian-handbook' <<Debian-Paket-debian-handbook>> welches in die
+Distribution wieder einfließt. Das Paket beinhaltet derzeit den
+französischen, englischen und spanischen Text.
+
+// Stichworte für den Index
+(((aptitude)))
+(((dpkg)))
+(((synaptic)))
+Das Buch ist für alle Anwender gedacht, die Debian GNU/Linux-Systeme
+administrieren. Daher deckt es neben einem Einblick in das Debian-Projekt
+(siehe <<was-ist-debian>>) alle Bereiche ab, über Sie als Administrator
+Bescheid wissen müssen – die Debian-Installation, die Einrichtung und
+Betreuung von Diensten wie KVM, Xen und LXC sowie die Absicherung der
+von Ihnen betreuten Systeme. Auch die Thematik Automatisierung kommt
+nicht zu kurz, bspw. mittels FAI (siehe
+<<automatisierte-installation>>). In Bezug auf das Debian-Paketformat
+(siehe <<debian-paketformat-im-detail>>) setzen die Autoren auf `dpkg`
+(Grundlagen und Ebenen) und zeigen das Paketmanagement anhand von
+`aptitude` und `synaptic`. Auch der Erstellung von Debianpaketen ist
+ein eigenes Kapitel gewidmet.
+
+.Cover des Buches
+image::werkzeuge/dokumentation/debian-admin-handbook.png[id="fig.debian-admin-handbook", width="50%"]
+// Datei (Ende): ./werkzeuge/dokumentation/the-debian-administrators-handbook.adoc

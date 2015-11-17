@@ -1,0 +1,18 @@
+// Datei: ./konzepte/teil-konzepte.adoc
+[[part.Teil_Konzepte]]
+[[konzepte]]
+
+// Baustelle: Fertig
+
+= Konzepte =
+
+// == Ziele ==
+//
+// .Ziele:
+// ****
+// 
+// * Wie wird Software unter UNIX/Linux bereitgestellt? (2)
+// * Wie organisiert Debian seine Softwarepakete? (2)
+// 
+// ****
+// Datei (Ende): ./konzepte/teil-konzepte.adoc

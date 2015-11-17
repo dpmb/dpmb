@@ -1,0 +1,15 @@
+// Datei: ./praxis/mehrere-pakete-in-einem-schritt-aendern/mehrere-pakete-in-einem-schritt-aendern.adoc
+
+// Baustelle: Rohtext
+
+[[mehrere-pakete-in-einem-schritt-aendern]]
+== Mehrere Pakete in einem Schritt ändern ==
+
+// mit apt-get
+include::mit-apt-get.adoc[]
+
+// mit aptitude
+include::mit-aptitude.adoc[]
+
+
+// Datei (Ende): ./praxis/mehrere-pakete-in-einem-schritt-aendern/mehrere-pakete-in-einem-schritt-aendern.adoc

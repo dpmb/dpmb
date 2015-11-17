@@ -1,0 +1,51 @@
+// Datei: ./werkzeuge/paketoperationen/installation-zwischengespeicherter-pakete-aus-dem-paketcache.adoc
+
+// Baustelle: Fertig
+
+[[installation-zwischengespeicherter-pakete-aus-dem-paketcache]]
+
+=== Installation zwischengespeicherter Pakete aus dem Paketcache ===
+
+// Stichworte für den Index
+(((apt-get, install --no-download)))
+(((Paket, Installation aus dem Paketcache)))
+(((Paketcache)))
+Liegt das Paket bereits oder noch im Paketcache, kann APT dieses von
+dort entnehmen und sofort installieren. Ein Bezug vom Paketmirror ist in
+diesem Fall nicht mehr erforderlich und spart sowohl Zeit, als auch
+Bandbreite. Dazu benötigt `apt-get` die Option `--no-download` zum
+Unterkommando `install`. Nachfolgende Ausgabe zeigt das anhand des
+Pakets 'bash-doc', welches bereits im Paketcache liegt.
+
+.Installation des Paketes 'bash-doc' via `apt-get` aus dem Paketcache
+----
+# apt-get --no-download install bash-doc
+Paketlisten werden gelesen... Fertig
+Abhängigkeitsbaum wird aufgebaut.       
+Statusinformationen werden eingelesen.... Fertig
+Die folgenden NEUEN Pakete werden installiert:
+  bash-doc
+0 aktualisiert, 1 neu installiert, 0 zu entfernen und 16 nicht aktualisiert.
+Es müssen noch 0 B von 696 kB an Archiven heruntergeladen werden.
+Nach dieser Operation werden 1.430 kB Plattenplatz zusätzlich benutzt.
+Laden der Fehlerberichte ... Erledigt
+»Found/Fixed«-Informationen werden ausgewertet ... Erledigt
+Vormals nicht ausgewähltes Paket bash-doc wird gewählt.
+(Lese Datenbank ... 299513 Dateien und Verzeichnisse sind derzeit installiert.)
+Entpacken von bash-doc (aus .../bash-doc_4.2+dfsg-0.1_all.deb) ...
+bash-doc (4.2+dfsg-0.1) wird eingerichtet ...
+#
+----
+
+[NOTE]
+.Paket vom Paketmirror beziehen und automatisch (sofort) installieren
+====
+Um eines oder mehrere Pakete sofort zu installieren, kennen APT und
+`aptitude` das Unterkommando `install`. Alle vollständig bezogenen
+Pakete landen danach automatisch im Paketcache unter
+`/var/cache/apt/archives`. Ausführlich gehen wir darauf unter
+Pakete installieren in <<pakete-installieren>> und Paketcache wieder
+aufräumen in <<paketcache-aufraeumen>> ein.
+====
+
+// Datei (Ende): ./werkzeuge/paketoperationen/installation-zwischengespeicherter-pakete-aus-dem-paketcache.adoc

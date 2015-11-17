@@ -1,0 +1,12 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/ncurses-basiert.adoc
+
+// Baustelle: Fertig
+
+[[ncurses-basiert]]
+
+=== ncurses-basierte Programme ===
+
+include::tasksel.adoc[]
+
+include::aptitude.adoc[]
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/ncurses-basiert.adoc

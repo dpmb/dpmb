@@ -1,0 +1,79 @@
+// Datei: ./praxis/qualitaetskontrolle/bereits-installierte-pakete-mit-adequate-pruefen/adequate.adoc
+
+// Baustelle: Rohtext
+
+[[qualitaetskontrolle-adequate]]
+=== Bereits installierte Pakete mit `adequate` prüfen ===
+
+// Stichworte für den Index
+(((adequate)))
+(((Debianpaket, adequate)))
+(((lintian)))
+
+Im Gegensatz zu `lintian` (siehe <<bugreports-lintian>>) validieren Sie mit
+`adequate` <<Debian-Paket-adequate>> die Pakete, die bereits auf ihrem
+System installiert sind. `adequate` steht Ihnen ab Debian 8 'Jessie'
+oder über die 'Debian Backports' für Debian 7 'Wheezy' bereit.
+
+// Stichworte für den Index
+(((adequate, Paketname)))
+
+Zur Paketanalyse versteht es die folgenden Schalter (Auswahl):
+
+'Paketname'::
+Überprüfung des von Ihnen angegebenen Debianpakets.
+
+// Stichworte für den Index
+(((adequate, --all)))
+
+`--all`::
+Überprüfung aller Pakete, die auf ihrem Debian-System derzeit
+installiert sind.
+
+// Stichworte für den Index
+(((adequate, --tags broken-symlink)))
+(((adequate, --tags missing-copyright-file)))
+(((adequate, --tags program-name-collision)))
+
+`--tags` 'Tag1' '-Tag2'::
+Beschränkung der Ausgabe auf die angegebenen Fehlerwerte zu 'Tag1' und
+ohne 'Tag2'. Als Tag sind bspw. 'broken-symlink',
+'missing-copyright-file' und 'program-name-collision' zulässig.
+
+Weitere Schalter und die vollständige Liste der Tags entnehmen Sie bitte
+der Manpage zum Programm.
+
+Im ersten Beispiel sehen Sie das Ergebnis der Validierung des Pakets
+'pdfstudio', welches aus einer nicht-Debian-eigenen Paketquelle stammt.
+In diesem Fall hat `adequate` entdeckt, dass die Informationen zum
+Copyright des Werkzeugs fehlen.
+
+.Überprüfung des Pakets 'pdfstudio' mit Fehlermeldung
+----
+$ adequate pdfstudio
+pdfstudio: missing-copyright-file /usr/share/doc/pdfstudio/copyright
+$
+----
+
+// Stichworte für den Index
+(((adequate, --all)))
+
+Die Validierung ihres gesamten Systems erfolgt mit Hilfe des Schalters
+`--all` und wird durchaus etwas mehr Zeit in Anspruch nehmen.
+Nachfolgend sehen Sie einen Ausschnitt des Ergebnisses für ein
+Desktopsystem auf der Basis von Debian 7 'Wheezy', welches sich bereits
+über eine längere Zeit in Verwendung befindet.
+
+.Überprüfung des gesamten Paketbestands (Ausschnitt)
+----
+$ adequate --all
+libc-bin: program-name-collision /usr/bin/rpcinfo /usr/sbin/rpcinfo
+rpcbind: program-name-collision /usr/sbin/rpcinfo /usr/bin/rpcinfo
+virtuoso-opensource-6.1-bin: incompatible-licenses /usr/bin/isql-vt OpenSSL (libssl.so.1.0.0) + GPLv3+ (libreadline.so.6)
+exifprobe: broken-symlink /usr/share/doc/exifprobe/changelog.gz -> ../CHANGES_2.0.gz
+python-matplotlib-data: broken-symlink /usr/share/matplotlib/mpl-data/fonts/ttf/cmsy10.ttf -> ../../../../fonts/truetype/ttf-lyx/cmsy10.ttf
+...
+$
+----
+
+// Datei (Ende): ./praxis/qualitaetskontrolle/bereits-installierte-pakete-mit-adequate-pruefen/adequate.adoc

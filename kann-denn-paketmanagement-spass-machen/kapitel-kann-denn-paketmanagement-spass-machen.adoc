@@ -1,0 +1,12 @@
+// Datei: ./kann-denn-paketmanagement-spass-machen/kapitel-kann-denn-paketmanagement-spass-machen.adoc
+
+// Baustelle: Fertig
+
+[[chap.kann-denn-paketmanagement-spass-machen]]
+== Über dieses Buch ==
+
+include::ja.adoc[]
+
+include::zum-buch/zum-buch.adoc[]
+
+// Datei (Ende): ./kann-denn-paketmanagement-spass-machen/kapitel-kann-denn-paketmanagement-spass-machen.adoc

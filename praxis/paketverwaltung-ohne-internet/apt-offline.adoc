@@ -1,0 +1,61 @@
+// Datei: ./praxis/paketverwaltung-ohne-internet/apt-offline.adoc
+
+// Baustelle: Notizen
+
+[[paketverwaltung-offline-apt-offline]]
+==== Das Projekt 'apt-offline' ====
+
+// Stichworte für den Index
+(((Debianpaket, apt-offline)))
+(((Debianpaket, apt-offline-gui)))
+
+* Projektseite <<apt-offline-Projektseite>>
+* Debian-Paket 'apt-offline' <<Debian-Paket-apt-offline>>
+* GUI-Version zum Paket: 'apt-offline-gui' <<Debian-Paket-apt-offline-gui>>
+* setzt auf der Programmiersprache Python auf
+
+* Beschreibungen: Offline Package Management for APT (<<Ritesh-apt-offline>>, <<xubuntu-apt-offline>>, <<Damienoh-apt-offline>>)
+
+// Stichworte für den Index
+(((apt-offline, get)))
+(((apt-offline, install)))
+(((apt-offline, set)))
+(((apt-offline, --update)))
+(((apt-offline, --upgrade)))
+
+* Ablauf:
+** Signatur für die Maschine erzeugen, die aktualisierte
+Paketinformationen und Pakete bekommen soll (auf der Maschine, die
+offline ist)
+
+----
+# apt-offline set /tmp/apt-offline.sig
+----
+
+*** Option `--update`: nur Updates (Einspielen aktualisierter,
+fehlerbereinigter Pakete mit der gleichen Versionsnummer)
+*** Option `--upgrade`: nur Upgrades (Einspielen aktualisierter,
+fehlerbereinigter Pakete mit einer neueren Version)
+*** ohne Optionen: alles auf den allerneuesten Stand bringen (entspricht
+einem `dist-upgrade`)
+
+** Paketinfo für die offline-Maschine holen, inkl. Bug-Reports und
+Ausführung als parallele 5 Threads (auf einer Maschine, die über eine
+Netzanbindung verfügt)
+
+----
+# apt-offline get apt-offline.sig --bug-reports --threads 5
+----
+
+** bezogene Paketinformationen auf der offline-Maschine einspielen, hier
+beispielhaft als Datei von einem Speichermedium, welches über USB
+eingehängt ist (USB-Stick oder USB-Festplatte)
+
+----
+# apt-offline install /media/USB/apt-offline.zip
+----
+
+*** aktualisiert den APT-Cache, sodaß alles daher kommt und nichts von
+extern bezogen werden muß
+
+// Datei (Ende): ./praxis/paketverwaltung-ohne-internet/apt-offline.adoc

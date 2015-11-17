@@ -1,0 +1,33 @@
+// Datei: ./werkzeuge/dokumentation/apt-dpkg-referenzliste.adoc
+
+// Baustelle: Fertig 
+
+[[die-apt-dpkg-referenzliste]]
+
+=== Die apt-dpkg-Referenzliste ===
+
+// Stichworte für den Index
+(((APT)))
+(((Debianpaket, apt-dpkg-ref)))
+(((dpkg)))
+Matthew Danish hat zu den beiden Programmen `dpkg` und APT eine
+Referenzliste zusammengestellt. Diese ist als offizielles Debianpaket
+mit dem Namen 'apt-dpkg-ref' <<Debian-Paket-apt-dpkg-ref>> verfügbar.
+Derzeit existiert diese Übersicht nur in englischer Sprache,
+Übersetzungen in andere Sprachen liegen bislang nicht vor.
+
+Installieren Sie dieses Paket über die Paketverwaltung, finden Sie diese
+Dokumentation danach im Verzeichnis `/usr/share/doc/apt-dpkg-ref/`
+wieder. Neben den Lisp- und LaTeX-Quellen ist die Dokumentation in Form
+einer HTML-, PDF- und PostScript-Datei verfügbar. 
+
+Alle Formate beinhalten eine Übersicht zu den grundlegenden `dpkg`- und
+APT-Kommandos samt griffiger Beschreibung der einzelnen Optionen.
+Zudem werden kurz und knapp die Beziehungen zwischen `dpkg` und APT
+hergestellt. Eine kurze Einführung zum Bauen von `deb`-Paketen aus den
+Paketquellen rundet die Beschreibung ab. <<fig.apt-dpkg-reference>>
+zeigt einen Ausschnitt der Referenzliste im PDF-Betrachter 'xpdf'.
+
+.Die apt-dpkg-Referenzliste im PDF-Betrachter 'xpdf'
+image::werkzeuge/dokumentation/apt-dpkg-referenzliste.png[id="fig.apt-dpkg-reference", width="50%"]
+// Datei (Ende): ./werkzeuge/dokumentation/apt-dpkg-referenzliste.adoc

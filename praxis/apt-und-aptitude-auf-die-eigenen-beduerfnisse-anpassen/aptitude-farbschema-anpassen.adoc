@@ -1,0 +1,32 @@
+// Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-farbschema-anpassen.adoc
+
+// Baustelle: Notizen
+
+[[aptitude-farbschema-anpassen]]
+=== `aptitude`-Farbschema anpassen ===
+
+==== Standardvorgaben ====
+* Standardfarben: siehe Beschreibung unter <<aptitude>>
+
+==== Zwischen `aptitude`-Themes wechseln ====
+
+* Theme: Farben und Anordnung
+* siehe `aptitude`-Handbuch <<aptitude-dokumentation-themes>>
+* zwei Themes werden mitgeliefert
+** `Dselect` (wie `dselect`) -- ist das Standard-Theme
+** `Vertical-Split` -- teilt die Darstellung senkrecht in Paketliste
+(links) und Beschreibung (rechts)
+** Konfigurationsdirektive: `Aptitude::Theme Vertical-Split;`
+
+==== Eigene Farben vergeben ====
+* für die einzelnen Strukturelemente eigene Farben festlegen
+* siehe `aptitude`-Handbuch: Customizing text colors and styles
+<<aptitude-dokumentation-text-colors-and-styles>>
+* Frage:
+** ist das empfehlenswert, oder stiftet das nicht eher Verwirrung?
+** Vorlieben und Gewohnheiten
+** Sehfähigkeiten (Farben, Kontrast)
+** Ausgabegerät, insbesondere Helligkeit
+
+
+// Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-farbschema-anpassen.adoc

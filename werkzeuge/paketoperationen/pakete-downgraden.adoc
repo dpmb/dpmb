@@ -1,0 +1,67 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-downgraden.adoc
+
+// Baustelle: Rohtext
+
+[[pakete-downgraden]]
+
+=== Pakete downgraden ===
+
+Allgemein gesprochen, steht der Begriff 'Downgrade' für einen
+Niedergang, eine Abwertung oder einen Rückschritt. Bezogen auf die
+Verwaltung von Softwarepaketen umfasst es das Einspielen einer vorherigen
+Paketversion. Es stellt damit das Gegenstück zu einer Aktualisierung
+mittels `apt-get upgrade` dar (siehe dazu <<pakete-aktualisieren>>).
+
+Ein solcher Rückschritt ist in Betracht zu ziehen, wenn die aktuelle
+Version eines Softwarepakets nicht das leistet, was sie verspricht,
+dabei Fehler auftreten oder Inkompatibilitäten mit anderen
+Softwarepaketen und deren Benutzung unmöglich machen. Häufig fallen in
+letztere Kategorie geänderte Schnittstellen, die noch nicht auf allen
+Ebenen konsequent umgesetzt wurden.
+
+Ein Downgrade wird vom Release-Team von Debian GNU/Linux offiziell nicht
+unterstützt. Keines der hier im Buch vorgestellten Werkzeuge zur
+Paketverwaltung verfügt bislang über einen spezifischen Schalter, um ein
+Downgrade explizit anzustoßen. Daher bleibt nur ein Vorgehen über andere
+Wege, die jedoch auf den bereits zuvor beschriebenen Mechanismen
+aufsetzen.
+
+==== Hintergrund und Fragen zum Downgrade ====
+
+* ist das komplizierter als das Einspielen einer neueren Version?
+** nein. Meistens nicht -- vom explizten angeben (dpkg/apt-get) oder
+auswählen der Version (aptitude TUI) mal abgesehen.
+** Aber: Die Maintainerskripte (`postinst`, `preinst`, `postrm`,
+`prerm`) unterstützen das im Normalfall nicht (evtl. unterstützt der
+Mechanismus, der sie aufruft das schon nicht), und es gibt Fälle, wo's
+kräftig schiefgehen kann, weil in die Hinrichtung was umgebaut wurde,
+was in der Rückrichtung nicht zurück umgebaut wurde. (Beispiel:
+https://bugs.debian.org/764503)
+
+* ist das mit einer Aktualisierung gleichzusetzen?
+** im Prinzip ja, nur mit einer älteren Version als explizite Festlegung
+** Vorgang kann ja auch großflächige Änderungen am Restbestand der
+Pakete auslösen (kann bei einer Aktualisierung ja auch vorkommen)
+** Änderungen sind nicht immer rückwärtskompatibel und lösen Verwicklungen aus
+** Aktualisierungen sind bereits hinreichend komplex
+* Alternativen und Querverweise:
+** apt-pinning bzw. Veröffentlichungen mischen (siehe <<veroeffentlichungen-mischen>>)
+** Paket aus den Quellen selbst bauen (``patchen'') und einspielen
+* Empfehlung: nur bei Bedarf durchführen
+
+==== Ablauf ====
+
+// Stichworte für den Index
+(((apt-cache, showpkg)))
+(((apt-get, -t install)))
+
+* vorher nützlich:
+** anzeigen, welche Paketversionen überhaupt verfügbar sind
+** `apt-cache showpkg Paketname` (siehe auch <<paketstatus-erfragen>>)
+
+* Möglichkeiten, um eine vorhergehende Paketversion einspielen
+** über die explizite Angabe der Versionsnummer des Paketes: `apt-get install <package-name>=<package-version-number>`
+** über die explizite Angabe der Veröffentlichung: `apt-get -t=<target release> install <package-name>`
+
+
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-downgraden.adoc

@@ -1,0 +1,95 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/synaptic.adoc
+
+// Baustelle: Fertig
+
+[[gui-synaptic]]
+
+==== Synaptic ====
+
+Das Programm steht im gleichnamigen Paket 'synaptic'
+<<Debian-Paket-synaptic>> bereit. Es verfügt über eine graphische
+Bedienoberfläche auf der Basis des Gimp Toolkits (GTK2) und war lange
+Zeit das empfohlene Programm zur Paketverwaltung für die Benutzer des
+Ubuntu-Desktops. Inzwischen hat das mehr an Apples App-Store denn an
+Aptitude erinnernde Ubuntu Software Center
+(<<gui-ubuntu-software-center>>) viele Fans abgeworben.
+
+.Softwareauswahl in `synaptic`
+image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/synaptic.png[id="fig.synaptic", width="50%"]
+
+Synaptic bedienen Sie über die Menüleiste, eine Reihe von Knöpfen
+darunter und eine dreispaltige Paketübersicht. Die Darstellung
+konfigurieren Sie über die Menüpunkte menu:Einstellungen[Einstellungen]
+und menu:Einstellungen[Werkzeugleiste]. <<fig.synaptic-setup-farben>>
+zeigt als Beispiel das Dialogfenster, über welches Sie die Farben zum
+jeweiligen Installationsstatus eines Paketes festlegen.
+
+.Farbige Markierungen der Pakete gemäß ihrem Installationsstatus (Synaptic)
+image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/synaptic-setup-farben.png[id="fig.synaptic-setup-farben", width="50%"]
+
+Über den Knopf menu:Eigenschaften[] erfahren Sie mehr über das gerade von
+Ihnen ausgewählte Paket. Dazu zählen Allgemeine Informationen, die
+Paketabhängigkeiten, die installierten Dateien, die verfügbaren
+Paketversionen sowie eine ausführliche Paketbeschreibung.
+<<fig.synaptic-paketinfo>> zeigt die Informationen zum Paket 'ding'.
+
+.Allgemeine Paketeigenschaften für das Paket 'ding' (Synaptic)
+image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/synaptic-paketinfo.png[id="fig.synaptic-paketinfo", width="50%"]
+
+Unter der Menüleiste und den Knöpfen finden Sie die dreispaltige
+'Paketübersicht'. Links finden Sie verschiedene Auswahlknöpfe, oben
+rechts die Paketliste und unten rechts die Paketbeschreibung im Detail.
+<<fig.synaptic>> zeigt Ihnen die Gesamtansicht anhand des Paketes 'a2ps'.
+
+Die 'linke Spalte' zeigt zunächst die Architektur
+(<<debian-architekturen>>). Über die einzelnen Knöpfe darunter schalten
+Sie zur Ansicht nach den Paketkategorien (Sektionen)
+(<<sortierung-der-pakete-nach-verwendungszweck>>) sowie dem Ursprung bzw. der Herkunft der Pakete
+(<<paketquellen>>), der Veröffentlichung (<<veroeffentlichungen>>) und
+dem Distributionsbereich (<<distributionsbereiche>>) um.
+
+In der 'Paketliste oben rechts' beinhalten die Spalten den
+Installationsstatus (Status), eine Information zur Herkunft des Paketes,
+den Paketnamen, die installierte und die verfügbare Version und eine
+kurze Paketbeschreibung. Zusätzlich können Sie als Spalten den
+Distributionsbereich, die Veröffentlichung und die Größe des Paketes
+nach der Installation ergänzen. Mit einem Mausklick auf den jeweiligen
+Spaltenkopf sortieren Sie die Paketliste nach der jeweiligen
+Eigenschaft.
+
+Die 'rechte untere Spalte' zeigt die ausführliche Paketbeschreibung an.
+Über den linken Knopf (menu:Bildschirmfoto herunterladen[]) beziehen
+Sie ein Bildschirmfoto, sofern dieses hinterlegt ist{empty}footnote:[Die
+Bildschirmfotos kommen von <<screenshots.debian.net>>. Falls für Ihr
+Lieblingspaket ein Screenshot fehlt, können Sie selbst einen
+anfertigen und dort hochladen. Nach einem Review wird das hochgeladene
+Bild im Normalfall freigeschaltet und ist dann für alle Nutzer der
+Webseite und der Programme, die die Daten von dort verwenden, sichtbar.].
+Über den rechten Knopf (menu:Änderungsprotokoll abrufen[]) zeigt
+Ihnen Synaptic die Änderungsdatei (engl. 'Changelog') zum ausgewählten
+Paket an.
+
+Um ein Paket zu installieren, wählen Sie dieses zuerst über den
+Menüeintrag menu:Paket[Zum installieren vormerken] (alternativ
+kbd:[Strg,I] oder einen Rechtsklick) aus. Über den Menüeintrag
+menu:Bearbeiten[Vorgemerkte Änderungen anwenden] (alternativ
+kbd:[Strg,P] oder den Knopf menu:Anwenden[]) lösen Sie die
+Installation aus. In ähnlicher Art und Weise verfahren Sie beim Löschen
+und Aktualisieren von Paketen. Synaptic prüft bei jeder Aktion die
+Paketabhängigkeiten und bezieht die weiteren Pakete in die Verarbeitung
+mit ein, damit ihr Linuxsystem stets in einem konsistenten Zustand
+bleibt.
+
+Möchten Sie hingegen eine ganze Paketgruppe installieren, bietet
+Synaptic die gleiche Funktionalität wie das Werkzeug 'tasksel' (siehe
+<<tasksel>>). Dazu nutzen Sie den Menüpunkt
+menu:Bearbeiten[Pakete nach Aufgaben vormerken]. Daraufhin erscheint
+ein ähnliches
+Auswahlfenster wie in <<fig.synaptic-tasksel>>, aus deren Liste sie die
+gewünschte Aktion markieren. Alle Pakete, die der ausgewählten Aufgabe
+zugeordnet sind, gelangen damit in die Vorauswahl und können daraufhin
+über den Knopf menu:Anwenden[] installiert werden.
+
+.Paketauswahl einer ganzen Aufgabengruppe (Synaptic)
+image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/synaptic-tasksel.png[id="fig.synaptic-tasksel", width="50%"]
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/synaptic.adoc

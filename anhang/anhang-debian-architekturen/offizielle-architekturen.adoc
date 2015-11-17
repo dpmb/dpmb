@@ -1,0 +1,51 @@
+// Datei: ./anhang/anhang-debian-architekturen/offizielle-architekturen.adoc
+// Baustelle: Fertig
+
+[[anhang-offizielle-debian-architekturen]]
+=== Offizielle Architekturen ===
+
+Debian unterstützt die folgenden Architekturen und Plattformen:
+
+i386 (i486/i586)::
+x86 (PC) 32-Bit. Trotz des Namens ab Debian 8 'Jessie' nur
+Pentium-kompatible Hardware. In Debian 6 'Squeeze' und 7 'Wheezy' umfasst
+das noch i486, jedoch bereits keine i486 SX mehr.
+
+amd64 (x86_64)::
+x86 (PC) 64-Bit. AMD 64-Bit-CPUs mit AMD64-Erweiterung und Intel CPUs
+mit EM64T-Erweiterung.
+
+arm64 (aarch64-linux-gnu)::
+ARM 64 Bit. 64-Bit-ARMv8-Architektur, die im Vergleich zu anderen
+ARM-Architekturen einen aufgeräumten Befehlssatz hat und auf den
+Servermarkt zielt. Hardware-Architektur des iPhone 5.
+
+armel (arm-linux-gnueabi)::
+ARM (EABI) <<Debian-Wiki-ARM-EABI-Port>>.
+
+armhf (arm-linux-gnueabihf)::
+ARM. Hardware Floating Point ABI, ab Debian 7.0 'Wheezy' unterstützt
+<<Debian-Wiki-ARM-EABI-Port>>.
+
+hurd-i386 (i486-gnu)::
+32-Bit-PC (i386) mit GNU-Hurd-Kernel (nur in Debian 'unstable').
+
+mips (mips-linux-gnu)::
+MIPS (Big Endian).
+
+mipsel (mipsel-linux-gnu)::
+MIPS (Little Endian).
+
+powerpc (powerpc-linux-gnu)::
+Motorola/IBM PowerPC. Läuft auf vielen der Apple Macintosh
+PowerMac-Modelle sowie auf Rechnern der offenen CHRP- und
+PReP-Architekturen.
+
+ppc64el (powerpc64le-linux-gnu)::
+PowerPC 64-Bit (POWER7+, POWER8). Little-Endian-Portierung von ppc64,
+nutzt die neue OpenPower-ELFv2-ABI.
+
+s390x (s390x-linux-gnu)::
+IBM S/390 und zSeries, 64-Bit-Userland.
+
+// Datei (Ende): ./anhang/anhang-debian-architekturen/offizielle-architekturen.adoc

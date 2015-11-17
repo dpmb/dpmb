@@ -1,0 +1,188 @@
+// Datei: ./praxis/debtags/verwendetes-vokabular-bearbeiten-und-erweitern.adoc
+
+// Baustelle: Rohtext
+
+[[verwendetes-vokabular-bearbeiten-und-erweitern]]
+
+=== Verwendetes Vokabular bearbeiten und erweitern ===
+
+Bislang lagen lediglich die Pakete und deren zugeordnete Schlagworte im
+Blickfeld. Nun rückt das dabei genutzte Vokabular in den Mittelpunkt,
+d.h. der dafür verwendete Wortschatz zur Klassifizierung der Pakete. 
+
+// Schlagworte für den Index
+(((Enrico Zini)))
+
+Die Federführung bei der Pflege übernimmt derzeit Enrico Zini, der Autor
+des Debtags-Projekts. Zu beobachten ist jedoch über die letzten Jahre,
+dass das Thema Verschlagwortung von den Benutzern verstärkt wahrgenommen
+wird und ein größeres Interesse besteht, daran mitzuwirken. Die
+vorgenommenen Veränderungen im Wortschatz reflektieren dabei einerseits
+den Wandel im Paketbestand und andererseits das gestiegene Bedürfnis der
+Debiananwender nach einer möglichst zielgenauen Recherchemöglichkeit zu
+den Paketen mit Hilfe passender sprachlicher Mittel.
+
+==== Alle verfügbaren Schlagworte anzeigen ====
+
+// Schlagworte für den Index
+(((debtags, tagcat)))
+(((Debtags, Schlagworte anzeigen)))
+
+Auf der *Kommandozeile* erhalten Sie diese Informationen über den Aufruf
+`debtags tagcat`. Zu jedem Eintrag sehen Sie eine kürzere und eine
+ausführlichere Beschreibung, welche den Einsatzzweck des Schlagworts
+näher beleuchtet.
+
+.Auflistung der verfügbaren Schlagworte (Ausschnitt)
+----
+$ debtags tagcat
+Tag: accessibility::input
+Description: Input Systems
+ Input Systems
+Applies to input methods for non-latin languages as well as special input
+systems.
+
+...
+
+$
+----
+
+==== Informationen zu Schlagworten anzeigen ====
+
+// Schlagworte für den Index
+(((debtags, tagsearch)))
+(((Debtags, Informationen zu Schlagworte anzeigen)))
+
+Auf der *Kommandozeile* stehen Ihnen mehrere Möglichkeiten offen,
+weitere Informationen zu den Schlagworten zu erhalten. Das Werkzeug
+`debtags` zeigt Ihnen die Schlagworte an, die sich mit einem bestimmten
+Thema befassen. Dazu kennt es das Unterkommando `tagsearch`, welches Sie
+um einen weiteren Begriff ergänzen. Die nachfolgende Ausgabe zeigt Ihnen
+die hinterlegten Unterkategorien zum Schlagwort `mail`.
+
+.Anzeige aller verfügbaren Unterkategorien zum Schlagwort `mail`
+----
+$ debtags tagsearch mail
+mail (facet) - Electronic Mail
+mail::TODO - Need an extra tag
+mail::delivery-agent - Mail Delivery Agent
+mail::filters - Filters
+mail::imap - IMAP Protocol
+mail::list - Mailing Lists
+mail::notification - Notification
+mail::pop - POP3 Protocol
+mail::smtp - SMTP Protocol
+mail::transport-agent - Mail Transport Agent
+mail::user-agent - Mail User Agent
+protocol::fidonet - FidoNet
+protocol::finger - Finger
+protocol::imap - IMAP
+protocol::nntp - NNTP
+protocol::pop3 - POP3
+protocol::smtp - SMTP
+system::server - Server
+works-with::mail - Email
+$
+----
+
+// Schlagworte für den Index
+(((debtags, tagshow)))
+(((Debtags, Informationen zu Schlagworte anzeigen)))
+
+Mit dem Unterkommando `tagshow` erhalten Sie weitere Informationen zu
+einem Schlagwort. Für die Facette `protocol::pop3` sieht das wie folgt
+aus:
+
+.Anzeige der Informationen zu einer spezifischen Facette, hier `protocol::pop3`
+----
+$ debtags tagshow "protocol::pop3"
+Tag: protocol::pop3
+Description: POP3
+ POP3
+Post Office Protocol, a protocol to download emails from a mail server,
+designed for users that have only intermittent connection to the Internet.
+
+In contrast to IMAP server, messages that are downloaded via POP3 are not
+supposed to stay on the server afterwards, since POP3 does not support
+multiple mailboxes for one account on the server.
+
+Link: http://en.wikipedia.org/wiki/Post_Office_Protocol
+Link: http://www.ietf.org/rfc/rfc1939.adoc
+$
+----
+
+// Schlagworte für den Index
+(((debtags-edit)))
+(((Enrico Zini)))
+
+An *graphischen Werkzeugen* existiert nur das Programm
+`debtags-edit` <<Debian-Paket-debtags-edit>> von Enrico Zini. Aus
+Zeitmangel wurde das Werkzeug bislang nicht mehr von ihm
+weiterentwickelt und ist daher nicht mehr für die Veröffentlichung
+Debian 'stable' verfügbar. Da die Quellen des Paketes aber frei
+zugänglich sind, dürfen Sie sich gern der Aufgabe annehmen, dieses
+Projekt fortzuführen.
+
+.`debtags-edit` im Einsatz
+image::praxis/debtags/debtags-edit.png[id="fig.debtags-edit", width="50%"]
+
+Über die *Debtags-Webseite* sind Ihnen die Informationen zu einem
+Schlagwort ebenfalls zugänglich. Verlinkt werden dabei auch die Pakete,
+die mit diesem Schlagwort versehen sind (siehe
+<<fig.debtags-suche-nach-facetten>>).
+
+.Informationen zur Facette `protocol::pop3`
+image::praxis/debtags/debtags-suche-nach-facetten.png[id="fig.debtags-suche-nach-facetten", width="50%"]
+
+==== Schlagworte bearbeiten ====
+
+// Schlagworte für den Index
+(((debtags, diff)))
+
+`debtags diff` 'Dateiname' (Alternative `mkpatch`)::
+create a tag patch between the current tag database and the tag
+collection 'Dateiname'. Standard input is used if filename is not
+specified.
+
+// Schlagworte für den Index
+(((debtags, submit)))
+
+`debtags submit` 'Patchdatei'::
+upload the given patch file to the central tag repository. If
+'Patchdatei' is omitted, mail the local tag modifications (uses
+`debtags-submit-patch`).
+
+// Schlagworte für den Index
+(((debtags, tag add)))
+
+`debtags tag add` 'Paket' 'Schlagworte'::
+Füge die angegebenen Schlagworte für das Paket in der Debtags-Datenbank hinzu.
+
+// Schlagworte für den Index
+(((debtags, tag rm)))
+
+`debtags tag rm` 'Paket' 'Schlagworte'::
+Entferne die angegebenen Schlagworte aus der Debtags-Datenbank für das
+genannte Paket.
+
+// Schlagworte für den Index
+(((debtags, update)))
+
+`debtags update`::
+Collect package tag data from the sources listed in
+/etc/debtags/sources.list, then regenerate the debtags tag database and
+main index. It needs to be run as root.
+
+// Schlagworte für den Index
+(((debtags-fetch)))
+
+`debtags-fetch`::
+fetch tag sources from /etc/debtags/sources.list
+
+// Schlagworte für den Index
+(((debtags-submit-patch)))
+
+`debtags-submit-patch`::
+submit tag patches to http://debtags.debian.net
+
+// Datei (Ende): ./praxis/debtags/verwendetes-vokabular-bearbeiten-und-erweitern.adoc

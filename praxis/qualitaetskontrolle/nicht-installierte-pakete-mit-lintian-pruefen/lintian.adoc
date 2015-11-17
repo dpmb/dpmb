@@ -1,0 +1,206 @@
+// Datei: ./praxis/qualitaetskontrolle/nicht-installierte-pakete-mit-lintian-pruefen/lintian.adoc
+
+// Baustelle: Fertig
+
+[[bugreports-lintian]]
+=== Nicht installierte Pakete mit `lintian` prüfen ===
+
+==== `lintian` verstehen ====
+
+// Stichworte für den Index
+(((Debianpaket, lintian)))
+(((Debian Policy Violations)))
+(((lintian)))
+(((Paketinhalt, Bestandteile)))
+(((Paketvalidierung, lintian)))
+Das Werkzeug `lintian` <<Lintian>> steht in dem gleichnamigen Paket
+<<Debian-Paket-lintian>> bereit. Der Name leitet sich von engl. 'lint'
+für Fussel und dem 'ian' aus 'Debian' ab. Es analysiert die
+verschiedenen Bestandteile eines einzelnen Debianpakets hinsichtlich
+typischer Fehler und insbesondere auch bzgl. häufig vorkommender
+Verstöße gegen die Debian-Richtlinien ('Debian Policy Violations').
+
+Als Systemadministrator hilft Ihnen `lintian` primär dabei, sowohl
+eigene als auch die Pakete von Drittparteien aus nicht-Debian-eigenen
+Paketquellen auf grundlegende Probleme hin zu testen. Deswegen gehen wir
+an dieser Stelle vor allem auf die Nutzung von `lintian` über die
+Kommandozeile ein.
+
+Bei Debian wird `lintian` primär an drei verschiedenen Stellen genutzt:
+
+* Testen frisch gebauter Pakete durch den Entwickler,
+* allgemeine Qualitätskontrolle des Paketbestandes (siehe <<fig.lintian-fehlerreport-webseite>>) und
+* automatisierte Ablehnung von frisch hochgeladenen Paketen bei groben
+  Fehlern{empty}footnote:[Von `lintian` bemerkte, besonders schwere Fehler
+  sollten bei offiziellen Paketen gar nicht auftauchen, da diese damit
+  sozusagen bereits beim Aufnahmetest durchfallen.].
+
+// Stichworte für den Index
+(((lintian, Fehlermeldungen)))
+(((lintian, Tests)))
+
+Dazu führt `lintian` eine ganze Reihe vorbereiteter Tests mit dem Paket
+durch. Das Ergebnis umfasst Fehlermeldungen mit unterschiedlichem
+Schweregrad, deren Kategorien wir für Sie in <<tab.lintian-fehler>>
+zusammengestellt haben.
+
+.Klassifikation der `lintian`-Fehlermeldungen
+[frame="topbot",options="header",cols="1,3",id="tab.lintian-fehler"]
+|====
+| Parameter	| Beschreibung
+| `E`	| Fehler ('error')
+| `W`	| Warnungen ('warning')
+| `I`	| Informationelle Hinweise ('informational tags')
+| `P`	| Pingelige Markierung ('pedantic tags')
+| `O`	| Überschriebene Markierungen ('overridden tags')
+| `X`	| Experimentelle, ggf. fehleranfällige Markierungen ('experimental tags')
+| `N`	| Kein Fehler, Bemerkung ('note')
+|====
+
+==== `lintian` verwenden ====
+
+// Stichworte für den Index
+(((lintian, Arbeitsweise)))
+
+`lintian` arbeitet auf einzelnen, vorbereiteten Paketdateien, nicht
+jedoch auf bereits installierten Paketen. Für letzteres eignet sich
+hingegen das Paket 'adequate', welches wir in
+<<qualitaetskontrolle-adequate>> genauer besprechen.
+
+// Stichworte für den Index
+(((Paketvarianten, Binärpaket)))
+(((Paketvarianten, Sourcepaket)))
+
+Das Programm verarbeitet sowohl Dateien für Quellpakete (`.dsc`), als
+auch für Binärpakete (`.deb`). Übergeben Sie `lintian` auch die während
+des Paketbaus erstellte Datei `.changes`, in welcher alle Dateien des
+jeweiligen Quell- und Binärpaketes aufgelistet sind, validiert das
+Programm nacheinander beide Entwicklungsstufen in einem Rutsch.
+
+// Stichworte für den Index
+(((lintian, -v)))
+(((lintian, --verbose)))
+
+Im nun folgenden Beispiel überprüft `lintian` das Paket 'mp4h'. Als
+Schalter kommen zum Einsatz:
+
+`-v` (Langform `--verbose`):: 
+für eine ausführlichere Ausgabe ('verbose').
+
+// Stichworte für den Index
+(((lintian, --color auto)))
+(((lintian, Fehlermeldungen)))
+
+`--color auto`:: 
+für eine farbige Kennzeichnung des Schweregrads des gefundenen Fehlers
+bei einer Ausgabe im Terminal. Zulässig sind ebenso die Werte `never`
+(keine Hervorhebung), `always` (stets mit Hervorhebung) und `html`
+(Hervorhebung bei der Ausgabe als Webseite).
+
+// Stichworte für den Index
+(((lintian, -I)))
+(((lintian, --display-info)))
+
+`-I` (Langform `--display-info`):: 
+Auflistung der informationellen Markierungen ('info tags'). So bleiben
+auch Schreibfehler nicht unentdeckt.
+
+// Stichworte für den Index
+(((lintian, -E)))
+(((lintian, --display-experimental)))
+
+`-E` (Langform `--display-experimental`):: 
+Auflistung der experimentellen Markierungen.
+
+// Stichworte für den Index
+(((lintian, --pedantic)))
+
+`--pedantic`:: 
+Legt eine noch genauere Überprüfung des Pakets fest.
+
+Weitere Schalter und Parameter sind in der Manpage zu `lintian`
+ausführlich erklärt.
+
+.Aufruf von `lintian` zum Finden typischer Probleme im Paket 'mp4h'
+----
+$ lintian -v --color auto -I -E --pedantic mp4h_1.3.1-9_amd64.changes
+N: Using profile pkg-perl/main.
+N: Setting up lab in /tmp/temp-lintian-lab-1SvMHn5dUB ...
+N: Unpacking packages in group mp4h/1.3.1-9
+N: ----
+N: Processing changes file mp4h (version 1.3.1-9, arch source amd64) ...
+N: ----
+N: Processing source package mp4h (version 1.3.1-9, arch source) ...
+P: mp4h source: no-dep5-copyright
+W: mp4h source: ancient-standards-version 3.9.4 (current is 3.9.6)
+P: mp4h source: debian-watch-may-check-gpg-signature
+N: ----
+N: Processing binary package mp4h (version 1.3.1-9, arch amd64) ...
+P: mp4h: no-homepage-field
+W: mp4h: postinst-has-useless-call-to-ldconfig
+W: mp4h: postrm-has-useless-call-to-ldconfig
+$
+----
+
+Die Ausgabe auf der Kommandozeile und in
+<<fig.lintian-fehlerreport-webseite>> sind aus mehreren Gründen nicht
+deckungsgleich. Es wurde zwar jeweils die gleiche Paketversion
+überprüft, aber dabei kamen unterschiedliche `lintian`-Versionen zum
+Einsatz. Auf der Projektseite wird meist die neueste `lintian`-Variante
+aus Debian 'unstable' oder 'testing' genutzt, die sich z.B. auch anhand
+der durchgeführten Tests unterscheidet, welche in das Paket aus Debian
+'stable' eingeflossen sind.
+
+.Ausgabe der Paketvalidierung mittels `lintian` zum Paket 'mp4h'
+image::praxis/qualitaetskontrolle/nicht-installierte-pakete-mit-lintian-pruefen/lintian-fehlerreport-webseite.png[id="fig.lintian-fehlerreport-webseite", width="50%"]
+
+// Stichworte für den Index
+(((lintian, -i)))
+(((lintian, --info)))
+(((lintian-info)))
+
+Hifreich ist auch die Option `-i` (Langform `--info`). Damit erhalten
+Sie bei jedem ersten Vorkommen einer Markierung noch zusätzliche
+Erklärungen und ersehen daraus, was die jeweilige Markierung bedeutet.
+Den gleichen Effekt erhalten Sie, wenn Sie die Ausgabe von `lintian`
+(ohne den Schalter `-v`) über eine Pipe an das Kommando `lintian-info`
+weiterleiten. `lintian-info` ist ebenso Bestandteil des Pakets
+'lintian'. Nachfolgend sehen Sie einen Ausschnitt zur Ausgabe dieses
+Programmaufrufs, bei dem das Paket 'mp4h_1.3.1-9_amd64.deb' überprüft
+wird.
+
+.Erklärung zu den von `lintian` gefundenen Problemen im Binärpaket 'mp4h' (Ausschnitt)
+----
+$ lintian -I -E --pedantic mp4h_1.3.1-9_amd64.deb | lintian-info
+P: mp4h: no-homepage-field
+N:
+N:   This non-native package lacks a Homepage field. If the package has an
+N:   upstream home page that contains useful information or resources for
+N:   the end user, consider adding a Homepage control field to
+N:   debian/control.
+N:   
+N:   Refer to Debian Policy Manual section 5.6.23 (Homepage) for details.
+N:   
+N:   Severity: pedantic, Certainty: possible
+N:   
+N:   Check: fields, Type: binary, udeb, source
+N:
+W: mp4h: postinst-has-useless-call-to-ldconfig
+N:
+N:   The postinst script calls ldconfig even though no shared libraries are
+N:   installed in a directory controlled by the dynamic library loader.
+N:   
+N:   Note this may be triggered by a bug in debhelper, that causes it to
+N:   auto-generate an ldconfig snippet for packages that does not need it.
+N:   
+N:   Refer to Debian Policy Manual section 8.1.1 (ldconfig) and
+N:   http://bugs.debian.org/204975 for details.
+N:   
+N:   Severity: minor, Certainty: certain
+N:   
+N:   Check: shared-libs, Type: binary, udeb
+[...]
+$
+----
+
+// Datei (Ende): ./praxis/qualitaetskontrolle/nicht-installierte-pakete-mit-lintian-pruefen/lintian.adoc

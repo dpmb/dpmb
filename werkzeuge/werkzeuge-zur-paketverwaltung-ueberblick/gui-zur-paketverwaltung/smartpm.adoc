@@ -1,0 +1,122 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/smartpm.adoc
+
+// Baustelle: Fertig
+
+[[gui-smartpm]]
+
+==== Smart Package Management (SmartPM) ====
+
+// Stichworte für den Index
+(((smartpm)))
+Im Paket 'smartpm' <<Debian-Paket-smartpm>> verbirgt sich das
+gleichnamige Programm zur Paketverwaltung. Zunächst etwas unscheinbar,
+entpuppt es sich aber bei näherer Betrachtung als eine Art Alleskönner
+und mindestens gleichwertiges Pendant zu Synaptic (siehe
+<<gui-synaptic>>).
+
+SmartPM verfügt über drei Bedienmodi. Erstens hat es ebenfalls eine
+graphische Bedienoberfläche auf der Basis des Gimp Toolkits (GTK2), lässt
+sich jedoch zweitens auch über die Kommandozeile mit mehreren Schaltern
+steuern und verfügt als drittes noch über eine Paketverwaltungsshell
+analog zur 'aptsh' (<<aptsh>>), zu 'wajig' (<<wajig>>) und zu 'cupt'
+(<<Cupt>>).
+
+Für ersteres rufen Sie SmartPM im Terminal über das Kommando `smart
+--gui` auf oder wählen den entsprechenden Eintrag aus dem Menü Ihrer
+Desktop-Umgebung aus. In <<fig.smartpm>> sehen Sie die zweispaltige
+Darstellung -- links die Paketkategorien, rechts oben die Paketliste mit
+Paketname samt Versionsnummer und rechts unten die ausführliche
+Paketbeschreibung -- hier am Beispiel des Pakets 'kexi'. Unter dem
+Reiter menu:General[] verbergen sich die Basisinformationen zum
+Paket, menu:Description[] bietet die Paketbeschreibung,
+menu:Content[] die Dateien aus dem Paket,
+menu:Changelog[] die
+Veränderungen zur vorherigen Version, menu:Relations[] die darüber
+bereitgestellten, verfügbaren und zusätzlich benötigten Pakete. Unter
+dem Reiter menu:URLs[] verbergen sich weitere Referenzen zum Paket.
+
+.Softwareauswahl in `smartpm`
+image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/smartpm.png[id="fig.smartpm", width="50%"]
+
+// Stichworte für den Index
+(((smart, install)))
+(((smart, remove)))
+(((smart, upgrade)))
+(((smart, --shell)))
+Für die Benutzung von SmartPM über die 'Kommandozeile' starten Sie das
+Programm über den Aufruf `smart` mit der gewünschten Aktion und dem
+Paketname. Analog zu APT bzw. `aptitude` stehen bspw. die Unterkommandos
+`install`, `remove` und `upgrade` bereit.
+
+Über den Aufruf `smart --shell` erreichen Sie die Paketverwaltungsshell.
+Darin nutzen Sie die gleichen Unterkommandos und Schalter wie bei
+obigem Aufruf über die Kommandozeile. Nachfolgendes Beispiel zeigt das
+Unterkommando `info`, welches hier alle Paketinformationen zum Paket
+'kexi' ausgibt.
+
+.Paketinformationen zu 'kexi' in der Shell von SmartPM
+----
+$ smart --shell
+Smart Package Manager 1.4 - Shell Mode
+
+Loading cache...
+Updating cache...              ####################################### [100%]
+
+smart> info kexi
+Name: kexi
+Version: 1:2.4.4-3
+Priority: 0
+Source: calligra_1:2.4.4-3
+Group: database
+License: 
+Installed Size: 8.8MB
+Reference URLs: http://www.calligra-suite.org/kexi/
+Flags: 
+Channels: DEB System
+Summary: integrated database environment for the Calligra Suite
+Description:
+ Kexi is an integrated data management application. It can be used for
+ creating database schemas, inserting data, performing queries, and
+ processing data. Forms can be created to provide a custom interface to
+ your data. All database objects - tables, queries and forms - are stored
+ in the database, making it easy to share data and design.
+ .
+ Kexi is considered as a long awaited Open Source competitor for MS Access,
+ Filemaker and Oracle Forms. Its development is motivated by the lack of
+ Rapid Application Development (RAD) tools for database systems that are
+ sufficiently powerful, inexpensive, open standards driven and portable
+ across many operating systems and hardware platforms.
+ .
+ This package is part of the Calligra Suite.
+
+smart>
+----
+
+SmartPM wirkt sehr ausgereift und verfügt zudem über eine Reihe von
+'Besonderheiten'. Es kann sowohl mit Paketen im `deb`- als auch in den
+verschiedenen `rpm`-Formaten umgehen. Das kann recht praktisch in
+gemischten Umgebungen sein. Im Gegensatz zu APT und `aptitude`
+gestattet es die Auswahl einer oder mehrerer Paketquellen zur
+Aktualisierung -- bei APT sind nur alle aktiven auf einmal möglich.
+
+Analog zu APT und `aptitude` kennt SmartPM auch diverse Markierungen.
+Das sind beispielsweise Flags, die anzeigen lassen, ob ein Paket seit
+der letzten Aktualisierung der Paketlisten neu hinzukam, ob ein Paket
+nicht aktualisiert werden darf (``lock'', ``hold''), oder ob ein Paket
+automatisch installiert wurde{empty}footnote:[Bislang scheint SmartPM diese
+Markierungen nicht mit APT oder `aptitude` zu synchronisieren. Dieses
+Verhalten ist als Bug registriert.].
+
+// TODO: Es gibt einen Bug-Report wegen der Nicht-Synchronisierung von
+// SmartPMs "lock flag" und dpkgs "hold"-Zustand. Eventuell will man
+// darauf verweisen.
+
+[NOTE]
+.Zusätzlicher Lesestoff
+====
+Eine ausführliche Beschreibung zum Programm mit weiteren Beispielen zur
+Konfiguration und zur Handhabung entnehmen Sie bitte dem
+Linux-User-Artikel zum gleichen Thema <<Hofmann-Smartpm-LinuxUser>>.
+====
+
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/smartpm.adoc

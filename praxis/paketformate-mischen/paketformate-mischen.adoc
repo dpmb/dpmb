@@ -1,0 +1,17 @@
+// Datei: ./praxis/paketformate-mischen/paketformate-mischen.adoc
+
+// Baustelle: Rohtext
+
+[[paketformate-mischen]]
+
+== Paketformate mischen ==
+
+// Einführung
+include::einfuehrung.adoc[]
+
+// rpms in deb-basierten Systemen
+include::alien.adoc[]
+
+// debs in rpm-basierten Systemen
+include::apt4rpm.adoc[]
+// Datei (Ende): ./praxis/paketformate-mischen/paketformate-mischen.adoc

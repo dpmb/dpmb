@@ -1,0 +1,31 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/apt-setup.adoc
+
+// Baustelle: Rohtext
+
+[[sec.apt-setup]]
+
+=== `apt-setup` -- Erstellung der Paketliste während der Installation ===
+
+'ToDo: Abschnitt veraltet?'
+
+Bei der Erst- oder Neuinstallation des Debian-Systems stellt der Debian
+Installer eine `/etc/apt/sources.list` zusammen, da diese ja bis dato
+noch nicht existiert. Bei der textbasierten Installation kommt das
+Programm `apt-setup` <<Debian-Paket-apt-setup>> zum Einsatz. Die Auswahl
+und Konfiguration der Paketquellen erfolgt dabei über diese schlichte
+Ncurses-Oberfläche.
+
+[IMPORTANT]
+.Einschränkung zur Verwendung
+====
+Verwenden Sie dieses Programm nicht auf einem bereits installierten
+System -- es ist nur für den Debian Installer gedacht. Daher beinhaltet
+der Paketname auch das Suffix `-udeb` (siehe Übergangs- und Metapakete
+in <<uebergangs-und-metapakete>>).
+====
+
+.Auswahl der Paketquellen über `apt-setup`
+image::werkzeuge/paketquellen-und-werkzeuge/apt-setup.png[id="fig.apt-setup", width="50%"]
+
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/apt-setup.adoc

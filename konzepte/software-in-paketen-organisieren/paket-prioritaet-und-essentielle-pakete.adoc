@@ -1,0 +1,216 @@
+// Datei: ./konzepte/software-in-paketen-organisieren/paket-prioritaet-und-essentielle-pakete.adoc
+
+// Baustelle: Fertig
+
+[[paket-prioritaet-und-essentielle-pakete]]
+
+=== Paket-Priorität und essentielle Pakete ===
+
+// Stichworte für den Index
+(((Paketbeschreibung, Paketpriorität)))
+(((Paketpriorität, Überblick)))
+Jede Paketbeschreibung beinhaltet ein Feld namens `priority` – englisch
+für ``Priorität''. Dabei geht es aber weniger um eine Rangfolge von
+Paketen, sondern um die Wichtigkeit eines Paketes bzw. um die
+Wahrscheinlichkeit, dass Sie dieses Paket installieren möchten.
+
+Debian kennt die folgenden fünf Prioritätsstufen:
+
+* erforderlich (_required_)
+* wichtig (_important_)
+* standard (_standard_)
+* optional (_optional_)
+* extra (_extra_)
+
+Die Begriffe in Klammern geben die Schlüsselworte wieder, die in der
+Paketbeschreibung genutzt werden. Jede dieser o.g. Stufen hat eine
+bestimmte Bedeutung.
+
+[TIP]
+.Auflistung der Pakete mit einer festgelegten Priorität
+====
+In <<pakete-nach-prioritaeten-finden>> lesen Sie, wie Sie mit `aptitude`
+Pakete mit einer spezifischen Priorität finden.
+====
+
+==== Prioritätsstufe ``erforderlich'' (_required_) ====
+
+// Stichworte für den Index
+(((Debianpaket, coreutils)))
+(((Debianpaket, dpkg)))
+(((Debianpaket, less)))
+(((Debianpaket, libc6)))
+(((Debianpaket, systemd)))
+(((Debianpaket, sysvinit)))
+(((Paketpriorität, required (erforderlich))))
+Dieser Prioritätsstufe sind Pakete zugeordnet, die für die korrekte
+Funktion des Betriebssystem unbedingt erforderlich sind. Dazu gehören
+beispielsweise 'dpkg', 'coreutils' für die GNU Core Utilities mit den
+Befehlen wie `ls`, `rm`, `cp`, `mv`, das Init-System (zur Zeit 'systemd'
+und 'sysvinit') und die C-Standard-Bibliotheken ('libc6' auf den meisten
+Architekturen).
+
+Entfernen Sie eines oder mehrere Pakete mit dieser Prioritätsstufe, kann
+das Ihr Betriebssystem so stark beschädigen, dass selbst das Werkzeug
+`dpkg` nicht mehr funktioniert. Unproblematisch ist hingegen der
+Austausch eines solchen Paketes durch funktionsgleiche Alternativen,
+bspw. beim Wechsel des Init-Systems.
+
+Systeme, die nur aus Paketen der Prioritätsstufe ``erforderlich''
+bestehen, sind zwar lauffähig, aber im Normalfall nahezu unbenutzbar, da
+z.B. Pakete wie APT, 'less' oder ein Texteditor fehlen. Die
+letztgenannten sind zum Betrieb nicht zwingend
+erforderlich{empty}footnote:[Hat z.B. ein System keine Netzwerkanbindung
+und wird deswegen nur sehr selten aktualisiert, ist APT nicht notwendig.
+Aktualisierungen können auch auf anderen Wegen, bspw. via USB-Stick oder
+SD-Karte mittels `dpkg` eingepflegt werden. Allerdings sind dann
+Abhängigkeiten ggf. manuell aufzulösen. Bei reinen Paketaktualisierungen
+ist dies nur sehr selten ein Problem, da die Abhängigkeiten im
+Normalfall auch schon von der vorherigen Paketversion gebraucht
+wurden.].
+
+==== Prioritätsstufe ``wichtig'' (_important_) ====
+
+// Stichworte für den Index
+(((Paketpriorität, important (wichtig))))
+(((Debianpaket, apt)))
+(((Debianpaket, debian-archive-keyring)))
+(((Debianpaket, gnupg)))
+(((Debianpaket, procps)))
+In diese Prioritätsstufe gehören alle Pakete, die auf jedem UNIX- bzw.
+Debian-System zu erwarten sind oder ohne die das System nur sehr
+schwierig zu warten wäre. Das schließt auch Server ohne Monitor mit ein.
+
+Als Pakete gehören neben 'apt' u.a. 'gnupg' und der
+Debian-Archiv-Schlüsselring zum Überprüfen der Signaturen von Paketlisten
+(siehe <<bezogenes-paket-verifizieren>>) dazu, ebenso OpenSSL, ein
+DHCP-Client, zwei Texteditoren (eine abgespeckte Variante von Vim sowie
+Nano), Kommandozeilenwerkzeuge zur Prozessverwaltung (`ps`, `kill`,
+`free`, `top`, `uptime` aus dem Paket 'procps'), ein Syslog-Daemon, ein
+Cron-Daemon, Man-Pages, Netzwerk-Programme wie `ping`, `traceroute` und
+`iptables` sowie das Netzwerkschnittstellenverwaltungssystem `ifupdown`.
+
+Diese Prioritätsstufe beinhaltet weder große Applikationen noch
+graphische Programme. Insbesondere gehören weder GNU Emacs noch TeX
+noch das X Window System oder das 'xterm' in diese Kategorie.
+
+==== Prioritätsstufe ``standard'' (_standard_) ====
+
+// Stichworte für den Index
+(((Debianpaket, reportbug)))
+(((Paketpriorität, standard)))
+Haben Sie alle Pakete dieser Prioritätsstufe installiert, verfügen Sie
+über ein nicht allzu großes, aber auch nicht zu unkomfortables System
+ohne graphische Oberfläche. Ein solches System wird im Debian Installer
+ausgewählt, wenn Sie als Administrator bei der Installation nicht
+explizit etwas anderes festlegen. Es enthält nur wenige größere
+Anwendungen und Daemons.
+
+Dazu gehören u.a. ein abgespeckter Exim als lokales
+Mail-Server-Programm, die E-Mail-Programme `mutt` und `mailx`, eine
+vollständige Perl-Installation (d.h. Perl mitsamt allen
+``Core''-Modulen{empty}footnote:[Perl selbst und ein paar wenige
+Perl-Module sind im Paket 'perl-base' welches ``essentiell'' ist.]),
+Python, Client-Anwendungen für SSH, FTP, Telnet, NFS und Whois, ein
+Text-Modus-Webbrowser (`w3m`) und der allgegenwärtige
+Textdateien-Betrachter `less`. Außerdem ist `reportbug` enthalten, ein
+Programm zum Melden von Fehlern in Debian (siehe dazu
+<<bugreports-anzeigen>>).
+
+==== Prioritätsstufe ``optional'' (_optional_) ====
+
+// Stichworte für den Index
+(((Paketpriorität, optional)))
+Dies ist in gewisser Weise der Standardwert für die Priorisierung eines
+Paketes. Alle Pakete, die in keine der anderen Stufen gehören, werden
+dieser Prioritätsstufe zugeordnet. Sie enthält deswegen auch den
+Großteil aller Pakete in Debian. Optional bedeutet in diesem Kontext,
+dass diese Pakete nicht von jedermann benötigt werden.
+
+==== Prioritätsstufe ``extra'' (_extra_) ====
+
+// Stichworte für den Index
+(((Paketpriorität, extra)))
+In dieser Prioritätsstufe sind einerseits Pakete, die im Konflikt mit
+Paketen aus den anderen Prioritätsstufen stehen. Dazu zählen z.B.
+alternative Mail-Transport-Agents wie Postfix, alternative Cron-Daemons
+wie Cronie oder alternative Syslog-Daemons wie Syslog-NG oder die
+Syslog-Implementation aus Busybox.
+
+Andererseits enthält sie aber auch Pakete, die nur in ganz bestimmten
+Fällen gebraucht werden, z.B. Programme zur Nutzung exotischer
+Hardware oder nur in bestimmten Umfeldern vorkommenden Daten, Pakete
+mit Debug-Symbolen für andere Pakete, Übergangspakete, etc.
+Beispielsweise sind viele Pakete aus dem Bereich ``Wissenschaft'' mit
+dieser Priorisierung versehen.
+
+[[markierung-essentiell]]
+
+==== Markierung ``essentiell'' (_essential_) ====
+
+// Stichworte für den Index
+(((apt-get, remove --force-remove-essential)))
+(((Debianpaket, coreutils)))
+(((Paketmarkierung, essentiell)))
+Zusätzlich zu den bereits oben vorgestellten Prioritäten gibt es noch
+die Markierung _essential_. Diese Markierung tragen nur grundlegende
+Pakete. In <<pakete-nach-prioritaeten-finden>> lesen Sie, welche Pakete
+zu dieser Gruppe dazugehören und wie Sie diese auflisten.
+
+.Eintrag in der Paketbeschreibung
+----
+Essential: yes
+----
+
+Pakete mit dieser Markierung müssen nicht explizit als Abhängigkeit bei
+anderen Paketen deklariert werden. In der Regel sind alle Pakete der
+Prioritätsstufe ``erforderlich'' in dieser Form markiert, von denen kein
+anderes Paket dieser Stufe abhängt. Somit wird auch bei der Entfernung
+eines nicht-essentiellen Pakets der Stufe ``erforderlich'' gewarnt. Das
+passiert jedoch nicht, wenn bei einer Umbenennung eines solchen Paketes
+das alte Paket entfernt wird, um für das neue Paket Platz zu machen oder
+weil es nicht mehr gebraucht wird (d.h. irgendwann nicht mehr notwendig
+ist).
+
+Diese Markierung hat den Effekt, dass sich beispielsweise `dpkg` weigert,
+dieses Paket zu entfernen (siehe <<pakete-deinstallieren>>). Mit dem
+zusätzlichen Parameter `--force-remove-essential` übergehen Sie diese
+Voreinstellung und können die Aktion trotzdem durchführen (siehe dazu
+Paketoperationen erzwingen in <<paketoperationen-erzwingen>>).
+
+// Stichworte für den Index
+(((Debianpaket, core-utils)))
+`apt-get` und `aptitude` entfernen diese Pakete nur nach Eingabe des
+vollständigen Satzes ``Ja, tue was ich sage!'' (`apt-get`) bzw. ``Mir ist
+klar, dass das eine sehr schlechte Idee ist.'' (`aptitude`). Diese Sätze
+werden jeweils in der eingestellten Sprache ihres Debiansystems
+angezeigt (Lokalisierung), sofern eine Übersetzung vorhanden ist.
+Nachfolgendes Beispiel zeigt die Bildschirmausgabe vor der Entfernung
+des Paketes 'core-utils'.
+
+.Eingabeaufforderung von `apt-get` vor der Entfernung des essentiellen Pakets 'core-utils'
+----
+# apt-get remove core-utils
+Paketlisten werden gelesen... Fertig
+Abhängigkeitsbaum wird aufgebaut.
+Statusinformationen werden eingelesen.... Fertig
+Die folgenden Pakete wurden automatisch installiert und werden nicht mehr benötigt:
+  abiword-common aqbanking-tools blt calligra-data cdparanoia cli-common dvd+rw-tools
+  ...
+  xul-ext-firebug xulrunner-17.0 xzgv yelp zathura zenity zenmap
+Die folgenden NEUEN Pakete werden installiert:
+  libgd2-noxpm
+WARNUNG: Die folgenden essentiellen Pakete werden entfernt.
+Dies sollte NICHT geschehen, außer Sie wissen genau, was Sie tun!
+  coreutils e2fsprogs util-linux (wegen e2fsprogs) sysvinit initscripts (wegen sysvinit)
+0 aktualisiert, 1 neu installiert, 693 zu entfernen und 0 nicht aktualisiert.
+Es müssen 229 kB an Archiven heruntergeladen werden.
+Nach dieser Operation werden 3.630 MB Plattenplatz freigegeben.
+Sie sind im Begriff, etwas potentiell Schädliches zu tun.
+Zum Fortfahren geben Sie bitte »Ja, tue was ich sage!« ein.
+ ?] q
+Abbruch.
+#
+----
+
+// Datei (Ende): ./konzepte/software-in-paketen-organisieren/paket-prioritaet-und-essentielle-pakete.adoc

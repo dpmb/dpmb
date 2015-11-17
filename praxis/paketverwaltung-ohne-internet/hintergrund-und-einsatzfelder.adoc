@@ -1,0 +1,37 @@
+// Datei: ./praxis/paketverwaltung-ohne-internet/hintergrund-und-einsatzfelder.adoc
+
+// Baustelle: Rohtext
+
+=== Hintergrund und Einsatzfelder ===
+
+Vollkommen berechtigt ist die Frage, ob eine Paketverwaltung heute
+überhaupt noch ohne Internet bzw. eine bestehende Netzwerkverbindung
+möglich ist. Wenn Sie etwas zurückdenken, erinnern Sie sich vielleicht
+daran, dass bis vor wenigen Jahren CDs und später DVDs und USB-Sticks als
+Installationsmedien üblich waren und ein Netzzugang eher die Ausnahme
+darstellte. Aufgrund der Allgegenwärtigkeit des Internets und der
+flächendeckenden Funkvernetzung ist die Situation heutzutage genau
+umgekehrt und eine netzbasierte Installation stellt den Standardfall
+dar. Nachfolgend sprechen wir die Fälle an, bei denen etwas Planung
+hilft, Momente ohne Netz zu überbrücken. Ob das ganze sinnvoll ist, ist
+projekt- und situationsabhängig. Wenn es sein muss, stellt sich diese
+Frage eigentlich nicht, sondern nur, ob und insbesondere mit welchen
+Mitteln Sie ein aufgetretenes Problem möglichst zeitnah lösen können.
+
+Situationen, die hier zu berücksichtigen sind, umfassen bspw. Arbeiten
+von unterwegs aus (Zug oder Flugzeug), Reparaturen irgendwo in der
+unterversorgten Pampa, auf der Berghütte, auf einem Schiff ohne UMTS, in
+einem abgeschirmten Gebäude  wie einem Bunker oder auch hinter einer
+recht restriktiven Firewall -- bspw. in einem Hotel. Zu berücksichtigen
+sind außerdem teure Wählverbindungen via Satelit sowie autarke Geräte
+und Installationen, die möglichst verbrauchsarm zusammengestellt sind
+oder gar keinen permanenten Netzzugang haben 'dürfen'. Dazu zählen bspw.
+Meßstationen von Sensornetzwerken in eher unzugänglichen Gebirgsregionen
+oder auf Gletschern.
+
+Meist wird Ihnen die Situation erst dann bewusst, wenn der Bedarf
+entsteht. Es hilft daher, bereits im Vorfeld daran zu denken und
+vorauszuplanen, um zumindest darauf vorbereitet zu sein.
+
+
+// Datei (Ende): ./praxis/paketverwaltung-ohne-internet/hintergrund-und-einsatzfelder.adoc

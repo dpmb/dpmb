@@ -1,0 +1,43 @@
+// Datei: ./praxis/mehrere-pakete-in-einem-schritt-aendern/mit-aptitude.adoc
+
+// Baustelle: Notizen
+
+=== `aptitude` ===
+
+// Stichworte für den Index
+(((Paketaktionen, Paketliste)))
+(((Paketaktionen, Muster)))
+
+Im Vergleich zu APT hat `aptitude` deutlich mehr auf dem Kasten. Es
+versteht bspw. verschiedene, zusätzliche *Optionen beim Aufruf*. Diese
+Optionen sind identisch zu den Tasten, die Sie in der Textoberfläche bei
+den Vormerkungen anwenden (siehe <<mit-aptitude-vormerkungen-machen>>).
+
+.Zusätzliche Optionen für den Aufruf bei `aptitude`
+[frame="topbot",options="header",cols="1,9",id="tab.aptitude-optionen"]
+|====
+| Taste | Bedeutung
+| `+paket` | Paket installieren ('install')
+| `-paket` | Paket entfernen ('remove')
+| `_paket` | Paket vollständig inklusive Konfigurationsdateien entfernen ('purge')
+| `:paket` | Paketversion behalten ('keep')
+| `=paket` | Paketversion dauerhaft beibehalten ('hold')
+|====
+
+Jeder der nachfolgend genannten Aufrufe sorgt dafür, dass Sie das Paket
+'goplay' installieren, 'xara-gtk' deinstallieren und 'debtags' so
+belassen (es auf 'hold' setzen). Bitte beachten Sie, dass diese
+Zusatzoptionen stets in Bezug zu den Unterkommandos zu sehen sind.
+
+.Installation mit `aptitude` und Zusatzoptionen
+----
+# aptitude install goplay -xara-gtk =debtags
+# aptitude remove xara-gtk +goplay =debtags
+----
+
+* ToDo: Umfangreich: `aptitude` (6)
+  - Tabelle welche gibts
+  - Änderungen am [Y/n/?] Prompt
+
+
+// Datei (Ende): ./praxis/mehrere-pakete-in-einem-schritt-aendern/mit-aptitude.adoc

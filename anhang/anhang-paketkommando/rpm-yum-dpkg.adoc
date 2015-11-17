@@ -1,0 +1,180 @@
+// Datei: ./anhang/anhang.paketkommando/rpm-yum-dpkg.adoc
+// Baustelle: Rohtext
+
+[[kommandos-zur-paketverwaltung-im-vergleich]]
+== Kommandos zur Paketverwaltung im Vergleich ==
+
+=== Zusammenfassung ===
+
+// Stichworte für den Index
+(((APT)))
+(((Aptitude)))
+(((dpkg)))
+(((RPM)))
+(((Yellowdog Updater Modified (YUM))))
+Hier stellen wir die jeweiligen Kommandos zur Paketverwaltung gegenüber,
+wie sie von RPM, Yellowdog Updater Modified (YUM), dpkg, APT und
+Aptitude verwendet werden. Wir betrachten die Installation und die
+Entfernung von Paketen, das Auflisten der installierten und verfügbaren
+Pakete sowie das Anzeigen von Paketabhängigkeiten.
+
+=== Paket installieren ===
+
+// Stichworte für den Index
+(((apt-get, install)))
+(((aptitude, install)))
+(((Paket, installieren)))
+(((rpm, -i)))
+(((rpm, -ihv)))
+(((yum, install)))
+(((yum, localinstall)))
+Mit den nachfolgenden Aufrufen installieren Sie ein Softwarepaket über
+die Kommandozeile.
+
+.Installation eines Paketes
+[frame="topbot",options="header",cols="2,4,4",id="tab.paketinstallation"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| `RPM`      | `rpm -i paket` | Paket liegt lokal vor
+|            | `rpm -ihv paket` | Paket liegt lokal vor, Installation mit Kommentaren
+| `YUM`      | `yum localinstall paket` | Paket liegt lokal vor
+|            | `yum install paket` | Paket wird dem Paketrepository entnommen
+| `dpkg`     | `dpkg -i paket` | Paket liegt lokal vor
+| `APT`      | `apt-get install paket` | Paket wird dem Paketrepository entnommen
+| `Aptitude` | `aptitude install paket` | Paket wird dem Paketrepository entnommen
+|====
+
+=== Paket löschen / entfernen ===
+
+// Stichworte für den Index
+(((apt-get, --purge remove)))
+(((apt-get, remove)))
+(((aptitude, remove)))
+(((dpkg, -r)))
+(((Paket, deinstallieren)))
+(((Paket, entfernen)))
+(((Paket, Konfigurationsdateien löschen)))
+(((Paket, löschen)))
+(((rpm, -e)))
+(((yum, erase)))
+(((yum, remove)))
+Mit den nachfolgenden Aufrufen entfernen Sie ein Softwarepaket über
+die Kommandozeile.
+
+.Entfernen eines Paketes
+[frame="topbot",options="header",cols="2,4,4",id="tab.paketentfernung"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| `RPM`      | `rpm -e paket` | 
+| `YUM`      | `yum remove paket` | 
+|            | `yum erase paket` | gleichbedeutend zu `remove`
+| `dpkg`     | `dpkg -r paket` | 
+| `APT`      | `apt-get remove paket` | Entfernen ohne Konfigurationsdateien des Pakets
+|            | `apt-get --purge remove paket` | Entfernen inklusive der Konfigurationsdateien des Pakets
+| `Aptitude` | `aptitude remove paket` | 
+|====
+
+=== Alle Pakete auflisten ===
+
+// Stichworte für den Index
+(((apt-cache, search)))
+(((aptitude, search)))
+(((dpkg, -l)))
+(((Paket, installiertes anzeigen)))
+(((Paket, Status anzeigen)))
+(((Paket, Zustand anzeigen)))
+(((Paketstatus)))
+(((Paketzustand)))
+(((rpm, -qa)))
+(((yum, list all)))
+(((yum, list available)))
+Mit den nachfolgenden Aufrufen listen Sie die vorhandenen Softwarepakete
+über die Kommandozeile auf.
+
+.Softwarepakete auflisten
+[frame="topbot",options="header",cols="2,4,4",id="tab.paketeauflisten"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| `RPM`      | `rpm -qa` |
+| `YUM`      | `yum list all` | alle installierten Pakete auflisten
+|            | `yum list available` | alle verfügbaren Pakete auflisten
+| `dpkg`     | `dpkg -l` | alle installierten Pakete auflisten
+| `APT`      | `apt-cache search paket` |
+| `Aptitude` | `aptitude search ~i`|
+|====
+
+=== Einzelpaket auflisten ===
+
+// Stichworte für den Index
+(((aptitude, show)))
+(((dpkg, -l)))
+(((dpkg, -s)))
+(((Paket, Status anzeigen)))
+(((Paket, Zustand anzeigen)))
+(((Paketstatus)))
+(((Paketzustand)))
+(((rpm, -q)))
+(((rpm, -qp)))
+Mit den nachfolgenden Aufrufen listen Sie die Informationen bzw. den
+Installationsstatus zu einem einzelnen Softwarepaket auf.
+
+.Einzelnes Softwarepaket auflisten
+[frame="topbot",options="header",cols="2,4,4",id="tab.paketinfo"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| `RPM`      | `rpm -q paket` |
+|            | `rpm -qp paket` | ?
+| `dpkg`     | `dpkg -l paket` | Ausgabe des Installationsstatus
+|            | `dpkg -s paket` | Ausgabe der Paketinformationen
+| `Aptitude` | `aptitude show paket`|
+|====
+
+=== Abhängigkeiten anzeigen ===
+
+// Stichworte für den Index
+(((apt-cache, depends)))
+(((apt-cache, rdepends)))
+(((Paket, Abhängigkeiten anzeigen)))
+(((Paket, Rückwärtsabhängigkeiten auflisten)))
+(((Paketabhängigkeiten, auflisten)))
+(((Paketabhängigkeiten, Rückwärtsabhängigkeiten auflisten)))
+(((rpm, -R)))
+(((yum, deplist)))
+(((yum, info)))
+Mit den nachfolgenden Aufrufen zeigen Sie die Abhängigkeiten zu anderen
+Paketen an.
+
+.Paketabhängigkeiten anzeigen
+[frame="topbot",options="header",cols="2,4,4",id="tab.paketabhaengigkeiten"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| `RPM`      | `rpm -R paket` |
+| `YUM`      | `yum deplist paket` |
+|            | `yum info paket` |
+| `APT`      | `apt-cache depends paket` |
+|            | `apt-cache rdepends paket` | umgekehrte Abhängigkeiten anzeigen
+|====
+
+=== Paketsignatur überprüfen ===
+
+// Stichworte für den Index
+(((Paket, auf Vertrauenswürdigkeit prüfen)))
+(((Paket, Signatur überprüfen)))
+(((Paket, verifizieren)))
+(((Paketsignatur, überprüfen)))
+(((rpm, -K)))
+Mit den nachfolgenden Aufrufen überprüfen Sie die Signatur eines Pakets.
+Sie stellen damit sicher, dass das Paket unverändert vom Paketmirror zu
+Ihnen übertragen wurde und auf dem Transportweg keine inhaltlichen
+Veränderungen stattgefunden haben.
+
+.Paketsignatur überprüfen
+[frame="topbot",options="header",cols="2,4,4",id="tab.paketsignatur"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| `RPM`      | `rpm -K paket` |
+| `YUM`      | |
+| `APT`      | |
+|====
+
+// Datei (Ende): ./anhang/anhang.paketkommando/rpm-yum-dpkg.adoc
