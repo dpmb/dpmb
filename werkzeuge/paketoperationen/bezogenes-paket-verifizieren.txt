@@ -7,6 +7,9 @@
 
 // Stichworte für den Index
 (((Paket, auf Vertrauenswürdigkeit prüfen)))
+(((Paket, Signatur überprüfen)))
+(((Paket, verifizieren)))
+(((Paketsignatur, überprüfen)))
 Installieren Sie ein Paket von einer Paketquelle, greifen eine ganze
 Reihe von automatischen Überprüfungen, die sicherstellen, dass die von
 Ihnen bezogenen Daten vertrauenswürdig sind. Mit den nachfolgend
