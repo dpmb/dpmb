@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<!-- based on openlayers sundial example -->		
+<Document>
+	<name>dpmb.kml</name>
+	<Style id="frank_icon">
+		<IconStyle>
+			<scale>0.5</scale>
+			<Icon>
+					<href>frank.png</href> <!-- falls zuviele eintraege auf der karte sind: kleineres icon: frank3.png -->
+			</Icon>
+			<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff00aaff</color>
+			<scale>0.5</scale>
+		</LabelStyle>
+	</Style>
+		<Style id="axel_icon">
+		<IconStyle>
+			<scale>0.5</scale>
+			<Icon>
+					<href>axel.png</href> <!-- hier auch axel3.png nehmen-->
+			</Icon>
+			<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff0000ff</color>
+			<scale>0.5</scale>
+		</LabelStyle>
+	</Style>
+	
+	<StyleMap id="frank">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#frank_icon</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#frank_icon2</styleUrl>
+		</Pair>
+	</StyleMap>
+	
+	<StyleMap id="axel">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#axel_icon</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#axel_icon2</styleUrl>
+		</Pair>
+	</StyleMap>
+	
+	<Folder>
+		<name>Commits</name>
+
+		<Placemark>
+			<name>Andorra</name>
+			<url>1</url>
+			<description>Andorra</description>
+			<styleUrl>#axel</styleUrl>
+			<Point><coordinates>1.52183549999995, 42.50631740000001</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Augsburg</name>
+			<url>2</url>
+			<description>Augsburg</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates> 10.897789999999986, 48.3705449</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Beauvais</name>
+			<url>3</url>
+			<description>Beauvais (RMLL 2015)</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>2.080712299999959, 49.42953869999999</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Beauvais</name>
+			<url>4</url>
+			<description>Beauvais (RMLL 2015)</description>
+			<styleUrl>#axel</styleUrl>
+			<Point><coordinates>2.080712299999959, 49.42953869999999</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Bergneustadt</name>
+			<url>5</url>
+			<description>Bergneustadt</description>
+			<styleUrl>#axel</styleUrl>
+			<Point><coordinates>7.649793999999929, 51.024104</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Berlin</name>
+			<url>6</url>
+			<description>Berlin</description>
+			<styleUrl>#axel</styleUrl>
+			<Point><coordinates>13.420244, 52.513041</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Berlin</name>
+			<url>6</url>
+			<description>Berlin</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>13.420244, 52.513041</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Besançon</name>
+			<url>7</url>
+			<description>Besançon</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>6.024053900000013, 47.237829</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Biel</name>
+			<url>6</url>
+			<description>Biel</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>7.246790899999951, 47.1367785</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Bottighofen</name>
+			<url></url>
+			<description>Bottighofen</description>
+			<styleUrl>#axel</styleUrl>
+			<Point><coordinates>9.20951869999999, 47.63560040000001</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Bottighofen</name>
+			<url></url>
+			<description>Bottighofen</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>9.20951869999999, 47.63560040000001</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Chemnitz</name>
+			<url>6</url>
+			<description>Chemnitz</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>12.921369700000014, 50.827845</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Chemnitz</name>
+			<url>6</url>
+			<description>Chemnitz</description>
+			<styleUrl>#axel</styleUrl>
+			<Point><coordinates>12.921369700000014, 50.827845</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Delémont</name>
+			<url>6</url>
+			<description>Delémont</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>7.345155500000033, 47.365837</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Frankfurt (Main)</name>
+			<url>6</url>
+			<description>Frankfurt (Main)</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>8.682126700000026, 50.1109221</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Freiburg im Breisgau</name>
+			<url>6</url>
+			<description>Freiburg im Breisgau</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>7.84210429999996, 47.9990077</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Friedrichshafen</name>
+			<url>6</url>
+			<description>Friedrichshafen</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>9.480011300000001, 47.6617648</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Essen</name>
+			<url>6</url>
+			<description>Essen</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>7.011555199999975, 51.4556432</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Essen</name>
+			<url>6</url>
+			<description>Essen</description>
+			<styleUrl>#axel</styleUrl>
+			<Point><coordinates>7.011555199999975, 51.4556432</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Genf</name>
+			<url>6</url>
+			<description>Genf</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>6.143157699999961, 46.2043907</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Goizueta</name>
+			<url>6</url>
+			<description>Goizueta</description>
+			<styleUrl>#axel</styleUrl>
+			<Point><coordinates>-1.864150900000027, 43.1722936</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Hamburg</name>
+			<url>6</url>
+			<description>Hamburg</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>9.99368179999999, 53.5510846</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Heidelberg</name>
+			<url>6</url>
+			<description>Heidelberg</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>8.672433500000011, 49.3987524</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Heidelberg</name>
+			<url>6</url>
+			<description>Heidelberg</description>
+			<styleUrl>#axel</styleUrl>
+			<Point><coordinates>8.672433500000011, 49.3987524</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Koblenz</name>
+			<url>6</url>
+			<description>Koblenz</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>7.588995899999986, 50.3569429</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Koblenz</name>
+			<url>6</url>
+			<description>Koblenz</description>
+			<styleUrl>#axel</styleUrl>
+			<Point><coordinates>7.588995899999986, 50.3569429</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Lauchringen</name>
+			<url>6</url>
+			<description>Lauchringen</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>8.312749800000006, 47.6293259</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Lauchringen</name>
+			<url>6</url>
+			<description>Lauchringen</description>
+			<styleUrl>#axel</styleUrl>
+			<Point><coordinates>8.312749800000006, 47.6293259</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Lausanne</name>
+			<url>6</url>
+			<description>Lausanne</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>6.632273400000031, 46.5196535</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Meersburg</name>
+			<url>6</url>
+			<description>Meersburg</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>9.272724400000016, 47.6969574</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Montpellier</name>
+			<url>6</url>
+			<description>Montpellier</description>
+			<styleUrl>#axel</styleUrl>
+			<Point><coordinates>3.8767159999999876, 43.610769</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Montpellier</name>
+			<url>6</url>
+			<description>Montpellier</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>3.8767159999999876, 43.610769</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>München</name>
+			<url>6</url>
+			<description>München</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>11.581980599999952, 48.1351253</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Port del Canto</name>
+			<url>6</url>
+			<description>Port del Canto</description>
+			<styleUrl>#axel</styleUrl>
+			<Point><coordinates>1.2367507871215366, 42.37020519979388</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Radebeul bei Dresden</name>
+			<url>6</url>
+			<description>Radebeul bei Dresden</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>13.649370699999963, 51.1115648</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Rostock-Warnemünde</name>
+			<url>6</url>
+			<description>Rostock-Warnemünde</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>12.058059011486876, 54.1754916225765</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Saint Cergue</name>
+			<url></url>
+			<description>Saint Cergue</description>
+			<styleUrl>#axel</styleUrl>
+			<Point><coordinates>6.158138199999939, 46.4460412</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Saint-Jouin-Bruneval</name>
+			<url></url>
+			<description>Saint-Jouin-Bruneval</description>
+			<styleUrl>#axel</styleUrl>
+			<Point><coordinates>0.1632309000000305, 49.642089</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Tübingen</name>
+			<url></url>
+			<description>Tübingen</description>
+			<styleUrl>#axel</styleUrl>
+			<Point><coordinates>9.057644799999935, 48.5216364</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Tübingen</name>
+			<url></url>
+			<description>Tübingen</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>9.057644799999935, 48.5216364</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Zürich</name>
+			<url></url>
+			<description>Zürich</description>
+			<styleUrl>#axel</styleUrl>
+			<Point><coordinates>8.546207030414172, 47.349142709237</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<name>Zürich</name>
+			<url></url>
+			<description>Zürich</description>
+			<styleUrl>#frank</styleUrl>
+			<Point><coordinates>8.546207030414172, 47.349142709237</coordinates></Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>
