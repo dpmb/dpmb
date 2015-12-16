@@ -4,7 +4,7 @@ language: generic
 
 before_install:
    - sudo apt-get update
-   - sudo apt-get install -y debhelper make moreutils dblatex asciidoc texlive-lang-german calibre calibre-bin python-sip epubcheck
+   - sudo apt-get install -y --no-install-recommends moreutils dblatex asciidoc texlive-lang-german calibre calibre-bin python-sip epubcheck
 
 script:
    - make verbose
