@@ -46,6 +46,7 @@ Corporate Server, UCS)
   seinen Weg zu bringen, für den Klappentext sowie fürs Lektorat der
   Einleitung und dem erstem Kapitel.
 * Oliver Rath für seine Vorschläge zur besseren Lesbarkeit von Programmcode
+* Karsten Merker für viele kleine Korrekturen
 
 Nicht zu vergessen sind die Probeleser, die sich durch unser Manuskript
 gekämpft haben: Arne Wichmann, Thomas Winde, Jana Pirat, Jörg Dölz,
