@@ -285,7 +285,7 @@ wird, in allen aktuellen Veröffentlichungen in der gleichen Version
 vorkommt und dafür auch nur einmal auf jedem Spiegel des
 Debian-APT-Archivs liegt. Welches Paket dann aus den verschiedenen
 Entwicklungsständen bei einer Installation ausgewählt wird, erfahren Sie
-unter Aus welchem Repo kommen die Pakete (siehe
+unter ``Aus welchem Repo kommen die Pakete'' (siehe
 <<aus-welchem-repo-kommen-die-pakete>>) genauer.
 
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/veroeffentlichungen.adoc
