@@ -197,9 +197,10 @@ _still in development_ – zu deutsch ``noch in Entwicklung'' –, was den
 Status der Veröffentlichung der zukünftigen Distribution sehr treffend
 umschreibt.
 
-Die Paketklassifikation _experimental_ hat keinen eigenen Alias-Namen.
-Das rührt daher, dass es keine eigenständige Veröffentlichung von Debian
-GNU/Linux darstellt.
+_Experimental_ trägt - analog zu _unstable_ - immer den Alias-Namen
+_rc-buggy_, was im Debian-Jargon eine Kurzform für ``contains
+release-critcal bugs'' darstellt, sinngemäß also ``in dieser Form ungeeignet
+zur Aufnahme in eine Veröffentlichung''.
 
 ==== Pakete auf Wanderschaft von einem Entwicklungsstand in den nächsten ====
 
