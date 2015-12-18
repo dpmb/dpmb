@@ -143,15 +143,15 @@ Dies ist insbesondere relevant bei proprietärer, nicht-quelloffener
 Software, die für 32-Bit-Linux kompiliert wurde, aber auf einem
 64-Bit-System installiert bzw. verwendet werden soll.
 
-* Systeme, die gemischte Prozessorbefehle verwenden – entweder als
-Emulation in Hardware oder Software. Dazu gehören z.B. 'i386'/'ia64'
-mittels Hardware-Emulation und 'arm'/jede Plattform (via Qemu).
+* Systeme, die gemischte Prozessorbefehle unterstützen – entweder als
+Emulation in Hardware oder per Software. Dazu gehören z.B. 'i386'/'ia64'
+mittels Hardware-Emulation und 'arm'/jede Plattform (via Qemu
+Userland-Emulation).
 
 * gemischte Betriebssystemumgebungen. Darunter fallen die Verwendung und
 Ausführung von Binärcode anderer Plattformen über eine
 Kompatibilitätsebene. Beispiele dafür sind Linux/'i386' auf
-FreeBSD/'i386', Solaris/'sparc' auf Linux/'sparc' und Virtualisierer wie
-Qemu, Bochs, VirtualBox und VMWare.
+FreeBSD/'i386' und Solaris/'sparc' auf Linux/'sparc'.
 
 * Cross-Kompilieren. Darunter fällt das Übersetzen von Programmcode für
 eine andere Zielplattform.
