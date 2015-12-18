@@ -56,7 +56,7 @@ neue stabile Veröffentlichung wird ca. alle zwei Jahre auf Basis von
 _testing_ erstellt. Pakete werden nur aktualisiert, um
 sicherheitskritische oder sonstige schwerwiegende Fehler zu
 beheben. Dabei werden (mit sehr wenigen Ausnahmen) ausschließlich die
-entsprechenden Fehler durch Patches behoben anstatt neuerer Versionen
+entsprechenden Fehler durch Patches behoben anstatt neuere Versionen
 der Programme auszuliefern.
 
 oldstable:: 
