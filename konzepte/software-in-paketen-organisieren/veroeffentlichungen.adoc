@@ -104,7 +104,22 @@ Im Detail gehen wir darauf unter Debian Backports in
 
 // Stichworte für den Index
 (((Veröffentlichung, Aliasname)))
+(((Veröffentlichung, Buster)))
+(((Veröffentlichung, Buzz)))
+(((Veröffentlichung, Bo)))
+(((Veröffentlichung, Etch)))
+(((Veröffentlichung, Hamm)))
+(((Veröffentlichung, Jessie)))
+(((Veröffentlichung, Lenny)))
+(((Veröffentlichung, Potato)))
+(((Veröffentlichung, Rex)))
+(((Veröffentlichung, Sarge)))
+(((Veröffentlichung, Slink)))
+(((Veröffentlichung, Squeeze)))
+(((Veröffentlichung, Stretch)))
 (((Veröffentlichung, Toy Story)))
+(((Veröffentlichung, Wheezy)))
+(((Veröffentlichung, Woody)))
 Jede Veröffentlichung von Debian GNU/Linux hat einen Alias-Namen, der
 nach einer Figur aus Pixars Filmreihe Toy Story benannt ist. Für die
 bisherigen Veröffentlichungen standen die folgenden Figuren aus dem Film
@@ -188,6 +203,8 @@ alle nicht mehr unterstützten Veröffentlichungen.
 // Stichworte für den Index
 (((Veröffentlichung, Ausnahmen)))
 (((Veröffentlichung, experimental)))
+(((Veröffentlichung, Sid)))
+(((Veröffentlichung, rc-buggy)))
 (((Veröffentlichung, unstable)))
 Eine weitere Ausnahme bildet die Veröffentlichung zu _unstable_. Sie
 besitzt stets den gleichen Alias-Namen _Sid_. In der Filmreihe Toy Story
