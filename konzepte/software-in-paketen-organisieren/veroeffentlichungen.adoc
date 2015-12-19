@@ -83,11 +83,11 @@ eingeschränkt unterstützt.
 
 experimental:: 
 Dies ist der einzige Entwicklungsstand, der keine alleinstehende
-Veröffentlichung ist, sondern ein nur ein Zusatz-Repository. Es fungiert als Zusatz
-zu _unstable_ und beinhaltet Pakete, bei denen der Paketbetreuer davon
-ausgeht, dass sie noch und ggf. sogar grobe Fehler beinhalten.
-_experimental_ wird genutzt, um Pakete im größeren Umfeld zu testen,
-bevor diese nach _unstable_ hochgeladen werden.
+Veröffentlichung ist, sondern nur ein Zusatz-Repository. Es fungiert als
+Erweiterung zu _unstable_ und beinhaltet Pakete, bei denen der
+Paketbetreuer davon ausgeht, dass sie noch und ggf. sogar grobe Fehler
+beinhalten. _experimental_ wird genutzt, um Pakete im größeren Umfeld zu
+testen, bevor diese nach _unstable_ hochgeladen werden.
 
 // Stichworte für den Index
 (((Veröffentlichung, Entwicklungsstand)))
@@ -197,10 +197,11 @@ _still in development_ – zu deutsch ``noch in Entwicklung'' –, was den
 Status der Veröffentlichung der zukünftigen Distribution sehr treffend
 umschreibt.
 
-_Experimental_ trägt - analog zu _unstable_ - immer den Alias-Namen
+_Experimental_ trägt – analog zu _unstable_ – immer den Alias-Namen
 _rc-buggy_, was im Debian-Jargon eine Kurzform für ``contains
-release-critcal bugs'' darstellt, sinngemäß also ``in dieser Form ungeeignet
-zur Aufnahme in eine Veröffentlichung''.
+release-critcal bugs'' darstellt. Das läßt sich sinngemäß als ``in
+dieser Form ungeeignet zur Aufnahme in eine Veröffentlichung''
+übersetzen.
 
 ==== Pakete auf Wanderschaft von einem Entwicklungsstand in den nächsten ====
 
