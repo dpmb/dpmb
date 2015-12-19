@@ -177,6 +177,9 @@ Aktualisierung von Debian 4.0 _Etch_. Seit Debian 5.0 _Lenny_ wird
 stattdessen ein Punkt verwendet, so z.B. `5.0.3` für die dritte
 Aktualisierung.
 
+// Stichworte für den Index
+(((Veröffentlichung, Etch)))
+(((Veröffentlichung, Wheezy)))
 Seit Debian 4.0 _Etch_ bekamen stabile Veröffentlichungen immer eine
 neue Nummer an erster Stelle. Seit Debian 7 _Wheezy_ ist die Null an
 zweiter Stelle verschwunden und stattdessen wird die Nummer der
