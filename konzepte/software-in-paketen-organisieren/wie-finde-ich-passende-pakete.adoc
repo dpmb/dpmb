@@ -78,8 +78,8 @@ Veröffentlichungen (siehe <<veroeffentlichungen>>), den Maintainer
 <<paket-zu-datei-finden>>) oder einem Fragment aus dem Paket (siehe
 <<nach-muster-in-einem-paket-suchen>>) suchen. Darüber hinaus gibt es
 eine konzept- und facettenbasierte Suche mit Hilfe von Debtags.
-Letzteres besprechen wir detailliert unter Erweiterte
-Paketklassifikation mit Debtags in
-<<erweiterte-paketklassifikation-mit-debtags>>.
+Letzteres besprechen wir detailliert unter ``Erweiterte
+Paketklassifikation mit Debtags'' (siehe 
+<<erweiterte-paketklassifikation-mit-debtags>>).
 
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/wie-finde-ich-passende-pakete.adoc
