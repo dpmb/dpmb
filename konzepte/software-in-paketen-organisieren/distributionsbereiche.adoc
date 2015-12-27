@@ -40,18 +40,20 @@ entspricht, aber frei verteilbar ist.
 // Stichworte für den Index
 (((DFSG)))
 (((Distributionsbereiche, Einordnung)))
-Zur Debian-Distribution zählt offiziell nur der Bereich _main_. Die
-anderen beiden Bereiche sind lediglich Ergänzungen, die zusätzlich
-bereitgestellt werden. Wir empfehlen Ihnen daher, soweit möglich nur
-Pakete aus _main_ zu verwenden, und nur wenn dies nicht ausreicht (z.B.
-wegen nicht-freier Firmware für bestimmte Hardwarekomponenten),
+Obwohl vielfach von außen anders wahrgenommen, zählt zur
+Debian-Distribution nur der Bereich _main_. Die anderen beiden Bereiche
+sind lediglich Ergänzungen, die zusätzlich bereitgestellt werden. Wir
+empfehlen Ihnen daher, soweit möglich nur Pakete aus _main_ zu
+verwenden, und nur wenn dies nicht ausreicht (z.B. wegen nicht-freier
+Firmware für bestimmte Hardwarekomponenten), die beiden Bereiche
 _contrib_ und/oder _non-free_ dazuzunehmen.
 
-Pakete, die in _main_ eingeordnet werden, unterliegen einer Lizenz, die
-den Debian-Richtlinien für Freie Software <<DFSG>> entspricht. Diese
-Richtlinien sind im Debian-Gesellschaftsvertrag festgelegt
-<<Debian-Social-Contract>> und weisen starke inhaltliche Gemeinsamkeiten
-zur Free Software Foundation (FSF) und zum GNU-Projekt auf.
+Pakete, die in _main_ eingeordnet sind, unterliegen einer Lizenz, die
+den Debian-Richtlinien für Freie Software -- kurz Debian Free Software
+Guidelines (DFSG) <<DFSG>> -- entsprechen. Diese Richtlinien sind im
+Debian-Gesellschaftsvertrag festgelegt <<Debian-Social-Contract>> und
+weisen starke inhaltliche Gemeinsamkeiten zur Free Software Foundation
+(FSF) und zum GNU-Projekt auf.
 
 Pakete im Zweig _contrib_ stehen zwar genauso unter einer freien Lizenz
 wie die Pakete in _main_, bedingen jedoch weitere Software oder Inhalte,
