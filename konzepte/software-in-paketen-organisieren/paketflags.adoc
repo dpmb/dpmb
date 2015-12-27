@@ -220,8 +220,8 @@ diese Aufgabe der Package Dependency Solver (siehe <<aptitude>>).
 (((Paketflags, explizit entfernen)))
 Setzen oder Entfernen Sie bewusst ein Paketflag und legen somit eine
 Version explizit fest, nehmen Sie Einfluss auf den Zustand Ihres Systems.
-Wobei Ihnen das von Nutzen sein kann, erklären wir unter Ausgewählte
-Pakete nicht aktualisieren (<<ausgewaehlte-pakete-nicht-aktualisieren>>)
+Wobei Ihnen das von Nutzen sein kann, erklären wir unter ``Ausgewählte
+Pakete nicht aktualisieren'' (<<ausgewaehlte-pakete-nicht-aktualisieren>>)
 ausführlicher.
 
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/paketflags.adoc
