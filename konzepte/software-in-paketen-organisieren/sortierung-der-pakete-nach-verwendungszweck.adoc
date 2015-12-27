@@ -223,7 +223,7 @@ Das Kategorienkonzept hat eine Reihe von Limitierungen, insbesondere die
 Einordnung eines Pakets in nur eine einzige Kategorie. Um diese Grenzen
 aufzuheben, gibt es das Debtags-Projekt, welches jedes Paket um passende
 Schlagworte ergänzt. Dieses Konzept und die dazugehörigen Werkzeuge
-stehen unter Erweiterte Paketklassifikation mit Debtags (siehe
+stehen unter ``Erweiterte Paketklassifikation mit Debtags'' (siehe
 <<erweiterte-paketklassifikation-mit-debtags>>) im Mittelpunkt.
 ====
 
