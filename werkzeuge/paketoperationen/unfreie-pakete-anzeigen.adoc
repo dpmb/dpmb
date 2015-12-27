@@ -1,0 +1,71 @@
+
+// Baustelle: Fertig
+
+[[unfreie-pakete-anzeigen]]
+
+=== Liste der installierten, nicht-freien Pakete anzeigen ===
+
+// Stichworte für den Index
+(((Debianpaket, vrms)))
+(((vrms, -e)))
+(((vrms, --explain)))
+Mit dem Kommando `vrms` aus dem gleichnamigen Paket 'vrms'
+<<Debian-Paket-vrms>> erhalten Sie eine Übersicht, welche nicht-freien
+Pakete auf Ihrem System installiert sind. 'vrms' steht dabei als
+Abkürzung für ``Virtual Richard M. Stallman'' und erinnert an den
+Initiator der GNU-Lizenzen. 
+
+Das nachfolgende Beispiel listet die einzelnen Pakete auf, die aus den
+beiden Bereichen _non-free_ und _contrib_ ausgewählt wurden, Neben jedem
+Paket sehen Sie eine Kurzbeschreibung. Die Darstellung entspricht dem
+Schalter `-e` (Langform `--explain`) und ist seit Debian 8 _Jessie_ die
+Standardeinstellung.
+
+.Ausgabe von `vrms -e` auf einem Desktop-System (Debian 7 _Wheezy_)
+----
+$ vrms -e
+
+             Non-free packages installed on efho-mobil
+
+firmware-iwlwifi                    Binary firmware for Intel PRO/Wireless 3945 and 802.11
+nautilus-dropbox                    Dropbox integration for Nautilus
+openttd-opensfx                     sound set for use with the OpenTTD game
+opera                               Fast and secure web browser and Internet suite
+skype                               Skype
+unrar                               Unarchiver for .rar files (non-free version)
+
+             Contrib packages installed on efho-mobil
+
+flashplugin-nonfree                 Adobe Flash Player - browser plugin
+
+  6 non-free packages, 0.2% of 2696 installed packages.
+  1 contrib packages, 0.0% of 2696 installed packages.
+$
+----
+
+// Stichworte für den Index
+(((Debianpaket, vrms)))
+(((vrms, -s)))
+(((vrms, --sparse)))
+Benötigen Sie lediglich eine Paketliste ohne zusätzliche Informationen,
+hilft Ihnen der Schalter `-s` (Langform `--sparse`) weiter. Nach den
+Paketen aus dem Bereich _non-free_ listet `vrms` die _contrib_-Pakete
+auf. Beide Bereiche werden durch eine schlichte Leerzeile voneinander
+getrennt.
+
+.Ausgabe von `vrms -s` auf einem Desktop-System (Debian 8 _Jessie_)
+----
+$ vrms -s
+firmware-iwlwifi
+ldraw-parts
+skype
+
+flashplugin-nonfree
+virtualbox
+virtualbox-dkms
+virtualbox-guest-dkms
+virtualbox-guest-utils
+virtualbox-guest-x11
+virtualbox-qt
+$
+----

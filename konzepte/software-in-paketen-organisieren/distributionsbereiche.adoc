@@ -103,35 +103,10 @@ image::konzepte/software-in-paketen-organisieren/aptitude-unfreie-pakete.png[id=
 
 // Stichworte für den Index
 (((Debianpaket, vrms)))
-(((vrms, -e)))
-Mit dem Kommando `vrms` aus dem gleichnamigen Paket 'vrms'
-<<Debian-Paket-vrms>> erhalten Sie eine Übersicht, welche nicht-freien
-Pakete auf Ihrem System installiert sind. 'vrms' steht dabei als
-Abkürzung für ``Virtual Richard M. Stallman''. Die im nachfolgenden
-Beispiel verwendete Option `-e` gibt eine zusätzliche Kurzbeschreibung
-zu jedem gefundenen Paket aus.
-
-.Ausgabe von `vrms` auf einem Desktop-System
-----
-$ vrms -e
-
-             Non-free packages installed on efho-mobil
-
-firmware-iwlwifi                    Binary firmware for Intel PRO/Wireless 3945 and 802.11
-nautilus-dropbox                    Dropbox integration for Nautilus
-openttd-opensfx                     sound set for use with the OpenTTD game
-opera                               Fast and secure web browser and Internet suite
-skype                               Skype
-unrar                               Unarchiver for .rar files (non-free version)
-
-             Contrib packages installed on efho-mobil
-
-flashplugin-nonfree                 Adobe Flash Player - browser plugin
-
-  6 non-free packages, 0.2% of 2696 installed packages.
-  1 contrib packages, 0.0% of 2696 installed packages.
-$
-----
+Eine vollständige Übersicht zu allen nicht-freien Paketen, die auf ihrem
+System installiert sind, gibt Ihnen das Programm `vrms`. Darauf gehen
+wir unter _Liste der installierten, nicht-freien Pakete anzeigen_
+<<unfreie-pakete-anzeigen>> ausführlicher ein.
 
 ==== Einordnung der Distributionsbereiche bei anderen Distributionen ====
 

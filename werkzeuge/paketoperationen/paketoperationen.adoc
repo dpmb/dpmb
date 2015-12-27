@@ -23,6 +23,8 @@ include::liste-der-installierten-pakete-anzeigen-und-deuten.adoc[]
 
 include::liste-der-installierten-kernelpakete-anzeigen.adoc[]
 
+include::unfreie-pakete-anzeigen.adoc[]
+
 include::neue-pakete-anzeigen.adoc[]
 
 include::pakete-nach-prioritaeten-finden.adoc[]
