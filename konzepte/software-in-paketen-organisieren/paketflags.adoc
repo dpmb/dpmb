@@ -43,8 +43,8 @@ _automatic_ trägt, gilt als automatisch installiert.
 // Stichworte für den Index
 (((Paketflags, Auswertung)))
 (((Paketflags, /var/lib/apt/extended_states)))
-Die vorgenannten Paketflags werden von `dpkg` (nur _hold_) und
-`aptitude` ausgewertet, APT nutzt diese Eigenschaft hingegen nicht. Dazu
+Die vorgenannten Paketflags werden von `dpkg` (nur _hold_), APT und
+`aptitude` ausgewertet. Dazu
 werden die Paketflags in der Datei `/var/lib/apt/extended_states`
 gespeichert.
 
