@@ -105,8 +105,8 @@ image::konzepte/software-in-paketen-organisieren/aptitude-unfreie-pakete.png[id=
 (((Debianpaket, vrms)))
 Eine vollständige Übersicht zu allen nicht-freien Paketen, die auf ihrem
 System installiert sind, gibt Ihnen das Programm `vrms`. Darauf gehen
-wir unter _Liste der installierten, nicht-freien Pakete anzeigen_ in 
-<<unfreie-pakete-anzeigen>> ausführlicher ein.
+wir unter _Liste der installierten, nicht-freien Pakete anzeigen_ (siehe
+<<unfreie-pakete-anzeigen>>) ausführlicher ein.
 
 ==== Einordnung der Distributionsbereiche bei anderen Distributionen ====
 
