@@ -17,7 +17,7 @@ zählen sowohl Online- als auch Offline-Quellen, bspw. offizielle,
 private und unternehmenseigene Repositories und Paketspiegel. Für die
 Recherche und Installation ohne Internetanbindung stehen bspw.
 vorbereitete Distributionsimages in unterschiedlichen Größen und
-Zusammenstellungen für CD, DVD, Blueray und USB-Stick über die Webseite
+Zusammenstellungen für CD, DVD, Blu-ray und USB-Stick über die Webseite
 des Debian-Projekts bereit <<Debian-besorgen>>.
 
 // Stichworte für den Index

@@ -182,7 +182,7 @@ Grundlage sind die ausgewerteten Paketabhängigkeiten. Trotzdem können
 Sie stets eigenhändig eingreifen, sofern dazu Ihrerseits Bedarf besteht.
 
 `apt-mark` kennt dafür die drei Schalter `auto` für automatisch,
-`manual` für manuell' und `hold` für gehalten, mit dem Sie die
+`manual` für manuell und `hold` für gehalten, mit dem Sie die
 entsprechende Markierung für ein angegebenes Paket explizit setzen
 können. Dazu erwartet `apt-mark` als Parameter ein einzelnes Paket oder
 eine Paketliste. Die nachfolgende Ausgabe zeigt das Setzen der
