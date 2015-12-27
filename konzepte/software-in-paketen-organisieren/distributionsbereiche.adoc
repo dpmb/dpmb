@@ -12,20 +12,21 @@
 (((Distributionsbereiche, Unterteilung bei Debian)))
 (((Distributionsbereiche, Zuordnung)))
 
-Die Distributionsbereiche ordnen die Pakete anhand ihrer Lizenzen. Das
-hilft Ihnen dabei, die Kontrolle über die verwendeten Lizenzen auf
-Ihrem System zu behalten. Mit der Auswahl von Paketen aus
-bestimmten Distributionsbereichen legen Sie den ``Freiheitsgrad''
-Ihrer Installation fest.
+Die verschiedenen Distributionsbereiche ordnen die einzelnen Pakete
+anhand ihrer Lizenzen. Das hilft Ihnen dabei, die Kontrolle über die
+verwendeten Lizenzen auf Ihrem System zu behalten. Mit der Auswahl von
+Paketen aus bestimmten Distributionsbereichen legen Sie somit den
+``Freiheitsgrad'' Ihrer Installation fest.
 
 // Stichworte für den Index
 (((Distributionsbereiche, main)))
 (((Distributionsbereiche, contrib)))
 (((Distributionsbereiche, non-free)))
-In Debian sind die Softwarepakete in drei Bereiche unterteilt:
+In Debian sind die Softwarepakete in die folgenden drei Bereiche
+unterteilt:
 
 main:: 
-Freie Software, die den Debian-Richtlinien für Freie Software entspricht.
+Freie Software, die den Debian-Richtlinien für freie Software entspricht.
 
 contrib:: 
 Freie Software, die von unfreier Software abhängt.
