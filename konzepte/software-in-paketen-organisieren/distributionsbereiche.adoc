@@ -9,6 +9,7 @@
 
 // Stichworte für den Index
 (((Distributionsbereiche, Begriff)))
+(((Distributionsbereiche, Einordnung anhand der Lizenzen)))
 (((Distributionsbereiche, Unterteilung bei Debian)))
 (((Distributionsbereiche, Zuordnung)))
 
@@ -40,7 +41,7 @@ entspricht, aber frei verteilbar ist.
 // Stichworte für den Index
 (((Debian Free Software Guidelines)))
 (((DFSG)))
-(((Distributionsbereiche, Einordnung)))
+(((Distributionsbereiche, Einordnung anhand der Lizenzen)))
 Obwohl vielfach von außen anders wahrgenommen, zählt zur
 Debian-Distribution nur der Bereich _main_. Die anderen beiden Bereiche
 sind lediglich Ergänzungen, die zusätzlich bereitgestellt werden. Wir
@@ -149,10 +150,15 @@ _universe_ (frei, nur Community-Unterstützung) und _multiverse_
 
 Andere Derivate von Debian bzw. Ubuntu oder nicht-offizielle
 Paketquellen (siehe <<paketquellen>>) können ebenfalls ihre eigenen
-Distributionsbereiche haben.
+Distributionsbereiche haben. Auf diese gehen wir hier nicht weiter ein.
 
 ==== Handhabung von geschützten Namen und Logos ====
 
+// Stichworte für den Index
+(((Softwarelizenz,Abbildung)))
+(((Softwarelizenz,Dokumentation)))
+(((Softwarelizenz,Firmware)))
+(((Softwarelizenz,Grafik)))
 Der Begriff ``Software'' wird hier recht weit gefasst und beinhaltet
 neben Programmcode auch Firmware, Dokumentation oder künstlerische
 Elemente wie beispielsweise Grafiken und Logos. Letztere stehen in
@@ -160,8 +166,8 @@ manchen Fällen unter anderen Lizenzen als der Rest der Software und
 dürfen aus markenrechtlichen Gründen nicht für abgeänderte Programme
 verwendet werden. Aus diesem Grund wurden einige Programme abgewandelt,
 bspw. der Webbrowser Iceweasel und das Mailprogramm Icedove, die im
-Original die Namen Firefox und Thunderbird tragen. Neben den anderen
-Namen werden in Debian auch alternative Logos genutzt.
+Original die Namen Firefox und Thunderbird tragen. Neben den beiden
+anderen Namen werden in Debian auch alternative Logos genutzt.
 
 ==== Softwareverteilung ====
 
