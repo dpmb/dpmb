@@ -394,7 +394,7 @@
 
 - [[[DebianQA]]] Debian Quality Assurance (QA) Team, https://qa.debian.org/
 
-- [[[Debian-Redirector]]] The Debian Redirector, http://http.debian.net/
+- [[[Debian-Redirector]]] The Debian Redirector, http://httpredir.debian.org/
 
 - [[[Debian-Security]]] Debian-Sicherheitsinformationen, https://www.debian.org/security/
 

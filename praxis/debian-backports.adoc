@@ -146,7 +146,7 @@ Eintrag wie folgt aus:
 .Eintrag zu Debian Backports für Debian 7 'Wheezy'
 ----
 # Backports
-deb http://http.debian.net/debian wheezy-backports main contrib non-free
+deb http://httpredir.debian.org/debian wheezy-backports main contrib non-free
 ----
 
 Wie bereits oben erwähnt, findet sich das APT-Repository für die
@@ -156,7 +156,7 @@ Deswegen ist dort die kanonische Mirror-Adresse eine leicht andere:
 .Eintrag zu Debian Backports für Debian 6 'Squeeze'
 ----
 # Backports
-deb http://http.debian.net/debian-backports squeeze-backports main contrib non-free
+deb http://httpredir.debian.org/debian-backports squeeze-backports main contrib non-free
 ----
 
 Nach der Aktualisierung der Paketquellen -- bspw. mittels `apt-get

@@ -161,30 +161,36 @@ $
 
 ==== GeoIP per HTTP-Redirect ====
 
-Raphael Geissert hat unter `http://http.debian.net/` den Debian
+Raphael Geissert hat den Debian
 Redirector <<Debian-Redirector>> entwickelt, der eine Alternative zu
-`cdn.debian.net` darstellt. Tragen Sie als Paketquelle
-`http://http.debian.net/debian/` ein, sendet APT zuerst eine
-HTTP-Anfrage an `http.debian.net` und bekommt als Antwort eine
+`cdn.debian.net` darstellt. Ursprünglich lief dieser Dienst
+unter der URL `http://http.debian.net/` außerhalb der Debian-internen
+Infrastruktur. Seit Mai 2015 ist der Dienst auf Debian-eigene
+Server umgezogen und dort unter `http://httpredir.debian.org/`
+zu erreichen. Die ursprüngliche Adresse `http://http.debian.net/`
+leitet seitdem automatisch auf `http://httpredir.debian.org/` um.
+Tragen Sie als Paketquelle
+`http://httpredir.debian.org/debian/` ein, sendet APT zuerst eine
+HTTP-Anfrage an `httpredir.debian.org` und bekommt als Antwort eine
 Weiterleitung an den eigentlichen Paketmirror. Die nachfolgende
 Ausschnitt zeigt den Eintrag für Debian 7 'Wheezy' in der Datei
 `/etc/apt/sources.list`:
 
 ----
-deb http://http.debian.net/debian/ wheezy main contrib non-free
+deb http://httpredir.debian.org/debian/ wheezy main contrib non-free
 ----
 
 Interessant ist auch die Netzwerkkommunikation, die (unbemerkt) im
 Hintergrund abläuft. Wir zeigen das anhand eines Beispiels aus der
 Schweiz genauer. Zur Analyse kommt das Kommando `GET` aus dem Paket
 'libwww-perl' zum Einsatz. Zu sehen ist, dass die Anfrage an
-`http.debian.net` aufgelöst wird und eine Weiterleitung (Redirect) zum
+`httpredir.debian.org` aufgelöst wird und eine Weiterleitung (Redirect) zum
 Debian-Paketmirror an der ETH Zürich erfolgt.
 
 .Auswertung der Netzwerkkommunikation bei der Auflösung der IP
 ----
-$ GET -SUsed http://http.debian.net/debian/
-GET http://http.debian.net/debian/
+$ GET -SUsed http://httpredir.debian.org/debian/
+GET http://httpredir.debian.org/debian/
 User-Agent: lwp-request/6.03 libwww-perl/6.04
 
 302 Found
@@ -235,7 +241,7 @@ Möglich sind z.B. statt der Empfehlung `/debian/` auch
 Das Verfahren mit HTTP-Weiterleitungen hat jedoch auch *Nachteile*.
 Einerseits funktioniert es ausschließlich per HTTP (oder HTTPS), da FTP
 keine Weiterleitungen kennt. Aus dieser Einschränkung leitet sich auch
-der Hostname `http.debian.net` ab. Andererseits werden pro Paketliste
+der Hostname `httpredir.debian.org` ab. Andererseits werden pro Paketliste
 sowie pro heruntergeladenem Paket stets zwei HTTP-Anfragen gesendet.
 
 Da sich dieses Verfahren trotz der o.g. Einschränkung in der Praxis als

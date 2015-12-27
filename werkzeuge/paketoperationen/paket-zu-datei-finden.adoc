@@ -105,9 +105,9 @@ $ ls /var/cache/apt/apt-file
 ftp.de.debian.org_debian_dists_wheezy_contrib_Contents-i386.gz
 ftp.de.debian.org_debian_dists_wheezy_main_Contents-i386.gz
 ftp.de.debian.org_debian_dists_wheezy_non-free_Contents-i386.gz
-http.debian.net_debian_dists_wheezy_contrib_Contents-i386.gz
-http.debian.net_debian_dists_wheezy_main_Contents-i386.gz
-http.debian.net_debian_dists_wheezy_non-free_Contents-i386.gz
+httpredir.debian.org_debian_dists_wheezy_contrib_Contents-i386.gz
+httpredir.debian.org_debian_dists_wheezy_main_Contents-i386.gz
+httpredir.debian.org_debian_dists_wheezy_non-free_Contents-i386.gz
 $
 ----
 
@@ -128,17 +128,17 @@ dynamisch ausgewählt. Hintergrundinformationen dazu finden Sie in
 .Suchdatenbank von APT aktualisieren
 ----
 # apt-file update
-Downloading complete file http://http.debian.net/debian/dists/wheezy/main/Contents-i386.gz
+Downloading complete file http://httpredir.debian.org/debian/dists/wheezy/main/Contents-i386.gz
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
 100 20.6M  100 20.6M    0     0  3917k      0  0:00:05  0:00:05 --:--:-- 4111k
-Downloading complete file http://http.debian.net/debian/dists/wheezy/contrib/Contents-i386.gz
+Downloading complete file http://httpredir.debian.org/debian/dists/wheezy/contrib/Contents-i386.gz
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
 100 73552  100 73552    0     0   302k      0 --:--:-- --:--:-- --:--:--  302k
-Downloading complete file http://http.debian.net/debian/dists/wheezy/non-free/Contents-i386.gz
+Downloading complete file http://httpredir.debian.org/debian/dists/wheezy/non-free/Contents-i386.gz
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
@@ -231,16 +231,16 @@ um eine ausführlichere Ausgabe zu erhalten.
 # apt-file -v show aptsh
 D: Using cache directory /var/cache/apt/apt-file
 D: reading sources file /etc/apt/sources.list
-D: got 'deb http://http.debian.net/debian/ wheezy main contrib non-free'
-D: kept 'deb http://http.debian.net/debian/ wheezy main contrib non-free'
+D: got 'deb http://httpredir.debian.org/debian/ wheezy main contrib non-free'
+D: kept 'deb http://httpredir.debian.org/debian/ wheezy main contrib non-free'
 D: got 'deb http://security.debian.org/ wheezy/updates main contrib non-free'
 D: kept 'deb http://security.debian.org/ wheezy/updates main contrib non-free'
 D: regexp: ^\s*(.*?)\s+(\S*/\S*aptsh\S*)\s*$
-D: Search in \/var\/cache\/apt\/apt\-file\/http\.debian\.net_debian_dists_wheezy_main_Contents\-i386\.gz using zfgrep  -- aptsh
+D: Search in \/var\/cache\/apt\/apt\-file\/httpredir\.debian\.org_debian_dists_wheezy_main_Contents\-i386\.gz using zfgrep  -- aptsh
 .........
-D: Search in \/var\/cache\/apt\/apt\-file\/http\.debian\.net_debian_dists_wheezy_contrib_Contents\-i386\.gz using zfgrep  -- aptsh
+D: Search in \/var\/cache\/apt\/apt\-file\/httpredir\.debian\.org_debian_dists_wheezy_contrib_Contents\-i386\.gz using zfgrep  -- aptsh
 
-D: Search in \/var\/cache\/apt\/apt\-file\/http\.debian\.net_debian_dists_wheezy_non\-free_Contents\-i386\.gz using zfgrep  -- aptsh
+D: Search in \/var\/cache\/apt\/apt\-file\/httpredir\.debian\.org_debian_dists_wheezy_non\-free_Contents\-i386\.gz using zfgrep  -- aptsh
 
 aptsh: /etc/aptsh.conf
 aptsh: /usr/bin/aptsh
