@@ -47,11 +47,14 @@ $
 (((Debianpaket, vrms)))
 (((vrms, -s)))
 (((vrms, --sparse)))
-Benötigen Sie lediglich eine Paketliste ohne zusätzliche Informationen,
-hilft Ihnen der Schalter `-s` (Langform `--sparse`) weiter. Nach den
-Paketen aus dem Bereich _non-free_ listet `vrms` die _contrib_-Pakete
-auf. Beide Bereiche werden durch eine schlichte Leerzeile voneinander
-getrennt.
+Benötigen Sie hingegen lediglich eine Paketliste ohne zusätzliche
+Informationen, hilft Ihnen der Schalter `-s` (Langform `--sparse`)
+weiter. Der Name jedes Paketes wird in einer einzelnen Zeile ausgegeben.
+
+Nach den Paketen aus dem Bereich _non-free_ listet `vrms` die
+_contrib_-Pakete auf. Die Auflistung beider Bereiche wird durch eine
+schlichte Leerzeile voneinander getrennt und erlaubt somit eine leichte
+Weiterverarbeitung, bspw. in einem Shellskript.
 
 .Ausgabe von `vrms -s` auf einem Desktop-System (Debian 8 _Jessie_)
 ----
