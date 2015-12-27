@@ -31,7 +31,7 @@ von Debian oder Ubuntu.
 (((Paketquelle,lokal)))
 (((Paketquelle,Netzwerk)))
 Eine Paketquelle kann dabei ein externes Speichermedium wie eine CD,
-DVD, Blueray, eine Speicherkarte oder ein USB-Stick sein, aber auch ein
+DVD, Blu-ray, eine Speicherkarte oder ein USB-Stick sein, aber auch ein
 lokales oder über das Netzwerk angebundenes Verzeichnis auf einer
 Festplatte. Waren noch vor wenigen Jahren die erstgenannten, festen
 Installationsmedien üblich, werden heute als Paketquelle aufgrund der

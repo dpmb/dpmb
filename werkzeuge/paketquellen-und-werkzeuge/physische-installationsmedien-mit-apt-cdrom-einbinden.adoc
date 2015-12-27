@@ -21,7 +21,7 @@ Ihrer Liste der Paketquellen in der Datei `/etc/apt/sources.list` (siehe
 <<etc-apt-sources.list-verstehen>>) hinzu.
 
 Während vor wenigen Jahren noch eine CD gebräuchlich war, ist es heute
-aufgrund der Datenmenge eher eine DVD, eine Blueray oder ein
+aufgrund der Datenmenge eher eine DVD, eine Blu-ray oder ein
 entsprechendes Abbild eines Datenträgers, kurz genannt ISO-Image.
 `apt-cdrom` kann mit allen diesen Medien und Formaten umgehen.
 
@@ -29,7 +29,7 @@ Die Alternative zu `apt-cdrom` ist, alle neuen Medien von Hand
 nachzutragen. Das kann ein wenig aufwendig werden. `apt-cdrom`
 erleichtert Ihnen die Arbeit und übernimmt folgende Schritte:
 
-* Medium (CD, DVD, Blueray, ISO-Image) auf Vollständigkeit und dessen Struktur überprüfen
+* Medium (CD, DVD, Blu-ray, ISO-Image) auf Vollständigkeit und dessen Struktur überprüfen
 * Validierung der Indexdateien des Mediums
 
 Voraussetzung dafür ist jedoch, dass sich das Medium bereits im Laufwerk

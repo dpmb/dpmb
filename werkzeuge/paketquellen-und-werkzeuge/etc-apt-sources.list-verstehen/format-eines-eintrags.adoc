@@ -33,7 +33,7 @@ legt die Art der Installationsquelle fest. Hierbei stehen:
 * `file`: Installationsquelle ist ein Verzeichnis. Dieses kann sowohl
 lokal vorliegen, als auch von extern eingebunden sein, bspw. über ein
 Netzwerkdateisystem wie AFS, NFS oder SMB
-* `cdrom`: CD, DVD oder Blueray
+* `cdrom`: CD, DVD oder Blu-ray
 * `http`: HTTP-Server
 * `ftp`: FTP-Server
 * `copy`: identisch zu `file`, aber die bezogenen Debianpakete werden
