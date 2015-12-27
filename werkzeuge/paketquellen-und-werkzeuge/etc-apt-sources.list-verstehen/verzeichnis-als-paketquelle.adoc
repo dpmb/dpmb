@@ -23,7 +23,7 @@ deb file:/home/benutzer/debian stable main contrib non-free
 // Indexeinträge
 (((/etc/apt/sources.list,Einträge für externe Ressourcen)))
 Ein Eintrag für einen externen Datenträger, bspw. eine CD, DVD oder
-Blueray, sieht ähnlich wie die vorhergehenden Beispiele aus. Nach dem
+Blu-ray, sieht ähnlich wie die vorhergehenden Beispiele aus. Nach dem
 Schlüsselwort `deb` folgt der Wert `cdrom` mit der Kennung des
 Datenträgers zur Installation. Am Schluss des Eintrags finden Sie die
 Veröffentlichung und den Distributionsbereich. Nachfolgend sehen Sie
