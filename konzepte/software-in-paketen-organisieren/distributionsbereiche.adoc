@@ -150,7 +150,7 @@ anderen Namen werden in Debian auch alternative Logos genutzt.
 (((Distributionsbereiche, Paketverteilung anhand der Lizenzen)))
 Bezogen auf die Anzahl der verfügbaren Softwarepakete findet sich der
 überwiegende Teil der Pakete im Bereich _main_, danach folgen _contrib_
-und _non-free_. Für die Architektur _amd64_ in Debian 8 'Jessie' ist das
+und _non-free_. Für die Architektur _amd64_ in Debian 8 _Jessie_ ist das
 Verhältnis 42987 (_main_) zu 250 (_contrib_) zu 470 (_non-free_). Damit
 sind das fast genau ein Prozent unfreie Pakete. Für die Plattform i386
 ist die Verteilung ähnlich.
