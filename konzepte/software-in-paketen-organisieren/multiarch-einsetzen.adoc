@@ -33,7 +33,7 @@ $
 `--remove-architecture` erweitern bzw. reduzieren Sie die Liste
 entsprechend. Beim Aufruf geben Sie dazu jeweils noch die gewünschte
 Architektur als Parameter an, bspw. `dpkg --add-architecture amd64` für
-64-Bit-CPUs.
+64-Bit-PC-CPUs.
 
 [NOTE]
 .Installation von Paketen für fremde Architekturen
