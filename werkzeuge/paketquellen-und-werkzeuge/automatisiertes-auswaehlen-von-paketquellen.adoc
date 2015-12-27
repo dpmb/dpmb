@@ -230,7 +230,7 @@ ihrer Nähe <<Debian-Mirror-Doku>>.
 
 Desweiteren kann der Redirect auch in Abhängigkeit der angefragten Datei
 passieren. So werden z.B. Anfragen nach Paketen aus dem Bereich
-'Backports' nur an Paketmirror weitergeleitet, die auch die Paketquellen
+'Backports' nur an Paketmirrors weitergeleitet, die auch die Paketquellen
 für 'Backports' spiegeln{empty}footnote:[Dies ist nur noch für Debian 6
 'Squeeze' relevant. Ab Debian 7 'Wheezy' sind die Backports in den
 normalen Debian-Paketquellen enthalten.]. Darüber hinaus muss die
@@ -260,7 +260,7 @@ von Paketspiegeln aussuchen <<Vogt-Apt-Mirror>>.
 
 Offizielle Mirror-Listen im passenden Format gibt es bisher jedoch nur
 von Ubuntu. Für Ubuntu 12.04 LTS 'Precise Pangolin' sieht der Eintrag
-für generell gut erreichbare Paketmirror wie folgt aus:
+für generell gut erreichbare Paketmirrors wie folgt aus:
 
 ----
 deb mirror://mirrors.ubuntu.com/mirrors.adoc precise main restricted universe multiverse

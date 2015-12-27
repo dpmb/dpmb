@@ -29,11 +29,11 @@ Dazu untersucht `apt-spy` die Paketmirrors für die angefragte Region
 bzgl. ihrer Bandbreite, Erreichbarkeit und damit indirekt zur
 Verlustrate der übertragenen Netzwerkpakete. Ohne Belang ist dabei, wie
 weit der Paketmirror netztechnisch von ihrem Standort entfernt ist. Das
-kann auch dazu führen, dass schwächere, lokale Paketmirror außen vor
+kann auch dazu führen, dass schwächere, lokale Paketmirrors außen vor
 bleiben, wenn ein anderer, erreichbarer Paketmirror schneller und mit
 einer höheren Bandbreite verfügbar ist. Um einen Paketmirror einschätzen
 zu können, lädt `apt-spy` pro Spiegelserver etwa 10 MB an Daten herunter.
-Da die Liste der verfügbaren Paketmirror mehr als einhundert Einträge
+Da die Liste der verfügbaren Paketmirrors mehr als einhundert Einträge
 umfasst, können Sie damit durchaus an das Limit ihrer Transferrate
 stoßen (wie bei uns im Test geschehen).
 
@@ -88,23 +88,23 @@ Sie bitte der Manpage zum Programm.
 `-d distribution`:: Debian-Veröffentlichung (<<veroeffentlichungen>>),
 für die die Paketliste erstellt werden soll
 
-`-a area`:: geographische Region, aus der die Paketmirror kommen sollen
+`-a area`:: geographische Region, aus der die Paketmirrors kommen sollen
 
-`-e Anzahl`:: 'early finish' -- legt die Anzahl der Paketmirror fest,
+`-e Anzahl`:: 'early finish' -- legt die Anzahl der Paketmirrors fest,
 die Sie abfragen möchten
 
 `-p proxy`:: Proxyserver in der Schreibweise `Hostname:Port`
 
 `-s Land`:: eine Komma-separierte Liste von Länderkürzeln, aus der die
-Paketmirror kommen sollen
+Paketmirrors kommen sollen
 
-`update`:: Aktualisieren der Liste der Paketmirror
+`update`:: Aktualisieren der Liste der Paketmirrors
 
 Nun folgen eine Reihe von *Beispielen aus der Praxis*. Beispiel 1 zeigt
 Ihnen den schnellsten Debian-Paketmirror in Europa für die
 Veröffentlichung Debian 'stable':
 
-.Ermittlung der Debian-Paketmirror für die Region Europa
+.Ermittlung der Debian-Paketmirrors für die Region Europa
 ----
 # apt-spy -d stable -a Europe
 
@@ -134,7 +134,7 @@ Writing new sources.list file: /etc/apt/sources.list.d/apt-spy.list
 
 In Beispiel 2 sehen Sie, wie sie ähnliches für Deutschland ermitteln:
 
-.Ermittlung der Debian-Paketmirror für die Region Deutschland
+.Ermittlung der Debian-Paketmirrors für die Region Deutschland
 ----
 # apt-spy -d stable -s de
 
@@ -171,7 +171,7 @@ deb-src ftp://ftp.uni-erlangen.de/debian/ stable main #contrib non-free
 deb http://security.debian.org/ stable/updates main
 ----
 
-Bitte beachten Sie, dass die ermittelten Paketmirror stets von ihrem
+Bitte beachten Sie, dass die ermittelten Paketmirrors stets von ihrem
 aktuellen Standort und der dort vorliegenden Netzwerkanbindung abhängen.
 Führen Sie das gleiche Kommando auf ihrem Linuxsystem aus, können die
 Ergebnisse von der Ausgabe im Buch abweichen.

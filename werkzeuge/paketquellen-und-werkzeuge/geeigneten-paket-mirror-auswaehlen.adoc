@@ -10,7 +10,7 @@
 (((netzbasierte Installation)))
 (((Paketmirror)))
 Zentraler Anlaufpunkt für netzbasierte Installationen sind die
-offiziellen Paketmirrors – auf deutsch auch Spiegelserver genannt – ,
+offiziellen Paketmirrors – auf deutsch auch Spiegelserver genannt –
 welche die Debianpakete für Sie bereithalten. Diese Paketmirrors sind
 weltweit verteilt und werden meist ehrenamtlich von einem
 Verantwortlichen für den jeweiligen Standort oder im Rahmen seiner
@@ -25,7 +25,7 @@ etwas weiter von ihrem aktuellen Standort entfernt ist. Für die
 Infrastruktur des Debian-Projekts heißt das außerdem, dass sich die
 Anfrage- oder Netzlast auf unterschiedliche Mirrors und deren Standorte
 verteilt. Für Sie bedeutet das konkret, dass sich neben der Verringerung
-eines Ausfalls insbesondere die Bezugszeiten für Debianpakete erheblich
+der Ausfallwahrscheinlichkeit insbesondere die Bezugszeiten für Debianpakete erheblich
 verringern, da Sie nicht auf einen einzigen Spiegelserver angewiesen
 sind. Verwenden Sie einen Spiegelserver in ihrer Nähe, merken Sie das
 insbesondere dann, wenn größere Aktualisierungen erfolgen, bspw. bei
@@ -77,7 +77,7 @@ Architekturen (siehe <<debian-architekturen>>) geboten wird. Hintergrund
 kann bspw. eine Begrenzung des verfügbaren Speicherplatzes auf dem
 Server sein. Das bedeutet jedoch nicht zwangsläufig, dass dieser Mirror
 schlechter erreichbar sein muss. Im deutschsprachigen Raum betreiben
-entsprechende Paketmirror bspw. die Uni Erlangen, die TU Graz und
+entsprechende Paketmirrors bspw. die Uni Erlangen, die TU Graz und
 SWITCH, das Schweizer Hochleistungsnetzwerk für die
 Wissenschaft <<SWITCH>>.
 
@@ -177,7 +177,7 @@ Sehr hilfreich und zumeist auch der erste Anlaufpunkt für inoffizielle
 Debian-Pakete ist die Paketsuche unter dem Menüpunkt menu:Search[].
 Im Eingabefeld geben Sie ein Textfragment aus dem Namen eines Paketes
 ein, nachdem dann `apt-get.org` seine Liste der Spiegelserver
-durchforstet. Ergebnis ist eine Liste, von der Sie entnehmen können, von
+durchforstet. Ergebnis ist eine Liste, aus der Sie entnehmen können, von
 welchem Spiegelserver Sie das gewünschte Paket beziehen können. Neben
 der Architektur (siehe <<debian-architekturen>>) sehen Sie auch die
 Veröffentlichung (siehe <<veroeffentlichungen>>) und den

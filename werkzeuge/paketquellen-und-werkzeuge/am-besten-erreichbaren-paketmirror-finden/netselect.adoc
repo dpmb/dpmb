@@ -15,7 +15,7 @@ primär die grundsätzliche Erreichbarkeit über das Netzwerk, die Pingzeit
 Computer – , sowie die Verlustrate der Netzwerkpakete vom Spiegelserver
 zu Ihnen. Gleichzeitig wird die Anzahl der Zwischenknoten von Ihrem
 Computer zum Spiegelserver gezählt, auch genannt 'Hops'. Bevorzugt
-werden lokale Paketmirror, was sich auch im daraus errechneten
+werden lokale Paketmirrors, was sich auch im daraus errechneten
 Zahlenwert niederschlägt. Je kleiner der ermittelte Wert ist, umso
 besser ist das für Sie.
 
@@ -183,7 +183,7 @@ ftp.debian.org.br     9999 ms  30 hops    0% ok
 ----
 
 Ergebnis des obigen Aufrufs ist eine Empfehlung für einen der
-Paketmirror, die Sie im Aufruf benannt haben. Dieser Paketmirror ist von
+Paketmirrors, die Sie im Aufruf benannt haben. Dieser Paketmirror ist von
 ihrem Standort aus derzeit am besten erreichbar. Das ermittelte Ergebnis
 schwankt und hängt stets von der aktuellen Netzauslastung ab.
 
@@ -238,11 +238,11 @@ _Wheezy_ oder _Sid_.
 // Stichworte für den Index
 (((netselect-apt, -o)))
 Im nachfolgenden Beispiel kommt zusätzlich die Option `-o test.list` zum
-Einsatz, was dazu führt, dass `netselect-apt` die ermittelten Paketmirror
+Einsatz, was dazu führt, dass `netselect-apt` die ermittelten Paketmirrors
 in diese Datei speichert. Ohne diese Angabe überschreibt es die aktuelle
 Paketliste unter `/etc/apt/sources.list`.
 
-.Speicherung der ermittelten Paketmirror in einer separaten Datei
+.Speicherung der ermittelten Paketmirrors in einer separaten Datei
 ----
 # netselect-apt stable -o test.list
 Using distribution stable.
@@ -292,7 +292,7 @@ Die von `netselect-apt` erzeugte Datei `test.list` enthält neben
 den Paketmirrors auch eine ganze Reihe Kommentare. Diese helfen Ihnen
 dabei, zu verstehen, wofür jeder einzelne Eintrag gedacht ist.
 
-.Inhalt der automatisch generierten Liste der Paketmirror
+.Inhalt der automatisch generierten Liste der Paketmirrors
 ----
 # cat test.list
 
@@ -319,7 +319,7 @@ Infrastruktur wirkt sich die Optimierung hingegen meist weitaus stärker
 aus.
 
 Bei mobilen Geräten sieht das hingegen deutlich anders aus. Mit Laptops
-oder Smartphones sind Sie variabler und damit den einhergehenden
+oder Smartphones sind Sie variabler und den damit einhergehenden
 Schwankungen in der Netzanbindung stärker ausgesetzt. Auffällig wird die
 Anpassung dann, wenn Sie größere Entfernungen zurücklegen, bspw. ein
 Land oder einen Kontinent gewechselt haben.

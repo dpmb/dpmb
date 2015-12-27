@@ -9,7 +9,7 @@
 (((Paketquelle, nicht-offiziell)))
 Nicht alle verfügbaren Softwareveröffentlichungen werden in die
 offiziellen Paketquellen von Debian aufgenommen. Viele Projekte stellen
-Programmversionen als `deb`-Pakete bereit, die sich in der Version her
+Programmversionen als `deb`-Pakete bereit, die sich von der Version her
 von der stabilen Veröffentlichung von Debian unterscheiden.
 
 Im folgenden Beispiel sehen Sie die Einbindung der Paketquellen des

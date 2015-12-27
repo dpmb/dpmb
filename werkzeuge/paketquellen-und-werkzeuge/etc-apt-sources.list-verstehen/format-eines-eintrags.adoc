@@ -61,7 +61,7 @@ sonstige Zeichenketten bis hin zu einem _._ verlangen.
 
 Komponente:: 
 bestimmt den Distributionsbereich, d.h. bspw. bei Debian _main_,
-_contrib_ oder _non-free_. Ausführlicher gehen wir dazu unter
+_contrib_ oder _non-free_. Ausführlicher gehen wir darauf in
 <<distributionsbereiche>> ein.
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/format-eines-eintrags.adoc
