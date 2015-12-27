@@ -182,21 +182,23 @@ ist die Verteilung ähnlich.
 
 ==== Hintergrund der Einteilung in Distributionsbereiche ====
 
+// Stichworte für den Index
+(((Distributionsbereiche, Hintergrund der Einteilung)))
 In der Klassifikation spiegelt sich die Offenheit und Vielfalt der
 Debian-Nutzer und -Entwickler sowie deren Weltbild wieder. Es zeugt von
 dem Verständnis dahingehend, welche Software Sie tatsächlich verwenden
 und nach welchen Kriterien Sie Ihre Pakete auswählen.
 
-Je mehr Nutzer von Debian es gibt, umso vielschichtiger sind die
-Varianten der Verwendung. Jeder Nutzer pendelt sich bei der Paketauswahl
-irgendwo zwischen den beiden Polen ``nur freie Software'' und ``freie
-und unfreie Software gemischt'' ein.
+Je mehr Nutzer von Debian einbezogen werden, umso vielschichtiger sind
+die Varianten der Verwendung. Jeder Nutzer pendelt sich bei der
+Paketauswahl irgendwo zwischen den beiden Polen ``nur freie Software''
+und ``freie und unfreie Software gemischt'' ein.
 
 Erstere Gruppe versucht, ausschließlich freie Software zu verwenden und
 dazu auch unfreie in freie Software zu überführen, bspw. durch Nachbau,
-Neuentwicklung oder Anregen eines Lizenzwechsels. Dieser Schritt kann auch mit
-einem Funktionsverzicht einhergehen und ist vergleichbar mit der
-Überzeugung ``so lange eine Technologie nur kommerziell/unfrei zur
+Neuentwicklung oder Anregen eines Lizenzwechsels. Dieser Schritt kann
+auch mit einem Funktionsverzicht einhergehen und ist vergleichbar mit
+der Überzeugung ``so lange eine Technologie nur kommerziell/unfrei zur
 Verfügung steht, verwende ich diese nicht und nutze stattdessen
 Alternativen''. Die zweite Gruppe ist deutlich pragmatischer und folgt
 dem Gedanken ``ich nutze die unfreie Variante, bis eine freie zur
