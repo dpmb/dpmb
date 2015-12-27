@@ -43,15 +43,15 @@ dahinter (siehe <<konzepte-und-ideen-dahinter>>) sowie Aufbau und Format
 von Binärpaketen (siehe <<aufbau-und-format-binaer>>).
 
 // Stichworte für den Index
-(((file)))
+(((file, UNIX-Kommando)))
 (((Debianpaket, vnstat)))
 Wie bereits oben benannt, hat ein Binärpaket üblicherweise die
-Dateiendung `deb` und wird auch durch das `file`-Kommando entsprechend
-als solches erkannt. Nachfolgende Ausgabe zeigt dieses Verhalten am
-Beispiel des Paketes 'vnstat', eines Programms zur Analyse des
-Netzwerktraffics.
+Dateiendung `deb` und wird auch durch das UNIX-Kommando
+`file`entsprechend als solches erkannt. Nachfolgende Ausgabe zeigt
+dieses Verhalten am Beispiel des Paketes 'vnstat', eines Programms zur
+Analyse des Netzwerktraffics.
 
-.`file` identifiziert die `deb`-Datei als Debianpaket
+.Das UNIX-Kommando `file` identifiziert die `deb`-Datei als Debianpaket
 ----
 $ file vnstat_1.10-1_i386.deb
 vnstat_1.10-1_i386.deb: Debian binary package (format 2.0)
