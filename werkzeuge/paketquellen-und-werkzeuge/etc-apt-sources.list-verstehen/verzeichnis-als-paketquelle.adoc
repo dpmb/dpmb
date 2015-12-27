@@ -41,8 +41,8 @@ deb cdrom:[Ubuntu 12.04 LTS _Precise Pangolin_ - Release i386 (20120423)]/ preci
 .Automatisierung der Eintragung
 ====
 Obige Einträge können Sie von Hand vornehmen. Das Werkzeug `apt-cdrom`
-vereinfacht den Vorgang jedoch erheblich. Unter Physische
-Installationsmedien mit `apt-cdrom` einbinden in
+vereinfacht den Vorgang jedoch erheblich. Unter ``Physische
+Installationsmedien mit `apt-cdrom` einbinden'' in
 <<physische-installationsmedien-mit-apt-cdrom-einbinden>> besprechen wir
 das Programm genauer.
 ====

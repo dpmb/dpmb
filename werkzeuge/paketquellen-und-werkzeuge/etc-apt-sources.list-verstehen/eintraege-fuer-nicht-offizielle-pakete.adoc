@@ -46,7 +46,7 @@ deb http://deb.opera.com/opera stable non-free
 Damit Debian dieser zusätzlichen Paketquelle auch vertraut, überprüft es
 dazu eine entsprechende digitale Signatur. Wie dieses Konzept
 funktioniert und Sie einen passenden Schlüssel beziehen, lesen Sie unter
-Paketquelle auf Echtheit überprüfen in <<paketquelle-auf-echtheit-ueberpruefen>>.
+``Paketquelle auf Echtheit überprüfen'' in <<paketquelle-auf-echtheit-ueberpruefen>>.
 =======
 
 // Indexeinträge

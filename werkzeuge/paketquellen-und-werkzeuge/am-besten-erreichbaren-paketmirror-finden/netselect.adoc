@@ -30,7 +30,7 @@ als neue Liste der Paketquellen benutzt werden.
 .Aktualisierung der Liste der Paketquellen
 ====
 Zu Änderungen an den Paketquellen beachten Sie bitte auch unsere
-Hinweise unter `/etc/apt/sources.list verstehen in`
+Hinweise unter ```/etc/apt/sources.list` verstehen'' in
 <<etc-apt-sources.list-verstehen>>. Wir raten Ihnen dazu, die neue Liste
 der Paketquellen zuerst lokal zu erstellen und danach manuell in das
 Verzeichnis `/etc/apt/` zu verschieben.

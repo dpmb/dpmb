@@ -33,7 +33,7 @@ einem Distributionswechsel oder -upgrade (siehe
 <<pakete-aktualisieren-dist-upgrade>>).
 
 Jeder Interessierte kann einen solchen Paketmirror betreiben. Wie Sie
-diesen einrichten, erfahren Sie unter Einen eigenen APT-Mirror aufsetzen
+diesen einrichten, erfahren Sie unter ``Einen eigenen APT-Mirror aufsetzen''
 in <<eigenen-apt-mirror-aufsetzen>>. Möchten Sie Ihren eigenen
 Paketmirror auch öffentlich zugänglich machen, nutzen Sie dazu am besten
 das bereits dafür vorbereitete Formular auf der Webseite des

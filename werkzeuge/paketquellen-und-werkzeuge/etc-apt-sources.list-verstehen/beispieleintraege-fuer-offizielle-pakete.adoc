@@ -26,7 +26,7 @@ ein, nutzen Sie ausschließlich Pakete aus der damit spezifizierten
 Veröffentlichung, die diesen Aliasnamen trägt. Möchten Sie später von
 dieser auf eine andere Veröffentlichung wechseln, passen Sie zunächst
 den Aliasnamen im Eintrag entsprechend an und aktualisieren nachfolgend
-die lokale Paketdatenbank (siehe Distribution aktualisieren in
+die lokale Paketdatenbank (siehe ``Distribution aktualisieren'' in
 <<distribution-aktualisieren>>).
 
 Um hingegen zusätzlich die Pakete aus weiteren Paketbereichen wie bspw.
@@ -44,7 +44,7 @@ deb http://ftp.de.debian.org/debian/ jessie main contrib non-free
 .Auswahl eines Paketmirrors
 ====
 Mehr Informationen zur Auswahl eines für Sie am besten geeigneten
-Paketmirrors erfahren Sie unter Geeigneten Paketmirror auswählen in 
+Paketmirrors erfahren Sie unter ``Geeigneten Paketmirror auswählen'' in 
 <<geeigneten-paketmirror-auswaehlen>>. Mit dieser Angabe können Sie die
 Bezugszeiten für Aktualisierungen der Paketlisten und der Pakete
 erheblich zu ihren Gunsten beeinflussen.

@@ -24,8 +24,8 @@ ausgewählte Inhalte:
 
 Art der Quelle:: 
 bezeichnet den verwendeten Pakettyp, `deb` für Debian-Binärpakete und
-`deb-src` für Debian-Quellpakete. Genauer gehen wir dazu unter Debians
-Paketvarianten in <<debian-pakete-varianten>> und Debian-Paketformat im
+`deb-src` für Debian-Quellpakete. Genauer gehen wir dazu unter ``Debians
+Paketvarianten'' in <<debian-pakete-varianten>> und ``Debian-Paketformat'' im
 Detail in <<debian-paketformat-im-detail>> ein.
 
 URI:: 
