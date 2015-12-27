@@ -263,11 +263,11 @@ von Ubuntu. Für Ubuntu 12.04 LTS 'Precise Pangolin' sieht der Eintrag
 für generell gut erreichbare Paketmirrors wie folgt aus:
 
 ----
-deb mirror://mirrors.ubuntu.com/mirrors.adoc precise main restricted universe multiverse
+deb mirror://mirrors.ubuntu.com/mirrors.txt precise main restricted universe multiverse
 ----
 
 In diesem Fall wird z.B. beim Aufruf von `apt-get update` zunächst die
-Mirror-Liste unter `http://mirrors.ubuntu.com/mirrors.adoc`
+Mirror-Liste unter `http://mirrors.ubuntu.com/mirrors.txt`
 heruntergeladen. In dieser Datei stehen die Basis-URLs mehrerer
 Paketquellen. Danach sucht sich APT per Zufall eine der dieser
 Paketquellen aus und lädt von dort die spezifizierten Paketlisten
@@ -312,21 +312,21 @@ jeweils immer auch noch `archive.ubuntu.com` angegeben wird. Unter
 diesem Hostnamen sind per DNS Round Robin wiederum zur Zeit sechs
 verschiedene Server von Canonical erreichbar.
 
-Alternativ zum dynamisch generierten `mirrors.adoc` können Sie
+Alternativ zum dynamisch generierten `mirrors.txt` können Sie
 bei Ubuntu auch eine Paketspiegel-Liste per Land angeben. Für
 Deutschland gibt es eine Liste von deutschen Ubuntu-Paketspiegeln unter
-`http://mirrors.ubuntu.com/DE.adoc`. Diese verwenden Sie z.B. für Ubuntu
+`http://mirrors.ubuntu.com/DE.txt`. Diese verwenden Sie z.B. für Ubuntu
 14.04 LTS 'Trusty Tahr' wie folgt in der `/etc/apt/sources.list`:
 
 ----
-deb mirror://mirrors.ubuntu.com/DE.adoc trusty main restricted universe multiverse
+deb mirror://mirrors.ubuntu.com/DE.txt trusty main restricted universe multiverse
 ----
 
 Wenn Sie möchten, können Sie dieses Feature von APT natürlich auch
 nutzen, um eine Liste ihrer favorisierten Paketspiegel selbst
 zusammenzustellen -- auch unter Debian.
 
-Unter `http://www.debian-paketmanagement.de/hetzner-mirrors.adoc` haben
+Unter `http://www.debian-paketmanagement.de/hetzner-mirrors.txt` haben
 wir z.B. eine Liste von Paketspiegeln für Debian erstellt, die alle bei
 dem deutschen Internetdienstleister Hetzner gehostet sind (ohne Gewähr)
 und somit für andere ebenfalls dort gehostete Server nicht mit ins
@@ -334,7 +334,7 @@ Trafficvolumen zählen. Der passende Eintrag in der
 `/etc/apt/sources.list` sind dann so aus:
 
 ----
-deb mirror://www.debian-paketmanagement.de/hetzner-mirrors.adoc wheezy main contrib non-free
+deb mirror://www.debian-paketmanagement.de/hetzner-mirrors.txt wheezy main contrib non-free
 ----
 
 ==== Welcher Paketmirror wird schlussendlich benutzt? ====
