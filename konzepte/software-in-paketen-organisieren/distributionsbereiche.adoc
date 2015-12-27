@@ -86,14 +86,16 @@ für Ihre gewünschten Zwecke einsetzen dürfen.
 
 // Stichworte für den Index
 (((Debianpaket, skype)))
-Für Software in _non-free_ gilt außerdem, dass keine Unterstützung
-seitens Debian für diese Pakete möglich ist. Das trifft insbesondere
-dann zu, wenn der Quellcode nicht veröffentlicht wurde, wie das bspw.
-bei der Firmware zu bestimmten WLAN-Chipsätzen der Fall ist. 
+Für Software aus dem Bereich _non-free_ gilt außerdem, dass keine
+Unterstützung seitens Debian für diese Pakete möglich ist. Das trifft
+insbesondere dann zu, wenn der Quellcode nicht veröffentlicht wurde, wie
+das bspw. bei der Firmware zu bestimmten WLAN-Chipsätzen der Fall ist.
+
 <<fig.aptitude-unfreie-pakete>> zeigt die Paketliste in Aptitude mit
 einem unfreien Paket aus dem Bereich Netzwerk – `skype`. Im
 abgebildeten Fall wurde es zudem nicht aus einem offiziellen
-Debian-Repository heruntergeladen, sondern manuell eingepflegt.
+Debian-Repository heruntergeladen, sondern manuell auf dem System
+eingepflegt.
 
 .Paketliste mit Skype als unfreies Paket in Aptitude
 image::konzepte/software-in-paketen-organisieren/aptitude-unfreie-pakete.png[id="fig.aptitude-unfreie-pakete", width="50%"]
