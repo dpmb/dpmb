@@ -218,7 +218,7 @@ diese Aufgabe der Package Dependency Solver (siehe <<aptitude>>).
 // Stichworte für den Index
 (((Paketflags, explizit setzen)))
 (((Paketflags, explizit entfernen)))
-Setzen oder Entfernen Sie bewusst ein Paketflag und legen somit eine
+Setzen oder Entfernen Sie bewusst das _hold_-Flag und legen somit eine
 Version explizit fest, nehmen Sie Einfluss auf den Zustand Ihres Systems.
 Wobei Ihnen das von Nutzen sein kann, erklären wir unter ``Ausgewählte
 Pakete nicht aktualisieren'' (<<ausgewaehlte-pakete-nicht-aktualisieren>>)
