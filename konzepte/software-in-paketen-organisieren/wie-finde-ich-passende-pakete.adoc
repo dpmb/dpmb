@@ -75,7 +75,7 @@ die jeweilige Paketkategorie (siehe
 <<sortierung-der-pakete-nach-verwendungszweck>>) bspw. auch über die
 Veröffentlichungen (siehe <<veroeffentlichungen>>), den Maintainer
 (siehe <<paket-nach-maintainer-finden>>), den Paketinhalt (siehe
-<<paket-zu-datei-finden>>) oder einem Fragment aus dem Paket (siehe
+<<paket-zu-datei-finden>>) oder ein Fragment aus dem Paket (siehe
 <<nach-muster-in-einem-paket-suchen>>) suchen. Darüber hinaus gibt es
 eine konzept- und facettenbasierte Suche mit Hilfe von Debtags.
 Letzteres besprechen wir detailliert unter ``Erweiterte
