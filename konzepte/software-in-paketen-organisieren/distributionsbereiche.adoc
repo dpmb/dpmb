@@ -38,6 +38,7 @@ entspricht, aber frei verteilbar ist.
 ==== Einordnung der Distributionsbereiche in Debian ====
 
 // Stichworte für den Index
+(((Debian Free Software Guidelines)))
 (((DFSG)))
 (((Distributionsbereiche, Einordnung)))
 Obwohl vielfach von außen anders wahrgenommen, zählt zur
@@ -49,16 +50,16 @@ Firmware für bestimmte Hardwarekomponenten), die beiden Bereiche
 _contrib_ und/oder _non-free_ dazuzunehmen.
 
 Pakete, die in _main_ eingeordnet sind, unterliegen einer Lizenz, die
-den Debian-Richtlinien für Freie Software -- kurz Debian Free Software
-Guidelines (DFSG) <<DFSG>> -- entsprechen. Diese Richtlinien sind im
+den Debian-Richtlinien für Freie Software – kurz _Debian Free Software
+Guidelines (DFSG)_ <<DFSG>> – entsprechen. Diese Richtlinien sind im
 Debian-Gesellschaftsvertrag festgelegt <<Debian-Social-Contract>> und
 weisen starke inhaltliche Gemeinsamkeiten zur Free Software Foundation
 (FSF) und zum GNU-Projekt auf.
 
-Pakete im Zweig _contrib_ stehen zwar genauso unter einer freien Lizenz
-wie die Pakete in _main_, bedingen jedoch weitere Software oder Inhalte,
-die nicht frei gemäß obiger Festlegung ist. Typische Gründe, warum ein
-Paket im Bereich _contrib_ einsortiert wurde, sind:
+Pakete im Bereich _contrib_ stehen zwar genauso unter einer freien
+Lizenz wie die Pakete in _main_, bedingen jedoch weitere Software oder
+Inhalte, die nicht frei gemäß obiger Festlegung ist. Typische Gründe,
+warum ein Paket im Bereich _contrib_ einsortiert wurde, sind:
 
 * Eine freie Spiele-Engine braucht die Spieldaten eines kommerziellen
   Spiels.
@@ -68,13 +69,13 @@ Paket im Bereich _contrib_ einsortiert wurde, sind:
   und/oder paketieren) von nicht-freier Software da.
 * Die Software muss mit einem nicht-freien Compiler übersetzt werden.
 
-Im Zweig _non-free_ finden sich Pakete, die nicht den
+Im Bereich _non-free_ finden sich Pakete, die nicht den
 Debian-Richtlinien für Freie Software entsprechen, aber trotzdem immer
 noch frei verteilbar sind. Typische Gründe für die Nichterfüllung der
 DFSG im Bereich _non-free_ sind:
 
-* Der Quellcode liegt nicht (komplett) vor. 
-* Die Software oder Teile davon – z.B. Teile der Dokumentation – dürfen nicht modifiziert werden.
+* Der Quellcode liegt nicht (komplett) vor.
+* Die Software oder einzelne Teile davon – z.B. Teile der Dokumentation – dürfen nicht modifiziert werden.
 * Die Software darf nur für nicht-kommerzielle Zwecke genutzt werden.
 * Die Software darf nur für ``Gutes'' verwendet werden.
 * Die Software darf nicht in kompilierter Form verteilt werden.
