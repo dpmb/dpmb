@@ -92,10 +92,29 @@ amd64
 i386
 #
 ----
+// Stichworte für den Index
+(((apt-get, update)))
+
+Nun aktualisieren Sie die lokale Liste der verfügbaren Pakete
+mittels `apt-get update`, wobei APT nun auch die Informationen
+zu den Paketen der neu hinzugefügten Architektur herunterlädt.
+
+.Aktualisieren der Paketlisten
+----
+# apt-get update
+Ign http://ftp.ch.debian.org jessie InRelease
+Hit http://ftp.ch.debian.org jessie Release.gpg
+Hit http://ftp.ch.debian.org jessie Release
+Hit http://ftp.ch.debian.org jessie/main amd64 Packages
+Get:1 http://ftp.ch.debian.org jessie/main i386 Packages [6769 kB]
+Hit http://ftp.ch.debian.org jessie/main Translation-en
+Fetched 6769 kB in 6s (1005 kB/s)
+Reading package lists... Done
+----
 
 // Stichworte für den Index
 (((apt-cache, policy)))
-Als zweiten Schritt prüfen Sie mit dem Aufruf `apt-cache policy`, für
+Als nächsten Schritt prüfen Sie mit dem Aufruf `apt-cache policy`, für
 welche akzeptierte Architektur das von Ihnen gewünschte Paket
 bereitsteht. Die Details zum Aufruf von `apt-cache` finden Sie in
 <<aus-welchem-repo-kommen-die-pakete>>.
