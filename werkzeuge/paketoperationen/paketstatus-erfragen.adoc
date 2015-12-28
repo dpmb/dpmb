@@ -87,14 +87,14 @@ $
 ----
 
 [[paketstatus-apt-cache]]
-==== `apt-cache show Paketname` ====
+==== `apt-cache show` 'Paketname' ====
 
 // Stichworte für den Index
 (((apt-cache, show)))
 (((Debianpaket, apt)))
 `apt-cache` ist Bestandteil des Debian-Pakets 'apt'
-<<Debian-Paket-apt>>. Der Aufruf `apt-cache show Paketname` liefert ein
-ähnliches Ergebnis wie obiges `dpkg -s Paketname`, ist jedoch noch
+<<Debian-Paket-apt>>. Der Aufruf `apt-cache show` 'Paketname' liefert ein
+ähnliches Ergebnis wie obiges `dpkg -s` 'Paketname', ist jedoch noch
 ausführlicher. Neben einer übersetzten Paketbeschreibung (Lokalisierung,
 sofern vorhanden) erscheinen zusätzlich die Debtags (siehe
 <<erweiterte-paketklassifikation-mit-debtags>>) zum Paket, der Dateiname
