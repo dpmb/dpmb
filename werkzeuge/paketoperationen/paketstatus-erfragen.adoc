@@ -133,7 +133,7 @@ $
 ----
 
 [[paketstatus-apt-cache-showpkg]]
-==== `apt-cache showpkg` ====
+==== `apt-cache showpkg` 'Paketname' ====
 
 // Stichworte für den Index
 (((apt-cache, showpkg)))
@@ -171,16 +171,16 @@ $
 ----
 
 [[paketstatus-aptitude]]
-==== `aptitude show Paketname` ====
+==== `aptitude show` 'Paketname' ====
 
 // Stichworte für den Index
 (((aptitude, show)))
 (((Debianpaket, aptitude)))
-Das Ergebnis des Aufrufs von `aptitude show` kombiniert die Ausgabe
-von `dpkg -s` mit Teilen von `apt-cache show`. Hervorzuheben sind die
-vollständig übersetzte Ausgabe samt Paketbeschreibung (Lokalisierung),
-die Paketflags (siehe <<paketflags>>) und die Debtags (siehe
-<<erweiterte-paketklassifikation-mit-debtags>>) zum Paket.
+Das Ergebnis des Aufrufs von `aptitude show` 'Paketname' kombiniert die
+Ausgabe von `dpkg -s` mit Teilen von `apt-cache show`. Hervorzuheben
+sind die vollständig übersetzte Ausgabe samt Paketbeschreibung
+(Lokalisierung), die Paketflags (siehe <<paketflags>>) und die Debtags
+(siehe <<erweiterte-paketklassifikation-mit-debtags>>) zum Paket.
 
 .Ausgabe der Statusinformationen zum Paket 'htop' mittels `aptitude`
 image::werkzeuge/paketoperationen/aptitude-show.png[id="fig.aptitude-show", width="50%"]
