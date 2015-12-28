@@ -31,8 +31,8 @@ verfügbar sind, bspw. Übersetzungen bzw. Sprachpakete.
 Eine kompakte Übersicht erhalten Sie mit Hilfe des Kommandos `dpkg -l`
 'Paketname'. In <<liste-der-installierten-pakete-anzeigen-und-deuten>>
 besprechen wir das genauer. Ausführlicher sind die Ausgaben zur
-`dpkg`-Option `-s` sowie den Aufrufen von `aptitude show` und `apt-cache
-show`.
+`dpkg`-Option `-s` sowie den Aufrufen von `aptitude show`, `apt-cache
+show` sowie `apt-mark`.
 
 [[paketstatus-dpkg]]
 ==== `dpkg -s` 'Paketname' ====
@@ -231,10 +231,10 @@ Halten-Markierung für xpdf entfernt.
 ----
 
 Weiterführende Informationen zu den vier Schaltern `auto`, `manual`,
-`hold` und `unhold` erhalten Sie unter Paketflags (siehe
-<<paketflags>>), Festlegen einer Paketversion durch explizites Setzen
-einer Markierung mit `apt-mark` (siehe
-<<ausgewaehlte-pakete-nicht-aktualisieren>>) sowie in Warum ist ein
-Paket (nicht) installiert (siehe <<warum-ist-ein-paket-installiert>>).
+`hold` und `unhold` erhalten Sie unter ``Paketflags'' (siehe
+<<paketflags>>), ``Festlegen einer Paketversion durch explizites Setzen
+einer Markierung mit `apt-mark`'' (siehe
+<<ausgewaehlte-pakete-nicht-aktualisieren>>) sowie in ``Warum ist ein
+Paket (nicht) installiert'' (siehe <<warum-ist-ein-paket-installiert>>).
 
 // Datei (Ende): ./werkzeuge/paketoperationen/paketstatus-erfragen.adoc
