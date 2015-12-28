@@ -18,9 +18,9 @@
 (((dpkg-deb, --contents)))
 (((dpkg-query, -L)))
 (((dpkg-query, --listfiles)))
-In einem Paket sind stets mehrere Dateien zusammengefasst. Mit den fünf
-Werkzeugen `dpkg`, `dpkg-deb`, `dpkg-query`, `dlocate` und `apt-file`
-zeigen Sie den Inhalt eines Pakets an. Dabei sind `dpkg-deb` und
+In einem Paket sind stets mehrere Dateien zusammengefasst. Mit den sechs
+Werkzeugen `dpkg`, `dpkg-deb`, `dpkg-query`, `dlocate`, `apt-file` und
+`dglob` zeigen Sie den Inhalt eines Pakets an. Dabei sind `dpkg-deb` und
 `dpkg-query` Hilfsprogramme von `dpkg` und verstehen die gleichen
 Schalter.
 
@@ -28,10 +28,10 @@ Es sind mehrere Fälle zu unterscheiden, die jeweils unterschiedliche
 Aufrufe nachsichziehen:
 
 das Paket ist bereits installiert:: 
-`dpkg -L` 'Paketname', `dpkg-query -L` 'Paketname' sowie mittels
-`dlocate -ls` 'Paketname'. Der Parameter 'Paketname' bezeichnet
-lediglich den Namen des Pakets (siehe <<benennung-eines-debian-pakets>>)
-ohne Angabe der Versionsnummer.
+`dpkg -L` 'Paketname', `dpkg-query -L` 'Paketname', `dlocate -ls`
+'Paketname' sowie mittels `dglob -f` 'Paketname'. Der Parameter
+'Paketname' bezeichnet lediglich den Namen des Pakets (siehe
+<<benennung-eines-debian-pakets>>) ohne Angabe der Versionsnummer.
 
 das Paket ist noch nicht installiert:: 
 `dpkg -c` 'deb-Datei' oder `dpkg-deb -c` 'deb-Datei'. Der Parameter
@@ -41,10 +41,10 @@ das Kommando aufrufen, ergänzen Sie im Aufruf den dazugehörigen
 Verzeichnispfad, in dem das Paketarchiv liegt.
 
 das Paket muss nicht installiert sein, kann aber:: 
-`apt-file show` 'Paketname' und `apt-file list` 'Paketname'. Der
-Parameter 'Paketname' bezeichnet hier lediglich den  Namen eines Pakets
-(siehe <<benennung-eines-debian-pakets>>) ohne Angabe der
-Versionsnummer.
+`apt-file show` 'Paketname', `apt-file list` 'Paketname' und `dglob -af`
+'Paketname'. Der Parameter 'Paketname' bezeichnet hier lediglich den
+Namen eines Pakets (siehe <<benennung-eines-debian-pakets>>) ohne Angabe
+der Versionsnummer.
 
 ==== `dpkg -L` 'Paketname' ====
 
@@ -160,14 +160,14 @@ drwxr-xr-x root/root         0 2012-05-21 01:04 ./usr/share/doc/xara-gtk/
 $
 ----
 
-==== `apt-file show Paketname` und `apt-file list Paketname` ====
+==== `apt-file show` 'Paketname' und `apt-file list` 'Paketname' ====
 
 // Stichworte für den Index
 (((apt-file, list)))
 (((apt-file, show)))
-Die beiden Optionen `show` und `list` sind synonym zueinander und
-liefern den gleichen Inhalt wie `dpkg -L`. Dabei ist die Darstellung
-von `apt-file` jedoch deutlich kompakter.
+Die beiden Optionen `show` und `list` des Werkzeugs `apt-file` sind
+synonym zueinander und liefern den gleichen Inhalt wie `dpkg -L`. Dabei
+ist die Darstellung von `apt-file` jedoch deutlich kompakter.
 
 .Paketinhalt in kompakter Form mittels `apt-file`
 ----
@@ -189,7 +189,7 @@ $
 (((Debianpaket, debian-goodies)))
 Analog zu `apt-file` arbeitet das Werkzeug `dglob` aus dem Paket
 'debian-goodies' <<Debian-Paket-debian-goodies>>. Es setzt auf
-`apt-file` auf und liefert eine ähnlich kompakte Ausgabe. Die Option
+`apt-file` auf und liefert eine ähnlich kompakte Ausgabe. Der Schalter
 `-f` dient dabei zur Ausgabe der Dateien im angefragten Paket, was wir
 nachfolgend erneut anhand des Pakets 'xara-gtk' illustrieren.
 
