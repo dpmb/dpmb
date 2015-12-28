@@ -77,6 +77,7 @@ $
 // Stichworte für den Index
 (((Debianpaket, debian-goodies)))
 (((debman, -f)))
+(((debman, -p)))
 (((debmany)))
 
 Für diesen speziellen Zweck existieren `debman` und `debmany`. Beide
@@ -94,5 +95,9 @@ $ debman -f htop_1.0.3-1_amd64.deb htop
 $
 ----
 
+Liegt das Paket noch nicht lokal vor, sondern noch auf einem
+Paketmirror, können sowohl `debman` als auch `debmany` dieses von dort
+beziehen und die Manpage anzeigen. `debman` versteht dazu den Schalter
+`-p`. 
 
 // Datei (Ende): ./werkzeuge/paketoperationen/manpages-anzeigen.adoc
