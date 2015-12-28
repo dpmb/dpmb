@@ -12,47 +12,53 @@
 (((dlocate, -S)))
 (((dpkg, -S)))
 (((dpkg, --search)))
+(((dpkg-query, -S)))
+(((dpkg-query, --search)))
 
 Häufig ist Ihnen nur der Dateiname bekannt, aber nicht das Paket, aus
 dem diese Datei stammt. Das wird insofern spannend, wenn das Paket
-anders als die gesuchte Datei heißt. Es gibt vier Möglichkeiten, diese
-Zuordnung zu ermitteln – einerseits über `dpkg` oder `dlocate`
-<<Debian-Paket-dlocate>> mit deren Option `-S Muster`, andererseits
-mittels `apt-file` und dessen Option `search Muster` und viertens über
-die Webseite des Debian-Projekts. `aptitude` verfügt nicht über einen
-solchen Schalter zur Suche.
+anders als die gesuchte Datei heißt. Es gibt derzeit fünf Möglichkeiten,
+diese Zuordnung zu ermitteln – einerseits über `dpkg`, `dpkg-query` oder
+`dlocate` <<Debian-Paket-dlocate>> mit deren Option `-S Muster`,
+andererseits mittels `apt-file` und dessen Option `search Muster` und
+fünftens über die Webseite des Debian-Projekts. `aptitude` verfügt nicht
+über einen solchen Schalter zur Suche.
 
-Die drei Kommandos finden alle Pfade, in denen das angegebene ``Muster''
-vorkommt. Der Unterschied zwischen den drei Programmen besteht darin,
-dass `dpkg` und `dlocate` nur in bereits installierten Paketen suchen,
-`apt-file` hingegen hingegen in allen verfügbaren Paketen, d.h.
-unabhängig davon, ob diese bereits auf ihrem System installiert sind
-oder nicht. Verfügbare Pakete bezeichnet die Menge von Paketen, die APT
-über einen Eintrag in der Liste der Paketquellen unter
-`/etc/apt/sources.list` und aus der dazugehörigen Paketliste
+Die vier Kommandos finden alle Pfade, in denen das angegebene ``Muster''
+vorkommt. Der Unterschied zwischen den vier Programmen besteht darin,
+dass `dpkg`, `dpkg-query` und `dlocate` nur in bereits installierten
+Paketen suchen, `apt-file` hingegen hingegen in allen verfügbaren
+Paketen, d.h. unabhängig davon, ob diese bereits auf ihrem System
+installiert sind oder nicht. Verfügbare Pakete bezeichnet die Menge von
+Paketen, die APT über einen Eintrag in der Liste der Paketquellen in der
+Datei `/etc/apt/sources.list` und aus der dazugehörigen Paketliste
 entnehmen kann (siehe dazu <<paketquellen>>). Pakete, die sich hingegen
 in Paketquellen befinden, die nicht in obiger Liste referenziert sind,
 kann `apt-file` nicht untersuchen.
 
 Bei der Suche über die Webseite bildet zunächst der gesamte
 Paketbestand aller Veröffentlichungen die Grundlage. Sie können das
-jederzeit entsprechend über die Auswahlfelder einschränken.
+jederzeit entsprechend über die Auswahlfelder zur Veröffentlichung oder
+Architektur einschränken.
 
 ==== Suche in bereits installierten Paketen ====
 
 // Stichworte für den Index
 (((dpkg, -S)))
 (((dpkg, --search)))
+(((dpkg-query, -S)))
+(((dpkg-query, --search)))
 (((dlocate)))
 (((dlocate, -S)))
-Dafür genügen der Aufruf `dpkg -S Muster` oder die flinke Abkürzung
-`dlocate Muster`. Zur Suche ist bei `dlocate` der Schalter `-S`
-optional, `dpkg` kennt hingegen dafür die Langform `--search`. Als
-weiteren Parameter akzeptieren `dpkg` und `dlocate` ein Textfragment
-oder Muster, nach dem sie in der Dateiliste der installierten Pakete
-suchen. Beginnt das Textfragment mit einem `/`, wird die
-Zeichenkette als absoluter Pfad interpretiert. Nachfolgendes Beispiel
-illustriert den Aufruf nach dem Muster `aptsh` mittels `dpkg`.
+Dafür genügen der Aufruf `dpkg -S Muster`, `dpkg-query -S Muster` oder
+die flinke Abkürzung `dlocate Muster`. Zur Suche ist bei `dlocate` der
+Schalter `-S` optional, `dpkg` und `dpkg-query`kennen hingegen dafür die
+Langform `--search`. Das Textfragment oder Muster beschreibt, wonach die
+Programme in der Dateiliste der installierten Pakete suchen sollen.
+Beginnt das Textfragment mit einem `/`, wird die Zeichenkette als
+absoluter Pfad interpretiert. Nachfolgendes Beispiel illustriert den
+Aufruf nach dem Muster `aptsh` mittels `dpkg` in allen installierten
+Paketen.
 
 .Suche nach dem Muster `aptsh` mittels `dpkg`
 ----
@@ -71,10 +77,11 @@ aptsh: /usr/lib/aptsh
 $
 ----
 
-`dlocate` liefert im Allgemeinen ein identisches Ergebnis zu `dpkg`. Da
-`dlocate` zur Suche auf `grep` zurückgreift, hat es mitunter eine höhere
-Trefferrate. Nachfolgendes Beispiel zeigt die Suche nach dem absoluten
-Pfad `/xara-gtk` – sowohl für `dpkg`, als auch zu `dlocate` im Vergleich.
+`dlocate` liefert im Allgemeinen ein identisches Ergebnis zu `dpkg` bzw.
+`dpkg-query`. Da `dlocate` zur Suche auf `grep` zurückgreift, hat es
+mitunter eine höhere Trefferrate. Nachfolgendes Beispiel zeigt die Suche
+nach dem absoluten Pfad `/xara-gtk` – sowohl für `dpkg`, als auch zu
+`dlocate` im Vergleich.
 
 .Suche nach der Pfadangabe `/xara-gtk`
 ----
