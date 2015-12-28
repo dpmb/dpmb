@@ -122,7 +122,7 @@ drwxr-xr-x    2 root root    4096 Jun 13 16:34 /usr/share/menu/
 $
 ----
 
-==== `dpkg -c deb-Datei` (Langform `--contents`) ====
+==== `dpkg -c` 'deb-Datei' ====
 
 // Stichworte für den Index
 (((dpkg, -c)))
@@ -130,9 +130,12 @@ $
 (((dpkg-deb, -c)))
 (((dpkg-deb, --contents)))
 Sie verwenden den Schalter `-c`, um sich den Inhalt eines `deb`-Pakets
-anzeigen zu lassen. Dieses Paket wird `dpkg` als Parameter übergeben. Im
-Gegensatz zu `dpkg -L` muss das Paket nicht auf ihrem System installiert
-sein, sondern liegt als Datei in einem Verzeichnis.
+anzeigen zu lassen (Langform `--contents`). Dieses Paket wird `dpkg` als
+Parameter übergeben und kann sowohl eine Datei in einem lokalen
+Verzeichnis bezeichnen, als auch den Namen eines Archivs. Im Gegensatz
+zu `dpkg -L` muss das Paket nicht auf ihrem System installiert sein.
+Intern übergibt `dpkg` die Ausführung an `dpkg-deb`, welches Sie auch
+separat aufrufen können.
 
 .Auflistung des Paketinhalts mit allen Informationen via `dpkg`
 ----
