@@ -96,10 +96,10 @@ als regulären Ausdruck interpretiert.
 // Stichworte für den Index
 (((dlocate, -ls)))
 Nutzen Sie statt `-L` hingegen den Schalter `-ls`, wird die Ausgabe sehr
-ausführlich. Es entspricht dem Kommando `ls -ldF` bezogen auf alle
-Dateien, die in dem Paket enthalten sind.
+ausführlich. Es entspricht dem Aufruf des UNIX-Kommandos `ls -ldF`
+bezogen auf alle Dateien, die in dem Paket enthalten sind.
 
-.Auflistung des Paketinhalts in kompakterer Form via `dlocate`
+.Auflistung des Paketinhalts in ausführlicherer Form via `dlocate`
 ----
 $ dlocate -ls xara-gtk
 drwxr-xr-x   24 root root    4096 Mär 13 09:44 /./
