@@ -7,6 +7,7 @@
 === Manpages anzeigen ===
 
 // Stichworte für den Index
+(((debman, -f)))
 (((dlocate)))
 (((dlocate, -man)))
 (((whereis)))
@@ -18,10 +19,15 @@ Hilfeseiten, auch genannt 'Info und Man(ual) Pages'. Um in Erfahrung zu
 bringen, ob diese vorhanden und installiert sind, bieten sich die beiden
 UNIX-Kommandos `whereis` aus dem essentiellen Paket 'util-linux'
 <<Debian-Paket-util-linux>> sowie das bereits mehrfach genutzte
-`dlocate` <<Debian-Paket-dlocate>> an.
+`dlocate` <<Debian-Paket-dlocate>> an. Manpages aus Paketen, die noch
+nicht installiert sind, zeigen Sie mit Hilfe von `debman` und `debmany`
+an.
 
-Mit der Option `-m Programmname` sucht `whereis` nach den passenden
-Hilfeseiten zum genannten Paketnamen:
+==== Manpages erstöbern ====
+
+Mit der Option `-m` 'Paketname' sucht `whereis` nach den passenden
+Hilfeseiten zum genannten Paket. Das Paket muß dabei lokal installiert
+sein:
 
 .Verfügbare Manpages für das Paket 'aptitude' mittels `whereis` lokalisieren
 ----
