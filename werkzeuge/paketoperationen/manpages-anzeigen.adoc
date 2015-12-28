@@ -12,6 +12,7 @@
 (((dlocate, -man)))
 (((whereis)))
 (((whereis, -m)))
+(((Debianpaket, debian-goodies)))
 (((Debianpaket, dlocate)))
 (((Debianpaket, util-linux)))
 Für die meisten UNIX/Linux-Werkzeuge bestehen Informations- und
@@ -70,5 +71,28 @@ $ dlocate -lsman aptitude
 /usr/share/man/de/man8/aptitude-curses.8.gz
 $
 ----
+
+==== Manpages aus noch nicht installierten Paketen anzeigen ====
+
+// Stichworte für den Index
+(((Debianpaket, debian-goodies)))
+(((debman, -f)))
+(((debmany)))
+
+Für diesen speziellen Zweck existieren `debman` und `debmany`. Beide
+Werkzeuge gehören zum Umfang des Pakets 'debian-goodies' und bieten
+Ihnen die Möglichkeit, Manpages von Paketen anzuzeigen, die noch nicht
+installiert sind, aber bspw. bereits als lokale Datei vorliegen. Dazu
+benötigt `debman` den Schalter `-f`, den Dateinamen und anschließend den
+Namen der Manpage. Der nachfolgende Aufruf demonstriert das am Beispiel
+von 'htop':
+
+.Aufruf von `debman` zum Paket 'htop'
+----
+$ debman -f htop_1.0.3-1_amd64.deb htop
+...
+$
+----
+
 
 // Datei (Ende): ./werkzeuge/paketoperationen/manpages-anzeigen.adoc
