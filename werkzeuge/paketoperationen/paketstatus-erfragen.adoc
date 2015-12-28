@@ -92,12 +92,12 @@ $
 // Stichworte für den Index
 (((dpkg, -I)))
 (((dpkg, --info)))
-(((dpkg-query, -I)))
-(((dpkg-query, --info)))
+(((dpkg-deb, -I)))
+(((dpkg-deb, --info)))
 
 Im Gegensatz zu `dpkg -s` verarbeitet der Schalter `-I` (Langform
 `--info`) lokal vorliegende deb-Dateien. Daraus extrahiert `dpkg` bzw.
-dessen Hilfsprogramm `dpkg-query` die Einträge der Steuerdatei sowie die
+dessen Hilfsprogramm `dpkg-deb` die Einträge der Steuerdatei sowie die
 Paketinformationen.
 
 .Detailinformationen des Pakets 'htop' mittels `dpkg` ermitteln
