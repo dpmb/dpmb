@@ -15,18 +15,23 @@ unterschiedliche Aufrufe nachsichziehen:
 (((apt-file, list)))
 (((apt-file, show)))
 (((dlocate, -ls)))
-(((dpkg, -L)))
-(((dpkg, --listfiles)))
 (((dpkg, -c)))
 (((dpkg, --contents)))
+(((dpkg, -L)))
+(((dpkg, --listfiles)))
+(((dpkg-deb, -c)))
+(((dpkg-deb, --contents)))
 das Paket ist installiert:: 
 `dpkg -L` 'Paketname' und `dlocate -ls` 'Paketname'. Der Parameter
 'Paketname' bezeichnet lediglich den Namen des Pakets (siehe
 <<benennung-eines-debian-pakets>>) ohne Angabe der Versionsnummer.
 
 das Paket ist nicht installiert:: 
-`dpkg -c` 'deb-Datei'. Der Parameter 'deb-Datei' ist eine Datei
-(Paketarchiv) im aktuellen Verzeichnis.
+`dpkg -c` 'deb-Datei' oder direkt über das `dpkg`-Hilfsprogramm
+`dpkg-deb -c` 'deb-Datei'. Der Parameter 'deb-Datei' ist ein Paketarchiv
+in Form einer lokal vorliegenden Datei. Befindet sich die Datei nicht im
+aktuellen Verzeichnis, von dem aus Sie das Kommando aufrufen, ergänzen
+Sie den dazugehörigen Verzeichnispfad.
 
 das Paket muss nicht installiert sein, kann aber:: 
 `apt-file show` 'Paketname' und `apt-file list` 'Paketname'. Der
