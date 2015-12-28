@@ -11,7 +11,7 @@
 Diese Aktion betrifft meist nur ein einzelnes Paket, welches auf dem
 System installiert ist oder war. Im Alltag ergeben sich mehrere
 Situationen, in denen das Wissen über den Zustand eines Paketes wichtig
-ist. 
+ist.
 
 Die Grundfrage ist häufig, ob derzeit ein bestimmtes Paket oder Programm
 auf Ihrem Linuxsystem installiert ist, und falls ja, in welchem Zustand
@@ -25,11 +25,14 @@ verfügbar sind, bspw. Übersetzungen bzw. Sprachpakete.
 
 // Stichworte für den Index
 (((dpkg, -l)))
-Eine kompakte Übersicht erhalten Sie mit Hilfe des Kommandos
-`dpkg -l Paketname` (siehe dazu
-<<liste-der-installierten-pakete-anzeigen-und-deuten>>). Ausführlicher
-sind die Ausgaben zur `dpkg`-Option `-s` sowie den Aufrufen von
-`aptitude show` und `apt-cache show`.
+(((dpkg, --list)))
+(((dpkg-query, -l)))
+(((dpkg-query, --list)))
+Eine kompakte Übersicht erhalten Sie mit Hilfe des Kommandos `dpkg -l`
+'Paketname'. In <<liste-der-installierten-pakete-anzeigen-und-deuten>>
+besprechen wir das genauer. Ausführlicher sind die Ausgaben zur
+`dpkg`-Option `-s` sowie den Aufrufen von `aptitude show` und `apt-cache
+show`.
 
 [[paketstatus-dpkg]]
 ==== `dpkg -s Paketname` (Langform `--status`) ====
