@@ -46,14 +46,16 @@ Parameter 'Paketname' bezeichnet hier lediglich den  Namen eines Pakets
 (siehe <<benennung-eines-debian-pakets>>) ohne Angabe der
 Versionsnummer.
 
-==== `dpkg -L Paketname` (Langform `--listfiles`) ====
+==== `dpkg -L` 'Paketname' ====
 
 // Stichworte für den Index
 (((dpkg, -L)))
 (((dpkg, --listfiles)))
 (((dpkg-query, -L)))
 (((dpkg-query, --listfiles)))
-Mit dieser Option listen Sie den Paketinhalt mit allen Pfaden auf. Jede
+Die Langform des Schalters ist `--listfiles`. Beide Schalter versteht
+ebenso das Hilfsprogramm `dpkg-query` und erzeugt die gleiche Ausgabe.
+Damit listen Sie den Paketinhalt mit allen Pfaden auf. Jede
 Verzeichnisebene ist separat aufgeführt. Das nachfolgende Beispiel
 verdeutlicht das am Paket 'xara-gtk'.
 
