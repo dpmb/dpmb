@@ -87,7 +87,7 @@ $
 // Stichworte für den Index
 (((dlocate, -L)))
 Eine identische Ausgabe zum vorherigen `dpkg`-Aufruf ermöglicht Ihnen
-das Programm `dlocate` <<Debian-Paket-dlocate>> mit der Option `-L`.
+das Programm `dlocate` <<Debian-Paket-dlocate>> mit dem Schalter `-L`.
 Beachten Sie hierbei jedoch, dass `dlocate` die Angabe des Paketnamens
 als regulären Ausdruck interpretiert. 
 
@@ -95,9 +95,9 @@ als regulären Ausdruck interpretiert.
 
 // Stichworte für den Index
 (((dlocate, -ls)))
-Nutzen Sie hingegen die Option `-ls`, wird die Ausgabe sehr ausführlich
-und entspricht dem Kommando `ls -ldF` bezogen auf alle Dateien, die in
-dem Paket enthalten sind.
+Nutzen Sie statt `-L` hingegen den Schalter `-ls`, wird die Ausgabe sehr
+ausführlich. Es entspricht dem Kommando `ls -ldF` bezogen auf alle
+Dateien, die in dem Paket enthalten sind.
 
 .Auflistung des Paketinhalts in kompakterer Form via `dlocate`
 ----
