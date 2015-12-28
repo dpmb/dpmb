@@ -6,15 +6,6 @@
 
 === Paketinhalte anzeigen (`apt-file`) ===
 
-In einem Paket sind stets mehrere Dateien zusammengefasst. Mit den fünf
-Werkzeugen `dpkg`, `dpkg-deb`, `dpkg-query`, `dlocate` und `apt-file`
-zeigen Sie den Inhalt eines Pakets an. Dabei sind `dpkg-deb` und
-`dpkg-query` Hilfsprogramme von `dpkg` und verstehen die gleichen
-Schalter.
-
-Es sind mehrere Fälle zu unterscheiden, die jeweils unterschiedliche
-Aufrufe nachsichziehen:
-
 // Stichworte für den Index
 (((apt-file, list)))
 (((apt-file, show)))
@@ -27,6 +18,15 @@ Aufrufe nachsichziehen:
 (((dpkg-deb, --contents)))
 (((dpkg-query, -L)))
 (((dpkg-query, --listfiles)))
+In einem Paket sind stets mehrere Dateien zusammengefasst. Mit den fünf
+Werkzeugen `dpkg`, `dpkg-deb`, `dpkg-query`, `dlocate` und `apt-file`
+zeigen Sie den Inhalt eines Pakets an. Dabei sind `dpkg-deb` und
+`dpkg-query` Hilfsprogramme von `dpkg` und verstehen die gleichen
+Schalter.
+
+Es sind mehrere Fälle zu unterscheiden, die jeweils unterschiedliche
+Aufrufe nachsichziehen:
+
 das Paket ist bereits installiert:: 
 `dpkg -L` 'Paketname', `dpkg-query -L` 'Paketname' sowie mittels
 `dlocate -ls` 'Paketname'. Der Parameter 'Paketname' bezeichnet
