@@ -22,21 +22,35 @@ image::konzepte/software-in-paketen-organisieren/werkzeugebenen-2.png[id="fig.we
 ==== Untere Ebene ====
 
 // Stichworte für den Index
+(((dpkg, -c)))
 (((dpkg, -i)))
+(((dpkg, -l)))
+(((dpkg, -L)))
 (((dpkg, -r)))
+(((dpkg, -s)))
+(((dpkg, -S)))
+(((dpkg-deb)))
+(((dpkg-query)))
 (((Softwarestapel, dpkg)))
 (((Softwarestapel, untere Ebene)))
-Die Basis bildet `dpkg`. Es dient dazu, a) ein `deb`-Paket auszupacken
-und auf dem System einzuspielen und b) die Inhalte eines bereits
-installierten `deb`-Pakets wieder aus dem System zu entfernen. Ersteres
-entspricht dem Kommandozeilenaufruf `dpkg -i Paketdatei`, das zweite
-hingegen `dpkg -r Paketdatei` (siehe <<pakete-installieren>> und
-<<pakete-deinstallieren>>).
+Die Basis bildet `dpkg`. Es dient dazu, a) ein bereits lokal
+vorliegendes `deb`-Paket auszupacken und auf dem System einzuspielen und
+b) die Inhalte eines bereits installierten `deb`-Pakets wieder aus dem
+System zu entfernen. Ersteres entspricht dabei dem Kommandozeilenaufruf
+`dpkg -i Paketdatei`, das zweite hingegen `dpkg -r Paketdatei` (siehe
+<<pakete-installieren>> und <<pakete-deinstallieren>>).
+
+Für Statusabfragen zu einem einzelnen Paket stützt sich `dpkg` auf die
+beiden Hilfsprogramme `dpkg-deb` und `dpkg-query`. Dazu gehören bspw.
+die Schalter `-c` und `-L` (siehe <<paketinhalte-anzeigen-apt-file>>)
+sowie `-l` (siehe <<liste-der-installierten-pakete-anzeigen-und-deuten>>), 
+`-s` (siehe <<paketstatus-erfragen>>) und `-S` (siehe
+<<paket-zu-datei-finden>>).
 
 Mit `dpkg` können Sie Ihre Pakete verwalten und das System vollständig
 pflegen. Jedoch müssen Sie sich dann aber um alle Komfortfunktionen
 selbst kümmern. `dpkg` prüft nur, ob alle Abhängigkeiten zu anderen
-Paketen erfüllt sind und beendet die Aktion im Fehlerfall. Es nimmt
+Paketen erfüllt sind und beendet im Fehlerfall die Aktion. Es nimmt
 Ihnen weder die automatische Auflösung von Paketabhängigkeiten, noch die
 richtige Reihenfolge bei der Installation der Pakete ab. Diese Mühe
 erleichtern Ihnen die Werkzeuge der oberen Ebene.
