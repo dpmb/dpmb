@@ -99,8 +99,8 @@ $
 ==== Suche in noch nicht installierten Paketen ====
 
 // Stichworte für den Index
-(((apt-file, update)))
-(((dpkg, --search)))
+(((apt-file, search)))
+(((/var/cache/apt/apt-file/)))
 Dafür gibt es `apt-file`. Grundlage seiner Aktivitäten ist die Liste der
 Paketquellen in `/etc/apt/sources.list/` und die Liste der Dateien in
 jedem der Pakete, die von dort bezogen werden. Letztere befindet sich im
@@ -169,11 +169,12 @@ Schalter entnehmen Sie bitte der Manpage zum Programm.
 (((apt-file, search)))
 (((apt-file, show)))
 (((dpkg, -L)))
+(((dpkg, --listfiles)))
 
 `search Muster`:: 
 Suche danach, in welchem Paket die als `Muster` angegebene Datei
 enthalten ist. Ergebnis ist eine Liste aller Pakete, die das angegebene
-`Muster` enthalten. `apt-file` sucht nur dabei nach Dateinamen, nicht
+`Muster` enthalten. `apt-file` sucht dabei nur nach Dateinamen, nicht
 jedoch nach Verzeichnisnamen.
 
 `find Muster`:: 
