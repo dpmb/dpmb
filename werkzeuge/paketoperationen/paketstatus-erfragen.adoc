@@ -30,9 +30,9 @@ verfügbar sind, bspw. Übersetzungen bzw. Sprachpakete.
 (((dpkg-query, --list)))
 Eine kompakte Übersicht erhalten Sie mit Hilfe des Kommandos `dpkg -l`
 'Paketname'. In <<liste-der-installierten-pakete-anzeigen-und-deuten>>
-besprechen wir das genauer. Ausführlicher sind die Ausgaben zur
-`dpkg`-Option `-s` sowie den Aufrufen von `aptitude show`, `apt-cache
-show` sowie `apt-mark`.
+besprechen wir das genauer. Ausführlicher sind die Ausgaben zu den
+`dpkg`-Schaltern `-s` und `-I` sowie den Aufrufen von `aptitude show`,
+`apt-cache show` sowie `apt-mark`.
 
 [[paketstatus-dpkg]]
 ==== `dpkg -s` 'Paketname' ====
@@ -48,6 +48,7 @@ show` sowie `apt-mark`.
 Mit diesem Aufruf ermitteln Sie den Status eines installierten Paketes.
 Die Langform zu `-s` ist `--status`. Intern greift `dpkg` auf
 `dpkg-query` zurück, so daß Sie die gleichen Schalter verwenden können.
+Paketname bezeichnet hier den Namen eines Debianpakets.
 
 Die Ausgabe beinhaltet bspw. die Paketfelder Paketname (siehe 
 <<benennung-eines-debian-pakets>>), Status, Priorität (siehe 
@@ -83,6 +84,48 @@ Description: interactive processes viewer
  Tasks related to processes (killing, renicing) can be done without
  entering their PIDs.
 Homepage: http://htop.sourceforge.net
+$
+----
+
+==== `dpkg -I` 'deb-Datei' ====
+
+// Stichworte für den Index
+(((dpkg, -I)))
+(((dpkg, --info)))
+(((dpkg-query, -I)))
+(((dpkg-query, --info)))
+
+Im Gegensatz zu `dpkg -s` verarbeitet der Schalter `-I` (Langform
+`--info`) lokal vorliegende deb-Dateien. Daraus extrahiert `dpkg` bzw.
+dessen Hilfsprogramm `dpkg-query` die Einträge der Steuerdatei sowie die
+Paketinformationen.
+
+.Detailinformationen des Pakets 'htop' mittels `dpkg` ermitteln
+----
+$ dpkg -I htop_1.0.3-1_amd64.deb 
+ neues Debian-Paket, Version 2.0.
+ Größe 75316 Byte: control-Archiv= 1156 Byte.
+     593 Byte,    17 Zeilen      control              
+     618 Byte,    10 Zeilen      md5sums              
+     185 Byte,     7 Zeilen   *  postinst             #!/bin/sh
+     160 Byte,     5 Zeilen   *  postrm               #!/bin/sh
+ Package: htop
+ Version: 1.0.3-1
+ Architecture: amd64
+ Maintainer: Eugene V. Lyubimkin <jackyf@debian.org>
+ Installed-Size: 204
+ Depends: libc6 (>= 2.15), libncursesw5 (>= 5.6+20070908), libtinfo5
+ Suggests: strace, ltrace
+ Section: utils
+ Priority: optional
+ Homepage: http://hisham.hm/htop/
+ Description: interactive processes viewer
+  Htop is an ncursed-based process viewer similar to top, but it
+  allows one to scroll the list vertically and horizontally to see
+  all processes and their full command lines.
+  .
+  Tasks related to processes (killing, renicing) can be done without
+  entering their PIDs.
 $
 ----
 
