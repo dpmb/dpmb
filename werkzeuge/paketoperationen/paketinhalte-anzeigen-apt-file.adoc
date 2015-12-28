@@ -82,13 +82,22 @@ $ dpkg -L xara-gtk
 $
 ----
 
+==== `dlocate -L` 'Paketname' ====
+
+// Stichworte für den Index
+(((dlocate, -L)))
+Eine identische Ausgabe zum vorherigen `dpkg`-Aufruf ermöglicht Ihnen
+das Programm `dlocate` <<Debian-Paket-dlocate>> mit der Option `-L`.
+Beachten Sie hierbei jedoch, dass `dlocate` die Angabe des Paketnamens
+als regulären Ausdruck interpretiert. 
+
+==== `dlocate --ls` 'Paketname' ====
+
 // Stichworte für den Index
 (((dlocate, -ls)))
-Gleiches ermöglicht der Aufruf des Programms `dlocate`
-<<Debian-Paket-dlocate>> mit der Option `-L`. Sie erhalten damit eine
-identische Ausgabe. Nutzen Sie hingegen die Option `-ls`, wird die
-Ausgabe sehr ausführlich und entspricht dem Kommando `ls -ldF` bezogen
-auf alle Dateien des Pakets.
+Nutzen Sie hingegen die Option `-ls`, wird die Ausgabe sehr ausführlich
+und entspricht dem Kommando `ls -ldF` bezogen auf alle Dateien, die in
+dem Paket enthalten sind.
 
 .Auflistung des Paketinhalts in kompakterer Form via `dlocate`
 ----
