@@ -6,10 +6,14 @@
 
 === Paketinhalte anzeigen (`apt-file`) ===
 
-In einem Paket sind stets mehrere Dateien zusammengefasst. Mit den drei
-Werkzeugen `dpkg`, `dlocate` und `apt-file` zeigen Sie den Inhalt eines
-Pakets an. Dabei sind mehrere Fälle zu unterscheiden, die jeweils
-unterschiedliche Aufrufe nachsichziehen:
+In einem Paket sind stets mehrere Dateien zusammengefasst. Mit den fünf
+Werkzeugen `dpkg`, `dpkg-deb`, `dpkg-query`, `dlocate` und `apt-file`
+zeigen Sie den Inhalt eines Pakets an. Dabei sind `dpkg-deb` und
+`dpkg-query` Hilfsprogramme von `dpkg` und verstehen die gleichen
+Schalter.
+
+Es sind mehrere Fälle zu unterscheiden, die jeweils unterschiedliche
+Aufrufe nachsichziehen:
 
 // Stichworte für den Index
 (((apt-file, list)))
@@ -21,17 +25,20 @@ unterschiedliche Aufrufe nachsichziehen:
 (((dpkg, --listfiles)))
 (((dpkg-deb, -c)))
 (((dpkg-deb, --contents)))
-das Paket ist installiert:: 
-`dpkg -L` 'Paketname' und `dlocate -ls` 'Paketname'. Der Parameter
-'Paketname' bezeichnet lediglich den Namen des Pakets (siehe
-<<benennung-eines-debian-pakets>>) ohne Angabe der Versionsnummer.
+(((dpkg-query, -L)))
+(((dpkg-query, --listfiles)))
+das Paket ist bereits installiert:: 
+`dpkg -L` 'Paketname', `dpkg-query -L` 'Paketname' sowie mittels
+`dlocate -ls` 'Paketname'. Der Parameter 'Paketname' bezeichnet
+lediglich den Namen des Pakets (siehe <<benennung-eines-debian-pakets>>)
+ohne Angabe der Versionsnummer.
 
-das Paket ist nicht installiert:: 
-`dpkg -c` 'deb-Datei' oder direkt über das `dpkg`-Hilfsprogramm
-`dpkg-deb -c` 'deb-Datei'. Der Parameter 'deb-Datei' ist ein Paketarchiv
-in Form einer lokal vorliegenden Datei. Befindet sich die Datei nicht im
-aktuellen Verzeichnis, von dem aus Sie das Kommando aufrufen, ergänzen
-Sie den dazugehörigen Verzeichnispfad.
+das Paket ist noch nicht installiert:: 
+`dpkg -c` 'deb-Datei' oder `dpkg-deb -c` 'deb-Datei'. Der Parameter
+'deb-Datei' ist ein Paketarchiv in Form einer lokal vorliegenden Datei.
+Befindet sich die Datei nicht im aktuellen Verzeichnis, von dem aus Sie
+das Kommando aufrufen, ergänzen Sie im Aufruf den dazugehörigen
+Verzeichnispfad, in dem das Paketarchiv liegt.
 
 das Paket muss nicht installiert sein, kann aber:: 
 `apt-file show` 'Paketname' und `apt-file list` 'Paketname'. Der
@@ -44,6 +51,8 @@ Versionsnummer.
 // Stichworte für den Index
 (((dpkg, -L)))
 (((dpkg, --listfiles)))
+(((dpkg-query, -L)))
+(((dpkg-query, --listfiles)))
 Mit dieser Option listen Sie den Paketinhalt mit allen Pfaden auf. Jede
 Verzeichnisebene ist separat aufgeführt. Das nachfolgende Beispiel
 verdeutlicht das am Paket 'xara-gtk'.
@@ -107,6 +116,8 @@ $
 // Stichworte für den Index
 (((dpkg, -c)))
 (((dpkg, --contents)))
+(((dpkg-deb, -c)))
+(((dpkg-deb, --contents)))
 Sie verwenden den Schalter `-c`, um sich den Inhalt eines `deb`-Pakets
 anzeigen zu lassen. Dieses Paket wird `dpkg` als Parameter übergeben. Im
 Gegensatz zu `dpkg -L` muss das Paket nicht auf ihrem System installiert
