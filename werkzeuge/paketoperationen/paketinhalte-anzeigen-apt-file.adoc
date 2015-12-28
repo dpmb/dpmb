@@ -9,6 +9,8 @@
 // Stichworte für den Index
 (((apt-file, list)))
 (((apt-file, show)))
+(((dglob, -af)))
+(((dglob, -f)))
 (((dlocate, -ls)))
 (((dpkg, -c)))
 (((dpkg, --contents)))
@@ -185,13 +187,14 @@ $
 ==== Einsatz von `dglob` ====
 
 // Stichworte für den Index
+(((dglob, -af)))
 (((dglob, -f)))
 (((Debianpaket, debian-goodies)))
 Analog zu `apt-file` arbeitet das Werkzeug `dglob` aus dem Paket
-'debian-goodies' <<Debian-Paket-debian-goodies>>. Es setzt auf
-`apt-file` auf und liefert eine ähnlich kompakte Ausgabe. Der Schalter
-`-f` dient dabei zur Ausgabe der Dateien im angefragten Paket, was wir
-nachfolgend erneut anhand des Pakets 'xara-gtk' illustrieren.
+'debian-goodies' <<Debian-Paket-debian-goodies>>. Die Ausgabe ist
+ähnlich kompakt wie von `apt-file`. Der Schalter `-f` dient dabei zur
+Ausgabe der Dateien im angefragten Paket, was wir nachfolgend erneut
+anhand des Pakets 'xara-gtk' illustrieren.
 
 .Ergebnis der Recherche zum Paket 'xara-gtk'
 ----
@@ -208,14 +211,16 @@ $
 
 // Stichworte für den Index
 (((dglob, -a)))
+(((dglob, -af)))
 (((Debianpaket, dctrl-tools)))
 (((Debianpaket, debian-goodies)))
 (((grep-aptavail)))
 Das Kommando `dglob` agiert üblicherweise nur auf den bereits
-installierten Paketen. Mit der Option `-a` weiten Sie Ihre Recherche auf
-alle verfügbaren Pakete aus. Für diesen Schritt setzt `dglob` auf das
-Programm `grep-aptavail` aus dem Paket 'dctrl-tools'
-<<Debian-Paket-dctrl-tools>> auf. Nähere Informationen zu 'dctrl-tools'
-erfahren Sie unter <<erweiterte-paketklassifikation-mit-debtags>>.
+installierten Paketen. Mit dem Schalter `-a` weiten Sie Ihre Recherche
+auf alle verfügbaren Pakete aus -- auch auf diejenigen, die noch nicht
+installiert sind. Für diesen Schritt setzt `dglob` auf das Programm
+`grep-aptavail` aus dem Paket 'dctrl-tools' <<Debian-Paket-dctrl-tools>>
+auf. Nähere Informationen zu 'dctrl-tools' erfahren Sie unter
+<<erweiterte-paketklassifikation-mit-debtags>>.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/paketinhalte-anzeigen-apt-file.adoc
