@@ -35,26 +35,32 @@ besprechen wir das genauer. Ausführlicher sind die Ausgaben zur
 show`.
 
 [[paketstatus-dpkg]]
-==== `dpkg -s Paketname` (Langform `--status`) ====
+==== `dpkg -s` 'Paketname' ====
 
 // Stichworte für den Index
+(((Debianpaket, dctrl-tools)))
 (((dpkg, -s)))
 (((dpkg, --status)))
+(((dpkg-query, -s)))
+(((dpkg-query, --status)))
 (((grep-status, -F)))
 (((grep-status, -X)))
 Mit diesem Aufruf ermitteln Sie den Status eines installierten Paketes.
-`dpkg` gibt bspw. die Paketfelder Paketname
-(<<benennung-eines-debian-pakets>>), Status, Priorität
-(<<paket-prioritaet-und-essentielle-pakete>>), Paketkategorie
-(<<sortierung-der-pakete-nach-verwendungszweck>>), installierte Größe,
-Maintainer, Architektur (<<debian-architekturen>>) und Version
-(<<benennung-eines-debian-pakets>>) aus. Darunter listet `dpkg` die
+Die Langform zu `-s` ist `--status`. Intern greift `dpkg` auf
+`dpkg-query` zurück, so daß Sie die gleichen Schalter verwenden können.
+
+Die Ausgabe beinhaltet bspw. die Paketfelder Paketname (siehe 
+<<benennung-eines-debian-pakets>>), Status, Priorität (siehe 
+<<paket-prioritaet-und-essentielle-pakete>>), Paketkategorie (siehe 
+<<sortierung-der-pakete-nach-verwendungszweck>>), installierte Größe,
+Maintainer, Architektur ( siehe <<debian-architekturen>>) und Version
+(siehe <<benennung-eines-debian-pakets>>) aus. Darunter listet `dpkg` die
 dazugehörige, hinterlegte Paketbeschreibung auf.
 
-Der Aufruf ist identisch zu `grep-status -F Package -X htop`, wobei Sie
-mit `-F` das entsprechende Paketfeld und mit `-X` den Paketnamen
-angeben. Das Kommando `grep-status` ist Bestandteil des Pakets
-'dctrl-tools' <<Debian-Paket-dctrl-tools>>.
+Der nachfolgende Aufruf ist zudem identisch zu `grep-status -F Package
+-X htop`, wobei Sie mit `-F` das entsprechende Paketfeld und mit `-X`
+den Paketnamen angeben. Das Kommando `grep-status` ist Bestandteil des
+Pakets 'dctrl-tools' <<Debian-Paket-dctrl-tools>>.
 
 .Status des Pakets 'htop' mittels `dpkg` ermitteln
 ----
