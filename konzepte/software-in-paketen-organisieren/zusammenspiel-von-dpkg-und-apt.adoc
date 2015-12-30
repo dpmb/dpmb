@@ -94,14 +94,17 @@ I: libc6 multiarch-support zlib1g
 $
 ----
 
-Das zweite Kommando `dot` wandelt diese Beschreibung in eine hübsche
-Grafik um. Für `dpkg` erhalten Sie die Abbildung im Bildformat _Portable
-Network Graphics_ (PNG) mit dem nachfolgend gezeigten Aufruf auf der
+Das zweite Kommando `dot` wandelt diese Beschreibung über den Schalter
+`-T`'Ausgabeformat' in eine hübsche Grafik um. Zwischen dem Schalter und
+dem gewählten Ausgabeformat erlaubt `dot` kein Leerzeichen. 
+
+Für `dpkg` erhalten Sie die Abbildung im Bildformat _Portable Network
+Graphics_ (PNG) mit dem nachfolgend gezeigten Aufruf auf der
 Kommandozeile. Dabei wird die Ausgabe des `debtree`-Kommandos nicht auf
 dem Terminal sichtbar, sondern wird mit dem Pipe-Operator `|` direkt an
 das Programm `dot` weitergegeben, welches es als Eingabe verarbeitet.
-Die Ausgabe von `dot` – die erzeugte Bilddatei – wird mit dem
-Umleitungsoperator `>` in die Datei `dpkg.png` im aktuelle Verzeichnis
+Die Ausgabe von `dot` – die erzeugte Bilddatei – wird danach mit dem
+Umleitungsoperator `>` in die Datei `dpkg.png` im aktuellen Verzeichnis
 umgeleitet.
 
 .Erzeugung der Abhängigkeitsgraphen und Speicherung als Rastergrafik
