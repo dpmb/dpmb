@@ -117,7 +117,9 @@ $
 ----
 
 // Stichworte für den Index
+(((Paketflags, automatic)))
 (((Paketflags, Darstellung in aptitude)))
+(((Paketflags, hold)))
 In der Textoberfläche von `aptitude` bekommt jeder Eintrag in der
 Paketliste zusätzliche Buchstaben. Dabei stehen die Buchstaben `h` für
 _hold_ und `A` für _automatic_ (siehe <<fig.aptitude-hold>>).
@@ -127,6 +129,7 @@ image::konzepte/software-in-paketen-organisieren/aptitude-hold.png[id="fig.aptit
 
 // Stichworte für den Index
 (((aptitude, search ~M)))
+(((Paketflags, automatic)))
 `aptitude` kann ebenfalls nach allen Paketen fahnden, die automatisch
 installiert wurden und dazu das Flag _automatic_ tragen. Es kennt dazu
 das spezielle Muster `~M` zum Unterkommando `search`. Ausführlicher
@@ -138,6 +141,9 @@ besprechen wir das in <<automatisch-installierte-pakete-anzeigen>>.
 (((apt-mark, showauto)))
 (((apt-mark, showhold)))
 (((apt-mark, showmanual)))
+(((Paketflags, automatic)))
+(((Paketflags, hold)))
+(((Paketflags, manual)))
 Das Werkzeug `apt-mark` ist spezialisiert auf die Paketmarkierungen und
 kann Ihnen die Pakete ausgeben, bei denen nur ein bestimmtes Paketflag
 gesetzt ist. Es kennt dazu die drei Unterkommandos `showauto`,
@@ -165,16 +171,21 @@ acpi-support-base
 .Liste der Pakete eingrenzen, die überprüft werden
 ====
 Geben Sie beim Aufruf keine weiteren Parameter an, werden alle Pakete
-geprüft. Übergeben Sie hingegen eine eigene Paketliste, untersucht
-`apt-mark` die darin genannten Pakete auf das Vorhandensein des
-jeweiligen Paketflags.
+geprüft. Übergeben Sie hingegen eine eigene Paketliste als Datei,
+untersucht `apt-mark` die darin genannten Pakete auf das Vorhandensein
+des jeweiligen Paketflags.
 ====
 
 [[paketflags-setzen-und-entfernen-einer-markierung]]
 ==== Setzen und Entfernen einer Markierung ====
 
 // Stichworte für den Index
+(((apt-mark, automatic)))
+(((apt-mark, hold)))
 (((apt-mark, manual)))
+(((Paketflags, automatic)))
+(((Paketflags, hold)))
+(((Paketflags, manual)))
 (((Paketflags, setzen)))
 Die Markierungen _automatic_ und _manual_ werden von den Programmen zur
 Paketverwaltung eigenständig gesetzt, wenn Sie Pakete installieren.
@@ -198,6 +209,7 @@ wireshark wurde als manuell installiert festgelegt.
 // Stichworte für den Index
 (((apt-mark, hold)))
 (((apt-mark, unhold)))
+(((Paketflags, hold)))
 Für das Halten eines Pakets existieren die Unterkommandos `hold` und
 `unhold`. Welchen konkreten Nutzen das haben kann, erfahren Sie in
 <<ausgewaehlte-pakete-nicht-aktualisieren>>.
@@ -218,6 +230,7 @@ diese Aufgabe der Package Dependency Solver (siehe <<aptitude>>).
 // Stichworte für den Index
 (((Paketflags, explizit setzen)))
 (((Paketflags, explizit entfernen)))
+(((Paketflags, hold)))
 Setzen oder Entfernen Sie bewusst das _hold_-Flag und legen somit eine
 Version explizit fest, nehmen Sie Einfluss auf den Zustand Ihres Systems.
 Wobei Ihnen das von Nutzen sein kann, erklären wir unter ``Ausgewählte
