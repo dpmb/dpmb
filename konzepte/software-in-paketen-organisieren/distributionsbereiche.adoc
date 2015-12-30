@@ -20,26 +20,33 @@ Paketen aus bestimmten Distributionsbereichen legen Sie somit den
 ``Freiheitsgrad'' Ihrer Installation fest.
 
 // Stichworte für den Index
+(((Debian, Debian Free Software Guidelines (DFSG))))
+(((Debian Free Software Guidelines (DFSG))))
 (((Distributionsbereiche, main)))
 (((Distributionsbereiche, contrib)))
 (((Distributionsbereiche, non-free)))
+(((DFSG)))
 In Debian sind die Softwarepakete in die folgenden drei Bereiche
 unterteilt:
 
-main:: 
-Freie Software, die den Debian-Richtlinien für freie Software entspricht.
+main::
+Freie Software, die den Debian-Richtlinien für freie Software (DFSG) entspricht.
 
-contrib:: 
+contrib::
 Freie Software, die von unfreier Software abhängt.
 
-non-free:: 
-Software, die _nicht_ den Debian-Richtlinien für freie Software
+non-free::
+Software, die _nicht_ den Debian-Richtlinien für freie Software (DFSG)
 entspricht, aber frei verteilbar ist.
 
 ==== Einordnung der Distributionsbereiche in Debian ====
 
 // Stichworte für den Index
-(((Debian Free Software Guidelines)))
+(((Debian, Debian Free Software Guidelines (DFSG))))
+(((Debian, Debian-Gesellschaftervertrag)))
+(((Debian Free Software Guidelines (DFSG))))
+(((Debian-Gesellschaftervertrag)))
+(((Debian Social Contract)))
 (((DFSG)))
 (((Distributionsbereiche, Einordnung anhand der Lizenzen)))
 Obwohl vielfach von außen anders wahrgenommen, zählt zur
@@ -47,7 +54,7 @@ Debian-Distribution nur der Bereich _main_. Die anderen beiden Bereiche
 sind lediglich Ergänzungen, die zusätzlich bereitgestellt werden. Wir
 empfehlen Ihnen daher, soweit möglich nur Pakete aus _main_ zu
 verwenden, und nur wenn dies nicht ausreicht (z.B. wegen nicht-freier
-Firmware für bestimmte Hardwarekomponenten), die beiden Bereiche
+Firmware für bestimmte Hardwarekomponenten), die beiden anderen Bereiche
 _contrib_ und/oder _non-free_ dazuzunehmen.
 
 Pakete, die in _main_ eingeordnet sind, unterliegen einer Lizenz, die
@@ -71,7 +78,7 @@ warum ein Paket im Bereich _contrib_ einsortiert wurde, sind:
 * Die Software muss mit einem nicht-freien Compiler übersetzt werden.
 
 Im Bereich _non-free_ finden sich Pakete, die nicht den
-Debian-Richtlinien für Freie Software entsprechen, aber trotzdem immer
+Debian-Richtlinien für Freie Software (DFSG) entsprechen, aber trotzdem immer
 noch frei verteilbar sind. Typische Gründe für die Nichterfüllung der
 DFSG im Bereich _non-free_ sind:
 
