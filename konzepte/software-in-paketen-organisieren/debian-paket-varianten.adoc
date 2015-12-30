@@ -173,13 +173,14 @@ sind:
 
 - der Originalquellcode als ein oder mehrere komprimierte `tar`-Archive.
   Je nach verwendetem Komprimierungsverfahren lauten die Dateiendungen
-`orig.tar.gz`, `orig.tar.bz2` oder `orig.tar.xz`.
+  `orig.tar.gz`, `orig.tar.bz2` oder `orig.tar.xz`.
 
 - die Änderungen vom Original zum Debianpaket als komprimierter Patch.
-  Diese Dateien haben klassisch die Endung `diff.gz`. Liegen die
-  Änderungen wie bei moderneren Sourcepaketen als komprimiertes
-  `tar`-Archiv vor, wird als Dateiendung `debian.tar.gz` oder
-  `debian.tar.xz` genutzt.
+  Diese Dateien haben klassisch die Endung `diff.gz` und wurden mit
+  `gzip` gepackt. Liegen die Änderungen wie bei moderneren Sourcepaketen 
+  als komprimiertes `tar`-Archiv vor, wird als Dateiendung `debian.tar.gz` 
+  oder `debian.tar.xz` genutzt. Bei Letzterem kommt anstatt von `gzip`
+  das Komprimierungswerkzeug `xz` zum Einsatz.
 
 - eine Datei mit den Metadaten (Größe, Hashsummen, etc.) über die
   vorhergenannten Dateien. Genutzt wird die Dateindung `dsc` als
