@@ -103,16 +103,35 @@ und Ende.
 ==== Pakete für alle Architekturen ====
 
 // Stichworte für den Index
+(((Architektur, all)))
+(((Architektur, architekturunabhängig)))
 (((Debian, Architekturen)))
 (((Debian, architekturunabhängig)))
 Neben den bereits genannten Architekturen gibt es noch Pakete mit dem
 Eintrag 'all'. Dies sind architekturunabhängige Pakete und Sie können
-diese auf beliebigen Architekturen installieren. 
+diese auf beliebigen Architekturen installieren.
 
 Dazu zählen z.B. Pakete von Programmen, die vollständig in den
 Skriptsprachen Perl, Python, Ruby oder Tcl geschrieben wurden. Ebenfalls
 gehören zu dieser Gruppe Pakete, die lediglich Daten enthalten, die auf
 jeder Architektur identisch sind. Das betrifft z.B. Bilder und Musik.
+
+.Auswahl der installierten, architektur-unabhängigen Pakete
+----
+$ dpkg -l | egrep " all" | head -5
+ii  abiword-common        3.0.0-8    all
+    efficient, featureful word processor with collaboration -- common files
+ii  acpi-support-base     0.142-6    all
+    scripts for handling base ACPI events such as the power button
+ii  adduser               3.113+nmu3 all
+    add and remove users and groups
+ii  adwaita-icon-theme    3.14.0-2   all
+    default icon theme of GNOME
+ii  aglfn                 1.7-3      all
+    Adobe Glyph List For New Fonts
+...
+$
+----
 
 [[debian-architekturen-multiarch]]
 ==== Multiarch: Mehrere Architekturen gleichzeitig auf einem System ====
