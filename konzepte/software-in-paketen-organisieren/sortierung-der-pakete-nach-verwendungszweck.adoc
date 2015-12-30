@@ -27,8 +27,8 @@ zusätzlich nach ihrem Distributionsbereich (siehe
 <<distributionsbereiche>>) – _main_, _contrib_ und _non-free_ –
 gruppiert. Der jeweilige Entwicklungszweig (siehe
 <<veroeffentlichungen>>) – bspw. _stable_, _unstable_ oder _testing_ –
-wird in dieser Darstellung nicht angezeigt, kann aber bei Bedarf per
-als weitere Ebene in der Anzeigehierachie konfiguriert werden.
+wird in dieser Darstellung nicht angezeigt, lässt sich aber bei Bedarf
+als weitere Ebene in der Anzeigehierachie konfigurieren.
 
 .Auflistung der verschiedenen Paketkategorien in `aptitude`
 image::konzepte/software-in-paketen-organisieren/aptitude-paketbereiche.png[id="fig.aptitude-paketbereiche", width="50%"]
