@@ -118,7 +118,7 @@ jeder Architektur identisch sind. Das betrifft z.B. Bilder und Musik.
 
 .Auswahl der installierten, architektur-unabhängigen Pakete
 ----
-$ dpkg -l | egrep " all" | head -5
+$ dpkg -l | fgrep " all" | head -5
 ii  abiword-common        3.0.0-8    all
     efficient, featureful word processor with collaboration -- common files
 ii  acpi-support-base     0.142-6    all
