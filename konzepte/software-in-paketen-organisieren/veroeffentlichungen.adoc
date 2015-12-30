@@ -47,7 +47,7 @@ Pakete, die in _unstable_ für eine gewisse Zeit keine schwerwiegenden
 Fehler aufweisen und deren Abhängigkeiten bereits ebenfalls in _testing_
 erfüllt werden können, wandern automatisch von 'unstable' hierher. Dieser
 Entwicklungsstand sollte konsistent sein und alle Paketabhängigkeiten
-erfüllbar sein.
+erfüllt sein.
 
 stable:: 
 Das ist die jeweils aktuelle stabile Veröffentlichung. Dieser
@@ -189,7 +189,9 @@ Debian 7 _Wheezy_.
 ==== Zusammenhang von Alias-Namen und Entwicklungsständen ====
 
 // Stichworte für den Index
+(((Debian, Debian Archive)))
 (((Veröffentlichung, Alias-Name)))
+(((Veröffentlichung, Debian Archive)))
 (((Veröffentlichung, oldoldstable)))
 Neben den o.g. Entwicklungsständen haben alle Veröffentlichungen auch
 noch Alias-Namen, die eine Veröffentlichung stets unverändert beibehält.
@@ -239,8 +241,7 @@ Bedingungen erfüllt sind:
   verfügbar oder werden gleichzeitig nach _testing_ migriert.
 
 * Es darf keine Abhängigkeiten von Paketen zerstören, die bereits in
-  _testing_ enthalten sind und diese damit nicht mehr installierbar
-  machen.
+  _testing_ enthalten sind und damit deren Installation verhindern.
 
 * Das Paket hat ein Mindestalter an Tagen erreicht. Dieses
   Mindestalter hängt vom Wert des Felds _urgency_ (engl. für
@@ -257,6 +258,8 @@ Bedingungen erfüllt sind:
   vorher bereits gebaut wurde. Für Ausnahmen muss zuerst das alte
   Paket aus dem Archiv manuell entfernt werden.
 
+// Stichworte für den Index
+(((Veröffentlichung, Debian-Release-Team)))
 Das Debian-Release-Team kann allerdings diese Bedingungen individuell
 übersteuern und kürzere oder längere Fristen für den Übergang in die
 _testing_-Veröffentlichung setzen.
