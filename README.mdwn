@@ -137,9 +137,9 @@ make mobi
 ```
 
 * `allinone.html` = Einzelne HTML-Datei mit allen Bildern eingebettet
-* `online.html` = Einzelne HTML-Datei mit allen Bildern als eigene Dateien
+* `online.html` = HTML-Datei mit allen Bildern als eigene Dateien
 * `chunked.html` = Eine HTML-Datei pro Kapitel
-* `doctor.html` = Einzelne HTML-Datei mit allen Bildern als eigene Dateien
+* `doctor.html` = HTML-Datei mit allen Bildern als eigene Dateien
   (mit `asciidoctor` statt `asciidoc`/`a2x` gerendert).
 
 #### .deb-Paket bauen und installieren
