@@ -11,6 +11,8 @@ aus einer sehr großen Anzahl Paketen. In dieser Vielfalt spiegeln sich
 die Interessen der Benutzer sehr deutlich wieder.
 
 // Stichworte für den Index
+(((Debian, Debian Quality Assurance Team)))
+(((Debian Quality Assurance Team)))
 (((Paketqualität)))
 Das 'Debian Quality Assurance Team' (kurz QA Team) <<DebianQA>>
 sorgt für eine möglichst hohe Softwarequalität. Neben den Werkzeugen zur
