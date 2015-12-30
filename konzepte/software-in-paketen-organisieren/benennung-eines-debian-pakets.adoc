@@ -63,7 +63,7 @@ Endet der Paketname mit dem Suffix `-dev` wie bspw. in 'libxslt1-dev',
 beinhaltet das Paket Kopfdateien (engl. _header files_), die nur
 notwendig sind, wenn Sie Programme unter Nutzung der dazugehörigen
 Bibliothek entwickeln. _dev_ ist die gebräuchliche englische Abkürzung
-für _development_). Im vorgenannten Beispiel befinden sich in dem Paket
+für _development_. Im vorgenannten Beispiel befinden sich in dem Paket
 die Kopfdateien zur XSLT-1-Bibliothek.
 
 Das Suffix `-doc` weist auf Dokumentation hin, welches häufig noch von
@@ -92,10 +92,10 @@ und Buchstaben beinhalten.
 Handelt es sich um ein _nicht-natives Debian-Paket_, besteht die
 Versionsnummer aus der Upstream-Version und der Debian-Revision. Bei
 dem Paket 'smartpm_1.4-2_all.deb' für 'smartpm' (siehe
-<<gui-smartpm>>) ist die Angabe 1.4 die Upstreamversion und die
+<<gui-smartpm>>) ist die Angabe 1.4 die Upstream-Version und die
 darauffolgende mit einem Minus `-` abgetrennte `2` steht für die
 zweite Debian-Revision. Hier liegt also das zweite Debianpaket vor,
-welches auf der Upstreamversion 1.4 basiert. Beinhaltet die
+welches auf der Upstream-Version 1.4 basiert. Beinhaltet die
 Versionsnummer mehrere Bindestriche, ist immer der letzte Bindestrich
 der Trenner zwischen der Upstream-Version und der
 Debian-Revisionsnummer.
@@ -112,10 +112,10 @@ identisch mit der Versionsnummer der Software. Für das Paket
 grundlegend, dass die neuere Version eine kleinere Versionsnummer hat
 als die vorherige Version, so muss der Paketversion die Angabe einer
 mit einem Doppelpunkt abgetrennten _Epoche_ hinzugefügt werden. Ist
-bspw. die vorhergehende Versionsnummer 2013.06.06-4 (Upstreamversion
+bspw. die vorhergehende Versionsnummer 2013.06.06-4 (Upstream-Version
 2013.06.06 Revision 4), entspricht das der Epoche 0 und ist identisch zu
 0:2013.06.06-4. Die Folgeversion wird dann 1:1.0-1, d.h. Epoche 1,
-Upstreamversion 1.0 und Revision 1.
+Upstream-Version 1.0 und Revision 1.
 
 Um eine spätere _alphanumerisch korrekte Sortierung anhand des
 Releasestatus_ zu ermöglichen, sind eine bzw. mehrere
@@ -165,9 +165,9 @@ Backports (siehe <<debian-backports>>) bezeichnen eine Rückportierung
 einer neueren Version auf die aktuelle Veröffentlichung. Dabei steht
 das Kürzel `bpo` für `backports.org`, dem Namen des
 Backports-Projektes, bevor es in Debian integriert wurde. Die Angabe
-`123-3~bpo8+2` steht bspw. für eine Rückportierung der Upstreamversion 123-3
-auf Debian 8 _Jessie_. Die Ziffer 2 deklariert das Paket die zweite
-Backports-Revision des Paket.
+`123-3~bpo8+2` steht bspw. für eine Rückportierung der Upstream-Version
+123-3 auf Debian 8 _Jessie_. Die Ziffer 2 deklariert das Paket die
+zweite Backports-Revision des Paket.
 
 `+deb<x>u<y>` ::
 stabiles Update. Die Angabe `121-3+deb7u2` steht für das zweite stabile
