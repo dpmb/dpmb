@@ -86,15 +86,21 @@ Pacman-Rosetta (siehe <<pacman-rosetta-beschreibung>>) sowie in unserer
 (((Softwarestapel, Synaptic)))
 (((Softwarestapel, Ubuntu Software Center)))
 Bei `deb`-basierten Distributionen besteht die obere Ebene
-typischerweise aus dem Programm APT sowie den weiteren Programmen
-`aptitude`, Muon (siehe <<gui-muon>>), Synaptic, Ubuntu Software Center
-(siehe <<gui-ubuntu-software-center>>) oder auch PackageKit (siehe
-<<gui-packagekit>>). Diese Programme haben die Aufgabe, Ihnen die
-Installation und die Aktualisierung der einzelnen Programmpakete auf
-Ihrem System zu vereinfachen. Dazu gehört die Aktualisierung der Liste
-von Paketen aus den Paketquellen, der Auflösung der Paketabhängigkeiten
-und die Berechnung der Installationsreihenfolge der von Ihnen
-ausgewählten Pakete.
+typischerweise aus dem Werkzeug APT (siehe <<apt>>). Häufig ist
+mindestens eines der weiteren Programme wie `aptitude` (siehe
+<<aptitude>>), Synaptic (siehe <<gui-synaptic>>), Ubuntu Software Center
+(siehe <<gui-ubuntu-software-center>>), Muon (siehe <<gui-muon>>) oder
+auch PackageKit (siehe <<gui-packagekit>>) installiert. Die Auswahl
+variiert und hängt von der von Ihnen gewählten Linux-Distribution und
+ihren Vorlieben ab.
+
+Alle diese Programme übernehmen die Aufgabe, Ihnen die Installation und
+die Aktualisierung der einzelnen Programmpakete auf Ihrem System zu
+vereinfachen und unter möglichst einer Benutzeroberfläche
+zusammenzufassen. Konkret gehört dazu die Aktualisierung der Liste von
+Paketen aus den Paketquellen, der Auflösung der Paketabhängigkeiten und
+die Berechnung der Installationsreihenfolge der von Ihnen ausgewählten
+Pakete.
 
 // Stichworte für den Index
 (((Softwarebibliotheken, libapt-inst)))
