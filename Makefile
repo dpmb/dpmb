@@ -5,7 +5,7 @@ DOCTORDEFAULTOPTIONS=-a experimental -a toc -a toclevels=4
 FORMATS=online.html allinone.html epub pdf mobi
 
 all: $(FORMATS)
-html: online.html allinone.html doctor.html
+html: online.html allinone.html doctor.html chunked.html
 
 allinone.html: $(BASE).allinone.html
 %.allinone.html: $(DEFAULTDEPENDENCIES)
@@ -18,6 +18,10 @@ online.html: $(BASE).online.html
 %.online.html: %.adoc $(DEFAULTDEPENDENCIES)
 	a2x $(VERBOSE) -f xhtml $(DEFAULTOPTIONS) $<
 	mv $(VERBOSE) $(BASE).html $@
+
+chunked.html: $(BASE).chunked/index.html
+%.chunked/index.html: %.adoc $(DEFAULTDEPENDENCIES)
+	a2x -f chunked $(DEFAULTOPTIONS) $<
 
 epub: $(BASE).epub
 %.epub: %.adoc $(DEFAULTDEPENDENCIES)
@@ -40,7 +44,7 @@ fb2: $(BASE).fb2
 	ebook-convert $< $@
 
 clean: deployclean
-	rm -rvf version.adoc *.html *.epub *.epub.d $(BASE).xml *.fls *.log *.pdf *.css *.tex *.mobi *.lit *.fb2
+	rm -rvf version.adoc *.html *.epub *.epub.d $(BASE).xml *.fls *.log *.pdf *.css *.tex *.mobi *.lit *.fb2 $(BASE).chunked
 
 deployclean:
 	rm -rvf deploy/*/ deploy/$(BASE)* deploy/*.html
