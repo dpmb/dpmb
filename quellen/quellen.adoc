@@ -576,6 +576,8 @@
 
 - [[[Mandriva-Wiki]]] Mandriva Control Center im Mandriva Wiki, http://wiki.mandriva.com/en/Tools/Control_Center
 
+- [[[Maassen-LPIC-1]]] Harald Maaßen: LPIC-1. Sicher zur erfolgreichen Linux-Zertifizierung, Rheinwerk Computing, Bonn, 4. Auflage, 2015, ISBN 978-3-8362-3527-3, https://www.rheinwerk-verlag.de/lpic-1_3781/
+
 - [[[MeeGo]]] MeeGo, https://meego.com/
 
 - [[[mime-applications-associations]]] MIME Application Associations, http://www.freedesktop.org/wiki/Specifications/mime-apps-spec/

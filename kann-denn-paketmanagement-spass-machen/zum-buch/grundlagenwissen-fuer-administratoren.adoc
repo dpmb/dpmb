@@ -26,9 +26,11 @@ Gewichtung <<lpic-101>>.
 [TIP]
 .Material für Ihre LPIC-Prüfungen
 ======
-Ihre Vorbereitung auf die anspruchsvollen Tests des LPI ergänzt das Buch
-``LPIC-1. Vorbereitung auf die Prüfungen des Linux Professional
-Institute'' von Peer Heinlein <<Heinlein-LPIC-1>>.
+Ihre Vorbereitung auf die anspruchsvollen Tests des LPI ergänzen die
+beiden Bücher ``LPIC-1. Vorbereitung auf die Prüfungen des Linux
+Professional Institute'' von Peer Heinlein <<Heinlein-LPIC-1>> und
+``LPIC-1. Sicher zur erfolgreichen Linux-Zertifizierung'' von Harald
+Maaßen <<Maassen-LPIC-1>>.
 ======
 
 // Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/grundlagenwissen-fuer-administratoren.adoc
