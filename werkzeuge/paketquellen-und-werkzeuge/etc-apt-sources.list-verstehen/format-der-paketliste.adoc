@@ -8,8 +8,8 @@
 
 // Indexeinträge
 (((/etc/apt/sources.list)))
-(((/etc/apt/sources.list`,Aufbau)))
-(((/etc/apt/sources.list`,Paketquelle)))
+(((/etc/apt/sources.list,Aufbau)))
+(((/etc/apt/sources.list,Paketquelle)))
 Wie auf UNIX/Linux-Systemen üblich, ist die Datei
 `/etc/apt/sources.list` eine reine Textdatei. Die Einträge darin
 erfolgen zeilenweise. Jede einzelne Paketquelle beschreiben Sie
