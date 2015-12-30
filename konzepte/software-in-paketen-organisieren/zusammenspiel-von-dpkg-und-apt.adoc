@@ -95,8 +95,11 @@ $
 ----
 
 Das zweite Kommando `dot` wandelt diese Beschreibung über den Schalter
-`-T`'Ausgabeformat' in eine hübsche Grafik um. Zwischen dem Schalter und
-dem gewählten Ausgabeformat erlaubt `dot` kein Leerzeichen. 
+`-T`'Ausgabeformat' in eine hübsche Grafik um. Aus Ausgabeformat
+unterstützt `dot` derzeit bspw. PostScript, Structured Vector Graphics
+(SVG), GIF, PNG und FIG (für die Verwendung in `xfig`). Beachten Sie
+bitte, dass `dot` zwischen dem Schalter und dem von Ihnen gewählten
+Ausgabeformat kein Leerzeichen erlaubt.
 
 Für `dpkg` erhalten Sie die Abbildung im Bildformat _Portable Network
 Graphics_ (PNG) mit dem nachfolgend gezeigten Aufruf auf der
