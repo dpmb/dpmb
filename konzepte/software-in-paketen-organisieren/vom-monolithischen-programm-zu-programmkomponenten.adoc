@@ -36,22 +36,24 @@ bereitgestellt wird.
 (((Softwarekomponenten)))
 (((Softwarekomponenten, Zerlegung in Pakete)))
 Während zu Beginn der Informationsverarbeitung noch eine Tontafel, ein
-Holzstab mit Einkerbungen oder auch nur ein Lochstreifen zur Erfassung
-einer Folge von Anweisungen ausreichte, passt heutiger Programmcode nur
-noch selten auf eine einzige Bildschirmseite
+Holzstab mit Einkerbungen, ein Blatt Papier oder auch nur ein
+Lochstreifen zur Erfassung einer Folge von Anweisungen ausreichte, passt
+heutiger Programmcode nur noch selten auf eine einzige Bildschirmseite
 <<Naumann-Abakus-Internet>>. Ein Großteil der aktuell genutzten Software
 ist daher mehrteilig und überaus komplex. Dabei spielen viele,
 unterschiedliche Komponenten zusammen, erfüllen verschiedene Aufgaben
 und bedingen einander. Dazu gehören kompilierte Programme, Skripte,
-Bibliotheken, Daten und Konfigurationsdateien. Die Paketierung der
-einzelnen Komponenten folgt eigenen Regeln, deren Konventionen nur zum
-Teil festgeschrieben sind und sich auch von Distribution zu Distribution
-etwas unterscheiden. <<tab.paketierung-apt>> zeigt die Zerlegung in
-einzelnen Pakete am Beispiel von APT. Dabei beinhaltet die linke Spalte
-den generischen Paketnamen ohne Nennung von Versionsnummer und
-Architektur, die mittlere Spalte die Kategorie, der das Paket zugeordnet
-ist (siehe <<sortierung-der-pakete-nach-verwendungszweck>>) und die
-rechte Spalte eine kurze Paketbeschreibung.
+Bibliotheken, Daten und Konfigurationsdateien.
+
+Die Paketierung der einzelnen Komponenten folgt eigenen Regeln, deren
+Konventionen nur zum Teil festgeschrieben sind und sich auch von
+Distribution zu Distribution etwas unterscheiden.
+<<tab.paketierung-apt>> zeigt die Zerlegung in einzelne Pakete am
+Beispiel von APT. Dabei beinhaltet die linke Spalte den generischen
+Paketnamen ohne Nennung von Versionsnummer und Architektur, die mittlere
+Spalte die Kategorie, der das Paket zugeordnet ist (siehe
+<<sortierung-der-pakete-nach-verwendungszweck>>) und die rechte Spalte
+eine kurze Paketbeschreibung.
 
 .Paketierung der Komponenten am Beispiel von APT
 [frame="topbot",options="header",id="tab.paketierung-apt"]
@@ -72,8 +74,8 @@ rechte Spalte eine kurze Paketbeschreibung.
 ====
 In <<benennung-eines-debian-pakets>> beleuchten wir die Benennung und
 Abfolge der Komponenten in den Paketnamen. Eine genaue Auflistung und
-Bedeutung der Paketkategorien lesen Sie in
-<<sortierung-der-pakete-nach-verwendungszweck>>.
+zur Bedeutung der Paketkategorien lesen Sie in
+<<sortierung-der-pakete-nach-verwendungszweck>> nach.
 ====
 
 //  ** Idee dahinter:
@@ -84,11 +86,11 @@ Die Ideen hinter der Zerlegung in einzelne Komponenten sind ganz
 unterschiedlich und ergeben sich aus der Entwicklung, dem Ausrollen und
 der nachfolgenden Pflege einer Software. Hauptmotivation ist dabei
 häufig, nicht das Rad jedes Mal neu erfinden zu müssen und stattdessen
-bereits bestehende Komponenten zu integrieren, die etabliert und
+bereits bestehende Komponenten zu integrieren, die etabliert sind und
 bekanntermaßen einen gewissen Qualitätsstandard erfüllen. Im
 Open-Source-Bereich erfolgt die Entwicklung weltweit verteilt, daher ist
 hier eine Zerlegung in kleinere Einheiten und ``Bausteine'' häufig von
-großem Nutzen. Damit können Aufgaben und Komponenten besser an kleine,
+großem Nutzen. Aufgaben und Komponenten können dadurch besser an kleine,
 spezialisierte Teams verteilt werden.
 
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/vom-monolithischen-programm-zu-programmkomponenten.adoc
