@@ -227,20 +227,20 @@ ist, welches dieses virtuelle Paket bereitstellt.
 In Debian gibt es bspw. die virtuellen Pakete 'xserver',
 'x-display-manager' und 'x-window-manager', die typische
 Komponenten des X-Window-Systems zusammenfassen.
-<<fig.aptitude-virtuelle-pakete>> zeigt die Auswahl für das virtuelle
-Paket 'x-display-manager' in `aptitude`. In der ersten Spalte der
-Darstellung erscheint dazu der Buchstabe `v` neben dem Namen des
-virtuellen Pakets.
+<<fig.aptitude-virtuelle-pakete>> zeigt beispielhaft die Auswahl für das
+virtuelle Paket 'x-display-manager' in `aptitude`. In der ersten Spalte
+der Darstellung kennzeichnet dazu der Buchstabe `v` neben dem Namen des
+virtuellen Pakets diese spezielle Variante.
 
-Zur Auswahl stehen daraus u.a. der Displaymanager Slim (Paket 'slim'),
-der Gnome Display Manager in Versionen 2 und 3 (Pakete 'gdm' und
-'gdm3'), der KDE Display Manager (Paket 'kdm'), der WINGs Display
+Zur Auswahl aus dem Paket stehen u.a. der Displaymanager Slim (Paket
+'slim'), der Gnome Display Manager in Versionen 2 und 3 (Pakete 'gdm'
+und 'gdm3'), der KDE Display Manager (Paket 'kdm'), der WINGs Display
 Manager und der ursprüngliche X Display-Manager (Paket 'xdm'). Der
 Screenshot in <<fig.aptitude-virtuelle-pakete>> stammt von einem
-Debian-System, auf welchem GDM3 installiert ist. Das erkennen Sie an
-der Hervorhebung durch fettgedruckten Text und dem `i` für ``Paket
-ist installiert'' in der ersten Spalte der Darstellung (siehe auch
-<<dpkg>> für weitere Darstellungsvarianten).
+Debian-System, auf welchem GDM3 installiert ist. Das erkennen Sie an der
+Hervorhebung durch fettgedruckten Text und der Markierung `i` für
+``Paket ist installiert'' in der ersten Spalte der Darstellung (siehe
+auch <<dpkg>> für weitere Darstellungsvarianten).
 
 .Inhalt des Pakets x-display-manager in Aptitude
 image::konzepte/software-in-paketen-organisieren/aptitude-virtuelle-pakete.png[id="fig.aptitude-virtuelle-pakete",width="50%"]
