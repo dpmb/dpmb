@@ -176,7 +176,7 @@ Diese Markierung hat den Effekt, dass sich beispielsweise `dpkg` weigert,
 dieses Paket zu entfernen (siehe <<pakete-deinstallieren>>). Mit dem
 zusätzlichen Parameter `--force-remove-essential` übergehen Sie diese
 Voreinstellung und können die Aktion trotzdem durchführen (siehe dazu
-Paketoperationen erzwingen in <<paketoperationen-erzwingen>>).
+``Paketoperationen erzwingen'' in <<paketoperationen-erzwingen>>).
 
 // Stichworte für den Index
 (((Debianpaket, core-utils)))
