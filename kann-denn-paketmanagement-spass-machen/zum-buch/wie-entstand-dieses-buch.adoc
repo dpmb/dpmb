@@ -64,13 +64,17 @@ Paketverwaltung scheint es so, als sei es unerheblich, welches wann zum
 Einsatz kommt. Dem ist nicht so, denn jedes hat seine ureigene Aufgabe
 in der Hierarchie der Paketverwaltung. Subtile Unterschiede zwischen APT
 und `aptitude` sorgen mitunter für eine blutige Nase, und insbesondere
-(RPM-Quer-)Einsteiger haben es zu Beginn nicht so leicht. Das Buch will
-darum vor allem Klarheit schaffen und Ihnen die Zusammenhänge zwischen
-den Programmen deutlich machen. Es hilft Ihnen, in jeder Situation das
-passende Werkzeug zur Paketverwaltung auszuwählen und es gekonnt
-einzusetzen. Dazu fassen wir den aktuellen Stand der Entwicklung
-zusammen und beleuchten darüber hinaus die angrenzenden Programme bzw.
-die damit verbundenen Fragestellungen im Alltag der Systembetreuung.
+Ein- und Umsteiger aus der RPM-Welt haben es zu Beginn nicht so leicht.
+Daher gibt es im Anhang eine Übersicht zu den Aufrufen von RPM und YUM
+-- siehe <<kommandos-zur-paketverwaltung-im-vergleich>>. 
+
+Das Buch will darum vor allem Klarheit schaffen und Ihnen die
+Zusammenhänge zwischen den Programmen deutlich machen. Es hilft Ihnen,
+in jeder Situation das passende Werkzeug zur Paketverwaltung auszuwählen
+und es gekonnt einzusetzen. Dazu fassen wir den aktuellen Stand der
+Entwicklung zusammen und beleuchten darüber hinaus die angrenzenden
+Programme bzw. die damit verbundenen Fragestellungen im Alltag der
+Systembetreuung.
 
 ==== Technische Basis ====
 
