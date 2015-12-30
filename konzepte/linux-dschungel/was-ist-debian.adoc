@@ -31,6 +31,8 @@ FreeBSD- bzw. GNU-Hurd-Betriebssystemkern nutzen.
 (((Debian, Entwicklungszweige)))
 (((Debian, Gesellschaftsvertrag)))
 (((Debian, Softwareauswahl)))
+(((Debian Free Software Guidelines (DFSG))))
+(((DFSG)))
 Einer der Eckpunkte des vom Debian-Projekt entwickelten Betriebssystems
 ist die ausschließliche Verwendung freier Software. Dafür sind die
 _Debian Free Software Guidelines_ (DFSG) <<DFSG>> maßgeblich, die im
