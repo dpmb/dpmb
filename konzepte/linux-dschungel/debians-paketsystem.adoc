@@ -8,7 +8,7 @@
 === Debians Paketsystem ===
 
 // Stichworte für den Index
-(((deb-Format)))
+(((deb-Paketformat)))
 (((dpkg)))
 (((Linux-Distribution, Debian)))
 (((Linux-Distribution, Paketabhängigkeiten)))
@@ -33,7 +33,7 @@ beziehen.
 (((apt)))
 (((aptitude)))
 (((console-apt)))
-(((deb-Format)))
+(((deb-Paketformat)))
 (((dselect)))
 (((muon)))
 (((PackageKit)))
