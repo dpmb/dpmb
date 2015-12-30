@@ -114,7 +114,7 @@ vorbereitete Zusammenstellung von Programmen benötigen. Für die
 Desktop-Umgebung XFCE genügt es beispielsweise, das dazugehörige
 Metapaket namens 'xfce4' auszuwählen. Andere Programmzusammenstellungen
 wie 'gnome' (GNOME-Window-Manager), 'lxde' (LXDE-Window-Manager) und
-'kde-full' (K Desktop Environment) handhaben das ähnlich. 
+'kde-full' (K Desktop Environment) handhaben das ähnlich.
 
 Sehr intensiv verwendet das Projekt Communtu diese Metapakete. Über die
 Webseite des Projekts stellen Sie sich individuelle Paketkombinationen
