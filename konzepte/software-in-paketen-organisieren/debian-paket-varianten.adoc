@@ -286,8 +286,8 @@ Paket die Ursache für den von Ihnen berichteten Fehler ist.
 [TIP]
 .Fehler zu einem Paket anzeigen
 ====
-Unter Bugreports anzeigen in <<bugreports-anzeigen>> lernen Sie, wie Sie
-die bestehenden Fehlermeldungen zu einem Paket anzeigen, deuten und
+Unter ``Bugreports anzeigen'' in <<bugreports-anzeigen>> lernen Sie, wie
+Sie die bestehenden Fehlermeldungen zu einem Paket anzeigen, deuten und
 einen eigenen Bugreport an das Betreuerteam des Pakets
 ('Paket-Maintainer') übermitteln.
 ====
