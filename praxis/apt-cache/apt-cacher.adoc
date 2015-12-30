@@ -7,7 +7,9 @@
 === apt-cacher ===
 
 // Stichworte für den Index
-(((Debian-Paket, apt-cacher)))
+(((apt-cacher, /etc/default/apt-cacher)))
+(((Debianpaket, apt-cacher)))
+(((Paketproxy)))
 
 * Paket 'apt-cacher' <<Debian-Paket-apt-cacher>>
 

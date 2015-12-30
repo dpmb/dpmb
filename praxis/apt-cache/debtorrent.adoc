@@ -8,8 +8,8 @@
 
 // Stichworte für den Index
 (((BitTorrent-Protokoll)))
-(((Debian-Paket, apt-transport-debtorrent)))
-(((Debian-Paket, debtorrent)))
+(((Debianpaket, apt-transport-debtorrent)))
+(((Debianpaket, debtorrent)))
 
 * Debianpaket 'debtorrent' <<Debian-Paket-debtorrent>>
 * Projektseite <<debtorrent-Projektseite>>

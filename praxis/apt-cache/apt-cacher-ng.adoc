@@ -7,7 +7,8 @@
 === apt-cacher-ng ===
 
 // Stichworte für den Index
-(((Debian-Paket, apt-cacher-ng)))
+(((Debianpaket, apt-cacher-ng)))
+(((Paketproxy)))
 
 * Programmpaket: 'apt-cacher-ng' <<Debian-Paket-apt-cacher-ng>>
 * Projektwebseite <<apt-cacher-ng-Projektseite>>

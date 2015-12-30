@@ -7,7 +7,8 @@
 === approx ===
 
 // Stichworte für den Index
-(((Debian-Paket, approx)))
+(((Debianpaket, approx)))
+(((Paketproxy)))
 
 * 'approx' <<Debian-Paket-approx>>
 * aus der Selbstbeschreibung:
