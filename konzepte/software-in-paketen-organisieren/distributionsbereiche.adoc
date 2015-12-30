@@ -112,7 +112,7 @@ image::konzepte/software-in-paketen-organisieren/aptitude-unfreie-pakete.png[id=
 (((Debianpaket, vrms)))
 Eine vollständige Übersicht zu allen nicht-freien Paketen, die auf ihrem
 System installiert sind, gibt Ihnen das Programm `vrms`. Darauf gehen
-wir unter _Liste der installierten, nicht-freien Pakete anzeigen_ (siehe
+wir unter ``Liste der installierten, nicht-freien Pakete anzeigen'' (siehe
 <<unfreie-pakete-anzeigen>>) ausführlicher ein.
 
 ==== Einordnung der Distributionsbereiche bei anderen Distributionen ====
@@ -141,15 +141,16 @@ Distributionsbereiche haben. Auf diese gehen wir hier nicht weiter ein.
 (((Softwarelizenz,Dokumentation)))
 (((Softwarelizenz,Firmware)))
 (((Softwarelizenz,Grafik)))
-Der Begriff ``Software'' wird hier recht weit gefasst und beinhaltet
-neben Programmcode auch Firmware, Dokumentation oder künstlerische
-Elemente wie beispielsweise Grafiken und Logos. Letztere stehen in
-manchen Fällen unter anderen Lizenzen als der Rest der Software und
-dürfen aus markenrechtlichen Gründen nicht für abgeänderte Programme
-verwendet werden. Aus diesem Grund wurden einige Programme abgewandelt,
-bspw. der Webbrowser Iceweasel und das Mailprogramm Icedove, die im
-Original die Namen Firefox und Thunderbird tragen. Neben den beiden
-anderen Namen werden in Debian auch alternative Logos genutzt.
+Der Begriff ``Software'' wird bei Debian recht weit gefasst und
+beinhaltet neben Programmcode auch Firmware, Dokumentation oder
+künstlerische Elemente wie beispielsweise Grafiken und Logos. Letztere
+stehen in manchen Fällen unter anderen Lizenzen als der Rest der
+Software und dürfen aus markenrechtlichen Gründen nicht für abgeänderte
+Programme verwendet werden. Aus diesem Grund wurden einige Programme
+abgewandelt, bspw. der Webbrowser Iceweasel und das Mailprogramm
+Icedove, die im Original die Namen Firefox und Thunderbird tragen. Neben
+den beiden anderen Namen werden in Debian auch alternative Logos
+genutzt.
 
 ==== Softwareverteilung ====
 
