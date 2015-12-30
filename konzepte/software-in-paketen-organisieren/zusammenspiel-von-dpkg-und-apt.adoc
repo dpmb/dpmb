@@ -19,7 +19,7 @@ die zur Nutzung dieser Werkzeuge ebenfalls notwendig sind.
 (((libapt-pkg)))
 (((Paketvalidierung, debian-archive-keyring)))
 (((Paketvalidierung, gnupg)))
-`apt` hängt vor allem von der aus dem APT-Quellcode gebauten Bibliothek
+APT hängt vor allem von der aus dem APT-Quellcode gebauten Bibliothek
 'libapt-pkg', von 'gnupg' und 'debian-archive-keyring' ab. Die beiden
 letztgenannten Pakete werden für die Validierung von digitalen
 Signaturen benötigt (siehe <<bezogenes-paket-verifizieren>>).
@@ -29,10 +29,10 @@ Signaturen benötigt (siehe <<bezogenes-paket-verifizieren>>).
 `dpkg` ist ein sog. _essentielles_ Paket (siehe
 <<paket-prioritaet-und-essentielle-pakete>>), hat also eher wenig
 Abhängigkeiten. Die meisten davon sind selbst _essentielle_ Pakete und
-müssen daher nicht namentlich als Abhängigkeit aufgeführt werden. Sie
-tauchen daher nur unter bestimmten Umständen explizit in den
-Abhängigkeitslisten auf, z.B. wenn bestimmte Einschränkungen bzgl. der
-Version bestehen.
+müssen daher nicht namentlich als Abhängigkeit in den Metadaten des
+Pakets aufgeführt werden. Sie tauchen daher nur unter bestimmten
+Umständen explizit in den Abhängigkeitslisten auf, z.B. wenn bestimmte
+Einschränkungen bzgl. der Version bestehen.
 
 // Stichworte für den Index
 (((Ncurses)))
@@ -40,8 +40,8 @@ Bei `aptitude` und den meisten anderen Frontends ist dies anders, denn
 diese sind alle um eine ganze Spur komplexer. Bei `aptitude` kommt z.B.
 noch die Benutzeroberfläche auf der Basis von Ncurses <<Ncurses>> hinzu.
 <<fig.apt-dot>>, <<fig.dpkg-dot>> und <<fig.aptitude-dot>> zeigen die
-minimalen Paketabhängigkeiten für das jeweilige Programm in graphischer
-Form.
+minimalen Paketabhängigkeiten für APT, `dpkg` und `aptitude` in
+graphischer Form.
 
 .Paketabhängigkeiten von APT
 image::konzepte/software-in-paketen-organisieren/apt.png[id="fig.apt-dot", width="50%"]
