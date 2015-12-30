@@ -41,9 +41,9 @@ dabei übernommen.
 (((Paketinhalt, Metadaten)))
 Außerdem sind in den Binärpaketen Metadaten gespeichert, die solche
 Informationen wie bspw. die Abhängigkeiten zu anderen Paketen
-enthalten. Weitere Details dazu erfahren Sie unter Konzepte und Ideen
-dahinter (siehe <<konzepte-und-ideen-dahinter>>) sowie Aufbau und Format
-von Binärpaketen (siehe <<aufbau-und-format-binaer>>).
+enthalten. Weitere Details dazu erfahren Sie unter ``Konzepte und Ideen
+dahinter'' (siehe <<konzepte-und-ideen-dahinter>>) sowie ``Aufbau und
+Format von Binärpaketen'' (siehe <<aufbau-und-format-binaer>>).
 
 // Stichworte für den Index
 (((file, UNIX-Kommando)))
@@ -86,8 +86,9 @@ dazu, Ihnen den Wechsel bei geänderten (Binär-)Paketnamen zu
 erleichtern. Damit wird bei einer Aktualisierung eines bestehenden
 Pakets das Paket mit dem neuen Namen nachgezogen. In den meisten Fällen
 können Sie nach der Aktualisierung das Paket mit dem bisher verwendeten
-Namen gefahrlos entfernen. Nicht selten passiert dies automatisch durch
-weitere, ggf. negative Abhängigkeiten.
+Namen gefahrlos von ihrem System entfernen. Nicht selten passiert dies
+bereits automatisch über die Paketverwaltung durch weitere, ggf.
+negative Abhängigkeiten.
 
 Übergangspakete hängen meist nur von einem einzigen anderen Paket ab.
 Beispiele dafür sind:
@@ -107,15 +108,18 @@ Abhängigkeiten zieht ein Metapaket eine Gruppe von verwendeten Paketen
 hinter sich her. Auf diese Art und Weise installieren Sie durch die
 Auswahl eines einzelnen Pakets eine ganze Gruppe an weiteren Paketen,
 die thematisch zusammengehören und sich häufig auch einander bedingen.
-Das ist sehr nützlich, wenn Sie sich sicher sind, dass Sie eine bestimmte
-Zusammenstellung von Programmen benötigen. Für die Desktop-Umgebung XFCE
-genügt es beispielsweise, das Metapaket 'xfce4' zu selektieren. Andere
-Programmzusammenstellungen wie 'gnome' (GNOME-Window-Manager), 'lxde'
-(LXDE-Window-Manager) und 'kde-full' (K Desktop Environment) handhaben
-das ähnlich. Das Projekt Communtu verwendet Metapakete sehr intensiv, um
-über die Webseite des Projekts individuelle Paketkombinationen
-(``Bündel'') bereitzustellen. Ausführlicher gehen wir darauf unter
-<<webbasierte-programme-communtu>> ein.
+
+Das ist sehr nützlich, wenn Sie sich sicher sind, dass Sie eine bereits
+vorbereitete Zusammenstellung von Programmen benötigen. Für die
+Desktop-Umgebung XFCE genügt es beispielsweise, das dazugehörige
+Metapaket namens 'xfce4' auszuwählen. Andere Programmzusammenstellungen
+wie 'gnome' (GNOME-Window-Manager), 'lxde' (LXDE-Window-Manager) und
+'kde-full' (K Desktop Environment) handhaben das ähnlich. 
+
+Sehr intensiv verwendet das Projekt Communtu diese Metapakete. Über die
+Webseite des Projekts stellen Sie sich individuelle Paketkombinationen
+(``Bündel'') zusammen und beziehen diese von dort. Ausführlicher gehen
+wir darauf in <<webbasierte-programme-communtu>> ein.
 
 // Stichworte für den Index
 (((Debianpaket, tasksel)))
