@@ -26,12 +26,13 @@ eigenen Skripte integrieren.
 `add-apt-repository` ist bis Debian 7 _Wheezy_ Bestandteil des Pakets
 'python-software-properties' <<Debian-Paket-python-software-properties>>
 und ab Debian 8 _Jessie_ in 'software-properties-common'
-<<software-properties-common>>. Es stellt graphische Komponenten bereit,
-die bspw. auch im Rahmen von Synaptic (siehe <<gui-synaptic>>) und dem
-Ubuntu Software Center (siehe <<gui-ubuntu-software-center>>) zum
-Einsatz kommen. Diese graphischen Komponenten beschreiben wir
-ausführlich unter Einstellungen mit Synaptic und im Ubuntu Software
-Center in <<einstellungen-mit-synaptic-und-im-ubuntu-software-center>>.
+<<Debian-Paket-software-properties-common>>. Es stellt graphische
+Komponenten bereit, die bspw. auch im Rahmen von Synaptic (siehe
+<<gui-synaptic>>) und dem Ubuntu Software Center (siehe
+<<gui-ubuntu-software-center>>) zum Einsatz kommen. Diese graphischen
+Komponenten beschreiben wir ausführlich unter Einstellungen mit Synaptic
+und im Ubuntu Software Center in
+<<einstellungen-mit-synaptic-und-im-ubuntu-software-center>>.
 
 // Stichworte für den Index
 (((add-apt-repository)))
