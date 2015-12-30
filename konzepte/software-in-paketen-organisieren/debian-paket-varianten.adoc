@@ -201,10 +201,10 @@ Paketierung.
 Zum Auspacken von Debian-Source-Paketen benutzen Sie das Programm
 `dpkg-source` aus dem Paket 'dpkg-dev'. Müssen Sie das Source-Paket
 vorher noch herunterladen, so nutzen Sie besser den Aufruf `apt-get
-source Paketname`, welcher das Source-Paket herunterlädt und danach
+source` 'Paketname', welcher das Source-Paket herunterlädt und danach
 direkt mit `dpkg-source` auspackt. Mehr Informationen zu Source-Paketen
-finden Sie unter Aufbau und Format von Sourcepaketen in
-<<aufbau-und-format-source>> und Sourcepakete beziehen in
+finden Sie unter ``Aufbau und Format von Sourcepaketen'' in
+<<aufbau-und-format-source>> und ``Sourcepakete beziehen'' in
 <<sourcepakete-beziehen>>.
 ====
 
