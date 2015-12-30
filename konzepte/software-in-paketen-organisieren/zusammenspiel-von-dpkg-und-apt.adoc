@@ -54,14 +54,15 @@ image::konzepte/software-in-paketen-organisieren/aptitude+apt.png[id="fig.aptitu
 
 // Stichworte für den Index
 (((debtree)))
+(((Debianpaket, debtree)))
 (((dot)))
 (((Graphviz)))
-Die Grafiken in den obigen Abbildungen erzeugen Sie mit Hilfe der beiden
-Programme `debtree` <<debtree-Projektseite>> und `dot` <<Graphviz>>.
-Ersteres berechnet über die Metadaten in den Paketlisten die
-Abhängigkeiten zu anderen Paketen nach und erzeugt daraus eine
-entsprechende Beschreibung des Abhängigkeitsgraphen in der Sprache
-'dot'.
+Die Grafiken in den drei obigen Abbildungen erzeugen Sie mit Hilfe der
+beiden Programme `debtree` <<Debian-Paket-debtree>> (siehe
+<<debtree-Projektseite>>) und `dot` <<Graphviz>>. Ersteres berechnet
+über die Metadaten in den Paketlisten die Abhängigkeiten zu anderen
+Paketen und erzeugt daraus eine entsprechende Beschreibung des
+Abhängigkeitsgraphen in der Sprache 'dot'.
 
 .Erzeugung der Abhängigkeitsgraphen zu `dpkg` mittels `debtree`
 ----

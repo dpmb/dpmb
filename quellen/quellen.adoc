@@ -289,6 +289,8 @@
 
 - [[[Debian-Paket-debsums]]] Debian-Paket 'debsums', http://packages.debian.org/de/stable/debsums
 
+- [[[Debian-Paket-debtree]]] Debian-Paket 'debtree', http://packages.debian.org/de/stable/debtree
+
 - [[[Debian-Paket-dgit]]] Debian-Paket 'dgit', https://packages.debian.org/testing/dgit
 
 - [[[Debian-Paket-dkms]]] Debian-Paket 'dkms' (Dynamic Kernel Modules Support), http://packages.debian.org/de/stable/dkms
