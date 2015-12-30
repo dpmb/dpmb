@@ -33,27 +33,29 @@ image::konzepte/software-in-paketen-organisieren/werkzeugebenen-2.png[id="fig.we
 (((dpkg-query)))
 (((Softwarestapel, dpkg)))
 (((Softwarestapel, untere Ebene)))
-Die Basis bildet `dpkg`. Es dient dazu, a) ein bereits lokal
+Die Basis bildet `dpkg`. Dessen Aufgabe ist es a) ein bereits lokal
 vorliegendes `deb`-Paket auszupacken und auf dem System einzuspielen und
 b) die Inhalte eines bereits installierten `deb`-Pakets wieder aus dem
 System zu entfernen. Ersteres entspricht dabei dem Kommandozeilenaufruf
-`dpkg -i Paketdatei`, das zweite hingegen `dpkg -r Paketdatei` (siehe
-<<pakete-installieren>> und <<pakete-deinstallieren>>).
+`dpkg -i` 'Paketdatei', das zweite hingegen `dpkg -r` 'Paketdatei'
+(siehe <<pakete-installieren>> und <<pakete-deinstallieren>>).
 
 Für Statusabfragen zu einem einzelnen Paket stützt sich `dpkg` auf die
 beiden Hilfsprogramme `dpkg-deb` und `dpkg-query`. Dazu gehören bspw.
-die Schalter `-c` und `-L` (siehe <<paketinhalte-anzeigen-apt-file>>)
-sowie `-l` (siehe <<liste-der-installierten-pakete-anzeigen-und-deuten>>), 
-`-s` (siehe <<paketstatus-erfragen>>) und `-S` (siehe
-<<paket-zu-datei-finden>>).
+die Schalter `-c` und `-L` zum Anzeigen des Inhalts eines Pakets (siehe
+<<paketinhalte-anzeigen-apt-file>>) sowie `-l` zur Auflistung der 
+installierten Pakete (siehe <<liste-der-installierten-pakete-anzeigen-und-deuten>>), 
+`-s` zum Erfragen des Paketstaus (siehe <<paketstatus-erfragen>>) und
+`-S`, um das Paket zu finden, in dem eine bestimmte Datei vorkommt
+(siehe <<paket-zu-datei-finden>>).
 
 Mit `dpkg` können Sie Ihre Pakete verwalten und das System vollständig
-pflegen. Jedoch müssen Sie sich dann aber um alle Komfortfunktionen
-selbst kümmern. `dpkg` prüft nur, ob alle Abhängigkeiten zu anderen
-Paketen erfüllt sind und beendet im Fehlerfall die Aktion. Es nimmt
-Ihnen weder die automatische Auflösung von Paketabhängigkeiten, noch die
-richtige Reihenfolge bei der Installation der Pakete ab. Diese Mühe
-erleichtern Ihnen die Werkzeuge der oberen Ebene.
+pflegen. Jedoch müssen Sie sich dann aber selbst um alle
+Komfortfunktionen kümmern. `dpkg` prüft nur, ob alle Abhängigkeiten zu
+anderen Paketen erfüllt sind und beendet im Fehlerfall die Aktion. Es
+nimmt Ihnen weder die automatische Auflösung von Paketabhängigkeiten,
+noch die richtige Reihenfolge bei der Installation der Pakete ab. Diese
+Mühe erleichtern Ihnen die Werkzeuge der oberen Ebene.
 
 // Stichworte für den Index
 (((emerge)))
@@ -64,12 +66,13 @@ erleichtern Ihnen die Werkzeuge der oberen Ebene.
 [TIP] 
 .Paketverwaltung bei anderen Linux-Distributionen
 ====
-Das Analogon bei `rpm`-basierten Distributionen ist `rpm`, bei Arch
-Linux ist es Pacman und bei Gentoo erreichen Sie die Funktionalität
+Das Analogon zu `dpkg` bei `rpm`-basierten Distributionen ist `rpm`, bei
+Arch Linux ist es Pacman und bei Gentoo erreichen Sie die Funktionalität
 durch die beiden Programme `emerge` und `equery`. Eine komplette
-Übersicht zu den verschiedenen Programmen finden Sie einerseits in 
-der Pacman-Rosetta (siehe <<pacman-rosetta-beschreibung>>) sowie in
-der Übersicht im Anhang (siehe <<kommandos-zur-paketverwaltung-im-vergleich>>).
+Übersicht zu den verschiedenen Programmen finden Sie einerseits in der
+Pacman-Rosetta (siehe <<pacman-rosetta-beschreibung>>) sowie in unserer
+Übersicht im Anhang des Buches (siehe
+<<kommandos-zur-paketverwaltung-im-vergleich>>).
 ====
 
 ==== Obere Ebene ====
@@ -78,10 +81,10 @@ der Übersicht im Anhang (siehe <<kommandos-zur-paketverwaltung-im-vergleich>>).
 (((Softwarestapel, APT)))
 (((Softwarestapel, aptitude)))
 (((Softwarestapel, Muon)))
+(((Softwarestapel, obere Ebene)))
 (((Softwarestapel, PackageKit)))
 (((Softwarestapel, Synaptic)))
 (((Softwarestapel, Ubuntu Software Center)))
-(((Softwarestapel, obere Ebene)))
 Bei `deb`-basierten Distributionen besteht die obere Ebene
 typischerweise aus dem Programm APT sowie den weiteren Programmen
 `aptitude`, Muon (siehe <<gui-muon>>), Synaptic, Ubuntu Software Center
