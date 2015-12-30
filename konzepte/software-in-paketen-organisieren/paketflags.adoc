@@ -211,7 +211,8 @@ wireshark wurde als manuell installiert festgelegt.
 (((apt-mark, unhold)))
 (((Paketflags, hold)))
 Für das Halten eines Pakets existieren die Unterkommandos `hold` und
-`unhold`. Welchen konkreten Nutzen das haben kann, erfahren Sie in
+`unhold`. Welchen konkreten Nutzen das haben kann, erfahren Sie unter 
+``Ausgewählte Pakete nicht aktualisieren'' in
 <<ausgewaehlte-pakete-nicht-aktualisieren>>.
 
 ==== Was passiert, wenn Paketflags geändert werden? ====
