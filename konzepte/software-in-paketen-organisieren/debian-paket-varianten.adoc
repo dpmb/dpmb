@@ -25,14 +25,17 @@ Quellcode enthalten, aus dem später eines oder mehrere Binärpakete
 
 // Stichworte für den Index
 (((Paketvarianten, Binärpaket)))
-Binärpakete beinhalten Programme, Konfigurationsdateien, Dokumentation
-und Daten in exakt dem Zustand, wie sie nachher auch installiert auf der
-Festplatte Ihres Rechners vorliegen. Das Installationsprogramm `dpkg`
-entpackt das Archiv aus dem `deb`-Paket und kopiert die Paketinhalte an
-die entsprechende Stelle in der Verzeichnishierarchie auf dem
-Zielsystem. Alle im Paket genannten Pfade und Berechtigungen werden
-dabei übernommen. In C oder einer ähnlichen Programmiersprache
-geschriebene Programme liegen im Binärpaket bereits kompiliert vor.
+Binärpakete beinhalten Programme in kompilierter Form, die vorher bspw.
+in C oder einer ähnlichen Programmiersprache geschrieben wurden.
+Weiterhin beinhaltet es häufig noch Konfigurationsdateien, Dokumentation
+und weitere Daten in exakt dem Zustand, wie sie nachher auch auf der
+Festplatte Ihres Rechners vorliegen.
+
+Bei der Installation eines `deb`-Paketes entpackt das Programm `dpkg`
+zuerst das Archiv aus dem `deb`-Paket und kopiert danach die Inhalte des
+Archivs an die vorbezeichnete Stelle in der Verzeichnishierarchie auf
+dem Zielsystem. Alle im Archiv genannten Pfade und Berechtigungen werden
+dabei übernommen.
 
 // Stichworte für den Index
 (((Paketinhalt, Metadaten)))
@@ -47,7 +50,7 @@ von Binärpaketen (siehe <<aufbau-und-format-binaer>>).
 (((Debianpaket, vnstat)))
 Wie bereits oben benannt, hat ein Binärpaket üblicherweise die
 Dateiendung `deb` und wird auch durch das UNIX-Kommando
-`file`entsprechend als solches erkannt. Nachfolgende Ausgabe zeigt
+`file` entsprechend als solches erkannt. Nachfolgende Ausgabe zeigt
 dieses Verhalten am Beispiel des Paketes 'vnstat', eines Programms zur
 Analyse des Netzwerktraffics.
 
