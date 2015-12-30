@@ -16,19 +16,10 @@ Werkzeuge haben innerhalb der letzten 20 Jahre bei weitaus mehr
 UNIX-artigen Betriebssystemen Einzug gehalten, als es auf den ersten
 Blick zu vermuten wäre.
 
-// - Auf praktisch jedem Debian-Derivat:
-//
-//  * Raspbian (Debian auf dem Raspberry Pi), Emdebian, …
-//  * Ubuntu und Derivate
-//  * Skolelinux/DebianEdu, Edubuntu
-//  * Aptosid, Siduction, Grml, Knoppix, Damn Small Linux, BackTrack, …
-//  * Linux Mint, Bodhi Linux, Crunchbang Linux, ElementaryOS, …
-//  * Zentyal, Univention Corporate Linux, …
-
 Vereinfacht gesagt, basiert praktisch jedes Debian-Derivat auf den beiden
 Konzepten. Die Übersicht in <<paketformat-im-einsatz>> zeigt eine
-Auswahl, jeweils ergänzt um den spezifischen Einsatzbereich. Bis auf
-Univention Corporate Server (UCS) sind alle genannten Derivate
+Auswahl, jeweils ergänzt um den spezifischen Einsatzbereich. Bis auf den
+Univention Corporate Server (UCS) sind alle der genannten Derivate
 kostenfrei verfügbar.
 
 // Datei (Ende): ./konzepte/linux-dschungel/welche-unix-artigen-betriebssysteme-verwenden-das.adoc
