@@ -19,21 +19,23 @@ Pakete und deren Abhängigkeiten. Wir raten Ihnen hierfür zu folgendem
 Ablauf:
 
 . Erstellen Sie zuerst eine Sicherheitskopie der Datei
-`/etc/apt/sources.list`.
+  `/etc/apt/sources.list`.
 
 . Tragen Sie die neuen oder veränderten Paketquellen in der Datei
-`/etc/apt/sources.list` nach und speichern diese Datei ab.
+  `/etc/apt/sources.list` nach und speichern diese Datei ab.
 
 . Sofern dies keine offiziellen Debian-Repositories sind, verifizieren
-Sie die Paketquelle (siehe <<paketquelle-auf-echtheit-ueberpruefen>>),
-die Sie hinzugefügt oder geändert haben.
+  Sie die Paketquelle, die Sie hinzugefügt oder geändert haben. Unter
+  ``Paketquelle auf Echtheit überprüfen'' in
+  <<paketquelle-auf-echtheit-ueberpruefen>> erfahren Sie, wie das zu
+  erfolgen hat.
 
 . Aktualisieren Sie die lokalen Paketlisten mit dem Kommando `apt-get
-update` oder `aptitude update`. Bitte beachten Sie dazu auch unsere
-Anmerkungen unter ``Liste der verfügbaren Pakete aktualisieren'' in
-<<liste-der-verfuegbaren-pakete-aktualisieren>>. Handelt es sich um ein
-Distributionsupgrade, lesen Sie bitte dazu zusätzlich unter ``Distribution
-aktualisieren'' in <<distribution-aktualisieren>> nach.
+  update` oder `aptitude update`. Bitte beachten Sie dazu auch unsere
+  Anmerkungen unter ``Liste der verfügbaren Pakete aktualisieren'' in
+  <<liste-der-verfuegbaren-pakete-aktualisieren>>. Handelt es sich um 
+  ein Distributionsupgrade, lesen Sie bitte dazu zusätzlich unter 
+  ``Distribution aktualisieren'' in <<distribution-aktualisieren>> nach.
 
 Mit dieser Vorgehensweise ist sichergestellt, dass die Paketverwaltung
 über ihre Veränderungen in der Liste der Paketquellen Bescheid weiß. Nun
