@@ -14,15 +14,10 @@
 (((dpkg, --remove-architecture)))
 (((dpkg, /var/lib/dpkg/arch)))
 (((dpkg, /var/lib/dpkg/arch-new)))
-`dpkg` führt eine Liste mit den Architekturen, für die es Pakete
-installiert bzw. installieren darf. Die Liste der Architekturen
-Ihres Systems ist in der Datei `/var/lib/dpkg/arch` hinterlegt. Die
-erste Architektur in dieser Datei ist die Basisarchitektur. Die Datei
-existiert allerdings nur, sofern Sie zuvor Fremdarchitekturen ergänzt
-haben. Die Basisarchitektur können Sie mit der `dpkg`-Option
-`--print-architecture` (früher bzw. bei älteren `dpkg`-Versionen
-`--print-installation-architecture`) aus, die Fremdarchitekturen mit
-`--print-foreign-architectures`.
+`dpkg` führt eine Liste mit allen Architekturen, für die es Pakete
+installiert bzw. installieren darf. Diese Liste befindet sich in der
+Datei `/var/lib/dpkg/arch` und existiert allerdings nur, sofern Sie
+zuvor auch Fremdarchitekturen ergänzt haben.
 
 .Inhalt der Liste der Architekturen eines Systems mit `amd64` als Basisarchitektur und `i386` als Fremdarchitektur
 ----
@@ -32,17 +27,23 @@ i386
 $
 ----
 
+Die erste Architektur in dieser Datei ist die Basisarchitektur. Diese
+geben Sie mit der `dpkg`-Option `--print-architecture` aus. Früher bzw.
+bei älteren `dpkg`-Versionen heißt die Option
+`--print-installation-architecture`. Die Fremdarchitekturen zeigen Sie
+mit `dpkg --print-foreign-architectures` an.
+
 Über die beiden `dpkg`-Optionen `--add-architecture` und
 `--remove-architecture` erweitern bzw. reduzieren Sie die Liste
 entsprechend. Beim Aufruf geben Sie dazu jeweils noch die gewünschte
-Architektur als Parameter an, bspw. `dpkg --add-architecture i386`
+Architektur als Parameter an, bspw. `dpkg --add-architecture i386`,
 wenn Sie zusätzlich die Architektur für 32-Bit-PCs nutzen wollen, weil
-es bestimmte Software nur für 32-Bit-System gibt.
+es ihre gewünschte Software nur für 32-Bit-Systeme gibt.
 
 Während des Vorgangs schreibt `dpkg` diese Änderung zuerst in eine
-temporäre Datei names `/var/lib/dpkg/arch-new` und benennt diese dann
-in `/var/lib/dpkg/arch` um wenn alle anderen Änderungen erfolgreich
-vorgenommen wurden.
+temporäre Datei namens `/var/lib/dpkg/arch-new`. Wurden  alle anderen
+Änderungen erfolgreich vorgenommen, benennt `dpkg` diese Datei in
+`/var/lib/dpkg/arch` um.
 
 [NOTE]
 .Installation von Paketen für fremde Architekturen
