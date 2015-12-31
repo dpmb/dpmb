@@ -15,7 +15,7 @@ die Interessen der Benutzer sehr deutlich wieder.
 (((Debian Quality Assurance Team)))
 (((Paketqualität)))
 Das 'Debian Quality Assurance Team' (kurz QA Team) <<DebianQA>>
-sorgt für eine möglichst hohe Softwarequalität. Neben den Werkzeugen zur
+sorgt dafür, dass eine möglichst hohe Softwarequalität in Debian gehalten wird. Neben den Werkzeugen zur
 Qualitätssicherung (siehe <<qualitaetskontrolle>>) gehören dazu die
 Trendforschung, die Bestandsaufnahme und eine Auswertung darüber, ob und
 vor allem wie häufig ein Paket installiert wird. Das sagt zwar nicht
