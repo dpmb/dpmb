@@ -299,6 +299,8 @@
 
 - [[[Debian-Paket-dlocate]]] Debian-Paket 'dlocate', https://packages.debian.org/de/stable/dlocate
 
+- [[[Debian-Paket-dpkg]]] Debian-Paket 'dpkg', https://packages.debian.org/de/stable/dpkg
+
 - [[[Debian-Paket-dpkg-www]]] Debian-Paket 'dpkg-www', https://packages.debian.org/de/stable/dpkg-www
 
 - [[[Debian-Paket-dwm]]] Debian-Paket 'dwm', http://packages.debian.org/de/stable/dwm
