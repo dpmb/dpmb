@@ -1,6 +1,7 @@
 // Datei: ./konzepte/software-in-paketen-organisieren/multiarch-einsetzen.adoc
 
 // Baustelle: Fertig
+// Axel: Fertig
 
 [[multiarch-einsetzen]]
 === Multiarch einsetzen ===
