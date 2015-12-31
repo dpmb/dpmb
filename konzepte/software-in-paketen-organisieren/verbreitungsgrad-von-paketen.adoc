@@ -38,7 +38,7 @@ große Rolle – Pakete, die häufiger genutzt werden, haben eine größere
 Chance, auf die ersten Installationsimages zu gelangen.
 
 // Stichworte für den Index
-(((Debian Polularity Contest)))
+(((Debian Popularity Contest)))
 (((Debianpaket, nginx)))
 (((Debianpaket, popularity-contest)))
 (((Nutzungsgrad von Paketen)))
