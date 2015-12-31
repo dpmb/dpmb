@@ -184,7 +184,7 @@ Voreinstellung und können die Aktion trotzdem durchführen (siehe dazu
 `apt-get` und `aptitude` entfernen diese Pakete nur nach Eingabe des
 vollständigen Satzes ``Ja, tue was ich sage!'' (`apt-get`) bzw. ``Mir ist
 klar, dass das eine sehr schlechte Idee ist.'' (`aptitude`). Diese Sätze
-werden jeweils in der eingestellten Sprache ihres Debiansystems
+werden jeweils in der eingestellten Sprache Ihres Debiansystems
 angezeigt (Lokalisierung), sofern eine Übersetzung vorhanden ist.
 Nachfolgendes Beispiel zeigt die Bildschirmausgabe vor der Entfernung
 des Paketes 'core-utils'.
