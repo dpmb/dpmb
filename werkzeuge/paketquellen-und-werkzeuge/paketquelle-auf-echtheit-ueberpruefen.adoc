@@ -35,7 +35,7 @@ werden zunächst vom Verwalter des Repositorys mit dem privaten
 Schlüssel signiert und deren öffentlicher Schlüssel bekanntgegeben bzw.
 als Paket hinterlegt. Über diese Signaturen überprüfen Sie damit
 einerseits die Echtheit der Paketquelle und andererseits über die
-Hashsummen jeden einzelnen Paketes in den Paketlisten auch jedes
+Hashsummen jeden einzelnen Pakets in den Paketlisten auch jedes
 einzelne Paket daraus (siehe auch Bezogenes Paket verifizieren in
 <<bezogenes-paket-verifizieren>>).
 
@@ -55,7 +55,7 @@ eine deutliche Warnung.
 Die Verwaltung der Schlüssel erfolgt mit dem Programm `apt-key`. Dazu
 gehört ein Schlüsselring mit allen GPG-Schlüsseln der Paketquellen, aus
 denen Pakete bezogen wurden. Bei Debian sind diese Schlüssel Bestandteil des
-Paketes 'debian-archive-keyring'
+Pakets 'debian-archive-keyring'
 <<Debian-Paket-debian-archive-keyring>>, bei Ubuntu heißt das Paket
 hingegen 'ubuntu-keyring' <<Ubuntu-Paket-ubuntu-keyring>>.
 

@@ -23,7 +23,7 @@ Paket sichtbar sind.
 |====
 | Platzhalter | Bedeutung
 | `%c` | aktueller Paketstatus ('Current State Flag')
-| `%a` | Aktion des Paketes ('Action Flag')
+| `%a` | Aktion des Pakets ('Action Flag')
 | `%M` | gesetzt, falls das Paket automatisch installiert wurde ('Automatic Flag')
 | `%p` | Paketname ('package name')
 | `%d` | Paketbeschreibung ('description')

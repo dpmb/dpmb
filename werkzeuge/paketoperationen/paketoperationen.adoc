@@ -35,7 +35,7 @@ include::obsolete-pakete-anzeigen.adoc[]
 
 include::aktualisierbare-pakete-anzeigen.adoc[]
 
-include::installationsgroesse-eines-paketes.adoc[]
+include::installationsgroesse-eines-pakets.adoc[]
 
 include::groesstes-installiertes-paket-finden.adoc[]
 
@@ -68,7 +68,7 @@ include::ausfuehrbare-dateien-anzeigen.adoc[]
 
 include::manpages-anzeigen.adoc[]
 
-include::konfigurationsdateien-eines-paketes-anzeigen.adoc[]
+include::konfigurationsdateien-eines-pakets-anzeigen.adoc[]
 
 // - Veränderungen zur vorherigen Version
 include::paketaenderungen-nachlesen.adoc[]

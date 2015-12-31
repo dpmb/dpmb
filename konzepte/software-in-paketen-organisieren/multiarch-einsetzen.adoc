@@ -68,7 +68,7 @@ Wie Sie Pakete architekturbezogen deinstallieren, lesen Sie in
 // Wie Sie Pakete finden, die zu dieser Kategorie zählen, lesen Sie im
 // Detail unter <<multiarch-pakete-finden>> nach.
 
-==== Multiarch-Beispiel: Installieren eines 32-Bit-Paketes auf einem 64-Bit-System ====
+==== Multiarch-Beispiel: Installieren eines 32-Bit-Pakets auf einem 64-Bit-System ====
 
 // Stichworte für den Index
 (((dpkg, --add-architecture)))
@@ -83,7 +83,7 @@ recht weit verbreitete, aber nicht-quelloffene Kommunikationsprogramm
 Skype <<Skype>>. Eine passende Schritt-für-Schritt-Anleitung finden Sie
 im Debian Wiki <<Debian-Wiki-Skype>>.
 
-Im Folgenden zeigen wir Ihnen anhand des vorgenannten Paketes `pforth`,
+Im Folgenden zeigen wir Ihnen anhand des vorgenannten Pakets `pforth`,
 wie eine solche Installation abläuft und insbesondere, welche
 Einzelschritte wir dabei für beachtenswert halten. Zunächst überprüfen
 Sie mittels `dpkg` und dessen Option `--print-architecture` die derzeit

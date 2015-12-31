@@ -14,7 +14,7 @@ Die generelle Idee zu dem Werkzeug `apt-listbugs` aus dem gleichnamigen
 Debianpaket <<Debian-Paket-apt-listbugs>> ist, Fehlerberichte aus dem
 Debian BTS abzurufen. Wie wir bereits zuvor in
 <<bugreports-hintergrundwissen>> angerissen haben, ist das Werkzeug in
-den Ablauf zur Aktualisierung und Installation eines Paketes mit APT
+den Ablauf zur Aktualisierung und Installation eines Pakets mit APT
 integriert. Es prüft in diesem Zusammenhang automatisch mit, ob im
 Debian BTS Fehler für das betreffende Paket vorliegen und diese bereits
 repariert wurden.

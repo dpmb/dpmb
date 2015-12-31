@@ -32,7 +32,7 @@ ToDo
 
 * `dpkg`-Schalter (Auswahl):
 ** `bad-verify`: Paket installieren, selbst wenn Authentizitätsüberprüfung misslingt
-** `overwrite` : Datei eines anderen Paketes überschreiben
+** `overwrite` : Datei eines anderen Pakets überschreiben
 ** `confmiss`  : Fehlende Konf.-Dateien immer installieren
 ** `conflicts` : Installation kollidierender Pakete erlauben
 ** `depends`   : Alle Abhängigkeitsprobleme in Warnungen umwandeln

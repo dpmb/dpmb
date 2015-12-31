@@ -49,7 +49,7 @@ $
 (((vrms, --sparse)))
 Benötigen Sie hingegen lediglich eine Paketliste ohne zusätzliche
 Informationen, hilft Ihnen der Schalter `-s` (Langform `--sparse`)
-weiter. Der Name jedes Paketes wird in einer einzelnen Zeile ausgegeben.
+weiter. Der Name jedes Pakets wird in einer einzelnen Zeile ausgegeben.
 
 Nach den Paketen aus dem Bereich _non-free_ listet `vrms` die
 _contrib_-Pakete auf. Die Auflistung beider Bereiche wird durch eine

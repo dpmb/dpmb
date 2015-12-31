@@ -85,7 +85,7 @@ auch für die textbasierte Version 'tshark' beinhaltet.
 (((Paketname, Versionsverlauf)))
 _Feld 2_ spiegelt eine Reihe unterschiedlicher Informationen und
 Zustände wieder, aus dem Sie den Versionsstand und -verlauf
-eines Paketes erkennen. Die Versionsangabe kann sowohl numerische
+eines Pakets erkennen. Die Versionsangabe kann sowohl numerische
 Zeichen (Ziffern), als auch nichtnumerische Zeichen wie Punkte, Tilden
 und Buchstaben beinhalten.
 
@@ -102,7 +102,7 @@ Debian-Revisionsnummer.
 
 Handelt es sich hingegen um ein _natives Debian-Paket_, d.h. eine
 Software, die ausschließlich als Debian-Paket vertrieben wird, gibt es
-keine Debian-Revisionsnummer und die Versionsnummer des Paketes ist
+keine Debian-Revisionsnummer und die Versionsnummer des Pakets ist
 identisch mit der Versionsnummer der Software. Für das Paket
 'dpkg_1.17.25_i386.deb' zu `dpkg` ist das 1.17.25.
 
@@ -135,7 +135,7 @@ als Konvention, werden aber auch an einigen Stellen erwartet.
 
 `+nmu<n>` ::
 Non-Maintainer-Upload (NMU) eines nativen Pakets. Das bezeichnet eine
-Paketversion, die nicht vom Verantwortlichen (Maintainer) des Paketes
+Paketversion, die nicht vom Verantwortlichen (Maintainer) des Pakets
 stammt. Bspw. bezeichnet die Datei `adduser_3.113+nmu3_all.deb` das
 Paket 'adduser' als dritten Non-Maintainer-Upload basierend auf der
 Version 3.113 des Maintainers.
@@ -153,11 +153,11 @@ Non-Maintainer-Upload, welcher auf der Basis der Maintainer-Version
 
 `+b<n>` ::
 Kennzeichnung eines Binären Non-Maintainer-Uploads (_BinNMU_). Das
-bezeichnet eine Übersetzung des Paketes ohne vorherige Änderung des
+bezeichnet eine Übersetzung des Pakets ohne vorherige Änderung des
 Quellcodes. Das tritt bspw. dann auf, wenn sich die Abhängigkeiten zum
-Bauen des Paketes geändert haben (sogenannte _build-dependencies_). Die
+Bauen des Pakets geändert haben (sogenannte _build-dependencies_). Die
 Angabe `123-4+b2` steht dabei für den zweiten Erstellungsdurchlauf des
-Paketes aus den Quellen der Version `123-4`. Ubuntu verwendet dafür
+Pakets aus den Quellen der Version `123-4`. Ubuntu verwendet dafür
 stattdessen die Syntax `123-4build2`.
 
 `~bpo<x>+<y>` ::

@@ -1,6 +1,7 @@
 // Datei: ./konzepte/software-in-paketen-organisieren/paket-prioritaet-und-essentielle-pakete.adoc
 
 // Baustelle: Fertig
+// Axel: Fertig
 
 [[paket-prioritaet-und-essentielle-pakete]]
 
@@ -11,7 +12,7 @@
 (((Paketpriorität, Überblick)))
 Jedes Paket beinhaltet ein Feld namens `Priority` – englisch
 für ``Priorität''. Dabei geht es aber weniger um eine Rangfolge von
-Paketen, sondern um die Wichtigkeit eines Paketes bzw. um die
+Paketen, sondern um die Wichtigkeit eines Pakets bzw. um die
 Wahrscheinlichkeit, dass Sie dieses Paket installieren möchten.
 
 Debian kennt die folgenden fünf Prioritätsstufen:
@@ -120,7 +121,7 @@ Programm zum Melden von Fehlern in Debian (siehe dazu
 // Stichworte für den Index
 (((Paketpriorität, optional)))
 Dies ist in gewisser Weise der Standardwert für die Priorisierung eines
-Paketes. Alle Pakete, die in keine der anderen Stufen gehören, werden
+Pakets. Alle Pakete, die in keine der anderen Stufen gehören, werden
 dieser Prioritätsstufe zugeordnet. Sie enthält deswegen auch den
 Großteil aller Pakete in Debian. Optional bedeutet in diesem Kontext,
 dass diese Pakete nicht von jedermann benötigt werden.
@@ -164,7 +165,7 @@ anderen Paketen deklariert werden. In der Regel sind alle Pakete der
 Prioritätsstufe ``erforderlich'' in dieser Form markiert, von denen kein
 anderes Paket dieser Stufe abhängt. Somit wird auch bei der Entfernung
 eines nicht-essentiellen Pakets der Stufe ``erforderlich'' gewarnt. Das
-passiert jedoch nicht, wenn bei einer Umbenennung eines solchen Paketes
+passiert jedoch nicht, wenn bei einer Umbenennung eines solchen Pakets
 das alte Paket entfernt wird, um für das neue Paket Platz zu machen oder
 weil es nicht mehr gebraucht wird (d.h. irgendwann nicht mehr notwendig
 ist).
@@ -187,31 +188,24 @@ klar, dass das eine sehr schlechte Idee ist.'' (`aptitude`). Diese Sätze
 werden jeweils in der eingestellten Sprache Ihres Debiansystems
 angezeigt (Lokalisierung), sofern eine Übersetzung vorhanden ist.
 Nachfolgendes Beispiel zeigt die Bildschirmausgabe vor der Entfernung
-des Paketes 'coreutils' <<Debian-Paket-coreutils>>.
+des Pakets 'init' <<Debian-Paket-init>>.
 
-.Eingabeaufforderung von `apt-get` vor der Entfernung des essentiellen Pakets 'coreutils'
+.Eingabeaufforderung von `apt-get` vor der Entfernung des essentiellen Pakets 'init'
 ----
-# apt-get remove coreutils
+# apt-get remove init
 Paketlisten werden gelesen... Fertig
 Abhängigkeitsbaum wird aufgebaut.
 Statusinformationen werden eingelesen.... Fertig
-Die folgenden Pakete wurden automatisch installiert und werden nicht mehr benötigt:
-  abiword-common aqbanking-tools blt calligra-data cdparanoia cli-common dvd+rw-tools
-  ...
-  xul-ext-firebug xulrunner-17.0 xzgv yelp zathura zenity zenmap
-Die folgenden NEUEN Pakete werden installiert:
-  libgd2-noxpm
+Die folgenden Pakete werden ENTFERNT:
+  init
 WARNUNG: Die folgenden essentiellen Pakete werden entfernt.
 Dies sollte NICHT geschehen, außer Sie wissen genau, was Sie tun!
-  coreutils e2fsprogs util-linux (wegen e2fsprogs) sysvinit initscripts (wegen sysvinit)
-0 aktualisiert, 1 neu installiert, 693 zu entfernen und 0 nicht aktualisiert.
-Es müssen 229 kB an Archiven heruntergeladen werden.
-Nach dieser Operation werden 3.630 MB Plattenplatz freigegeben.
+  init
+0 aktualisiert, 0 neu installiert, 1 zu entfernen und 0 nicht aktualisiert.
+Nach dieser Operation werden 29,7 kB Plattenplatz freigegeben.
 Sie sind im Begriff, etwas potentiell Schädliches zu tun.
 Zum Fortfahren geben Sie bitte »Ja, tue was ich sage!« ein.
- ?] q
-Abbruch.
-#
+ ?]
 ----
 
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/paket-prioritaet-und-essentielle-pakete.adoc

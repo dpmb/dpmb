@@ -45,7 +45,7 @@ Paketquellen zur Verfügung steht. Während `grep-available` weitestgehend
 die Informationen ausgibt, die Sie mittels `dpkg -s` erhalten, liefert
 Ihnen `grep-aptavail` die vollständigen Informationen, so bspw. auch, wo
 Sie das Paket in der Verzeichnishierarchie der Paketquellen finden.
-Nachfolgendes Beispiel zeigt die Recherche anhand des Paketes 'xpdf'.
+Nachfolgendes Beispiel zeigt die Recherche anhand des Pakets 'xpdf'.
 
 .Paketinformationen zu 'xpdf'
 ----

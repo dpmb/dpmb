@@ -17,7 +17,7 @@ Bandbreite. Dazu benötigt `apt-get` die Option `--no-download` zum
 Unterkommando `install`. Nachfolgende Ausgabe zeigt das anhand des
 Pakets 'bash-doc', welches bereits im Paketcache liegt.
 
-.Installation des Paketes 'bash-doc' via `apt-get` aus dem Paketcache
+.Installation des Pakets 'bash-doc' via `apt-get` aus dem Paketcache
 ----
 # apt-get --no-download install bash-doc
 Paketlisten werden gelesen... Fertig

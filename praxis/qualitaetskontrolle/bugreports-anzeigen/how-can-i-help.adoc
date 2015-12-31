@@ -56,7 +56,7 @@ Möglichkeiten, welche bereits in der Vergangenheit aufgelistet wurden.
 Eine kompaktere Darstellung ohne Kopf- und Fußzeilen.
 
 In Benutzung sind zudem eine Reihe von Abkürzungen für die konkrete
-Hilfe, die sich auf den Zustand eines Paketes beziehen. Diese
+Hilfe, die sich auf den Zustand eines Pakets beziehen. Diese
 Abkürzungen haben wir der Übersicht der 'Work-Needing and Prospective
 Packages (WNPP)' entnommen <<Debian-Wiki-WNPP>>:
 
@@ -106,7 +106,7 @@ Kennzeichnung für Pakete, die vor kurzem aus dem Zweig Debian 'testing'
 entfernt wurden. Dies kann aufgrund bislang nicht behobener,
 veröffentlichungskritischer Fehler ('RC bugs') passiert sein, aber auch
 weil der Paketbetreuer oder jemand anderes explizit die Entfernung des
-Paketes beantragt hat. Letzteres passiert häufiger, als Sie sich
+Pakets beantragt hat. Letzteres passiert häufiger, als Sie sich
 vorstellen können, z.B. wenn bei einer Bibliothek wegen einer
 `SONAME`-Änderung auch der Paketname korrigiert werden muss, bspw. von
 `libfoo7` zu `libfoo8`.

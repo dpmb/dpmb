@@ -175,7 +175,7 @@ image::werkzeuge/paketquellen-und-werkzeuge/apt-get-org.png[id="fig.apt-get-org"
 
 Sehr hilfreich und zumeist auch der erste Anlaufpunkt für inoffizielle
 Debian-Pakete ist die Paketsuche unter dem Menüpunkt menu:Search[].
-Im Eingabefeld geben Sie ein Textfragment aus dem Namen eines Paketes
+Im Eingabefeld geben Sie ein Textfragment aus dem Namen eines Pakets
 ein, nachdem dann `apt-get.org` seine Liste der Spiegelserver
 durchforstet. Ergebnis ist eine Liste, aus der Sie entnehmen können, von
 welchem Spiegelserver Sie das gewünschte Paket beziehen können. Neben

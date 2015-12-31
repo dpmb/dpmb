@@ -35,7 +35,7 @@ der Betreuung älterer Installationen ist das Programm
 // Stichworte für den Index
 (((Debianpaket, piuparts)))
 (((Package Installation UPgrading And Removal Testing Suite (Piuparts))))
-Möchten Sie den gesamten Installationsvorgang eines Paketes testen,
+Möchten Sie den gesamten Installationsvorgang eines Pakets testen,
 steht Ihnen die _Package Installation, UPgrading And Removal Testing
 Suite (Piuparts)_ <<Piuparts>> aus dem gleichnamigen Debianpaket
 <<Debian-Paket-piuparts>> zur Seite. Die drei Werkzeuge `piuparts`,

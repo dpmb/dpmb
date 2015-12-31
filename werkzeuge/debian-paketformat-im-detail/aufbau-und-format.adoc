@@ -37,7 +37,7 @@ Pakets pflegt.
 Für das Paket 'dpkg-www' <<Debian-Paket-dpkg-www>> beinhaltet das bspw.
 das Starten des Webservers nach der Installation des Pakets, das
 Anhalten (vorher) und Neustarten (nachher) im Zuge einer Aktualisierung
-des Paketes und das Anhalten des Dienstes, bevor das Paket vom System
+des Pakets und das Anhalten des Dienstes, bevor das Paket vom System
 wieder entfernt wird. In <<fig.postinst>> sehen Sie einen Ausschnitt aus
 dem `postinst`-Skript zu besagtem Paket.
 
@@ -123,7 +123,7 @@ data.tar.gz
 $
 ----
 
-Dabei stehen die einzelnen Komponenten eines Paketes für:
+Dabei stehen die einzelnen Komponenten eines Pakets für:
 
 `debian-binary` ::
 Kennzeichnung für ein Debian-Paket. `debian-binary` ist eine

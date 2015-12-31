@@ -14,8 +14,8 @@ Schalter ist gleichwertig zur Auswahl über die Textoberfläche und
 beliebig mit Vormerkungen daraus mischbar.
 
 In nachfolgender Ausgabe sehen Sie, wie Sie die Vormerkungen zur
-Installation des Paketes 'cssed', zum Entfernen des Paketes 'apt-doc'
-und der Aktualisierung des Paketes 'iceweasel' samt dessen
+Installation des Pakets 'cssed', zum Entfernen des Pakets 'apt-doc'
+und der Aktualisierung des Pakets 'iceweasel' samt dessen
 Abhängigkeiten 'libmozjs24d' und 'xulrunner-24.0' durchführen. Das
 abschließende Kommando 'search' gibt Ihnen eine Übersicht zu den
 Paketoperationen, die sich `aptitude` nun gemerkt hat und welche Pakete

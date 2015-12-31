@@ -47,7 +47,7 @@ Die folgenden Schlüsselworte werden in Binärpaketen (siehe
 <<binaerpakete>>) und den Paketlisten von diesen verwendet:
 
 `Package`:: 
-zu dt.: Paket; Name des Paketes ohne Versionsnummer und Architektur,
+zu dt.: Paket; Name des Pakets ohne Versionsnummer und Architektur,
 siehe auch Benennung eines Debian-Pakets in
 <<benennung-eines-debian-pakets>>
 
@@ -124,7 +124,7 @@ zu dt.: Sektion oder Paketkategorie, in die das Paket einsortiert ist,
 siehe Paketkategorien in <<sortierung-der-pakete-nach-verwendungszweck>>
 
 `Priority`:: 
-zu dt.: Priorität; Prioritätsstufe des Paketes, siehe Paket-Priorität
+zu dt.: Priorität; Prioritätsstufe des Pakets, siehe Paket-Priorität
 und essentielle Pakete in <<paket-prioritaet-und-essentielle-pakete>>
 
 `Essential`:: 
@@ -142,7 +142,7 @@ und Langbeschreibung kann auch ein Punkt (`.`) stehen.
 `Built-Using`:: 
 zu dt.: gebaut mit; Dieses Feld muss gemäß Debian Policy Manual
 §7.8 <<Debian-Policy-Manual>> vorhanden sein, sofern der Inhalt des
-Binärpaketes nicht nur aus Quellcode aus dessen Quellpaket besteht und
+Binärpakets nicht nur aus Quellcode aus dessen Quellpaket besteht und
 die Lizenz dieses Quellpakets vorschreibt, dass auch sämtlicher mit
 einkompilierter Quellcode frei verfügbar sein muss. Dies ist z.B. der
 Fall, wenn eine unter GNU GPL stehende Software statisch kompiliert wird

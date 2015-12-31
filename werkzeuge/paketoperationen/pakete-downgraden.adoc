@@ -60,7 +60,7 @@ Pakete auslösen (kann bei einer Aktualisierung ja auch vorkommen)
 ** `apt-cache showpkg Paketname` (siehe auch <<paketstatus-erfragen>>)
 
 * Möglichkeiten, um eine vorhergehende Paketversion einspielen
-** über die explizite Angabe der Versionsnummer des Paketes: `apt-get install <package-name>=<package-version-number>`
+** über die explizite Angabe der Versionsnummer des Pakets: `apt-get install <package-name>=<package-version-number>`
 ** über die explizite Angabe der Veröffentlichung: `apt-get -t=<target release> install <package-name>`
 
 

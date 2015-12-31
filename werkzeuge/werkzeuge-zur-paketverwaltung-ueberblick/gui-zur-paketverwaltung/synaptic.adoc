@@ -22,7 +22,7 @@ darunter und eine dreispaltige Paketübersicht. Die Darstellung
 konfigurieren Sie über die Menüpunkte menu:Einstellungen[Einstellungen]
 und menu:Einstellungen[Werkzeugleiste]. <<fig.synaptic-setup-farben>>
 zeigt als Beispiel das Dialogfenster, über welches Sie die Farben zum
-jeweiligen Installationsstatus eines Paketes festlegen.
+jeweiligen Installationsstatus eines Pakets festlegen.
 
 .Farbige Markierungen der Pakete gemäß ihrem Installationsstatus (Synaptic)
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/synaptic-setup-farben.png[id="fig.synaptic-setup-farben", width="50%"]
@@ -39,7 +39,7 @@ image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltun
 Unter der Menüleiste und den Knöpfen finden Sie die dreispaltige
 'Paketübersicht'. Links finden Sie verschiedene Auswahlknöpfe, oben
 rechts die Paketliste und unten rechts die Paketbeschreibung im Detail.
-<<fig.synaptic>> zeigt Ihnen die Gesamtansicht anhand des Paketes 'a2ps'.
+<<fig.synaptic>> zeigt Ihnen die Gesamtansicht anhand des Pakets 'a2ps'.
 
 Die 'linke Spalte' zeigt zunächst die Architektur
 (<<debian-architekturen>>). Über die einzelnen Knöpfe darunter schalten
@@ -49,10 +49,10 @@ Sie zur Ansicht nach den Paketkategorien (Sektionen)
 dem Distributionsbereich (<<distributionsbereiche>>) um.
 
 In der 'Paketliste oben rechts' beinhalten die Spalten den
-Installationsstatus (Status), eine Information zur Herkunft des Paketes,
+Installationsstatus (Status), eine Information zur Herkunft des Pakets,
 den Paketnamen, die installierte und die verfügbare Version und eine
 kurze Paketbeschreibung. Zusätzlich können Sie als Spalten den
-Distributionsbereich, die Veröffentlichung und die Größe des Paketes
+Distributionsbereich, die Veröffentlichung und die Größe des Pakets
 nach der Installation ergänzen. Mit einem Mausklick auf den jeweiligen
 Spaltenkopf sortieren Sie die Paketliste nach der jeweiligen
 Eigenschaft.
