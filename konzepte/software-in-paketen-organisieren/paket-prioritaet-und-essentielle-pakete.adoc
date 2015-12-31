@@ -7,9 +7,9 @@
 === Paket-Priorität und essentielle Pakete ===
 
 // Stichworte für den Index
-(((Paketbeschreibung, Paketpriorität)))
+(((Paket, Paketpriorität)))
 (((Paketpriorität, Überblick)))
-Jede Paketbeschreibung beinhaltet ein Feld namens `priority` – englisch
+Jedes Paket beinhaltet ein Feld namens `Priority` – englisch
 für ``Priorität''. Dabei geht es aber weniger um eine Rangfolge von
 Paketen, sondern um die Wichtigkeit eines Paketes bzw. um die
 Wahrscheinlichkeit, dass Sie dieses Paket installieren möchten.
