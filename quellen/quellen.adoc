@@ -327,9 +327,9 @@
 
 - [[[Debian-Paket-ia32-libs]]] Debian-Paket 'ia32-libs', https://packages.debian.org/de/stable/ia32-libs
 
-- [[[Debian-Paket-isenkram]]] Debian-Paket 'isenkram', https://packages.debian.org/de/testing/isenkram
+- [[[Debian-Paket-isenkram]]] Debian-Paket 'isenkram', https://packages.debian.org/de/stable/isenkram
 
-- [[[Debian-Paket-isenkram-cli]]] Debian-Paket 'isenkram-cli', https://packages.debian.org/de/testing/isenkram-cli
+- [[[Debian-Paket-isenkram-cli]]] Debian-Paket 'isenkram-cli', https://packages.debian.org/de/stable/isenkram-cli
 
 - [[[Debian-Paket-libapache2-mod-authn-yubikey]]] Debian-Paket 'libapache2-mod-authn-yubikey', http://packages.debian.org/de/stable/libapache2-mod-authn-yubikey
 
