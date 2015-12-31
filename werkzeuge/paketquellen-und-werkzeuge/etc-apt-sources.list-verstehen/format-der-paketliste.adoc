@@ -66,7 +66,7 @@ somit auskommentiert sind.
 [TIP]
 .Empfehlung zur Abfolge
 ====
-Für das Hinzufügen und Ändern von Paketquellen empfehlen wir Ihnen eine
+Für das Hinzufügen und Ändern der Paketquellen empfehlen wir Ihnen eine
 bestimmte Reihenfolge (siehe
 <<empfehlung-zum-ablauf-fuer-das-hinzufuegen-und-aendern-von-paketquellen>>).
 Damit erleben Sie zukünftig keine bösen Überraschungen mehr.
