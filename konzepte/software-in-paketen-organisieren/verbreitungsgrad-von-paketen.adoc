@@ -74,4 +74,13 @@ Werden weder Änderungszeitstempel noch Zugriffszeitstempel beim
 Projekt mitgeliefert, wird das Paket im Graphen 'no-files' (keine
 Dateien) aufgelistet.
 
+Unter [[Debian-Popcon-Graph]] kann man dies sogar nutzen, ob den
+Verlauf der Beliebtheit von Paketen miteinander zu vergleichen.
+<<fig.popcon-screen-vs-tmux>> zeigt beispielhaft einen Vergleich
+zwischen 'screen' und 'tmux' in den beiden Metriken 'installed' und
+'vote'.
+
+.Vergleich Installationen und Nutzung der Pakete 'screen' und 'tmux'
+image::konzepte/software-in-paketen-organisieren/popcon-screen-vs-tmux.png[id="fig.popcon-screen-vs-tmux", width="50%"]
+
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/verbreitungsgrad-von-paketen.adoc

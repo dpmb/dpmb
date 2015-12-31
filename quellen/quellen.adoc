@@ -392,6 +392,8 @@
 
 - [[[Debian-Policy-Subsections]]] Debian Policy Manual, Bereich Subsections, http://www.debian.org/doc/debian-policy/ch-archive.html#s-subsections
 
+- [[[Debian-Popcon-Graph]]] Debian Popcon Graphen, https://qa.debian.org/popcon-graph.php
+
 - [[[Debian-Popularity-Contest]]] Debian Popularity Contest, http://popcon.debian.org/
 
 - [[[Debian-Ports-Projekt]]] Debian-Ports Projekt, http://www.ports.debian.org/
