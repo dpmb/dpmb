@@ -3,13 +3,13 @@
 // Baustelle: Fertig
 
 [[paketflags]]
-=== Paketflags ===
+=== Lokale Paketflags ===
 
 ==== Die einzelnen Paketflags im Überblick ====
 
 // Stichworte für den Index
 (((Paketflags, Begriff)))
-Ein Debianpaket besitzt zusätzliche Paketflags, die gesetzt sein können.
+Ein Debianpaket besitzt zusätzliche lokale Paketflags, die gesetzt sein können.
 Damit werden bestimmte Zustände markiert, die eine spezifische Art und
 Weise bei der Installation eines Pakets widerspiegeln.
 
@@ -76,12 +76,13 @@ in der Datei `/var/lib/aptitude/pkgstates`:
 ----
 ...
 
-Package: xserver-xorg
-Architecture: i386
+Package: python3-pkg-resources
+Architecture: amd64
 Unseen: no
 State: 1
 Dselect-State: 1
 Remove-Reason: 0
+ForbidVer: 18.8-1
 
 ...
 
