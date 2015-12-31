@@ -151,9 +151,8 @@ dieser Priorisierung versehen.
 (((Debianpaket, coreutils)))
 (((Paketmarkierung, essentiell)))
 Zusätzlich zu den bereits oben vorgestellten Prioritäten gibt es noch
-die Markierung _essential_. Diese Markierung tragen nur grundlegende
-Pakete. In <<pakete-nach-prioritaeten-finden>> lesen Sie, welche Pakete
-zu dieser Gruppe dazugehören und wie Sie diese auflisten.
+die Markierung _essential_. Diese Markierung tragen nur sehr grundlegende
+Pakete.
 
 .Eintrag in der Paketbeschreibung
 ----
@@ -169,6 +168,10 @@ passiert jedoch nicht, wenn bei einer Umbenennung eines solchen Paketes
 das alte Paket entfernt wird, um für das neue Paket Platz zu machen oder
 weil es nicht mehr gebraucht wird (d.h. irgendwann nicht mehr notwendig
 ist).
+
+In <<pakete-nach-prioritaeten-finden>> lesen Sie, wie Sie auflisten,
+welche Pakete genau auf Ihrer Version von Debian als essentiell
+markiert sind.
 
 Diese Markierung hat den Effekt, dass sich beispielsweise `dpkg` weigert,
 dieses Paket zu entfernen (siehe <<pakete-deinstallieren>>). Mit dem
