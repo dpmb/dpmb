@@ -74,7 +74,7 @@ hingegen das Paket 'adequate', welches wir in
 Das Programm verarbeitet sowohl Dateien für Quellpakete (`.dsc`), als
 auch für Binärpakete (`.deb`). Übergeben Sie `lintian` auch die während
 des Paketbaus erstellte Datei `.changes`, in welcher alle Dateien des
-jeweiligen Quell- und Binärpaketes aufgelistet sind, validiert das
+jeweiligen Quell- und Binärpakets aufgelistet sind, validiert das
 Programm nacheinander beide Entwicklungsstufen in einem Rutsch.
 
 // Stichworte für den Index

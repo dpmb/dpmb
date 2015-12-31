@@ -29,11 +29,11 @@ Diese rühren schlicht und einfach aus der schieren Anzahl an Paketen,
 die inzwischen erfreulicherweise für Debian zur Verfügung stehen.
 
 * Der Paketüberblick geht verloren und die Auswahl und das Finden eines
-bestimmten Paketes gerät mehr oder weniger zum zufälligen Ereignis.
+bestimmten Pakets gerät mehr oder weniger zum zufälligen Ereignis.
 
 * Das Klassifikationsraster zur Einordnung der Pakete in die bestehenden
 Softwarekategorien ist zu grob und lässt nur einen einzigen, vorher
-bestimmten Blickwinkel zu. Der Maintainer eines Paketes muss daher genau
+bestimmten Blickwinkel zu. Der Maintainer eines Pakets muss daher genau
 abwägen, welche Paketkategorie überwiegt oder am besten passt und trägt
 diese Kategorie in der `control`-Datei des Debian-Pakets ein (siehe
 Aufbau eines Debian-Pakets in <<aufbau-und-format-binaer>>).
@@ -52,7 +52,7 @@ Recherchemöglichkeiten bereits unter Pakete über den Namen finden in
 <<pakete-ueber-den-namen-finden>>.
 
 Gelingt Ihnen die Recherche über die Paketkategorien oder den Namen des
-Paketes nicht, geht das Paket in der Masse der Möglichkeiten unter und
+Pakets nicht, geht das Paket in der Masse der Möglichkeiten unter und
 bleibt letztendlich unentdeckt. Im Ergebnis führt das vor allem dazu, dass
 Sie als Debian-Benutzer mehr und mehr Experte sein müssen, um sich
 innerhalb der Debian-Paketliste zurechtzufinden. Für die Praxis heißt

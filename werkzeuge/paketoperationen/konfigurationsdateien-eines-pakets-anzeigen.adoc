@@ -1,10 +1,10 @@
-// Datei: ./werkzeuge/paketoperationen/konfigurationsdateien-eines-paketes-anzeigen.adoc
+// Datei: ./werkzeuge/paketoperationen/konfigurationsdateien-eines-pakets-anzeigen.adoc
 
 // Baustelle: Fertig
 
-[[konfigurationsdateien-eines-paketes-anzeigen]]
+[[konfigurationsdateien-eines-pakets-anzeigen]]
 
-=== Konfigurationsdateien eines Paketes anzeigen ===
+=== Konfigurationsdateien eines Pakets anzeigen ===
 
 Die meisten Programme verfügen über Konfigurationsdateien, mit denen Sie
 das jeweilige Programm auf ihre Bedürfnisse individuell einstellen
@@ -54,4 +54,4 @@ $ dlocate -lsconf xpdf
 $
 ----
 
-// Datei (Ende): ./werkzeuge/paketoperationen/konfigurationsdateien-eines-paketes-anzeigen.adoc
+// Datei (Ende): ./werkzeuge/paketoperationen/konfigurationsdateien-eines-pakets-anzeigen.adoc

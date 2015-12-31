@@ -31,7 +31,7 @@ Weiterhin beinhaltet es häufig noch Konfigurationsdateien, Dokumentation
 und weitere Daten in exakt dem Zustand, wie sie nachher auch auf der
 Festplatte Ihres Rechners vorliegen.
 
-Bei der Installation eines `deb`-Paketes entpackt das Programm `dpkg`
+Bei der Installation eines `deb`-Pakets entpackt das Programm `dpkg`
 zuerst das Archiv aus dem `deb`-Paket und kopiert danach die Inhalte des
 Archivs an die vorbezeichnete Stelle in der Verzeichnishierarchie auf
 dem Zielsystem. Alle im Archiv genannten Pfade und Berechtigungen werden
@@ -51,7 +51,7 @@ Format von Binärpaketen'' (siehe <<aufbau-und-format-binaer>>).
 Wie bereits oben benannt, hat ein Binärpaket üblicherweise die
 Dateiendung `deb` und wird auch durch das UNIX-Kommando
 `file` entsprechend als solches erkannt. Nachfolgende Ausgabe zeigt
-dieses Verhalten am Beispiel des Paketes 'vnstat', eines Programms zur
+dieses Verhalten am Beispiel des Pakets 'vnstat', eines Programms zur
 Analyse des Netzwerktraffics.
 
 .Das UNIX-Kommando `file` identifiziert die `deb`-Datei als Debianpaket

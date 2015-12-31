@@ -30,7 +30,7 @@ Paket den Anforderungen (Richtlinien) entspricht.
 (((apt-listbugs)))
 
 Weiterhin zählt dazu auch eine Prüfung auf kritische Fehler vor der
-Installation eines Paketes. `apt-get` wertet dazu das Ergebnis von
+Installation eines Pakets. `apt-get` wertet dazu das Ergebnis von
 `apt-listbugs` (siehe <<bugreports-apt-listbugs>>) aus und warnt Sie,
 falls für das Paket kritische Fehler im Debian BTS hinterlegt sind. Die
 Entscheidung liegt dann bei Ihnen, ob Sie das Paket wirklich

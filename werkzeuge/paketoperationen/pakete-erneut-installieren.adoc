@@ -68,7 +68,7 @@ In diesem Fall hilft Ihnen der Aufruf von `dpkg-reconfigure` mit dem
 Paketnamen als Parameter. In manchen Fällen reicht dies alleine schon
 aus, um eine verkorkste Konfiguration wieder hinzubiegen. Mitunter
 kommen Sie damit um ein gänzliches Entfernen und Wiederinstallieren des
-Paketes herum (siehe auch <<pakete-konfigurieren>>).
+Pakets herum (siehe auch <<pakete-konfigurieren>>).
 
 ==== Wiederinstallieren von Paketen mit vorhandenen Konfigurationsdateien ====
 
@@ -104,7 +104,7 @@ würde es sich ja um eine Paketaktualisierung handeln.
 
 Diese Vorgehensweise wird meist dann verwendet, wenn – wie zu Beginn
 dieses Abschnitts erwähnt – eine oder mehrere Dateien eines
-installierten Paketes kaputt gegangen sind und diese wiederhergestellt
+installierten Pakets kaputt gegangen sind und diese wiederhergestellt
 werden sollen. Oft ist dies sogar einfacher und schneller, als das
 Backup zu bemühen.
 
@@ -148,7 +148,7 @@ erste Versuch, das Paket mit dem Namen der Software zu Reinstallieren,
 ein Fehlschlag. Gerade die größeren Software-Suiten bestehen häufig aus
 mehreren Paketen und das Paket mit dem Namen der Suite ist meist nur ein
 Metapaket ohne eigentlichen Inhalt. Zu bedenken ist außerdem, dass eine
-Wiederinstallation eines bereits installierten Paketes dessen
+Wiederinstallation eines bereits installierten Pakets dessen
 Abhängigkeiten unangetastet lässt.
 
 // Stichworte für den Index

@@ -44,7 +44,7 @@ die dort hinterlegten Pakete hervorholen und auf Ihrem System
 installieren. Für das Paket 'debtags' mittels APT sind bspw. diese
 beiden Aufrufe notwendig:
 
-.APT-Aufrufe zum Zwischenspeichern und späteren Installieren eines Paketes
+.APT-Aufrufe zum Zwischenspeichern und späteren Installieren eines Pakets
 ----
 # apt-get download debtags
 # apt-get --no-download install debtags

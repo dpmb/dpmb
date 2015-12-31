@@ -11,7 +11,7 @@
 // Stichworte für den Index
 (((Debianpaket, debian-goodies)))
 (((which-pkg-broke)))
-Um herauszufinden, welche Abhängigkeiten eines Paketes sich zuletzt
+Um herauszufinden, welche Abhängigkeiten eines Pakets sich zuletzt
 geändert haben und ob vielleicht dabei ein Bug zum Vorschein kam, sparen
 Sie sich mit dem Programm `which-pkg-broke` aus dem Paket
 'debian-goodies' <<Debian-Paket-debian-goodies>> einiges an Arbeit.

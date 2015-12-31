@@ -22,7 +22,7 @@ einzelnen Softwarepakete. Das umfasst Funktionen zur Suche nach Paketen,
 deren Verwaltung sowie die Ausgabe der Paketinformationen. Dazu gehören:
 
 * der Abruf von Informationen zu einem Paket aus den verschiedenen Paketquellen
-* der Abruf eines Paketes und der vollständigen Auflösung der
+* der Abruf eines Pakets und der vollständigen Auflösung der
 Paketabhängigkeiten dieses Pakets
 * die Authentifizierung der Paketquellen und Überprüfung der abgerufenen
 Daten (Validierung)

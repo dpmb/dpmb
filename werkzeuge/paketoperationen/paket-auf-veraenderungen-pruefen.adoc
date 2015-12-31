@@ -131,11 +131,11 @@ $
 // Stichworte für den Index
 (((debsums)))
 (((Paket, Dateien auf Integrität prüfen)))
-Genauso wie `dlocate` kann auch `debsums` die Dateien eines Paketes auf
+Genauso wie `dlocate` kann auch `debsums` die Dateien eines Pakets auf
 Integrität überprüfen. Dazu braucht es jedoch keine weitere Option, da
 das Überprüfen von Dateien die einzige Aufgabe von `debsums` ist:
 
-.`debsums` beim Prüfen des Paketes `htop`
+.`debsums` beim Prüfen des Pakets `htop`
 ----
 $ debsums htop
 /usr/bin/htop                                   OK
@@ -209,7 +209,7 @@ debsums: missing file //opt/PDFStudio/jre/lib/charsets.jar.pack (from pdfstudio 
 vom Paket ausgeliefert werden und somit vorab deklariert wurden. Diese
 befinden sich fast immer unterhalb des Verzeichnisses `/etc/`.
 
-.Auflistung aller 'Conffiles' des Paketes 'unburden-home-dir' mit Zustand:
+.Auflistung aller 'Conffiles' des Pakets 'unburden-home-dir' mit Zustand:
 ----
 $ debsums -e unburden-home-dir
 /etc/unburden-home-dir.list                 FAILED
@@ -220,13 +220,13 @@ $
 ----
 
 Möchten Sie nur die Konfigurationsdateien (genauer 'Conffiles') eines
-Paketes auflisten, die lokal geändert wurden, so kombinieren Sie die
+Pakets auflisten, die lokal geändert wurden, so kombinieren Sie die
 beiden Schalter `-c` und `-e` miteinander:
 
 // Stichworte für den Index
 (((debsums, -ce)))
 
-.Auflistung geänderter 'Conffiles' des Paketes 'unburden-home-dir'
+.Auflistung geänderter 'Conffiles' des Pakets 'unburden-home-dir'
 ----
 $ debsums -ce unburden-home-dir
 /etc/default/unburden-home-dir
@@ -251,7 +251,7 @@ Bei der Benutzung von `debsums` spielen die Berechtigungen des Benutzers
 eine Rolle. Die Integrität von Dateien, die für normale Benutzer nicht
 lesbar sind, können nur vom Benutzer 'root' geprüft werden.
 
-.Auflistung geänderter 'Conffiles' des Paketes `sudo` geht nur `root`-Rechten:
+.Auflistung geänderter 'Conffiles' des Pakets `sudo` geht nur `root`-Rechten:
 ----
 $ debsums -e sudo
 /etc/pam.d/sudo                                 OK

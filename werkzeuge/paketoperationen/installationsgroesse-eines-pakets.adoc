@@ -1,10 +1,10 @@
-// Datei: ./werkzeuge/paketoperationen/installationsgroesse-eines-paketes.adoc
+// Datei: ./werkzeuge/paketoperationen/installationsgroesse-eines-pakets.adoc
 
 // Baustelle: Fertig
 
-[[installationsgroesse-eines-paketes]]
+[[installationsgroesse-eines-pakets]]
 
-=== Installationsgröße eines Paketes ===
+=== Installationsgröße eines Pakets ===
 
 // Stichworte für den Index
 (((dlocate, -du)))
@@ -33,4 +33,4 @@ $ dlocate -du htop
 $
 ----
 
-// Datei (Ende): ./werkzeuge/paketoperationen/installationsgroesse-eines-paketes.adoc
+// Datei (Ende): ./werkzeuge/paketoperationen/installationsgroesse-eines-pakets.adoc

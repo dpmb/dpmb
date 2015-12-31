@@ -12,8 +12,8 @@ anzeigen und deuten (siehe
 <<liste-der-installierten-pakete-anzeigen-und-deuten>>), die neuen
 Pakete anzeigen (siehe <<neue-pakete-anzeigen>>), die Pakete nach
 Prioritäten finden (siehe <<pakete-nach-prioritaeten-finden>>), die
-Installationsgröße eines Paketes bestimmen (siehe
-<<installationsgroesse-eines-paketes>>), die Paketabhängigkeiten
+Installationsgröße eines Pakets bestimmen (siehe
+<<installationsgroesse-eines-pakets>>), die Paketabhängigkeiten
 anzeigen (siehe <<paketabhaengigkeiten-anzeigen>>), die Herkunft der
 Pakete klären (siehe <<aus-welchem-repo-kommen-die-pakete>>) und über
 den Paketinhalt suchen (siehe dazu <<paket-zu-datei-finden>> und

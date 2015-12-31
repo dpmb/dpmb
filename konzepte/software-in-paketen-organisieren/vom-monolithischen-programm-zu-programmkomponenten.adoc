@@ -70,7 +70,7 @@ eine kurze Paketbeschreibung.
 |====
 
 [TIP]
-.Benennung eines Debianpaketes und Paketkategorien
+.Benennung eines Debianpakets und Paketkategorien
 ====
 In <<benennung-eines-debian-pakets>> beleuchten wir die Benennung und
 Abfolge der Komponenten in den Paketnamen. Eine genaue Auflistung und

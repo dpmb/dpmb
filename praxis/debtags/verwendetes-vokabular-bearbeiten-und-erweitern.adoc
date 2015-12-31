@@ -119,7 +119,7 @@ An *graphischen Werkzeugen* existiert nur das Programm
 `debtags-edit` <<Debian-Paket-debtags-edit>> von Enrico Zini. Aus
 Zeitmangel wurde das Werkzeug bislang nicht mehr von ihm
 weiterentwickelt und ist daher nicht mehr für die Veröffentlichung
-Debian 'stable' verfügbar. Da die Quellen des Paketes aber frei
+Debian 'stable' verfügbar. Da die Quellen des Pakets aber frei
 zugänglich sind, dürfen Sie sich gern der Aufgabe annehmen, dieses
 Projekt fortzuführen.
 

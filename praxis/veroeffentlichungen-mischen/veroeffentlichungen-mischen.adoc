@@ -6,7 +6,7 @@
 == Veröffentlichungen mischen ==
 
 Debian reglementiert die Erweiterung der vorhandenen Funktionalität für
-die Veröffentlichung eines Paketes aus Debian 'stable' deutlich. Besteht
+die Veröffentlichung eines Pakets aus Debian 'stable' deutlich. Besteht
 Ihrerseits jedoch die Notwendigkeit für eine neuere Paketversion mit
 zusätzlichen Funktionen, prüfen Sie als erstes, ob es für Ihr Paket
 bereits einen Kandidaten aus dem Bereich 'Debian Backports' gibt (siehe

@@ -93,7 +93,7 @@ simulieren Sie den Vorgang (Schritt 3). Dazu bietet Ihnen APT die
 Option `--simulate` und als Alternativen dazu auch `--just-print`,
 `--dry-run`, `--recon` und `--no-act` an. `aptitude` kennt die Option
 `-s` bzw. `--simulate` in der Langform. Die nachfolgende Ausgabe zeigt
-die Simulation anhand von APT und des Paketes 'kdm'. Dabei bezeichnen
+die Simulation anhand von APT und des Pakets 'kdm'. Dabei bezeichnen
 die Zeilen der Ausgabe eine Installation eines Pakets, die mit `Inst`
 beginnen. Das Schlüsselwort `Conf` besagt, dass das entsprechende Paket
 konfiguriert wird.

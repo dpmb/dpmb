@@ -10,7 +10,7 @@
 (((Paketstatus anzeigen)))
 Diese Aktion betrifft meist nur ein einzelnes Paket, welches auf dem
 System installiert ist oder war. Im Alltag ergeben sich mehrere
-Situationen, in denen das Wissen über den Zustand eines Paketes wichtig
+Situationen, in denen das Wissen über den Zustand eines Pakets wichtig
 ist.
 
 Die Grundfrage ist häufig, ob derzeit ein bestimmtes Paket oder Programm
@@ -45,7 +45,7 @@ besprechen wir das genauer. Ausführlicher sind die Ausgaben zu den
 (((dpkg-query, --status)))
 (((grep-status, -F)))
 (((grep-status, -X)))
-Mit diesem Aufruf ermitteln Sie den Status eines installierten Paketes.
+Mit diesem Aufruf ermitteln Sie den Status eines installierten Pakets.
 Die Langform zu `-s` ist `--status`. Intern greift `dpkg` auf
 `dpkg-query` zurück, so daß Sie die gleichen Schalter verwenden können.
 Paketname bezeichnet hier den Namen eines Debianpakets.
@@ -144,7 +144,7 @@ sofern vorhanden) erscheinen zusätzlich die Debtags (siehe
 und Pfad im Paketmirror und die GPG-Keys zur Validierung des Pakets
 (siehe <<bezogenes-paket-verifizieren>>).
 
-.Status des Paketes 'htop' mit `apt-cache` ermitteln
+.Status des Pakets 'htop' mit `apt-cache` ermitteln
 ----
 $ apt-cache show htop
 Package: htop

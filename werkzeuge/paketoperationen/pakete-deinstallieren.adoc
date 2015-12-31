@@ -9,7 +9,7 @@
 (((Paket, deinstallieren)))
 (((Paket, entfernen)))
 (((Paket, löschen)))
-Weitaus anspruchsvoller als die Installation eines Paketes ist hingegen
+Weitaus anspruchsvoller als die Installation eines Pakets ist hingegen
 deren rückstandsfreie und saubere Entfernung. Dazu zählt nicht nur das
 Löschen der Dateien des eigentlichen Pakets, sondern auch das Aufräumen
 und Entsorgen der dazugehörigen Konfigurationsdateien aus Ihrem
@@ -35,9 +35,9 @@ die Daten und die ausführbaren Dateien gelöscht – die dazugehörigen
 Konfigurationsdateien bleiben unversehrt. Das Vorgehen entspricht dem
 Aufruf `dpkg -r Paketname` in der richtigen Reihenfolge der
 Paketabhängigkeiten. Der nachfolgende Aufruf zeigt das Vorgehen anhand
-des Paketes 'cssed' für `apt-get`.
+des Pakets 'cssed' für `apt-get`.
 
-.Löschen eines Paketes 'cssed' mittels APT
+.Löschen eines Pakets 'cssed' mittels APT
 ----
 # apt-get remove cssed
 Paketlisten werden gelesen... Fertig
@@ -170,7 +170,7 @@ $
 (((aptitude, purge)))
 (((apt-get, remove --purge)))
 Haben Sie die aus Ihrer Sicht unnützen Konfigurationsdateien eines
-bereits deinstallierten Paketes ausfindig gemacht und möchten diese
+bereits deinstallierten Pakets ausfindig gemacht und möchten diese
 endgültig ins digitale Nirwana befördern, sind Ihnen APT und `aptitude`
 gern dabei behilflich. APT unterstützt Sie mit der Kombination aus dem
 Kommando `apt-get`, dessen Schalter `remove` und der Option `--purge

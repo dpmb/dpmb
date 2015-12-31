@@ -10,7 +10,7 @@ Die Paketverwaltung -- genauer APT -- pflegt lokale Paketlisten im
 Verzeichnis `/var/lib/apt/lists`. Diese Paketlisten dienen als
 Nachschlagewerk für APT. Wollen Sie den Paketbestand auf Ihrem
 Debian-System ändern, benutzt APT diese Paketliste, um die Existenz, die
-Verfügbarkeit von einer Paketquelle und die Abhängigkeiten eines Paketes
+Verfügbarkeit von einer Paketquelle und die Abhängigkeiten eines Pakets
 zu bestimmen, bevor diese tatsächlich bezogen werden. Installieren Sie ein
 Paket nach (<<pakete-installieren>>), weiß APT aus der lokalen
 Paketliste, von welcher Paketquelle und unter welcher URL es dieses

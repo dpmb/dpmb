@@ -103,7 +103,7 @@ die Liste der verfügbaren Pakete anzeigen
 den Paketzwischenspeicher von APT erzeugen
 
 `madison`:: 
-verfügbare Versionen eines Paketes anzeigen (siehe
+verfügbare Versionen eines Pakets anzeigen (siehe
 <<aus-welchem-repo-kommen-die-pakete>> und
 <<verfuegbare-paketversionen-ermitteln>>)
 

@@ -43,7 +43,7 @@ Chance, auf die ersten Installationsimages zu gelangen.
 Grundlage für die erfassten Daten ist das Projekt Popcon – der 'Debian
 Popularity Contest' <<Debian-Popularity-Contest>>. Die Benutzung ist
 freiwillig und über dessen Teilnahme entscheiden Sie als Benutzer
-selbst. Voraussetzung dafür ist die Installation des Paketes
+selbst. Voraussetzung dafür ist die Installation des Pakets
 'popularity-contest' und dessen Aktivierung.
 
 Danach wird in regelmäßigen Abständen (wöchentlich) der Softwarebestand

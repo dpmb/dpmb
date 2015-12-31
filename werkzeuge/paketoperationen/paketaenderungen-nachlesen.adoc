@@ -32,7 +32,7 @@ $
 // Stichworte für den Index
 (((aptitude, changelog)))
 `aptitude` verfügt dazu ebenfalls über den Schalter `changelog`. Als
-zusätzlichen Parameter erwartet es den Namen eines Paketes, zudem diese
+zusätzlichen Parameter erwartet es den Namen eines Pakets, zudem diese
 Informationen bezogen und ausgegeben werden. Das angefragte Paket muss
 dazu nicht auf Ihrem Debiansystem installiert sein.
 

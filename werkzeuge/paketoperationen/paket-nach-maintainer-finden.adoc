@@ -56,7 +56,7 @@ $
 
 Obige Ausgabe basiert auf dem Formatstring `-F '%c%a%M %p - %d'`. Die
 einzelnen Buchstaben stehen für den aktuellen Paketstatus (`%c`), die
-Aktion des Paketes (`%a`), automatische Installation (`%M`), den
+Aktion des Pakets (`%a`), automatische Installation (`%M`), den
 Paketnamen (`%p`) und die Paketbeschreibung (`%d`). Eine detaillierte
 Übersicht zu allen zulässigen Formatoptionen erklären wir Ihnen unter
 `aptitude` Format Strings in <<aptitude-format-strings>>. Eine

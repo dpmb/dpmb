@@ -311,11 +311,11 @@ durchsucht die gesamte Paketdatenbank (siehe <<lokale-paketliste-und-paketcache>
 durchsucht nicht nur die Paketkategorien 'libs' und 'oldlibs', sondern zusätzlich auch die Liste der Entwicklerbibliotheken ('libdevel')
 
 `-z` (Langform `--show-size`):: 
-Ausgabe mit Größenangabe des Paketes. Daraus ersehen Sie, wieviel Platz
+Ausgabe mit Größenangabe des Pakets. Daraus ersehen Sie, wieviel Platz
 das Paket auf der Festplatte belegt.
 
 `-P` (Langform `--show-priority`):: 
-Ausgabe zeigt die Priorität des Paketes (siehe
+Ausgabe zeigt die Priorität des Pakets (siehe
 <<paket-prioritaet-und-essentielle-pakete>>) an; Wert aus 'required',
 'important', 'standard', 'optional' oder 'extra'.
 
@@ -434,7 +434,7 @@ weiteren Varianten und deren Bedeutung vor.
 
 // Stichworte für den Index
 (((apt-get, --purge remove)))
-Um die verbliebenen Konfigurationsdateien eines Paketes auch noch
+Um die verbliebenen Konfigurationsdateien eines Pakets auch noch
 zu entfernen, benutzen Sie üblicherweise das Kommando `apt-get --purge
 remove Paketname`. Für das oben genannte Paket 'gnome-screenshot' heißt
 der Aufruf `apt-get --purge remove gnome-screenshot`. Weitere Details

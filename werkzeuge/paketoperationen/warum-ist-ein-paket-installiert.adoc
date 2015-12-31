@@ -16,7 +16,7 @@ verfügbaren Speicherplatz stetig, aber gnadenlos.
 Möchten Sie klären, warum ein Paket installiert wurde, gibt Ihnen
 `aptitude` dazu bereitwillig Auskunft. Es versteht dazu das
 Unterkommando `why`, mit dem es Ihnen die Gründe auflistet, die zur
-Installation des besagten Paketes geführt haben. Grundlage dafür sind
+Installation des besagten Pakets geführt haben. Grundlage dafür sind
 einerseits die Paketflags (siehe dazu <<paketflags>>) und andererseits
 die Einträge in der Paketbeschreibung. `aptitude` wertet daraus die fünf
 Felder `Recommends`, `Conflicts`, `Depends`, `Replaces` und `Provides`
@@ -137,7 +137,7 @@ $
 
 Bestehen hingegen keine Gründe für eine Installation oder `aptitude`
 kann diese nicht zweifelsfrei ermitteln, liefert es die nachfolgende
-Ausgabe – hier am Beispiel des Paketes 'libruby-extras':
+Ausgabe – hier am Beispiel des Pakets 'libruby-extras':
 
 .Ausgabe von `aptitude` zur Klärung der Installation (Variante 2)
 ----

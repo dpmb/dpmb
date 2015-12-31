@@ -11,7 +11,7 @@
 (((Paketflags, Begriff)))
 Ein Debianpaket besitzt zusätzliche Paketflags, die gesetzt sein können.
 Damit werden bestimmte Zustände markiert, die eine spezifische Art und
-Weise bei der Installation eines Paketes widerspiegeln.
+Weise bei der Installation eines Pakets widerspiegeln.
 
 // Stichworte für den Index
 (((Paketflags, Annahmen)))
@@ -95,7 +95,7 @@ Remove-Reason: 0
 Sichtbar werden alle Markierungen zu einem Paket, wenn Sie die Details
 dazu erfragen – entweder direkt über die Kommandozeile oder in der
 Textoberfläche zu `aptitude`. Wir verdeutlichen Ihnen das hier anhand
-des installierten und gehaltenen Paketes 'wireshark'.
+des installierten und gehaltenen Pakets 'wireshark'.
 
 Auf der Kommandozeile verwenden Sie hierfür `aptitude` mit dem
 Unterkommando `show` gefolgt vom Paketnamen. In den Zeilen 2 und 3 der

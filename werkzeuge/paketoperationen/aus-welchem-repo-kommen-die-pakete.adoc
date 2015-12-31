@@ -20,7 +20,7 @@ Ihnen die Programme `apt-cache`, `apt-show-versions`, `apt` und
 (((apt-cache, policy)))
 (((apt-pinning, Priorität eines Eintrags)))
 Rufen Sie `apt-cache` lediglich mit dem Schalter `policy` und _ohne_ die
-weitere Angabe eines Paketes auf, untersucht das Programm jede einzelne
+weitere Angabe eines Pakets auf, untersucht das Programm jede einzelne
 Paketquelle, die Sie in `/etc/apt/sources.list` eingetragen haben. Das
 Ergebnis der Analyse ist zweispaltig. In der linken Spalte erscheint ein
 Zahlenwert zur Priorität des jeweiligen Eintrags, wie er von

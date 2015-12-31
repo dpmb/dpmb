@@ -83,18 +83,18 @@ Fähigkeiten, Informationen über installierte und noch zur Verfügung
 stehende Pakete und Paketdateien anzuzeigen sowie bereits lokal als
 Datei vorliegende Pakete zu installieren, zu konfigurieren und wieder
 vom System zu entfernen. `dpkg` fokussiert dabei eher auf Einzelpakete,
-bspw. der Aufruf `dpkg -i Paketname` zur Installation eines Paketes
+bspw. der Aufruf `dpkg -i Paketname` zur Installation eines Pakets
 (siehe auch <<pakete-installieren>>).
 
 Die 'obere Ebene' beinhaltet im weitesten Sinne alle übergeordneten
 Aufgaben, wie bspw. komplexere Verwaltungsfunktionen. Dazu zählt das
 Herunterladen der Paketlisten von den vorher von Ihnen festgelegten
 Paketmirrors, das Aktualisieren der lokalen Paketlisten, das Auswählen
-und Beziehen eines Paketes von einem passenden Paketmirror, das Auflösen
+und Beziehen eines Pakets von einem passenden Paketmirror, das Auflösen
 der Paketabhängigkeiten und das Klären weiterer, dazu benötigter oder
 empfohlener Pakete, die zum ausgewählten Paket passen und welche für Sie
 als Benutzer interessant sein könnten. Ebenso gehört die Validierung
-eines Paketes anhand seines GPG-Schlüssels (siehe
+eines Pakets anhand seines GPG-Schlüssels (siehe
 <<bezogenes-paket-verifizieren>>) dazu. Zur oberen Ebene zählen bspw.
 Programme wie `tasksel`, APT, `aptitude`, SmartPM, das Ubuntu Software
 Center und die PackageKit-Varianten 'apper' (KDE) und 'gnome-packagekit'
