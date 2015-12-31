@@ -15,22 +15,22 @@ welche die Debianpakete für Sie bereithalten. Diese Paketmirrors sind
 weltweit verteilt und werden meist ehrenamtlich von einem
 Verantwortlichen für den jeweiligen Standort oder im Rahmen seiner
 administrativen Aufgaben vor Ort betreut. Viele Spiegelserver werden
-automatisch über neue Pakete informiert und abgeglichen und stellen
-somit stets aktuelle Pakete bereit.
+automatisch über neue Pakete informiert und abgeglichen und verfügen
+somit stets über den aktuelle Paketbestand.
 
 Mit dieser dezentralen Verteilung ist gewährleistet, dass Sie bei einem
 Ausfall oder der Nichtverfügbarkeit eines Paketmirrors problemlos auf
-eine Alternative zurückgreifen können, auch wenn diese netztechnisch
-etwas weiter von ihrem aktuellen Standort entfernt ist. Für die
-Infrastruktur des Debian-Projekts heißt das außerdem, dass sich die
-Anfrage- oder Netzlast auf unterschiedliche Mirrors und deren Standorte
-verteilt. Für Sie bedeutet das konkret, dass sich neben der Verringerung
-der Ausfallwahrscheinlichkeit insbesondere die Bezugszeiten für Debianpakete erheblich
-verringern, da Sie nicht auf einen einzigen Spiegelserver angewiesen
-sind. Verwenden Sie einen Spiegelserver in ihrer Nähe, merken Sie das
-insbesondere dann, wenn größere Aktualisierungen erfolgen, bspw. bei
-einem Distributionswechsel oder -upgrade (siehe
-<<pakete-aktualisieren-dist-upgrade>>).
+eine adäquate Alternative zurückgreifen können, auch wenn diese
+netztechnisch etwas weiter von ihrem aktuellen Standort entfernt ist.
+Für die Infrastruktur des Debian-Projekts heißt das außerdem, dass sich
+die Anfrage- oder Netzlast auf unterschiedliche Mirrors und deren
+Standorte verteilt. Für Sie bedeutet das konkret, dass sich neben der
+Verringerung der Ausfallwahrscheinlichkeit insbesondere die Bezugszeiten
+für Debianpakete erheblich verringern, da Sie nicht auf einen einzigen
+Spiegelserver angewiesen sind. Verwenden Sie einen Spiegelserver in
+ihrer Nähe, merken Sie das insbesondere dann, wenn größere
+Aktualisierungen erfolgen, bspw. bei einem Distributionswechsel oder
+-upgrade (siehe <<pakete-aktualisieren-dist-upgrade>>).
 
 Jeder Interessierte kann einen solchen Paketmirror betreiben. Wie Sie
 diesen einrichten, erfahren Sie unter ``Einen eigenen APT-Mirror aufsetzen''
@@ -78,8 +78,8 @@ kann bspw. eine Begrenzung des verfügbaren Speicherplatzes auf dem
 Server sein. Das bedeutet jedoch nicht zwangsläufig, dass dieser Mirror
 schlechter erreichbar sein muss. Im deutschsprachigen Raum betreiben
 entsprechende Paketmirrors bspw. die Uni Erlangen, die TU Graz und
-SWITCH, das Schweizer Hochleistungsnetzwerk für die
-Wissenschaft <<SWITCH>>.
+SWITCH, das Schweizer Hochleistungsnetzwerk für die Wissenschaft 
+<<SWITCH>>.
 
 // Indexeinträge
 (((Paketmirror, Beschreibung)))
@@ -140,7 +140,8 @@ IPv6: no
 (((Paketmirror, Linux Mint)))
 Für die anderen `deb`-basierten Distributionen sieht das ähnlich wie bei
 Debian aus. Eine aktuelle Liste finden Sie auf der Webseite der
-jeweiligen Distribution.
+jeweiligen Distribution. Beispielhaft zeigen wir Ihnen das für die
+Distribution Linux Mint.
 
 .Auswahl der Paketmirror für Linux Mint
 image::werkzeuge/paketquellen-und-werkzeuge/linuxmint-mirrors.png[id="fig.linuxmint-mirrors", width="50%"]
@@ -166,7 +167,7 @@ Verfügung. Darüberhinaus bietet `apt-get.org` <<apt-get.org>> die
 Möglichkeit zur Recherche nach einem möglichen inoffiziellen Repository
 (siehe <<fig.apt-get-org>>). Bitte beachten Sie bei der Auswahl der
 Paketquelle über diesen Dienst, dass nicht jedes der angezeigten
-Repositories Pakete  für alle Architekturen (siehe
+Repositories Pakete für alle Architekturen (siehe
 <<debian-architekturen>>) und Veröffentlichungen (siehe
 <<veroeffentlichungen>>) bereithält.
 
@@ -174,19 +175,19 @@ Repositories Pakete  für alle Architekturen (siehe
 image::werkzeuge/paketquellen-und-werkzeuge/apt-get-org.png[id="fig.apt-get-org", width="50%"]
 
 Sehr hilfreich und zumeist auch der erste Anlaufpunkt für inoffizielle
-Debian-Pakete ist die Paketsuche unter dem Menüpunkt menu:Search[].
-Im Eingabefeld geben Sie ein Textfragment aus dem Namen eines Pakets
-ein, nachdem dann `apt-get.org` seine Liste der Spiegelserver
-durchforstet. Ergebnis ist eine Liste, aus der Sie entnehmen können, von
-welchem Spiegelserver Sie das gewünschte Paket beziehen können. Neben
-der Architektur (siehe <<debian-architekturen>>) sehen Sie auch die
+Debianpakete ist die Paketsuche unter dem Menüpunkt menu:Search[]. Im
+Eingabefeld geben Sie ein Textfragment aus dem Namen eines Pakets ein,
+nachdem dann `apt-get.org` seine Liste der Spiegelserver durchforstet.
+Das Ergebnis ist eine Liste, aus der Sie entnehmen können, von welchem
+Spiegelserver Sie das gewünschte Paket beziehen können. Neben der
+Architektur (siehe <<debian-architekturen>>) sehen Sie auch die
 Veröffentlichung (siehe <<veroeffentlichungen>>) und den
 Distributionsbereich (siehe <<distributionsbereiche>>), in die das
 gefundene Paket einsortiert ist. <<fig.apt-get-org-search>> zeigt das
 Suchergebnis nach dem Paket 'libdvdcss' an, welches bei älteren
-Veröffentlichungen wie Debian 3 _Woody_, Debian 3.1 _Sarge_ oder auch bei
-_Sid_ für die drei Debian-Architekturen _all_, _i386_ und _powerpc_
-benötigt wird und hierüber zur Verfügung steht.
+Veröffentlichungen wie Debian 3 _Woody_, Debian 3.1 _Sarge_ oder auch
+bei _Sid_ für die drei Debian-Architekturen _all_, _i386_ und _powerpc_
+zum Lesen von DVDs benötigt wird und hierüber zur Verfügung steht.
 
 .Suchergebnis der Recherche bei `apt-get.org`
 image::werkzeuge/paketquellen-und-werkzeuge/apt-get-org-search.png[id="fig.apt-get-org-search", width="50%"]
