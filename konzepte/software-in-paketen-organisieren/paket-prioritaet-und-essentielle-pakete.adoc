@@ -205,7 +205,6 @@ Nach dieser Operation werden 29,7 kB Plattenplatz freigegeben.
 Sie sind im Begriff, etwas potentiell Schädliches zu tun.
 Zum Fortfahren geben Sie bitte »Ja, tue was ich sage!« ein.
  ?]
-#
 ----
 
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/paket-prioritaet-und-essentielle-pakete.adoc
