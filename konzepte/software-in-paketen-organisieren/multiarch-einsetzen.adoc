@@ -38,7 +38,7 @@ mit `dpkg --print-foreign-architectures` an.
 entsprechend. Beim Aufruf geben Sie dazu jeweils noch die gewünschte
 Architektur als Parameter an, bspw. `dpkg --add-architecture i386`,
 wenn Sie zusätzlich die Architektur für 32-Bit-PCs nutzen wollen, weil
-es ihre gewünschte Software nur für 32-Bit-Systeme gibt.
+es die von Ihnen gewünschte Software nur für 32-Bit-Systeme gibt.
 
 Während des Vorgangs schreibt `dpkg` diese Änderung zuerst in eine
 temporäre Datei namens `/var/lib/dpkg/arch-new`. Wurden  alle anderen
