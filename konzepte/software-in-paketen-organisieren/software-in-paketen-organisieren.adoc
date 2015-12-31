@@ -38,7 +38,7 @@ include::paket-prioritaet-und-essentielle-pakete.adoc[]
 
 include::verbreitungsgrad-von-paketen.adoc[]
 
-include::paketflags.adoc[]
+include::lokale-paketmarkierungen.adoc[]
 
 // Wie finde ich passende Pakete
 include::wie-finde-ich-passende-pakete.adoc[]

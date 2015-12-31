@@ -38,10 +38,10 @@ listet alle Pakete auf, die gelöscht werden (siehe <<pakete-deinstallieren>>)
 listet alle Pakete auf, die vollständig gelöscht werden (siehe <<pakete-deinstallieren>>)
 
 `hold`::
-listet alle Pakete auf, deren Version explizit beibehalten wird (siehe <<paketflags>>)
+listet alle Pakete auf, deren Version explizit beibehalten wird (siehe <<lokale-paketmarkierungen>>)
 
 `keep`::
-listet alle Pakete auf, die automatisch beibehalten werden (siehe <<paketflags>>)
+listet alle Pakete auf, die automatisch beibehalten werden (siehe <<lokale-paketmarkierungen>>)
 
 Die nachfolgende Ausgabe ist das Äquivalent zu
 <<fig.aptitude-vormerkungen>> im Terminal. Bitte beachten Sie dabei, dass
@@ -97,9 +97,9 @@ Daraufhin sehen Sie eine Darstellung ähnlich zu
 gruppiert sind. Als Kategorien bestehen derzeit:
 
 * Pakete, die automatisch in ihrem derzeitigen Zustand gehalten werden
-(siehe <<paketflags>>),
+(siehe <<lokale-paketmarkierungen>>),
 * Pakete, die installiert werden (siehe <<pakete-installieren>>),
-* Pakete, die zurückgehalten werden (siehe <<paketflags>>),
+* Pakete, die zurückgehalten werden (siehe <<lokale-paketmarkierungen>>),
 * Pakete, die entfernt werden (siehe <<pakete-deinstallieren>>) und
 * Pakete, die aktualisiert werden (siehe <<pakete-aktualisieren>>).
 

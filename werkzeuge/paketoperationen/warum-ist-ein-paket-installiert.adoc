@@ -17,7 +17,7 @@ Möchten Sie klären, warum ein Paket installiert wurde, gibt Ihnen
 `aptitude` dazu bereitwillig Auskunft. Es versteht dazu das
 Unterkommando `why`, mit dem es Ihnen die Gründe auflistet, die zur
 Installation des besagten Pakets geführt haben. Grundlage dafür sind
-einerseits die Paketflags (siehe dazu <<paketflags>>) und andererseits
+einerseits die Paketflags (siehe dazu <<lokale-paketmarkierungen>>) und andererseits
 die Einträge in der Paketbeschreibung. `aptitude` wertet daraus die fünf
 Felder `Recommends`, `Conflicts`, `Depends`, `Replaces` und `Provides`
 aus (siehe <<konzepte-und-ideen-dahinter>>). Über diese vorgenannten

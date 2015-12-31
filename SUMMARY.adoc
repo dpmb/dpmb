@@ -36,7 +36,7 @@
 .. link:konzepte/software-in-paketen-organisieren/multiarch-einsetzen.adoc[Multiarch einsetzen]
 .. link:konzepte/software-in-paketen-organisieren/paket-prioritaet-und-essentielle-pakete.adoc[Paket-Priorität und essentielle Pakete]
 .. link:konzepte/software-in-paketen-organisieren/verbreitungsgrad-von-paketen.adoc[Verbreitungsgrad von Paketen]
-.. link:konzepte/software-in-paketen-organisieren/paketflags.adoc[Paketflags]
+.. link:konzepte/software-in-paketen-organisieren/lokale-paketmarkierungen.adoc[Paketflags]
 .. link:konzepte/software-in-paketen-organisieren/wie-finde-ich-passende-pakete.adoc[Wie finde ich passende Pakete]
  link:werkzeuge/teil-werkzeuge.adoc[Werkzeuge]
 . link:werkzeuge/paketquellen-und-werkzeuge/paketquellen-und-werkzeuge.adoc[Paketquellen und Werkzeuge]

@@ -106,7 +106,7 @@ Paket 'openssh-server' eine zusätzliche Abhängigkeit vom Paket
 * `aptitude safe-upgrade` geht im Gegensatz zu `apt-get` und `apt` noch
 einen Schritt weiter und erlaubt auch, dass Pakete entfernt werden. Das
 betrifft allerdings ausschließlich solche Pakete, die die Markierung
-``automatisch installiert'' tragen (siehe Paketflags in <<paketflags>>).
+``automatisch installiert'' tragen (siehe Paketflags in <<lokale-paketmarkierungen>>).
 Über die Option `--no-new-installs` sorgen Sie dafür, dass auch
 `aptitude` beim Aktualisieren nur die Pakete erneuert, die keine
 weiteren, zusätzlichen Pakete nachsichziehen.

@@ -141,7 +141,7 @@ not installed').
 | `hi` | das Paket ist installiert, aber auf 'hold' gesetzt. Bei
 Softwareaktualisierungen wird das Paket nicht berücksichtigt und in
 seinem derzeitigen Zustand belassen (siehe Paketflags in
-<<paketflags>>).
+<<lokale-paketmarkierungen>>).
 |====
 
 ==== `aptitude search ~i` ====

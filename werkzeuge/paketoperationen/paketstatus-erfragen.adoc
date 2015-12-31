@@ -222,7 +222,7 @@ $
 Das Ergebnis des Aufrufs von `aptitude show` 'Paketname' kombiniert die
 Ausgabe von `dpkg -s` mit Teilen von `apt-cache show`. Hervorzuheben
 sind die vollständig übersetzte Ausgabe samt Paketbeschreibung
-(Lokalisierung), die Paketflags (siehe <<paketflags>>) und die Debtags
+(Lokalisierung), die Paketflags (siehe <<lokale-paketmarkierungen>>) und die Debtags
 (siehe <<erweiterte-paketklassifikation-mit-debtags>>) zum Paket.
 
 .Ausgabe der Statusinformationen zum Paket 'htop' mittels `aptitude`
@@ -237,7 +237,7 @@ image::werkzeuge/paketoperationen/aptitude-show.png[id="fig.aptitude-show", widt
 (((Debianpaket, apt)))
 `apt-mark` ist ebenfalls ein Kommando aus dem Paket 'apt'. Es zeigt
 Ihnen einerseits die Pakete an, die bereits mit einem bestimmten
-Paketflag (siehe <<paketflags>>) versehen wurden, andererseits erlaubt
+Paketflag (siehe <<lokale-paketmarkierungen>>) versehen wurden, andererseits erlaubt
 es Ihnen auch, diese Paketflags explizit zu setzen.
 
 Mit den beiden Schaltern `showauto` und `showmanual` zeigen Sie die
@@ -275,7 +275,7 @@ Halten-Markierung für xpdf entfernt.
 
 Weiterführende Informationen zu den vier Schaltern `auto`, `manual`,
 `hold` und `unhold` erhalten Sie unter ``Paketflags'' (siehe
-<<paketflags>>), ``Festlegen einer Paketversion durch explizites Setzen
+<<lokale-paketmarkierungen>>), ``Festlegen einer Paketversion durch explizites Setzen
 einer Markierung mit `apt-mark`'' (siehe
 <<ausgewaehlte-pakete-nicht-aktualisieren>>) sowie in ``Warum ist ein
 Paket (nicht) installiert'' (siehe <<warum-ist-ein-paket-installiert>>).

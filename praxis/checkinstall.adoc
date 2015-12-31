@@ -33,7 +33,7 @@ des Projektes.
 Aus dem `tar.gz`-Archiv baut `checkinstall` mit den Kommandos `make` und
 `checkinstall` ein passendes `deb`-Paket, welches dann nachfolgend über
 die Paketverwaltung mittels `dpkg` eingespielt wird. Zusätzlich erhält
-das Paket die Markierung 'hold' (siehe dazu <<paketflags>>).
+das Paket die Markierung 'hold' (siehe dazu <<lokale-paketmarkierungen>>).
 
 * Vorteile:
 ** vereinfachte Nutzung von Entwicklerversionen

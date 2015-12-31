@@ -1,8 +1,8 @@
-// Datei: ./konzepte/software-in-paketen-organisieren/paketflags.adoc
+// Datei: ./konzepte/software-in-paketen-organisieren/lokale-paketmarkierungen.adoc
 
 // Baustelle: Rohtext
 
-[[paketflags]]
+[[lokale-paketmarkierungen]]
 === Lokale Paketmarkierungen ===
 
 // Stichworte für den Index
@@ -229,7 +229,7 @@ untersucht `apt-mark` die darin genannten Pakete auf das Vorhandensein
 des jeweiligen Paketmarkierungen.
 ====
 
-[[paketflags-setzen-und-entfernen-einer-markierung]]
+[[setzen-und-entfernen-einer-markierung-mit-apt-mark]]
 ==== Setzen und Entfernen einer Markierung mit apt-mark ====
 
 // Stichworte für den Index
@@ -345,4 +345,4 @@ i A awesome                         - Hochkonfigurierbarer Fenstermanager für X
 #
 ----
 
-// Datei (Ende): ./konzepte/software-in-paketen-organisieren/paketflags.adoc
+// Datei (Ende): ./konzepte/software-in-paketen-organisieren/lokale-paketmarkierungen.adoc

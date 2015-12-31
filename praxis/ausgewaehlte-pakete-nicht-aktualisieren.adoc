@@ -9,7 +9,7 @@
 Die Paketverwaltung muss darüber Bescheid wissen, wenn Sie ein
 ausgewähltes Paket auf dem aktuellen Stand belassen möchten. Dazu
 existiert das Paketflag 'hold', welches Sie in dem Fall explizit
-festklopfen müssen (siehe auch Paketflags unter <<paketflags>>). Haben
+festklopfen müssen (siehe auch Paketflags unter <<lokale-paketmarkierungen>>). Haben
 Sie das Flag gesetzt, wird das Paket somit nicht weiter aktualisiert
 oder gelöscht, sondern in dem derzeit bestehenden Zustand und der
 Version gehalten.
