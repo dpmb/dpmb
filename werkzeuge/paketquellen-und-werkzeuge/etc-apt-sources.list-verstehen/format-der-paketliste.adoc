@@ -10,6 +10,7 @@
 (((/etc/apt/sources.list)))
 (((/etc/apt/sources.list,Aufbau)))
 (((/etc/apt/sources.list,Paketquelle)))
+(((Paketquelle,Format)))
 Wie auf UNIX/Linux-Systemen üblich, ist die Datei
 `/etc/apt/sources.list` eine reine Textdatei. Die Einträge darin
 erfolgen zeilenweise. Jede einzelne Paketquelle beschreiben Sie
@@ -20,12 +21,13 @@ image::werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/sourc
 
 // Indexeinträge
 (((/etc/apt/sources.list,Änderungen)))
+(((Paketquelle,ändern)))
 Änderungen nehmen Sie mit Hilfe eines beliebigen Texteditors als
 Benutzer `root` vor, bspw. mittels 'vim', 'emacs' oder 'nano' (siehe
-<<fig.sources-list-nano>>). Aktivieren Sie an dieser Stelle in Ihrem
-Texteditor die Syntaxhervorhebung, erfassen Sie die Struktur der
-einzelnen Einträge leichter und bemerken sofort fehlerhafte Änderungen
-durch eine entsprechende Einfärbung des Textes.
+<<fig.sources-list-nano>>). Haben Sie in Ihrem Texteditor die
+Syntaxhervorhebung aktiviert, erfassen Sie die Struktur der einzelnen
+Einträge leichter und bemerken sofort fehlerhafte Änderungen durch eine
+entsprechende Einfärbung des Textes.
 
 // Indexeinträge
 (((Paketquelle,auskommentieren)))
@@ -33,13 +35,13 @@ durch eine entsprechende Einfärbung des Textes.
 (((Paketquelle,hinzufügen)))
 (((Paketquelle,löschen)))
 (((Paketquelle,ändern)))
-Sie fügen eine weitere Paketquelle hinzu, indem Sie die Liste ergänzen.
-Tragen Sie dazu in einer freien oder zusätzlichen Zeile die gewünschte
-Paketquelle nach. Um eine bereits erfasste Paketquelle zu modifizieren,
-ändern Sie den entsprechenden Listeneintrag. Mit Hilfe des `#`-Zeichens
-zu Beginn einer Zeile kommentieren Sie den jeweiligen Eintrag aus. Eine
-Paketquelle entfernen Sie endgültig aus der Liste, indem Sie die
-betreffende Zeile löschen.
+Sie fügen eine weitere Paketquelle hinzu, indem Sie die Liste um eine
+weitere Zeile ergänzen. Tragen Sie dazu in einer freien oder
+zusätzlichen Zeile die gewünschte Paketquelle nach. Um eine bereits
+erfasste Paketquelle zu modifizieren, ändern Sie den entsprechenden
+Listeneintrag. Mit Hilfe des `#`-Zeichens zu Beginn einer Zeile
+kommentieren Sie den jeweiligen Eintrag aus. Eine Paketquelle entfernen
+Sie endgültig aus der Liste, indem Sie die betreffende Zeile löschen.
 
 // Indexeinträge
 (((Paketquelle,Anzahl der Einträge)))
