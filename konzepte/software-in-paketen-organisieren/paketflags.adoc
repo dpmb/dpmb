@@ -76,12 +76,13 @@ in der Datei `/var/lib/aptitude/pkgstates`:
 ----
 ...
 
-Package: xserver-xorg
-Architecture: i386
+Package: python3-pkg-resources
+Architecture: amd64
 Unseen: no
 State: 1
 Dselect-State: 1
 Remove-Reason: 0
+ForbidVer: 18.8-1
 
 ...
 
