@@ -46,15 +46,13 @@ Pakete mit einer spezifischen Priorität finden.
 Dieser Prioritätsstufe sind Pakete zugeordnet, die für die korrekte
 Funktion des Betriebssystem unbedingt erforderlich sind. Dazu gehören
 beispielsweise 'dpkg', 'coreutils' für die GNU Core Utilities mit den
-Befehlen wie `ls`, `rm`, `cp`, `mv`, das Init-System (zur Zeit 'systemd'
-und 'sysvinit') und die C-Standard-Bibliotheken ('libc6' auf den meisten
-Architekturen).
+Befehlen wie `ls`, `rm`, `cp`, `mv`, das Init-System (seit Debian 8
+Jessie das Metapaket 'init') und die C-Standard-Bibliotheken ('libc6'
+auf den meisten Architekturen).
 
 Entfernen Sie eines oder mehrere Pakete mit dieser Prioritätsstufe, kann
 das Ihr Betriebssystem so stark beschädigen, dass selbst das Werkzeug
-`dpkg` nicht mehr funktioniert. Unproblematisch ist hingegen der
-Austausch eines solchen Paketes durch funktionsgleiche Alternativen,
-bspw. beim Wechsel des Init-Systems.
+`dpkg` nicht mehr funktioniert.
 
 Systeme, die nur aus Paketen der Prioritätsstufe ``erforderlich''
 bestehen, sind zwar lauffähig, aber im Normalfall nahezu unbenutzbar, da
