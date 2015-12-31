@@ -8,3 +8,4 @@
 *.fb2
 /version.adoc
 /docbook-xsl.css
+/*.chunked/
