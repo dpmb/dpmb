@@ -195,12 +195,13 @@ Processing triggers for libc-bin (2.19-11) ...
 #
 ----
 
-Abschließend überprüfen Sie mittels `dpkg`, für welche Architekturen das
-Paket auf Ihrem System installiert ist. In o.g. Fall ist das Paket
-`libc6` sowohl für _amd64_, als auch für _i386_ installiert. Sie
-erkennen das daran, dass neben dem Namen des Pakets auch die Architektur
-angegeben wird. Als Trennzeichen in der Ausgabe fungiert hier ein
-Doppelpunkt.
+In o.g. Fall wurde das Paket `libc6` als Abhängigkeit auch für die
+Architektur _i386_ installiert. Sie erkennen das daran, dass neben dem
+Namen des Pakets auch die Architektur angegeben wird. Als Trennzeichen
+in der Ausgabe fungiert hier ein Doppelpunkt.
+
+Abschließend überprüfen Sie mittels `dpkg`, für welche Architekturen
+die Pakete `pforth` und `libc6` auf Ihrem System installiert sind.
 
 .Installationsstatus für das Paket 'libc6'
 ----
