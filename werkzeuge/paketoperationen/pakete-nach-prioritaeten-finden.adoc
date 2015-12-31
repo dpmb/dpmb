@@ -78,4 +78,15 @@ i   util-linux       - Verschiedene System-Kommandos
 $
 ----
 
+Auffällig hierbei ist, dass das Paket 'apt' aufgelistet wird, obwohl
+wir in <<paket-prioritaet-und-essentielle-pakete>> geschrieben haben,
+dass man ein autarkes System auch problemlos ohne APT betreiben
+kann. Grund hierfür ist, dass APT sich selbst als essentiell ansieht
+und sich deswegen selbst nicht deinstallieren will. Da Aptitude zum
+Teil APTs Bibliotheken nutzt, sieht es diesen Fall
+genauso{empty}footnote:[Bis einschließlich Debian 8 Jessie kann man
+jedoch das Paket 'aptitude' mit Aptitude selbst entfernen. Unter
+exotischen Umständen hat Aptitude das sogar bereits selbst als
+Lösungsvorschlag für einen Abhängkeitskonflikt angeboten.]
+
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-nach-prioritaeten-finden.adoc
