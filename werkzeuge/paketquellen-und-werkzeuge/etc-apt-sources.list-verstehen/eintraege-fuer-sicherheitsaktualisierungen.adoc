@@ -7,6 +7,8 @@
 // Indexeinträge
 (((/etc/apt/sources.list,Einträge für Sicherheitsaktualisierungen)))
 (((Debian Security Team)))
+(((Paketquelle, Security Updates)))
+(((Paketquelle, Sicherheitsaktualisierungen)))
 (((Security Updates)))
 Häufig, aber in unregelmäßigen Abständen – d.h. wenn es erforderlich
 ist – kündigt das Debian Security-Team <<Debian-Security>>
