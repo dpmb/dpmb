@@ -56,4 +56,22 @@ eine tabellarische Übersicht und eine graphische Auswertung.
 .Erfasster Verbreitungsgrad für das Paket 'nginx'
 image::konzepte/software-in-paketen-organisieren/popcon-nginx.png[id="fig.popcon-nginx", width="50%"]
 
+Neben der Architektur der Installation und welche Pakete installiert
+sind, erfasst Popcon anhand der Zeitstempel im Dateisystem ausserdem
+noch folgende Daten für jedes installierte Paket:
+
+* Wann wurde das Paket zuletzt aktualisiert oder installiert? Dies
+  wird für den Graphen 'recent' (kürzlich) verwendet und anhand des
+  Zeitstempels der Dateien des Pakets unter `/var/lib/dpkg/info`
+  eruiert.
+
+* Wann wurde zuletzt auf ausführbare Dateien des Pakets zugegeriffen?
+  Dies wird für die Graphen 'vote' (dafür stimmen) 'old' (alt)
+  verwendet und anhand der Zugriffszeitstempel ('atime') von
+  Programmdateien des Paketes eruiert.
+
+Werden weder Änderungszeitstempel noch Zugriffszeitstempel beim
+Projekt mitgeliefert, wird das Paket im Graphen 'no-files' (keine
+Dateien) aufgelistet.
+
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/verbreitungsgrad-von-paketen.adoc
