@@ -185,6 +185,8 @@
 
 - [[[Debian-History]]] Debian Documentation Team: A Brief History of Debian, Chapter 3, Debian Releases, http://www.debian.org/doc/manuals/project-history/ch-releases.de.html
 
+- [[[Debian-Manpages]]] Debian Man Page Lookup, http://http://manpages.debian.org/
+
 - [[[Debian-Mirror-Checker]]] Debian Mirror Checker, http://mirror.debian.org/status.html
 
 - [[[Debian-Mirror-Doku]]] Dokumentation zur Auswahl eines Netzwerk-Spiegel-Servers, http://www.debian.org/releases/stable/i386/ch06s03.html#apt-setup-mirror-selection

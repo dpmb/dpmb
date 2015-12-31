@@ -7,6 +7,7 @@
 === Manpages anzeigen ===
 
 // Stichworte für den Index
+(((apropos)))
 (((debman, -f)))
 (((dlocate)))
 (((dlocate, -man)))
@@ -19,12 +20,18 @@
 (((Dokumentation, manpages)))
 Für die meisten UNIX/Linux-Werkzeuge bestehen Informations- und
 Hilfeseiten, auch genannt 'Info und Man(ual) Pages'. Um in Erfahrung zu
-bringen, ob diese vorhanden und installiert sind, bieten sich die beiden
-UNIX-Kommandos `whereis` aus dem essentiellen Paket 'util-linux'
-<<Debian-Paket-util-linux>> sowie das bereits mehrfach genutzte
-`dlocate` <<Debian-Paket-dlocate>> an. Manpages aus Paketen, die noch
-nicht installiert sind, zeigen Sie mit Hilfe von `debman` und `debmany`
-an.
+bringen, ob diese überhaupt vorhanden und installiert sind, bieten sich
+zunächt die beiden UNIX-Kommandos `apropos` und `whereis` (Paket
+'util-linux' <<Debian-Paket-util-linux>>) an. Ebenso hilft Ihnen das
+bereits mehrfach genutzte Werkzeug `dlocate` <<Debian-Paket-dlocate>>
+weiter. 
+
+Manpages aus `deb`-Paketen, die noch nicht auf ihrem System installiert
+sind, aber als lokale Datei vorliegen, zeigen Sie mit Hilfe von `debman`
+und `debmany` aus dem Paket 'debian-goodies'
+<<Debian-Paket-debian-goodies>> an. Liegt das Paket nicht lokal vor,
+hilft Ihnen die Manpages-Sammlung des Debian-Projekts weiter
+<<Debian-Manpages>>.
 
 ==== Manpages erstöbern ====
 
