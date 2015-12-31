@@ -110,12 +110,14 @@ $
 (((debmany)))
 
 Für diesen speziellen Zweck existieren `debman` und `debmany`. Beide
-Werkzeuge gehören zum Umfang des Pakets 'debian-goodies' und bieten
-Ihnen die Möglichkeit, Manpages von Paketen anzuzeigen, die noch nicht
-installiert sind, aber bspw. bereits als lokale Datei vorliegen. Dazu
-benötigt `debman` den Schalter `-f`, den Dateinamen und anschließend den
-Namen der Manpage. Der nachfolgende Aufruf demonstriert das am Beispiel
-von 'htop':
+Werkzeuge gehören zum Umfang des Pakets 'debian-goodies'
+<<Debian-Paket-debian-goodies>> und bieten Ihnen die Möglichkeit,
+Manpages von Paketen anzuzeigen, die noch nicht installiert sind, aber
+bspw. bereits als lokale Datei vorliegen. Dazu benötigt `debman` den
+Schalter `-f`, den Dateinamen und anschließend den Namen der Manpage.
+Der nachfolgende Aufruf am Beispiel von 'htop' offnet den bei Ihnen
+voreingestellten Betrachter für Manpages -- ganz so, als ob das Paket
+tatsächlich installiert wäre.
 
 .Aufruf von `debman` zum Paket 'htop'
 ----
@@ -124,9 +126,24 @@ $ debman -f htop_1.0.3-1_amd64.deb htop
 $
 ----
 
-Liegt das Paket noch nicht lokal vor, sondern noch auf einem
-Paketmirror, können sowohl `debman` als auch `debmany` dieses von dort
-beziehen und die Manpage anzeigen. `debman` versteht dazu den Schalter
-`-p`. 
+Liegt das Paket hingegen noch nicht lokal vor, gibt es auch keinen Grund
+zur Verzweiflung. Sowohl `debman` als auch `debmany` können dieses vom
+Paketmirror beziehen und die Darstellung der Manpage daraus veranlassen.
+`debman` versteht dazu den Schalter `-p`.
+
+Sind Sie mit dem Webbrowser unterwegs und bevorzugen diese Darstellung,
+greifen Sie darüber auf die Manpages-Sammlung des Debian-Projekts zurück
+<<Debian-Manpages>>. <<fig.manpages>> zeigt das Ergebnis der Recherche
+nach `htop`.
+
+.Suche in der Manpages-Sammlung nach `htop`
+image::werkzeuge/paketoperationen/manpages.png[id="fig.manpages", width="50%"]
+
+Über diesen Service recherchieren Sie in allen Veröffentlichungen von
+Debian sowie auch _testing_, _unstable_ und _experimental_. Über die
+Auswahllisten legen Sie neben dem zu durchsuchenden Bereich das
+Ausgabeformat fest -- hier HTML, PostScript, PDF oder Plaintext. Der
+Service ist noch nicht ganz vollständig, so dass derzeit noch nicht alle
+Manpages für die über das Menü offerierten Sprachen hinterlegt sind.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/manpages-anzeigen.adoc
