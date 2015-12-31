@@ -1,6 +1,7 @@
 // Datei: ./konzepte/software-in-paketen-organisieren/paket-prioritaet-und-essentielle-pakete.adoc
 
 // Baustelle: Fertig
+// Axel: Fertig
 
 [[paket-prioritaet-und-essentielle-pakete]]
 
