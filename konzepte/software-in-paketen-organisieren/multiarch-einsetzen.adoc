@@ -14,26 +14,34 @@
 (((dpkg, /var/lib/dpkg/arch)))
 (((dpkg, /var/lib/dpkg/arch-new)))
 `dpkg` führt eine Liste mit den Architekturen, für die es Pakete
-installiert bzw. installieren darf. Die Liste für die Basisarchitektur
-ihres Systems ist in der Datei `/var/lib/dpkg/arch` hinterlegt, die der
-zusätzlichen Fremdarchitekturen in `/var/lib/dpkg/arch-new`. Letztere
-existiert nur, sofern Sie zuvor Fremdarchitekturen ergänzt haben. Den
-Inhalt dieser Listen geben Sie mit den beiden `dpkg`-Optionen
-`--print-architecture` und `--print-foreign-architectures` aus.
+installiert bzw. installieren darf. Die Liste der Architekturen
+Ihres Systems ist in der Datei `/var/lib/dpkg/arch` hinterlegt. Die
+erste Architektur in dieser Datei ist die Basisarchitektur. Die Datei
+existiert allerdings nur, sofern Sie zuvor Fremdarchitekturen ergänzt
+haben. Die Basisarchitektur können Sie mit der `dpkg`-Option
+`--print-architecture` (früher bzw. bei älteren `dpkg`-Versionen
+`--print-installation-architecture`) aus, die Fremdarchitekturen mit
+`--print-foreign-architectures`.
 
-.Inhalt der Liste der Basisarchitekturen, hier `i386` und `amd64`
+.Inhalt der Liste der Architekturen eines Systems mit `amd64` als Basisarchitektur und `i386` als Fremdarchitektur
 ----
 $ cat /var/lib/dpkg/arch
-i386
 amd64
+i386
 $
 ----
 
 Über die beiden `dpkg`-Optionen `--add-architecture` und
 `--remove-architecture` erweitern bzw. reduzieren Sie die Liste
 entsprechend. Beim Aufruf geben Sie dazu jeweils noch die gewünschte
-Architektur als Parameter an, bspw. `dpkg --add-architecture amd64` für
-64-Bit-PC-CPUs.
+Architektur als Parameter an, bspw. `dpkg --add-architecture i386`
+wenn Sie zusätzlich die Architektur für 32-Bit-PCs nutzen wollen, weil
+es bestimmte Software nur für 32-Bit-System gibt.
+
+Während des Vorgangs schreibt `dpkg` diese Änderung zuerst in eine
+temporäre Datei names `/var/lib/dpkg/arch-new` und benennt diese dann
+in `/var/lib/dpkg/arch` um wenn alle anderen Änderungen erfolgreich
+vorgenommen wurden.
 
 [NOTE]
 .Installation von Paketen für fremde Architekturen
