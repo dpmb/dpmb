@@ -187,30 +187,24 @@ klar, dass das eine sehr schlechte Idee ist.'' (`aptitude`). Diese Sätze
 werden jeweils in der eingestellten Sprache Ihres Debiansystems
 angezeigt (Lokalisierung), sofern eine Übersetzung vorhanden ist.
 Nachfolgendes Beispiel zeigt die Bildschirmausgabe vor der Entfernung
-des Pakets 'coreutils' <<Debian-Paket-coreutils>>.
+des Pakets 'init' <<Debian-Paket-init>>.
 
-.Eingabeaufforderung von `apt-get` vor der Entfernung des essentiellen Pakets 'coreutils'
+.Eingabeaufforderung von `apt-get` vor der Entfernung des essentiellen Pakets 'init'
 ----
-# apt-get remove coreutils
+# apt-get remove init
 Paketlisten werden gelesen... Fertig
 Abhängigkeitsbaum wird aufgebaut.
 Statusinformationen werden eingelesen.... Fertig
-Die folgenden Pakete wurden automatisch installiert und werden nicht mehr benötigt:
-  abiword-common aqbanking-tools blt calligra-data cdparanoia cli-common dvd+rw-tools
-  ...
-  xul-ext-firebug xulrunner-17.0 xzgv yelp zathura zenity zenmap
-Die folgenden NEUEN Pakete werden installiert:
-  libgd2-noxpm
+Die folgenden Pakete werden ENTFERNT:
+  init
 WARNUNG: Die folgenden essentiellen Pakete werden entfernt.
 Dies sollte NICHT geschehen, außer Sie wissen genau, was Sie tun!
-  coreutils e2fsprogs util-linux (wegen e2fsprogs) sysvinit initscripts (wegen sysvinit)
-0 aktualisiert, 1 neu installiert, 693 zu entfernen und 0 nicht aktualisiert.
-Es müssen 229 kB an Archiven heruntergeladen werden.
-Nach dieser Operation werden 3.630 MB Plattenplatz freigegeben.
+  init
+0 aktualisiert, 0 neu installiert, 1 zu entfernen und 0 nicht aktualisiert.
+Nach dieser Operation werden 29,7 kB Plattenplatz freigegeben.
 Sie sind im Begriff, etwas potentiell Schädliches zu tun.
 Zum Fortfahren geben Sie bitte »Ja, tue was ich sage!« ein.
- ?] q
-Abbruch.
+ ?]
 #
 ----
 

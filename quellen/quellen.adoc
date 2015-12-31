@@ -257,8 +257,6 @@
 
 - [[[Debian-Paket-checkinstall]]] Debian-Paket 'checkinstall', http://packages.debian.org/de/stable/checkinstall
 
-- [[[Debian-Paket-coreutils]]] Debian-Paket 'coreutils', http://packages.debian.org/de/stable/coreutils
-
 - [[[Debian-Paket-cupt]]] Debian-Paket 'cupt', http://packages.debian.org/de/stable/cupt
 
 - [[[Debian-Paket-dctrl-tools]]] Debian-Paket 'dctrl-tools', http://packages.debian.org/de/stable/dctrl-tools
@@ -326,6 +324,8 @@
 - [[[Debian-Paket-how-can-i-help]]] Debian-Paket 'how-can-i-help', https://packages.debian.org/jessie/how-can-i-help
 
 - [[[Debian-Paket-ia32-libs]]] Debian-Paket 'ia32-libs', https://packages.debian.org/de/stable/ia32-libs
+
+- [[[Debian-Paket-init]]] Debian-Paket 'init', http://packages.debian.org/de/stable/init
 
 - [[[Debian-Paket-isenkram]]] Debian-Paket 'isenkram', https://packages.debian.org/de/stable/isenkram
 
