@@ -3,13 +3,13 @@
 // Baustelle: Fertig
 
 [[paketflags]]
-=== Paketflags ===
+=== Lokale Paketflags ===
 
 ==== Die einzelnen Paketflags im Überblick ====
 
 // Stichworte für den Index
 (((Paketflags, Begriff)))
-Ein Debianpaket besitzt zusätzliche Paketflags, die gesetzt sein können.
+Ein Debianpaket besitzt zusätzliche lokale Paketflags, die gesetzt sein können.
 Damit werden bestimmte Zustände markiert, die eine spezifische Art und
 Weise bei der Installation eines Pakets widerspiegeln.
 
