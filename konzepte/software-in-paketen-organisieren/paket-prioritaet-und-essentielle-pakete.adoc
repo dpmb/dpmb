@@ -174,14 +174,15 @@ In <<pakete-nach-prioritaeten-finden>> lesen Sie, wie Sie auflisten,
 welche Pakete genau auf Ihrer Version von Debian als essentiell
 markiert sind.
 
-Diese Markierung hat weiter den Effekt, dass sich beispielsweise auch `dpkg` weigert,
-solche Pakete zu entfernen (siehe <<pakete-deinstallieren>>). Mit dem
-zusätzlichen Parameter `--force-remove-essential` übergehen Sie diese
-Voreinstellung und können die Aktion trotzdem durchführen (siehe dazu
-``Paketoperationen erzwingen'' in <<paketoperationen-erzwingen>>).
+Diese Markierung hat weiter den Effekt, dass sich beispielsweise auch
+`dpkg` weigert, solche Pakete zu entfernen (siehe
+<<pakete-deinstallieren>>). Mit dem zusätzlichen Parameter
+`--force-remove-essential` übergehen Sie diese Voreinstellung und können
+die Aktion trotzdem durchführen (siehe dazu ``Paketoperationen
+erzwingen'' in <<paketoperationen-erzwingen>>).
 
 // Stichworte für den Index
-(((Debianpaket, coreutils)))
+(((Debianpaket, init)))
 `apt-get` und `aptitude` entfernen diese Pakete nur nach Eingabe des
 vollständigen Satzes ``Ja, tue was ich sage!'' (`apt-get`) bzw. ``Mir ist
 klar, dass das eine sehr schlechte Idee ist.'' (`aptitude`). Diese Sätze
