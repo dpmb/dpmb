@@ -1,52 +1,64 @@
 // Datei: ./konzepte/software-in-paketen-organisieren/paketflags.adoc
 
-// Baustelle: Fertig
+// Baustelle: Rohtext
 
 [[paketflags]]
-=== Lokale Paketflags ===
-
-==== Die einzelnen Paketflags im Überblick ====
+=== Lokale Paketmarkierungen ===
 
 // Stichworte für den Index
-(((Paketflags, Begriff)))
-Ein Debianpaket besitzt zusätzliche lokale Paketflags, die gesetzt sein können.
-Damit werden bestimmte Zustände markiert, die eine spezifische Art und
-Weise bei der Installation eines Pakets widerspiegeln.
+(((Paketmarkierungen, Begriff)))
+Ein installiertes Debianpaket kann zusätzliche, lokale Markierungen
+haben, die z.B. dessen Aktualisierung beeinflussen oder, wenn kein
+anderes Paket mehr von ihm abhängt, auch seine automatische
+Deinstallation veranlassen oder verhindern.
+
+==== Paketmarkierungen, die von verschiedenen Programmen genutzt werden ====
+
+Diese Markierungen werden teilweise automatisch von APT, Aptitude und
+Co. gesetzt, können aber auch manuell gesetzt oder entfernt werden.
 
 // Stichworte für den Index
-(((Paketflags, Annahmen)))
-(((Paketflags, automatic)))
-(((Paketflags, manual)))
-(((Paketflags, hold)))
+(((Paketmarkierungen, Annahmen)))
+(((Paketmarkierungen, automatic)))
+(((Paketmarkierungen, manual)))
+(((Paketmarkierungen, hold)))
 
 automatisch installiert (_automatic_):: 
-das Paket wurde automatisch installiert, i.d.R. als direkte Abhängigkeit
-zu einem anderen Paket (siehe <<paketabhaengigkeiten-anzeigen>>). Diese
-Markierung veranlasst, dass dieses Paket entfernt wird, wenn keine
-weiteren, manuell installierten Pakete von diesem abhängen.
+das Paket wurde automatisch installiert, i.d.R. als Abhängigkeit
+eines anderen Pakets (siehe <<paketabhaengigkeiten-anzeigen>>). Diese
+Markierung veranlasst, dass dieses Paket wieder entfernt wird, wenn keine
+weiteren, installierten Pakete von diesem abhängen.
 
 manuell installiert (_manual_):: 
-das Paket wurde manuell, d.h. explizit installiert. Das verhindert, dass
+das Paket wurde manuell, d.h. explizit installiert. Diese Markierung verhindert, dass
 dieses Paket automatisch mit entfernt wird, wenn kein weiteres Paket von
-diesem abhängt.
+ihm abhängt.
 
 halten (_hold_):: 
 das Paket wird in der vorliegenden, installierten Version auf dem System
-gehalten und nicht aktualisiert (_upgrade_) oder von diesem gelöscht
+gehalten und nicht aktualisiert (_upgrade_) oder deinstalliert
 (siehe <<pakete-aktualisieren>> und <<pakete-deinstallieren>>).
 
-Desweiteren bestehen Annahmen zu den Paketflags. Ein Paket, welches
-nicht automatisch im Rahmen einer Paketabhängigkeit installiert wurde,
-gilt stets als manuell installiert. Ein Paket, welches das Paketflag
-_automatic_ trägt, gilt als automatisch installiert.
+Die Markierung 'manuell installiert' entspricht defacto dem
+Nicht-Vorhandensein einer 'automatisch installiert' Markierung. Ein
+Paket hat jeweils immer genau eine der beiden Markierungen 'manuell
+installiert' oder 'automatisch installiert'.
 
 // Stichworte für den Index
-(((Paketflags, Auswertung)))
-(((Paketflags, /var/lib/apt/extended_states)))
-Die vorgenannten Paketflags werden von `dpkg` (nur _hold_), APT und
-`aptitude` ausgewertet. Dazu
-werden die Paketflags in der Datei `/var/lib/apt/extended_states`
-gespeichert.
+(((Paketmarkierungen, Auswertung)))
+(((Paketmarkierungen, /var/lib/apt/extended_states)))
+(((Paketmarkierungen, /var/lib/dpkg/status)))
+Die vorgenannten Paketmarkierungen werden von `dpkg` (nur _hold_), APT und
+`aptitude` ausgewertet. Die Unterscheidung 'automatisch/manuell
+installiert' wird dazu in der Datei `/var/lib/apt/extended_states`
+gespeichert, die 'hold'-Markierungen in
+`/var/lib/dpkg/status`{empty}footnote:[In früheren
+Debian-Veröffentlichungen wurden die 'hold'-Markierungen von
+`aptitude` und `dpkg` getrennt gespeichert und `apt-get` wusste nichts
+von der 'hold'-Markierung. Auch wurde die 'automatisch
+installiert'-Markierung zuerst von Aptitude eingeführt und
+dementsprechend anfangs nur in `/var/lib/aptitude/pkgstates`
+gespeichert.]
 
 .Informationen zu jedem Paket in der Datei `/var/lib/apt/extended_states` (Ausschnitt)
 ----
@@ -67,12 +79,48 @@ Architecture: i386
 ...
 ----
 
-// Stichworte für den Index
-(((Paketflags, /var/lib/aptitude/pkgstates)))
-`aptitude` speichert weitere Informationen zu den Paketen eigenständig
-in der Datei `/var/lib/aptitude/pkgstates`:
+.Ein Paket "auf hold" in der Datei `/var/lib/dpkg/status` (Ausschnitt)
+----
+...
 
-.Zusatzinformationen zu den Paketen (Ausschnitt)
+Package: awesome
+Status: hold ok installed
+Priority: optional
+Section: x11
+Installed-Size: ...
+...
+----
+
+==== Aptitude-spezifische Paketmarkierungen ====
+
+// Stichworte für den Index
+(((Paketmarkierungen, /var/lib/aptitude/pkgstates)))
+`aptitude` speichert weitere Informationen zu den Paketen eigenständig
+in der Datei `/var/lib/aptitude/pkgstates`. Dazu gehören:
+
+Verbotene Versionen ('forbid-version'/'ForbidVer')::
+Vom lokalen Adminstrator nicht erwünschte Version, die nicht
+installiert werden darf, auf die nicht aktualisiert werden darf
+bzw. die beim Aktualisieren übersprungen werden soll.
+
+Neue Pakete ('New Packages'/'Unseen')::
+Aptitude pflegt eine Liste mit neu in den Paketlisten der abonnierten
+APT-Repositories aufgetauchten Paketen, die vom lokalen Adminstrator
+zurückgesetzt werden kann (`aptitude forget-new`).
+
+Entfernungsgrund ('Remove-Reason')::
+Aptitude zeigt an, warum ein Paket entfernt wird: wegen nicht (mehr)
+erfüllter Abhängigkeiten, Konflikten mit anderen Paketen, oder weil es
+nicht gebraucht wird (kein Paket mehr davon abhängt). Wird solch eine
+Paketentfernung nur vorgemerkt, so speichert Aptitude bis zur
+Entfernung auch den Grund für diese.
+
+Benutzerspezifische Markierungen ('User Tags')::
+Aptitude erlaubt Benutzern Paketen mit dem Unterkommando
+`add-user-tag` eigene Markierungen zu setzen, nach denen der Benutzer
+danach mit dem Muster `?user-tag(…)` auch wieder suchen kann.
+
+.Aptitude-spezifische Zusatzinformationen zu Paketen (Ausschnitt)
 ----
 ...
 
@@ -83,15 +131,17 @@ State: 1
 Dselect-State: 1
 Remove-Reason: 0
 ForbidVer: 18.8-1
+User-Tags: broken-by-807773
 
 ...
 
 ----
+
 ==== Lesen und Anzeigen einer Markierung mit `aptitude` ====
 
 // Stichworte für den Index
 (((aptitude, show)))
-(((Paketflags, Darstellung in der Kommandozeile)))
+(((Paketmarkierungen, Darstellung in der Kommandozeile)))
 (((Debianpaket, wireshark)))
 Sichtbar werden alle Markierungen zu einem Paket, wenn Sie die Details
 dazu erfragen – entweder direkt über die Kommandozeile oder in der
@@ -104,33 +154,35 @@ nachfolgenden Ausgabe erfahren Sie einerseits, dass 'wireshark'
 zurückgehalten wird und andererseits nicht automatisch installiert
 wurde.
 
-.Darstellung der Markierungen zum Paket 'wireshark' mittels `aptitude`
+.Darstellung der Markierungen zum Paket 'python-pkg-resources' mittels `aptitude`
 ----
-$ aptitude show wireshark
-Paket: wireshark
-Zustand: Installiert [zurückgehalten]
-Automatisch installiert: nein
-Version: 1.8.2-5wheezy9
-Priorität: optional
-Bereich: net
+$ aptitude show python-pkg-resources
+Paket: python-pkg-resources
+Zustand: Installiert
+Verbotene Version: 18.8-1
+Automatisch installiert: ja
+Version: 18.7-1
+…
+Benutzermarkierungen: broken-by-807773
+
 ...
 $
 ----
 
 // Stichworte für den Index
-(((Paketflags, automatic)))
-(((Paketflags, Darstellung in aptitude)))
-(((Paketflags, hold)))
+(((Paketmarkierungen, automatic)))
+(((Paketmarkierungen, Darstellung in aptitude)))
+(((Paketmarkierungen, hold)))
 In der Textoberfläche von `aptitude` bekommt jeder Eintrag in der
 Paketliste zusätzliche Buchstaben. Dabei stehen die Buchstaben `h` für
 _hold_ und `A` für _automatic_ (siehe <<fig.aptitude-hold>>).
 
-.Ausgabe der Paketflags in der Textoberfläche von `aptitude`
+.Ausgabe der Paketmarkierungen in der Textoberfläche von `aptitude`
 image::konzepte/software-in-paketen-organisieren/aptitude-hold.png[id="fig.aptitude-hold", width="50%"]
 
 // Stichworte für den Index
 (((aptitude, search ~M)))
-(((Paketflags, automatic)))
+(((Paketmarkierungen, automatic)))
 `aptitude` kann ebenfalls nach allen Paketen fahnden, die automatisch
 installiert wurden und dazu das Flag _automatic_ tragen. Es kennt dazu
 das spezielle Muster `~M` zum Unterkommando `search`. Ausführlicher
@@ -142,9 +194,9 @@ besprechen wir das in <<automatisch-installierte-pakete-anzeigen>>.
 (((apt-mark, showauto)))
 (((apt-mark, showhold)))
 (((apt-mark, showmanual)))
-(((Paketflags, automatic)))
-(((Paketflags, hold)))
-(((Paketflags, manual)))
+(((Paketmarkierungen, automatic)))
+(((Paketmarkierungen, hold)))
+(((Paketmarkierungen, manual)))
 Das Werkzeug `apt-mark` ist spezialisiert auf die Paketmarkierungen und
 kann Ihnen die Pakete ausgeben, bei denen nur ein bestimmtes Paketflag
 gesetzt ist. Es kennt dazu die drei Unterkommandos `showauto`,
@@ -174,20 +226,20 @@ acpi-support-base
 Geben Sie beim Aufruf keine weiteren Parameter an, werden alle Pakete
 geprüft. Übergeben Sie hingegen eine eigene Paketliste als Datei,
 untersucht `apt-mark` die darin genannten Pakete auf das Vorhandensein
-des jeweiligen Paketflags.
+des jeweiligen Paketmarkierungen.
 ====
 
 [[paketflags-setzen-und-entfernen-einer-markierung]]
-==== Setzen und Entfernen einer Markierung ====
+==== Setzen und Entfernen einer Markierung mit apt-mark ====
 
 // Stichworte für den Index
 (((apt-mark, automatic)))
 (((apt-mark, hold)))
 (((apt-mark, manual)))
-(((Paketflags, automatic)))
-(((Paketflags, hold)))
-(((Paketflags, manual)))
-(((Paketflags, setzen)))
+(((Paketmarkierungen, automatic)))
+(((Paketmarkierungen, hold)))
+(((Paketmarkierungen, manual)))
+(((Paketmarkierungen, setzen)))
 Die Markierungen _automatic_ und _manual_ werden von den Programmen zur
 Paketverwaltung eigenständig gesetzt, wenn Sie Pakete installieren.
 Grundlage sind die ausgewerteten Paketabhängigkeiten. Trotzdem können
@@ -200,7 +252,7 @@ können. Dazu erwartet `apt-mark` als Parameter ein einzelnes Paket oder
 eine Paketliste. Die nachfolgende Ausgabe zeigt das Setzen der
 Markierung _manual_ für das Paket 'wireshark'.
 
-.Setzen des Paketflags 'manual' für das Paket 'wireshark'
+.Setzen der Paketmarkierungen 'manual' für das Paket 'wireshark'
 ----
 # apt-mark manual wireshark
 wireshark wurde als manuell installiert festgelegt.
@@ -210,33 +262,87 @@ wireshark wurde als manuell installiert festgelegt.
 // Stichworte für den Index
 (((apt-mark, hold)))
 (((apt-mark, unhold)))
-(((Paketflags, hold)))
+(((Paketmarkierungen, hold)))
 Für das Halten eines Pakets existieren die Unterkommandos `hold` und
 `unhold`. Welchen konkreten Nutzen das haben kann, erfahren Sie unter 
 ``Ausgewählte Pakete nicht aktualisieren'' in
 <<ausgewaehlte-pakete-nicht-aktualisieren>>.
 
-==== Was passiert, wenn Paketflags geändert werden? ====
+==== Was passiert, wenn Paketmarkierungen geändert werden? ====
 
 // Stichworte für den Index
-(((Paketflags, ändern)))
-(((Paketflags, Änderungen in der Paketauswahl)))
-(((Paketflags, Seiteneffekte)))
-Durch das Setzen der Paketflags verändern sich die Paketauswahl und die
-Vorschläge durch die Paketverwaltung. `dpkg` und `aptitude` respektieren
-die von Ihnen gesetzten Markierungen und empfehlen Ihnen bei einer
-Änderung des Paketbestands beispielsweise andere Pakete als sonst, um
-die Paketabhängigkeiten nicht zu verletzen. Bei `aptitude` übernimmt
-diese Aufgabe der Package Dependency Solver (siehe <<aptitude>>).
+(((Paketmarkierungen, ändern)))
+(((Paketmarkierungen, Änderungen in der Paketauswahl)))
+(((Paketmarkierungen, Seiteneffekte)))
+Durch das Setzen von Paketmarkierungen verändert sich die Art wie
+Paketabhängigkeiten ausgewerten werden und damit die Vorschläge durch
+die Paketverwaltung. `dpkg`, `apt`, `apt-get` und `aptitude`
+respektieren die von Ihnen gesetzten Markierungen. `apt`, `apt-get`
+und `aptitude` empfehlen Ihnen bei einer Änderung des Paketbestands
+beispielsweise andere Pakete als sonst, um die Paketabhängigkeiten
+nicht zu verletzen. Oder sie schlagen vor, bestimmte Pakete zu
+entfernen, da sie neu als nicht mehr gebraucht angesehen werden.
 
 // Stichworte für den Index
-(((Paketflags, explizit setzen)))
-(((Paketflags, explizit entfernen)))
-(((Paketflags, hold)))
+(((Paketmarkierungen, explizit setzen)))
+(((Paketmarkierungen, explizit entfernen)))
+(((Paketmarkierungen, hold)))
 Setzen oder Entfernen Sie bewusst das _hold_-Flag und legen somit eine
 Version explizit fest, nehmen Sie Einfluss auf den Zustand Ihres Systems.
 Wobei Ihnen das von Nutzen sein kann, erklären wir unter ``Ausgewählte
 Pakete nicht aktualisieren'' (<<ausgewaehlte-pakete-nicht-aktualisieren>>)
 ausführlicher.
+
+==== Setzen und Entfernen einer Markierung mit aptitude ====
+
+Alternativ dazu kann man auch `aptitude` verwenden. Dort heissen nicht nur
+die Unterkommandos teilweise etwas anders, `aptitude` in der
+Standardeinstellung will neu mangels Abhängigkeiten nicht mehr
+benötigte Pakete auch direkt entfernen. Im u.g. Beispiel gibt es
+z.B. Pakete, die eine Abhängigkeit auf das Paket 'wireshark' haben,
+aber keine, die eine Abhängigkeit auf 'zshdb' haben. Entsprechend will
+`aptitude` es auch direkt entfernen.
+
+.Setzen von Paketmarkierungen mit `aptitude`
+----
+# aptitude markauto wireshark zshdb
+Die folgenden Pakete werden ENTFERNT:
+  zshdb{u}
+0 Pakete aktualisiert, 0 zusätzlich installiert, 1 werden entfernt und 26 nicht aktualisiert.
+0 B an Archiven müssen heruntergeladen werden. Nach dem Entpacken werden 451 kB frei werden.
+Möchten Sie fortsetzen? [Y/n/?] n
+Abbruch.
+# aptitude unmarkauto wireshark zshdb
+Es werden keine Pakete installiert, aktualisiert oder entfernt.
+0 Pakete aktualisiert, 0 zusätzlich installiert, 0 werden entfernt und 26 nicht aktualisiert.
+0 B an Archiven müssen heruntergeladen werden. Nach dem Entpacken werden 0 B zusätzlich belegt sein.
+#
+----
+
+Ebenfalls fällt auf, das `aptitude` im Gegensatz zu `apt-mark` nicht
+angibt, dass sich eine Markierung geändert oder nicht geändert hat,
+sondern, dass es keine Pakete entfernen oder aktualisieren will.
+
+Allerdings aktualisiert es (in der Standardeinstellung) nicht
+automatisch Pakete, bei denen die 'hold'-Markierung entfernt wurde:
+
+.Setzen eines Paketes auf 'hold' mit `aptitude`
+----
+# aptitude search '~U'
+i A awesome                         - Hochkonfigurierbarer Fenstermanager für X
+# aptitude hold awesome
+Es werden keine Pakete installiert, aktualisiert oder entfernt.
+0 Pakete aktualisiert, 0 zusätzlich installiert, 0 werden entfernt und 26 nicht aktualisiert.
+0 B an Archiven müssen heruntergeladen werden. Nach dem Entpacken werden 0 B zusätzlich belegt sein.
+# aptitude search '~U'
+ihA awesome                         - Hochkonfigurierbarer Fenstermanager für X
+# aptitude unhold awesome
+Es werden keine Pakete installiert, aktualisiert oder entfernt.
+0 Pakete aktualisiert, 0 zusätzlich installiert, 0 werden entfernt und 26 nicht aktualisiert.
+0 B an Archiven müssen heruntergeladen werden. Nach dem Entpacken werden 0 B zusätzlich belegt sein.
+# aptitude search '~U'
+i A awesome                         - Hochkonfigurierbarer Fenstermanager für X
+#
+----
 
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/paketflags.adoc
