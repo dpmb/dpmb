@@ -180,18 +180,18 @@ Voreinstellung und können die Aktion trotzdem durchführen (siehe dazu
 ``Paketoperationen erzwingen'' in <<paketoperationen-erzwingen>>).
 
 // Stichworte für den Index
-(((Debianpaket, core-utils)))
+(((Debianpaket, coreutils)))
 `apt-get` und `aptitude` entfernen diese Pakete nur nach Eingabe des
 vollständigen Satzes ``Ja, tue was ich sage!'' (`apt-get`) bzw. ``Mir ist
 klar, dass das eine sehr schlechte Idee ist.'' (`aptitude`). Diese Sätze
 werden jeweils in der eingestellten Sprache Ihres Debiansystems
 angezeigt (Lokalisierung), sofern eine Übersetzung vorhanden ist.
 Nachfolgendes Beispiel zeigt die Bildschirmausgabe vor der Entfernung
-des Paketes 'core-utils'.
+des Paketes 'coreutils'.
 
-.Eingabeaufforderung von `apt-get` vor der Entfernung des essentiellen Pakets 'core-utils'
+.Eingabeaufforderung von `apt-get` vor der Entfernung des essentiellen Pakets 'coreutils'
 ----
-# apt-get remove core-utils
+# apt-get remove coreutils
 Paketlisten werden gelesen... Fertig
 Abhängigkeitsbaum wird aufgebaut.
 Statusinformationen werden eingelesen.... Fertig
