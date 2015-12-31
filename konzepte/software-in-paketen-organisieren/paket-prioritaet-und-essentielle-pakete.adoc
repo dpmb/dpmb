@@ -51,7 +51,7 @@ Jessie das Metapaket 'init') und die C-Standard-Bibliotheken ('libc6'
 auf den meisten Architekturen).
 
 Entfernen Sie eines oder mehrere Pakete mit dieser Prioritätsstufe, kann
-das Ihr Betriebssystem so stark beschädigen, dass selbst das Werkzeug
+das Ihre Installation so stark beschädigen, dass selbst das Werkzeug
 `dpkg` nicht mehr funktioniert.
 
 Systeme, die nur aus Paketen der Prioritätsstufe ``erforderlich''
