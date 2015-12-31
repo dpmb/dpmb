@@ -18,7 +18,7 @@ deb http://ftp.de.debian.org/debian/ stable main
 Mit diesem Eintrag beziehen Sie stets nur Pakete aus der aktuellen,
 stabilen Veröffentlichung. Erscheint eine neue Veröffentlichung, sind
 Sie damit auf der sicheren Seite und wechseln automatisch zum
-Nachfolger. 
+Nachfolger.
 
 Tragen Sie hingegen anstatt von _stable_ den entsprechenden Aliasnamen
 der Veröffentlichung in Kleinbuchstaben wie bspw. _wheezy_ oder _jessie_
