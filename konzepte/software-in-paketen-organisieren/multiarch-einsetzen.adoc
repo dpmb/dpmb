@@ -66,6 +66,8 @@ Wie Sie Pakete architekturbezogen deinstallieren, lesen Sie in
 // Wie Sie Pakete finden, die zu dieser Kategorie zählen, lesen Sie im
 // Detail unter <<multiarch-pakete-finden>> nach.
 
+==== Multiarch-Beispiel: Installieren eines 32-Bit-Paketes auf einem 64-Bit-System ====
+
 // Stichworte für den Index
 (((dpkg, --add-architecture)))
 (((dpkg, --print-architecture)))
