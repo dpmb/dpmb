@@ -173,8 +173,8 @@ In <<pakete-nach-prioritaeten-finden>> lesen Sie, wie Sie auflisten,
 welche Pakete genau auf Ihrer Version von Debian als essentiell
 markiert sind.
 
-Diese Markierung hat den Effekt, dass sich beispielsweise `dpkg` weigert,
-dieses Paket zu entfernen (siehe <<pakete-deinstallieren>>). Mit dem
+Diese Markierung hat weiter den Effekt, dass sich beispielsweise auch `dpkg` weigert,
+solche Pakete zu entfernen (siehe <<pakete-deinstallieren>>). Mit dem
 zusätzlichen Parameter `--force-remove-essential` übergehen Sie diese
 Voreinstellung und können die Aktion trotzdem durchführen (siehe dazu
 ``Paketoperationen erzwingen'' in <<paketoperationen-erzwingen>>).
