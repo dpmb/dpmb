@@ -6,10 +6,13 @@
 
 // Indexeinträge
 (((/etc/apt/sources.list,Einträge für Deutschland)))
+(((Paketquelle, Security Updates)))
+(((Paketquelle, Sicherheitsaktualisierungen)))
 (((Paketvarianten, Binärpaket)))
 (((Paketvarianten, Sourcepaket)))
-Liegt ihr Lebens- und Arbeitsmittelpunkt in Deutschland, enthält die
-Datei typischerweise die folgenden Einträge:
+Liegt ihr Lebens- und Arbeitsmittelpunkt in Deutschland oder Sie
+beziehen die Pakete von einem Paketmirror, der in Deutschland steht,
+enthält die Datei typischerweise die folgenden Einträge:
 
 //.Inhalt der `/etc/apt/sources.list` für den deutschen Sprachraum
 ----
