@@ -14,6 +14,9 @@ include::apt-offline.adoc[]
 // Offline-Verwaltung mit 'apt-zip'
 include::apt-zip.adoc[]
 
+// Pakete zerlegen mit dpkg-split
+include::dpkg-split.adoc[]
+
 // Offline-Verwaltung mit 'aptoncd'
 include::aptoncd.adoc[]
 

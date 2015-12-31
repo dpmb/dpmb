@@ -1,0 +1,21 @@
+// Datei: ./praxis/paketverwaltung-ohne-internet/dpkg-split.adoc
+
+// Baustelle: Notizen
+
+[[paketverwaltung-offline-dpkg-split]]
+==== Pakete mit `dpkg-split` aufteilen ====
+
+// Stichworte für den Index
+(((Debianpaket, dpkg)))
+(((dpkg-split)))
+
+* Werkzeug `dpkg-split` aus dem Paket 'dpkg' <<Debian-Paket-dpkg>>
+* zerlegt eine `deb`-Datei in kleinere Stücke und kann diese Stücke
+  wieder zusammensetzen
+* nützlich, um Binärpakete auf mehrere Medien mit geringer Kapazität zu
+  verteilen (wenn man grade nichts anderes zur Hand hat ...)
+* Schalter (Auswahl):
+** `-s` (Langform: `--split`)
+** `-j` (Langform: `--join`)
+
+// Datei (Ende): ./praxis/paketverwaltung-ohne-internet/dpkg-split.adoc
