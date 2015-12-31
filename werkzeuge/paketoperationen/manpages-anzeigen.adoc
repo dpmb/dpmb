@@ -35,20 +35,27 @@ hilft Ihnen die Manpages-Sammlung des Debian-Projekts weiter
 
 ==== Manpages erstöbern ====
 
-Mit der Option `-m` 'Paketname' sucht `whereis` nach den passenden
-Hilfeseiten zum genannten Paket. Das Paket muß dabei lokal installiert
-sein:
+// Stichworte für den Index
+(((apropos)))
+(((dlocate, -man)))
+(((Dokumentation, manpages)))
+Mittels `apropos` 'Paketname' sehen Sie, ob zu dem von Ihnen angefragten
+Programm lokal Dokumentation verfügbar ist. Für das Stichwort `aptitude`
+sieht das bspw. wie folgt aus:
 
-.Verfügbare Manpages für das Paket 'aptitude' mittels `whereis` lokalisieren
+.Verfügbare Manpages für das Paket 'aptitude' mittels `aptitude` lokalisieren
 ----
-$ whereis -m aptitude
-aptitude: /usr/share/man/man8/aptitude.8.gz
+$ apropos aptitude
+aptitude (8)         - Benutzerschnittstelle für den Paketmanager
+aptitude-curses (8)  - Benutzerschnittstelle für den Paketmanager
+aptitude-create-state-bundle (1) - bundle the current aptitude state
+aptitude-run-state-bundle (1) - unpack an aptitude state bundle and invoke aptitude on it
 $
 ----
 
-Ähnliches leistet auch das Kommando `dlocate` mit dem Schalter `-man`
-gefolgt vom Paketnamen. Das Ergebnis des Aufrufs für das Programm
-`aptitude` sieht wie folgt aus:
+Eine ähnliche Hilfe leistet auch das Kommando `dlocate` mit dem Schalter
+`-man` gefolgt vom Paketnamen. Das Ergebnis des Aufrufs sieht für das
+Programm `aptitude` sieht wie folgt aus:
 
 .Verfügbare Manpages für das Paket 'aptitude' mittels `dlocate` aufspüren
 ----
@@ -57,13 +64,26 @@ $ dlocate -man aptitude
 $
 ----
 
+Nun können Sie die Manpage mittels `man aptitude` bzw. `man
+aptitude-curses` aufrufen.
+
 // Stichworte für den Index
 (((dlocate, -lsman)))
-Benötigen Sie zusätzlich den exakten Pfad zur Manpage, nutzen Sie
-stattdessen den Schalter `-lsman`. Damit erfahren Sie bspw. aus dem
-nachfolgenden Aufruf, dass die Manpage für mehrere Sprachen wie bspw.
-Deutsch (de), Spanisch (es) und Polnisch (pl) im Verzeichnis
-`/usr/share/man` bereitsteht.
+(((whereis, -m)))
+Benötigen Sie zusätzlich den exakten Pfad zur Datei, in der die Manpage
+liegt, nutzen Sie stattdessen entweder `whereis` mit dem Schalter `-m`
+oder `dlocate` mit dem Schalter `-lsman`. 
+
+.Verfügbare Manpages für das Paket 'aptitude' mittels `whereis` lokalisieren
+----
+$ whereis -m aptitude
+aptitude: /usr/share/man/man8/aptitude.8.gz
+$
+----
+
+Bei letzterem erfahren Sie bspw. aus dem nachfolgenden Aufruf, dass die
+Manpage für mehrere Sprachen wie bspw. Deutsch (de), Spanisch (es) und
+Polnisch (pl) im Verzeichnis `/usr/share/man` bereitsteht.
 
 .Verfügbare Manpages für das Paket 'aptitude' mit vollständigem Pfad
 ----
