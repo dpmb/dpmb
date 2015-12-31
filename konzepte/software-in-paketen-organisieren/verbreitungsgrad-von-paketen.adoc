@@ -1,6 +1,7 @@
 // Datei: ./konzepte/software-in-paketen-organisieren/verbreitungsgrad-von-paketen.adoc
 
-// Baustelle: Fertig
+// Baustelle: Entbandwurmisierung-ggf-noch-notwendig
+// Axel: Fertig
 
 [[verbreitungsgrad-von-paketen]]
 
@@ -56,6 +57,8 @@ eine tabellarische Übersicht und eine graphische Auswertung.
 .Erfasster Verbreitungsgrad für das Paket 'nginx'
 image::konzepte/software-in-paketen-organisieren/popcon-nginx.png[id="fig.popcon-nginx", width="50%"]
 
+==== Verschiedene Metriken ====
+
 Neben der Architektur der Installation und welche Pakete installiert
 sind, erfasst Popcon anhand der Zeitstempel im Dateisystem ausserdem
 noch folgende Daten für jedes installierte Paket:
@@ -73,6 +76,8 @@ noch folgende Daten für jedes installierte Paket:
 Werden weder Änderungszeitstempel noch Zugriffszeitstempel beim
 Projekt mitgeliefert, wird das Paket im Graphen 'no-files' (keine
 Dateien) aufgelistet.
+
+==== Vergleichen von Paketen ====
 
 Unter [[Debian-Popcon-Graph]] kann man dies sogar nutzen, ob den
 Verlauf der Beliebtheit von Paketen miteinander zu vergleichen.
