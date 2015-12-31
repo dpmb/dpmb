@@ -65,9 +65,8 @@ So könnten Sie z.B. die Beispiele in diesem Abschnitt in den Dateien
 `/etc/apt/sources.list.d/postgresql.list`,
 `/etc/apt/sources.list.d/x2go.list` und
 `/etc/apt/sources.list.d/opera.list` speichern. Damit behalten
-Sie bereits anhand des Namens den Überblick, aus welchen Fremdquellen
-weitere Pakete bezogen werden.
+Sie bereits anhand des Dateinamens den Überblick, aus welchen
+Fremdquellen weitere Pakete bezogen werden.
 =======
-
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/eintraege-fuer-nicht-offizielle-pakete.adoc
