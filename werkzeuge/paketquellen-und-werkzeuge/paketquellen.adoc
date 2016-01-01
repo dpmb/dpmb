@@ -30,14 +30,14 @@ von Debian oder Ubuntu.
 (((Paketquelle,extern)))
 (((Paketquelle,lokal)))
 (((Paketquelle,Netzwerk)))
-Eine Paketquelle kann dabei ein externes Speichermedium wie eine CD,
+Eine Paketquelle kann dabei aber auch ein externes Speichermedium wie eine CD,
 DVD, Blu-ray, eine Speicherkarte oder ein USB-Stick sein, aber auch ein
-lokales oder über das Netzwerk angebundenes Verzeichnis auf einer
+lokales oderüber das Netzwerk angebundenes Verzeichnis auf einer
 Festplatte. Waren noch vor wenigen Jahren die erstgenannten, festen
 Installationsmedien üblich, werden heute als Paketquelle aufgrund der
 weitestgehend flächendeckenden Verfügbarkeit des Internets stattdessen
-FTP- und HTTP-Server bevorzugt. Damit stehen Ihnen stets aktuelle Pakete
-zur Verfügung.
+FTP- und HTTP-Server bevorzugt. Damit sind die von Ihnen genutzten
+Paketquellen stets aktuell.
 
 ==== Benutzte Paketquellen ====
 
