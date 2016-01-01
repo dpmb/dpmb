@@ -1,6 +1,7 @@
 // Datei: ./konzepte/software-in-paketen-organisieren/wie-finde-ich-passende-pakete.adoc
 
 // Baustelle: Fertig
+// Axel: Fertig
 
 [[wie-finde-ich-passende-pakete]]
 
@@ -15,7 +16,7 @@
 (((Paketsuche)))
 Debianpakete sind von verschiedenen Orten und Medien verfügbar. Dazu
 zählen sowohl Online- als auch Offline-Quellen, bspw. offizielle,
-private und unternehmenseigene Repositories und Paketspiegel. Für die
+private und unternehmenseigene Repositories und Spiegelserver ('Mirrors'). Für die
 Recherche und Installation ohne Internetanbindung stehen bspw.
 vorbereitete Distributionsimages in unterschiedlichen Größen und
 Zusammenstellungen für CD, DVD, Blu-ray und USB-Stick über die Webseite
