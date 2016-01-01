@@ -62,7 +62,7 @@ der Pakete auf Ihrem System geht.
 Bei der Auswahl der Paketquellen sind Sie nicht auf lediglich eine
 dieser o.g. Ressourcen beschränkt. Sie können diese beliebig mischen und
 somit auch Konzepte zur Ausfallsicherung umsetzen. Diese Konstellation
-kommt genau dann zum Tragen, wenn ihre primäre Paketquelle nicht in der
+kommt genau dann zum Tragen, wenn Ihre primäre Paketquelle nicht in der
 gewohnten Art und Weise zur Verfügung steht, bspw. bei einem Ausfall des
 Internetzugangs oder der Wartung des bevorzugten Paketspiegels.
 

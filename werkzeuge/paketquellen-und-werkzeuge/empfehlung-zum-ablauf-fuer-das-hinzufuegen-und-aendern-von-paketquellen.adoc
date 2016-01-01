@@ -42,7 +42,7 @@ Mit dieser Vorgehensweise ist sichergestellt, dass die Paketverwaltung
 können Sie die Pakete aus den geänderten oder neuen Paketquellen zu
 ihrem System hinzufügen.
 
-Im Bedarfsfall können Sie auch auf den Stand vor ihren Veränderungen
+Im Bedarfsfall können Sie auch auf den Stand vor Ihren Veränderungen
 zurückgreifen. Sollte dies erforderlich sein, restaurieren Sie die im
 ersten Schritt angelegte Sicherheitskopie und führen das Kommando
 `apt-get update` respektive `aptitude update` erneut aus.
