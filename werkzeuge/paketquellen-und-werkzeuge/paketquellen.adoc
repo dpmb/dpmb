@@ -13,10 +13,10 @@
 (((Paketquelle)))
 (((Paketquelle,APT-Repository)))
 (((Paketquelle,Repository)))
-indextermsee:[APT-Repository,Paketquelle]
-indextermsee:[Paketspiegel,Paketmirror]
-indextermsee:[Repo,Paketquelle]
-indextermsee:[Repository,Paketquelle]
+//indextermsee:[APT-Repository,Paketquelle]
+//indextermsee:[Paketspiegel,Paketmirror]
+//indextermsee:[Repo,Paketquelle]
+//indextermsee:[Repository,Paketquelle]
 Eine Paketquelle bezeichnet einen Ort, von dem aus Softwarepakete zur
 Verfügung stehen. Alternativ und gleichbedeutend werden dafür auch die
 Begriffe _APT-Repository_, _Repository_ oder ganz kurz nur _Repo_
