@@ -21,7 +21,8 @@ Attribution - Share Alike 4.0 International License].
 
 == Read online
 
-* link:debian-paketmanagement.online.html[HTML]
+* link:debian-paketmanagement.chunked/index.html[HTML, one file per chapter]
+* link:debian-paketmanagement.online.html[HTML, single file]
 
 == Download
 

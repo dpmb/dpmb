@@ -2,7 +2,7 @@ BASE=debian-paketmanagement
 DEFAULTDEPENDENCIES=*.adoc */*.adoc */*/*.adoc Makefile version.adoc *-docinfo.xml
 DEFAULTOPTIONS=-L
 DOCTORDEFAULTOPTIONS=-a experimental -a toc -a toclevels=4
-FORMATS=online.html allinone.html epub pdf mobi
+FORMATS=online.html allinone.html chunked epub pdf mobi
 
 all: $(FORMATS)
 html: online.html allinone.html doctor.html chunked.html
@@ -19,9 +19,9 @@ online.html: $(BASE).online.html
 	a2x $(VERBOSE) -f xhtml $(DEFAULTOPTIONS) $<
 	mv $(VERBOSE) $(BASE).html $@
 
-chunked.html: $(BASE).chunked/index.html
+chunked: $(BASE).chunked/index.html
 %.chunked/index.html: %.adoc $(DEFAULTDEPENDENCIES)
-	a2x -f chunked $(DEFAULTOPTIONS) $<
+	a2x $(VERBOSE) -f chunked $(DEFAULTOPTIONS) $<
 
 epub: $(BASE).epub
 %.epub: %.adoc $(DEFAULTDEPENDENCIES)
@@ -75,7 +75,7 @@ test-epub: $(BASE).epub
 
 # Formerly used for divshot.io, but rather generic
 deploy: all version.adoc
-	for suffix in $(FORMATS); do cp -pvf $(BASE).$$suffix deploy/; done
+	for suffix in $(FORMATS); do cp -pvfr $(BASE).$$suffix deploy/; done
 	for i in `find . -name '*.png' -not -path './deploy/*'`; do \
 	    mkdir -pv `dirname "deploy/$$i"`; \
 	    cp -pv "$$i" "deploy/$$i"; \

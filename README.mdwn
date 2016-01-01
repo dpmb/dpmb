@@ -129,7 +129,7 @@ Will man nur eines der Formate bauen, so reicht einer dieser Befehle:
 ```sh
 make allinone.html
 make online.html
-make chunked.html
+make chunked
 make doctor.html
 make pdf
 make epub
@@ -138,7 +138,7 @@ make mobi
 
 * `allinone.html` = Einzelne HTML-Datei mit allen Bildern eingebettet
 * `online.html` = HTML-Datei mit allen Bildern als eigene Dateien
-* `chunked.html` = Eine HTML-Datei pro Kapitel
+* `chunked` = Eine HTML-Datei pro Kapitel
 * `doctor.html` = HTML-Datei mit allen Bildern als eigene Dateien
   (mit `asciidoctor` statt `asciidoc`/`a2x` gerendert).
 
