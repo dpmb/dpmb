@@ -19,10 +19,14 @@ Pakete und deren Abhängigkeiten. Wir raten Ihnen hierfür zu folgendem
 Ablauf:
 
 . Erstellen Sie zuerst eine Sicherheitskopie der Datei
-  `/etc/apt/sources.list`.
+  `/etc/apt/sources.list`. Ggf. macht das auch Ihr Editorprogramm
+  automatisch.
 
 . Tragen Sie die neuen oder veränderten Paketquellen in der Datei
-  `/etc/apt/sources.list` nach und speichern diese Datei ab.
+  `/etc/apt/sources.list` nach und speichern diese Datei ab. Wenn Sie
+  nur neue Paketquellen hinzufügen wollen, können Sie alternativ auch
+  eine neue Datei in `/etc/apt/sources.list.d/`, die auf `.list`
+  endet, anlegen.
 
 . Sofern dies keine offiziellen Debian-Repositories sind, verifizieren
   Sie die Paketquelle, die Sie hinzugefügt oder geändert haben. Unter
@@ -44,8 +48,9 @@ ihrem System hinzufügen.
 
 Im Bedarfsfall können Sie auch auf den Stand vor Ihren Veränderungen
 zurückgreifen. Sollte dies erforderlich sein, restaurieren Sie die im
-ersten Schritt angelegte Sicherheitskopie und führen das Kommando
-`apt-get update` respektive `aptitude update` erneut aus.
+ersten Schritt angelegte Sicherheitskopie oder -- falls Sie nur eine
+neue Datei angelegt haben, löschen Sie diese -- und führen das
+Kommando `apt-get update` respektive `aptitude update` erneut aus.
 
 [TIP]
 .Mit etwas Automatisierung den Ablauf vereinfachen
