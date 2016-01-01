@@ -1,5 +1,5 @@
-dpmb (0~2015.08.24) UNRELEASED; urgency=low
+dpmb (0~2016.01.01) UNRELEASED; urgency=low
 
   * Initial release (Closes: #TODO)
 
- -- Axel Beckert <abe@debian.org>  Mon, 24 Aug 2015 17:15:02 +0200
+ -- Axel Beckert <abe@debian.org>  Fri, 01 Jan 2016 03:26:04 +0100
