@@ -51,7 +51,7 @@ zählt damit zu den
 zentralen Komponenten des Debian-Paketsystems. An diesen Einträgen
 orientieren sich die Werkzeuge zur Paketverwaltung, wenn es um
 Änderungen im lokalen Paketbestand und entsprechende Aktualisierungen
-der Pakete auf ihrem System geht.
+der Pakete auf Ihrem System geht.
 
 // Stichworte für den Index
 (((Paketquelle,Auswahl)))
