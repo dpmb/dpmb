@@ -44,8 +44,10 @@ Paketquellen stets aktuell.
 // Stichworte für den Index
 (((Paketquelle, Konfigurationsdatei)))
 (((Konfigurationsdatei,/etc/apt/sources.list)))
-Welche Paketquellen Sie verwenden, legen Sie in Debian GNU/Linux in der
-Datei `/etc/apt/sources.list` fest. Diese Datei zählt damit zu den
+Welche Paketquellen Sie verwenden, legen Sie bei Debian in der
+Datei `/etc/apt/sources.list` (oder alternativ in auf `*.list` endende
+Dateien im Verzeichnis `/etc/apt/sources.list.d/`) fest. Diese Datei
+zählt damit zu den
 zentralen Komponenten des Debian-Paketsystems. An diesen Einträgen
 orientieren sich die Werkzeuge zur Paketverwaltung, wenn es um
 Änderungen im lokalen Paketbestand und entsprechende Aktualisierungen
