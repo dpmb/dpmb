@@ -7,7 +7,7 @@
 === Liste der zuletzt installierten Pakete anzeigen ===
 
 // Stichworte für den Index
-(((Logdatei, /var/log/dpkg.log])))
+(((Logdatei, /var/log/dpkg.log)))
 (((logrotate)))
 (((Paket installieren, zuletzt installierte Pakete anzeigen)))
 Als Verantwortlicher für Ihr Linuxsystem möchten Sie ab und an wissen,
