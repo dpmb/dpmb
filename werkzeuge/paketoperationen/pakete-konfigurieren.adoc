@@ -7,34 +7,72 @@
 === Pakete konfigurieren ===
 
 // Stichworte für den Index
-(((Paket, konfigurieren)))
 (((Paket, erneut konfigurieren)))
+(((Paket, konfigurieren)))
 
 Im Normalfall liegen die Debianpakete entweder bereits fertig
 konfiguriert oder mit einer vorbereiteten Konfiguration auf dem
-Spiegelserver. Dafür zeichnet der Paketmaintainer verantwortlich. Diese
-Basiseinstellungen funktionieren im Allgemeinen, haben aber nicht immer
-einen Bezug zum konkreten Einsatzfall. Dieser lässt sich kaum
-vorhersehen. Daher folgt im Rahmen der Paketinstallation ein
-individuelles Feintuning seitens des Administrators (Voreinstellungen
-für alle Benutzer) oder durch Sie als Benutzer selbst (individuelle,
-lokale Einstellungen).
+Spiegelserver. Dafür zeichnet der Paketmaintainer verantwortlich. 
 
-Das Anwenden der vorbereiteten Konfiguration umfasst bspw. das Festlegen
-von Zugangsdaten (administratives Passwort von MySQL) oder das Starten
-von benötigten Diensten, bspw. Exim als Mail Transfer Agent (MTA).
-Stellt `dpkg` dabei fest, dass zwischen der mitgelieferten Konfiguration
-des neuen Pakets und der bereits bestehenden Konfiguration Unterschiede
-vorliegen, werden Sie durch das Programm gefragt, welche der beiden
-Einstellungen zukünftig genutzt werden soll. Das ist sinnvoll und
-berücksichtigt insbesondere den Fall, dass das Paket bereits installiert
-ist und von Ihnen händisch auf ihre individuellen Gegebenheiten angepasst
-wurde. Als Möglichkeiten werden Ihnen angeboten: 
+==== Bestehende Konfiguration anzeigen ====
+
+// Stichworte für den Index
+(((debconf-show)))
+(((Debianpaket, dpkg)))
+(((Debianpaket, tzdata)))
+(((Paket, die bestehende Konfiguration anzeigen)))
+Die bestehende Konfiguration eines Paketes zeigen Sie mit Hilfe des
+Kommandos `debconf-show` 'Paketname' an. `debconf-show` ist Bestandteil
+des Pakets 'dpkg' <<Debian-Paket-dpkg>> und somit ein essentieller Teil
+ihrer Installation. Für das Paket 'tzdata' <<Debian-Paket-tzdata>> sieht
+das Ergebnis wie folgt aus, sofern Sie auf ihrem System als Zeitzone
+``Europa/Berlin'' eingestellt haben:
+
+.Ausgabe der Konfiguration eines Pakets -- hier 'tzdata'
+----
+# debconf-show tzdata
+  tzdata/Zones/Pacific:
+  tzdata/Zones/Arctic:
+  tzdata/Zones/Africa:
+  tzdata/Zones/Asia:
+  tzdata/Zones/US:
+* tzdata/Zones/Etc: UTC
+  tzdata/Zones/Australia:
+* tzdata/Zones/Europe: Berlin
+* tzdata/Areas: Europe
+  tzdata/Zones/Antarctica:
+  tzdata/Zones/SystemV:
+  tzdata/Zones/Atlantic:
+  tzdata/Zones/Indian:
+  tzdata/Zones/America:
+#
+----
+
+==== Bestehende Konfiguration anwenden ====
+
+Diese Basiseinstellungen funktionieren im Allgemeinen recht gut, haben
+aber nicht immer einen Bezug zu ihrem konkreten Einsatzfall. Dieser
+lässt sich selten vollständig vorhersehen. Daher folgt im Rahmen der
+Paketinstallation ein individuelles Feintuning seitens des
+Administrators (Voreinstellungen für alle Benutzer) oder durch Sie als
+Benutzer selbst (individuelle, lokale Einstellungen).
+
+Das Anwenden der vorbereiteten Konfiguration umfasst mehrere Schritte --
+bspw. das Festlegen von Zugangsdaten (administratives Passwort von
+MySQL) oder das Starten von benötigten Diensten, bspw. Exim als Mail
+Transfer Agent (MTA). Stellt `dpkg` dabei fest, dass zwischen der
+mitgelieferten Konfiguration des neuen Pakets und der bereits
+bestehenden Konfiguration Unterschiede vorliegen, werden Sie durch das
+Programm gefragt, welche der beiden Einstellungen zukünftig genutzt
+werden soll. Das ist sinnvoll und berücksichtigt insbesondere den Fall,
+dass das Paket bereits installiert ist und von Ihnen händisch auf ihre
+individuellen Gegebenheiten angepasst wurde. Als Möglichkeiten werden
+Ihnen angeboten:
 
 * die mitgelieferte Konfiguration des neuen Pakets zu benutzen
 * die bestehende Konfiguration des installierten Pakets beibehalten
-* sich die Unterschiede zwischen beiden anzeigen zu lassen und 
-* eine Shell zur individuellen Problembehebung zu öffnen. 
+* sich die Unterschiede zwischen beiden anzeigen zu lassen und
+* eine Shell zur individuellen Problembehebung zu öffnen.
 
 Bei letzterem eröffnet sich Ihnen damit die Möglichkeit, bspw. eine
 Sicherheitskopie der bestehenden Konfiguration anzulegen, bevor diese
@@ -50,7 +88,7 @@ entpackt, aber nicht konfiguriert. Hintergrund können nicht sauber
 aufgelöste Abhängigkeiten sein, aber auch Fehler im Paket selbst. Ist
 ein benötigtes Paket nicht konfiguriert und be- bzw. verhindert damit
 die Installation und Einrichtung weiterer, davon abhängiger Pakete,
-teilt Ihnen `dpkg` das mit:
+teilt Ihnen `dpkg` das wie folgt mit:
 
 .Fehler in der Konfiguration am Beispiel des Pakets 'mysql-server'
 ----
@@ -117,7 +155,7 @@ bereits installiertes und konfiguriertes Paket an (siehe dazu
 <<dpkg-reconfigure>>).
 
 [[dpkg-reconfigure]]
-==== `dpkg-reconfigure` ====
+==== Konfiguration mit `dpkg-reconfigure` erneut durchführen ====
 
 // Stichworte für den Index
 (((debconf)))
@@ -132,5 +170,6 @@ Konfigurationseinträgen der Pakete unter `/var/cache/debconf` speichert
 
 * Beispiel:
 ** locale-Einstellungen (Sprache, Lokalisierung, Zeichensatz)
+** Einstellung für die Zeitzone (Paket 'tzdata' <<Debian-Paket-tzdata>>)
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-konfigurieren.adoc

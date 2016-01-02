@@ -378,6 +378,8 @@
 
 - [[[Debian-Paket-tasksel]]] Debian-Paket 'tasksel', http://packages.debian.org/de/stable/tasksel
 
+- [[[Debian-Paket-tzdata]]] Debian-Paket 'tzdat', http://packages.debian.org/de/stable/tzdata
+
 - [[[Debian-Paket-util-linux]]] Debian-Paket 'util-linux', http://packages.debian.org/de/stable/util-linux
 
 - [[[Debian-Paket-vrms]]] Debian-Paket 'vrms', https://packages.debian.org/stable/vrms
