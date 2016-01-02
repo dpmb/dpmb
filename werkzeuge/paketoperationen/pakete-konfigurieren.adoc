@@ -85,6 +85,8 @@ Das Gegenstück zu `debconf-get-selections` ist `debconf-set-selections`
 kann die Ausgabe von `debconf-get-selections` direkt verarbeiten und
 dient Ihnen bspw. zum Einspielen einer vorab gesicherten
 Paketkonfiguration auf dem gleichen oder einem anderen System.
+Ausführlicher besprechen wir diesen Fall in
+<<paketkonfiguration-sichern>>.
 
 ==== Bestehende Konfiguration anwenden ====
 
