@@ -18,7 +18,7 @@ Art_der_Quelle URI Distribution [Komponente 1] [Komponente 2] [...]
 (((debtorrent)))
 (((Paketvarianten, Binärpaket)))
 (((Paketvarianten, Sourcepaket)))
-(((/var/apt/cache/archives/)))
+(((/var/cache/apt/archives/)))
 Jedes dieser Felder hat eine bestimmte Funktion und erlaubt nur
 ausgewählte Inhalte:
 
@@ -37,7 +37,7 @@ Netzwerkdateisystem wie AFS, NFS oder SMB
 * `http`: HTTP-Server
 * `ftp`: FTP-Server
 * `copy`: identisch zu `file`, aber die bezogenen Debianpakete werden
-zusätzlich im lokalen Verzeichnis `/var/apt/cache/archives/`
+zusätzlich im lokalen Verzeichnis `/var/cache/apt/archives/`
 abgelegt
 * `mirror`: Auswahl einer Installationsquelle anhand der GeoIP des
 Servers (siehe <<paketquellen-ueber-geoip-auswaehlen>>)
