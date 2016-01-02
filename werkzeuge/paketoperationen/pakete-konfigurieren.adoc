@@ -111,6 +111,7 @@ dpkg: Fehler beim Bearbeiten von scrollkeeper (--configure):
 ----
 
 // Stichworte für den Index
+(((Debianpaket, dpkg)))
 (((dpkg, --audit)))
 (((dpkg, -C)))
 Hilfreich ist es in diesem Fall, dass Sie zunächst herausbekommen, welche
@@ -128,6 +129,7 @@ sie müssen erneut installiert werden:
 ----
 
 // Stichworte für den Index
+(((Debianpaket, dpkg)))
 (((dpkg, -a)))
 (((dpkg, --configure)))
 (((dpkg, --pending))
@@ -159,6 +161,7 @@ bereits installiertes und konfiguriertes Paket an (siehe dazu
 
 // Stichworte für den Index
 (((debconf)))
+(((Debianpaket, dpkg)))
 (((dpkg-reconfigure)))
 (((Konfigurationsdatei, /var/cache/debconf)))
 (((Paket, erneut konfigurieren)))
