@@ -7,12 +7,12 @@
 == Cache-Verzeichnis auf separater Partition ==
 
 // Stichworte für den Index
-indexterm:[Paketcache]
-indexterm:[/var/cache/apt/archives]
+(((Paketcache)))
+(((/var/cache/apt/archives/)))
 
 Es gibt die unterschiedlichsten Gründe, entweder das gesamte Verzeichnis
 `/var` oder nur den Paketcache unter
-`/var/cache/apt/archives` von den restlichen Partitionen in
+`/var/cache/apt/archives/` von den restlichen Partitionen in
 Ihrem Linuxsystem zu trennen. Die darin abgespeicherten variablen Daten
 sind in Bezug auf deren Größe und Menge (d.h. die Anzahl der Inodes für
 die Dateien) nicht vorhersehbar und schwanken. Aktualisieren Sie Software
@@ -39,7 +39,7 @@ lokales Netzwerk sowie die passende Infrastruktur Voraussetzung ist,
 zählt für die `tmpfs`-Partition im wesentlichen der verfügbare RAM.
 
 Als erstes stellen wir Ihnen vor, wie Sie aus dem Verzeichnis
-`/var/cache/apt/archives` eine RAM-basierte `tmpfs`-Partition
+`/var/cache/apt/archives/` eine RAM-basierte `tmpfs`-Partition
 erstellen. Danach besprechen wir, wie Sie einen Paketcache als separate
 Partition oder lediglich als Unterverzeichnis auf einer anderen
 Partition einrichten.
@@ -70,7 +70,7 @@ Tragen Sie dazu den neuen Einhängepunkt (engl. 'mount point') am Ende
 der Datei `/etc/fstab` ein. Bei Axels Laptop sieht dies
 wie folgt aus:
 
-.`/etc/fstab`-Eintrag für `/var/cache/apt/archives`
+.`/etc/fstab`-Eintrag für `/var/cache/apt/archives/`
 ----
 # Gerät  Einhängepunkt            Dateisystemtyp  Optionen         fsck
 none     /var/cache/apt/archives  tmpfs           size=2147483648  0  0
@@ -89,7 +89,7 @@ temporär woanders hin, hängen das `tmpfs`-Dateisystem aus dem RAM ein
 (es wird dabei automatisch erzeugt) und verschieben die vorher
 gesicherten Dateien an die alte Position im Dateibaum zurück.
 
-.Einhängen von `/var/cache/apt/archives` als `tmpfs`-Dateisystem
+.Einhängen von `/var/cache/apt/archives/` als `tmpfs`-Dateisystem
 ----
 # mkdir /var/cache/apt/archives.temp
 # mv /var/cache/apt/archives/* /var/cache/apt/archives.temp/
@@ -175,7 +175,7 @@ gar nicht in der APT-Konfiguration nach einem geänderten Pfad schaut
 (was ein Bug wäre). Daher ist es empfehlenswert, zusätzlich einen
 entsprechenden Hinweis zu hinterlegen. Am einfachsten ist ein
 symbolischer Verweis (engl. kurz: 'Symlink') vom üblichen Pfad
-`/var/cache/apt/archives` zum neuen Ort{empty}footnote:[Im Normalfall
+`/var/cache/apt/archives/` zum neuen Ort{empty}footnote:[Im Normalfall
 sollte sogar der Symlink alleine auch ausreichen, damit APT einen
 alternativen Cache findet. APT folgt dann einfach auch dem Symlink.].
 Auch hier gilt wieder: Am besten gleich nach dem Einrichten mit dem
