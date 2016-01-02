@@ -14,7 +14,7 @@ Im Normalfall liegen die Debianpakete entweder bereits fertig
 konfiguriert oder mit einer vorbereiteten Konfiguration auf dem
 Spiegelserver. Dafür zeichnet der Paketmaintainer verantwortlich. 
 
-==== Bestehende Konfiguration anzeigen ====
+==== Bestehende Konfiguration eines Pakets anzeigen ====
 
 // Stichworte für den Index
 (((debconf-show)))
@@ -48,12 +48,52 @@ das Ergebnis wie folgt aus, sofern Sie auf ihrem System als Zeitzone
 #
 ----
 
+In obiger Ausgabe erscheint vor jeder Zeile ein `*` für die Fragen zur
+Konfiguration, die Ihnen als Benutzer bereits gestellt wurden.
+
+==== Konfiguration für alle Pakete auslesen ====
+
+// Stichworte für den Index
+(((debconf-get-selections)))
+(((debconf-set-selections)))
+(((Debianpaket, debconf-utils)))
+
+Die Konfiguration für alle Pakete ist in der Debconf-Datenbank
+gespeichert. Um diese Konfiguration auszulesen, bedienen Sie sich des
+Kommandos `debconf-get-selections` aus dem Paket 'debconf-utils'
+<<Debian-Paket-debconf-utils>>. Die Ausgabe des Programms erfolgt
+zeilenweise auf `stdout`. Die Ausgabe besteht aus einer Kommentarzeile
+(eingeleitet mit einem `#`), auf die die Konfigurationsvariable und
+deren Wert folgt.
+
+.Gespeicherte Konfiguration in der Debconf-Datenbank 
+----
+# debconf-get-selections | less
+# Standardwortliste des Systems:
+# Choices: american (American English), deutsch (New German), Manuelle Einrichtu
+ng von symbolischen Verweisen
+dictionaries-common     dictionaries-common/default-wordlist    select  deutsch 
+(New German)
+# Jetzt die Umstellung auf GRUB 2 abschließen?
+grub-pc grub-pc/mixed_legacy_and_grub2  boolean true
+...
+#
+----
+
+Das Gegenstück zu `debconf-get-selections` ist `debconf-set-selections`
+(Paket 'debconf-utils' <<Debian-Paket-debconf-utils>>). Dieses Werkzeug
+kann die Ausgabe von `debconf-get-selections` direkt verarbeiten und
+dient Ihnen bspw. zum Einspielen einer vorab gesicherten
+Paketkonfiguration auf dem gleichen oder einem anderen System.
+
 ==== Bestehende Konfiguration anwenden ====
 
-Diese Basiseinstellungen funktionieren im Allgemeinen recht gut, haben
-aber nicht immer einen Bezug zu ihrem konkreten Einsatzfall. Dieser
-lässt sich selten vollständig vorhersehen. Daher folgt im Rahmen der
-Paketinstallation ein individuelles Feintuning seitens des
+// Stichworte für den Index
+(((Paket, die bestehende Konfiguration verwenden)))
+Die Basiseinstellungen eines Pakets funktionieren im Allgemeinen recht
+gut, haben aber nicht immer einen Bezug zu ihrem konkreten Einsatzfall.
+Dieser lässt sich selten vollständig vorhersehen. Daher folgt im Rahmen
+der Paketinstallation ein individuelles Feintuning seitens des
 Administrators (Voreinstellungen für alle Benutzer) oder durch Sie als
 Benutzer selbst (individuelle, lokale Einstellungen).
 
@@ -132,7 +172,7 @@ sie müssen erneut installiert werden:
 (((Debianpaket, dpkg)))
 (((dpkg, -a)))
 (((dpkg, --configure)))
-(((dpkg, --pending))
+(((dpkg, --pending)))
 Als nächsten Schritt schieben Sie die Konfiguration des Pakets an. Für
 ein einzelnes Paket gelingt Ihnen das mit dem Aufruf `dpkg --configure
 Paketname` und für mehrere Pakete mit `dpkg -a` (Langform `--pending`).
@@ -161,7 +201,9 @@ bereits installiertes und konfiguriertes Paket an (siehe dazu
 
 // Stichworte für den Index
 (((debconf)))
+(((debconf-get-selections)))
 (((Debianpaket, debconf)))
+(((Debianpaket, debconf-utils)))
 (((Debianpaket, dpkg)))
 (((dpkg-reconfigure)))
 (((Konfigurationsdatei, /var/cache/debconf)))
