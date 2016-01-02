@@ -14,10 +14,9 @@
 (((Paketquelle)))
 (((Paketquelle,APT-Repository)))
 (((Paketquelle,Repository)))
-//indextermsee:[APT-Repository,Paketquelle]
-//indextermsee:[Paketspiegel,Paketmirror]
-//indextermsee:[Repo,Paketquelle]
-//indextermsee:[Repository,Paketquelle]
+(((Paketspiegel,Paketmirror)))
+(((Repo,Paketquelle)))
+(((Repository,Paketquelle)))
 Eine Paketquelle bezeichnet einen Ort, von dem aus Softwarepakete zur
 Verfügung stehen. Alternativ und gleichbedeutend werden dafür auch die
 Begriffe _APT-Repository_, _Repository_ oder ganz kurz nur _Repo_
@@ -31,28 +30,28 @@ von Debian oder Ubuntu.
 (((Paketquelle,extern)))
 (((Paketquelle,lokal)))
 (((Paketquelle,Netzwerk)))
-Eine Paketquelle kann dabei aber auch ein externes Speichermedium wie eine CD,
-DVD, Blu-ray, eine Speicherkarte oder ein USB-Stick sein, aber auch ein
-lokales oderüber das Netzwerk angebundenes Verzeichnis auf einer
-Festplatte. Waren noch vor wenigen Jahren die erstgenannten, festen
-Installationsmedien üblich, werden heute als Paketquelle aufgrund der
-weitestgehend flächendeckenden Verfügbarkeit des Internets stattdessen
-FTP- und HTTP-Server bevorzugt. Damit sind die von Ihnen genutzten
-Paketquellen stets aktuell.
+Eine Paketquelle kann dabei aber auch ein externes Speichermedium wie
+eine CD, DVD, Blu-ray, eine Speicherkarte oder ein USB-Stick sein, aber
+auch ein lokales oder über das Netzwerk angebundenes Verzeichnis auf
+einer Festplatte. Waren noch vor wenigen Jahren die erstgenannten,
+festen Installationsmedien üblich, werden heute als Paketquelle aufgrund
+der weitestgehend flächendeckenden Verfügbarkeit des Internets
+stattdessen FTP- und HTTP-Server bevorzugt. Damit sind die von Ihnen
+genutzten Paketquellen stets aktuell.
 
 ==== Benutzte Paketquellen ====
 
 // Stichworte für den Index
 (((Paketquelle, Konfigurationsdatei)))
 (((Konfigurationsdatei,/etc/apt/sources.list)))
+(((Konfigurationsdatei,/etc/apt/sources.list.d/)))
 Welche Paketquellen Sie verwenden, legen Sie bei Debian in der
 Datei `/etc/apt/sources.list` (oder alternativ in auf `*.list` endende
-Dateien im Verzeichnis `/etc/apt/sources.list.d/`) fest. Diese Datei
-zählt damit zu den
-zentralen Komponenten des Debian-Paketsystems. An diesen Einträgen
-orientieren sich die Werkzeuge zur Paketverwaltung, wenn es um
-Änderungen im lokalen Paketbestand und entsprechende Aktualisierungen
-der Pakete auf Ihrem System geht.
+Dateien im Verzeichnis `/etc/apt/sources.list.d/`) fest. Diese Dateien
+zählen damit zu den zentralen Komponenten des Debian-Paketsystems. An
+diesen Einträgen orientieren sich die Werkzeuge zur Paketverwaltung,
+wenn es um Änderungen im lokalen Paketbestand und entsprechende
+Aktualisierungen der Pakete auf Ihrem System geht.
 
 // Stichworte für den Index
 (((Paketquelle,Auswahl)))
