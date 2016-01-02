@@ -161,6 +161,7 @@ bereits installiertes und konfiguriertes Paket an (siehe dazu
 
 // Stichworte für den Index
 (((debconf)))
+(((Debianpaket, debconf)))
 (((Debianpaket, dpkg)))
 (((dpkg-reconfigure)))
 (((Konfigurationsdatei, /var/cache/debconf)))

@@ -50,6 +50,9 @@ installiert werden soll. Zum Einsatz kommt dabei meist die Option
 
 ==== Wiederinstallieren vollständig entfernter Pakete ====
 
+// Stichworte für den Index
+(((Debianpaket, debconf)))
+(((Debianpaket, dpkg)))
 Wurden Pakete mit der Option `--purge` vollständig entfernt (siehe
 dazu <<pakete-deinstallieren>>), so ist dieser Fall in vielen Fällen
 trivial und ohne jegliche Besonderheiten.
@@ -63,16 +66,19 @@ nicht wieder gestellt werden. Im Endeffekt wird die gleiche
 Konfiguration wie bei der vorherigen Installation des Pakets generiert.
 
 // Stichworte für den Index
+(((Debianpaket, dpkg)))
 (((dpkg-reconfigure)))
 In diesem Fall hilft Ihnen der Aufruf von `dpkg-reconfigure` mit dem
 Paketnamen als Parameter. In manchen Fällen reicht dies alleine schon
 aus, um eine verkorkste Konfiguration wieder hinzubiegen. Mitunter
 kommen Sie damit um ein gänzliches Entfernen und Wiederinstallieren des
-Pakets herum (siehe auch <<pakete-konfigurieren>>).
+Pakets herum. Ausführlich gehen wir dazu unter ``Pakete konfigurieren''
+in <<pakete-konfigurieren>> ein.
 
 ==== Wiederinstallieren von Paketen mit vorhandenen Konfigurationsdateien ====
 
 // Stichworte für den Index
+(((Debianpaket, dpkg)))
 (((Paket, erneut installieren und Konfiguration beibehalten)))
 Auch dieser Fall funktioniert meist ganz unspektakulär und so wie Sie es
 erwarten. Neben den bereits oben erwähnten Stolperstellen kommt jedoch

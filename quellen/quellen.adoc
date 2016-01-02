@@ -263,6 +263,8 @@
 
 - [[[Debian-Paket-dctrl-tools]]] Debian-Paket 'dctrl-tools', http://packages.debian.org/de/stable/dctrl-tools
 
+- [[[Debian-Paket-debconf]]] Debian-Paket 'debconf', http://packages.debian.org/de/stable/debconf
+
 - [[[Debian-Paket-debdelta]]] Debian-Paket 'debdelta', http://packages.debian.org/de/stable/debdelta
 
 - [[[Debian-Paket-debfoster]]] Debian-Paket 'debfoster', http://packages.debian.org/de/stable/debfoster
