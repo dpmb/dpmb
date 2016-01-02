@@ -48,14 +48,14 @@ image::werkzeuge/paketoperationen/webbrowser-paket-download.png[id="fig.webbrows
 // Stichworte für den Index
 (((apt-get, -d install)))
 (((apt-get, --download-only install)))
-(((Paketcache, /var/cache/apt/archives)))
+(((Paketcache, /var/cache/apt/archives/)))
 (((Paketcache, /var/cache/apt/archives/partial/)))
 Der Modus 2 kommt zum Zug, wenn Sie das Paket hingegen im lokalen
 Paketcache (siehe <<paketcache>>) abspeichern möchten. Dazu verstehen
 `apt-get` und `aptitude` zum Unterkommando `install` die Option `-d`
 (Langform `--download-only`). Nachfolgende Ausgabe zeigt, wie sich
 `aptitude` dabei verhält. Das Paket wird nicht installiert, sondern im
-Paketcache unter `/var/cache/apt/archives` abgespeichert, sofern es
+Paketcache unter `/var/cache/apt/archives/` abgespeichert, sofern es
 vollständig bezogen wurde. Nur teilweise heruntergeladene Pakete liegen
 hingegen unter `/var/cache/apt/archives/partial/`.
 
