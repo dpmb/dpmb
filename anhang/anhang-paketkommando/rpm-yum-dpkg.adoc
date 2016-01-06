@@ -156,7 +156,9 @@ Installationsstatus zu einem einzelnen Softwarepaket auf.
 (((yum, deplist)))
 (((yum, info)))
 Mit den nachfolgenden Aufrufen zeigen Sie die Abhängigkeiten zu anderen
-Paketen an.
+Paketen an. Für `dpkg` und APT gehen wir dazu genauer in
+``Paketabhängigkeiten anzeigen'' in <<paketabhaengigkeiten-anzeigen>>
+ein.
 
 .Paketabhängigkeiten anzeigen
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketabhaengigkeiten"]
@@ -165,7 +167,7 @@ Paketen an.
 | `RPM`      | `rpm -R paket` |
 | `YUM`      | `yum deplist paket` |
 |            | `yum info paket` |
-| `APT`      | `apt-cache depends paket` |
+| APT        | `apt-cache depends paket` |
 |            | `apt-cache rdepends paket` | umgekehrte Abhängigkeiten anzeigen
 |====
 
