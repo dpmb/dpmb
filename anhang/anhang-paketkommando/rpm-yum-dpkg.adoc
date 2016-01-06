@@ -184,7 +184,8 @@ Mit den nachfolgenden Aufrufen überprüfen Sie die Signatur eines Pakets.
 Sie stellen damit sicher, dass das Paket unverändert vom Paketmirror zu
 Ihnen übertragen wurde und auf dem Transportweg keine inhaltlichen
 Veränderungen stattgefunden haben. Für Debianpakete widmen wir uns dem
-Thema in ``Paket auf Veränderungen prüfen'' in
+Thema in ``Paket verifizieren'' in <<bezogenes-paket-verifizieren>> und
+``Paket auf Veränderungen prüfen'' in
 <<paket-auf-veraenderungen-pruefen>>.
 
 .Paketsignatur überprüfen
