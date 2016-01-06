@@ -35,13 +35,13 @@ die Kommandozeile.
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketinstallation"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| `RPM`      | `rpm -i paket` | Paket liegt lokal vor
-|            | `rpm -ihv paket` | Paket liegt lokal vor, Installation mit Kommentaren
-| `YUM`      | `yum localinstall paket` | Paket liegt lokal vor
-|            | `yum install paket` | Paket wird dem Paketrepository entnommen
-| `dpkg`     | `dpkg -i paket` | Paket liegt lokal vor
-| `APT`      | `apt-get install paket` | Paket wird dem Paketrepository entnommen
-| `Aptitude` | `aptitude install paket` | Paket wird dem Paketrepository entnommen
+| `RPM`      | `rpm -i` 'paketname' | Paket liegt lokal vor
+|            | `rpm -ihv` 'paketname' | Paket liegt lokal vor, Installation mit Kommentaren
+| `YUM`      | `yum localinstall` 'paketname' | Paket liegt lokal vor
+|            | `yum install` 'paketname' | Paket wird dem Paketrepository entnommen
+| `dpkg`     | `dpkg -i` 'paketname' | Paket liegt lokal vor
+| `APT`      | `apt-get install` 'paketname' | Paket wird dem Paketrepository entnommen
+| `Aptitude` | `aptitude install` 'paketname' | Paket wird dem Paketrepository entnommen
 |====
 
 === Paket löschen / entfernen ===
