@@ -31,7 +31,11 @@ Pakete sowie das Anzeigen von Paketabhängigkeiten.
 Mit den nachfolgenden Aufrufen installieren Sie ein Softwarepaket über
 die Kommandozeile. Unter ``Pakete installieren'' in
 <<pakete-installieren>> gehen wir detaillierter auf `dpkg`, APT und
-`aptitude` ein.
+`aptitude` ein. Unter ``Installation zwischengespeicherter Pakete aus
+dem Paketcache'' in
+<<installation-zwischengespeicherter-pakete-aus-dem-paketcache>>
+erfahren Sie mehr darüber, wie Sie Pakete installieren, die bereits im
+Paketcache vorliegen.
 
 .Installation eines Pakets
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketinstallation"]
@@ -43,6 +47,7 @@ die Kommandozeile. Unter ``Pakete installieren'' in
 |            | `yum install` 'Paketname' | Paket wird dem Paketrepository entnommen
 | `dpkg`     | `dpkg -i` 'Paketname' | Paket liegt lokal vor
 | `APT`      | `apt-get install` 'Paketname' | Paket wird dem Paketrepository entnommen
+|            | `apt-get --no-download install` 'Paketname' | Paket wird dem Paketcache entnommen
 | `Aptitude` | `aptitude install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |====
 
