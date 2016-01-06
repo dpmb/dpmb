@@ -107,12 +107,13 @@ Mit den nachfolgenden Aufrufen listen Sie die vorhandenen Softwarepakete
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketeauflisten"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| `RPM`      | `rpm -qa` |
+| `RPM`      | `rpm -qa` | alle installierten Pakete auflisten
 | `YUM`      | `yum list all` | alle installierten Pakete auflisten
-|            | `yum list available` | alle verfügbaren Pakete auflisten
+|            | `yum list available` | alle verfügbaren Pakete auflisten,
+auch die (noch) nicht installierten Pakete
 | `dpkg`     | `dpkg -l` | alle installierten Pakete auflisten
-|  APT       | `apt-cache search paket` |
-| `aptitude` | `aptitude search ~i`|
+|  APT       | `apt-cache search` 'Paketname' |
+| `aptitude` | `aptitude search ~i`| alle installierten Pakete auflisten
 |====
 
 === Einzelpaket auflisten ===
@@ -136,7 +137,6 @@ Installationsstatus zu einem einzelnen Softwarepaket auf.
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -q` 'Paketname' | Ausgabe des Installationsstatus für 'Paketname'
-|            | `rpm -qa | grep` 'Paketname'` | Ausgabe des Installationsstatus für 'Paketname'
 |            | `rpm -qp` 'Paketname' | ?
 | `dpkg`     | `dpkg -l` Paketname' | Ausgabe des Installationsstatus
 |            | `dpkg -s` Paketname' | Ausgabe der Paketinformationen
