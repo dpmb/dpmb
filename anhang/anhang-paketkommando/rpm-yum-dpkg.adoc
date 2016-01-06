@@ -61,19 +61,21 @@ die Kommandozeile. Unter ``Pakete installieren'' in
 (((yum, erase)))
 (((yum, remove)))
 Mit den nachfolgenden Aufrufen entfernen Sie ein Softwarepaket über
-die Kommandozeile.
+die Kommandozeile. Unter ``Pakete deinstallieren'' in
+<<pakete-deinstallieren>> gehen wir detaillierter auf `dpkg`, APT und
+`aptitude` ein.
 
 .Entfernen eines Pakets
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketentfernung"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| `RPM`      | `rpm -e paket` | 
-| `YUM`      | `yum remove paket` | 
-|            | `yum erase paket` | gleichbedeutend zu `remove`
-| `dpkg`     | `dpkg -r paket` | 
-| `APT`      | `apt-get remove paket` | Entfernen ohne Konfigurationsdateien des Pakets
-|            | `apt-get --purge remove paket` | Entfernen inklusive der Konfigurationsdateien des Pakets
-| `Aptitude` | `aptitude remove paket` | 
+| `RPM`      | `rpm -e` 'paketname' | 
+| `YUM`      | `yum remove` 'paketname' | 
+|            | `yum erase` 'paketname' | gleichbedeutend zu `remove`
+| `dpkg`     | `dpkg -r` 'paketname' | 
+| `APT`      | `apt-get remove` 'paketname' | Entfernen ohne Konfigurationsdateien des Pakets
+|            | `apt-get --purge remove` 'paketname' | Entfernen inklusive der Konfigurationsdateien des Pakets
+| `Aptitude` | `aptitude remove` 'paket' | 
 |====
 
 === Alle Pakete auflisten ===
