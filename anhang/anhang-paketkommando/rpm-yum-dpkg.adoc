@@ -29,7 +29,9 @@ Pakete sowie das Anzeigen von Paketabhängigkeiten.
 (((yum, install)))
 (((yum, localinstall)))
 Mit den nachfolgenden Aufrufen installieren Sie ein Softwarepaket über
-die Kommandozeile.
+die Kommandozeile. Unter ``Pakete installieren'' in
+<<pakete-installieren>> gehen wir detaillierter auf `dpkg`, APT und
+`aptitude` ein.
 
 .Installation eines Pakets
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketinstallation"]
