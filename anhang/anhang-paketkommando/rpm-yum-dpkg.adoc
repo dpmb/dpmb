@@ -49,9 +49,9 @@ Paketcache vorliegen.
 | `YUM`      | `yum localinstall` 'Paketname' | Paket liegt lokal vor
 |            | `yum install` 'Paketname' | Paket wird dem Paketrepository entnommen
 | `dpkg`     | `dpkg -i` 'Paketname' | Paket liegt lokal vor
-| `APT`      | `apt-get install` 'Paketname' | Paket wird dem Paketrepository entnommen
+| APT        | `apt-get install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |            | `apt-get --no-download install` 'Paketname' | Paket wird dem Paketcache entnommen und nicht vom Paketmirror bezogen
-| `Aptitude` | `aptitude install` 'Paketname' | Paket wird dem Paketrepository entnommen
+| `aptitude` | `aptitude install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |====
 
 === Paket löschen / entfernen ===
@@ -81,9 +81,9 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 | `YUM`      | `yum remove` 'Paketname' | 
 |            | `yum erase` 'Paketname' | gleichbedeutend zu `remove`
 | `dpkg`     | `dpkg -r` 'Paketname' | 
-| `APT`      | `apt-get remove` 'Paketname' | Entfernen ohne Konfigurationsdateien des Pakets
+|  APT       | `apt-get remove` 'Paketname' | Entfernen ohne Konfigurationsdateien des Pakets
 |            | `apt-get --purge remove` 'Paketname' | Entfernen inklusive der Konfigurationsdateien des Pakets
-| `Aptitude` | `aptitude remove` 'Paketname' | 
+| `aptitude` | `aptitude remove` 'Paketname' | 
 |====
 
 === Alle Pakete auflisten ===
@@ -111,8 +111,8 @@ Mit den nachfolgenden Aufrufen listen Sie die vorhandenen Softwarepakete
 | `YUM`      | `yum list all` | alle installierten Pakete auflisten
 |            | `yum list available` | alle verfügbaren Pakete auflisten
 | `dpkg`     | `dpkg -l` | alle installierten Pakete auflisten
-| `APT`      | `apt-cache search paket` |
-| `Aptitude` | `aptitude search ~i`|
+|  APT       | `apt-cache search paket` |
+| `aptitude` | `aptitude search ~i`|
 |====
 
 === Einzelpaket auflisten ===
@@ -126,6 +126,7 @@ Mit den nachfolgenden Aufrufen listen Sie die vorhandenen Softwarepakete
 (((Paketstatus)))
 (((Paketzustand)))
 (((rpm, -q)))
+(((rpm, -qa)))
 (((rpm, -qp)))
 Mit den nachfolgenden Aufrufen listen Sie die Informationen bzw. den
 Installationsstatus zu einem einzelnen Softwarepaket auf.
@@ -134,11 +135,12 @@ Installationsstatus zu einem einzelnen Softwarepaket auf.
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketinfo"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| `RPM`      | `rpm -q paket` |
-|            | `rpm -qp paket` | ?
-| `dpkg`     | `dpkg -l paket` | Ausgabe des Installationsstatus
-|            | `dpkg -s paket` | Ausgabe der Paketinformationen
-| `Aptitude` | `aptitude show paket`|
+| `RPM`      | `rpm -q` 'Paketname' | Ausgabe des Installationsstatus für 'Paketname'
+|            | `rpm -qa | grep` 'Paketname'` | Ausgabe des Installationsstatus für 'Paketname'
+|            | `rpm -qp` 'Paketname' | ?
+| `dpkg`     | `dpkg -l` Paketname' | Ausgabe des Installationsstatus
+|            | `dpkg -s` Paketname' | Ausgabe der Paketinformationen
+| `aptitude` | `aptitude show` Paketname'|
 |====
 
 === Abhängigkeiten anzeigen ===
