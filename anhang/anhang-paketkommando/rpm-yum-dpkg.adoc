@@ -10,18 +10,21 @@
 (((APT)))
 (((Aptitude)))
 (((dpkg)))
+(((FPM)))
 (((RPM)))
 (((Yellowdog Updater Modified (YUM))))
 Hier stellen wir die jeweiligen Kommandos zur Paketverwaltung gegenüber,
-wie sie von RPM, Yellowdog Updater Modified (YUM), dpkg, APT und
-Aptitude verwendet werden. Wir betrachten die Installation und die
-Entfernung von Paketen, das Auflisten der installierten und verfügbaren
-Pakete sowie das Anzeigen von Paketabhängigkeiten.
+wie sie von RPM, Yellowdog Updater Modified (YUM), seinem Nachfolger
+Effing Package Management (FPM), Debian's `dpkg`, APT und `aptitude`
+verwendet werden. Wir betrachten die Installation und die Entfernung von
+Paketen, das Auflisten der installierten und verfügbaren Pakete sowie
+das Anzeigen von Paketabhängigkeiten.
 
 === Paket installieren ===
 
 // Stichworte für den Index
 (((apt-get, install)))
+(((apt-get, --no-download install)))
 (((aptitude, install)))
 (((Paket, installieren)))
 (((rpm, -i)))
@@ -47,7 +50,7 @@ Paketcache vorliegen.
 |            | `yum install` 'Paketname' | Paket wird dem Paketrepository entnommen
 | `dpkg`     | `dpkg -i` 'Paketname' | Paket liegt lokal vor
 | `APT`      | `apt-get install` 'Paketname' | Paket wird dem Paketrepository entnommen
-|            | `apt-get --no-download install` 'Paketname' | Paket wird dem Paketcache entnommen
+|            | `apt-get --no-download install` 'Paketname' | Paket wird dem Paketcache entnommen und nicht vom Paketmirror bezogen
 | `Aptitude` | `aptitude install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |====
 
