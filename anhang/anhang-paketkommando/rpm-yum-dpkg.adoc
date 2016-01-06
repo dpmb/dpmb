@@ -37,13 +37,13 @@ die Kommandozeile. Unter ``Pakete installieren'' in
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketinstallation"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| `RPM`      | `rpm -i` 'paketname' | Paket liegt lokal vor
-|            | `rpm -ihv` 'paketname' | Paket liegt lokal vor, Installation mit Kommentaren
-| `YUM`      | `yum localinstall` 'paketname' | Paket liegt lokal vor
-|            | `yum install` 'paketname' | Paket wird dem Paketrepository entnommen
-| `dpkg`     | `dpkg -i` 'paketname' | Paket liegt lokal vor
-| `APT`      | `apt-get install` 'paketname' | Paket wird dem Paketrepository entnommen
-| `Aptitude` | `aptitude install` 'paketname' | Paket wird dem Paketrepository entnommen
+| `RPM`      | `rpm -i` 'Paketname' | Paket liegt lokal vor
+|            | `rpm -ihv` 'Paketname' | Paket liegt lokal vor, Installation mit Kommentaren
+| `YUM`      | `yum localinstall` 'Paketname' | Paket liegt lokal vor
+|            | `yum install` 'Paketname' | Paket wird dem Paketrepository entnommen
+| `dpkg`     | `dpkg -i` 'Paketname' | Paket liegt lokal vor
+| `APT`      | `apt-get install` 'Paketname' | Paket wird dem Paketrepository entnommen
+| `Aptitude` | `aptitude install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |====
 
 === Paket löschen / entfernen ===
@@ -69,13 +69,13 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketentfernung"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| `RPM`      | `rpm -e` 'paketname' | 
-| `YUM`      | `yum remove` 'paketname' | 
-|            | `yum erase` 'paketname' | gleichbedeutend zu `remove`
-| `dpkg`     | `dpkg -r` 'paketname' | 
-| `APT`      | `apt-get remove` 'paketname' | Entfernen ohne Konfigurationsdateien des Pakets
-|            | `apt-get --purge remove` 'paketname' | Entfernen inklusive der Konfigurationsdateien des Pakets
-| `Aptitude` | `aptitude remove` 'paket' | 
+| `RPM`      | `rpm -e` 'Paketname' | 
+| `YUM`      | `yum remove` 'Paketname' | 
+|            | `yum erase` 'Paketname' | gleichbedeutend zu `remove`
+| `dpkg`     | `dpkg -r` 'Paketname' | 
+| `APT`      | `apt-get remove` 'Paketname' | Entfernen ohne Konfigurationsdateien des Pakets
+|            | `apt-get --purge remove` 'Paketname' | Entfernen inklusive der Konfigurationsdateien des Pakets
+| `Aptitude` | `aptitude remove` 'Paketname' | 
 |====
 
 === Alle Pakete auflisten ===
