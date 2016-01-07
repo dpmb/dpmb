@@ -49,7 +49,10 @@ das Ergebnis wie folgt aus, sofern Sie auf ihrem System als Zeitzone
 ----
 
 In obiger Ausgabe erscheint vor jeder Zeile ein `*` für die Fragen zur
-Konfiguration, die Ihnen als Benutzer bereits gestellt wurden.
+Konfiguration, die Ihnen als Benutzer bereits gestellt wurden. Das kommt
+beispielsweise dann vor, wenn Sie Debian auf ihrem System einrichten --
+das Paket 'tzdata' ist essentieller Bestandteil des
+Installationsprozesses.
 
 ==== Konfiguration für alle Pakete auslesen ====
 
@@ -61,10 +64,16 @@ Konfiguration, die Ihnen als Benutzer bereits gestellt wurden.
 Die Konfiguration für alle Pakete ist in der Debconf-Datenbank
 gespeichert. Um diese Konfiguration auszulesen, bedienen Sie sich des
 Kommandos `debconf-get-selections` aus dem Paket 'debconf-utils'
-<<Debian-Paket-debconf-utils>>. Die Ausgabe des Programms erfolgt
-zeilenweise auf `stdout`. Die Ausgabe besteht aus einer Kommentarzeile
-(eingeleitet mit einem `#`), auf die die Konfigurationsvariable und
-deren Wert folgt.
+<<Debian-Paket-debconf-utils>>. Dieses Paket gehört nicht zur
+Basisinstallation und ist daher ggf. noch von Ihnen nachzuinstallieren.
+
+Die Ausgabe des Programms erfolgt zeilenweise auf dem
+Standardausgabekanal (`stdout`). Sie erhalten zunächst eine
+Kommentarzeile, die jeweils mit einem `#` eingeleitet wird. Darauf folgt
+die Konfigurationsvariable und der Wert, der für die entsprechende
+Variable derzeit hinterlegt ist. Da die Debconf-Datenbank eine hohe
+Anzahl Variablen speichert, macht Ihnen ein Pager wie `less` die
+seitenweise Betrachtung leichter (siehe nachfolgendes Beispiel).
 
 .Gespeicherte Konfiguration in der Debconf-Datenbank 
 ----
@@ -85,7 +94,8 @@ Das Gegenstück zu `debconf-get-selections` ist `debconf-set-selections`
 kann die Ausgabe von `debconf-get-selections` direkt verarbeiten und
 dient Ihnen bspw. zum Einspielen einer vorab gesicherten
 Paketkonfiguration auf dem gleichen oder einem anderen System.
-Ausführlicher besprechen wir diesen Fall in
+Ausführlicher besprechen wir diesen speziellen Anwendungsfall im
+Praxisteil unter ``Paketkonfiguration sichern'' in
 <<paketkonfiguration-sichern>>.
 
 ==== Bestehende Konfiguration anwenden ====
@@ -96,8 +106,9 @@ Die Basiseinstellungen eines Pakets funktionieren im Allgemeinen recht
 gut, haben aber nicht immer einen Bezug zu ihrem konkreten Einsatzfall.
 Dieser lässt sich selten vollständig vorhersehen. Daher folgt im Rahmen
 der Paketinstallation ein individuelles Feintuning seitens des
-Administrators (Voreinstellungen für alle Benutzer) oder durch Sie als
-Benutzer selbst (individuelle, lokale Einstellungen).
+Administrators  im Rahmen der Voreinstellungen für alle Benutzer oder
+durch Sie als Benutzer selbst, indem Sie individuelle, lokale
+Korrekturen vornehmen.
 
 Das Anwenden der vorbereiteten Konfiguration umfasst mehrere Schritte --
 bspw. das Festlegen von Zugangsdaten (administratives Passwort von
@@ -107,30 +118,31 @@ mitgelieferten Konfiguration des neuen Pakets und der bereits
 bestehenden Konfiguration Unterschiede vorliegen, werden Sie durch das
 Programm gefragt, welche der beiden Einstellungen zukünftig genutzt
 werden soll. Das ist sinnvoll und berücksichtigt insbesondere den Fall,
-dass das Paket bereits installiert ist und von Ihnen händisch auf ihre
-individuellen Gegebenheiten angepasst wurde. Als Möglichkeiten werden
-Ihnen angeboten:
+dass das Paket bereits bisher auf ihrem System installiert war und von
+Ihnen händisch auf ihre individuellen Gegebenheiten angepasst wurde. Als
+Möglichkeiten werden Ihnen hier angeboten:
 
 * die mitgelieferte Konfiguration des neuen Pakets zu benutzen
 * die bestehende Konfiguration des installierten Pakets beibehalten
 * sich die Unterschiede zwischen beiden anzeigen zu lassen und
 * eine Shell zur individuellen Problembehebung zu öffnen.
 
-Bei letzterem eröffnet sich Ihnen damit die Möglichkeit, bspw. eine
-Sicherheitskopie der bestehenden Konfiguration anzulegen, bevor diese
-verändert wird. Sollte diese neue Konfiguration nicht ihren Erwartungen
-entsprechen, können Sie somit jederzeit auf die Sicherheitskopie
-zurückgreifen. Bei diesem Vorgehen haben Sie als Administrator die
-Möglichkeit zu sehen, dass Unterschiede bestehen, welche Unterschiede
-das konkret sind, Ihre Konfiguration beizubehalten und im Zweifelsfall
-die Konfiguration auf neue (Standard)Werte zurückzusetzen.
+Bei letzterem bietet sich Ihnen damit die Möglichkeit, bspw. eine
+Sicherheitskopie der bestehenden Konfiguration anzulegen, bevor Sie
+diese verändern. Sollte diese neue Konfiguration nicht ihren Erwartungen
+oder Bedürfnissen entsprechen, können Sie somit jederzeit auf die
+Sicherheitskopie zurückgreifen. Bei diesem Vorgehen haben Sie als
+Administrator die Möglichkeit zu sehen, dass überhaupt Unterschiede
+bestehen und welche Unterschiede das konkret sind. Sie können Ihre
+derzeitige Konfiguration beibehalten sowie im Zweifelsfall die
+Konfiguration auf neue (Standard)Werte zurückzusetzen.
 
 In seltenen Fällen geht dieser Prozess schief, d.h. das Paket wurde zwar
 entpackt, aber nicht konfiguriert. Hintergrund können nicht sauber
-aufgelöste Abhängigkeiten sein, aber auch Fehler im Paket selbst. Ist
-ein benötigtes Paket nicht konfiguriert und be- bzw. verhindert damit
-die Installation und Einrichtung weiterer, davon abhängiger Pakete,
-teilt Ihnen `dpkg` das wie folgt mit:
+aufgelöste Paketabhängigkeiten sein, aber auch Fehler im Paket selbst.
+Ist ein benötigtes Paket nicht konfiguriert und be- bzw. verhindert
+damit die Installation und Einrichtung weiterer, davon abhängiger
+Pakete, teilt Ihnen `dpkg` das wie folgt mit:
 
 .Fehler in der Konfiguration am Beispiel des Pakets 'mysql-server'
 ----
@@ -156,7 +168,7 @@ dpkg: Fehler beim Bearbeiten von scrollkeeper (--configure):
 (((Debianpaket, dpkg)))
 (((dpkg, --audit)))
 (((dpkg, -C)))
-Hilfreich ist es in diesem Fall, dass Sie zunächst herausbekommen, welche
+Hilfreich ist es in diesem Fall, dass Sie zunächst analysieren, welche
 Pakete unvollständig installiert sind. Dabei hilft Ihnen der Aufruf
 `dpkg -C`, wobei `dpkg` für letzteres auch die Langform `--audit` kennt.
 
@@ -175,28 +187,34 @@ sie müssen erneut installiert werden:
 (((dpkg, -a)))
 (((dpkg, --configure)))
 (((dpkg, --pending)))
+(((Maintainer-Skripte, postinst)))
 Als nächsten Schritt schieben Sie die Konfiguration des Pakets an. Für
-ein einzelnes Paket gelingt Ihnen das mit dem Aufruf `dpkg --configure
-Paketname` und für mehrere Pakete mit `dpkg -a` (Langform `--pending`).
+ein einzelnes Paket gelingt Ihnen das mit dem Aufruf `dpkg --configure`
+'Paketname' und für mehrere Pakete mit `dpkg -a` (Langform `--pending`).
+Im letztgenannten Fall arbeitet `dpkg` die Liste der unkonfigurierten
+Pakete nacheinander ab. Die konkrete Reihenfolge der Abarbeitung legt
+`dpkg` eigenständig fest.
 
-* was passiert da genau (aus der Manpage zu `dpkg`):
+Die Konfiguration eines Pakets geschieht in den folgenden Schritten:
 
-----
-Die Konfiguration besteht aus folgenden Schritten:
+. Die Konfigurationsdateien (``Conffiles'') des Pakets werden entpackt.
 
-1. Entpacke die Conffiles und sichere gleichzeitig die alten
-Conffiles, sodass diese, falls etwas schief geht, wiederhergestellt
-werden können.
+. Die bereits bestehenden Konfigurationsdateien (``Conffiles'') für das
+  Paket werden gespeichert. Falls dabei etwas schief geht, können diese
+  wiederhergestellt werden.
 
+. Stellt das Paket ein Maintainer-Skript namens `postinst` bereit, wird
+  dieses abgearbeitet.
 
-2. Führe das postinst-Skript aus, falls dies vom Paket bereitgestellt
-wird.
-----
-
-* konfigurieren vs. erneut konfigurieren
-Mit dem Kommando `dpkg-reconfigure` wenden Sie die gleiche Prozedur auf ein
-bereits installiertes und konfiguriertes Paket an (siehe dazu
-<<dpkg-reconfigure>>).
+// Stichworte für den Index
+(((Debianpaket, dpkg)))
+(((dpkg-reconfigure)))
+(((Paket, erneut konfigurieren)))
+Möchten Sie zu einem späteren Zeitpunkt die Einstellungen zu dem nun
+installierten und konfigurierten Paket erneut anpassen, benutzen Sie
+stattdessen das Werkzeug `dpkg-reconfigure`. Damit durchlaufen Sie die
+Prozedur erneut. Ausführlicher gehen wir dazu in <<dpkg-reconfigure>>
+ein.
 
 [[dpkg-reconfigure]]
 ==== Konfiguration mit `dpkg-reconfigure` erneut durchführen ====
