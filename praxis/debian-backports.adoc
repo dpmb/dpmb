@@ -81,7 +81,7 @@ Platz für solche Rückportierungen.
 
 Bedarf und Interesse an den Backports wuchs und es gab ein eigenes
 Spiegelnetzwerk analog zu dem von Debian. 2010 wurde das Projekt dann
-mit dem Umzug von 'backports.org' zu 'backports.debian.org' offzieller
+mit dem Umzug von 'backports.org' zu 'backports.debian.org' offizieller
 Bestandteil des Debian-Projektes <<backports.org-moved-to-backports.debian.org>>.
 
 Dennoch wurde die von nun an 'Debian Backports' genannten Pakete noch
@@ -94,7 +94,7 @@ darauf folgende Veröffentlichungen.
 
 === Welche Pakete gibt es als offiziellen Backport? ===
 
-Welche Pakete es auch als offziellen Backport gibt, können Sie
+Welche Pakete es auch als offiziellen Backport gibt, können Sie
 mittlerweile recht einfach in der Debian Paketsuche
 <<Debian-Paketsuche>> herausfinden. Ob es ein solches Paket auch als
 offiziellen Backport gibt, hängt von zwei Dingen ab -- dem Bedarf
