@@ -1,0 +1,18 @@
+// Datei: ./praxis/paketkonfiguration-sichern.adoc
+
+// Baustelle: Notizen
+
+[[paketkonfiguration-sichern]]
+== Paketkonfiguration sichern ==
+
+// Stichworte für den Index
+(((debconf-get-selections)))
+(((debconf-set-selections)))
+(((Debianpaket, debconf-utils)))
+* wie sichere ich die bestehende Paketkonfiguration aus der Debconf-Datenbank
+* wie spiele ich das lokal wieder ein
+* Werkzeuge:
+** debconf-get-selections
+** debconf-set-selections
+
+// Datei (Ende): ./praxis/paketkonfiguration-sichern.adoc
