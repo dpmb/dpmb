@@ -91,6 +91,8 @@ include::versionierte-paketverwaltung.adoc[]
 // - Schnappschüsse einer Installation
 include::snapshots.adoc[]
 
+// - Paketkonfiguration sichern und wiederherstellen
+include::paketkonfiguration-sichern.adoc[]
 
 // == Paketverwaltung mit eingeschränkten Ressourcen für Embedded und Mobile Devices ==
 
