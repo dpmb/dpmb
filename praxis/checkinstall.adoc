@@ -42,6 +42,10 @@ das Paket die Markierung 'hold' (siehe dazu <<lokale-paketmarkierungen>>).
 ** Paket passt zu den anderen Softwarekomponenten
 ** Paketverwaltung hat eine Information darüber, dass das Paket als solches installiert wurde
 
+// Stichworte für den Index
+(((Maintainer-Skripte, postinst)))
+(((Maintainer-Skripte, preinst)))
+
 * Nachteile:
 ** Paket unterläuft die Qualitätskontrolle von Debian -- die Kontrolle
 findet nicht statt
