@@ -28,6 +28,12 @@ aufsetzen.
 
 ==== Hintergrund und Fragen zum Downgrade ====
 
+// Stichworte für den Index
+(((Maintainer-Skripte, postinst)))
+(((Maintainer-Skripte, postrm)))
+(((Maintainer-Skripte, preinst)))
+(((Maintainer-Skripte, prerm)))
+
 * ist das komplizierter als das Einspielen einer neueren Version?
 ** nein. Meistens nicht -- vom explizten angeben (dpkg/apt-get) oder
 auswählen der Version (aptitude TUI) mal abgesehen.
@@ -62,6 +68,5 @@ Pakete auslösen (kann bei einer Aktualisierung ja auch vorkommen)
 * Möglichkeiten, um eine vorhergehende Paketversion einspielen
 ** über die explizite Angabe der Versionsnummer des Pakets: `apt-get install <package-name>=<package-version-number>`
 ** über die explizite Angabe der Veröffentlichung: `apt-get -t=<target release> install <package-name>`
-
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-downgraden.adoc
