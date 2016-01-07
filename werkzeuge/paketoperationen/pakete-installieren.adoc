@@ -189,6 +189,8 @@ APT bzw. `aptitude` mit ihrer Arbeit ohne Rückfrage fort. Andernfalls
 wartet das Programm noch auf Ihr Einverständnis.
 
 // Stichworte für den Index
+(((Maintainer-Skripte, postinst)))
+(((Maintainer-Skripte, preinst)))
 (((Security Updates)))
 
 Daraufhin werden die Pakete vom Paketmirror bezogen und im Paketcache
@@ -196,12 +198,12 @@ zwischengespeichert, auf Korrektheit überprüft (siehe
 <<bezogenes-paket-verifizieren>>), um die notwendigen
 Sicherheitsaktualisierungen (``Fixes'' oder ``Security Updates'')
 ergänzt und danach temporär ausgepackt. Nun erfolgt die Auswertung und
-Ausführung der `preinst`-Skripte des Pakets (siehe
+Ausführung der `preinst`-Maintainer-Skripte des Pakets (siehe
 <<aufbau-und-format>>) und danach werden die Dateien aus dem jeweiligen
 Paket an die angegebene Stelle im Dateisystem kopiert. Abschließend
 erfolgen eine (Nach)Konfiguration (siehe <<pakete-konfigurieren>>),
 sofern das erforderlich ist, und die Ausführung der
-`postinst`-Skripte des Pakets (siehe <<aufbau-und-format>>).
+`postinst`-Maintainer-Skripte des Pakets (siehe <<aufbau-und-format>>).
 Ganz am Ende aktualisieren APT bzw. `aptitude` noch die Paketdatenbank
 und setzen den Status des Pakets auf ``vollständig installiert'' (siehe
 <<paketstatus-erfragen>>).
