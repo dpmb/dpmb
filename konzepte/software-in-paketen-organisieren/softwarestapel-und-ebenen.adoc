@@ -139,7 +139,7 @@ Smart Package Manager (siehe <<gui-smartpm>>) und PackageKit (siehe
 <<gui-packagekit>>). Muon und SmartPM können die Paketformate `deb`,
 `rpm` und `tar.gz` (Slackware) verarbeiten sowie die bereits oben
 genannten Verwaltungen APT, YUM und `urpmi` ansprechen. Weitere
-Informationen dazu finden Sie unter Frontends für das Paketmanagement in
-<<frontends-fuer-das-paketmanagement>>.
+Informationen dazu finden Sie unter ``Frontends für das
+Paketmanagement'' in <<frontends-fuer-das-paketmanagement>>.
 
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/softwarestapel-und-ebenen.adoc
