@@ -35,18 +35,20 @@ besprechen wir das genauer. Ausführlicher sind die Ausgaben zu den
 `apt-cache show` sowie `apt-mark`.
 
 [[paketstatus-dpkg]]
-==== `dpkg -s` 'Paketname' ====
+==== `dpkg -s` 'Paketname' und `dlocate -s` 'Paketname' ====
 
 // Stichworte für den Index
 (((Debianpaket, dctrl-tools)))
+(((Debianpaket, dlocate)))
+(((dlocate, -s)))
 (((dpkg, -s)))
 (((dpkg, --status)))
 (((dpkg-query, -s)))
 (((dpkg-query, --status)))
 (((grep-status, -F)))
 (((grep-status, -X)))
-Mit diesem Aufruf ermitteln Sie den Status eines installierten Pakets.
-Die Langform zu `-s` ist `--status`. Intern greift `dpkg` auf
+Mit diesen beiden Aufrufen ermitteln Sie den Status eines installierten
+Pakets. Die Langform zu `-s` ist `--status`. Intern greift `dpkg` auf
 `dpkg-query` zurück, so daß Sie die gleichen Schalter verwenden können.
 Paketname bezeichnet hier den Namen eines Debianpakets.
 
