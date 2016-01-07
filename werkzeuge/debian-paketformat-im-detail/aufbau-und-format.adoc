@@ -26,6 +26,11 @@ Konflikte zu anderen Paketen. Diese Relationen beschreiben wir
 ausführlich in Konzepte und Ideen dahinter
 (<<konzepte-und-ideen-dahinter>>).
 
+// Stichworte für den Index
+(((Maintainer-Skripte, postinst)))
+(((Maintainer-Skripte, postrm)))
+(((Maintainer-Skripte, preinst)))
+(((Maintainer-Skripte, prerm)))
 Zweitens gehören die sogenannten Maintainer-Skripte namens `preinst`,
 `postinst`, `prerm` und `postrm` dazu. Die beiden Skripte `preinst` und
 `postinst` regeln alle Aktivitäten vor und nach der Installation,
@@ -157,6 +162,11 @@ Konfigurationsdateien und Copyright-Informationen
 Paket mit reduziertem Paketinhalt, welches speziell für den
 Debian-Installer gedacht ist (siehe <<Debian-udeb>>).
 
+// Stichworte für den Index
+(((Maintainer-Skripte, postinst)))
+(((Maintainer-Skripte, postrm)))
+(((Maintainer-Skripte, preinst)))
+(((Maintainer-Skripte, prerm)))
 Wie bereits oben angesprochen, beinhaltet jedes Debianpaket auch
 sogenannte 'Control-Files' (nach <<Krafft-Debian-System144>>). Diese
 Steuerdateien werden in der Komponente `control.tar.gz`
