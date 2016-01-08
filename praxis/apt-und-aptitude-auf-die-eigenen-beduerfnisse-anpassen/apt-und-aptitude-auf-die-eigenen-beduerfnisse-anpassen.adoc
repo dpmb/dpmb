@@ -17,6 +17,12 @@ include::interaktives-aendern-von-optionen.adoc[]
 // aptitude Formatstrings
 include::aptitude-formatstrings.adoc[]
 
+// aptitude Ausgabebreite festlegen
+include::aptitude-ausgabebreite.adoc[]
+
+// aptitude Ausgabe sortieren
+include::aptitude-ausgabe-sortieren.adoc[]
+
 // aptitude Gruppierung
 include::aptitude-gruppierung.adoc[]
 

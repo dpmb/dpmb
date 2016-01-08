@@ -67,54 +67,6 @@ v  | tzdata-jessie
 v  | tzdata-jessie:i386
 ----
 
-// Stichworte für den Index
-(((aptitude, search -O)))
-(((aptitude, search --sort)))
-(((aptitude, Sortierung der Ausgabe festlegen)))
-Möchten Sie die Ausgabe darüberhinaus noch sortieren, hilft Ihnen der
-Schalter `-O` (Langform `--sort`) weiter. Die Sortierung der Ausgabe
-erlaubt bspw. die Werte `installsize` (Installationsgröße), `name`
-(Paketname) und `version` (Versionsnummer). Die Basiseinstellung ist
-`name,version`, wobei `aptitude` zuerst eine Sortierung anhand des
-Paketnamens und danach noch anhand der Paketversion durchführt. Somit
-erscheinen ältere Pakete in der Auflistung zuoberst.
-
-Nachfolgend sehen Sie wiederum eine dreispaltige Ausgabe, die hier aus
-der Größe nach der Installation (Platzbedarf auf dem Speichermedium),
-dem Paketnamen sowie dem Namen und der EMailadresse des Paketmaintainers
-besteht. Zusätzlich ist die Ausgabe aufsteigend nach der Paketgröße
-sortiert. Recherchiert wird dabei nach allen Paketen, die im Namen die
-Zeichenkette `debtags` beinhalten.
-
-.Suche nach `debtags`-Paketen mit spezifischer Formatierung der Ausgabe und Sortierung
-----
-$ aptitude search -F "%I %5p,%m" --sort installsize debtags
-79,9 kB  python-debtagshw      ,Enrico Zini <enrico@debian.org>
-79,9 kB  python3-debtagshw     ,Enrico Zini <enrico@debian.org>
-826 kB   debtags:i386          ,Enrico Zini <enrico@debian.org>
-910 kB   debtags               ,Enrico Zini <enrico@debian.org>
-$
-----
-
-// Stichworte für den Index
-(((aptitude, Breite der Ausgabe festlegen)))
-(((aptitude, search -w)))
-(((aptitude, search --width)))
-Ohne weitere Angaben benutzt `aptitude` zur Ausgabe die gesamte Breite
-des Terminals. Möchten Sie das auf einen bestimmten Wert festlegen,
-nutzen Sie dafür den Schalter `-w` (Langform `--width`) gefolgt von der
-Anzahl Zeichen. Das nachfolgende Beispiel zeigt Ihnen den Aufruf für
-eine Breite von 40 Zeichen. Überflüssige Zeichen schneidet `aptitude` in
-der Ausgabe ab.
-
-.Begrenzung der Ausgabe auf eine feste Breite
-----
-$ aptitude search -w 40 debtags
-i   debtags      - Akiviert die Unterstü
-p   debtags:i386 - Akiviert die Unterstü
-p   python-debta - Vergleicht »hardware:
-p   python3-debt - Vergleicht »hardware:
-$
-----
+* `--group-by`
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-formatstrings.adoc

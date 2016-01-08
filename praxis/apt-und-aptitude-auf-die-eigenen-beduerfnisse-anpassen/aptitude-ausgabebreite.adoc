@@ -1,0 +1,31 @@
+// Datei:
+./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-ausgabebreite.adoc
+
+// Baustelle: Rohtext
+
+[[aptitude-ausgabebreite-festlegen]]
+=== Für `aptitude` die Ausgabebreite festlegen ===
+
+// Stichworte für den Index
+(((aptitude, Breite der Ausgabe festlegen)))
+(((aptitude, search -w)))
+(((aptitude, search --width)))
+Ohne weitere Angaben benutzt `aptitude` zur Ausgabe die gesamte Breite
+des Terminals. Möchten Sie das auf einen bestimmten Wert festlegen,
+nutzen Sie dafür den Schalter `-w` (Langform `--width`) gefolgt von der
+Anzahl Zeichen. Das nachfolgende Beispiel zeigt Ihnen den Aufruf für
+eine Breite von 40 Zeichen. Überflüssige Zeichen schneidet `aptitude` in
+der Ausgabe ab.
+
+.Begrenzung der Ausgabe auf eine feste Breite
+----
+$ aptitude search -w 40 debtags
+i   debtags      - Akiviert die Unterstü
+p   debtags:i386 - Akiviert die Unterstü
+p   python-debta - Vergleicht »hardware:
+p   python3-debt - Vergleicht »hardware:
+$
+----
+
+// Datei (Ende):
+./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-ausgabebreite.adoc

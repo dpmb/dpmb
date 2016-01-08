@@ -1,0 +1,37 @@
+// Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-formatstrings.adoc
+
+// Baustelle: Rohtext
+
+[[aptitude-ausgabe-sortieren]]
+=== Bei `aptitude` die Ausgabe sortieren ===
+
+// Stichworte für den Index
+(((aptitude, search -O)))
+(((aptitude, search --sort)))
+(((aptitude, Sortierung der Ausgabe festlegen)))
+Möchten Sie die Ausgabe darüberhinaus noch sortieren, hilft Ihnen der
+Schalter `-O` (Langform `--sort`) weiter. Die Sortierung der Ausgabe
+erlaubt bspw. die Werte `installsize` (Installationsgröße), `name`
+(Paketname) und `version` (Versionsnummer). Die Basiseinstellung ist
+`name,version`, wobei `aptitude` zuerst eine Sortierung anhand des
+Paketnamens und danach noch anhand der Paketversion durchführt. Somit
+erscheinen ältere Pakete in der Auflistung zuoberst.
+
+Nachfolgend sehen Sie wiederum eine dreispaltige Ausgabe, die hier aus
+der Größe nach der Installation (Platzbedarf auf dem Speichermedium),
+dem Paketnamen sowie dem Namen und der EMailadresse des Paketmaintainers
+besteht. Zusätzlich ist die Ausgabe aufsteigend nach der Paketgröße
+sortiert. Recherchiert wird dabei nach allen Paketen, die im Namen die
+Zeichenkette `debtags` beinhalten.
+
+.Suche nach `debtags`-Paketen mit spezifischer Formatierung der Ausgabe und Sortierung
+----
+$ aptitude search -F "%I %5p,%m" --sort installsize debtags
+79,9 kB  python-debtagshw      ,Enrico Zini <enrico@debian.org>
+79,9 kB  python3-debtagshw     ,Enrico Zini <enrico@debian.org>
+826 kB   debtags:i386          ,Enrico Zini <enrico@debian.org>
+910 kB   debtags               ,Enrico Zini <enrico@debian.org>
+$
+----
+
+// Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-formatstrings.adoc
