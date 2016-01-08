@@ -35,11 +35,11 @@ spaltenweise zu einem Paket darstellt.
 |====
 
 Die Voreinstellung von `aptitude` beinhaltet die Platzhalter `%c`, `%a`,
-`%M`, `%p%` und `d`. Es umfasst somit den Paketstatus, die Aktion, das
-'Automatic Flag', den Paketnamen und die Paketbeschreibung. Mit
-zusätzlichen Trennzeichen und dezimalen Angaben vor einem Platzhalter
-legen Sie die Gestaltung der Ausgabe und die jeweilige Spaltenbreite
-fest.
+`%M`, `%p%` und `d`. Es umfasst somit die einzelnen Spalten mit dem
+Paketstatus, der Aktion, das 'Automatic Flag', den Paketnamen und die
+Paketbeschreibung. Mit zusätzlichen Trennzeichen und dezimalen Angaben
+vor einem Platzhalter legen Sie die Gestaltung der Ausgabe und die
+jeweilige Spaltenbreite fest.
 
 Mit der Angabe `%c%a | %15p` erzeugen Sie drei Spalten -- den
 Paketstatus, die Aktion des Pakets und den Paketname -- wobei zwischen
@@ -49,6 +49,7 @@ umfaßt. Die dritte Spalte hat eine feste Breite von 15 Zeichen, während
 die anderen Spalten variabel bleiben. 
 
 // Stichworte für den Index
+(((aptitude, Ausgabespalten festlegen)))
 (((aptitude, search --display-format)))
 (((aptitude, search -F)))
 Im Aufruf von `aptitude search` geben Sie die Platzhalterfolge als Wert
@@ -69,6 +70,7 @@ v  | tzdata-jessie:i386
 // Stichworte für den Index
 (((aptitude, search -O)))
 (((aptitude, search --sort)))
+(((aptitude, Sortierung der Ausgabe festlegen)))
 Möchten Sie die Ausgabe darüberhinaus noch sortieren, hilft Ihnen der
 Schalter `-O` (Langform `--sort`) weiter. Die Sortierung der Ausgabe
 erlaubt bspw. die Werte `installsize` (Installationsgröße), `name`
@@ -81,7 +83,7 @@ Nachfolgend sehen Sie wiederum eine dreispaltige Ausgabe, die hier aus
 der Größe nach der Installation (Platzbedarf auf dem Speichermedium),
 dem Paketnamen sowie dem Namen und der EMailadresse des Paketmaintainers
 besteht. Zusätzlich ist die Ausgabe aufsteigend nach der Paketgröße
-sortiert. Die Recherche umfasst dabei alle Pakete, die im Namen die
+sortiert. Recherchiert wird dabei nach allen Paketen, die im Namen die
 Zeichenkette `debtags` beinhalten.
 
 .Suche nach `debtags`-Paketen mit spezifischer Formatierung der Ausgabe und Sortierung
@@ -95,6 +97,7 @@ $
 ----
 
 // Stichworte für den Index
+(((aptitude, Breite der Ausgabe festlegen)))
 (((aptitude, search -w)))
 (((aptitude, search --width)))
 Ohne weitere Angaben benutzt `aptitude` zur Ausgabe die gesamte Breite
