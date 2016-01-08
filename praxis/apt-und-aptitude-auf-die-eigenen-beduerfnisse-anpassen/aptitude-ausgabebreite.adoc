@@ -1,5 +1,4 @@
-// Datei:
-./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-ausgabebreite.adoc
+// Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-ausgabebreite.adoc
 
 // Baustelle: Rohtext
 
@@ -27,5 +26,4 @@ p   python3-debt - Vergleicht »hardware:
 $
 ----
 
-// Datei (Ende):
-./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-ausgabebreite.adoc
+// Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-ausgabebreite.adoc

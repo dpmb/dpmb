@@ -1,4 +1,4 @@
-// Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-formatstrings.adoc
+// Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-ausgabe-sortieren.adoc
 
 // Baustelle: Rohtext
 
@@ -34,4 +34,4 @@ $ aptitude search -F "%I %5p,%m" --sort installsize debtags
 $
 ----
 
-// Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-formatstrings.adoc
+// Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-ausgabe-sortieren.adoc
