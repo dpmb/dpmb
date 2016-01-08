@@ -26,4 +26,8 @@ p   python3-debt - Vergleicht »hardware:
 $
 ----
 
+Dieser Wert korrespondiert mit der Einstellung
+`Aptitude::CmdLine::Package-Display-Width` in der Konfigurationsdatei zu
+`aptitude`.
+
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-ausgabebreite.adoc
