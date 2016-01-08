@@ -6,6 +6,12 @@
 
 === `aptitude`-Gruppierung ===
 
+==== Kommandozeile ====
+
+* `--group-by`
+
+==== Textoberfläche ====
+
 ToDo:
 
 * Anordnung der Spalten in der Text-Modus-Oberfläche
