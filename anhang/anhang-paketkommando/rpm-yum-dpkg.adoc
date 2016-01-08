@@ -101,7 +101,11 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 (((yum, list all)))
 (((yum, list available)))
 Mit den nachfolgenden Aufrufen listen Sie die vorhandenen Softwarepakete
-über die Kommandozeile auf.
+über die Kommandozeile auf. Für `dpkg`, APT und `aptitude` besprechen
+wir das detaillierter unter ``Liste der installierten Pakete anzeigen
+und deuten'' in <<liste-der-installierten-pakete-anzeigen-und-deuten>>
+und unter Aktualisierbare Pakete anzeigen'' in
+<<aktualisierbare-pakete-anzeigen>>.
 
 .Softwarepakete auflisten
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketeauflisten"]
@@ -114,6 +118,8 @@ auch die (noch) nicht installierten Pakete
 | `dpkg`     | `dpkg -l` | alle installierten Pakete auflisten
 |  APT       | `apt-cache search` 'Paketname' |
 | `aptitude` | `aptitude search ~i`| alle installierten Pakete auflisten
+| `aptitude` | `aptitude versions` 'Paketname'| alle verfügbaren Pakete
+für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
 |====
 
 === Einzelpaket auflisten ===
