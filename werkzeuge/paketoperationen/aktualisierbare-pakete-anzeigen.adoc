@@ -66,43 +66,41 @@ $
 (((Pakete aktualisieren, verfügbare Versionen anzeigen)))
 Um alle verfügbaren Varianten eines Pakets für alle Veröffentlichungen
 anzuzeigen, nutzen Sie die `aptitude`-Option `versions`. Nachfolgende
-Ausgabe illustriert die Recherche nach dem Paket 'aptitude', welches
-hier ausschließlich aus _stable_ bezogen werden. Die erste Spalte zeigt
-den Paketstatus an, danach die Versionsnummer, die Veröffentlichung und
-als letztes die Priorität (siehe dazu <<veroeffentlichungen-mischen>>).
+Ausgabe illustriert die Recherche nach den Paketen, in denen die
+Zeichenkette 'tzdata' im Paketnamen enthalten ist. Hier werden zudem
+ausschließlich Pakete aus der Veröffentlichung _stable_ bezogen. Die
+Sortierung erfolgt paketweise, d.h. zunächst erhalten Sie eine Zeile mit
+dem Paketnamen und darunter zusätzliche Informationen zur verfügbaren
+Version. Die erste Spalte zeigt dabei den Paketstatus an, danach die
+Versionsnummer, die Veröffentlichung und als letztes die Priorität
+(siehe dazu <<veroeffentlichungen-mischen>>).
 
-.Die verfügbaren Versionen zum Paket 'aptitude' anzeigen
+.Die verfügbaren Versionen zu den Paketen 'tzdata' anzeigen
 ----
-$ aptitude versions 'aptitude'
-Paket aptitude:
-i   0.6.8.2-1                       stable                500 
+aptitude versions 'tzdata'
+Paket tzdata:
+p   2015f-0+deb8u1               stable  500 
+i   2015g-0+deb8u1               stable- 500 
 
-Paket aptitude-common:
-i A 0.6.8.2-1                       stable                500 
+Paket tzdata-java:
+p A 2015f-0+deb8u1               stable  500 
+i A 2015g-0+deb8u1               stable- 500
+$
+----
 
-Paket aptitude-dbg:
-p   0.6.8.2-1                       stable                500 
+Wünschen Sie nur eine kompakte Ausgabe zu einem konkreten Paket ohne
+Darstellung des Paketnamens, helfen Ihnen die beiden Schalter
+`--show-package-names` mit dem Wert `never` und `--group-by` mit dem
+Wert `none` weiter. Ersteres blendet den Paketnamen aus, während der
+zweite Schalter die Gruppierung in der Ausgabe deaktiviert.
+Ausführlicher gehen wir auf die Gruppierung in <<aptitude-gruppierung>>
+ein.
 
-Paket aptitude-doc-cs:
-p   0.6.8.2-1                       stable                500 
-
-Paket aptitude-doc-en:
-p   0.6.8.2-1                       stable                500 
-
-Paket aptitude-doc-es:
-p   0.6.8.2-1                       stable                500 
-
-Paket aptitude-doc-fi:
-p   0.6.8.2-1                       stable                500 
-
-Paket aptitude-doc-fr:
-p   0.6.8.2-1                       stable                500 
-
-Paket aptitude-doc-it:
-p   0.6.8.2-1                       stable                500 
-
-Paket aptitude-doc-ja:
-p   0.6.8.2-1                       stable                500
+.Kompakte Ausgabe ohne Paketname
+----
+$ aptitude versions 'tzdata-java' --show-package-names=never --group-by=none
+p A 2015f-0+deb8u1               stable  500
+i A 2015g-0+deb8u1               stable- 500
 $
 ----
 
