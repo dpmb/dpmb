@@ -130,10 +130,10 @@ auch die (noch) nicht installierten Pakete
 (((rpm, -qa)))
 (((rpm, -qp)))
 Mit den nachfolgenden Aufrufen listen Sie die Informationen bzw. den
-Installationsstatus zu einem einzelnen Softwarepaket auf. Für `dpkg`
-gehen wir darauf genauer in ``Liste der installierten Pakete anzeigen un
-deuten'' unter <<liste-der-installierten-pakete-anzeigen-und-deuten>>
-ein.
+Installationsstatus zu einem einzelnen Softwarepaket auf. Für `dpkg` und
+`aptitude`gehen wir darauf genauer in ``Liste der installierten Pakete
+anzeigen und deuten'' unter
+<<liste-der-installierten-pakete-anzeigen-und-deuten>> ein.
 
 .Einzelnes Softwarepaket auflisten
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketinfo"]
@@ -141,9 +141,9 @@ ein.
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -q` 'Paketname' | Ausgabe des Installationsstatus für 'Paketname'
 |            | `rpm -qp` 'Paketname' | ?
-| `dpkg`     | `dpkg -l` Paketname' | Ausgabe des Installationsstatus
-|            | `dpkg -s` Paketname' | Ausgabe der Paketinformationen
-| `aptitude` | `aptitude show` Paketname'|
+| `dpkg`     | `dpkg -l` 'Paketname' | Ausgabe des Installationsstatus
+|            | `dpkg -s` 'Paketname' | Ausgabe der Paketinformationen
+| `aptitude` | `aptitude show` 'Paketname'|
 |====
 
 === Abhängigkeiten anzeigen ===
