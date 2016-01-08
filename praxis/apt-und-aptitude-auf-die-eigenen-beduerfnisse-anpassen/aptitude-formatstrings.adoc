@@ -5,6 +5,9 @@
 [[aptitude-format-strings]]
 === `aptitude` Format Strings ===
 
+// Stichworte für den Index
+(((aptitude, Format Strings)))
+(((aptitude, die Ausgabe anpassen)))
 'Format Strings' sind eine spezifische Schreibweise einer Ausgabe anhand
 von Platzhaltern. Sie ähneln der Art und Weise, wie sie in der
 `printf()`-Funktion in der Programmiersprache C respektive der
@@ -32,16 +35,24 @@ spaltenweise zu einem Paket darstellt.
 |====
 
 Die Voreinstellung von `aptitude` beinhaltet die Platzhalter `%c`, `%a`,
-`%M`, `%p%` und `d`. Es umfasst somit den Paketstatus, die Aktion, das 'Automatic Flag', den Paketnamen und die Paketbeschreibung. Mit zusätzlichen Trennzeichen und dezimalen Angaben vor einem Platzhalter legen Sie die Gestaltung der Ausgabe und die jeweilige Spaltenbreite fest. 
+`%M`, `%p%` und `d`. Es umfasst somit den Paketstatus, die Aktion, das
+'Automatic Flag', den Paketnamen und die Paketbeschreibung. Mit
+zusätzlichen Trennzeichen und dezimalen Angaben vor einem Platzhalter
+legen Sie die Gestaltung der Ausgabe und die jeweilige Spaltenbreite
+fest.
 
 Mit der Angabe `%c%a | %15p` erzeugen Sie drei Spalten -- den
 Paketstatus, die Aktion des Pakets und den Paketname -- wobei zwischen
 der zweiten und dritten Spalte ein senkrechter Trennstrich eingefügt
 wird, der davor und danach noch ein Leerzeichen zur besseren Lesbarkeit
 umfaßt. Die dritte Spalte hat eine feste Breite von 15 Zeichen, während
-die anderen Spalten variabel bleiben. Im Aufruf von `aptitude search`
-geben Sie die Platzhalterfolge als Wert zur zusätzlichen Option `-F` wie
-folgt an:
+die anderen Spalten variabel bleiben. 
+
+// Stichworte für den Index
+(((aptitude, search --display-format)))
+(((aptitude, search -F)))
+Im Aufruf von `aptitude search` geben Sie die Platzhalterfolge als Wert
+zur zusätzlichen Option `-F` (Langform `--display-format`) wie folgt an:
 
 .Individuelle Gestaltung des Ausgabeformats von `aptitude` bei der Suche
 nach dem Paket 'tzdata'
@@ -56,11 +67,12 @@ v  | tzdata-jessie:i386
 ----
 
 Möchten Sie die Ausgabe darüberhinaus noch sortieren, hilft Ihnen der
-Schalter `--sort` weiter. Die Sortierung der Ausgabe erlaubt bspw. die
-Werte `installsize` (Installationsgröße), `name` (Paketname) und
-`version` (Versionsnummer). Die Basiseinstellung ist `name,version`,
-wobei `aptitude` zuerst eine Sortierung anhand des Paketnamens und
-danach noch anhand der Paketversion durchführt.
+Schalter `-O` (Langform `--sort`) weiter. Die Sortierung der Ausgabe
+erlaubt bspw. die Werte `installsize` (Installationsgröße), `name`
+(Paketname) und `version` (Versionsnummer). Die Basiseinstellung ist
+`name,version`, wobei `aptitude` zuerst eine Sortierung anhand des
+Paketnamens und danach noch anhand der Paketversion durchführt. Somit
+erscheinen ältere Pakete in der Auflistung zuoberst.
 
 Nachfolgend sehen Sie wiederum eine dreispaltige Ausgabe, die hier aus
 der Größe nach der Installation (Platzbedarf auf dem Speichermedium),
