@@ -7,16 +7,16 @@
 
 'Format Strings' sind eine spezifische Schreibweise einer Ausgabe anhand
 von Platzhaltern. Sie ähneln der Art und Weise, wie sie in der
-`printf()`-Funktion in der Programmiersprache C respektiver der
+`printf()`-Funktion in der Programmiersprache C respektive der
 `print()`-Funktion in Python üblich sind. Eine ausführliche Beschreibung
 der Platzhalter finden Sie im `aptitude`-Handbuch unter 'Customizing the
 package list' <<aptitude-dokumentation-package-list>>.
 
 <<tab.aptitude-format-strings>> gibt Ihnen eine Übersicht zu den
-verfügbaren Format Strings. Diese Format Strings helfen Ihnen in
+verfügbaren Format Strings. Diese Platzhalter helfen Ihnen in
 Kombination mit der Suche nach Paketen und bei der Gestaltung der
-Ausgabe. Sie bestimmen damit, welche Informationen spaltenweise zu einem
-Paket sichtbar sind.
+Ausgabe. Sie bestimmen damit, welche Informationen `aptitude`
+spaltenweise zu einem Paket darstellt.
 
 .Format Strings in `aptitude`
 [frame="topbot",options="header",cols="1,9",id="tab.aptitude-format-strings"]
@@ -31,9 +31,30 @@ Paket sichtbar sind.
 | `%I` | Installationsgröße ('installed size')
 |====
 
-Die Voreinstellung von `aptitude` umfasst den Paketstatus, die Aktion,
-das 'Automatic Flag', den Paketnamen und die Paketbeschreibung. Bei der
-eigenen Auflistung bestehend aus der Installationsgröße und dem
+Die Voreinstellung von `aptitude` ist die Platzhalterfolge `%c%a%M%p%d`
+und umfasst somit den Paketstatus, die Aktion, das 'Automatic Flag', den
+Paketnamen und die Paketbeschreibung. Mit zusätzlichen Trennzeichen und
+dezimalen Angaben vor einem Platzhalter legen Sie die Gestaltung der
+Ausgabe und die jeweilige Spaltenbreite fest. Mit der Angabe `%c%a |
+15%p` erzeugen Sie drei Spalten -- den Paketstatus, die Aktion des
+Pakets und den Paketname -- wobei zwischen der zweiten und dritten
+Spalte ein senkrechter Trennstrich eingefügt wird, der links davor und
+danach noch ein Leerzeichen zur besseren Lesbarkeit umfaßt. Die dritte
+Spalte hat eine Breite von 15 Zeichen. Im Aufruf von `aptitude` geben
+Sie die Platzhalterfolge als zusätzlich Option `-F` mit an:
+
+.Individuelle Gestaltung des Ausgabeformats von `aptitude`
+----
+aptitude search -F "%c%a | %15p" tzdata
+i  | tzdata
+v  | tzdata:i386
+i  | tzdata-java
+v  | tzdata-java:i386
+v  | tzdata-jessie
+v  | tzdata-jessie:i386
+----
+
+Bei der eigenen Auflistung bestehend aus der Installationsgröße und dem
 Paketnamen helfen Ihnen die beiden Schalter `-F` und `--sort` weiter.
 Während ersteres den Format String einleitet, kümmert sich der zweite
 Schalter um die Sortierung der Ausgabe. 
