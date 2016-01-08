@@ -25,13 +25,16 @@ spaltenweise zu einem Paket darstellt.
 [frame="topbot",options="header",cols="1,9",id="tab.aptitude-format-strings"]
 |====
 | Platzhalter | Bedeutung
+| `%a` | Flag für die Aktion des Pakets ('Action Flag')
 | `%c` | aktueller Paketstatus ('Current State Flag')
-| `%a` | Aktion des Pakets ('Action Flag')
+| `%d` | die kurze Paketbeschreibung ('description')
+| `%E` | Name des Source-Pakets
+| `%I` | die (geschätzte) Installationsgröße ('installed size')
+| `%m` | der Name des Paketmaintainers ('maintainer')
 | `%M` | gesetzt, falls das Paket automatisch installiert wurde ('Automatic Flag')
 | `%p` | Paketname ('package name')
-| `%d` | Paketbeschreibung ('description')
-| `%m` | Paketmaintainer ('maintainer')
-| `%I` | Installationsgröße ('installed size')
+| `%P` | Paketpriorität ('priority')
+| `%s` | Bereich, in den das Paket eingeordnet ist ('section')
 |====
 
 Die Voreinstellung von `aptitude` beinhaltet die Platzhalter `%c`, `%a`,
@@ -66,7 +69,5 @@ v  | tzdata-java:i386
 v  | tzdata-jessie
 v  | tzdata-jessie:i386
 ----
-
-* `--group-by`
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-formatstrings.adoc
