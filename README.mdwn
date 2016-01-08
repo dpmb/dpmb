@@ -32,6 +32,9 @@ starts. The downloadable
 [ePub](https://www.gitbook.com/download/pdf/book/dpmb/dpmb) variants
 at Gitbook suffer from the same symptoms, too.
 
+It has been written at
+[many different locations](http://www.dpmb.org/karte/).
+
 ## German / Deutsch
 
 Dies ist der frei verfügbare Quelltext zum
@@ -45,6 +48,9 @@ und kann mit [AsciiDoc](http://asciidoc.org/) oder
 [DocBook to LaTeX Publishing (dblatex)](http://dblatex.sourceforge.net/)
 und [Calibre](http://calibre-ebook.com/)s `ebook-convert` nach
 z.B. HTML, EPub, PDF und Mobipocket gerendert werden.
+
+Es wurde an [vielen verschiedenen Orten](http://www.dpmb.org/karte/)
+geschrieben.
 
 ### Lizenz
 
