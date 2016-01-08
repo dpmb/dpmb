@@ -1,6 +1,6 @@
 // Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-gruppierung.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[aptitude-gruppierung]]
 
@@ -8,7 +8,7 @@
 
 ==== Kommandozeile ====
 
-`aptitude` kennt dazu den Schalter `--group-by`. Eine kurze Version des
+Zur Gruppierung kennt `aptitude` den Schalter `--group-by`. Eine kurze Version des
 Schalters existiert u.E. bislang nicht. Als Wert sind die folgenden
 Möglichkeiten zulässig:
 
@@ -30,7 +30,7 @@ Gruppierung nach dem Paketnamen
 Gruppierung nach dem Namen des Sourcepakets
 
 `source-version`::
-Gruppierung nach der Version des Sourcepakets
+Gruppierung nach dem Namen und der Version des Sourcepakets
 
 Diese Werte korrespondieren mit der Einstellung
 `Aptitude::CmdLine::Versions-Group-By` in der Konfigurationsdatei zu
