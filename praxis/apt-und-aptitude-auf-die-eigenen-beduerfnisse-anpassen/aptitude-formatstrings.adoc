@@ -31,19 +31,20 @@ spaltenweise zu einem Paket darstellt.
 | `%I` | Installationsgröße ('installed size')
 |====
 
-Die Voreinstellung von `aptitude` ist die Platzhalterfolge `%c%a%M%p%d`
-und umfasst somit den Paketstatus, die Aktion, das 'Automatic Flag', den
-Paketnamen und die Paketbeschreibung. Mit zusätzlichen Trennzeichen und
-dezimalen Angaben vor einem Platzhalter legen Sie die Gestaltung der
-Ausgabe und die jeweilige Spaltenbreite fest. Mit der Angabe `%c%a |
-15%p` erzeugen Sie drei Spalten -- den Paketstatus, die Aktion des
-Pakets und den Paketname -- wobei zwischen der zweiten und dritten
-Spalte ein senkrechter Trennstrich eingefügt wird, der links davor und
-danach noch ein Leerzeichen zur besseren Lesbarkeit umfaßt. Die dritte
-Spalte hat eine Breite von 15 Zeichen. Im Aufruf von `aptitude` geben
-Sie die Platzhalterfolge als zusätzlich Option `-F` mit an:
+Die Voreinstellung von `aptitude` beinhaltet die Platzhalter `%c`, `%a`,
+`%M`, `%p%` und `d`. Es umfasst somit den Paketstatus, die Aktion, das 'Automatic Flag', den Paketnamen und die Paketbeschreibung. Mit zusätzlichen Trennzeichen und dezimalen Angaben vor einem Platzhalter legen Sie die Gestaltung der Ausgabe und die jeweilige Spaltenbreite fest. 
 
-.Individuelle Gestaltung des Ausgabeformats von `aptitude`
+Mit der Angabe `%c%a | %15p` erzeugen Sie drei Spalten -- den
+Paketstatus, die Aktion des Pakets und den Paketname -- wobei zwischen
+der zweiten und dritten Spalte ein senkrechter Trennstrich eingefügt
+wird, der davor und danach noch ein Leerzeichen zur besseren Lesbarkeit
+umfaßt. Die dritte Spalte hat eine feste Breite von 15 Zeichen, während
+die anderen Spalten variabel bleiben. Im Aufruf von `aptitude search`
+geben Sie die Platzhalterfolge als Wert zur zusätzlichen Option `-F` wie
+folgt an:
+
+.Individuelle Gestaltung des Ausgabeformats von `aptitude` bei der Suche
+nach dem Paket 'tzdata'
 ----
 aptitude search -F "%c%a | %15p" tzdata
 i  | tzdata
@@ -54,21 +55,28 @@ v  | tzdata-jessie
 v  | tzdata-jessie:i386
 ----
 
-Bei der eigenen Auflistung bestehend aus der Installationsgröße und dem
-Paketnamen helfen Ihnen die beiden Schalter `-F` und `--sort` weiter.
-Während ersteres den Format String einleitet, kümmert sich der zweite
-Schalter um die Sortierung der Ausgabe. 
+Möchten Sie die Ausgabe darüberhinaus noch sortieren, hilft Ihnen der
+Schalter `--sort` weiter. Die Sortierung der Ausgabe erlaubt bspw. die
+Werte `installsize` (Installationsgröße), `name` (Paketname) und
+`version` (Versionsnummer). Die Basiseinstellung ist `name,version`,
+wobei `aptitude` zuerst eine Sortierung anhand des Paketnamens und
+danach noch anhand der Paketversion durchführt.
 
-Nachfolgend sehen Sie eine dreispaltige Ausgabe, die aus der
-Installationsgröße nach der Installation, dem Paketnamen und dem
-Paketmaintainer besteht. Die Recherche umfasst alle Pakete, die im Namen
-die Zeichenkette `debtags` beinhalten.
+Nachfolgend sehen Sie wiederum eine dreispaltige Ausgabe, die hier aus
+der Größe nach der Installation (Platzbedarf auf dem Speichermedium),
+dem Paketnamen sowie dem Namen und der EMailadresse des Paketmaintainers
+besteht. Zusätzlich ist die Ausgabe aufsteigend nach der Paketgröße
+sortiert. Die Recherche umfasst dabei alle Pakete, die im Namen die
+Zeichenkette `debtags` beinhalten.
 
-.Suche nach `debtags`-Paketen mit spezifischer Formatierung der Ausgabe
+.Suche nach `debtags`-Paketen mit spezifischer Formatierung der Ausgabe und Sortierung
 ----
-$ aptitude search -F "%I,%15p,%m" debtags
-938 kB  ,debtags           ,Enrico Zini <enrico@debian.org>
-109 kB  ,python-debtagshw  ,Enrico Zini <enrico@debian.org>
+$ aptitude search -F "%I %5p,%m" --sort installsize debtags
+79,9 kB  python-debtagshw      ,Enrico Zini <enrico@debian.org>
+79,9 kB  python3-debtagshw     ,Enrico Zini <enrico@debian.org>
+826 kB   debtags:i386          ,Enrico Zini <enrico@debian.org>
+910 kB   debtags               ,Enrico Zini <enrico@debian.org>
 $
 ----
+
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-formatstrings.adoc
