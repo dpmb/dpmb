@@ -11,11 +11,15 @@
 `dpkg` ist das Debian-Programm für grundlegende Paketoperationen und
 bildet in Bezug auf Funktionsumfang und Handhabung das Äquivalent zu
 `rpm` auf RedHat-basierten Linuxsystemen. Es kürzt den Namen 'Debian
-GNU/Linux package manager' ab. 
+GNU/Linux package manager' ab. Im Anhang unter ``Kommandos zur
+Paketverwaltung im Vergleich`` (siehe
+<<kommandos-zur-paketverwaltung-im-vergleich>>) stellen wir die
+verschiedenen Schalter zu den beiden Kommandos `dpkg` und `rpm`
+gegenüber.
 
-Das Programm agiert nur mit Paketen, die schon auf ihrem Linuxsystem
-lokal vorliegen -- entweder als `deb`-Datei in einem Verzeichnis oder
-als bereits installiertes Paket. `dpkg` kann keine Pakete von einem
+`dpkg` agiert nur mit Paketen, die schon auf ihrem Linuxsystem lokal
+vorliegen -- entweder als `deb`-Datei in einem Verzeichnis oder als
+bereits installiertes Paket. `dpkg` kann keine Pakete von einem
 Paketmirror beziehen.
 
 Sie erreichen `dpkg` ausschließlich über die Kommandozeile und starten
@@ -32,13 +36,13 @@ entnehmen Sie bitte der Manpage zum Programm]:
 (((dpkg, --configure)))
 * Paketliste ausgeben (<<liste-der-installierten-pakete-anzeigen-und-deuten>>) (`dpkg -l`)
 
-* Paketstatus erfragen (<<paketstatus-erfragen>>) mit `dpkg -s Paketname`
+* Paketstatus erfragen (<<paketstatus-erfragen>>) mit `dpkg -s` 'Paketname'
 
-* Inhalt eines installierten Pakets anzeigen (<<paketinhalte-anzeigen-apt-file>>) mit `dpkg -L Paketname`
+* Inhalt eines installierten Pakets anzeigen (<<paketinhalte-anzeigen-apt-file>>) mit `dpkg -L` 'Paketname'
 
-* Inhalt eines nicht installierten Pakets anzeigen (<<paketinhalte-anzeigen-apt-file>>) mit `dpkg -c Paketname`
+* Inhalt eines nicht installierten Pakets anzeigen (<<paketinhalte-anzeigen-apt-file>>) mit `dpkg -c` 'Paketname'
 
-* Paket zu Datei finden (<<paket-zu-datei-finden>>) mit `dpkg -S Paketname` und 
+* Paket zu Datei finden (<<paket-zu-datei-finden>>) mit `dpkg -S` 'Paketname' und 
 
 * Pakete konfigurieren (<<pakete-konfigurieren>>) (Option `--configure`)
 
