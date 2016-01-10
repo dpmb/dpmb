@@ -9,6 +9,8 @@
 // Stichworte für den Index
 (((APT)))
 (((aptitude)))
+(((Dokumentation, offline)))
+(((Dokumentation, online)))
 (((dpkg)))
 (((synaptic)))
 Neben bereits oben besprochenen Dokumenten existieren viele thematisch

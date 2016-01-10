@@ -8,6 +8,8 @@
 
 // Stichworte für den Index
 (((Debian Administrator's Handbook)))
+(((Dokumentation, offline)))
+(((Dokumentation, online)))
 Seit 2003 setzen Raphaël Hertzog und Roland Mas mit ihrem Kompendium ``The 
 Debian Administrator's Handbook'' Maßstäbe
 <<Hertzog-Mas-Debian-Administrators-Handbook>> (französischer
