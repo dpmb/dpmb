@@ -10,6 +10,7 @@
 (((APT)))
 (((Debianpaket, apt-dpkg-ref)))
 (((dpkg)))
+(((Dokumentation, offline)))
 Matthew Danish hat zu den beiden Programmen `dpkg` und APT eine
 Referenzliste zusammengestellt. Diese ist als offizielles Debianpaket
 mit dem Namen 'apt-dpkg-ref' <<Debian-Paket-apt-dpkg-ref>> verfügbar.

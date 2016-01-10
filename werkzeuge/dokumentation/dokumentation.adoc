@@ -14,6 +14,7 @@ verstreut.
 // Stichworte für den Index
 (((Dokumentation, Manpages)))
 (((Dokumentation, Infopages)))
+(((Dokumentation, offline)))
 Um flink ein Kommando oder eine Option nachzuschlagen, geht daher der
 erste Griff zu den `man`- und `info`-pages der Werkzeuge `dpkg`, APT
 und `aptitude`. Diese Hilfeseiten sind zwar meist nur eine Kurzfassung
