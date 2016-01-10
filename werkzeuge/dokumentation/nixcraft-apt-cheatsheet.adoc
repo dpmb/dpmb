@@ -9,6 +9,7 @@
 // Stichworte für den Index
 (((Dokumentation, apt-get)))
 (((Dokumentation, dpkg)))
+(((Dokumentation, online)))
 Im Nixcraft-Blog <<nixcraft-blog>> finden Sie eine Übersicht, welches
 die beiden Programme `dpkg` und `apt-get` mit vielen Erklärungen und
 aussagekräftigen  Beispielen gegenüberstellt. Zu beiden Programmen gibt

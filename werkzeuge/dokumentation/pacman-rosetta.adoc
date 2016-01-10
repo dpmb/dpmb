@@ -8,6 +8,7 @@
 
 // Stichworte für den Index
 (((apt-get)))
+(((Dokumentation, online)))
 (((dpkg)))
 (((emerge)))
 (((Pacman)))
@@ -19,7 +20,10 @@ Funktionen populärer Paketverwaltungen beinhaltet die Pacman Rosetta
 <<Pacman-Rosetta>> aus dem Wiki zu Arch Linux. Anhand von Aufrufen aus
 der Praxis stellt es Pacman (Arch Linux), YUM (RedHat/Fedora), `dpkg`
 und `apt-get` (Debian, Ubuntu) sowie `rug` (älteres Suse), Zypper
-(openSUSE) und `emerge` (Gentoo Linux) gegenüber.
+(openSUSE) und `emerge` (Gentoo Linux) gegenüber. Eine ähnliche
+Übersicht mit den aktuellen Parametern finden Sie auch im Anhang unter
+``Kommandos zur  Paketverwaltung im Vergleich''
+<<kommandos-zur-paketverwaltung-im-vergleich>>.
 
 .Die Pacman Rosetta (Ausschnitt)
 image::werkzeuge/dokumentation/pacman-rosetta.png[id="fig.pacman-rosetta", width="50%"]
