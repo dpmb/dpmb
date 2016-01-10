@@ -8,6 +8,7 @@
 
 // Stichworte für den Index
 (((Advanced Packaging Tool)))
+(((apt)))
 (((Debianpaket, apt)))
 APT ist das Debian-Programm für etwas komplexere Paketoperationen und
 steht als Abkürzung für 'Advanced Packaging Tool'. Sie finden es im
@@ -49,19 +50,20 @@ Programme verfügt über umfangreiche Unterkommandos, die Sie wiederum mit
 diversen Optionen und Schaltern kombinieren können. Die gebräuchlichsten
 Aktionen für den Alltag sind:
 
-* Paketstatus erfragen (<<paketstatus-erfragen>>) mit `apt-cache show
-Paketname`
-* Inhalt eines Pakets anzeigen (<<paketinhalte-anzeigen-apt-file>>) mit `apt-file show Paketname`
+* Paketstatus erfragen (<<paketstatus-erfragen>>) mit `apt-cache show`
+'Paketname'
+* Inhalt eines Pakets anzeigen (<<paketinhalte-anzeigen-apt-file>>) mit
+`apt-file show` 'Paketname'
 * Paketabhängigkeiten anzeigen (<<paketabhaengigkeiten-anzeigen>>) mit
-`apt-cache depends Paketname`
+`apt-cache depends` 'Paketname'
 * Paket über den Namen oder die Beschreibung finden
-(<<pakete-ueber-den-namen-finden>>) mit `apt-cache search
-Paketname`
-* Paket installieren (<<pakete-installieren>>) mit `apt-get install
-Paketname`
-* Installierte Pakete löschen (<<pakete-deinstallieren>> mit `apt-get remove
-Paketname`
-* Paketliste aktualisieren (<<liste-der-verfuegbaren-pakete-aktualisieren>>) mit `apt-get update`
+(<<pakete-ueber-den-namen-finden>>) mit `apt-cache search` 'Paketname'
+* Paket installieren (<<pakete-installieren>>) mit `apt-get install` 'Paketname'
+* Installierte Pakete löschen (<<pakete-deinstallieren>> mit `apt-get
+remove` 'Paketname'
+* Paketliste aktualisieren (<<liste-der-verfuegbaren-pakete-aktualisieren>>) mit `apt-get` 'update'
+* neuere Versionen für die Pakete einspielen (<<pakete-aktualisieren>> mit `apt-get upgrade`) 
+* die gesamte Distribution aktualisieren (<<distribution-aktualisieren>>) mit `apt-get dist-upgrade`
 
 Nachfolgend geben wir Ihnen eine Übersicht zu allen Unterkommandos, die
 die einzelnen APT-Werkzeuge bereithalten. Neben dem jeweiligen
