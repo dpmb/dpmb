@@ -228,6 +228,7 @@ detailliert ein.
 
 // Stichworte für den Index
 (((APT2)))
+(((APT-Nachfolger, APT2)))
 Die *Weiterentwicklung von APT* geht stetig voran. Seit mehreren Jahren
 gibt es Bestrebungen, APT grundlegend zu erneuern bzw. dessen verteilte
 Funktionalität unter einer einzigen Benutzeroberfläche zusammenzufassen.
