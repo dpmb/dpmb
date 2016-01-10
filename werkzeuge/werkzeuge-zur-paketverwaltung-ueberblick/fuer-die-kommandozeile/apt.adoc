@@ -62,7 +62,7 @@ Aktionen für den Alltag sind:
 * Installierte Pakete löschen (<<pakete-deinstallieren>> mit `apt-get
 remove` 'Paketname'
 * Paketliste aktualisieren (<<liste-der-verfuegbaren-pakete-aktualisieren>>) mit `apt-get` 'update'
-* neuere Versionen für die Pakete einspielen (<<pakete-aktualisieren>> mit `apt-get upgrade`) 
+* neuere Versionen für die Pakete einspielen (<<pakete-aktualisieren>>) mit `apt-get upgrade`)
 * die gesamte Distribution aktualisieren (<<distribution-aktualisieren>>) mit `apt-get dist-upgrade`
 
 Nachfolgend geben wir Ihnen eine Übersicht zu allen Unterkommandos, die
@@ -212,8 +212,8 @@ Pakete auf eine neue Version aktualisieren (siehe <<pakete-aktualisieren>>)
 (((apt-key, update)))
 Für `apt-key` sind die Unterkommandos `add`, `adv`, `del`, `export`,
 `exportall`, `finger`, `list`, `netupdate` und `update` zulässig. Diese
-besprechen wir ausführlich unter Paketquelle auf Echtheit überprüfen in
-<<paketquelle-auf-echtheit-ueberpruefen>>.
+besprechen wir ausführlich unter ``Paketquelle auf Echtheit überprüfen''
+in <<paketquelle-auf-echtheit-ueberpruefen>>.
 
 // Stichworte für den Index
 (((apt-mark, auto)))
@@ -221,8 +221,8 @@ besprechen wir ausführlich unter Paketquelle auf Echtheit überprüfen in
 (((apt-mark, showauto)))
 (((apt-mark, showmanual)))
 Die Unterkommandos von `apt-mark` lauten `auto`, `manual`, `showauto`
-und `showmanual`. Dazu gehen wir unter <<paketstatus-erfragen>>
-detailliert ein.
+und `showmanual`. Dazu gehen wir unter ``Paketstatus erfragen'' in
+<<paketstatus-erfragen>> detailliert ein.
 
 // Absatz zusammengefasst -- ist ein Gedanke, der zusammengehört
 
