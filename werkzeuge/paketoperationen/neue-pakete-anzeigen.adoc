@@ -7,12 +7,12 @@
 === Neue Pakete anzeigen ===
 
 Zu den neuen Paketen zählen die Pakete, die derzeit nicht installiert
-sind bzw. die noch nie installiert waren. Wurde ein Paket gelöscht, aber
-die Konfigurationsdatei blieb erhalten, gilt das entsprechende Paket
-nicht mehr als neu. 
+sind bzw. die noch nie installiert waren. Wurde ein Paket
+deinstalliertt, aber die Konfigurationsdatei blieb erhalten, gilt das
+entsprechende Paket hingegen nicht mehr als neu.
 
 // Stichworte für den Index
-(((aptitude, search ~N])))
+(((aptitude, search ~N)))
 (((aptitude, search ?new)))
 (((Pakete, neue Pakete anzeigen)))
 `aptitude` verfügt mit `~N` (Langform `?new`) über ein Suchmuster, um
