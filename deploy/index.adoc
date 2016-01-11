@@ -33,9 +33,15 @@ Attribution - Share Alike 4.0 International License].
 
 == Source Code
 
-image::https://travis-ci.org/dpmb/dpmb.svg?branch=master["Build Status",link="https://travis-ci.org/dpmb/dpmb",float="right"]
+image::https://travis-ci.org/dpmb/dpmb.svg?branch=master["Travis CI Build Status",link="https://travis-ci.org/dpmb/dpmb",float="right"]
+image::/webhook-state.png["CGI::Github::Webhook Status",float="right"]
 
 The https://github.com/dpmb/dpmb[book's source code] can be found on GitHub.
+
+Upon every push into our GitHub repository, this site and all book
+variants on it are automatically regenerated from the just pushed code
+via the
+https://metacpan.org/release/CGI-Github-Webhook[CGI::Github::Webhook Perl module].
 
 == Contact
 
