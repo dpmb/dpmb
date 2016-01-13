@@ -1,6 +1,7 @@
 // Datei: ./werkzeuge/paketquellen-und-werkzeuge/empfehlung-zum-ablauf-fuer-das-hinzufuegen-und-aendern-von-paketquellen.adoc
 
-// Baustelle: Fertig
+// Baustelle: Rohtext
+// Axel: Solala-Fertig
 
 [[empfehlung-zum-ablauf-fuer-das-hinzufuegen-und-aendern-von-paketquellen]]
 === Empfehlung zum Ablauf für das Hinzufügen und Ändern von Paketquellen ===
@@ -11,41 +12,58 @@
 (((aptitude, update)))
 (((/etc/apt/sources.list, Paketquelle nachtragen)))
 (((/etc/apt/sources.list.d/, Paketquelle nachtragen)))
-Wie bereits in <<paketquellen>> ausgeführt, ist die Datei
-`/etc/apt/sources.list` der Dreh- und Angelpunkt für alle verwendeten
-Paketquellen. Erfolgen Änderungen in dieser Datei, informieren Sie die
-Paketverwaltung danach noch über diese Modifikation. Infolgedessen
-synchronisiert sie lokal vorliegende Informationen über verfügbare
-Pakete und deren Abhängigkeiten. Wir raten Ihnen hierfür zu folgendem
-Ablauf:
+Wie bereits in <<paketquellen>> ausgeführt, sind die Datei
+`/etc/apt/sources.list` und das Verzeichnis
+`/etc/apt/sources.list.d/` Dreh- und Angelpunkte für alle
+verwendeten Paketquellen. Erfolgen Änderungen in dieser Datei, muss
+die Paketverwaltung anschließend noch über diese Modifikation
+informiert werden, damit sie den Paketcache anhand der aktualisierten
+Liste von Repositories.
 
-. Erstellen Sie zuerst eine Sicherheitskopie der Datei
-  `/etc/apt/sources.list`. Gegebenenfalls macht das auch Ihr Texteditor
-  automatisch.
+Dazu synchronisiert sie die lokal vorliegende Informationen über
+verfügbare Pakete und deren Abhängigkeiten (siehe <<paketcache>>) mit
+den konfigurierten Paketquellen (<<paketquellen>>).
 
-. Tragen Sie die neuen oder veränderten Paketquellen in der Datei
+Wir empfehlen Ihnen hierfür zu folgendem Ablauf:
+
+. Erstellen Sie zuerst eine Sicherheitskopie der entsprechenden Datei,
+  z.B.  `cp -pv /etc/apt/sources.list /etc/apt/sourceels.list.backup`.
+  Gegebenenfalls macht das auch Ihr Texteditor automatisch.
+
+. Tragen Sie die neuen oder veränderten Paketquellen
   `/etc/apt/sources.list` nach und speichern diese Datei ab. Wenn Sie
   nur neue Paketquellen hinzufügen wollen, können Sie alternativ auch
   eine neue Datei im Verzeichnis `/etc/apt/sources.list.d/` anlegen.
   Der Name dieser Datei muss dann auf `.list` enden.
 
-. Sofern dies keine offiziellen Debian-Repositories sind, verifizieren
+. Sofern dies _keine_ offiziellen Debian-Repositories sind, verifizieren
   Sie die Paketquelle, die Sie hinzugefügt oder geändert haben. Unter
   ``Paketquelle auf Echtheit überprüfen'' in
   <<paketquelle-auf-echtheit-ueberpruefen>> erfahren Sie, wie das zu
-  erfolgen hat.
+  erfolgen hat. Offizielle Paketquellen sollten alle mit den bereits
+  mitgelieferten Schlüsseln verifiziert werden können.
 
-. Aktualisieren Sie die lokalen Paketlisten mit dem Kommando `apt-get
-  update` oder `aptitude update`. Bitte beachten Sie dazu auch unsere
+. Aktualisieren Sie die lokalen Paketlisten mit einem der Kommandos `apt-get
+  update`, `aptitude update` oder ab Debian 8 'Jessie' auch mit `apt
+  update`. Bitte beachten Sie dazu auch unsere
   Anmerkungen unter ``Liste der verfügbaren Pakete aktualisieren'' in
   <<liste-der-verfuegbaren-pakete-aktualisieren>>. Handelt es sich um 
-  ein Distributionsupgrade, lesen Sie bitte dazu zusätzlich unter 
-  ``Distribution aktualisieren'' in <<distribution-aktualisieren>> nach.
+  ein Upgrade auf eine neue Version Ihrer Distribution, lesen Sie
+  bitte dazu zusätzlich unter ``Distribution aktualisieren'' in
+  <<distribution-aktualisieren>> nach.
 
 Mit dieser Vorgehensweise ist sichergestellt, dass die Paketverwaltung
-über ihre Veränderungen in der Liste der Paketquellen Bescheid weiß. Nun
+über Ihre Veränderungen in der Liste der Paketquellen beachtet hat. Nun
 können Sie die Pakete aus den geänderten oder neuen Paketquellen zu
-ihrem System hinzufügen.
+Ihrem System hinzufügen.
+
+[TIP]
+.Mit etwas Automatisierung den Ablauf vereinfachen
+====
+Möchten Sie diese Schrittfolge automatisieren, hilft Ihnen das
+Kommando `add-apt-repository` weiter. Dessen Möglichkeiten besprechen
+wir genauer in <<eintraege-mit-add-apt-repository-im-griff-behalten>>.
+====
 
 Im Bedarfsfall können Sie auch auf den Stand vor Ihren Veränderungen
 zurückgreifen. Sollte dies erforderlich sein, restaurieren Sie die im
@@ -54,11 +72,14 @@ neue Datei angelegt haben, löschen Sie diese -- und führen das
 Kommando `apt-get update` respektive `aptitude update` erneut aus.
 
 [TIP]
-.Mit etwas Automatisierung den Ablauf vereinfachen
+.Versionierung statt Backup
 ====
-Möchten Sie diese Schrittfolge automatisieren, hilft Ihnen das
-Kommando `add-apt-repository` weiter. Dessen Möglichkeiten besprechen
-wir genauer in <<eintraege-mit-add-apt-repository-im-griff-behalten>>.
+Anstatt manuell Backups zu machen, können Sie auch das Verzeichnis
+`/etc/apt/` mit einer Versionsverwaltung wie z.B. Git
+versionieren. Das Debian-Paket 'etckeeper' bietet dies sogar
+automatisiert bei jeder Paket-Installation, -Aktualisierung oder
+-Entfernung automatisiert an, versioniert dann aber gleich das ganze
+Verzeichnis `/etc/`.
 ====
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/empfehlung-zum-ablauf-fuer-das-hinzufuegen-und-aendern-von-paketquellen.adoc
