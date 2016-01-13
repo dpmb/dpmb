@@ -61,7 +61,7 @@ doctor.html: $(BASE).doctor.html
 	asciidoctor $(DOCTORDEFAULTOPTIONS) -o $@ $(BASE).adoc
 
 version.adoc: debian-paketmanagement.adoc *-docinfo.xml */*.adoc */*/*.adoc Makefile
-	echo ":revdate: "`date '+%F'` > version.adoc
+	echo ":revdate: "`date '+%F %T GMT%z'` > version.adoc
 	echo -n ":revnumber: " >> version.adoc; \
 	if [ -d .git ] && `which git >/dev/null`; then \
 	    git describe --tags --always >> version.adoc; \
