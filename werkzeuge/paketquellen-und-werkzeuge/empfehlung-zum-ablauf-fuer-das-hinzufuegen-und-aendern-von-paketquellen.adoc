@@ -72,7 +72,7 @@ neue Datei angelegt haben, löschen Sie diese -- und führen das
 Kommando `apt-get update` respektive `aptitude update` erneut aus.
 
 [TIP]
-.Versionierung statt Backup
+.Versionierung statt manuellem Backup
 ====
 Anstatt manuell Backups zu machen, können Sie auch das Verzeichnis
 `/etc/apt/` mit einer Versionsverwaltung wie z.B. Git
