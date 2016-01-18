@@ -8,6 +8,7 @@
 
 // Indexeinträge
 (((add-apt-repository)))
+(((apt, update)))
 (((apt-get, update)))
 (((aptitude, update)))
 (((/etc/apt/sources.list, Paketquelle nachtragen)))
@@ -77,11 +78,11 @@ löschen Sie diese -- und führen das Kommando `apt-get update` respektive
 .Versionierung statt manuellem Backup
 ====
 Anstatt manuell Backups zu machen, können Sie auch das Verzeichnis
-`/etc/apt/` mit einer Versionsverwaltung wie z.B. Git
-versionieren. Das Debian-Paket 'etckeeper' bietet dies sogar
-automatisiert bei jeder Paket-Installation, -Aktualisierung oder
--Entfernung automatisiert an, versioniert dann aber gleich das ganze
-Verzeichnis `/etc/`.
+`/etc/apt/` mit einer Versionsverwaltung wie z.B. Git versionieren. Das
+Debian-Paket 'etckeeper' <<Debian-Paket-etckeeper>> bietet dies sogar
+automatisiert bei jeder Paketinstallation, -Aktualisierung oder
+-Entfernung an, versioniert dann aber gleich das ganze Verzeichnis
+`/etc/`.
 ====
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/empfehlung-zum-ablauf-fuer-das-hinzufuegen-und-aendern-von-paketquellen.adoc
