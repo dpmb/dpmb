@@ -13,12 +13,11 @@
 (((/etc/apt/sources.list, Paketquelle nachtragen)))
 (((/etc/apt/sources.list.d/, Paketquelle nachtragen)))
 Wie bereits in <<paketquellen>> ausgeführt, sind die Datei
-`/etc/apt/sources.list` und das Verzeichnis
-`/etc/apt/sources.list.d/` Dreh- und Angelpunkte für alle
-verwendeten Paketquellen. Erfolgen Änderungen in dieser Datei, muss
-die Paketverwaltung anschließend noch über diese Modifikation
-informiert werden, damit sie den Paketcache anhand der aktualisierten
-Liste von Repositories.
+`/etc/apt/sources.list` und das Verzeichnis `/etc/apt/sources.list.d/`
+Dreh- und Angelpunkte für alle verwendeten Paketquellen. Erfolgen
+Änderungen darin, muss die Paketverwaltung anschließend noch über diese
+Modifikation informiert werden, damit sie den Paketcache anhand der
+aktualisierten Liste von Repositories auf den neuesten Stand bringt.
 
 Dazu synchronisiert sie die lokal vorliegende Informationen über
 verfügbare Pakete und deren Abhängigkeiten (siehe <<paketcache>>) mit
@@ -27,10 +26,10 @@ den konfigurierten Paketquellen (<<paketquellen>>).
 Wir empfehlen Ihnen hierfür zu folgendem Ablauf:
 
 . Erstellen Sie zuerst eine Sicherheitskopie der entsprechenden Datei,
-  z.B.  `cp -pv /etc/apt/sources.list /etc/apt/sourceels.list.backup`.
+  z.B. `cp -pv /etc/apt/sources.list /etc/apt/sourceels.list.backup`.
   Gegebenenfalls macht das auch Ihr Texteditor automatisch.
 
-. Tragen Sie die neuen oder veränderten Paketquellen
+. Tragen Sie die neuen oder veränderten Paketquellen in 
   `/etc/apt/sources.list` nach und speichern diese Datei ab. Wenn Sie
   nur neue Paketquellen hinzufügen wollen, können Sie alternativ auch
   eine neue Datei im Verzeichnis `/etc/apt/sources.list.d/` anlegen.
@@ -41,19 +40,20 @@ Wir empfehlen Ihnen hierfür zu folgendem Ablauf:
   ``Paketquelle auf Echtheit überprüfen'' in
   <<paketquelle-auf-echtheit-ueberpruefen>> erfahren Sie, wie das zu
   erfolgen hat. Offizielle Paketquellen sollten alle mit den bereits
-  mitgelieferten Schlüsseln verifiziert werden können.
+  mitgelieferten Schlüsseln ihrer Debian-Installation verifiziert werden
+  können.
 
-. Aktualisieren Sie die lokalen Paketlisten mit einem der Kommandos `apt-get
-  update`, `aptitude update` oder ab Debian 8 'Jessie' auch mit `apt
-  update`. Bitte beachten Sie dazu auch unsere
-  Anmerkungen unter ``Liste der verfügbaren Pakete aktualisieren'' in
-  <<liste-der-verfuegbaren-pakete-aktualisieren>>. Handelt es sich um 
-  ein Upgrade auf eine neue Version Ihrer Distribution, lesen Sie
-  bitte dazu zusätzlich unter ``Distribution aktualisieren'' in
+. Aktualisieren Sie die lokalen Paketlisten mit einem der Kommandos
+  `apt-get update`, `aptitude update` oder ab Debian 8 'Jessie' auch mit
+  `apt update`. Bitte beachten Sie dazu auch unsere Anmerkungen unter
+  ``Liste der verfügbaren Pakete aktualisieren'' in
+  <<liste-der-verfuegbaren-pakete-aktualisieren>>. Handelt es sich um ein
+  Upgrade auf eine neue Version Ihrer Distribution, lesen Sie bitte dazu
+  zusätzlich unter ``Distribution aktualisieren'' in
   <<distribution-aktualisieren>> nach.
 
 Mit dieser Vorgehensweise ist sichergestellt, dass die Paketverwaltung
-über Ihre Veränderungen in der Liste der Paketquellen beachtet hat. Nun
+Ihre Veränderungen in der Liste der Paketquellen beachtet hat. Nun
 können Sie die Pakete aus den geänderten oder neuen Paketquellen zu
 Ihrem System hinzufügen.
 
@@ -68,8 +68,10 @@ wir genauer in <<eintraege-mit-add-apt-repository-im-griff-behalten>>.
 Im Bedarfsfall können Sie auch auf den Stand vor Ihren Veränderungen
 zurückgreifen. Sollte dies erforderlich sein, restaurieren Sie die im
 ersten Schritt angelegte Sicherheitskopie oder -- falls Sie nur eine
-neue Datei angelegt haben, löschen Sie diese -- und führen das
-Kommando `apt-get update` respektive `aptitude update` erneut aus.
+neue Datei im Verzeichnis `/etc/apt/sources.list.d/` angelegt haben,
+löschen Sie diese -- und führen das Kommando `apt-get update` respektive
+`aptitude update` erneut aus. Ab Debian 8 'Jessie' ist auch der Aufruf
+`apt update` zulässig.
 
 [TIP]
 .Versionierung statt manuellem Backup
