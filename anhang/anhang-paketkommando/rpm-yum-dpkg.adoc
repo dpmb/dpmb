@@ -10,15 +10,22 @@
 (((APT)))
 (((Aptitude)))
 (((dpkg)))
+(((DNF)))
 (((FPM)))
 (((RPM)))
 (((Yellowdog Updater Modified (YUM))))
 Hier stellen wir die jeweiligen Kommandos zur Paketverwaltung gegenüber,
-wie sie von RPM, Yellowdog Updater Modified (YUM), seinem Nachfolger
-Effing Package Management (FPM), Debian's `dpkg`, APT und `aptitude`
-verwendet werden. Wir betrachten die Installation und die Entfernung von
-Paketen, das Auflisten der installierten und verfügbaren Pakete sowie
-das Anzeigen von Paketabhängigkeiten.
+wie sie von RPM, Yellowdog Updater Modified (YUM), seinen Nachfolgern
+Effing Package Management (FPM) und Dandified YUM (DNF), Debian's
+`dpkg`, APT sowie `aptitude` verwendet werden. Wir betrachten dabie
+bspw. die Installation und die Entfernung von Paketen, das Auflisten der
+installierten und verfügbaren Pakete sowie das Anzeigen von
+Paketabhängigkeiten.
+
+Diese Zusammenstellung basiert auf umfangreichen Tests und Recherchen,
+bspw. mit Fedora 23, CentOS 6 und 7 sowie Ubuntu 15.10 und Debian 8. Die
+Verfügbarkeit der Werkzeuge und deren einzelne Schalter variiert recht
+stark.
 
 === Paket installieren ===
 
