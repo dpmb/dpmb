@@ -10,7 +10,7 @@
 (((APT)))
 (((Aptitude)))
 (((dpkg)))
-(((DNF)))
+(((Dandified YUM (DNF))))
 (((FPM)))
 (((RPM)))
 (((Yellowdog Updater Modified (YUM))))
@@ -52,11 +52,12 @@ Paketcache vorliegen.
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketinstallation"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| `RPM`      | `rpm -i` 'Paketname' | Paket liegt lokal vor
-|            | `rpm -ihv` 'Paketname' | Paket liegt lokal vor, Installation mit Kommentaren
-| `YUM`      | `yum localinstall` 'Paketname' | Paket liegt lokal vor
+| `RPM`      | `rpm -i` 'Paketname' | Paket liegt lokal als Datei vor
+|            | `rpm -i --nodeps` 'Paketname' | Paket liegt lokal als Datei vor, Installation ohne Berücksichtigung der Paketabhängigkeiten
+|            | `rpm -ihv` 'Paketname' | Paket liegt lokal als Datei vor, Installation mit Kommentaren
+| `YUM`      | `yum localinstall` 'Paketname' | Paket liegt lokal als Datei vor
 |            | `yum install` 'Paketname' | Paket wird dem Paketrepository entnommen
-| `dpkg`     | `dpkg -i` 'Paketname' | Paket liegt lokal vor
+| `dpkg`     | `dpkg -i` 'Paketname' | Paket liegt lokal als Datei vor
 | APT        | `apt-get install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |            | `apt-get --no-download install` 'Paketname' | Paket wird dem Paketcache entnommen und nicht vom Paketmirror bezogen
 | `aptitude` | `aptitude install` 'Paketname' | Paket wird dem Paketrepository entnommen
@@ -169,6 +170,7 @@ das zu `dpkg` und `aptitude` genauer.
 (((Paket, Rückwärtsabhängigkeiten auflisten)))
 (((Paketabhängigkeiten, auflisten)))
 (((Paketabhängigkeiten, Rückwärtsabhängigkeiten auflisten)))
+(((rpm, -qpR)))
 (((rpm, -R)))
 (((yum, deplist)))
 (((yum, info)))
@@ -181,7 +183,8 @@ ein.
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketabhaengigkeiten"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| `RPM`      | `rpm -R` 'Paketname' |
+| `RPM`      | `rpm -R` 'Paketname' | das Paket muß dazu lokal als Datei vorliegen
+|            | `rpm -qpR` 'Paketname' | das Paket muß dazu lokal als Datei vorliegen
 | `YUM`      | `yum deplist` 'Paketname' |
 |            | `yum info` 'Paketname' |
 | APT        | `apt-cache depends` 'Paketname' |
@@ -197,6 +200,7 @@ ein.
 (((Paket, verifizieren)))
 (((Paketsignatur, überprüfen)))
 (((rpm, -K)))
+(((rpm, --checksig)))
 Mit den nachfolgenden Aufrufen überprüfen Sie die Signatur eines Pakets.
 Sie stellen damit sicher, dass das Paket unverändert vom Paketmirror zu
 Ihnen übertragen wurde und auf dem Transportweg keine inhaltlichen
@@ -210,6 +214,7 @@ Thema in ``Paket verifizieren'' in <<bezogenes-paket-verifizieren>> und
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -K` 'Paketname' |
+|            | `rpm --checksig` 'Paketname' |
 | `YUM`      | |
 | APT        | |
 |====
