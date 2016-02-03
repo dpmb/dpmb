@@ -191,6 +191,33 @@ ein.
 |            | `apt-cache rdepends` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 |====
 
+=== Alle Dateien eines installierten Pakets anzeigen ===
+
+// Stichworte für den Index
+(((Paket, auf Veränderungen prüfen)))
+(((dpkg, -L)))
+(((dpkg, --listfiles)))
+(((dpkg-query, -L)))
+(((dpkg-query, --listfiles)))
+(((rpm, -ql)))
+Mit den nachfolgenden Aufrufen zeigen Sie an, welche Dateien und
+Verzeichnisse zu dem installierten Paket gehören. Für Debianpakete
+widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
+<<paketinhalte-anzeigen-apt-file>>.
+
+.Paketinhalte anzeigen
+[frame="topbot",options="header",cols="2,4,4",id="tab.paketinhalte"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| `RPM`      | `rpm -ql` 'Paketname' |
+| `YUM`      | |
+| `dpkg`     | `dpkg -L` 'Paketname' |
+|            | `dpkg --listfiles` 'Paketname' |
+| `dpkg-query` | `dpkg-query -L` 'Paketname' |
+|            | `dpkg-query --listfiles` 'Paketname' |
+| APT        | |
+|====
+
 === Paketsignatur überprüfen ===
 
 // Stichworte für den Index
