@@ -20,6 +20,7 @@
 (((dpkg-deb, --contents)))
 (((dpkg-query, -L)))
 (((dpkg-query, --listfiles)))
+(((Paket, Inhalte anzeigen)))
 In einem Paket sind stets mehrere Dateien zusammengefasst. Mit den sechs
 Werkzeugen `dpkg`, `dpkg-deb`, `dpkg-query`, `dlocate`, `apt-file` und
 `dglob` zeigen Sie den Inhalt eines Pakets an. Dabei sind `dpkg-deb` und
