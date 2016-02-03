@@ -641,6 +641,8 @@
 
 - [[[RMLL]]] Rencontres Mondiales du Logiciel Libre, http://rmll.info/
 
+- [[[RPM-Salve]]] 20 Practical Examples of RPM Commands in Linux, http://www.tecmint.com/20-practical-examples-of-rpm-commands-in-linux/
+
 - [[[rpmseek]]] Rpmseek, http://www.rpmseek.com/
 
 - [[[RPM-Webseite]]] Dokumentation auf rpm.org, http://www.rpm.org/wiki/Docs
@@ -734,6 +736,8 @@
 - [[[xubuntu-apt-offline]]] xubuntu Offline Documentation, http://docs.xubuntu.org/1304/offline-packages.html
 
 - [[[YUM]]] Yellowdog Updater, Modified (YUM), Projektseite, http://yum.baseurl.org/
+
+- [[[YUM-Salve]]] 20 Linux YUM (Yellowdog Updater, Modified) Commands for Package Management, http://www.tecmint.com/20-linux-yum-yellowdog-updater-modified-commands-for-package-mangement/
 
 - [[[Zypper]]] Zypper, Projektseite, http://de.opensuse.org/Zypper
 
