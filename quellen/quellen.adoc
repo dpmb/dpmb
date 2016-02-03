@@ -641,7 +641,9 @@
 
 - [[[RMLL]]] Rencontres Mondiales du Logiciel Libre, http://rmll.info/
 
-- [[[RPM-Salve]]] 20 Practical Examples of RPM Commands in Linux, http://www.tecmint.com/20-practical-examples-of-rpm-commands-in-linux/
+- [[[RPM-Gite]]] Vivek Gite: CentOS / RHEL: See Detailed History Of yum Commands, http://www.cyberciti.biz/faq/yum-history-command/
+
+- [[[RPM-Salve]]] Ravi Salve: 20 Practical Examples of RPM Commands in Linux, http://www.tecmint.com/20-practical-examples-of-rpm-commands-in-linux/
 
 - [[[rpmseek]]] Rpmseek, http://www.rpmseek.com/
 
@@ -737,7 +739,7 @@
 
 - [[[YUM]]] Yellowdog Updater, Modified (YUM), Projektseite, http://yum.baseurl.org/
 
-- [[[YUM-Salve]]] 20 Linux YUM (Yellowdog Updater, Modified) Commands for Package Management, http://www.tecmint.com/20-linux-yum-yellowdog-updater-modified-commands-for-package-mangement/
+- [[[YUM-Salve]]] Ravi Salve: 20 Linux YUM (Yellowdog Updater, Modified) Commands for Package Management, http://www.tecmint.com/20-linux-yum-yellowdog-updater-modified-commands-for-package-mangement/
 
 - [[[Zypper]]] Zypper, Projektseite, http://de.opensuse.org/Zypper
 
