@@ -95,7 +95,7 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 | `aptitude` | `aptitude remove` 'Paketname' | 
 |====
 
-=== Alle Pakete auflisten ===
+=== Alle installierten Pakete auflisten ===
 
 // Stichworte für den Index
 (((apt-cache, search)))
@@ -107,6 +107,7 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 (((Paketstatus)))
 (((Paketzustand)))
 (((rpm, -qa)))
+(((rpm, -qa --last)))
 (((yum, list all)))
 (((yum, list available)))
 Mit den nachfolgenden Aufrufen listen Sie die vorhandenen Softwarepakete
@@ -121,6 +122,7 @@ sowie unter ``Aktualisierbare Pakete anzeigen'' in
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -qa` | alle installierten Pakete auflisten
+|            | `rpm -qa --last` | alle zuletzt installierten Pakete auflisten
 | `YUM`      | `yum list all` | alle installierten Pakete auflisten
 |            | `yum list available` | alle verfügbaren Pakete auflisten,
 auch die (noch) nicht installierten Pakete
@@ -194,11 +196,11 @@ ein.
 === Alle Dateien eines installierten Pakets anzeigen ===
 
 // Stichworte für den Index
-(((Paket, auf Veränderungen prüfen)))
 (((dpkg, -L)))
 (((dpkg, --listfiles)))
 (((dpkg-query, -L)))
 (((dpkg-query, --listfiles)))
+(((Paket, Inhalte anzeigen)))
 (((rpm, -ql)))
 Mit den nachfolgenden Aufrufen zeigen Sie an, welche Dateien und
 Verzeichnisse zu dem installierten Paket gehören. Für Debianpakete
