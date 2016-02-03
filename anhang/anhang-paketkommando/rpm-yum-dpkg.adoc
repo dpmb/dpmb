@@ -63,6 +63,25 @@ Paketcache vorliegen.
 | `aptitude` | `aptitude install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |====
 
+=== Paket aktualisieren ===
+
+// Stichworte für den Index
+(((Paket, aktualisieren)))
+(((rpm, -U)))
+Mit den nachfolgenden Aufrufen aktualisieren Sie ein Softwarepaket über
+die Kommandozeile. Unter ``Pakete aktualisieren'' in
+<<pakete-aktualisieren>> gehen wir detaillierter auf die Vorgehensweise
+bei `dpkg`, APT und `aptitude` ein.
+
+.Aktualisieren eines Pakets
+[frame="topbot",options="header",cols="2,4,4",id="tab.paketaktualisierung"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| `RPM`      | `rpm -U` 'Paketname' | Paket liegt lokal als Datei vor
+| `YUM`      |  | 
+|====
+
+
 === Paket löschen / entfernen ===
 
 // Stichworte für den Index
@@ -75,6 +94,7 @@ Paketcache vorliegen.
 (((Paket, Konfigurationsdateien löschen)))
 (((Paket, löschen)))
 (((rpm, -e)))
+(((rpm, -e --nodeps)))
 (((yum, erase)))
 (((yum, remove)))
 Mit den nachfolgenden Aufrufen entfernen Sie ein Softwarepaket über
@@ -87,6 +107,7 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -e` 'Paketname' | 
+|            | `rpm -e --nodeps` 'Paketname' | Entfernung des Pakets ohne Berücksichtigung der Paketabhängigkeiten
 | `YUM`      | `yum remove` 'Paketname' | 
 |            | `yum erase` 'Paketname' | gleichbedeutend zu `remove`
 | `dpkg`     | `dpkg -r` 'Paketname' | 
