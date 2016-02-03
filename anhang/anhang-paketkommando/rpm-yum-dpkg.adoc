@@ -25,7 +25,8 @@ Paketabhängigkeiten.
 Diese Zusammenstellung basiert auf umfangreichen Tests und Recherchen,
 bspw. mit Fedora 23, CentOS 6 und 7 sowie Ubuntu 15.10 und Debian 8. Die
 Verfügbarkeit der Werkzeuge und deren einzelne Schalter variiert recht
-stark <<RPM-Salve>> <<RPM-Gite>> <<YUM-Salve>>.
+stark <<RPM-Salve>> <<RPM-Gite>> <<RPM-Canepa>> <<YUM-Salve>>
+<<dpkg-Kumar>> <<apt-Salve>>.
 
 === Paket installieren ===
 

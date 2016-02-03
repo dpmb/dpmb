@@ -40,6 +40,8 @@
 
 - [[[aptitude-dokumentation-veraltet]]] veraltete Dokumentation zu `aptitude`, http://www.algebraicthunk.net/~dburrows/projects/aptitude/doc/
 
+- [[[apt-Salve]]] Ravi Salve: 25 Useful Basic Commands of APT-GET and APT-CACHE for Package Management, http://www.tecmint.com/useful-basic-commands-of-apt-get-and-apt-cache-for-package-management/
+
 - [[[Aptosid]]] Aptosid, http://aptosidusers.de/
 
 - [[[aptsh-Projekt]]] `aptsh`-Projektseite bei BerliOS, http://developer.berlios.de/projects/aptsh/
@@ -479,6 +481,8 @@
 
 - [[[dinstall-status]]] dinstall Status, https://ftp-master.debian.org/dinstall.status
 
+- [[[dpkg-Kumar]]] Avishek Kumar: 15 Practical Examples of "dpkg commands" for Debian Based Distros, http://www.tecmint.com/dpkg-command-examples/
+
 - [[[dpmb-github]]] Debian Package Management Book, GitHub-Repository, https://github.com/dpmb
 
 - [[[Drilling-APT-Pinning-LinuxUser]]] Thomas Drilling: Festgenagelt. Tricks zum Mischen von Debian-Releases, LinuxUser 06/2012, LinuxNewMedia AG, München, 2012, S. 35ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2012/06/Tricks-zum-Mischen-von-Debian-Releases
@@ -640,6 +644,8 @@
 - [[[RM-software-center]]] Entfernung von Ubuntu Software Center aus Debian, https://bugs.debian.org/755452
 
 - [[[RMLL]]] Rencontres Mondiales du Logiciel Libre, http://rmll.info/
+
+- [[[RPM-Canepa]]] Gabriel Cánepa: Linux Package Management with Yum, RPM, Apt, Dpkg, Aptitude and Zypper – Part 9, http://www.tecmint.com/linux-package-management/
 
 - [[[RPM-Gite]]] Vivek Gite: CentOS / RHEL: See Detailed History Of yum Commands, http://www.cyberciti.biz/faq/yum-history-command/
 
