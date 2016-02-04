@@ -204,6 +204,7 @@ jedermann zu benutzen.
 
 // Stichworte für den Index
 (((Debianpaket, apt-show-versions)))
+(((Debianpaket, vlc)))
 (((Debianpaket, zsh)))
 (((apt-show-versions)))
 'apt-show-versions' <<Debian-Paket-apt-show-versions>> ist ein Paket,
@@ -215,12 +216,22 @@ interessant, d.h. wenn Pakete aus verschiedenen Veröffentlichungen
 gleichzeitig verwendet werden.
 
 Nachfolgendes Beispiel zeigt die Ausgabe für das Paket 'zsh' auf einem
-Debian 7 'Wheezy':
+Debian 7 'Wheezy'. Hier ist kein neueres Paket verfügbar:
 
 .Versionen anzeigen für das Paket 'zsh'
 ----
 $ apt-show-versions zsh
 zsh/wheezy uptodate 4.3.17-1
+$
+----
+
+Anders als bei dem obigen Beispiel ist es für das Paket 'vlc' unter
+Debian 8 'Jessie', für das ein aktuelleres Paket bereitsteht:
+
+.Versionen anzeigen für das Paket 'vlc'
+----
+$ apt-show-versions vlc
+vlc:amd64/jessie 2.2.0~rc2-2+deb8u1 upgradeable to 1:2.2.1-dmo3
 $
 ----
 
