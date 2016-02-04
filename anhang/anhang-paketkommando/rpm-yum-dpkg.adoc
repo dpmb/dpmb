@@ -79,8 +79,9 @@ bei `dpkg`, APT und `aptitude` ein.
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -U` 'Paketname' | Paket liegt lokal als Datei vor
 | `YUM`      |  | 
+| APT        | `apt-get upgrade` 'Paketname' |
+| `aptitude` | |
 |====
-
 
 === Paket löschen / entfernen ===
 
