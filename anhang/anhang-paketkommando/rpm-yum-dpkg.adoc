@@ -356,7 +356,7 @@ Um festzustellen, ob die vorliegenden Dateien noch identisch mit den
 Dateien aus dem installierten Paket sind, helfen Ihnen diese Kommandos:
 
 .Paket auf Veränderungen prüfen
-[frame="topbot",options="header",cols="2,4,4",id="tab.paketveränderungen"]
+[frame="topbot",options="header",cols="2,4,4",id="tab.paketveraenderungen"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -Va` | prüft alle installierten Pakete
