@@ -66,8 +66,10 @@ Paketcache vorliegen.
 === Paket aktualisieren ===
 
 // Stichworte für den Index
+(((apt-get, upgrade)))
 (((Paket, aktualisieren)))
 (((rpm, -U)))
+(((yum, update)))
 Mit den nachfolgenden Aufrufen aktualisieren Sie ein Softwarepaket über
 die Kommandozeile. Unter ``Pakete aktualisieren'' in
 <<pakete-aktualisieren>> gehen wir detaillierter auf die Vorgehensweise
@@ -78,7 +80,8 @@ bei `dpkg`, APT und `aptitude` ein.
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -U` 'Paketname' | Paket liegt lokal als Datei vor
-| `YUM`      |  | 
+| `YUM`      | `yum update` | die gesamte Veröffentlichung aktualisieren
+|     `      | `yum update` 'Paketname' | nur 'Paketname' aktualisieren
 | APT        | `apt-get upgrade` 'Paketname' |
 | `aptitude` | |
 |====
@@ -130,8 +133,10 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 (((Paketzustand)))
 (((rpm, -qa)))
 (((rpm, -qa --last)))
+(((yum, list)))
 (((yum, list all)))
 (((yum, list available)))
+(((yum, list installed)))
 Mit den nachfolgenden Aufrufen listen Sie die vorhandenen Softwarepakete
 über die Kommandozeile auf. Für `dpkg`, APT und `aptitude` besprechen
 wir das detaillierter unter ``Liste der installierten Pakete anzeigen
@@ -144,10 +149,11 @@ sowie unter ``Aktualisierbare Pakete anzeigen'' in
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -qa` | alle installierten Pakete auflisten
-|            | `rpm -qa --last` | alle zuletzt installierten Pakete auflisten
-| `YUM`      | `yum list all` | alle installierten Pakete auflisten
-|            | `yum list available` | alle verfügbaren Pakete auflisten,
-auch die (noch) nicht installierten Pakete
+|            | `rpm -qa --last` | alle zuletzt installierten Pakete auflisten auch die (noch) nicht installierten Pakete
+| `YUM`      | `yum list` 'Paketname' | anzeigen, welche Versionen des Pakets installiert sind
+|            | `yum list all` | alle installierten Pakete auflisten
+|            | `yum list available` | alle verfügbaren Pakete auflisten
+|            | `yum list installed` | alle installierten Pakete auflisten
 | `dpkg`     | `dpkg -l` | alle installierten Pakete auflisten
 |  APT       | `apt-cache search` 'Paketname' |
 | `aptitude` | `aptitude search ~i`| alle installierten Pakete auflisten
@@ -168,6 +174,7 @@ für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
 (((rpm, -q)))
 (((rpm, -qa)))
 (((rpm, -qp)))
+(((yum, list)))
 Mit den nachfolgenden Aufrufen listen Sie die Informationen bzw. den
 Installationsstatus zu einem einzelnen Softwarepaket auf. Unter ``Liste
 der installierten Pakete anzeigen und deuten'' in
@@ -180,6 +187,7 @@ das zu `dpkg` und `aptitude` genauer.
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -q` 'Paketname' | Ausgabe des Installationsstatus für 'Paketname'
 |            | `rpm -qp` 'Paketname' | ?
+| `YUM`      | `yum list` 'Paketname' | anzeigen, welche Versionen des Pakets installiert sind
 | `dpkg`     | `dpkg -l` 'Paketname' | Ausgabe des Installationsstatus
 |            | `dpkg -s` 'Paketname' | Ausgabe der Paketinformationen
 | `aptitude` | `aptitude show` 'Paketname'|
@@ -251,6 +259,7 @@ widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 (((dpkg-query, -S)))
 (((dpkg-query, --search)))
 (((Paket, zu Datei finden)))
+(((yum, provides)))
 Um herauszufinden, aus welchem Paket eine Datei stammt, bieten sowohl
 `rpm` als auch `dpkg` entsprechende Schalter an. Für Debianpakete
 besprechen wir das Thema in ``Paket zu Datei finden'' in
@@ -261,7 +270,7 @@ besprechen wir das Thema in ``Paket zu Datei finden'' in
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -qf` 'Dateiname' | 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
-| `YUM`      | |
+| `YUM`      | `yum provides` 'Dateiname'| 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
 | `dpkg`     | `dpkg -S` 'Dateiname' | Suche in den installierten Paketen
 |            | `dpkg --search` 'Dateiname' | Suche in den installierten Paketen
 | `dpkg-query` | `dpkg-query -S` 'Dateiname' | Suche in den installierten Paketen
@@ -287,6 +296,7 @@ besprechen wir das Thema in ``Paket zu Datei finden'' in
 (((Paketstatus anzeigen)))
 (((rpm, -qi)))
 (((rpm, -qip)))
+(((yum, info)))
 Diese Information zeigen Ihnen `dpkg` und `apt-cache` an. Ausführlicher
 beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
 <<paketstatus-erfragen>>.
@@ -297,7 +307,7 @@ beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -qi` 'Paketname' | 'Paketname' muß lokal installiert sein
 |            | `rpm -qip` 'Dateiname' | 'Dateiname' muß lokal vorliegen
-| `YUM`      | |
+| `YUM`      | `yum info` 'Paketname' | 'Paketname' muß lokal installiert sein
 | `dpkg`     | `dpkg -s` 'Paketname' | 'Paketname' muß lokal installiert sein
 |            | `dpkg --status` 'Paketname' | 'Paketname' muß lokal installiert sein
 |            | `dpkg -i` 'Dateiname' | 'Dateiname' bezeichnet eine lokale Datei
@@ -352,7 +362,6 @@ Dateien aus dem installierten Paket sind, helfen Ihnen diese Kommandos:
 | `RPM`      | `rpm -Va` | prüft alle installierten Pakete
 |            | `rpm -Vp` 'Paketname' | prüft nur das angegebene Paket
 | `YUM`      | |
-| APT        | |
 |====
 
 // Stichworte für den Index
