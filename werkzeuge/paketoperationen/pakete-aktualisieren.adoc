@@ -6,6 +6,8 @@
 
 === Pakete aktualisieren ===
 
+// Stichworte für den Index
+(((Paket, aktualisieren)))
 Ein Großteil der verfügbaren Software veraltet häufig in recht kurzer
 Zeit. Die Entwickler veröffentlichen neue Softwarepakete, die um Fehler
 bereinigt oder bei denen neue Funktionen ergänzt wurden. Das Debian-Team
@@ -40,6 +42,7 @@ Veränderung der Schnittstelle einhergehen kann.
 (((apt-get, update)))
 (((apt-get, upgrade)))
 (((apt-get, dist-upgrade)))
+(((Paketliste, aktualisieren)))
 APT und `aptitude` kennen die beiden Unterkommandos `update` und
 `upgrade` in verschiedenen Schweregraden und verknüpfen damit wechselnde
 Funktionalitäten. Das Team um APT und `aptitude` hat die Bedeutung der
@@ -68,6 +71,7 @@ selbst aus (`upgrade`, `dist-upgrade`, `safe-upgrade` und
 (((apt, update)))
 (((aptitude, update)))
 (((apt-get, update)))
+(((Paketliste, aktualisieren)))
 Das Unterkommando `update` steht in identischer Form und Bedeutung bei
 den drei Kommandos `apt-get`, `apt` und `aptitude` zur Verfügung. Es
 dient dabei nur zur Aktualisierung der Paketlisten, die in der Datei
@@ -84,6 +88,7 @@ aktualisieren in <<liste-der-verfuegbaren-pakete-aktualisieren>> ein.
 (((aptitude, safe-upgrade)))
 (((aptitude, safe-upgrade --no-new-installs)))
 (((apt-get, upgrade)))
+(((Paket, aktualisieren)))
 Dem Unterkommando `upgrade` von `apt-get` entspricht `safe-upgrade` bei
 `apt` und `aptitude`. Sie aktualisieren damit alle installierten Pakete
 auf die neueste, verfügbare Version. Dabei werden keine potentiell
@@ -154,6 +159,9 @@ Funktionserweiterungen wird die Versionsnummer des Pakets erhöht.
 (((apt-get, dist-upgrade)))
 (((apt, full-upgrade)))
 (((aptitude, full-upgrade)))
+(((Distribution, aktualisieren)))
+(((Sicherheitsaktualisierungen)))
+(((Veröffentlichung, Versionswechsel)))
 Was bei `apt-get` das Unterkommando `dist-upgrade` ist, heißt bei `apt`
 und `aptitude` hingegen `full-upgrade`. Beide Unterkommandos sind
 ähnlich zu `upgrade` und `safe-upgrade`. 
@@ -201,7 +209,7 @@ Pakete. Dieses Verhalten können Sie in der Konfiguration von `aptitude`
 (((apt-get, dist-upgrade)))
 (((apt-get, update)))
 (((apt-get, upgrade)))
-
+(((Paket, aktualisieren)))
 Um Ihnen die Aktualisierung Ihrer Softwarezusammenstellung zu
 vereinfachen, haben wir nachfolgend eine Schrittfolge zusammengestellt,
 die Ihnen als Orientierung dienen kann. Sind Sie auf der *Kommandozeile*
