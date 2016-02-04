@@ -28,6 +28,7 @@ Schritt.
 (((apt-get, remove)))
 (((aptitude, remove)))
 (((dpkg, -r)))
+(((dpkg, --remove)))
 Dazu dienen die beiden Kommandos `apt-get remove Paketname` und
 `aptitude remove Paketname`. Beide Aufrufe entfernen das Paket und ggf.
 auch alle weiteren Pakete, die davon abhängen. Dabei werden jedoch nur
@@ -199,6 +200,7 @@ Trigger für menu werden verarbeitet ...
 
 // Stichworte für den Index
 (((dpkg, -P)))
+(((dpkg, --purge)))
 (((aptitude, purge)))
 (((apt-get, remove --purge)))
 APT und `aptitude` ermöglichen auch das Deinstallieren eines oder

@@ -92,7 +92,10 @@ bei `dpkg`, APT und `aptitude` ein.
 (((apt-get, --purge remove)))
 (((apt-get, remove)))
 (((aptitude, remove)))
+(((dpkg, -P)))
+(((dpkg, --purge)))
 (((dpkg, -r)))
+(((dpkg, --remove)))
 (((Paket, deinstallieren)))
 (((Paket, entfernen)))
 (((Paket, Konfigurationsdateien löschen)))
@@ -114,7 +117,10 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 |            | `rpm -e --nodeps` 'Paketname' | Entfernung des Pakets ohne Berücksichtigung der Paketabhängigkeiten
 | `YUM`      | `yum remove` 'Paketname' | 
 |            | `yum erase` 'Paketname' | gleichbedeutend zu `remove`
-| `dpkg`     | `dpkg -r` 'Paketname' | 
+| `dpkg`     | `dpkg -r` 'Paketname' | entfernt nur das Paket
+|            | `dpkg --remove` 'Paketname' | entfernt nur das Paket
+|            | `dpkg -P` 'Paketname' | entfernt das Paket und die Konfigurationsdatei
+|            | `dpkg --purge` 'Paketname' | entfernt das Paket und die Konfigurationsdatei
 |  APT       | `apt-get remove` 'Paketname' | Entfernen ohne Konfigurationsdateien des Pakets
 |            | `apt-get --purge remove` 'Paketname' | Entfernen inklusive der Konfigurationsdateien des Pakets
 | `aptitude` | `aptitude remove` 'Paketname' | 
