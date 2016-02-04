@@ -7,6 +7,7 @@
 === Paketstatus erfragen ===
 
 // Stichworte für den Index
+(((Paket, Status anzeigen)))
 (((Paketstatus anzeigen)))
 Diese Aktion betrifft meist nur ein einzelnes Paket, welches auf dem
 System installiert ist oder war. Im Alltag ergeben sich mehrere
