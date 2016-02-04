@@ -355,4 +355,14 @@ Dateien aus dem installierten Paket sind, helfen Ihnen diese Kommandos:
 | APT        | |
 |====
 
+// Stichworte für den Index
+(((Debianpaket, debsums)))
+(((Debianpaket, dlocate)))
+(((dlocate, -md5check)))
+(((dlocate, -md5sum)))
+`dpkg`, APT und `aptitude` stellen keine eigenen Schalter zur Verfügung.
+Stattdessen weichen Sie auf die Werkzeuge `debsums` und `dlocate` aus.
+Darauf gehen wir im Abschnitt ``Paket auf Veränderungen prüfen'' in
+<<paket-auf-veraenderungen-pruefen>> genauer ein.
+
 // Datei (Ende): ./anhang/anhang.paketkommando/rpm-yum-dpkg.adoc
