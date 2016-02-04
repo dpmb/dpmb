@@ -242,6 +242,34 @@ widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 | APT        | |
 |====
 
+=== Paket identifizieren, aus dem eine Datei stammt ===
+
+// Stichworte für den Index
+(((apt-file, search)))
+(((dpkg, -S)))
+(((dpkg, --search)))
+(((dpkg-query, -S)))
+(((dpkg-query, --search)))
+(((Paket, zu Datei finden)))
+Um herauszufinden, aus welchem Paket eine Datei stammt, bieten sowohl
+`rpm` als auch `dpkg` entsprechende Schalter an. Für Debianpakete
+besprechen wir das Thema in ``Paket zu Datei finden'' in
+<<paket-zu-datei-finden>> ausführlich.
+
+.Paket zu Datei finden
+[frame="topbot",options="header",cols="2,4,4",id="tab.paket-zu-datei-finden"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| `RPM`      | `rpm -qf` 'Dateiname' | 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
+| `YUM`      | |
+| `dpkg`     | `dpkg -S` 'Dateiname' | Suche in den installierten Paketen
+|            | `dpkg --search` 'Dateiname' | Suche in den installierten Paketen
+| `dpkg-query` | `dpkg-query -S` 'Dateiname' | Suche in den installierten Paketen
+|            | `dpkg-query --search` 'Dateiname' | Suche in den installierten Paketen
+| APT        | `apt-file --search` 'Dateiname' | Suche in allen verfügbaren Paketen
+| `aptitude` | kein Schalter |
+|====
+
 === Paketsignatur überprüfen ===
 
 // Stichworte für den Index
