@@ -270,6 +270,41 @@ besprechen wir das Thema in ``Paket zu Datei finden'' in
 | `aptitude` | kein Schalter |
 |====
 
+=== Paketstatus anzeigen ===
+
+// Stichworte für den Index
+(((apt-cache, show)))
+(((aptitude, show)))
+(((dpkg, -I)))
+(((dpkg, --info)))
+(((dpkg, -s)))
+(((dpkg, --status)))
+(((dpkg-deb, -I)))
+(((dpkg-deb, --info)))
+(((dpkg-query, -s)))
+(((dpkg-query, --status)))
+(((Paket, Status anzeigen)))
+(((Paketstatus anzeigen)))
+Diese Information zeigen Ihnen `dpkg` und `apt-cache` an. Ausführlicher
+beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
+<<paketstatus-erfragen>>.
+
+.Paketstatus erfragen
+[frame="topbot",options="header",cols="2,4,4",id="tab.paketstatus-erfragen"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| `RPM`      | `rpm -qi` 'Paketname' | 'Paketname' muß lokal installiert sein
+| `YUM`      | |
+| `dpkg`     | `dpkg -s` 'Paketname' | 'Paketname' muß lokal installiert sein
+|            | `dpkg --status` 'Paketname' | 'Paketname' muß lokal installiert sein
+|            | `dpkg -i` 'Dateiname' | 'Dateiname' bezeichnet eine lokale Datei
+|            | `dpkg --info` 'Dateiname' | 'Dateiname' bezeichnet eine lokale Datei
+| `dpkg-query` | `dpkg-query -s` 'Paketname' | 'Paketname' muß lokal installiert sein
+|            | `dpkg-query --status` 'Paketname' | 'Paketname' muß lokal installiert sein
+| `apt`      | `apt-cache show` 'Paketname' | Suche in allen verfügbaren Paketen
+| `aptitude` | `aptitude show` 'Paketname' | Suche in allen verfügbaren Paketen
+|====
+
 === Paketsignatur überprüfen ===
 
 // Stichworte für den Index
