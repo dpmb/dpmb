@@ -285,6 +285,8 @@ besprechen wir das Thema in ``Paket zu Datei finden'' in
 (((dpkg-query, --status)))
 (((Paket, Status anzeigen)))
 (((Paketstatus anzeigen)))
+(((rpm, -qi)))
+(((rpm, -qip)))
 Diese Information zeigen Ihnen `dpkg` und `apt-cache` an. Ausführlicher
 beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
 <<paketstatus-erfragen>>.
@@ -294,6 +296,7 @@ beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -qi` 'Paketname' | 'Paketname' muß lokal installiert sein
+|            | `rpm -qip` 'Dateiname' | 'Dateiname' muß lokal vorliegen
 | `YUM`      | |
 | `dpkg`     | `dpkg -s` 'Paketname' | 'Paketname' muß lokal installiert sein
 |            | `dpkg --status` 'Paketname' | 'Paketname' muß lokal installiert sein
@@ -329,6 +332,25 @@ Thema in ``Paket verifizieren'' in <<bezogenes-paket-verifizieren>> und
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -K` 'Paketname' |
 |            | `rpm --checksig` 'Paketname' |
+| `YUM`      | |
+| APT        | |
+|====
+
+=== Paket auf Veränderungen prüfen ===
+
+// Stichworte für den Index
+(((Paket, auf Veränderungen prüfen)))
+(((rpm, -Va)))
+(((rpm, -Vp)))
+Um festzustellen, ob die vorliegenden Dateien noch identisch mit den
+Dateien aus dem installierten Paket sind, helfen Ihnen diese Kommandos:
+
+.Paket auf Veränderungen prüfen
+[frame="topbot",options="header",cols="2,4,4",id="tab.paketveränderungen"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| `RPM`      | `rpm -Va` | prüft alle installierten Pakete
+|            | `rpm -Vp` 'Paketname' | prüft nur das angegebene Paket
 | `YUM`      | |
 | APT        | |
 |====
