@@ -159,7 +159,7 @@ image::praxis/qualitaetskontrolle/nicht-installierte-pakete-mit-lintian-pruefen/
 (((lintian, --info)))
 (((lintian-info)))
 
-Hifreich ist auch die Option `-i` (Langform `--info`). Damit erhalten
+Hilfreich ist auch die Option `-i` (Langform `--info`). Damit erhalten
 Sie bei jedem ersten Vorkommen einer Markierung noch zusätzliche
 Erklärungen und ersehen daraus, was die jeweilige Markierung bedeutet.
 Den gleichen Effekt erhalten Sie, wenn Sie die Ausgabe von `lintian`

@@ -9,6 +9,8 @@
 // Stichworte für den Index
 (((aptitude)))
 (((aptitude-Handbuch)))
+(((Dokumentation, offline)))
+(((Dokumentation, online)))
 `aptitude` ist ein recht komplexes Programm und bedarf daher einiges an
 Dokumentation. Diese steht bislang in 7 Sprachen als HTML-Datei bereit,
 so in englisch, tschechisch, spanisch, finnisch, französisch,

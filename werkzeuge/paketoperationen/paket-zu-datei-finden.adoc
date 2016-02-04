@@ -14,6 +14,7 @@
 (((dpkg, --search)))
 (((dpkg-query, -S)))
 (((dpkg-query, --search)))
+(((Paket, zu Datei finden)))
 
 Häufig ist Ihnen nur der Dateiname bekannt, aber nicht das Paket, aus
 dem diese Datei stammt. Das wird insofern spannend, wenn das Paket
