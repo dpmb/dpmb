@@ -6,6 +6,9 @@
 
 === Pakete downgraden ===
 
+// Stichworte für den Index
+(((Paket, downgraden)))
+
 Allgemein gesprochen, steht der Begriff 'Downgrade' für einen
 Niedergang, eine Abwertung oder einen Rückschritt. Bezogen auf die
 Verwaltung von Softwarepaketen umfasst es das Einspielen einer vorherigen
@@ -17,14 +20,15 @@ Version eines Softwarepakets nicht das leistet, was sie verspricht,
 dabei Fehler auftreten oder Inkompatibilitäten mit anderen
 Softwarepaketen und deren Benutzung unmöglich machen. Häufig fallen in
 letztere Kategorie geänderte Schnittstellen, die noch nicht auf allen
-Ebenen konsequent umgesetzt wurden.
+nachfolgenden Ebenen konsequent umgesetzt wurden.
 
 Ein Downgrade wird vom Release-Team von Debian GNU/Linux offiziell nicht
-unterstützt. Keines der hier im Buch vorgestellten Werkzeuge zur
-Paketverwaltung verfügt bislang über einen spezifischen Schalter, um ein
-Downgrade explizit anzustoßen. Daher bleibt nur ein Vorgehen über andere
-Wege, die jedoch auf den bereits zuvor beschriebenen Mechanismen
-aufsetzen.
+unterstützt. Alle Mechanismen sind auf das Einspielen einer neueren
+Version ausgerichtet. Daher verfügt auch keines der hier im Buch
+vorgestellten Werkzeuge zur Paketverwaltung bislang über einen
+spezifischen Schalter, um ein Downgrade explizit anzustoßen. Es bleibt
+daher nur ein Vorgehen über andere Wege, die jedoch auf den bereits
+zuvor beschriebenen Mechanismen aufsetzen.
 
 ==== Hintergrund und Fragen zum Downgrade ====
 
