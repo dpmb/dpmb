@@ -37,6 +37,7 @@ einzelne Schalter variiert recht stark <<RPM-Salve>> <<RPM-Gite>>
 (((apt-get, install)))
 (((apt-get, --no-download install)))
 (((aptitude, install)))
+(((dnf, install)))
 (((Paket, installieren)))
 (((rpm, -i)))
 (((rpm, -ihv)))
@@ -58,6 +59,8 @@ Paketcache vorliegen.
 | APT        | `apt-get install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |            | `apt-get --no-download install` 'Paketname' | Paket wird dem Paketcache entnommen und nicht vom Paketmirror bezogen
 | `aptitude` | `aptitude install` 'Paketname' | Paket wird dem Paketrepository entnommen
+| `DNF`      | `dnf install` 'Paketname' | Paket wird dem Paketrepository entnommen
+|            | `dnf install` 'Paketdatei' | Paketdatei liegt also lokale Datei vor
 | `dpkg`     | `dpkg -i` 'Paketname' | Paket liegt lokal als Datei vor
 | `RPM`      | `rpm -i` 'Paketname' | Paket liegt lokal als Datei vor
 |            | `rpm -i --nodeps` 'Paketname' | Paket liegt lokal als Datei vor, Installation ohne Berücksichtigung der Paketabhängigkeiten
@@ -136,6 +139,8 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 // Stichworte für den Index
 (((apt-cache, search)))
 (((aptitude, search)))
+(((dnf, list available)))
+(((dnf, list installed)))
 (((dpkg, -l)))
 (((Paket, installiertes anzeigen)))
 (((Paket, Status anzeigen)))
@@ -163,6 +168,8 @@ sowie unter ``Aktualisierbare Pakete anzeigen'' in
 | `aptitude` | `aptitude search ~i`| alle installierten Pakete auflisten
 |            | `aptitude versions` 'Paketname'| alle verfügbaren Pakete
 für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
+| `DNF`      | `dnf list installed` | alle installierten Pakete anzeigen
+|            | `dnf list available` | alle verfügbaren Pakete anzeigen
 | `dpkg`     | `dpkg -l` | alle installierten Pakete auflisten
 | `RPM`      | `rpm -qa` | alle installierten Pakete auflisten
 |            | `rpm -qa --last` | alle zuletzt installierten Pakete auflisten, auch die (noch) nicht installierten Pakete
