@@ -73,6 +73,8 @@ Paketcache vorliegen.
 
 // Stichworte für den Index
 (((apt-get, upgrade)))
+(((dnf, update)))
+(((dnf, upgrade)))
 (((Paket, aktualisieren)))
 (((rpm, -U)))
 (((yum, update)))
@@ -87,6 +89,10 @@ bei `dpkg`, APT und `aptitude` ein.
 | Werkzeug   | Aufruf | Anmerkungen
 | APT        | `apt-get upgrade` 'Paketname' |
 | `aptitude` | |
+| `DNF`      | `dnf update` | alle installierten Pakete aktualisieren (veraltet)
+|            | `dnf update` 'Paketname' | nur 'Paketname' aktualisieren (veraltet)
+|            | `dnf upgrade` | alle installierten Pakete aktualisieren
+|            | `dnf upgrade` 'Paketname' | nur 'Paketname' aktualisieren
 | `RPM`      | `rpm -U` 'Paketname' | Paket liegt lokal als Datei vor
 | `YUM`      | `yum update` | die gesamte Veröffentlichung aktualisieren
 |     `      | `yum update` 'Paketname' | nur 'Paketname' aktualisieren
