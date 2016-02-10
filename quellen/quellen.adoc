@@ -54,6 +54,8 @@
 
 - [[[apt-get.org]]] Suche nach inoffiziellen Debian-Paketen, http://www.apt-get.org/
 
+- [[[apt-get-update-bug-764503]]] Debian Bug Report 764503, https://bugs.debian.org/764503
+
 - [[[apt-mirror-Projektseite]]] Projektseite zu 'apt-mirror', http://apt-mirror.github.io/
 
 - [[[apt-mirror-ubuntu]]] Felipe Alfaro Solana: Create a local mirror of Ubuntu packages using `apt-mirror`, http://blog.felipe-alfaro.com/2014/05/30/create-a-local-mirror-of-ubuntu-packages-using-apt-mirror/
