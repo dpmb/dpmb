@@ -10,6 +10,7 @@
 (((apt-get, upgrade -u)))
 (((apt-get, upgrade --show-upgraded)))
 (((apt-get, upgrade --simulate)))
+(((Paket, verfügbare Versionen anzeigen)))
 (((Pakete aktualisieren, Simulation)))
 (((Pakete aktualisieren, verfügbare Versionen anzeigen)))
 Sowohl APT als auch `aptitude` zeigen Ihnen an, für welche Pakete eine
@@ -63,6 +64,7 @@ $
 
 // Stichworte für den Index
 (((aptitude, versions)))
+(((Paket, verfügbare Versionen anzeigen)))
 (((Pakete aktualisieren, verfügbare Versionen anzeigen)))
 Um alle verfügbaren Varianten eines Pakets für alle Veröffentlichungen
 anzuzeigen, nutzen Sie die `aptitude`-Option `versions`. Nachfolgende

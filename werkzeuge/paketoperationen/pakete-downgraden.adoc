@@ -52,26 +52,29 @@ Rückrichtung nicht zurück umgebaut werden kann (siehe
 
 Der gesamte Vorgang ist mit einer Aktualisierung gleichzusetzen. Hierbei
 benennen Sie jedoch explizit eine ältere Paketversion, die Sie entweder
-über einen Parameter (``target'') beim Aufruf von `dpkg` bzw. `apt-get`
-angeben oder in der Textoberfläche von Aptitude auswählen. Berechnet die
-Paketverwaltung nun die Abhängigkeiten zu den übrigen Paketen, kann am
-Ende dieses Vorgangs auch eine großflächige Änderung am Restbestand der
-Pakete stehen. Dieser Fall ist nicht ungewöhnlich, denn er kann ebenso
-bei einer Aktualisierung vorkommen.
+über einen Parameter (``target release'' oder Versionsnummer) beim
+Aufruf von `dpkg` bzw. `apt-get` angeben oder in der Textoberfläche von
+Aptitude auswählen. Berechnet die Paketverwaltung nun die Abhängigkeiten
+zu den übrigen Paketen, kann am Ende dieses Vorgangs auch eine
+großflächige Änderung am Restbestand der Pakete stehen. Dieser Fall ist
+nicht ungewöhnlich, denn er kann ebenso bei einer Aktualisierung
+vorkommen.
 
 Wie oben schon benannt, sind diese Änderungen nicht immer
 rückwärtskompatibel und lösen Verwicklungen aus (Aktualisierungen sind
 eigentlich bereits hinreichend komplex). Unsere Empfehlung ist, ein
-Downgrade nur bei dem Bedarf dafür durchzuführen. Ziehen Sie vorher in
-Betracht, ob das Mischen von Veröffentlichungen mittels `apt-pinning`
-(siehe <<veroeffentlichungen-mischen>>) oder das Übersetzen des Pakets
-aus den Quellen und das nachfolgende Einspielen risikoärmer ist.
+Downgrade nur bei dem Bedarf dafür durchzuführen. Prüfen Sie vorher, ob
+das Mischen von Veröffentlichungen mittels `apt-pinning` (siehe
+<<veroeffentlichungen-mischen>>) oder das Übersetzen des Pakets aus den
+Quellen und das nachfolgende Einspielen risikoärmer ist.
 
 ==== Ablauf ====
 
 // Stichworte für den Index
 (((apt-cache, showpkg)))
 (((apt-get, -t install)))
+(((Paket, verfügbare Versionen anzeigen)))
+(((Pakete aktualisieren, verfügbare Versionen anzeigen)))
 
 * vorher nützlich:
 ** anzeigen, welche Paketversionen überhaupt verfügbar sind
