@@ -171,15 +171,17 @@
 
 - [[[Debian-DebSrc3.0]]] Projects DebSrc3.0, http://wiki.debian.org/Projects/DebSrc3.0
 
-- [[[Debian-Debtags]]] Debtags Projekt, http://debtags.debian.net/
+- [[[Debian-Debtags]]] Debtags Projekt, http://debtags.debian.org/
+
+- [[[Debian-Debtags-Old]]] Debtags Projekt, http://debtags.debian.net/
 
 - [[[Debian-Debtags-Editor]]] Debtags Editor, http://debtags.debian.net/edit/
 
-- [[[Debian-Debtags-Search]]] Debtags Projekt, Suche, http://debtags.debian.net/search
+- [[[Debian-Debtags-Search]]] Debtags Projekt, Suche, http://debtags.debian.org/search
 
-- [[[Debian-Debtags-Search-By-Tags]]] Debtags Projekt, Suche anhand der Schlagworte, http://debtags.debian.net/search/bytag
+- [[[Debian-Debtags-Search-By-Tags]]] Debtags Projekt, Suche anhand der Schlagworte, http://debtags.debian.org/search/bytag
 
-- [[[Debian-Debtags-Statistics]]] Debtags Projekt, Statistische Daten, http://debtags.debian.net/reports/stats/
+- [[[Debian-Debtags-Statistics]]] Debtags Projekt, Statistische Daten, http://debtags.debian.org/reports/stats/
 
 - [[[Debian-Developers-Reference]]] Developer's Reference Team: Debian Developer's Reference, deutsche Übersetzung, http://www.debian.org/doc/manuals/developers-reference/index.html
 

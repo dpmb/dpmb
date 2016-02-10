@@ -18,10 +18,13 @@ Jahre 2003 des Problems an. Er orientierte sich dabei an der Art und
 Weise, wie Bücher und Dokumente von je her anhand von Schlüsselworten
 und Kategorien indexiert und klassifiziert werden. Zur
 Debian-Entwicklerkonferenz DebConf im Jahre 2005 in Helsinki
-<<DebConf5>> stellte er sein Projekt 'Debtags' <<Debian-Debtags>> vor,
-welches die Debianpakete und deren Beschreibung um geeignete Stichworte
-oder Attribute ergänzt und damit die Granularität der Suche deutlich
-erhöht.
+<<DebConf5>> stellte er sein Projekt 'Debtags' <<Debian-Debtags-Old>>
+vor, welches die Debianpakete und deren Beschreibung um geeignete
+Stichworte oder Attribute ergänzt und damit die Granularität der Suche
+deutlich erhöht. Seit Anfang 2016 ist die Webseite des Debtags-Projekts
+Bestandteil der offiziellen Webseite des Debian-Projekts
+<<Debian-Debtags>> (siehe auch ``Debtags Webseite''
+<<debtags-webseite>>).
 
 // Stichworte für den Index
 (((Debianpaket, debtags)))
@@ -42,8 +45,8 @@ zum Information Retrieval und zur Suchmaschinenoptimierung – engl. SEO
 als Abkürzung für Search Engine Optimization – unter dem Fachbegriff
 Verschlagwortung von Inhalten und Indexierung von Dokumenten. Gleiche
 Sachverhalte werden dabei durch einheitliche Begriffe repräsentiert. In
-Enrico Zinis Klassifikationsschema entspricht ein verwendeter Begriff
-einem Aspekt oder einer spezifischen Eigenschaft eines Pakets.
+dem hier genutzten Klassifikationsschema entspricht ein verwendeter
+Begriff einem Aspekt oder einer spezifischen Eigenschaft eines Pakets.
 
 Jedes Paket kann beliebig viele Schlagworte besitzen, sogenannte
 Mehrfachattribute oder Facetten. Daher heißt das Klassifikationsschema
