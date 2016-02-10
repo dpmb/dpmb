@@ -50,20 +50,22 @@ sind die Fälle, wo eine konzeptuelle Änderung im Paket in der
 Rückrichtung nicht zurück umgebaut werden kann (siehe
 <<apt-get-update-bug-764503>>).
 
+Der gesamte Vorgang ist mit einer Aktualisierung gleichzusetzen. Hierbei
+benennen Sie jedoch explizit eine ältere Paketversion, die Sie entweder
+über einen Parameter (``target'') beim Aufruf von `dpkg` bzw. `apt-get`
+angeben oder in der Textoberfläche von Aptitude auswählen. Berechnet die
+Paketverwaltung nun die Abhängigkeiten zu den übrigen Paketen, kann am
+Ende dieses Vorgangs auch eine großflächige Änderung am Restbestand der
+Pakete stehen. Dieser Fall ist nicht ungewöhnlich, denn er kann ebenso
+bei einer Aktualisierung vorkommen.
 
-** nein. Meistens nicht -- vom explizten angeben (dpkg/apt-get) oder
-auswählen der Version (aptitude TUI) mal abgesehen.
-
-* ist das mit einer Aktualisierung gleichzusetzen?
-** im Prinzip ja, nur mit einer älteren Version als explizite Festlegung
-** Vorgang kann ja auch großflächige Änderungen am Restbestand der
-Pakete auslösen (kann bei einer Aktualisierung ja auch vorkommen)
-** Änderungen sind nicht immer rückwärtskompatibel und lösen Verwicklungen aus
-** Aktualisierungen sind bereits hinreichend komplex
-* Alternativen und Querverweise:
-** apt-pinning bzw. Veröffentlichungen mischen (siehe <<veroeffentlichungen-mischen>>)
-** Paket aus den Quellen selbst bauen (``patchen'') und einspielen
-* Empfehlung: nur bei Bedarf durchführen
+Wie oben schon benannt, sind diese Änderungen nicht immer
+rückwärtskompatibel und lösen Verwicklungen aus (Aktualisierungen sind
+eigentlich bereits hinreichend komplex). Unsere Empfehlung ist, ein
+Downgrade nur bei dem Bedarf dafür durchzuführen. Ziehen Sie vorher in
+Betracht, ob das Mischen von Veröffentlichungen mittels `apt-pinning`
+(siehe <<veroeffentlichungen-mischen>>) oder das Übersetzen des Pakets
+aus den Quellen und das nachfolgende Einspielen risikoärmer ist.
 
 ==== Ablauf ====
 
