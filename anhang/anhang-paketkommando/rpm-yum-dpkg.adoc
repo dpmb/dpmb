@@ -282,6 +282,7 @@ widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 
 // Stichworte für den Index
 (((apt-file, search)))
+(((dnf, provides)))
 (((dpkg, -S)))
 (((dpkg, --search)))
 (((dpkg-query, -S)))
@@ -299,6 +300,7 @@ besprechen wir das Thema in ``Paket zu Datei finden'' in
 | Werkzeug   | Aufruf | Anmerkungen
 | APT        | `apt-file --search` 'Dateiname' | Suche in allen verfügbaren Paketen
 | `aptitude` | kein Schalter |
+| `DNF`      | `dnf provides` 'Dateiname'| 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
 | `dpkg`     | `dpkg -S` 'Dateiname' | Suche in den installierten Paketen
 |            | `dpkg --search` 'Dateiname' | Suche in den installierten Paketen
 | `dpkg-query` | `dpkg-query -S` 'Dateiname' | Suche in den installierten Paketen
