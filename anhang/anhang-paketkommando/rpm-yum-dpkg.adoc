@@ -176,6 +176,8 @@ für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
 
 // Stichworte für den Index
 (((aptitude, show)))
+(((dnf, list)))
+(((dnf, list installed)))
 (((dpkg, -l)))
 (((dpkg, -s)))
 (((Paket, Status anzeigen)))
@@ -197,6 +199,8 @@ das zu `dpkg` und `aptitude` genauer.
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | `aptitude` | `aptitude show` 'Paketname'|
+| `DNF`      | `dnf list installed` | alle installierten Pakete anzeigen
+|            | `dnf list installed` 'Paketname' | Installationsstatus zu Paketname anzeigen
 | `dpkg`     | `dpkg -l` 'Paketname' | Ausgabe des Installationsstatus
 |            | `dpkg -s` 'Paketname' | Ausgabe der Paketinformationen
 | `RPM`      | `rpm -q` 'Paketname' | Ausgabe des Installationsstatus für 'Paketname'
