@@ -11,22 +11,25 @@
 (((Aptitude)))
 (((dpkg)))
 (((Dandified YUM (DNF))))
+(((DNF)))
+(((Effing Package Management (FPM)))
 (((FPM)))
 (((RPM)))
 (((Yellowdog Updater Modified (YUM))))
-Hier stellen wir die jeweiligen Kommandos zur Paketverwaltung gegenüber,
-wie sie von RPM, Yellowdog Updater Modified (YUM), seinen Nachfolgern
-Effing Package Management (FPM) und Dandified YUM (DNF), Debian's
-`dpkg`, APT sowie `aptitude` verwendet werden. Wir betrachten dabei
-bspw. die Installation und die Entfernung von Paketen, das Auflisten der
-installierten und verfügbaren Pakete sowie das Anzeigen von
-Paketabhängigkeiten.
+Hier stellen wir Ihnen die jeweiligen Kommandos zur Paketverwaltung
+gegenüber, soweit dieser Schritt möglich ist. Im Rampenlicht stehen RPM,
+Yellowdog Updater Modified (YUM), seine Nachfolger Effing Package
+Management (FPM) und Dandified YUM (DNF), Debian's `dpkg`, APT sowie
+`aptitude`. Wir betrachten dabei bspw. die Installation und die
+Entfernung von Paketen, das Auflisten der installierten und verfügbaren
+Pakete sowie das Anzeigen von Paketabhängigkeiten.
 
 Diese Zusammenstellung basiert auf umfangreichen Tests und Recherchen,
-bspw. mit Fedora 23, CentOS 6 und 7 sowie Ubuntu 15.10 und Debian 8. Die
-Verfügbarkeit der Werkzeuge und deren einzelne Schalter variiert recht
-stark <<RPM-Salve>> <<RPM-Gite>> <<RPM-Canepa>> <<YUM-Salve>>
-<<dpkg-Kumar>> <<apt-Salve>>.
+bspw. mit Fedora 23, CentOS 6 und 7 sowie Ubuntu 15.10 'Wily Werewolf'
+und Debian 8 'Jessie'. Die Verfügbarkeit der Werkzeuge und deren
+einzelne Schalter variiert recht stark <<RPM-Salve>> <<RPM-Gite>>
+<<RPM-Canepa>> <<YUM-Salve>> <<dpkg-Kumar>> <<apt-Salve>>
+<<DNF-Dokumentation>>.
 
 === Paket installieren ===
 
@@ -52,15 +55,15 @@ Paketcache vorliegen.
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketinstallation"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
+| APT        | `apt-get install` 'Paketname' | Paket wird dem Paketrepository entnommen
+|            | `apt-get --no-download install` 'Paketname' | Paket wird dem Paketcache entnommen und nicht vom Paketmirror bezogen
+| `aptitude` | `aptitude install` 'Paketname' | Paket wird dem Paketrepository entnommen
+| `dpkg`     | `dpkg -i` 'Paketname' | Paket liegt lokal als Datei vor
 | `RPM`      | `rpm -i` 'Paketname' | Paket liegt lokal als Datei vor
 |            | `rpm -i --nodeps` 'Paketname' | Paket liegt lokal als Datei vor, Installation ohne Berücksichtigung der Paketabhängigkeiten
 |            | `rpm -ihv` 'Paketname' | Paket liegt lokal als Datei vor, Installation mit Kommentaren
 | `YUM`      | `yum localinstall` 'Paketname' | Paket liegt lokal als Datei vor
 |            | `yum install` 'Paketname' | Paket wird dem Paketrepository entnommen
-| `dpkg`     | `dpkg -i` 'Paketname' | Paket liegt lokal als Datei vor
-| APT        | `apt-get install` 'Paketname' | Paket wird dem Paketrepository entnommen
-|            | `apt-get --no-download install` 'Paketname' | Paket wird dem Paketcache entnommen und nicht vom Paketmirror bezogen
-| `aptitude` | `aptitude install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |====
 
 === Paket aktualisieren ===
@@ -79,16 +82,17 @@ bei `dpkg`, APT und `aptitude` ein.
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketaktualisierung"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
+| APT        | `apt-get upgrade` 'Paketname' |
+| `aptitude` | |
 | `RPM`      | `rpm -U` 'Paketname' | Paket liegt lokal als Datei vor
 | `YUM`      | `yum update` | die gesamte Veröffentlichung aktualisieren
 |     `      | `yum update` 'Paketname' | nur 'Paketname' aktualisieren
-| APT        | `apt-get upgrade` 'Paketname' |
-| `aptitude` | |
 |====
 
 === Paket löschen / entfernen ===
 
 // Stichworte für den Index
+(((apt-gte, purge)))
 (((apt-get, --purge remove)))
 (((apt-get, remove)))
 (((aptitude, remove)))
@@ -113,17 +117,18 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketentfernung"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| `RPM`      | `rpm -e` 'Paketname' | 
-|            | `rpm -e --nodeps` 'Paketname' | Entfernung des Pakets ohne Berücksichtigung der Paketabhängigkeiten
-| `YUM`      | `yum remove` 'Paketname' | 
-|            | `yum erase` 'Paketname' | gleichbedeutend zu `remove`
+|  APT       | `apt-get remove` 'Paketname' | Entfernen ohne Konfigurationsdateien des Pakets
+|            | `apt-get purge` 'Paketname' | Entfernen inklusive der Konfigurationsdateien des Pakets
+|            | `apt-get --purge remove` 'Paketname' | Entfernen inklusive der Konfigurationsdateien des Pakets
+| `aptitude` | `aptitude remove` 'Paketname' | 
 | `dpkg`     | `dpkg -r` 'Paketname' | entfernt nur das Paket
 |            | `dpkg --remove` 'Paketname' | entfernt nur das Paket
 |            | `dpkg -P` 'Paketname' | entfernt das Paket und die Konfigurationsdatei
 |            | `dpkg --purge` 'Paketname' | entfernt das Paket und die Konfigurationsdatei
-|  APT       | `apt-get remove` 'Paketname' | Entfernen ohne Konfigurationsdateien des Pakets
-|            | `apt-get --purge remove` 'Paketname' | Entfernen inklusive der Konfigurationsdateien des Pakets
-| `aptitude` | `aptitude remove` 'Paketname' | 
+| `RPM`      | `rpm -e` 'Paketname' | 
+|            | `rpm -e --nodeps` 'Paketname' | Entfernung des Pakets ohne Berücksichtigung der Paketabhängigkeiten
+| `YUM`      | `yum remove` 'Paketname' | 
+|            | `yum erase` 'Paketname' | gleichbedeutend zu `remove`
 |====
 
 === Alle installierten Pakete auflisten ===
@@ -154,17 +159,17 @@ sowie unter ``Aktualisierbare Pakete anzeigen'' in
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketeauflisten"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
+|  APT       | `apt-cache search` 'Paketname' |
+| `aptitude` | `aptitude search ~i`| alle installierten Pakete auflisten
+|            | `aptitude versions` 'Paketname'| alle verfügbaren Pakete
+für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
+| `dpkg`     | `dpkg -l` | alle installierten Pakete auflisten
 | `RPM`      | `rpm -qa` | alle installierten Pakete auflisten
-|            | `rpm -qa --last` | alle zuletzt installierten Pakete auflisten auch die (noch) nicht installierten Pakete
+|            | `rpm -qa --last` | alle zuletzt installierten Pakete auflisten, auch die (noch) nicht installierten Pakete
 | `YUM`      | `yum list` 'Paketname' | anzeigen, welche Versionen des Pakets installiert sind
 |            | `yum list all` | alle installierten Pakete auflisten
 |            | `yum list available` | alle verfügbaren Pakete auflisten
 |            | `yum list installed` | alle installierten Pakete auflisten
-| `dpkg`     | `dpkg -l` | alle installierten Pakete auflisten
-|  APT       | `apt-cache search` 'Paketname' |
-| `aptitude` | `aptitude search ~i`| alle installierten Pakete auflisten
-| `aptitude` | `aptitude versions` 'Paketname'| alle verfügbaren Pakete
-für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
 |====
 
 === Einzelpaket auflisten ===
@@ -191,12 +196,12 @@ das zu `dpkg` und `aptitude` genauer.
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketinfo"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
+| `aptitude` | `aptitude show` 'Paketname'|
+| `dpkg`     | `dpkg -l` 'Paketname' | Ausgabe des Installationsstatus
+|            | `dpkg -s` 'Paketname' | Ausgabe der Paketinformationen
 | `RPM`      | `rpm -q` 'Paketname' | Ausgabe des Installationsstatus für 'Paketname'
 |            | `rpm -qp` 'Paketname' | ?
 | `YUM`      | `yum list` 'Paketname' | anzeigen, welche Versionen des Pakets installiert sind
-| `dpkg`     | `dpkg -l` 'Paketname' | Ausgabe des Installationsstatus
-|            | `dpkg -s` 'Paketname' | Ausgabe der Paketinformationen
-| `aptitude` | `aptitude show` 'Paketname'|
 |====
 
 === Abhängigkeiten anzeigen ===
@@ -221,12 +226,12 @@ ein.
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketabhaengigkeiten"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
+| APT        | `apt-cache depends` 'Paketname' |
+|            | `apt-cache rdepends` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 | `RPM`      | `rpm -R` 'Paketname' | das Paket muß dazu lokal als Datei vorliegen
 |            | `rpm -qpR` 'Paketname' | das Paket muß dazu lokal als Datei vorliegen
 | `YUM`      | `yum deplist` 'Paketname' |
 |            | `yum info` 'Paketname' |
-| APT        | `apt-cache depends` 'Paketname' |
-|            | `apt-cache rdepends` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 |====
 
 === Alle Dateien eines installierten Pakets anzeigen ===
@@ -247,13 +252,13 @@ widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketinhalte"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| `RPM`      | `rpm -ql` 'Paketname' |
-| `YUM`      | |
+| APT        | |
 | `dpkg`     | `dpkg -L` 'Paketname' |
 |            | `dpkg --listfiles` 'Paketname' |
 | `dpkg-query` | `dpkg-query -L` 'Paketname' |
 |            | `dpkg-query --listfiles` 'Paketname' |
-| APT        | |
+| `RPM`      | `rpm -ql` 'Paketname' |
+| `YUM`      | |
 |====
 
 === Paket identifizieren, aus dem eine Datei stammt ===
@@ -275,14 +280,14 @@ besprechen wir das Thema in ``Paket zu Datei finden'' in
 [frame="topbot",options="header",cols="2,4,4",id="tab.paket-zu-datei-finden"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| `RPM`      | `rpm -qf` 'Dateiname' | 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
-| `YUM`      | `yum provides` 'Dateiname'| 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
+| APT        | `apt-file --search` 'Dateiname' | Suche in allen verfügbaren Paketen
+| `aptitude` | kein Schalter |
 | `dpkg`     | `dpkg -S` 'Dateiname' | Suche in den installierten Paketen
 |            | `dpkg --search` 'Dateiname' | Suche in den installierten Paketen
 | `dpkg-query` | `dpkg-query -S` 'Dateiname' | Suche in den installierten Paketen
 |            | `dpkg-query --search` 'Dateiname' | Suche in den installierten Paketen
-| APT        | `apt-file --search` 'Dateiname' | Suche in allen verfügbaren Paketen
-| `aptitude` | kein Schalter |
+| `RPM`      | `rpm -qf` 'Dateiname' | 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
+| `YUM`      | `yum provides` 'Dateiname'| 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
 |====
 
 === Paketstatus anzeigen ===
