@@ -316,17 +316,17 @@ beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketstatus-erfragen"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| `RPM`      | `rpm -qi` 'Paketname' | 'Paketname' muß lokal installiert sein
-|            | `rpm -qip` 'Dateiname' | 'Dateiname' muß lokal vorliegen
-| `YUM`      | `yum info` 'Paketname' | 'Paketname' muß lokal installiert sein
+| `apt`      | `apt-cache show` 'Paketname' | Suche in allen verfügbaren Paketen
+| `aptitude` | `aptitude show` 'Paketname' | Suche in allen verfügbaren Paketen
 | `dpkg`     | `dpkg -s` 'Paketname' | 'Paketname' muß lokal installiert sein
 |            | `dpkg --status` 'Paketname' | 'Paketname' muß lokal installiert sein
 |            | `dpkg -i` 'Dateiname' | 'Dateiname' bezeichnet eine lokale Datei
 |            | `dpkg --info` 'Dateiname' | 'Dateiname' bezeichnet eine lokale Datei
 | `dpkg-query` | `dpkg-query -s` 'Paketname' | 'Paketname' muß lokal installiert sein
 |            | `dpkg-query --status` 'Paketname' | 'Paketname' muß lokal installiert sein
-| `apt`      | `apt-cache show` 'Paketname' | Suche in allen verfügbaren Paketen
-| `aptitude` | `aptitude show` 'Paketname' | Suche in allen verfügbaren Paketen
+| `RPM`      | `rpm -qi` 'Paketname' | 'Paketname' muß lokal installiert sein
+|            | `rpm -qip` 'Dateiname' | 'Dateiname' muß lokal vorliegen
+| `YUM`      | `yum info` 'Paketname' | 'Paketname' muß lokal installiert sein
 |====
 
 === Paketsignatur überprüfen ===
@@ -351,10 +351,11 @@ Thema in ``Paket verifizieren'' in <<bezogenes-paket-verifizieren>> und
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketsignatur"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
+| APT        | |
+| DNF        | |
 | `RPM`      | `rpm -K` 'Paketname' |
 |            | `rpm --checksig` 'Paketname' |
 | `YUM`      | |
-| APT        | |
 |====
 
 === Paket auf Veränderungen prüfen ===
