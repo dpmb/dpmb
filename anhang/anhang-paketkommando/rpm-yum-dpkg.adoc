@@ -99,6 +99,8 @@ bei `dpkg`, APT und `aptitude` ein.
 (((apt-get, --purge remove)))
 (((apt-get, remove)))
 (((aptitude, remove)))
+(((dnf, erase)))
+(((dnf, remove)))
 (((dpkg, -P)))
 (((dpkg, --purge)))
 (((dpkg, -r)))
@@ -124,6 +126,8 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 |            | `apt-get purge` 'Paketname' | Entfernen inklusive der Konfigurationsdateien des Pakets
 |            | `apt-get --purge remove` 'Paketname' | Entfernen inklusive der Konfigurationsdateien des Pakets
 | `aptitude` | `aptitude remove` 'Paketname' | 
+| `DNF`      | `dnf erase` 'Paketname' | Paket wird deinstalliert (veraltet)
+|            | `dnf remove` 'Paketname' | Paket wird deinstalliert
 | `dpkg`     | `dpkg -r` 'Paketname' | entfernt nur das Paket
 |            | `dpkg --remove` 'Paketname' | entfernt nur das Paket
 |            | `dpkg -P` 'Paketname' | entfernt das Paket und die Konfigurationsdatei
