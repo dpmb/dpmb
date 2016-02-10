@@ -187,6 +187,7 @@ für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
 
 // Stichworte für den Index
 (((aptitude, show)))
+(((dnf, info)))
 (((dnf, list)))
 (((dnf, list installed)))
 (((dpkg, -l)))
@@ -210,7 +211,8 @@ das zu `dpkg` und `aptitude` genauer.
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | `aptitude` | `aptitude show` 'Paketname'|
-| `DNF`      | `dnf list installed` | alle installierten Pakete anzeigen
+| `DNF`      | `dnf info` 'Paketname' | Informationen zu Paketname anzeigen
+|            | `dnf list installed` | alle installierten Pakete anzeigen
 |            | `dnf list installed` 'Paketname' | Installationsstatus zu Paketname anzeigen
 | `dpkg`     | `dpkg -l` 'Paketname' | Ausgabe des Installationsstatus
 |            | `dpkg -s` 'Paketname' | Ausgabe der Paketinformationen
