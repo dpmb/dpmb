@@ -81,16 +81,29 @@ des eigenen Binärpakets risikoärmer ist.
 // Stichworte für den Index
 (((apt-cache, showpkg)))
 (((apt-get, -t install)))
+(((aptitude, versions)))
+(((Debianpaket, openvpn)))
 (((Paket, verfügbare Versionen anzeigen)))
 (((Pakete aktualisieren, verfügbare Versionen anzeigen)))
 
-Als Schritt eins listen Sie zunächst die Paketversionen auf, welche
-überhaupt verfügbar sind (siehe ``Paketstatus erfragen'' in
-<<paketstatus-erfragen>>). Dabei hilft ihnen das Werkzeug `apt-cache`
-mit dem Schalter `showpkg` und dem Namen des gewünschten Pakets:
+Als Schritt eins schauen Sie nach, welche Paketversionen überhaupt
+verfügbar sind (siehe ``Paketstatus erfragen'' in
+<<paketstatus-apt-cache-showpkg>> und ``Aktualisierbare Pakete
+anzeigen'' in <<aktualisierbare-pakete-anzeigen>>). Dabei helfen ihnen
+die beiden Werkzeuge `apt-cache` mit dem Schalter `showpkg` bzw.
+`aptitude` mit dem Schalter `versions` sowie dem Namen des gewünschten
+Pakets weiter. Die nachfolgende Ausgabe nutzt `aptitude` und betrifft
+das Paket `openvpn` aus der stabilen Veröffentlichung:
 
+.Auflistung der verfügbaren Versionen zum Paket `openvpn`
 ----
-apt-cache showpkg Paketname
+$ aptitude versions openvpn
+...
+Paket openvpn:
+i   2.3.4-5                                       100 
+p   2.3.4-5+deb8u1         stable                 500 
+...
+$
 ----
 
 * Möglichkeiten, um eine vorhergehende Paketversion einspielen
