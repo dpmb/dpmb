@@ -56,7 +56,7 @@ konzeptuelle Änderung im Paket in der Rückrichtung nicht umgebaut werden
 kann (siehe dazu bspw. den Debian-Bug 764503
 <<apt-get-update-bug-764503>>).
 
-Der gesamte Vorgang ist mit einer Aktualisierung gleichzusetzen. Hierbei
+Ein Downgrade ist mit einer Aktualisierung gleichzusetzen. Hierbei
 benennen Sie jedoch explizit eine ältere Paketversion, die Sie entweder
 über einen Parameter -- ``target release'' oder Versionsnummer -- beim
 Aufruf von `dpkg` bzw. `apt-get` angeben oder in der Textoberfläche von
@@ -69,11 +69,12 @@ ist sehr groß.
 
 Wie oben schon benannt, sind diese Änderungen nicht immer
 rückwärtskompatibel und lösen Verwicklungen aus (Aktualisierungen sind
-eigentlich bereits hinreichend komplex). Unsere Empfehlung ist, ein
-Downgrade nur bei dem Bedarf dafür durchzuführen. Prüfen Sie bitte
-vorher, ob das Mischen von Veröffentlichungen mittels `apt-pinning`
-(siehe <<veroeffentlichungen-mischen>>) oder das Übersetzen des Pakets
-aus den Quellen und das nachfolgende Einspielen risikoärmer ist.
+eigentlich bereits hinreichend komplex). Wir empfehlen Ihnen daher, ein
+Downgrade nur bei dem tatsächlichen Bedarf dafür durchzuführen. Prüfen
+Sie bitte vorher, ob das Mischen von Veröffentlichungen mittels
+`apt-pinning` (siehe <<veroeffentlichungen-mischen>>) oder das
+Übersetzen des Pakets aus den Quellen und das nachfolgende Einspielen
+des eigenen Binärpakets risikoärmer ist.
 
 ==== Ablauf ====
 
@@ -83,9 +84,14 @@ aus den Quellen und das nachfolgende Einspielen risikoärmer ist.
 (((Paket, verfügbare Versionen anzeigen)))
 (((Pakete aktualisieren, verfügbare Versionen anzeigen)))
 
-* vorher nützlich:
-** anzeigen, welche Paketversionen überhaupt verfügbar sind
-** `apt-cache showpkg Paketname` (siehe auch <<paketstatus-erfragen>>)
+Als Schritt eins listen Sie zunächst die Paketversionen auf, welche
+überhaupt verfügbar sind (siehe ``Paketstatus erfragen'' in
+<<paketstatus-erfragen>>). Dabei hilft ihnen das Werkzeug `apt-cache`
+mit dem Schalter `showpkg` und dem Namen des gewünschten Pakets:
+
+----
+apt-cache showpkg Paketname
+----
 
 * Möglichkeiten, um eine vorhergehende Paketversion einspielen
 ** über die explizite Angabe der Versionsnummer des Pakets: `apt-get install <package-name>=<package-version-number>`
