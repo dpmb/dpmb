@@ -116,7 +116,7 @@ sind. Aus obiger Ausgabe von `apt-show-versions` wird nur ersichtlich,
 daß derzeit die Version `2.3.4-5+deb8u1` installiert ist und es sich
 dabei um das derzeit aktuellste Paket handelt. Das Suffix `deb8u1`
 deutet auf eine (Sicherheits-)Aktualisierung der Vorgängerversion
-`2.3.4-5` hin. 
+`2.3.4-5` hin.
 
 Um diese Version aufzuspüren, kann ein Blick in den Paketcache bereits
 zum Erfolg führen:
@@ -130,7 +130,7 @@ $
 ----
 
 Sie sehen, dass das Paket mit der Version `2.3.4-5` noch lokal
-herumliegt. Dieses Paket können Sie nachfolgend benutzen. 
+herumliegt. Dieses Paket können Sie nachfolgend benutzen.
 
 // Stichworte für den Index
 (((Debian Snapshots, Paketarchiv)))
@@ -148,10 +148,24 @@ diese Webseite stöbern Sie veröffentlichungsbezogen oder anhand des
 Paketnamens für das Quell- bzw. Binärpaket. <<fig.snapshots-openvpn>>
 zeigt das Suchergebnis für das Paket `openvpn`. Mit einem Klick auf die
 gesuchte Version aus der Liste beziehen das benötigte Paket aus dem
-Archiv.
+Archiv und speichern es im Paketcache unter `/var/cache/apt/archives'.
 
 .Suchergebnis nach dem Paket `openvpn` im Paketarchiv
 image::werkzeuge/paketoperationen/snapshots-openvpn.png[id="fig.snapshots-openvpn", width="50%"]
+
+In Schritt zwei ersetzen Sie das aktuelle Paket durch dessen Vorgänger.
+Dieser Schritt funktioniert unkompliziert, sofern keine größeren
+Paketabhängigkeiten bestehen und repariert werden müssen. Im
+vorliegenden Fall genügt folgendes:
+
+. Entfernen des derzeit installierten `openvpn`-Pakets mittels `apt-get
+remove openvpn`
+
+. Einspielen des älteren `openvpn`-Pakets mittels `dpkg -ihv
+/var/cache/apt/archives/openvpn_2.3.4-5_amd64.deb`.
+
+Bei dieser Vorgehensweise bleiben alle Konfigurationsdateien unverändert
+erhalten.
 
 // Stichworte für den Index
 (((apt-get, -t install)))
