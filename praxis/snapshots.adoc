@@ -32,8 +32,8 @@ Konfigurationsdateien wird gesichert/gemerkt, bspw. über eine Paketliste oder
 
 * Variante 2: eine Art 'Package Freeze'. Das Datum, bis zu dem noch
 Aktualisierungen von Paketen einfließen können, wird festgelegt. Das Zauberwort
-heißt http://snapshot.debian.org/. In der `/etc/apt/sources.list`
-stehen dann Einträge der Form
+heißt http://snapshot.debian.org/ <<Debian-Snapshots>>. In der
+`/etc/apt/sources.list` stehen dann Einträge der Form:
 
 ----
 deb http://snapshot.debian.org/archive/debian/20091004T111800Z/ lenny main

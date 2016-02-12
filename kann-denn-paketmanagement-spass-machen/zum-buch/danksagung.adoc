@@ -18,7 +18,7 @@ Menschen gebürt unser Dank:
 * Annette Kalbow (für inhaltliche Vorschläge mit `apt-file`, `dpkg -l`
   und `dpkg -L` sowie die graphische Umsetzung der Landkarte)
 * Mechtilde Stehmann (für die Sprachkorrekuren und die Vorschläge für die FAQ)
-* Marco Uhl (für die Idee zum FAQ-Eintrag über `snapshot.debian.org` bei Testing- vs. Produktiv-Umgebung)
+* Marco Uhl (für die Idee zum FAQ-Eintrag über 'Debian Snapshots' <<Debian-Snapshots>> bei Testing- vs. Produktiv-Umgebung)
 * Werner Heuser (für die Installation und den Umgang auf Embedded und Mobile Devices)
 * Claude Becker (für Ideen und Korrekturlesen rund um das Parsen von
   Debian-Versionsnummern und APT-Pinning)
