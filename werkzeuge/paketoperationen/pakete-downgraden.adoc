@@ -93,11 +93,14 @@ anzeigen'' in <<aktualisierbare-pakete-anzeigen>>). Dabei helfen ihnen
 die beiden Werkzeuge `apt-cache` mit dem Schalter `showpkg` bzw.
 `aptitude` mit dem Schalter `versions` sowie dem Namen des gewünschten
 Pakets weiter. Die nachfolgende Ausgabe nutzt `aptitude` und betrifft
-das Paket `openvpn` aus der stabilen Veröffentlichung:
+das Paket `openvpn` aus der stabilen Veröffentlichung. Um exakt das
+Paket `openvpn` anzusprechen und diejenigen Pakete auszublenden, die
+so ähnlich heißen, wurde der Paketname als regulärer Ausdruck
+formuliert.
 
 .Auflistung der verfügbaren Versionen zum Paket `openvpn`
 ----
-$ aptitude versions openvpn
+$ aptitude versions ^openvpn$
 ...
 Paket openvpn:
 i   2.3.4-5                                       100 
