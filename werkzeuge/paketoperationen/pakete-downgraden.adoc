@@ -136,13 +136,21 @@ herumliegt. Dieses Paket können Sie nachfolgend benutzen.
 (((Debian Snapshots, Paketarchiv)))
 Sollte obiger Schritt jedoch nicht (mehr) von Erfolg gekrönt sein --
 weil Sie bspw. den Paketcache aufgeräumt haben -- benötigen Sie Plan B.
-Dieser beinhaltet eine Recherche im Paketarchiv unter Debian Snapshots
-<<Debian-Snapshots>>. Dieses Archiv beinhaltet den Zugriff auf alle
-Varianten eines Pakets, welche jemals Bestandteil einer Veröffentlichung
-von Debian waren. Über diese Webseite stöbern Sie
-veröffentlichungsbezogen oder anhand des Paketnamens für das Quell- bzw.
-Binärpaket. Abb. zeigt das Suchergebnis für das Paket `openvpn`.
+Dieser beinhaltet eine Recherche im Paketarchiv unter 'Debian Snapshots'
+<<Debian-Snapshots>> (siehe Abb. <<fig.snapshots>>). 
 
+.Das Debian-Paketarchiv
+image::werkzeuge/paketoperationen/snapshots.png[id="fig.snapshots", width="50%"]
+
+Dieses Archiv beinhaltet den Zugriff auf alle Varianten eines Pakets,
+welche jemals Bestandteil einer Veröffentlichung von Debian waren. Über
+diese Webseite stöbern Sie veröffentlichungsbezogen oder anhand des
+Paketnamens für das Quell- bzw. Binärpaket. Abb.
+<<fig.snapshots-openvpn>> zeigt das Suchergebnis für das Paket
+`openvpn`.
+
+.Suchergebnis nach dem Paket `openvpn` im Paketarchiv
+image::werkzeuge/paketoperationen/snapshots-openvpn.png[id="fig.snapshots-openvpn", width="50%"]
 
 // Stichworte für den Index
 (((apt-get, -t install)))
