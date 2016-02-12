@@ -7,7 +7,9 @@
 === Pakete downgraden ===
 
 // Stichworte für den Index
+(((Paket, bestimmte Version installieren)))
 (((Paket, downgraden)))
+(((Paket installieren, bestimmte Version)))
 
 Allgemein gesprochen, steht der Begriff 'Downgrade' für einen
 Niedergang, eine Abwertung oder einen Rückschritt. Bezogen auf die
@@ -80,7 +82,7 @@ des eigenen Binärpakets risikoärmer ist.
 
 // Stichworte für den Index
 (((apt-cache, showpkg)))
-(((apt-get, -t install)))
+(((apt-show-versions)))
 (((aptitude, versions)))
 (((Debianpaket, openvpn)))
 (((Paket, verfügbare Versionen anzeigen)))
@@ -88,15 +90,16 @@ des eigenen Binärpakets risikoärmer ist.
 
 Als Schritt eins schauen Sie nach, welche Paketversionen überhaupt
 verfügbar sind (siehe ``Paketstatus erfragen'' in
-<<paketstatus-apt-cache-showpkg>> und ``Aktualisierbare Pakete
-anzeigen'' in <<aktualisierbare-pakete-anzeigen>>). Dabei helfen ihnen
-die beiden Werkzeuge `apt-cache` mit dem Schalter `showpkg` bzw.
-`aptitude` mit dem Schalter `versions` sowie dem Namen des gewünschten
-Pakets weiter. Die nachfolgende Ausgabe nutzt `aptitude` und betrifft
-das Paket `openvpn` aus der stabilen Veröffentlichung. Um exakt das
-Paket `openvpn` anzusprechen und diejenigen Pakete auszublenden, die
-so ähnlich heißen, wurde der Paketname als regulärer Ausdruck
-formuliert.
+<<paketstatus-apt-cache-showpkg>>, ``Aktualisierbare Pakete anzeigen''
+in <<aktualisierbare-pakete-anzeigen>> und ``Aus welchem Repo kommen die
+Pakete'' in <<aus-welchem-repo-kommen-die-pakete>>). Dabei helfen ihnen
+bspw. die Werkzeuge `apt-cache` mit dem Schalter `showpkg`, `aptitude`
+mit dem Schalter `versions` sowie `apt-show-versions` weiter. Alle
+Programme benötigen im Aufruf zusätzlich den Namen des gewünschten
+Pakets. Die nachfolgende Ausgabe nutzt `aptitude` und betrifft das Paket
+`openvpn` aus der stabilen Veröffentlichung. Um exakt das Paket
+`openvpn` anzusprechen und diejenigen Pakete auszublenden, die so
+ähnlich heißen, wurde der Paketname als regulärer Ausdruck formuliert.
 
 .Auflistung der verfügbaren Versionen zum Paket `openvpn`
 ----
@@ -109,6 +112,11 @@ p   2.3.4-5+deb8u1         stable                 500
 $
 ----
 
+// Stichworte für den Index
+(((apt-get, -t install)))
+(((Debianpaket, openvpn)))
+(((Paket, bestimmte Version installieren)))
+(((Paket installieren, bestimmte Version)))
 * Möglichkeiten, um eine vorhergehende Paketversion einspielen
 ** über die explizite Angabe der Versionsnummer des Pakets: `apt-get install <package-name>=<package-version-number>`
 ** über die explizite Angabe der Veröffentlichung: `apt-get -t=<target release> install <package-name>`
