@@ -184,12 +184,21 @@ $
 // Stichworte für den Index
 (((apt-cache, showpkg)))
 (((Debianpaket, apt)))
-Desweiteren verfügt `apt-cache` über das Unterkommando `showpkg`, mit dem
-Sie Paketabhängigkeiten und die verfügbaren Übersetzungen ermitteln
-können. Detaillierter gehen wir auf die Ermittlung der einfachen und
-umgekehrten Paketabhängigkeiten in <<paketabhaengigkeiten-anzeigen>> ein.
+(((Debianpaket, htop)))
+(((Debianpaket, openvpn)))
+Desweiteren verfügt `apt-cache` über das Unterkommando `showpkg`. Primär
+dient es dazu, die verfügbaren Paketvarianten samt deren Abhängigkeiten
+und Übersetzungen darzustellen. Die Ermittlung der einfachen und
+umgekehrten Paketabhängigkeiten besprechen wir ausführlicher unter
+``Paketabhängigkeiten anzeigen'' in <<paketabhaengigkeiten-anzeigen>>.
 
-.Detailansicht zum Paket 'htop' via `apt-cache showpkg`
+Die nachfolgenden Ausgaben zeigen die Detailansicht für die Pakete
+'htop' und 'openvpn'. Für ersteres steht nur ein Paket zur Verfügung,
+bei dem zweiten hingegen eine aktualisierte Variante. Daher umfaßt die
+Ausgabe zwei Einträge mit den Versionen 2.3.4-5 und 2.3.4-5+deb8u1,
+wobei die letztgenannte Version noch auf dem Paketmirror liegt.
+
+.Detailansicht zum Paket 'htop' via `apt-cache showpkg` (Debian 7 'Wheezy')
 ----
 $ apt-cache showpkg htop
 Package: htop
@@ -212,6 +221,54 @@ Dependencies:
 1.0.1-1 - libc6 (2 2.3.4) libncursesw5 (2 5.6+20070908) libtinfo5 (0 (null)) strace (0 (null)) ltrace (0 (null)) 
 Provides: 
 1.0.1-1 - 
+Reverse Provides:
+$
+----
+
+.Detailansicht zum Paket 'openvpn' via `apt-cache showpkg` (Debian 8 'Jessie')
+----
+apt-cache showpkg openvpn
+Package: openvpn
+Versions: 
+2.3.4-5+deb8u1 (/var/lib/apt/lists/ftp.de.debian.org_debian_dists_jessie_main_binary-amd64_Packages)
+ Description Language: 
+                 File: /var/lib/apt/lists/ftp.de.debian.org_debian_dists_jessie_main_binary-amd64_Packages
+                  MD5: 2ebe91e411d46309a61861db507e5c2f
+ Description Language: de
+                 File: /var/lib/apt/lists/ftp.de.debian.org_debian_dists_jessie_main_i18n_Translation-de
+                  MD5: 2ebe91e411d46309a61861db507e5c2f
+ Description Language: en
+                 File: /var/lib/apt/lists/ftp.de.debian.org_debian_dists_jessie_main_i18n_Translation-en
+                  MD5: 2ebe91e411d46309a61861db507e5c2f
+
+2.3.4-5 (/var/lib/dpkg/status)
+ Description Language: 
+                 File: /var/lib/apt/lists/ftp.de.debian.org_debian_dists_jessie_main_binary-amd64_Packages
+                  MD5: 2ebe91e411d46309a61861db507e5c2f
+ Description Language: de
+                 File: /var/lib/apt/lists/ftp.de.debian.org_debian_dists_jessie_main_i18n_Translation-de
+                  MD5: 2ebe91e411d46309a61861db507e5c2f
+ Description Language: en
+                 File: /var/lib/apt/lists/ftp.de.debian.org_debian_dists_jessie_main_i18n_Translation-en
+                  MD5: 2ebe91e411d46309a61861db507e5c2f
+
+
+Reverse Depends: 
+  openvpn:i386,openvpn
+  openvpn-auth-radius,openvpn 2
+  openvpn-auth-ldap,openvpn 2
+  network-manager-openvpn,openvpn 2.1~rc9
+  kvpnc,openvpn
+  gadmin-openvpn-server,openvpn
+  gadmin-openvpn-client,openvpn
+  eurephia,openvpn 2
+  collectd-core,openvpn
+Dependencies: 
+2.3.4-5+deb8u1 - debconf (18 0.5) debconf-2.0 (0 (null)) libc6 (2 2.15) liblzo2-2 (0 (null)) libpam0g (2 0.99.7.1) libpkcs11-helper1 (2 1.11) libssl1.0.0 (2 1.0.0) init-system-helpers (2 1.18~) initscripts (2 2.88dsf-13.3) iproute2 (0 (null)) openssl (0 (null)) resolvconf (0 (null)) easy-rsa (0 (null)) openvpn:i386 (0 (null)) 
+2.3.4-5 - debconf (18 0.5) debconf-2.0 (0 (null)) libc6 (2 2.15) liblzo2-2 (0 (null)) libpam0g (2 0.99.7.1) libpkcs11-helper1 (2 1.11) libssl1.0.0 (2 1.0.0) init-system-helpers (2 1.18~) initscripts (2 2.88dsf-13.3) iproute2 (0 (null)) openssl (0 (null)) resolvconf (0 (null)) easy-rsa (0 (null)) openvpn:i386 (0 (null)) 
+Provides: 
+2.3.4-5+deb8u1 - 
+2.3.4-5 - 
 Reverse Provides:
 $
 ----
