@@ -10,19 +10,68 @@
 
 // Stichworte für den Index
 (((apt-cache, madison)))
+(((Debianpaket, apt-doc)))
 (((Paketversion anzeigen)))
 Das Werkzeug `apt-cache` verfügt über das Unterkommando `madison`. Damit
 finden Sie heraus, welche Pakete derzeit von den Spiegelservern in einer
 neueren Version verfügbar sind. Nachfolgender Ausdruck zeigt das für das
-Paket 'apt-doc'.
+Paket 'apt-doc' <<Debian-Paket-apt-doc>>.
 
-//.Ausgabe von `apt-cache` mit dem Unterkommando `madison` für 'apt-doc'
+.Ausgabe von `apt-cache` mit dem Unterkommando `madison` für 'apt-doc'
 ----
 $ apt-cache madison apt-doc
    apt-doc | 0.9.7.9+deb7u2 | http://ftp.de.debian.org/debian/ wheezy/main i386 Packages
    apt-doc | 0.9.7.9+deb7u2 | http://security.debian.org/ wheezy/updates/main i386 Packages
        apt | 0.9.7.9+deb7u2 | http://ftp.de.debian.org/debian/ wheezy/main Sources
        apt | 0.9.7.9+deb7u2 | http://security.debian.org/ wheezy/updates/main Sources
+$
+----
+
+// Stichworte für den Index
+(((rmadison)))
+(((Debianpaket, apt-doc)))
+(((Debianpaket, devscripts)))
+(((Paketversion anzeigen)))
+Möchten Sie hingegen wissen, welche Versionen für die jeweiligen
+Veröffentlichungen bereitstehen, hilft Ihnen das Werkzeug `rmadison` aus
+dem Paket 'devscripts' weiter <<Debian-Paket-devscripts>>. Für das
+bereits oben verwendete Paket 'apt-cache' sieht das unter der
+Veröffentlichung Debian 8 'Jessie' wie folgt aus:
+
+.Auflistung der verfügbaren Paketversionen mit `rmadison`
+----
+$ rmadison apt-doc
+debian:
+ apt-doc | 0.8.10.3+squeeze1 | squeeze         | all
+ apt-doc | 0.8.10.3+squeeze7 | squeeze-lts     | all
+ apt-doc | 0.9.7.9+deb7u6    | wheezy-security | all
+ apt-doc | 0.9.7.9+deb7u7    | wheezy          | all
+ apt-doc | 1.0.9.8           | jessie-kfreebsd | all
+ apt-doc | 1.0.9.8.2         | jessie          | all
+ apt-doc | 1.2.2             | stretch         | all
+ apt-doc | 1.2.3             | sid             | all
+new:
+$
+----
+
+// Stichworte für den Index
+(((Debianpaket, base-files)))
+(((Paketversion anzeigen, nach Architektur filtern)))
+(((Paketversion anzeigen, nach Veröffentlichung filtern)))
+Obige Ausgabe umfaßt die vier Spalten Paketname, Versionsnummer,
+Veröffentlichung und Architektur. Möchten Sie die Ausgabe hingegen auf
+eine bestimmte Veröffentlichung oder Architektur einschränken,
+akzeptiert `rmadison` die Schalter `-a` 'Architektur' und `-s`
+'Veröffentlichung'. Um zu sehen, welche Version des Paketes 'base-files'
+für die Veröffentlichung Debian 8 'Jessie' und die Architektur 'amd64'
+bereitstehen, nutzen Sie den folgenden Aufruf:
+
+.Gefilterte Auflistung der verfügbaren Paketversionen mit `rmadison`
+----
+$ rmadison -s jessie -a amd64 base-files
+debian:
+ base-files | 8+deb8u3 | jessie | amd64
+new:
 $
 ----
 
@@ -35,7 +84,7 @@ Suchfilter `search '~U'` bzw. `search '?upgradable'` in der Langform.
 Ergebnis ist eine Liste der Pakete, welche den Installationsstatus, den
 Paketnamen und die kurze Paketbeschreibung umfasst.
 
-//.Ausgabe von `aptitude` zur Liste der aktualisierbaren Pakete
+.Ausgabe von `aptitude` zur Liste der aktualisierbaren Pakete
 ----
 $ aptitude search '~U'
 i   acpi-support      - Skripte zur Verwaltung von ACPI-Ereignissen           
