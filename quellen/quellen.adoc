@@ -422,6 +422,8 @@
 
 - [[[Debian-Security]]] Debian-Sicherheitsinformationen, https://www.debian.org/security/
 
+- [[[Debian-Snapshots]]] Debian Snapshots, http://snapshot.debian.org/
+
 - [[[Debian-Sources-List-Generator]]] Debian Sources List Generator, http://debgen.simplylinux.ch/
 
 - [[[Debian-Spiegel-Informationen]]] Spiegel-Informationen einreichen, http://www.debian.org/mirror/submit

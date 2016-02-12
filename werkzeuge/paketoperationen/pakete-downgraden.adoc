@@ -88,29 +88,61 @@ des eigenen Binärpakets risikoärmer ist.
 (((Paket, verfügbare Versionen anzeigen)))
 (((Pakete aktualisieren, verfügbare Versionen anzeigen)))
 
-Als Schritt eins schauen Sie nach, welche Paketversionen überhaupt
-verfügbar sind (siehe ``Paketstatus erfragen'' in
-<<paketstatus-apt-cache-showpkg>>, ``Aktualisierbare Pakete anzeigen''
-in <<aktualisierbare-pakete-anzeigen>> und ``Aus welchem Repo kommen die
-Pakete'' in <<aus-welchem-repo-kommen-die-pakete>>). Dabei helfen ihnen
-bspw. die Werkzeuge `apt-cache` mit dem Schalter `showpkg`, `aptitude`
-mit dem Schalter `versions` sowie `apt-show-versions` weiter. Alle
-Programme benötigen im Aufruf zusätzlich den Namen des gewünschten
-Pakets. Die nachfolgende Ausgabe nutzt `aptitude` und betrifft das Paket
-`openvpn` aus der stabilen Veröffentlichung. Um exakt das Paket
-`openvpn` anzusprechen und diejenigen Pakete auszublenden, die so
-ähnlich heißen, wurde der Paketname als regulärer Ausdruck formuliert.
+Als Schritt eins bringen Sie in Erfahrung, welche Paketversionen
+überhaupt installiert und darüberhinaus aus dem Repository ihrer
+genutzten Veröffentlichung verfügbar sind. Dabei helfen ihnen bspw. die
+Werkzeuge `apt-cache`, `aptitude`, `rmadison` und `apt-show-versions`
+weiter (siehe ``Paketstatus erfragen'' in
+<<paketstatus-apt-cache-showpkg>>, ``Verfügbare Paketversionen
+ermitteln'' in <<verfuegbare-paketversionen-ermitteln>> und ``Aus
+welchem Repo kommen die Pakete'' in
+<<aus-welchem-repo-kommen-die-pakete>>). Im Aufruf benötigen alle
+Programme zusätzlich den Namen des gewünschten Pakets und listen in der
+Ausgabe die letzte Version auf, ggf. noch spezifiziert für die jeweilige
+Veröffentlichung. Die nachfolgende Ausgabe nutzt `apt-show-versions` und
+zeigt das anhand des Paketes `openvpn` aus der stabilen
+Veröffentlichung.
 
 .Auflistung der verfügbaren Versionen zum Paket `openvpn`
 ----
-$ aptitude versions ^openvpn$
-...
-Paket openvpn:
-i   2.3.4-5                                       100 
-p   2.3.4-5+deb8u1         stable                 500 
-...
+$ apt-show-versions openvpn
+openvpn:amd64/jessie 2.3.4-5+deb8u1 uptodate
 $
 ----
+
+Die oben benannten Werkzeuge können Ihnen jedoch nicht darstellen,
+welche vorherigen Versionen eines Pakets existieren und noch verfügbar
+sind. Aus obiger Ausgabe von `apt-show-versions` wird nur ersichtlich,
+daß derzeit die Version `2.3.4-5+deb8u1` installiert ist und es sich
+dabei um das derzeit aktuellste Paket handelt. Das Suffix `deb8u1`
+deutet auf eine (Sicherheits-)Aktualisierung der Vorgängerversion
+`2.3.4-5` hin. 
+
+Um diese Version aufzuspüren, kann ein Blick in den Paketcache bereits
+zum Erfolg führen:
+
+.Recherche im Paketcache
+----
+$ ls /var/cache/apt/archives/openvpn*
+/var/cache/apt/archives/openvpn_2.3.4-5_amd64.deb
+/var/cache/apt/archives/openvpn_2.3.4-5+deb8u1_amd64.deb
+$
+----
+
+Sie sehen, dass das Paket mit der Version `2.3.4-5` noch lokal
+herumliegt. Dieses Paket können Sie nachfolgend benutzen. 
+
+// Stichworte für den Index
+(((Debian Snapshots, Paketarchiv)))
+Sollte obiger Schritt jedoch nicht (mehr) von Erfolg gekrönt sein --
+weil Sie bspw. den Paketcache aufgeräumt haben -- benötigen Sie Plan B.
+Dieser beinhaltet eine Recherche im Paketarchiv unter Debian Snapshots
+<<Debian-Snapshots>>. Dieses Archiv beinhaltet den Zugriff auf alle
+Varianten eines Pakets, welche jemals Bestandteil einer Veröffentlichung
+von Debian waren. Über diese Webseite stöbern Sie
+veröffentlichungsbezogen oder anhand des Paketnamens für das Quell- bzw.
+Binärpaket. Abb. zeigt das Suchergebnis für das Paket `openvpn`.
+
 
 // Stichworte für den Index
 (((apt-get, -t install)))
