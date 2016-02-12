@@ -41,35 +41,39 @@ aufsetzen.
 (((Maintainer-Skripte, prerm)))
 
 Das Einspielen einer neueren Version ist vom prinzipiellen Ablauf her
-nicht komplizierter als die Aktualisierung -- es laufen die gleichen
-Mechanismen ab und es kommen die gleichen Werkzeuge zum Einsatz.
-Behalten Sie dabei stets im Hinterkopf, daß es wie das Fahren entgegen
-der Fahrtrichtung einer Einbahnstraße ist -- es geht so lange gut, wie
-Ihnen keiner entgegenkommt. Schwierigkeiten können Ihnen nämlich die
-Maintainerskripte (`postinst`, `preinst`, `postrm`, `prerm`) bereiten,
-die das Downgrade im Normalfall nicht unterstützen. Eventuell ist der
-Mechanismus, der sie aufruft, auch nicht darauf vorbereitet. Kritisch
-sind insbesondere die Fälle, wo eine konzeptuelle Änderung im Paket in
-der Rückrichtung nicht zurück umgebaut werden kann (siehe
+nicht anders als die Aktualisierung -- es laufen die gleichen
+Mechanismen ab und es kommen die gleichen Werkzeuge zum Einsatz. Der
+Unterschied ist jedoch die Komplexität, die hier deutlich höher ist.
+
+Vergleichbar ist der Vorgang wie das Bewegen entgegen der Fahrtrichtung
+in einer Einbahnstraße -- es geht so lange gut, wie Ihnen keiner
+entgegenkommt. Schwierigkeiten können Ihnen nämlich die
+Maintainerskripte (siehe ``Binärpakete'' in
+<<aufbau-und-format-binaer>>) bereiten, die das Downgrade im Normalfall
+nicht unterstützen. Eventuell ist der Mechanismus, der sie aufruft, auch
+nicht darauf vorbereitet. Kritisch sind insbesondere die Fälle, wo eine
+konzeptuelle Änderung im Paket in der Rückrichtung nicht umgebaut werden
+kann (siehe dazu bspw. den Debian-Bug 764503
 <<apt-get-update-bug-764503>>).
 
 Der gesamte Vorgang ist mit einer Aktualisierung gleichzusetzen. Hierbei
 benennen Sie jedoch explizit eine ältere Paketversion, die Sie entweder
-über einen Parameter (``target release'' oder Versionsnummer) beim
+über einen Parameter -- ``target release'' oder Versionsnummer -- beim
 Aufruf von `dpkg` bzw. `apt-get` angeben oder in der Textoberfläche von
 Aptitude auswählen. Berechnet die Paketverwaltung nun die Abhängigkeiten
 zu den übrigen Paketen, kann am Ende dieses Vorgangs auch eine
 großflächige Änderung am Restbestand der Pakete stehen. Dieser Fall ist
 nicht ungewöhnlich, denn er kann ebenso bei einer Aktualisierung
-vorkommen.
+vorkommen. Die Wahrscheinlichkeit, daß die Änderungen erheblich sind,
+ist sehr groß.
 
 Wie oben schon benannt, sind diese Änderungen nicht immer
 rückwärtskompatibel und lösen Verwicklungen aus (Aktualisierungen sind
 eigentlich bereits hinreichend komplex). Unsere Empfehlung ist, ein
-Downgrade nur bei dem Bedarf dafür durchzuführen. Prüfen Sie vorher, ob
-das Mischen von Veröffentlichungen mittels `apt-pinning` (siehe
-<<veroeffentlichungen-mischen>>) oder das Übersetzen des Pakets aus den
-Quellen und das nachfolgende Einspielen risikoärmer ist.
+Downgrade nur bei dem Bedarf dafür durchzuführen. Prüfen Sie bitte
+vorher, ob das Mischen von Veröffentlichungen mittels `apt-pinning`
+(siehe <<veroeffentlichungen-mischen>>) oder das Übersetzen des Pakets
+aus den Quellen und das nachfolgende Einspielen risikoärmer ist.
 
 ==== Ablauf ====
 
