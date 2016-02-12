@@ -78,7 +78,8 @@ Sie bitte vorher, ob das Mischen von Veröffentlichungen mittels
 Übersetzen des Pakets aus den Quellen und das nachfolgende Einspielen
 des eigenen Binärpakets risikoärmer ist.
 
-==== Ablauf ====
+==== Ablauf und Durchführung ====
+===== Bestehende Paketversionen klären =====
 
 // Stichworte für den Index
 (((apt-cache, showpkg)))
@@ -153,10 +154,12 @@ Archiv und speichern es im Paketcache unter `/var/cache/apt/archives'.
 .Suchergebnis nach dem Paket `openvpn` im Paketarchiv
 image::werkzeuge/paketoperationen/snapshots-openvpn.png[id="fig.snapshots-openvpn", width="50%"]
 
-In Schritt zwei ersetzen Sie das aktuelle Paket durch dessen Vorgänger.
-Dieser Schritt funktioniert unkompliziert, sofern keine größeren
-Paketabhängigkeiten bestehen und repariert werden müssen. Im
-vorliegenden Fall genügt folgendes:
+===== Paket austauschen =====
+
+Im sich nun anschließenden Schritt zwei ersetzen Sie das aktuelle Paket
+durch dessen Vorgänger. Dieser Schritt ist unkompliziert, sofern keine
+größeren Paketabhängigkeiten bestehen und repariert werden müssen. Im
+vorliegenden Fall genügt dazu folgendes:
 
 . Entfernen des derzeit installierten `openvpn`-Pakets mittels `apt-get
 remove openvpn`
@@ -167,13 +170,32 @@ remove openvpn`
 Bei dieser Vorgehensweise bleiben alle Konfigurationsdateien unverändert
 erhalten.
 
+===== Paket über die Angabe der Versionsnummer austauschen =====
+
 // Stichworte für den Index
 (((apt-get, -t install)))
 (((Debianpaket, openvpn)))
 (((Paket, bestimmte Version installieren)))
 (((Paket installieren, bestimmte Version)))
-* Möglichkeiten, um eine vorhergehende Paketversion einspielen
-** über die explizite Angabe der Versionsnummer des Pakets: `apt-get install <package-name>=<package-version-number>`
-** über die explizite Angabe der Veröffentlichung: `apt-get -t=<target release> install <package-name>`
+
+* über die explizite Angabe der Versionsnummer des Pakets: 
+
+----
+apt-get install <package-name>=<package-version-number>
+----
+
+===== Paket über die Angabe der Veröffentlichung austauschen =====
+
+// Stichworte für den Index
+(((apt-get, -t install)))
+(((Debianpaket, openvpn)))
+(((Paket, bestimmte Version installieren)))
+(((Paket installieren, Auswahl anhand der Veröffentlichung)))
+
+* über die explizite Angabe der Veröffentlichung: 
+
+----
+apt-get -t=<target release> install <package-name>
+----
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-downgraden.adoc
