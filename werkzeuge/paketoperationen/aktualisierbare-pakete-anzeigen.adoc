@@ -106,6 +106,24 @@ i A 2015g-0+deb8u1               stable- 500
 $
 ----
 
+// Stichworte für den Index
+(((Debianpaket, apt-show-versions)))
+(((Debianpaket, base-files)))
+(((apt-show-versions)))
+Als gleichwertige Alternative steht Ihnen auch das zusätzliche Werkzeug
+`apt-show-versions` aus dem gleichnamigen Debianpaket zur Verfügung
+<<Debian-Paket-apt-show-versions>> (siehe auch ``Aus welchem Repo kommen
+die Pakete'' in <<aus-welchem-repo-kommen-die-pakete>>). Die
+nachfolgende Ausgabe zeigt den Status des Pakets `base-files` an. Daraus
+erkennen Sie, daß für dieses ein neueres Paket bereitsteht.
+
+.Kompakte Ausgabe mittels `apt-show-versions`
+----
+$ apt-show-versions base-files
+base-files:amd64/jessie 8+deb8u2 upgradeable to 8+deb8u3
+$
+----
+
 Bei den graphischen Programmen zur Paketverwaltung kann lediglich
 Synaptic (siehe <<gui-synaptic>>) die aktualisierbaren Pakete anzeigen.
 Dazu wählen Sie zunächst den Knopf `Benutzerdefinierte Filter` aus der
