@@ -11,24 +11,26 @@
 
 Allgemein gesprochen, steht der Begriff 'Downgrade' für einen
 Niedergang, eine Abwertung oder einen Rückschritt. Bezogen auf die
-Verwaltung von Softwarepaketen umfasst es das Einspielen einer vorherigen
-Paketversion. Es stellt damit das Gegenstück zu einer Aktualisierung
-mittels `apt-get upgrade` dar (siehe dazu <<pakete-aktualisieren>>).
+Verwaltung von Softwarepaketen umfasst es das Einspielen oder
+Zurückgehen zu einer vorherigen Paketversion. Es stellt damit das
+Gegenstück zu einer Aktualisierung mittels `apt-get upgrade` dar (siehe
+dazu <<pakete-aktualisieren>>).
 
-Ein solcher Rückschritt ist in Betracht zu ziehen, wenn die derzeit
-installierte Version eines Softwarepakets nicht das leistet, was sie
-verspricht, dabei Fehler auftreten oder Inkompatibilitäten mit anderen
+Ein Downgrade ist in Betracht zu ziehen, wenn die derzeit installierte
+Version eines Softwarepakets nicht das leistet, was sie verspricht,
+bspw. dabei Fehler auftreten oder Inkompatibilitäten mit anderen
 Softwarepaketen deren Benutzung unmöglich machen. Häufig fallen in
 letztere Kategorie geänderte Schnittstellen, die noch nicht auf allen
 nachfolgenden Ebenen konsequent umgesetzt wurden.
 
 Ein Downgrade wird vom Release-Team von Debian GNU/Linux offiziell nicht
-unterstützt. Alle Mechanismen sind auf das Einspielen einer neueren
-Version ausgerichtet. Daher verfügt auch keines der hier im Buch
-vorgestellten Werkzeuge zur Paketverwaltung bislang über einen
-spezifischen Schalter, um ein Downgrade explizit anzustoßen. Es bleibt
-daher nur ein Vorgehen über andere Wege, die jedoch auf den bereits
-zuvor beschriebenen Mechanismen aufsetzen.
+unterstützt. Alle Mechanismen zur Paketverwaltung und Aktualisierung
+sind auf das Einspielen einer neueren Version ausgerichtet. Daher
+verfügt auch keines der hier im Buch vorgestellten Werkzeuge zur
+Paketverwaltung bislang über einen spezifischen Schalter, um ein
+Downgrade explizit anzustoßen. Es bleibt daher nur ein Vorgehen über
+andere Wege, die jedoch auf den bereits zuvor beschriebenen Mechanismen
+aufsetzen.
 
 ==== Hintergrund und Fragen zum Downgrade ====
 
@@ -40,14 +42,15 @@ zuvor beschriebenen Mechanismen aufsetzen.
 
 Das Einspielen einer neueren Version ist vom prinzipiellen Ablauf her
 nicht komplizierter als die Aktualisierung -- es laufen die gleichen
-Mechanismen ab. Behalten Sie dabei stets im Hinterkopf, daß es wie das
-Fahren entgegen der Fahrtrichtung einer Einbahnstraße ist -- es geht so
-lange gut, wie Ihnen keiner entgegenkommt. Schwierigkeiten können Ihnen
-nämlich die Maintainerskripte (`postinst`, `preinst`, `postrm`, `prerm`)
-bereiten, die das Downgrade im Normalfall nicht unterstützen. Eventuell 
-unterstützt der Mechanismus, der sie aufruft, das schon nicht. Kritisch
-sind die Fälle, wo eine konzeptuelle Änderung im Paket in der
-Rückrichtung nicht zurück umgebaut werden kann (siehe
+Mechanismen ab und es kommen die gleichen Werkzeuge zum Einsatz.
+Behalten Sie dabei stets im Hinterkopf, daß es wie das Fahren entgegen
+der Fahrtrichtung einer Einbahnstraße ist -- es geht so lange gut, wie
+Ihnen keiner entgegenkommt. Schwierigkeiten können Ihnen nämlich die
+Maintainerskripte (`postinst`, `preinst`, `postrm`, `prerm`) bereiten,
+die das Downgrade im Normalfall nicht unterstützen. Eventuell ist der
+Mechanismus, der sie aufruft, auch nicht darauf vorbereitet. Kritisch
+sind insbesondere die Fälle, wo eine konzeptuelle Änderung im Paket in
+der Rückrichtung nicht zurück umgebaut werden kann (siehe
 <<apt-get-update-bug-764503>>).
 
 Der gesamte Vorgang ist mit einer Aktualisierung gleichzusetzen. Hierbei
