@@ -5,6 +5,8 @@
 [[pakete-bauen-mit-checkinstall]]
 == Pakete bauen mit `checkinstall` ==
 
+=== Pakete aus zusätzlichen Quellen ergänzen ===
+
 // Stichworte für den Index
 (((Paketquelle, mischen)))
 (((Paketvarianten, Binärpaket)))
@@ -12,19 +14,22 @@ Das Debian-Paketarchiv ist bereits sehr umfangreich und umfaßt eine
 Vielzahl von vorab geprüften Paketen mit ausgewählter, stabiler
 Software. Benötigen Sie hingegen Software, welche nicht darin enthalten
 ist -- aus welchem Grund auch immer --, können Sie beispielsweise auf
-Fremdpaketquellen zurückgreifen und die entsprechenden Pakete daraus
-einbinden (siehe <<paketquellen>>).
+zusätzliche Quellen für Fremdpakete zurückgreifen und die entsprechenden
+Pakete daraus einbinden (siehe <<paketquellen>>).
+
+=== Software selbst übersetzen und einspielen ===
 
 // Stichworte für den Index
 (((Paketvarianten, Sourcepaket)))
-Als Alternative dazu stehen Ihnen stets die entsprechenden Sourcepakete
-oder der Quelltext als `tar.gz`-Archiv von der Projektseite zur
-Verfügung. In beiden Fällen übersetzen Sie den Programmcode und
-installieren die dabei erzeugten Binärdateien auf ihrem System. Der
-letztgenannte Weg geht jedoch am Paketmanagement vorbei und birgt die
-Risiken, daß a) nicht alle Abhängigkeiten der Software erfüllt werden
-und Sie b) die Software nur sehr mühselig wieder von ihrem System
-entfernen können.
+Als Alternative zu obigem Weg stehen Ihnen stets die entsprechenden
+Sourcepakete oder der Quelltext als `tar.gz`-Archiv von der Projektseite
+zur Verfügung. In beiden Fällen übersetzen Sie den Programmcode selbst
+und installieren danach die dabei erzeugten Binärdateien auf ihrem
+System.
+
+Das geht jedoch an der Paketverwaltung vorbei. Es birgt die Risiken, daß
+a) nicht alle Abhängigkeiten der Software erfüllt werden und Sie b) die
+Software nur sehr mühselig wieder von ihrem System entfernen können.
 
 // Stichworte für den Index
 (((checkinstall)))
