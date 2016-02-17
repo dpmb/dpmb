@@ -65,10 +65,13 @@ für Slackware erstellen. Die einzelnen Schalter entnehmen Sie bitte
 .Schalter für die Paketformate
 [frame="topbot",options="header",cols="2,8",id="tab.paketformat-checkinstall"]
 |====
-| Schalter | Paketformat
-| `-D` | erzeugt ein Debian-Paket (`deb`)
-| `-R` | erzeugt ein RPM-Paket (`rpm`)
-| `-S` | erzeugt ein Slackware-Paket (`tgz`)
+| Paketformat | Schalter
+| Debian-Paket (`deb`)    | `-D`
+|                         | `--type=debian`
+| RPM-Paket (`rpm`)       | `-R` 
+|                         | `--type=rpm`
+| Slackware-Paket (`tgz`) | `-S`
+|                         | `--type=slackware`
 |====
 
 Vereinfacht gesagt, erstellt `checkinstall` ein Paket direkt aus dem
@@ -120,6 +123,10 @@ beiden Aufrufen `./configure` und `make`.
 ----
 # checkinstall --install=no
 ----
+
+=== Beispiel ===
+
+ToDo
 
 === Vor- und Nachteile ===
 
