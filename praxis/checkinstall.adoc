@@ -26,11 +26,23 @@ Sourcepakete oder der Quelltext als `tar.gz`-Archiv von der Projektseite
 zur Verfügung. In beiden Fällen übersetzen Sie den Programmcode selbst
 und installieren danach die dabei erzeugten Binärdateien auf ihrem
 System. Üblicherweise umfaßt das den Dreierschritt aus den Aufrufen
-`configure`, `make` und `make install`.
+`./configure`, `make` und `make install`.
 
-Das geht jedoch an der Paketverwaltung vorbei. Es birgt die Risiken, daß
-a) nicht alle Abhängigkeiten der Software erfüllt werden und Sie b) die
-Software nur sehr mühselig wieder von ihrem System entfernen können.
+Das geht jedoch an der Paketverwaltung vorbei -- diese bemerkt nicht,
+daß Sie ihrem System zusätzliche Software hinzugefügt haben. Dieser
+Schritt birgt die Risiken, daß a) nicht alle Abhängigkeiten der Software
+erfüllt werden, b) Konflikte mit einer gleichzeitig installierten,
+anderen Version des Programms entstehen und Sie c) die Software nur sehr
+mühselig wieder von ihrem System entfernen können. Nicht wenige
+Entwickler ``vergessen'' in ihren Makefiles das Ziel `uninstall` (siehe
+<<Drilling-Checkinstall-LinuxUser>>). 
+
+Gleiches Ungemach droht Ihnen, wenn Sie zu einem späteren Zeitpunkt die
+eingespielte Software oder auch andere Pakete aktualisieren möchten.
+Nicht selten treten dann erhebliche Abhängigkeitsprobleme zu anderen
+Paketen auf. Komponenten, die Sie an der Paketverwaltung vorbei
+installiert haben, sind zwar vorhanden, werden aber von dieser als
+fehlende Abhängigkeit eingestuft.
 
 === Software selbst übersetzen und als `deb`-Paket einspielen ===
 // Stichworte für den Index
@@ -63,7 +75,7 @@ Versionskontrollsystem des Projektes.
 (((checkinstall)))
 (((checkinstall, --install=no)))
 (((Paketflags, hold)))
-Zum Aufruf genügt das Kommando
+Zum Aufruf genügt dieses Kommando im Verzeichnis mit dem Quellcode:
 
 ----
 checkinstall
@@ -83,6 +95,11 @@ Wünschen Sie hingegen keine automatische Installation, rufen Sie
 ----
 checkinstall --install=no
 ----
+
+=== Vor- und Nachteile ===
+
+Bitte berücksichtigen Sie die folgenden Punkte bei der Verwendung von
+`checkinstall`:
 
 * Vorteile:
 ** vereinfachte Nutzung von Entwicklerversionen
@@ -105,6 +122,13 @@ Libc linken, oder bei solchen, bei denen das SUID/GUID-Bit gesetzt ist
 (Quelle: <<Drilling-Checkinstall-LinuxUser>>)
 ** Probleme mit `preinstall`- und `postinstall`-Skripten (Quelle:
 <<Schnober-Checkinstall-LinuxUser>>)
+** Einschätzung aus dem Ubuntu-Wiki: ``Technisch betrachtet gilt die
+Verwendung von checkinstall als "quick & dirty", da nicht alle
+Möglichkeiten durch die herkömmliche Paketerstellung gegeben sind
+(beispielsweise Prüfsummen, Maintainer-Skripte oder Modifikationen beim
+Kompiliervorgang). Dadurch sind die mit checkinstall erstellten Pakete
+von niedrigerer Qualität, als die herkömmlich Erstellten. Zur Weitergabe
+sollte man deswegen unbedingt den herkömmlichen Weg vorziehen.''
 
 * Empfehlung: 
 ** Nutzung nur für lokale Rechner und Einzelsysteme
