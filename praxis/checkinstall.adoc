@@ -5,6 +5,19 @@
 [[pakete-bauen-mit-checkinstall]]
 == Pakete bauen mit `checkinstall` ==
 
+Das Debian-Paketarchiv ist bereits sehr umfangreich und umfaßt eine
+Vielzahl von geprüften Paketen mit stabiler Software. Benötigen Sie
+hingegen Software, welche nicht darin enthalten ist -- aus welchem Grund
+auch immer --, können Sie beispielsweise auf Fremdpaketquellen
+zurückgreifen und die entsprechenden Pakete daraus einbinden (siehe
+<<paketquellen>>).
+
+ oder die Software aus
+dem Quelltext übersetzen und auf ihrem System installieren. Letzteres
+geht jedoch am Paketmanagement vorbei und birgt das Risiko, 
+
+in ein `.deb`-Paket übersetzen.
+
 Das Projekt `checkinstall` <<checkinstall>> hat sich zum Ziel gesetzt,
 die direkte Erstellung von Binärpaketen aus dem dazugehörigen, aktuellen
 Quellcode zu ermöglichen, die zu Ihrer Installation passen. Vereinfacht
