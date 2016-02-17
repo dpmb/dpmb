@@ -62,8 +62,15 @@ für Slackware erstellen. Die einzelnen Schalter entnehmen Sie bitte
 <<tab.paketformat-checkinstall>>. Benennen Sie keinen Schalter, erzeugt
 `checkinstall` automatisch ein `deb`-Paket.
 
+// Stichworte für den Index
+(((checkinstall, -D)))
+(((checkinstall, -R)))
+(((checkinstall, -S)))
+(((checkinstall, --type=debian)))
+(((checkinstall, --type=rpm)))
+(((checkinstall, --type=slackware)))
 .Schalter für die Paketformate
-[frame="topbot",options="header",cols="2,8",id="tab.paketformat-checkinstall"]
+[frame="topbot",options="header",cols="4,4",id="tab.paketformat-checkinstall"]
 |====
 | Paketformat | Schalter
 | Debian-Paket (`deb`)    | `-D`
@@ -89,7 +96,6 @@ Versionskontrollsystem des Projektes.
 
 // Stichworte für den Index
 (((checkinstall)))
-(((checkinstall, --install=no)))
 (((Paketflags, hold)))
 Zum Aufruf genügt das nachfolgende Kommando im Verzeichnis mit dem
 Quellcode. Es entspricht dem bereits oben genannten Aufruf von
