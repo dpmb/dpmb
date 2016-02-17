@@ -25,20 +25,22 @@ Als Alternative zu obigem Weg stehen Ihnen stets die entsprechenden
 Sourcepakete oder der Quelltext als `tar.gz`-Archiv von der Projektseite
 zur Verfügung. In beiden Fällen übersetzen Sie den Programmcode selbst
 und installieren danach die dabei erzeugten Binärdateien auf ihrem
-System.
+System. Üblicherweise umfaßt das den Dreierschritt aus den Aufrufen
+`configure`, `make` und `make install`.
 
 Das geht jedoch an der Paketverwaltung vorbei. Es birgt die Risiken, daß
 a) nicht alle Abhängigkeiten der Software erfüllt werden und Sie b) die
 Software nur sehr mühselig wieder von ihrem System entfernen können.
 
+=== Software selbst übersetzen und als `.deb`-Paket einspielen ===
 // Stichworte für den Index
 (((checkinstall)))
 (((Debianpaket, checkinstall)))
 An dieser Stelle kommt das Projekt `checkinstall` <<checkinstall>> ins
 Spiel. Es hat sich zum Ziel gesetzt, das Übersetzen von Paketen aus dem
-Quellcode und das direkte Erstellen von Binärpaketen in einem einzigen
-Schritt miteinander zu kombinieren. Diese ``frischen'' Binärpakete
-passen dann zu Ihrer bestehenden Installation.
+Quellcode und das direkte Erstellen von Binärpaketen miteinander zu
+kombinieren. Diese ``frischen'' Binärpakete passen dann zu Ihrer
+bestehenden Installation.
 
 Vereinfacht gesagt, erstellt Checkinstall ein Paket direkt aus dem
 Quellcode und übergeht den Paketmanager dabei aber nicht. Es beobachtet
