@@ -75,10 +75,12 @@ Versionskontrollsystem des Projektes.
 (((checkinstall)))
 (((checkinstall, --install=no)))
 (((Paketflags, hold)))
-Zum Aufruf genügt dieses Kommando im Verzeichnis mit dem Quellcode:
+Zum Aufruf genügt das nachfolgende Kommando im Verzeichnis mit dem
+Quellcode. Es entspricht dem bereits oben genannten Aufruf von
+`./configure`, `make` und `make install`.
 
 ----
-checkinstall
+# checkinstall
 ----
 
 Aus dem zunächst bezogenen `tar.gz`-Archiv baut `checkinstall` ein zu
@@ -86,14 +88,23 @@ ihrer Installation passendes `deb`-Paket und installiert dieses über die
 Paketverwaltung. Dabei erhält das Paket die Markierung 'hold' (siehe
 dazu <<lokale-paketmarkierungen>>).
 
+Möchten Sie ein bestimmtes Skript zur Installation ausführen, geben Sie
+dieses beim Aufruf von `checkinstall` als zusätzlichen Parameter an.
+Nachfolgend heißt das Skript schlicht `installationsskript.sh`.
+
+----
+# checkinstall installationsskript.sh
+----
+
 // Stichworte für den Index
 (((checkinstall)))
 (((checkinstall, --install=no)))
 Wünschen Sie hingegen keine automatische Installation, rufen Sie
-`checkinstall` mit dem Parameter `--install=no` auf:
+`checkinstall` mit dem Parameter `--install=no` auf. Das entspricht den
+beiden Aufrufen `./configure` und `make`.
 
 ----
-checkinstall --install=no
+# checkinstall --install=no
 ----
 
 === Vor- und Nachteile ===
