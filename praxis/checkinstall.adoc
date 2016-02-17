@@ -20,25 +20,28 @@ einbinden (siehe <<paketquellen>>).
 Als Alternative dazu stehen Ihnen stets die entsprechenden Sourcepakete
 oder der Quelltext als `tar.gz`-Archiv von der Projektseite zur
 Verfügung. In beiden Fällen übersetzen Sie den Programmcode und
-installieren die Binärdateien auf ihrem System. Der letztgenannte Weg
-geht jedoch am Paketmanagement vorbei und birgt die Risiken, daß a) nicht
-alle Abhängigkeiten der Software erfüllt werden und Sie b) die Software
-nur sehr mühselig wieder von ihrem System entfernen können.
-
-in ein `.deb`-Paket übersetzen.
-
-Das Projekt `checkinstall` <<checkinstall>> hat sich zum Ziel gesetzt,
-die direkte Erstellung von Binärpaketen aus dem dazugehörigen, aktuellen
-Quellcode zu ermöglichen, die zu Ihrer Installation passen. Vereinfacht
-gesagt, erstellt es ein Paket direkt aus dem Quellcode und übergeht den
-Paketmanager dabei aber nicht. Es beobachtet den Erstellprozess und
-bindet alle Dateien in das neue Paket ein, die bei der Übersetzung
-entstehen. Daher gibt es auch die Umschreibung
-``Installations-Verfolger''.
+installieren die dabei erzeugten Binärdateien auf ihrem System. Der
+letztgenannte Weg geht jedoch am Paketmanagement vorbei und birgt die
+Risiken, daß a) nicht alle Abhängigkeiten der Software erfüllt werden
+und Sie b) die Software nur sehr mühselig wieder von ihrem System
+entfernen können.
 
 // Stichworte für den Index
-indexterm:[checkinstall]
-indexterm:[Debianpaket, checkinstall]
+(((checkinstall)))
+(((Debianpaket, checkinstall)))
+An dieser Stelle kommt das Projekt `checkinstall` <<checkinstall>> ins
+Spiel. Es hat sich zum Ziel gesetzt, das Übersetzen von Paketen aus dem
+Quellcode und das direkte Erstellen von Binärpaketen in einem einzigen
+Schritt miteinander zu kombinieren. Diese ``frischen'' Binärpakete
+passen dann zu Ihrer bestehenden Installation.
+
+Vereinfacht gesagt, erstellt Checkinstall ein Paket direkt aus dem
+Quellcode und übergeht den Paketmanager dabei aber nicht. Es beobachtet
+den Erstellprozess und bindet alle Dateien in das neue Paket ein, die
+bei der Übersetzung entstehen. Daher gibt es auch dafür die schöne
+Umschreibung ``Installations-Verfolger''.
+
+// Stichworte für den Index
 indexterm:[dpkg, -i]
 indexterm:[Paketflags, hold]
 
