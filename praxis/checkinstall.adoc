@@ -70,6 +70,7 @@ für Slackware erstellen. Die einzelnen Schalter entnehmen Sie bitte
 (((checkinstall, --type=debian)))
 (((checkinstall, --type=rpm)))
 (((checkinstall, --type=slackware)))
+
 .Schalter für die verschiedenen unterstützten Paketformate
 [frame="topbot",options="header",cols="4,4",id="tab.paketformat-checkinstall"]
 |====
@@ -78,11 +79,11 @@ für Slackware erstellen. Die einzelnen Schalter entnehmen Sie bitte
 |                         | `-t debian`
 |                         | `--type=debian`
 | RPM-Paket (`rpm`)       | `-R` 
-|                         | `--type=rpm`
 |                         | `-t rpm`
+|                         | `--type=rpm`
 | Slackware-Paket (`tgz`) | `-S`
-|                         | `--type=slackware`
 |                         | `-t slackware`
+|                         | `--type=slackware`
 |====
 
 Vereinfacht gesagt, erstellt `checkinstall` ein Paket direkt aus dem
