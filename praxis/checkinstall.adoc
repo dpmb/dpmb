@@ -66,6 +66,7 @@ für Slackware erstellen. Die einzelnen Schalter entnehmen Sie bitte
 (((checkinstall, -D)))
 (((checkinstall, -R)))
 (((checkinstall, -S)))
+(((checkinstall, -t)))
 (((checkinstall, --type=debian)))
 (((checkinstall, --type=rpm)))
 (((checkinstall, --type=slackware)))
@@ -74,11 +75,14 @@ für Slackware erstellen. Die einzelnen Schalter entnehmen Sie bitte
 |====
 | Paketformat | Schalter
 | Debian-Paket (`deb`)    | `-D`
+|                         | `-t debian`
 |                         | `--type=debian`
 | RPM-Paket (`rpm`)       | `-R` 
 |                         | `--type=rpm`
+|                         | `-t rpm`
 | Slackware-Paket (`tgz`) | `-S`
 |                         | `--type=slackware`
+|                         | `-t slackware`
 |====
 
 Vereinfacht gesagt, erstellt `checkinstall` ein Paket direkt aus dem
@@ -133,16 +137,41 @@ beiden Aufrufen `./configure` und `make`.
 ----
 
 // Stichworte für den Index
+(((checkinstall, Debian-spezifische Schalter)))
+(((checkinstall, --help)))
 (((Paketbeschreibung, Schlüsselworte für Binärpakete)))
-Weitere Schalter entnehmen Sie bitte <<tab.schalter-checkinstall>>.
-Diese Schalter korrespondieren direkt mit den dazugehörigen Feldern in
-einem Binärpaket (siehe <<konzepte-und-ideen-dahinter>>).
+Weitere Debian-spezifische Schalter entnehmen Sie bitte
+<<tab.debian-schalter-checkinstall>>. Diese Schalter korrespondieren
+direkt mit den dazugehörigen Feldern in einem Debian-Binärpaket (siehe
+<<konzepte-und-ideen-dahinter>>). Schalter zur Darstellung und Ausgabe
+entnehmen Sie bitte der Manpage zum Programm oder über den Aufruf von:
 
-.Debian-spezifische Schalter für ein Binärpaket
-[frame="topbot",options="header",cols="3,5",id="tab.schalter-checkinstall"]
+----
+checkinstall --help
+----
+
+.Spezifische Schalter für ein Debian-Binärpaket
+[frame="topbot",options="header",cols="3,5",id="tab.debian-schalter-checkinstall"]
 |====
 | Schalter | Bedeutung
-| `
+| `--pkgname=`'name'            | Name des Pakets
+| `--pkgversion=`'version'      | Versionsnummer des Pakets
+| `-A` 'Architektur'            | Architektur des Pakets
+| `--arch` 'Architektur'        | Architektur des Pakets
+| `--pkgarch=`'Architektur'     | Architektur des Pakets
+| `--pkgrelease=`'Release'      | Angabe der Veröffentlichung
+| `--pkglicense=`'Lizenz'       | Angabe der Lizenz zum Paket
+| `--pkggroup=`'Gruppe'         | Benennung der Paketkategorie
+| `--pkgsource=`'Quelle'        | Angabe der Quelle zum Paket
+| `--pkgaltsource=`'Quelle'     | alternative Angabe der Quelle zum Paket
+| `--pakdir=`'Verzeichnis'      | Zielverzeichnis, in dem das Paket gespeichert wird
+| `--maintainer=`'Emailadresse' | Emailadresse des Paketmaintainers
+| `--provides=`'Liste'          | Name der Pakete, die es bereitstellt
+| `--requires=`'Liste'          | Name der Pakete, die das Paket benötigt
+| `--conflicts=`'Liste'         | andere Pakete, mit denen das Paket in Konflikt steht
+| `--replaces=`'Liste'          | andere Pakete, die dieses Paket ersetzt
+| `--dpkgflags=`'Flags'         | Flags, die an `dpkg` zur Installation mitgegeben werden
+| `--nodoc`                     | keine Dokumentation in das Paket einfügen
 |====
 
 === Beispiel ===
