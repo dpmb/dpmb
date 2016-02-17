@@ -511,11 +511,15 @@
 
 - [[[FreeBSD]]] FreeBSD-Projekt, http://www.freebsd.org/
 
+- [[[FreeCode]]] FreeCode, http://freecode.com/
+
 - [[[gambaru-rc-alert]]] gambaru.de: Wie man veröffentlichungskritische Bugs in Debian beseitigt, http://www.gambaru.de/blog/2012/09/19/wie-man-veroffentlichungskritische-bugs-in-debian-beseitigt/
 
 - [[[gdebi]]] Gdebi, https://launchpad.net/gdebi
 
 - [[[geoiptool]]] Geo IP Tool, http://www.geoiptool.com/
+
+- [[[GitHub]]] GitHub, https://github.com/
 
 - [[[github-issue]]] Issue auf GitHub, https://github.com/dpmb/dpmb/issues/new 
 
@@ -680,6 +684,8 @@
 - [[[Skype]]] Skype, www.skype.com/
 
 - [[[SmartPM]]] Smart Package Manager, Projektseite, http://labix.org/smart
+
+- [[[SourceForge]]] SourceForge, https://sourceforge.net/
 
 - [[[Stapelberg-Debian-Repo]]] Michael Stapelberg: Kurz-Howto: Eigenes
   Debian-Repository aufbauen, http://michael.stapelberg.de/Artikel/Debian_Repository/
