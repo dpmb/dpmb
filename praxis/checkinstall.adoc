@@ -55,17 +55,20 @@ den Repositories verfügbar <<Debian-Paket-checkinstall>>.
 Es hat sich zum Ziel gesetzt, das Übersetzen von Paketen aus dem
 Quellcode und das direkte Erstellen von Binärpaketen miteinander zu
 kombinieren. Diese ``frischen'' Binärpakete passen dann exklusiv zu
-Ihrer bestehenden Installation. `checkinstall` kann neben `deb`-Paketen
-auch `rpm`- und `tgz`-Dateien für Slackware erstellen. Die einzelnen
-Schalter entnehmen Sie bitte <<tab.paketformat-checkinstall>>.
+Ihrer bestehenden Installation. 
+
+`checkinstall` kann neben `deb`-Paketen auch `rpm`- und `tgz`-Dateien
+für Slackware erstellen. Die einzelnen Schalter entnehmen Sie bitte
+<<tab.paketformat-checkinstall>>. Benennen Sie keinen Schalter, erzeugt
+`checkinstall` automatisch ein `deb`-Paket.
 
 .Schalter für die Paketformate
 [frame="topbot",options="header",cols="2,8",id="tab.paketformat-checkinstall"]
 |====
 | Schalter | Paketformat
-| `-D` | erzeugt ein Debian-Paket (`.deb`)
-| `-R` | erzeugt ein RPM-Paket (`.rpm`)
-| `-S` | erzeugt ein Slackware-Paket (`.tgz`)
+| `-D` | erzeugt ein Debian-Paket (`deb`)
+| `-R` | erzeugt ein RPM-Paket (`rpm`)
+| `-S` | erzeugt ein Slackware-Paket (`tgz`)
 |====
 
 Vereinfacht gesagt, erstellt `checkinstall` ein Paket direkt aus dem
