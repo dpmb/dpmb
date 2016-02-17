@@ -69,7 +69,7 @@ für Slackware erstellen. Die einzelnen Schalter entnehmen Sie bitte
 (((checkinstall, --type=debian)))
 (((checkinstall, --type=rpm)))
 (((checkinstall, --type=slackware)))
-.Schalter für die Paketformate
+.Schalter für die verschiedenen unterstützten Paketformate
 [frame="topbot",options="header",cols="4,4",id="tab.paketformat-checkinstall"]
 |====
 | Paketformat | Schalter
@@ -96,10 +96,12 @@ Versionskontrollsystem des Projektes.
 
 // Stichworte für den Index
 (((checkinstall)))
+(((checkinstall, --install=yes)))
 (((Paketflags, hold)))
 Zum Aufruf genügt das nachfolgende Kommando im Verzeichnis mit dem
 Quellcode. Es entspricht dem bereits oben genannten Aufruf von
-`./configure`, `make` und `make install`.
+`./configure`, `make` und `make install` und ist gleichzeitig die
+Kurzform für den Aufruf `checkinstall --install=yes`.
 
 ----
 # checkinstall
@@ -124,11 +126,24 @@ aber von Ihnen beliebig benannt werden.
 (((checkinstall, --install=no)))
 Wünschen Sie hingegen keine automatische Installation, rufen Sie
 `checkinstall` mit dem Parameter `--install=no` auf. Das entspricht den
-beiden Aufrufen `./configure` und `make`.
+beiden Aufrufen `./configure` und `make`. 
 
 ----
 # checkinstall --install=no
 ----
+
+// Stichworte für den Index
+(((Paketbeschreibung, Schlüsselworte für Binärpakete)))
+Weitere Schalter entnehmen Sie bitte <<tab.schalter-checkinstall>>.
+Diese Schalter korrespondieren direkt mit den dazugehörigen Feldern in
+einem Binärpaket (siehe <<konzepte-und-ideen-dahinter>>).
+
+.Debian-spezifische Schalter für ein Binärpaket
+[frame="topbot",options="header",cols="3,5",id="tab.schalter-checkinstall"]
+|====
+| Schalter | Bedeutung
+| `
+|====
 
 === Beispiel ===
 
