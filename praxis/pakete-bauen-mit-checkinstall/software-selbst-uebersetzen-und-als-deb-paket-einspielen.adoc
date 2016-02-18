@@ -21,12 +21,10 @@ hilft Ihnen das spezialisierte Paket 'dh-make-perl' weiter
 `checkinstall` hat sich zum Ziel gesetzt, das Übersetzen von Paketen aus
 dem Quellcode und das direkte Erstellen von Binärpaketen miteinander zu
 kombinieren. Diese ``frischen'' Binärpakete passen dann exklusiv zu
-Ihrer bestehenden Installation.
-
-`checkinstall` kann neben `deb`-Paketen auch `rpm`- und `tgz`-Dateien
-für Slackware erstellen. Die einzelnen Schalter entnehmen Sie bitte
-<<tab.paketformat-checkinstall>>. Benennen Sie keinen Schalter, erzeugt
-`checkinstall` automatisch ein `deb`-Paket.
+Ihrer bestehenden Installation. Es kann neben `deb`-Paketen auch `rpm`-
+und `tgz`-Dateien für Slackware erstellen. Die einzelnen Schalter
+entnehmen Sie bitte <<tab.paketformat-checkinstall>>. Benennen Sie
+keinen Schalter, erzeugt `checkinstall` automatisch ein `deb`-Paket.
 
 // Stichworte für den Index
 (((checkinstall, -D)))
