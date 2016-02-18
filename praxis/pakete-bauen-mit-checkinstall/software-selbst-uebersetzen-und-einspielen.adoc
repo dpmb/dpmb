@@ -1,0 +1,34 @@
+// Datei: ./praxis/pakete-bauen-mit-checkinstall/software-selbst-uebersetzen-und-einspielen.adoc
+
+// Baustelle: Fertig
+
+[[checkinstall-software-selbst-uebersetzen-und-einspielen]]
+=== Software selbst übersetzen und einspielen ===
+
+// Stichworte für den Index
+(((Paketvarianten, Sourcepaket)))
+Als Alternative zu obigem Weg stehen Ihnen stets die entsprechenden
+Sourcepakete oder der Quelltext als `tar.gz`-Archiv von der Projektseite
+zur Verfügung. In beiden Fällen übersetzen Sie den Programmcode selbst
+und installieren danach die dabei erzeugten Binärdateien auf ihrem
+System. Üblicherweise umfaßt das den Dreierschritt aus den Aufrufen
+`./configure`, `make` und `make install`.
+
+Das geht jedoch an der Paketverwaltung vorbei -- diese bemerkt nicht,
+daß Sie ihrem System zusätzliche Software hinzugefügt haben. Dieser
+Schritt birgt die Risiken, daß a) nicht alle Abhängigkeiten der Software
+erfüllt werden, b) Konflikte mit einer gleichzeitig installierten,
+anderen Version des Programms entstehen und Sie c) die Software nur sehr
+mühselig wieder von ihrem System entfernen können. Nicht wenige
+Entwickler ``vergessen'' in ihren Makefiles das Ziel `uninstall` (siehe
+<<Drilling-Checkinstall-LinuxUser>>). 
+
+Gleiches Ungemach droht Ihnen, wenn Sie zu einem späteren Zeitpunkt die
+eingespielte Software oder auch andere Pakete aktualisieren möchten.
+Nicht selten treten dann erhebliche Abhängigkeitsprobleme zu anderen
+Paketen auf. Komponenten, die Sie an der Paketverwaltung vorbei
+installiert haben, sind zwar vorhanden, werden aber von dieser als
+fehlende Abhängigkeit eingestuft.
+
+// Datei (Ende): ./praxis/pakete-bauen-mit-checkinstall/software-selbst-uebersetzen-und-einspielen.adoc
+
