@@ -5,19 +5,21 @@
 [[pakete-bauen-mit-checkinstall]]
 == Pakete bauen mit `checkinstall` ==
 
-# Pakete aus zusätzlichen Quellen ergänzen
+Test
+
+// Pakete aus zusätzlichen Quellen ergänzen
 include::pakete-aus-zusaetzlichen-quellen-ergaenzen.adoc[]
 
-# Software selbst übersetzen und einspielen
+// Software selbst übersetzen und einspielen
 include::software-selbst-uebersetzen-und-einspielen.adoc[]
 
-# Software selbst übersetzen und als `deb`-Paket einspielen
+// Software selbst übersetzen und als `deb`-Paket einspielen
 include::software-selbst-uebersetzen-und-als-deb-paket-einspielen.adoc[]
 
-# Beispiel
+// Beispiel
 include::beispiel.adoc[]
 
-# Vor- und Nachteile
+// Vor- und Nachteile
 include::vor-und-nachteile.adoc[]
 
 // Datei (Ende): ./praxis/pakete-bauen-mit-checkinstall/checkinstall.adoc
