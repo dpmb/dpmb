@@ -305,6 +305,8 @@
 
 - [[[Debian-Paket-dgit]]] Debian-Paket 'dgit', https://packages.debian.org/testing/dgit
 
+- [[[Debian-Paket-dh-make-perl]]] Debian-paket 'dh-make-perl', https://packages.debian.org/jessie/dh-make-perl
+
 - [[[Debian-Paket-dkms]]] Debian-Paket 'dkms' (Dynamic Kernel Modules Support), http://packages.debian.org/de/stable/dkms
 
 - [[[Debian-Paket-dlocate]]] Debian-Paket 'dlocate', https://packages.debian.org/de/stable/dlocate

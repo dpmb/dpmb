@@ -1,4 +1,4 @@
-// Datei: ./praxis/checkinstall.adoc
+// Datei: ./praxis/pakete-bauen-mit-checkinstall/checkinstall.adoc
 
 // Baustelle: Rohtext
 
@@ -20,4 +20,4 @@ include::beispiel.adoc[]
 # Vor- und Nachteile
 include::vor-und-nachteile.adoc[]
 
-// Datei (Ende): ./praxis/checkinstall.adoc
+// Datei (Ende): ./praxis/pakete-bauen-mit-checkinstall/checkinstall.adoc
