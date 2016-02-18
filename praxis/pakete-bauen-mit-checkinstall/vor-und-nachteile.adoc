@@ -1,0 +1,45 @@
+// Datei: ./praxis/pakete-bauen-mit-checkinstall/vor-und-nachteile.adoc
+
+// Baustelle: Notizen
+
+=== Vor- und Nachteile ===
+
+Bitte berücksichtigen Sie die folgenden Punkte bei der Verwendung von
+`checkinstall`:
+
+* Vorteile:
+** vereinfachte Nutzung von Entwicklerversionen
+** damit kann ein erstelltes Paket auch wieder restefrei vom System heruntergekratzt werden
+** installiert automatisch die zusätzlichen, bisher noch nicht installierten Header-Files nach
+** Paket passt zu den anderen Softwarekomponenten
+** Paketverwaltung hat eine Information darüber, dass das Paket als solches installiert wurde
+
+// Stichworte für den Index
+(((Maintainer-Skripte, postinst)))
+(((Maintainer-Skripte, preinst)))
+
+* Nachteile:
+** Paket unterläuft die Qualitätskontrolle von Debian -- die Kontrolle
+findet nicht statt
+** Prüfung der Paketabhängigkeiten findet nur bedingt statt, d.h.
+Ergebnis ist nicht unbedingt portabel
+** Das Skript funktioniert nicht bei Programmen, die statisch gegen die
+Libc linken, oder bei solchen, bei denen das SUID/GUID-Bit gesetzt ist
+(Quelle: <<Drilling-Checkinstall-LinuxUser>>)
+** Probleme mit `preinstall`- und `postinstall`-Skripten (Quelle:
+<<Schnober-Checkinstall-LinuxUser>>)
+** Einschätzung aus dem Ubuntu-Wiki: ``Technisch betrachtet gilt die
+Verwendung von checkinstall als "quick & dirty", da nicht alle
+Möglichkeiten durch die herkömmliche Paketerstellung gegeben sind
+(beispielsweise Prüfsummen, Maintainer-Skripte oder Modifikationen beim
+Kompiliervorgang). Dadurch sind die mit checkinstall erstellten Pakete
+von niedrigerer Qualität, als die herkömmlich Erstellten. Zur Weitergabe
+sollte man deswegen unbedingt den herkömmlichen Weg vorziehen.''
+
+* Empfehlung: 
+** Nutzung nur für lokale Rechner und Einzelsysteme
+(``Testinstallationen''), kein Alltagsbetrieb
+** Verwendung in Kombination mit 'auto-apt' (siehe Fehlende Pakete bei Bedarf hinzufügen unter <<fehlende-pakete-bei-bedarf-hinzufuegen>>)
+
+
+// Datei (Ende): ./praxis/pakete-bauen-mit-checkinstall/vor-und-nachteile.adoc
