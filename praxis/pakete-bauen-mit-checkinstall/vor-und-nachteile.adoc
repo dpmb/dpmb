@@ -18,31 +18,30 @@ unerwartete Querschläger produzieren, kratzen Sie es auch wieder ohne
 viel Aufwand und vorallem restefrei vom System herunter. Das erlaubt
 Ihnen automatisierte Integrationstests im Rahmen der Qualitätssicherung.
 
-* Vorteile:
-** installiert automatisch die zusätzlichen, bisher noch nicht installierten Header-Files nach
-*** stimmt das?
+Verschwiegen werden sollen jedoch nicht die Nachteile. Ein mittels
+`checkinstall` generiertes und eingespieltes Paket unterläuft die
+strenge Qualitätskontrolle von Debian. Die übliche Validierung durch
+andere Tester und Benutzer sowie eine Erzeugung von Prüfsummen findet
+ebenfalls nicht statt. Die Paketabhängigkeiten werden nur bedingt
+validiert, d.h. nur auf dem System, auf dem das Paket erzeugt und
+eingespielt wurde. Das Ergebnis -- sprich das erzeugte `deb`-Paket --
+ist nicht unbedingt portabel und stets eins-zu-eins auf andere
+Debian-Installationen übertragbar. Berichtet wird ebenfalls, daß
+`checkinstall` nicht bei Programmen funktioniert, die statisch gegen die
+`libc` linken, oder bei solchen, bei denen das SUID/GUID-Bit gesetzt ist
+(siehe <<Drilling-Checkinstall-LinuxUser>>). Ebenso sind Probleme mit
+den `preinstall`- und `postinstall`-Skripten bekannt (siehe
+<<Schnober-Checkinstall-LinuxUser>>).
+
+==== Weitere noch unbearbeitete Notizen ====
 
 // Stichworte für den Index
 (((Maintainer-Skripte, postinst)))
 (((Maintainer-Skripte, preinst)))
 
-* Nachteile:
-** Paket unterläuft die Qualitätskontrolle von Debian -- die Kontrolle
-findet nicht statt
-** Prüfung der Paketabhängigkeiten findet nur bedingt statt, d.h.
-Ergebnis ist nicht unbedingt portabel
-** Das Skript funktioniert nicht bei Programmen, die statisch gegen die
-Libc linken, oder bei solchen, bei denen das SUID/GUID-Bit gesetzt ist
-(Quelle: <<Drilling-Checkinstall-LinuxUser>>)
-** Probleme mit `preinstall`- und `postinstall`-Skripten (Quelle:
-<<Schnober-Checkinstall-LinuxUser>>)
-** Einschätzung aus dem Ubuntu-Wiki: ``Technisch betrachtet gilt die
-Verwendung von checkinstall als "quick & dirty", da nicht alle
-Möglichkeiten durch die herkömmliche Paketerstellung gegeben sind
-(beispielsweise Prüfsummen, Maintainer-Skripte oder Modifikationen beim
-Kompiliervorgang). Dadurch sind die mit checkinstall erstellten Pakete
-von niedrigerer Qualität, als die herkömmlich Erstellten. Zur Weitergabe
-sollte man deswegen unbedingt den herkömmlichen Weg vorziehen.''
+* Vorteile:
+** installiert automatisch die zusätzlichen, bisher noch nicht installierten Header-Files nach
+*** stimmt das?
 
 * Empfehlung: 
 ** überprüfen, ob ein Stapel Software ``baut'', sich ein Paket daraus
