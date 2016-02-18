@@ -5,8 +5,6 @@
 [[pakete-bauen-mit-checkinstall]]
 == Pakete bauen mit `checkinstall` ==
 
-Test
-
 // Pakete aus zusätzlichen Quellen ergänzen
 include::pakete-aus-zusaetzlichen-quellen-ergaenzen.adoc[]
 
