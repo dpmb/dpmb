@@ -1,0 +1,11 @@
+// Datei: ./praxis/pakete-bauen-mit-checkinstall/beispiel.adoc
+
+// Baustelle: Fertig
+
+[[checkinstall-beispiel]]
+=== Beispiel ===
+
+ToDo
+
+
+// Datei (Ende): ./praxis/pakete-bauen-mit-checkinstall/beispiel.adoc

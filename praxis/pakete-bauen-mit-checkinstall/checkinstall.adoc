@@ -14,9 +14,8 @@ include::software-selbst-uebersetzen-und-einspielen.adoc[]
 # Software selbst übersetzen und als `deb`-Paket einspielen
 include::software-selbst-uebersetzen-und-als-deb-paket-einspielen.adoc[]
 
-=== Beispiel ===
-
-ToDo
+# Beispiel
+include::beispiel.adoc[]
 
 === Vor- und Nachteile ===
 
