@@ -1,0 +1,19 @@
+// Datei: ./praxis/pakete-bauen-mit-checkinstall/pakete-aus-zusaetzlichen-quellen-ergaenzen.adoc
+
+// Baustelle: Fertig
+
+[[pakete-aus-zusaetzlichen-quellen-ergaenzen]]
+=== Pakete aus zusätzlichen Quellen ergänzen ===
+
+// Stichworte für den Index
+(((Paketquelle, mischen)))
+(((Paketvarianten, Binärpaket)))
+Das Debian-Paketarchiv ist bereits sehr umfangreich und umfaßt eine
+Vielzahl von vorab geprüften Paketen mit ausgewählter, stabiler
+Software. Benötigen Sie hingegen Softwarekomponenten, welche nicht darin
+enthalten ist -- aus welchem Grund auch immer --, können Sie
+beispielsweise auf zusätzliche Quellen für Fremdpakete zurückgreifen und
+die entsprechenden Pakete daraus einbinden (siehe dazu ``Paketquellen''
+in <<paketquellen>>).
+
+// Datei (Ende): ./praxis/pakete-bauen-mit-checkinstall/pakete-aus-zusaetzlichen-quellen-ergaenzen.adoc

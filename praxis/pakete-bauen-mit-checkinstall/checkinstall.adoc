@@ -1,0 +1,222 @@
+// Datei: ./praxis/checkinstall.adoc
+
+// Baustelle: Rohtext
+
+[[pakete-bauen-mit-checkinstall]]
+== Pakete bauen mit `checkinstall` ==
+
+# Pakete aus zusätzlichen Quellen ergänzen
+include::pakete-aus-zusaetzlichen-quellen-ergaenzen.adoc[]
+
+// Stichworte für den Index
+(((Paketquelle, mischen)))
+(((Paketvarianten, Binärpaket)))
+Das Debian-Paketarchiv ist bereits sehr umfangreich und umfaßt eine
+Vielzahl von vorab geprüften Paketen mit ausgewählter, stabiler
+Software. Benötigen Sie hingegen Software, welche nicht darin enthalten
+ist -- aus welchem Grund auch immer --, können Sie beispielsweise auf
+zusätzliche Quellen für Fremdpakete zurückgreifen und die entsprechenden
+Pakete daraus einbinden (siehe <<paketquellen>>).
+
+=== Software selbst übersetzen und einspielen ===
+
+// Stichworte für den Index
+(((Paketvarianten, Sourcepaket)))
+Als Alternative zu obigem Weg stehen Ihnen stets die entsprechenden
+Sourcepakete oder der Quelltext als `tar.gz`-Archiv von der Projektseite
+zur Verfügung. In beiden Fällen übersetzen Sie den Programmcode selbst
+und installieren danach die dabei erzeugten Binärdateien auf ihrem
+System. Üblicherweise umfaßt das den Dreierschritt aus den Aufrufen
+`./configure`, `make` und `make install`.
+
+Das geht jedoch an der Paketverwaltung vorbei -- diese bemerkt nicht,
+daß Sie ihrem System zusätzliche Software hinzugefügt haben. Dieser
+Schritt birgt die Risiken, daß a) nicht alle Abhängigkeiten der Software
+erfüllt werden, b) Konflikte mit einer gleichzeitig installierten,
+anderen Version des Programms entstehen und Sie c) die Software nur sehr
+mühselig wieder von ihrem System entfernen können. Nicht wenige
+Entwickler ``vergessen'' in ihren Makefiles das Ziel `uninstall` (siehe
+<<Drilling-Checkinstall-LinuxUser>>). 
+
+Gleiches Ungemach droht Ihnen, wenn Sie zu einem späteren Zeitpunkt die
+eingespielte Software oder auch andere Pakete aktualisieren möchten.
+Nicht selten treten dann erhebliche Abhängigkeitsprobleme zu anderen
+Paketen auf. Komponenten, die Sie an der Paketverwaltung vorbei
+installiert haben, sind zwar vorhanden, werden aber von dieser als
+fehlende Abhängigkeit eingestuft.
+
+=== Software selbst übersetzen und als `deb`-Paket einspielen ===
+// Stichworte für den Index
+(((checkinstall)))
+(((Debianpaket, checkinstall)))
+An dieser Stelle kommt das Projekt `checkinstall` <<checkinstall>> ins
+Spiel. Es steht unter der GPLv2 und ist über das gleichnamige Paket aus
+den Repositories verfügbar <<Debian-Paket-checkinstall>>.
+
+Es hat sich zum Ziel gesetzt, das Übersetzen von Paketen aus dem
+Quellcode und das direkte Erstellen von Binärpaketen miteinander zu
+kombinieren. Diese ``frischen'' Binärpakete passen dann exklusiv zu
+Ihrer bestehenden Installation. 
+
+`checkinstall` kann neben `deb`-Paketen auch `rpm`- und `tgz`-Dateien
+für Slackware erstellen. Die einzelnen Schalter entnehmen Sie bitte
+<<tab.paketformat-checkinstall>>. Benennen Sie keinen Schalter, erzeugt
+`checkinstall` automatisch ein `deb`-Paket.
+
+// Stichworte für den Index
+(((checkinstall, -D)))
+(((checkinstall, -R)))
+(((checkinstall, -S)))
+(((checkinstall, -t)))
+(((checkinstall, --type=debian)))
+(((checkinstall, --type=rpm)))
+(((checkinstall, --type=slackware)))
+
+.Schalter für die verschiedenen unterstützten Paketformate
+[frame="topbot",options="header",cols="4,4",id="tab.paketformat-checkinstall"]
+|====
+| Paketformat | Schalter
+| Debian-Paket (`deb`)    | `-D`
+|                         | `-t debian`
+|                         | `--type=debian`
+| RPM-Paket (`rpm`)       | `-R` 
+|                         | `-t rpm`
+|                         | `--type=rpm`
+| Slackware-Paket (`tgz`) | `-S`
+|                         | `-t slackware`
+|                         | `--type=slackware`
+|====
+
+Vereinfacht gesagt, erstellt `checkinstall` ein Paket direkt aus dem
+Quellcode und übergeht den Paketmanager dabei aber nicht. Es beobachtet
+den Erstellprozess und bindet alle Dateien in das neue Paket ein, die
+bei der Übersetzung entstehen und benötigt werden. Daher gibt es auch
+dafür die schöne Umschreibung ``Installations-Verfolger''.
+
+Dazu bezieht `checkinstall` zunächst die benötigten Quellen zum Paket.
+Als Quelle kommen alle Softwarearchive in Frage, so z.B. neben den
+regulären Debian-Paketquellen auch von den Plattformen SourceForge
+<<SourceForge>>, Freecode (vormals Freshmeat) <<FreeCode>> und GitHub
+<<GitHub>>. Gleiches gilt für das direkte Auschecken aus dem
+Versionskontrollsystem des Projektes.
+
+// Stichworte für den Index
+(((checkinstall)))
+(((checkinstall, --install=yes)))
+(((Paketflags, hold)))
+Zum Aufruf genügt das nachfolgende Kommando im Verzeichnis mit dem
+Quellcode. Es entspricht dem bereits oben genannten Aufruf von
+`./configure`, `make` und `make install` und ist gleichzeitig die
+Kurzform für den Aufruf `checkinstall --install=yes`.
+
+----
+# checkinstall
+----
+
+Aus dem zunächst bezogenen `tar.gz`-Archiv baut `checkinstall` ein zu
+ihrer Installation passendes `deb`-Paket und installiert dieses über die
+Paketverwaltung. Dabei erhält das Paket die Markierung 'hold' (siehe
+dazu <<lokale-paketmarkierungen>>).
+
+Möchten Sie ein bestimmtes Skript zur Installation ausführen, geben Sie
+dieses beim Aufruf von `checkinstall` als zusätzlichen Parameter an.
+Nachfolgend heißt das Skript schlicht `installationsskript.sh`, kann
+aber von Ihnen beliebig benannt werden.
+
+----
+# checkinstall installationsskript.sh
+----
+
+// Stichworte für den Index
+(((checkinstall)))
+(((checkinstall, --install=no)))
+Wünschen Sie hingegen keine automatische Installation, rufen Sie
+`checkinstall` mit dem Parameter `--install=no` auf. Das entspricht den
+beiden Aufrufen `./configure` und `make`. 
+
+----
+# checkinstall --install=no
+----
+
+// Stichworte für den Index
+(((checkinstall, Debian-spezifische Schalter)))
+(((checkinstall, --help)))
+(((Paketbeschreibung, Schlüsselworte für Binärpakete)))
+Weitere Debian-spezifische Schalter entnehmen Sie bitte
+<<tab.debian-schalter-checkinstall>>. Diese Schalter korrespondieren
+direkt mit den dazugehörigen Feldern in einem Debian-Binärpaket (siehe
+<<konzepte-und-ideen-dahinter>>). Schalter zur Darstellung und Ausgabe
+entnehmen Sie bitte der Manpage zum Programm oder über den Aufruf von:
+
+----
+checkinstall --help
+----
+
+.Spezifische Schalter für ein Debian-Binärpaket
+[frame="topbot",options="header",cols="3,5",id="tab.debian-schalter-checkinstall"]
+|====
+| Schalter | Bedeutung
+| `--pkgname=`'name'            | Name des Pakets
+| `--pkgversion=`'version'      | Versionsnummer des Pakets
+| `-A` 'Architektur'            | Architektur des Pakets
+| `--arch` 'Architektur'        | Architektur des Pakets
+| `--pkgarch=`'Architektur'     | Architektur des Pakets
+| `--pkgrelease=`'Release'      | Angabe der Veröffentlichung
+| `--pkglicense=`'Lizenz'       | Angabe der Lizenz zum Paket
+| `--pkggroup=`'Gruppe'         | Benennung der Paketkategorie
+| `--pkgsource=`'Quelle'        | Angabe der Quelle zum Paket
+| `--pkgaltsource=`'Quelle'     | alternative Angabe der Quelle zum Paket
+| `--pakdir=`'Verzeichnis'      | Zielverzeichnis, in dem das Paket gespeichert wird
+| `--maintainer=`'Emailadresse' | Emailadresse des Paketmaintainers
+| `--provides=`'Liste'          | Name der Pakete, die es bereitstellt
+| `--requires=`'Liste'          | Name der Pakete, die das Paket benötigt
+| `--conflicts=`'Liste'         | andere Pakete, mit denen das Paket in Konflikt steht
+| `--replaces=`'Liste'          | andere Pakete, die dieses Paket ersetzt
+| `--dpkgflags=`'Flags'         | Flags, die an `dpkg` zur Installation mitgegeben werden
+| `--nodoc`                     | keine Dokumentation in das Paket einfügen
+|====
+
+=== Beispiel ===
+
+ToDo
+
+=== Vor- und Nachteile ===
+
+Bitte berücksichtigen Sie die folgenden Punkte bei der Verwendung von
+`checkinstall`:
+
+* Vorteile:
+** vereinfachte Nutzung von Entwicklerversionen
+** damit kann ein erstelltes Paket auch wieder restefrei vom System heruntergekratzt werden
+** installiert automatisch die zusätzlichen, bisher noch nicht installierten Header-Files nach
+** Paket passt zu den anderen Softwarekomponenten
+** Paketverwaltung hat eine Information darüber, dass das Paket als solches installiert wurde
+
+// Stichworte für den Index
+(((Maintainer-Skripte, postinst)))
+(((Maintainer-Skripte, preinst)))
+
+* Nachteile:
+** Paket unterläuft die Qualitätskontrolle von Debian -- die Kontrolle
+findet nicht statt
+** Prüfung der Paketabhängigkeiten findet nur bedingt statt, d.h.
+Ergebnis ist nicht unbedingt portabel
+** Das Skript funktioniert nicht bei Programmen, die statisch gegen die
+Libc linken, oder bei solchen, bei denen das SUID/GUID-Bit gesetzt ist
+(Quelle: <<Drilling-Checkinstall-LinuxUser>>)
+** Probleme mit `preinstall`- und `postinstall`-Skripten (Quelle:
+<<Schnober-Checkinstall-LinuxUser>>)
+** Einschätzung aus dem Ubuntu-Wiki: ``Technisch betrachtet gilt die
+Verwendung von checkinstall als "quick & dirty", da nicht alle
+Möglichkeiten durch die herkömmliche Paketerstellung gegeben sind
+(beispielsweise Prüfsummen, Maintainer-Skripte oder Modifikationen beim
+Kompiliervorgang). Dadurch sind die mit checkinstall erstellten Pakete
+von niedrigerer Qualität, als die herkömmlich Erstellten. Zur Weitergabe
+sollte man deswegen unbedingt den herkömmlichen Weg vorziehen.''
+
+* Empfehlung: 
+** Nutzung nur für lokale Rechner und Einzelsysteme
+(``Testinstallationen''), kein Alltagsbetrieb
+** Verwendung in Kombination mit 'auto-apt' (siehe Fehlende Pakete bei Bedarf hinzufügen unter <<fehlende-pakete-bei-bedarf-hinzufuegen>>)
+
+// Datei (Ende): ./praxis/checkinstall.adoc
