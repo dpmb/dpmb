@@ -8,14 +8,20 @@
 // Stichworte für den Index
 (((checkinstall)))
 (((Debianpaket, checkinstall)))
+(((Debianpaket, dh-make-perl)))
 An dieser Stelle kommt das Projekt `checkinstall` <<checkinstall>> ins
 Spiel. Es steht unter der GPLv2 und ist über das gleichnamige Paket aus
-den Repositories verfügbar <<Debian-Paket-checkinstall>>.
+den Repositories verfügbar <<Debian-Paket-checkinstall>>. 
 
-Es hat sich zum Ziel gesetzt, das Übersetzen von Paketen aus dem
-Quellcode und das direkte Erstellen von Binärpaketen miteinander zu
+// Hinweis auf dh-make-perl
+NOTE: Handelt es sich bei der einzuspielenden Software um Perl-Module,
+hilft Ihnen das spezialisierte Paket 'dh-make-perl' weiter
+<<Debian-Paket-dh-make-perl>>.
+
+`checkinstall` hat sich zum Ziel gesetzt, das Übersetzen von Paketen aus
+dem Quellcode und das direkte Erstellen von Binärpaketen miteinander zu
 kombinieren. Diese ``frischen'' Binärpakete passen dann exklusiv zu
-Ihrer bestehenden Installation. 
+Ihrer bestehenden Installation.
 
 `checkinstall` kann neben `deb`-Paketen auch `rpm`- und `tgz`-Dateien
 für Slackware erstellen. Die einzelnen Schalter entnehmen Sie bitte
