@@ -8,16 +8,6 @@
 # Pakete aus zusätzlichen Quellen ergänzen
 include::pakete-aus-zusaetzlichen-quellen-ergaenzen.adoc[]
 
-// Stichworte für den Index
-(((Paketquelle, mischen)))
-(((Paketvarianten, Binärpaket)))
-Das Debian-Paketarchiv ist bereits sehr umfangreich und umfaßt eine
-Vielzahl von vorab geprüften Paketen mit ausgewählter, stabiler
-Software. Benötigen Sie hingegen Software, welche nicht darin enthalten
-ist -- aus welchem Grund auch immer --, können Sie beispielsweise auf
-zusätzliche Quellen für Fremdpakete zurückgreifen und die entsprechenden
-Pakete daraus einbinden (siehe <<paketquellen>>).
-
 === Software selbst übersetzen und einspielen ===
 
 // Stichworte für den Index
