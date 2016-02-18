@@ -4,15 +4,23 @@
 
 === Vor- und Nachteile ===
 
-Bitte berücksichtigen Sie die folgenden Punkte bei der Verwendung von
-`checkinstall`:
+Erwartungsgemäß wird die Verwendung von `checkinstall` im Alltag von
+Entwicklern, Paketmaintainern und Benutzern recht unterschiedlich
+bewertet. 
+
+'Entwickler' und 'Paketmaintainer' sehen das Werkzeug überwiegend
+positiv -- haben Sie darüber nämlich die Möglichkeit, auszutesten, ob
+sich die von Ihnen verwendete Entwicklerversion nahtlos in das
+bestehende Debian-Ökosystem einspielen läßt und mit den anderen Paketen
+harmoniert. Die Paketverwaltung hat eine Information darüber, daß Sie
+ein zusätzliches Paket als solches installiert haben. Sollte das Paket
+unerwartete Querschläger produzieren, kratzen Sie es auch wieder ohne
+viel Aufwand und vorallem restefrei vom System herunter. Das erlaubt
+Ihnen automatisierte Integrationstests im Rahmen der Qualitätssicherung.
 
 * Vorteile:
-** vereinfachte Nutzung von Entwicklerversionen
-** damit kann ein erstelltes Paket auch wieder restefrei vom System heruntergekratzt werden
 ** installiert automatisch die zusätzlichen, bisher noch nicht installierten Header-Files nach
-** Paket passt zu den anderen Softwarekomponenten
-** Paketverwaltung hat eine Information darüber, dass das Paket als solches installiert wurde
+*** stimmt das?
 
 // Stichworte für den Index
 (((Maintainer-Skripte, postinst)))
@@ -37,6 +45,10 @@ von niedrigerer Qualität, als die herkömmlich Erstellten. Zur Weitergabe
 sollte man deswegen unbedingt den herkömmlichen Weg vorziehen.''
 
 * Empfehlung: 
+** überprüfen, ob ein Stapel Software ``baut'', sich ein Paket daraus
+bauen läßt und dieses mit dem restlichen Debian-Ökosystem
+zusammenarbeitet. Kann die Basis dafür sein, dann daraus ein richtiges
+Paket entsprechend den Debian-Paket-Standards zu bauen.
 ** Nutzung nur für lokale Rechner und Einzelsysteme
 (``Testinstallationen''), kein Alltagsbetrieb
 ** Verwendung in Kombination mit 'auto-apt' (siehe Fehlende Pakete bei Bedarf hinzufügen unter <<fehlende-pakete-bei-bedarf-hinzufuegen>>)
