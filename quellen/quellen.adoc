@@ -575,6 +575,8 @@
 
 - [[[Kali-Linux]]] Kali Linux, http://www.kali.org/
 
+- [[[Kemp-dh-make-perl]]] Steve Kemp: Building Debian packages of Perl modules, https://www.debian-administration.org/article/78/Building_Debian_packages_of_Perl_modules
+
 - [[[Kemp-dget]]] Steve Kemp: Downloading Debian source packages easily, http://www.debian-administration.org/article/504/Downloading_Debian_source_packages_easily
 
 - [[[Keryx]]] Keryx im Ubuntu Launchpad, https://launchpad.net/keryx
