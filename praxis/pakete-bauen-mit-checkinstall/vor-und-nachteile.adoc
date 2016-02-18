@@ -1,6 +1,6 @@
 // Datei: ./praxis/pakete-bauen-mit-checkinstall/vor-und-nachteile.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 === Vor- und Nachteile ===
 
@@ -36,26 +36,34 @@ Debian-Installationen übertragbar. Berichtet wird ebenfalls, daß
 den `preinstall`- und `postinstall`-Skripten bekannt (siehe
 <<Schnober-Checkinstall-LinuxUser>>).
 
-Aus Sicht der 'Benutzer' ist es erfreulich, wenn eine Lücke in den
-benötigten Komponenten geschlossen wird. Was sie meist weniger
-einschätzen können, ist die Stabilität der Lösung und der Aufwand
-seitens der Entwickler und Paketmaintainer, um diese Lösung dauerhaft zu
-betreuen und den Weiterentwicklungen anzupassen.
+Aus Sicht der 'Benutzer' ist es sicherlich sehr erfreulich, wenn eine
+Lücke in den benötigten Komponenten geschlossen wird. Was sie meist
+weniger einschätzen können, ist die Stabilität der Lösung und der
+Aufwand seitens der Entwickler und Paketmaintainer, um diese Lösung
+dauerhaft zu betreuen und den Weiterentwicklungen anzupassen.
+
+Aus den oben genannten Gründen empfehlen wir Ihnen, den Einsatz von
+`checkinstall` genau zu überdenken. Als nützlich und hilfreich schätzen
+wir es insofern ein, daß Sie in einem Schritt überprüfen können, ob ein
+Stapel Software ``baut'', sich ein Paket daraus schneidern läßt und
+dieses mit dem restlichen Debian-Ökosystem zusammenarbeitet. Das
+erleichtert Ihnen die Integrationstests und sollte nachfolgend die Basis
+dafür bilden, daraus ein richtiges Paket entsprechend den
+Debian-Paket-Standards zu erstellen. Bis das soweit ist, steht einer
+Benutzung auf lokalen Rechnern und Einzelsystemen -- bspw. im Rahmen
+einer ``Testinstallation'' -- nichts im Wege. Einem großflächigen
+Alltagsbetrieb des erzeugten Pakets stehen wir skeptisch gegenüber.
+
+Interessant ist die Verwendung von `checkinstall` in Kombination mit dem
+Werkzeug `auto-apt` <<Debian-Paket-auto-apt>>. Damit fügen Sie fehlende Pakete
+bei Bedarf hinzu und lösen offene Paketabhängigkeiten auf. Genauer gehen
+wir drauf unter ``Fehlende Pakete bei Bedarf hinzufügen'' in
+<<fehlende-pakete-bei-bedarf-hinzufuegen>> ein.
 
 ==== Weitere noch unbearbeitete Notizen ====
 
 * Vorteile:
 ** installiert automatisch die zusätzlichen, bisher noch nicht installierten Header-Files nach
 *** stimmt das?
-
-* Empfehlung: 
-** überprüfen, ob ein Stapel Software ``baut'', sich ein Paket daraus
-bauen läßt und dieses mit dem restlichen Debian-Ökosystem
-zusammenarbeitet. Kann die Basis dafür sein, dann daraus ein richtiges
-Paket entsprechend den Debian-Paket-Standards zu bauen.
-** Nutzung nur für lokale Rechner und Einzelsysteme
-(``Testinstallationen''), kein Alltagsbetrieb
-** Verwendung in Kombination mit 'auto-apt' (siehe Fehlende Pakete bei Bedarf hinzufügen unter <<fehlende-pakete-bei-bedarf-hinzufuegen>>)
-
 
 // Datei (Ende): ./praxis/pakete-bauen-mit-checkinstall/vor-und-nachteile.adoc
