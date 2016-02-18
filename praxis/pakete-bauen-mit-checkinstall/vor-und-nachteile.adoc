@@ -5,8 +5,7 @@
 === Vor- und Nachteile ===
 
 Erwartungsgemäß wird die Verwendung von `checkinstall` im Alltag von
-Entwicklern, Paketmaintainern und Benutzern recht unterschiedlich
-bewertet. 
+Entwicklern, Paketmaintainern und Benutzern gemischt bewertet. 
 
 'Entwickler' und 'Paketmaintainer' sehen das Werkzeug überwiegend
 positiv -- haben Sie darüber nämlich die Möglichkeit, auszutesten, ob
@@ -17,6 +16,10 @@ ein zusätzliches Paket als solches installiert haben. Sollte das Paket
 unerwartete Querschläger produzieren, kratzen Sie es auch wieder ohne
 viel Aufwand und vorallem restefrei vom System herunter. Das erlaubt
 Ihnen automatisierte Integrationstests im Rahmen der Qualitätssicherung.
+
+// Stichworte für den Index
+(((Maintainer-Skripte, postinst)))
+(((Maintainer-Skripte, preinst)))
 
 Verschwiegen werden sollen jedoch nicht die Nachteile. Ein mittels
 `checkinstall` generiertes und eingespieltes Paket unterläuft die
@@ -33,11 +36,13 @@ Debian-Installationen übertragbar. Berichtet wird ebenfalls, daß
 den `preinstall`- und `postinstall`-Skripten bekannt (siehe
 <<Schnober-Checkinstall-LinuxUser>>).
 
-==== Weitere noch unbearbeitete Notizen ====
+Aus Sicht der 'Benutzer' ist es erfreulich, wenn eine Lücke in den
+benötigten Komponenten geschlossen wird. Was sie meist weniger
+einschätzen können, ist die Stabilität der Lösung und der Aufwand
+seitens der Entwickler und Paketmaintainer, um diese Lösung dauerhaft zu
+betreuen und den Weiterentwicklungen anzupassen.
 
-// Stichworte für den Index
-(((Maintainer-Skripte, postinst)))
-(((Maintainer-Skripte, preinst)))
+==== Weitere noch unbearbeitete Notizen ====
 
 * Vorteile:
 ** installiert automatisch die zusätzlichen, bisher noch nicht installierten Header-Files nach
