@@ -304,7 +304,7 @@ besprechen wir das Thema in ``Paket zu Datei finden'' in
 [frame="topbot",options="header",cols="2,4,4",id="tab.paket-zu-datei-finden"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| APT        | `apt-file --search` 'Dateiname' | Suche in allen verfügbaren Paketen
+| APT        | `apt-file search` 'Dateiname' | Suche in allen verfügbaren Paketen
 | `aptitude` | kein Schalter |
 | `DNF`      | `dnf provides` 'Dateiname'| 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
 | `dpkg`     | `dpkg -S` 'Dateiname' | Suche in den installierten Paketen
