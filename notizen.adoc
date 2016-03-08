@@ -14,6 +14,7 @@ TODO für Axel
 * Erweiterungen: PDiffs
 * Erweiterungen: debdelta
 * Erweiterungen: systeme-mit-schlechter-anbindung-warten
+* Praxis: Automatisches wieder Deinstallieren bei nächster Gelegenheit, siehe https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=366520#29
 * https://juliank.wordpress.com/2012/01/24/managing-system-package-selections-using-custom-meta-packages/
 * EPUB3 and KF8/MOBI: https://github.com/asciidoctor/asciidoctor-epub3
   <pere> do you plan to publish mobi versions?  I create those using ebook-convert.
