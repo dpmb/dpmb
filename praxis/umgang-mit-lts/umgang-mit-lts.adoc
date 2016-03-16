@@ -6,4 +6,26 @@
 
 == Umgang mit LTS ==
 
+* der Paketmirror meldet "Release file expired" zurück
+** LTS-Version ist "abgelaufen", d.h. wird nicht weiter gepflegt
+** wie kann man die Installation trotzdem noch weiter betreiben?
+
+* kurzzeitig (einmalig):
+** Aufruf von `apt-get` mit dem Schalter 'Acquire::Check-Valid-Until=false'
+
+----
+# apt-get -o Acquire::Check-Valid-Until=false update
+----
+
+** dieser Aufruf überspringt/ignoriert die Prüfung, ob das Release File
+noch gültig ist
+
+* dauerhaft (bis zum Update)
+** anlegen eines Options-Files, um den Schalter dauerhaft zu nutzen,
+bspw. in `/etc/apt/apt.conf.d/`
+
+----
+# echo "Acquire::Check-Valid-Until=False;" > /etc/apt/apt.conf.d/10no--check-valid-until
+----
+
 // Datei (Ende): ./praxis/umgang-mit-lts/umgang-mit-lts.adoc
