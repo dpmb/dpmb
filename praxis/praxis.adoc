@@ -51,6 +51,9 @@ include::pakete-bauen-mit-checkinstall/checkinstall.adoc[]
 // - unterschiedliche Paketformate mischen (deb, rpm)
 include::paketformate-mischen/paketformate-mischen.adoc[]
 
+// - mit LTS-Versionen umgehen
+include::umgang-mit-lts/umgang-mit-lts.adoc[]
+
 
 // == Webbasierte Paketinstallation
 include::webbasierte-installation-von-paketen/webbasierte-installation-von-paketen.adoc[]
