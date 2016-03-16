@@ -40,7 +40,8 @@ Corporate Server, UCS)
   Einleitung und dem erstem Kapitel.
 * Oliver Rath für seine Vorschläge zur besseren Lesbarkeit von Programmcode
 * Karsten Merker für viele kleine Korrekturen
-* Wolfram Schneider für den Hinweis zu `dh-make-perl` als spezialisierte Variante von `checkinstall`
+* Wolfram Schneider für den Hinweis zu `dh-make-perl` als spezialisierte
+Variante von `checkinstall` sowie zum Aktualisieren von LTS-Versionen (siehe <<umgang-mit-lts>>)
 
 Nicht zu vergessen sind die Probeleser, die sich durch unser Manuskript
 gekämpft haben: Arne Wichmann, Thomas Winde, Jana Pirat, Jörg Dölz,
