@@ -1,0 +1,9 @@
+// Datei: ./praxis/umgang-mit-lts/umgang-mit-lts.adoc
+
+// Baustelle: Notizen
+
+[[umgang-mit-lts]]
+
+== Umgang mit LTS ==
+
+// Datei (Ende): ./praxis/umgang-mit-lts/umgang-mit-lts.adoc
