@@ -99,11 +99,19 @@ tatsächlich zu ihrer bestehenden Installation passt.
 
 ==== Umgewandelte Pakete einspielen ====
 
-* Einspielen des erzeugten deb-Pakets mit `dpkg` an APT und `aptitude` vorbei
-** Aufruf: `dpkg -i neuespaket.deb`
+// Stichworte für den Index
+(((dpkg, -i)))
 
-* was ist da zu beachten:
-** alles geht glatt und das Paket funktioniert
-** alles geht glatt und das Paket funktioniert nicht
+Haben Sie das Paket erfolgreich in das `deb`-Format umgewandelt, spielen
+Sie dieses mittels `dpkg -i paketname.deb` ein. APT und `aptitude`
+bekommen von der Aktion erstmal nichts mit, stören sich aber nicht
+daran. 
+
+Dabei können zwei Ergebnisse eintreten -- alles geht glatt und das Paket
+funktioniert, oder alles geht glatt und das Paket funktioniert nicht. Im
+zweiten Fall müssen Sie manuell nacharbeiten:
+
+* was ist da zu tun?
+* woran kann das hängen? (Ursachenforschung)
 
 // Datei (Ende): ./praxis/paketformate-mischen/alien.adoc
