@@ -189,6 +189,11 @@ Anleitung finden Sie im Wiki von debianforum.de
 
 === Backports bei Ubuntu ===
 
+// Stichworte für den Index
+(((Veröffentlichung, Entwicklungsstand)))
+(((Veröffentlichung, Langzeitunterstützung)))
+(((Veröffentlichung, LTS)))
+
 Auch bei Ubuntu gibt es Backports. Diese funktionieren nach ähnlichen
 Regeln wie bei Debian. Da es bei Ubuntu aber keinen 'testing'-Zweig wie
 bei Debian gibt und die Veröffentlichungen wesentlich häufiger

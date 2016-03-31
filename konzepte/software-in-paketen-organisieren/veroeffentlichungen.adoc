@@ -27,6 +27,7 @@ _Jessie_
 // Stichworte für den Index
 (((Veröffentlichung, Entwicklungsstand)))
 (((Veröffentlichung, experimental)))
+(((Veröffentlichung, Langzeitunterstützung)))
 (((Veröffentlichung, LTS)))
 (((Veröffentlichung, oldstable)))
 (((Veröffentlichung, oldoldstable)))
