@@ -41,8 +41,8 @@ vollständig abschalten können.
 (((apt-get, update)))
 
 Um die Überprüfung auf Gültigkeit des Release File einmalig zu
-ignorieren, rufen Sie `apt-get` mit dem Schalter '-o
-Acquire::Check-Valid-Until=false' auf. In Folge aktualisiert `apt-get`
+ignorieren, rufen Sie `apt-get` mit dem Schalter `-o
+Acquire::Check-Valid-Until=false` auf. In Folge aktualisiert `apt-get`
 ihre Paketdatenbank anstandslos.
 
 ----
