@@ -10,25 +10,27 @@
 
 Den Begriff 'alien' übersetzen Sie am ehesten mit 'fremd', 'Fremdling'
 oder 'Ausländer'. So heißt auch das Debianpaket <<Debian-Paket-alien>>,
-welches Ihnen hilft, eine Software, welche nicht als deb-Paket vorliegt,
-entsprechend umzuwandeln und für Ihre Debian-Installation vorzubereiten.
+welches Ihnen hilft, eine Software, welche nicht als `deb`-Paket
+vorliegt, entsprechend umzuwandeln und für Ihre Debian-Installation
+vorzubereiten.
 
-Wie bereits in <<Hofmann-Osterried-Alien-LinuxUser>> beschrieben,
-sollten bei der Umwandlung des Pakets nach Möglichkeit die folgenden
-Bestandteile erhalten bleiben:
+Wie bereits in ``Gestaltwandler. Programmpakete richtig konvertieren''
+<<Hofmann-Osterried-Alien-LinuxUser>> beschrieben, sollten bei der
+Umwandlung des Pakets nach Möglichkeit die folgenden Bestandteile
+erhalten bleiben:
 
 * die Paketbeschreibungen. Damit erkennen Sie später über die
 Paketverwaltung, um was für eine Software es sich handelt, wer der Autor
 ist oder wo sich die dazugehörige Homepage des Projekts befindet.
 
 * die Informationsdateien. Diese beschreiben, wie Sie das Paket wieder
-entfernen oder aktualisieren -- und was dabei gegebenenfalls zu beachten
-ist.
+entfernen oder aktualisieren. Häufig befinden sich auch Hinweise dabei,
+die benennen, was dabei gegebenenfalls zu beachten ist.
 
 * die Informationen über Abhängigkeiten zu anderer Software
 
 * die Angabe der Prozessorarchitektur im Dateinamen, wie etwa 'amd64'
-bei deb-Paketen und 'x86_64' bei rpm.
+bei `deb`-Paketen und 'x86_64' bei `rpm`-Archiven.
 
 Bei der Umwandlung des Paketformats bestehen mehrere Fallstricke. Diese
 führen regelmäßig dazu, dass die gewünschte Software nicht wie erhofft
@@ -46,7 +48,7 @@ Optionen und Schalter
 Verwenden Sie daher möglichst die Version der Software, die auch zu
 Ihrer Distribution und Architektur passt. Diese lässt sich i.d.R. am
 einfachsten in Ihren Softwarebestand integrieren. Weitere Informationen
-dazu finden auf der Projektwebseite von 'alien' <<alien>>.
+dazu finden auf der Projektwebseite von `alien` <<alien>>.
 
 ==== Pakete umwandeln ====
 
