@@ -17,7 +17,7 @@ Wie wir bereits in 'Bedeutung der verschiedenen Entwicklungsstände'
 haben, ist LTS eine Abkürzung und steht für 'long-term support' -- auf
 deutsch 'Langzeitunterstützung'. Damit pflegt das Debianprojekt ältere
 Veröffentlichungen über bis zu fünf Jahre nach dem Ende des
-Releasezyklus.
+Releasezyklus <<Plura-lts>>.
 
 Betreiben Sie eine solche, ältere Debianinstallation, erreichen Sie
 irgendwann einen Punkt, an dem keine weiteren Aktualisierungen der

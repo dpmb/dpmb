@@ -648,6 +648,8 @@
 
 // - [[[Plenz-Haenel-Git]]] Julius Plenz und Valentin Haenel: Git. Verteilte Versionsverwaltung für Code und Dokumente, Open Source Press, München, 1. Auflage Juni 2011, ISBN 978-3-941841-42-0
 
+- [[[Plura-lts]]] Michael Plura: Am Leben halten, ix 12/2014, http://www.heise.de/ix/heft/Am-Leben-halten-2458886.html
+
 - [[[RaspberryPi]]] Webseite zur Hardwareplattform Raspberry Pi, http://www.raspberrypi.org/
 
 - [[[Raspbian]]] Debian für das Raspberry Pi, http://www.raspbian.org/
