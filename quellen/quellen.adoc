@@ -277,6 +277,8 @@
 
 - [[[Debian-Paket-debfoster]]] Debian-Paket 'debfoster', http://packages.debian.org/de/stable/debfoster
 
+- [[[Debian-Paket-debhelper]]] Debian-Paket 'debhelper', http://packages.debian.org/de/stable/debhelper
+
 - [[[Debian-Paket-debian-archive-keyring]]] Debian-Paket 'debian-archive-keyring', http://packages.debian.org/de/stable/debian-archive-keyring
 
 - [[[Debian-Paket-debian-goodies]]] Debian-Paket 'debian-goodies', http://packages.debian.org/de/stable/debian-goodies
@@ -312,6 +314,8 @@
 - [[[Debian-Paket-dlocate]]] Debian-Paket 'dlocate', https://packages.debian.org/de/stable/dlocate
 
 - [[[Debian-Paket-dpkg]]] Debian-Paket 'dpkg', https://packages.debian.org/de/stable/dpkg
+
+- [[[Debian-Paket-dpkg-dev]]] Debian-Paket 'dpkg-dev', https://packages.debian.org/de/stable/dpkg-dev
 
 - [[[Debian-Paket-dpkg-www]]] Debian-Paket 'dpkg-www', https://packages.debian.org/de/stable/dpkg-www
 
@@ -371,6 +375,8 @@
 
 - [[[Debian-Paket-packagesearch]]] Debian-Paket 'packagesearch', http://packages.debian.org/de/stable/packagesearch
 
+- [[[Debian-Paket-perl]]] Debian-Paket 'perl', https://packages.debian.org/jessie/perl
+
 - [[[Debian-Paket-piuparts]]] Debian-Paket 'piuparts', http://packages.debian.org/de/stable/piuparts
 
 - [[[Debian-Paket-python-software-properties]]] Debian-Paket 'python-software-properties', http://packages.debian.org/de/stable/python-software-properties
@@ -378,6 +384,8 @@
 - [[[Debian-Paket-reportbug]]] Debian-Paket 'reportbug', https://packages.debian.org/de/stable/reportbug
 
 - [[[Debian-Paket-reprepro]]] Debian-Paket 'reprepro', https://packages.debian.org/de/stable/reprepro
+
+- [[[Debian-Paket-rpm]]] Debian-Paket 'rpm', https://packages.debian.org/de/stable/rpm
 
 - [[[Debian-Paket-sensible-utils]]] Debian-Paket 'sensible-utils', http://packages.debian.org/de/stable/sensible-utils
 
@@ -403,6 +411,8 @@
 - [[[Debian-Paket-wget]]] Debian-Paket 'wget', http://packages.debian.org/de/stable/wget
 
 - [[[Debian-Paket-xara-gtk]]] Debian-Paket 'xara-gtk', http://packages.debian.org/de/stable/xara-gtk
+
+- [[[Debian-Paket-yum]]] Debian-Paket 'yum', https://packages.debian.org/de/stable/yum
 
 - [[[Debian-Paket-zutils]]] Debian-Paket 'zutils', http://packages.debian.org/de/stable/zutils
 
