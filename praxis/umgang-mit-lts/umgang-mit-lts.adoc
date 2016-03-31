@@ -24,10 +24,14 @@ irgendwann einen Punkt, an dem keine weiteren Aktualisierungen der
 verwendeten Softwarepakete mehr möglich sind. Versuchen Sie diesen
 Schritt trotzdem, meldet sich der Paketmirror mit dem Fehler ``Release
 file expired'' bei Ihnen zurück. Zu diesem Zeitpunkt ist die LTS-Version
-``abgelaufen'', d.h. die weitere Pflege der Versionen der
+``abgelaufen'', d.h. die weitere Pflege der Versionen aus dieser
 Veröffentlichung durch die Paketmaintainer ist eingestellt.
 
-** wie kann man die Installation trotzdem noch weiter betreiben?
+Können Sie die bislang verwendete Veröffentlichung nicht wechseln,
+stellt sich die Frage, ob -- und wenn ja wie -- Sie die bestehende
+Installation trotzdem noch weiter betreiben können. APT liefert einen
+Schalter, mit dem Sie die Überprüfung auf das Ende der Langzeitunterstützung
+abschalten können.
 
 === kurzzeitig (einmalig) ===
 * Aufruf von `apt-get` mit dem Schalter 'Acquire::Check-Valid-Until=false'
