@@ -51,14 +51,15 @@ ihre Paketdatenbank anstandslos.
 
 === Dauerhaftes Abschalten ===
 
-(bis zum tatsächlichen Update)
-* anlegen eines Options-Files, um den Schalter dauerhaft zu nutzen,
-bspw. in `/etc/apt/apt.conf.d/`
+Brauchen Sie das Abschalten häufiger -- bspw. bis zum geplanten,
+tatsächlichen Versionswechsel -- legen Sie am besten eine Datei im
+Verzeichnis `/etc/apt/apt.conf.d/` mit dem entsprechenden Schalter an.
+Mit dem nachfolgenden Aufruf erzeugen Sie eine Datei
+`/etc/apt/apt.conf.d/10no-check-valid-until` und setzen den Schalter
+dauerhaft <<Stackexchange-LTS>>:
 
 ----
 # echo "Acquire::Check-Valid-Until=False;" > /etc/apt/apt.conf.d/10no-check-valid-until
 ----
-
-* Quelle: http://unix.stackexchange.com/questions/2544/how-to-work-around-release-file-expired-problem-on-a-local-mirror
 
 // Datei (Ende): ./praxis/umgang-mit-lts/umgang-mit-lts.adoc
