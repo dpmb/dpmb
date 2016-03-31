@@ -1,6 +1,6 @@
 // Datei: ./praxis/umgang-mit-lts/umgang-mit-lts.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[umgang-mit-lts]]
 
