@@ -54,6 +54,17 @@ dazu finden auf der Projektwebseite von `alien` <<alien>>.
 
 ==== Pakete umwandeln ====
 
+// Stichworte für den Index
+(((Debianpaket, alien)))
+(((Debianpaket, debhelper)))
+(((Debianpaket, dpkg)))
+(((Debianpaket, dpkg-dev)))
+(((Debianpaket, gcc)))
+(((Debianpaket, make)))
+(((Debianpaket, perl)))
+(((Debianpaket, rpm)))
+(((Debianpaket, yum)))
+(((Filesystem Hierarchy Standard (FHS))))
 Damit Ihnen das Umwandeln von Paketen gelingt, müssen ein paar
 Voraussetzungen erfüllt sein. Für `alien` benötigen Sie:
 
@@ -69,12 +80,22 @@ Hilfreich sind außerdem der GNU-C-Compiler und `make`, sofern Software
 aus dem Quellcode zu übersetzen ist (Pakete <<Debian-Paket-gcc>> und
 <<Debian-Paket-make>>).
 
-* Optionen für Debian/deb-basierte Systeme
-** `--patch=Datei`, `--anypatch` und `--nopatch`: zum automatischen Anpassen von Startup-Skripten und Pfaden gemäß dem File Hierarchy Standard (FHS) 
-** `-c`: Bestehende Pre- und Post-Install- sowie Remove-Skripte bleiben erhalten
-** `--generate` und `--veryverbose`: Optionen zur Fehlersuche
+// Stichworte für den Index
+(((alien, --anypatch)))
+(((alien, -c)))
+(((alien, --generate)))
+(((alien, --nopatch)))
+(((alien, --patch)))
+(((alien, --veryverbose)))
+`deb`-basierte Systeme haben ihre Eigenheiten. Die folgenden Schalter
+von `alien` helfen Ihnen bei der Paketumwandlung:
 
-* Paket überprüfen, ob es zur bestehenden Installation passt
+* `--patch=Datei`, `--anypatch` und `--nopatch` zum automatischen Anpassen von Startup-Skripten und Pfaden gemäß dem File Hierarchy Standard (FHS)
+* `-c` um bestehende Pre- und Post-Install- sowie Remove-Skripte zu erhalten
+* `--generate` und `--veryverbose` um die Fehlersuche zu erweitern
+
+Am Ende überprüfen Sie das Paket, um sicherzugehen, ob es auch
+tatsächlich zu ihrer bestehenden Installation passt.
 
 ==== Umgewandelte Pakete einspielen ====
 
