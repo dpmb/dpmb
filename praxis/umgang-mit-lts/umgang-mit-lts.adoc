@@ -8,17 +8,25 @@
 
 // Stichworte für den Index
 (((Veröffentlichung, Entwicklungsstand)))
+(((Veröffentlichung, Langzeitunterstützung)))
 (((Veröffentlichung, LTS)))
 (((Veröffentlichung, oldoldstable)))
 
-Wie bereits in 'Bedeutung der verschiedenen Entwicklungsstände'
-(siehe <<bedeutung-der-verschiedenen-entwicklungsstaende>>) beleuchtet,
-ist LTS eine Abkürzung und steht für 'long-term support'. Damit
-unterstützt das Debianprojekt ältere Veröffentlichungen über bis zu fünf
-Jahre nach dem Ende des Releasezyklus.
+Wie wir bereits in 'Bedeutung der verschiedenen Entwicklungsstände'
+(siehe <<bedeutung-der-verschiedenen-entwicklungsstaende>>) beleuchtet
+haben, ist LTS eine Abkürzung und steht für 'long-term support' -- auf
+deutsch 'Langzeitunterstützung'. Damit pflegt das Debianprojekt ältere
+Veröffentlichungen über bis zu fünf Jahre nach dem Ende des
+Releasezyklus.
 
-* der Paketmirror meldet "Release file expired" zurück
-** LTS-Version ist "abgelaufen", d.h. wird nicht weiter gepflegt
+Betreiben Sie eine solche, ältere Debianinstallation, erreichen Sie
+irgendwann einen Punkt, an dem keine weiteren Aktualisierungen der
+verwendeten Softwarepakete mehr möglich sind. Versuchen Sie diesen
+Schritt trotzdem, meldet sich der Paketmirror mit dem Fehler ``Release
+file expired'' bei Ihnen zurück. Zu diesem Zeitpunkt ist die LTS-Version
+``abgelaufen'', d.h. die weitere Pflege der Versionen der
+Veröffentlichung durch die Paketmaintainer ist eingestellt.
+
 ** wie kann man die Installation trotzdem noch weiter betreiben?
 
 === kurzzeitig (einmalig) ===
