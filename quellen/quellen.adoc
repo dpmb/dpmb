@@ -327,6 +327,8 @@
 
 - [[[Debian-Paket-gawk]]] Debian-Paket 'gawk', http://packages.debian.org/de/stable/gawk
 
+- [[[Debian-Paket-gcc]]] Debian-Paket 'gcc', http://packages.debian.org/de/stable/gcc
+
 - [[[Debian-Paket-gdebi]]] Debian-Paket 'gdebi', http://packages.debian.org/de/stable/gdebi
 
 - [[[Debian-Paket-gdebi-core]]] Debian-Paket 'gdebi-core', http://packages.debian.org/de/stable/gdebi-core
@@ -358,6 +360,8 @@
 - [[[Debian-Paket-lintian]]] Debian-Paket 'lintian', http://packages.debian.org/de/stable/lintian
 
 - [[[Debian-Paket-localepurge]]] Debian-Paket 'localepurge', http://packages.debian.org/stable/localepurge
+
+- [[[Debian-Paket-make]]] Debian-Paket 'make', http://packages.debian.org/de/stable/make
 
 - [[[Debian-Paket-module-assistant]]] Debian-Paket 'module-assistant', http://packages.debian.org/de/stable/module-assistant
 

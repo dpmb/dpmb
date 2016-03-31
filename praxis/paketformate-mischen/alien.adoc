@@ -65,8 +65,9 @@ die Konvertierung von `rpm`-Paketen (<<Debianpaket-rpm>> und <<Debianpaket-yum>>
 Paketen <<Debian-Paket-dpkg>>, <<Debian-Paket-dpkg-dev>> und
 <<Debian-Paket-debhelper>> zur Erzeugung von Debianpaketen
 
-Hilfreich sind außerdem die beiden Programme `gcc` und `make`, sofern
-Software aus dem Quellcode zu übersetzen ist.
+Hilfreich sind außerdem der GNU-C-Compiler und `make`, sofern Software
+aus dem Quellcode zu übersetzen ist (Pakete <<Debian-Paket-gcc>> und
+<<Debian-Paket-make>>).
 
 * Optionen für Debian/deb-basierte Systeme
 ** `--patch=Datei`, `--anypatch` und `--nopatch`: zum automatischen Anpassen von Startup-Skripten und Pfaden gemäß dem File Hierarchy Standard (FHS) 
