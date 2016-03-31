@@ -68,9 +68,9 @@ dazu finden auf der Projektwebseite von `alien` <<alien>>.
 Damit Ihnen das Umwandeln von Paketen gelingt, müssen ein paar
 Voraussetzungen erfüllt sein. Für `alien` benötigen Sie:
 
-* Perl <<Debianpaket-perl>>)
+* Perl <<Debian-Paket-perl>>)
 * die Werkzeuge `rpm` bzw. `yum` aus den gleichnamigen Debianpaketen für
-die Konvertierung von `rpm`-Paketen (<<Debianpaket-rpm>> und <<Debianpaket-yum>>)
+die Konvertierung von `rpm`-Paketen (<<Debian-Paket-rpm>> und <<Debian-Paket-yum>>)
 
 * die Werkzeuge `dpkg`, `dpkg-dev` und `debhelper` aus den gleichnamigen
 Paketen <<Debian-Paket-dpkg>>, <<Debian-Paket-dpkg-dev>> und
