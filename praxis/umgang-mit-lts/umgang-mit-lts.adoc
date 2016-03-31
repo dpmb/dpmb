@@ -29,22 +29,29 @@ Veröffentlichung durch die Paketmaintainer ist eingestellt.
 
 Können Sie die bislang verwendete Veröffentlichung nicht wechseln,
 stellt sich die Frage, ob -- und wenn ja wie -- Sie die bestehende
-Installation trotzdem noch weiter betreiben können. APT liefert einen
-Schalter, mit dem Sie die Überprüfung auf das Ende der Langzeitunterstützung
-abschalten können.
+Installation trotzdem noch weiter betreiben können. APT liefert dazu den
+Schalter `Acquire::Check-Valid-Until`, mit dem Sie die Überprüfung auf
+das Ende der Langzeitunterstützung überspringen und bei Bedarf auch
+vollständig abschalten können.
 
-=== kurzzeitig (einmalig) ===
-* Aufruf von `apt-get` mit dem Schalter 'Acquire::Check-Valid-Until=false'
+=== Kurzzeitiges Abschalten ===
+
+// Stichworte für den Index
+(((apt-get, -o)))
+(((apt-get, update)))
+
+Um die Überprüfung auf Gültigkeit des Release File einmalig zu
+ignorieren, rufen Sie `apt-get` mit dem Schalter '-o
+Acquire::Check-Valid-Until=false' auf. In Folge aktualisiert `apt-get`
+ihre Paketdatenbank anstandslos.
 
 ----
 # apt-get -o Acquire::Check-Valid-Until=false update
 ----
 
-* dieser Aufruf überspringt/ignoriert die Prüfung, ob das Release File
-noch gültig ist
+=== Dauerhaftes Abschalten ===
 
-=== dauerhaft (bis zum tatsächlichen Update) ===
-
+(bis zum tatsächlichen Update)
 * anlegen eines Options-Files, um den Schalter dauerhaft zu nutzen,
 bspw. in `/etc/apt/apt.conf.d/`
 
