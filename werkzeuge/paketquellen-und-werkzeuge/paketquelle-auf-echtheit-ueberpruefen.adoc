@@ -51,6 +51,10 @@ eine deutliche Warnung.
 (((apt-key, Schlüsselverwaltung)))
 (((Debianpaket, debian-archive-keyring)))
 (((Schlüsselring, /etc/apt/trusted.gpg)))
+(((Schlüsselring, Debian)))
+(((Schlüsselring, DebianEdu/Skolelinux)))
+(((Schlüsselring, Debian-Ports-Projekt)))
+(((Schlüsselring, Ubuntu)))
 (((Ubuntupaket, ubuntu-keyring)))
 Die Verwaltung der Schlüssel erfolgt mit dem Programm `apt-key`. Dazu
 gehört ein Schlüsselring mit allen GPG-Schlüsseln der Paketquellen, aus
@@ -59,21 +63,22 @@ Pakets 'debian-archive-keyring'
 <<Debian-Paket-debian-archive-keyring>>, bei Ubuntu heißt das Paket
 hingegen 'ubuntu-keyring' <<Ubuntu-Paket-ubuntu-keyring>>.
 
-**TODO:** `/etc/apt/trustdb.gpg` erklären. Gemäß gpg-Manpage sind
-Dateien mit dem Namen "trustdb.gpg" nur Caches.
+// Fixed:
+// https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=619558
+// **TODO:** `/etc/apt/trustdb.gpg` erklären. Gemäß gpg-Manpage sind
+// Dateien mit dem Namen "trustdb.gpg" nur Caches.
 
 Der primäre Schlüsselring für lokale, als vertrauenswürdig eingestufte
 Schlüssel ist die Datei `/etc/apt/trusted.gpg`. Für zusätzliche
 Schlüsselbunde und Dateifragmente weiterer vertrauenswürdiger Schlüssel
-ist das Verzeichnis `/etc/apt/trusted.gpg.d/`
-vorgesehen. Insbesondere o.g. Schlüsselbund-Pakete speichern ihre
-Schlüsselbund-Dateien in diesem Verzeichnis.
+ist das Verzeichnis `/etc/apt/trusted.gpg.d/` vorgesehen. Insbesondere
+o.g. Schlüsselbund-Pakete speichern ihre Schlüsselbund-Dateien in diesem
+Verzeichnis.
 
-Die Dateien in `/etc/apt/trusted.gpg.d/` gelten als
-Konfigurationsdateien, können also von lokalen Administrator verändert
+Die einzelnen Dateien in `/etc/apt/trusted.gpg.d/` gelten als
+Konfigurationsdateien, können also vom lokalen Administrator verändert
 oder gelöscht werden. Deswegen sind diese Schlüssel zusätzlich auch noch
-in der Datei `/usr/share/keyrings/debian-archive-keyring.gpg`
-gespeichert.
+in der Datei `/usr/share/keyrings/debian-archive-keyring.gpg` gespeichert.
 
 Die Schlüssel haben eine begrenzte Gültigkeit oder können auch
 zurückgezogen werden. Daher sind in der Schlüsselbund-Datei
