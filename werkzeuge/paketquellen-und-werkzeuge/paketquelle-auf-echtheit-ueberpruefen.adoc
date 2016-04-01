@@ -36,8 +36,8 @@ Schlüssel signiert und der dazugehörige, öffentliche Schlüssel
 bekanntgegeben bzw. als Paket hinterlegt. Mit Hilfe dieses
 Signatur-Paares überprüfen Sie einerseits die Echtheit der Paketquelle
 und andererseits über die Hashsummen jeden einzelnen Pakets in den
-Paketlisten auch jedes einzelne Paket daraus (siehe auch Bezogenes Paket
-verifizieren in <<bezogenes-paket-verifizieren>>).
+Paketlisten auch jedes einzelne Paket daraus (siehe auch ``Bezogenes
+Paket verifizieren'' in <<bezogenes-paket-verifizieren>>).
 
 APT und `aptitude` haben diesen Vorgang in ihre internen Abläufe
 integriert und nehmen Ihnen diesen Verifizierungsschritt vollständig ab.
@@ -98,12 +98,14 @@ Debian-Ports-Projekt (<<debian-architekturen-ports-projekt>>.
 (((apt-key, exportall)))
 (((apt-key, finger)))
 (((apt-key, list)))
-Mit `apt-key` können Sie sich bspw. die gemerkten Schlüssel anzeigen
-sowie neue Schlüssel zum Schlüsselring hinzufügen oder auch daraus
-wieder entfernen. Diese Vorgänge kommen meist dann zum tragen, wenn Sie
-Ihr Debian-System von Ballast befreien und nicht mehr benötigte
-Schlüssel austragen oder weitere Paketquellen einbinden möchten, deren
-Schlüssel (noch) nicht offiziell hinterlegt ist.
+(((Schlüsselring, Informationen anzeigen)))
+Mit `apt-key` greifen Sie auf ihren gespeicherten Schlüsselring zu.
+Damit lassen Sie sich bspw. die gemerkten Schlüssel anzeigen, fügen neue
+Schlüssel zum Schlüsselring hinzu oder entfernen diese daraus wieder.
+Diese Vorgänge kommen meist dann zum tragen, wenn Sie Ihr Debian-System
+von Ballast befreien und nicht mehr benötigte Schlüssel austragen oder
+weitere Paketquellen einbinden möchten, deren Schlüssel (noch) nicht
+offiziell hinterlegt ist.
 
 Die vier Unterkommandos `list`, `finger`, `export` und `exportall` haben
 rein informativen Charakter. Mit den ersten beiden zeigen sie zu den
@@ -112,11 +114,18 @@ Verfallsdatum sowie den Eigentümer bzw. Aussteller des Schlüssels an. Im
 vorliegenden Fall ist dieser keine Person, sondern eine
 Debian-Veröffentlichung bzw. deren Verantwortlicher. Als E-Mail-Adresse
 ist hier diejenige der FTP-Master hinterlegt (siehe
-<<fig.apt-key-list>>). Mit dem Aufruf `apt-key finger` zeigen Sie
-zusätzlich deren Fingerabdruck an (siehe <<fig.apt-key-finger>>). Mit
-`apt-key export Schlüssel` bzw. `apt-key exportall` geben Sie nur einen
-bestimmten respektive alle Schlüssel auf der Standardausgabe als als
-PGP-Block aus.
+<<fig.apt-key-list>>). 
+
+// Stichworte für den Index
+(((apt-key, export)))
+(((apt-key, export-all)))
+(((apt-key, finger)))
+(((Schlüsselring, Fingerabdruck anzeigen)))
+Mit dem Aufruf `apt-key finger` zeigen Sie zusätzlich deren
+Fingerabdruck an (siehe <<fig.apt-key-finger>>). Mit `apt-key export
+Schlüssel` geben Sie nur einen bestimmten Schlüssel auf der
+Standardausgabe als als PGP-Block aus. Der Schalter `apt-key exportall`
+führt das gleiche für alle Schlüssel durch.
 
 .Auflistung der gespeicherten, vertrauenswürdigen Schlüssel
 image::werkzeuge/paketquellen-und-werkzeuge/apt-key-list.png[id="fig.apt-key-list", width="50%"]
