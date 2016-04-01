@@ -467,11 +467,11 @@
 
 - [[[Debian-Wiki-Debian-Entwickler]]] Debian Wiki: Wie werde ich ein Debian-Entwickler?, http://wiki.debian.org/DebianDeveloper
 
-- [[[Debian-Wiki-FHS]]] Filesystem Hierarchy Standard (FHS) im Debian Wiki, http://wiki.debian.org/FilesystemHierarchyStandard
+- [[[Debian-Wiki-FHS]]] Debian Wiki: Filesystem Hierarchy Standard (FHS), http://wiki.debian.org/FilesystemHierarchyStandard
 
-- [[[Debian-Wiki-Debian-GNUHurd]]] Wiki zu Debian GNU/Hurd, https://wiki.debian.org/Debian_GNU/Hurd
+- [[[Debian-Wiki-Debian-GNUHurd]]] Debian Wiki: Debian GNU/Hurd, https://wiki.debian.org/Debian_GNU/Hurd
 
-- [[[Debian-Wiki-Debian-GNUkFreeBSD]]] Wiki zu Debian GNU/kFreeBSD, https://wiki.debian.org/Debian_GNU/kFreeBSD
+- [[[Debian-Wiki-Debian-GNUkFreeBSD]]] Debian Wiki: Debian GNU/kFreeBSD, https://wiki.debian.org/Debian_GNU/kFreeBSD
 
 - [[[Debian-Wiki-DebTorrent]]] Debian Wiki: DebTorrent, https://wiki.debian.org/DebTorrent
 
