@@ -18,12 +18,12 @@ empfangenen Paketlisten und Pakete überprüfen (Authentizität).
 
 Hintergrund dafür ist einerseits, dass eine Paketquelle Paketarchive
 unterschiedlichster Herkunft umfasst. Die Daten könnten aus einer wenig
-vertrauenswürdigen Quelle stammen und auch Schadcode enthalten. Die
-Zuverlässigkeit von Speichermedien (Datenträger) nimmt mit der Zeit ab
-und sorgt für fehlerhafte Bitfolgen. Andererseits erfolgt der Transport
-über Leitungsnetze unterschiedlichster Art, wobei hier gekippte Bits und
-somit Übertragungsfehler und verfälschte Daten auf dem Transportweg
-nicht vollständig auszuschließen sind.
+vertrauenswürdigen Quelle stammen und auch Schadcode enthalten. Ebenso
+nimmt die Zuverlässigkeit von Speichermedien (Datenträger) mit der Zeit
+ab und sorgt für fehlerhafte Bitfolgen. Desweiteren erfolgt der
+Transport über Leitungsnetze unterschiedlichster Art, wobei hier
+gekippte Bits und somit Übertragungsfehler und verfälschte Daten auf dem
+Transportweg nicht vollständig auszuschließen sind.
 
 Daher sind sowohl alle Veröffentlichungen (siehe
 <<veroeffentlichungen>>), als auch die Paketquellen (siehe
@@ -31,13 +31,13 @@ Daher sind sowohl alle Veröffentlichungen (siehe
 einzelnen Pakete jeweils separat digital signiert. Eine digitale
 Signatur (``Schlüssel'', GPG-Key) besteht aus zwei Teilen -- einem
 öffentlichen und einem privaten, geheimen Schlüssel. Die Paketlisten
-werden zunächst vom Verwalter des Repositorys mit dem privaten
-Schlüssel signiert und deren öffentlicher Schlüssel bekanntgegeben bzw.
-als Paket hinterlegt. Über diese Signaturen überprüfen Sie damit
-einerseits die Echtheit der Paketquelle und andererseits über die
-Hashsummen jeden einzelnen Pakets in den Paketlisten auch jedes
-einzelne Paket daraus (siehe auch Bezogenes Paket verifizieren in
-<<bezogenes-paket-verifizieren>>).
+werden zunächst vom Verwalter des Repositorys mit seinem privaten
+Schlüssel signiert und der dazugehörige, öffentliche Schlüssel
+bekanntgegeben bzw. als Paket hinterlegt. Mit Hilfe dieses
+Signatur-Paares überprüfen Sie einerseits die Echtheit der Paketquelle
+und andererseits über die Hashsummen jeden einzelnen Pakets in den
+Paketlisten auch jedes einzelne Paket daraus (siehe auch Bezogenes Paket
+verifizieren in <<bezogenes-paket-verifizieren>>).
 
 APT und `aptitude` haben diesen Vorgang in ihre internen Abläufe
 integriert und nehmen Ihnen diesen Verifizierungsschritt vollständig ab.
