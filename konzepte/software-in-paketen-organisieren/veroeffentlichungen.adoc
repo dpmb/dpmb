@@ -104,7 +104,7 @@ Im Detail gehen wir darauf unter Debian Backports in
 ==== Alias-Namen ====
 
 // Stichworte für den Index
-(((Veröffentlichung, Aliasname)))
+(((Veröffentlichung, Alias-Name)))
 (((Veröffentlichung, Buster)))
 (((Veröffentlichung, Buzz)))
 (((Veröffentlichung, Bo)))
