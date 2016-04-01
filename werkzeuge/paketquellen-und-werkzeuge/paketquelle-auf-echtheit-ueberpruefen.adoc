@@ -99,6 +99,7 @@ Debian-Ports-Projekt (<<debian-architekturen-ports-projekt>>.
 (((apt-key, finger)))
 (((apt-key, list)))
 (((Schlüsselring, Informationen anzeigen)))
+(((Schlüsselring, Schlüssel anzeigen)))
 Mit `apt-key` greifen Sie auf ihren gespeicherten Schlüsselring zu.
 Damit lassen Sie sich bspw. die gemerkten Schlüssel anzeigen, fügen neue
 Schlüssel zum Schlüsselring hinzu oder entfernen diese daraus wieder.
@@ -121,6 +122,7 @@ ist hier diejenige der FTP-Master hinterlegt (siehe
 (((apt-key, export-all)))
 (((apt-key, finger)))
 (((Schlüsselring, Fingerabdruck anzeigen)))
+(((Schlüsselring, Schlüssel exportieren)))
 Mit dem Aufruf `apt-key finger` zeigen Sie zusätzlich deren
 Fingerabdruck an (siehe <<fig.apt-key-finger>>). Mit `apt-key export
 Schlüssel` geben Sie nur einen bestimmten Schlüssel auf der
@@ -138,6 +140,10 @@ image::werkzeuge/paketquellen-und-werkzeuge/apt-key-finger.png[id="fig.apt-key-f
 (((apt-key, del)))
 (((apt-key, update)))
 (((apt-key, net-update)))
+(((Schlüsselring, Schlüssel aktualisieren)))
+(((Schlüsselring, Schlüssel hinzufügen)))
+(((Schlüsselring, Schlüssel löschen)))
+(((Schlüsselring, Schlüssel über das Netzwerk synchronisieren)))
 Mit `apt-key add Schlüsseldatei` und `apt-key del Schlüssel-ID`
 verändern Sie den Inhalt des Schlüsselbundes. Mit ersterem fügen Sie
 einen neuen Schlüssel aus einer Datei hinzu, mit letzterem löschen Sie
@@ -194,7 +200,7 @@ Signaturen ebenfalls nicht möglich ist.
 ====
 
 Der bezogene Schlüssel befindet sich nun im aktuellen Verzeichnis in der
-Datei `archive.key`. Diesen Schlüssel fügen Sie nun über den
+lokalen Datei `archive.key`. Diesen Schlüssel fügen Sie nun über den
 Aufruf `apt-key add archive.key` Ihrem lokalen Schlüsselbund hinzu:
 
 .Hinzufügen des bezogenen Schlüssels mittels `apt-key`
