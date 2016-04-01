@@ -208,10 +208,10 @@ Pakete auf eine neue Version aktualisieren (siehe <<pakete-aktualisieren>>)
 (((apt-key, exportall)))
 (((apt-key, finger)))
 (((apt-key, list)))
-(((apt-key, netupdate)))
+(((apt-key, net-update)))
 (((apt-key, update)))
 Für `apt-key` sind die Unterkommandos `add`, `adv`, `del`, `export`,
-`exportall`, `finger`, `list`, `netupdate` und `update` zulässig. Diese
+`exportall`, `finger`, `list`, `net-update` und `update` zulässig. Diese
 besprechen wir ausführlich unter ``Paketquelle auf Echtheit überprüfen''
 in <<paketquelle-auf-echtheit-ueberpruefen>>.
 
