@@ -144,8 +144,6 @@
 
 - [[[Debdelta]]] Debdelta, Pakete als Differenzen zur vorherigen Paket-Version, http://debdelta.debian.net/
 
-- [[[DebianAlternatives]]] Debian Wiki: Debian Alternatives, https://wiki.debian.org/DebianAlternatives
-
 - [[[DebianDerivativeCensus]]] Debian-Derivate-Zensus, http://wiki.debian.org/Derivatives/Census
 
 - [[[Debianforum-Wiki-Backports]]] Debian Backports im Debianforum Wiki: http://wiki.debianforum.de/Backports
@@ -456,6 +454,8 @@
 - [[[Debian-Virtual-Packages-List]]] Liste aller offiziell verwendeten virtuellen Pakete, http://www.debian.org/doc/packaging-manuals/virtual-package-names-list.adoc
 
 - [[[Debian-Webseite]]] Webseite des Debian-Projekts, http://www.debian.org/
+
+- [[[Debian-Wiki-Alternatives]]] Debian Wiki: Debian Alternatives, https://wiki.debian.org/DebianAlternatives
 
 - [[[Debian-Wiki-AptConf]]] Debian Wiki: Eintrag zu AptConf, https://wiki.debian.org/AptConf
 

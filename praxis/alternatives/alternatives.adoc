@@ -59,7 +59,7 @@ Standardprogramm manuell fest oder lassen dieses automatisch auswählen.
 
 Das Alternativen-System ist eine Debian-Eigenheit, die für viele
 Programme und -Pakete existiert. In RedHat/Fedora wurde das System in
-leicht veränderter Form übernommen <<DebianAlternatives>>. Ubuntu
+leicht veränderter Form übernommen <<Debian-Wiki-Alternatives>>. Ubuntu
 präferiert hingegen XDG und greift vor allem dann auf das Debian
 Alternativen-System zurück, wenn es die Pakete unverändert von Debian
 übernimmt.
