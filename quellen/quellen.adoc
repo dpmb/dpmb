@@ -473,6 +473,8 @@
 
 - [[[Debian-Wiki-Debian-GNUkFreeBSD]]] Debian Wiki: Debian GNU/kFreeBSD, https://wiki.debian.org/Debian_GNU/kFreeBSD
 
+- [[[Debian-Wiki-Debian-Repository-Format]]] Debian Wiki: Debian Repository Format, https://wiki.debian.org/RepositoryFormat
+
 - [[[Debian-Wiki-DebTorrent]]] Debian Wiki: DebTorrent, https://wiki.debian.org/DebTorrent
 
 - [[[Debian-Wiki-DiskImage]]] Debian Wiki: Diskimage, https://wiki.debian.org/DiskImage

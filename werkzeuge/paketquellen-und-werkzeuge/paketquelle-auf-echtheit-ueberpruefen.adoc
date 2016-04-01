@@ -8,15 +8,15 @@
 ==== Basiswissen ====
 
 Paketquellen und Repositories sind im Prinzip Fileserver mit einer vorab
-festgelegten Struktur, deren Inhalt öffentlich zugänglich ist.
-Vereinfacht betrachtet muss bei dessen Abruf sichergestellt werden, dass
-die von dort bezogenen Daten echt sind und auch mit den Originaldaten
-übereinstimmen, aus denen die Distribution besteht. Daher sind in der
-Paketverwaltung Mechanismen integriert, welche die Echtheit und
-Vollständigkeit der empfangenen Paketlisten und Pakete überprüfen
-(Authentizität).
+festgelegten, spezifischen Struktur, deren Inhalt öffentlich zugänglich
+ist <<Debian-Wiki-Debian-Repository-Format>>. Vereinfacht betrachtet
+muss bei dessen Abruf sichergestellt werden, dass die von dort bezogenen
+Daten echt sind und auch mit den Originaldaten übereinstimmen, aus denen
+die Distribution besteht. Daher sind in der Paketverwaltung mehrstufige
+Mechanismen integriert, welche die Echtheit und Vollständigkeit der
+empfangenen Paketlisten und Pakete überprüfen (Authentizität).
 
-Hintergrund ist einerseits, dass eine Paketquelle Paketarchive
+Hintergrund dafür ist einerseits, dass eine Paketquelle Paketarchive
 unterschiedlichster Herkunft umfasst. Die Daten könnten aus einer wenig
 vertrauenswürdigen Quelle stammen und auch Schadcode enthalten. Die
 Zuverlässigkeit von Speichermedien (Datenträger) nimmt mit der Zeit ab
