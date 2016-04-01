@@ -459,7 +459,7 @@
 
 - [[[Debian-Wiki-ARM-EABI-Port]]] Debian Wiki: ARM EABI Port, http://wiki.debian.org/ArmPorts
 
-- [[[Debian-Wiki-chroot]]] `chroot` (deutschsprachig) im Debian Wiki, http://wiki.debian.org/de/chroot
+- [[[Debian-Wiki-chroot]]] Debian Wiki: `chroot` (deutschsprachig), http://wiki.debian.org/de/chroot
 
 - [[[Debian-Wiki-cupt]]] Debian Wiki: Eintrag zu `cupt`, https://wiki.debian.org/Cupt
 
