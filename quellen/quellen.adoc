@@ -150,8 +150,6 @@
 
 - [[[DebianLiveSystem]]] The Debian Live Systems project, http://live.debian.net/
 
-- [[[DebianMaintainer]]] Debian Maintainer im Debian Wiki, https://wiki.debian.org/DebianMaintainer
-
 - [[[Debian-Anwenderhandbuch]]] Frank Ronneburg: Das Debiananwenderhandbuch, http://debiananwenderhandbuch.de/
 
 - [[[Debian-Anwenderhandbuch-apt-offline]]] Frank Ronneburg: Das
@@ -466,6 +464,8 @@
 - [[[Debian-Wiki-cupt]]] Debian Wiki: Eintrag zu `cupt`, https://wiki.debian.org/Cupt
 
 - [[[Debian-Wiki-Debian-Entwickler]]] Debian Wiki: Wie werde ich ein Debian-Entwickler?, http://wiki.debian.org/DebianDeveloper
+
+- [[[Debian-Wiki-Maintainer]]] Debian Wiki: Debian Maintainer, https://wiki.debian.org/DebianMaintainer
 
 - [[[Debian-Wiki-FHS]]] Debian Wiki: Filesystem Hierarchy Standard (FHS), http://wiki.debian.org/FilesystemHierarchyStandard
 

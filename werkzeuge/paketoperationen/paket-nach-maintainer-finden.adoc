@@ -13,7 +13,7 @@ Debian-Paket verantwortlich zeichnet. Maintainer kümmern sich darum, dass
 das Paket gepflegt wird, d.h. Änderungen und Verbesserungen aus dem
 Upstream in das Paket unter Berücksichtigung der Debian-Spezifika
 einfließen, dieses dabei weiterhin den Debian-Richtlinien entspricht und
-in möglichst stabiler Form verfügbar bleibt <<DebianMaintainer>>.
+in möglichst stabiler Form verfügbar bleibt <<Debian-Wiki-Maintainer>>.
 
 ==== Welche Pakete betreut ein Debian-Maintainer ====
 
