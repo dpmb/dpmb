@@ -8,7 +8,7 @@
 === Welche UNIX-artigen Betriebssysteme verwenden das Paketformat und das APT-Paketmanagement ===
 
 // Stichworte für den Index
-(((deb-Format)))
+(((deb-Paketformat)))
 (((Paketformat, deb)))
 Debian-Binärpakete liegen in einem spezifischen Format vor – dem
 `deb`-Paketformat. Sowohl das Format, als auch die dazugehörigen
