@@ -119,7 +119,7 @@ ist hier diejenige der FTP-Master hinterlegt (siehe
 
 // Stichworte für den Index
 (((apt-key, export)))
-(((apt-key, export-all)))
+(((apt-key, exportall)))
 (((apt-key, finger)))
 (((Schlüsselring, Fingerabdruck anzeigen)))
 (((Schlüsselring, Schlüssel exportieren)))
