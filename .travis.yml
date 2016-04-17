@@ -4,11 +4,12 @@ language: generic
 
 before_install:
    - sudo apt-get update
-   - sudo apt-get install -y --no-install-recommends moreutils dblatex asciidoc texlive-lang-german calibre calibre-bin python-sip epubcheck
+   - sudo apt-get install -y --no-install-recommends moreutils dblatex asciidoc texlive-lang-german calibre calibre-bin python-sip epubcheck build-essential
 
 script:
    - make verbose
    - make test
+   - dpkg-buildpackage -j4
 
 #after_failure:
 #   - sudo apt-get install libxml2-utils
