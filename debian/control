@@ -20,6 +20,6 @@ Depends: ${misc:Depends}
 Recommends: www-browser | pdf-reader | fbreader | calibre
 Suggests: www-browser, pdf-reader, fbreader | calibre
 Description: German-written book about package management with Debian
- This package comtains the book "Debian Paketmanagement" (aka DPMB) by
+ This package contains the book "Debian Paketmanagement" (aka DPMB) by
  Axel Beckert and Frank Hofmann as single HTML page, as PDF document
  and as e-book in the epub format.
