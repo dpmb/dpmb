@@ -23,3 +23,6 @@ Description: book about Debian package management written in German
  This package contains the book "Debian Paketmanagement" (aka DPMB,
  German edition) by Axel Beckert and Frank Hofmann as a single HTML
  page, as a PDF document and as an e-book in epub format.
+ .
+ The book is not yet finished, so some chapters are incomplete or not
+ yet proof-read.
