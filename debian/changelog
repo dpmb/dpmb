@@ -1,5 +1,5 @@
-dpmb (0~2016.04.17) UNRELEASED; urgency=low
+dpmb (0~2016.04.24) unstable; urgency=low
 
-  * Initial release (Closes: #821328)
+  * Initial upload (Closes: #821328)
 
- -- Axel Beckert <abe@debian.org>  Sun, 17 Apr 2016 19:46:49 +0200
+ -- Axel Beckert <abe@debian.org>  Sun, 24 Apr 2016 02:03:50 +0200
