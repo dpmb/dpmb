@@ -9,7 +9,7 @@ before_install:
 script:
    - make -j4 verbose
    - make test
-   - dpkg-buildpackage -j4
+   - dpkg-buildpackage -j4 -us -uc
 
 #after_failure:
 #   - sudo apt-get install libxml2-utils
