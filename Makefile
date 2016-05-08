@@ -5,7 +5,7 @@ DOCTORDEFAULTOPTIONS=-a experimental -a toc -a toclevels=4
 FORMATS=online.html allinone.html chunked epub pdf mobi
 
 all: $(FORMATS)
-html: online.html allinone.html doctor.html chunked.html
+html: online.html allinone.html doctor.html chunked
 
 allinone.html: $(BASE).allinone.html
 %.allinone.html: $(DEFAULTDEPENDENCIES)
