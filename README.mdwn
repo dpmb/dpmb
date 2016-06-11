@@ -70,10 +70,21 @@ geschrieben.
 ### Das Buch lesen oder herunterladen
 
 Man kann das Buch auch
-[online lesen](http://book.dpmb.org/). Allerdings hat das Rendering bei [Gitbook](http://www.gitbook.com/)
-momentan noch einige Probleme. So funktionieren momentan weder
-Referenzen noch Bilder und es hat überflüssige
-Zusatzinhaltsverzeichnisse am Start einiger Kapitel. Die herunterladbaren
+[online lesen](http://book.dpmb.org/debian-paketmanagement.chunked/index.html)
+oder von http://book.dpmb.org/ als
+[einzelne HTML-Datei mitsamt allen Bildern](http://book.dpmb.org/debian-paketmanagement.allinone.html)
+(ca. 12 MB), als [PDF](http://book.dpmb.org/debian-paketmanagement.pdf)
+(ca. 10 MB), als [Epub](http://book.dpmb.org/debian-paketmanagement.epub)
+(ca. 9 MB) oder als
+[Mobipocket](http://book.dpmb.org/debian-paketmanagement.mobi) (ca. 15
+MB) herunterladen.
+
+Zusätzlich gibt's das Buch auch
+[online beo GitBook](http://gitbook.dpmb.org/), aber das Rendering bei
+[Gitbook](http://www.gitbook.com/) hat leider einige Probleme. So
+funktionieren aktuell weder Referenzen noch Bilder und es hat
+überflüssige Zusatzinhaltsverzeichnisse am Start einiger Kapitel. Die
+herunterladbaren
 [PDF](https://www.gitbook.com/download/pdf/book/dpmb/dpmb)- und
 [ePub](https://www.gitbook.com/download/epub/book/dpmb/dpmb)-Varianten
 von Gitbook sind von denselben Problemen betroffen.
