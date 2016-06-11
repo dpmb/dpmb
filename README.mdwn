@@ -17,6 +17,9 @@ be rendered to e.g. HTML, EPub, PDF, or Mobipocket using
 [DocBook to LaTeX Publishing (dblatex)](http://dblatex.sourceforge.net/)
 and [Calibre](http://calibre-ebook.com/)'s `ebook-convert`.
 
+It has been written at
+[many different locations](http://www.dpmb.org/karte/).
+
 ### License
 
 <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">The book "Debian Package Management"</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.dpmb.org/" property="cc:attributionName" rel="cc:attributionURL">Frank Hofmann and Axel Beckert</a> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution - Share Alike 4.0 International License</a>.
@@ -42,9 +45,6 @@ starts. The downloadable
 https://www.gitbook.com/download/pdf/book/dpmb/dpmb[PDF] and
 https://www.gitbook.com/download/pdf/book/dpmb/dpmb[ePub] variants at
 Gitbook suffer from the same symptoms, too.
-
-It has been written at
-[many different locations](http://www.dpmb.org/karte/).
 
 ## German / Deutsch
 
