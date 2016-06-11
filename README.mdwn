@@ -23,14 +23,25 @@ and [Calibre](http://calibre-ebook.com/)'s `ebook-convert`.
 
 ### Read or Download the Book
 
-You can also [read it online](http://book.dpmb.org/), but be aware
-that the rendering over there at [Gitbook](http://www.gitbook.com/)
-still contains some bugs, i.e. neither references nor images work
+You can also
+http://book.dpmb.org/debian-paketmanagement.chunked/index.html[read it online]
+or download as either
+http://book.dpmb.org/debian-paketmanagement.allinone.html[single HTML file including all images]
+(ca. 12 MB) or as http://book.dpmb.org/debian-paketmanagement.pdf[PDF]
+(ca. 10 MB), http://book.dpmb.org/debian-paketmanagement.epub[Epub]
+(ca. 9 MB) or
+http://book.dpmb.org/debian-paketmanagement.mobi[Mobipocket] (ca. 15
+MB) file on http://book.dpmb.org/[http://book.dpmb.org/].
+
+Additionally, the book is also available
+http://gitbook.dpmb.org/[online at GitBook], but be aware that the
+rendering over there at http://www.gitbook.com/[Gitbook] still
+contains quite some bugs, i.e. neither references nor images work
 properly yet and there are superfluous table of contents at chapter
 starts. The downloadable
-[PDF](https://www.gitbook.com/download/pdf/book/dpmb/dpmb) and
-[ePub](https://www.gitbook.com/download/pdf/book/dpmb/dpmb) variants
-at Gitbook suffer from the same symptoms, too.
+https://www.gitbook.com/download/pdf/book/dpmb/dpmb[PDF] and
+https://www.gitbook.com/download/pdf/book/dpmb/dpmb[ePub] variants at
+Gitbook suffer from the same symptoms, too.
 
 It has been written at
 [many different locations](http://www.dpmb.org/karte/).
