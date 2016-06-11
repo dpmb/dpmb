@@ -43,7 +43,7 @@ contains quite some bugs, i.e. neither references nor images work
 properly yet and there are superfluous table of contents at chapter
 starts. The downloadable
 [PDF](https://www.gitbook.com/download/pdf/book/dpmb/dpmb) and
-[ePub](https://www.gitbook.com/download/pdf/book/dpmb/dpmb) variants
+[ePub](https://www.gitbook.com/download/epub/book/dpmb/dpmb) variants
 at Gitbook suffer from the same symptoms, too.
 
 ## German / Deutsch
@@ -75,7 +75,7 @@ momentan noch einige Probleme. So funktionieren momentan weder
 Referenzen noch Bilder und es hat überflüssige
 Zusatzinhaltsverzeichnisse am Start einiger Kapitel. Die herunterladbaren
 [PDF](https://www.gitbook.com/download/pdf/book/dpmb/dpmb)- und
-[ePub](https://www.gitbook.com/download/pdf/book/dpmb/dpmb)-Varianten
+[ePub](https://www.gitbook.com/download/epub/book/dpmb/dpmb)-Varianten
 von Gitbook sind von denselben Problemen betroffen.
 
 ### Klappentext
