@@ -50,7 +50,7 @@ Gitbook suffer from the same symptoms, too.
 
 Dies ist der frei verfügbare Quelltext zum
 [Buch Debian-Paketmanagement](http://www.dpmb.org/) von
-[Axel Beckert](http://axel.beckert.ch/) und
+[Axel Beckert](https://axel.beckert.ch/) und
 [Frank Hofmann](http://www.efho.de/).
 
 Das Buch ist im [AsciiDoc](http://asciidoc.org/)-Format geschrieben
