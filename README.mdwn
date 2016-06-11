@@ -34,7 +34,7 @@ or download as either
 (ca. 10 MB), [Epub](http://book.dpmb.org/debian-paketmanagement.epub)
 (ca. 9 MB) or
 [Mobipocket](http://book.dpmb.org/debian-paketmanagement.mobi) (ca. 15
-MB) file on http://book.dpmb.org/.
+MB) file from http://book.dpmb.org/.
 
 Additionally, the book is also available
 [online at GitBook](http://gitbook.dpmb.org/), but be aware that the
