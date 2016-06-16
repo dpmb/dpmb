@@ -17,29 +17,40 @@ be rendered to e.g. HTML, EPub, PDF, or Mobipocket using
 [DocBook to LaTeX Publishing (dblatex)](http://dblatex.sourceforge.net/)
 and [Calibre](http://calibre-ebook.com/)'s `ebook-convert`.
 
+It has been written at
+[many different locations](http://www.dpmb.org/karte/).
+
 ### License
 
 <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">The book "Debian Package Management"</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.dpmb.org/" property="cc:attributionName" rel="cc:attributionURL">Frank Hofmann and Axel Beckert</a> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution - Share Alike 4.0 International License</a>.
 
 ### Read or Download the Book
 
-You can also [read it online](http://book.dpmb.org/), but be aware
-that the rendering over there at [Gitbook](http://www.gitbook.com/)
-still contains some bugs, i.e. neither references nor images work
+You can also
+[read it online](http://book.dpmb.org/debian-paketmanagement.chunked/index.html)
+or download as either
+[single HTML file including all images](http://book.dpmb.org/debian-paketmanagement.allinone.html)
+(ca. 12 MB) or as [PDF](http://book.dpmb.org/debian-paketmanagement.pdf)
+(ca. 10 MB), [Epub](http://book.dpmb.org/debian-paketmanagement.epub)
+(ca. 9 MB) or
+[Mobipocket](http://book.dpmb.org/debian-paketmanagement.mobi) (ca. 15
+MB) file from http://book.dpmb.org/.
+
+Additionally, the book is also available
+[online at GitBook](http://gitbook.dpmb.org/), but be aware that the
+rendering over there at [Gitbook](http://www.gitbook.com/) still
+contains quite some bugs, i.e. neither references nor images work
 properly yet and there are superfluous table of contents at chapter
 starts. The downloadable
 [PDF](https://www.gitbook.com/download/pdf/book/dpmb/dpmb) and
-[ePub](https://www.gitbook.com/download/pdf/book/dpmb/dpmb) variants
+[ePub](https://www.gitbook.com/download/epub/book/dpmb/dpmb) variants
 at Gitbook suffer from the same symptoms, too.
-
-It has been written at
-[many different locations](http://www.dpmb.org/karte/).
 
 ## German / Deutsch
 
 Dies ist der frei verfügbare Quelltext zum
 [Buch Debian-Paketmanagement](http://www.dpmb.org/) von
-[Axel Beckert](http://axel.beckert.ch/) und
+[Axel Beckert](https://axel.beckert.ch/) und
 [Frank Hofmann](http://www.efho.de/).
 
 Das Buch ist im [AsciiDoc](http://asciidoc.org/)-Format geschrieben
@@ -59,12 +70,23 @@ geschrieben.
 ### Das Buch lesen oder herunterladen
 
 Man kann das Buch auch
-[online lesen](http://book.dpmb.org/). Allerdings hat das Rendering bei [Gitbook](http://www.gitbook.com/)
-momentan noch einige Probleme. So funktionieren momentan weder
-Referenzen noch Bilder und es hat überflüssige
-Zusatzinhaltsverzeichnisse am Start einiger Kapitel. Die herunterladbaren
+[online lesen](http://book.dpmb.org/debian-paketmanagement.chunked/index.html)
+oder von http://book.dpmb.org/ als
+[einzelne HTML-Datei mitsamt allen Bildern](http://book.dpmb.org/debian-paketmanagement.allinone.html)
+(ca. 12 MB), als [PDF](http://book.dpmb.org/debian-paketmanagement.pdf)
+(ca. 10 MB), als [Epub](http://book.dpmb.org/debian-paketmanagement.epub)
+(ca. 9 MB) oder als
+[Mobipocket](http://book.dpmb.org/debian-paketmanagement.mobi) (ca. 15
+MB) herunterladen.
+
+Zusätzlich gibt's das Buch auch
+[online beo GitBook](http://gitbook.dpmb.org/), aber das Rendering bei
+[Gitbook](http://www.gitbook.com/) hat leider einige Probleme. So
+funktionieren aktuell weder Referenzen noch Bilder und es hat
+überflüssige Zusatzinhaltsverzeichnisse am Start einiger Kapitel. Die
+herunterladbaren
 [PDF](https://www.gitbook.com/download/pdf/book/dpmb/dpmb)- und
-[ePub](https://www.gitbook.com/download/pdf/book/dpmb/dpmb)-Varianten
+[ePub](https://www.gitbook.com/download/epub/book/dpmb/dpmb)-Varianten
 von Gitbook sind von denselben Problemen betroffen.
 
 ### Klappentext

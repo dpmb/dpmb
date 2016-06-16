@@ -1,22 +1,78 @@
 // Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfigurationsdateien-von-apt.adoc
 
 // Baustelle: Rohtext
+// Axel: Rohtext
 
 [[konfigurationsdateien-von-apt]]
 === Konfigurationsdateien von APT ===
 
 // Stichworte für den Index
+(((run-parts)))
+
+APT und auch alle Programme die sich APTs Bibliotheken nutzen, greifen
+auf diverse Konfiurationsdateien zu, die unterschiedliche Funktionen
+haben.
+
+Alle Arten von Konfigurationsdateien gibt es in zwei Geschmäckern:
+
+* Als einzelne Datei (typischerweise dem lokalen Systemadministrator
+  vorbehalten)
+
+* Als Verzeichnis mit der Endung `.d`. Alle Dateien in solch einem
+  Verzeichnis, die bestimmten Regeln hinsichtlich dem Dateinamen
+  entsprechen (siehe u.a. Man-Page
+  `run-parts(8)`{empty}footnote:[insbesondere dürfen keine Punkte im
+  Dateinamen vorkommen]), werden interpretiert als wären sie an der
+  gleichnamigen Datei ohne `.d` angehängt. Diese Verzeichnisse werden
+  typischerweise von Paketen verwendet, um paketspezifische
+  Konfigurationsschnipsel darin abzulegen. Aber auch der lokale
+  Systemadministrator kann darin Dateien ablegen, z.B. per
+  Konfigurationsmanagement.
+
+==== Verhalten von APT und Hooks: /etc/apt/apt.conf(.d) ====
+
+// Stichworte für den Index
 (((/etc/apt/apt.conf)))
 (((/etc/apt/apt.conf.d/)))
 
-APT greift bis einschließlich Debian 6 'Squeeze' auf die
-Hauptkonfigurationsdatei `/etc/apt/apt.conf` zu. Spätere
-Veröffentlichungen (siehe dazu <<veroeffentlichungen>>) nutzen das
-modulare Konzept unter `/etc/apt/apt.conf.d/` (siehe
-<<Debian-Wiki-AptConf>>). Üblicherweise enthält das letztgenannte
-Verzeichnis diese Module:
+In der Datei `/etc/apt/apt.conf` bzw. in den Dateien in
+`/etc/apt/apt.conf.d/` können viele Aspekte von APT und anderen
+APT-Frondends konfiguriert werden. Alle diese Einstellungen können
+auch auf der Kommandozeile mit `-o <Schlüssel>=<Wert>` überschrieben
+bzw. gesetzt werden. Darunter fallen u.a.:
 
-.Modulare Konfigurationsdateien von APT
+* Wie oft APT selbstständig Paketlisten und Pakete herunterladen soll
+  (alle Einstellungen, die mit `APT::Periodic::` beginnen.
+
+* Ob `Recommends` oder `Suggests` per Default installiert werden sollen.
+
+* Welche Pakete nie automatisch entfernt werden sollen.
+
+* Ob Paketlisten lokal entpackt oder komprimiert gespeichert werden
+  sollen.
+
+* Welche Kompressionsalgorithmen beim Herunterladen von Paketlisten
+  bevorzugt werden sollen.
+
+* Wohin APT Paketlisten und Pakete herunterladen soll. (Sollte man
+  nicht systemweit ändern, kann aber beim Bearbeiten einer
+  Chroot-Umgebung von außen durchaus als Einstellung auf der
+  Kommandozeile nützlich sein.)
+
+* An- und Abschalten von Fortschrittsbalken (ab APT 1.0).
+
+* Wo Changelogs heruntergeladen werden können.
+
+* Welche Übersetzungen der Paketlisten heruntergeladen werden sollen.
+
+* Welche Parameter APT an `dpkg-deb` übergibt.
+
+* Hooks, z.B. vor und nach dem Auspacken von Paketen.
+
+* Konfigurationen für beliebige Tools in APT-Ökosystem, die ebenfalls
+  diese Konfigurationsdateien verwenden, z.B. `aptitude`, `adequate`, `whatmaps`, etc.
+
+.Beispielhafter Inhalt von /etc/apt/apt.conf.d/
 ----
 $ ls /etc/apt/apt.conf.d/
 00trustcdrom    10periodic           20packagekit           99synaptic
@@ -25,17 +81,24 @@ $ ls /etc/apt/apt.conf.d/
 $
 ----
 
+==== Konfigurationsdateien von Aptitude ====
+
 // Stichworte für den Index
 (((~/.aptitude/config)))
 (((aptitude, lokale Konfigurationsdateien)))
 
 `aptitude` verwendet alle Konfigurationsdateien von APT plus seine
-eigenen. Diese finden Sie im Verzeichnis `~/.aptitude/config`.
-Änderungen an der Konfiguration von `aptitude` werden hier gespeichert.
-Die Konfigurationsdateien von `aptitude` verwenden dabei die gleiche
-Syntax wie die von APT.
+eigenen. Diese finden Sie im Verzeichnis `~/.aptitude/` in der Datei
+`config`.  Interaktive Konfigurationänderungen in der TUI von
+`aptitude` werden hier gespeichert.
 
-.Lokale Konfiguration von `aptitude`
+Die Konfiguration von `aptitude` verwendet dabei die gleiche Syntax
+wie die von APT und können auch manuell in den Konfigurationsdateien
+von APT abgespeichert werden, z.B. als Datei
+`/etc/apt/apt.conf.d/lokale-aptitude-einstellungen`. Diese stören APT
+nicht, da sie alle mit `Aptitude::` beginnen.
+
+.Beispiel einer lokalen Konfigurationsdate von `aptitude`
 ----
 aptitude "";
 aptitude::Keep-Unused-Pattern "";

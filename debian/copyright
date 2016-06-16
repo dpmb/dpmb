@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: Debian-Paketmanagement
-Source: http://www.debian-paketmanagement.de/
+Upstream-Name: Debian Package Management Book
+Source: http://www.dpmb.org/
 
 Files: *
 Copyright: 2012-2016 Axel Beckert <abe@debian.org>
@@ -9,7 +9,7 @@ License: CC-BY-SA-4.0
 
 Files: asciidoc-macros/asciidoctor-compat.conf
 Copyright: 2012-2015 Dan Allen, Ryan Waldron and the Asciidoctor Project
-License: MIT
+License: Expat
 
 Files: asciidoc-macros/data-uri-fixup.conf
 Copyright: 2008 Stuart Rackham <srackham@methods.co.nz>
@@ -332,7 +332,7 @@ License: CC-BY-SA-4.0
        to the Licensor or You, including from the legal processes of any
        jurisdiction or authority.
 
-Lioense: MIT
+License: Expat
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
  in the Software without restriction, including without limitation the rights
