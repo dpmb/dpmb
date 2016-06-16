@@ -7,11 +7,12 @@
 === Konfigurationsdateien von APT ===
 
 // Stichworte für den Index
+(((Debianpaket, apt)))
 (((run-parts)))
 
-APT und auch alle Programme die sich APTs Bibliotheken nutzen, greifen
-auf diverse Konfiurationsdateien zu, die unterschiedliche Funktionen
-haben.
+APT und auch alle Programme, die APTs Bibliotheken benutzen, greifen auf
+diverse Konfigurationsdateien zu. Über diese Dateien werden
+unterschiedliche Funktionen abgebildet.
 
 Alle Arten von Konfigurationsdateien gibt es in zwei Geschmäckern:
 
