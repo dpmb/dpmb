@@ -14,21 +14,20 @@ APT und auch alle Programme, die APTs Bibliotheken benutzen, greifen auf
 diverse Konfigurationsdateien zu. Über diese Dateien werden
 unterschiedliche Funktionen abgebildet.
 
-Alle Arten von Konfigurationsdateien gibt es in zwei Geschmäckern:
+Alle Varianten der Konfigurationsdateien gibt es in zwei Geschmäckern:
 
-* Als einzelne Datei (typischerweise dem lokalen Systemadministrator
-  vorbehalten)
+* als einzelne Datei -- diese ist typischerweise dem lokalen
+  Systemadministrator vorbehalten
 
-* Als Verzeichnis mit der Endung `.d`. Alle Dateien in solch einem
+* als Verzeichnis mit dem Suffix `.d`. Alle Dateien in einem solchen
   Verzeichnis, die bestimmten Regeln hinsichtlich dem Dateinamen
-  entsprechen (siehe u.a. Man-Page
-  `run-parts(8)`{empty}footnote:[insbesondere dürfen keine Punkte im
-  Dateinamen vorkommen]), werden interpretiert als wären sie an der
-  gleichnamigen Datei ohne `.d` angehängt. Diese Verzeichnisse werden
-  typischerweise von Paketen verwendet, um paketspezifische
-  Konfigurationsschnipsel darin abzulegen. Aber auch der lokale
-  Systemadministrator kann darin Dateien ablegen, z.B. per
-  Konfigurationsmanagement.
+  entsprechen, werden so interpretiert, als wären sie an der
+  gleichnamigen Datei ohne `.d` angehängt (siehe u.a. Man-Page
+  `run-parts(8)`. Insbesondere dürfen keine Punkte im Dateinamen
+  vorkommen. Diese Verzeichnisse werden  typischerweise von Paketen
+  verwendet, um paketspezifische Konfigurationsschnipsel darin abzulegen.
+  Auch Sie als lokaler Systemadministrator legen darin Dateien ab, bspw.
+  über das Konfigurationsmanagement.
 
 ==== Verhalten von APT und Hooks: /etc/apt/apt.conf(.d) ====
 
