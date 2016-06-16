@@ -7,6 +7,7 @@
 === Installationsgröße eines Pakets ===
 
 // Stichworte für den Index
+(((Debianpaket, dlocate)))
 (((dlocate, -du)))
 (((Paket, Installationsgröße anzeigen)))
 Die Frage, wieviel Platz ein installiertes Paket auf der Platte belegt,
@@ -31,6 +32,30 @@ $ dlocate -du htop
 4	/usr/share/pixmaps/htop.png
 180	insgesamt
 $
+----
+
+// Stichworte für den Index
+(((Debianpaket, aptitude)))
+(((aptitude, -Z)))
+(((Paket, Installationsgröße anzeigen)))
+Möchten Sie den benötigten Speicherplatz bereits vor der Installation
+wissen, hilft Ihnen `aptitude` weiter. Mit Hilfe des zusätzlichen
+Schalters `-Z` ergänzt `aptitude` die Größenangabe hinter jedem Paket,
+hier beispielhaft für 'aptitude-doc-it' und 'aptitude-doc-ru'. Wird ein
+'+' vor der Zahl dargestellt, wird dieser Speicherplatz benötigt, ein
+'-' vor der Zahl gibt den frei werdenden Platz an.
+
+.Ausgabe der Installationsgröße eines Pakets mit `aptitude`
+----
+# aptitude -Z install aptitude-doc-it aptitude-doc-ru
+Die folgenden NEUEN Pakete werden zusätzlich installiert:
+   aptitude-doc-it <+1.082 kB>  aptitude-doc-ru <+1.408 kB>  
+   0 Pakete aktualisiert, 2 zusätzlich installiert, 0 werden entfernt
+   und 14 nicht aktualisiert.
+   636 kB an Archiven müssen heruntergeladen werden. Nach dem Entpacken
+   werden 2.490 kB zusätzlich belegt sein.
+...
+#
 ----
 
 // Datei (Ende): ./werkzeuge/paketoperationen/installationsgroesse-eines-pakets.adoc
