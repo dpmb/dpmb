@@ -34,43 +34,49 @@ Alle Varianten der Konfigurationsdateien gibt es in zwei Geschmäckern:
 // Stichworte für den Index
 (((/etc/apt/apt.conf)))
 (((/etc/apt/apt.conf.d/)))
+(((APT-Hooks)))
+(((Debianpaket, adequate)))
+(((Debianpaket, whatmaps)))
 
-In der Datei `/etc/apt/apt.conf` bzw. in den Dateien in
+In der Datei `/etc/apt/apt.conf` bzw. in den Dateien im Verzeichnis
 `/etc/apt/apt.conf.d/` können viele Aspekte von APT und anderen
-APT-Frondends konfiguriert werden. Alle diese Einstellungen können
-auch auf der Kommandozeile mit `-o <Schlüssel>=<Wert>` überschrieben
-bzw. gesetzt werden. Darunter fallen u.a.:
+APT-Frontends konfiguriert werden. Alle diese Einstellungen
+überschreiben Sie bei Bedarf explizit auch auf der Kommandozeile. Dazu
+verwenden Sie als Schalter `-o`, gefolgt von der Form `<Schlüssel>=<Wert>`.
+Darunter fallen u.a.:
 
-* Wie oft APT selbstständig Paketlisten und Pakete herunterladen soll
-  (alle Einstellungen, die mit `APT::Periodic::` beginnen.
+* wie oft APT selbstständig Paketlisten und Pakete herunterladen soll
+  (alle Einstellungen, die mit `APT::Periodic::` beginnen),
 
-* Ob `Recommends` oder `Suggests` per Default installiert werden sollen.
+* ob empfohlene ('Recommends') oder vorgeschlagene Pakete ('Suggests')
+per Default installiert werden sollen,
 
-* Welche Pakete nie automatisch entfernt werden sollen.
+* welche Pakete nie automatisch entfernt werden sollen,
 
-* Ob Paketlisten lokal entpackt oder komprimiert gespeichert werden
-  sollen.
+* ob Paketlisten lokal entpackt oder komprimiert gespeichert werden
+  sollen,
 
-* Welche Kompressionsalgorithmen beim Herunterladen von Paketlisten
-  bevorzugt werden sollen.
+* welche Kompressionsalgorithmen beim Herunterladen von Paketlisten
+  bevorzugt werden sollen,
 
-* Wohin APT Paketlisten und Pakete herunterladen soll. (Sollte man
+* wohin APT Paketlisten und Pakete herunterladen soll. (Sollte man
   nicht systemweit ändern, kann aber beim Bearbeiten einer
   Chroot-Umgebung von außen durchaus als Einstellung auf der
   Kommandozeile nützlich sein.)
 
-* An- und Abschalten von Fortschrittsbalken (ab APT 1.0).
+* An- und Abschalten von Fortschrittsbalken (verfügbar ab APT 1.0),
 
-* Wo Changelogs heruntergeladen werden können.
+* wo Changelogs heruntergeladen werden können,
 
-* Welche Übersetzungen der Paketlisten heruntergeladen werden sollen.
+* welche Übersetzungen der Paketlisten heruntergeladen werden sollen,
 
-* Welche Parameter APT an `dpkg-deb` übergibt.
+* welche Parameter APT an `dpkg-deb` übergibt,
 
-* Hooks, z.B. vor und nach dem Auspacken von Paketen.
+* Hooks, z.B. vor und nach dem Auspacken von Paketen,
 
-* Konfigurationen für beliebige Tools in APT-Ökosystem, die ebenfalls
-  diese Konfigurationsdateien verwenden, z.B. `aptitude`, `adequate`, `whatmaps`, etc.
+* Konfigurationen für beliebige Tools im APT-Ökosystem, die ebenfalls
+  diese Konfigurationsdateien verwenden, z.B. `aptitude`, `adequate`
+  <<Debian-Paket-adequate>>, `whatmaps` <<Debian-Paket-whatmaps>>, etc.
 
 .Beispielhafter Inhalt von /etc/apt/apt.conf.d/
 ----

@@ -410,6 +410,8 @@
 
 - [[[Debian-Paket-wget]]] Debian-Paket 'wget', http://packages.debian.org/de/stable/wget
 
+- [[[Debian-Paket-whatmaps]]] Debian-Paket 'whatmaps', http://packages.debian.org/de/jessie/whatmaps
+
 - [[[Debian-Paket-xara-gtk]]] Debian-Paket 'xara-gtk', http://packages.debian.org/de/stable/xara-gtk
 
 - [[[Debian-Paket-yum]]] Debian-Paket 'yum', https://packages.debian.org/de/stable/yum
