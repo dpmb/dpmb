@@ -10,14 +10,14 @@
 (((Debianpaket, dlocate)))
 (((dlocate, -du)))
 (((Paket, Installationsgröße anzeigen)))
-Die Frage, wieviel Platz ein installiertes Paket auf der Platte belegt,
-beantworten Sie am besten mit dem Aufruf `dlocate -du Paketname`
+Die Frage, wieviel Platz ein installiertes Paket auf dem Speichermedium
+belegt, beantworten Sie am besten mit dem Aufruf `dlocate -du Paketname`
 <<Debian-Paket-dlocate>>. Als Ergebnis erhalten Sie eine Auflistung mit
 einer Datei pro Zeile, bei der die jeweilige Größe in der ersten Spalte
 in Kilobyte angegeben ist. Die letzte Zeile summiert die Einzelwerte
 auf. Nachfolgendes Listing zeigt den Aufruf für das Paket 'htop'.
 
-.Ermittlung der Installationsgröße eines Pakets mit `dlocate`
+.Ermittlung der Installationsgröße des Pakets 'htop' mit `dlocate`
 ----
 $ dlocate -du htop
 136	/usr/bin/htop
@@ -42,9 +42,10 @@ Möchten Sie den benötigten Speicherplatz bereits vor der Installation
 wissen, hilft Ihnen `aptitude` weiter. Mit Hilfe des zusätzlichen
 Schalters `-Z` ergänzt `aptitude` die Größenangabe hinter jedem Paket,
 hier beispielhaft für 'aptitude-doc-it' und 'aptitude-doc-ru'. Wird ein
-'+' vor der Zahl dargestellt, wird dieser Speicherplatz zur Installation
-des Paketes benötigt, ein '-' vor der Zahl gibt hingegen den frei
-werdenden Platz an, wenn das Paket entfernt wird.
+`+` vor der Zahl dargestellt, wird dieser Speicherplatz zur Installation
+des Paketes benötigt, ein `-` vor der Zahl gibt hingegen den frei
+werdenden Platz an, wenn das Paket entfernt wird. Die Gesamtsumme der
+Änderungen erfahren Sie in der Statusnachricht darunter.
 
 .Ausgabe der Installationsgröße eines Pakets mit `aptitude`
 ----
