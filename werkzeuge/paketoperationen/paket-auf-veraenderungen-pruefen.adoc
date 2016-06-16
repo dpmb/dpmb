@@ -37,11 +37,13 @@ war, d.h. ob die Dateien nach wie vor den erwarteten Inhalt haben.
 
 // Stichworte für den Index
 (((Debianpaket, debsums)))
+(((Debianpaket, dpkg)))
 (((Debianpaket, dlocate)))
 Bei der Klärung dieser Fragen helfen Ihnen u.a. die Werkzeuge
 `debsums` <<Debian-Paket-debsums>>, `dlocate` <<Debian-Paket-dlocate>>
-und auch `dpkg` selbst weiter. Letzteres steht Ihnen in der Version 1.17
-ab Debian 8 _Jessie_ und Ubuntu 14.04 LTS _Trusty Tahr_ zur Verfügung.
+und auch `dpkg` selbst weiter. Letzteres steht Ihnen mit einem passenden
+Schalter ab der Version 1.17 ab Debian 8 _Jessie_ und Ubuntu 14.04 LTS
+_Trusty Tahr_ zur Verfügung.
 
 // siehe dazu: http://debiananwenderhandbuch.de/debsums.html
 
@@ -100,6 +102,7 @@ $
 ==== Dateien paketbezogen mit `dlocate` überprüfen ====
 
 // Stichworte für den Index
+(((Debianpaket, dlocate)))
 (((dlocate, -md5check)))
 `dlocate` kann nicht nur die MD5-Summe für eine Datei ausgeben, sondern
 diese auch überprüfen. Dazu benutzen Sie den Schalter `-md5check`. Falls
@@ -129,6 +132,7 @@ $
 ==== Dateien überprüfen mit `debsums` ====
 
 // Stichworte für den Index
+(((Debianpaket, debsums)))
 (((debsums)))
 (((Paket, Dateien auf Integrität prüfen)))
 Genauso wie `dlocate` kann auch `debsums` die Dateien eines Pakets auf
@@ -269,6 +273,7 @@ $
 ==== Dateien mit `dpkg -V` überprüfen ====
 
 // Stichworte für den Index
+(((Debianpaket, dpkg)))
 (((dpkg, --verify)))
 (((dpkg, -V)))
 Ab 'dpkg' Version 1.17 kann auch `dpkg` selbst Dateien anhand der
