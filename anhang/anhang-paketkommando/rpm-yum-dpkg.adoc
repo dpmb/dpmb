@@ -415,7 +415,7 @@ Dateien aus dem installierten Paket sind, helfen Ihnen diese Kommandos:
 (((dpkg, --verify)))
 (((dpkg, -V)))
 APT und `aptitude` stellen keine eigenen Schalter zur Verfügung, `dpkg`
-erst ab der Version 1.17 (verfügbar ab Debian 8 Jessie). Für
+erst ab der Version 1.17 (verfügbar ab Debian 8 'Jessie'). Für
 vorhergehende Veröffentlichungen weichen Sie auf die Werkzeuge `debsums`
 und `dlocate` aus. Darauf gehen wir im Abschnitt ``Paket auf
 Veränderungen prüfen'' in <<paket-auf-veraenderungen-pruefen>> genauer
