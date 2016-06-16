@@ -108,7 +108,7 @@ abgespeichert werden, z.B. als Datei
 `/etc/apt/apt.conf.d/lokale-aptitude-einstellungen`. Diese stören APT
 nicht, da sie alle mit dem Präfix `Aptitude::` beginnen.
 
-.Beispiel einer lokalen Konfigurationsdate von `aptitude`
+.Beispiel einer lokalen Konfigurationsdatei von `aptitude`
 ----
 aptitude "";
 aptitude::Keep-Unused-Pattern "";
@@ -117,10 +117,17 @@ aptitude::Delete-Unused-Pattern "";
 
 ==== APT-Hooks ====
 
+// Stichworte für den Index
+(((APT-Hooks)))
+
 * Begriff und Nutzen
 ** Ergänzungen, kleine Erweiterungen, Eingriffe
 ** standardisierte Abläufe um eigene, paketbezogene Schritte ergänzen
+
 * Festlegung in der APT-Konfiguration
+** wo speichert man das
+** was ist erlaubt, was nicht
+** was sind Gepflogenheiten
 
 ==== cron.daily/apt ====
 
