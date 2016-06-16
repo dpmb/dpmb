@@ -78,6 +78,10 @@ per Default installiert werden sollen,
   diese Konfigurationsdateien verwenden, z.B. `aptitude`, `adequate`
   <<Debian-Paket-adequate>>, `whatmaps` <<Debian-Paket-whatmaps>>, etc.
 
+Um das Vorgehen besser zu verstehen, werfen Sie am besten einen Blick in
+das Verzeichnis `/etc/apt/apt.conf.d/`. Das nachfolgende Listing zeigt
+den typischen Inhalt auf einem Debian 8 'Jessie'.
+
 .Beispielhafter Inhalt von /etc/apt/apt.conf.d/
 ----
 $ ls /etc/apt/apt.conf.d/
@@ -95,14 +99,14 @@ $
 
 `aptitude` verwendet alle Konfigurationsdateien von APT plus seine
 eigenen. Diese finden Sie im Verzeichnis `~/.aptitude/` in der Datei
-`config`.  Interaktive Konfigurationänderungen in der TUI von
-`aptitude` werden hier gespeichert.
+`config`. Hier werden auch die interaktiven Änderungen der Konfiguration
+in der Textoberfläche von `aptitude` gespeichert.
 
-Die Konfiguration von `aptitude` verwendet dabei die gleiche Syntax
-wie die von APT und können auch manuell in den Konfigurationsdateien
-von APT abgespeichert werden, z.B. als Datei
+Dabei verwendet die Konfiguration von `aptitude` die gleiche Syntax wie
+die von APT. Sie kann auch manuell in den Konfigurationsdateien von APT
+abgespeichert werden, z.B. als Datei
 `/etc/apt/apt.conf.d/lokale-aptitude-einstellungen`. Diese stören APT
-nicht, da sie alle mit `Aptitude::` beginnen.
+nicht, da sie alle mit dem Präfix `Aptitude::` beginnen.
 
 .Beispiel einer lokalen Konfigurationsdate von `aptitude`
 ----
