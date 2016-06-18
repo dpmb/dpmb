@@ -181,6 +181,7 @@ für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
 | `DNF`      | `dnf list installed` | alle installierten Pakete anzeigen
 |            | `dnf list available` | alle verfügbaren Pakete anzeigen
 | `dpkg`     | `dpkg -l` | alle installierten Pakete auflisten
+|            | `dpkg --list` | alle installierten Pakete auflisten
 | `RPM`      | `rpm -qa` | alle installierten Pakete auflisten
 |            | `rpm -qa --last` | alle zuletzt installierten Pakete auflisten, auch die (noch) nicht installierten Pakete
 | `YUM`      | `yum list` 'Paketname' | anzeigen, welche Versionen des Pakets installiert sind
@@ -221,7 +222,9 @@ das zu `dpkg` und `aptitude` genauer.
 |            | `dnf list installed` | alle installierten Pakete anzeigen
 |            | `dnf list installed` 'Paketname' | Installationsstatus zu Paketname anzeigen
 | `dpkg`     | `dpkg -l` 'Paketname' | Ausgabe des Installationsstatus
+|            | `dpkg --list` 'Paketname' | Ausgabe des Installationsstatus
 |            | `dpkg -s` 'Paketname' | Ausgabe der Paketinformationen
+|            | `dpkg --status` 'Paketname' | Ausgabe der Paketinformationen
 | `RPM`      | `rpm -q` 'Paketname' | Ausgabe des Installationsstatus für 'Paketname'
 |            | `rpm -qp` 'Paketname' | ?
 | `YUM`      | `yum list` 'Paketname' | anzeigen, welche Versionen des Pakets installiert sind
