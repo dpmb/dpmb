@@ -77,6 +77,7 @@ Paketcache vorliegen.
 (((dnf, upgrade)))
 (((Paket, aktualisieren)))
 (((rpm, -U)))
+(((rpm, --upgrade)))
 (((yum, update)))
 Mit den nachfolgenden Aufrufen aktualisieren Sie ein Softwarepaket über
 die Kommandozeile. Unter ``Pakete aktualisieren'' in
@@ -94,6 +95,7 @@ bei `dpkg`, APT und `aptitude` ein.
 |            | `dnf upgrade` | alle installierten Pakete aktualisieren
 |            | `dnf upgrade` 'Paketname' | nur 'Paketname' aktualisieren
 | `RPM`      | `rpm -U` 'Paketname' | Paket liegt lokal als Datei vor
+|            | `rpm --upgrade` 'Paketname' | Paket liegt lokal als Datei vor
 | `YUM`      | `yum update` | die gesamte Veröffentlichung aktualisieren
 |     `      | `yum update` 'Paketname' | nur 'Paketname' aktualisieren
 |====
@@ -117,6 +119,7 @@ bei `dpkg`, APT und `aptitude` ein.
 (((Paket, löschen)))
 (((rpm, -e)))
 (((rpm, -e --nodeps)))
+(((rpm, --erase)))
 (((yum, erase)))
 (((yum, remove)))
 Mit den nachfolgenden Aufrufen entfernen Sie ein Softwarepaket über
@@ -139,6 +142,7 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 |            | `dpkg -P` 'Paketname' | entfernt das Paket und die Konfigurationsdateien des Pakets
 |            | `dpkg --purge` 'Paketname' | entfernt das Paket und die Konfigurationsdateien des Pakets
 | `RPM`      | `rpm -e` 'Paketname' | entfernt das angegebene Paket
+|            | `rpm --erase` 'Paketname' | entfernt das angegebene Paket
 |            | `rpm -e --nodeps` 'Paketname' | Entfernung des Pakets ohne Berücksichtigung der Paketabhängigkeiten
 | `YUM`      | `yum remove` 'Paketname' | entfernt das angegebene Paket
 |            | `yum erase` 'Paketname' | gleichbedeutend zu `remove`
@@ -198,12 +202,15 @@ für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
 (((dnf, list)))
 (((dnf, list installed)))
 (((dpkg, -l)))
+(((dpkg, --list)))
 (((dpkg, -s)))
+(((dpkg, --status)))
 (((Paket, Status anzeigen)))
 (((Paket, Zustand anzeigen)))
 (((Paketstatus)))
 (((Paketzustand)))
 (((rpm, -q)))
+(((rpm, --query)))
 (((rpm, -qa)))
 (((rpm, -qp)))
 (((yum, list)))
@@ -226,7 +233,8 @@ das zu `dpkg` und `aptitude` genauer.
 |            | `dpkg -s` 'Paketname' | Ausgabe der Paketinformationen
 |            | `dpkg --status` 'Paketname' | Ausgabe der Paketinformationen
 | `RPM`      | `rpm -q` 'Paketname' | Ausgabe des Installationsstatus für 'Paketname'
-|            | `rpm -qp` 'Paketname' | ?
+|            | `rpm --query` 'Paketname' | Ausgabe des Installationsstatus für 'Paketname'
+|            | `rpm -qp` 'Paketname' | analog zu `-q`
 | `YUM`      | `yum list` 'Paketname' | anzeigen, welche Versionen des Pakets installiert sind
 |====
 
