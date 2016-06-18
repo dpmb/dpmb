@@ -128,19 +128,19 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketentfernung"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-|  APT       | `apt-get remove` 'Paketname' | Entfernen ohne Konfigurationsdateien des Pakets
-|            | `apt-get purge` 'Paketname' | Entfernen inklusive der Konfigurationsdateien des Pakets
-|            | `apt-get --purge remove` 'Paketname' | Entfernen inklusive der Konfigurationsdateien des Pakets
-| `aptitude` | `aptitude remove` 'Paketname' | 
+|  APT       | `apt-get remove` 'Paketname' | entfernt das Paket, die Konfigurationsdateien des Pakets bleiben erhalten
+|            | `apt-get purge` 'Paketname' | entfernt das Paket inklusive der Konfigurationsdateien des Pakets
+|            | `apt-get --purge remove` 'Paketname' | entfernt das Paket inklusive der Konfigurationsdateien des Pakets
+| `aptitude` | `aptitude remove` 'Paketname' | entfernt das Paket, die Konfigurationsdate    ien des Pakets bleiben erhalten
 | `DNF`      | `dnf erase` 'Paketname' | Paket wird deinstalliert (veraltet)
 |            | `dnf remove` 'Paketname' | Paket wird deinstalliert
 | `dpkg`     | `dpkg -r` 'Paketname' | entfernt nur das Paket
 |            | `dpkg --remove` 'Paketname' | entfernt nur das Paket
-|            | `dpkg -P` 'Paketname' | entfernt das Paket und die Konfigurationsdatei
-|            | `dpkg --purge` 'Paketname' | entfernt das Paket und die Konfigurationsdatei
-| `RPM`      | `rpm -e` 'Paketname' | 
+|            | `dpkg -P` 'Paketname' | entfernt das Paket und die Konfigurationsdateien des Pakets
+|            | `dpkg --purge` 'Paketname' | entfernt das Paket und die Konfigurationsdateien des Pakets
+| `RPM`      | `rpm -e` 'Paketname' | entfernt das angegebene Paket
 |            | `rpm -e --nodeps` 'Paketname' | Entfernung des Pakets ohne Berücksichtigung der Paketabhängigkeiten
-| `YUM`      | `yum remove` 'Paketname' | 
+| `YUM`      | `yum remove` 'Paketname' | entfernt das angegebene Paket
 |            | `yum erase` 'Paketname' | gleichbedeutend zu `remove`
 |====
 
