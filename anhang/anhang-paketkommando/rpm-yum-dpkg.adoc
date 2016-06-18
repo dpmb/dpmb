@@ -156,6 +156,7 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 (((dnf, list available)))
 (((dnf, list installed)))
 (((dpkg, -l)))
+(((dpkg, --list)))
 (((Paket, installiertes anzeigen)))
 (((Paket, Status anzeigen)))
 (((Paket, Zustand anzeigen)))
@@ -249,6 +250,7 @@ das zu `dpkg` und `aptitude` genauer.
 (((Paketabhängigkeiten, Rückwärtsabhängigkeiten auflisten)))
 (((rpm, -qpR)))
 (((rpm, -R)))
+(((rpm, --requires)))
 (((yum, deplist)))
 (((yum, info)))
 Mit den nachfolgenden Aufrufen zeigen Sie die Abhängigkeiten zu anderen
@@ -263,6 +265,7 @@ ein.
 | APT        | `apt-cache depends` 'Paketname' |
 |            | `apt-cache rdepends` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 | `RPM`      | `rpm -R` 'Paketname' | das Paket muß dazu lokal als Datei vorliegen
+|     `      | `rpm --requires` 'Paketname' | das Paket muß dazu lokal als Datei vorliegen
 |            | `rpm -qpR` 'Paketname' | das Paket muß dazu lokal als Datei vorliegen
 | `YUM`      | `yum deplist` 'Paketname' |
 |            | `yum info` 'Paketname' |
@@ -305,6 +308,7 @@ widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 (((dpkg-query, -S)))
 (((dpkg-query, --search)))
 (((Paket, zu Datei finden)))
+(((rpm, -qf)))
 (((yum, provides)))
 Um herauszufinden, aus welchem Paket eine Datei stammt, bieten sowohl
 `rpm` als auch `dpkg` entsprechende Schalter an. Für Debianpakete
@@ -421,6 +425,7 @@ Dateien aus dem installierten Paket sind, helfen Ihnen diese Kommandos:
 // Stichworte für den Index
 (((Debianpaket, debsums)))
 (((Debianpaket, dlocate)))
+(((debsums)))
 (((dlocate, -md5check)))
 (((dlocate, -md5sum)))
 (((dpkg, --verify)))
