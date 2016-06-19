@@ -73,6 +73,7 @@ Paketcache vorliegen.
 
 // Stichworte für den Index
 (((apt-get, upgrade)))
+(((aptitude, safe-upgrade)))
 (((dnf, update)))
 (((dnf, upgrade)))
 (((Paket, aktualisieren)))
@@ -82,14 +83,16 @@ Paketcache vorliegen.
 Mit den nachfolgenden Aufrufen aktualisieren Sie ein Softwarepaket über
 die Kommandozeile. Unter ``Pakete aktualisieren'' in
 <<pakete-aktualisieren>> gehen wir detaillierter auf die Vorgehensweise
-bei `dpkg`, APT und `aptitude` ein.
+und die begrifflichen Unterschiede bei `dpkg`, APT, `apt` und `aptitude`
+ein.
 
 .Aktualisieren eines Pakets
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketaktualisierung"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| APT        | `apt-get upgrade` 'Paketname' |
-| `aptitude` | |
+| APT        | `apt-get upgrade` 'Paketname' | aktualisierte Version des Pakets einspielen
+| `apt`      | `apt safe-upgrade` 'Paketname' | aktualisierte Version des Pakets einspielen
+| `aptitude` | `aptitude safe-upgrade` 'Paketname' | aktualisierte Version des Pakets einspielen
 | `DNF`      | `dnf update` | alle installierten Pakete aktualisieren (veraltet)
 |            | `dnf update` 'Paketname' | nur 'Paketname' aktualisieren (veraltet)
 |            | `dnf upgrade` | alle installierten Pakete aktualisieren
