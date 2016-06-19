@@ -157,7 +157,9 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 
 // Stichworte für den Index
 (((apt-cache, search)))
-(((aptitude, search)))
+(((aptitude, search ~i)))
+(((aptitude, search ?installed)))
+(((aptitude, versions)))
 (((dnf, list installed)))
 (((dpkg, -l)))
 (((dpkg, --list)))
@@ -376,7 +378,8 @@ beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
 (((apt-get, upgrade -u)))
 (((apt-get, upgrade --show-upgraded)))
 (((apt-get, upgrade --simulate)))
-(((aptitude, search -U)))
+(((aptitude, search ~U)))
+(((aptitude, search ?upgradable)))
 (((dnf, list upgrades)))
 (((Paket, aktualisierbare Pakete anzeigen)))
 (((Pakete aktualisieren, aktualisierbare Pakete anzeigen)))
@@ -395,7 +398,8 @@ nachfolgende Tabelle. In Abschnitt ``Aktualisierbare Pakete anzeigen``
 |            | `apt-get upgrade --show-upgraded` | analog zu `-u` (Langform)
 |            | `apt-get upgrade -u -s ` | Simulation, analog zu `-u`
 |            | `apt-get upgrade --show-upgraded --simulate` | Simulation, analog zu `-u -s` (Langform)
-| `aptitude` | `aptitude search -U` | alle aktualisierbaren Pakete anzeigen
+| `aptitude` | `aptitude search ~U` | alle aktualisierbaren Pakete anzeigen
+|            | `aptitude search ?upgradable` | alle aktualisierbaren Pakete anzeigen
 | DNF        | `dnf list upgrades` | alle aktualisierbaren Pakete anzeigen
 | `RPM`      | |
 | `YUM`      | `yum list updates`| alle aktualisierbaren Pakete anzeigen
