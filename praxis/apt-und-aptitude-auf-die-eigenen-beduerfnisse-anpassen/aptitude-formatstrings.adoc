@@ -38,7 +38,7 @@ spaltenweise zu einem Paket darstellt.
 |====
 
 Die Voreinstellung von `aptitude` beinhaltet die Platzhalter `%c`, `%a`,
-`%M`, `%p%` und `d`. Es umfasst somit die einzelnen Spalten mit dem
+`%M`, `%p%` und `%d`. Es umfasst somit die einzelnen Spalten mit dem
 Paketstatus, der Aktion, das 'Automatic Flag', den Paketnamen und die
 Paketbeschreibung. Mit zusätzlichen Trennzeichen und dezimalen Angaben
 vor einem Platzhalter legen Sie die Gestaltung der Ausgabe und die
