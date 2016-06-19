@@ -77,7 +77,8 @@ Sortierung erfolgt paketweise, d.h. zunächst erhalten Sie eine Zeile mit
 dem Paketnamen und darunter zusätzliche Informationen zur verfügbaren
 Version. Die erste Spalte zeigt dabei den Paketstatus an, danach die
 Versionsnummer, die Veröffentlichung und als letztes die Priorität
-(siehe dazu <<veroeffentlichungen-mischen>>).
+(siehe dazu ``Veröffentlichungen mischen'' in
+<<veroeffentlichungen-mischen>>).
 
 .Die verfügbaren Versionen zu den Paketen 'tzdata' anzeigen
 ----
