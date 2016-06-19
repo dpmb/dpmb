@@ -365,6 +365,37 @@ beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
 | `YUM`      | `yum info` 'Paketname' | 'Paketname' muß lokal installiert sein
 |====
 
+=== Aktualisierbare Pakete anzeigen ===
+
+// Stichworte für den Index
+(((apt-get, upgrade -u)))
+(((apt-get, upgrade --show-upgraded)))
+(((apt-get, upgrade --simulate)))
+(((aptitude, search -U)))
+(((dnf, list upgrades)))
+(((Paket, aktualisierbare Pakete anzeigen)))
+(((Pakete aktualisieren, aktualisierbare Pakete anzeigen)))
+(((Pakete aktualisieren, Simulation)))
+(((yum, list updates)))
+Viele Pakete werden regelmäßig aktualisiert. Welches Kommando Ihnen die
+Pakete anzeigt, die in einer neuen Version bereitstehen, zeigt Ihnen die
+nachfolgende Tabelle. In Abschnitt ``Aktualisierbare Pakete anzeigen``
+<<aktualisierbare-pakete-anzeigen>> erfahren Sie dazu mehr Details.
+
+.Aktualisierbare Pakete anzeigen
+[frame="topbot",options="header",cols="2,4,4",id="tab.aktualisierbarepakete"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| APT        | `apt-get upgrade -u` | alle Pakete auflisten, für die eine neue Version bereitsteht
+|            | `apt-get upgrade --show-upgraded` | analog zu `-u` (Langform)
+|            | `apt-get upgrade -u -s ` | Simulation, analog zu `-u`
+|            | `apt-get upgrade --show-upgraded --simulate` | Simulation, analog zu `-u -s` (Langform)
+| `aptitude` | `aptitude search -U` | alle aktualisierbaren Pakete anzeigen
+| DNF        | `dnf list upgrades` | alle aktualisierbaren Pakete anzeigen
+| `RPM`      | |
+| `YUM`      | `yum list updates`| alle aktualisierbaren Pakete anzeigen
+|====
+
 === Verfügbare Pakete anzeigen ===
 
 // Stichworte für den Index
