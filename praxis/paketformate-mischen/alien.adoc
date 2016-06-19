@@ -147,11 +147,27 @@ von `alien` helfen Ihnen bei der Paketumwandlung:
 * `--patch=Datei`, `--anypatch` und `--nopatch` zum automatischen Anpassen von Startup-Skripten und Pfaden gemäß dem File Hierarchy Standard (FHS)
 * `-c` (Langform `--scripts`) um bestehende Pre- und Post-Install- sowie Remove-Skripte zu erhalten
 * `-g` (Langform `--generate`) und `--veryverbose` um die Fehlersuche zu erweitern
+* `-g` (Langform `--generate`), um das Paket vor der Umwandlung zu bearbeiten
+** erzeugt ein Verzeichnis mit dem Paketinhalt
+** ermöglich Ihnen die Ergänzung und Korrektur des Paketinhalts
+
+==== Pakete umwandeln und einspielen ====
+
+// Stichworte für den Index
+(((alien, -i)))
+(((alien, --install)))
+
+* Paket von rpm nach deb umwandeln und gleich einspielen (Kurzform)
+
+----
+alien -i paket.rpm
+----
 
 ==== Umgewandelte Pakete einspielen ====
 
 // Stichworte für den Index
 (((dpkg, -i)))
+(((dpkg, --install)))
 
 Haben Sie das Paket erfolgreich in das `deb`-Format umgewandelt, spielen
 Sie dieses mittels `dpkg -i paketname.deb` ein. APT und `aptitude`
