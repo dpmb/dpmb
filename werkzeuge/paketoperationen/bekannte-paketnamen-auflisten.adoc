@@ -8,6 +8,8 @@
 
 // Stichworte für den Index
 (((apt-cache, pkgnames)))
+(((Paket, bekannte Pakete auflisten)))
+(((Paket, verfügbare Pakete anzeigen)))
 APT kann Ihnen ausgeben, welche Pakete es überhaupt kennt. Dazu verfügt
 das Werkzeug `apt-cache` über das Unterkommando `pkgnames`. Die Ausgabe,
 die Sie nach dessen Aufruf erhalten, hängt von den von Ihnen genutzten

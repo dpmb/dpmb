@@ -144,8 +144,8 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 | `RPM`      | `rpm -e` 'Paketname' | entfernt das angegebene Paket
 |            | `rpm --erase` 'Paketname' | entfernt das angegebene Paket
 |            | `rpm -e --nodeps` 'Paketname' | Entfernung des Pakets ohne Berücksichtigung der Paketabhängigkeiten
-| `YUM`      | `yum remove` 'Paketname' | entfernt das angegebene Paket
-|            | `yum erase` 'Paketname' | gleichbedeutend zu `remove`
+| `YUM`      | `yum remove` 'Paketname' | entfernt das angegebene Paket samt seiner Abhängigkeiten
+|            | `yum erase` 'Paketname' | entfernt nur das angegebene Paket
 |====
 
 === Alle installierten Pakete auflisten ===
@@ -367,6 +367,27 @@ beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
 | `RPM`      | `rpm -qi` 'Paketname' | 'Paketname' muß lokal installiert sein
 |            | `rpm -qip` 'Dateiname' | 'Dateiname' muß lokal vorliegen
 | `YUM`      | `yum info` 'Paketname' | 'Paketname' muß lokal installiert sein
+|====
+
+=== Verfügbare Pakete anzeigen ===
+
+// Stichworte für den Index
+(((Paket, bekannte Pakete auflisten)))
+(((Paket, verfügbare Pakete anzeigen)))
+(((apt-cache, pkgnames)))
+(((yum, list available)))
+Welche Pakete verfügbar sind, erfahren Sie mit den nachfolgend genannten
+Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten``
+<<bekannte-paketnamen-auflisten>> stellen wir Ihnen das genauer vor.
+
+.Verfügbare Pakete anzeigen
+[frame="topbot",options="header",cols="2,4,4",id="tab.verfuegbarepakete"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| APT        | `apt-cache pkgnames` | alle verfügbaren (bekannten) Pakete auflisten
+| DNF        | |
+| `RPM`      | |
+| `YUM`      | `yum list available`| alle verfügbaren Pakete anzeigen
 |====
 
 === Paketsignatur überprüfen ===
