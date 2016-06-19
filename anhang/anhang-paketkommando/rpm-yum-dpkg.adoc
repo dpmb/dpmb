@@ -153,7 +153,6 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 // Stichworte für den Index
 (((apt-cache, search)))
 (((aptitude, search)))
-(((dnf, list available)))
 (((dnf, list installed)))
 (((dpkg, -l)))
 (((dpkg, --list)))
@@ -166,7 +165,6 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 (((rpm, -qa --last)))
 (((yum, list)))
 (((yum, list all)))
-(((yum, list available)))
 (((yum, list installed)))
 Mit den nachfolgenden Aufrufen listen Sie die vorhandenen Softwarepakete
 über die Kommandozeile auf. Für `dpkg`, APT und `aptitude` besprechen
@@ -184,14 +182,12 @@ sowie unter ``Aktualisierbare Pakete anzeigen'' in
 |            | `aptitude versions` 'Paketname'| alle verfügbaren Pakete
 für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
 | `DNF`      | `dnf list installed` | alle installierten Pakete anzeigen
-|            | `dnf list available` | alle verfügbaren Pakete anzeigen
 | `dpkg`     | `dpkg -l` | alle installierten Pakete auflisten
 |            | `dpkg --list` | alle installierten Pakete auflisten
 | `RPM`      | `rpm -qa` | alle installierten Pakete auflisten
 |            | `rpm -qa --last` | alle zuletzt installierten Pakete auflisten, auch die (noch) nicht installierten Pakete
 | `YUM`      | `yum list` 'Paketname' | anzeigen, welche Versionen des Pakets installiert sind
 |            | `yum list all` | alle installierten Pakete auflisten
-|            | `yum list available` | alle verfügbaren Pakete auflisten
 |            | `yum list installed` | alle installierten Pakete auflisten
 |====
 
@@ -375,6 +371,7 @@ beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
 (((Paket, bekannte Pakete auflisten)))
 (((Paket, verfügbare Pakete anzeigen)))
 (((apt-cache, pkgnames)))
+(((dnf, list available)))
 (((yum, list available)))
 Welche Pakete verfügbar sind, erfahren Sie mit den nachfolgend genannten
 Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten``
@@ -385,7 +382,7 @@ Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten``
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | APT        | `apt-cache pkgnames` | alle verfügbaren (bekannten) Pakete auflisten
-| DNF        | |
+| DNF        | `dnf list available` | alle verfügbaren Pakete anzeigen
 | `RPM`      | |
 | `YUM`      | `yum list available`| alle verfügbaren Pakete anzeigen
 |====
