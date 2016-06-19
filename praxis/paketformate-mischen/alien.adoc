@@ -10,6 +10,7 @@
 
 // Stichworte für den Index
 (((Debianpaket, alien)))
+(((Fremdformate hinzufügen)))
 Den Begriff 'alien' übersetzen Sie am ehesten mit 'fremd', 'Fremdling'
 oder 'Ausländer'. So heißt auch das gleichnamige Debianpaket
 <<Debian-Paket-alien>>, welches Ihnen hilft, eine Software, welche nicht
@@ -29,7 +30,7 @@ ist oder wo sich die dazugehörige Homepage des Projekts befindet.
 entfernen oder aktualisieren. Häufig befinden sich auch Hinweise dabei,
 die benennen, was dabei gegebenenfalls zu beachten ist.
 
-* die Informationen über Abhängigkeiten zu anderer Software
+* die Informationen über Abhängigkeiten zu anderer Software.
 
 * die Angabe der Prozessorarchitektur im Dateinamen, wie etwa 'amd64'
 bei `deb`-Paketen und 'x86_64' bei `rpm`-Archiven.
@@ -38,8 +39,9 @@ Bei der Umwandlung des Paketformats bestehen mehrere Fallstricke. Diese
 führen regelmäßig dazu, dass die gewünschte Software nicht wie erhofft
 funktioniert:
 
-* die referenzierten Bibliotheken passen nicht oder sind nicht
-auffindbar
+* die referenzierten Bibliotheken passen gar nicht, nicht mehr (sind
+bspw. veraltet) oder sind nicht auffindbar (sind bspw. nicht installiert
+oder haben einen anderen Paketnamen)
 * die angegebenen Pfade im Originalpaket stimmen nicht mit Ihrer lokalen
 Verzeichnisstruktur überein
 * der Binärcode passt nicht zu Ihrer genutzten Plattform und Architektur
@@ -65,10 +67,12 @@ dazu finden auf der Projektwebseite von `alien` <<alien>>.
 (((Debianpaket, rpm)))
 (((Debianpaket, yum)))
 (((Filesystem Hierarchy Standard (FHS))))
-Damit Ihnen das Umwandeln von Paketen gelingt, müssen ein paar
-Voraussetzungen erfüllt sein. Für `alien` benötigen Sie:
+(((Paket, mit alien umwandeln)))
+Damit Ihnen das Umwandeln von bestehenden Paketen in das `deb`-Format
+gelingt, müssen ein paar Voraussetzungen erfüllt sein. Für `alien`
+benötigen Sie:
 
-* Perl <<Debian-Paket-perl>>)
+* Perl <<Debian-Paket-perl>>
 * die Werkzeuge `rpm` bzw. `yum` aus den gleichnamigen Debianpaketen für
 die Konvertierung von `rpm`-Paketen (<<Debian-Paket-rpm>> und <<Debian-Paket-yum>>)
 
@@ -76,23 +80,31 @@ die Konvertierung von `rpm`-Paketen (<<Debian-Paket-rpm>> und <<Debian-Paket-yum
 Paketen <<Debian-Paket-dpkg>>, <<Debian-Paket-dpkg-dev>> und
 <<Debian-Paket-debhelper>> zur Erzeugung von Debianpaketen
 
-Hilfreich sind außerdem der GNU-C-Compiler und `make`, sofern Software
-aus dem Quellcode zu übersetzen ist (Pakete <<Debian-Paket-gcc>> und
-<<Debian-Paket-make>>).
+Die Pakete `perl` und `dpkg` sind essentielle Pakete und auf ihrer
+Debian-Installation vorhanden. Sollten die anderen genannten Pakete
+nocht nicht vorhanden sein, installieren Sie diese über die
+Paketverwaltung nach.
+
+Hilfreich sind außerdem der GNU-C-Compiler `gcc` und `make`, sofern
+Software aus dem Quellcode zu übersetzen ist. Dazu benötigen Sie die
+beiden Pakete `gcc` <<Debian-Paket-gcc>> und `make`
+<<Debian-Paket-make>>.
 
 // Stichworte für den Index
 (((alien, --anypatch)))
 (((alien, -c)))
+(((alien, -g)))
 (((alien, --generate)))
 (((alien, --nopatch)))
 (((alien, --patch)))
+(((alien, --scripts)))
 (((alien, --veryverbose)))
 `deb`-basierte Systeme haben ihre Eigenheiten. Die folgenden Schalter
 von `alien` helfen Ihnen bei der Paketumwandlung:
 
 * `--patch=Datei`, `--anypatch` und `--nopatch` zum automatischen Anpassen von Startup-Skripten und Pfaden gemäß dem File Hierarchy Standard (FHS)
-* `-c` um bestehende Pre- und Post-Install- sowie Remove-Skripte zu erhalten
-* `--generate` und `--veryverbose` um die Fehlersuche zu erweitern
+* `-c` (Langform `--scripts`) um bestehende Pre- und Post-Install- sowie Remove-Skripte zu erhalten
+* `-g` (Langform `--generate`) und `--veryverbose` um die Fehlersuche zu erweitern
 
 Am Ende überprüfen Sie das Paket, um sicherzugehen, ob es auch
 tatsächlich zu ihrer bestehenden Installation passt.
