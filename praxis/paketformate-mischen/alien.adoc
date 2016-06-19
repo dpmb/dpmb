@@ -75,10 +75,11 @@ Damit Ihnen das Umwandeln von bestehenden Paketen in das `deb`-Format
 gelingt, müssen ein paar Voraussetzungen erfüllt sein. Für `alien`
 benötigen Sie:
 
-* Perl <<Debian-Paket-perl>>
+* Perl <<Debian-Paket-perl>> -- weil `alien` ein Perl-Skript ist
 
 * die Werkzeuge `rpm` bzw. `yum` aus den gleichnamigen Debianpaketen für
-die Konvertierung von `rpm`-Paketen (<<Debian-Paket-rpm>> und <<Debian-Paket-yum>>)
+die Konvertierung von `rpm`-Paketen nach `deb` (<<Debian-Paket-rpm>> und
+<<Debian-Paket-yum>>)
 
 * die Werkzeuge `dpkg`, `dpkg-dev` und `debhelper` 
 (<<Debian-Paket-dpkg>>, <<Debian-Paket-dpkg-dev>>,
@@ -137,7 +138,7 @@ tatsächlich zu ihrer bestehenden Installation passt.
 (((alien, -k)))
 (((alien, --anypatch)))
 (((alien, --generate)))
-(((alien, --keep-version
+(((alien, --keep-version)))
 (((alien, --nopatch)))
 (((alien, --patch)))
 (((alien, --scripts)))
