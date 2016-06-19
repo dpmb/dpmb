@@ -7,18 +7,20 @@
 === Neue Pakete anzeigen ===
 
 Zu den neuen Paketen zählen die Pakete, die derzeit nicht installiert
-sind bzw. die noch nie installiert waren. Wurde ein Paket
-deinstalliertt, aber die Konfigurationsdatei blieb erhalten, gilt das
-entsprechende Paket hingegen nicht mehr als neu.
+sind bzw. die noch nie installiert waren. Wurde ein Paket von Ihnen
+deinstalliert, aber die Konfigurationsdatei blieb erhalten, gilt das
+entsprechende Paket hingegen nicht mehr als neu. Haben Sie jedoch die
+Konfigurationsdatei mittels `purge` ebenfalls gelöscht, hat `aptitude`
+keine Erinnerung mehr an das Paket und betrachtet es wieder als neu.
 
 // Stichworte für den Index
 (((aptitude, search ~N)))
 (((aptitude, search ?new)))
 (((Pakete, neue Pakete anzeigen)))
 `aptitude` verfügt mit `~N` (Langform `?new`) über ein Suchmuster, um
-diese Pakete aufzuspüren. Als Kennung beginnt jede ausgegebene Zeile mit
-dem Kleinbuchstaben `p`, gefolgt vom Paketnamen und der
-Kurzbeschreibung zum Paket.
+diese Pakete aufzuspüren. Jede ausgegebene Zeile beginnt mit dem
+Paketstatus -- hier der Kleinbuchstabe `p` zur Kennzeichnung als 'neues
+Paket' --, gefolgt vom Paketnamen und der Kurzbeschreibung zum Paket.
 
 .Auflistung aller neuen Pakete mittels `aptitude` (Auszug)
 ----
