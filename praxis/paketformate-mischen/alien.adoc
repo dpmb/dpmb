@@ -132,10 +132,12 @@ tatsächlich zu ihrer bestehenden Installation passt.
 ===== Besonderheiten bei der Umwandlung =====
 
 // Stichworte für den Index
-(((alien, --anypatch)))
 (((alien, -c)))
 (((alien, -g)))
+(((alien, -k)))
+(((alien, --anypatch)))
 (((alien, --generate)))
+(((alien, --keep-version
 (((alien, --nopatch)))
 (((alien, --patch)))
 (((alien, --scripts)))
@@ -146,6 +148,7 @@ von `alien` helfen Ihnen bei der Paketumwandlung:
 
 * `--patch=Datei`, `--anypatch` und `--nopatch` zum automatischen Anpassen von Startup-Skripten und Pfaden gemäß dem File Hierarchy Standard (FHS)
 * `-c` (Langform `--scripts`) um bestehende Pre- und Post-Install- sowie Remove-Skripte zu erhalten
+* `-k` (Langform `--keep-version`), um die Versionsnummer beizubehalten -- normalerweise zählt alien diese um eins hoch
 * `-g` (Langform `--generate`) und `--veryverbose` um die Fehlersuche zu erweitern
 * `-g` (Langform `--generate`), um das Paket vor der Umwandlung zu bearbeiten
 ** erzeugt ein Verzeichnis mit dem Paketinhalt
@@ -170,13 +173,13 @@ alien -i paket.rpm
 (((dpkg, --install)))
 
 Haben Sie das Paket erfolgreich in das `deb`-Format umgewandelt, spielen
-Sie dieses mittels `dpkg -i paketname.deb` ein. APT und `aptitude`
+Sie dieses mittels `dpkg -i` 'paketname.deb' ein. APT und `aptitude`
 bekommen von der Aktion erstmal nichts mit, stören sich aber nicht
-daran. 
+daran, dass das Paket eingespielt ist.
 
-Dabei können zwei Ergebnisse eintreten -- alles geht glatt und das Paket
-funktioniert, oder alles geht glatt und das Paket funktioniert nicht. Im
-zweiten Fall müssen Sie manuell nacharbeiten:
+Dabei können mehrere Ergebnisse eintreten -- alles geht glatt und das Paket
+funktioniert, alles geht glatt und das Paket funktioniert nicht, oder
+das Einspielen geht schief. Da bleibt nur manuelle Nacharbeitung:
 
 * was ist da zu tun?
 * woran kann das hängen? (Ursachenforschung)
