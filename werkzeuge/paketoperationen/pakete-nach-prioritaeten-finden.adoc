@@ -81,10 +81,10 @@ $
 Auffällig an obiger Auflistung ist, dass diese das Paket 'apt' enthält,
 obwohl wir in <<paket-prioritaet-und-essentielle-pakete>> geschrieben
 haben, dass Sie ein autarkes System auch problemlos ohne APT betreiben
-können. Der Grund hierfür ist, dass APT sich selbst als essentiell ansieht
-und sich deswegen selbst nicht deinstallieren will. Da Aptitude zum
-Teil APTs Bibliotheken benutzt, sieht es diesen Fall
-genauso{empty}footnote:[Bis einschließlich Debian 8 Jessie können Sie
+können. Der Grund hierfür ist, dass APT sich selbst als essentiell
+ansieht und sich deswegen selbst nicht deinstallieren will. Da Aptitude
+zum Teil APTs Bibliotheken benutzt, sieht es diesen Fall
+genauso{empty}footnote:[Bis einschließlich Debian 8 'Jessie' können Sie
 jedoch das Paket 'aptitude' mit Aptitude selbst entfernen. Unter
 exotischen Umständen hat Aptitude das sogar bereits selbst als
 Lösungsvorschlag für einen Abhängkeitskonflikt angeboten.].
