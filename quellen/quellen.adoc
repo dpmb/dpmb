@@ -357,6 +357,8 @@
 
 - [[[Debian-Paket-localepurge]]] Debian-Paket 'localepurge', http://packages.debian.org/stable/localepurge
 
+- [[[Debian-Paket-lsb]]] Debian-Paket 'lsb', http://packages.debian.org/stable/lsb
+
 - [[[Debian-Paket-make]]] Debian-Paket 'make', http://packages.debian.org/de/stable/make
 
 - [[[Debian-Paket-module-assistant]]] Debian-Paket 'module-assistant', http://packages.debian.org/de/stable/module-assistant

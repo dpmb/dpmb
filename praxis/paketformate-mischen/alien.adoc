@@ -64,6 +64,7 @@ dazu finden auf der Projektwebseite von `alien` <<alien>>.
 (((Debianpaket, dpkg)))
 (((Debianpaket, dpkg-dev)))
 (((Debianpaket, gcc)))
+(((Debianpaket, lsb)))
 (((Debianpaket, make)))
 (((Debianpaket, perl)))
 (((Debianpaket, rpm)))
@@ -85,6 +86,9 @@ die Konvertierung von `rpm`-Paketen (<<Debian-Paket-rpm>> und <<Debian-Paket-yum
 
 * der GNU-C-Compiler `gcc` und `make` (<<Debian-Paket-gcc>> und
 <<Debian-Paket-make>>), sofern Software aus dem Quellcode zu übersetzen ist
+
+* das Paket 'lsb' <<Debian-Paket-lsb>> zur Linux-Standardisierung gemäß
+der Linux Standard Base (LSB)
 
 Die beiden Pakete `perl` und `dpkg` gehören zu den essentiellen Paketen
 und sind auf ihrer Debian-Installation vorhanden. Die anderen genannten
