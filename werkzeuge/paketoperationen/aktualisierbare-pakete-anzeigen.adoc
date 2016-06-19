@@ -10,7 +10,9 @@
 (((apt-get, upgrade -u)))
 (((apt-get, upgrade --show-upgraded)))
 (((apt-get, upgrade --simulate)))
+(((Paket, aktualisierbare Pakete anzeigen)))
 (((Paket, verfügbare Versionen anzeigen)))
+(((Pakete aktualisieren, aktualisierbare Pakete anzeigen)))
 (((Pakete aktualisieren, Simulation)))
 (((Pakete aktualisieren, verfügbare Versionen anzeigen)))
 Sowohl APT als auch `aptitude` zeigen Ihnen an, für welche Pakete eine

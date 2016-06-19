@@ -29,12 +29,12 @@ Schritt.
 (((aptitude, remove)))
 (((dpkg, -r)))
 (((dpkg, --remove)))
-Dazu dienen die beiden Kommandos `apt-get remove Paketname` und
-`aptitude remove Paketname`. Beide Aufrufe entfernen das Paket und ggf.
+Dazu dienen die beiden Kommandos `apt-get remove` 'Paketname' und
+`aptitude remove` 'Paketname'. Beide Aufrufe entfernen das Paket und ggf.
 auch alle weiteren Pakete, die davon abhängen. Dabei werden jedoch nur
 die Daten und die ausführbaren Dateien gelöscht – die dazugehörigen
 Konfigurationsdateien bleiben unversehrt. Das Vorgehen entspricht dem
-Aufruf `dpkg -r Paketname` in der richtigen Reihenfolge der
+Aufruf `dpkg -r` 'Paketname' in der richtigen Reihenfolge der
 Paketabhängigkeiten. Der nachfolgende Aufruf zeigt das Vorgehen anhand
 des Pakets 'cssed' für `apt-get`.
 
@@ -125,6 +125,7 @@ dafür.
 
 // Stichworte für den Index
 (((dpkg, -l)))
+(((dpkg, --list)))
 `dpkg` rufen Sie dazu zunächst mit der Option `-l` auf (siehe
 <<liste-der-installierten-pakete-anzeigen-und-deuten>>) und schicken
 dessen Ausgabe an das Kommando `grep` weiter. Mit dem regulären Ausdruck
@@ -174,8 +175,8 @@ Haben Sie die aus Ihrer Sicht unnützen Konfigurationsdateien eines
 bereits deinstallierten Pakets ausfindig gemacht und möchten diese
 endgültig ins digitale Nirwana befördern, sind Ihnen APT und `aptitude`
 gern dabei behilflich. APT unterstützt Sie mit der Kombination aus dem
-Kommando `apt-get`, dessen Schalter `remove` und der Option `--purge
-Paketname`. Bei `aptitude` besteht kein separater Schalter für den
+Kommando `apt-get`, dessen Schalter `remove` und der Option `--purge`
+'Paketname'. Bei `aptitude` besteht kein separater Schalter für den
 Schritt – stattdessen genügt hier der Schalter `purge` vollkommen.
 
 .Löschen der Konfigurationsdateien mittels APT
@@ -205,12 +206,12 @@ Trigger für menu werden verarbeitet ...
 (((apt-get, remove --purge)))
 APT und `aptitude` ermöglichen auch das Deinstallieren eines oder
 mehrerer Pakete samt zugehöriger Konfigurationsdateien in einem einzigen
-Schritt. Die Aufrufe entsprechen dem Kommando `dpkg -P Paketname` für
+Schritt. Die Aufrufe entsprechen dem Kommando `dpkg -P` 'Paketname' für
 eine Menge von Paketen in der richtigen Reihenfolge der
 Paketabhängigkeiten. 
 
 Für diese Aktion kombinieren Sie entweder `apt-get` mit dem Schalter
-`remove` und der Option `--purge Paketname`. `aptitude` kennt
+`remove` und der Option `--purge` 'Paketname', `aptitude` kennt
 stattdessen nur den Schalter `purge`.
 
 .Löschen des Pakets 'cssed' samt Konfigurationsdateien in einem Schritt
