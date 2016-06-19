@@ -95,6 +95,39 @@ diese über die Paketverwaltung nach (siehe ``Pakete installieren'' in
 ===== Durchführung =====
 
 // Stichworte für den Index
+(((alien, -d)))
+(((alien, -p)))
+(((alien, -r)))
+(((alien, -t)))
+(((alien, --to-deb)))
+(((alien, --to-pkg)))
+(((alien, --to-rpm)))
+(((alien, --to-slp)))
+(((alien, --to-tgz)))
+
+* Umwandlung eines rpm in ein deb mittels expliziter Angabe des
+Paketformats über den Schalter `-d` (Langform `--to-deb`)
+
+----
+alien --to-deb paket.rpm
+----
+
+* `--to-deb` ist der Standardfall, d.h. kann man im Aufruf weglassen
+
+* Alternative Formate:
+** rpm: `-r` (Langform `--to-rpm`)
+** tgz: `-t` (Langform `--to-tgz`)
+** slp: `--to-slp` (keine Kurzform)
+** pkg: (Open)Solaris-Pakete mittels `-p` (Langform `--to-pkg`)
+
+Am Ende überprüfen Sie das Paket, um sicherzugehen, ob es auch
+tatsächlich zu ihrer bestehenden Installation passt.
+
+* wie macht man diese Überprüfung?
+
+===== Besonderheiten bei der Umwandlung =====
+
+// Stichworte für den Index
 (((alien, --anypatch)))
 (((alien, -c)))
 (((alien, -g)))
@@ -103,15 +136,13 @@ diese über die Paketverwaltung nach (siehe ``Pakete installieren'' in
 (((alien, --patch)))
 (((alien, --scripts)))
 (((alien, --veryverbose)))
+
 `deb`-basierte Systeme haben ihre Eigenheiten. Die folgenden Schalter
 von `alien` helfen Ihnen bei der Paketumwandlung:
 
 * `--patch=Datei`, `--anypatch` und `--nopatch` zum automatischen Anpassen von Startup-Skripten und Pfaden gemäß dem File Hierarchy Standard (FHS)
 * `-c` (Langform `--scripts`) um bestehende Pre- und Post-Install- sowie Remove-Skripte zu erhalten
 * `-g` (Langform `--generate`) und `--veryverbose` um die Fehlersuche zu erweitern
-
-Am Ende überprüfen Sie das Paket, um sicherzugehen, ob es auch
-tatsächlich zu ihrer bestehenden Installation passt.
 
 ==== Umgewandelte Pakete einspielen ====
 
