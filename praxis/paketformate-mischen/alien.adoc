@@ -56,6 +56,8 @@ dazu finden auf der Projektwebseite von `alien` <<alien>>.
 
 ==== Pakete umwandeln ====
 
+===== Voraussetzungen =====
+
 // Stichworte für den Index
 (((Debianpaket, alien)))
 (((Debianpaket, debhelper)))
@@ -73,22 +75,24 @@ gelingt, müssen ein paar Voraussetzungen erfüllt sein. Für `alien`
 benötigen Sie:
 
 * Perl <<Debian-Paket-perl>>
+
 * die Werkzeuge `rpm` bzw. `yum` aus den gleichnamigen Debianpaketen für
 die Konvertierung von `rpm`-Paketen (<<Debian-Paket-rpm>> und <<Debian-Paket-yum>>)
 
-* die Werkzeuge `dpkg`, `dpkg-dev` und `debhelper` aus den gleichnamigen
-Paketen <<Debian-Paket-dpkg>>, <<Debian-Paket-dpkg-dev>> und
-<<Debian-Paket-debhelper>> zur Erzeugung von Debianpaketen
+* die Werkzeuge `dpkg`, `dpkg-dev` und `debhelper` 
+(<<Debian-Paket-dpkg>>, <<Debian-Paket-dpkg-dev>>,
+<<Debian-Paket-debhelper>>) zur Erzeugung von Debianpaketen
 
-Die Pakete `perl` und `dpkg` sind essentielle Pakete und auf ihrer
-Debian-Installation vorhanden. Sollten die anderen genannten Pakete
-nocht nicht vorhanden sein, installieren Sie diese über die
-Paketverwaltung nach.
+* der GNU-C-Compiler `gcc` und `make` (<<Debian-Paket-gcc>> und
+<<Debian-Paket-make>>), sofern Software aus dem Quellcode zu übersetzen ist
 
-Hilfreich sind außerdem der GNU-C-Compiler `gcc` und `make`, sofern
-Software aus dem Quellcode zu übersetzen ist. Dazu benötigen Sie die
-beiden Pakete `gcc` <<Debian-Paket-gcc>> und `make`
-<<Debian-Paket-make>>.
+Die beiden Pakete `perl` und `dpkg` gehören zu den essentiellen Paketen
+und sind auf ihrer Debian-Installation vorhanden. Die anderen genannten
+Pakete könnten noch fehlen. Falls letzteres zutrifft, installieren Sie
+diese über die Paketverwaltung nach (siehe ``Pakete installieren'' in
+<<pakete-installieren>>).
+
+===== Durchführung =====
 
 // Stichworte für den Index
 (((alien, --anypatch)))
