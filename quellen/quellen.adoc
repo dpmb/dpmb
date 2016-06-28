@@ -751,6 +751,8 @@
 
 - [[[Ubuntu-Snappy]]] Ubuntu Package Format Snappy, https://developer.ubuntu.com/en/snappy/
 
+- [[[Ubuntu-Snappy-Projekt]]] Ubuntu Package Format Snappy (Projektseite), https://snapcraft.io/
+
 - [[[Ubuntu-Software-Center]]] Ubuntu Software Center, Projektseite/Wiki, https://wiki.ubuntu.com/SoftwareCenter
 
 - [[[Ubuntu-Sources-List-Generator]]] Ubuntu Sources List Generator, http://repogen.simplylinux.ch/

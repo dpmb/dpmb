@@ -160,9 +160,9 @@ Software in möglichst einem Paket bereitzustellen.
 
 Wie sich in der Diskussion zeigt, ist der Einsatz der Click-Pakete recht
 umstritten (siehe <<Click-Paket-Format-Diskussionen>> und
-<<Watson-App-Design>>). Möglicherweise wird dieses Format vor dessen
-größerer Verbreitung bereits durch den für den Herbst 2015 angekündigten
-Nachfolger Snappy <<Ubuntu-Snappy>> überholt.
+<<Watson-App-Design>>). Mittlerweise ist dieses Format vor dessen
+größerer Verbreitung bereits durch den seit Herbst 2015 verwendeten
+Nachfolger Snappy <<Ubuntu-Snappy>> <<Ubuntu-Snappy-Projekt>> überholt.
 
 === Weitere Debian-Derivate ===
 
