@@ -2,6 +2,8 @@ dpmb (0~2016.06.29) UNRELEASED; urgency=medium
 
   * Recommend/Suggest virtual package pdf-viewer instead of the
     non-existent pdf-reader.
+  * debian/copyright: Replace http:// with https:// where
+    applicable. Issues reported by DUCK.
 
  -- Axel Beckert <abe@debian.org>  Wed, 29 Jun 2016 23:16:09 +0200
 
