@@ -1,13 +1,13 @@
 # Book "Debian Package Management" / Buch "Debian-Paketmanagement"
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License Contract" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" align="right" /></a>
+<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License Contract" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" align="right" /></a>
 [![Build Status](https://travis-ci.org/dpmb/dpmb.svg?branch=master)](https://travis-ci.org/dpmb/dpmb)
 
 ## English
 
 This is the freely available source code for the (for now German written)
-[book Debian Package Management](http://www.dpmb.org/) by
-[Axel Beckert](http://axel.beckert.ch/) and
+[book Debian Package Management](https://www.dpmb.org/) by
+[Axel Beckert](https://axel.beckert.ch/) and
 [Frank Hofmann](http://www.efho.de/).
 
 The book is written in [AsciiDoc](http://asciidoc.org/) format and can
@@ -15,30 +15,30 @@ be rendered to e.g. HTML, EPub, PDF, or Mobipocket using
 [AsciiDoc](http://asciidoc.org/) or
 [Asciidoctor](http://asciidoctor.org/), and
 [DocBook to LaTeX Publishing (dblatex)](http://dblatex.sourceforge.net/)
-and [Calibre](http://calibre-ebook.com/)'s `ebook-convert`.
+and [Calibre](https://calibre-ebook.com/)'s `ebook-convert`.
 
 It has been written at
-[many different locations](http://www.dpmb.org/karte/).
+[many different locations](https://www.dpmb.org/karte/).
 
 ### License
 
-<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">The book "Debian Package Management"</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.dpmb.org/" property="cc:attributionName" rel="cc:attributionURL">Frank Hofmann and Axel Beckert</a> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution - Share Alike 4.0 International License</a>.
+<span xmlns:dct="https://purl.org/dc/terms/" href="https://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">The book "Debian Package Management"</span> by <a xmlns:cc="https://creativecommons.org/ns#" href="https://www.dpmb.org/" property="cc:attributionName" rel="cc:attributionURL">Frank Hofmann and Axel Beckert</a> is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution - Share Alike 4.0 International License</a>.
 
 ### Read or Download the Book
 
 You can also
-[read it online](http://book.dpmb.org/debian-paketmanagement.chunked/index.html)
+[read it online](https://book.dpmb.org/debian-paketmanagement.chunked/index.html)
 or download as either
-[single HTML file including all images](http://book.dpmb.org/debian-paketmanagement.allinone.html)
-(ca. 12 MB) or as [PDF](http://book.dpmb.org/debian-paketmanagement.pdf)
-(ca. 10 MB), [Epub](http://book.dpmb.org/debian-paketmanagement.epub)
+[single HTML file including all images](https://book.dpmb.org/debian-paketmanagement.allinone.html)
+(ca. 12 MB) or as [PDF](https://book.dpmb.org/debian-paketmanagement.pdf)
+(ca. 10 MB), [Epub](https://book.dpmb.org/debian-paketmanagement.epub)
 (ca. 9 MB) or
-[Mobipocket](http://book.dpmb.org/debian-paketmanagement.mobi) (ca. 15
-MB) file from http://book.dpmb.org/.
+[Mobipocket](https://book.dpmb.org/debian-paketmanagement.mobi) (ca. 15
+MB) file from https://book.dpmb.org/.
 
 Additionally, the book is also available
 [online at GitBook](http://gitbook.dpmb.org/), but be aware that the
-rendering over there at [Gitbook](http://www.gitbook.com/) still
+rendering over there at [Gitbook](https://www.gitbook.com/) still
 contains quite some bugs, i.e. neither references nor images work
 properly yet and there are superfluous table of contents at chapter
 starts. The downloadable
@@ -49,7 +49,7 @@ at Gitbook suffer from the same symptoms, too.
 ## German / Deutsch
 
 Dies ist der frei verfügbare Quelltext zum
-[Buch Debian-Paketmanagement](http://www.dpmb.org/) von
+[Buch Debian-Paketmanagement](https://www.dpmb.org/) von
 [Axel Beckert](https://axel.beckert.ch/) und
 [Frank Hofmann](http://www.efho.de/).
 
@@ -57,31 +57,31 @@ Das Buch ist im [AsciiDoc](http://asciidoc.org/)-Format geschrieben
 und kann mit [AsciiDoc](http://asciidoc.org/) oder
 [Asciidoctor](http://asciidoctor.org/), und je nach Format via
 [DocBook to LaTeX Publishing (dblatex)](http://dblatex.sourceforge.net/)
-und [Calibre](http://calibre-ebook.com/)s `ebook-convert` nach
+und [Calibre](https://calibre-ebook.com/)s `ebook-convert` nach
 z.B. HTML, EPub, PDF und Mobipocket gerendert werden.
 
-Es wurde an [vielen verschiedenen Orten](http://www.dpmb.org/karte/)
+Es wurde an [vielen verschiedenen Orten](https://www.dpmb.org/karte/)
 geschrieben.
 
 ### Lizenz
 
-<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Das Buch "Debian-Paketmanagement"</span> von <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.debian-paketmanagement.de/" property="cc:attributionName" rel="cc:attributionURL">Frank Hofmann und Axel Beckert</a> ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
+<span xmlns:dct="https://purl.org/dc/terms/" href="https://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Das Buch "Debian-Paketmanagement"</span> von <a xmlns:cc="https://creativecommons.org/ns#" href="https://www.debian-paketmanagement.de/" property="cc:attributionName" rel="cc:attributionURL">Frank Hofmann und Axel Beckert</a> ist lizenziert unter einer <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
 
 ### Das Buch lesen oder herunterladen
 
 Man kann das Buch auch
-[online lesen](http://book.dpmb.org/debian-paketmanagement.chunked/index.html)
-oder von http://book.dpmb.org/ als
-[einzelne HTML-Datei mitsamt allen Bildern](http://book.dpmb.org/debian-paketmanagement.allinone.html)
-(ca. 12 MB), als [PDF](http://book.dpmb.org/debian-paketmanagement.pdf)
-(ca. 10 MB), als [Epub](http://book.dpmb.org/debian-paketmanagement.epub)
+[online lesen](https://book.dpmb.org/debian-paketmanagement.chunked/index.html)
+oder von https://book.dpmb.org/ als
+[einzelne HTML-Datei mitsamt allen Bildern](https://book.dpmb.org/debian-paketmanagement.allinone.html)
+(ca. 12 MB), als [PDF](https://book.dpmb.org/debian-paketmanagement.pdf)
+(ca. 10 MB), als [Epub](https://book.dpmb.org/debian-paketmanagement.epub)
 (ca. 9 MB) oder als
-[Mobipocket](http://book.dpmb.org/debian-paketmanagement.mobi) (ca. 15
+[Mobipocket](https://book.dpmb.org/debian-paketmanagement.mobi) (ca. 15
 MB) herunterladen.
 
 Zusätzlich gibt's das Buch auch
 [online beo GitBook](http://gitbook.dpmb.org/), aber das Rendering bei
-[Gitbook](http://www.gitbook.com/) hat leider einige Probleme. So
+[Gitbook](https://www.gitbook.com/) hat leider einige Probleme. So
 funktionieren aktuell weder Referenzen noch Bilder und es hat
 überflüssige Zusatzinhaltsverzeichnisse am Start einiger Kapitel. Die
 herunterladbaren
@@ -132,7 +132,7 @@ apt-get install asciidoc dblatex texlive-lang-german xmlto calibre
 ```
 
 (Hinweis für Gentoo-Nutzer: Es gibt ein
-[Gentoo-Overlay für dblatex](http://gpo.zugaina.org/app-text/dblatex).)
+[Gentoo-Overlay für dblatex](https://gpo.zugaina.org/app-text/dblatex).)
 
 Dann als Benutzer das entsprechende Git-Repository klonen und ins
 entsprechende Verzeichnis wechseln:
