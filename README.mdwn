@@ -11,7 +11,7 @@ This is the freely available source code for the (for now German written)
 [Frank Hofmann](http://www.efho.de/).
 
 The book is written in [AsciiDoc](http://asciidoc.org/) format and can
-be rendered to e.g. HTML, EPub, PDF, or Mobipocket using
+be rendered to e.g. HTML, EPUB, PDF, or Mobipocket using
 [AsciiDoc](http://asciidoc.org/) or
 [Asciidoctor](http://asciidoctor.org/), and
 [DocBook to LaTeX Publishing (dblatex)](http://dblatex.sourceforge.net/)
@@ -31,7 +31,7 @@ You can also
 or download as either
 [single HTML file including all images](https://book.dpmb.org/debian-paketmanagement.allinone.html)
 (ca. 12 MB) or as [PDF](https://book.dpmb.org/debian-paketmanagement.pdf)
-(ca. 10 MB), [Epub](https://book.dpmb.org/debian-paketmanagement.epub)
+(ca. 10 MB), [EPUB](https://book.dpmb.org/debian-paketmanagement.epub)
 (ca. 9 MB) or
 [Mobipocket](https://book.dpmb.org/debian-paketmanagement.mobi) (ca. 15
 MB) file from https://book.dpmb.org/. The book is also
@@ -45,7 +45,7 @@ contains quite some bugs, i.e. neither references nor images work
 properly yet and there are superfluous table of contents at chapter
 starts. The downloadable
 [PDF](https://www.gitbook.com/download/pdf/book/dpmb/dpmb) and
-[ePub](https://www.gitbook.com/download/epub/book/dpmb/dpmb) variants
+[EPUB](https://www.gitbook.com/download/epub/book/dpmb/dpmb) variants
 at Gitbook suffer from the same symptoms, too.
 
 ## German / Deutsch
@@ -60,7 +60,7 @@ und kann mit [AsciiDoc](http://asciidoc.org/) oder
 [Asciidoctor](http://asciidoctor.org/), und je nach Format via
 [DocBook to LaTeX Publishing (dblatex)](http://dblatex.sourceforge.net/)
 und [Calibre](https://calibre-ebook.com/)s `ebook-convert` nach
-z.B. HTML, EPub, PDF und Mobipocket gerendert werden.
+z.B. HTML, EPUB, PDF und Mobipocket gerendert werden.
 
 Es wurde an [vielen verschiedenen Orten](https://www.dpmb.org/karte/)
 geschrieben.
@@ -76,7 +76,7 @@ Man kann das Buch auch
 oder von https://book.dpmb.org/ als
 [einzelne HTML-Datei mitsamt allen Bildern](https://book.dpmb.org/debian-paketmanagement.allinone.html)
 (ca. 12 MB), als [PDF](https://book.dpmb.org/debian-paketmanagement.pdf)
-(ca. 10 MB), als [Epub](https://book.dpmb.org/debian-paketmanagement.epub)
+(ca. 10 MB), als [EPUB](https://book.dpmb.org/debian-paketmanagement.epub)
 (ca. 9 MB) oder als
 [Mobipocket](https://book.dpmb.org/debian-paketmanagement.mobi) (ca. 15
 MB) herunterladen.
@@ -88,7 +88,7 @@ funktionieren aktuell weder Referenzen noch Bilder und es hat
 überflüssige Zusatzinhaltsverzeichnisse am Start einiger Kapitel. Die
 herunterladbaren
 [PDF](https://www.gitbook.com/download/pdf/book/dpmb/dpmb)- und
-[ePub](https://www.gitbook.com/download/epub/book/dpmb/dpmb)-Varianten
+[EPUB](https://www.gitbook.com/download/epub/book/dpmb/dpmb)-Varianten
 von Gitbook sind von denselben Problemen betroffen.
 
 ### Klappentext

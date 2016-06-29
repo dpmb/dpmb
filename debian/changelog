@@ -6,6 +6,7 @@ dpmb (0~2016.06.29) UNRELEASED; urgency=medium
     applicable. Issues reported by DUCK.
   * debian/rules: Replace "$(MAKE)" with "dh_auto_build --" to properly
     pass number of parallel jobs to upstream build system.
+  * Use proper capitalization of "EPUB" in long package description.
 
  -- Axel Beckert <abe@debian.org>  Wed, 29 Jun 2016 23:16:09 +0200
 

@@ -27,7 +27,7 @@ Attribution - Share Alike 4.0 International License].
 == Download
 
 * link:debian-paketmanagement.allinone.html[HTML (all in one file, i.e. images, etc. are embedded in the HTML file)]
-* link:debian-paketmanagement.epub[Epub]
+* link:debian-paketmanagement.epub[EPUB]
 * link:debian-paketmanagement.pdf[PDF]
 * link:debian-paketmanagement.mobi[Mobipocket]
 
