@@ -1,5 +1,8 @@
 dpmb (0~2016.06.29) UNRELEASED; urgency=medium
 
+  * New upstream snapshot
+    + Supports the SOURCE_DATE_EPOCH specification for reproducible
+      builds.
   * Recommend/Suggest virtual package pdf-viewer instead of the
     non-existent pdf-reader.
   * debian/copyright: Replace http:// with https:// where
