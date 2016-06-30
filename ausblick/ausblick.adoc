@@ -20,6 +20,8 @@ Smartphones).
 ** falls ja, was spricht denn dafür
 ** falls nein, was wäre denn eine geeignete Alternative dazu
 *** gibt es vllt. schon kreative Ansätze, die langsam vor sich hin köcheln
+*** was ist mit den Containerformaten wie Flatpak, Open Container Format
+(OCF), App Container Image (ACI) und Docker?
 * welche Punkte sind zu verbessern bzw. zu ergänzen
 ** an welchen Punkten hakelt es immer wieder
 ** hat das Modell Risiken und Schwachstellen
@@ -29,6 +31,7 @@ Smartphones).
 * welche der im Buch vorgestellten Ansätze und Lösungen haben Potential
 für die Zukunft
 
+[[pakete-selber-bauen]]
 == Pakete selber bauen ==
 
 * TODO: Evtl. woanders hin?
@@ -41,11 +44,13 @@ für die Zukunft
 ** weil (5): damit können wir testen, ob wir unser Paket für das Buch
 richtig bauen bzw. ob noch etwas fehlt
 
+[[ein-eigenes-debian-repository-aufbauen]]
 == Ein eigenes Debian-Repository aufbauen ==
 
 * siehe dazu: Michael Stapelberg: Kurz-Howto: Eigenes Debian-Repository
 aufbauen <<Stapelberg-Debian-Repo>>
 
+[[zukunft-von-apt]]
 == Zukunft von APT, `dpkg` und Freunden ==
 
 TODO: Drei-Weg-Konfigdatei-Mergen, siehe
