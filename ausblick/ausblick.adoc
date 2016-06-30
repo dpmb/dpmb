@@ -50,11 +50,7 @@ include::ein-eigenes-debian-repository-aufbauen/ein-eigenes-debian-repository-au
 // Zukunft von apt
 include::zukunft-von-apt/zukunft-von-apt.adoc[]
 
-== Fazit / Zusammenfassung ==
-
-TODO: Mehr und Aufsplitten
-
-// Empfehlungen für Einsteiger
-include::empfehlungen-fuer-einsteiger/empfehlungen-fuer-einsteiger.adoc[]
+// Fazit und Zusammenfassung
+include::fazit/fazit.adoc[]
 
 // Datei (Ende): ./ausblick/ausblick.adoc
