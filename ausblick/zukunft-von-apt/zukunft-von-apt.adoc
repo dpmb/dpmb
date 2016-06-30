@@ -1,0 +1,13 @@
+// Datei: ./ausblick/zukunft-von-apt/zukunft-von-apt.adoc
+
+// Baustelle: Notizen
+
+[[zukunft-von-apt]]
+== Zukunft von APT, `dpkg` und Freunden ==
+
+TODO: Drei-Weg-Konfigdatei-Mergen
+* siehe http://community.libelektra.org/wp/?p=145 (Libelektra ist IIRC eine
+generische Konfigdatei-Parser-Bibliothek) und
+* https://bugs.debian.org/32877
+
+// Datei (Ende): ./ausblick/zukunft-von-apt/zukunft-von-apt.adoc

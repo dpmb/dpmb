@@ -50,13 +50,8 @@ richtig bauen bzw. ob noch etwas fehlt
 * siehe dazu: Michael Stapelberg: Kurz-Howto: Eigenes Debian-Repository
 aufbauen <<Stapelberg-Debian-Repo>>
 
-[[zukunft-von-apt]]
-== Zukunft von APT, `dpkg` und Freunden ==
-
-TODO: Drei-Weg-Konfigdatei-Mergen, siehe
-http://community.libelektra.org/wp/?p=145 (Libelektra ist IIRC eine
-generische Konfigdatei-Parser-Bibliothek) und
-https://bugs.debian.org/32877
+// Zukunft von apt
+include::zukunft-von-apt/zukunft-von-apt.adoc[]
 
 == Fazit / Zusammenfassung ==
 
