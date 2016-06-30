@@ -8,6 +8,9 @@
 
 ==== Weshalb aufräumen? ====
 
+// Stichworte für den Index
+(((Paketcache, aufräumen)))
+(((Paketcache, /var/cache/apt/archives)))
 Der Paketcache belegt Speicherplatz auf dem Datenträger ihres
 Debian-Systems. Da dieser Bereich lediglich temporäre Daten beinhaltet,
 raten wir Ihnen, diesen regelmäßig aufzuräumen.
@@ -28,16 +31,20 @@ weitere Informationen daran angehängt werden.
 Einen Ausweg aus diesem Dilemma gelingt Ihnen mit dem Anlegen einer
 separaten Partition für `/var/cache/apt/archives`. Wie Sie diese
 einrichten und mit welchen Vor- und Nachteilen dieser Schritt verbunden
-ist, zeigen wir Ihnen unter Cache-Verzeichnis auf separater Partition in
-<<cache-verzeichnis-auf-separater-partition>>.
+ist, zeigen wir Ihnen unter ``Cache-Verzeichnis auf separater
+Partition'' in <<cache-verzeichnis-auf-separater-partition>>.
 
 ==== Kommandos zum Aufräumen ====
 
-Die Programme `dpkg`, `apt-get`, `aptitude` und Synaptic räumen in der
-Standardeinstellung nicht eigenständig auf. Ob überhaupt, wann und
-insbesondere wie aufgeräumt wird, entscheiden Sie als Systembetreuer
-selbst und müssen dazu das Werkzeug entsprechend konfigurieren.
+Die Programme `dpkg`, `apt-get`, `aptitude` und Synaptic räumen den
+Paketcache in der Standardeinstellung nicht eigenständig auf. Ob
+überhaupt, wann und insbesondere wie aufgeräumt wird, entscheiden Sie
+als Systembetreuer selbst und müssen dazu das Werkzeug entsprechend
+konfigurieren.
 
+// Stichworte für den Index
+(((apt-get, autoclean)))
+(((aptitude, autoclean)))
 Grundsätzlich gibt es mehrere, unterschiedlich radikale Ansätze zum
 Aufräumen des Paketcaches. Die *Variante eins* umfasst das Löschen von
 Paketen aus dem Cache, die in keinem der verwendeten APT-Repositories
@@ -70,6 +77,9 @@ dazugehörigen `deb`-Paket weiter. Dazu benutzen Sie den Aufruf `dpkg -i
 Paketname`. `Paketname` bezeichnet den Namen und Pfad der lokalen Datei
 für das benötigte `deb`-Paket (siehe <<pakete-installieren>>).
 
+// Stichworte für den Index
+(((apt-get, clean)))
+(((aptitude, clean)))
 *Variante zwei* umfasst das Löschen sämtlicher Pakete aus dem Paketcache
 -- damit schaffen Sie radikal Platz. Die passenden Kommandos dazu lauten
 `apt-get clean` und `aptitude clean`. Übrig bleiben danach nur die
@@ -82,6 +92,7 @@ landen, die nur teilweise bezogen wurden.
 # apt-get clean
 # ls /var/cache/apt/archives/
 lock  partial
+#
 ----
 
 Bei Synaptic bildet zunächst der Eintrag menu:Einstellungen[Dateien]
@@ -100,6 +111,8 @@ beinhalten -- z.B. '0ad-data' mit ca. 530 MB Paketdateigröße -- , reicht
 es oft aus, diese einzelnen Dateien aus dem Paketcache zu entfernen, um
 dort wieder ausreichend Platz zu haben.
 
+// Stichworte für den Index
+(((Paketcache, /var/cache/apt/archives/partial/)))
 Alle derzeit von Debian unterstützten Versionen von APT klagen nicht,
 wenn Sie das gesamte Verzeichnis
 `/var/cache/apt/archives/partial/` klammheimlich hinter dem
@@ -120,6 +133,8 @@ Datei `/etc/rc.local` dauerhaft Abhilfe schaffen.
 
 ==== Empfehlungen zum Zeitpunkt des Aufräumens ====
 
+// Stichpunkte für den Index
+(((aptitude, Paketcache automatisch aufräumen)))
 Wann Sie am besten aufräumen, hängt etwas von der Nutzung und dem
 verfügbaren Plattenplatz ab. In den meisten Fällen ist _nach_ dem
 Installieren und Aktualisieren der Pakete ein guter Zeitpunkt.
@@ -144,6 +159,9 @@ Das manuelle Aufrufen der o.g. Kommandos kostet Zeit. Daher bieten APT
 und `aptitude` unterschiedliche Möglichkeiten, um diese Vorgänge zu
 automatisieren.
 
+// Stichpunkte für den Index
+(((apt, Paketcache automatisch aufräumen)))
+(((apt, Paketcache regelmäßig aufräumen)))
 Das Paket 'apt' bringt mit dem Skript `/etc/cron.daily/apt`
 einen Cron-Job mit, der diverse Aufgaben einmal pro Tag ausführen kann.
 Konfiguriert wird das Skript ebenfalls über die Datei
@@ -169,6 +187,10 @@ Die Dokumentation zu diesem Skript finden Sie in den Kommentarzeilen am
 Anfang der Datei `/etc/cron.daily/apt`. Dort finden sich noch
 weitere und feinere Einstellmöglichkeiten zum automatischen Aufräumen
 des Paketcaches, z.B. anhand des Alters der Pakete.
+
+// Stichworte für den Index
+(((aptitude, --autoclean-on-startup)))
+(((aptitude, --clean-on-startup)))
 
 `aptitude` dagegen bietet eine Zeitsteuerung über Schalter und Optionen
 an. Damit erfolgt das Aufräumen via `autoclean` oder `clean` vor oder

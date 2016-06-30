@@ -12,7 +12,7 @@
 (((Dokumentation, online)))
 Im Nixcraft-Blog <<nixcraft-blog>> finden Sie eine Übersicht, welches
 die beiden Programme `dpkg` und `apt-get` mit vielen Erklärungen und
-aussagekräftigen  Beispielen gegenüberstellt. Zu beiden Programmen gibt
+aussagekräftigen Beispielen gegenüberstellt. Zu beiden Programmen gibt
 es einen Spickzettel für den Webbrowser (auf englisch 'cheat sheet'),
 welcher Ihnen auch in vielen Situationen weiterhilft. Der Spickzettel
 steht zu `dpkg` <<nixcraft-dpkg>> und `apt-get` <<nixcraft-apt-get>> zur

@@ -6,9 +6,12 @@
 
 == Paketcache ==
 
+// Hintergrundwissen
 include::hintergrundwissen.adoc[]
 
+// Status des Paketcache
 include::paketcache-status.adoc[]
 
+// Paketcache aufräumen
 include::paketcache-aufraeumen.adoc[]
 // Datei (Ende): ./werkzeuge/paketcache/paketcache.adoc

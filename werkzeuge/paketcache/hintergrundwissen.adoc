@@ -6,6 +6,11 @@
 
 === Hintergrundwissen ===
 
+// Stichworte für den Index
+(((Paketcache, Begriff)))
+(((Paketcache, lokales Depot)))
+(((Paketcache, /var/cache/apt/archives/)))
+(((Paketcache, /var/cache/apt/archives/partial/)))
 Die deutsche Übersetzung zum Wort 'cache' ist Zwischenspeicher oder
 Puffer. In der Manpage von `apt-get` wird dafür auch der Begriff
 'lokales Depot' verwendet.
@@ -22,7 +27,7 @@ von APT oder `aptitude` heruntergeladen wurden und auch im Paketcache
 liegen, wird mit dem Auspacken und Installieren der Pakete begonnen. So
 ist garantiert, dass alle durch Abhängigkeiten notwendigen Pakete auch
 lokal verfügbar sind und nichts mehr fehlt. Die Pakete werden daraufhin
-von `dpkg` bzw. den Bibliotheken (siehe <<apt-und-bibliotheken>>)
+von `dpkg` unter Verwendung der Bibliotheken (siehe <<apt-und-bibliotheken>>)
 ausgepackt, die Dateien an die angegebene Stelle im Verzeichnisbaum
 kopiert und abschließend ggf. noch automatisch konfiguriert (siehe dazu
 <<pakete-konfigurieren>>).
