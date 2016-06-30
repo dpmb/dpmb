@@ -93,6 +93,10 @@ i A 2015g-0+deb8u1               stable- 500
 $
 ----
 
+// Stichworte für den Index
+(((aptitude, versions --show-package-names)))
+(((aptitude, versions --group-ny)))
+(((Paket, verfügbare Versionen anzeigen)))
 Wünschen Sie nur eine kompakte Ausgabe zu einem konkreten Paket ohne
 Darstellung des Paketnamens, helfen Ihnen die beiden Schalter
 `--show-package-names` mit dem Wert `never` und `--group-by` mit dem

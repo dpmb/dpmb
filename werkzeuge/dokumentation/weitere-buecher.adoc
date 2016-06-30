@@ -45,10 +45,12 @@ Linux-Distributionen gleichermaßen gut geeignet <<Kofler-Linux-2013>>.
 * Heike Jurzik ``Debian GNU/Linux: Das umfassende Handbuch'' –
 Erstveröffentlichung als Buch 2006 zu Debian 3.1 _Sarge_, danach
 regelmäßige Aktualisierung und Erweiterung <<Jurzik-Debian-Handbuch>>.
-Das Buch richtet sich an Ein- und Umsteiger, die ihr Wissen Stück für
-Stück erweitern – vom Einstieg über die Installation bishin zum Betrieb
-eigener Dienste und Server. Fokussierung auf `deb`-basierte
-Distributionen mit dem Schwerpunkt Debian GNU/Linux.
+In der Regel erfolgt eine weitere Veröffentlichung, wenn eine neue
+Debian-Veröffentlichung freigegeben wurde. Das Buch richtet sich an Ein-
+und Umsteiger, die ihr Wissen Stück für Stück erweitern – vom Einstieg
+über die Installation bishin zum Betrieb eigener Dienste und Server.
+Fokussierung auf `deb`-basierte Distributionen mit dem Schwerpunkt
+Debian GNU/Linux.
 
 * Eric Amberg ``Linux-Server mit Debian 6 GNU/Linux: Das umfassende
 Praxishandbuch'' – erschienen 2012 zu Debian 5 _Lenny_ und Debian 6
