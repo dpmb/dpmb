@@ -357,6 +357,8 @@
 
 - [[[Debian-Paket-libapt-pkg4.12]]] Debian-Paket 'libapt-pkg4.12', http://packages.debian.org/de/stable/libapt-pkg4.12
 
+- [[[Debian-Paket-libapt-pkg-doc]]] Debian-Paket 'libapt-pkg-doc', http://packages.debian.org/de/stable/libapt-pkg-doc
+
 - [[[Debian-Paket-libapt-pkg-perl]]] Debian-Paket 'libapt-pkg-perl', http://packages.debian.org/de/stable/libapt-pkg-perl
 
 - [[[Debian-Paket-lintian]]] Debian-Paket 'lintian', http://packages.debian.org/de/stable/lintian
