@@ -6,7 +6,7 @@ P=$(shell dh_listpackages)
 	dh $@ --parallel
 
 override_dh_auto_build:
-	$(MAKE) allinone.html pdf epub mobi
+	dh_auto_build -- allinone.html pdf epub mobi
 
 override_dh_auto_install:
 	# Install all images manually for now.

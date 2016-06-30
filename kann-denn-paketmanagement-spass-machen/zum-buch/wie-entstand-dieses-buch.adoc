@@ -80,7 +80,7 @@ Systembetreuung.
 
 Rein technisch setzt das Buch auf AsciiDoc <<AsciiDoc>> auf -- einem
 Textformat, aus welchem dann über mehrere Zwischenstufen diverse
-Ausgabeformate wie PDF, ePub oder HTML entstehen.
+Ausgabeformate wie PDF, EPUB oder HTML entstehen.
 Basierend auf einer einzigen Quelle stehen damit passende Ergebnisse für
 die verschiedenen Ausgabegeräte zur Verfügung. Die AsciiDoc-Dateien
 liegen in einem Versionskontrollsystem namens Git und sind auf der

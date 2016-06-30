@@ -7,8 +7,8 @@ Frank Hofmann, Axel Beckert
 include::../version.adoc[]
 
 On this page you can read or download generated development snapshots
-of the http://www.dpmb.org/[Debian Package Management Book] by
-http://www.efho.de/[Frank Hofmann] and http://axel.beckert.ch/[Axel
+of the https://www.dpmb.org/[Debian Package Management Book] by
+http://www.efho.de/[Frank Hofmann] and https://axel.beckert.ch/[Axel
 Beckert]. For now only a German edition is available.
 
 == License
@@ -16,7 +16,7 @@ Beckert]. For now only a German edition is available.
 image::https://i.creativecommons.org/l/by-sa/4.0/88x31.png["CC BY-SA 4.0",float="right"]
 
 The book "Debian Package Management" is licensed under the
-http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons
+https://creativecommons.org/licenses/by-sa/4.0/[Creative Commons
 Attribution - Share Alike 4.0 International License].
 
 == Read online
@@ -27,7 +27,7 @@ Attribution - Share Alike 4.0 International License].
 == Download
 
 * link:debian-paketmanagement.allinone.html[HTML (all in one file, i.e. images, etc. are embedded in the HTML file)]
-* link:debian-paketmanagement.epub[Epub]
+* link:debian-paketmanagement.epub[EPUB]
 * link:debian-paketmanagement.pdf[PDF]
 * link:debian-paketmanagement.mobi[Mobipocket]
 

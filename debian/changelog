@@ -1,3 +1,18 @@
+dpmb (0~2016.06.29) UNRELEASED; urgency=medium
+
+  * New upstream snapshot
+    + Supports the SOURCE_DATE_EPOCH specification for reproducible
+      builds.
+  * Recommend/Suggest virtual package pdf-viewer instead of the
+    non-existent pdf-reader.
+  * debian/copyright: Replace http:// with https:// where
+    applicable. Issues reported by DUCK.
+  * debian/rules: Replace "$(MAKE)" with "dh_auto_build --" to properly
+    pass number of parallel jobs to upstream build system.
+  * Use proper capitalization of "EPUB" in long package description.
+
+ -- Axel Beckert <abe@debian.org>  Wed, 29 Jun 2016 23:16:09 +0200
+
 dpmb (0~2016.04.24) unstable; urgency=low
 
   * Initial upload (Closes: #821328)

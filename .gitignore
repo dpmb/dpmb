@@ -9,3 +9,11 @@
 /version.adoc
 /docbook-xsl.css
 /*.chunked/
+
+# Package build artefacts
+/debian/debian-paketmanagement-buch/
+/debian/tmp/
+/debian/files
+/debian/*-stamp
+/debian/*.debhelper.log
+/debian/*.substvars
