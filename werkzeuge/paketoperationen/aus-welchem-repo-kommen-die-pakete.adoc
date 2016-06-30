@@ -72,9 +72,10 @@ Geben Sie hingegen beim Aufruf als Parameter einen Paketnamen an, prüft
 ob es ein neueres Paket gibt und falls ja, von welchem Paketmirror das
 Paket in diesem Fall käme.
 
-Beispiel 1 zeigt das Vorgehen anhand des Pakets 'gdm3'. Im vorliegenden
-Fall ist dieses bereits installiert (Status von `dpkg`) Falls es das
-noch nicht wäre, käme das Paket aus dem deutschen Debian-Repository.
+*Beispiel 1* zeigt das Vorgehen anhand des Pakets 'gdm3'. Im
+vorliegenden Fall ist dieses bereits installiert (Status von `dpkg`)
+Falls es das noch nicht wäre, käme das Paket aus dem deutschen
+Debian-Repository.
 
 .Verfügbarkeit für das Paket 'gdm3' feststellen
 ----
@@ -89,7 +90,7 @@ gdm3:
 $
 ----
 
-Beispiel 2 betrifft das Paket 'linux-libc-dev'. Dieses ist bereits in
+*Beispiel 2* betrifft das Paket 'linux-libc-dev'. Dieses ist bereits in
 Version 3.2.51-1 installiert, aber es gibt eine aktuellere Variante
 (3.2.57-3) sowie zusätzlich eine Sicherheitsaktualisierung
 (Security-Update) mit der Versionsnummer 3.2.46-1+deb7u1. In diesem Fall
@@ -112,7 +113,7 @@ linux-libc-dev:
 $
 ----
 
-Als Beispiel 3 steht das Paket 'kteatime' im Fokus. Dieses ist noch
+Als *Beispiel 3* steht das Paket 'kteatime' im Fokus. Dieses ist noch
 nicht installiert und könnte nachgezogen werden. Dabei käme das Paket
 aus dem deutschen Debian-Repository.
 
@@ -244,9 +245,9 @@ Ab Debian 8 'Jessie' und Ubuntu 14.04 LTS 'Trusty Tahr' wird APT auf der
 Basis der Version 1.0 ausgeliefert. Ab dieser Version verlieren die
 zuvor vorgestellten Kommandos `apt-cache` und `apt-show-versions` etwas
 an Bedeutung, da das Kommando `apt` mit dem neuen Unterkommando `list`
-und einem Paketnamen als Parameter ähnliches leistet. Die Ausgabe auf
-dem Terminal erfolgt in Farbe, nur lässt sich das hier im Buch leider
-weniger gut illustrieren.
+und einem Paketnamen als Parameter ähnliches leistet. Die Ausgabe des
+Paketnamens auf dem Terminal erfolgt in Farbe, nur lässt sich das hier
+im Buch leider weniger gut illustrieren.
 
 Nachfolgend sehen Sie wiederum die Ausgabe für das Paket 'zsh'. Nach dem
 Paketnamen erscheinen die Veröffentlichung, die Versionsnummer und die

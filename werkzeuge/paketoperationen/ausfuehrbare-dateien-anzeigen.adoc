@@ -12,7 +12,7 @@
 Die ausführbaren Dateien Ihres Linuxsystems befinden sich üblicherweise
 im Verzeichnis `/usr/bin` bzw. `/usr/sbin`. Um herauszufinden, welche
 ausführbaren Dateien sich in einem Paket befinden, können Sie einerseits
-das Paket durchforsten (siehe Paketinhalte anzeigen in
+das Paket durchforsten (siehe ``Paketinhalte anzeigen'' in
 <<paketinhalte-anzeigen-apt-file>>) oder andererseits das Kommando
 `dlocate` benutzen. Über die Option `-lsbin` und den Paketnamen gibt es
 Ihnen ausführlich Auskunft. Die nachfolgende Ausgabe zeigt die
