@@ -62,32 +62,7 @@ https://bugs.debian.org/32877
 
 TODO: Mehr und Aufsplitten
 
-[[ausblick-empfehlung-fuer-einsteiger]]
-=== Empfehlungen für Einsteiger ===
-
-==== Mit welchem Programm zur Paketverwaltung soll ich anfangen? ====
-
-Das hängt sehr davon ab, welche Art von Benutzerschnittstelle Sie
-bevorzugen -- oder auch, in welcher Situation (Desktop, Server via ssh)
-Sie gerade sind:
-
-* Kommandozeile: `apt`. Es ist einfach und intuitiv, schnell getippt,
-  hat angenehme farbliche Hervorhebungen in der Ausgabe und kann
-  praktisch alles, womit Sie im Alltag zu tun haben. Bei älteren
-  Veröffentlichungen ohne `apt` als Befehl weichen Sie auf die Befehle
-  `apt-get` und `apt-cache` aus, aber die Nachteile sind nur
-  geringfügig. Im wesentlichen umfaßt das mehr Tippen, je nach Aufgabe
-  das passende Programm auswählen und keine Farbe in der
-  Standard-Einstellung.
-
-* Interaktiver Textmodus: `aptitude`. Nicht nur, weil es auch das
-  einzige Programm mit dieser Benutzerschnittstelle ist, sondern auch,
-  weil es einem sehr viele Informationen und Möglichkeiten bietet. Diese
-  Darstellung in der Gesamtheit auf der Kommandozeile zu erreichen,
-  gelingt nur mit einem Dutzend parallel geöffneter Terminalfenster.
-
-* Graphische Benutzerschnittstelle: Synaptic (siehe <<gui-synaptic>>).
-  Es bildet unserer Meinung nach das Debian-Paketsystem am besten ab
-  und reduziert es nicht auf einen ``App-Store''.
+// Empfehlungen für Einsteiger
+include::empfehlungen-fuer-einsteiger/empfehlungen-fuer-einsteiger.adoc[]
 
 // Datei (Ende): ./ausblick/ausblick.adoc

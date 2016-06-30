@@ -113,8 +113,8 @@ Funktionalitäten ergänzt wird.
 Es gibt keine Regelung oder Empfehlung dafür, welches Programm aus
 obiger Liste Sie benutzen sollen. Dafür sind die Wissensstände,
 Gewohnheiten und Vorlieben im Umgang mit Software zu unterschiedlich
-(siehe auch Ausblick und Empfehlung für Einsteiger in
-<<ausblick-empfehlung-fuer-einsteiger>>).
+(siehe auch ``Ausblick und Empfehlungen für Einsteiger'' in
+<<ausblick-empfehlungen-fuer-einsteiger>>).
 
 In der Praxis zeigt sich, dass `apt-get` häufig die schnellste und
 effizienteste Variante ist, sofern Sie den exakten Namen eines
