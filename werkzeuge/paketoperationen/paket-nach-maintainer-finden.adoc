@@ -83,6 +83,8 @@ $
 (((Debianpaket, dctrl-tools)))
 (((grep-dctrl, -F)))
 (((grep-dctrl, -s)))
+(((Paketsuche, anhand des Maintainers)))
+(((Paketsuche, anhand des Uploaders)))
 Das Programm `grep-dctrl` aus dem Paket 'dctrl-tools' sucht alle Pakete
 heraus, bei dem als Maintainer oder Uploader die angefragte Person
 hinterlegt ist und gibt diese zum gefundenen Paketnamen aus. Als
@@ -113,6 +115,8 @@ $
 
 // Stichworte für den Index
 (((ara)))
+(((ara, -progress)))
+(((ara, -table)))
 (((Debianpaket, ara)))
 (((Paketsuche, anhand des Maintainers)))
 (((Paketsuche, anhand des Uploaders)))
