@@ -165,9 +165,9 @@
 
 - [[[Debian-Backports]]] Debian Backports: http://backports-master.debian.org/
 
-- [[[Debian-besorgen]]], Debian besorgen. Installationsmedien und ISO-Images auf der Debian-Webseite, http://www.debian.org/distrib/
+- [[[Debian-besorgen]]] Debian besorgen. Installationsmedien und ISO-Images auf der Debian-Webseite, http://www.debian.org/distrib/
 
-- [[[Debian-Bug-Tracking-System]]], Debian Bug Tracking System (Debian BTS), https://www.debian.org/Bugs/
+- [[[Debian-Bug-Tracking-System]]] Debian Bug Tracking System (Debian BTS), https://www.debian.org/Bugs/
 
 - [[[Debian-DebSrc3.0]]] Projects DebSrc3.0, http://wiki.debian.org/Projects/DebSrc3.0
 
@@ -701,13 +701,13 @@
 
 - [[[Schnober-Checkinstall-LinuxUser]]] Carsten Schnober: Wie am Schnürchen. Debian-Pakete bauen von einfach bis anspruchsvoll, LinuxUser 02/2008, LinuxNewMedia AG, München, 2008, S. 88ff., https://www.linux-user.de/ausgabe/2008/02/088/index.html
 
-- [[[screenshots.debian.net]]], Screenshot-Sammlung von Debian- und Ubuntu-Paketen, https://screenshots.debian.net/
+- [[[screenshots.debian.net]]] Screenshot-Sammlung von Debian- und Ubuntu-Paketen, https://screenshots.debian.net/
 
 - [[[Sentinel4Mobile]]] Sentinel4Mobile Berlin, Werner Heuser, http://sentinel4mobile.de/
 
 - [[[Siduction]]] Siduction, http://siduction.org/
 
-- [[[SingleClickInstall]]], https://wiki.ubuntu.com/SingleClickInstall
+- [[[SingleClickInstall]]] https://wiki.ubuntu.com/SingleClickInstall
 
 - [[[Skolelinux]]] Skolelinux, http://skolelinux.de/
 
