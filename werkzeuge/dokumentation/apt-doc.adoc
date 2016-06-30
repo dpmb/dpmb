@@ -8,6 +8,7 @@
 
 // Stichworte für den Index
 (((Debianpaket, apt-doc)))
+(((Dokumentation, Benutzerhandbuch zu APT)))
 (((Dokumentation, offline)))
 Das Paket 'apt-doc' <<Debian-Paket-apt-doc>> beinhaltet das
 Benutzerhandbuch zu APT. Es wurde bereits 1998 von Jason Gunthorpe

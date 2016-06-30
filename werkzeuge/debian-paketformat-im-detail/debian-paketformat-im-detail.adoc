@@ -6,7 +6,9 @@
 
 == Debian-Paketformat im Detail ==
 
+// Konzepte und Ideen dahinter
 include::konzepte-und-ideen-dahinter.adoc[]
 
+// Aufbau und Format
 include::aufbau-und-format.adoc[]
 // Datei (Ende): ./werkzeuge/debian-paketformat-im-detail/debian-paketformat-im-detail.adoc
