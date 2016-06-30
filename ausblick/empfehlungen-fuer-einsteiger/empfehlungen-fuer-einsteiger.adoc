@@ -7,6 +7,12 @@
 
 ==== Mit welchem Programm zur Paketverwaltung soll ich anfangen? ====
 
+// Stichworte für den Index
+(((apt)))
+(((apt-cache)))
+(((apt-get)))
+(((aptitude)))
+(((Synaptic)))
 Das hängt sehr davon ab, welche Art von Benutzerschnittstelle Sie
 bevorzugen -- oder auch, in welcher Situation (Desktop, Server via ssh)
 Sie gerade sind:
