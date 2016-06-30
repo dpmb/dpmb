@@ -12,14 +12,15 @@
 (((Dokumentation, offline)))
 (((Dokumentation, online)))
 `aptitude` ist ein recht komplexes Programm und bedarf daher einiges an
-Dokumentation. Diese steht bislang in 7 Sprachen als HTML-Datei bereit,
+Dokumentation. Diese steht bislang in 9 Sprachen als HTML-Datei bereit,
 so in englisch, tschechisch, spanisch, finnisch, französisch,
-italienisch und japanisch. Eine deutsche Übersetzung fehlt leider
-bisher.
+italienisch, niederländisch, russisch und japanisch. Eine deutsche
+Übersetzung fehlt leider bisher noch.
 
 Seit 2013 ist die Zusammenstellung für `aptitude` in der Version 0.6.8.2
-wieder in allen 7 Sprachen verfügbar <<aptitude-dokumentation>>. Zuvor
-war es längere Zeit recht ruhig um die Dokumentation, da der bisherige
+in 7 Sprachen verfügbar <<aptitude-dokumentation>>, für Debian 8
+'Jessie' kamen zudem niederländisch und russisch dazu. Zuvor war es
+längere Zeit recht ruhig um die Dokumentation, da der bisherige
 Maintainer nicht mehr erreichbar war. Nachdem das neue `aptitude`-Team
 vollen Zugriff auf die Daten bei Alioth – Debians
 FusionForge-Installation – hatte, ging es flink voran. Leider verweisen
