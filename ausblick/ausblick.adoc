@@ -44,11 +44,8 @@ für die Zukunft
 ** weil (5): damit können wir testen, ob wir unser Paket für das Buch
 richtig bauen bzw. ob noch etwas fehlt
 
-[[ein-eigenes-debian-repository-aufbauen]]
-== Ein eigenes Debian-Repository aufbauen ==
-
-* siehe dazu: Michael Stapelberg: Kurz-Howto: Eigenes Debian-Repository
-aufbauen <<Stapelberg-Debian-Repo>>
+// Ein eigenes Debian-Repository aufbauen
+include::ein-eigenes-debian-repository-aufbauen/ein-eigenes-debian-repository-aufbauen.adoc[]
 
 // Zukunft von apt
 include::zukunft-von-apt/zukunft-von-apt.adoc[]

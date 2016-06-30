@@ -1,0 +1,11 @@
+// Datei: ./ausblick/ein-eigenes-debian-repository-aufbauen/ein-eigenes-debian-repository-aufbauen.adoc
+
+// Baustelle: Notizen
+
+[[ein-eigenes-debian-repository-aufbauen]]
+== Ein eigenes Debian-Repository aufbauen ==
+
+* siehe dazu: Michael Stapelberg: Kurz-Howto: Eigenes Debian-Repository
+aufbauen <<Stapelberg-Debian-Repo>>
+
+// Datei (Ende): ./ausblick/ein-eigenes-debian-repository-aufbauen/ein-eigenes-debian-repository-aufbauen.adoc
