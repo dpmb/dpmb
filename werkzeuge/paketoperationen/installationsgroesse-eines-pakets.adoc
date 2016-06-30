@@ -20,17 +20,17 @@ auf. Nachfolgendes Listing zeigt den Aufruf für das Paket 'htop'.
 .Ermittlung der Installationsgröße des Pakets 'htop' mit `dlocate`
 ----
 $ dlocate -du htop
-136	/usr/bin/htop
-4	/usr/share/applications/htop.desktop
-4	/usr/share/doc/htop/AUTHORS
-8	/usr/share/doc/htop/changelog.Debian.gz
-8	/usr/share/doc/htop/changelog.gz
-4	/usr/share/doc/htop/copyright
-4	/usr/share/doc/htop/README
-4	/usr/share/man/man1/htop.1.gz
-4	/usr/share/menu/htop
-4	/usr/share/pixmaps/htop.png
-180	insgesamt
+136 /usr/bin/htop
+4   /usr/share/applications/htop.desktop
+4   /usr/share/doc/htop/AUTHORS
+8   /usr/share/doc/htop/changelog.Debian.gz
+8   /usr/share/doc/htop/changelog.gz
+4   /usr/share/doc/htop/copyright
+4   /usr/share/doc/htop/README
+4   /usr/share/man/man1/htop.1.gz
+4   /usr/share/menu/htop
+4   /usr/share/pixmaps/htop.png
+180 insgesamt
 $
 ----
 

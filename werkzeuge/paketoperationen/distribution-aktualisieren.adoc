@@ -20,8 +20,8 @@ vergleichsweise viel ändert und durchaus auch etliches schief gehen
 kann, womit Sie nicht unbedingt rechnen. An der Stelle sei jedoch zu
 Ihrer Beruhigung angemerkt, dass der Wechsel von Debian 6 _Squeeze_ auf
 Debian 7 _Wheezy_ recht unspektakulär verlief und vielfach problemlos
-über die Bühne ging. Die Tests für den Umzug auf Debian 8 _Jessie_
-liefen bislang ähnlich gut.
+über die Bühne ging. Ähnliches gilt für den Wechsel auf den Debian 8
+_Jessie_.
 
 Trotzdem halten wir es für ganz praktisch, wenn wir Ihnen eine
 Schritt-für-Schritt-Abfolge zur Verfügung stellen, der Sie folgen
@@ -49,9 +49,9 @@ das doch erforderlich sein sollte.
 (((apt-get, upgrade)))
 Die vollständige Aktualisierung des Paketbestands erfolgt mit dem
 APT-Unterkommando `dist-upgrade`. Es ist auf den ersten Blick sehr
-ähnlich zu `upgrade`. Es bestehen jedoch wesentliche Unterschiede
-zwischen beiden. Ersteres bezieht nur innerhalb der bestehenden
-Veröffentlichung, das Zweite bezieht alles von der neuen
+ähnlich zu `upgrade`, es bestehen jedoch wesentliche Unterschiede
+zwischen beiden. Ersteres bezieht nur Änderungen innerhalb der
+bestehenden Veröffentlichung, das Zweite bezieht alles von der neuen
 Veröffentlichung.
 
 ==== Unsere empfohlene Reihenfolge ====
@@ -66,6 +66,7 @@ Veröffentlichung.
 (((Distribution aktualisieren, Release Notes)))
 (((Distribution aktualisieren, Veröffentlichungshinweise)))
 (((Distributionswechsel, Release Notes)))
+(((Distributionswechsel, Veröffentlichungshinweise)))
 Wir empfehlen Ihnen, bei der Aktualisierung Ihrer Distribution die
 nachfolgenden Schritte nicht außer Acht zu lassen.
 
@@ -96,10 +97,10 @@ nach möglicherweise kritischen Fehlern in der Debian-Fehlerdatenbank
 . Aktualisieren Sie die bestehende Paketliste mittels `apt-get update`
 (siehe <<liste-der-verfuegbaren-pakete-aktualisieren>>). Damit bringen
 Sie die Paketliste auf den aktuellen Stand und verringern die
-Unterschiede zur Aktualisierung.
+Unterschiede zum verfügbaren Paketbestand.
 
 . Spüren Sie Waisen und nicht mehr benötigte Pakete mittels `apt-get
-autoremove` auf (siehe <<umgang-mit-waisen>>). Diese Pflege verringert
+autoremove` auf (siehe <<umgang-mit-waisen>>). Dieser Schritt verringert
 den zu berücksichtigenden Paketbestand und macht sich in mehrfacher
 Hinsicht bemerkbar. Einerseits werden Altlasten beseitigt, sie sparen
 Zeit und Festplattenplatz, es müssen somit weniger Datenpakete über die
