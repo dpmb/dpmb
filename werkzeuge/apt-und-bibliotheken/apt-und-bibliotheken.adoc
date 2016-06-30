@@ -57,13 +57,17 @@ HTML-Dokument bereit.
 
 === Bibliothek `libapt-inst` ===
 
+// Stichworte für den Index
+(((Debianpaket, libapt-inst)))
+(((Paketinterna abfragen)))
 // Worin liegt der Unterschied und Nutzen im Vergleich zu libapt-pkg?
 
 Um Informationen aus `deb`-Paketen zur erhalten, nutzen Sie diese
-Bibliothek. Darüber steht eine Schnittstelle zur Abfrage der
-Paketinterna bereit, die sowohl den Paketinhalt, als auch die
-Steuerdaten der Komponente `control.tar.gz` umfassen (siehe
-Debian-Paketformat im Detail in <<aufbau-und-format>>).
+Bibliothek aus dem Paket 'libapt-inst' <<Debian-Paket-libapt-inst>>.
+Darüber steht eine Schnittstelle zur Abfrage der Paketinterna bereit,
+die sowohl den Paketinhalt, als auch die Steuerdaten der Komponente
+`control.tar.gz` umfassen (siehe Debian-Paketformat im Detail in
+<<aufbau-und-format>>).
 
 // ==== `libdpkg-perl` ====
 //
