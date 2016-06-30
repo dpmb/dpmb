@@ -86,7 +86,9 @@
 
 - [[[Bailey-Maximum-RPM-verify]]] When Verification Fails — rpm -V Output in Edward C. Bailey: Maximum RPM. Taking the Red Hat Package Manager to the Limit, Red Hat Inc., 2000, ISBN 1-888172-78-9, http://www.rpm.org/max-rpm/
 
-- [[[Beckert-Aptitude-Textmodus]]], Axel Beckert: Aptitude. Pakete komfortabel im Text-Modus verwalten, Vortrag im Rahmen des Linuxday Dornbirn, November 2013, http://fileshare.lugv.at/public/vortraege2013/linuxday/aptitude-linuxday.html
+- [[[Bean-clever-merge-config]]] Jules Bean: Cleverer conffile merge, https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=32877
+
+- [[[Beckert-Aptitude-Textmodus]]] Axel Beckert: Aptitude. Pakete komfortabel im Text-Modus verwalten, Vortrag im Rahmen des Linuxday Dornbirn, November 2013, http://fileshare.lugv.at/public/vortraege2013/linuxday/aptitude-linuxday.html
 
 - [[[Beckert-Blog]]] Axel Beckerts Blog, http://noone.org/blog
 
@@ -613,6 +615,8 @@
 - [[[Krafft-Debian-System137ff]]] Ebd., Kapitel 5, S. 137-294
 
 - [[[LernStick]]] LernStick, Fachhochschule Nordwestschweiz, Solothurn, http://www.imedias.ch/projekte/lernstick/index.cfm
+
+- [[[libelektra]]] Libelektra, http://community.libelektra.org/wp/?p=145
 
 - [[[LiMux]]] LiMux -- Linux in der Stadtverwaltung München, http://www.muenchen.de/rathaus/Stadtverwaltung/Direktorium/LiMux.html
 
