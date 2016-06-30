@@ -6,6 +6,9 @@
 
 === Paketcache-Status ===
 
+// Stichworte für den Index
+(((Paketcache, Status)))
+(((apt-cache, stats)))
 Den aktuellen Zustand des Paketcaches erfahren Sie mit Hilfe das
 Kommandos `apt-cache stats`. Es wertet den Paketcache hinsichtlich der
 gefundenen Symbole aus -- d.h. die Namen, die Varianten und die Bezüge
@@ -36,7 +39,7 @@ $
 
 Ist der Platz auf ihrem Speichermedium knapp, sehen Sie in der letzten
 Zeile der Ausgabe, welche Menge durch den Paketcache gerade belegt wird.
-Wie Sie darin wieder für Ordnung sorgen, lesen Sie unter Paketcache
-aufräumen in <<paketcache-aufraeumen>> nach.
+Wie Sie darin wieder für Ordnung sorgen, lesen Sie unter ``Paketcache
+aufräumen'' in <<paketcache-aufraeumen>> nach.
 
 // Datei (Ende): ./werkzeuge/paketcache/paketcache-status.adoc

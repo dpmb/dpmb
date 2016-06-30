@@ -191,6 +191,8 @@ des Paketcaches, z.B. anhand des Alters der Pakete.
 // Stichworte für den Index
 (((aptitude, --autoclean-on-startup)))
 (((aptitude, --clean-on-startup)))
+(((aptitude, autoclean)))
+(((aptitude, clean)))
 
 `aptitude` dagegen bietet eine Zeitsteuerung über Schalter und Optionen
 an. Damit erfolgt das Aufräumen via `autoclean` oder `clean` vor oder
