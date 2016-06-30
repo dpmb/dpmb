@@ -13,7 +13,9 @@ Auch wenn bei den nachfolgend vorgestellten Paketoperationen und
 Beispielen stets `Paketname` im Singular steht, können Sie beim Aufruf
 einen oder mehrere exakte Paketnamen angeben. Diese Liste trennen Sie
 durch Leerzeichen, wobei die Reihenfolge der genannten Pakete im
-Allgemeinen keine Rolle spielt:
+Allgemeinen keine Rolle spielt. Nachfolgend soll das an einem Aufruf mit
+`apt-get` zur Installation der Pakete 'xpdf', 'kile' und 'cssed'
+deutlich werden.
 
 .Installation der Pakete `xpdf`, `kile` und `cssed` mittels APT in einem Aufruf
 ----
@@ -26,8 +28,8 @@ Zulässig sind ebenfalls ein Fragment eines Namens oder auch ein
 Paketmuster über einen regulären Ausdruck. Dann werden alle Pakete
 ausgewählt, die auf das Fragment bzw. Muster passen. Das betrifft
 insbesondere die Kommandozeilenwerkzeuge `dpkg`, APT, `aptitude` und
-`ara`. Bei den graphischen Programmen wird das sehr unterschiedlich
-gehandhabt.
+`ara`. Bei den graphischen Programmen wird das hingegen sehr
+unterschiedlich gehandhabt.
 
 .Auflistung aller Dokumentationspakete zu `aptitude` über ein Muster
 ----
