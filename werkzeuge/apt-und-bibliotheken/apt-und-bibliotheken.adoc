@@ -17,9 +17,13 @@ Paketverwaltung entwickeln.
 
 === Bibliothek `libapt-pkg` ===
 
-Diese Bibliothek enthält die Basiskomponenten zum Zugriff auf die
-einzelnen Softwarepakete. Das umfasst Funktionen zur Suche nach Paketen,
-deren Verwaltung sowie die Ausgabe der Paketinformationen. Dazu gehören:
+// Stichworte für den Index
+(((Debianpaket, libapt-pkg4.12)))
+Diese Bibliothek aus dem Paket 'libapt-pkg4.12'
+<<Debian-Paket-libapt-pkg4.12>> enthält die Basiskomponenten zum Zugriff
+auf die einzelnen Softwarepakete. Das umfasst Funktionen zur Suche nach
+Paketen, deren Verwaltung sowie die Ausgabe der Paketinformationen. Dazu
+gehören:
 
 * der Abruf von Informationen zu einem Paket aus den verschiedenen Paketquellen
 * der Abruf eines Pakets und der vollständigen Auflösung der
@@ -35,9 +39,12 @@ FTP, HTTP/S, rsh und DebTorrent (APT über BitTorent)
 
 === Bibliothek `libapt-pkg-perl` ===
 
-Diese Bibliothek beinhaltet die Perl-Schnittstelle zum Zugriff auf die
-einzelnen Softwarepakete. Es hat die gleiche Funktionalität wie das
-weiter oben beschriebene Paket 'libapt-pkg'.
+// Stichworte für den Index
+(((Debianpaket, libapt-pkg-perl)))
+Diese Bibliothek aus dem Paket 'libapt-pkg-perl'
+<<Debian-Paket-libapt-pkg-perl>> beinhaltet die Perl-Schnittstelle zum
+Zugriff auf die einzelnen Softwarepakete. Es hat die gleiche
+Funktionalität wie das weiter oben beschriebene Paket 'libapt-pkg'.
 
 === Bibliothek `libapt-pkg-doc` ===
 
