@@ -8,7 +8,9 @@
 // Stichworte für den Index
 (((libelektra)))
 TODO: Drei-Weg-Konfigdatei-Mergen
+
 * Libelektra <<libelektra>> ist IIRC eine generische Konfigdatei-Parser-Bibliothek und
+
 * Cleverer Config merge <<Bean-clever-merge-config>>
 
 // Datei (Ende): ./ausblick/zukunft-von-apt/zukunft-von-apt.adoc
