@@ -1,0 +1,18 @@
+// Datei: ./ausblick/pakete-selber-bauen/pakete-selber-bauen.adoc
+
+// Baustelle: Notizen
+
+[[pakete-selber-bauen]]
+== Pakete selber bauen ==
+
+* TODO: Evtl. woanders hin?
+
+* Beispiel: anhand des deb-Pakets für das vorliegende Buch
+** weil (1): ist komplett
+** weil (2): ist in den Quellen für das Buch gleich dabei
+** weil (3): hängt von keinen weiteren Paketen ab
+** weil (4): ist überschaubar
+** weil (5): damit können wir testen, ob wir unser Paket für das Buch
+richtig bauen bzw. ob noch etwas fehlt
+
+// Datei (Ende): ./ausblick/pakete-selber-bauen/pakete-selber-bauen.adoc

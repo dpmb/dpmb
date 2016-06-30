@@ -7,42 +7,11 @@
 
 = Ausblick
 
-== Notizen ==
+// Notizen
+include::notizen/notizen.adoc[]
 
-TODO: Wollen wir hier ein wenig über die Zukunft von Paketmanagement
-unter Debian orakeln? CUPT könnte man hier nochmals erwähnen. Das
-web-basierte Zeugs vielleicht auch (Stichworte Tablets und
-Smartphones).
-
-* welche Fragen blieben bislang offen und unbeantwortet
-* hat Paketmanagement -- so wie es jetzt vorliegt und verwendet wird -- überhaupt eine Zukunft
-** Modell und Struktur wird langsam volljährig
-** falls ja, was spricht denn dafür
-** falls nein, was wäre denn eine geeignete Alternative dazu
-*** gibt es vllt. schon kreative Ansätze, die langsam vor sich hin köcheln
-*** was ist mit den Containerformaten wie Flatpak, Open Container Format
-(OCF), App Container Image (ACI) und Docker?
-* welche Punkte sind zu verbessern bzw. zu ergänzen
-** an welchen Punkten hakelt es immer wieder
-** hat das Modell Risiken und Schwachstellen
-** was wird derzeit nicht abgedeckt
-** Anwendungsfälle
-* was sind die häufigsten Vorkommnisse, an denen etwas schiefgeht
-* welche der im Buch vorgestellten Ansätze und Lösungen haben Potential
-für die Zukunft
-
-[[pakete-selber-bauen]]
-== Pakete selber bauen ==
-
-* TODO: Evtl. woanders hin?
-
-* Beispiel: anhand des deb-Pakets für das vorliegende Buch
-** weil (1): ist komplett
-** weil (2): ist in den Quellen für das Buch gleich dabei
-** weil (3): hängt von keinen weiteren Paketen ab
-** weil (4): ist überschaubar
-** weil (5): damit können wir testen, ob wir unser Paket für das Buch
-richtig bauen bzw. ob noch etwas fehlt
+// Pakete selber bauen
+include::pakete-selber-bauen/pakete-selber-bauen.adoc[]
 
 // Ein eigenes Debian-Repository aufbauen
 include::ein-eigenes-debian-repository-aufbauen/ein-eigenes-debian-repository-aufbauen.adoc[]

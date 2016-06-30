@@ -1,0 +1,12 @@
+// Datei: ./ausblick/fazit/fazit.adoc
+
+// Baustelle: Notizen
+
+== Fazit / Zusammenfassung ==
+
+TODO: Mehr und Aufsplitten
+
+// Empfehlungen für Einsteiger
+include::empfehlungen-fuer-einsteiger/empfehlungen-fuer-einsteiger.adoc[]
+
+// Datei (Ende): ./ausblick/fazit/fazit.adoc

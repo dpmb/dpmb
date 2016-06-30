@@ -1,0 +1,29 @@
+// Datei: ./ausblick/notizen/notizen.adoc
+
+// Baustelle: Notizen
+
+== Notizen ==
+
+TODO: Wollen wir hier ein wenig über die Zukunft von Paketmanagement
+unter Debian orakeln? CUPT könnte man hier nochmals erwähnen. Das
+web-basierte Zeugs vielleicht auch (Stichworte Tablets und
+Smartphones).
+
+* welche Fragen blieben bislang offen und unbeantwortet
+* hat Paketmanagement -- so wie es jetzt vorliegt und verwendet wird -- überhaupt eine Zukunft
+** Modell und Struktur wird langsam volljährig
+** falls ja, was spricht denn dafür
+** falls nein, was wäre denn eine geeignete Alternative dazu
+*** gibt es vllt. schon kreative Ansätze, die langsam vor sich hin köcheln
+*** was ist mit den Containerformaten wie Flatpak, Open Container Format
+(OCF), App Container Image (ACI) und Docker?
+* welche Punkte sind zu verbessern bzw. zu ergänzen
+** an welchen Punkten hakelt es immer wieder
+** hat das Modell Risiken und Schwachstellen
+** was wird derzeit nicht abgedeckt
+** Anwendungsfälle
+* was sind die häufigsten Vorkommnisse, an denen etwas schiefgeht
+* welche der im Buch vorgestellten Ansätze und Lösungen haben Potential
+für die Zukunft
+
+// Datei (Ende): ./ausblick/notizen/notizen.adoc
