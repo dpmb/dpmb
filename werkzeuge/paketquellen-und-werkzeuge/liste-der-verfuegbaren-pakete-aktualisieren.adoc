@@ -139,7 +139,7 @@ gefunden werden, wird eine Warnung ausgegeben. Entsprechende Zeilen beginnen mit
 `W:`. Pakete, die nicht korrekt signiert sind, können Schadcode enthalten und
 sollten nicht installiert werden. Zur Überprüfung auf korrekte Pakete tragen Sie
 bitte den passenden GPG-Key nach. Näheres dazu finden Sie unter
-Bezogenes Paket verifizieren in <<bezogenes-paket-verifizieren>>.
+``Bezogenes Paket verifizieren'' in <<bezogenes-paket-verifizieren>>.
 ====
 
 [TIP]
@@ -148,8 +148,8 @@ Bezogenes Paket verifizieren in <<bezogenes-paket-verifizieren>>.
 Möchten Sie neuere Versionen von Paketen installieren oder auf eine
 andere Veröffentlichung von Debian wechseln, ist zusätzlich ein
 'upgrade' bzw. 'dist-upgrade' erforderlich. Weitere Informationen dazu
-erhalten Sie unter Pakete aktualisieren in <<pakete-aktualisieren>> bzw.
-Distribution aktulisieren in <<distribution-aktualisieren>>.
+erhalten Sie unter ``Pakete aktualisieren'' in <<pakete-aktualisieren>>
+bzw. ``Distribution aktualisieren'' in <<distribution-aktualisieren>>.
 ====
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/liste-der-verfuegbaren-pakete-aktualisieren.adoc
