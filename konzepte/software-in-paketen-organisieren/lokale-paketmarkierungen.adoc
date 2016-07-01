@@ -164,7 +164,11 @@ Auf der Kommandozeile rufen Sie hierfür `aptitude` mit dem Unterkommando
 `show` gefolgt vom Paketnamen auf. In den Zeilen 2 und 3 der
 nachfolgenden Ausgabe erfahren Sie einerseits, dass das Paket
 'python-pkg-resources' automatisch installiert wurde und die Version 18.8-1
-nicht lokal eingespielt werden darf.
+nicht lokal eingespielt werden darf. Darüberhinaus wurde eine manuelle
+Markierung vergeben (`broken-by-807773`), die kennzeichnet, dass das
+Paket defekt ist (`broken`). Die Ziffernfolge referenziert die Nummer
+des Bugs im Debian Bug Tracking System (BTRS) und ermöglicht Ihnen,
+nachzulesen, warum der Eintrag da ist.
 
 .Darstellung der Markierungen zum Paket 'python-pkg-resources' mittels `aptitude`
 ----
