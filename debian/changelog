@@ -1,6 +1,6 @@
-dpmb (0~2016.06.29) UNRELEASED; urgency=medium
+dpmb (0~2016.06.30) unstable; urgency=medium
 
-  * New upstream snapshot
+  * New snapshot
     + Supports the SOURCE_DATE_EPOCH specification for reproducible
       builds.
   * Recommend/Suggest virtual package pdf-viewer instead of the
@@ -11,7 +11,7 @@ dpmb (0~2016.06.29) UNRELEASED; urgency=medium
     pass number of parallel jobs to upstream build system.
   * Use proper capitalization of "EPUB" in long package description.
 
- -- Axel Beckert <abe@debian.org>  Wed, 29 Jun 2016 23:16:09 +0200
+ -- Axel Beckert <abe@debian.org>  Thu, 30 Jun 2016 19:29:32 +0200
 
 dpmb (0~2016.04.24) unstable; urgency=low
 
