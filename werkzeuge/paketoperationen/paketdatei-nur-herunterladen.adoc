@@ -78,9 +78,10 @@ das Schauen, was passiert, ohne eine tatsächliche Veränderung des
 Paketbestands auf dem System vorzunehmen. 
 
 Ein weiterer Fall ist die Aktualisierung von Paketen ohne Internetzugang
-(siehe auch <<paketverwaltung-ohne-internet>>). Damit können Sie vorab
-bereits alle Pakete zusammenstellen, die Sie im Bedarfsfall benötigen
-und diese dann aus dem Paketcache oder aus einem lokalen Verzeichnis
-installieren, ohne auf eine bestehende Netzverbindung angewiesen zu sein.
+(siehe auch ``Paketverwaltung ohne Internet'' in
+<<paketverwaltung-ohne-internet>>). Damit stellen Sie vorab bereits alle
+Pakete zusammen, die Sie im Bedarfsfall benötigen und installieren diese
+dann aus dem Paketcache oder aus einem lokalen Verzeichnis, ohne auf
+eine bestehende Netzverbindung angewiesen zu sein.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/paketdatei-nur-herunterladen.adoc
