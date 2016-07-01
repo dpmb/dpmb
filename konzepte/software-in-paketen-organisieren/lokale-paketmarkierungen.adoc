@@ -317,13 +317,18 @@ ausführlicher.
 
 ==== Setzen und Entfernen einer Markierung mit aptitude ====
 
-Alternativ dazu kann man auch `aptitude` verwenden. Dort heissen nicht nur
-die Unterkommandos teilweise etwas anders, `aptitude` in der
-Standardeinstellung will neu mangels Abhängigkeiten nicht mehr
-benötigte Pakete auch direkt entfernen. Im u.g. Beispiel gibt es
-z.B. Pakete, die eine Abhängigkeit auf das Paket 'wireshark' haben,
-aber keine, die eine Abhängigkeit auf 'zshdb' haben. Entsprechend will
-`aptitude` es auch direkt entfernen.
+// Stichworte für den Index
+(((aptitude, markauto)))
+(((aptitude, unmarkauto)))
+(((Debianpaket, zshdb)))
+(((Debianpaket, wireshark)))
+Alternativ zu `apt-mark` bietet sich auch `aptitude` an. Dort heissen
+die Unterkommandos etwas anders, ebenso agiert `aptitude` vielleicht
+ungewohnt. In der Standardeinstellung will es Pakete entfernen, die
+mangels geänderter Abhängigkeiten nicht mehr benötigt werden. Im u.g.
+Beispiel gibt es z.B. Pakete, die eine Abhängigkeit auf das Paket
+'wireshark' haben, aber keine, die eine Abhängigkeit auf 'zshdb' haben.
+Entsprechend will `aptitude` es auch direkt entfernen.
 
 .Setzen von Paketmarkierungen mit `aptitude`
 ----
