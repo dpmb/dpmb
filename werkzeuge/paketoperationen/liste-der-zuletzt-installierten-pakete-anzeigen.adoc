@@ -33,6 +33,11 @@ $ grep " install " /var/log/dpkg.log
 $
 ----
 
+// Stichworte für den Index
+(((Debianpaket, gzip)))
+(((Debianpaket, zutils)))
+(((zcat, -f)))
+
 Reicht Ihnen dieses Ergebnis noch nicht aus, suchen Sie zusätzlich noch
 in allen wegrotierten Logdateien. Zur Anwendung kommt hier das Kommando
 `zcat` aus dem Paket 'gzip', welches ein 'essentielles' Paket darstellt.
@@ -44,10 +49,6 @@ Untenstehende Ausgabe wurde zusätzlich mittels `sort` aufsteigend nach
 Datum sortiert, d.h. die untersten Einträge enthalten die jüngsten
 Änderungen im Paketbestand. Mit dem UNIX-Kommando `tail` beschränken Sie
 die Ausgabe des Rechercheergebnisses auf lediglich zehn Einträge.
-
-// Stichworte für den Index
-(((Debianpaket, zutils)))
-(((zcat, -f)))
 
 .Recherche in den Logdateien von `dpkg` mittels `zcat`
 ----
@@ -71,13 +72,13 @@ ausgibt.footnote:[Ist die alternative `zcat`-Implementation aus dem
 Paket 'zutils' installiert, ist die Option `-f` nicht mehr
 erforderlich.]
 
+// Stichworte für den Index
+(((zgrep, -h)))
+
 Alternativ können Sie auch `zgrep` verwenden, das spart ein klein wenig
 Tipparbeit. Damit die Sortierung gelingt, muss dort allerdings die
 Ausgabe von vorangestellten Dateinamen mit der Option `-h` unterdrückt
 werden:
-
-// Stichworte für den Index
-(((zgrep, -h)))
 
 .Recherche in den Logdateien von `dpkg` mittels `zgrep`
 ----
