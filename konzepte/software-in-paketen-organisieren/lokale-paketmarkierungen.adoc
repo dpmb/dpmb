@@ -132,7 +132,7 @@ eigene Markierungen setzen. Nach diesen suchen Sie im Paketbestand mit
 dem Muster `?user-tag(Muster)`. Muster bezeichnet hier einen Regulären
 Ausdruck, mit dem Sie die Markierung spezifizieren.
 
-.Aptitude-spezifische Zusatzinformationen zu Paketen (Ausschnitt)
+.`aptitude`-spezifische Zusatzinformationen zu Paketen (Ausschnitt)
 ----
 ...
 
@@ -146,8 +146,10 @@ ForbidVer: 18.8-1
 User-Tags: broken-by-807773
 
 ...
-
 ----
+
+Die benutzerspezifischen Markierungen werden auch in der TUI von
+`aptitude` angezeigt, jedoch können Sie diese dort nicht ändern.
 
 ==== Lesen und Anzeigen einer Markierung mit `aptitude` ====
 
