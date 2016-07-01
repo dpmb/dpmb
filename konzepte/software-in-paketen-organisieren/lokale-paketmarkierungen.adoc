@@ -199,12 +199,15 @@ _hold_ und `A` für _automatic_ (siehe <<fig.aptitude-hold>>).
 image::konzepte/software-in-paketen-organisieren/aptitude-hold.png[id="fig.aptitude-hold", width="50%"]
 
 // Stichworte für den Index
+(((aptitude, search ?automatic)))
 (((aptitude, search ~M)))
 (((Paketmarkierungen, automatic)))
 `aptitude` kann ebenfalls nach allen Paketen fahnden, die automatisch
-installiert wurden und dazu das Flag _automatic_ tragen. Es kennt dazu
-das spezielle Muster `~M` zum Unterkommando `search`. Ausführlicher
-besprechen wir das in <<automatisch-installierte-pakete-anzeigen>>.
+installiert wurden und somit das Flag _automatic_ tragen. Es kennt dazu
+das spezielle Muster `?automatic` (Kurzform `~M`) zum Unterkommando
+`search`. Ausführlicher besprechen wir das in ``Automatisch installierte
+Pakete mit `aptitude` anzeigen'' in
+<<automatisch-installierte-pakete-mit-aptitude>>.
 
 ==== Lesen und Anzeigen einer Markierung mit `apt-mark` ====
 
@@ -224,7 +227,8 @@ installierten Pakete bzw. die Pakete, deren Zustand beibehalten wird.
 Nachfolgend sehen Sie beispielhaft nur das Ergebnis des Aufrufs für die
 manuell installierten Pakete. Auf automatisch installierte Pakete gehen
 wir genauer in <<automatisch-installierte-pakete-anzeigen>> ein. Dem
-Umgang mit dem _hold_-Flag in der Praxis ist
+Umgang mit dem _hold_-Flag in der Praxis ist der Abschnitt ``Ausgewählte
+Pakete nicht aktualisieren'' in
 <<ausgewaehlte-pakete-nicht-aktualisieren>> gewidmet.
 
 .Auflistung aller manuell installierten Pakete mittels `apt-mark`
@@ -292,14 +296,14 @@ Für das Halten eines Pakets existieren die Unterkommandos `hold` und
 (((Paketmarkierungen, ändern)))
 (((Paketmarkierungen, Änderungen in der Paketauswahl)))
 (((Paketmarkierungen, Seiteneffekte)))
-Durch das Setzen von Paketmarkierungen verändert sich die Art wie
-Paketabhängigkeiten ausgewerten werden und damit die Vorschläge durch
-die Paketverwaltung. `dpkg`, `apt`, `apt-get` und `aptitude`
-respektieren die von Ihnen gesetzten Markierungen. `apt`, `apt-get`
-und `aptitude` empfehlen Ihnen bei einer Änderung des Paketbestands
-beispielsweise andere Pakete als sonst, um die Paketabhängigkeiten
-nicht zu verletzen. Oder sie schlagen vor, bestimmte Pakete zu
-entfernen, da sie neu als nicht mehr gebraucht angesehen werden.
+Durch das Setzen von Paketmarkierungen verändert sich die Art und Weise,
+wie die Paketabhängigkeiten bewertet werden. `dpkg`, `apt`, `apt-get`
+und `aptitude` respektieren die von Ihnen gesetzten Markierungen. `apt`,
+`apt-get` und `aptitude` empfehlen Ihnen bei einer Änderung des
+Paketbestands beispielsweise andere Pakete als sonst, um die
+Paketabhängigkeiten nicht zu verletzen. Oder sie schlagen vor, bestimmte
+Pakete zu entfernen, da sie neu als nicht mehr gebraucht angesehen
+werden.
 
 // Stichworte für den Index
 (((Paketmarkierungen, explizit setzen)))
