@@ -6,42 +6,49 @@
 === Lokale Paketmarkierungen ===
 
 // Stichworte für den Index
+(((Paketmarkierungen, Auswirkungen)))
 (((Paketmarkierungen, Begriff)))
 Ein installiertes Debianpaket kann zusätzliche, lokale Markierungen
-haben, die z.B. dessen Aktualisierung beeinflussen oder, wenn kein
-anderes Paket mehr von ihm abhängt, auch seine automatische
-Deinstallation veranlassen oder verhindern.
+besitzen. Diese beeinflussen z.B. dessen Aktualisierung oder -- wenn
+kein anderes Paket mehr von ihm abhängt -- veranlassen oder verhindern
+auch seine automatische Deinstallation.
 
 ==== Paketmarkierungen, die von verschiedenen Programmen genutzt werden ====
 
-Diese Markierungen werden teilweise automatisch von APT, Aptitude und
-Co. gesetzt, können aber auch manuell gesetzt oder entfernt werden.
+Diese Markierungen werden teilweise bereits automatisch von APT und
+`aptitude` gesetzt, wenn es Pakete installiert, entfernt oder
+aktualisiert. Als Systembetreuer können Sie jederzeit eingreifen und die
+Markierungen eigenhändig setzen und entfernen.
 
 // Stichworte für den Index
 (((Paketmarkierungen, Annahmen)))
 (((Paketmarkierungen, automatic)))
 (((Paketmarkierungen, manual)))
 (((Paketmarkierungen, hold)))
+Die folgenden Paketmarkierungen sind in Benutzung:
 
-automatisch installiert (_automatic_):: 
+automatisch installiert (_automatic_)::
 das Paket wurde automatisch installiert, i.d.R. als Abhängigkeit
-eines anderen Pakets (siehe <<paketabhaengigkeiten-anzeigen>>). Diese
-Markierung veranlasst, dass dieses Paket wieder entfernt wird, wenn keine
-weiteren, installierten Pakete von diesem abhängen.
+eines anderen Pakets (siehe ``Paketabhängigkeiten anzeigen'' in
+<<paketabhaengigkeiten-anzeigen>>). Diese Markierung veranlasst, dass
+dieses Paket wieder entfernt wird, wenn keine weiteren, installierten
+Pakete mehr von diesem abhängen.
 
-manuell installiert (_manual_):: 
-das Paket wurde manuell, d.h. explizit installiert. Diese Markierung verhindert, dass
-dieses Paket automatisch mit entfernt wird, wenn kein weiteres Paket von
-ihm abhängt.
+manuell installiert (_manual_)::
+das Paket wurde manuell, d.h. explizit installiert. Diese Markierung
+verhindert, dass dieses Paket automatisch mit entfernt wird, wenn kein
+weiteres Paket mehr von ihm abhängt (siehe ``Umgang mit Waisen'' in
+<<umgang-mit-waisen>>).
 
-halten (_hold_):: 
+halten (_hold_)::
 das Paket wird in der vorliegenden, installierten Version auf dem System
 gehalten und nicht aktualisiert (_upgrade_) oder deinstalliert
-(siehe <<pakete-aktualisieren>> und <<pakete-deinstallieren>>).
+(siehe ``Pakete aktualisieren'' in <<pakete-aktualisieren>> und ``Pakete
+deinstallieren'' in <<pakete-deinstallieren>>).
 
 Die Markierung 'manuell installiert' entspricht defacto dem
-Nicht-Vorhandensein einer 'automatisch installiert' Markierung. Ein
-Paket hat jeweils immer genau eine der beiden Markierungen 'manuell
+Nicht-Vorhandensein der Markierung 'automatisch installiert'. Ein Paket
+hat jeweils immer genau eine der beiden Markierungen 'manuell
 installiert' oder 'automatisch installiert'.
 
 // Stichworte für den Index
