@@ -322,6 +322,8 @@ ausführlicher.
 (((aptitude, unmarkauto)))
 (((Debianpaket, zshdb)))
 (((Debianpaket, wireshark)))
+(((Paketmarkierungen, mit aptitude entfernen)))
+(((Paketmarkierungen, mit aptitude setzen)))
 Alternativ zu `apt-mark` bietet sich auch `aptitude` an. Dort heissen
 die Unterkommandos etwas anders, ebenso agiert `aptitude` vielleicht
 ungewohnt. In der Standardeinstellung will es Pakete entfernen, die
@@ -339,6 +341,15 @@ Die folgenden Pakete werden ENTFERNT:
 0 B an Archiven müssen heruntergeladen werden. Nach dem Entpacken werden 451 kB frei werden.
 Möchten Sie fortsetzen? [Y/n/?] n
 Abbruch.
+#
+----
+
+Möchten Sie eine Markierung wieder aufheben, kennt `aptitude` den
+Schalter `unmarkauto`. Das nachfolgende Beispiel demonstriert das
+Vorgehen.
+
+.Aufheben von Paketmarkierungen mit `aptitude`
+----
 # aptitude unmarkauto wireshark zshdb
 Es werden keine Pakete installiert, aktualisiert oder entfernt.
 0 Pakete aktualisiert, 0 zusätzlich installiert, 0 werden entfernt und 26 nicht aktualisiert.
@@ -346,12 +357,12 @@ Es werden keine Pakete installiert, aktualisiert oder entfernt.
 #
 ----
 
-Ebenfalls fällt auf, das `aptitude` im Gegensatz zu `apt-mark` nicht
-angibt, dass sich eine Markierung geändert oder nicht geändert hat,
-sondern, dass es keine Pakete entfernen oder aktualisieren will.
-
-Allerdings aktualisiert es (in der Standardeinstellung) nicht
-automatisch Pakete, bei denen die 'hold'-Markierung entfernt wurde:
+Dabei fällt auf, das `aptitude` im Gegensatz zu `apt-mark` nicht angibt,
+dass sich eine Markierung geändert oder nicht geändert hat. Stattdessen
+informiert es Sie darüber, dass es keine Pakete entfernt oder
+aktualisiert. Kurioserweise aktualisiert es (in der Standardeinstellung)
+nicht automatisch die Pakete, bei denen die 'hold'-Markierung entfernt
+wurde:
 
 .Setzen eines Paketes auf 'hold' mit `aptitude`
 ----
