@@ -357,6 +357,11 @@ Es werden keine Pakete installiert, aktualisiert oder entfernt.
 #
 ----
 
+// Stichworte für den Index
+(((aptitude, hold)))
+(((aptitude, search ~U)))
+(((aptitude, search ?upgradable)))
+(((aptitude, unhold)))
 Dabei fällt auf, das `aptitude` im Gegensatz zu `apt-mark` nicht angibt,
 dass sich eine Markierung geändert oder nicht geändert hat. Stattdessen
 informiert es Sie darüber, dass es keine Pakete entfernt oder
