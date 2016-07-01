@@ -153,8 +153,10 @@ User-Tags: broken-by-807773
 
 // Stichworte für den Index
 (((aptitude, show)))
-(((Paketmarkierungen, Darstellung in der Kommandozeile)))
+(((Debian BTS)))
+(((Debian Bug Tracking System)))
 (((Debianpaket, python-pkg-resources)))
+(((Paketmarkierungen, Darstellung im Terminal)))
 Sichtbar werden alle Markierungen zu einem Paket, wenn Sie die Details
 dazu erfragen – entweder direkt über die Kommandozeile oder in der
 Textoberfläche zu `aptitude`. Wir verdeutlichen Ihnen das hier anhand
@@ -167,7 +169,7 @@ nachfolgenden Ausgabe erfahren Sie einerseits, dass das Paket
 nicht lokal eingespielt werden darf. Darüberhinaus wurde eine manuelle
 Markierung vergeben (`broken-by-807773`), die kennzeichnet, dass das
 Paket defekt ist (`broken`). Die Ziffernfolge referenziert die Nummer
-des Bugs im Debian Bug Tracking System (BTRS) und ermöglicht Ihnen,
+des Bugs im Debian Bug Tracking System (BTS) und ermöglicht Ihnen,
 nachzulesen, warum der Eintrag da ist.
 
 .Darstellung der Markierungen zum Paket 'python-pkg-resources' mittels `aptitude`
