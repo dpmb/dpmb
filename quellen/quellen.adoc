@@ -521,6 +521,8 @@
 
 - [[[DNF-Dokumentation]]] Dokumentation zu Dandified YUM (DNF), http://dnf.readthedocs.org/en/latest/
 
+- [[[Docker]]] Docker, https://www.docker.com/
+
 - [[[dpkg-Kumar]]] Avishek Kumar: 15 Practical Examples of "dpkg commands" for Debian Based Distros, http://www.tecmint.com/dpkg-command-examples/
 
 - [[[dpmb-github]]] Debian Package Management Book, GitHub-Repository, https://github.com/dpmb
@@ -538,6 +540,8 @@
 - [[[FHS-Linux-Foundation]]] Filesystem Hierarchy Standard (FHS), Linux Foundation, https://wiki.linuxfoundation.org/en/FHS
 
 - [[[Finkproject]]] Fink-Projekt, http://www.finkproject.org/
+
+- [[[Flatpack]]] Flatpack, http://flatpak.org/
 
 - [[[Foster-Johnson-RPM-Guide]]] Eric Foster-Johnson, Stuart Ellis und Ben Cotton: RPM Guide, 2005/2011, Fedora Project Contributors, Edition 0, http://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/RPM_Guide/index.html
 
@@ -667,6 +671,8 @@
 - [[[nixcraft-blog]]] Nixcraft-Blog, http://www.cyberciti.biz/tips/linux-debian-package-management-cheat-sheet.html
 
 - [[[nixcraft-dpkg]]] `dpkg`-Spickzettel im Nixcraft-Blog, http://www.cyberciti.biz/howto/question/linux/dpkg-cheat-sheet.php
+
+- [[[OpenContainer]]] Open Container Format (OCF), https://www.opencontainers.org/
 
 - [[[OpenMoko]]] OpenMoko-Projekt, http://www.openmoko.org/
 

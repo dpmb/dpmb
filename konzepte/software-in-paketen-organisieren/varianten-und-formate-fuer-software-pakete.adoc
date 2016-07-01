@@ -20,21 +20,12 @@
 (((Slackware)))
 (((Paketformat, tar.gz)))
 (((Paketformat, tar.xz)))
-(((Containerformat, Docker)))
-(((Containerformat, Flatpack)))
-(((Containerformat, OpenContainer)))
-(((Containerformat, Snappy)))
 Auf Linux-Systemen herrscht in Bezug auf das Paketformat keine
 Einheitlichkeit. Jede Linux-Distribution legt selbst fest, welches
 Paketformat sie verwendet. Zwei dieser Formate haben eine sehr hohe
 Verbreitung erlangt – `rpm` und `deb`. Slackware Linux nutzt hingegen
 ein schlichtes `tar`-Archiv, welches entweder mit `gzip` oder ab Release
 13 mit `xz` komprimiert wird (siehe <<tab.paketformate>>).
-
-Seit 2015 und der Popularisierung von Docker bestehen Containerformate.
-Ziel ist, in diesen Containern bereits fertig installierte Anwendungen
-bereitzustellen. Dazu zählen bspw. die Formate Flatpack, OpenContainer
-und Snappy.
 
 .Übersicht zu Paketformaten und deren Verbreitung
 [frame="topbot",options="header",id="tab.paketformate"]
@@ -53,6 +44,27 @@ Mandrake/Mandriva/Mageia, SuSE/openSUSE, ...
 | Snappy     | Containerformat        | seit 2015 | Ubuntu
 | `tar.gz`, `tar.xz` | mit `gzip` bzw. `xz` komprimiertes `tar`-Archiv | seit
 1993 (2009) | Slackware
+|====
+
+// Stichworte für den Index
+(((Containerformat, Docker)))
+(((Containerformat, Flatpack)))
+(((Containerformat, OpenContainer)))
+(((Containerformat, Snappy)))
+Seit 2015 und der Popularisierung von Docker bestehen Containerformate.
+Ziel ist, in diesen Containern bereits fertig installierte Anwendungen
+bereitzustellen. Dazu zählen bspw. die Formate Flatpack, OpenContainer
+und Snappy (siehe <<Docker>>, <<Flatpack>>, <<OpenContainer>> und
+<<Ubuntu-Snappy-Projekt>>).
+
+.Übersicht zu Containerformaten und deren Verbreitung
+[frame="topbot",options="header",id="tab.containerformate"]
+|====
+| Abkürzung  | Format                 | in Verwendung | Distribution
+| Docker     | Containerformat        | seit 2014 | Debian, Ubuntu, RedHat/Fedora
+| Flatpack   | Containerformat        | seit 2015 | RedHat/Fedora, Ubuntu
+| OpenContainer | Containerformat     | seit 2015 | Virtualisierer
+| Snappy     | Containerformat        | seit 2015 | Ubuntu
 |====
 
 // Stichworte für den Index
