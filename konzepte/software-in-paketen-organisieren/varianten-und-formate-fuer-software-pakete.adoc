@@ -20,6 +20,10 @@
 (((Slackware)))
 (((Paketformat, tar.gz)))
 (((Paketformat, tar.xz)))
+(((Containerformat, Docker)))
+(((Containerformat, Flatpack)))
+(((Containerformat, OpenContainer)))
+(((Containerformat, Snappy)))
 Auf Linux-Systemen herrscht in Bezug auf das Paketformat keine
 Einheitlichkeit. Jede Linux-Distribution legt selbst fest, welches
 Paketformat sie verwendet. Zwei dieser Formate haben eine sehr hohe
@@ -27,18 +31,26 @@ Verbreitung erlangt – `rpm` und `deb`. Slackware Linux nutzt hingegen
 ein schlichtes `tar`-Archiv, welches entweder mit `gzip` oder ab Release
 13 mit `xz` komprimiert wird (siehe <<tab.paketformate>>).
 
+Seit 2015 und der Popularisierung von Docker bestehen Containerformate.
+Ziel ist, in diesen Containern bereits fertig installierte Anwendungen
+bereitzustellen. Dazu zählen bspw. die Formate Flatpack, OpenContainer
+und Snappy.
+
 .Übersicht zu Paketformaten und deren Verbreitung
 [frame="topbot",options="header",id="tab.paketformate"]
 |====
 | Abkürzung  | Format                 | in Verwendung | Distribution
 | `deb`      | Debian-Paketformat     | seit 1993 | Debian, Ubuntu, Grml,
 Knoppix, Linux Mint ...
+| Flatpack   | Containerformat        | seit 2015 | RedHat/Fedora, Ubuntu
 | `rpm`      | Redhat Package Manager | seit 1995 | RedHat/Fedora, CentOS, 
 Mandrake/Mandriva/Mageia, SuSE/openSUSE, ...
 | `apk`      | Android-Paketformat    | seit 2003 | Android
 | `ipkg`     | Itsy Package Management System, Vorbild `deb` | 2001 bis 2006 | Unslung, OpenWrt, OpenMoko, webOS, Gumstix, iPAQ, QNAP (als Plugin), Synology (als Zusatz)
+| OpenContainer | Containerformat     | seit 2015 | Virtualisierer
 | `opkg`     | OpenMoko Package Management System, `ipkg`-Fork | seit 2006 | OpenMoko, OpenWrt, OpenZaurus, OpenEmbedded
 | `pkg.tar.gz` | Pacman                 | seit 2002 | Arch Linux
+| Snappy     | Containerformat        | seit 2015 | Ubuntu
 | `tar.gz`, `tar.xz` | mit `gzip` bzw. `xz` komprimiertes `tar`-Archiv | seit
 1993 (2009) | Slackware
 |====
@@ -53,7 +65,7 @@ erfolgt bei laufendem System. Nach der Paketpflege ist üblicherweise
 lediglich der dazugehörige Dienst neu zu starten. Im Normalfall passiert
 dies heutzutage in den Maintainer-Skripten des Pakets und wird von der
 Paketverwaltung automatisch angestoßen. Mehr Informationen zu den
-Maintainer-Skripten finden Sie unter Aufbau und Format eines
-Debianpakets in <<aufbau-und-format>>.
+Maintainer-Skripten finden Sie unter ``Aufbau und Format eines
+Debianpakets'' in <<aufbau-und-format>>.
 
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/varianten-und-formate-fuer-software-pakete.adoc
