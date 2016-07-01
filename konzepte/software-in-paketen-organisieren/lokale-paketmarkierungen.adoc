@@ -154,17 +154,17 @@ User-Tags: broken-by-807773
 // Stichworte für den Index
 (((aptitude, show)))
 (((Paketmarkierungen, Darstellung in der Kommandozeile)))
-(((Debianpaket, wireshark)))
+(((Debianpaket, python-pkg-resources)))
 Sichtbar werden alle Markierungen zu einem Paket, wenn Sie die Details
 dazu erfragen – entweder direkt über die Kommandozeile oder in der
 Textoberfläche zu `aptitude`. Wir verdeutlichen Ihnen das hier anhand
-des installierten und gehaltenen Pakets 'wireshark'.
+des installierten und gehaltenen Pakets 'python-pkg-resources'.
 
-Auf der Kommandozeile verwenden Sie hierfür `aptitude` mit dem
-Unterkommando `show` gefolgt vom Paketnamen. In den Zeilen 2 und 3 der
-nachfolgenden Ausgabe erfahren Sie einerseits, dass 'wireshark'
-zurückgehalten wird und andererseits nicht automatisch installiert
-wurde.
+Auf der Kommandozeile rufen Sie hierfür `aptitude` mit dem Unterkommando
+`show` gefolgt vom Paketnamen auf. In den Zeilen 2 und 3 der
+nachfolgenden Ausgabe erfahren Sie einerseits, dass das Paket
+'python-pkg-resources' automatisch installiert wurde und die Version 18.8-1
+nicht lokal eingespielt werden darf.
 
 .Darstellung der Markierungen zum Paket 'python-pkg-resources' mittels `aptitude`
 ----
