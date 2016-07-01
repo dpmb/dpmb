@@ -54,6 +54,7 @@ installiert' oder 'automatisch installiert'.
 // Stichworte für den Index
 (((Paketmarkierungen, Auswertung)))
 (((Paketmarkierungen, /var/lib/apt/extended_states)))
+(((Paketmarkierungen, /var/lib/aptitude/pkgstates)))
 (((Paketmarkierungen, /var/lib/dpkg/status)))
 Die vorgenannten Paketmarkierungen werden von `dpkg` (nur _hold_), APT und
 `aptitude` ausgewertet. Die Unterscheidung 'automatisch/manuell
@@ -63,7 +64,7 @@ gespeichert, die 'hold'-Markierungen in
 Debian-Veröffentlichungen wurden die 'hold'-Markierungen von
 `aptitude` und `dpkg` getrennt gespeichert und `apt-get` wusste nichts
 von der 'hold'-Markierung. Auch wurde die 'automatisch
-installiert'-Markierung zuerst von Aptitude eingeführt und
+installiert'-Markierung zuerst von `aptitude` eingeführt und
 dementsprechend anfangs nur in `/var/lib/aptitude/pkgstates`
 gespeichert.]
 
@@ -101,31 +102,35 @@ Installed-Size: ...
 ==== Aptitude-spezifische Paketmarkierungen ====
 
 // Stichworte für den Index
+(((aptitude, add-user-tag)))
+(((aptitude, forget-new)))
+(((aptitude, search ?user-tag)))
 (((Paketmarkierungen, /var/lib/aptitude/pkgstates)))
 `aptitude` speichert weitere Informationen zu den Paketen eigenständig
 in der Datei `/var/lib/aptitude/pkgstates`. Dazu gehören:
 
 Verbotene Versionen ('forbid-version'/'ForbidVer')::
-Vom lokalen Adminstrator nicht erwünschte Version, die nicht
-installiert werden darf, auf die nicht aktualisiert werden darf
-bzw. die beim Aktualisieren übersprungen werden soll.
+Von Ihnen als lokaler Administrator nicht erwünschte Version, die nicht
+installiert wird, auf die nicht aktualisiert wird bzw. die beim
+Aktualisieren übersprungen wird.
 
 Neue Pakete ('New Packages'/'Unseen')::
-Aptitude pflegt eine Liste mit neu in den Paketlisten der abonnierten
-APT-Repositories aufgetauchten Paketen, die vom lokalen Adminstrator
-zurückgesetzt werden kann (`aptitude forget-new`).
+`aptitude` pflegt eine Liste mit neuen Paketen, die in den Paketlisten
+der abonnierten APT-Repositories aufgetaucht sind. Diese Markierung
+können Sie mit dem Aufruf `aptitude forget-new` zurücksetzen.
 
 Entfernungsgrund ('Remove-Reason')::
-Aptitude zeigt an, warum ein Paket entfernt wird: wegen nicht (mehr)
-erfüllter Abhängigkeiten, Konflikten mit anderen Paketen, oder weil es
-nicht gebraucht wird (kein Paket mehr davon abhängt). Wird solch eine
-Paketentfernung nur vorgemerkt, so speichert Aptitude bis zur
-Entfernung auch den Grund für diese.
+`aptitude` zeigt an, warum ein Paket entfernt wird: wegen nicht (mehr)
+erfüllter Abhängigkeiten, wegen Konflikten mit anderen Paketen, oder
+weil es nicht mehr gebraucht wird (sprich: kein Paket mehr davon
+abhängt). Wird solch eine Paketentfernung nur vorgemerkt, so speichert
+`aptitude` bis zur Entfernung auch den Grund für diese.
 
 Benutzerspezifische Markierungen ('User Tags')::
-Aptitude erlaubt Benutzern Paketen mit dem Unterkommando
-`add-user-tag` eigene Markierungen zu setzen, nach denen der Benutzer
-danach mit dem Muster `?user-tag(…)` auch wieder suchen kann.
+Sie als Benutzer dürfen für Pakete mit dem Unterkommando `add-user-tag`
+eigene Markierungen setzen. Nach diesen suchen Sie im Paketbestand mit
+dem Muster `?user-tag(Muster)`. Muster bezeichnet hier einen Regulären
+Ausdruck, mit dem Sie die Markierung spezifizieren.
 
 .Aptitude-spezifische Zusatzinformationen zu Paketen (Ausschnitt)
 ----
