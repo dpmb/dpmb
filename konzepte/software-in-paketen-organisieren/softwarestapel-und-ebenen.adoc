@@ -23,12 +23,19 @@ image::konzepte/software-in-paketen-organisieren/werkzeugebenen-2.png[id="fig.we
 
 // Stichworte für den Index
 (((dpkg, -c)))
+(((dpkg, --contents)))
 (((dpkg, -i)))
+(((dpkg, --install)))
 (((dpkg, -l)))
+(((dpkg, --load-avail)))
 (((dpkg, -L)))
+(((dpkg, --listfiles)))
 (((dpkg, -r)))
+(((dpkg, --remove)))
 (((dpkg, -s)))
+(((dpkg, --status)))
 (((dpkg, -S)))
+(((dpkg, --search)))
 (((dpkg-deb)))
 (((dpkg-query)))
 (((Softwarestapel, dpkg)))
@@ -119,6 +126,7 @@ steuern `dpkg` und die o.g. Bibliotheken bei.
 // Stichworte für den Index
 (((rpm)))
 (((RPM)))
+(((rpmdrake)))
 (((urpmi)))
 (((Yet another Setup Tool (YaST))))
 (((Yellowdog Updater Modified (YUM))))
@@ -127,6 +135,8 @@ Bei `rpm`-basierten Distributionen RedHat, Fedora und CentOS heißen die
 Werkzeuge Yellowdog Updater, Modified (YUM) <<YUM>>, bei SuSE und
 openSUSE Zypper <<Zypper>> und Yet another Setup Tool (YaST). Mageia
 Linux und Rosa Linux nutzen hingegen `urpmi` <<Mageia-urpmi>>.
+`rpmdrake` <<rpmdrake>> ist das Pendant zu Synaptic und wird aufgrund
+der einfachen Benutzbarkeit häufig Einsteigern empfohlen.
 
 ==== Werkzeuge, die verschiedene Paketformate unterstützen ====
 
