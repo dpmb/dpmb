@@ -12,6 +12,7 @@ auf. Dabei gibt es eine Reihe von Bibliotheken und weiteren Programmen,
 die zur Nutzung dieser Werkzeuge ebenfalls notwendig sind.
 
 // Stichworte für den Index
+(((Bibliothek, libapt-pkg)))
 (((Debianpaket, coreutils)))
 (((Debianpaket, gnupg)))
 (((Debianpaket, debian-archive-keyring)))
@@ -20,9 +21,12 @@ die zur Nutzung dieser Werkzeuge ebenfalls notwendig sind.
 (((Paketvalidierung, debian-archive-keyring)))
 (((Paketvalidierung, gnupg)))
 APT hängt vor allem von der aus dem APT-Quellcode gebauten Bibliothek
-'libapt-pkg', von 'gnupg' und 'debian-archive-keyring' ab. Die beiden
-letztgenannten Pakete werden für die Validierung von digitalen
-Signaturen benötigt (siehe <<bezogenes-paket-verifizieren>>).
+'libapt-pkg', von 'gnupg' und 'debian-archive-keyring' ab. 'libapt-pkg'
+stellt eine Schnittstelle für den Zugriff auf die Debianpakete bereit
+(siehe ``APT und Bibliotheken'' in <<apt-und-bibliotheken>>). Die beiden
+anderen Pakete werden hingegen für die Validierung von digitalen
+Signaturen benötigt (siehe ``Bezogenes Paket verifizieren'' in
+<<bezogenes-paket-verifizieren>>).
 
 // Stichworte für den Index
 (((Paketmarkierung, essentiell)))
@@ -30,11 +34,13 @@ Signaturen benötigt (siehe <<bezogenes-paket-verifizieren>>).
 <<paket-prioritaet-und-essentielle-pakete>>), hat also eher wenig
 Abhängigkeiten. Die meisten davon sind selbst _essentielle_ Pakete und
 müssen daher nicht namentlich als Abhängigkeit in den Metadaten des
-Pakets aufgeführt werden. Sie tauchen daher nur unter bestimmten
+Pakets aufgeführt werden. Deshalb tauchen sie nur unter bestimmten
 Umständen explizit in den Abhängigkeitslisten auf, z.B. wenn bestimmte
 Einschränkungen bzgl. der Version bestehen.
 
 // Stichworte für den Index
+(((aptitude, Bedienoberfläche)))
+(((aptitude, ncurses)))
 (((Ncurses)))
 Bei `aptitude` und den meisten anderen Frontends ist dies anders, denn
 diese sind alle um eine ganze Spur komplexer. Bei `aptitude` kommt z.B.
@@ -95,11 +101,11 @@ $
 ----
 
 Das zweite Kommando `dot` wandelt diese Beschreibung über den Schalter
-`-T`'Ausgabeformat' in eine hübsche Grafik um. Aus Ausgabeformat
+`-T`'Ausgabeformat' in eine hübsche Grafik um. Als Ausgabeformat
 unterstützt `dot` derzeit bspw. PostScript, Structured Vector Graphics
 (SVG), GIF, PNG und FIG (für die Verwendung in `xfig`). Beachten Sie
-bitte, dass `dot` zwischen dem Schalter und dem von Ihnen gewählten
-Ausgabeformat kein Leerzeichen erlaubt.
+bitte, dass `dot` im Aufruf zwischen dem Schalter und dem von Ihnen
+gewählten Ausgabeformat kein Leerzeichen erlaubt.
 
 Für `dpkg` erhalten Sie die Abbildung im Bildformat _Portable Network
 Graphics_ (PNG) mit dem nachfolgend gezeigten Aufruf auf der

@@ -18,7 +18,9 @@ Paketverwaltung entwickeln.
 === Bibliothek `libapt-pkg` ===
 
 // Stichworte für den Index
+(((Bibliothek, libapt-pkg)))
 (((Debianpaket, libapt-pkg4.12)))
+(((libapt-pkg)))
 Diese Bibliothek aus dem Paket 'libapt-pkg4.12'
 <<Debian-Paket-libapt-pkg4.12>> enthält die Basiskomponenten zum Zugriff
 auf die einzelnen Softwarepakete. Das umfasst Funktionen zur Suche nach
@@ -40,7 +42,9 @@ FTP, HTTP/S, rsh und DebTorrent (APT über BitTorent)
 === Bibliothek `libapt-pkg-perl` ===
 
 // Stichworte für den Index
+(((Bibliothek, libapt-pkg-perl)))
 (((Debianpaket, libapt-pkg-perl)))
+(((libapt-pkg-perl)))
 Diese Bibliothek aus dem Paket 'libapt-pkg-perl'
 <<Debian-Paket-libapt-pkg-perl>> beinhaltet die Perl-Schnittstelle zum
 Zugriff auf die einzelnen Softwarepakete. Es hat die gleiche
@@ -49,7 +53,9 @@ Funktionalität wie das weiter oben beschriebene Paket 'libapt-pkg'.
 === Bibliothek `libapt-pkg-doc` ===
 
 // Stichworte für den Index
+(((Bibliothek, libapt-pkg-doc)))
 (((Debianpaket, libapt-pkg-doc)))
+(((libapt-pkg-doc)))
 Dieses Paket <<Debian-Paket-libapt-pkg-doc>> stellt die Dokumentation
 zur Verfügung, auf deren Grundlage Sie eigene Entwicklungen in APT
 anstoßen können. Die Dokumentation steht als Plaintext und als
@@ -58,7 +64,9 @@ HTML-Dokument bereit.
 === Bibliothek `libapt-inst` ===
 
 // Stichworte für den Index
+(((Bibliothek, libapt-inst)))
 (((Debianpaket, libapt-inst)))
+(((libapt-inst)))
 (((Paketinterna abfragen)))
 // Worin liegt der Unterschied und Nutzen im Vergleich zu libapt-pkg?
 
