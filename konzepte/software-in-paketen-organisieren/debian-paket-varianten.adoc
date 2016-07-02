@@ -123,6 +123,7 @@ wir darauf in <<webbasierte-programme-communtu>> ein.
 
 // Stichworte für den Index
 (((Debianpaket, tasksel)))
+(((Metapaket, Tasks)))
 (((Paketgruppe)))
 (((Paketvarianten, Tasks)))
 _Tasks_ – auf deutsch mit ``Aufgaben'' übersetzbar – sind Metapakete,
@@ -141,6 +142,7 @@ Programm `tasksel` gehen wir in <<tasksel>> ausführlicher ein.
 ==== Mikro-Binärpakete ====
 
 // Stichworte für den Index
+(((Mikro-Binärpaket, udeb)))
 (((Paketvarianten, Mikro-Binärpaket)))
 Ausschließlich die _Mikro-Binärpakete_ mit der Dateiendung `udeb` sind
 technisch keine gewöhnlichen Binärpakete. Sie sind aufs Kleinste
@@ -167,9 +169,12 @@ Format von Übergangs- und Metapaketen in
 ==== Source-Pakete (`dsc` und weitere Dateien) ====
 
 // Stichworte für den Index
+(((Debian Source Control)))
 (((Paketvarianten, Sourcepaket)))
-Diese Pakete beinhalten den Quellcode von Programmen. Die Bestandteile
-sind:
+(((Sourcepaket, dsc)))
+Diese Pakete beinhalten den Quellcode von Programmen und tragen das
+Suffix `dsc` als Abkürzung für _Debian Source Control_. Die Bestandteile
+eines solchen Paketes sind:
 
 - der Originalquellcode als ein oder mehrere komprimierte `tar`-Archive.
   Je nach verwendetem Komprimierungsverfahren lauten die Dateiendungen
