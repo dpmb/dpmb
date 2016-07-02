@@ -22,6 +22,10 @@ bereitgestellt wird.
 //    *** Konfigurationsdateien
 
 // Stichworte für den Index
+(((Bibliothek, libapt-inst)))
+(((Bibliothek, libapt-pkg)))
+(((Bibliothek, libapt-pkg-doc)))
+(((Bibliothek, libapt-pkg-perl)))
 (((Debianpaket, apt)))
 (((Debianpaket, apt-doc)))
 (((Debianpaket, apt-transport-https)))
@@ -30,6 +34,7 @@ bereitgestellt wird.
 (((Debianpaket, libapt-pkg)))
 (((Debianpaket, libapt-pkg-dev)))
 (((Debianpaket, libapt-pkg-doc)))
+(((Debianpaket, libapt-pkg-perl)))
 (((Paketbeschreibung)))
 (((Paketkategorie)))
 (((Paketname)))
@@ -51,9 +56,11 @@ Distribution zu Distribution etwas unterscheiden.
 <<tab.paketierung-apt>> zeigt die Zerlegung in einzelne Pakete am
 Beispiel von APT. Dabei beinhaltet die linke Spalte den generischen
 Paketnamen ohne Nennung von Versionsnummer und Architektur, die mittlere
-Spalte die Kategorie, der das Paket zugeordnet ist (siehe
+Spalte die Kategorie, der das Paket zugeordnet ist (siehe ``Sortierung
+der Pakete nach Verwendungszweck'' in
 <<sortierung-der-pakete-nach-verwendungszweck>>) und die rechte Spalte
-eine kurze Paketbeschreibung.
+eine kurze Paketbeschreibung. Auf die genannten Bibliotheken gehen wir
+genauer in ``APT und Bibliotheken'' in <<apt-und-bibliotheken>> ein.
 
 .Paketierung der Komponenten am Beispiel von APT
 [frame="topbot",options="header",id="tab.paketierung-apt"]
@@ -63,10 +70,11 @@ eine kurze Paketbeschreibung.
 | 'apt-doc' | Dokumentation ('doc') | Dokumentation zum Paket 'apt'
 | 'apt-transport-https' | Administration ('admin') | APT-Plugin für HTTPS-Support
 | 'apt-utils' | Administration ('admin') | Hilfsprogramme für APT
-| 'libapt-inst' | Bibliotheken ('libs') | Laufzeitbibliothek zum Paketformat (siehe <<apt-und-bibliotheken>>)
-| 'libapt-pkg-dev' | Bibliotheken zur Entwicklung ('libdevel') | Entwicklerdateien zu 'libapt-pkg' (siehe <<apt-und-bibliotheken>>)
-| 'libapt-pkg-doc' | Dokumentation ('doc') | Dokumentation zur Laufzeitbibliothek 'libapt-pkg' (siehe <<apt-und-bibliotheken>>)
-| 'libapt-pkg' | Bibliotheken ('libs') | Laufzeitbibliothek zur Paketverwaltung (siehe <<apt-und-bibliotheken>>)
+| 'libapt-inst' | Bibliotheken ('libs') | Laufzeitbibliothek zum Paketformat
+| 'libapt-pkg' | Bibliotheken ('libs') | Laufzeitbibliothek zur Paketverwaltung
+| 'libapt-pkg-dev' | Bibliotheken zur Entwicklung ('libdevel') | Entwicklerdateien zu 'libapt-pkg'
+| 'libapt-pkg-doc' | Dokumentation ('doc') | Dokumentation zur Laufzeitbibliothek 'libapt-pkg'
+| 'libapt-pkg-perl' | Bibliotheken ('libs') | Laufzeitbibliothek zur Paketverwaltung, Perl-Schnittstelle
 |====
 
 [TIP]
