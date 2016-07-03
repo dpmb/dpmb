@@ -62,6 +62,10 @@ image::konzepte/software-in-paketen-organisieren/popcon-nginx.png[id="fig.popcon
 
 ==== Verschiedene Metriken ====
 
+// Stichworte für den Index
+(((Debian Popularity Contest)))
+(((Popcon)))
+(((/var/lib/dpkg/info)))
 Neben der Architektur der Installation und welche Pakete installiert
 sind, erfasst Popcon anhand der Zeitstempel im Dateisystem ausserdem
 noch folgende Daten für jedes installierte Paket:
@@ -71,9 +75,9 @@ noch folgende Daten für jedes installierte Paket:
   Zeitstempels der Dateien des Pakets unter `/var/lib/dpkg/info`
   eruiert.
 
-* Wann wurde zuletzt auf ausführbare Dateien des Pakets zugegeriffen?
-  Dies wird für die Graphen 'vote' (dafür stimmen) 'old' (alt)
-  verwendet und anhand der Zugriffszeitstempel ('atime') von
+* Wann wurde zuletzt auf ausführbare Dateien des Pakets zugegriffen?
+  Dies wird für die Graphen 'vote' (dafür stimmen) und 'old' (alt)
+  verwendet und anhand der Zeitstempel des Zugriffs ('atime') von
   Programmdateien des Paketes eruiert.
 
 Werden weder Änderungszeitstempel noch Zugriffszeitstempel beim
