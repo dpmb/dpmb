@@ -23,13 +23,17 @@ Begriffe _APT-Repository_, _Repository_ oder ganz kurz nur _Repo_
 benutzt. Der Begriff _Paketmirror_ – oder auch komplett eingedeutscht
 als _Paketspiegel_ – wird ebenfalls gerne verwendet. Letzteres
 impliziert aber zusätzlich, dass es sich dabei um eine vollständige Kopie
-einer Paketquelle handelt, also z.B. um einen offiziellen Spiegelserver
+einer offiziellen Paketquelle handelt, also z.B. um einen Spiegelserver
 von Debian oder Ubuntu.
 
 // Stichworte für den Index
-(((Paketquelle,extern)))
-(((Paketquelle,lokal)))
-(((Paketquelle,Netzwerk)))
+(((Paketquelle, CD)))
+(((Paketquelle, DVD)))
+(((Paketquelle, extern)))
+(((Paketquelle, lokal)))
+(((Paketquelle, Netzwerk)))
+(((Paketquelle, Speicherkarte)))
+(((Paketquelle, USB-Stick)))
 Eine Paketquelle kann dabei aber auch ein externes Speichermedium wie
 eine CD, DVD, Blu-ray, eine Speicherkarte oder ein USB-Stick sein, aber
 auch ein lokales oder über das Netzwerk angebundenes Verzeichnis auf
