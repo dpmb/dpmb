@@ -26,6 +26,8 @@ Paketen aus bestimmten Distributionsbereichen legen Sie somit den
 (((Distributionsbereiche, contrib)))
 (((Distributionsbereiche, non-free)))
 (((DFSG)))
+(((Software, frei)))
+(((Software, unfrei)))
 In Debian sind die Softwarepakete in die folgenden drei Bereiche
 unterteilt:
 
@@ -49,6 +51,7 @@ entspricht, aber frei verteilbar ist.
 (((Debian Social Contract)))
 (((DFSG)))
 (((Distributionsbereiche, Einordnung anhand der Lizenzen)))
+(((Free Software Foundation (FSF))))
 Obwohl vielfach von außen anders wahrgenommen, zählt zur
 Debian-Distribution nur der Bereich _main_. Die anderen beiden Bereiche
 sind lediglich Ergänzungen, die zusätzlich bereitgestellt werden. Wir
@@ -78,9 +81,9 @@ warum ein Paket im Bereich _contrib_ einsortiert wurde, sind:
 * Die Software muss mit einem nicht-freien Compiler übersetzt werden.
 
 Im Bereich _non-free_ finden sich Pakete, die nicht den
-Debian-Richtlinien für Freie Software (DFSG) entsprechen, aber trotzdem immer
-noch frei verteilbar sind. Typische Gründe für die Nichterfüllung der
-DFSG im Bereich _non-free_ sind:
+Debian-Richtlinien für Freie Software (DFSG) entsprechen, aber trotzdem
+immer noch frei verteilbar sind. Typische Gründe für die Nichterfüllung
+der DFSG im Bereich _non-free_ sind:
 
 * Der Quellcode liegt nicht (komplett) vor.
 * Die Software oder einzelne Teile davon – z.B. Teile der Dokumentation – dürfen nicht modifiziert werden.
@@ -94,25 +97,28 @@ für Ihre gewünschten Zwecke einsetzen dürfen.
 
 // Stichworte für den Index
 (((Debianpaket, skype)))
+(((Software, unfrei)))
 Für Software aus dem Bereich _non-free_ gilt außerdem, dass keine
 Unterstützung seitens Debian für diese Pakete möglich ist. Das trifft
 insbesondere dann zu, wenn der Quellcode nicht veröffentlicht wurde, wie
 das bspw. bei der Firmware zu bestimmten WLAN-Chipsätzen der Fall ist.
 
 <<fig.aptitude-unfreie-pakete>> zeigt die Paketliste in Aptitude mit
-einem unfreien Paket aus dem Bereich Netzwerk – `skype`. Im
-abgebildeten Fall wurde es zudem nicht aus einem offiziellen
-Debian-Repository heruntergeladen, sondern manuell auf dem System
-eingepflegt.
+einem unfreien Paket aus dem Bereich Netzwerk – `skype`. Im abgebildeten
+Fall wurde es zudem nicht aus einem offiziellen Debian-Repository
+heruntergeladen, sondern aus einer anderen Quelle und danach manuell auf
+dem System eingepflegt.
 
 .Paketliste mit Skype als unfreies Paket in Aptitude
 image::konzepte/software-in-paketen-organisieren/aptitude-unfreie-pakete.png[id="fig.aptitude-unfreie-pakete", width="50%"]
 
 // Stichworte für den Index
 (((Debianpaket, vrms)))
+(((Software, unfrei)))
 Eine vollständige Übersicht zu allen nicht-freien Paketen, die auf ihrem
-System installiert sind, gibt Ihnen das Programm `vrms`. Darauf gehen
-wir unter ``Liste der installierten, nicht-freien Pakete anzeigen'' (siehe
+System installiert sind, gibt Ihnen das Programm `vrms` aus dem
+gleichnamigen Debianpaket <<Debian-Paket-vrms>>. Darauf gehen wir unter
+``Liste der installierten, nicht-freien Pakete anzeigen'' in
 <<unfreie-pakete-anzeigen>>) ausführlicher ein.
 
 ==== Einordnung der Distributionsbereiche bei anderen Distributionen ====
@@ -137,20 +143,24 @@ Distributionsbereiche haben. Auf diese gehen wir hier nicht weiter ein.
 ==== Handhabung von geschützten Namen und Logos ====
 
 // Stichworte für den Index
-(((Softwarelizenz,Abbildung)))
-(((Softwarelizenz,Dokumentation)))
-(((Softwarelizenz,Firmware)))
-(((Softwarelizenz,Grafik)))
+(((Softwarelizenz, Abbildung)))
+(((Softwarelizenz, Dokumentation)))
+(((Softwarelizenz, Firmware)))
+(((Softwarelizenz, Grafik)))
 Der Begriff ``Software'' wird bei Debian recht weit gefasst und
 beinhaltet neben Programmcode auch Firmware, Dokumentation oder
 künstlerische Elemente wie beispielsweise Grafiken und Logos. Letztere
 stehen in manchen Fällen unter anderen Lizenzen als der Rest der
 Software und dürfen aus markenrechtlichen Gründen nicht für abgeänderte
-Programme verwendet werden. Aus diesem Grund wurden einige Programme
-abgewandelt, bspw. der Webbrowser Iceweasel und das Mailprogramm
-Icedove, die im Original die Namen Firefox und Thunderbird tragen. Neben
-den beiden anderen Namen werden in Debian auch alternative Logos
-genutzt.
+Programme verwendet werden. 
+
+Aus diesem Grund wurden 2006 einige Programme abgewandelt, bspw. der
+Webbrowser Iceweasel und das Mailprogramm Icedove, die im Original die
+Namen Firefox und Thunderbird tragen. Neben den beiden anderen Namen
+werden in Debian auch alternative Logos genutzt. Nach einer
+markenrechtlichen Einigung im Frühjahr 2016 steht an, dass ab Debian 9
+'Stretch' Firefox und Thunderbird wieder zu Debian zurückkehren und
+Iceweasel und Icedove aufgegeben werden.
 
 ==== Softwareverteilung ====
 
