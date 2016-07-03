@@ -34,8 +34,8 @@ Paketenamen mit allen Zeichensätzen anzeigen zu können.
 _Feld 1_ bezeichnet den Namen des Pakets, welche durch die Paketdatei
 bereitgestellt wird. Die Paketdatei `iceweasel_3.5.16-12_i386.deb` ist
 ein Binärpaket (Dateiendung `.deb`) und beinhaltet den Webbrowser
-Iceweasel.
- 
+Iceweasel in der Version 3.5.16 für die Architektur i386.
+
 Darüberhinaus existieren bei der Benennung eine Reihe von
 Gepflogenheiten in Form von Präfixen und Suffixen. Diese stellen kein
 ``muss'' dar, vereinfachen aber die Handhabung insgesamt sowie die
@@ -63,7 +63,7 @@ Endet der Paketname mit dem Suffix `-dev` wie bspw. in 'libxslt1-dev',
 beinhaltet das Paket Kopfdateien (engl. _header files_), die nur
 notwendig sind, wenn Sie Programme unter Nutzung der dazugehörigen
 Bibliothek entwickeln. _dev_ ist die gebräuchliche englische Abkürzung
-für _development_. Im vorgenannten Beispiel befinden sich in dem Paket
+für _development_. Im Paket 'libxslt1-dev' befinden sich beispielsweise
 die Kopfdateien zur XSLT-1-Bibliothek.
 
 Das Suffix `-doc` weist auf Dokumentation hin, welches häufig noch von
