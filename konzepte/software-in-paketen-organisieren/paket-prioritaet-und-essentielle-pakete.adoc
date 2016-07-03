@@ -96,13 +96,14 @@ noch das X Window System oder das 'xterm' in diese Kategorie.
 ==== Prioritätsstufe ``standard'' (_standard_) ====
 
 // Stichworte für den Index
+(((Debianpaket, perl-base)))
 (((Debianpaket, reportbug)))
 (((Paketpriorität, standard)))
 Haben Sie alle Pakete dieser Prioritätsstufe installiert, verfügen Sie
 über ein nicht allzu großes, aber auch nicht zu unkomfortables System
-ohne graphische Oberfläche. Ein solches System wird im Debian Installer
-ausgewählt, wenn Sie als Administrator bei der Installation nicht
-explizit etwas anderes festlegen. Es enthält nur wenige größere
+ohne graphische Bedienoberfläche. Ein solches System wird im Debian
+Installer ausgewählt, wenn Sie als Administrator bei der Installation
+nicht explizit etwas anderes festlegen. Es enthält nur wenige größere
 Anwendungen und Daemons.
 
 Dazu gehören u.a. ein abgespeckter Exim als lokales
@@ -113,8 +114,8 @@ Perl-Module sind im Paket 'perl-base' welches ``essentiell'' ist.]),
 Python, Client-Anwendungen für SSH, FTP, Telnet, NFS und Whois, ein
 Text-Modus-Webbrowser (`w3m`) und der allgegenwärtige
 Textdateien-Betrachter `less`. Außerdem ist `reportbug` enthalten, ein
-Programm zum Melden von Fehlern in Debian (siehe dazu
-<<bugreports-anzeigen>>).
+Programm zum Melden von Fehlern in Debian (siehe dazu ``Bugreports
+anzeigen'' in <<bugreports-anzeigen>>).
 
 ==== Prioritätsstufe ``optional'' (_optional_) ====
 
