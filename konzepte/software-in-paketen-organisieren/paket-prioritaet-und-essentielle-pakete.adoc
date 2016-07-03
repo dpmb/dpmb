@@ -131,6 +131,7 @@ dass diese Pakete nicht von jedermann benötigt werden.
 
 // Stichworte für den Index
 (((Paketpriorität, extra)))
+(((Paketvarianten, Übergangspaket)))
 In dieser Prioritätsstufe sind einerseits Pakete, die im Konflikt mit
 Paketen aus den anderen Prioritätsstufen stehen. Dazu zählen z.B.
 alternative Mail-Transport-Agents wie Postfix, alternative Cron-Daemons
@@ -171,16 +172,15 @@ das alte Paket entfernt wird, um für das neue Paket Platz zu machen oder
 weil es nicht mehr gebraucht wird (d.h. irgendwann nicht mehr notwendig
 ist).
 
-In <<pakete-nach-prioritaeten-finden>> lesen Sie, wie Sie auflisten,
-welche Pakete genau auf Ihrer Version von Debian als essentiell
-markiert sind.
+Unter ``Pakete nach Prioritäten finden'' in
+<<pakete-nach-prioritaeten-finden>> lesen Sie, wie Sie auflisten, welche
+Pakete genau auf Ihrer Version von Debian als essentiell markiert sind.
 
-Diese Markierung hat weiter den Effekt, dass sich beispielsweise auch
-`dpkg` weigert, solche Pakete zu entfernen (siehe
-<<pakete-deinstallieren>>). Mit dem zusätzlichen Parameter
-`--force-remove-essential` übergehen Sie diese Voreinstellung und können
-die Aktion trotzdem durchführen (siehe dazu ``Paketoperationen
-erzwingen'' in <<paketoperationen-erzwingen>>).
+Weiterhin hat die Markierung ``essentiell'' den Effekt, dass sich
+beispielsweise auch `dpkg` weigert, solche Pakete zu entfernen. Mit dem
+zusätzlichen Parameter `--force-remove-essential` übergehen Sie diese
+Voreinstellung und können die Aktion trotzdem durchführen (siehe dazu
+``Paketoperationen erzwingen'' in <<paketoperationen-erzwingen>>).
 
 // Stichworte für den Index
 (((Debianpaket, init)))
