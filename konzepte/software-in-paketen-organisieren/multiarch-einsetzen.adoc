@@ -8,18 +8,16 @@
 
 // Stichworte für den Index
 (((Architektur, Multiarch)))
-(((dpkg, --add-architecture)))
-(((dpkg, --print-architecture)))
-(((dpkg, --print-foreign-architectures)))
-(((dpkg, --remove-architecture)))
 (((dpkg, /var/lib/dpkg/arch)))
 (((dpkg, /var/lib/dpkg/arch-new)))
 `dpkg` führt eine Liste mit allen Architekturen, für die es Pakete
 installiert bzw. installieren darf. Diese Liste befindet sich in der
 Datei `/var/lib/dpkg/arch` und existiert allerdings nur, sofern Sie
-zuvor auch Fremdarchitekturen ergänzt haben.
+zuvor auch Fremdarchitekturen ergänzt haben. Das nachfolgende Beispiel
+stammt von einem System mit `amd64` als Basisarchitektur und `i386` als
+Fremdarchitektur.
 
-.Inhalt der Liste der Architekturen eines Systems mit `amd64` als Basisarchitektur und `i386` als Fremdarchitektur
+.Inhalt der Liste der Architekturen
 ----
 $ cat /var/lib/dpkg/arch
 amd64
@@ -27,12 +25,18 @@ i386
 $
 ----
 
+// Stichworte für den Index
+(((dpkg, --print-architecture)))
+(((dpkg, --print-foreign-architectures)))
 Die erste Architektur in dieser Datei ist die Basisarchitektur. Diese
 geben Sie mit der `dpkg`-Option `--print-architecture` aus. Früher bzw.
 bei älteren `dpkg`-Versionen heißt die Option
 `--print-installation-architecture`. Die Fremdarchitekturen zeigen Sie
 mit `dpkg --print-foreign-architectures` an.
 
+// Stichworte für den Index
+(((dpkg, --add-architecture)))
+(((dpkg, --remove-architecture)))
 Über die beiden `dpkg`-Optionen `--add-architecture` und
 `--remove-architecture` erweitern bzw. reduzieren Sie die Liste
 entsprechend. Beim Aufruf geben Sie dazu jeweils noch die gewünschte
@@ -106,7 +110,6 @@ i386
 ----
 // Stichworte für den Index
 (((apt-get, update)))
-
 Nun aktualisieren Sie die lokale Liste der verfügbaren Pakete
 mittels `apt-get update`, wobei APT nun auch die Informationen
 zu den Paketen der neu hinzugefügten Architektur herunterlädt.
@@ -128,7 +131,8 @@ Reading package lists... Done
 (((apt-cache, policy)))
 Als nächsten Schritt prüfen Sie mit dem Aufruf `apt-cache policy`, für
 welche akzeptierte Architektur das von Ihnen gewünschte Paket
-bereitsteht. Die Details zum Aufruf von `apt-cache` finden Sie in
+bereitsteht. Die Details zum Aufruf von `apt-cache` finden Sie unter
+``Aus welchem Repo kommen die Pakete'' in
 <<aus-welchem-repo-kommen-die-pakete>>.
 
 .Prüfung auf Verfügbarkeit für eine Architektur mittels `apt-cache`
