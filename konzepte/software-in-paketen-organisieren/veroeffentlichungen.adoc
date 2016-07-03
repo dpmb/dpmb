@@ -8,6 +8,8 @@
 === Veröffentlichungen ===
 
 // Stichworte für den Index
+(((Veröffentlichung, Benennung)))
+(((Veröffentlichung, Referenzierung)))
 (((Veröffentlichung, Releases)))
 (((Veröffentlichung, Varianten)))
 Debian GNU/Linux wird in verschiedenen Veröffentlichungen angeboten, die
@@ -25,6 +27,7 @@ _Jessie_
 ==== Bedeutung der verschiedenen Entwicklungsstände ====
 
 // Stichworte für den Index
+(((Software, Patches)))
 (((Veröffentlichung, Entwicklungsstand)))
 (((Veröffentlichung, experimental)))
 (((Veröffentlichung, Langzeitunterstützung)))
@@ -57,7 +60,7 @@ neue stabile Veröffentlichung wird ca. alle zwei Jahre auf Basis von
 _testing_ erstellt. Pakete werden nur aktualisiert, um
 sicherheitskritische oder sonstige schwerwiegende Fehler zu
 beheben. Dabei werden (mit sehr wenigen Ausnahmen) ausschließlich die
-entsprechenden Fehler durch Patches behoben anstatt neuere Versionen
+entsprechenden Fehler durch Patches behoben, anstatt neuere Versionen
 der Programme auszuliefern.
 
 oldstable:: 
@@ -79,7 +82,7 @@ Wenn vorhanden, ist dies die jeweils vorvorherige stabile
 Veröffentlichung. Zum ersten Mal trat dieser Entwicklungsstand auf, als im
 Frühjahr 2015 Debian 8 _Jessie_ zur stabilen Veröffentlichung erklärt
 wurde. Gleichzeitig wurde Debian 6 _Squeeze_ zur neuen Suite
-_oldoldstable_ und wird per _Long Term Support_ weiterhin noch
+_oldoldstable_ und wird per Long Term Support (LTS) weiterhin noch
 eingeschränkt unterstützt.
 
 experimental:: 
