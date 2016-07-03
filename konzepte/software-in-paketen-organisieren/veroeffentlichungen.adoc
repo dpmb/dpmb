@@ -166,7 +166,7 @@ Drucklegung festgelegt, voraussichtlich 2019; benannt nach dem Welpen aus 'Toy S
 Mehr Details zu den einzelnen Veröffentlichungen finden sich in der
 Debian-Historie <<Debian-History>>. Die Figuren aus Toy Story und
 insbesondere deren Charakterzüge sind ausführlich im Disney Wiki
-<<ToyStory>> dokumentiert.
+<<ToyStory>> dokumentiert (siehe <<fig.toystory>>).
 
 .Beschreibung der Filmserie 'Toy Story' im Disney Wiki
 image::konzepte/software-in-paketen-organisieren/toystory.png[id="fig.toystory", width="50%"]
@@ -186,7 +186,7 @@ Aktualisierung.
 (((Veröffentlichung, Wheezy)))
 Seit Debian 4.0 _Etch_ bekamen stabile Veröffentlichungen immer eine
 neue Nummer an erster Stelle. Seit Debian 7 _Wheezy_ ist die Null an
-zweiter Stelle verschwunden und stattdessen wird die Nummer der
+zweiter Stelle verschwunden. Stattdessen wird die Nummer der
 Aktualisierung genutzt, so z.B. `7.3` für die dritte Aktualisierung von
 Debian 7 _Wheezy_.
 
