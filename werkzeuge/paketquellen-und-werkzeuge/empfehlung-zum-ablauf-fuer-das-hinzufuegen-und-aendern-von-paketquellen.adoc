@@ -18,23 +18,23 @@ Wie bereits in <<paketquellen>> ausgeführt, sind die Datei
 Dreh- und Angelpunkte für alle verwendeten Paketquellen. Erfolgen
 Änderungen darin, muss die Paketverwaltung anschließend noch über diese
 Modifikation informiert werden, damit sie den Paketcache anhand der
-aktualisierten Liste von Repositories auf den neuesten Stand bringt.
+aktualisierten Liste von Repositories auf den neuesten Stand bringt. Die
+Paketverwaltung erkennt die Änderungen nicht von sich aus und wartet auf
+ihren ``Anstoß''. Danach synchronisiert sie die lokal vorliegenden
+Informationen über verfügbare Pakete und deren Abhängigkeiten (siehe
+<<paketcache>>) mit den konfigurierten Paketquellen (<<paketquellen>>).
 
-Dazu synchronisiert sie die lokal vorliegende Informationen über
-verfügbare Pakete und deren Abhängigkeiten (siehe <<paketcache>>) mit
-den konfigurierten Paketquellen (<<paketquellen>>).
-
-Wir empfehlen Ihnen hierfür zu folgendem Ablauf:
+Wir empfehlen Ihnen zur Aktualisierung den folgenden Ablauf:
 
 . Erstellen Sie zuerst eine Sicherheitskopie der entsprechenden Datei,
   z.B. `cp -pv /etc/apt/sources.list /etc/apt/sourceels.list.backup`.
   Gegebenenfalls macht das auch Ihr Texteditor automatisch.
 
-. Tragen Sie die neuen oder veränderten Paketquellen in 
-  `/etc/apt/sources.list` nach und speichern diese Datei ab. Wenn Sie
-  nur neue Paketquellen hinzufügen wollen, können Sie alternativ auch
-  eine neue Datei im Verzeichnis `/etc/apt/sources.list.d/` anlegen.
-  Der Name dieser Datei muss dann auf `.list` enden.
+. Tragen Sie die neuen oder veränderten Paketquellen in die Datei 
+  `/etc/apt/sources.list` nach und speichern diese ab. Wenn Sie nur neue
+  Paketquellen hinzufügen wollen, können Sie alternativ auch eine neue
+  Datei im Verzeichnis `/etc/apt/sources.list.d/` anlegen. Der Name dieser
+  Datei muss dann auf `.list` enden.
 
 . Sofern dies _keine_ offiziellen Debian-Repositories sind, verifizieren
   Sie die Paketquelle, die Sie hinzugefügt oder geändert haben. Unter
