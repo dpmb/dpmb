@@ -23,6 +23,9 @@ TODO für Axel
   <pere> this way the original and translation will stay in sync.
 * <ari> aptitude list upgradeable packages from security:
   <ari> aptitude search "~Osecurity.debian.org ~U"
+* Boxer nochmal anschauen: Meta-Packages, wo man Paket abziehen kann:
+  https://wiki.debian.org/Boxer
+* Übersetzung mit po4a: Es kann auch AsciiDoc direkt parsen: perldoc Locale::Po4a::AsciiDoc
 * APT 1.1 kann SRV Records!
 
   apt (1.1~exp10) experimental; urgency=medium

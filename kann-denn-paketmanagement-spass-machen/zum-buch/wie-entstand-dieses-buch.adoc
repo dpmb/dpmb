@@ -128,7 +128,7 @@ Berlin, Besançon, Bottighofen (Bodensee, Schweiz), Bruchsal, Chemnitz, Biel,
 Delémont, Essen, Frankfurt/Main, Freiburg im Breisgau, Friedrichshafen,
 Genf, Germersheim, Goizueta (Baskenland, Spanien), Hamburg, Heidelberg, Koblenz,
 Lauchringen (Baden, Wutachtal), Lausanne, Meersburg, Montpellier,
-München, Port del Cantó (Katalanische Pyrenäen, Spanien), Radebeul bei
+München, Orø (Dänemark), Port del Cantó (Katalanische Pyrenäen, Spanien), Radebeul bei
 Dresden, Rostock-Warnemünde, Saint Cergue (Jura, Schweiz),
 Saint-Jouin-Bruneval (Normandie), Tübingen, Zernez (Engadin) und Zürich (siehe
 <<fig.buchkarte>>). Wir nahmen uns dabei an der Philosophie von Debian
