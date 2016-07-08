@@ -26,6 +26,7 @@ TODO für Axel
 * Boxer nochmal anschauen: Meta-Packages, wo man Paket abziehen kann:
   https://wiki.debian.org/Boxer
 * Übersetzung mit po4a: Es kann auch AsciiDoc direkt parsen: perldoc Locale::Po4a::AsciiDoc
+  -> man 7 po4a
 * APT 1.1 kann SRV Records!
 
   apt (1.1~exp10) experimental; urgency=medium
