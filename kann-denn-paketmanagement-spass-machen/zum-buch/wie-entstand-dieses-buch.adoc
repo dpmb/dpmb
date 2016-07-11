@@ -130,7 +130,7 @@ Genf, Germersheim, Goizueta (Baskenland, Spanien), Hamburg, Heidelberg, Koblenz,
 Lauchringen (Baden, Wutachtal), Lausanne, Meersburg, Montpellier,
 München, Orø (Dänemark), Port del Cantó (Katalanische Pyrenäen, Spanien), Radebeul bei
 Dresden, Rostock-Warnemünde, Saint Cergue (Jura, Schweiz),
-Saint-Jouin-Bruneval (Normandie), Tübingen, Zernez (Engadin) und Zürich (siehe
+Saint-Jouin-Bruneval (Normandie), Tübingen, Tvinnefossen (Norwegen), Zernez (Engadin) und Zürich (siehe
 <<fig.buchkarte>>). Wir nahmen uns dabei an der Philosophie von Debian
 GNU/Linux ein Beispiel: ohne Hektik, mit dem Blick fürs Detail und
 zumeist pedantisch bis ins letzte i-Tüpfelchen, aber trotzdem mit viel
