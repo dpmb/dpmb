@@ -75,7 +75,7 @@ referenzierten Abhängigkeiten benötigt werden.
 === Debian Backports ===
 
 Dass o.g. Bedürfnisse, Gedanken und Lösungen nichts Neues sind, können
-Sie sich sicher denken. Deswegen hat Norbert Tretowski 2003
+Sie sich sicher denken. Deswegen hat Norbert Tretkowski 2003
 'backports.org', kurz 'bpo', ins Leben gerufen -- einen zentralen
 Platz für solche Rückportierungen.
 
