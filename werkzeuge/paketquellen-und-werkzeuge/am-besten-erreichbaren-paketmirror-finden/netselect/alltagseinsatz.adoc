@@ -1,0 +1,25 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/netselect/alltagseinsatz.adoc
+
+// Baustelle: Rohtext
+
+===== `netselect` und `netselect-apt` im Alltagseinsatz =====
+
+Aus unserer Sicht lohnt sich der Aufruf von `netselect` bzw.
+`netselect-apt` bei stationären Systemen (Servern) mit fester Anbindung
+nur bedingt. Hilfreich ist das Vorgehen bspw. nach der ersten
+Einrichtung, einem Standortwechsel des Gerätes oder der Änderung der
+Infrastruktur, da letztere in der Regel häufig recht konstant ist. Bei
+Endsystemen an einem festen Ort raten wir Ihnen, die Werkzeuge nur
+interessehalber auszuprobieren, weil die Zugriffszeiten in diesem
+Kontext nicht immer eine so große Relevanz haben. Bei Systemen für die
+Infrastruktur wirkt sich die Optimierung hingegen meist weitaus stärker
+aus.
+
+Bei mobilen Geräten sieht das hingegen deutlich anders aus. Mit Laptops
+oder Smartphones sind Sie variabler und den damit einhergehenden
+Schwankungen in der Netzanbindung stärker ausgesetzt. Auffällig wird die
+Anpassung dann, wenn Sie größere Entfernungen zurücklegen, bspw. ein
+Land oder einen Kontinent gewechselt haben.
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/netselect/alltagseinsatz.adoc
+

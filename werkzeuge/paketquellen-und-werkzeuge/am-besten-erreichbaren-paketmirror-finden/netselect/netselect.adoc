@@ -1,0 +1,54 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/netselect/netselect.adoc
+
+// Baustelle: Rohtext
+
+==== `netselect` und `netselect-apt` ====
+
+// Stichworte für den Index
+(((netselect)))
+(((netselect-apt)))
+(((Paketmirror, Leistungskriterien)))
+Die beiden Programme `netselect` und `netselect-apt` überprüfen den von
+Ihnen benannten Spiegelserver anhand von mehreren Kriterien. Dazu gehört
+primär die grundsätzliche Erreichbarkeit über das Netzwerk, die Pingzeit
+– d.h. wieviel Zeit benötigt ein Netzwerkpaket vom Paketmirror zu Ihrem
+Computer – , sowie die Verlustrate der Netzwerkpakete vom Spiegelserver
+zu Ihnen. Gleichzeitig wird die Anzahl der Zwischenknoten von Ihrem
+Computer zum Spiegelserver gezählt, auch genannt 'Hops'. Bevorzugt
+werden lokale Paketmirrors, was sich auch im daraus errechneten
+Zahlenwert niederschlägt. Je kleiner der ermittelte Wert ist, umso
+besser ist das für Sie.
+
+Der Unterschied zwischen `netselect` und `netselect-apt` ist folgender:
+`netselect` gibt nur den ermittelten Zahlenwert für den evaluierten
+Spiegelserver aus, während `netselect-apt` eine Datei namens
+`sources.list` im aktuellen Verzeichnis erzeugt. Diese beinhaltet die
+besten gefundenen Spiegelserver und kann von Ihnen sofort als neue Liste
+der Paketquellen benutzt werden.
+
+[NOTE]
+.Aktualisierung der Liste der Paketquellen
+====
+Zu Änderungen an den Paketquellen beachten Sie bitte auch unsere
+Hinweise unter ```/etc/apt/sources.list` verstehen'' in
+<<etc-apt-sources.list-verstehen>>. Wir raten Ihnen dazu, die neue Liste
+der Paketquellen zuerst lokal zu erstellen und danach manuell in das
+Verzeichnis `/etc/apt/` zu verschieben.
+====
+
+// Paketquellen nach Pingzeiten und Entfernung auswählen
+include::paketquellen-nach-pingzeiten-und-entfernung-auswaehlen.adoc[]
+
+// Anzahl der Hops begrenzen
+include::anzahl-der-hops-begrenzen.adoc[]
+
+// Einen geschützten Paketmirror abfragen
+include::einen-geschuetzten-paketmirror-abfragen.adoc[]
+
+// Liste generieren lassen
+include::liste-generieren-lassen.adoc[]
+
+// netselect und netselect-apt im Alltagseinsatz
+include::alltagseinsatz.adoc[]
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/netselect/netselect.adoc

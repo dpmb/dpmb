@@ -33,7 +33,7 @@ wurde nicht in Debian 8 _Jessie_ übernommen, steht jedoch weiterhin für
 _unstable_ zur Verfügung.
 
 // netselect und netselect-apt
-include::netselect.adoc[]
+include::netselect/netselect.adoc[]
 
 // apt-spy
 include::apt-spy/apt-spy.adoc[]

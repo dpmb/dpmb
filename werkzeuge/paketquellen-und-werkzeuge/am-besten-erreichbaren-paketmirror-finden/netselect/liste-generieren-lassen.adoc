@@ -1,0 +1,123 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/netselect/liste-generieren-lassen.adoc
+
+// Baustelle: Rohtext
+
+[[liste-der-paketquellen-mit-netselect-apt-generieren-lassen]]
+===== Liste der Paketquellen mit `netselect-apt` generieren lassen =====
+
+// Stichworte für den Index
+(((netselect-apt, -o)))
+(((netselect-apt, --outfile)))
+Wie oben bereits angesprochen, erzeugt `netselect-apt` eine Datei
+`sources.list` im aktuellen Verzeichnis. Dazu verfügt es über
+den Schalter `-o` (Langform `--outfile`), mit dem Sie die entsprechende
+Veröffentlichung (siehe <<veroeffentlichungen>>) angeben und eine
+passende Liste dazu generieren lassen. `netselect-apt` akzeptiert dazu
+Angaben wie _stable_ oder _unstable_, aber auch die Alternativnamen der
+Veröffentlichung wie _Wheezy_ oder _Sid_.
+
+// Stichworte für den Index
+(((netselect-apt, -a)))
+(((netselect-apt, --arch))
+(((netselect-apt, -c)))
+(((netselect-apt, --country)))
+(((netselect-apt, -f)))
+(((netselect-apt, --ftp)))
+(((netselect-apt, -n)))
+(((netselect-apt, --nonfree)))
+(((netselect-apt, -o)))
+(((netselect-apt, --outfile)))
+(((netselect-apt, -s)))
+(((netselect-apt, --sources)))
+Desweiteren kennt `netselect-apt` diese Schalter:
+
+`-a` (Langform `--arch`):: Erzeugung der Liste für die angegebene
+Prozessorarchitektur. Eine Übersicht zu den von Debian unterstützten
+Architekturen finden Sie unter ``Debian-Architekturen'' in
+<<anhang-debian-architekturen>>. Geben Sie keinen Wert an, benutzt
+`netselect-apt` den Wert, den `dpkg` als Architektur zurückliefert.
+
+`-c` (Langform `--country`):: Die Einträge kommen nur aus dem
+angegebenen Land.
+
+`-f` (Langform `--ftp`):: Benutze FTP-Quellen anstatt von HTTP-Quellen.
+
+`-n` (Langform `--nonfree`):: Ergänzung der Einträge um den
+Distributionsbereich `nonfree` (siehe ``Distributionsbereiche'' in
+<<distributionsbereiche>>).
+
+`-s` (Langform `--sources`):: zusätzliche Erzeugung von Einträgen für
+den Bezug von Quellpaketen (siehe ``Sourcepakete'' in <<sourcepakete>>
+und ``Einträge für Quellpakete'' in <<eintraege-fuer-quellpakete>>).
+
+Im nachfolgenden Beispiel kommt lediglich der Schalter `-o` 'test.list'
+zum Einsatz. Das führt dazu, dass `netselect-apt` die ermittelten
+Paketmirrors in die Datei 'test.list' im lokalen Verzeichnis ausgibt.
+
+.Speicherung der ermittelten Paketmirrors in einer separaten Datei
+----
+# netselect-apt stable -o test.list
+Using distribution stable.
+Retrieving the list of mirrors from www.debian.org...
+
+--2014-02-13 14:55:02--  http://www.debian.org/mirror/mirrors_full
+Auflösen des Hostnamen »www.debian.org (www.debian.org)«... 5.153.231.4, 130.89.148.14, 2001:610:1908:b000::148:14, ...
+Verbindungsaufbau zu www.debian.org (www.debian.org)|5.153.231.4|:80... verbunden.
+HTTP-Anforderung gesendet, warte auf Antwort... 200 OK
+Länge: 338381 (330K) [text/html]
+In »»/tmp/netselect-apt.WrCIoS«« speichern.
+
+100%[============================================================>] 338.381      959K/s   in 0,3s    
+
+2014-02-13 14:55:03 (959 KB/s) - »»/tmp/netselect-apt.WrCIoS«« gespeichert [338381/338381]
+
+Choosing a main Debian mirror using netselect.
+netselect: 347 (23 active) nameserver request(s)...       
+Duplicate address 218.100.43.30 (http://ftp.au.debian.org/debian/, http://mirror.waia.asn.au/debian/); keeping only under first name.
+netselect: 343 (23 active) nameserver request(s)...       
+Duplicate address 195.222.33.229 (http://ftp.ba.debian.org/debian/, http://mirror.debian.com.ba/debian/); keeping only under first name.
+...
+Running netselect to choose 10 out of 333 addresses.
+...
+The fastest 10 servers seem to be:
+
+	http://artfiles.org/debian/
+	http://ftp.plusline.de/debian/
+	http://ftp5.gwdg.de/pub/linux/debian/debian/
+	http://debian.netcologne.de/debian/
+	http://ftp.uni-erlangen.de/debian/
+	http://deb-mirror.de/debian/
+	http://mirror.de.leaseweb.net/debian/
+	http://mirror.1und1.de/debian/
+	http://deb-mirror.de/debian/
+	http://ftp.uni-bayreuth.de/debian/
+
+Of the hosts tested we choose the fastest valid for HTTP:
+        http://artfiles.org/debian/
+
+Writing test.list.
+Done.
+#
+----
+
+Die von `netselect-apt` erzeugte Datei `test.list` enthält neben
+den Paketmirrors auch eine ganze Reihe Kommentare. Diese helfen Ihnen
+dabei, zu verstehen, wofür jeder einzelne Eintrag gedacht ist.
+
+.Inhalt der automatisch generierten Liste der Paketmirrors
+----
+# cat test.list
+
+# Debian packages for stable
+deb http://artfiles.org/debian/ stable main contrib
+# Uncomment the deb-src line if you want 'apt-get source'
+# to work with most packages.
+# deb-src http://artfiles.org/debian/ stable main contrib
+
+# Security updates for stable
+deb http://security.debian.org/ stable/updates main contrib
+#
+----
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/netselect/liste-generieren-lassen.adoc
+

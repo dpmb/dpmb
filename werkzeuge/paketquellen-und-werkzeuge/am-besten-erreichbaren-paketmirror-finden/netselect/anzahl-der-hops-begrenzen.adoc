@@ -1,0 +1,43 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/netselect/anzahl-der-hops-begrenzen.adoc
+
+// Baustelle: Rohtext
+
+===== Anzahl der Hops begrenzen =====
+
+// Stichworte für den Index
+(((netselect, -)))
+(((netselect, -vvv)))
+
+Die Auswahl des Paketmirrors läßt sich auch von der Anzahl der
+Zwischenknoten (Hops) abhängig machen. `netselect` kennt dazu den
+Schalter `-m` gefolgt von der Anzahl der Zwischenknoten. Nachfolgende
+Ausgabe zeigt das für den Server `ftp.at.debian.org`. Die Ausgabe ist
+sortiert, d.h. der Paketmirror mit den wenigsten Hops steht ganz oben in
+der Liste.
+
+.Paketmirror mit den wenigsten Zwischenknoten
+----
+# netselect -m 10 -vvv ftp.at.debian.org
+Running netselect to choose 1 out of 1 address.         
+ftp.at.debian.org                       33 ms    5 hops - HIGHER
+ftp.at.debian.org                       51 ms    8 hops - HIGHER
+ftp.at.debian.org                       51 ms    9 hops - HIGHER
+ftp.at.debian.org                       47 ms   10 hops - OK
+min_lag is now 47
+ftp.at.debian.org                       49 ms   10 hops - OK
+ftp.at.debian.org                       48 ms   10 hops - OK
+ftp.at.debian.org                       56 ms   10 hops - OK
+ftp.at.debian.org                       49 ms   10 hops - OK
+ftp.at.debian.org                       48 ms   10 hops - OK
+ftp.at.debian.org                       48 ms   10 hops - OK
+ftp.at.debian.org                       48 ms   10 hops - OK
+ftp.at.debian.org                       48 ms   10 hops - OK
+ftp.at.debian.org                       48 ms   10 hops - OK
+
+
+ftp.at.debian.org                       48 ms  10 hops  100% ok (10/10) [   96]
+   96 ftp.at.debian.org
+#
+----
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/netselect/anzahl-der-hops-begrenzen.adoc

@@ -1,0 +1,43 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/netselect/einen-geschuetzten-paketmirror-abfragen.adoc
+
+// Baustelle: Rohtext
+
+===== Einen geschützten Paketmirror abfragen =====
+
+// Stichworte für den Index
+(((netselect, -I)))
+(((netselect, -vvv)))
+(((netselect, ICMP-Pakete vs. UDP-Pakete)))
+
+Ist der Paketmirror beispielweise von einer Firewall geschützt und diese
+blockiert UDP-Pakete, kann die Option `-I` von größerem Nutzen sein.
+Damit sendet `netselect` zur Abfrage stattdessen ICMP-Pakete und umgeht
+das Hindernis. Das Ergebnis sehen Sie in der nachfolgenden Ausgabe:
+
+.Paketmirror mit ICMP-Paketen abfragen
+----
+# netselect -I -vvv ftp.de.debian.org
+Running netselect to choose 1 out of 1 address.         
+ftp.de.debian.org            37 ms   15 hops - OK
+min_lag is now 37
+ftp.de.debian.org            36 ms    8 hops - OK
+min_lag is now 36
+ftp.de.debian.org            27 ms    4 hops - HIGHER
+ftp.de.debian.org            36 ms    6 hops - HIGHER
+ftp.de.debian.org            36 ms    7 hops - OK
+ftp.de.debian.org            36 ms    7 hops - OK
+ftp.de.debian.org            36 ms    7 hops - OK
+ftp.de.debian.org            36 ms    7 hops - OK
+ftp.de.debian.org            36 ms    7 hops - OK
+ftp.de.debian.org            36 ms    7 hops - OK
+ftp.de.debian.org            37 ms    7 hops - OK
+ftp.de.debian.org            38 ms    7 hops - OK
+
+
+ftp.de.debian.org            36 ms   7 hops  100% ok (10/10) [   61]
+   61 ftp.de.debian.org
+#
+----
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/netselect/einen-geschuetzten-paketmirror-abfragen.adoc
+

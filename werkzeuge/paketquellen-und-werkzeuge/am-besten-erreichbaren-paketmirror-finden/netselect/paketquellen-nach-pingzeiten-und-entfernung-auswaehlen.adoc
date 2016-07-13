@@ -1,0 +1,168 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/netselect/paketquellen-nach-pingzeiten-und-entfernung-auswaehlen.adoc
+
+// Baustelle: Rohtext
+
+[[paketquellen-netselect-auswaehlen]]
+===== Paketquellen nach Pingzeiten und Entfernung auswählen =====
+
+`netselect` und `netselect-apt` akzeptieren beim Aufruf eine Menge
+verschiedener Schalter und Parameter. Stets anzugeben ist mindestens ein
+Spiegelserver, der zu testen ist. Geben Sie hingegen eine ganze Liste
+an, werden alle daraus nacheinander überprüft. Die nachfolgende Ausgabe
+zeigt das Ergebnis für fünf angefragte Paketmirrors.
+
+// Stichworte für den Index
+(((netselect, -v)))
+(((netselect, -vv)))
+(((netselect, -vvv)))
+(((netselect, -vvvv)))
+
+
+.Aufruf von `netselect` mit fünf verschiedenen Paketmirrors
+----
+# netselect -v ftp.debian.org http.us.debian.org ftp.at.debian.org download.unesp.br ftp.debian.org.br
+netselect: unknown host ftp.debian.org.br
+Running netselect to choose 1 out of 8 addresses.
+...............................................................
+   73 ftp.debian.org
+#
+----
+
+Mit dem zusätzlichen Schalter `-v` regeln Sie die Ausführlichkeit der
+Ausgabe. Ohne den Schalter geben beide Programme nur den Paketmirror
+aus, der den besten Wert hat, mit `-vv` bzw. `-vvv` oder sogar `-vvvv`
+entsprechend mehr Details. 
+
+.Etwas ausführlichere Ausgabe zu den Paketmirrors
+----
+# netselect -vv ftp.debian.org http.us.debian.org ftp.at.debian.org download.unesp.br ftp.debian.org.br
+netselect: unknown host ftp.debian.org.br
+Running netselect to choose 1 out of 8 addresses.
+...............................................................
+128.61.240.89          141 ms   8 hops   88% ok ( 8/ 9) [  284]
+ftp.debian.org          41 ms   8 hops  100% ok (10/10) [   73]
+128.30.2.36            118 ms  19 hops  100% ok (10/10) [  342]
+64.50.233.100          112 ms  14 hops   66% ok ( 2/ 3) [  403]
+64.50.236.52           133 ms  15 hops  100% ok (10/10) [  332]
+ftp.at.debian.org       47 ms  13 hops  100% ok (10/10) [  108]
+download.unesp.br      314 ms  10 hops   75% ok ( 3/ 4) [  836]
+ftp.debian.org.br     9999 ms  30 hops    0% ok
+   73 ftp.debian.org
+#
+----
+
+In der Ausgabe erscheinen die IP-Adresse bzw. der Hostname (Spalte 1),
+nachdem aufgelöst wird, die durchschnittliche Paketlaufzeit (Spalte 2),
+die Anzahl der Zwischenknoten (Spalte 3) sowie die Verlustrate der
+Pakete auf dem Transportweg (Spalte 4 bis 6). Die Angabe `ok` besagt
+dabei, dass der Paketmirror über das Netz erreichbar ist. Die Angabe
+`9999ms` für die Paketlaufzeit besagt hingegen, dass der Paketmirror zum
+Testzeitpunkt leider nicht erreichbar war.
+
+Die Werte in den runden Klammern in Spalte 6 zeigen, wie der Prozentwert
+der Verlustrate der Pakete in Spalte 4 zustandekam. Dieser basiert auf
+der Anzahl Pakete, die der Paketmirror als empfangen bestätigt hat,
+jeweils gegenübergestellt der Anzahl gesendeter Pakete. Die Zahl in den
+eckigen Klammern am Ende jeder ausgegebenen Zeile (Spalte 7) ist der
+Wert, den `netselect` für den jeweiligen Paketmirror ermittelt hat.
+
+// Stichworte für den Index
+(((netselect, -vvv)))
+
+.Noch mehr Informationen zu den Paketmirrors
+----
+# netselect -vvv ftp.debian.org http.us.debian.org ftp.at.debian.org download.unesp.br ftp.debian.org.br
+netselect: unknown host ftp.debian.org.br
+Running netselect to choose 1 out of 8 addresses.
+128.30.2.36            122 ms   15 hops - HIGHER
+64.50.233.100          112 ms   15 hops - OK
+ftp.at.debian.org       49 ms   15 hops - OK
+min_lag is now 49
+64.50.236.52           140 ms   15 hops - OK
+ftp.debian.org          42 ms   15 hops - OK
+min_lag is now 42
+ftp.at.debian.org       48 ms    8 hops - HIGHER
+128.30.2.36            117 ms   23 hops - OK
+ftp.debian.org          41 ms    8 hops - OK
+min_lag is now 41
+64.50.233.100          112 ms    8 hops - HIGHER
+64.50.236.52           112 ms    8 hops - HIGHER
+ftp.debian.org          28 ms    4 hops - HIGHER
+ftp.at.debian.org       49 ms   12 hops - HIGHER
+ftp.debian.org          38 ms    6 hops - HIGHER
+ftp.at.debian.org       48 ms   14 hops - OK
+128.30.2.36            119 ms   19 hops - OK
+64.50.233.100          113 ms   12 hops - HIGHER
+ftp.debian.org          53 ms    7 hops - HIGHER
+ftp.at.debian.org       49 ms   13 hops - OK
+64.50.236.52           114 ms   12 hops - HIGHER
+ftp.debian.org          42 ms    8 hops - OK
+download.unesp.br      306 ms   15 hops - OK
+ftp.at.debian.org       48 ms   13 hops - OK
+ftp.debian.org          42 ms    8 hops - OK
+ftp.at.debian.org       49 ms   13 hops - OK
+64.50.233.100          114 ms   14 hops - OK
+128.30.2.36            118 ms   17 hops - HIGHER
+ftp.debian.org          42 ms    8 hops - OK
+64.50.236.52           138 ms   14 hops - HIGHER
+ftp.at.debian.org       49 ms   13 hops - OK
+ftp.debian.org          41 ms    8 hops - OK
+ftp.at.debian.org       49 ms   13 hops - OK
+ftp.debian.org          41 ms    8 hops - OK
+128.30.2.36            119 ms   18 hops - HIGHER
+ftp.debian.org          43 ms    8 hops - OK
+ftp.at.debian.org       48 ms   13 hops - OK
+64.50.236.52           132 ms   15 hops - OK
+ftp.debian.org          43 ms    8 hops - OK
+ftp.at.debian.org       48 ms   13 hops - OK
+ftp.debian.org          42 ms    8 hops - OK
+128.30.2.36            118 ms   19 hops - OK
+ftp.at.debian.org       48 ms   13 hops - OK
+download.unesp.br      313 ms    8 hops - HIGHER
+64.50.236.52           134 ms   15 hops - OK
+128.30.2.36            122 ms   19 hops - OK
+64.50.236.52           133 ms   15 hops - OK
+128.30.2.36            129 ms   19 hops - OK
+download.unesp.br      307 ms   12 hops - OK
+64.50.236.52           140 ms   15 hops - OK
+128.30.2.36            124 ms   19 hops - OK
+64.50.236.52           133 ms   15 hops - OK
+128.30.2.36            117 ms   19 hops - OK
+128.30.2.36            117 ms   19 hops - OK
+64.50.236.52           134 ms   15 hops - OK
+download.unesp.br      308 ms   10 hops - OK
+128.30.2.36            118 ms   19 hops - OK
+64.50.236.52           134 ms   15 hops - OK
+128.30.2.36            118 ms   19 hops - OK
+64.50.236.52           133 ms   15 hops - OK
+download.unesp.br      305 ms    9 hops - HIGHER
+64.50.236.52           131 ms   15 hops - OK
+
+
+download.unesp.br      307 ms  10 hops   75% ok ( 3/ 4) [  818]
+128.30.2.36            119 ms  19 hops  100% ok (10/10) [  345]
+64.50.233.100          113 ms  14 hops   66% ok ( 2/ 3) [  405]
+64.50.236.52           134 ms  15 hops  100% ok (10/10) [  335]
+128.61.240.89         9999 ms  30 hops    0% ok
+ftp.at.debian.org       48 ms  13 hops  100% ok (10/10) [  110]
+ftp.debian.org          41 ms   8 hops  100% ok (10/10) [   73]
+ftp.debian.org.br     9999 ms  30 hops    0% ok
+   73 ftp.debian.org
+#
+----
+
+Ergebnis des obigen Aufrufs ist eine Empfehlung für einen der
+Paketmirrors, die Sie im Aufruf benannt haben. Dieser Paketmirror ist von
+ihrem Standort aus derzeit am besten erreichbar. Das ermittelte Ergebnis
+schwankt und hängt stets von der aktuellen Netzauslastung ab.
+
+Die Empfehlung und der ermittelte Zahlenwert stehen in der letzten Zeile
+der Ausgabe und zeigen hier den Wert 73 für den Server `ftp.debian.org`.
+Die angegebene Zahl errechnet sich aus den bereits zu Beginn genannten
+Kriterien und ist vergleichbar mit einem Punktwert, hat jedoch offiziell
+keine Einheit. Je höher der Wert ist, umso schlechter ist der
+Paketmirror von Ihrem aktuellen Standort im Netz zu erreichen.
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/netselect/paketquellen-nach-pingzeiten-und-entfernung-auswaehlen.adoc
+
+
