@@ -1,0 +1,35 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/apt-spy/apt-spy-konfigurieren.adoc
+
+// Baustelle: Rohtext
+
+===== `apt-spy` konfigurieren =====
+
+Zu `apt-spy` gehört eine *Konfigurationsdatei* unter
+`/etc/apt-spy.conf`. Diese enthält die Länderkennungen sowie die
+Zuordnung von Länderkennungen und Kontinenten. Nachfolgender Ausschnitt
+zeigt die Bereiche für Nordamerika und Ozeanien.
+
+.Konfiguration von `apt-spy` für Nordamerika und Ozeanien (Ausschnitt)
+----
+$ cat /etc/apt-spy.conf
+...
+North-America:
+
+CA
+US
+MX
+
+Oceania:
+
+AU
+NZ
+...
+$
+----
+
+// * schöne, ausführliche Beschreibung: 
+// ** http://debiananwenderhandbuch.de/apt-spy.html
+// ** scheint aber etwas veraltet zu sein
+
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/apt-spy/apt-spy-konfigurieren.adoc

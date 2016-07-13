@@ -28,5 +28,3 @@ include::paketquellen-nach-bandbreite-auswaehlen.adoc[]
 include::apt-spy-konfigurieren.adoc[]
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/apt-spy/apt-spy.adoc
-
-
