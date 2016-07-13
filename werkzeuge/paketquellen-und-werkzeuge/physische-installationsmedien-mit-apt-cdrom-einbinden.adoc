@@ -7,6 +7,7 @@
 
 // Stichworte für den Index
 (((apt-cdrom)))
+(((apt-cdrom, ISO-Images)))
 (((apt-cdrom-setup)))
 (((Debianpaket, apt)))
 (((Debianpaket, apt-cdrom-setup)))
@@ -23,7 +24,9 @@ Ihrer Liste der Paketquellen in der Datei `/etc/apt/sources.list` (siehe
 Während vor wenigen Jahren noch eine CD gebräuchlich war, ist es heute
 aufgrund der Datenmenge eher eine DVD, eine Blu-ray oder ein
 entsprechendes Abbild eines Datenträgers, kurz genannt ISO-Image.
-`apt-cdrom` kann mit allen diesen Medien und Formaten umgehen.
+`apt-cdrom` kann mit allen diesen Medien und Formaten umgehen, d.h. auch
+mit ISO-Images, welches Sie bspw. auf einem USB-Stick vorbereitet haben.
+Letzteres zählt häufig zu den ersten Schritten einer Netzwerkinstallation.
 
 Die Alternative zu `apt-cdrom` ist, alle neuen Medien von Hand
 nachzutragen. Das kann ein wenig aufwendig werden. `apt-cdrom`
@@ -45,7 +48,7 @@ befindet, das Medium eingehängt ist und das dazugehörige Gerät
 (((apt-cdrom, -r)))
 (((apt-cdrom, --rename)))
 
-`apt-cdrom` unterstützt die folgenden nützlichen Aufufe:
+`apt-cdrom` unterstützt die folgenden nützlichen Schalter und Aufrufe:
 
 `apt-cdrom`:: 
 kurze Information (Hilfeseite) zu `apt-cdrom`
