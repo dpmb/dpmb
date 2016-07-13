@@ -31,7 +31,7 @@ Daher sind sowohl alle Veröffentlichungen (siehe
 einzelnen Pakete jeweils separat digital signiert. Eine digitale
 Signatur (``Schlüssel'', GPG-Key) besteht aus zwei Teilen -- einem
 öffentlichen und einem privaten, geheimen Schlüssel. Die Paketlisten
-werden zunächst vom Verwalter des Repositorys mit seinem privaten
+werden zunächst vom Verwalter des Repositories mit seinem privaten
 Schlüssel signiert und der dazugehörige, öffentliche Schlüssel
 bekanntgegeben bzw. als Paket hinterlegt. Mit Hilfe dieses
 Signatur-Paares überprüfen Sie einerseits die Echtheit der Paketquelle
@@ -194,7 +194,7 @@ In »»archive.key«« speichern.
 Bitte beachten Sie, dass dieser Schlüssel jedoch nicht über gesicherte
 Kanäle (z.B. per HTTPS) heruntergeladen wurde und Sie damit nicht
 hundertprozentig sicher sein können, dass dieser Schlüssel wirklich von
-Opera ist. Leider scheint der Schlüssel auch nicht mit allzuvielen
+Opera ist. Leider scheint der Schlüssel auch nicht mit allzu vielen
 Signaturen ausgestattet zu sein, sodass eine Verifizierung über die
 Signaturen ebenfalls nicht möglich ist.
 ====
