@@ -287,6 +287,8 @@ Veröffentlichung wie _Wheezy_ oder _Sid_.
 // Stichworte für den Index
 (((netselect-apt, -a)))
 (((netselect-apt, --arch))
+(((netselect-apt, -n)))
+(((netselect-apt, --nonfree)))
 (((netselect-apt, -o)))
 (((netselect-apt, --outfile)))
 (((netselect-apt, -s)))
@@ -298,6 +300,10 @@ Prozessorarchitektur. Eine Übersicht zu den von Debian unterstützten
 Architekturen finden Sie unter ``Debian-Architekturen'' in
 <<anhang-debian-architekturen>>. Geben Sie keinen Wert an, benutzt
 `netselect-apt` den Wert, den `dpkg` als Architektur zurückliefert.
+
+`-n` (Langform `--nonfree`):: Ergänzung der Einträge um den
+Distributionsbereich `nonfree` (siehe ``Distributionsbereiche'' in
+<<distributionsbereiche>>).
 
 `-s` (Langform `--sources`):: zusätzliche Erzeugung von Einträgen für
 den Bezug von Quellpaketen (siehe ``Sourcepakete'' in <<sourcepakete>>
