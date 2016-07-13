@@ -247,7 +247,7 @@
 
 - [[[Debian-Paket-apt-show-versions]]] Debian-Paket 'apt-show-versions', http://packages.debian.org/de/stable/apt-show-versions
 
-- [[[Debian-Paket-apt-spy]]] Debian-Paket 'apt-spy', http://packages.debian.org/de/stable/apt-spy
+- [[[Debian-Paket-apt-spy]]] Debian-Paket 'apt-spy' in Debian 7 _Wheezy_, https://packages.debian.org/wheezy/apt-spy
 
 - [[[Debian-Paket-apt-transport-debtorrent]]] Debian-Paket 'apt-transport-debtorrent', http://packages.debian.org/de/stable/apt-transport-debtorrent
 
