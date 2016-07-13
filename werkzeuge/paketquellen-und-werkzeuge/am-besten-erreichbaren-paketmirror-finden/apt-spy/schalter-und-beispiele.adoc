@@ -1,5 +1,7 @@
 // Datei: ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/apt-spy/schalter-und-beispiele.adoc
 
+// Baustelle: Rohtext
+
 ===== Schalter und Beispiele =====
 
 // Stichworte für den Index
@@ -10,28 +12,27 @@
 (((apt-spy, -s)))
 (((apt-spy, update)))
 
-`apt-spy` versteht eine ganze Reihe von *Optionen zur Konfiguration*,
-von denen wir Ihnen eine Auswahl vorstellen. Weitere Optionen entnehmen
-Sie bitte der Manpage zum Programm.
+`apt-spy` versteht eine ganze Reihe von Schaltern zur Konfiguration, von
+denen wir Ihnen eine Auswahl vorstellen. Weitere Optionen entnehmen Sie
+bitte der Manpage zum Programm.
 
-`-d distribution`:: Debian-Veröffentlichung (<<veroeffentlichungen>>),
-für die die Paketliste erstellt werden soll
+`-d` 'distribution':: Debian-Veröffentlichung (siehe <<veroeffentlichungen>>), für die die Paketliste erstellt werden soll
 
-`-a area`:: geographische Region, aus der die Paketmirrors kommen sollen
+`-a` 'area':: geographische Region, aus der die Paketmirrors kommen sollen
 
-`-e Anzahl`:: 'early finish' -- legt die Anzahl der Paketmirrors fest,
+`-e` 'Anzahl':: 'early finish' -- legt die Anzahl der Paketmirrors fest,
 die Sie abfragen möchten
 
-`-p proxy`:: Proxyserver in der Schreibweise `Hostname:Port`
+`-p` 'proxy':: Proxyserver in der Schreibweise `Hostname:Port`
 
-`-s Land`:: eine Komma-separierte Liste von Länderkürzeln, aus der die
+`-s` 'Land':: eine Komma-separierte Liste von Länderkürzeln, aus der die
 Paketmirrors kommen sollen
 
 `update`:: Aktualisieren der Liste der Paketmirrors
 
-Nun folgen eine Reihe von *Beispielen aus der Praxis*. Beispiel 1 zeigt
+Nun folgen eine Reihe von Beispielen aus der Praxis. Beispiel 1 zeigt
 Ihnen den schnellsten Debian-Paketmirror in Europa für die
-Veröffentlichung Debian 'stable':
+Veröffentlichung Debian _stable_:
 
 .Ermittlung der Debian-Paketmirrors für die Region Europa
 ----
@@ -61,7 +62,8 @@ Writing new sources.list file: /etc/apt/sources.list.d/apt-spy.list
 #
 ----
 
-In Beispiel 2 sehen Sie, wie sie ähnliches für Deutschland ermitteln:
+In Beispiel 2 sehen Sie, wie sie ähnliches für Deutschland ermitteln.
+Als Kürzel dient hier `de` für Deutschland:
 
 .Ermittlung der Debian-Paketmirrors für die Region Deutschland
 ----
@@ -103,6 +105,6 @@ deb http://security.debian.org/ stable/updates main
 Bitte beachten Sie, dass die ermittelten Paketmirrors stets von ihrem
 aktuellen Standort und der dort vorliegenden Netzwerkanbindung abhängen.
 Führen Sie das gleiche Kommando auf ihrem Linuxsystem aus, können die
-Ergebnisse von der Ausgabe im Buch abweichen.
+Ergebnisse von der hier im Buch gezeigten Ausgabe abweichen.
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/apt-spy/schalter-und-beispiele.adoc
