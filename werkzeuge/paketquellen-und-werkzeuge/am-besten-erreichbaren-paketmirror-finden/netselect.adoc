@@ -2,8 +2,7 @@
 
 // Baustelle: Rohtext
 
-[[paketquellen-netselect-auswaehlen]]
-==== Paketquellen mit `netselect` nach Pingzeiten und Entfernung auswählen ====
+==== `netselect` und `netselect-apt` ====
 
 // Stichworte für den Index
 (((netselect)))
@@ -36,6 +35,9 @@ Hinweise unter ```/etc/apt/sources.list` verstehen'' in
 der Paketquellen zuerst lokal zu erstellen und danach manuell in das
 Verzeichnis `/etc/apt/` zu verschieben.
 ====
+
+[[paketquellen-netselect-auswaehlen]]
+===== Paketquellen nach Pingzeiten und Entfernung auswählen =====
 
 `netselect` und `netselect-apt` akzeptieren beim Aufruf eine Menge
 verschiedener Schalter und Parameter. Stets anzugeben ist mindestens ein
@@ -195,7 +197,7 @@ Kriterien und ist vergleichbar mit einem Punktwert, hat jedoch offiziell
 keine Einheit. Je höher der Wert ist, umso schlechter ist der
 Paketmirror von Ihrem aktuellen Standort im Netz zu erreichen.
 
-==== Anzahl der Hops begrenzen ====
+===== Anzahl der Hops begrenzen =====
 
 // Stichworte für den Index
 (((netselect, -)))
@@ -233,7 +235,7 @@ ftp.at.debian.org                       48 ms  10 hops  100% ok (10/10) [   96]
 #
 ----
 
-==== Einen geschützten Paketmirror abfragen ====
+===== Einen geschützten Paketmirror abfragen =====
 
 // Stichworte für den Index
 (((netselect, -I)))
@@ -271,7 +273,7 @@ ftp.de.debian.org            36 ms   7 hops  100% ok (10/10) [   61]
 ----
 
 [[liste-der-paketquellen-mit-netselect-apt-generieren-lassen]]
-==== Liste der Paketquellen mit `netselect-apt` generieren lassen ====
+===== Liste der Paketquellen mit `netselect-apt` generieren lassen =====
 
 // Stichworte für den Index
 (((netselect-apt, -o)))
@@ -387,7 +389,7 @@ deb http://security.debian.org/ stable/updates main contrib
 #
 ----
 
-==== `netselect` und `netselect-apt` im Alltagseinsatz ====
+===== `netselect` und `netselect-apt` im Alltagseinsatz =====
 
 Aus unserer Sicht lohnt sich der Aufruf von `netselect` bzw.
 `netselect-apt` bei stationären Systemen (Servern) mit fester Anbindung
