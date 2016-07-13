@@ -63,8 +63,7 @@ Running netselect to choose 1 out of 8 addresses.
 Mit dem zusätzlichen Schalter `-v` regeln Sie die Ausführlichkeit der
 Ausgabe. Ohne den Schalter geben beide Programme nur den Paketmirror
 aus, der den besten Wert hat, mit `-vv` bzw. `-vvv` oder sogar `-vvvv`
-entsprechend mehr Details. Weitere Optionen entnehmen Sie bitte der
-Manpage zu den Programmen.
+entsprechend mehr Details. 
 
 .Etwas ausführlichere Ausgabe zu den Paketmirrors
 ----
@@ -196,8 +195,11 @@ Kriterien und ist vergleichbar mit einem Punktwert, hat jedoch offiziell
 keine Einheit. Je höher der Wert ist, umso schlechter ist der
 Paketmirror von Ihrem aktuellen Standort im Netz zu erreichen.
 
+==== Einen geschützten Paketmirror abfragen ====
+
 // Stichworte für den Index
 (((netselect, -I)))
+(((netselect, -vvv)))
 (((netselect, ICMP-Pakete vs. UDP-Pakete)))
 
 Ist der Paketmirror beispielweise von einer Firewall geschützt und diese
@@ -205,7 +207,7 @@ blockiert UDP-Pakete, kann die Option `-I` von größerem Nutzen sein.
 Damit sendet `netselect` zur Abfrage stattdessen ICMP-Pakete und umgeht
 das Hindernis. Das Ergebnis sehen Sie in der nachfolgenden Ausgabe:
 
-.Höchste Stufe der Ausführlichkeit zu den Paketmirrors
+.Paketmirror mit ICMP-Paketen abfragen
 ----
 # netselect -I -vvv ftp.de.debian.org
 Running netselect to choose 1 out of 1 address.         
