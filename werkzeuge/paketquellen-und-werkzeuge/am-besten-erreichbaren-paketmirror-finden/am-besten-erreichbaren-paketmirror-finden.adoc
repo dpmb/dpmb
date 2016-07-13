@@ -36,6 +36,6 @@ _unstable_ zur Verfügung.
 include::netselect.adoc[]
 
 // apt-spy
-include::apt-spy.adoc[]
+include::apt-spy/apt-spy.adoc[]
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/am-besten-erreichbaren-paketmirror-finden.adoc
