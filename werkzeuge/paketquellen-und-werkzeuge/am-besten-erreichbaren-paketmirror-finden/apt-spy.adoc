@@ -90,6 +90,14 @@ $
 
 ====== Optionen und Beispiele ======
 
+// Stichworte für den Index
+(((apt-spy, -a)))
+(((apt-spy, -d)))
+(((apt-spy, -e)))
+(((apt-spy, -p)))
+(((apt-spy, -s)))
+(((apt-spy, update)))
+
 `apt-spy` versteht eine ganze Reihe von *Optionen zur Konfiguration*,
 von denen wir Ihnen eine Auswahl vorstellen. Weitere Optionen entnehmen
 Sie bitte der Manpage zum Programm.
