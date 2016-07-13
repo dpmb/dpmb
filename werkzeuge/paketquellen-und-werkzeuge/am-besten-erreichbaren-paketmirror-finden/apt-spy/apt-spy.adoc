@@ -1,0 +1,32 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/apt-spy/apt-spy.adoc
+
+// Baustelle: Rohtext
+
+==== Paketquellen mit `apt-spy` einstellen ====
+
+// Stichworte für den Index
+(((apt-spy, Verfügbarkeit)))
+(((Debianpaket, apt-spy)))
+
+[NOTE]
+.Verfügbarkeit von `apt-spy`
+====
+`apt-spy` ist bis einschließlich Debian 7 _Wheezy_ fester Bestandteil
+des Paketbestands. Für Debian 8 _Jessie_ gibt es kein offizielles Paket,
+jedoch weiterhin in _unstable_.
+====
+
+Das Werkzeug `apt-spy` aus dem gleichnamigen Debian-Paket
+<<Debian-Paket-apt-spy>> erstellt eine Liste der Paketquellen für eine
+netzbasierte Installation. Basis dafür sind die verfügbaren Paketmirror
+und deren Erreichbarkeit.
+
+// Paketquellen nach Bandbreite auswaehlen
+include::paketquellen-nach-bandbreite-auswaehlen.adoc[]
+
+// apt-spy konfigurieren
+include::apt-spy-konfigurieren.adoc[]
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/apt-spy/apt-spy.adoc
+
+
