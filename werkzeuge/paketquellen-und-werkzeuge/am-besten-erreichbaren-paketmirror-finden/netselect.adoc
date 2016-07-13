@@ -287,6 +287,8 @@ Veröffentlichung wie _Wheezy_ oder _Sid_.
 // Stichworte für den Index
 (((netselect-apt, -a)))
 (((netselect-apt, --arch))
+(((netselect-apt, -f)))
+(((netselect-apt, --ftp)))
 (((netselect-apt, -n)))
 (((netselect-apt, --nonfree)))
 (((netselect-apt, -o)))
@@ -300,6 +302,8 @@ Prozessorarchitektur. Eine Übersicht zu den von Debian unterstützten
 Architekturen finden Sie unter ``Debian-Architekturen'' in
 <<anhang-debian-architekturen>>. Geben Sie keinen Wert an, benutzt
 `netselect-apt` den Wert, den `dpkg` als Architektur zurückliefert.
+
+`-f` (Langform `--ftp`):: Benutze FTP-Quellen anstatt von HTTP-Quellen.
 
 `-n` (Langform `--nonfree`):: Ergänzung der Einträge um den
 Distributionsbereich `nonfree` (siehe ``Distributionsbereiche'' in
