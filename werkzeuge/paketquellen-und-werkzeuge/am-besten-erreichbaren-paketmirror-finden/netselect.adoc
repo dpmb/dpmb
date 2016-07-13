@@ -318,9 +318,9 @@ Distributionsbereich `nonfree` (siehe ``Distributionsbereiche'' in
 den Bezug von Quellpaketen (siehe ``Sourcepakete'' in <<sourcepakete>>
 und ``Einträge für Quellpakete'' in <<eintraege-fuer-quellpakete>>).
 
-Im nachfolgenden Beispiel kommt lediglich der Schalter `-o test.list`
+Im nachfolgenden Beispiel kommt lediglich der Schalter `-o` 'test.list'
 zum Einsatz. Das führt dazu, dass `netselect-apt` die ermittelten
-Paketmirrors in diese Datei im lokalen Verzeichnis ausgibt.
+Paketmirrors in die Datei 'test.list' im lokalen Verzeichnis ausgibt.
 
 .Speicherung der ermittelten Paketmirrors in einer separaten Datei
 ----
