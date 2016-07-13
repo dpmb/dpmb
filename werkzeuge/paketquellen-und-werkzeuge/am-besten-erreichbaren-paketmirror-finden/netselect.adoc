@@ -275,16 +275,22 @@ ftp.de.debian.org            36 ms   7 hops  100% ok (10/10) [   61]
 
 // Stichworte für den Index
 (((netselect-apt, -o)))
+(((netselect-apt, --outfile)))
 Wie oben bereits angesprochen, erzeugt `netselect-apt` eine Datei
 `sources.list` im aktuellen Verzeichnis. Dazu verfügt es über
-einen weiteren Schalter, mit dem Sie die entsprechende Veröffentlichung
-(siehe <<veroeffentlichungen>>) angeben und eine passende Liste dazu
-generieren lassen. `netselect-apt` akzeptiert dazu Angaben wie _stable_
-oder _unstable_, aber auch die Alternativnamen der Veröffentlichung wie
-_Wheezy_ oder _Sid_.
+den Schalter `-o` (Langform `--outfile`), mit dem Sie die entsprechende
+Veröffentlichung (siehe <<veroeffentlichungen>>) angeben und eine
+passende Liste dazu generieren lassen. `netselect-apt` akzeptiert dazu
+Angaben wie _stable_ oder _unstable_, aber auch die Alternativnamen der
+Veröffentlichung wie _Wheezy_ oder _Sid_.
 
 // Stichworte für den Index
 (((netselect-apt, -a)))
+(((netselect-apt, --arch))
+(((netselect-apt, -o)))
+(((netselect-apt, --outfile)))
+(((netselect-apt, -s)))
+(((netselect-apt, --sources)))
 Desweiteren kennt `netselect-apt` diese Schalter:
 
 `-a` (Langform `--arch`):: Erzeugung der Liste für die angegebene
@@ -293,9 +299,13 @@ Architekturen finden Sie unter ``Debian-Architekturen'' in
 <<anhang-debian-architekturen>>. Geben Sie keinen Wert an, benutzt
 `netselect-apt` den Wert, den `dpkg` als Architektur zurückliefert.
 
-Im nachfolgenden Beispiel kommt zusätzlich die Option `-o test.list` zum
-Einsatz, was dazu führt, dass `netselect-apt` die ermittelten Paketmirrors
-in diese Datei im lokalen Verzeichnis speichert. 
+`-s` (Langform `--sources`):: zusätzliche Erzeugung von Einträgen für
+den Bezug von Quellpaketen (siehe ``Sourcepakete'' in <<sourcepakete>>
+und ``Einträge für Quellpakete'' in <<eintraege-fuer-quellpakete>>).
+
+Im nachfolgenden Beispiel kommt lediglich der Schalter `-o test.list`
+zum Einsatz. Das führt dazu, dass `netselect-apt` die ermittelten
+Paketmirrors in diese Datei im lokalen Verzeichnis ausgibt.
 
 .Speicherung der ermittelten Paketmirrors in einer separaten Datei
 ----
