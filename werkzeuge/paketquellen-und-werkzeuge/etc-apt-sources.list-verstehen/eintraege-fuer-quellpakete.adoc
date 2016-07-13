@@ -2,6 +2,7 @@
 
 // Baustelle: Fertig
 
+[[eintraege-fuer-quellpakete]]
 ==== Einträge für Quellpakete ====
 
 // Indexeinträge
