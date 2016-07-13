@@ -8,6 +8,7 @@
 // Stichworte für den Index
 (((netselect)))
 (((netselect-apt)))
+(((Paketmirror, Leistungskriterien)))
 Die beiden Programme `netselect` und `netselect-apt` überprüfen den von
 Ihnen benannten Spiegelserver anhand von mehreren Kriterien. Dazu gehört
 primär die grundsätzliche Erreichbarkeit über das Netzwerk, die Pingzeit
@@ -22,9 +23,9 @@ besser ist das für Sie.
 Der Unterschied zwischen `netselect` und `netselect-apt` ist folgender:
 `netselect` gibt nur den ermittelten Zahlenwert für den evaluierten
 Spiegelserver aus, während `netselect-apt` eine Datei namens
-`sources.list` im aktuellen Verzeichnis erzeugt. Diese
-beinhaltet die besten gefundenen Spiegelserver und kann von Ihnen sofort
-als neue Liste der Paketquellen benutzt werden.
+`sources.list` im aktuellen Verzeichnis erzeugt. Diese beinhaltet die
+besten gefundenen Spiegelserver und kann von Ihnen sofort als neue Liste
+der Paketquellen benutzt werden.
 
 [NOTE]
 .Aktualisierung der Liste der Paketquellen
@@ -44,6 +45,10 @@ zeigt das Ergebnis für fünf angefragte Paketmirrors.
 
 // Stichworte für den Index
 (((netselect, -v)))
+(((netselect, -vv)))
+(((netselect, -vvv)))
+(((netselect, -vvvv)))
+
 
 .Aufruf von `netselect` mit fünf verschiedenen Paketmirrors
 ----
@@ -60,9 +65,6 @@ Ausgabe. Ohne den Schalter geben beide Programme nur den Paketmirror
 aus, der den besten Wert hat, mit `-vv` bzw. `-vvv` oder sogar `-vvvv`
 entsprechend mehr Details. Weitere Optionen entnehmen Sie bitte der
 Manpage zu den Programmen.
-
-// Stichworte für den Index
-(((netselect, -vv)))
 
 .Etwas ausführlichere Ausgabe zu den Paketmirrors
 ----
@@ -194,13 +196,14 @@ Kriterien und ist vergleichbar mit einem Punktwert, hat jedoch offiziell
 keine Einheit. Je höher der Wert ist, umso schlechter ist der
 Paketmirror von Ihrem aktuellen Standort im Netz zu erreichen.
 
-Ist der Paketmirror von einer Firewall geschützt und blockiert
-UDP-Pakete, kann die Option `-I` von größerem Nutzen sein. Damit werden
-stattdessen ICMP-Pakete gesendet. Das Ergebnis sehen Sie in der
-nachfolgenden Ausgabe:
-
 // Stichworte für den Index
 (((netselect, -I)))
+(((netselect, ICMP-Pakete vs. UDP-Pakete)))
+
+Ist der Paketmirror beispielweise von einer Firewall geschützt und diese
+blockiert UDP-Pakete, kann die Option `-I` von größerem Nutzen sein.
+Damit sendet `netselect` zur Abfrage stattdessen ICMP-Pakete und umgeht
+das Hindernis. Das Ergebnis sehen Sie in der nachfolgenden Ausgabe:
 
 .Höchste Stufe der Ausführlichkeit zu den Paketmirrors
 ----
@@ -227,6 +230,10 @@ ftp.de.debian.org            36 ms   7 hops  100% ok (10/10) [   61]
 #
 ----
 
+==== Liste der Paketquellen mit `netselect-apt` generieren lassen ====
+
+// Stichworte für den Index
+(((netselect-apt, -o)))
 Wie oben bereits angesprochen, erzeugt `netselect-apt` eine Datei
 `sources.list` im aktuellen Verzeichnis. Dazu verfügt es über
 einen weiteren Schalter, mit dem Sie die entsprechende Veröffentlichung
@@ -235,8 +242,6 @@ generieren lassen. `netselect-apt` akzeptiert dazu Angaben wie _stable_
 oder _unstable_, aber auch die Alternativnamen der Veröffentlichung wie
 _Wheezy_ oder _Sid_.
 
-// Stichworte für den Index
-(((netselect-apt, -o)))
 Im nachfolgenden Beispiel kommt zusätzlich die Option `-o test.list` zum
 Einsatz, was dazu führt, dass `netselect-apt` die ermittelten Paketmirrors
 in diese Datei speichert. Ohne diese Angabe überschreibt es die aktuelle
@@ -306,6 +311,8 @@ deb http://artfiles.org/debian/ stable main contrib
 deb http://security.debian.org/ stable/updates main contrib
 #
 ----
+
+==== `netselect` und `netselect-apt` im Alltagseinsatz ====
 
 Aus unserer Sicht lohnt sich der Aufruf von `netselect` bzw.
 `netselect-apt` bei stationären Systemen (Servern) mit fester Anbindung
