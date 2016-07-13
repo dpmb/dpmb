@@ -270,6 +270,7 @@ ftp.de.debian.org            36 ms   7 hops  100% ok (10/10) [   61]
 #
 ----
 
+[[liste-der-paketquellen-mit-netselect-apt-generieren-lassen]]
 ==== Liste der Paketquellen mit `netselect-apt` generieren lassen ====
 
 // Stichworte für den Index
@@ -282,10 +283,19 @@ generieren lassen. `netselect-apt` akzeptiert dazu Angaben wie _stable_
 oder _unstable_, aber auch die Alternativnamen der Veröffentlichung wie
 _Wheezy_ oder _Sid_.
 
+// Stichworte für den Index
+(((netselect-apt, -a)))
+Desweiteren kennt `netselect-apt` diese Schalter:
+
+`-a` (Langform `--arch`):: Erzeugung der Liste für die angegebene
+Prozessorarchitektur. Eine Übersicht zu den von Debian unterstützten
+Architekturen finden Sie unter ``Debian-Architekturen'' in
+<<anhang-debian-architekturen>>. Geben Sie keinen Wert an, benutzt
+`netselect-apt` den Wert, den `dpkg` als Architektur zurückliefert.
+
 Im nachfolgenden Beispiel kommt zusätzlich die Option `-o test.list` zum
 Einsatz, was dazu führt, dass `netselect-apt` die ermittelten Paketmirrors
-in diese Datei speichert. Ohne diese Angabe überschreibt es die aktuelle
-Paketliste unter `/etc/apt/sources.list`.
+in diese Datei im lokalen Verzeichnis speichert. 
 
 .Speicherung der ermittelten Paketmirrors in einer separaten Datei
 ----
