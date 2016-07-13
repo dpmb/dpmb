@@ -8,9 +8,8 @@
 === Am besten erreichbaren Paketmirror finden ===
 
 // Stichworte für den Index
-(((Debianpaket, netselect)))
-(((Debianpaket, netselect-apt)))
 (((Paketmirror, Auswahl)))
+(((Paketmirror, Leistungskriterien)))
 Jeder Paketmirror hat eine spezifische Leistungsfähigkeit, die sich an
 den beiden Kriterien Netzanbindung und Hardwareausstattung messen lässt.
 Auf diese Merkmale haben Sie zwar nur begrenzt Einfluss, steuern jedoch
@@ -18,12 +17,15 @@ Auf diese Merkmale haben Sie zwar nur begrenzt Einfluss, steuern jedoch
 <<etc-apt-sources.list-verstehen>>), welchen verfügbaren Paketmirror Sie
 benutzen.
 
+// Stichworte für den Index
+(((Debianpaket, netselect)))
+(((Debianpaket, netselect-apt)))
 Anstatt diese Schritte aufwendig über die Kombination einzelner
-Werkzeuge wie `ping` oder `traceroute` zu ermitteln, sind hier
-`netselect` <<Debian-Paket-netselect>> und `netselect-apt`
-<<Debian-Paket-netselect-apt>> die besseren Mittel der Wahl. Damit
-finden Sie den Spiegelserver heraus, der netztechnisch von ihrem
-aktuellen Standort aus am besten erreichbar ist.
+Werkzeuge wie `ping` oder `traceroute` zu ermitteln, sind hier die
+beiden Programme `netselect` <<Debian-Paket-netselect>> und
+`netselect-apt` <<Debian-Paket-netselect-apt>> die besseren Mittel der
+Wahl. Damit finden Sie den Paketmirror heraus, der netztechnisch von
+ihrem aktuellen Standort aus am besten erreichbar ist.
 
 // Stichworte für den Index
 (((Debianpaket, apt-spy)))
