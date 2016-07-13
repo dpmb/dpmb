@@ -2,19 +2,28 @@
 
 // Baustelle: Rohtext
 
-// ===== Paketquellen mit +apt-spy+ einstellen
-//
-// Das Werkzeug +apt-spy+ aus dem gleichnamigen Debian-Paket
-// <<Debian-Paket-apt-spy>> erstellt eine Liste der
-// <<etc-apt-sources.list-verstehen, Paketquellen>> für eine netzbasierte
-// Installation. Basis dafür sind die verfügbaren Paketmirror und deren
-// Erreichbarkeit. Im Detail gehen wir darauf im Abschnitt
-// <<paketquellen-mit-apt-spy-auswaehlen, Paketquelle mit +apt-spy+ nach
-// Bandbreite auswählen>> ein.
+==== Paketquellen mit `apt-spy` einstellen ====
+
+// Stichworte für den Index
+(((apt-spy, Verfügbarkeit)))
+(((Debianpaket, apt-spy)))
+
+[NOTE]
+.Verfügbarkeit von `apt-spy`
+====
+`apt-spy` ist bis einschließlich Debian 7 _Wheezy_ fester Bestandteil
+des Paketbestands. Für Debian 8 _Jessie_ gibt es kein offizielles Paket,
+jedoch weiterhin in _unstable.
+====
+
+Das Werkzeug `apt-spy` aus dem gleichnamigen Debian-Paket
+<<Debian-Paket-apt-spy>> erstellt eine Liste der Paketquellen für eine
+netzbasierte Installation. Basis dafür sind die verfügbaren Paketmirror
+und deren Erreichbarkeit.
 
 [[paketquellen-mit-apt-spy-auswaehlen]]
 
-==== Paketquellen mit `apt-spy` nach Bandbreite auswählen ====
+===== Paketquellen mit `apt-spy` nach Bandbreite auswählen =====
 
 In den meisten Fällen wissen Sie, welche Paketquellen Sie als
 Bezugspunkt für ihr Linuxsystem verwenden möchten, sei es aus
@@ -50,7 +59,7 @@ enthaltene Eintrag wird von `apt-spy` auf dessen Erreichbarkeit von
 ihrem aktuellen Standort aus überprüft. Die vielversprechendsten
 Einträge landen in o.g. Liste.
 
-// ====== `apt-spy` konfigurieren ======
+====== `apt-spy` konfigurieren ======
 
 Zu `apt-spy` gehört eine *Konfigurationsdatei* unter
 `/etc/apt-spy.conf`. Diese enthält die Länderkennungen sowie die
@@ -79,7 +88,7 @@ $
 // ** http://debiananwenderhandbuch.de/apt-spy.html
 // ** scheint aber etwas veraltet zu sein
 
-// ====== Optionen und Beispiele ======
+====== Optionen und Beispiele ======
 
 `apt-spy` versteht eine ganze Reihe von *Optionen zur Konfiguration*,
 von denen wir Ihnen eine Auswahl vorstellen. Weitere Optionen entnehmen

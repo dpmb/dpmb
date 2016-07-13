@@ -1,8 +1,6 @@
 // Datei: ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/am-besten-erreichbaren-paketmirror-finden.adoc
 
 // Baustelle: Rohtext
-// TODO: apt-spy ist aus Jessie rausgeflogen, tut vermutlich auch in
-//       Wheezy nicht mehr wegen fehlender Datenquelle.
 
 [[am-besten-erreichbaren-paketmirror-finden]]
 === Am besten erreichbaren Paketmirror finden ===
