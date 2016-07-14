@@ -8,6 +8,7 @@
 
 // Stichworte für den Index
 (((aptitude)))
+(((Debianpaket, aptitude)))
 Im Vergleich mit den anderen vorgestellten Programmen zur
 Paketverwaltung ist `aptitude` eine recht komplexe und umfangreiche
 Anwendung. Es ermöglicht Ihnen zwei unterschiedliche Wege der Bedienung
@@ -17,6 +18,9 @@ Bedienoberfläche im Terminal. Wieder aufgegeben wurden zwischenzeitlich
 die Versuche, `aptitude` auch mit einer graphischen Bedienoberfläche
 auszustatten (siehe <<Beckert-Blog-Aptitude-Gtk-Will-Vanish>>).
 
+// Stichworte für den Index
+(((Debianpaket, aptitude)))
+(((Debianpaket, aptitude-common)))
 Das Programm ist verteilt auf die beiden Pakete namens 'aptitude' und
 'aptitude-common'. Da das Programm nicht zur Standardauswahl bei der
 Installation von Debian GNU/Linux und Ubuntu gehört, richten Sie es am
@@ -147,6 +151,8 @@ und her. Die Belegung weiterer Tasten entnehmen Sie bitte
 // ** Ins Menü wechseln: kbd:[Ctrl,t] oder kbd:[F10]
 // ** Paketlisten aktualisieren: kbd:[u]
 
+// Stichworte für den Index
+(((aptitude, interaktiver Abhängigkeitsauflöser)))
 Auch wenn sich APT und `aptitude` größtenteils sehr ähnlich sind,
 bestehen eine Reihe von feinen Unterschieden, die erst während der
 Benutzung der Programme präsent werden. `aptitude` hat nützliche
@@ -186,6 +192,8 @@ image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/aptitu
 | Vorschlag anwenden | kbd:[!]
 |=============================
 
+// Stichworte für den Index
+(((aptitude, Sortierung der Pakete nach Debtags)))
 Darüber hinaus verfügt `aptitude` über eine Ansicht, in der Sie Pakete
 nach *Debian-Tags (Debtags)* (siehe dazu
 <<erweiterte-paketklassifikation-mit-debtags>>) sortiert betrachten
@@ -194,6 +202,8 @@ insbesondere dann interessant, wenn Sie lediglich wissen, nach welcher
 Funktionalität oder Art von Paket Sie suchen, jedoch den konkreten
 Paketnamen nicht kennen.
 
+// Stichworte für den Index
+(((aptitude, Kategoriebrowser)))
 Der ebenfalls im Menü in <<fig.aptitude-debtags-browser>> (noch)
 angezeigte *Kategoriebrowser* gilt als veraltet{empty}footnote:[Es handelt
 sich dabei um eine hart in `aptitude` verdrahtete und schon sehr lange
