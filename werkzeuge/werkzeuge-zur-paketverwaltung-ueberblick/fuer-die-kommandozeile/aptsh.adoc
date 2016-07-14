@@ -56,11 +56,15 @@ dem Programm beschreibt. Erst später erschienen andere Möglichkeiten wie
 unserem Radar, welche wir dann für das vorliegende Buch genauer
 inspizierten (siehe nachfolgende Abschnitte).
 
+// Stichworte für den Index
+(((aptsh, NMU)))
+(((aptsh, berliOS)))
 Hintergrund für die Recherche nach Alternativen zur `aptsh` war der
 Fakt, dass das Projekt seit Debian 6 'Squeeze' leider verwaist ist. Alle
-Pakete sind lediglich Non-Maintainer-Uploads (NMU) und damit ohne
-kontinuierliche Betreuung. Zudem kommt hinzu, dass das Projekt
-<<aptsh-Projekt>> seit dem Auf-und-Ab von Berlios unter wechselnden
-Adressen auffindbar ist. Das vereinfacht die Pflege nicht unbedingt.
+später veröffentlichten Pakete sind lediglich Non-Maintainer-Uploads
+(NMU) und damit ohne kontinuierliche Betreuung. Zudem kommt hinzu, dass
+das Projekt <<aptsh-Projekt>> seit dem Auf-und-Ab von berliOS
+<<berliOS>> unter wechselnden Adressen auffindbar ist. Das vereinfacht
+die Pflege nicht unbedingt.
 
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/aptsh.adoc
