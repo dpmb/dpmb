@@ -6,6 +6,9 @@
 
 ==== Synaptic ====
 
+// Stichworte
+(((Debianpaket, synaptic)))
+(((Synaptic)))
 Das Programm steht im gleichnamigen Paket 'synaptic'
 <<Debian-Paket-synaptic>> bereit. Es verfügt über eine graphische
 Bedienoberfläche auf der Basis des Gimp Toolkits (GTK2) und war lange
@@ -44,9 +47,10 @@ rechts die Paketliste und unten rechts die Paketbeschreibung im Detail.
 Die 'linke Spalte' zeigt zunächst die Architektur
 (<<debian-architekturen>>). Über die einzelnen Knöpfe darunter schalten
 Sie zur Ansicht nach den Paketkategorien (Sektionen)
-(<<sortierung-der-pakete-nach-verwendungszweck>>) sowie dem Ursprung bzw. der Herkunft der Pakete
-(<<paketquellen>>), der Veröffentlichung (<<veroeffentlichungen>>) und
-dem Distributionsbereich (<<distributionsbereiche>>) um.
+(<<sortierung-der-pakete-nach-verwendungszweck>>) sowie dem Ursprung
+bzw. der Herkunft der Pakete (<<paketquellen>>), der Veröffentlichung
+(<<veroeffentlichungen>>) und dem Distributionsbereich
+(<<distributionsbereiche>>) um.
 
 In der 'Paketliste oben rechts' beinhalten die Spalten den
 Installationsstatus (Status), eine Information zur Herkunft des Pakets,
@@ -84,12 +88,12 @@ Möchten Sie hingegen eine ganze Paketgruppe installieren, bietet
 Synaptic die gleiche Funktionalität wie das Werkzeug 'tasksel' (siehe
 <<tasksel>>). Dazu nutzen Sie den Menüpunkt
 menu:Bearbeiten[Pakete nach Aufgaben vormerken]. Daraufhin erscheint
-ein ähnliches
-Auswahlfenster wie in <<fig.synaptic-tasksel>>, aus deren Liste sie die
-gewünschte Aktion markieren. Alle Pakete, die der ausgewählten Aufgabe
-zugeordnet sind, gelangen damit in die Vorauswahl und können daraufhin
-über den Knopf menu:Anwenden[] installiert werden.
+ein ähnliches Auswahlfenster wie in <<fig.synaptic-tasksel>>, aus deren
+Liste sie die gewünschte Aktion markieren. Alle Pakete, die der
+ausgewählten Aufgabe zugeordnet sind, gelangen damit in die Vorauswahl
+und können daraufhin über den Knopf menu:Anwenden[] installiert werden.
 
 .Paketauswahl einer ganzen Aufgabengruppe (Synaptic)
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/synaptic-tasksel.png[id="fig.synaptic-tasksel", width="50%"]
+
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/synaptic.adoc
