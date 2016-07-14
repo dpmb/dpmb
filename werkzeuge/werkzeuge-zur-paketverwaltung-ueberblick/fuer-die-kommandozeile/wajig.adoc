@@ -7,7 +7,9 @@
 ==== `wajig` ====
 
 // Stichworte für den Index
+(((Debianpaket, wajig)))
 (((wajig)))
+(((wajig, gjig)))
 Das in der Programmiersprache Python geschriebene Programm 'wajig'
 <<Debian-Paket-wajig>> ist vorrangig ein Wrapper um `dpkg` (<<dpkg>>)
 und APT (<<apt>>). Es zählt zur gleichen Kategorie wie die `aptsh`
@@ -17,7 +19,7 @@ Debian 6 'Squeeze' bestand zudem eine graphische Variante namens 'gjig',
 die mittlerweile obsolet ist.
 
 `wajig` zielt darauf ab, alle im Alltag erforderlichen Aktionen zur
-Paketverwaltung in 'einem' Werkzeug für die Kommandozeile
+Paketverwaltung in 'einem einzigen' Werkzeug für die Kommandozeile
 zusammenzufassen. Daher haben sich die 'wajig'-Entwickler das Ziel
 gesetzt, die APT-Bibliotheken (siehe <<apt-und-bibliotheken>>)
 vollständig auszureizen und nach Möglichkeit auch alle Optionen, die
