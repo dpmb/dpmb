@@ -25,12 +25,15 @@ anspruchsvoll. Das betrifft die Anforderungen an die Hardware und
 insbesondere den benötigten Speicher für die Ausführung. APT hat zudem
 eine deutlich höhere Ausführungsgeschwindigkeit als `aptitude`.
 
+// Stichworte für den Index
+(((Debianpaket, libapt-pkg)))
+(((APT, libapt-pkg)))
 APT ist sehr mächtig und kann mit Paketen umgehen, die sich entweder
 bereits lokal auf Ihrem System befinden, oder noch auf einem Paketmirror
-vorliegen. Es kombiniert i.d.R. mehrere Einzelaktionen von `dpkg`,
+vorliegen. Es kombiniert i.d.R. mehrere Einzelaktionen von `dpkg`. Es
 greift dabei aber nicht direkt auf `dpkg` zurück, sondern kapselt dafür
-die Aufrufe mit Hilfe der Bibliothek `libapt-pkg` (siehe dazu APT und
-Bibliotheken unter <<apt-und-bibliotheken>>).
+die Aufrufe mit Hilfe der Bibliothek 'libapt-pkg' (siehe dazu ``APT und
+Bibliotheken'' unter <<apt-und-bibliotheken>>).
 
 // Stichworte für den Index
 (((apt-cache)))
