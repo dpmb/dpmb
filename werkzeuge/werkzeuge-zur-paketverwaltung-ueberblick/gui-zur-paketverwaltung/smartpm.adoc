@@ -7,6 +7,7 @@
 ==== Smart Package Management (SmartPM) ====
 
 // Stichworte für den Index
+(((Debianpaket, smartpm)))
 (((smartpm)))
 Im Paket 'smartpm' <<Debian-Paket-smartpm>> verbirgt sich das
 gleichnamige Programm zur Paketverwaltung. Zunächst etwas unscheinbar,
@@ -21,6 +22,8 @@ steuern und verfügt als drittes noch über eine Paketverwaltungsshell
 analog zur 'aptsh' (<<aptsh>>), zu 'wajig' (<<wajig>>) und zu 'cupt'
 (<<Cupt>>).
 
+// Stichworte für den Index
+(((smart, --gui)))
 Für ersteres rufen Sie SmartPM im Terminal über das Kommando `smart
 --gui` auf oder wählen den entsprechenden Eintrag aus dem Menü Ihrer
 Desktop-Umgebung aus. In <<fig.smartpm>> sehen Sie die zweispaltige
