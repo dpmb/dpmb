@@ -7,6 +7,7 @@
 ==== `dpkg` ====
 
 // Stichworte für den Index
+(((Debianpaket, dpkg)))
 (((dpkg)))
 `dpkg` ist das Debian-Programm für grundlegende Paketoperationen und
 bildet in Bezug auf Funktionsumfang und Handhabung das Äquivalent zu
@@ -29,22 +30,27 @@ entnehmen Sie bitte der Manpage zum Programm]:
 
 // Stichworte für den Index
 (((dpkg, -c)))
+(((dpkg, --contents)))
 (((dpkg, -l)))
+(((dpkg, --list)))
 (((dpkg, -L)))
+(((dpkg, --listfiles)))
 (((dpkg, -s)))
+(((dpkg, --status)))
 (((dpkg, -S)))
+(((dpkg, --search)))
 (((dpkg, --configure)))
-* Paketliste ausgeben (<<liste-der-installierten-pakete-anzeigen-und-deuten>>) (`dpkg -l`)
+* Paketliste ausgeben mittels `dpkg -l` (siehe <<liste-der-installierten-pakete-anzeigen-und-deuten>>)
 
-* Paketstatus erfragen (<<paketstatus-erfragen>>) mit `dpkg -s` 'Paketname'
+* Paketstatus erfragen mit `dpkg -s` 'Paketname' (siehe <<paketstatus-erfragen>>)
 
-* Inhalt eines installierten Pakets anzeigen (<<paketinhalte-anzeigen-apt-file>>) mit `dpkg -L` 'Paketname'
+* Inhalt eines installierten Pakets anzeigen mit `dpkg -L` 'Paketname' (siehe <<paketinhalte-anzeigen-apt-file>>)
 
-* Inhalt eines nicht installierten Pakets anzeigen (<<paketinhalte-anzeigen-apt-file>>) mit `dpkg -c` 'Paketname'
+* Inhalt eines nicht installierten Pakets anzeigen (siehe <<paketinhalte-anzeigen-apt-file>>) mit `dpkg -c` 'Paketname'
 
-* Paket zu Datei finden (<<paket-zu-datei-finden>>) mit `dpkg -S` 'Paketname' und 
+* Paket zu Datei finden (siehe <<paket-zu-datei-finden>>) mit `dpkg -S` 'Paketname' und 
 
-* Pakete konfigurieren (<<pakete-konfigurieren>>) (Option `--configure`)
+* Pakete konfigurieren (siehe <<pakete-konfigurieren>>) (Option `--configure`)
 
 Mit `dpkg` zeigen Sie die installierten Pakete und deren Zustand an, suchen
 nach Paketinhalten und konfigurieren im Bedarfsfall ein Paket nach.
