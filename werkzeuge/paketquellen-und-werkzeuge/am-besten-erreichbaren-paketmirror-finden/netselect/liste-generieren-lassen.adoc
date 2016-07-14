@@ -18,7 +18,7 @@ Veröffentlichung wie _Wheezy_ oder _Sid_.
 
 // Stichworte für den Index
 (((netselect-apt, -a)))
-(((netselect-apt, --arch))
+(((netselect-apt, --arch)))
 (((netselect-apt, -c)))
 (((netselect-apt, --country)))
 (((netselect-apt, -f)))
