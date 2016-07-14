@@ -7,6 +7,10 @@
 
 // Stichworte für den Index
 (((Ubuntu Landscape)))
+(((Ubuntupaket, landscape-client)))
+(((Ubuntupaket, landscape-client-ui)))
+(((Ubuntupaket, landscape-client-ui-install)))
+(((Ubuntupaket, landscape-common)))
 Canonical stellt mit Ubuntu Landscape <<Ubuntu-Landscape>> seit 2008
 eine zentrale Administrationsoberfläche für Einzelrechner und
 Serversysteme bereit. Ubuntu Landscape ist Teil des kostenpflichtigen
