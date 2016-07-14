@@ -7,6 +7,7 @@
 ==== GDebi ====
 
 // Stichworte für den Index
+(((Debianpaket, gdebi)))
 (((gdebi)))
 // Überblick
 Initial nur für Ubuntu entwickelt, verbirgt sich unter dem Namen GDebi
