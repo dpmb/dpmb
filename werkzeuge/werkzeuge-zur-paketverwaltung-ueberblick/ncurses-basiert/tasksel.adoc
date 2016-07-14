@@ -7,6 +7,8 @@
 ==== tasksel ====
 
 // Stichworte für den Index
+(((Debianpaket, tasksel)))
+(((Debianpaket, tasksel-data)))
 (((tasksel)))
 `tasksel` gehört zu den Anwendungen, die Sie vielleicht nur aus der
 textbasierten Installation von Debian her kennen. Nach der
@@ -19,9 +21,12 @@ Der Name ist eine Abkürzung und steht für 'task select', auf Deutsch
 übersetzbar mit ``Aufgabe auswählen''. Das Paket 'tasksel'
 <<Debian-Paket-tasksel>> beinhaltet lediglich die Benutzeroberfläche,
 das Paket 'tasksel-data' hingegen eine Liste mit vorab festgelegten
-Standardaufgaben (englisch 'tasks'). Jeder genannten Aufgabe sind eine
-Reihe von Paketen zugeordnet.
+Standardaufgaben. Jeder genannten Aufgabe sind eine Reihe von Paketen
+zugeordnet.
 
+// Stichworte für den Index
+(((tasksel, Metapaket)))
+(((tasksel, aptitude)))
 Die beiden 'tasksel'-Generationen 2.x und 3.x unterscheiden sich massiv
 voneinander. Während Generation 2 noch von `aptitude` abhängt, setzt
 Generation 3 hingegen verstärkt auf die Nutzung von Metapaketen (siehe
