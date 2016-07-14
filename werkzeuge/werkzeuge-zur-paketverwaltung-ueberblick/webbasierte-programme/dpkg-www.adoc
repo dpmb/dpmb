@@ -7,6 +7,7 @@
 
 // Stichworte für den Index
 (((Debianpaket, dctrl-tools)))
+(((Debianpaket, dpkg-www)))
 (((dpkg-www)))
 Das Projekt `dpkg-www` umfasst ein CGI-Skript und stellt Ihnen damit den
 Zugang zu sämtlicher Dokumentation zu den einzelnen Paketen zur
@@ -27,8 +28,8 @@ Die Grundlage bildet das gleichnamige Paket 'dpkg-www'
 Aktualisierung bereits 2008 erhielt und derzeit als verwaist eingestuft
 ist (d.h, dass das Paket keinen Maintainer mehr hat), sind gemäß
 Popularity Contest (<<Debian-Popularity-Contest>>) noch etwa 350
-Installationen in Benutzung (siehe dazu auch
-<<verbreitungsgrad-von-paketen>>).
+Installationen in Benutzung (siehe dazu auch ``Verbreitungsgrad von
+Paketen'' in <<verbreitungsgrad-von-paketen>>).
 
 Bitte beachten Sie, dass Sie ohne Anpassung der Konfiguration lediglich
 im Paketbestand des Systems stöbern können. Aus der Bedienoberfläche
