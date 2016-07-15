@@ -265,8 +265,11 @@ $
 
 ==== Aktualisierbare Pakete mit `aptitude` ermitteln ====
 
+// Stichworte für den Index
+(((aptitude, aktualisierbare Pakete anzeigen)))
+(((Paket, aktualisierbare Pakete anzeigen)))
 Auch `aptitude` hilft Ihnen dabei, die Pakete zu finden, für die es
-Neuerungen gibt. Näheres dazu lesen Sie unter Aktualisierbare Pakete
-anzeigen in <<aktualisierbare-pakete-anzeigen>>.
+Neuerungen gibt. Näheres dazu lesen Sie unter ``Aktualisierbare Pakete
+anzeigen'' in <<aktualisierbare-pakete-anzeigen>>.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/aus-welchem-repo-kommen-die-pakete.adoc

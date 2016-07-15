@@ -9,6 +9,7 @@
 // Stichworte für den Index
 (((apt-get, upgrade -u)))
 (((apt-get, upgrade --show-upgraded)))
+(((apt-get, upgrade -s)))
 (((apt-get, upgrade --simulate)))
 (((Paket, aktualisierbare Pakete anzeigen)))
 (((Paket, verfügbare Versionen anzeigen)))
@@ -46,6 +47,7 @@ Conf libc-bin (2.13-38+deb7u4 Debian-Security:7.0/stable [i386]) [libc6:i386 ]
 ----
 
 // Stichworte für den Index
+(((aptitude, aktualisierbare Pakete anzeigen)))
 (((aptitude, search ~U)))
 (((aptitude, search ?upgradable)))
 `aptitude` kennt für diesen Zweck die Suchoption `~U`. Diese steht als
