@@ -1,0 +1,77 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/webbrowser.adoc
+
+// Baustelle: Rohtext
+
+==== Browserbasierte Suche ====
+
+===== Suche über die Webseite des Debian-Projekts =====
+
+// Stichworte für den Index
+(((Paketsuche, anhand der Architektur)))
+(((Paketsuche, anhand des Maintainers)))
+(((Paketsuche, über den Paketnamen)))
+(((Paketsuche, über die Paketbeschreibung)))
+(((Paketsuche, über den Paketinhalt)))
+(((Paketsuche, über die Paketliste)))
+(((Paketsuche, anhand der Paketversion)))
+(((Paketsuche, anhand der Veröffentlichung)))
+Nicht nur für den Einstieg, sondern auch für den Alltag ist die
+Paketsuche über die Webseite des Debian-Projekts (siehe
+<<Debian-Paketsuche>>) äußerst hilfreich und insbesondere sehr schnell.
+<<fig.packages-Webbrowser>> zeigt das Ergebnis der Recherche nach dem
+Paket 'iftop' im Webbrowser 'Iceweasel' an.
+
+Neben dem Paketnamen beinhaltet jeder Suchtreffer die Distribution
+(siehe <<distributionsbereiche>>), gefolgt von der Veröffentlichung
+(hier genannt ``Suite'') (siehe <<veroeffentlichungen>>), der
+Paketkategorie (siehe <<sortierung-der-pakete-nach-verwendungszweck>>)
+und den Debian-Architekturen (siehe <<debian-architekturen>>), für die
+passende Pakete zur Verfügung stehen. Damit sehen Sie sofort, ob das
+Paket für ihre Veröffentlichung und Architektur existiert.
+
+Klicken Sie einen der Links unterhalb des Suchfeldes an, schränken Sie
+das Suchergebnis auf die jeweilige Veröffentlichung oder Architektur
+weiter ein und erhalten daraufhin detailliertere Informationen zu dem
+spezifisch ausgewählten Paket. Neben der Paketbeschreibung sehen Sie die
+Debian Tags, die Paketabhängigkeiten und am rechten Rand weiterführende
+Informationen zum Paket. Dazu zählen ein Screenshot von
+screenshots.debian.net (sofern verfügbar), Fehlerberichte, die Liste der
+Änderungen (``Changelog''), die Quellcodepakete, den Paketbetreuer
+(``Maintainer''), die Projektwebseite und eine Liste ähnlicher Pakete.
+
+// Abbildung von packages.debian.org
+.Ergebnis der Paketsuche nach 'iftop' über http://packages.debian.org/
+image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/paketsuche-debian-webseite.png[id="fig.packages-Webbrowser", width="50%"]
+
+===== Suchmaschinen für Pakete =====
+
+// Stichworte für den Index
+(((Paketsuche, über das Paketformat)))
+(((Paketsuche, über den Paketnamen)))
+Bereits oben angesprochene Suche über die Webseite des Debian-Projekts
+beinhaltet nur Pakete, die in den offiziellen Repositories enthalten
+sind. Für andere, externe Pakete existieren hingegen spezielle
+Suchmaschinen und Verzeichnisdienste. Für `deb`-Pakete sind das bspw.
+apt-get.org <<apt-get.org>> und Rpmseek <<rpmseek>>. Letzeres kann
+sowohl `rpm`- als auch `deb`-Pakete erstöbern. Gefundene Pakete können
+Sie direkt von der angegebenen Quelle beziehen und installieren. Bitte
+beachten Sie aber, dass mit diesen Suchmaschinen gefundene Pakete oft
+nicht den Qualitätsansprüchen von Debian entsprechen, einer nicht-freien
+Lizenz unterliegen oder schlicht nicht auf Ihrem System installierbar
+sind, weil z.B. manche Abhängigkeiten nicht erfüllt werden.
+
+.Ergebnis der Paketsuche nach 'htop' über http://www.rpmseek.com/
+image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/rpmseek.png[id="fig.rpmseek", width="50%"]
+
+[TIP]
+.Integration distributionsfremder `deb`-Pakete
+====
+Wie die Einbindung und Verifizierung von `deb`-Paketen aus den
+Paketquellen erfolgt, erklären wir Ihnen unter ``Paketquellen und
+Werkzeuge'' in <<paketquellen-und-werkzeuge>> genauer. Möchten sie auch
+`rpm`-Pakete einpflegen, sorgt ``Fremdformate mit `alien` hinzufügen''
+in <<fremdformate-mit-alien-hinzufuegen>> für Erleuchtung. Andere
+Paketformate betrachten wir im Buch nicht weiter.
+====
+
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/webbrowser.adoc

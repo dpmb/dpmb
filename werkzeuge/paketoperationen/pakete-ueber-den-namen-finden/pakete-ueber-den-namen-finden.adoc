@@ -1,0 +1,33 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/pakete-ueber-den-namen-finden.adoc
+
+// Baustelle: Fertig
+
+[[pakete-ueber-den-namen-finden]]
+
+=== Pakete über den Namen finden ===
+
+// Stichworte für den Index
+(((Paketsuche, anhand Regulärer Ausdrücke)))
+(((Paketsuche, über den Paketnamen)))
+Diese Suchvariante ist der häufigste Weg zur Recherche nach gewünschten
+Paketen. Alle Werkzeuge zur Paketverwaltung bieten eine entsprechende
+Suchfunktion an, variieren dabei jedoch stark in der Form sowie der
+Menge der Möglichkeiten. Namentlich ähnliche Pakete sind mit `dpkg`,
+`apt-cache` und `aptitude` über ein Unterkommando und ein Muster
+auffindbar. `dpkg` hat ein eigenes Musterformat, `apt-cache` und
+`aptitude` unterstützen hingegen Reguläre Ausdrücke. Bei den graphischen
+Programmen ist die Suche über Muster bislang nicht oder lediglich
+eingeschränkt implementiert.
+
+Ergänzend stehen Ihnen mehrere Dienste für eine Recherche mittels
+Webbrowser zur Verfügung. Das umfaßt Dienste, die vom Debianprojekt
+unterhalten und gepflegt werden, aber auch kommerzielle Anbieter und
+private Initiativen.
+
+// Systemwerkzeuge
+include::systemwerkzeuge.adoc[]
+
+// Browserbasierte Suche
+include::webbrowser.adoc[]
+
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/pakete-ueber-den-namen-finden.adoc

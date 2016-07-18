@@ -50,7 +50,7 @@ include::aus-welchem-repo-kommen-die-pakete.adoc[]
 // include::verfuegbare-paketversionen-ermitteln.adoc[]
 
 // in Pakete hineinschauen
-include::pakete-ueber-den-namen-finden.adoc[]
+include::pakete-ueber-den-namen-finden/pakete-ueber-den-namen-finden.adoc[]
 
 include::pakete-ueber-die-paketbeschreibung-finden.adoc[]
 
