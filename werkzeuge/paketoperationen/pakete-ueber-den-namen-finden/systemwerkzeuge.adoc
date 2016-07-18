@@ -4,49 +4,8 @@
 
 ==== Systemwerkzeuge ====
 
-===== `dpkg` =====
-
-// Stichworte für den Index
-(((dpkg, -l)))
-(((dpkg, --list)))
-(((Paketsuche, über die Paketliste)))
-`dpkg` sucht nur in der Paketliste. Dazu bietet es die Option `-l`
-(Langform `--list`) und listet darüber nur derzeit oder früher schon
-einmal installierte Pakete auf. Es erwartet als weiteren Parameter
-entweder einen vollständigen Paketnamen oder einen Suchausdruck mit
-Platzhalter (engl. _Wildcard_). Bitte schließen Sie den Suchausdruck in
-einfache oder doppelte Hochkommata ein, damit die Shell nicht versucht,
-den Platzhalter selbst auszuwerten.
-
-.Fahndung nach den Paketen für 'xpdf' mittels `dpkg`
-----
-$ dpkg -l 'xpdf*'
-Gewünscht=Unbekannt/Installieren/R=Entfernen/P=Vollständig Löschen/Halten
-| Status=Nicht/Installiert/Config/U=Entpackt/halb konFiguriert/
-         Halb installiert/Trigger erWartet/Trigger anhängig
-|/ Fehler?=(kein)/R=Neuinstallation notwendig (Status, Fehler: GROSS=schlecht)
-||/ Name           Version      Architektur  Beschreibung
-+++-==============-============-============-=================================
-ii  xpdf           3.03-10      amd64        Portable Document Format (PDF) re
-un  xpdf-reader    <keine>                   (keine Beschreibung vorhanden)
-un  xpdf-utils     <keine>                   (keine Beschreibung vorhanden)
-$
-----
-
-Obiger Ausgabe entnehmen Sie, dass nur das Paket 'xpdf' installiert ist.
-Die beiden anderen Pakete namens 'xpdf-reader' und 'xpdf-utils' waren
-schon einmal installiert und sind daher `dpkg` bereits bekannt. Deswegen
-erscheint als Paketstatus die Buchstabenfolge `un` für ``nicht mehr
-installiert''.
-
-[TIP]
-.Ausgabeformat des Paketstatus
-====
-Das Ausgabeformat sowie die Buchstaben am Zeilenanfang erklären wir
-ausführlicher in den beiden Abschnitten `dpkg` und ``Liste der
-installierten Pakete anzeigen und deuten'' (siehe
-<<liste-der-installierten-pakete-anzeigen-und-deuten>>).
-====
+// - dpkg 
+include::dpkg.adoc[]
 
 ===== APT =====
 
