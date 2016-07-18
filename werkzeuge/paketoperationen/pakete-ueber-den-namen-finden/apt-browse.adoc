@@ -1,0 +1,9 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/apt-browse.adoc
+
+// Baustelle: Notizen
+
+===== Suche über apt-browse.org =====
+
+* http://apt-browse.org/
+
+// Datei: ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/apt-browse.adoc
