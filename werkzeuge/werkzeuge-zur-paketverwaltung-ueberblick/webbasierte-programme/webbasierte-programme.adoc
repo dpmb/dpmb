@@ -6,8 +6,6 @@
 
 === Webbasierte Programme ===
 
-include::dpkg-www.adoc[]
-
 include::ubuntu-landscape.adoc[]
 
 include::appnr.adoc[]

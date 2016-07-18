@@ -4,6 +4,9 @@
 
 ==== Browserbasierte Suche ====
 
+// In Paketen blättern mittels `dpkg-www`
+include::dpkg-www.adoc[]
+
 // Suche über die Webseite des Debian-Projekts
 include::debianprojekt.adoc[]
 
