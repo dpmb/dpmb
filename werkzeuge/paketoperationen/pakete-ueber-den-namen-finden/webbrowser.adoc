@@ -13,7 +13,7 @@ include::debianprojekt.adoc[]
 
 // Ubuntu
 // - Suche über die Webseite des Ubuntu-Projekts
-include::ubuntuproject.adoc[]
+include::ubuntuprojekt.adoc[]
 
 // Fremdprojekte, -quellen und -formate
 // - apt-browse.org
