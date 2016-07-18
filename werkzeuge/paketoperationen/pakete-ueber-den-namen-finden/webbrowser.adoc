@@ -7,16 +7,17 @@
 // In Paketen blättern mittels `dpkg-www`
 include::dpkg-www.adoc[]
 
+// Suche über die Webseite des Debian-Projekts
+include::debianprojekt.adoc[]
+
+// Suche über die Webseite des Ubuntu-Projekts
+include::ubuntuproject.adoc[]
+
 // apt-get.org
 include::apt-get.adoc[]
 
 // apt-browse.org
 include::apt-browse.adoc[]
-
-// Suche über die Webseite des Debian-Projekts
-include::debianprojekt.adoc[]
-
-// Suche über die Webseite des Ubuntu-Projekts
 
 ===== Suchmaschinen für Pakete =====
 

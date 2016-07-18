@@ -1,0 +1,9 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/ubuntuprojekt.adoc
+
+// Baustelle: Rohtext
+
+===== Suche über die Webseite des Ubuntu-Projekts =====
+
+* http://packages.ubuntu.com/
+
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/ubuntuprojekt.adoc
