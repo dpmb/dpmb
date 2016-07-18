@@ -12,12 +12,12 @@
 Das Projekt `dpkg-www` umfasst ein CGI-Skript und stellt Ihnen damit den
 Zugang zu sämtlicher Dokumentation zu den einzelnen Paketen zur
 Verfügung, die auf ihrem eigenen oder einem fremden Debian-System
-installiert sind. Dazu analysiert es das Verzeichnis
+installiert sind. Dazu analysiert `dpkg-www` zunächst das Verzeichnis
 `/usr/share/doc`. Als Ergebnis erhalten Sie zu jedem Paket eine
 graphische Auflistung der dazugehörigen, verfügbaren Textdateien,
 README-Dokumente, Manpages und GNU Info-Dokumente. Auch das manuelle
-Durchblättern des Verzeichnisses `/usr/share/doc` gehört dazu.
-Ist ebenfalls das Paket 'dctrl-tools' <<Debian-Paket-dctrl-tools>>
+Durchblättern des Verzeichnisses `/usr/share/doc` gehört dazu. Ist
+ebenfalls das Paket 'dctrl-tools' <<Debian-Paket-dctrl-tools>>
 installiert, können Sie mittels `dpkg-www` auch nach anderen Paketen und
 insbesondere nach den darin enthaltenen Dateien suchen.
 
@@ -31,6 +31,9 @@ Popularity Contest (<<Debian-Popularity-Contest>>) noch etwa 350
 Installationen in Benutzung (siehe dazu auch ``Verbreitungsgrad von
 Paketen'' in <<verbreitungsgrad-von-paketen>>).
 
+// Stichworte für den Index
+(((dpkg-www, /etc/dpkg-www.conf)))
+(((dpkg-www, /etc/dwww/dwww.conf)))
 Bitte beachten Sie, dass Sie ohne Anpassung der Konfiguration lediglich
 im Paketbestand des Systems stöbern können. Aus der Bedienoberfläche
 heraus können Sie im Auslieferungszustand keine Veränderung ihres
@@ -60,8 +63,8 @@ Postscript oder SGML.
 image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/dpkg-www.png[id="fig.dpkg-www", width="50%"]
 
 Wählen Sie ein Paket aus der Liste aus, erhalten Sie detailliertere
-Informationen dazu. Dieses zeigt <<fig.dpkg-www-synaptic>> anhand des
-Programms Synaptic.
+Informationen dazu. <<fig.dpkg-www-synaptic>> zeigt dieses beispielhaft
+anhand des Programms Synaptic.
 
 .Auswahl der Hilfeseiten zu Synaptic
 image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/dpkg-www-synaptic.png[id="fig.dpkg-www-synaptic", width="50%"]
@@ -79,7 +82,7 @@ freigeschaltet worden sein.
 (((dpkg-www, -s)))
 (((dpkg-www, -stdout)))
 Neben dem Paketnamen versteht das Programm die folgenden beiden
-Optionen:
+Schalter:
 
 `-s` (Langform `--stdout`) :: 
 die Ausgabe erfolgt nicht im Webbrowser, sondern auf dem Terminal.
@@ -107,9 +110,9 @@ $ dpkg-www bash
 $
 ----
 
-Um die Informationen zu dem gleichen Paket zuerhalten, welches jedoch
+Um die Informationen zu dem gleichen Paket zu erhalten, welches jedoch
 auf dem entfernten Rechner mit dem Hostnamen `kiste` installiert ist,
-funktioniert dieser Aufruf mit der zusätzlichen Option `-h`:
+funktioniert dieser Aufruf mit dem zusätzlichen Schalter `-h`:
 
 .Entfernte Hilfedokumente zum Paket 'bash' mittels `dpkg-www` im Webbrowser anzeigen
 ----
