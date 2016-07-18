@@ -145,38 +145,8 @@ Pakete, die diesem Muster entsprechen (siehe <<fig.aptitude-limit-xpdf>>).
 .Ergebnis der Limitierung nach `xpdf` über die Aptitude-TUI
 image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/aptitude-limit-xpdf.png[id="fig.aptitude-limit-xpdf", width="50%"]
 
-===== Synaptic =====
-
-// Stichworte für den Index
-(((Paketsuche, anhand des Maintainers)))
-(((Paketsuche, über den Paketnamen)))
-(((Paketsuche, über die Paketbeschreibung)))
-(((Paketsuche, über die Paketliste)))
-(((Paketsuche, anhand der Paketversion)))
-(((Paketsuche, über ein Suchmuster)))
-(((Paketsuche, über ein Textfragment)))
-Synaptic aus <<gui-synaptic>> bietet Ihnen zwei Varianten zur Suche an
-– einerseits eine Schnellsuche und andererseits eine ausführliche
-Suche. Die _Schnellsuche_ verbirgt sich hinter dem Suchfenster oben
-rechts und ist mit dem Begriff menu:Schnellauswahl-Filter[] betitelt.
-Geben Sie dort einen Text ein, durchsucht Synaptic die Paketliste und
-filtert nur die heraus, deren Paketname mit dem Text beginnen. Dabei
-werden Platzhalter und Reguläre Ausdrücke nicht unterstützt. Als
-Ergebnis wird die dargestellte Paketliste auf die gefundenen Pakete
-eingeschränkt.
-
-Die _ausführlichere Suche_ erreichen Sie mittels kbd:[Ctrl]+kbd:[F] oder
-alternativ über den Knopf mit der Lupe. Es öffnet sich ein Fenster mit
-einem Eingabefeld für den Suchtext. Darunter befindet sich ein
-Auswahlfeld, wo Sie die Suche nach Name, Beschreibung und Name, Betreuer
-(siehe auch <<paket-nach-maintainer-finden>>), Version, Abhängigkeiten
-und den bereitgestellten Paketen genauer spezifizieren können. Bei
-dieser Suche versteht Synaptic auch Fragmente, d.h. es interpretiert den
-Suchtext als Teilstring. <<fig.synaptic-suche-nach-namen>> zeigt das
-Suchergebnis für das Fragment `fce`.
-
-.Ergebnis der Suche nach dem Fragment `fce` in Synaptic
-image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/synaptic-suche-nach-namen.png[id="fig.synaptic-suche-nach-namen", width="50%"]
+// Synaptic
+include::synaptic.adoc[]
 
 ===== SmartPM =====
 

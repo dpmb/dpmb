@@ -1,0 +1,42 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/synaptic.adoc
+
+// Baustelle: Fertig
+
+===== Synaptic =====
+
+// Stichworte für den Index
+(((Paketsuche, anhand des Maintainers)))
+(((Paketsuche, über den Paketnamen)))
+(((Paketsuche, über die Paketbeschreibung)))
+(((Paketsuche, über die Paketliste)))
+(((Paketsuche, anhand der Paketversion)))
+(((Paketsuche, über ein Suchmuster)))
+(((Paketsuche, über ein Textfragment)))
+Bis zur Version 0.8 bot Ihnen Synaptic aus <<gui-synaptic>> zwei
+Varianten zur Suche an – einerseits eine Schnellsuche und andererseits
+eine ausführliche Suche. Die _Schnellsuche_ verschwand mit der Version
+0.8.
+
+Erstere verbirgt sich hinter dem Suchfenster oben rechts und ist mit dem
+Begriff menu:Schnellauswahl-Filter[] betitelt. Geben Sie dort einen Text
+ein, durchsucht Synaptic die Paketliste und filtert nur die heraus,
+deren Paketname mit dem Text beginnen. Dabei werden Platzhalter und
+Reguläre Ausdrücke nicht unterstützt. Als Ergebnis wird die dargestellte
+Paketliste auf die gefundenen Pakete eingeschränkt.
+
+Die _ausführlichere Suche_ erreichen Sie mittels kbd:[Ctrl]+kbd:[F], dem
+Menüeintrag menu:Bearbeiten[Suchen ...] oder alternativ über den Knopf
+mit der Lupe in der Werkzeugleiste. Es öffnet sich ein Fenster mit einem
+Eingabefeld für den Suchtext. Darunter befindet sich ein Auswahlfeld, wo
+Sie die Suche entweder nach Paketname, Beschreibung und Paketname,
+Betreuer (``Maintainer''), Paketversion, Abhängigkeiten und den
+bereitgestellten Paketen genauer spezifizieren können. Bei dieser Suche
+versteht Synaptic auch Fragmente, d.h. es interpretiert den Suchtext als
+Teilstring. Reguläre Ausdrücke versteht es hingegen nicht.
+<<fig.synaptic-suche-nach-namen>> zeigt das Suchergebnis für das
+Fragment `fce`.
+
+.Ergebnis der Suche nach dem Fragment `fce` in Synaptic
+image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/synaptic-suche-nach-namen.png[id="fig.synaptic-suche-nach-namen", width="50%"]
+
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/synaptic.adoc
