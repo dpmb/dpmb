@@ -4,6 +4,13 @@
 
 ===== Suche über die Webseite des Ubuntu-Projekts =====
 
+// Stichworte für den Index
+(((Paketsuche, über den Paketnamen)))
+(((Paketsuche, über die Paketbeschreibung)))
+(((Paketsuche, über den Paketinhalt)))
+(((Paketsuche, anhand der Veröffentlichung)))
+(((Paketsuche, anhand des Quellpakets)))
+
 * http://packages.ubuntu.com/
 * Suche
 ** Vorauswahl anhand der Distribution (oberer Teil der Webseite)
