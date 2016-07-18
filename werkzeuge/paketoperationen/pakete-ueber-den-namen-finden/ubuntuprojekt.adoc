@@ -8,6 +8,7 @@
 (((Paketsuche, über den Paketnamen)))
 (((Paketsuche, über die Paketbeschreibung)))
 (((Paketsuche, über den Paketinhalt)))
+(((Paketsuche, über packages.ubuntu.org)))
 (((Paketsuche, anhand der Veröffentlichung)))
 (((Paketsuche, anhand des Quellpakets)))
 

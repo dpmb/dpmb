@@ -4,6 +4,8 @@
 
 ===== Suche über apt-get.org =====
 
+// Stichworte für den Index
+(((Paketsuche, mittels apt-get.org)))
 * http://apt-get.org/
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/apt-get.adoc

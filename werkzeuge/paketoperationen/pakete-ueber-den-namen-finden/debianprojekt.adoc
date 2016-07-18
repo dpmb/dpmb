@@ -11,6 +11,7 @@
 (((Paketsuche, über die Paketbeschreibung)))
 (((Paketsuche, über den Paketinhalt)))
 (((Paketsuche, über die Paketliste)))
+(((Paketsuche, über packages.debian.org)))
 (((Paketsuche, anhand der Paketversion)))
 (((Paketsuche, anhand der Veröffentlichung)))
 Nicht nur für den Einstieg, sondern auch für den Alltag ist die

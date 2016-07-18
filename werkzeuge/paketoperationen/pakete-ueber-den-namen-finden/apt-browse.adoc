@@ -4,6 +4,11 @@
 
 ===== Suche über apt-browse.org =====
 
+// Stichworte für den Index
+(((Paketsuche, mittels apt-browse.org)))
+(((Paketsuche, über den Paketnamen)))
+(((Paketsuche, über die Paketbeschreibung)))
+
 * http://apt-browse.org/
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/apt-browse.adoc

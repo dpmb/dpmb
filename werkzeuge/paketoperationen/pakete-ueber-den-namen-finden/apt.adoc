@@ -6,6 +6,8 @@
 
 // Stichworte für den Index
 (((apt-cache, search)))
+(((Paketsuche, mittels APT)))
+(((Paketsuche, mittels apt-cache)))
 (((Paketsuche, über den Paketnamen)))
 (((Paketsuche, über die Paketbeschreibung)))
 (((Paketsuche, über die Paketliste)))
