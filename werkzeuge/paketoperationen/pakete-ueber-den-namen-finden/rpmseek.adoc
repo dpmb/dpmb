@@ -5,19 +5,32 @@
 ===== Rpmseek.com =====
 
 // Stichworte für den Index
+(((Paketsuche, anhand der Architektur)))
+(((Paketsuche, anhand der Linux-Distribution)))
+(((Paketsuche, mittels Rpmseek)))
+(((Paketsuche, über die Paketabhängigkeiten)))
+(((Paketsuche, über die Paketbeschreibung)))
 (((Paketsuche, über das Paketformat)))
 (((Paketsuche, über den Paketnamen)))
-Bereits oben angesprochene Suche über die Webseite des Debian-Projekts
-beinhaltet nur Pakete, die in den offiziellen Repositories enthalten
-sind. Für andere, externe Pakete existieren hingegen spezielle
-Suchmaschinen und Verzeichnisdienste. Für `deb`-Pakete sind das bspw.
-apt-get.org <<apt-get.org>> und Rpmseek <<rpmseek>>. Letzeres kann
-sowohl `rpm`- als auch `deb`-Pakete erstöbern. Gefundene Pakete können
-Sie direkt von der angegebenen Quelle beziehen und installieren. Bitte
-beachten Sie aber, dass mit diesen Suchmaschinen gefundene Pakete oft
-nicht den Qualitätsansprüchen von Debian entsprechen, einer nicht-freien
-Lizenz unterliegen oder schlicht nicht auf Ihrem System installierbar
-sind, weil z.B. manche Abhängigkeiten nicht erfüllt werden.
+(((Paketsuche, über ein Fragment des Paketnamens)))
+Die bereits oben angesprochenen Möglichkeiten zur Recherche über die
+Webseiten des Debian- bzw. Ubuntu-Projekts beinhalten nur Pakete, die in
+den offiziellen Repositories der jeweiligen Distribution enthalten sind.
+Für andere, externe Pakete existieren hingegen spezielle Suchmaschinen
+und Verzeichnisdienste.
+
+Rpmseek <<rpmseek>> kann sowohl `rpm`- als auch `deb`-Pakete erstöbern.
+Es erlaubt die Suche anhand des Paketnamens, des Paketformats, der
+Linux-Distribution und der Architektur. Dabei sucht es entweder in der
+Paketliste oder der Beschreibung und kann ebenso die Paketabhängigkeiten
+berücksichtigen.
+
+Gefundene Pakete können Sie nicht nur inspizieren, sondern direkt von
+der angegebenen Quelle beziehen und installieren. Bitte beachten Sie
+aber, dass mit diesen Suchmaschinen gefundene Pakete oft nicht den
+Qualitätsansprüchen von Debian entsprechen, einer nicht-freien Lizenz
+unterliegen oder schlicht nicht auf Ihrem System installierbar sind,
+weil z.B. manche Abhängigkeiten nicht erfüllt werden.
 
 .Ergebnis der Paketsuche nach 'htop' über http://www.rpmseek.com/
 image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/rpmseek.png[id="fig.rpmseek", width="50%"]
