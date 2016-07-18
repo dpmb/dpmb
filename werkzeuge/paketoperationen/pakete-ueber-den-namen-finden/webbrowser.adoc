@@ -8,6 +8,7 @@
 include::dpkg-www.adoc[]
 
 // apt-get.org
+include::apt-get.adoc[]
 
 // apt-browse.org
 include::apt-browse.adoc[]

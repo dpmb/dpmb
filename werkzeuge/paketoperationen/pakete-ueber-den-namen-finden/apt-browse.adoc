@@ -6,4 +6,4 @@
 
 * http://apt-browse.org/
 
-// Datei: ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/apt-browse.adoc
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/apt-browse.adoc

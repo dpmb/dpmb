@@ -1,0 +1,9 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/apt-get.adoc
+
+// Baustelle: Notizen
+
+===== Suche über apt-get.org =====
+
+* http://apt-get.org/
+
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/apt-get.adoc
