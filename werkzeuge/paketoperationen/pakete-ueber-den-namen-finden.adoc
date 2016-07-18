@@ -101,10 +101,13 @@ $
 (((aptitude, search)))
 (((Paketsuche, anhand der Architektur)))
 (((Paketsuche, anhand des Maintainers)))
+(((Paketsuche, anhand der Markierung)))
 (((Paketsuche, über den Paketnamen)))
 (((Paketsuche, über die Paketbeschreibung)))
 (((Paketsuche, über die Paketliste)))
 (((Paketsuche, anhand der Paketversion)))
+(((Paketsuche, über ein Suchmuster)))
+(((Paketsuche, über ein Textfragment)))
 `aptitude` berücksichtigt bei der Suche üblicherweise nur den
 Paketnamen. Es sucht jedoch auf Wunsch auch in der Paketliste und der
 Paketbeschreibung. Beinhaltet der Paketname eine Tilde (`~`) oder ein
@@ -165,6 +168,8 @@ image::werkzeuge/paketoperationen/aptitude-limit-xpdf.png[id="fig.aptitude-limit
 (((Paketsuche, über die Paketbeschreibung)))
 (((Paketsuche, über die Paketliste)))
 (((Paketsuche, anhand der Paketversion)))
+(((Paketsuche, über ein Suchmuster)))
+(((Paketsuche, über ein Textfragment)))
 Synaptic aus <<gui-synaptic>> bietet Ihnen zwei Varianten zur Suche an
 – einerseits eine Schnellsuche und andererseits eine ausführliche
 Suche. Die _Schnellsuche_ verbirgt sich hinter dem Suchfenster oben
@@ -175,15 +180,15 @@ werden Platzhalter und Reguläre Ausdrücke nicht unterstützt. Als
 Ergebnis wird die dargestellte Paketliste auf die gefundenen Pakete
 eingeschränkt.
 
-Die _ausführlichere Suche_ erreichen Sie mittels kbd:[Ctrl,F] oder
+Die _ausführlichere Suche_ erreichen Sie mittels kbd:[Ctrl]+kbd:[F] oder
 alternativ über den Knopf mit der Lupe. Es öffnet sich ein Fenster mit
 einem Eingabefeld für den Suchtext. Darunter befindet sich ein
 Auswahlfeld, wo Sie die Suche nach Name, Beschreibung und Name, Betreuer
 (siehe auch <<paket-nach-maintainer-finden>>), Version, Abhängigkeiten
-und den bereitgestellten Paketen spezifizieren können. Bei dieser Suche
-versteht Synaptic auch Fragmente, d.h. es interpretiert den Suchtext als
-Teilstring. <<fig.synaptic-suche-nach-namen>> zeigt das Suchergebnis
-für das Fragment `fce`.
+und den bereitgestellten Paketen genauer spezifizieren können. Bei
+dieser Suche versteht Synaptic auch Fragmente, d.h. es interpretiert den
+Suchtext als Teilstring. <<fig.synaptic-suche-nach-namen>> zeigt das
+Suchergebnis für das Fragment `fce`.
 
 .Ergebnis der Suche nach dem Fragment `fce` in Synaptic
 image::werkzeuge/paketoperationen/synaptic-suche-nach-namen.png[id="fig.synaptic-suche-nach-namen", width="50%"]
