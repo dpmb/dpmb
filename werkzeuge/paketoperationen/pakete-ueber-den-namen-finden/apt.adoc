@@ -1,0 +1,38 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/apt.adoc
+
+// Baustelle: Fertig
+
+===== APT =====
+
+// Stichworte für den Index
+(((apt-cache, search)))
+(((Paketsuche, über den Paketnamen)))
+(((Paketsuche, über die Paketbeschreibung)))
+(((Paketsuche, über die Paketliste)))
+(((Paketsuche, über ein Textfragment)))
+Das Kommando `apt-cache` liefert in der Standardeinstellung das
+umfangreichste Suchergebnis auf der Kommandozeile. Ohne weitere
+Suchoptionen durchsucht `apt-cache search` die Paketliste und erstöbert
+den Paketnamen, die Paketabhängigkeiten sowie die kurze als auch die
+ausführliche Paketbeschreibung.
+
+`apt-cache` erwartet nach dem Unterkommando `search` ein Textfragment
+als Suchbegriff. Nachfolgend sehen Sie das Suchergebnis zum Paket
+'lintian' <<Debian-Paket-lintian>>. Es beinhaltet das gefundene Paket
+sowie dessen Kurzbeschreibung.
+
+.Suche nach einem Paket
+----
+$ apt-cache search lintian
+dput - Debian package upload tool
+elida - pbuilder mail interface
+fixincludes - Fix non-ANSI header files
+libdebian-package-html-perl - generates HTML from a Debian source/binary package
+debaux - Debian-Hilfsprogramme
+devscripts - Skripte, die das Leben eines Debian-Paketbetreuers erleichtern
+lintian - Debian-Paketprüfer
+$
+----
+
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/apt.adoc
+

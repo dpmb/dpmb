@@ -1,0 +1,70 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/aptitude.adoc
+
+// Baustelle: Fertig
+
+===== `aptitude` =====
+
+// Stichworte für den Index
+(((aptitude, search)))
+(((Paketsuche, anhand der Architektur)))
+(((Paketsuche, anhand des Maintainers)))
+(((Paketsuche, anhand der Markierung)))
+(((Paketsuche, über den Paketnamen)))
+(((Paketsuche, über die Paketbeschreibung)))
+(((Paketsuche, über die Paketliste)))
+(((Paketsuche, anhand der Paketversion)))
+(((Paketsuche, über ein Suchmuster)))
+(((Paketsuche, über ein Textfragment)))
+`aptitude` berücksichtigt bei der Suche üblicherweise nur den
+Paketnamen. Es sucht jedoch auf Wunsch auch in der Paketliste und der
+Paketbeschreibung. Beinhaltet der Paketname eine Tilde (`~`) oder ein
+Fragezeichen (`?`), wird der Paketname als Suchmuster aufgefasst. In
+Folge werden alle Pakete berücksichtigt, die diesem Suchmuster
+entsprechen. Dazu füttern Sie `aptitude` mit den folgenden Optionen:
+
+`~dsuchbegriff` (Langform `?description(suchbegriff)`):: 
+Suche nach dem 'suchbegriff' in der Paketbeschreibung.
+
+`~nsuchbegriff` (Langform `?name(suchbegriff)`)::
+Suche nach 'suchbegriff' im Namen des Pakets. 'suchbegriff' wird hier
+als Teilzeichenkette betrachtet und findet bspw. bei `apt` die Pakete
+'apt', 'aptitude' und 'synaptic'.
+
+`?exact-name(suchbegriff)`::
+Suche nach Paketen, deren Paketnamen exakt mit dem Suchbegriff übereinstimmen.
+
+`?term(suchbegriff)`::
+Volltextsuche nach 'suchbegriff' im Namen und der Beschreibung des Pakets.
+
+`?term-prefix(suchbegriff)`::
+Volltextsuche nach Begriffen, die den 'suchbegriff' als Präfix beinhalten.
+
+`?user-tag(suchbegriff)`::
+Suche nach Begriffen, die den 'suchbegriff' als benutzerdefinierte Markierung beinhalten.
+
+Der Kommandozeilenaufruf von `aptitude` ist ähnlich zu `apt-cache` –
+auch hier folgt auf das Unterkommando `search` die Suchoption oder nur
+das Textfragment zur Recherche. Beispielhaft interessierte uns das Paket
+'xpdf'. Wie Sie der nachfolgenden Ausgabe entnehmen können, sucht
+`aptitude` per Default nur in den Paketnamen. Das Suchergebnis zeigt,
+dass insgesamt drei Pakete verfügbar sind, die 'xpdf' im Namen tragen.
+Davon ist nur das erste auf dem System installiert.
+
+.Suche nach 'xpdf' mittels `aptitude`
+----
+$ aptitude search xpdf
+i   xpdf          - Leseprogramm für das Portable Document Format (PDF)
+p   xpdf-reader   - Übergangspaket für xpdf
+p   xpdf-utils
+$
+----
+
+In der Textoberfläche von `aptitude` begrenzen Sie zunächst die Auswahl
+mit der Taste kbd:[l]. In das Eingabefeld tragen Sie den Suchtext
+oder das o.g. Suchmuster ein. Daraufhin erscheinen in der Übersicht alle
+Pakete, die diesem Muster entsprechen (siehe <<fig.aptitude-limit-xpdf>>).
+
+.Ergebnis der Limitierung nach `xpdf` über die Aptitude-TUI
+image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/aptitude-limit-xpdf.png[id="fig.aptitude-limit-xpdf", width="50%"]
+
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/aptitude.adoc
