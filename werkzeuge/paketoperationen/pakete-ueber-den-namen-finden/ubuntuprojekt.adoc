@@ -5,5 +5,15 @@
 ===== Suche über die Webseite des Ubuntu-Projekts =====
 
 * http://packages.ubuntu.com/
+* Suche
+** Vorauswahl anhand der Distribution (oberer Teil der Webseite)
+** anhand eines Begriffs bezogen auf den Paketnamen, die
+   Paketbeschreibung oder den Namen des Quellpakets
+** Eingrenzung auf die Veröffentlichung und den Distributionsbereich
+   (hier genannt ``Section'')
+
+// Abbildung von packages.ubuntu.org
+.Ergebnis der Paketsuche nach 'aptsh' über http://packages.ubuntu.org/
+image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/paketsuche-ubuntu-webseite.png[id="fig.packages-ubuntu-Webbrowser", width="50%"]
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/ubuntuprojekt.adoc
