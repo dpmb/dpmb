@@ -1,0 +1,44 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/debianprojekt.adoc
+
+// Baustelle: Rohtext
+
+===== Suche über die Webseite des Debian-Projekts =====
+
+// Stichworte für den Index
+(((Paketsuche, anhand der Architektur)))
+(((Paketsuche, anhand des Maintainers)))
+(((Paketsuche, über den Paketnamen)))
+(((Paketsuche, über die Paketbeschreibung)))
+(((Paketsuche, über den Paketinhalt)))
+(((Paketsuche, über die Paketliste)))
+(((Paketsuche, anhand der Paketversion)))
+(((Paketsuche, anhand der Veröffentlichung)))
+Nicht nur für den Einstieg, sondern auch für den Alltag ist die
+Paketsuche über die Webseite des Debian-Projekts (siehe
+<<Debian-Paketsuche>>) äußerst hilfreich und insbesondere sehr schnell.
+<<fig.packages-Webbrowser>> zeigt das Ergebnis der Recherche nach dem
+Paket 'iftop' im Webbrowser 'Iceweasel' an.
+
+Neben dem Paketnamen beinhaltet jeder Suchtreffer die Distribution
+(siehe <<distributionsbereiche>>), gefolgt von der Veröffentlichung
+(hier genannt ``Suite'') (siehe <<veroeffentlichungen>>), der
+Paketkategorie (siehe <<sortierung-der-pakete-nach-verwendungszweck>>)
+und den Debian-Architekturen (siehe <<debian-architekturen>>), für die
+passende Pakete zur Verfügung stehen. Damit sehen Sie sofort, ob das
+Paket für ihre Veröffentlichung und Architektur existiert.
+
+Klicken Sie einen der Links unterhalb des Suchfeldes an, schränken Sie
+das Suchergebnis auf die jeweilige Veröffentlichung oder Architektur
+weiter ein und erhalten daraufhin detailliertere Informationen zu dem
+spezifisch ausgewählten Paket. Neben der Paketbeschreibung sehen Sie die
+Debian Tags, die Paketabhängigkeiten und am rechten Rand weiterführende
+Informationen zum Paket. Dazu zählen ein Screenshot von
+screenshots.debian.net (sofern verfügbar), Fehlerberichte, die Liste der
+Änderungen (``Changelog''), die Quellcodepakete, den Paketbetreuer
+(``Maintainer''), die Projektwebseite und eine Liste ähnlicher Pakete.
+
+// Abbildung von packages.debian.org
+.Ergebnis der Paketsuche nach 'iftop' über http://packages.debian.org/
+image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/paketsuche-debian-webseite.png[id="fig.packages-Webbrowser", width="50%"]
+
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/debianprojekt.adoc
