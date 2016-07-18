@@ -23,14 +23,15 @@ eingeschränkt implementiert.
 
 // Stichworte für den Index
 (((dpkg, -l)))
+(((dpkg, --list)))
 (((Paketsuche, über die Paketliste)))
-`dpkg` sucht nur in der Paketliste. Dazu bietet es die Option `-l` und
-listet darüber nur derzeit oder früher schon einmal installierte Pakete
-auf. Es erwartet als weiteren Parameter entweder einen vollständigen
-Paketnamen oder einen Suchausdruck mit Platzhalter (engl. _Wildcard_).
-Bitte schließen Sie den Suchausdruck in einfache oder doppelte
-Hochkommata ein, damit die Shell nicht versucht, den Platzhalter selbst
-auszuwerten.
+`dpkg` sucht nur in der Paketliste. Dazu bietet es die Option `-l`
+(Langform `--list`) und listet darüber nur derzeit oder früher schon
+einmal installierte Pakete auf. Es erwartet als weiteren Parameter
+entweder einen vollständigen Paketnamen oder einen Suchausdruck mit
+Platzhalter (engl. _Wildcard_). Bitte schließen Sie den Suchausdruck in
+einfache oder doppelte Hochkommata ein, damit die Shell nicht versucht,
+den Platzhalter selbst auszuwerten.
 
 .Fahndung nach den Paketen für 'xpdf' mittels `dpkg`
 ----
@@ -57,8 +58,8 @@ installiert''.
 .Ausgabeformat des Paketstatus
 ====
 Das Ausgabeformat sowie die Buchstaben am Zeilenanfang erklären wir
-ausführlicher in den beiden Abschnitten `dpkg` und Liste der
-installierten Pakete anzeigen und deuten (siehe
+ausführlicher in den beiden Abschnitten `dpkg` und ``Liste der
+installierten Pakete anzeigen und deuten'' (siehe
 <<liste-der-installierten-pakete-anzeigen-und-deuten>>).
 ====
 
@@ -69,6 +70,7 @@ installierten Pakete anzeigen und deuten (siehe
 (((Paketsuche, über den Paketnamen)))
 (((Paketsuche, über die Paketbeschreibung)))
 (((Paketsuche, über die Paketliste)))
+(((Paketsuche, über ein Textfragment)))
 Das Kommando `apt-cache` liefert in der Standardeinstellung das
 umfangreichste Suchergebnis auf der Kommandozeile. Ohne weitere
 Suchoptionen durchsucht `apt-cache search` die Paketliste und erstöbert
@@ -77,8 +79,8 @@ ausführliche Paketbeschreibung.
 
 `apt-cache` erwartet nach dem Unterkommando `search` ein Textfragment
 als Suchbegriff. Nachfolgend sehen Sie das Suchergebnis zum Paket
-'lintian' <<Debian-Paket-lintian>>. Es zeigt das gefundene Paket sowie
-dessen Kurzbeschreibung dazu an.
+'lintian' <<Debian-Paket-lintian>>. Es beinhaltet das gefundene Paket
+sowie dessen Kurzbeschreibung.
 
 .Suche nach einem Paket
 ----
