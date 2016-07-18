@@ -6,10 +6,11 @@
 
 // Stichworte für den Index
 (((Paketsuche, anhand des Maintainers)))
-(((Paketsuche, über den Paketnamen)))
+(((Paketsuche, anhand der Paketversion)))
+(((Paketsuche, mittels Synaptic)))
 (((Paketsuche, über die Paketbeschreibung)))
 (((Paketsuche, über die Paketliste)))
-(((Paketsuche, anhand der Paketversion)))
+(((Paketsuche, über den Paketnamen)))
 (((Paketsuche, über ein Suchmuster)))
 (((Paketsuche, über ein Textfragment)))
 Bis zur Version 0.8 bot Ihnen Synaptic aus <<gui-synaptic>> zwei
