@@ -9,6 +9,7 @@
 (((Debianpaket, dctrl-tools)))
 (((Debianpaket, dpkg-www)))
 (((dpkg-www)))
+(((Paketsuche, mittels dpkg-www)))
 Das Projekt `dpkg-www` umfasst ein CGI-Skript und stellt Ihnen damit den
 Zugang zu sämtlicher Dokumentation zu den einzelnen Paketen zur
 Verfügung, die auf ihrem eigenen oder einem fremden Debian-System

@@ -5,6 +5,7 @@
 ===== SmartPM =====
 
 // Stichworte für den Index
+(((Paketsuche, mittels SmartPM)))
 (((Paketsuche, über den Paketnamen)))
 (((Paketsuche, über ein Suchmuster)))
 (((Paketsuche, über ein Textfragment)))
@@ -13,7 +14,8 @@ Diese ist als Suchfeld in die graphische Bedienoberfläche integriert.
 Das Suchfeld erreichen Sie ebenfalls über die Tastenkombination
 kbd:[Ctrl]+kbd:[F]. SmartPM versteht auch Fragmente, d.h. es
 interpretiert den Suchtext als Teilstring, sucht bislang jedoch nur im
-Paketnamen.
+Paketnamen. Reguläre Ausdrücke bei der Formulierung des Suchstrings
+unterstützt es bislang nicht.
 
 .Ergebnis der Suche nach dem Fragment `top` in SmartPM
 image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/smartpm-suche.png[id="fig.smartpm-suche", width="50%"]

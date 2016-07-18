@@ -7,6 +7,7 @@
 // Stichworte für den Index
 (((dpkg, -l)))
 (((dpkg, --list)))
+(((Paketsuche, mittels dpkg)))
 (((Paketsuche, über die Paketliste)))
 `dpkg` sucht nur in der Paketliste. Dazu bietet es die Option `-l`
 (Langform `--list`) und listet darüber nur derzeit oder früher schon

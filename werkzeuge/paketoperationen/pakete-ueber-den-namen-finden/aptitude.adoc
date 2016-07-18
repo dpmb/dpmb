@@ -9,10 +9,11 @@
 (((Paketsuche, anhand der Architektur)))
 (((Paketsuche, anhand des Maintainers)))
 (((Paketsuche, anhand der Markierung)))
+(((Paketsuche, anhand der Paketversion)))
+(((Paketsuche, mittels aptitude)))
 (((Paketsuche, über den Paketnamen)))
 (((Paketsuche, über die Paketbeschreibung)))
 (((Paketsuche, über die Paketliste)))
-(((Paketsuche, anhand der Paketversion)))
 (((Paketsuche, über ein Suchmuster)))
 (((Paketsuche, über ein Textfragment)))
 `aptitude` berücksichtigt bei der Suche üblicherweise nur den
