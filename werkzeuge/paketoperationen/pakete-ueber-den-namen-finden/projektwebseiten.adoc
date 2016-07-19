@@ -28,6 +28,8 @@ und den Debian-Architekturen (siehe <<debian-architekturen>>), für die
 passende Pakete zur Verfügung stehen. Damit sehen Sie sofort, ob das
 Paket für ihre Veröffentlichung und Architektur existiert.
 
+// Stichworte für den Index
+(((http://screenshots.debian.net)))
 Klicken Sie einen der Links unterhalb des Suchfeldes an, schränken Sie
 das Suchergebnis auf die jeweilige Veröffentlichung oder Architektur
 weiter ein und erhalten daraufhin detailliertere Informationen zu dem
@@ -42,54 +44,59 @@ screenshots.debian.net (sofern verfügbar), Fehlerberichte, die Liste der
 .Ergebnis der Paketsuche nach 'iftop' über http://packages.debian.org/
 image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/paketsuche-debian-webseite.png[id="fig.packages-Webbrowser", width="50%"]
 
-Aber nicht nur das, man kann mit bestimmten Kurzformen der URL direkt
-die entsprechende Suche einleiten oder ein Paket anzeigen lassen:
+// Stichworte für den Index
+(((Paketsuche, anhand von Kurzformen (URL))))
+Aber nicht nur das -- Sie können mit bestimmten Kurzformen der URL
+direkt die entsprechende Suche einleiten oder ein gewünschtes Paket
+anzeigen lassen:
 
-* https://packages.debian.org/'suchbegriff' sucht nach Binärpaketen mit
-  'suchbegriff' im Paketnamen, z.B. https://packages.debian.org/screen
-  sucht nach Binärpaketen mit "screen" im Namen.
+`https://packages.debian.org/`'suchbegriff'::
+sucht nach Binärpaketen mit 'suchbegriff' im Paketnamen, z.B. https://packages.debian.org/screen
+sucht nach Binärpaketen mit 'screen' im Namen.
 
-* https://packages.debian.org/src:'suchbegriff' sucht nach Quellpaketen mit
-  'suchbegriff' im Paketnamen, z.B. https://packages.debian.org/src:screen
-  sucht nach Quellpaketen mit "screen" im Namen.
+`https://packages.debian.org/src:`'suchbegriff'::
+sucht nach Quellpaketen mit 'suchbegriff' im Paketnamen, z.B.
+https://packages.debian.org/src:screen sucht nach Quellpaketen mit
+'screen' im Namen.
 
-* https://packages.debian.org/'release'/'paketname' zeigt die
-  Informationen zum Binärpaket 'paketname' in der Veröffentlichung
-  'release' an, z.B. https://packages.debian.org/stable/screen zeigt
-  die Paketbeschreibung und die Abhängigkeiten des Paketes "screen" im
-  aktuellen Stable-Release von Debian an.
+`https://packages.debian.org/`'release'/'paketname':: 
+zeigt die Informationen zum Binärpaket 'paketname' in der
+Veröffentlichung 'release' an, z.B. https://packages.debian.org/stable/screen 
+für die Paketbeschreibung und die Abhängigkeiten des Paketes 'screen' in
+der aktuellen stabilen Debian-Veröffentlichung
 
-* https://packages.debian.org/'sprachkürzel'/'release'/'paketname'
-  zeigt die Informationen zum Paket 'paketname' in der
-  Veröffentlichung 'release' in der gewählten Sprache an,
-  z.B. https://packages.debian.org/de/stable/screen zeigt die
-  Paketbeschreibung und die Abhängigkeiten des Paketes "screen" im
-  aktuellen Stable-Release von Debian auf Deutsch an.
+`https://packages.debian.org/`'sprachkürzel'/'release'/'paketname'::
+zeigt die Informationen zum Paket 'paketname' in der Veröffentlichung
+'release' in der gewählten Sprache an, z.B.
+https://packages.debian.org/de/stable/screen für die Paketbeschreibung
+und die Abhängigkeiten des Paketes 'screen' im aktuellen Stable-Release
+von Debian auf Deutsch
 
-* https://packages.debian.org/source/'release'/'sourcepaketname' zeigt
-  die Informationen zum Quellpaket 'sourcepaketname' in der
-  Veröffentlichung 'release' an,
-  z.B. https://packages.debian.org/source/testing/screen zeigt die
-  Paketbeschreibung und die Abhängigkeiten des Paketes "screen" in
-  Debian Testing an. Analog zu den Binärpaketen kann man auch hier
-  noch ein Sprachkürzel an den Anfang des Pfades setzen, um eine
-  bestimmte Sprache zu erzwingen.
+`https://packages.debian.org/source/`'release'/'sourcepaketname'::
+zeigt die Informationen zum Quellpaket 'sourcepaketname' in der
+Veröffentlichung 'release' an, z.B.
+https://packages.debian.org/source/testing/screen zeigt die
+Paketbeschreibung und die Abhängigkeiten des Paketes `screen` in Debian
+Testing an. Analog zu den Binärpaketen können Sie hier auch noch ein
+Sprachkürzel an den Anfang des Pfades setzen, um eine bestimmte Sprache
+zu erzwingen.
 
-* https://packages.debian.org/'release'/ zeigt alle Sektionen in dem
-  Release an.
+`https://packages.debian.org/`'release'`/`:: 
+zeigt alle Sektionen in der benannten Veröffentlichung ('release') an
 
-* https://packages.debian.org/'release'/'sektion' zeigt alle
-  Binärpakete in der entsprechenden Sektion des gewählten Releases an,
-  z.B. zeigt https://packages.debian.org/stable/mail/ alle Binärpakete
-  in der Sektion "Mail" in der aktuellen Stable-Veröffentlichung von
-  Debian an. Auch hier kann man wieder ein Sprachkürzel an den Anfang
-  des Pfades setzen, um eine bestimmte Sprache auszuwählen.
+`https://packages.debian.org/`'release'/'sektion'::
+zeigt alle Binärpakete in der entsprechenden Sektion der gewählten
+Veröffentlichung ('release') an, z.B. zeigt
+https://packages.debian.org/stable/mail/ alle Binärpakete in der Sektion
+'Mail' in der aktuellen Stable-Veröffentlichung von Debian an. Auch hier
+können Sie wieder ein Sprachkürzel an den Anfang des Pfades setzen, um
+eine bestimmte Sprache auszuwählen.
 
-Anstelle eines Release-Namens ('jessie', 'stretch', 'sid', etc.)kann
-auch immer ein Suite-Name ('stable', 'testing', 'unstable', etc.)
-verwendet werden wie in den Beispielen gezeigt.
+Anstelle des Namens einer Veröffentlichung -- 'jessie', 'stretch',
+'sid', etc. -- kann auch immer ein Suite-Name -- 'stable', 'testing',
+'unstable', etc. -- verwendet werden. 
 
-====== Suche über die Webseite von Debian-Derivaten ======
+===== Suche über die Webseite von Debian-Derivaten =====
 
 Einige Derivate von Debian nutzen dieselbe Webanwendung zur Auflistung
 ihrer Pakete im Web. Den Autoren des Buches sind bisher bekannt:
