@@ -94,7 +94,7 @@ das Programm `dlocate` <<Debian-Paket-dlocate>> mit dem Schalter `-L`.
 Beachten Sie hierbei jedoch, dass `dlocate` die Angabe des Paketnamens
 als regulären Ausdruck interpretiert. 
 
-==== `dlocate --ls` 'Paketname' ====
+==== `dlocate -ls` 'Paketname' ====
 
 // Stichworte für den Index
 (((dlocate, -ls)))
