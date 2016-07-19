@@ -105,8 +105,8 @@ analog funktionieren. Jedoch ist dabei zu beachten, dass andere
 Distributionen aufgrund anderer Release-Politiken ggf. keine
 Suitenamen haben und damit auch diese Kurzformen nicht anbieten.
 
-// Abbildung von packages.ubuntu.org
-.Ergebnis der Paketsuche nach 'aptsh' über http://packages.ubuntu.org/
+// Abbildung von packages.ubuntu.com
+.Ergebnis der Paketsuche nach 'aptsh' über http://packages.ubuntu.com/
 image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/paketsuche-ubuntu-webseite.png[id="fig.packages-ubuntu-Webbrowser", width="50%"]
 
 Bei LinuxMint gibt es zwar auch die Webseite
