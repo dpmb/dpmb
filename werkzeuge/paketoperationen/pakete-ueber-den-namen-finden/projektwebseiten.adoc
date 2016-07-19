@@ -47,10 +47,13 @@ screenshots.debian.net (sofern verfügbar), Fehlerberichte, die Liste der
 image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/paketsuche-debian-webseite.png[id="fig.packages-Webbrowser", width="50%"]
 
 // Stichworte für den Index
-(((Debianpaket, screen)))
+(((Ubuntupaket, screen)))
+(((Paketsuche, anhand der Veröffentlichung)))
 (((Paketsuche, anhand von Kurzformen (URL))))
 (((Paketsuche, nach Binärpaketen)))
-(((Paketsuche, nach Quellpaketen)))
+(((Paketsuche, über den Paketnamen)))
+(((Paketsuche, über den Paketinhalt)))
+(((Paketsuche, über ein Textfragment)))
 Aber nicht nur das -- Sie können mit bestimmten Kurzformen der URL
 direkt die entsprechende Suche einleiten oder ein gewünschtes Paket
 anzeigen lassen:
@@ -162,11 +165,26 @@ Kurzformen nicht ermöglichen.
 image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/paketsuche-ubuntu-webseite.png[id="fig.packages-ubuntu-Webbrowser", width="50%"]
 
 // Stichworte für den Index
+(((Paketsuche, anhand der Veröffentlichung)))
+(((Paketsuche, anhand des Distributionsbereichs)))
+(((Paketsuche, über den Paketnamen)))
+(((Paketsuche, über den Paketinhalt)))
+(((Paketsuche, über die Paketbeschreibung)))
 (((Paketsuche, Linux Mint)))
 (((Paketsuche, über packages.linuxmint.com)))
-Bei Linux Mint gibt es zwar auch die Webseite
-http://packages.linuxmint.com/, aber diese verwendet eine andere
-Software. Nach unseren Recherchen funktionieren bislang keine der o.g.
+Bei *Linux Mint* gibt es zwar auch die Webseite
+http://packages.linuxmint.com/, aber diese verwendet eine auf PHP
+basierende Software zur Recherche. Als Suchkriterien stehen Ihnen die
+Veröffentlichung, ein Schlüsselwort für den Paketnamen und die
+Paketbeschreibung sowie der Distributionsbereich zur Verfügung.
+Letzteres Auswahlfeld ist als 'Section' gekennzeichnet und stellt die
+Bereiche _Main_, _Upstream_, _Import_, _Backport_, _Romeo_ und _Any_
+bereit (siehe <<fig.packages-linuxmint-Webbrowser>>). Nach unseren
+Recherchen funktionieren bislang keine der vom Debian-Projekt bekannten
 Kurzformen.
+
+// Abbildung von packages.linuxmint.com
+.Ergebnis der Paketsuche nach 'kdm' über http://packages.linuxmint.com/
+image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/paketsuche-linux-mint-webseite.png[id="fig.packages-linuxmint-Webbrowser", width="50%"]
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/projektwebseiten.adoc
