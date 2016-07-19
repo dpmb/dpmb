@@ -108,7 +108,9 @@ Einige Derivate von Debian nutzen dieselbe Webanwendung zur Auflistung
 ihrer Pakete im Web. Den Autoren des Buches sind bisher bekannt:
 
 Ubuntu (https://packages.ubuntu.com/)::
-unterstützt auch 'devel' nicht als Suite-Name, z.B. http://packages.ubuntu.com/de/xenial/mail/
+unterstützt bisher keine Suite-Namen, es gibt bei Ubuntu bisher aber
+auch nur genau einen Suite-Namen ('devel');
+z.B. http://packages.ubuntu.com/de/xenial/mail/
 
 Tanglu (http://packages.tanglu.org/):: 
 z.Zt. kein HTTPS unterstützt, z.B. http://packages.tanglu.org/de/staging/mail/
