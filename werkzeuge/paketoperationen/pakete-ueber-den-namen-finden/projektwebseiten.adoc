@@ -99,6 +99,8 @@ Anstelle des Namens einer Veröffentlichung -- 'jessie', 'stretch',
 ===== Suche über die Webseite von Debian-Derivaten =====
 
 // Stichworte für den Index
+(((Paketsuche, Tanglu)))
+(((Paketsuche, Ubuntu)))
 (((Paketsuche, über packages.tanglu.org)))
 (((Paketsuche, über packages.ubuntu.com)))
 
@@ -120,9 +122,12 @@ auch diese Kurzformen nicht ermöglichen.
 .Ergebnis der Paketsuche nach 'aptsh' über http://packages.ubuntu.com/
 image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/paketsuche-ubuntu-webseite.png[id="fig.packages-ubuntu-Webbrowser", width="50%"]
 
-Bei LinuxMint gibt es zwar auch die Webseite
+// Stichworte für den Index
+(((Paketsuche, Linux Mint)))
+(((Paketsuche, über packages.linuxmint.com)))
+Bei Linux Mint gibt es zwar auch die Webseite
 http://packages.linuxmint.com/, aber diese verwendet eine andere
-Software dafür und es scheinen auch keine der o.g. Kurzformen zu
-funktionieren.
+Software. Nach unseren Recherchen funktionieren bislang keine der o.g.
+Kurzformen.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/projektwebseiten.adoc
