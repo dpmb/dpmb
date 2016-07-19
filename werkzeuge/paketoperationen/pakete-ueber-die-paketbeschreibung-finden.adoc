@@ -19,16 +19,18 @@ und `grep-status` aus dem Paket 'dctrl-tools'
 
 // Stichworte für den Index
 (((grep-available, -F)))
+(((grep-available, --field)))
 (((grep-available, -i)))
+(((grep-available, --ignore-case)))
 Ohne die Angabe weiterer Parameter durchsucht `grep-available` die
-gesamte Paketbeschreibung. Mit Hilfe der Option `-F` schränken Sie den
-Vorgang auf einen darüber ausgewählten Feldnamen ein. Nachfolgender
-Aufruf zeigt Ihnen von allen verfügbaren Paketen die Paketnamen an, bei
-denen in der Beschreibung und im Paketnamen die Zeichenfolge `xpdf`
-enthalten ist. Durch den Schalter `-i` erfolgt die Suche dabei
-unabhängig von der Groß- und Kleinschreibung. Das abschließende
-`sort`-Kommando sorgt darüberhinaus für eine Ausgabe in alphabetisch
-aufsteigender Abfolge.
+gesamte Paketbeschreibung. Mit Hilfe der Option `-F` (Langform
+`--field`) schränken Sie den Vorgang auf einen darüber ausgewählten
+Feldnamen ein. Nachfolgender Aufruf zeigt Ihnen von allen verfügbaren
+Paketen die Paketnamen an, bei denen in der Beschreibung und im
+Paketnamen die Zeichenfolge `xpdf` enthalten ist. Durch den Schalter
+`-i` (Langform `--ignore-case) erfolgt die Suche dabei unabhängig von
+der Groß- und Kleinschreibung. Das abschließende `sort`-Kommando sorgt
+darüberhinaus für eine Ausgabe in alphabetisch aufsteigender Abfolge.
 
 .Verfügbare Pakete anzeigen, bei denen in der Beschreibung und im Paketnamen die Zeichenfolge `xpdf` enthalten ist
 ----
