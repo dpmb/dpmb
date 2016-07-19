@@ -98,19 +98,23 @@ Anstelle des Namens einer Veröffentlichung -- 'jessie', 'stretch',
 
 ===== Suche über die Webseite von Debian-Derivaten =====
 
+// Stichworte für den Index
+(((Paketsuche, über packages.tanglu.org)))
+(((Paketsuche, über packages.ubuntu.com)))
+
 Einige Derivate von Debian nutzen dieselbe Webanwendung zur Auflistung
 ihrer Pakete im Web. Den Autoren des Buches sind bisher bekannt:
 
-* Ubuntu: https://packages.ubuntu.com/ (unterstützt auch "devel" nicht
-  als Suite-Name), z.B. http://packages.ubuntu.com/de/xenial/mail/
+Ubuntu (https://packages.ubuntu.com/)::
+unterstützt auch 'devel' nicht als Suite-Name, z.B. http://packages.ubuntu.com/de/xenial/mail/
 
-* Tanglu: http://packages.tanglu.org/ (z.Zt. kein HTTPS unterstützt),
-  z.B. http://packages.tanglu.org/de/staging/mail/
+Tanglu (http://packages.tanglu.org/):: 
+z.Zt. kein HTTPS unterstützt, z.B. http://packages.tanglu.org/de/staging/mail/
 
-Die o.g. Kurzformen sollten dementsprechend mit diesen Hostnamen
-analog funktionieren. Jedoch ist dabei zu beachten, dass andere
-Distributionen aufgrund anderer Release-Politiken ggf. keine
-Suitenamen haben und damit auch diese Kurzformen nicht anbieten.
+Die o.g. Kurzformen sollten ebenfalls mit diesen Hostnamen
+funktionieren. Jedoch ist dabei zu beachten, dass andere Distributionen
+aufgrund anderer Release-Politiken ggf. keine Suitenamen haben und damit
+auch diese Kurzformen nicht ermöglichen.
 
 // Abbildung von packages.ubuntu.com
 .Ergebnis der Paketsuche nach 'aptsh' über http://packages.ubuntu.com/
