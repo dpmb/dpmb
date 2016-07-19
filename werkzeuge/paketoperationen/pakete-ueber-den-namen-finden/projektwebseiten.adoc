@@ -59,20 +59,20 @@ sucht nach Quellpaketen mit 'suchbegriff' im Paketnamen, z.B.
 https://packages.debian.org/src:screen sucht nach Quellpaketen mit
 'screen' im Namen.
 
-`https://packages.debian.org/`'release'/'paketname':: 
+`https://packages.debian.org/`'release'`/`'paketname':: 
 zeigt die Informationen zum Binärpaket 'paketname' in der
 Veröffentlichung 'release' an, z.B. https://packages.debian.org/stable/screen 
 für die Paketbeschreibung und die Abhängigkeiten des Paketes 'screen' in
 der aktuellen stabilen Debian-Veröffentlichung
 
-`https://packages.debian.org/`'sprachkürzel'/'release'/'paketname'::
+`https://packages.debian.org/`'sprachkürzel'`/`'release'`/`'paketname'::
 zeigt die Informationen zum Paket 'paketname' in der Veröffentlichung
 'release' in der gewählten Sprache an, z.B.
 https://packages.debian.org/de/stable/screen für die Paketbeschreibung
 und die Abhängigkeiten des Paketes 'screen' im aktuellen Stable-Release
 von Debian auf Deutsch
 
-`https://packages.debian.org/source/`'release'/'sourcepaketname'::
+`https://packages.debian.org/source/`'release'`/`'sourcepaketname'::
 zeigt die Informationen zum Quellpaket 'sourcepaketname' in der
 Veröffentlichung 'release' an, z.B.
 https://packages.debian.org/source/testing/screen zeigt die
@@ -84,7 +84,7 @@ zu erzwingen.
 `https://packages.debian.org/`'release'`/`:: 
 zeigt alle Sektionen in der benannten Veröffentlichung ('release') an
 
-`https://packages.debian.org/`'release'/'sektion'::
+`https://packages.debian.org/`'release'`/`'sektion'::
 zeigt alle Binärpakete in der entsprechenden Sektion der gewählten
 Veröffentlichung ('release') an, z.B. zeigt
 https://packages.debian.org/stable/mail/ alle Binärpakete in der Sektion
