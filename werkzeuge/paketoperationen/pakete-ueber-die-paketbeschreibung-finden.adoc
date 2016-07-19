@@ -72,8 +72,9 @@ $
 
 // Stichworte für den Index
 (((grep-status, -v)))
-(((grep-status, --invert-match))
-Hilfreich ist auch der Schalter `-v` (Langversion `--invert-match`). Mit
-diesem verkehren Sie das Suchergebnis in das Gegenteil. 
+(((grep-status, --invert-match)))
+Analog zu `grep` verfügt `grep-status` ebenfalls über den hilfreichen
+Schalter `-v` (Langversion `--invert-match`). Mit diesem verkehren Sie
+das Suchergebnis in das Gegenteil.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-die-paketbeschreibung-finden.adoc

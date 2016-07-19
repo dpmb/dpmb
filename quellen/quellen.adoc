@@ -26,6 +26,8 @@
 
 - [[[apt4rpm]]] `apt4rpm`: http://apt4rpm.sourceforge.net/
 
+- [[[apt-browse]]] Apt-browse, http://apt-browse.org/
+
 - [[[aptitude-categorical-browser-to-be-removed]]] Kategorie-Browser in Aptitude wird voraussichtlich entfernt, https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=686124#44
 
 - [[[aptitude-dokumentation]]] Dokumentation zu `aptitude` in allen bisher verfügbaren Sprachen, http://aptitude.alioth.debian.org/doc/
@@ -392,6 +394,8 @@
 - [[[Debian-Paket-perl]]] Debian-Paket 'perl', https://packages.debian.org/jessie/perl
 
 - [[[Debian-Paket-piuparts]]] Debian-Paket 'piuparts', http://packages.debian.org/de/stable/piuparts
+
+- [[[Debian-Paket-python-apt]]] Debian-Paket 'python-apt', https://packages.debian.org/jessie/python-apt
 
 - [[[Debian-Paket-python-software-properties]]] Debian-Paket 'python-software-properties', http://packages.debian.org/de/stable/python-software-properties
 
