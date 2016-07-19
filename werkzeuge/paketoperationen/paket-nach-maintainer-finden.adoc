@@ -22,6 +22,7 @@ in möglichst stabiler Form verfügbar bleibt <<Debian-Wiki-Maintainer>>.
 (((aptitude, Format Strings)))
 (((ara)))
 (((grep-ctrl)))
+(((Paketsuche, mittels aptitude)))
 (((Synaptic)))
 Diese Information liefern Ihnen mehrere Werkzeuge – `aptitude`,
 `grep-dctrl` sowie `ara` und Synaptic. Die Unterschiede liegen im Aufruf
@@ -59,7 +60,7 @@ einzelnen Buchstaben stehen für den aktuellen Paketstatus (`%c`), die
 Aktion des Pakets (`%a`), automatische Installation (`%M`), den
 Paketnamen (`%p`) und die Paketbeschreibung (`%d`). Eine detaillierte
 Übersicht zu allen zulässigen Formatoptionen erklären wir Ihnen unter
-`aptitude` Format Strings in <<aptitude-format-strings>>. Eine
+```aptitude` Format Strings'' in <<aptitude-format-strings>>. Eine
 Alternative bietet zudem das Aptitude Handbuch
 <<aptitude-dokumentation-paketdarstellung>>.
 
@@ -85,14 +86,15 @@ $
 (((grep-dctrl, -s)))
 (((Paketsuche, anhand des Maintainers)))
 (((Paketsuche, anhand des Uploaders)))
-Das Programm `grep-dctrl` aus dem Paket 'dctrl-tools' sucht alle Pakete
-heraus, bei dem als Maintainer oder Uploader die angefragte Person
-hinterlegt ist und gibt diese zum gefundenen Paketnamen aus. Als
-weiteren Parameter benötigt es noch die lokal gespeicherte Paketliste,
-die es durchsuchen soll. Im nachfolgenden Beispiel ist das die
-Paketliste für den Paketmirror `ftp.de.debian.org` für die Distribution
-Debian 7 _Wheezy_ sowie daraus der Bereich _main_ und die Architektur
-_i386_.
+(((Paketsuche, mittels grep-dctrl)))
+Das Programm `grep-dctrl` aus dem Paket 'dctrl-tools'
+<<Debian-Paket-dctrl-tools>> sucht alle Pakete heraus, bei dem als
+Maintainer oder Uploader die angefragte Person hinterlegt ist und gibt
+diese zum gefundenen Paketnamen aus. Als weiteren Parameter benötigt es
+noch die lokal gespeicherte Paketliste, die es durchsuchen soll. Im
+nachfolgenden Beispiel ist das die Paketliste für den Paketmirror
+`ftp.de.debian.org` für die Distribution Debian 7 _Wheezy_ sowie daraus
+der Bereich _main_ und die Architektur _i386_.
 
 .Suche nach Maintainer und Uploader in der lokalen Paketliste (Ausschnitt)
 ----
@@ -120,6 +122,7 @@ $
 (((Debianpaket, ara)))
 (((Paketsuche, anhand des Maintainers)))
 (((Paketsuche, anhand des Uploaders)))
+(((Paketsuche, mittels ara)))
 Das Programm `ara` aus dem gleichnamigen Paket <<Debian-Paket-ara>>
 erlaubt eine sehr kompakte Schreibweise. Es sucht dabei in den Binär-
 und den Sourcepaketen, sofern diese vorhanden sind und gibt dabei
@@ -157,6 +160,7 @@ image::werkzeuge/paketoperationen/ara-suche.png[id="fig.ara-suche", width="50%"]
 
 // Stichworte für den Index
 (((Synaptic)))
+(((Paketsuche, mittels Synaptic)))
 Das graphische Programm Synaptic (<<gui-synaptic>>) handhabt das ganze
 etwas anders und bietet Ihnen einen passenden Menüeintrag an. Unter dem
 Eintrag menu:Bearbeiten[Suchen] bzw. mit der Tastenkombination
@@ -177,6 +181,7 @@ image::werkzeuge/paketoperationen/synaptic-suche-nach-maintainer.png[id="fig.syn
 (((Debianpaket, devscripts)))
 (((Paketsuche, anhand des Maintainers)))
 (((Paketsuche, anhand des Co-Maintainers)))
+(((Paketsuche, mittels dd-list)))
 Interessant ist natürlich auch die Rückrichtung: das Ausgeben aller
 Maintainer und Co-Maintainer zu einer Liste von Source- und
 Binärpaketen. Das gelingt Ihnen mit dem Kommando `dd-list` aus dem Paket
