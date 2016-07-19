@@ -25,10 +25,10 @@ insbesondere nach den darin enthaltenen Dateien suchen.
 // Stichworte für den Index
 (((Debianpaket, dpkg-www)))
 Die Grundlage bildet das gleichnamige Paket 'dpkg-www'
-(<<Debian-Paket-dpkg-www>>). Obwohl dieses seine letzte reguläre
+<<Debian-Paket-dpkg-www>>. Obwohl dieses seine letzte reguläre
 Aktualisierung bereits 2008 erhielt und derzeit als verwaist eingestuft
 ist (d.h, dass das Paket keinen Maintainer mehr hat), sind gemäß
-Popularity Contest (<<Debian-Popularity-Contest>>) noch etwa 350
+Popularity Contest <<Debian-Popularity-Contest>> noch etwa 350
 Installationen in Benutzung (siehe dazu auch ``Verbreitungsgrad von
 Paketen'' in <<verbreitungsgrad-von-paketen>>).
 
@@ -46,6 +46,9 @@ zunächst noch Änderungen an den beiden Konfigurationsdateien
 Dokumentation zu `dpkg-www`.
 
 // Stichworte für den Index
+(((Debianpaket, apache2)))
+(((Debianpaket, nginx)))
+(((Debianpaket, synaptic)))
 (((dpkg-www, Webserver Apache)))
 (((dpkg-www, Webserver Nginx)))
 `dpkg-www` setzt auf einem installierten Webserver wie Apache oder Nginx
@@ -64,8 +67,8 @@ Postscript oder SGML.
 image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/dpkg-www.png[id="fig.dpkg-www", width="50%"]
 
 Wählen Sie ein Paket aus der Liste aus, erhalten Sie detailliertere
-Informationen dazu. <<fig.dpkg-www-synaptic>> zeigt dieses beispielhaft
-anhand des Programms Synaptic.
+Informationen dazu. <<fig.dpkg-www-synaptic>> zeigt das Vorgehen
+beispielhaft anhand des Pakets 'synaptic' <<Debian-Paket-synaptic>>.
 
 .Auswahl der Hilfeseiten zu Synaptic
 image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/dpkg-www-synaptic.png[id="fig.dpkg-www-synaptic", width="50%"]
@@ -92,6 +95,7 @@ die Ausgabe erfolgt nicht im Webbrowser, sondern auf dem Terminal.
 Hostname des angefragten Rechners.
 
 // Stichworte für den Index
+(((Debianpaket, htop)))
 (((dpkg-query, -l)))
 (((dpkg-query, -L)))
 (((dpkg-query, -S)))
