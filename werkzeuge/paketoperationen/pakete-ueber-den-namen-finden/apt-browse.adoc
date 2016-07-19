@@ -5,10 +5,28 @@
 ===== Suche über apt-browse.org =====
 
 // Stichworte für den Index
+(((Paketsuche, anhand der Architektur)))
+(((Paketsuche, anhand der Veröffentlichung)))
 (((Paketsuche, mittels apt-browse.org)))
 (((Paketsuche, über den Paketnamen)))
 (((Paketsuche, über die Paketbeschreibung)))
+(((Paketsuche, über ein Textfragment)))
 
-* http://apt-browse.org/
+* entwickelt von Thomas Orozco <<apt-browse>>
+* Ziel:
+** Suche in Paketen nach bestimmten Dateien und Inhalten
+** erlaubt die Suche in mehreren Architekturen gleichzeitig
+** erlaubt die Suche in mehreren Veröffentlichungen gleichzeitig
+** fokussiert bisher auf Debian _stable_ / _testing_ und Ubuntu
+* entwickelt in Python
+** benutzt die Python-APT-Bibliothek aus dem Paket 'python-apt' <<Debian-Paket-python-apt>>
+* Suchergebnis 
+** umfaßt Suchtreffer mit Hervorhebung der exakten Treffer
+** Auswahl auf Eintrag öffnet detaillierte Angaben zum Paketinhalt mit
+Paketname, Architektur, Paketbeschreibung und Paketabhängigkeiten
+
+// Abbildung von apt-browse.org
+.Ergebnis der Paketsuche nach 'htop' über http://apt-browse.org/
+image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/paketsuche-apt-browse-webseite.png[id="fig.packages-apt-browse-Webbrowser", width="50%"]
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/apt-browse.adoc
