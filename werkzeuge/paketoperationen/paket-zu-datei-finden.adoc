@@ -51,9 +51,10 @@ Architektur einschränken.
 (((dpkg-query, --search)))
 (((dlocate)))
 (((dlocate, -S)))
+(((Paketsuche, mittels dpkg)))
 Dafür genügen der Aufruf `dpkg -S Muster`, `dpkg-query -S Muster` oder
 die flinke Abkürzung `dlocate Muster`. Zur Suche ist bei `dlocate` der
-Schalter `-S` optional, `dpkg` und `dpkg-query`kennen hingegen dafür die
+Schalter `-S` optional, `dpkg` und `dpkg-query` kennen hingegen dafür die
 Langform `--search`. Das Textfragment oder Muster beschreibt, wonach die
 Programme in der Dateiliste der installierten Pakete suchen sollen.
 Beginnt das Textfragment mit einem `/`, wird die Zeichenkette als
