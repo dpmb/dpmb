@@ -7,10 +7,12 @@
 // Stichworte für den Index
 (((Paketsuche, anhand der Architektur)))
 (((Paketsuche, anhand des Maintainers)))
+(((Paketsuche, bei Debian)))
 (((Paketsuche, über den Paketnamen)))
-(((Paketsuche, über die Paketbeschreibung)))
 (((Paketsuche, über den Paketinhalt)))
+(((Paketsuche, über die Paketbeschreibung)))
 (((Paketsuche, über die Paketliste)))
+(((Paketsuche, über ein Textfragment)))
 (((Paketsuche, über packages.debian.org)))
 (((Paketsuche, anhand der Paketversion)))
 (((Paketsuche, anhand der Veröffentlichung)))
@@ -45,6 +47,7 @@ screenshots.debian.net (sofern verfügbar), Fehlerberichte, die Liste der
 image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/paketsuche-debian-webseite.png[id="fig.packages-Webbrowser", width="50%"]
 
 // Stichworte für den Index
+(((Debianpaket, screen)))
 (((Paketsuche, anhand von Kurzformen (URL))))
 (((Paketsuche, nach Binärpaketen)))
 (((Paketsuche, nach Quellpaketen)))
@@ -53,8 +56,11 @@ direkt die entsprechende Suche einleiten oder ein gewünschtes Paket
 anzeigen lassen:
 
 `https://packages.debian.org/`'suchbegriff'::
-sucht nach Binärpaketen mit 'suchbegriff' im Paketnamen, z.B. so für
-Pakete mit 'screen' im Namen:
+sucht nach Binärpaketen mit 'suchbegriff' im Paketnamen, wobei der
+Paketname nicht mit dem Suchbegriff beginnen muß. Ebenso unterscheidet
+die Suche nicht zwischen Groß- und Kleinschreibung, sperrt sich aber
+gegenüber Regulären Ausdrücken. So sieht bspw. der Aufruf für Pakete mit
+'screen' im Paketnamen aus:
 ----
 https://packages.debian.org/screen
 ----
@@ -69,7 +75,7 @@ https://packages.debian.org/src:screen
 `https://packages.debian.org/`'release'`/`'paketname':: 
 zeigt die Informationen zum Binärpaket 'paketname' in der
 Veröffentlichung 'release' an, z.B. so für die Paketbeschreibung und die
-Abhängigkeiten des Paketes 'screen' in der aktuellen stabilen
+Abhängigkeiten des Paketes 'screen' in der aktuellen, stabilen
 Debian-Veröffentlichung:
 ----
 https://packages.debian.org/stable/screen
@@ -81,7 +87,7 @@ zeigt die Informationen zum Paket 'paketname' in der Veröffentlichung
 und die Abhängigkeiten des Paketes 'screen' im aktuellen Stable-Release
 von Debian auf Deutsch:
 ----
-https://packages.debian.org/de/stable/screen für die Paketbeschreibung
+https://packages.debian.org/de/stable/screen
 ----
 
 `https://packages.debian.org/source/`'release'`/`'sourcepaketname'::
@@ -120,8 +126,8 @@ Anstelle des Namens einer Veröffentlichung -- 'jessie', 'stretch',
 ===== Suche über die Webseite von Debian-Derivaten =====
 
 // Stichworte für den Index
-(((Paketsuche, Tanglu)))
-(((Paketsuche, Ubuntu)))
+(((Paketsuche, bei Tanglu)))
+(((Paketsuche, bei Ubuntu)))
 (((Paketsuche, über packages.tanglu.org)))
 (((Paketsuche, über packages.ubuntu.com)))
 
