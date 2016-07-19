@@ -77,7 +77,7 @@ zeigt die Informationen zum Quellpaket 'sourcepaketname' in der
 Veröffentlichung 'release' an, z.B.
 https://packages.debian.org/source/testing/screen zeigt die
 Paketbeschreibung und die Abhängigkeiten des Paketes `screen` in Debian
-Testing an. Analog zu den Binärpaketen können Sie hier auch noch ein
+_Testing_ an. Analog zu den Binärpaketen können Sie hier auch noch ein
 Sprachkürzel an den Anfang des Pfades setzen, um eine bestimmte Sprache
 zu erzwingen.
 
@@ -93,8 +93,8 @@ können Sie wieder ein Sprachkürzel an den Anfang des Pfades setzen, um
 eine bestimmte Sprache auszuwählen.
 
 Anstelle des Namens einer Veröffentlichung -- 'jessie', 'stretch',
-'sid', etc. -- kann auch immer ein Suite-Name -- 'stable', 'testing',
-'unstable', etc. -- verwendet werden. 
+'sid', etc. -- kann auch stets ein Entwicklungsstand -- 'stable',
+'testing', 'unstable', etc. -- verwendet werden.
 
 ===== Suche über die Webseite von Debian-Derivaten =====
 
@@ -115,8 +115,9 @@ z.Zt. kein HTTPS unterstützt, z.B. http://packages.tanglu.org/de/staging/mail/
 
 Die o.g. Kurzformen sollten ebenfalls mit diesen Hostnamen
 funktionieren. Jedoch ist dabei zu beachten, dass andere Distributionen
-aufgrund anderer Release-Politiken ggf. keine Suitenamen haben und damit
-auch diese Kurzformen nicht ermöglichen.
+aufgrund anderer Release-Politiken ggf. keine Namen für
+Entwicklungsstände nutzen und damit auch diese Kurzformen nicht
+ermöglichen.
 
 // Abbildung von packages.ubuntu.com
 .Ergebnis der Paketsuche nach 'aptsh' über http://packages.ubuntu.com/
