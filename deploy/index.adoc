@@ -4,6 +4,7 @@ Frank Hofmann, Axel Beckert
 :subtitle:
 :backend: html5
 :lang: en
+//po4a: macro include[]
 include::../version.adoc[]
 
 On this page you can read or download generated development snapshots

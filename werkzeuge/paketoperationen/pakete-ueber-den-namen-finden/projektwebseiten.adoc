@@ -1,0 +1,117 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/projektwebseiten.adoc
+
+// Baustelle: Rohtext
+
+===== Suche über die Webseite des Debian-Projekts =====
+
+// Stichworte für den Index
+(((Paketsuche, anhand der Architektur)))
+(((Paketsuche, anhand des Maintainers)))
+(((Paketsuche, über den Paketnamen)))
+(((Paketsuche, über die Paketbeschreibung)))
+(((Paketsuche, über den Paketinhalt)))
+(((Paketsuche, über die Paketliste)))
+(((Paketsuche, über packages.debian.org)))
+(((Paketsuche, anhand der Paketversion)))
+(((Paketsuche, anhand der Veröffentlichung)))
+Nicht nur für den Einstieg, sondern auch für den Alltag ist die
+Paketsuche über die Webseite des Debian-Projekts (siehe
+<<Debian-Paketsuche>>) äußerst hilfreich und insbesondere sehr schnell.
+<<fig.packages-Webbrowser>> zeigt das Ergebnis der Recherche nach dem
+Paket 'iftop' im Webbrowser 'Iceweasel' an.
+
+Neben dem Paketnamen beinhaltet jeder Suchtreffer die Distribution
+(siehe <<distributionsbereiche>>), gefolgt von der Veröffentlichung
+(hier genannt ``Suite'') (siehe <<veroeffentlichungen>>), der
+Paketkategorie (siehe <<sortierung-der-pakete-nach-verwendungszweck>>)
+und den Debian-Architekturen (siehe <<debian-architekturen>>), für die
+passende Pakete zur Verfügung stehen. Damit sehen Sie sofort, ob das
+Paket für ihre Veröffentlichung und Architektur existiert.
+
+Klicken Sie einen der Links unterhalb des Suchfeldes an, schränken Sie
+das Suchergebnis auf die jeweilige Veröffentlichung oder Architektur
+weiter ein und erhalten daraufhin detailliertere Informationen zu dem
+spezifisch ausgewählten Paket. Neben der Paketbeschreibung sehen Sie die
+Debian Tags, die Paketabhängigkeiten und am rechten Rand weiterführende
+Informationen zum Paket. Dazu zählen ein Screenshot von
+screenshots.debian.net (sofern verfügbar), Fehlerberichte, die Liste der
+Änderungen (``Changelog''), die Quellcodepakete, den Paketbetreuer
+(``Maintainer''), die Projektwebseite und eine Liste ähnlicher Pakete.
+
+// Abbildung von packages.debian.org
+.Ergebnis der Paketsuche nach 'iftop' über http://packages.debian.org/
+image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/paketsuche-debian-webseite.png[id="fig.packages-Webbrowser", width="50%"]
+
+Aber nicht nur das, man kann mit bestimmten Kurzformen der URL direkt
+die entsprechende Suche einleiten oder ein Paket anzeigen lassen:
+
+* https://packages.debian.org/'suchbegriff' sucht nach Binärpaketen mit
+  'suchbegriff' im Paketnamen, z.B. https://packages.debian.org/screen
+  sucht nach Binärpaketen mit "screen" im Namen.
+
+* https://packages.debian.org/src:'suchbegriff' sucht nach Quellpaketen mit
+  'suchbegriff' im Paketnamen, z.B. https://packages.debian.org/src:screen
+  sucht nach Quellpaketen mit "screen" im Namen.
+
+* https://packages.debian.org/'release'/'paketname' zeigt die
+  Informationen zum Binärpaket 'paketname' in der Veröffentlichung
+  'release' an, z.B. https://packages.debian.org/stable/screen zeigt
+  die Paketbeschreibung und die Abhängigkeiten des Paketes "screen" im
+  aktuellen Stable-Release von Debian an.
+
+* https://packages.debian.org/'sprachkürzel'/'release'/'paketname'
+  zeigt die Informationen zum Paket 'paketname' in der
+  Veröffentlichung 'release' in der gewählten Sprache an,
+  z.B. https://packages.debian.org/de/stable/screen zeigt die
+  Paketbeschreibung und die Abhängigkeiten des Paketes "screen" im
+  aktuellen Stable-Release von Debian auf Deutsch an.
+
+* https://packages.debian.org/source/'release'/'sourcepaketname' zeigt
+  die Informationen zum Quellpaket 'sourcepaketname' in der
+  Veröffentlichung 'release' an,
+  z.B. https://packages.debian.org/source/testing/screen zeigt die
+  Paketbeschreibung und die Abhängigkeiten des Paketes "screen" in
+  Debian Testing an. Analog zu den Binärpaketen kann man auch hier
+  noch ein Sprachkürzel an den Anfang des Pfades setzen, um eine
+  bestimmte Sprache zu erzwingen.
+
+* https://packages.debian.org/'release'/ zeigt alle Sektionen in dem
+  Release an.
+
+* https://packages.debian.org/'release'/'sektion' zeigt alle
+  Binärpakete in der entsprechenden Sektion des gewählten Releases an,
+  z.B. zeigt https://packages.debian.org/stable/mail/ alle Binärpakete
+  in der Sektion "Mail" in der aktuellen Stable-Veröffentlichung von
+  Debian an. Auch hier kann man wieder ein Sprachkürzel an den Anfang
+  des Pfades setzen, um eine bestimmte Sprache auszuwählen.
+
+Anstelle eines Release-Namens ('jessie', 'stretch', 'sid', etc.)kann
+auch immer ein Suite-Name ('stable', 'testing', 'unstable', etc.)
+verwendet werden wie in den Beispielen gezeigt.
+
+====== Suche über die Webseite von Debian-Derivaten ======
+
+Einige Derivate von Debian nutzen dieselbe Webanwendung zur Auflistung
+ihrer Pakete im Web. Den Autoren des Buches sind bisher bekannt:
+
+* Ubuntu: https://packages.ubuntu.com/ (unterstützt auch "devel" nicht
+  als Suite-Name), z.B. http://packages.ubuntu.com/de/xenial/mail/
+
+* Tanglu: http://packages.tanglu.org/ (z.Zt. kein HTTPS unterstützt),
+  z.B. http://packages.tanglu.org/de/staging/mail/
+
+Die o.g. Kurzformen sollten dementsprechend mit diesen Hostnamen
+analog funktionieren. Jedoch ist dabei zu beachten, dass andere
+Distributionen aufgrund anderer Release-Politiken ggf. keine
+Suitenamen haben und damit auch diese Kurzformen nicht anbieten.
+
+// Abbildung von packages.ubuntu.org
+.Ergebnis der Paketsuche nach 'aptsh' über http://packages.ubuntu.org/
+image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/paketsuche-ubuntu-webseite.png[id="fig.packages-ubuntu-Webbrowser", width="50%"]
+
+Bei LinuxMint gibt es zwar auch die Webseite
+http://packages.linuxmint.com/, aber diese verwendet eine andere
+Software dafür und es scheinen auch keine der o.g. Kurzformen zu
+funktionieren.
+
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/projektwebseiten.adoc

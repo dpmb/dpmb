@@ -8,12 +8,8 @@
 // - in Paketen blättern mittels `dpkg-www`
 include::dpkg-www.adoc[]
 
-// - Suche über die Webseite des Debian-Projekts
-include::debianprojekt.adoc[]
-
-// Ubuntu
-// - Suche über die Webseite des Ubuntu-Projekts
-include::ubuntuprojekt.adoc[]
+// - Suche über die Webseite des jeweiligen Open-Source-Projekts
+include::projektwebseiten.adoc[]
 
 // Fremdprojekte, -quellen und -formate
 // - apt-browse.org
