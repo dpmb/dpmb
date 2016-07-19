@@ -46,51 +46,72 @@ image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/paketsuche-debia
 
 // Stichworte für den Index
 (((Paketsuche, anhand von Kurzformen (URL))))
+(((Paketsuche, nach Binärpaketen)))
+(((Paketsuche, nach Quellpaketen)))
 Aber nicht nur das -- Sie können mit bestimmten Kurzformen der URL
 direkt die entsprechende Suche einleiten oder ein gewünschtes Paket
 anzeigen lassen:
 
 `https://packages.debian.org/`'suchbegriff'::
-sucht nach Binärpaketen mit 'suchbegriff' im Paketnamen, z.B. https://packages.debian.org/screen
-sucht nach Binärpaketen mit 'screen' im Namen.
+sucht nach Binärpaketen mit 'suchbegriff' im Paketnamen, z.B. so für
+Pakete mit 'screen' im Namen:
+----
+https://packages.debian.org/screen
+----
 
 `https://packages.debian.org/src:`'suchbegriff'::
-sucht nach Quellpaketen mit 'suchbegriff' im Paketnamen, z.B.
-https://packages.debian.org/src:screen sucht nach Quellpaketen mit
-'screen' im Namen.
+sucht nach Quellpaketen mit 'suchbegriff' im Paketnamen, z.B. so für
+Pakete mit 'screen' im Namen:
+----
+https://packages.debian.org/src:screen
+----
 
 `https://packages.debian.org/`'release'`/`'paketname':: 
 zeigt die Informationen zum Binärpaket 'paketname' in der
-Veröffentlichung 'release' an, z.B. https://packages.debian.org/stable/screen 
-für die Paketbeschreibung und die Abhängigkeiten des Paketes 'screen' in
-der aktuellen stabilen Debian-Veröffentlichung
+Veröffentlichung 'release' an, z.B. so für die Paketbeschreibung und die
+Abhängigkeiten des Paketes 'screen' in der aktuellen stabilen
+Debian-Veröffentlichung:
+----
+https://packages.debian.org/stable/screen
+----
 
 `https://packages.debian.org/`'sprachkürzel'`/`'release'`/`'paketname'::
 zeigt die Informationen zum Paket 'paketname' in der Veröffentlichung
-'release' in der gewählten Sprache an, z.B.
-https://packages.debian.org/de/stable/screen für die Paketbeschreibung
+'release' in der gewählten Sprache an, z.B. so für die Paketbeschreibung
 und die Abhängigkeiten des Paketes 'screen' im aktuellen Stable-Release
-von Debian auf Deutsch
+von Debian auf Deutsch:
+----
+https://packages.debian.org/de/stable/screen für die Paketbeschreibung
+----
 
 `https://packages.debian.org/source/`'release'`/`'sourcepaketname'::
 zeigt die Informationen zum Quellpaket 'sourcepaketname' in der
-Veröffentlichung 'release' an, z.B.
-https://packages.debian.org/source/testing/screen zeigt die
-Paketbeschreibung und die Abhängigkeiten des Paketes `screen` in Debian
-_Testing_ an. Analog zu den Binärpaketen können Sie hier auch noch ein
-Sprachkürzel an den Anfang des Pfades setzen, um eine bestimmte Sprache
-zu erzwingen.
+Veröffentlichung 'release' an, z.B. so für die Paketbeschreibung und die
+Abhängigkeiten des Paketes `screen` in Debian _Testing_:
+----
+https://packages.debian.org/source/testing/screen
+----
+Analog zu den Binärpaketen können Sie hier auch noch ein Sprachkürzel an
+den Anfang des Pfades setzen, um eine bestimmte Sprache zu erzwingen.
 
 `https://packages.debian.org/`'release'`/`:: 
-zeigt alle Sektionen in der benannten Veröffentlichung ('release') an
+zeigt alle Kategorien in der benannten Veröffentlichung ('release') an,
+hier für Debian _unstable_:
+----
+https://packages.debian.org/unstable
+----
 
-`https://packages.debian.org/`'release'`/`'sektion'::
-zeigt alle Binärpakete in der entsprechenden Sektion der gewählten
-Veröffentlichung ('release') an, z.B. zeigt
-https://packages.debian.org/stable/mail/ alle Binärpakete in der Sektion
-'Mail' in der aktuellen Stable-Veröffentlichung von Debian an. Auch hier
-können Sie wieder ein Sprachkürzel an den Anfang des Pfades setzen, um
-eine bestimmte Sprache auszuwählen.
+`https://packages.debian.org/`'release'`/`'kategorie'::
+zeigt alle Binärpakete in der entsprechenden Kategorie der gewählten
+Veröffentlichung ('release') an (siehe ``Sortierung der Pakete nach
+Verwendungszweck'' in <<sortierung-der-pakete-nach-verwendungszweck>>),
+z.B. alle Binärpakete in der Kategorie 'Mail' in der aktuellen, stabilen
+Veröffentlichung von Debian:
+----
+https://packages.debian.org/stable/mail/
+----
+Auch hier können Sie wieder ein Sprachkürzel an den Anfang des Pfades
+setzen, um eine bestimmte Sprache auszuwählen. 
 
 Anstelle des Namens einer Veröffentlichung -- 'jessie', 'stretch',
 'sid', etc. -- kann auch stets ein Entwicklungsstand -- 'stable',
