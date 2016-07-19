@@ -14,8 +14,7 @@
 Bleibt ihre Recherche über den Paketnamen ohne Erfolg, dehnen Sie ihre
 Suche am besten auf die gesamte Paketbeschreibung aus. Zur Recherche
 darin helfen Ihnen die darauf spezialisierten Programme `grep-available`
-und `grep-status` aus dem Paket 'dctrl-tools'
-<<Debian-Paket-dctrl-tools>>.
+und `grep-status` aus dem Paket 'dctrl-tools' <<Debian-Paket-dctrl-tools>>.
 
 // Stichworte für den Index
 (((grep-available, -F)))
@@ -52,15 +51,24 @@ $
 ----
 
 // Stichworte für den Index
+(((grep-available, -P)))
+(((grep-available, -S)))
+Um den Aufruf für den Paketnamen zu vereinfachen, stellt Ihnen
+`grep-available` zudem die beiden Abkürzungen `-P` für `-FPackage` und
+`-S` für `-FSource:Package` bereit.
+
+// Stichworte für den Index
 (((grep-status, -s)))
+(((grep-status, --show-field)))
 Obige Liste enthält alle Pakete – unabhängig davon, ob diese auf ihrem
 System installiert sind, oder nicht. Mit dem nachfolgenden Aufruf
-reduzieren Sie die Liste entsprechend. Dabei kommt der Schalter `-s` zum
-tragen, der den Paketstatus passend auswertet.
+reduzieren Sie die Liste entsprechend. Dabei kommt der Schalter `-s`
+(Langform `--show-field`) zum tragen, der den Paketstatus passend
+auswertet.
 
 .Lediglich die installierten Pakete anzeigen, bei denen in der Beschreibung und im Paketnamen die Zeichenfolge `xpdf` enthalten ist
 ----
-$ grep-status -F Description -F Package -i -s Package xpdf | grep Package | sort
+$ grep-status -F Description -P -i -s Package xpdf | grep Package | sort
 Package: flpsed
 Package: libpoppler19
 Package: libpoppler-cpp0
@@ -76,7 +84,7 @@ $
 (((grep-status, -v)))
 (((grep-status, --invert-match)))
 Analog zu `grep` verfügt `grep-status` ebenfalls über den hilfreichen
-Schalter `-v` (Langversion `--invert-match`). Mit diesem verkehren Sie
-das Suchergebnis in das Gegenteil.
+Schalter `-v` (Langversion `--invert-match`). Bei Bedarf verkehren Sie
+mit diesem das Suchergebnis in das Gegenteil.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-die-paketbeschreibung-finden.adoc
