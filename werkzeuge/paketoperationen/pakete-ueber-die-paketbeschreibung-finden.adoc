@@ -10,6 +10,8 @@
 (((Debianpaket, dctrl-tools)))
 (((grep-available)))
 (((grep-status)))
+(((Paketsuche, mittels grep-available)))
+(((Paketsuche, mittels grep-status)))
 (((Paketsuche, über die Paketbeschreibung)))
 Bleibt ihre Recherche über den Paketnamen ohne Erfolg, dehnen Sie ihre
 Suche am besten auf die gesamte Paketbeschreibung aus. Zur Recherche
