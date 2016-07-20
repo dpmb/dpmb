@@ -208,6 +208,32 @@ $
 
 // Stichworte für den Index
 (((aptitude, search ~R)))
+`aptitude` versteht eine Reihe von speziellen Suchmustern. Eines davon
+ist `~Rmuster` als Abkürzung für 'reverse-depends', welches Sie mit dem
+Unterkommando `search` kombinieren. 'muster' bezeichnet hier den Namen
+oder das Textfragment eines Pakets. Für diese Information muss das
+entsprechende Paket nicht auf ihrem System installiert sein, aber in der
+Paketdatenbank gelistet sein.
+
+Mit dem nachfolgenden Aufruf erhalten Sie alle Pakete, die 'xpdf'
+benötigt. Es entspricht dem Aufruf `apt-cache depends -i xpdf`. Die
+Ausgabe beinhaltet nur die notwendigen Abhängigkeiten ohne weitere
+Empfehlungen. Analog zur Ausgabe von `dpkg` umfaßt die verwendete
+Darstellungsform den Installationsstatus, den Namen und die
+Kurzbeschreibung des Pakets.
+
+.Anzeige der Paketabhängigkeiten mit `aptitude`
+----
+$ aptitude search ~Rxpdf
+i   libc6                           - GNU C-Bibliothek: Dynamische Bibliotheken 
+i   libgcc1                         - GCC Support-Bibliothek                    
+i A libpoppler46                    - Bibliothek zur PDF-Darstellung            
+i   libstdc++6                      - GNU-Implementierung der Standard-C++-Bibli
+i A libx11-6                        - Clientseitige X11-Bibliothek              
+i A libxm4                          - Motif - X/Motif shared library            
+i A libxt6                          - X11-Bibliothek mit wesentlichen Werkzeugen
+$
+----
 
 *HINWEIS: FALSCH EINSORTIERT -- IM UMBAU*
 
