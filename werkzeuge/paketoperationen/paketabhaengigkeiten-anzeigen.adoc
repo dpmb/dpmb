@@ -35,8 +35,10 @@ können Sie den Zustand übergehen -- mehr dazu erfahren Sie in
 // Stichworte für den Index
 (((apt-cache, depends)))
 (((apt-cache, show)))
+(((apt-rdepends)))
 (((dpkg-deb, -f)))
 (((dpkg-deb, --field)))
+(((Debianpaket, apt-rdepends)))
 (((Debianpaket, dctrl-tools)))
 (((Debianpaket, dpkg)))
 (((grep-status)))
@@ -44,11 +46,12 @@ können Sie den Zustand übergehen -- mehr dazu erfahren Sie in
 Hier sehen Sie, von welchen weiteren Paketen ein Paket abhängt. Zu
 dieser Information gelangen Sie mit mehreren Werkzeugen. Dazu zählen
 `dpkg-deb`, `apt-cache` mit den beiden Unterkommandos `show` und
-`depends`, `aptitude` mit speziellen Suchoptionen und `grep-status` aus
-dem Paket 'dctrl-tools' <<Debian-Paket-dctrl-tools>>. Als weitere
-Information benötigen die genannten Programme noch den Namen des Pakets,
-zu dem es die Paketabhängigkeiten ausgeben sollen. Die nachfolgenden
-Ausgaben illustrieren die Wirkung anhand des Pakets 'xpdf'.
+`depends`, `aptitude` mit speziellen Suchoptionen, `apt-rdepends` und
+`grep-status` aus dem Paket 'dctrl-tools' <<Debian-Paket-dctrl-tools>>.
+Als weitere Information benötigen die genannten Programme noch den Namen
+des Pakets, zu dem es die Paketabhängigkeiten ausgeben sollen. Die
+nachfolgenden Ausgaben illustrieren die Wirkung anhand des Pakets
+'xpdf'.
 
 ===== Ausgabe der Paketabhängigkeiten mit `dpkg-deb` =====
 
@@ -235,6 +238,68 @@ xpdf
 $
 ----
 
+===== Recherche mit `apt-rdepends` =====
+
+// Stichworte für den Index
+(((apt-rdepends)))
+(((Debianpaket, apt-rdepends)))
+Deutlicher wird `apt-rdepends` aus dem gleichnamigen Paket. Es löst die
+Abhängigkeiten noch weitaus stärker auf. Nachfolgende Darstellung zeigt
+daher nur einen Ausschnitt. Für diese Information muss das entsprechende
+Paket nicht auf ihrem System installiert sein, aber in der
+Paketdatenbank gelistet sein.
+
+.Ausgabe der Paketabhängigkeiten mit `apt-rdepends` (Ausschnitt)
+----
+$ apt-rdepends xpdf | more
+xpdf
+  Depends: libc6 (>= 2.4)
+  Depends: libgcc1 (>= 1:4.1.1)
+  Depends: libpoppler46 (>= 0.26.2)
+  Depends: libstdc++6 (>= 4.1.1)
+  Depends: libx11-6
+  Depends: libxm4 (>= 2.3.4)
+  Depends: libxt6
+libc6
+  Depends: libgcc1
+libgcc1
+  Depends: gcc-4.9-base (= 4.9.2-10)
+...
+$
+----
+
+// Stichworte für den Index
+(((apt-rdepends, -d)))
+(((dotty)))
+(((Debianpaket, graphviz)))
+(((Paketabhängigkeiten, graphisch darstellen)))
+Das Ergebnis von `apt-rdepends` wird vielleicht leichter verständlich,
+wenn Sie die Paketabhängigkeiten graphisch darstellen. Dabei hilft Ihnen
+das Programm `dotty` aus dem Paket 'graphviz' <<Graphviz>>. Für das
+Paket 'tcpdump' sieht der Aufruf wie folgt aus.
+
+.Erzeugung der Abhängigkeiten als Dot-Datei
+----
+$ apt-rdepends -d tcpdump | dot > tcpdump.dot
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+$
+----
+
+Das Ergebnis der von `apt-rdepends` zu `dot` weitergeleiteten und in der
+Datei `tcpdump.dot` abgespeicherten Relationsmenge zeigen Sie
+mit dem Programm `dotty` an (siehe <<fig.tcpdump-apt-rdepends>>).
+
+.Aufruf von `dotty`
+----
+$ dotty tcpdump.dot
+$
+----
+
+.Darstellung der umgekehrten Paketabhängigkeiten mit `dotty`
+image::werkzeuge/paketoperationen/tcpdump-apt-rdepends.png[id="fig.tcpdump-apt-rdepends", width="50%"]
+
 ===== Ausgabe der Paketabhängigkeiten mit `aptitude` =====
 
 // Stichworte für den Index
@@ -307,37 +372,6 @@ Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libpoppler46 (>= 0.26.2), libstdc
 $
 ----
 
-===== aptitude (vorher) =====
-
-*HINWEIS: FALSCH EINSORTIERT -- IM UMBAU*
-
-
-// Stichworte für den Index
-(((aptitude, search ~D)))
-(((aptitude, search ?depends)))
-`aptitude` versteht eine Reihe von speziellen Suchmustern. Eines davon
-ist `~Dmuster` als Abkürzung für 'depends', welches Sie mit dem
-Unterkommando `search` kombinieren. 'muster' bezeichnet hier den Namen
-oder das Textfragment eines Pakets. Für diese Information muss das
-entsprechende Paket nicht auf ihrem System installiert sein, aber in der
-Paketdatenbank gelistet sein.
-
-Um beispielsweise alle Pakete zu erhalten, die eine Abhängigkeit auf das Paket 'xpdf' in der Paketbeschreibung deklariert haben, nutzen Sie das Kommando `aptitude search ~Dxpdf`. Das Ergebnis ist eine mehrspaltige Auflistung der Pakete
-mit deren Installationsstatus, Paketnamen und Kurzbeschreibung (siehe
-dazu ``Liste der installierten Pakete anzeigen und deuten'' in
-<<liste-der-installierten-pakete-anzeigen-und-deuten>>).
-
-.Ausgabe der Paketabhängigkeiten mit `aptitude`
-----
-$ aptitude search ~Dxpdf
-p   eficas               - Graphical editor for Code Aster command files
-p   impressive           - Werkzeug zur Präsentation von PDF-Dateien mit
-p   muttprint-manual     - Handbuch für muttprint
-p   page-crunch          - PDF and PS manipulation for printing needs
-p   wiipdf               - Präsentiert eine PDF-Datei mittels Wiimote
-$
-----
-
 ==== Anzeige der umgekehrten Paketabhängigkeiten ====
 
 // Stichworte für den Index
@@ -362,6 +396,8 @@ und auch `aptitude` selbst weiter.
 Über das Unterkommando `rdepends` zeigt `apt-cache` alle Pakete an.
 Pakete, die von weiteren Paketen abhängen, sind in der Ausgabe von
 `apt-cache` mit einem senkrechten Strich (``Pipe'') gekennzeichnet.
+Für diese Information muss das entsprechende Paket nicht auf ihrem
+System installiert sein, aber in der Paketdatenbank gelistet sein.
 
 .Ausgabe der umgekehrten Paketabhängigkeiten mit `apt-cache` für das Paket 'xpdf'
 ----
@@ -392,114 +428,60 @@ Reverse Depends:
 $
 ----
 
-Deutlicher wird `apt-rdepends`, da es die Abhängigkeiten noch weitaus
-stärker auflöst. Nachfolgende Darstellung zeigt daher nur einen
-Ausschnitt.
-
-.Ausgabe der umgekehrten Paketabhängigkeiten mit `apt-rdepends` (Ausschnitt)
-----
-$ apt-rdepends xfce4 | more
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-xfce4
-  Depends: gtk2-engines-xfce (>= 2.8.0)
-  Depends: orage (>= 4.8.0)
-  Depends: thunar (>= 1.2.0)
-  Depends: xfce4-appfinder (>= 4.8.0)
-  Depends: xfce4-mixer (>= 4.8.0)
-  Depends: xfce4-panel (>= 4.8.0)
-  Depends: xfce4-session (>= 4.8.0)
-  Depends: xfce4-settings (>= 4.8.0)
-  Depends: xfce4-utils (>= 4.8.0)
-  Depends: xfconf (>= 4.8.0)
-  Depends: xfdesktop4 (>= 4.8.0)
-  Depends: xfwm4 (>= 4.8.0)
-gtk2-engines-xfce
-  Depends: libatk1.0-0 (>= 1.12.4)
-  Depends: libc6 (>= 2.3.6-6~)
-...
-$
-----
-
-// Stichworte für den Index
-(((apt-rdepends, -d)))
-(((dotty)))
-(((Debianpaket, graphviz)))
-(((Paketabhängigkeiten, graphisch darstellen)))
-Das Ergebnis von `apt-rdepends` wird vielleicht leichter verständlich,
-wenn Sie die Paketabhängigkeiten graphisch darstellen. Dabei hilft Ihnen
-das Programm `dotty` aus dem Paket 'graphviz' <<Graphviz>>. Für das
-Paket 'tcpdump' sieht der Aufruf wie folgt aus.
-
-.Erzeugung der Abhängigkeiten als Dot-Datei
-----
-$ apt-rdepends -d tcpdump | dot > tcpdump.dot
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-$
-----
-
-Das Ergebnis der von `apt-rdepends` zu `dot` weitergeleiteten und in der
-Datei `tcpdump.dot` abgespeicherten Relationsmenge zeigen Sie
-mit dem Programm `dotty` an (siehe <<fig.tcpdump-apt-rdepends>>).
-
-.Aufruf von `dotty`
-----
-$ dotty tcpdump.dot
-$
-----
-
-.Darstellung der umgekehrten Paketabhängigkeiten mit `dotty`
-image::werkzeuge/paketoperationen/tcpdump-apt-rdepends.png[id="fig.tcpdump-apt-rdepends", width="50%"]
-
-*HINWEIS: FALSCH EINSORTIERT -- IM UMBAU*
-
-// Stichworte für den Index
-(((aptitude, search reverse-depends)))
-(((aptitude, search ~R)))
-(((Paket, Rückwärtsabhängigkeiten auflisten)))
-(((Paketabhängigkeiten, Rückwärtsabhängigkeiten auflisten)))
-Zur Suche nach umgekehrten Paketabhängigkeiten hilft Ihnen `aptitude`
-mit dem Suchmuster `~Rmuster` als Abkürzung für 'reverse-depends'.
-Dieses Suchmuster kombinieren Sie wieder mit dem Unterkommando `search`
-und dem Namen oder Textfragment eines Pakets. Für das Paket 'xfce4'
-erhalten Sie nachfolgende Ausgabe:
-
-.Ausgabe der umgekehrten Paketabhängigkeiten mit `aptitude` (Ausschnitt)
-----
-$ aptitude search ~Rxfce4
-p   aterm                - Afterstep XVT - ein VT102 Emulatur für das
-p   aterm-ml             - Afterstep XVT - ein VT102-Emulatur für das
-i   dpkg                 - Debian-Paketverwaltungssystem
-p   dunst                - Minimalistischer Benachrichtigungs-Daemon 
-p   eterm                - Enlightened Terminal Emulator
-p   evilvte              - Leichtgewichtiger Terminal-Emulator auf Ba
-i A exo-utils            - Werkzeugdateien für libex
-p   exo-utils-dbg        - Debuginformationen für exo-utils
-i   gnome-terminal       - GNOME-Terminalemulator
-i A gstreamer0.10-alsa   - GStreamer-Erweiterung für ALSA
-...
-$
-----
+===== Recherche mit `apt-rdepends` =====
 
 // Stichworte für den Index
 (((apt-rdepends, -r)))
-Möchten Sie hingegen nur die Pakete anzeigen, die sich gegenseitig
-direkt bedingen, hilft Ihnen `apt-rdepends` mit der Option `-r`.
-Nachfolgend zeigt es die definierte Abhängigkeit zwischen den beiden
-Paketen 'xfce4' und 'task-xfce-desktop'.
+(((Debianpaket, apt-rdepends)))
+`apt-rdepends` löst die Abhängigkeiten der Pakete zueinander noch
+weitaus stärker auf. Für diese Information muss das entsprechende Paket
+nicht auf ihrem System installiert sein, aber in der Paketdatenbank
+gelistet sein.
 
-.Ausgabe sich gegenseitig bedingender Pakete mit `apt-rdepends`
+.Ausgabe der umgekehrten Paketabhängigkeiten mit `apt-rdepends`
 ----
-$ apt-rdepends xfce4 -r
+$ apt-rdepends -r xpdf
 Reading package lists... Done
-Building dependency tree
+Building dependency tree       
 Reading state information... Done
-xfce4
-  Reverse Depends: task-xfce-desktop (3.14.1)
-task-xfce-desktop
+xpdf
+  Reverse Depends: eficas (6.4.0-1-1.1)
+  Reverse Depends: muttprint-manual (0.73-5.1)
+  Reverse Depends: wiipdf (1.4-2)
+eficas
+muttprint-manual
+wiipdf
+$
+----
+
+===== Recherche mit `aptitude` =====
+
+// Stichworte für den Index
+(((aptitude, search ~D)))
+(((aptitude, search ?depends)))
+Mit einer Reihe von speziellen Suchmustern unterstützt Sie `aptitude`
+bei der Recherche in der Paketdatenbank. Eines davon ist `~Dmuster` als
+Abkürzung für 'depends', welches Sie mit dem Unterkommando `search`
+kombinieren. 'muster' bezeichnet hier den Namen oder das Textfragment
+eines Pakets. Für diese Information muss das entsprechende Paket nicht
+auf ihrem System installiert sein, aber in der Paketdatenbank gelistet
+sein.
+
+Um beispielsweise alle Pakete zu erhalten, die eine Abhängigkeit auf das
+Paket 'xpdf' in der Paketbeschreibung deklariert haben, nutzen Sie das
+Kommando `aptitude search ~Dxpdf`. Das Ergebnis ist eine mehrspaltige
+Auflistung der Pakete mit deren Installationsstatus, Paketnamen und
+Kurzbeschreibung (siehe dazu ``Liste der installierten Pakete anzeigen
+und deuten'' in <<liste-der-installierten-pakete-anzeigen-und-deuten>>).
+
+.Ausgabe der Paketabhängigkeiten mit `aptitude`
+----
+$ aptitude search ~Dxpdf
+p   eficas               - Graphical editor for Code Aster command files
+p   impressive           - Werkzeug zur Präsentation von PDF-Dateien mit
+p   muttprint-manual     - Handbuch für muttprint
+p   page-crunch          - PDF and PS manipulation for printing needs
+p   wiipdf               - Präsentiert eine PDF-Datei mittels Wiimote
 $
 ----
 
