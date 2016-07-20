@@ -5,6 +5,8 @@
 ===== Suche über apt-browse.org =====
 
 // Stichworte für den Index
+(((Bibliothek, python-apt)))
+(((Debianpaket, python-apt)))
 (((Paketsuche, anhand der Architektur)))
 (((Paketsuche, anhand der Veröffentlichung)))
 (((Paketsuche, mittels apt-browse.org)))

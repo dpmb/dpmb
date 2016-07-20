@@ -50,6 +50,17 @@ Diese Bibliothek aus dem Paket 'libapt-pkg-perl'
 Zugriff auf die einzelnen Softwarepakete. Es hat die gleiche
 Funktionalität wie das weiter oben beschriebene Paket 'libapt-pkg'.
 
+=== Bibliothek `python-apt` ===
+
+// Stichworte für den Index
+(((Bibliothek, python-apt)))
+(((Debianpaket, python-apt)))
+(((python-apt)))
+Diese Bibliothek aus dem Paket 'python-apt' <<Debian-Paket-python-apt>>
+beinhaltet die Python-Schnittstelle zum Zugriff auf die einzelnen
+Softwarepakete. Es hat die gleiche Funktionalität wie die weiter oben
+beschriebenen Pakete 'libapt-pkg' und 'libapt-pkg-perl'.
+
 === Bibliothek `libapt-pkg-doc` ===
 
 // Stichworte für den Index
