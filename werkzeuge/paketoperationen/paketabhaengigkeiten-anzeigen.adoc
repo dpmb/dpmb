@@ -173,13 +173,14 @@ begrenzt die Ausgabe nur auf die installierten Pakete
 
 `--recurse`:: 
 führt die Unterkommandos `depends` und `rdepends` rekursiv aus, so dass
-alle erwähnten Pakete einmal ausgegeben werden
+alle erwähnten Pakete einmal ausgegeben werden. Diese Liste kann sehr
+lang sein.
 
 // Stichworte für den Index
 (((apt-cache, depends --no-depends)))
-Die nachfolgende Ausgabe grenzt die Auflistung auf die Pakete ein, als
-Vorschlag oder Empfehlung hinterlegt sind. Im Aufruf nutzen Sie dafür
-die Option `--no-depends`.
+Die nachfolgende Ausgabe grenzt die Auflistung auf die Pakete ein, die
+lediglich als Vorschlag oder Empfehlung hinterlegt sind. Im Aufruf
+nutzen Sie dafür die Option `--no-depends`.
 
 .Ausgabe der vorgeschlagenen und empfohlenen Pakete zu 'xpdf'
 ----
