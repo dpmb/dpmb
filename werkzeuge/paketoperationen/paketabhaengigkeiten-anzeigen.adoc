@@ -346,27 +346,52 @@ $
 (((Debianpaket, apt-rdepends)))
 (((Paket, Rückwärtsabhängigkeiten auflisten)))
 (((Paketabhängigkeiten, Rückwärtsabhängigkeiten auflisten)))
+
 Diese Aktivität übersetzen Sie mit der Frage ``Welche anderen Pakete
-benötigt Paket 'x'?'', auch genannt 'Rückwärtsabhängigkeit'. Zur
+benötigen Paket 'x'?'', auch genannt 'Rückwärtsabhängigkeit'. Zur
 Beantwortung der Frage helfen Ihnen einerseits wiederum `apt-cache` mit
-dem Unterkommando `rdepends`, andererseits das Kommando `apt-rdepends`
+dem Unterkommando `depends`, andererseits das Kommando `apt-rdepends`
 aus dem gleichnamigen Paket 'apt-rdepends' <<Debian-Paket-apt-rdepends>>
 und auch `aptitude` selbst weiter.
 
-.Ausgabe der umgekehrten Paketabhängigkeiten mit `apt-cache` für das Paket 'xfce4'
+===== Recherche mit `apt-cache` =====
+
+// Stichworte für den Index
+(((apt-cache, rdepends)))
+
+Über das Unterkommando `rdepends` zeigt `apt-cache` alle Pakete an.
+Pakete, die von weiteren Paketen abhängen, sind in der Ausgabe von
+`apt-cache` mit einem senkrechten Strich (``Pipe'') gekennzeichnet.
+
+.Ausgabe der umgekehrten Paketabhängigkeiten mit `apt-cache` für das Paket 'xpdf'
 ----
-$ apt-cache rdepends xfce4
-xfce4
+$ apt-cache rdepends xpdf
+xpdf
 Reverse Depends:
-  xfwm4
-  task-xfce-desktop
- |desktop-base
-  education-desktop-xfce
+ |xmds-doc
+  xfe
+  wiipdf
+ |vim-latexsuite
+  python-scapy
+ |ruby-tioga
+ |python-tables-doc
+ |page-crunch
+ |octave-doc
+ |muttprint-manual
+  mozplugger
+  mlpost
+  libmlpost-ocaml-dev
+ |mc
+ |libjgoodies-forms-java-doc
+ |libinventor1
+ |gprolog-doc
+ |geomview
+  libfontconfig1
+  eficas
+ |auctex
 $
 ----
 
-Pakete, die von weiteren Paketen abhängen, sind in der Ausgabe von
-`apt-cache` mit einem senkrechten Strich (``Pipe'') gekennzeichnet.
 Deutlicher wird `apt-rdepends`, da es die Abhängigkeiten noch weitaus
 stärker auflöst. Nachfolgende Darstellung zeigt daher nur einen
 Ausschnitt.
