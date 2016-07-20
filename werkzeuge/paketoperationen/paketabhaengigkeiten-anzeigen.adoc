@@ -183,7 +183,7 @@ die Option `--no-depends`.
 
 .Ausgabe der vorgeschlagenen und empfohlenen Pakete zu 'xpdf'
 ----
-$ apt-cache depends xfce4 --no-depends
+$ apt-cache depends xpdf --no-depends
 xpdf
   Empfiehlt: poppler-utils
     poppler-utils:i386
