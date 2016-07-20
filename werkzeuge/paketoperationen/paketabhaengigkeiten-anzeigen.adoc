@@ -71,27 +71,38 @@ $
 // Stichworte für den Index
 (((apt-cache, depends)))
 
-In der zweiten Darstellung sehen Sie den Einsatz des Unterkommandos
-`depends`. Jedes benötigte Debianpaket wird in einer einzelnen Zeile
-in alphabetisch aufsteigender Reihenfolge und ohne die Versionsnummer
-ausgegeben. Für diese Information muss das entsprechende Paket nicht auf
-ihrem System installiert sein, aber in der Paketdatenbank gelistet sein.
+Variante 2 verwendet das spezifische Unterkommando `depends`. Jedes
+benötigte Debianpaket wird in einer einzelnen Zeile in alphabetisch
+aufsteigender Reihenfolge und ohne die Versionsnummer ausgegeben. Für
+diese Information muss das entsprechende Paket nicht auf ihrem System
+installiert sein, aber in der Paketdatenbank gelistet sein.
 
 .Detaillierte Ausgabe der Paketabhängigkeiten
 ----
 $ apt-cache depends xpdf
 xpdf
-  Hängt ab von: lesstif2
   Hängt ab von: libc6
   Hängt ab von: libgcc1
-  Hängt ab von: libpoppler19
+  Hängt ab von: libpoppler46
   Hängt ab von: libstdc++6
   Hängt ab von: libx11-6
+  Hängt ab von: libxm4
   Hängt ab von: libxt6
   Empfiehlt: poppler-utils
+    poppler-utils:i386
   Empfiehlt: poppler-data
   Empfiehlt: gsfonts-x11
   Empfiehlt: cups-bsd
+    cups-bsd:i386
+  Kollidiert mit: <xpdf-common>
+  Kollidiert mit: <xpdf-common:i386>
+  Kollidiert mit: <xpdf-reader>
+  Kollidiert mit: <xpdf-reader:i386>
+  Ersetzt: <xpdf-common>
+  Ersetzt: <xpdf-common:i386>
+  Ersetzt: <xpdf-reader>
+  Ersetzt: <xpdf-reader:i386>
+  Kollidiert mit: xpdf:i386
 $
 ----
 
