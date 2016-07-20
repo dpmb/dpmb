@@ -93,6 +93,18 @@ $
 ----
 
 // Stichworte für den Index
+(((apt-cache, depends -i)))
+(((apt-cache, depends --important)))
+(((apt-cache, depends --installed)))
+(((apt-cache, depebds --no-breaks)))
+(((apt-cache, depends --no-conflicts)))
+(((apt-cache, depends --no-depends)))
+(((apt-cache, depends --no-enhances)))
+(((apt-cache, depends --no-pre-depends)))
+(((apt-cache, depends --no-recommends)))
+(((apt-cache, depends --no-replaces)))
+(((apt-cache, depends --no-suggests)))
+(((apt-cache, depends --recurse)))
 (((Paketabhängigkeiten, Auflistung einschränken)))
 Ohne weitere Optionen enthält die Ausgabe alle Abhängigkeiten und
 Empfehlungen zu dem Paket. Mit den folgenden Optionen spezifizieren Sie
@@ -128,6 +140,10 @@ Pakete, die das aktuelle Paket erweitern, werden nicht angezeigt
 
 `--installed`:: 
 begrenzt die Ausgabe nur auf die installierten Pakete
+
+`--recurse`:: 
+führt die Unterkommandos `depends` und `rdepends` rekursiv aus, so dass
+alle erwähnten Pakete einmal ausgegeben werden
 
 Eine Anwendung der Optionen zeigt die nachfolgende Ausgabe, hier für das
 Paket 'xfce4' und mit der Option `--no-depends`. Angezeigt werden nur
