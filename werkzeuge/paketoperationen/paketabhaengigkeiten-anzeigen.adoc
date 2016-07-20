@@ -112,7 +112,7 @@ die Ausgabe noch genauer.
 
 `-i` (Langform `--important`):: 
 Einschränkung auf die wichtigen Abhängigkeiten, d.h. nur unerfüllte
-('unmet') und direkte Abhängigkeiten ('depends')
+('unmet') und direkte Abhängigkeiten ('depends' und 'pre-depends'). 
 
 `--no-pre-depends`:: 
 blendet die Pakete aus, die vorher installiert sein müssen
@@ -168,16 +168,16 @@ $
 // Stichworte für den Index
 (((aptitude, search ~D)))
 (((aptitude, search ?depends)))
-Wie oben schon angerissen, versteht `aptitude` eine Reihe von speziellen
-Suchmustern. Eines davon ist `~Dmuster` als Abkürzung für 'depends',
-welches Sie mit dem Unterkommando `search` kombinieren. 'muster' bezeichnet
-hier den Namen oder das Textfragment eines Pakets. Um beispielsweise
-alle Pakete aufzulisten, die eine Abhängigkeit auf das Paket 'xpdf' in
-der Paketbeschreibung deklariert haben, nutzen Sie das Kommando
-`aptitude search ~Dxpdf`. Das Ergebnis ist eine mehrspaltige Auflistung
-der Pakete mit deren Installationsstatus, Paketnamen und
-Kurzbeschreibung (siehe dazu Liste der installierten Pakete anzeigen und
-deuten in <<liste-der-installierten-pakete-anzeigen-und-deuten>>).
+`aptitude` versteht eine Reihe von speziellen Suchmustern. Eines davon
+ist `~Dmuster` als Abkürzung für 'depends', welches Sie mit dem
+Unterkommando `search` kombinieren. 'muster' bezeichnet hier den Namen
+oder das Textfragment eines Pakets. Um beispielsweise alle Pakete
+aufzulisten, die eine Abhängigkeit auf das Paket 'xpdf' in der
+Paketbeschreibung deklariert haben, nutzen Sie das Kommando `aptitude
+search ~Dxpdf`. Das Ergebnis ist eine mehrspaltige Auflistung der Pakete
+mit deren Installationsstatus, Paketnamen und Kurzbeschreibung (siehe
+dazu ``Liste der installierten Pakete anzeigen und deuten'' in
+<<liste-der-installierten-pakete-anzeigen-und-deuten>>).
 
 .Ausgabe der Paketabhängigkeiten mit `aptitude`
 ----
