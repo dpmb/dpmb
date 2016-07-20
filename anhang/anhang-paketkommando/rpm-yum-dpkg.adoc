@@ -249,8 +249,8 @@ das zu `dpkg` und `aptitude` genauer.
 (((apt-cache, rdepends)))
 (((apt-rdepends)))
 (((apt-rdepends, -r)))
-(((aptitude, search ~D)))
-(((aptitude, search ~R)))
+// (((aptitude, search ~D)))
+// (((aptitude, search ~R)))
 (((dpkg, -f)))
 (((dpkg, --field)))
 (((dpkg-deb, -f)))
@@ -282,12 +282,12 @@ ein.
 |            | `apt-cache rdepends` 'Paketname' | Abhängigkeiten anzeigen
 | `apt-rdepends` | `apt-rdepends` 'Paketname' | Abhängigkeiten anzeigen
 |            | `apt-rdepends -r` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
-| `aptitude` | `aptitude search ~R`'Paketname' | Abhängigkeiten anzeigen
-|            | `aptitude search ~D`'Paketname' | umgekehrte Abhängigkeiten anzeigen
+| `aptitude` | `aptitude search ~R` 'Paketname' | Abhängigkeiten anzeigen
+|            | `aptitude search ~D` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 | `grep-status` | `grep-status -F Package -s Depends` 'Paketname' | Abhängigkeiten anzeigen
 |            | `grep-status -P -s Depends` 'Paketname' | Abhängigkeiten anzeigen
 | `RPM`      | `rpm -R` 'Paketname' | das Paket muß dazu lokal als Datei vorliegen
-|     `      | `rpm --requires` 'Paketname' | das Paket muß dazu lokal als Datei vorliegen
+|            | `rpm --requires` 'Paketname' | das Paket muß dazu lokal als Datei vorliegen
 |            | `rpm -qpR` 'Paketdatei' | das Paket muß dazu lokal als Datei vorliegen
 | `YUM`      | `yum deplist` 'Paketname' |
 |            | `yum info` 'Paketname' |
