@@ -35,15 +35,20 @@ können Sie den Zustand übergehen -- mehr dazu erfahren Sie in
 // Stichworte für den Index
 (((apt-cache, depends)))
 (((apt-cache, show)))
+(((Debianpaket, dctrl-tools)))
+(((grep-status)))
 (((Paketabhängigkeiten, auflisten)))
-Dazu stehen Ihnen einerseits das Werkzeug `apt-cache` mit den beiden
-Unterkommandos `show` und `depends` zur Verfügung, andererseits auch
-`aptitude` mit speziellen Suchoptionen. Als weitere Information
-benötigen beide Programme noch den Namen des Pakets, zu dem es die
-Paketabhängigkeiten ausgeben sollen.
+Zu dieser Information gelangen Sie mit mehreren Werkzeugen. Dazu zählt
+`apt-cache` mit den beiden Unterkommandos `show` und `depends`,
+`aptitude` mit speziellen Suchoptionen und `grep-status` aus dem Paket
+'dctrl-tools' <<Debian-Paket-dctrl-tools>>. Als weitere Information
+benötigen die genannten Programme noch den Namen des Pakets, zu dem es
+die Paketabhängigkeiten ausgeben sollen. Die nachfolgenden Ausgaben
+illustrieren die Wirkung anhand des Pakets 'xpdf'. 
 
-Die beiden nachfolgenden Ausgaben illustrieren die Wirkung zum Paket
-'xpdf'. Die erste Ausgabe greift auf `apt-cache show` in Verbindung mit
+===== Ausgabe der Paketabhängigkeiten mit `apt-cache` =====
+
+Die erste Ausgabe greift auf `apt-cache show` in Verbindung mit
 dem UNIX-Kommando `grep` und einer Pipe zurück, um aus der
 Paketbeschreibung die entsprechende Zeile mit den Abhängigkeiten
 herauszufiltern.
@@ -139,6 +144,8 @@ xfce4
 $
 ----
 
+===== Ausgabe der Paketabhängigkeiten mit `aptitude` =====
+
 // Stichworte für den Index
 (((aptitude, search ~D)))
 (((aptitude, search ?depends)))
@@ -163,6 +170,10 @@ p   page-crunch          - PDF and PS manipulation for printing needs
 p   wiipdf               - Präsentiert eine PDF-Datei mittels Wiimote
 $
 ----
+
+===== Ausgabe der Paketabhängigkeiten mit `grep-status` =====
+
+* Todo
 
 ==== Anzeige der umgekehrten Paketabhängigkeiten ====
 
