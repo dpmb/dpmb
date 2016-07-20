@@ -30,7 +30,7 @@ eines sauberen Paketbestands durchzuführen sind. Nur mit etwas Nachdruck
 können Sie den Zustand übergehen -- mehr dazu erfahren Sie in
 ``Paketoperationen erzwingen'' in <<paketoperationen-erzwingen>>.
 
-==== Paketabhängigkeiten auflisten ====
+==== Die Abhängigkeiten eines Pakets auflisten ====
 
 // Stichworte für den Index
 (((apt-cache, depends)))
@@ -38,22 +38,25 @@ können Sie den Zustand übergehen -- mehr dazu erfahren Sie in
 (((Debianpaket, dctrl-tools)))
 (((grep-status)))
 (((Paketabhängigkeiten, auflisten)))
-Zu dieser Information gelangen Sie mit mehreren Werkzeugen. Dazu zählt
+Hier sehen Sie, von welchen weiteren Paketen ein Paket abhängt. Zu
+dieser Information gelangen Sie mit mehreren Werkzeugen. Dazu zählt
 `apt-cache` mit den beiden Unterkommandos `show` und `depends`,
 `aptitude` mit speziellen Suchoptionen und `grep-status` aus dem Paket
 'dctrl-tools' <<Debian-Paket-dctrl-tools>>. Als weitere Information
 benötigen die genannten Programme noch den Namen des Pakets, zu dem es
 die Paketabhängigkeiten ausgeben sollen. Die nachfolgenden Ausgaben
-illustrieren die Wirkung anhand des Pakets 'xpdf'. 
+illustrieren die Wirkung anhand des Pakets 'xpdf'.
 
 ===== Ausgabe der Paketabhängigkeiten mit `apt-cache` =====
 
-Die erste Ausgabe greift auf `apt-cache show` in Verbindung mit
-dem UNIX-Kommando `grep` und einer Pipe zurück, um aus der
-Paketbeschreibung die entsprechende Zeile mit den Abhängigkeiten
-herauszufiltern. Das entsprechende Paket muss dafür nicht auf ihrem
-System installiert sein, sondern nur in der Paketdatenbank als Paket
-gelistet sein.
+Variante 1 verfolgt einen typischen UNIX-Ansatz -- es kombiniert die
+beiden Werkzeuge `apt-cache` und `grep` miteinander. Dazu filtert es die
+Ausgabe der vollständigen Paketinformationen, wie es `apt-cache` mit dem
+Unterkommando `show` liefert. Über eine Pipe und mittels `grep` filtert
+es danach die Zeile mit den Abhängigkeiten heraus, die mit dem
+Schlüsselwort `Depends` beginnt. Für diese Information muss das
+entsprechende Paket nicht auf ihrem System installiert sein, sondern nur
+in der Paketdatenbank als Paket gelistet sein.
 
 // Stichworte für den Index
 (((apt-cache, show)))
@@ -61,7 +64,7 @@ gelistet sein.
 .Suche mittels `grep` in der Ausgabe von `apt-cache`
 ----
 $ apt-cache show xpdf | grep Depends
-Depends: lesstif2 (>= 1:0.94.4), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libpoppler19 (>= 0.18.4), libstdc++6 (>= 4.1.1), libx11-6, libxt6
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libpoppler46 (>= 0.26.2), libstdc++6 (>= 4.1.1), libx11-6, libxm4 (>= 2.3.4), libxt6
 $
 ----
 
@@ -171,10 +174,11 @@ $
 `aptitude` versteht eine Reihe von speziellen Suchmustern. Eines davon
 ist `~Dmuster` als Abkürzung für 'depends', welches Sie mit dem
 Unterkommando `search` kombinieren. 'muster' bezeichnet hier den Namen
-oder das Textfragment eines Pakets. Um beispielsweise alle Pakete
-aufzulisten, die eine Abhängigkeit auf das Paket 'xpdf' in der
-Paketbeschreibung deklariert haben, nutzen Sie das Kommando `aptitude
-search ~Dxpdf`. Das Ergebnis ist eine mehrspaltige Auflistung der Pakete
+oder das Textfragment eines Pakets. Für diese Information muss das
+entsprechende Paket nicht auf ihrem System installiert sein, aber in der
+Paketdatenbank gelistet sein.
+
+Um beispielsweise alle Pakete zu erhalten, die eine Abhängigkeit auf das Paket 'xpdf' in der Paketbeschreibung deklariert haben, nutzen Sie das Kommando `aptitude search ~Dxpdf`. Das Ergebnis ist eine mehrspaltige Auflistung der Pakete
 mit deren Installationsstatus, Paketnamen und Kurzbeschreibung (siehe
 dazu ``Liste der installierten Pakete anzeigen und deuten'' in
 <<liste-der-installierten-pakete-anzeigen-und-deuten>>).
