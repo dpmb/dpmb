@@ -51,7 +51,9 @@ illustrieren die Wirkung anhand des Pakets 'xpdf'.
 Die erste Ausgabe greift auf `apt-cache show` in Verbindung mit
 dem UNIX-Kommando `grep` und einer Pipe zurück, um aus der
 Paketbeschreibung die entsprechende Zeile mit den Abhängigkeiten
-herauszufiltern.
+herauszufiltern. Das entsprechende Paket muss dafür nicht auf ihrem
+System installiert sein, sondern nur in der Paketdatenbank als Paket
+gelistet sein.
 
 // Stichworte für den Index
 (((apt-cache, show)))
@@ -69,7 +71,8 @@ $
 In der zweiten Darstellung sehen Sie den Einsatz des Unterkommandos
 `depends`. Jedes benötigte Debianpaket wird in einer einzelnen Zeile
 in alphabetisch aufsteigender Reihenfolge und ohne die Versionsnummer
-ausgegeben.
+ausgegeben. Für diese Information muss das entsprechende Paket nicht auf
+ihrem System installiert sein, aber in der Paketdatenbank gelistet sein.
 
 .Detaillierte Ausgabe der Paketabhängigkeiten
 ----
