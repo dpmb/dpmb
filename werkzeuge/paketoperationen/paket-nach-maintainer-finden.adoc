@@ -21,7 +21,7 @@ in möglichst stabiler Form verfügbar bleibt <<Debian-Wiki-Maintainer>>.
 (((aptitude, search ~m)))
 (((aptitude, Format Strings)))
 (((ara)))
-(((grep-ctrl)))
+(((grep-dctrl)))
 (((Paketsuche, mittels aptitude)))
 (((Synaptic)))
 Diese Information liefern Ihnen mehrere Werkzeuge – `aptitude`,
