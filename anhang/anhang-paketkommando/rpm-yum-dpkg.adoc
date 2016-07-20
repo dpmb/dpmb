@@ -269,7 +269,7 @@ ein.
 |            | `apt-cache rdepends` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 | `RPM`      | `rpm -R` 'Paketname' | das Paket muß dazu lokal als Datei vorliegen
 |     `      | `rpm --requires` 'Paketname' | das Paket muß dazu lokal als Datei vorliegen
-|            | `rpm -qpR` 'Paketname' | das Paket muß dazu lokal als Datei vorliegen
+|            | `rpm -qpR` 'Paketdatei' | das Paket muß dazu lokal als Datei vorliegen
 | `YUM`      | `yum deplist` 'Paketname' |
 |            | `yum info` 'Paketname' |
 |====
