@@ -239,7 +239,37 @@ $
 
 ===== Ausgabe der Paketabhängigkeiten mit `grep-status` =====
 
-* Todo
+// Stichworte für den Index
+(((grep-status, -F)))
+(((grep-status, -s)))
+(((Debianpaket, dctrl-tools)))
+
+Das Werkzeug `grep-status` aus dem Paket 'dctrl-tools'
+<<Debian-Paket-dctrl-tools>> filtert die gewünschten Felder aus der
+Paketbeschreibung heraus. Im nachfolgenden Aufruf kommen `-F Package`
+zum Abgleich des Musters mit dem Paketnamen und `-s Depends` zur Ausgabe
+des `Depends`-Feldes zum Einsatz.
+
+.Ausgabe der Paketabhängigkeiten mit `grep-status`
+----
+$ grep-status -F Package -s Depends xpdf
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libpoppler46 (>= 0.26.2), libstdc++6 (>= 4.1.1), libx11-6, libxm4 (>= 2.3.4), libxt6
+$
+----
+
+// Stichworte für den Index
+(((grep-status, -F Package)))
+(((grep-status, -P)))
+
+Eine kürzere Schreibweise erlaubt der Schalter `-P`, welcher dem
+Schalter `-F Package` entspricht. Die Ausgabe ist in beiden Fällen
+identisch.
+
+.Ausgabe der Paketabhängigkeiten mit `grep-status` (optimiert)
+----
+$ grep-status -P -s Depends xpdf
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libpoppler46 (>= 0.26.2), libstdc++6 (>= 4.1.1), libx11-6, libxm4 (>= 2.3.4), libxt6
+----
 
 ===== aptitude (vorher) =====
 
