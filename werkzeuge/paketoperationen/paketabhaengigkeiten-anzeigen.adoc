@@ -35,19 +35,49 @@ können Sie den Zustand übergehen -- mehr dazu erfahren Sie in
 // Stichworte für den Index
 (((apt-cache, depends)))
 (((apt-cache, show)))
+(((dpkg-deb, -f)))
+(((dpkg-deb, --field)))
 (((Debianpaket, dctrl-tools)))
+(((Debianpaket, dpkg)))
 (((grep-status)))
 (((Paketabhängigkeiten, auflisten)))
 Hier sehen Sie, von welchen weiteren Paketen ein Paket abhängt. Zu
-dieser Information gelangen Sie mit mehreren Werkzeugen. Dazu zählt
-`apt-cache` mit den beiden Unterkommandos `show` und `depends`,
-`aptitude` mit speziellen Suchoptionen und `grep-status` aus dem Paket
-'dctrl-tools' <<Debian-Paket-dctrl-tools>>. Als weitere Information
-benötigen die genannten Programme noch den Namen des Pakets, zu dem es
-die Paketabhängigkeiten ausgeben sollen. Die nachfolgenden Ausgaben
-illustrieren die Wirkung anhand des Pakets 'xpdf'.
+dieser Information gelangen Sie mit mehreren Werkzeugen. Dazu zählen
+`dpkg-deb`, `apt-cache` mit den beiden Unterkommandos `show` und
+`depends`, `aptitude` mit speziellen Suchoptionen und `grep-status` aus
+dem Paket 'dctrl-tools' <<Debian-Paket-dctrl-tools>>. Als weitere
+Information benötigen die genannten Programme noch den Namen des Pakets,
+zu dem es die Paketabhängigkeiten ausgeben sollen. Die nachfolgenden
+Ausgaben illustrieren die Wirkung anhand des Pakets 'xpdf'.
+
+===== Ausgabe der Paketabhängigkeiten mit `dpkg-deb` =====
+
+// Stichworte für den Index
+(((dpkg-deb, -f)))
+(((dpkg-deb, --field)))
+(((Debianpaket, dpkg)))
+
+Das Kommando `dpkg-deb` ist Bestandteil des essentiellen Pakets 'dpkg'
+<<Debian-Paket-dpkg>>. Über den Schalter `-f` (Langform `--field`) und
+der Angabe des Feldnamens liest es die Paketinformationen und gibt
+anschließend den Inhalt des spezifizierten Feldes aus. Beachten Sie
+bitte beim Aufruf die etwas unintuitiven Abfolge der Parameter -- erst
+den Schalter, danach den Dateinamen der `deb`-Datei und am Ende der
+Feldname. Für diese Information muss das entsprechende Paket nicht auf
+ihrem System installiert sein, sondern nur als Datei in einem
+Verzeichnis liegen und erreichbar sein.
+
+.Ausgabe der Abhängigkeiten mittes `dpkg-dev`
+----
+$ dpkg-deb -f xpdf_3.03-17+b1_amd64.deb Depends
+libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libpoppler46 (>= 0.26.2), libstdc++6 (>= 4.1.1), libx11-6, libxm4 (>= 2.3.4), libxt6
+$
+----
 
 ===== Ausgabe der Paketabhängigkeiten mit `apt-cache` =====
+
+// Stichworte für den Index
+(((apt-cache, show)))
 
 *Variante 1* verfolgt einen typischen UNIX-Ansatz -- es kombiniert die
 beiden Werkzeuge `apt-cache` und `grep` miteinander. Dazu filtert es die
@@ -57,9 +87,6 @@ es danach die Zeile mit den Abhängigkeiten heraus, die mit dem
 Schlüsselwort `Depends` beginnt. Für diese Information muss das
 entsprechende Paket nicht auf ihrem System installiert sein, sondern nur
 in der Paketdatenbank als Paket gelistet sein.
-
-// Stichworte für den Index
-(((apt-cache, show)))
 
 .Suche mittels `grep` in der Ausgabe von `apt-cache`
 ----
@@ -246,9 +273,13 @@ $
 
 Das Werkzeug `grep-status` aus dem Paket 'dctrl-tools'
 <<Debian-Paket-dctrl-tools>> filtert die gewünschten Felder aus der
-Paketbeschreibung heraus. Im nachfolgenden Aufruf kommen `-F Package`
-zum Abgleich des Musters mit dem Paketnamen und `-s Depends` zur Ausgabe
-des `Depends`-Feldes zum Einsatz.
+Paketbeschreibung heraus. Für diese Information muss das entsprechende
+Paket nicht auf ihrem System installiert sein, aber in der
+Paketdatenbank gelistet sein.
+
+Im nachfolgenden Aufruf kommen `-F Package` zum Abgleich des Musters mit
+dem Paketnamen und `-s Depends` zur Ausgabe des `Depends`-Feldes zum
+Einsatz.
 
 .Ausgabe der Paketabhängigkeiten mit `grep-status`
 ----
@@ -269,6 +300,7 @@ identisch.
 ----
 $ grep-status -P -s Depends xpdf
 Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libpoppler46 (>= 0.26.2), libstdc++6 (>= 4.1.1), libx11-6, libxm4 (>= 2.3.4), libxt6
+$
 ----
 
 ===== aptitude (vorher) =====
