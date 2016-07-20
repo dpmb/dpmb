@@ -14,17 +14,21 @@ riesigen Menge einzelner Pakete. Dabei werden größere, komplexe
 Funktionalitäten in kleine, separate Bausteine zerlegt. Diese Bausteine
 sind als einzelne `deb`-Pakete verfügbar, die häufig einander bedingen.
 In der Paketbeschreibung jedes `deb`-Pakets ist der Bezug zu den anderen
-Paketen hinterlegt. Genaueres dazu lesen Sie unter Debian-Paketformat im
-Detail in <<debian-paketformat-im-detail>>.
+Paketen hinterlegt. Genaueres dazu lesen Sie unter ``Debian-Paketformat
+im Detail'' in <<debian-paketformat-im-detail>>.
 
 Vor der Veränderung des Paketbestands – d.h. dem Hinzufügen, Entfernen
 und Aktualisieren eines oder mehrerer Pakete – prüfen APT und
 `aptitude`, ob diese Abhängigkeiten nach den Änderungen weiterhin
 erfüllt sind. Die Abhängigkeiten müssen erfüllt sein, damit Ihr
 Linuxsystem weiterhin funktioniert und dieses für Sie benutzbar bleibt.
-Sind die Abhängigkeiten jedoch nicht erfüllt, werden Ihnen die Pakete
-und die erforderlichen Paketoperationen angezeigt, die zur
-Aufrechterhaltung eines sauberen Paketbestands durchzuführen sind.
+
+Sind die Abhängigkeiten jedoch nicht erfüllt, weigern sich APT und
+`aptitude` zunächst, Software einzuspielen. Sie zeigen Ihnen an, welche
+Pakete und Einzelschritte erforderlich sind, die zur Wiedererlangung
+eines sauberen Paketbestands durchzuführen sind. Nur mit etwas Nachdruck
+können Sie den Zustand übergehen -- mehr dazu erfahren Sie in
+``Paketoperationen erzwingen'' in <<paketoperationen-erzwingen>>.
 
 ==== Paketabhängigkeiten auflisten ====
 
