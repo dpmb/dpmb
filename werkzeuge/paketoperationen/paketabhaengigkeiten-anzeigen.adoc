@@ -175,21 +175,31 @@ begrenzt die Ausgabe nur auf die installierten Pakete
 führt die Unterkommandos `depends` und `rdepends` rekursiv aus, so dass
 alle erwähnten Pakete einmal ausgegeben werden
 
-Eine Anwendung der Optionen zeigt die nachfolgende Ausgabe, hier für das
-Paket 'xfce4' und mit der Option `--no-depends`. Angezeigt werden nur
-die vorgeschlagenen und empfohlenen Pakete zu 'xfce4'.
+// Stichworte für den Index
+(((apt-cache, depends --no-depends)))
+Die nachfolgende Ausgabe grenzt die Auflistung auf die Pakete ein, als
+Vorschlag oder Empfehlung hinterlegt sind. Im Aufruf nutzen Sie dafür
+die Option `--no-depends`.
 
-.Ausgabe der vorgeschlagenen und empfohlenen Pakete zu 'xfce4'
+.Ausgabe der vorgeschlagenen und empfohlenen Pakete zu 'xpdf'
 ----
 $ apt-cache depends xfce4 --no-depends
-xfce4
-  Schlägt vor: xfprint4
-  Schlägt vor: xfce4-goodies
-  Empfiehlt: xorg
-  Empfiehlt: desktop-base
-  Empfiehlt: thunar-volman
-  Empfiehlt: tango-icon-theme
-  Empfiehlt: xfce4-notifyd
+xpdf
+  Empfiehlt: poppler-utils
+    poppler-utils:i386
+  Empfiehlt: poppler-data
+  Empfiehlt: gsfonts-x11
+  Empfiehlt: cups-bsd
+    cups-bsd:i386
+  Kollidiert mit: <xpdf-common>
+  Kollidiert mit: <xpdf-common:i386>
+  Kollidiert mit: <xpdf-reader>
+  Kollidiert mit: <xpdf-reader:i386>
+  Ersetzt: <xpdf-common>
+  Ersetzt: <xpdf-common:i386>
+  Ersetzt: <xpdf-reader>
+  Ersetzt: <xpdf-reader:i386>
+  Kollidiert mit: xpdf:i386
 $
 ----
 
