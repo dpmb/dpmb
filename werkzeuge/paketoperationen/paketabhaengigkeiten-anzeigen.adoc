@@ -49,7 +49,7 @@ illustrieren die Wirkung anhand des Pakets 'xpdf'.
 
 ===== Ausgabe der Paketabhängigkeiten mit `apt-cache` =====
 
-Variante 1 verfolgt einen typischen UNIX-Ansatz -- es kombiniert die
+*Variante 1* verfolgt einen typischen UNIX-Ansatz -- es kombiniert die
 beiden Werkzeuge `apt-cache` und `grep` miteinander. Dazu filtert es die
 Ausgabe der vollständigen Paketinformationen, wie es `apt-cache` mit dem
 Unterkommando `show` liefert. Über eine Pipe und mittels `grep` filtert
@@ -71,11 +71,11 @@ $
 // Stichworte für den Index
 (((apt-cache, depends)))
 
-Variante 2 verwendet das spezifische Unterkommando `depends`. Jedes
-benötigte Debianpaket wird in einer einzelnen Zeile in alphabetisch
-aufsteigender Reihenfolge und ohne die Versionsnummer ausgegeben. Für
-diese Information muss das entsprechende Paket nicht auf ihrem System
-installiert sein, aber in der Paketdatenbank gelistet sein.
+*Variante 2* verwendet das spezifische Unterkommando `depends`.
+`apt-cache` gibt jedes benötigte Debianpaket in einer einzelnen Zeile in
+alphabetisch aufsteigender Reihenfolge und ohne die Versionsnummer aus.
+Für diese Information muss das entsprechende Paket nicht auf ihrem
+System installiert sein, aber in der Paketdatenbank gelistet sein.
 
 .Detaillierte Ausgabe der Paketabhängigkeiten
 ----
