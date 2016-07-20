@@ -207,6 +207,12 @@ $
 ===== Ausgabe der Paketabhängigkeiten mit `aptitude` =====
 
 // Stichworte für den Index
+(((aptitude, search ~R)))
+
+*HINWEIS: FALSCH EINSORTIERT -- IM UMBAU*
+
+
+// Stichworte für den Index
 (((aptitude, search ~D)))
 (((aptitude, search ?depends)))
 `aptitude` versteht eine Reihe von speziellen Suchmustern. Eines davon
@@ -326,6 +332,8 @@ $
 
 .Darstellung der umgekehrten Paketabhängigkeiten mit `dotty`
 image::werkzeuge/paketoperationen/tcpdump-apt-rdepends.png[id="fig.tcpdump-apt-rdepends", width="50%"]
+
+*HINWEIS: FALSCH EINSORTIERT -- IM UMBAU*
 
 // Stichworte für den Index
 (((aptitude, search reverse-depends)))
