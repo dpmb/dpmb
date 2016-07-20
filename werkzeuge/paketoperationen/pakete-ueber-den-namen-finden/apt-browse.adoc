@@ -14,18 +14,21 @@
 (((Paketsuche, über die Paketbeschreibung)))
 (((Paketsuche, über ein Textfragment)))
 
-* entwickelt von Thomas Orozco <<apt-browse>>
-* Ziel:
-** Suche in Paketen nach bestimmten Dateien und Inhalten
-** erlaubt die Suche in mehreren Architekturen gleichzeitig
-** erlaubt die Suche in mehreren Veröffentlichungen gleichzeitig
-** fokussiert bisher auf Debian _stable_ / _testing_ und Ubuntu
-* entwickelt in Python
-** benutzt die Python-APT-Bibliothek aus dem Paket 'python-apt' <<Debian-Paket-python-apt>>
-* Suchergebnis 
-** umfaßt Suchtreffer mit Hervorhebung der exakten Treffer
-** Auswahl auf Eintrag öffnet detaillierte Angaben zum Paketinhalt mit
-Paketname, Architektur, Paketbeschreibung und Paketabhängigkeiten
+Diese Webseite pflegt Thomas Orozco <<apt-browse>>. Vorrangiges Ziel
+von ihm ist, die Suche in Paketen nach bestimmten Dateien und Inhalten
+zu vereinfachen. Es ist ein nicht-kommerzieller Dienst, der in der
+Programmiersprache Python entwickelt wurde und die Python-APT-Bibliothek
+aus dem Paket 'python-apt' <<Debian-Paket-python-apt>> benutzt.
+
+Die Suche erlaubt die gleichzeitige Recherche in mehreren Architekturen
+und in mehreren Veröffentlichungen. Eingepflegt sind bis dato die
+Veröffentlichungen Debian _stable_ und _unstable_ sowie die
+Ubuntu-Varianten der letzten 4 Jahre. Das Suchergebnis hebt die exakten
+Treffer hervor, andere Einträge folgen in der Auflistung darunter. Die
+Auswahl eines Suchtreffers öffnet detaillierte Angaben zum Paketinhalt
+mit dem Paketnamen, der Architektur, der Paketbeschreibung und den
+Paketabhängigkeiten. Die ebenso angezeigte Dateiliste des Paketinhalts
+läßt Sie in dem Paket datei- und verzeichnisweise schmökern.
 
 // Abbildung von apt-browse.org
 .Ergebnis der Paketsuche nach 'htop' über http://apt-browse.org/
