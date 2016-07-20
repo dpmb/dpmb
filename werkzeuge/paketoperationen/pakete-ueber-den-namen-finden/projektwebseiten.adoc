@@ -2,6 +2,8 @@
 
 // Baustelle: Rohtext
 
+[[suche-ueber-die-webseite-des-debian-projekts]]
+
 ===== Suche über die Webseite des Debian-Projekts =====
 
 // Stichworte für den Index

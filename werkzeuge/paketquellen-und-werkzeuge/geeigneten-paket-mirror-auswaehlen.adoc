@@ -163,33 +163,10 @@ Komponenten, die von externen Bestandteilen und Diensten abhängig sind.
 
 Sollten Sie nur über einen Zugang mittels Webbrowser verfügen, steht
 Ihnen die Webseite des Debian-Projekts <<Debian-Webseite>> zur
-Verfügung. Darüberhinaus bietet `apt-get.org` <<apt-get.org>> die
-Möglichkeit zur Recherche nach einem möglichen inoffiziellen Repository
-(siehe <<fig.apt-get-org>>). Bitte beachten Sie bei der Auswahl der
-Paketquelle über diesen Dienst, dass nicht jedes der angezeigten
-Repositories Pakete für alle Architekturen (siehe
-<<debian-architekturen>>) und Veröffentlichungen (siehe
-<<veroeffentlichungen>>) bereithält.
-
-.Auswahl der Paketmirror für bei `apt-get.org`
-image::werkzeuge/paketquellen-und-werkzeuge/apt-get-org.png[id="fig.apt-get-org", width="50%"]
-
-Sehr hilfreich und zumeist auch der erste Anlaufpunkt für inoffizielle
-Debianpakete ist die Paketsuche unter dem Menüpunkt menu:Search[]. Im
-Eingabefeld geben Sie ein Textfragment aus dem Namen eines Pakets ein,
-nachdem dann `apt-get.org` seine Liste der Spiegelserver durchforstet.
-Das Ergebnis ist eine Liste, aus der Sie entnehmen können, von welchem
-Spiegelserver Sie das gewünschte Paket beziehen können. Neben der
-Architektur (siehe <<debian-architekturen>>) sehen Sie auch die
-Veröffentlichung (siehe <<veroeffentlichungen>>) und den
-Distributionsbereich (siehe <<distributionsbereiche>>), in die das
-gefundene Paket einsortiert ist. <<fig.apt-get-org-search>> zeigt das
-Suchergebnis nach dem Paket 'libdvdcss' an, welches bei älteren
-Veröffentlichungen wie Debian 3 _Woody_, Debian 3.1 _Sarge_ oder auch
-bei _Sid_ für die drei Debian-Architekturen _all_, _i386_ und _powerpc_
-zum Lesen von DVDs benötigt wird und hierüber zur Verfügung steht.
-
-.Suchergebnis der Recherche bei `apt-get.org`
-image::werkzeuge/paketquellen-und-werkzeuge/apt-get-org-search.png[id="fig.apt-get-org-search", width="50%"]
+Verfügung. Informationen zu den einzelnen Paketen finden Sie unter der
+Paketsuche (siehe <<suche-ueber-die-webseite-des-debian-projekts>>).
+Ein mögliches Repository für inoffizielle Pakete ist `apt-get.org`
+<<apt-get.org>>, welches wir unter ``Suche über die Webseite
+apt-get.org'' <<suche-ueber-die-webseite-apt-get.org>> besprechen.
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/geeigneten-paket-mirror-auswaehlen.adoc
