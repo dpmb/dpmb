@@ -1,6 +1,6 @@
 // Datei: ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/apt-browse.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 ===== Suche über apt-browse.org =====
 
@@ -18,17 +18,21 @@ Diese Webseite pflegt Thomas Orozco <<apt-browse>>. Vorrangiges Ziel
 von ihm ist, die Suche in Paketen nach bestimmten Dateien und Inhalten
 zu vereinfachen. Es ist ein nicht-kommerzieller Dienst, der in der
 Programmiersprache Python entwickelt wurde und die Python-APT-Bibliothek
-aus dem Paket 'python-apt' <<Debian-Paket-python-apt>> benutzt.
+aus dem Paket 'python-apt' <<Debian-Paket-python-apt>> benutzt (siehe
+auch ``APT und Bibliotheken'' in <<apt-und-bibliotheken>>).
 
 Die Suche erlaubt die gleichzeitige Recherche in mehreren Architekturen
 und in mehreren Veröffentlichungen. Eingepflegt sind bis dato die
 Veröffentlichungen Debian _stable_ und _unstable_ sowie die
-Ubuntu-Varianten der letzten 4 Jahre. Das Suchergebnis hebt die exakten
-Treffer hervor, andere Einträge folgen in der Auflistung darunter. Die
-Auswahl eines Suchtreffers öffnet detaillierte Angaben zum Paketinhalt
-mit dem Paketnamen, der Architektur, der Paketbeschreibung und den
-Paketabhängigkeiten. Die ebenso angezeigte Dateiliste des Paketinhalts
-läßt Sie in dem Paket datei- und verzeichnisweise schmökern.
+Ubuntu-Varianten der letzten 4 Jahre. 
+
+Das Suchergebnis hebt die exakten Treffer hervor, andere Einträge folgen
+in der Auflistung darunter (siehe
+<<fig.packages-apt-browse-Webbrowser>>). Die Auswahl eines Suchtreffers
+öffnet detaillierte Angaben zum Paketinhalt mit dem Paketnamen, der
+Architektur, der Paketbeschreibung und den Paketabhängigkeiten. Die
+ebenso angezeigte Dateiliste des Paketinhalts läßt Sie in dem Paket
+datei- und verzeichnisweise schmökern.
 
 // Abbildung von apt-browse.org
 .Ergebnis der Paketsuche nach 'htop' über http://apt-browse.org/
