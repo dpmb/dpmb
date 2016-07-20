@@ -120,13 +120,29 @@ $
 (((apt-cache, depends --no-suggests)))
 (((apt-cache, depends --recurse)))
 (((Paketabhängigkeiten, Auflistung einschränken)))
-Ohne weitere Optionen enthält die Ausgabe alle Abhängigkeiten und
-Empfehlungen zu dem Paket. Mit den folgenden Optionen spezifizieren Sie
-die Ausgabe noch genauer.
+Ohne weitere Optionen enthält die Ausgabe alle Abhängigkeiten,
+Empfehlungen und Konflikte zu dem Paket. Mit den folgenden Optionen
+spezifizieren Sie die Ausgabe noch genauer.
 
 `-i` (Langform `--important`):: 
 Einschränkung auf die wichtigen Abhängigkeiten, d.h. nur unerfüllte
-('unmet') und direkte Abhängigkeiten ('depends' und 'pre-depends'). 
+('unmet') und direkte Abhängigkeiten ('depends' und 'pre-depends'). Es
+entspricht damit exakt den Angaben im Feld `Depends` der
+Paketinformationen.
+
+.Beschränkung auf die wichtigen Abhängigkeiten mittels `-i`
+----
+$ apt-cache depends -i xpdf
+xpdf
+  Hängt ab von: libc6
+  Hängt ab von: libgcc1
+  Hängt ab von: libpoppler46
+  Hängt ab von: libstdc++6
+  Hängt ab von: libx11-6
+  Hängt ab von: libxm4
+  Hängt ab von: libxt6
+$
+----
 
 `--no-pre-depends`:: 
 blendet die Pakete aus, die vorher installiert sein müssen
