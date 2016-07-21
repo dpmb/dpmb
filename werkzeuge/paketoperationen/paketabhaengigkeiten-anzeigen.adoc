@@ -508,28 +508,44 @@ $
 // Stichworte für den Index
 (((aptitude, search ~D)))
 (((aptitude, search ?depends)))
-Mit einer Reihe von speziellen Suchmustern unterstützt Sie `aptitude`
-bei der Recherche in der Paketdatenbank. Eines davon ist `~Dmuster` als
-Abkürzung für 'depends', welches Sie mit dem Unterkommando `search`
-kombinieren. 'muster' bezeichnet hier den Namen oder das Textfragment
-eines Pakets. Für diese Information muss das entsprechende Paket nicht
-auf ihrem System installiert sein, aber in der Paketdatenbank gelistet
-sein.
+Mit einer Reihe von speziellen Suchmustern zum Unterkommando `search`
+unterstützt Sie `aptitude` bei der Recherche in der
+Paketdatenbank. Eines davon ist `~D`'muster'. Es sucht in den
+Abhängigkeiten\footnote{Engl. 'Dependencies'; ohne weitere Angaben
+wird in den Abhängigkeiten des Feldes `Depends` gesucht.} aller Pakete
+nach dem regulrären Ausdruck 'muster'. Dabei findet es nicht nur
+vollständige Paketnamen sondern auch Bestandteile von Paketnamen. Für
+diese Information muss das entsprechende Paket nicht auf ihrem System
+installiert sein, aber in der Paketdatenbank vorhanden sein.
 
-Um beispielsweise alle Pakete zu erhalten, die eine Abhängigkeit auf das
-Paket 'xpdf' in der Paketbeschreibung deklariert haben, nutzen Sie das
+Um beispielsweise alle Pakete zu erhalten, die eine Abhängigkeit auf ein
+Paket mit der Zeichenkette 'xpdf' im Paketnamen haben, nutzen Sie das
 Kommando `aptitude search ~Dxpdf`. Das Ergebnis ist eine mehrspaltige
 Auflistung der Pakete mit deren Installationsstatus, Paketnamen und
 Kurzbeschreibung (siehe dazu ``Liste der installierten Pakete anzeigen
 und deuten'' in <<liste-der-installierten-pakete-anzeigen-und-deuten>>).
 
-.Ausgabe der Paketabhängigkeiten mit `aptitude`
+.Auflistung aller Pakete, deren Abhängigkeiten die Zeichenkette `xpdf` beinhalten, mit `aptitude`
 ----
-$ aptitude search ~Dxpdf
+$ aptitude search '~Dxpdf'
 p   eficas               - Graphical editor for Code Aster command files
 p   impressive           - Werkzeug zur Präsentation von PDF-Dateien mit
 p   muttprint-manual     - Handbuch für muttprint
 p   page-crunch          - PDF and PS manipulation for printing needs
+p   wiipdf               - Präsentiert eine PDF-Datei mittels Wiimote
+$
+----
+
+Diese Liste beinhaltet auch das Paket impressive, welches eine
+Abhängigkeit auf `poppler-utils | mupdf-tools | xpdf-utils` hat. Will
+man nur Abhängigkeiten auf das Paket 'xpdf', so muß man Anfangs- und
+End-Anker verwenden:
+
+.Auflistung aller Pakete, die eine harte Abhängigkeit auf das Paket 'xpdf' beinhalten, mit `aptitude`
+----
+$ aptitude search '~D^xpdf$'
+p   eficas               - Graphical editor for Code Aster command files
+p   muttprint-manual     - Handbuch für muttprint
 p   wiipdf               - Präsentiert eine PDF-Datei mittels Wiimote
 $
 ----
