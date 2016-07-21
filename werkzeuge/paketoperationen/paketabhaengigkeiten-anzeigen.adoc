@@ -376,8 +376,8 @@ Für diese Information muss das entsprechende Paket nicht auf ihrem
 System installiert sein, aber in der Paketdatenbank gelistet sein.
 
 Im nachfolgenden Aufruf kommen `-F Package` zum Abgleich des Musters mit
-dem Paketnamen und `-s Depends` zur Ausgabe des `Depends`-Feldes zum
-Einsatz.
+dem Paketnamen und `-s Depends` zur Ausgabe des Feldes für die
+Paketabhängigkeiten zum Einsatz.
 
 .Ausgabe der Paketabhängigkeiten mit `grep-status`
 ----
