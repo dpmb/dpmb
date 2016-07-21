@@ -304,11 +304,13 @@ image::werkzeuge/paketoperationen/tcpdump-apt-rdepends.png[id="fig.tcpdump-apt-r
 
 // Stichworte für den Index
 (((aptitude, search ~R)))
+(((aptitude, search ?reverse-depends)))
 `aptitude` versteht eine Reihe von speziellen Suchmustern. Eines davon
-ist `~Rmuster` als Abkürzung für 'reverse-depends', welches Sie mit dem
-Unterkommando `search` kombinieren. 'muster' bezeichnet hier den Namen
-oder das Textfragment eines Pakets. Für diese Information muss das
-entsprechende Paket nicht auf ihrem System installiert sein, aber in der
+ist `~Rmuster` als Abkürzung für die Langform
+`?reverse-depends(`'Paketname'`)`, welches Sie mit dem Unterkommando
+`search` kombinieren. 'muster' bezeichnet hier den Namen oder das
+Textfragment eines Pakets. Für diese Information muss das entsprechende
+Paket nicht auf ihrem System installiert sein, aber in der
 Paketdatenbank gelistet sein.
 
 Mit dem nachfolgenden Aufruf erhalten Sie alle Pakete, die 'xpdf'
