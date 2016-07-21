@@ -44,17 +44,18 @@ dazu erfahren Sie in ``Paketoperationen erzwingen'' in
 (((Debianpaket, apt-rdepends)))
 (((Debianpaket, dctrl-tools)))
 (((Debianpaket, dpkg)))
+(((grep-aptavail)))
 (((grep-status)))
 (((Paketabhängigkeiten, auflisten)))
 Hier sehen Sie, von welchen weiteren Paketen ein Paket abhängt. Zu
 dieser Information gelangen Sie mit mehreren Werkzeugen. Dazu zählen
 `dpkg-deb`, `apt-cache` mit den beiden Unterkommandos `show` und
-`depends`, `aptitude` mit speziellen Suchoptionen, `apt-rdepends` und
-`grep-status` aus dem Paket 'dctrl-tools' <<Debian-Paket-dctrl-tools>>.
-Als weitere Information benötigen die genannten Programme noch den Namen
-des Pakets, zu dem es die Paketabhängigkeiten ausgeben sollen. Die
-nachfolgenden Ausgaben illustrieren die Wirkung anhand des Pakets
-'xpdf'.
+`depends`, `aptitude` mit speziellen Suchoptionen, `apt-rdepends` sowie
+`grep-aptavail` und `grep-status` aus dem Paket 'dctrl-tools'
+<<Debian-Paket-dctrl-tools>>. Als weitere Information benötigen die
+genannten Programme noch den Namen des Pakets, zu dem es die
+Paketabhängigkeiten ausgeben sollen. Die nachfolgenden Ausgaben
+illustrieren die Wirkung anhand des Pakets 'xpdf'.
 
 // Warnhinweis
 [WARNING]
@@ -354,15 +355,25 @@ $
 ===== Ausgabe der Paketabhängigkeiten mit `grep-status` =====
 
 // Stichworte für den Index
+(((grep-aptavail, -F)))
+(((grep-aptavail, -P)))
+(((grep-aptavail, -s)))
 (((grep-status, -F)))
+(((grep-status, -P)))
 (((grep-status, -s)))
 (((Debianpaket, dctrl-tools)))
 
-Das Werkzeug `grep-status` aus dem Paket 'dctrl-tools'
-<<Debian-Paket-dctrl-tools>> filtert die gewünschten Felder aus der
-Paketbeschreibung heraus. Für diese Information muss das entsprechende
-Paket nicht auf ihrem System installiert sein, aber in der
-Paketdatenbank gelistet sein.
+Die beiden Werkzeuge `grep-aptavail` und `grep-status` aus dem Paket
+'dctrl-tools' <<Debian-Paket-dctrl-tools>> filtern die gewünschten
+Felder aus der Paketbeschreibung heraus. Während `grep-status` eher die
+Sichtweise von `dpkg` benutzt und sich nur auf die (jemals)
+installierten Pakete in der aktuellen Architektur bezieht, entspricht
+`grep-aptavail` eher `aptitude` und durchsucht alle lokalen Paketlisten.
+Benutzen Sie bspw. mehrere Archtekturen (Multiarch), erhalten Sie einen
+Suchtreffer pro Paketliste der Architektur.
+
+Für diese Information muss das entsprechende Paket nicht auf ihrem
+System installiert sein, aber in der Paketdatenbank gelistet sein.
 
 Im nachfolgenden Aufruf kommen `-F Package` zum Abgleich des Musters mit
 dem Paketnamen und `-s Depends` zur Ausgabe des `Depends`-Feldes zum
@@ -376,17 +387,25 @@ $
 ----
 
 // Stichworte für den Index
-(((grep-status, -F Package)))
-(((grep-status, -P)))
+(((grep-aptavail, -F Package)))
+(((grep-aptavail, -P)))
 
 Eine kürzere Schreibweise erlaubt der Schalter `-P`, welcher dem
-Schalter `-F Package` entspricht. Die Ausgabe ist in beiden Fällen
-identisch.
+Schalter `-F Package` entspricht. Nachfolgende Ausgabe zeigt
+`grep-aptavail` mit den Feldern für die Paketabhängigkeit (`Depends`),
+den Paketnamen (`Package`) und die Architektur (`Architecture`).
 
-.Ausgabe der Paketabhängigkeiten mit `grep-status` (optimiert)
+.Ausgabe der Paketabhängigkeiten mit `grep-`aptavail`
 ----
-$ grep-status -P -s Depends xpdf
+$ grep-aptavail -P -s Package,Depends,Architecture xpdf
+Package: xpdf
 Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libpoppler46 (>= 0.26.2), libstdc++6 (>= 4.1.1), libx11-6, libxm4 (>= 2.3.4), libxt6
+Architecture: amd64
+
+Package: xpdf
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libpoppler46 (>= 0.26.2), libstdc++6 (>= 4.1.1), libx11-6, libxm4 (>= 2.3.4), libxt6
+Architecture: i386
+
 $
 ----
 
