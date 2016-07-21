@@ -510,7 +510,8 @@ $
 (((aptitude, search ?depends)))
 Mit einer Reihe von speziellen Suchmustern zum Unterkommando `search`
 unterstützt Sie `aptitude` bei der Recherche in der
-Paketdatenbank. Eines davon ist `~D`'muster'. Es sucht in den
+Paketdatenbank. Eines davon ist `~D`'muster' und dessen Langform
+`?depends(`'muster'`)`. Sie suchen in den
 Abhängigkeiten\footnote{Engl. 'Dependencies'; ohne weitere Angaben
 wird in den Abhängigkeiten des Feldes `Depends` gesucht.} aller Pakete
 nach dem regulrären Ausdruck 'muster'. Dabei findet es nicht nur
