@@ -81,7 +81,7 @@ und am Ende der Feldname. Für diese Information muss das entsprechende
 Paket nicht auf ihrem System installiert sein, sondern nur als Datei in
 einem Verzeichnis liegen und erreichbar sein.
 
-.Ausgabe der Abhängigkeiten mittes `dpkg-deb`
+.Ausgabe der Abhängigkeiten mittels `dpkg-deb`
 ----
 $ dpkg-deb -f xpdf_3.03-17+b1_amd64.deb Depends
 libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libpoppler46 (>= 0.26.2), libstdc++6 (>= 4.1.1), libx11-6, libxm4 (>= 2.3.4), libxt6
