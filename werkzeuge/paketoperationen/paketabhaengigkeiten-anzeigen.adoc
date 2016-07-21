@@ -58,20 +58,7 @@ Paketabhängigkeiten ausgeben sollen. Die nachfolgenden Ausgaben
 illustrieren die Wirkung anhand des Pakets 'xpdf'.
 
 // Warnhinweis
-[WARNING]
-.Unterschied zwischen `apt-cache` und `aptitude` bei der Suche nach Abhängigkeiten
-====
-Hier ist die Bedeutung der Unterkommandos bzw. Schalter zwischen den
-beiden Werkzeugen genau entgegengesetzt. Während `apt-cache depends`
-alle Abhängigkeiten eines gegebenen Pakets heraussucht, ``denkt'' `aptitude
-search ?depends(…)` andersherum und durchsucht die Abhängigkeiten aller
-Paket nach einem Muster, sucht also nach Abhängigkeiten auf ein Paket
-bzw. einer Zeichenkette oder einem regulären Ausdruck.
-
-Daher entspricht `apt-cache depends` dem Aufruf `aptitude search ~R`
-bzw. `aptitude search ?reverse-depends(…)` sowie `apt-cache rdepends`
-dem Aufruf `aptitude search ~D` bzw.  `aptitude search ?depends(…)`.
-====
+include::paketabhaengigkeiten-warnung.adoc[]
 
 ===== Ausgabe der Paketabhängigkeiten mit `dpkg-deb` =====
 
@@ -429,16 +416,7 @@ aus dem gleichnamigen Paket 'apt-rdepends' <<Debian-Paket-apt-rdepends>>
 und auch `aptitude` selbst weiter.
 
 // Warnhinweis
-[WARNING]
-.Unterschied zwischen `apt-cache` und `aptitude`
-====
-Hier ist die Bedeutung der Unterkommandos bzw. Schalter zwischen den
-beiden Werkzeugen genau entgegengesetzt. Während `apt-cache depends`
-alle Abhängigkeiten 'zu einem Paket' heraussucht, ``denkt'' `aptitude
-depends` andersherum und durchsucht damit die Abhängigkeiten 'von einem
-Paket'. Daher entspricht `apt-cache depends` dem Aufruf `aptitude search
-~R` sowie `apt-cache rdepends` dem Aufruf `aptitude search ~D`.
-====
+include::paketabhaengigkeiten-warnung.adoc[]
 
 ===== Recherche mit `apt-cache` =====
 
