@@ -56,6 +56,19 @@ des Pakets, zu dem es die Paketabhängigkeiten ausgeben sollen. Die
 nachfolgenden Ausgaben illustrieren die Wirkung anhand des Pakets
 'xpdf'.
 
+// Warnhinweis
+[WARNING]
+.Unterschied zwischen `apt-cache` und `aptitude`
+====
+Hier ist die Bedeutung der Unterkommandos bzw. Schalter zwischen den
+beiden Werkzeugen genau entgegengesetzt. Während `apt-cache depends`
+alle Abhängigkeiten 'zu einem Paket' heraussucht, ``denkt'' `aptitude
+depends` andersherum und durchsucht damit die Abhängigkeiten 'von einem
+Paket'. Daher entspricht `apt-cache depends` dem Aufruf `aptitude search
+~R` sowie `apt-cache rdepends` dem Aufruf `aptitude search ~D`.
+====
+
+
 ===== Ausgabe der Paketabhängigkeiten mit `dpkg-deb` =====
 
 // Stichworte für den Index
@@ -392,6 +405,18 @@ Beantwortung der Frage helfen Ihnen einerseits wiederum `apt-cache` mit
 dem Unterkommando `depends`, andererseits das Kommando `apt-rdepends`
 aus dem gleichnamigen Paket 'apt-rdepends' <<Debian-Paket-apt-rdepends>>
 und auch `aptitude` selbst weiter.
+
+// Warnhinweis
+[WARNING]
+.Unterschied zwischen `apt-cache` und `aptitude`
+====
+Hier ist die Bedeutung der Unterkommandos bzw. Schalter zwischen den
+beiden Werkzeugen genau entgegengesetzt. Während `apt-cache depends`
+alle Abhängigkeiten 'zu einem Paket' heraussucht, ``denkt'' `aptitude
+depends` andersherum und durchsucht damit die Abhängigkeiten 'von einem
+Paket'. Daher entspricht `apt-cache depends` dem Aufruf `aptitude search
+~R` sowie `apt-cache rdepends` dem Aufruf `aptitude search ~D`.
+====
 
 ===== Recherche mit `apt-cache` =====
 
