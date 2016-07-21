@@ -123,19 +123,50 @@ Veranstaltungen nehmen wir gern aktiv teil und nutzen die Gelegenheit,
 das Buch gemeinsam zu vervollständigen.
 
 Viele Texte verfassen wir zudem von unterwegs aus. Die bisherigen
-Stationen umfassen Ålesund (Norwegen), Andorra, Augsburg, Beauvais (Picardie), Bergneustadt,
-Berlin, Besançon, Bottighofen (Bodensee, Schweiz), Bratland (bei Bergen, Norwegen), Bruchsal, Chemnitz, Biel,
-Delémont, Essen, Frankfurt/Main, Freiburg im Breisgau, Friedrichshafen,
-Genf, Germersheim, Goizueta (Baskenland, Spanien), Hamburg, Heidelberg, Koblenz,
-Lauchringen (Baden, Wutachtal), Lausanne, Meersburg, Montpellier,
-München, Orø (Dänemark), Port del Cantó (Katalanische Pyrenäen, Spanien), Radebeul bei
-Dresden, Rostock-Warnemünde, Saint Cergue (Jura, Schweiz),
-Saint-Jouin-Bruneval (Normandie), Insel Sokn (bei Stavanger, Norwegen),
-Tübingen, Tvinnefossen (Norwegen), Zernez (Engadin) und Zürich (siehe
-<<fig.buchkarte>>). Wir nahmen uns dabei an der Philosophie von Debian
-GNU/Linux ein Beispiel: ohne Hektik, mit dem Blick fürs Detail und
-zumeist pedantisch bis ins letzte i-Tüpfelchen, aber trotzdem mit viel
-Freude, Neugierde und unserem Entdeckerdrang folgend.
+Stationen umfassen
+Ålesund (Norwegen),
+Andorra,
+Augsburg,
+Beauvais (Picardie),
+Bergneustadt,
+Berlin,
+Besançon,
+Bottighofen (Bodensee, Schweiz),
+Bratland (bei Bergen, Norwegen),
+Bruchsal,
+Chemnitz,
+Biel,
+Delémont,
+Essen,
+Frankfurt/Main,
+Freiburg im Breisgau,
+Friedrichshafen,
+Genf,
+Germersheim,
+Goizueta (Baskenland, Spanien),
+Hamburg,
+Heidelberg,
+Koblenz,
+Lauchringen (Baden, Wutachtal),
+Lausanne,
+Meersburg,
+Montpellier,
+München,
+Orø (Dänemark),
+Port del Cantó (Katalanische Pyrenäen, Spanien),
+Radebeul bei Dresden,
+Rostock-Warnemünde,
+Saint Cergue (Jura, Schweiz),
+Saint-Jouin-Bruneval (Normandie),
+Insel Sokn (bei Stavanger, Norwegen),
+Tübingen,
+Tvinnefossen (Norwegen),
+Zernez (Engadin) und
+Zürich
+(siehe <<fig.buchkarte>>). Wir nahmen uns dabei an der Philosophie von
+Debian GNU/Linux ein Beispiel: ohne Hektik, mit dem Blick fürs Detail
+und zumeist pedantisch bis ins letzte i-Tüpfelchen, aber trotzdem mit
+viel Freude, Neugierde und unserem Entdeckerdrang folgend.
 
 .Orte, an denen das vorliegende Buch entstand
 image::kann-denn-paketmanagement-spass-machen/zum-buch/buchkarte.png[id="fig.buchkarte",width="50%"]
