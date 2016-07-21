@@ -395,7 +395,7 @@ Schalter `-F Package` entspricht. Nachfolgende Ausgabe zeigt
 `grep-aptavail` mit den Feldern für die Paketabhängigkeit (`Depends`),
 den Paketnamen (`Package`) und die Architektur (`Architecture`).
 
-.Ausgabe der Paketabhängigkeiten mit `grep-`aptavail`
+.Ausgabe der Paketabhängigkeiten mit `grep-aptavail`
 ----
 $ grep-aptavail -P -s Package,Depends,Architecture xpdf
 Package: xpdf
