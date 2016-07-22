@@ -28,7 +28,7 @@ include::mehrere-pakete-in-einem-schritt-aendern/mehrere-pakete-in-einem-schritt
 include::ausgewaehlte-pakete-aktualisieren.adoc[]
 
 // - bestimmte Pakete behalten
-include::ausgewaehlte-pakete-nicht-aktualisieren.adoc[]
+include::ausgewaehlte-pakete-nicht-aktualisieren/ausgewaehlte-pakete-nicht-aktualisieren.adoc[]
 
 // - Pakete bei Bedarf ergänzen
 include::fehlende-pakete-bei-bedarf-hinzufuegen/fehlende-pakete-bei-bedarf-hinzufuegen.adoc[]
