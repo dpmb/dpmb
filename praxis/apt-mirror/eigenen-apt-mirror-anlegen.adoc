@@ -8,6 +8,7 @@
 
 // Stichworte für den Index
 (((Paketmirror, aufsetzen)))
+(((Paketmirror, öffentlich zugänglich machen)))
 (((Paketmirror, Unterschied zu Paketcache)))
 (((Paketmirror, Varianten)))
 
@@ -42,6 +43,11 @@ Nachfolgend stellen wir Ihnen mehrere Varianten anhand der Pakete
 'apt-mirror' (<<apt-mirror>>), 'debmirror' (<<debmirror>>),
 'debpartial-mirror' (<<debpartial-mirror>>) und 'reprepro'
 (<<reprepro>>) genauer vor.
+
+Möchten Sie nach der erfolgreichen Inbetriebnahme ihren eigenen
+Paketmirror auch öffentlich zugänglich machen, nutzen Sie dazu am besten
+das bereits dafür vorbereitete Formular auf der Webseite des
+Debian-Projekts <<Debian-Spiegel-Informationen>>.
 
 // apt-mirror
 include::apt-mirror.adoc[]

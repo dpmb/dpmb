@@ -34,10 +34,7 @@ Aktualisierungen erfolgen, bspw. bei einem Distributionswechsel oder
 
 Jeder Interessierte kann einen solchen Paketmirror betreiben. Wie Sie
 diesen einrichten, erfahren Sie unter ``Einen eigenen APT-Mirror aufsetzen''
-in <<eigenen-apt-mirror-aufsetzen>>. Möchten Sie Ihren eigenen
-Paketmirror auch öffentlich zugänglich machen, nutzen Sie dazu am besten
-das bereits dafür vorbereitete Formular auf der Webseite des
-Debian-Projekts <<Debian-Spiegel-Informationen>>.
+in <<eigenen-apt-mirror-aufsetzen>>. 
 
 ==== Paketmirror bei Debian ====
 
