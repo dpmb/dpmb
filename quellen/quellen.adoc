@@ -774,6 +774,8 @@
 
 - [[[Ubuntu-Launchpad]]] Ubuntu Launchpad, https://launchpad.net/ubuntu
 
+- [[[Ubuntu-Mirrors]]] Official Archive Mirrors for Ubuntu, https://launchpad.net/ubuntu/+archivemirrors
+
 - [[[Ubuntu-One]]] Ubuntu One, http://ubuntuone.com
 
 - [[[Ubuntu-One-Wikipedia]]] Ubuntu One, Wikipedia-Eintrag, http://de.wikipedia.org/wiki/Ubuntu_One
