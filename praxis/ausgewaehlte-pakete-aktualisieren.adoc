@@ -29,6 +29,14 @@ für diesen Schritt und die Wartung etwas mehr Zeit ein.
 [[nur-ein-einzelnes-paket-aktualisieren]]
 === Nur ein einzelnes Paket aktualisieren ===
 
+Im Alltag sind häufig für mehrere Pakete gleichzeitig Aktualisierungen
+verfügbar. Sowohl APT, als auch `aptitude` gestatten es Ihnen daher, nur
+die Pakete zu erneuern, die Sie wünschen. Stets werden dabei die
+Paketabhängigkeiten berücksichtigt und nur die Softwarepakete mit
+einbezogen, die es betrifft.
+
+==== Auf der Kommandozeile ====
+
 // Stichworte für den Index
 (((apt-get, upgrade)))
 (((aptitude, dist-upgrade)))
@@ -36,16 +44,10 @@ für diesen Schritt und die Wartung etwas mehr Zeit ein.
 (((aptitude, upgrade)))
 (((Paket, aktualisieren)))
 (((Paket, Einzelpaket aktualisieren)))
-Im Alltag sind häufig für mehrere Pakete gleichzeitig Aktualisierungen
-verfügbar. Sowohl APT, als auch `aptitude` gestatten es Ihnen daher, nur
-die Pakete zu erneuern, die Sie wünschen. Stets werden dabei die
-Paketabhängigkeiten berücksichtigt und nur die Softwarepakete mit
-einbezogen, die es betrifft.
-
-Auf der *Kommandozeile* verstehen `apt-get` und `aptitude` die beiden
-Unterkommandos `upgrade` und `dist-upgrade`, jeweils gefolgt von einer
-Liste von Paketnamen. Ältere Versionen von APT bis Version XYZ können
-noch nicht damit umgehen und ignorieren diese Liste.
+Hier verstehen `apt-get` und `aptitude` die beiden Unterkommandos
+`upgrade` und `dist-upgrade`, jeweils gefolgt von einer Liste von
+Paketnamen. Ältere Versionen von APT bis Version XYZ können noch nicht
+damit umgehen und ignorieren diese Liste.
 
 .Beispiel für Einzelaktualisierung mit `apt-get upgrade`
 ----
@@ -77,14 +79,16 @@ Pakete aus der Kategorie 'libs' (Bibliotheken).
 ToDo: Beispiel
 ----
 
-* Durchführung über die *Textoberfläche* von `aptitude`
-** Zweig/Kategorie menu:Sicherheitsaktualisierungen[]
-*** Paket markieren mit kbd:[+]
-*** Paketvorschau mit kbd:[g]
-*** Paketaktualisierung mit kbd:[g]
-** ToDo: da muss aber noch mehr sein ....
+==== Über die Textoberfläche von `aptitude` ====
 
-* Durchführung bei *Synaptic* (siehe <<gui-synaptic>>)
+* Zweig/Kategorie menu:Sicherheitsaktualisierungen[]
+** Paket markieren mit kbd:[+]
+** Paketvorschau mit kbd:[g]
+** Paketaktualisierung mit kbd:[g]
+* ToDo: da muss aber noch mehr sein ....
+
+==== Durchführung bei *Synaptic* ====
+* siehe <<gui-synaptic>>
 ** Auswahl der Kategorie menu:Aktualisierbar (Upstream)[]
 ** Rechtsklick auf Eintrag in der Paketliste
 ** Auswahl menu:Zum Aktualisieren vormerken[]
