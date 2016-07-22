@@ -18,8 +18,9 @@ geändert werden, und nicht in der `/etc/apt/sources.list`-Datei
 jedes Clients
 
 * Approx kann ... 
-** ... vorher verfügbare Konzepte wie 'apt-proxy' ersetzen, ohne die
-`/etc/apt/sources.list`-Dateien der Clients zu ändern,
+** ... vorher verfügbare Konzepte wie 'apt-proxy' <<apt-proxy>>
+ersetzen, ohne die Datei `/etc/apt/sources.list`-Dateien der Clients zu
+ändern.
 ** ... oder als Alternative zu 'apt-cacher' eingesetzt werden (siehe
 <<apt-cacher>>).
 
