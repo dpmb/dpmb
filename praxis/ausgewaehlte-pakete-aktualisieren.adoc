@@ -26,6 +26,11 @@ für diesen Schritt und die Wartung etwas mehr Zeit ein.
 [[nur-ein-einzelnes-paket-aktualisieren]]
 === Nur ein einzelnes Paket aktualisieren ===
 
+// Stichworte für den Index
+(((apt-get, upgrade)))
+(((aptitude, dist-upgrade)))
+(((aptitude, install)))
+(((aptitude, upgrade)))
 Im Alltag sind häufig für mehrere Pakete gleichzeitig Aktualisierungen
 verfügbar. Sowohl APT, als auch `aptitude` gestatten es Ihnen daher, nur
 die Pakete zu erneuern, die Sie wünschen. Stets werden dabei die
@@ -46,9 +51,9 @@ ToDo: Beispiel
 .Automatische Aktualisierung bei der Installation
 ====
 Ist ein Paket bereits installiert und Sie führen erneut das Kommando
-`aptitude install Paketname` aus, wird es nach Möglichkeit durch eine
+`aptitude install` 'Paketname' aus, wird es nach Möglichkeit durch eine
 neuere Version ersetzt. Es entspricht in diesem Fall dem Aufruf
-`aptitude upgrade Paketname`.
+`aptitude upgrade` 'Paketname'.
 
 //ToDo: Beispiel
 ====
