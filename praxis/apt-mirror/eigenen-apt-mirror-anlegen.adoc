@@ -41,8 +41,8 @@ dass der lokale Paketmirror stets aktuelle Pakete vorhält.
 
 Nachfolgend stellen wir Ihnen mehrere Varianten anhand der Pakete
 'apt-mirror' (<<apt-mirror>>), 'debmirror' (<<debmirror>>),
-'debpartial-mirror' (<<debpartial-mirror>>) und 'reprepro'
-(<<reprepro>>) genauer vor.
+'debpartial-mirror' (<<debpartial-mirror>>) 'ubumirror' <<ubumirror>>
+und 'reprepro' (<<reprepro>>) genauer vor.
 
 Möchten Sie nach der erfolgreichen Inbetriebnahme ihren eigenen
 Paketmirror auch öffentlich zugänglich machen, nutzen Sie dazu am besten
@@ -57,6 +57,9 @@ include::debmirror.adoc[]
 
 // debpartial-mirror
 include::debpartial-mirror.adoc[]
+
+// ubumirror
+include::ubumirror.adoc[]
 
 // reprepo
 include::reprepro.adoc[]

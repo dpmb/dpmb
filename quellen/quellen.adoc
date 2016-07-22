@@ -766,10 +766,6 @@
 
 - [[[Ubuntu-apturl]]] AptURL im Ubuntu Apps Directory, https://apps.ubuntu.com/cat/applications/apturl/
 
-- [[[Ubuntu-Paket-software-center]]] Ubuntu-Paket 'software-center', https://launchpad.net/software-center
-
-- [[[Ubuntu-Paket-ubuntu-keyring]]] Ubuntu-Paket 'ubuntu-keyring', http://packages.ubuntu.com/de/trusty/ubuntu-keyring
-
 - [[[Ubuntu-Landscape]]] Ubuntu Landscape System Management, https://landscape.canonical.com/
 
 - [[[Ubuntu-Launchpad]]] Ubuntu Launchpad, https://launchpad.net/ubuntu
@@ -779,6 +775,12 @@
 - [[[Ubuntu-One]]] Ubuntu One, http://ubuntuone.com
 
 - [[[Ubuntu-One-Wikipedia]]] Ubuntu One, Wikipedia-Eintrag, http://de.wikipedia.org/wiki/Ubuntu_One
+
+- [[[Ubuntu-Paket-software-center]]] Ubuntu-Paket 'software-center', https://launchpad.net/software-center
+
+- [[[Ubuntu-Paket-ubumirror]]] Ubuntu-Paket 'ubumirror', https://launchpad.net/ubumirror
+
+- [[[Ubuntu-Paket-ubuntu-keyring]]] Ubuntu-Paket 'ubuntu-keyring', http://packages.ubuntu.com/de/trusty/ubuntu-keyring
 
 - [[[Ubuntu-Snappy]]] Ubuntu Package Format Snappy, https://developer.ubuntu.com/en/snappy/
 

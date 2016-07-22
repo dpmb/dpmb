@@ -1,0 +1,14 @@
+// Datei: ./praxis/apt-mirror/ubumirror.adoc
+
+// Baustelle: Notizen
+
+[[ubumirror]]
+
+=== ubumirror ===
+
+// Stichworte für den Index
+(((Ubuntupaket, ubumirror)))
+
+* Paket: <<Ubuntu-Paket-ubumirror>>
+
+// Datei (Ende): ./praxis/apt-mirror/ubumirror.adoc
