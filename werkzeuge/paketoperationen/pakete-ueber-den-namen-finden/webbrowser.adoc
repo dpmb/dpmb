@@ -2,6 +2,7 @@
 
 // Baustelle: Rohtext
 
+[[browserbasierte-suche]]
 ==== Browserbasierte Suche ====
 
 // Debian-eigene Quellen und Werkzeuge
