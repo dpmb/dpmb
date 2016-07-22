@@ -6,6 +6,9 @@
 
 === debmirror ===
 
+// Stichworte für den Index
+(((Debianpaket, debmirror)))
+
 * Paket: <<Debian-Paket-debmirror>>
 * Beschreibung von 'debmirror' unter http://debiananwenderhandbuch.de/debianmirror.html
 * keine Konfigurationsdatei
