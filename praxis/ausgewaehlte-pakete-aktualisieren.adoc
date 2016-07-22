@@ -6,6 +6,9 @@
 
 == Ausgewählte Pakete aktualisieren ==
 
+// Stichworte für den Index
+(((Paket, aktualisieren)))
+(((Paket, Einzelpaket aktualisieren)))
 Bereits in ``Pakete aktualisieren'' in <<pakete-aktualisieren>>
 beleuchteten wir, wie Sie alle bereits bestehenden Pakete auf ihrem
 Linuxsystem aktualisieren. Das hilft Ihnen dabei, dass alle Pakete aus
@@ -31,6 +34,8 @@ für diesen Schritt und die Wartung etwas mehr Zeit ein.
 (((aptitude, dist-upgrade)))
 (((aptitude, install)))
 (((aptitude, upgrade)))
+(((Paket, aktualisieren)))
+(((Paket, Einzelpaket aktualisieren)))
 Im Alltag sind häufig für mehrere Pakete gleichzeitig Aktualisierungen
 verfügbar. Sowohl APT, als auch `aptitude` gestatten es Ihnen daher, nur
 die Pakete zu erneuern, die Sie wünschen. Stets werden dabei die
@@ -58,6 +63,9 @@ neuere Version ersetzt. Es entspricht in diesem Fall dem Aufruf
 //ToDo: Beispiel
 ====
 
+// Stichworte für den Index
+(((aptitude, full-upgrade)))
+(((aptitude, safe-upgrade)))
 `aptitude` mit seinen Unterkommandos `safe-upgrade` und `full-upgrade`
 nimmt hingegen schon länger Parameter entgegen. Dabei sind nicht nur
 Paketnamen, sondern auch Suchausdrücke möglich. Bspw. erneuert der
