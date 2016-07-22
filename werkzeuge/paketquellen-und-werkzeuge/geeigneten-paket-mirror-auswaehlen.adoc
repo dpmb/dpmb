@@ -9,6 +9,8 @@
 // Stichworte für den Index
 (((netzbasierte Installation)))
 (((Paketmirror)))
+(((Paketmirror, Empfehlung für die Auswahl)))
+(((Paketmirror, offizielle Liste (Debian))))
 Zentraler Anlaufpunkt für netzbasierte Installationen sind die
 offiziellen Paketmirrors – auf deutsch auch Spiegelserver genannt –
 welche die Debianpakete für Sie bereithalten. Diese Paketmirrors sind
@@ -18,19 +20,28 @@ administrativen Aufgaben vor Ort betreut. Viele Spiegelserver werden
 automatisch über neue Pakete informiert und abgeglichen und verfügen
 somit stets über den aktuelle Paketbestand.
 
-Mit dieser dezentralen Verteilung ist gewährleistet, dass Sie bei einem
-Ausfall oder der Nichtverfügbarkeit eines Paketmirrors problemlos auf
-eine adäquate Alternative zurückgreifen können, auch wenn diese
-netztechnisch etwas weiter von ihrem aktuellen Standort entfernt ist.
-Für die Infrastruktur des Debian-Projekts heißt das außerdem, dass sich
-die Anfrage- oder Netzlast auf unterschiedliche Mirrors und deren
-Standorte verteilt. Für Sie bedeutet das konkret, dass sich neben der
-Verringerung der Ausfallwahrscheinlichkeit insbesondere die Bezugszeiten
-für Debianpakete erheblich verringern, da Sie nicht auf einen einzigen
-Spiegelserver angewiesen sind. Verwenden Sie einen Spiegelserver in
-ihrer Nähe, merken Sie das insbesondere dann, wenn größere
-Aktualisierungen erfolgen, bspw. bei einem Distributionswechsel oder
--upgrade (siehe <<pakete-aktualisieren-dist-upgrade>>).
+Wir empfehlen Ihnen, bei der Auswahl eines Paketmirrors einen solchen zu
+bevorzugen, der eine möglichst kurze Entfernung zu ihrem Standort hat,
+mit hoher Verfügbarkeit glänzt und über eine gute Netzanbindung verfügt.
+Damit erhöht sich die Zuverlässigkeit ihrer Infrastruktur und
+insbesondere auch der Komponenten, die von externen Bestandteilen und
+Diensten abhängig sind.
+
+Mit der oben beschriebenen, dezentralen Verteilung ist gewährleistet,
+dass Sie bei einem Ausfall oder der Nichtverfügbarkeit des von ihnen
+gewählten Paketmirrors problemlos auf eine adäquate Alternative
+zurückgreifen können, auch wenn diese netztechnisch etwas weiter von
+ihrem aktuellen Standort entfernt ist. Für die Infrastruktur des
+Debian-Projekts heißt das außerdem, dass sich die Anfrage- oder Netzlast
+auf unterschiedliche Mirrors und deren Standorte verteilt.
+
+Für Sie bedeutet das im Alltag, dass sich neben der Verringerung der
+Ausfallwahrscheinlichkeit insbesondere die Bezugszeiten für Debianpakete
+erheblich verringern, da Sie nicht auf einen einzigen Spiegelserver
+angewiesen sind. Verwenden Sie einen Spiegelserver in ihrer Nähe, merken
+Sie das insbesondere dann, wenn größere Aktualisierungen erfolgen, bspw.
+bei einem Distributionswechsel oder -upgrade (siehe
+<<pakete-aktualisieren-dist-upgrade>>).
 
 Jeder Interessierte kann einen solchen Paketmirror betreiben. Wie Sie
 diesen einrichten, erfahren Sie unter ``Einen eigenen APT-Mirror aufsetzen''
@@ -146,27 +157,14 @@ Zusammenstellung für die Distribution Linux Mint.
 .Auswahl der Paketmirror für Linux Mint
 image::werkzeuge/paketquellen-und-werkzeuge/linuxmint-mirrors.png[id="fig.linuxmint-mirrors", width="50%"]
 
-[[generischen-mirror-verwenden]]
-==== Generischen Mirror verwenden ====
+==== Pakete ohne Paketmirror beziehen ====
 
-// TODO: Gehört evtl. eher zu GeoIP
-
-Wie bereits oben genannt, existieren für Debian 'primäre' und
-'sekundäre' Paketmirrors. Wir empfehlen Ihnen, bei der Auswahl eines
-Paketmirrors einen solchen zu bevorzugen, der eine möglichst kurze
-Entfernung zu ihrem Standort hat, mit hoher Verfügbarkeit glänzt und
-über eine gute Netzanbindung verfügt. Damit erhöht sich die
-Zuverlässigkeit ihrer Infrastruktur und insbesondere auch der
-Komponenten, die von externen Bestandteilen und Diensten abhängig sind.
-
-// TODO: Eigener Abschnitt über apt-get?
-
-Sollten Sie nur über einen Zugang mittels Webbrowser verfügen, steht
-Ihnen die Webseite des Debian-Projekts <<Debian-Webseite>> zur
-Verfügung. Informationen zu den einzelnen Paketen finden Sie unter der
-Paketsuche (siehe <<suche-ueber-die-webseite-des-debian-projekts>>).
-Ein mögliches Repository für inoffizielle Pakete ist `apt-get.org`
-<<apt-get.org>>, welches wir unter ``Suche über die Webseite
-apt-get.org'' <<suche-ueber-die-webseite-apt-get.org>> besprechen.
+Steht Ihnen lediglich ein Zugang über einen Webbrowser zur Verfügung,
+sind Sie trotzdem nicht vom Paketarchiv abgeschnitten. Unter
+``Browserbasierte Suche'' in <<browserbasierte-suche>> erfahren Sie, wie
+Sie die benötigten Pakete mit Hilfe ihres Webbrowsers recherchieren und
+beziehen. Unter ``Webbasierte Programme'' in <<webbasierte-programme>>
+stellen wir Ihnen weitere clevere Lösungen für verschiedene
+Linux-Distributionen vor.
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/geeigneten-paket-mirror-auswaehlen.adoc

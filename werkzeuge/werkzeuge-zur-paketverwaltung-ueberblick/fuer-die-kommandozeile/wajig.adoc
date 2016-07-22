@@ -52,10 +52,10 @@ installierten Paketen, wohingegen Ihnen `list-orphans` die Paketwaisen
 (((wajig, rpm2deb)))
 (((wajig, rpminstall)))
 Als Besonderheit ist einerseits die Anbindung an 'apt-get.org'
-<<apt-get.org>> zu nennen, um den Paketmirror dynamisch auszuwählen
-(siehe <<generischen-mirror-verwenden>>). Ebenso ist die Umwandlung und
-Installation von `.rpm`-Paketen mittels `rpm2deb` und `rpminstall` sowie
-die ausführliche, integrierte Hilfe hervorzuheben.
+<<apt-get.org>> zu nennen, um darüber den Paketmirror nach Bedarf
+auszuwählen. Ebenso ist die Umwandlung und Installation von
+`.rpm`-Paketen mittels `rpm2deb` und `rpminstall` sowie die
+ausführliche, integrierte Hilfe hervorzuheben.
 
 .Suche nach der Datei `sources.list` mit Hilfe von `wajig`
 ----
