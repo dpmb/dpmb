@@ -42,6 +42,8 @@
 
 - [[[aptitude-dokumentation-veraltet]]] veraltete Dokumentation zu `aptitude`, http://www.algebraicthunk.net/~dburrows/projects/aptitude/doc/
 
+- [[[apt-proxy]]] `apt-proxy`-Projektseite, http://apt-proxy.sourceforge.net/
+
 - [[[apt-Salve]]] Ravi Salve: 25 Useful Basic Commands of APT-GET and APT-CACHE for Package Management, http://www.tecmint.com/useful-basic-commands-of-apt-get-and-apt-cache-for-package-management/
 
 - [[[Aptosid]]] Aptosid, http://aptosidusers.de/

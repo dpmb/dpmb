@@ -22,7 +22,7 @@
 entwickelt (siehe <<apt-cacher>>)
 ** Fokus:
 *** maximaler Durchsatz mit geringen Systemanforderungen
-*** Ersatz für `apt-proxy` und `approx` (<<approx>>) verwendet werden,
+*** Ersatz für `apt-proxy` <<apt-proxy>> und `approx` (<<approx>>)
 ohne die Datei `/etc/apt/sources.list` der Clients zu ändern.
 
 // Datei (Ende): ./praxis/apt-cache/apt-cacher-ng.adoc

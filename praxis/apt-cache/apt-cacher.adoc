@@ -28,7 +28,7 @@ holt es das Paket zuvor vom Paketmirror
 
 * empfohlene Schritte, um das zu nutzen:
 ** Installation der Pakete 'apt-cacher', idealerweise in Kombination mit
-einem APT-Proxy wie 'apt-proxy' oder 'approx' <<approx>>
+einem APT-Proxy wie 'apt-proxy' <<apt-proxy>> oder 'approx' <<approx>>
 ** Service aktivieren durch Anpassung der Datei
 `/etc/default/apt-cacher` und Änderung des Wertes für
 `AUTOSTART`: "AUTOSTART=0" in "AUTOSTART=1"
