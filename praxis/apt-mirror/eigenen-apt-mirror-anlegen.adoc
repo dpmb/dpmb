@@ -6,35 +6,37 @@
 
 == Einen eigenen APT-Mirror aufsetzen ==
 
-Wie bereits in <<geeigneten-paketmirror-auswaehlen>> deutlich wurde,
-stellen die offiziellen Paketmirrors stets aktuelle Debian-Pakete für
-alle Interessierten zur Verfügung. Diese Spiegelserver werden
-weitestgehend individuell betreut.
+Wie bereits in ``Geeigneten Paketmirror auswählen''
+<<geeigneten-paketmirror-auswaehlen>> deutlich wurde, stellen die
+offiziellen Paketmirrors stets aktuelle Debian-Pakete für alle
+Interessierten zur Verfügung. Diese Spiegelserver sind weltweit verteilt
+und werden weitestgehend individuell betreut.
 
-Mit einem Paketmirror verfolgen Sie das gleiche Ziel wie mit einem
-Paketcache (siehe Einen APT-Cache einrichten in <<apt-cache>>). Darüber
-werden ebenfalls Debian-Softwarepakete in einer Art Puffer
-bereitgestellt. Ziele sind dabei einerseits die Unabhängigkeit zu
-externen Paketquellen und andererseits der Wunsch, die Bezugszeiten über
-das lokale Netzwerk für die Arbeitsgruppe oder Wirtschaftseinheit
-möglichst zu verringern. 
+Entsprechen die bereits bestehenden und für Sie netztechnisch
+erreichbaren Spiegelserver nicht ihren Anforderungen an Bezugszeit der
+Pakete, Aktualität der Software und Verfügbarkeit des Dienstes, kann das
+Aufsetzen einer eigenen Instanz eine mögliche Option zur Verbesserung
+sein. Prinzipiell erreichen Sie damit das gleiche Ergebnis wie mit einem
+Paketcache (siehe ``Einen APT-Cache einrichten'' in <<apt-cache>>), da
+darüber ebenfalls Debian-Softwarepakete in einer Art lokalem Puffer
+bereitgestellt werden.
 
 Der Unterschied zwischen einem Paketcache und einem Paketmirror besteht
-darin, dass bei ersterem nur die bereits nachgefragten Pakete vorgehalten
-werden, während ein Paketmirror i.d.R. die gesamte Distribution inkl.
-ausgewählter Veröffentlichungen bereitstellt. Ein lokaler Paketmirror
-spiegelt den offiziellen Paketbestand und macht ihn für die Benutzer,
-Dienste und Geräte in einem lokalen Netzwerk verfügbar. Damit geht eine
-Entlastung der offiziellen Paketmirror und eine Verringerung des
-Netzwerkverkehrs zu diesem einher -- die verfügbare Bandbreite der
-Außenanbindung kann anderweitig genutzt werden. Es ist an der Stelle
-jedoch dafür zu sorgen, dass der lokale Paketmirror stets aktuelle Pakete
-vorhält.
+darin, dass bei ersterem nur die Pakete vorgehalten werden, die bisher
+nachgefragt wurden, d.h. über diesen Dienst bezogen wurden. Im Gegensatz
+dazu stellt ein Paketmirror i.d.R. die gesamte Distribution inkl.
+ausgewählter Veröffentlichungen bereit. Er spiegelt den offiziellen
+Paketbestand und macht ihn somit für die Benutzer, Dienste und Geräte in
+ihrem lokalen Netzwerk verfügbar. Damit geht eine Entlastung der
+offiziellen Paketmirror und eine Verringerung des Netzwerkverkehrs zu
+diesem einher -- die verfügbare Bandbreite der Außenanbindung kann
+anderweitig genutzt werden. An der Stelle ist jedoch dafür zu sorgen,
+dass der lokale Paketmirror stets aktuelle Pakete vorhält.
 
 Nachfolgend stellen wir Ihnen mehrere Varianten anhand der Pakete
 'apt-mirror' (<<apt-mirror>>), 'debmirror' (<<debmirror>>),
 'debpartial-mirror' (<<debpartial-mirror>>) und 'reprepro'
-(<<reprepro>>) vor.
+(<<reprepro>>) genauer vor.
 
 // apt-mirror
 include::apt-mirror.adoc[]
