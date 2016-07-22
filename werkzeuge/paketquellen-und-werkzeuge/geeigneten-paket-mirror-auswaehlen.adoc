@@ -40,8 +40,8 @@ in <<eigenen-apt-mirror-aufsetzen>>.
 
 // Indexeinträge
 (((Paketmirror, Namensschema)))
-(((Paketmirror, offizielle Liste (Debian)))
-(((Paketmirror, primäre)))
+(((Paketmirror, offizielle Liste (Debian))))
+(((Paketmirror, primäre (Debian))))
 Das Debian-Projekt pflegt eine offizielle Liste seiner Paketmirrors
 <<Debian-Spiegel-Liste>>. Diese Liste ist in _primäre_ und _sekundäre_
 Mirrors gegliedert.
@@ -68,7 +68,7 @@ Debian-Paketmirror `ftp.ch.debian.org` an der ETH Zürich und einer der
 Debian-Paketmirrors für Deutschland an der TU Dresden.
 
 // Indexeinträge
-(((Paketmirror, sekundäre)))
+(((Paketmirror, sekundäre (Debian))))
 _Sekundäre Mirrors_ unterscheiden sich dahingehend von primären Mirrors,
 dass nicht garantiert ist, dass das volle Spektrum an Debianpaketen und
 Architekturen (siehe <<debian-architekturen>>) geboten wird. Hintergrund
@@ -136,7 +136,7 @@ IPv6: no
 
 // Indexeinträge
 (((Paketmirror, Linux Mint)))
-(((Paketmirror, offizielle Liste (Ubuntu)))
+(((Paketmirror, offizielle Liste (Ubuntu))))
 Für die anderen `deb`-basierten Distributionen sieht das ähnlich wie bei
 Debian aus. Eine aktuelle Liste finden Sie auf der Webseite der
 jeweiligen Distribution, bei Ubuntu hingegen im Entwicklerportal
