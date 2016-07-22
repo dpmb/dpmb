@@ -126,19 +126,25 @@ gleichnamigen Debianpaket <<Debian-Paket-vrms>>. Darauf gehen wir unter
 // Stichworte für den Index
 (((Distributionsbereiche, Unterteilung bei Ubuntu)))
 (((Distributionsbereiche, main (Ubuntu))))
+(((Distributionsbereiche, multiverse (Ubuntu))))
+(((Distributionsbereiche, partner (Ubuntu))))
 (((Distributionsbereiche, restricted (Ubuntu))))
 (((Distributionsbereiche, universe (Ubuntu))))
-Bei Ubuntu sind die Distributionsbereiche etwas anders eingeteilt als
-bei Debian. Dort kommt neben den Lizenzen auch noch der Supportstatus
-zum Tragen. Dafür ist die Unterscheidung nach Softwarelizenzen auf
-frei oder unfrei reduziert: Es gibt _main_ (frei, von Canonical
-unterstützt), _restricted_ (unfrei, von Canonical unterstützt),
-_universe_ (frei, nur Community-Unterstützung) und _multiverse_
-(unfrei, nur Community-Unterstützung).
+Im Vergleich zu Debian sind bei Ubuntu die Distributionsbereiche etwas
+anders eingeteilt. Dort kommt neben den Lizenzen auch noch der
+Supportstatus zum Tragen. Dafür ist die Unterscheidung nach
+Softwarelizenzen auf frei oder unfrei reduziert: Es gibt _main_ (frei,
+von Canonical unterstützt), _restricted_ (unfrei, von Canonical
+unterstützt), _universe_ (frei, nur Community-Unterstützung) und
+_multiverse_ (unfrei, nur Community-Unterstützung). Zusätzlich existiert
+der Distributionsbereich _partner_, welcher für die Bereitstellung
+kommerzieller Software gedacht ist, deren Quellcode nicht offen liegt.
 
-Andere Derivate von Debian bzw. Ubuntu oder nicht-offizielle
-Paketquellen (siehe <<paketquellen>>) können ebenfalls ihre eigenen
-Distributionsbereiche haben. Auf diese gehen wir hier nicht weiter ein.
+Andere Derivate von Debian bzw. Ubuntu (siehe ``Paketformat im Einsatz''
+unter <<paketformat-im-einsatz>>) oder nicht-offizielle Paketquellen
+(siehe ``Paketquellen'' in <<paketquellen>>) können ebenfalls ihre
+eigenen Distributionsbereiche haben. Auf diese gehen wir hier nicht
+weiter ein.
 
 ==== Handhabung von geschützten Namen und Logos ====
 
