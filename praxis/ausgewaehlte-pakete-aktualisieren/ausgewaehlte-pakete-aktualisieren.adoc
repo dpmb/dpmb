@@ -1,4 +1,4 @@
-// Datei: ./praxis/ausgewaehlte-pakete-aktualisieren.adoc
+// Datei: ./praxis/ausgewaehlte-pakete-aktualisieren/ausgewaehlte-pakete-aktualisieren.adoc
 
 // Baustelle: Rohtext
 
@@ -95,6 +95,10 @@ ToDo: Beispiel
 
 === Aktualisierung mit Wechsel der Veröffentlichung ===
 
+// Stichworte für den Index
+(((apt-cache, depends)))
+(((apt-get, install -t)))
+
 'Frage/Problem:' Ich möchte alle Abhängigkeiten von 'kdegames' von
 'unstable' auf 'experimental' heben (da es noch kein neues
 kdegames-Metapaket gibt, das von diesen Versionen abhängt und daher
@@ -111,4 +115,4 @@ Status:
 
 * geht, ist aber umständlich
 * kann man das einfacher machen? (ist eine Art pinning für ein einzelnes Paket)
-// Datei (Ende): ./praxis/ausgewaehlte-pakete-aktualisieren.adoc
+// Datei (Ende): ./praxis/ausgewaehlte-pakete-aktualisieren/ausgewaehlte-pakete-aktualisieren.adoc
