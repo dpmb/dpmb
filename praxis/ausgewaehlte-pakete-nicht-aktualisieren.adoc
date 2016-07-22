@@ -34,6 +34,9 @@ aufwendiger werden. Bedenken Sie diesen Schritt daher gut.
 
 === Auf der Kommandozeile ===
 
+// Stichworte für den Index
+(((apt-mark, hold)))
+(((apt-mark, unhold)))
 Um ein Paket auf einem bestimmten Versionsstand zu halten, nutzen Sie
 das Werkzeug `apt-mark`. Es kennt das Unterkommando `hold`, um damit das
 dazugehörige Paketflag zu setzen, und `unhold`, um diese Festlegung zu
@@ -55,6 +58,8 @@ Halten-Markierung für wireshark entfernt.
 #
 ----
 
+// Stichworte für den Index
+(((apt-mark, showhold)))
 `apt-mark` kennt zudem das Unterkommando `showhold`. Damit lassen Sie
 sich auflisten, welche Pakete auf Ihrem System derzeit auf 'hold'
 gesetzt sind. Geben Sie keine Pakete als Parameter an, werden alle
@@ -75,5 +80,14 @@ wireshark
 === Graphische Programme ===
 
 * Synaptic
+** Menüpunkt Paket:Version sperren (siehe <<fig.synaptic-hold>>)
+*** farbige Hervorhebung (default: rot) in der Auswahlliste der Pakete
+*** Symbol eines Hängeschloß über dem Auswahlkästchen
+*** Kontextmenü mit den Paketaktionen (erreichbar über die rechte
+    Maustaste) nicht mehr aufrufbar, Aktionen nur noch über das Menü
+** geht nur bei bereits installierten Paketen
+
+.Setzen des Paketflags 'hold' in Synaptic
+image::praxis/synaptic-hold.png[id="fig.synaptic-hold", width="50%"]
 
 // Datei (Ende): ./praxis/ausgewaehlte-pakete-nicht-aktualisieren.adoc
