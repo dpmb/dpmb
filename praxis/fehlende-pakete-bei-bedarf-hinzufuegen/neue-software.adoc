@@ -6,6 +6,9 @@
 
 === Neue Software ===
 
+// Stichworte für den Index
+(((Debianpaket, auto-apt)))
+
 * Paket 'auto-apt' (<<Debian-Paket-auto-apt>>)
 * Kurzfassung: "package search by file and on-demand package
 installation tool auto-apt checks the file access of programs running
@@ -27,6 +30,12 @@ Kommando auto-apt voran: auto-apt make bzImage. Werden nun während des
 Durchlaufs fehlende Programme festgestellt, so ermittelt auto-apt, zu
 welchem Paket diese gehören, und installiert die fehlenden Pakete
 inklusive aller Abhängigkeiten."
+
+// Stichworte für den Index
+(((auto-apt, run)))
+(((auto-apt, update)))
+(((auto-apt, update-local)))
+(((auto-apt, updatedb)))
 
 * Aufruf: `auto-apt run Kommando`
 ** werden zusätzliche Dateien benötigt, fragt `auto-apt`, ob diese

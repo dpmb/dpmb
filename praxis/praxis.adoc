@@ -25,7 +25,7 @@ include::debtags/debtags.adoc[]
 include::mehrere-pakete-in-einem-schritt-aendern/mehrere-pakete-in-einem-schritt-aendern.adoc[]
 
 // - nur bestimmte Pakete aktualisieren
-include::ausgewaehlte-pakete-aktualisieren.adoc[]
+include::ausgewaehlte-pakete-aktualisieren/ausgewaehlte-pakete-aktualisieren.adoc[]
 
 // - bestimmte Pakete behalten
 include::ausgewaehlte-pakete-nicht-aktualisieren/ausgewaehlte-pakete-nicht-aktualisieren.adoc[]
