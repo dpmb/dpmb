@@ -17,8 +17,8 @@ werden. Im vorliegenden Fall handelt es sich um eine Sonderform -- einen
 lokalen Zwischenspeicher häufig benötigter Softwarepakete. Diese werden
 gepuffert und erlauben damit im Vergleich zum Bezug von Paketmirror aus
 dem Internet eine wesentlich geringere Zugriffszeit, da die
-Transportwege kürzer sind und weniger Zwischenstationen miteinbezogen
-werden müssen.
+Transportwege kürzer sind und weniger Zwischenstationen (``Hops'') mit
+einbezogen werden müssen.
 
 Das macht sich insbesondere dann deutlich bemerkbar, wenn mehrere
 Rechner diesen Datenpuffer verwenden und daraus die gleichen
@@ -54,7 +54,7 @@ letzterer stets alle Softwarepakete der Veröffentlichung vorhält -- also
 auch die, die Sie nicht benötigen -- landen im Paketcache hingegen nur
 die Pakete, die bisher tatsächlich angefragt wurden.
 
-Abzuschätzen ist noch der Betreuungsaufwand, der bei beiden Varianten
+Abzuschätzen ist zudem der Betreuungsaufwand, der bei beiden Varianten
 einzuplanen ist.
 
 * ToDo: Betreuungsaufwand abschätzen
