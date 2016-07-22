@@ -6,6 +6,11 @@
 
 == Einen eigenen APT-Mirror aufsetzen ==
 
+// Stichworte für den Index
+(((Paketmirror, aufsetzen)))
+(((Paketmirror, Unterschied zu Paketcache)))
+(((Paketmirror, Varianten)))
+
 Wie bereits in ``Geeigneten Paketmirror auswählen''
 <<geeigneten-paketmirror-auswaehlen>> deutlich wurde, stellen die
 offiziellen Paketmirrors stets aktuelle Debian-Pakete für alle
