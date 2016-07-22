@@ -8,6 +8,7 @@
 
 // Stichworte für den Index
 (((Debianpaket, isenkram)))
+(((Debianpaket, isenkram-cli)))
 (((isenkram, Integration in tasksel)))
 
 Die Auswahl der installierten Pakete auf Ihrem System orientiert sich an
@@ -18,15 +19,17 @@ Komponente benötigt.
 
 Etwas mühselig ist es, durch eigene Experimente Gewissheit zu bekommen,
 welche Pakete aufgrund des Komponentenwechsels entfernt und ergänzt
-werden müssen. In diesem Fall kommt das Paket 'isenkram'
-<<Debian-Paket-isenkram>> des norwegischen Entwicklers Petter
-Reinholdtsen ins Spiel. Dieses hat derzeit noch den Status 'testing' und
-steht unter sehr aktiver Entwicklung <<Isenkram-Reinholdtsen>>. Hinter
-Isenkram verbirgt sich eine Art Benachrichtigungsdienst, der überprüft,
-ob die benötigten Pakete für die neue Hardware bereits auf dem System
-installiert sind. Falls nicht, wird dieses (automatisch) nachgezogen.
-Dazu klinkt es sich als zusätzliches Modul in die Konfiguration von
-'tasksel' ein (siehe <<tasksel>>).
+werden müssen. In diesem Fall kommen die beiden Pakete 'isenkram'
+<<Debian-Paket-isenkram>> und 'isenkram-cli'
+<<Debian-Paket-isenkram-cli>> des norwegischen Entwicklers Petter
+Reinholdtsen ins Spiel. Dieses hat zwar bereits den Status 'stable',
+steht aber unter sehr aktiver Entwicklung <<Isenkram-Reinholdtsen>>. 
+
+Hinter Isenkram verbirgt sich eine Art Benachrichtigungsdienst, der
+überprüft, ob die benötigten Pakete für die neue Hardware bereits auf
+ihrem System installiert sind. Falls nicht, wird dieses (automatisch)
+nachgezogen. Dazu klinkt es sich als zusätzliches Modul in die
+Konfiguration von 'tasksel' ein (siehe <<tasksel>>).
 
 ToDo:
 
