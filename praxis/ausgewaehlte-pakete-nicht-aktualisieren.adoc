@@ -6,13 +6,17 @@
 
 == Ausgewählte Pakete nicht aktualisieren ==
 
+// Stichworte für den Index
+(((Paket, nicht aktualisieren)))
+(((Paketflags, hold)))
+
 Die Paketverwaltung muss darüber Bescheid wissen, wenn Sie ein
-ausgewähltes Paket auf dem aktuellen Stand belassen möchten. Dazu
+bestimmtes Paket auf dem derzeitigen Stand belassen möchten. Dazu
 existiert das Paketflag 'hold', welches Sie in dem Fall explizit
-festklopfen müssen (siehe auch Paketflags unter <<lokale-paketmarkierungen>>). Haben
-Sie das Flag gesetzt, wird das Paket somit nicht weiter aktualisiert
-oder gelöscht, sondern in dem derzeit bestehenden Zustand und der
-Version gehalten.
+festklopfen müssen (siehe auch ``Paketflags'' unter
+<<lokale-paketmarkierungen>>). Haben Sie das Flag gesetzt, wird das
+Paket somit nicht weiter aktualisiert oder gelöscht, sondern in dem
+derzeit bestehenden Zustand und der Version gehalten.
 
 Ergebnis dieses Vorgehens ist, dass das Paket auf Ihrem Linuxsystem so
 erhalten bleibt, wie es aktuell ist. Es gibt keine Veränderungen bzgl.
