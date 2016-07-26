@@ -31,6 +31,9 @@ Durchlaufs fehlende Programme festgestellt, so ermittelt auto-apt, zu
 welchem Paket diese gehören, und installiert die fehlenden Pakete
 inklusive aller Abhängigkeiten."
 
+* auto-apt ist "orphaned" und hat momentan keinen richtigen
+  Maintainer, siehe https://bugs.debian.org/541016
+
 * Wer nicht gleich das Paket installiert haben will, sondern nur beim
   Aufruf auf der Kommandozeile den Hinweis bekommen, welches Paket
   installiert werden müsste, für den ist vermutlich das Paket
