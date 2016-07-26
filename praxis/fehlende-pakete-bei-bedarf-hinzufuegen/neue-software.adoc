@@ -31,6 +31,15 @@ Durchlaufs fehlende Programme festgestellt, so ermittelt auto-apt, zu
 welchem Paket diese gehören, und installiert die fehlenden Pakete
 inklusive aller Abhängigkeiten."
 
+* Wer nicht gleich das Paket installiert haben will, sondern nur beim
+  Aufruf auf der Kommandozeile den Hinweis bekommen, welches Paket
+  installiert werden müsste, für den ist vermutlich das Paket
+  "command-not-found" das richtige.
+
+* Neu ab Debian Stretch: apprecommender, empfiehlt Anwendung basierend
+  auf u.a. debtags der installierten Anwendenungen. Noch sehr neu und
+  roh.
+
 // Stichworte für den Index
 (((auto-apt, run)))
 (((auto-apt, update)))
