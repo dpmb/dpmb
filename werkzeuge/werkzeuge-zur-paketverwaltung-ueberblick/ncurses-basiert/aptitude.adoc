@@ -133,12 +133,12 @@ und her. Die Belegung weiterer Tasten entnehmen Sie bitte
 |=============================
 | Aktion | Tastenbelegung
 | Hilfe | kbd:[?]
-| `aptitude` beenden (Vormerkungen werden gespeichert) | kbd:[Shift,q]
-| `aptitude` abbrechen (alle Vormerkungen gehen verloren) | kbd:[Ctrl,c]
-| Info-Fenster ein- und ausblenden | kbd:[Shift,d]
+| `aptitude` beenden (Vormerkungen werden gespeichert) | kbd:[Shift]+kbd:[q]
+| `aptitude` abbrechen (alle Vormerkungen gehen verloren) | kbd:[Ctrl]+kbd[C]
+| Info-Fenster ein- und ausblenden | kbd:[Shift]+kbd:[D]
 | Zwischen den Info-Ansichten wechseln | kbd:[i]
 | Zwischen beiden Fenstern hin- und herwechseln | kbd:[Tab]
-| In das Menü von `aptitude` wechseln | kbd:[Ctrl,t] oder kbd:[F10]
+| In das Menü von `aptitude` wechseln | kbd:[Ctrl]+kbd:[t] oder kbd:[F10]
 | Paketlisten aktualisieren | kbd:[u]
 | Ausgewähltes Paket auswählen | kbd:[+]
 | Ausgewähltes Paket entfernen | kbd:[-]
