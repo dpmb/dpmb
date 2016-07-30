@@ -159,8 +159,8 @@ Dateisystemen.
 [TIP]
 .Aufbau und Format von Übergangs- und Metapaketen
 ====
-Mehr Informationen zum Aufbau dieser Pakete finden Sie unter Aufbau und
-Format von Übergangs- und Metapaketen in
+Mehr Informationen zum Aufbau dieser Pakete finden Sie unter ``Aufbau
+und Format von Übergangs- und Metapaketen'' in
 <<aufbau-und-format-uebergang-und-metapakete>>.
 ====
 
