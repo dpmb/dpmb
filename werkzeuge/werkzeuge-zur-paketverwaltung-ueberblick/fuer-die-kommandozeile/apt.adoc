@@ -6,6 +6,8 @@
 
 ==== APT ====
 
+===== Überblick =====
+
 // Stichworte für den Index
 (((Advanced Packaging Tool)))
 (((apt)))
@@ -34,6 +36,8 @@ vorliegen. Es kombiniert i.d.R. mehrere Einzelaktionen von `dpkg`. Es
 greift dabei aber nicht direkt auf `dpkg` zurück, sondern kapselt dafür
 die Aufrufe mit Hilfe der Bibliothek 'libapt-pkg' (siehe dazu ``APT und
 Bibliotheken'' unter <<apt-und-bibliotheken>>).
+
+===== Komponenten und Funktionen =====
 
 // Stichworte für den Index
 (((apt-cache)))
@@ -64,14 +68,16 @@ Aktionen für den Alltag sind:
 * Paket installieren (<<pakete-installieren>>) mit `apt-get install` 'Paketname'
 * Installierte Pakete löschen (<<pakete-deinstallieren>> mit `apt-get
 remove` 'Paketname'
-* Paketliste aktualisieren (<<liste-der-verfuegbaren-pakete-aktualisieren>>) mit `apt-get` 'update'
-* neuere Versionen für die Pakete einspielen (<<pakete-aktualisieren>>) mit `apt-get upgrade`)
+* Paketliste aktualisieren (<<liste-der-verfuegbaren-pakete-aktualisieren>>) mit `apt-get update`
+* neuere Versionen für die Pakete einspielen (<<pakete-aktualisieren>>) mit `apt-get upgrade`
 * die gesamte Distribution aktualisieren (<<distribution-aktualisieren>>) mit `apt-get dist-upgrade`
 
 Nachfolgend geben wir Ihnen eine Übersicht zu allen Unterkommandos, die
 die einzelnen APT-Werkzeuge bereithalten. Neben dem jeweiligen
 Unterkommando finden Sie den Verweis auf den entsprechenden Abschnitt im
 Buch, in dem wir auf dieses genauer eingehen.
+
+===== `apt-cache` =====
 
 // Stichworte für den Index
 (((apt-cache, depends)))
@@ -126,7 +132,7 @@ umgekehrte Paketabhängigkeiten anzeigen (siehe <<paketabhaengigkeiten-anzeigen>
 Paket über den Namen finden (siehe <<pakete-ueber-den-namen-finden>>)
 
 `show`:: 
-Paketinformationen ausgeben und Paketstatus erfragen siehe (<<paketstatus-erfragen>>)
+Paketinformationen ausgeben und Paketstatus erfragen (siehe <<paketstatus-erfragen>>)
 
 `showsrc`:: 
 Informationen zum Sourcepaket anzeigen (siehe <<sourcepakete-anzeigen>>)
@@ -139,9 +145,11 @@ Statistik zum Paketcache ausgeben (siehe <<paketcache-status>>)
 
 `unmet`:: 
 eine Zusammenfassung aller unerfüllten Abhängigkeiten im Paketcache
-ausgeben (siehe Paketstatus erfragen in <<paketstatus-erfragen>>)
+ausgeben (siehe ``Paketstatus erfragen'' in <<paketstatus-erfragen>>)
 
 `xvcg`:: einen Abhängigkeitsgraphen für 'xvcg' für die benannten Pakete erzeugen
+
+===== `apt-get` =====
 
 // Stichworte für den Index
 (((apt-get, autoclean)))
@@ -203,6 +211,8 @@ Paketliste aktualisieren (siehe <<liste-der-verfuegbaren-pakete-aktualisieren>>)
 `upgrade`:: 
 Pakete auf eine neue Version aktualisieren (siehe <<pakete-aktualisieren>>)
 
+===== `apt-key` und `apt-mark` =====
+
 // Stichworte für den Index
 (((apt-key, add)))
 (((apt-key, adv)))
@@ -227,13 +237,13 @@ Die Unterkommandos von `apt-mark` lauten `auto`, `manual`, `showauto`
 und `showmanual`. Dazu gehen wir unter ``Paketstatus erfragen'' in
 <<paketstatus-erfragen>> detailliert ein.
 
-// Absatz zusammengefasst -- ist ein Gedanke, der zusammengehört
+===== Weiterentwicklung von APT =====
 
 // Stichworte für den Index
 (((APT2)))
 (((APT-Nachfolger, APT2)))
-Die *Weiterentwicklung von APT* geht stetig voran. Seit mehreren Jahren
-gibt es Bestrebungen, APT grundlegend zu erneuern bzw. dessen verteilte
+Dieser Prozess geht stetig voran. Seit mehreren Jahren gibt es
+Bestrebungen, APT grundlegend zu erneuern bzw. dessen verteilte
 Funktionalität unter einer einzigen Benutzeroberfläche zusammenzufassen.
 Unter dem Namen APT2 <<apt2>> existiert zwar ein Prototyp mit neuer API,
 jedoch gab es dort nach unserer Recherche seit 2011 keine weitere
