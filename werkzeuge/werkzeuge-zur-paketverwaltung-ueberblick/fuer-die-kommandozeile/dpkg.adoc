@@ -40,6 +40,7 @@ entnehmen Sie bitte der Manpage zum Programm]:
 (((dpkg, -S)))
 (((dpkg, --search)))
 (((dpkg, --configure)))
+
 * Paketliste ausgeben mittels `dpkg -l` (siehe <<liste-der-installierten-pakete-anzeigen-und-deuten>>)
 
 * Paketstatus erfragen mit `dpkg -s` 'Paketname' (siehe <<paketstatus-erfragen>>)
