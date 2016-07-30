@@ -5,6 +5,10 @@
 
 == Backports ==
 
+// Stichworte für den Index
+(((Debian Backports)))
+(((Paket, Rückportierung)))
+
 ----
 überarbeiteter Beitrag aus aus: http://www.wizards-of-foss.de/de/weblog/2013/03/08/debian-backports-verwenden/
 ----
