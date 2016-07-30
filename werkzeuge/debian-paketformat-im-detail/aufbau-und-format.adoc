@@ -308,8 +308,12 @@ $
 
 Wünschen Sie stattdessen eine graphische oder webbasierte Darstellung
 des Paketinhalts, stehen Ihnen als Alternativen die Werkzeuge
-`deb-gview`, `dpkg-www` und `apt-browse` zur Verfügung. `deb-gview`
-finden Sie im gleichnamigen Paket <<Debian-Paket-deb-gview>>.
+`deb-gview`, `dpkg-www` und `apt-browse` zur Verfügung. Während Sie mit
+`deb-gview` nur auf die lokalen Dateien ihres Systems zugreifen können,
+erlaubt `dpkg-www` sowohl lokale, als auch entfernte Dateien.
+`apt-browse` nutzt hingegen seinen eigenen Datenbestand.
+
+`deb-gview` finden Sie im gleichnamigen Paket <<Debian-Paket-deb-gview>>.
 <<fig.deb-gview>> zeigt die Bedienoberfläche beispielhaft anhand des
 Pakets 'debsums' <<Debian-Paket-debsums>>. Die dreispaltige Aufteilung
 beinhaltet die Daten- und Steuerdateien, die darin enthaltenen
