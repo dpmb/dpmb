@@ -23,8 +23,8 @@ anderen Paketen. Diese legen die Voraussetzungen fest, nach denen das
 Paket überhaupt übersetzt (``gebaut'') und später auf Ihrem Linux-System
 installiert werden kann. Insbesondere zählen dazu die Abhängigkeiten und
 Konflikte zu anderen Paketen. Diese Relationen beschreiben wir
-ausführlich in Konzepte und Ideen dahinter
-(<<konzepte-und-ideen-dahinter>>).
+ausführlich unter ``Konzepte und Ideen dahinter'' in
+<<konzepte-und-ideen-dahinter>>.
 
 // Stichworte für den Index
 (((Maintainer-Skripte, postinst)))
