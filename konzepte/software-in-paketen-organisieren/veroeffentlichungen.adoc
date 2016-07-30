@@ -94,13 +94,14 @@ beinhalten. _experimental_ wird genutzt, um Pakete im größeren Umfeld zu
 testen, bevor diese nach _unstable_ hochgeladen werden.
 
 // Stichworte für den Index
+(((Paket, Rückportierung)))
 (((Veröffentlichung, Entwicklungsstand)))
 (((Veröffentlichung, Debian Backports)))
 Darüberhinaus existiert der Paketbereich _backports_. Das beinhaltet
 Rückportierungen neuerer oder aktualisierter Pakete aus dem
 Entwicklungszweig _testing_ nach _stable_, teilweise auch aus
 _unstable_. Das ist spannend, aber auch mit gewissen Risiken verbunden.
-Im Detail gehen wir darauf unter Debian Backports in
+Im Detail gehen wir darauf unter ``Debian Backports'' in
 <<debian-backports>> ein.
 
 [[alias-namen]]
