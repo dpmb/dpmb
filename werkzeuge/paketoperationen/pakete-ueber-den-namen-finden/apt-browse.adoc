@@ -2,6 +2,8 @@
 
 // Baustelle: Rohtext
 
+[[paketsuche-mit-apt-browse]]
+
 ===== Suche über apt-browse.org =====
 
 // Stichworte für den Index

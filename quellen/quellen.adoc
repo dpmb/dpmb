@@ -281,6 +281,8 @@
 
 - [[[Debian-Paket-debfoster]]] Debian-Paket 'debfoster', http://packages.debian.org/de/stable/debfoster
 
+- [[[Debian-Paket-deb-gview]]] Debian-Paket 'deb-gview', http://packages.debian.org/de/stable/deb-gview
+
 - [[[Debian-Paket-debhelper]]] Debian-Paket 'debhelper', http://packages.debian.org/de/stable/debhelper
 
 - [[[Debian-Paket-debian-archive-keyring]]] Debian-Paket 'debian-archive-keyring', http://packages.debian.org/de/stable/debian-archive-keyring

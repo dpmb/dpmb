@@ -254,8 +254,10 @@ entsprechende Verzeichnisstruktur auf dem Zielsystem vollständig wieder.
 
 // Stichworte für den Index
 (((dpkg-deb, -c)))
+(((Paketinhalt, auflisten)))
+(((Paketsuche, über den Paketnamen)))
 
-Diese Struktur, die zu installierenden Dateien sowie deren Typ und Größe,
+Diese Struktur, die zu installierenden Dateien sowie deren Typ und Größe
 zeigen Sie mit dem Kommando `dpkg-deb -c` 'Paketdatei' an. Das
 nachfolgende Beispiel anhand des Pakets 'vnstat' zeigt, dass darin
 sowohl Programme (ausführbare Dateien in `/usr/bin` und `/usr/sbin`) als
@@ -295,6 +297,38 @@ drwxr-xr-x root/root         0 2010-04-20 20:38 ./var/lib/
 drwxr-xr-x root/root         0 2010-04-20 20:38 ./var/lib/vnstat/
 $
 ----
+
+// Stichworte für den Index
+(((apt-browse)))
+(((Debianpaket, deb-gview)))
+(((Debianpaket, dpkg-www)))
+(((Paketinhalt, auflisten)))
+(((Paketsuche, mittels apt-browse.org)))
+(((Paketsuche, über den Paketnamen)))
+
+Wünschen Sie stattdessen eine graphische oder webbasierte Darstellung
+des Paketinhalts, stehen Ihnen als Alternativen die Werkzeuge
+`deb-gview`, `dpkg-www` und `apt-browse` zur Verfügung. `deb-gview`
+finden Sie im gleichnamigen Paket <<Debian-Paket-deb-gview>>.
+<<fig.deb-gview>> zeigt die Bedienoberfläche beispielhaft anhand des
+Pakets 'debsums' <<Debian-Paket-debsums>>. Die dreispaltige Aufteilung
+beinhaltet die Daten- und Steuerdateien, die darin enthaltenen
+Programmdateien und Metadaten zum Paket.
+
+// Abbildung von deb-gview
+.Detailinformationen zum Paket 'debsums' 
+image::werkzeuge/debian-paketformat-im-detail/deb-gview.png[id="fig.deb-gview", width="50%"]
+
+Die spezialisierten Suchmaschinen für Pakete namens `dpkg-www` und
+`apt-browse` listen die Paketdetails ebenfalls auf (siehe
+<<fig.apt-browse-paketinhalt>>). Genauer besprechen wir diese unter ``In
+Paketen blättern mittels `dpkg-www`'' in
+<<webbasierte-programme-dpkg-www>> sowie ``Suche über apt-browse.org''
+in <<paketsuche-mit-apt-browse>>.
+
+// Abbildung von apt-browse
+.Detailinformationen zum Paket 'debsums' in `apt-browse.org` (Ausschnitt) 
+image::werkzeuge/debian-paketformat-im-detail/apt-browse-paketinhalt.png[id="fig.apt-browse-paketinhalt", width="50%"]
 
 [[aufbau-und-format-uebergang-und-metapakete]]
 
