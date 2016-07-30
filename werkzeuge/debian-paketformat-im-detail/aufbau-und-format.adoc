@@ -166,6 +166,8 @@ Dokumentation, Konfigurationsdateien und Copyright-Informationen
 einen Sonderfall. Es ist ein Paket mit reduziertem Paketinhalt, welches
 speziell für den Debian-Installer gedacht ist (siehe <<Debian-udeb>>).
 
+===== Steuerdateien und Skripte =====
+
 // Stichworte für den Index
 (((Maintainer-Skripte, postinst)))
 (((Maintainer-Skripte, postrm)))
@@ -233,23 +235,27 @@ Diese Datei enthält Texte zu den Fragen und Hinweisen, die `debconf`
 während der Paketkonfiguration anzeigt (siehe dazu auch ``Pakete
 konfigurieren'' in <<pakete-konfigurieren>>).
 
+===== Daten im Paket =====
+
 // Stichworte für den Index
 (((deb-Paketformat, Bestandteile)))
 (((deb-Paketformat, Daten)))
 Die eigentlichen Dateien zu einem Paket liegen in der 'Datenkomponente'.
-Damit `dpkg` die zu installierenden Programme und Daten des Binärpakets
-auch an die richtige Position in der Dateisystemhierarchie kopieren
-kann, spiegelt der Inhalt dieser Komponente die entsprechende
-Verzeichnisstruktur auf dem Zielsystem vollständig wieder.
+Damit `dpkg` die zu installierenden Programme und Daten aus dem
+Binärpaket auch an die richtige Position in der Dateisystemhierarchie
+ihres Systems kopieren kann, spiegelt der Inhalt dieser Komponente die
+entsprechende Verzeichnisstruktur auf dem Zielsystem vollständig wieder.
+
+// Stichworte für den Index
+(((dpkg-deb, -c)))
 
 Diese Struktur, die zu installierenden Dateien sowie deren Typ und Größe,
-zeigen Sie mit dem Kommando `dpkg-deb -c` 'Paketdatei' an. Am Beispiel von
-'vnstat' sehen Sie damit, dass im Debianpaket sowohl Programme
-(ausführbare Dateien in `/usr/bin` und `/usr/sbin`) als
-auch Dokumentation (in `/usr/share/doc` und
-`/usr/share/man`), Konfigurationsdateien (in `/etc`) und
-ein Verzeichnis für variable Daten (unterhalb von `/var/lib`)
-enthalten sind:
+zeigen Sie mit dem Kommando `dpkg-deb -c` 'Paketdatei' an. Das
+nachfolgende Beispiel anhand des Pakets 'vnstat' zeigt, dass darin
+sowohl Programme (ausführbare Dateien in `/usr/bin` und `/usr/sbin`) als
+auch Dokumentation (in `/usr/share/doc` und `/usr/share/man`),
+Konfigurationsdateien (in `/etc`) und ein Verzeichnis für variable Daten
+(unterhalb von `/var/lib`) enthalten sind:
 
 .Inhalt des Pakets 'vnstat' mit `dpkg-deb` anzeigen
 ----
