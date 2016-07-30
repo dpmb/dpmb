@@ -52,22 +52,24 @@ jeweils Angabe der Unterkommandos auf der Kommandozeile):
 * Recherche und Paketliste filtern anhand von Paketkategorien,
 Veröffentlichungen und Mustern (Teilzeichenketten, Reguläre Ausdrücke) bzgl. des Paketnamens,
 der Metadaten und der Paketbeschreibung
-* Paketstatus erfragen (<<paketstatus-erfragen>>) mit `aptitude show Paketname`
-* Paketdatei ins aktuelle Verzeichnis herunterladen (<<paketdatei-nur-herunterladen>>) mit `aptitude download Paketname`
+* Paketstatus erfragen (<<paketstatus-erfragen>>) mit `aptitude show` 'Paketname'
+* Paketdatei ins aktuelle Verzeichnis herunterladen 
+(<<paketdatei-nur-herunterladen>>) mit `aptitude download` 'Paketname'
 * Pakete zur Installation, Aktualisierung oder Löschung vormerken (siehe Mit `aptitude` Vormerkungen machen unter <<mit-aptitude-vormerkungen-machen>>)
-* Paket installieren (<<pakete-installieren>>) mit `aptitude install Paketname`
+* Paket installieren (<<pakete-installieren>>) mit `aptitude install` 'Paketname'
 * Paket in einer bestimmten Version halten (nicht aktualisieren) (siehe <<ausgewahlte-pakete-aktualisieren>> und <<ausgewaehlte-pakete-nicht-aktualisieren>>)
-* Pakete deinstallieren (<<pakete-deinstallieren>>) mit `aptitude remove Paketname`
-* Pakete erneut installieren (<<pakete-erneut-installieren>>) mit `aptitude reinstall Paketname`
+* Pakete deinstallieren (<<pakete-deinstallieren>>) mit `aptitude remove` 'Paketname'
+* Pakete erneut installieren (<<pakete-erneut-installieren>>) mit `aptitude reinstall` 'Paketname'
 * installierte Paketliste oder die Veröffentlichung aktualisieren (<<pakete-aktualisieren>>) mit `aptitude update`, `aptitude safe-upgrade` und `aptitude full-upgrade`
-* klären, warum ein Paket (nicht) installiert ist (<<warum-ist-ein-paket-installiert>>) mit `aptitude why Paketname` bzw. `aptitude why-not Paketname`
-* Paketabhängigkeiten mit `aptitude search ?depends Paketname` anzeigen (<<paketabhaengigkeiten-anzeigen>>)
+* klären, warum ein Paket (nicht) installiert ist
+(<<warum-ist-ein-paket-installiert>>) mit `aptitude why` 'Paketname' bzw. `aptitude why-not` 'Paketname'
+* Paketabhängigkeiten mit `aptitude search ?depends` 'Paketname' anzeigen (<<paketabhaengigkeiten-anzeigen>>)
 
 [TIP]
 .Dokumentation zu `aptitude`
 ====
 Für den vollständigen Funktionsumfang und als Einstieg zum Programm ist
-das Lesen der Dokumentation zu `aptitude` (<<aptitude-dokumentation>>)
+das Lesen der Dokumentation zu `aptitude` <<aptitude-dokumentation>>
 empfehlenswert. Neben der Bedienung enthält es alle Unterkommandos,
 Optionen, Schalter und Möglichkeiten zur Konfiguration.
 ====
@@ -209,14 +211,14 @@ angezeigte *Kategoriebrowser* gilt als veraltet{empty}footnote:[Es handelt
 sich dabei um eine hart in `aptitude` verdrahtete und schon sehr lange
 nicht mehr gepflegte Kategorisierung der Pakete], funktioniert seit
 einigen Versionen nicht mehr und wird voraussichtlich demnächst ganz
-entfernt (<<aptitude-categorical-browser-to-be-removed>>). Der oben
+entfernt <<aptitude-categorical-browser-to-be-removed>>. Der oben
 angerissene Debtags-Browser ist der offizielle, wesentlich aktuellere
 und besser gepflegte Ersatz dafür.
 
 Im Erweiterungsteil gehen wir darauf ein, was passiert, wenn Sie APT und
 `aptitude` miteinander mischen (<<apt-und-aptitude-mischen>>). Auch der
 Konfiguration des Programms ist ein eigener Abschnitt gewidmet (siehe
-APT und `aptitude` auf die eigenen Bedürfnisse anpassen in
+``APT und `aptitude` auf die eigenen Bedürfnisse anpassen'' in
 <<apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen>>).
 
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/aptitude.adoc
