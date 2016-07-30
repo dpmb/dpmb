@@ -119,13 +119,6 @@ dem Paket nuvola-icon-theme, Version 4:15.04.3-1.
 * daptup (https://packages.debian.org/jessie/daptup)
   reporter of changes in list of available packages from repositories
 
-* deb-gview (https://packages.debian.org/jessie/deb-gview)
-  GNOME viewer for .deb package files and contents
-
-  Displays Debian control information, devscript details and details of
-  the files that would be installed (names, sizes and locations). Files
-  within the package can be viewed within the package or externally.
-
 * packagekit-command-not-found (https://packages.debian.org/jessie/packagekit-command-not-found)
   Offer to install missing programs automatically
 
