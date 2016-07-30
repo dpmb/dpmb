@@ -210,7 +210,7 @@ wurde.
 MD5-Summen der Dateien, welche im Paket enthalten sind. Damit wird
 sichergestellt, dass beispielsweise keine Übertragungsfehler (Bitfehler)
 oder Änderungen zwischen dem Paketmirror und ihrem lokalen System
-erfolgt sind (siehe auch Bezogenes Paket verifizieren in
+erfolgt sind (siehe auch ``Bezogenes Paket verifizieren'' in
 <<bezogenes-paket-verifizieren>>).
 
 `shlibs`::
@@ -226,8 +226,8 @@ direkt in der `debconf`-Datenbank abgelegt und bspw. im
 
 `templates`::
 Diese Datei enthält Texte zu den Fragen und Hinweisen, die `debconf`
-während der Paketkonfiguration anzeigt (siehe dazu auch Pakete
-konfigurieren in <<pakete-konfigurieren>>).
+während der Paketkonfiguration anzeigt (siehe dazu auch ``Pakete
+konfigurieren'' in <<pakete-konfigurieren>>).
 
 Die eigentlichen Dateien zu einem Paket liegen in der 'Datenkomponente'.
 Damit `dpkg` die zu installierenden Programme und Daten des Binärpakets
@@ -236,7 +236,7 @@ kann, spiegelt der Inhalt dieser Komponente die entsprechende
 Verzeichnisstruktur auf dem Zielsystem vollständig wieder.
 
 Diese Struktur, die zu installierenden Dateien sowie deren Typ und Größe,
-zeigen Sie mit dem Kommando `dpkg-deb -c Paketdatei` an. Am Beispiel von
+zeigen Sie mit dem Kommando `dpkg-deb -c` 'Paketdatei' an. Am Beispiel von
 'vnstat' sehen Sie damit, dass im Debianpaket sowohl Programme
 (ausführbare Dateien in `/usr/bin` und `/usr/sbin`) als
 auch Dokumentation (in `/usr/share/doc` und
