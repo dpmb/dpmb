@@ -53,6 +53,9 @@ image::werkzeuge/debian-paketformat-im-detail/postinst.png[id="fig.postinst", wi
 
 ==== Source-Pakete ====
 
+// Stichworte für den Index
+(((Paketvarianten, Sourcepaket)))
+
 Ein Source-Paket beinhaltet einerseits den Quellcode der Software und
 andererseits die Anweisungen, nach denen aus dem Quellcode der Software
 eines oder mehrere Binärpakete entstehen <<Krafft-Debian-System>>. Dazu
@@ -114,6 +117,9 @@ die beiden Klammern.
 [[aufbau-und-format-binaer]]
 
 ==== Binärpakete ====
+
+// Stichworte für den Index
+(((Paketvarianten, Binärpaket)))
 
 ===== Komponenten =====
 
@@ -294,11 +300,17 @@ $
 
 ==== Übergangs- und Metapakete ====
 
-Wie bereits in Übergangs- und Metapakete (siehe
+// Stichworte für den Index
+(((Paketvarianten, Dummypaket)))
+(((Paketvarianten, Metapaket)))
+(((Paketvarianten, Transitionspaket)))
+(((Paketvarianten, Übergangspaket)))
+
+Wie bereits in ``Übergangs- und Metapakete'' (siehe
 <<uebergangs-und-metapakete>>) deutlich wurde, handelt es sich hierbei
 um Binärpakete, die eine spezielle Charakteristik haben: sie haben meist
 außer der Dokumentation keine weiteren Inhalte. Der eigentliche Inhalt
-sowie Sinn und Zweck sind die Beschreibung der Abhängigkeiten der
+sowie Sinn und Zweck liegen in der Beschreibung der Abhängigkeiten der
 Pakete.
 
 Übergangspakete werden auch 'Dummypakete' oder 'Transitionspakete'
