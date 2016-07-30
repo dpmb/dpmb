@@ -269,6 +269,8 @@
 
 - [[[Debian-Paket-checkinstall]]] Debian-Paket 'checkinstall', http://packages.debian.org/de/stable/checkinstall
 
+- [[[Debian-Paket-command-not-found]]] Debian-Paket 'command-not-found', http://packages.debian.org/de/stable/command-not-found
+
 - [[[Debian-Paket-cupt]]] Debian-Paket 'cupt', http://packages.debian.org/de/stable/cupt
 
 - [[[Debian-Paket-dctrl-tools]]] Debian-Paket 'dctrl-tools', http://packages.debian.org/de/stable/dctrl-tools
