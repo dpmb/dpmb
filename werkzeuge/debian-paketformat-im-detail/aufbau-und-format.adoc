@@ -115,6 +115,8 @@ die beiden Klammern.
 
 ==== Binärpakete ====
 
+===== Komponenten =====
+
 Ein Debian-Binärpaket ist ein BSD-`ar`-Archiv, welches weitere,
 komprimierte `tar`-Archive beinhaltet. Nachfolgendes Beispiel zeigt das
 für das Paket 'autotools-dev'.
@@ -130,7 +132,7 @@ $
 
 Dabei stehen die einzelnen Komponenten eines Pakets für:
 
-`debian-binary` ::
+`debian-binary`::
 Kennzeichnung für ein Debian-Paket. `debian-binary` ist eine
 Textdatei, welche lediglich die Versionsnummer des verwendeten
 Binär-Paketformats enthält. Nachfolgender Auszug zeigt die
@@ -151,16 +153,18 @@ $
 mit `gzip` komprimiertes `tar`-Archiv; dieses enthält die
 Kontrollinformationen für die Paketverwaltung
 
-`data.tar.gz`, `data.tar.xz`, `data.tar.bz2` ::
+`data.tar.gz`, `data.tar.xz`, `data.tar.bz2`::
 eigentliche Dateien des Pakets plus Speicherort, jeweils mit `gzip`,
 `xz` oder `bzip2` komprimiert
 
+===== Benennung =====
+
 Ein Debian-Binärpaket ist eine Datei mit der Erweiterung `deb` oder
-`udeb`. Ersteres beinhaltet ausführbare Dateien, Daten, Dokumentation,
-Konfigurationsdateien und Copyright-Informationen
-<<Krafft-Debian-System>>. Bei `udeb`-Dateien handelt es sich um ein
-Paket mit reduziertem Paketinhalt, welches speziell für den
-Debian-Installer gedacht ist (siehe <<Debian-udeb>>).
+`udeb` im Dateinamen. Ersteres beinhaltet ausführbare Dateien, Daten,
+Dokumentation, Konfigurationsdateien und Copyright-Informationen
+<<Krafft-Debian-System>>. Bei `udeb`-Dateien handelt es sich hingegen um
+einen Sonderfall. Es ist ein Paket mit reduziertem Paketinhalt, welches
+speziell für den Debian-Installer gedacht ist (siehe <<Debian-udeb>>).
 
 // Stichworte für den Index
 (((Maintainer-Skripte, postinst)))
@@ -229,6 +233,9 @@ Diese Datei enthält Texte zu den Fragen und Hinweisen, die `debconf`
 während der Paketkonfiguration anzeigt (siehe dazu auch ``Pakete
 konfigurieren'' in <<pakete-konfigurieren>>).
 
+// Stichworte für den Index
+(((deb-Paketformat, Bestandteile)))
+(((deb-Paketformat, Daten)))
 Die eigentlichen Dateien zu einem Paket liegen in der 'Datenkomponente'.
 Damit `dpkg` die zu installierenden Programme und Daten des Binärpakets
 auch an die richtige Position in der Dateisystemhierarchie kopieren
