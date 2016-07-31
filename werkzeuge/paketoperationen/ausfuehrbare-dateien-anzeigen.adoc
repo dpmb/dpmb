@@ -29,7 +29,7 @@ $
 
 // Stichworte für den Index
 (((Debianpaket, util-linux)))
-(((Paketmarkierung, essentiell)))
+(((Paketmarkierungen, essentiell)))
 (((whereis, -b)))
 Eine weitere Möglichkeit stellt das UNIX-Kommandos `whereis` aus dem
 essentiellen Paket 'util-linux' <<Debian-Paket-util-linux>> dar. Mit der

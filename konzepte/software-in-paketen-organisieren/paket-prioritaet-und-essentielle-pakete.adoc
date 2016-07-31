@@ -152,7 +152,7 @@ dieser Priorisierung versehen.
 // Stichworte für den Index
 (((apt-get, remove --force-remove-essential)))
 (((Debianpaket, coreutils)))
-(((Paketmarkierung, essentiell)))
+(((Paketmarkierungen, essentiell)))
 Zusätzlich zu den bereits oben vorgestellten Prioritäten gibt es noch
 die Markierung _essential_. Diese Markierung tragen nur sehr grundlegende
 Pakete.

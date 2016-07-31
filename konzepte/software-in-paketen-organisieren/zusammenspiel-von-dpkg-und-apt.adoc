@@ -29,7 +29,7 @@ Signaturen benötigt (siehe ``Bezogenes Paket verifizieren'' in
 <<bezogenes-paket-verifizieren>>).
 
 // Stichworte für den Index
-(((Paketmarkierung, essentiell)))
+(((Paketmarkierungen, essentiell)))
 `dpkg` ist ein sog. _essentielles_ Paket (siehe
 <<paket-prioritaet-und-essentielle-pakete>>), hat also eher wenig
 Abhängigkeiten. Die meisten davon sind selbst _essentielle_ Pakete und
