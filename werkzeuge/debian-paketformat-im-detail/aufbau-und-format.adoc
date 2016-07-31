@@ -331,10 +331,10 @@ Programmdateien und Metadaten zum Paket.
 .Detailinformationen zum Paket 'debsums' (`deb-gview`)
 image::werkzeuge/debian-paketformat-im-detail/deb-gview.png[id="fig.deb-gview", width="50%"]
 
-<<fig.synaptic-paketinhalt>> zeigt die Programmdateien zum Paket, wie es
-Synaptic darstellt. Sie erreichen dieses Dialogfenster über
-menu:Paket[Eigenschaften] und danach im Reiter ``Installierte Dateien''.
-Ausführlicher besprechen wir Synaptic in <<gui-synaptic>>.
+<<fig.synaptic-paketinhalt>> zeigt die Programmdateien zum gleichen
+Paket, wie es Synaptic darstellt. Sie erreichen dieses Dialogfenster
+über menu:Paket[Eigenschaften] und danach im Reiter ``Installierte
+Dateien''. Ausführlicher besprechen wir Synaptic in <<gui-synaptic>>.
 
 // Abbildung von Synaptic
 .Detailinformationen zum Paket 'debsums' (Synaptic)
