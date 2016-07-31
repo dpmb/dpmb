@@ -85,14 +85,14 @@ Description: Text-based Interactive
 ----
 
 Wurden die Debian-Pakete entsprechend markiert, vereinfacht sich darüber
-die Suche nach passenden Paketen erheblich (siehe Vergebene Schlagworte
-anzeigen in <<vergebene-schlagworte-anzeigen>> und Suche anhand der
-Schlagworte in <<suche-anhand-der-schlagworte>>). Damit profitieren Sie
-als Nutzer sofort von dem Klassifikationsschema und können bei Interesse
-gleichzeitig zu dessen Komplettierung beitragen, indem Sie Debianpakete,
-die noch unvollständig kategorisiert oder gänzlich ohne Attribute sind,
-um weitere Schlagworte ergänzen. In Folge haben alle Debian-Benutzer
-kurzfristig einen spürbaren Vorteil davon.
+die Suche nach passenden Paketen erheblich (siehe ``Vergebene
+Schlagworte anzeigen'' in <<vergebene-schlagworte-anzeigen>> und ``Suche
+anhand der Schlagworte'' in <<suche-anhand-der-schlagworte>>). Damit
+profitieren Sie als Nutzer sofort von dem Klassifikationsschema und
+können bei Interesse gleichzeitig zu dessen Komplettierung beitragen,
+indem Sie Debianpakete, die noch unvollständig kategorisiert oder
+gänzlich ohne Attribute sind, um weitere Schlagworte ergänzen. In Folge
+haben alle Debian-Benutzer kurzfristig einen spürbaren Vorteil davon.
 
 // Schlagworte für den Index
 (((Debtags, Integration in die Paketmanager)))

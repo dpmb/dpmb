@@ -36,7 +36,7 @@ Softwarekategorien ist zu grob und lässt nur einen einzigen, vorher
 bestimmten Blickwinkel zu. Der Maintainer eines Pakets muss daher genau
 abwägen, welche Paketkategorie überwiegt oder am besten passt und trägt
 diese Kategorie in der `control`-Datei des Debian-Pakets ein (siehe
-Aufbau eines Debian-Pakets in <<aufbau-und-format-binaer>>).
+``Aufbau eines Debian-Pakets'' in <<aufbau-und-format-binaer>>).
 
 * Es ist keine Mehrfachzuordnung möglich, wenn ein Programm verschiedene
 Aspekte umfasst und thematisch in unterschiedliche Kategorien passt.
@@ -48,7 +48,7 @@ gestattet Ihnen zwar dazu auch die Verwendung Regulärer Ausdrücke, setzt
 aber den gekonnten Umgang damit voraus. Eine Recherche nach der
 thematischen Ähnlichkeit, einer konkreten Eigenschaft des Pakets oder
 dem Funktionsumfang ist nicht möglich. Ausführlich besprechen wir diese
-Recherchemöglichkeiten bereits unter Pakete über den Namen finden in
+Recherchemöglichkeiten bereits unter ``Pakete über den Namen finden'' in
 <<pakete-ueber-den-namen-finden>>.
 
 Gelingt Ihnen die Recherche über die Paketkategorien oder den Namen des
