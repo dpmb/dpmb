@@ -302,16 +302,24 @@ $
 (((apt-browse)))
 (((Debianpaket, deb-gview)))
 (((Debianpaket, dpkg-www)))
+(((Debianpaket, synaptic)))
 (((Paketinhalt, auflisten)))
 (((Paketsuche, mittels apt-browse.org)))
 (((Paketsuche, über den Paketnamen)))
 
 Wünschen Sie stattdessen eine graphische oder webbasierte Darstellung
 des Paketinhalts, stehen Ihnen als Alternativen die Werkzeuge
-`deb-gview`, `dpkg-www` und `apt-browse` zur Verfügung. Während Sie mit
-`deb-gview` nur auf die lokalen Dateien ihres Systems zugreifen können,
-erlaubt `dpkg-www` sowohl lokale, als auch entfernte Dateien.
-`apt-browse` nutzt hingegen seinen eigenen Datenbestand.
+`deb-gview`, Synaptic, `dpkg-www` und `apt-browse` zur Verfügung. Im
+Detail agiert hier jedes der genannten Programme anders.
+
+`deb-gview` und Synaptic erlauben Ihnen nur den Zugriff auf ihr lokales
+System. Während `deb-gview` dabei den Inhalt von `deb`-Dateien ausliest,
+beschränkt sich Synaptic auf bereits installierte Debianpakete.
+`dpkg-www` hingegen inspiziert bereits installierte Debianpakete sowohl
+auf ihrem lokalen System, als auch auf einem anderen Rechner.
+`apt-browse` greift stattdessen ausschließlich auf seinen eigenen
+Datenbestand auf dem Webserver zurück und wertet die Informationen aus
+den Paketen aus.
 
 `deb-gview` finden Sie im gleichnamigen Paket <<Debian-Paket-deb-gview>>.
 <<fig.deb-gview>> zeigt die Bedienoberfläche beispielhaft anhand des
