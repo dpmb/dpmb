@@ -325,11 +325,20 @@ den Paketen aus.
 <<fig.deb-gview>> zeigt die Bedienoberfläche beispielhaft anhand des
 Pakets 'debsums' <<Debian-Paket-debsums>>. Die dreispaltige Aufteilung
 beinhaltet die Daten- und Steuerdateien, die darin enthaltenen
-Programmdateien und Metadaten zum Paket.
+Programmdateien und Metadaten zum Paket. 
 
 // Abbildung von deb-gview
-.Detailinformationen zum Paket 'debsums' 
+.Detailinformationen zum Paket 'debsums' (`deb-gview`)
 image::werkzeuge/debian-paketformat-im-detail/deb-gview.png[id="fig.deb-gview", width="50%"]
+
+<<fig.synaptic-paketinhalt>> zeigt die Programmdateien zum Paket, wie es
+Synaptic darstellt. Sie erreichen dieses Dialogfenster über
+menu:Paket[Eigenschaften] und danach im Reiter ``Installierte Dateien''.
+Ausführlicher besprechen wir Synaptic in <<gui-synaptic>>.
+
+// Abbildung von Synaptic
+.Detailinformationen zum Paket 'debsums' (Synaptic)
+image::werkzeuge/debian-paketformat-im-detail/synaptic-paketinhalt.png[id="fig.synaptic-paketinhalt", width="50%"]
 
 Die spezialisierten Suchmaschinen für Pakete namens `dpkg-www` und
 `apt-browse` listen die Paketdetails ebenfalls auf (siehe
