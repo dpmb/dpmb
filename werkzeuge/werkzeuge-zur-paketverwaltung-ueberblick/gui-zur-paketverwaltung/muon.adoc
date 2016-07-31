@@ -10,12 +10,16 @@
 (((Debianpaket, muon)))
 (((muon)))
 (((Synaptic)))
+
 * Paketmanager für KDE
-* Klon von Synaptic (siehe <<gui-synaptic>>)
+* Klon (Pendant) von Synaptic (siehe <<gui-synaptic>>)
 * setzt auf GTK auf
 * bislang speziell genutzt in Kubuntu
 * Debianpaket 'muon' <<Debian-Paket-muon>>
 * verfügbar ab Debian 9 'Stretch'
+* Funktionen (Auswahl):
+** Auswahl nach Softwarekategorie, Paketname, Architektur, Veröffentlichung
+** Anzeige der Paketbeschreibung, der Paketabhängigkeiten, des Paketinhalts (Dateien im Paket)
 
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/muon.adoc
 
