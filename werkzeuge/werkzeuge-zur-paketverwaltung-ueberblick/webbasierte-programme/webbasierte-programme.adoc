@@ -6,6 +6,11 @@
 
 === Webbasierte Programme ===
 
+// Stichworte für den Index
+(((Paketverwaltung, Benutzerschnittstelle)))
+(((Paketverwaltung, Frontend)))
+(((Paketverwaltung, WUI)))
+
 include::ubuntu-landscape.adoc[]
 
 include::appnr.adoc[]

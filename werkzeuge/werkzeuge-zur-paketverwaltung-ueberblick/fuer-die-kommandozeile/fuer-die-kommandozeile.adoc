@@ -6,6 +6,11 @@
 
 === Für die Kommandozeile ===
 
+// Stichworte für den Index
+(((Paketverwaltung, Benutzerschnittstelle)))
+(((Paketverwaltung, Frontend)))
+(((Paketverwaltung, Kommandozeile)))
+
 include::dpkg.adoc[]
 
 include::apt.adoc[]

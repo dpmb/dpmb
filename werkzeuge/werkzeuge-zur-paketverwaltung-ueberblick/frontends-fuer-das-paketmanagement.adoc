@@ -6,6 +6,14 @@
 
 === Frontends für das Paketmanagement ===
 
+// Stichworte für den Index
+(((Paketverwaltung, Benutzerschnittstelle)))
+(((Paketverwaltung, Frontend)))
+(((Paketverwaltung, GUI)))
+(((Paketverwaltung, Kommandozeile)))
+(((Paketverwaltung, TUI)))
+(((Paketverwaltung, WUI)))
+
 Unter einem 'Frontend' verstehen wir ein Programm oder ein Werkzeug mit
 einer Bedienoberfläche, welches im Alltag von Ihnen für die Verwaltung
 der Softwarepakete verwendet wird. Es deckt alle dafür notwendigen
@@ -33,7 +41,7 @@ keinen Anspruch auf Vollständigkeit.
 | Kategorie | `deb`-basierte Systeme | `rpm`-basierte Systeme | andere Paketformate
 | Kommandozeile| `dpkg`, `dpkg-www`, APT, `aptitude`, `aptsh`, `cupt`, SmartPM, `gdebi` ('gdebi-core'), `wajig`| `rpm`, `yum`, `urpmi`, `zypper`, SmartPM | `emerge`, `pacman`
 | Text User Interface (TUI) | `tasksel`, `aptitude`, Debian Installer, Univention Installer für Univention Corporate Server (UCS) | Yet another Setup Tool (YaST), DrakConf oder Mandriva Linux Control Center (MCC) <<Mandriva-Wiki>> bzw. Mageia Control Center (MCC) (Textkonsole) | pcurses
-| Graphical User Interface (GUI) | Synaptic, SmartPM, Ubuntu Software Center, PackageKit, Apper (früher 'KPackageKit'), `gdebi` | Yet another Setup Tool 2 (YaST2), DrakConf
+| Graphical User Interface (GUI) | Synaptic, SmartPM, Ubuntu Software Center, Muon, PackageKit, Apper (früher 'KPackageKit'), `gdebi` | Yet another Setup Tool 2 (YaST2), DrakConf
 oder Mandriva Linux Control Center (MCC) <<Mandriva-Wiki>> bzw. Mageia Control Center (MCC) | PacmanXG4, PacmanExpress, tkPacman, GNOME PackageKit, Zenity Pacman GUI, Octopi
 | webbasierte Verwaltung (WUI) | IP Brick <<ipbrick>>, Univention Management Console für Univention Corporate Server (UCS), Ubuntu Landscape , Appnr, Communtu, Debian Pure Blends | |
 |=============================
@@ -66,6 +74,10 @@ oder Mandriva Linux Control Center (MCC) <<Mandriva-Wiki>> bzw. Mageia Control C
 // <<Ubuntu-Landscape>>
 
 ==== Aufgaben, Sinn und Zweck des Frontends ====
+
+// Stichworte für den Index
+(((Paketverwaltung, Aufgabenverteilung)))
+(((Paketverwaltung, Ebenen)))
 
 Basierend auf der Einordnung in die unterschiedlichen Softwarestapel und
 Ebenen (siehe <<softwarestapel-und-ebenen>>) lässt sich der
