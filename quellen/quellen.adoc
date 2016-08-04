@@ -215,6 +215,8 @@
 
 - [[[Debian-Paket-apper]]] Debian-Paket 'apper', https://packages.debian.org/jessie/apper
 
+- [[[Debian-Paket-apprecommender]]] Debian-Paket 'apprecommender', http://packages.debian.org/de/stretch/apprecommender
+
 - [[[Debian-Paket-approx]]] Debian-Paket 'approx', http://packages.debian.org/de/stable/approx
 
 - [[[Debian-Paket-apt]]] Debian-Paket 'apt', https://packages.debian.org/de/stable/apt

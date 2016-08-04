@@ -31,6 +31,10 @@ Durchlaufs fehlende Programme festgestellt, so ermittelt auto-apt, zu
 welchem Paket diese gehören, und installiert die fehlenden Pakete
 inklusive aller Abhängigkeiten."
 
+// Stichworte für den Index
+(((Debianpaket, apprecommender)))
+(((Debianpaket, command-not-found)))
+
 * auto-apt ist "orphaned" und hat momentan keinen richtigen
   Maintainer, siehe https://bugs.debian.org/541016
 
@@ -39,9 +43,9 @@ inklusive aller Abhängigkeiten."
   installiert werden müsste, für den ist vermutlich das Paket
   'command-not-found' <<Debian-Paket-command-not-found>> das richtige.
 
-* Neu ab Debian _Stretch_: apprecommender, empfiehlt Anwendung basierend
-  auf u.a. Debtags der installierten Anwendungen. Noch sehr neu und
-  roh.
+* Neu ab Debian _Stretch_: 'apprecommender'
+<<Debian-Paket-apprecommender>>, empfiehlt Anwendung basierend auf u.a.
+Debtags der installierten Anwendungen. Noch sehr neu und roh.
 
 // Stichworte für den Index
 (((auto-apt, run)))
