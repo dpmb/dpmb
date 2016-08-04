@@ -225,6 +225,8 @@
 
 - [[[Debian-Paket-apt-cacher-ng]]] Debian-Paket 'apt-cacher-ng', http://packages.debian.org/de/stable/apt-cacher-ng
 
+- [[[Debian-Paket-apt-clone]]] Debian-Paket 'apt-clone', https://packages.debian.org/stable/apt-clone
+
 - [[[Debian-Paket-apt-cdrom-setup]]] Debian-Paket 'apt-cdrom-setup', http://packages.debian.org/de/stable/apt-cdrom-setup
 
 - [[[Debian-Paket-apt-dater]]] Debian-Paket 'apt-dater', https://packages.debian.org/de/stable/apt-dater
@@ -779,6 +781,8 @@
 - [[[Ubuntu-One]]] Ubuntu One, http://ubuntuone.com
 
 - [[[Ubuntu-One-Wikipedia]]] Ubuntu One, Wikipedia-Eintrag, http://de.wikipedia.org/wiki/Ubuntu_One
+
+- [[[Ubuntu-Paket-apt-clone]]] Ubuntu-Paket 'apt-clone', https://launchpad.net/apt-clone
 
 - [[[Ubuntu-Paket-software-center]]] Ubuntu-Paket 'software-center', https://launchpad.net/software-center
 

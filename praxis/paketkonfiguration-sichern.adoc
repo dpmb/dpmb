@@ -15,4 +15,13 @@
 ** debconf-get-selections
 ** debconf-set-selections
 
+=== `apt-clone` ===
+
+* Werkzeug/Paket: 'apt-clone' 
+** für Debian <<Debian-Paket-apt-clone>>
+** für Ubuntu <<Ubuntu-Paket-apt-clone>>
+* Projektseite im Launchpad
+* Aufgabe: "Script to create state bundles"
+* Kurzbeschreibung: "This package can be used to clone/restore the packages on a apt based system. It will save/restore the packages, sources.list, keyring and automatic-installed states. It can also save/restore no longer downloadable packages using dpkg-repack. "
+
 // Datei (Ende): ./praxis/paketkonfiguration-sichern.adoc
