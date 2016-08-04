@@ -2,11 +2,14 @@
 
 // Baustelle: Rohtext
 
-[[apt-url-sinn-und-zweck]]
+[[apturl-sinn-und-zweck]]
 
 === Sinn und Zweck ===
 
-Die Idee hinter 'apt-url' ist die Installation von Paketen aus den
+// Stichworte für den Index
+(((Paket installieren, über den Webbrowser)))
+
+Die Idee hinter 'apturl' ist die Installation von Paketen aus den
 eingetragenen Repositories (bzw. Channels bei Ubuntu) über die
 Adresszeile Ihres Webbrowsers. Für Installationen auf Servern und
 Desktops ist das nicht unbedingt der geeignete Weg, jedoch Tablet
@@ -21,7 +24,7 @@ die Adresszeile des Webbrowsers und surfen die darüber genannte URL an:
 apt://cowsay
 ----
 
-'apt-url' akzeptiert die Angabe mehrerer Pakete auf einmal. Die
+'apturl' akzeptiert die Angabe mehrerer Pakete auf einmal. Die
 einzelnen Paketnamen trennen Sie jeweils durch Komma voneinander.
 Leerzeichen sind dabei in der Paketliste nicht zulässig. Für die beiden
 Pakete `cowsay` und `xmms` sieht das wie folgt aus:
