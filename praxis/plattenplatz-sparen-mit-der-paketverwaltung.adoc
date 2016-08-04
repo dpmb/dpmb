@@ -10,6 +10,7 @@
 * `dpkg --path-exclude=…`
 * Paket 'localepurge', momentan noch unter <<paketverwaltung-mit-eingeschraenkten-ressourcen-fuer-embedded-und-mobile-devices>>
 * Ungenutzte Bibliotheken, denen aber das ``Automatisch installiert''-Flag fehlt <<Beckert-Blog-Finding-Libraries>>
+* den Paketcache aufräumen (siehe <<paketcache-aufraeumen>>)
 * Auch `/var/cache/apt` auf tmpfs gehört hier erwähnt, momentan unter <<cache-verzeichnis-auf-separater-partition>>
 * `logrotate` (sollte eigentlich installiert sein, sorgt aber für nicht
   permanent wachsende Logfiles. Seine Konfiguration sollte angepasst
