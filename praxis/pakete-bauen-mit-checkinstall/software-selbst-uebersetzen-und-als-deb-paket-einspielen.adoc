@@ -14,11 +14,15 @@ Spiel. Es steht unter der GPLv2 und ist über das gleichnamige Paket aus
 den Repositories verfügbar <<Debian-Paket-checkinstall>>. 
 
 // Hinweis auf dh-make-perl
-NOTE: Handelt es sich bei der einzuspielenden Software um Perl-Module,
-hilft Ihnen auch das spezialisierte Paket 'dh-make-perl' weiter
+[NOTE]
+.Hinweis auf 'dh-make-perl'
+========================================================
+Handelt es sich bei der einzuspielenden Software um Perl-Module, hilft
+Ihnen auch das spezialisierte Paket 'dh-make-perl' weiter
 <<Debian-Paket-dh-make-perl>>. Wie Sie das Werkzeug verwenden, erläutert
 Steve Kemp in seinem lesenswerten Blogeintrag ``Building Debian packages
 of Perl modules'' <<Kemp-dh-make-perl>>.
+========================================================
 
 `checkinstall` hat sich zum Ziel gesetzt, das Übersetzen von Paketen aus
 dem Quellcode und das direkte Erstellen von Binärpaketen miteinander zu
