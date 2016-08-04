@@ -9,6 +9,7 @@
 (((debconf-get-selections)))
 (((debconf-set-selections)))
 (((Debianpaket, debconf-utils)))
+
 * wie sichere ich die bestehende Paketkonfiguration aus der Debconf-Datenbank
 * wie spiele ich das lokal wieder ein
 * Werkzeuge:
@@ -16,6 +17,11 @@
 ** debconf-set-selections
 
 === `apt-clone` ===
+
+// Stichworte für den Index
+(((apt-clone)))
+(((Debianpaket, apt-clone)))
+(((Ubuntupaket, apt-clone)))
 
 * Werkzeug/Paket: 'apt-clone' 
 ** für Debian <<Debian-Paket-apt-clone>>
