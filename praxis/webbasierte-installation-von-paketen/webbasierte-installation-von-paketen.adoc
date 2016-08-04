@@ -5,6 +5,10 @@
 [[webbasierte-installation-von-paketen-mit-apturl]]
 == Webbasierte Installation von Paketen mit `apturl` ==
 
+// Stichworte für den Index
+(((apturl)))
+(((Ubuntupaket, apturl)))
+
 In diesem Abschnitt beleuchten wir die Installation von `deb`-Paketen
 über das `apturl`-Protokoll (Langfassung: APT Protocol). Dahinter
 verbirgt sich eine Erweiterung für die Webbrowser Firefox/Iceweasel,
