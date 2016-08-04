@@ -12,7 +12,7 @@
 (((Veröffentlichung, LTS)))
 (((Veröffentlichung, oldoldstable)))
 
-Wie wir bereits in 'Bedeutung der verschiedenen Entwicklungsstände'
+Wie wir bereits in ``Bedeutung der verschiedenen Entwicklungsstände''
 (siehe <<bedeutung-der-verschiedenen-entwicklungsstaende>>) beleuchtet
 haben, ist LTS eine Abkürzung und steht für 'long-term support' -- auf
 deutsch 'Langzeitunterstützung'. Damit pflegt das Debianprojekt ältere
@@ -27,6 +27,9 @@ file expired'' bei Ihnen zurück. Zu diesem Zeitpunkt ist die LTS-Version
 ``abgelaufen'', d.h. die weitere Pflege der Versionen aus dieser
 Veröffentlichung durch die Paketmaintainer ist eingestellt.
 
+// Stichworte für den Index
+(((apt-get, Acquire::Check-Valid-Until)))
+
 Können Sie die bislang verwendete Veröffentlichung nicht wechseln,
 stellt sich die Frage, ob -- und wenn ja wie -- Sie die bestehende
 Installation trotzdem noch weiter betreiben können. APT liefert dazu den
@@ -38,6 +41,7 @@ vollständig abschalten können.
 
 // Stichworte für den Index
 (((apt-get, -o)))
+(((apt-get, Acquire::Check-Valid-Until)))
 (((apt-get, update)))
 
 Um die Überprüfung auf Gültigkeit des Release File einmalig zu
