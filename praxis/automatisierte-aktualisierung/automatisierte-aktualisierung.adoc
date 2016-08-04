@@ -12,6 +12,10 @@ bspw. einen Schulungsraum oder Cluster
 
 === `apt-dater` ===
 
+// Stichworte für den Index
+(((apt-dater)))
+(((Debianpaket, apt-dater)))
+
 * Werkzeug/Paket: 'apt-dater' <<Debian-Paket-apt-dater>>
 * terminal-based remote package update manager 
 * Projektseite <<apt-dater-Projektseite>>
