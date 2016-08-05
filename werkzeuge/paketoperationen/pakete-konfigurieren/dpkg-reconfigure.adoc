@@ -11,18 +11,35 @@
 (((Debianpaket, debconf)))
 (((Debianpaket, debconf-utils)))
 (((Debianpaket, dpkg)))
+(((Debianpaket, tzdata)))
 (((dpkg-reconfigure)))
 (((Konfigurationsdatei, /var/cache/debconf)))
 (((Paket, erneut konfigurieren)))
 
-* Aufruf: `dpkg-reconfigure Paket`
-* konfiguriert ein bereits installiertes Paket erneut
-* verwendet wird dazu `debconf`, welches eine Datenbank mit den
-Konfigurationseinträgen der Pakete unter `/var/cache/debconf` speichert
+Für diesen Schritt hilft Ihnen das Werkzeug `dpkg-reconfigure` aus dem
+Paket 'debconf-utils' <<Debian-Paket-debconf-utils>> weiter. Es greift
+dazu auf `debconf` zurück, welches wiederum eine Datenbank mit den
+Konfigurationseinträgen ihrer Pakete unter `/var/cache/debconf` benutzt.
 
-* Beispiel:
-** locale-Einstellungen (Sprache, Lokalisierung, Zeichensatz)
-** Einstellung für die Zeitzone (Paket 'tzdata' <<Debian-Paket-tzdata>>)
+`dpkg-reconfigure` kennt diese Optionen zum Aufruf:
+
+`-f` (Langform `--frontend`)::
+Üblicherweise benutzt `dpkg-reconfigure` die nicht-interaktive
+Schnittstelle auf der Basis von Dialog/Ncurses. Zur weiteren Auswahl
+stehen Readline (interaktiv), via Gnome oder KDE, mit Hilfe eines
+Texteditors oder die Eingabezeile (nicht interaktiv). In <<fig.debconf>>
+sehen Sie den Einstellungsdialog für das Paket 'debconf', welchen Sie
+mittels `dpkg-reconfigure debconf` erreichen.
+
+.Konfiguration des Pakets 'debconf'
+image::werkzeuge/paketoperationen/pakete-konfigurieren/debconf.png[id="fig.debconf", width="50%"]
+
+Mit dem Aufruf `dpkg-reconfigure` 'Paketname' konfigurieren Sie ein
+bereits installiertes Paket erneut. Wir zeigen Ihnen das anhand des
+Pakets 'tzdata' <<Debian-Paket-tzdata>>, welches die Einstellungen für
+die Zeitzone steuert.
+
+ToDo: Beispiel
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-konfigurieren/dpkg-reconfigure.adoc
 
