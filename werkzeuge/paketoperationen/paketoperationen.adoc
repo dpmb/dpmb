@@ -95,7 +95,7 @@ include::pakete-installieren.adoc[]
 
 include::pakete-erneut-installieren.adoc[]
 
-include::pakete-konfigurieren.adoc[]
+include::pakete-konfigurieren/pakete-konfigurieren.adoc[]
 
 include::pakete-aktualisieren.adoc[]
 

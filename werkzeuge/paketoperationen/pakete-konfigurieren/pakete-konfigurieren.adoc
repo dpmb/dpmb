@@ -27,26 +27,7 @@ include::konfiguration-fuer-alle-pakete-auslesen.adoc[]
 // Bestehende Konfiguration anwenden
 include::bestehende-konfiguration-anwenden.adoc[]
 
-[[dpkg-reconfigure]]
-==== Konfiguration mit `dpkg-reconfigure` erneut durchführen ====
-
-// Stichworte für den Index
-(((debconf)))
-(((debconf-get-selections)))
-(((Debianpaket, debconf)))
-(((Debianpaket, debconf-utils)))
-(((Debianpaket, dpkg)))
-(((dpkg-reconfigure)))
-(((Konfigurationsdatei, /var/cache/debconf)))
-(((Paket, erneut konfigurieren)))
-
-* Aufruf: `dpkg-reconfigure Paket`
-* konfiguriert ein bereits installiertes Paket erneut
-* verwendet wird dazu `debconf`, welches eine Datenbank mit den
-Konfigurationseinträgen der Pakete unter `/var/cache/debconf` speichert
-
-* Beispiel:
-** locale-Einstellungen (Sprache, Lokalisierung, Zeichensatz)
-** Einstellung für die Zeitzone (Paket 'tzdata' <<Debian-Paket-tzdata>>)
+// Konfiguration mit `dpkg-reconfigure` erneut durchführen
+include::dpkg-reconfigure.adoc[]
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-konfigurieren/pakete-konfigurieren.adoc
