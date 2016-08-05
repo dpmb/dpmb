@@ -18,89 +18,11 @@ Spiegelserver. Dafür zeichnet der Paketmaintainer verantwortlich. Mit
 verschiedenen Werkzeugen zeigen Sie diese Konfiguration an oder
 justieren das Paket neu.
 
-==== Bestehende Konfiguration eines Pakets anzeigen ====
+// Bestehende Konfiguration eines Pakets anzeigen
+include::bestehende-konfiguration-eines-pakets-anzeigen.adoc[]
 
-// Stichworte für den Index
-(((debconf-show)))
-(((Debianpaket, dpkg)))
-(((Debianpaket, tzdata)))
-(((Paket, die bestehende Konfiguration anzeigen)))
-Die bestehende Konfiguration eines Paketes zeigen Sie mit Hilfe des
-Kommandos `debconf-show` 'Paketname' an. `debconf-show` ist Bestandteil
-des Pakets 'dpkg' <<Debian-Paket-dpkg>> und somit ein essentieller Teil
-ihrer Installation. Für das Paket 'tzdata' <<Debian-Paket-tzdata>> sieht
-das Ergebnis wie folgt aus, sofern Sie auf ihrem System als Zeitzone
-``Europa/Berlin'' eingestellt haben:
-
-.Ausgabe der Konfiguration eines Pakets -- hier 'tzdata'
-----
-# debconf-show tzdata
-  tzdata/Zones/Pacific:
-  tzdata/Zones/Arctic:
-  tzdata/Zones/Africa:
-  tzdata/Zones/Asia:
-  tzdata/Zones/US:
-* tzdata/Zones/Etc: UTC
-  tzdata/Zones/Australia:
-* tzdata/Zones/Europe: Berlin
-* tzdata/Areas: Europe
-  tzdata/Zones/Antarctica:
-  tzdata/Zones/SystemV:
-  tzdata/Zones/Atlantic:
-  tzdata/Zones/Indian:
-  tzdata/Zones/America:
-#
-----
-
-In obiger Ausgabe erscheint vor jeder Zeile ein `*` für die Fragen zur
-Konfiguration, die Ihnen als Benutzer bereits gestellt wurden. Das kommt
-beispielsweise dann vor, wenn Sie Debian auf ihrem System einrichten --
-das Paket 'tzdata' ist essentieller Bestandteil des
-Installationsprozesses.
-
-==== Konfiguration für alle Pakete auslesen ====
-
-// Stichworte für den Index
-(((debconf-get-selections)))
-(((debconf-set-selections)))
-(((Debianpaket, debconf-utils)))
-
-Die Konfiguration für alle Pakete ist in der Debconf-Datenbank
-gespeichert. Um diese Konfiguration auszulesen, bedienen Sie sich des
-Kommandos `debconf-get-selections` aus dem Paket 'debconf-utils'
-<<Debian-Paket-debconf-utils>>. Dieses Paket gehört nicht zur
-Basisinstallation und ist daher ggf. noch von Ihnen nachzuinstallieren.
-
-Die Ausgabe des Programms erfolgt zeilenweise auf dem
-Standardausgabekanal (`stdout`). Sie erhalten zunächst eine
-Kommentarzeile, die jeweils mit einem `#` eingeleitet wird. Darauf folgt
-die Konfigurationsvariable und der Wert, der für die entsprechende
-Variable derzeit hinterlegt ist. Da die Debconf-Datenbank eine hohe
-Anzahl Variablen speichert, macht Ihnen ein Pager wie `less` die
-seitenweise Betrachtung leichter (siehe nachfolgendes Beispiel).
-
-.Gespeicherte Konfiguration in der Debconf-Datenbank 
-----
-# debconf-get-selections | less
-# Standardwortliste des Systems:
-# Choices: american (American English), deutsch (New German), Manuelle Einrichtu
-ng von symbolischen Verweisen
-dictionaries-common     dictionaries-common/default-wordlist    select  deutsch 
-(New German)
-# Jetzt die Umstellung auf GRUB 2 abschließen?
-grub-pc grub-pc/mixed_legacy_and_grub2  boolean true
-...
-#
-----
-
-Das Gegenstück zu `debconf-get-selections` ist `debconf-set-selections`
-(Paket 'debconf-utils' <<Debian-Paket-debconf-utils>>). Dieses Werkzeug
-kann die Ausgabe von `debconf-get-selections` direkt verarbeiten und
-dient Ihnen bspw. zum Einspielen einer vorab gesicherten
-Paketkonfiguration auf dem gleichen oder einem anderen System.
-Ausführlicher besprechen wir diesen speziellen Anwendungsfall im
-Praxisteil unter ``Paketkonfiguration sichern'' in
-<<paketkonfiguration-sichern>>.
+// Konfiguration für alle Pakete auslesen
+include::konfiguration-fuer-alle-pakete-auslesen.adoc[]
 
 ==== Bestehende Konfiguration anwenden ====
 

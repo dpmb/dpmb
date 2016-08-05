@@ -1,0 +1,50 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-konfigurieren/konfiguration-fuer-alle-pakete-auslesen.adoc
+
+// Baustelle: Rohtext
+
+==== Konfiguration für alle Pakete auslesen ====
+
+// Stichworte für den Index
+(((debconf-get-selections)))
+(((debconf-set-selections)))
+(((Debianpaket, debconf-utils)))
+
+Die Konfiguration für alle Pakete ist in der Debconf-Datenbank
+gespeichert. Um diese Konfiguration auszulesen, bedienen Sie sich des
+Kommandos `debconf-get-selections` aus dem Paket 'debconf-utils'
+<<Debian-Paket-debconf-utils>>. Dieses Paket gehört nicht zur
+Basisinstallation und ist daher ggf. noch von Ihnen nachzuinstallieren.
+
+Die Ausgabe des Programms erfolgt zeilenweise auf dem
+Standardausgabekanal (`stdout`). Sie erhalten zunächst eine
+Kommentarzeile, die jeweils mit einem `#` eingeleitet wird. Darauf folgt
+die Konfigurationsvariable und der Wert, der für die entsprechende
+Variable derzeit hinterlegt ist. Da die Debconf-Datenbank eine hohe
+Anzahl Variablen speichert, macht Ihnen ein Pager wie `less` die
+seitenweise Betrachtung leichter (siehe nachfolgendes Beispiel).
+
+.Gespeicherte Konfiguration in der Debconf-Datenbank 
+----
+# debconf-get-selections | less
+# Standardwortliste des Systems:
+# Choices: american (American English), deutsch (New German), Manuelle Einrichtu
+ng von symbolischen Verweisen
+dictionaries-common     dictionaries-common/default-wordlist    select  deutsch 
+(New German)
+# Jetzt die Umstellung auf GRUB 2 abschließen?
+grub-pc grub-pc/mixed_legacy_and_grub2  boolean true
+...
+#
+----
+
+Das Gegenstück zu `debconf-get-selections` ist `debconf-set-selections`
+(Paket 'debconf-utils' <<Debian-Paket-debconf-utils>>). Dieses Werkzeug
+kann die Ausgabe von `debconf-get-selections` direkt verarbeiten und
+dient Ihnen bspw. zum Einspielen einer vorab gesicherten
+Paketkonfiguration auf dem gleichen oder einem anderen System.
+Ausführlicher besprechen wir diesen speziellen Anwendungsfall im
+Praxisteil unter ``Paketkonfiguration sichern'' in
+<<paketkonfiguration-sichern>>.
+
+
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-konfigurieren/konfiguration-fuer-alle-pakete-auslesen.adoc
