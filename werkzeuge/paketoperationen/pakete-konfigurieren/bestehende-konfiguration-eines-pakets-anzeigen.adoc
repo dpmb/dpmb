@@ -1,0 +1,47 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-konfigurieren/bestehende-konfiguration-eines-pakets-anzeigen.adoc
+
+// Baustelle: Rohtext
+
+==== Bestehende Konfiguration eines Pakets anzeigen ====
+
+// Stichworte für den Index
+(((debconf-show)))
+(((Debianpaket, dpkg)))
+(((Debianpaket, tzdata)))
+(((Paket, bestehende Konfiguration anzeigen)))
+Die bestehende Konfiguration eines Paketes zeigen Sie mit Hilfe des
+Kommandos `debconf-show` 'Paketname' an. `debconf-show` ist Bestandteil
+des Pakets 'dpkg' <<Debian-Paket-dpkg>> und somit ein essentieller Teil
+ihrer Installation. Für das Paket 'tzdata' <<Debian-Paket-tzdata>> sieht
+das Ergebnis wie folgt aus, sofern Sie auf ihrem System als Zeitzone
+``Europa/Berlin'' eingestellt haben:
+
+.Ausgabe der Konfiguration eines Pakets -- hier 'tzdata'
+----
+# debconf-show tzdata
+  tzdata/Zones/Pacific:
+  tzdata/Zones/Arctic:
+  tzdata/Zones/Africa:
+  tzdata/Zones/Asia:
+  tzdata/Zones/US:
+* tzdata/Zones/Etc: UTC
+  tzdata/Zones/Australia:
+* tzdata/Zones/Europe: Berlin
+* tzdata/Areas: Europe
+  tzdata/Zones/Antarctica:
+  tzdata/Zones/SystemV:
+  tzdata/Zones/Atlantic:
+  tzdata/Zones/Indian:
+  tzdata/Zones/America:
+#
+----
+
+In obiger Ausgabe erscheint vor jeder Zeile ein `*` für die Frage zur
+Konfiguration, die Ihnen als Benutzer bereits bei der Einrichtung des
+Pakets gestellt wurde. Das kommt beispielsweise dann vor, wenn Sie
+Debian auf ihrem System installieren -- das Paket 'tzdata' ist ein
+grundlegender Bestandteil des Installationsprozesses. Es legt die
+verwendete Zeitzone ihres Systems fest ('tzdata' kürzt 'time zone data'
+ab).
+
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-konfigurieren/bestehende-konfiguration-eines-pakets-anzeigen.adoc

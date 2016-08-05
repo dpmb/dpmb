@@ -1,0 +1,245 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-konfigurieren/pakete-konfigurieren.adoc
+
+// Baustelle: Rohtext
+
+[[pakete-konfigurieren]]
+
+=== Pakete konfigurieren ===
+
+// Stichworte für den Index
+(((Paket, erneut konfigurieren)))
+(((Paket, Konfiguration ändern)))
+(((Paket, bestehende Konfiguration anzeigen)))
+(((Paket, konfigurieren)))
+
+Im Normalfall liegen die Debianpakete entweder bereits fertig
+konfiguriert oder mit einer vorbereiteten Konfiguration auf dem
+Spiegelserver. Dafür zeichnet der Paketmaintainer verantwortlich. Mit
+verschiedenen Werkzeugen zeigen Sie diese Konfiguration an oder
+justieren das Paket neu.
+
+==== Bestehende Konfiguration eines Pakets anzeigen ====
+
+// Stichworte für den Index
+(((debconf-show)))
+(((Debianpaket, dpkg)))
+(((Debianpaket, tzdata)))
+(((Paket, die bestehende Konfiguration anzeigen)))
+Die bestehende Konfiguration eines Paketes zeigen Sie mit Hilfe des
+Kommandos `debconf-show` 'Paketname' an. `debconf-show` ist Bestandteil
+des Pakets 'dpkg' <<Debian-Paket-dpkg>> und somit ein essentieller Teil
+ihrer Installation. Für das Paket 'tzdata' <<Debian-Paket-tzdata>> sieht
+das Ergebnis wie folgt aus, sofern Sie auf ihrem System als Zeitzone
+``Europa/Berlin'' eingestellt haben:
+
+.Ausgabe der Konfiguration eines Pakets -- hier 'tzdata'
+----
+# debconf-show tzdata
+  tzdata/Zones/Pacific:
+  tzdata/Zones/Arctic:
+  tzdata/Zones/Africa:
+  tzdata/Zones/Asia:
+  tzdata/Zones/US:
+* tzdata/Zones/Etc: UTC
+  tzdata/Zones/Australia:
+* tzdata/Zones/Europe: Berlin
+* tzdata/Areas: Europe
+  tzdata/Zones/Antarctica:
+  tzdata/Zones/SystemV:
+  tzdata/Zones/Atlantic:
+  tzdata/Zones/Indian:
+  tzdata/Zones/America:
+#
+----
+
+In obiger Ausgabe erscheint vor jeder Zeile ein `*` für die Fragen zur
+Konfiguration, die Ihnen als Benutzer bereits gestellt wurden. Das kommt
+beispielsweise dann vor, wenn Sie Debian auf ihrem System einrichten --
+das Paket 'tzdata' ist essentieller Bestandteil des
+Installationsprozesses.
+
+==== Konfiguration für alle Pakete auslesen ====
+
+// Stichworte für den Index
+(((debconf-get-selections)))
+(((debconf-set-selections)))
+(((Debianpaket, debconf-utils)))
+
+Die Konfiguration für alle Pakete ist in der Debconf-Datenbank
+gespeichert. Um diese Konfiguration auszulesen, bedienen Sie sich des
+Kommandos `debconf-get-selections` aus dem Paket 'debconf-utils'
+<<Debian-Paket-debconf-utils>>. Dieses Paket gehört nicht zur
+Basisinstallation und ist daher ggf. noch von Ihnen nachzuinstallieren.
+
+Die Ausgabe des Programms erfolgt zeilenweise auf dem
+Standardausgabekanal (`stdout`). Sie erhalten zunächst eine
+Kommentarzeile, die jeweils mit einem `#` eingeleitet wird. Darauf folgt
+die Konfigurationsvariable und der Wert, der für die entsprechende
+Variable derzeit hinterlegt ist. Da die Debconf-Datenbank eine hohe
+Anzahl Variablen speichert, macht Ihnen ein Pager wie `less` die
+seitenweise Betrachtung leichter (siehe nachfolgendes Beispiel).
+
+.Gespeicherte Konfiguration in der Debconf-Datenbank 
+----
+# debconf-get-selections | less
+# Standardwortliste des Systems:
+# Choices: american (American English), deutsch (New German), Manuelle Einrichtu
+ng von symbolischen Verweisen
+dictionaries-common     dictionaries-common/default-wordlist    select  deutsch 
+(New German)
+# Jetzt die Umstellung auf GRUB 2 abschließen?
+grub-pc grub-pc/mixed_legacy_and_grub2  boolean true
+...
+#
+----
+
+Das Gegenstück zu `debconf-get-selections` ist `debconf-set-selections`
+(Paket 'debconf-utils' <<Debian-Paket-debconf-utils>>). Dieses Werkzeug
+kann die Ausgabe von `debconf-get-selections` direkt verarbeiten und
+dient Ihnen bspw. zum Einspielen einer vorab gesicherten
+Paketkonfiguration auf dem gleichen oder einem anderen System.
+Ausführlicher besprechen wir diesen speziellen Anwendungsfall im
+Praxisteil unter ``Paketkonfiguration sichern'' in
+<<paketkonfiguration-sichern>>.
+
+==== Bestehende Konfiguration anwenden ====
+
+// Stichworte für den Index
+(((Paket, die bestehende Konfiguration verwenden)))
+Die Basiseinstellungen eines Pakets funktionieren im Allgemeinen recht
+gut, haben aber nicht immer einen Bezug zu ihrem konkreten Einsatzfall.
+Dieser lässt sich selten vollständig vorhersehen. Daher folgt im Rahmen
+der Paketinstallation ein individuelles Feintuning seitens des
+Administrators  im Rahmen der Voreinstellungen für alle Benutzer oder
+durch Sie als Benutzer selbst, indem Sie individuelle, lokale
+Korrekturen vornehmen.
+
+Das Anwenden der vorbereiteten Konfiguration umfasst mehrere Schritte --
+bspw. das Festlegen von Zugangsdaten (administratives Passwort von
+MySQL) oder das Starten von benötigten Diensten, bspw. Exim als Mail
+Transfer Agent (MTA). Stellt `dpkg` dabei fest, dass zwischen der
+mitgelieferten Konfiguration des neuen Pakets und der bereits
+bestehenden Konfiguration Unterschiede vorliegen, werden Sie durch das
+Programm gefragt, welche der beiden Einstellungen zukünftig genutzt
+werden soll. Das ist sinnvoll und berücksichtigt insbesondere den Fall,
+dass das Paket bereits bisher auf ihrem System installiert war und von
+Ihnen händisch auf ihre individuellen Gegebenheiten angepasst wurde. Als
+Möglichkeiten werden Ihnen hier angeboten:
+
+* die mitgelieferte Konfiguration des neuen Pakets zu benutzen
+* die bestehende Konfiguration des installierten Pakets beibehalten
+* sich die Unterschiede zwischen beiden anzeigen zu lassen und
+* eine Shell zur individuellen Problembehebung zu öffnen.
+
+Bei letzterem bietet sich Ihnen damit die Möglichkeit, bspw. eine
+Sicherheitskopie der bestehenden Konfiguration anzulegen, bevor Sie
+diese verändern. Sollte diese neue Konfiguration nicht ihren Erwartungen
+oder Bedürfnissen entsprechen, können Sie somit jederzeit auf die
+Sicherheitskopie zurückgreifen. Bei diesem Vorgehen haben Sie als
+Administrator die Möglichkeit zu sehen, dass überhaupt Unterschiede
+bestehen und welche Unterschiede das konkret sind. Sie können Ihre
+derzeitige Konfiguration beibehalten sowie im Zweifelsfall die
+Konfiguration auf neue (Standard)Werte zurückzusetzen.
+
+In seltenen Fällen geht dieser Prozess schief, d.h. das Paket wurde zwar
+entpackt, aber nicht konfiguriert. Hintergrund können nicht sauber
+aufgelöste Paketabhängigkeiten sein, aber auch Fehler im Paket selbst.
+Ist ein benötigtes Paket nicht konfiguriert und be- bzw. verhindert
+damit die Installation und Einrichtung weiterer, davon abhängiger
+Pakete, teilt Ihnen `dpkg` das wie folgt mit:
+
+.Fehler in der Konfiguration am Beispiel des Pakets 'mysql-server'
+----
+...
+mysql-server hängt ab von mysql-server-5.5; aber:
+  Paket mysql-server-5.5 ist noch nicht konfiguriert.
+dpkg: Fehler beim Bearbeiten von mysql-server (--configure):
+ Abhängigkeitsprobleme - verbleibt unkonfiguriert
+...
+Richte docbook-xml ein (4.5-5) ...
+update-xmlcatalog: error: entity already registered
+dpkg: Fehler beim Bearbeiten von docbook-xml (--configure):
+Unterprozess post-installation script gab den Fehlerwert 1 zurück
+dpkg: Abhängigkeitsprobleme verhindern Konfiguration von scrollkeeper:
+scrollkeeper hängt ab von docbook-xml (>= 4.2-11); aber:
+Paket docbook-xml ist noch nicht konfiguriert.
+dpkg: Fehler beim Bearbeiten von scrollkeeper (--configure):
+ Abhängigkeitsprobleme - lasse es unkonfiguriert
+...
+----
+
+// Stichworte für den Index
+(((Debianpaket, dpkg)))
+(((dpkg, --audit)))
+(((dpkg, -C)))
+Hilfreich ist es in diesem Fall, dass Sie zunächst analysieren, welche
+Pakete unvollständig installiert sind. Dabei hilft Ihnen der Aufruf
+`dpkg -C`, wobei `dpkg` für letzteres auch die Langform `--audit` kennt.
+
+.Auflistung der unvollständig installierten Pakete mittels `dpkg`
+----
+# dpkg --audit
+Für die folgenden Pakete fehlt die MD5-Prüfsummen-Datei in der Datenbank,
+sie müssen erneut installiert werden:
+ slib                 Portable Scheme library
+ vifm                 a ncurses based file manager with vi like keybindings
+#
+----
+
+// Stichworte für den Index
+(((Debianpaket, dpkg)))
+(((dpkg, -a)))
+(((dpkg, --configure)))
+(((dpkg, --pending)))
+(((Maintainer-Skripte, postinst)))
+Als nächsten Schritt schieben Sie die Konfiguration des Pakets an. Für
+ein einzelnes Paket gelingt Ihnen das mit dem Aufruf `dpkg --configure`
+'Paketname' und für mehrere Pakete mit `dpkg -a` (Langform `--pending`).
+Im letztgenannten Fall arbeitet `dpkg` die Liste der unkonfigurierten
+Pakete nacheinander ab. Die konkrete Reihenfolge der Abarbeitung legt
+`dpkg` eigenständig fest.
+
+Die Konfiguration eines Pakets geschieht in den folgenden Schritten:
+
+. Die Konfigurationsdateien (``Conffiles'') des Pakets werden entpackt.
+
+. Die bereits bestehenden Konfigurationsdateien (``Conffiles'') für das
+  Paket werden gespeichert. Falls dabei etwas schief geht, können diese
+  wiederhergestellt werden.
+
+. Stellt das Paket ein Maintainer-Skript namens `postinst` bereit, wird
+  dieses abgearbeitet.
+
+// Stichworte für den Index
+(((Debianpaket, dpkg)))
+(((dpkg-reconfigure)))
+(((Paket, erneut konfigurieren)))
+Möchten Sie zu einem späteren Zeitpunkt die Einstellungen zu dem nun
+installierten und konfigurierten Paket erneut anpassen, benutzen Sie
+stattdessen das Werkzeug `dpkg-reconfigure`. Damit durchlaufen Sie die
+Prozedur erneut. Ausführlicher gehen wir dazu in <<dpkg-reconfigure>>
+ein.
+
+[[dpkg-reconfigure]]
+==== Konfiguration mit `dpkg-reconfigure` erneut durchführen ====
+
+// Stichworte für den Index
+(((debconf)))
+(((debconf-get-selections)))
+(((Debianpaket, debconf)))
+(((Debianpaket, debconf-utils)))
+(((Debianpaket, dpkg)))
+(((dpkg-reconfigure)))
+(((Konfigurationsdatei, /var/cache/debconf)))
+(((Paket, erneut konfigurieren)))
+
+* Aufruf: `dpkg-reconfigure Paket`
+* konfiguriert ein bereits installiertes Paket erneut
+* verwendet wird dazu `debconf`, welches eine Datenbank mit den
+Konfigurationseinträgen der Pakete unter `/var/cache/debconf` speichert
+
+* Beispiel:
+** locale-Einstellungen (Sprache, Lokalisierung, Zeichensatz)
+** Einstellung für die Zeitzone (Paket 'tzdata' <<Debian-Paket-tzdata>>)
+
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-konfigurieren/pakete-konfigurieren.adoc
