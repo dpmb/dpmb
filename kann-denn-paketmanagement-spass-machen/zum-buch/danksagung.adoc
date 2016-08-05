@@ -42,6 +42,7 @@ Corporate Server, UCS)
 * Karsten Merker für viele kleine Korrekturen
 * Wolfram Schneider für den Hinweis zu `dh-make-perl` als spezialisierte
 Variante von `checkinstall` sowie zum Aktualisieren von LTS-Versionen (siehe <<umgang-mit-lts>>)
+* Jörg Brühe für die Anregungen zu den Paketabhängigkeiten
 
 Nicht zu vergessen sind die Probeleser, die sich durch unser Manuskript
 gekämpft haben: Arne Wichmann, Thomas Winde, Jana Pirat, Jörg Dölz,
