@@ -75,6 +75,7 @@ Current default time zone: 'Europe/Berlin'
 Local time is now:      Sat Aug  6 00:46:08 CEST 2016.
 Universal Time is now:  Fri Aug  5 22:46:08 UTC 2016.
 
+#
 ----
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-konfigurieren/dpkg-reconfigure.adoc
