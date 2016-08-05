@@ -428,8 +428,8 @@ $
 ====
 Die ersten beiden Zeichen in der Zeile mit den Paketdetails haben
 eine besondere Bedeutung und geben den Status des Pakets an. Unter
-Paketstatus erfragen in <<paketstatus-erfragen>> stellen wir Ihnen alle
-weiteren Varianten und deren Bedeutung vor.
+``Paketstatus erfragen'' in <<paketstatus-erfragen>> stellen wir Ihnen
+alle weiteren Varianten und deren Bedeutung vor.
 ====
 
 // Stichworte für den Index
