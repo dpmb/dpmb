@@ -34,6 +34,26 @@ mittels `dpkg-reconfigure debconf` erreichen.
 .Konfiguration des Pakets 'debconf'
 image::werkzeuge/paketoperationen/pakete-konfigurieren/debconf.png[id="fig.debconf", width="50%"]
 
+`--default-priority`::
+verwendet 'low' als Schwellwert für die Fragen, die Ihnen für die
+Konfiguration des Pakets gestellt werden
+
+`--force`::
+erzwingt eine Konfiguration des Pakets, selbst wenn sich dieses in einem
+inkonsistenten oder defekten Zustand befindet
+
+`--no-reload`::
+verhindert das erneute Laden der Vorlagen. Nützlich insbesondere dann,
+wenn die Vorlage defekt ist
+
+`-p` (Langform `--priority`)::
+setzt den Schwellwert für die Fragen, die Ihnen für die Konfiguration
+des Pakets gestellt werden
+
+`-u` (Langform `--unseen-only`)::
+zeigt Ihnen die Fragen an, die ihnen noch nicht zur Konfiguration des
+Pakets gestellt wurden
+
 Mit dem Aufruf `dpkg-reconfigure` 'Paketname' konfigurieren Sie ein
 bereits installiertes Paket erneut. Wir zeigen Ihnen das anhand des
 Pakets 'tzdata' <<Debian-Paket-tzdata>>, welches die Einstellungen für
