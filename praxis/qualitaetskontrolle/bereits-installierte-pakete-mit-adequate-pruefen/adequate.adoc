@@ -16,29 +16,47 @@ System installiert sind. `adequate` steht Ihnen ab Debian 8 'Jessie'
 oder über die 'Debian Backports' für Debian 7 'Wheezy' bereit.
 
 // Stichworte für den Index
+(((adequate, --all)))
 (((adequate, Paketname)))
+(((adequate, --tags broken-symlink)))
+(((adequate, --tags missing-copyright-file)))
+(((adequate, --tags program-name-collision)))
 
 Zur Paketanalyse versteht es die folgenden Schalter (Auswahl):
 
 'Paketname'::
 Überprüfung des von Ihnen angegebenen Debianpakets.
 
-// Stichworte für den Index
-(((adequate, --all)))
-
 `--all`::
 Überprüfung aller Pakete, die auf ihrem Debian-System derzeit
 installiert sind.
 
-// Stichworte für den Index
-(((adequate, --tags broken-symlink)))
-(((adequate, --tags missing-copyright-file)))
-(((adequate, --tags program-name-collision)))
-
-`--tags` 'Tag1' '-Tag2'::
+`--tags` 'Tag1','Tag2'::
 Beschränkung der Ausgabe auf die angegebenen Fehlerwerte zu 'Tag1' und
-ohne 'Tag2'. Als Tag sind bspw. 'broken-symlink',
-'missing-copyright-file' und 'program-name-collision' zulässig.
+'Tag2'. Alle angegebenen Tags trennen Sie durch Komma in einer Liste.
+
+`--tags` '-Tag1','Tag2'::
+Beschränkung der Ausgabe auf die angegebenen Fehlerwerte *ohne* 'Tag1'
+und 'Tag2'. Alle angegebenen Tags trennen Sie durch Komma in einer
+Liste. 
+
+Als Tags sind zulässig:
+
+* 'bin-or-sbin-binary-requires-usr-lib-library'
+* 'broken-binfmt-detector'
+* 'broken-binfmt-interpreter'
+* 'broken-symlink'
+* 'incompatible-licenses'
+* 'library-not-found'
+* 'missing-alternative'
+* 'missing-copyright-file'
+* 'missing-symbol-version-information'
+* 'obsolete-conffile'
+* 'program-name-collision'
+* 'py-file-not-bytecompiled'
+* 'pyshared-file-not-bytecompiled'
+* 'symbol-size-mismatch'
+* 'undefined-symbol'
 
 Weitere Schalter und die vollständige Liste der Tags entnehmen Sie bitte
 der Manpage zum Programm.
