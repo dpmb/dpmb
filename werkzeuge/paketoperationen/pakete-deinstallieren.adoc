@@ -70,7 +70,7 @@ Software noch benötigt werden, nicht gelöscht werden – die andere
 installierte Software soll ja trotzdem weiterhin funktionieren. Bei
 systemrelevanten Werkzeugen in essentiellen Paketen erhalten Sie daher
 eine zusätzliche, deutliche Warnung (siehe nachfolgendes Beispiel sowie
-Paketprioritäten und essentielle Pakete in
+``Paketprioritäten und essentielle Pakete'' in
 <<paket-prioritaet-und-essentielle-pakete>>).
 
 .Ausgabe einer deutlichen Warnung vor dem Löschen des essentiellen Pakets 'base-files'
