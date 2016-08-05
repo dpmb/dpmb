@@ -116,7 +116,7 @@ neue Distribution an. Wechseln Sie bspw. von Debian 7 _Wheezy_ auf
 Debian 8 _Jessie_, ändern Sie alle Vorkommen von `wheezy` auf `jessie`.
 
 . Bringen Sie die Paketliste mittels `apt-get update` auf den neuesten
-Stand (siehe Paketliste aktualisieren unter
+Stand (siehe ``Paketliste aktualisieren'' unter
 <<liste-der-verfuegbaren-pakete-aktualisieren>>).
 
 . Aktualisieren Sie die Distribution mittels `apt-get dist-upgrade`.
