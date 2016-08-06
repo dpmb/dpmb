@@ -51,18 +51,18 @@ $
 (((dpigs, -S)))
 `dpigs` verfügt nur über einige wenige, aber durchaus nützliche
 Schalter. Um beispielsweise die Anzahl der ausgegebenen Pakete zu
-begrenzen, nutzen Sie die Option `-n` (Langform `--lines=N`), wobei `n`
-bzw. `N` ein Zahlenwert für die gewünschte Anzahl ist. Der Schalter `-S`
+begrenzen, nutzen Sie die Option `-nZahl` (Langform `--lines=Zahl`),
+wobei `Zahl` der Wert für die gewünschte Anzahl ist. Der Schalter `-S`
 zeigt die Pakete an, die hingegen die größten Quelldaten haben. Mit dem
 Schalter `-H` rechnet `dpigs` die Größenangaben in menschlich lesbare
 Werte um. Der Schalter `-H` steht hierbei als Abkürzung für 'human
-readable'. Kombinieren Sie die drei genannten Schalter, sieht die
-Recherche nach den fünf großen Paketen auf einem Desktopsystem in etwa
+readable'. Kombinieren Sie die drei letztgenannten Schalter, sieht die
+Recherche nach den fünf Paketen, die am meisten Quellcode benötigen,
 folgendermaßen aus:
 
-.Ausgabe von `dpigs` mit Einschränkung auf die fünf Spitzenreiter in menschenlesbarer Form
+.Ausgabe von `dpigs` mit Einschränkung auf die fünf Spitzenreiter für den Quelltext
 ----
-$ dpigs -S --lines=5 -H
+$ dpigs -S -n5 -H
    1.0G texlive-extra
  299.7M libreoffice
  274.7M texlive-base
