@@ -108,7 +108,7 @@ u.a. mit Maemo und damit ebenfalls mit dem `deb`-Paketformat laufen.
 (((Hurd)))
 (((Nexenta OS)))
 Auch mit Nicht-Linux-Kerneln wird das Paketformat eingesetzt. Einerseits gibt
-es Debian offiziell auch mit BSD- und GNU-Hurd-Kernel in Form von Debian
+es Debian im Rahmen der Debian Ports auch mit BSD- und GNU-Hurd-Kernel in Form von Debian
 GNU/kFreeBSD <<Debian-Wiki-Debian-GNUkFreeBSD>> und Debian GNU/Hurd
 <<Debian-Wiki-Debian-GNUHurd>>. Andererseits gibt es außerhalb des
 Debian-Projektes Portierungen auf den OpenSolaris bzw. Illumos-Kernel,
