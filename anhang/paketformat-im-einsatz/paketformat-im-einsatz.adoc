@@ -107,16 +107,17 @@ u.a. mit Maemo und damit ebenfalls mit dem `deb`-Paketformat laufen.
 (((Fink)))
 (((Hurd)))
 (((Nexenta OS)))
-Auch mit Nicht-Linux-Kerneln wird das Paketformat eingesetzt. Einerseits gibt
-es Debian im Rahmen der Debian Ports auch mit BSD- und GNU-Hurd-Kernel in Form von Debian
-GNU/kFreeBSD <<Debian-Wiki-Debian-GNUkFreeBSD>> und Debian GNU/Hurd
+Auch mit Nicht-Linux-Kerneln wird das Paketformat
+eingesetzt. Einerseits gibt es Debian im Rahmen der Debian Ports auch
+mit BSD- und GNU-Hurd-Kernel in Form von Debian GNU/kFreeBSD
+<<Debian-Wiki-Debian-GNUkFreeBSD>> und Debian GNU/Hurd
 <<Debian-Wiki-Debian-GNUHurd>>. Auch von Ubuntu gibt es mittlerweile
-unter dem Namen UbuntuBSD <<UbuntuBSD>> eine Variante mit FreeBSD-Kernel.
-Andererseits gibt es außerhalb des
-Debian-Projektes Portierungen auf den OpenSolaris bzw. Illumos-Kernel,
-z.B. Nexenta OS <<NexentaOS>>, Illumian <<Illumian>> und Dyson OS
-<<DysonOS>>. Das mit Nexenta OS verwandte StormOS <<StormOS>> wurde
-allerdings bereits 2012 wieder eingestellt.
+unter dem Namen UbuntuBSD <<UbuntuBSD>> eine Variante mit
+FreeBSD-Kernel.  Andererseits gibt es außerhalb des Debian-Projektes
+Portierungen auf den OpenSolaris bzw. Illumos-Kernel, z.B. Nexenta OS
+<<NexentaOS>>, Illumian <<Illumian>> und Dyson OS <<DysonOS>>. Das mit
+Nexenta OS verwandte StormOS <<StormOS>> wurde allerdings bereits 2012
+wieder eingestellt.
 
 Unter Mac OS X existieren mit Fink <<Finkproject>> zusätzliche, freie
 Pakete. Diese können Sie über einen Jailbreak auch auf Ihrem iPhone,
