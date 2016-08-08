@@ -280,8 +280,8 @@ ein.
 | `dpkg-deb` | `dpkg-deb -f` 'Paketdatei' `Depends` | das Paket muß dazu lokal als Datei vorliegen
 | APT        | `apt-cache depends` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 |            | `apt-cache rdepends` 'Paketname' | Abhängigkeiten anzeigen
-| `apt-rdepends` | `apt-rdepends` 'Paketname' | Abhängigkeiten anzeigen
-|            | `apt-rdepends -r` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
+| `apt-rdepends` | `apt-rdepends -r` 'Paketname' | Abhängigkeiten anzeigen
+|            | `apt-rdepends` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 | `aptitude` | `aptitude search ~R` 'Paketname' | Abhängigkeiten anzeigen
 |            | `aptitude search ~D` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 | `grep-status` | `grep-status -F Package -s Depends` 'Paketname' | Abhängigkeiten anzeigen

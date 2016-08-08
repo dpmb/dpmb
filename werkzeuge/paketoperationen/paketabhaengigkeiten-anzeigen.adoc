@@ -281,11 +281,12 @@ $
 (((Debianpaket, graphviz)))
 (((Paketabhängigkeiten, graphisch darstellen)))
 Das Ergebnis von `apt-rdepends` wird vielleicht leichter verständlich,
-wenn Sie die Paketabhängigkeiten graphisch darstellen. Dabei hilft Ihnen
-das Programm `dotty` aus dem Paket 'graphviz' <<Graphviz>>. Für das
-Paket 'tcpdump' sieht der Aufruf wie folgt aus.
+wenn Sie die Paketabhängigkeiten graphisch darstellen. Bei der
+Veranschaulichung hilft Ihnen das Programm `dotty` aus dem Paket
+'graphviz' <<Graphviz>>. Für das Paket 'tcpdump' sieht der Aufruf wie
+folgt aus.
 
-.Erzeugung der Abhängigkeiten als Dot-Datei
+.Erzeugung der Abhängigkeiten als `dot`-Datei
 ----
 $ apt-rdepends -d tcpdump | dot > tcpdump.dot
 Reading package lists... Done
