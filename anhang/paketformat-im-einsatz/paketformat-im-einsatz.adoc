@@ -104,9 +104,15 @@ u.a. mit Maemo und damit ebenfalls mit dem `deb`-Paketformat laufen.
 
 // Stichworte für den Index
 (((BSD)))
+(((Debian GNU/kFreeBSD)))
+(((Debian GNU/Hurd)))
+(((Dyson OS)))
 (((Fink)))
 (((Hurd)))
+(((Illumian)))
 (((Nexenta OS)))
+(((StormOS)))
+(((UbuntuBSD)))
 Auch mit Nicht-Linux-Kerneln wird das Paketformat
 eingesetzt. Einerseits gibt es Debian im Rahmen der Debian Ports auch
 mit BSD- und GNU-Hurd-Kernel in Form von Debian GNU/kFreeBSD
