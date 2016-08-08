@@ -772,6 +772,8 @@
 
 - [[[Ubuntu]]] Ubuntu Linux, http://www.ubuntu.com/
 
+- [[[UbuntuBSD]]] UbuntuBSD, https://www.ubuntubsd.org/
+
 - [[[Ubuntu-apturl]]] AptURL im Ubuntu Apps Directory, https://apps.ubuntu.com/cat/applications/apturl/
 
 - [[[Ubuntu-Landscape]]] Ubuntu Landscape System Management, https://landscape.canonical.com/
