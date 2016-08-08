@@ -7,6 +7,7 @@
 === Embedded-Geräte ===
 
 // Stichworte für den Index
+(((Armbian)))
 (((Emdebian)))
 (((Raspbian)))
 
@@ -15,8 +16,15 @@
 // releases." emdebian-archive-keyring ist jedoch grade wieder frisch
 // nach Debian Unstable gekommen → Im Auge behalten.
 
-Emdebian:: Debian für Embedded Devices <<Emdebian>>
-Raspbian:: Debian speziell für den Raspberry Pi <<Raspbian>>
+Armbian:: 
+Debian für ARM-basierte Geräte, bspw. ein Cubieboard oder Cubietruck
+<<Armbian>>
+
+Emdebian:: 
+Debian für Embedded Devices <<Emdebian>>
+
+Raspbian:: 
+Debian speziell für den Raspberry Pi <<Raspbian>>
 
 === Bildung ===
 
