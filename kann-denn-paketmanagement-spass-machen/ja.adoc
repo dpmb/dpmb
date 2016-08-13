@@ -35,7 +35,7 @@ Module werden als _Pakete_ (_Packages_) bereitgestellt. Das setzt
 voraus, dass deren Bezug zueinander (_Relation_) klar geregelt ist; nur
 so kann ein Betriebssystem wie Debian GNU/Linux (siehe
 <<was-ist-debian>>) funktionieren und weiterentwickelt werden, an dem
-Hunderte Entwickler aus der ganzen Welt mitwirken und das inzwischen aus
+Hunderte von Entwicklern aus der ganzen Welt mitwirken und das inzwischen aus
 mehr als 40.000 Paketen besteht. Ohne ein leistungsfähiges
 Paketmanagement wäre dies unmöglich.
 
