@@ -10,14 +10,14 @@
 Eine Reihe von Menschen haben uns bei der Realisierung dieses Buches
 direkt oder indirekt unterstützt, sei es in Form von Anregungen, Kritik,
 Vorschlägen zur Ergänzung oder Fach- und Verständnisfragen. Diesen
-Menschen gebürt unser Dank:
+Menschen gebührt unser Dank:
 
 * Elmar Heeb (für `aptitude-robot` und viele interessante Diskussionen)
 * Dirk Deimeke (für Tipps zum Autor-Werden) <<Hackerfunk>>
 * Arne Wichmann (für das Diagramm der Vertrauenskette in Debian – unter GPL)
 * Annette Kalbow (für inhaltliche Vorschläge mit `apt-file`, `dpkg -l`
   und `dpkg -L` sowie die graphische Umsetzung der Landkarte)
-* Mechtilde Stehmann (für die Sprachkorrekuren und die Vorschläge für die FAQ)
+* Mechtilde Stehmann (für die Sprachkorrekturen und die Vorschläge für die FAQ)
 * Marco Uhl (für die Idee zum FAQ-Eintrag über 'Debian Snapshots' <<Debian-Snapshots>> bei Testing- vs. Produktiv-Umgebung)
 * Werner Heuser (für die Installation und den Umgang auf Embedded und Mobile Devices)
 * Claude Becker (für Ideen und Korrekturlesen rund um das Parsen von
