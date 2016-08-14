@@ -114,7 +114,7 @@ Bedienritual erfordern. Dazu gehören PackageSearch
 <<Debian-Paket-xara-gtk>>. Letzteres ist die X11-Version des bereits
 oben gezeigten Kommandozeilenwerkzeugs `ara`. Alle Programme bieten die
 Suche anhand der Debtags über die Paketdatenbank an und verfügen
-darüberhinaus auch über eine einfache Schnittstelle zur Paketverwaltung.
+darüber hinaus auch über eine einfache Schnittstelle zur Paketverwaltung.
 
 // Stichworte für den Index
 (((Debianpaket, goplay)))
