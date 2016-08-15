@@ -188,7 +188,7 @@ eines solchen Paketes sind:
   das Komprimierungswerkzeug `xz` zum Einsatz.
 
 - eine Datei mit den Metadaten (Größe, Hashsummen, etc.) über die
-  vorhergenannten Dateien. Genutzt wird die Dateindung `dsc` als
+  vorher genannten Dateien. Genutzt wird die Dateiendung `dsc` als
   Abkürzung für _Debian Source Control_.
 
 Alle diese genannten Dateien stellen in der Gesamtheit ein einzelnes

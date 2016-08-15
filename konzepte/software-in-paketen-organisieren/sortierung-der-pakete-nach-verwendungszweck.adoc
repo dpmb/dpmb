@@ -28,7 +28,7 @@ zusätzlich nach ihrem Distributionsbereich (siehe
 gruppiert. Der jeweilige Entwicklungszweig (siehe
 <<veroeffentlichungen>>) – bspw. _stable_, _unstable_ oder _testing_ –
 wird in dieser Darstellung nicht angezeigt, lässt sich aber bei Bedarf
-als weitere Ebene in der Anzeigehierachie konfigurieren.
+als weitere Ebene in der Anzeigehierarchie konfigurieren.
 
 .Auflistung der verschiedenen Paketkategorien in `aptitude`
 image::konzepte/software-in-paketen-organisieren/aptitude-paketbereiche.png[id="fig.aptitude-paketbereiche", width="50%"]
@@ -187,7 +187,7 @@ udeb-Pakete des Debian-Installers (_debian-installer_)::
 spezielle Pakete zur Verwendung im Debian-Installer, siehe <<mikro-binaerpakete>> ('archdetect', 'cdrom-detect')
 
 Verschiedenes (_misc_)::
-Diverses, was sonst nirgends hineinpaßt ('bochsbios', 'cpuburn', 'screen')
+Diverses, was sonst nirgends hineinpasst ('bochsbios', 'cpuburn', 'screen')
 
 Versionskontrollsysteme (_vcs_)::
 Versionskontrollsysteme und zugehörige Hilfswerkzeuge ('bzr', 'cvs', 'git')
