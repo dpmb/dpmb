@@ -31,7 +31,7 @@ Paketen die Paketnamen an, bei denen in der Beschreibung und im
 Paketnamen die Zeichenfolge `xpdf` enthalten ist. Durch den Schalter
 `-i` (Langform `--ignore-case`) erfolgt die Suche dabei unabhängig von
 der Groß- und Kleinschreibung. Das abschließende `sort`-Kommando sorgt
-darüberhinaus für eine Ausgabe in alphabetisch aufsteigender Abfolge.
+darüber hinaus für eine Ausgabe in alphabetisch aufsteigender Abfolge.
 
 .Verfügbare Pakete anzeigen, bei denen in der Beschreibung und im Paketnamen die Zeichenfolge `xpdf` enthalten ist
 ----

@@ -42,7 +42,7 @@ Entwicklungsstände:
 
 unstable:: 
 Hier findet die aktive Entwicklung von Debian statt. Neue Pakete und
-Versionen landen fast immer zuerst hier. Dieser Entwicklungzustand kann
+Versionen landen fast immer zuerst hier. Dieser Entwicklungszustand kann
 inkonsistent sein und beispielsweise unerfüllte Abhängigkeiten
 beinhalten. Er ist primär für Entwickler gedacht.
 

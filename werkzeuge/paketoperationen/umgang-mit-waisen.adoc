@@ -40,7 +40,7 @@ von weiteren Programmen, um Waisen aufzuspüren und auch zu entfernen.
 Für die Kommandozeile sind das `debfoster` (siehe <<debfoster>>) und
 `deborphan` (siehe <<deborphan>>). Auf Ncurses basieren Orphaner und
 Editkeep (siehe <<orphaner-und-editkeep>>) und auf GTK+ das Pendant
-Gtkorphan (siehe <<Gtkorphan>>). Darüberhinaus bieten die `aptsh` (siehe
+Gtkorphan (siehe <<Gtkorphan>>). Darüber hinaus bieten die `aptsh` (siehe
 <<aptsh-orphans>>) und `wajig` (<<wajig>>) entsprechende Möglichkeiten
 zur Suche, die wir Ihnen nicht ebenfalls vorenthalten möchten.
 
@@ -445,7 +445,7 @@ Eine zusätzliche Möglichkeit bietet die Kombination aus `apt-get` und
 `deborphan`. Die Angabe `$(deborphan)` bewirkt die Ausführung des
 Kommandos `deborphan` in einer Subshell und liefert als Rückgabewert
 alle Pakete, die Waisen sind. Indem Sie das als Parameter an APT
-übermitteln, sparen Sie einerseits Tipparbeit und können darüberhinaus
+übermitteln, sparen Sie einerseits Tipparbeit und können darüber hinaus
 auf die Rückfragen von APT reagieren.
 
 .Kombinieren von APT und `deborphan`
