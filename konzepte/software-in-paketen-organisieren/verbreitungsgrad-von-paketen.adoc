@@ -67,7 +67,7 @@ image::konzepte/software-in-paketen-organisieren/popcon-nginx.png[id="fig.popcon
 (((Popcon)))
 (((/var/lib/dpkg/info)))
 Neben der Architektur der Installation und welche Pakete installiert
-sind, erfasst Popcon anhand der Zeitstempel im Dateisystem ausserdem
+sind, erfasst Popcon anhand der Zeitstempel im Dateisystem außerdem
 noch folgende Daten für jedes installierte Paket:
 
 * Wann wurde das Paket zuletzt aktualisiert oder installiert? Dies

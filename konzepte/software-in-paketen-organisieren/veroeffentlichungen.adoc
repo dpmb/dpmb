@@ -272,7 +272,7 @@ umschreibt.
 
 _Experimental_ trägt – analog zu _unstable_ – immer den Alias-Namen
 _rc-buggy_, was im Debian-Jargon eine Kurzform für ``contains
-release-critcal bugs'' darstellt. Das läßt sich sinngemäß als ``in
+release-critcal bugs'' darstellt. Das lässt sich sinngemäß als ``in
 dieser Form ungeeignet zur Aufnahme in eine Veröffentlichung''
 übersetzen.
 
