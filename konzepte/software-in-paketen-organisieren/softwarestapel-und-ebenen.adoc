@@ -135,8 +135,9 @@ Bei `rpm`-basierten Distributionen RedHat, Fedora und CentOS heißen die
 Werkzeuge Yellowdog Updater, Modified (YUM) <<YUM>>, bei SuSE und
 openSUSE Zypper <<Zypper>> und Yet another Setup Tool (YaST). Mageia
 Linux und Rosa Linux nutzen hingegen `urpmi` <<Mageia-urpmi>>.
-`rpmdrake` <<rpmdrake>> ist das Pendant zu Synaptic und wird aufgrund
-der einfachen Benutzbarkeit häufig Einsteigern empfohlen.
+`rpmdrake` <<rpmdrake>> setzt auf `urpmi` auf und ist das Pendant zum
+graphischen Werkzeug Synaptic. Aufgrund der einfachen Benutzbarkeit wird
+es häufig Einsteigern empfohlen.
 
 ==== Werkzeuge, die verschiedene Paketformate unterstützen ====
 
