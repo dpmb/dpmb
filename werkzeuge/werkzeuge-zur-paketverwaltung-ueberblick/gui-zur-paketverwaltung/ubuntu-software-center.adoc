@@ -13,11 +13,11 @@
 Canonical bietet mit dem Ubuntu Software Center
 <<Ubuntu-Software-Center>> eine weitere graphische Verwaltung zur
 Auswahl und Pflege ihres Softwarebestands an. Dieses Paket wurde 2010
-auch in den Bestand von Debian als Paket 'software-center'
+auch in den Bestand von Debian als Paket namens 'software-center'
 <<Debian-Paket-software-center>> übernommen, aber bereits 2014 wieder
-aus Debian entfernt. Die Begründung ist, dass das Programm nicht mehr
+ausgelistet. Die Begründung ist, dass das Programm nicht mehr
 aktuell in Debian sei und auch bessere Alternativen existieren
-(<<RM-software-center>>).  Es ist daher in Debian 6 'Squeeze' und Debian
+<<RM-software-center>>. Es ist daher in Debian 6 'Squeeze' und Debian
 7 'Wheezy' enthalten, aber nicht mehr ab Debian 8 'Jessie'. Für Ubuntu
 steht es weiterhin stets in aktualisierter Form zur Verfügung
 <<Ubuntu-Paket-software-center>>.
