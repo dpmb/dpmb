@@ -144,10 +144,12 @@ es häufig Einsteigern empfohlen.
 // Stichworte für den Index
 (((Muon)))
 (((PackageKit)))
-(((smartpm)))
+(((SmartPM)))
+(((urpmi)))
+(((Yellowdog Updater Modified (YUM))))
 Darüber hinaus gibt es Programme, die mit mehreren unterschiedlichen
 Paketformaten umgehen können. Dazu zählen Muon (siehe <<gui-muon>>), der
-Smart Package Manager (SmartpM) (siehe <<gui-smartpm>>) und PackageKit
+Smart Package Manager (SmartPM) (siehe <<gui-smartpm>>) und PackageKit
 (siehe <<gui-packagekit>>). Muon und SmartPM können die Paketformate
 `deb`, `rpm` und `tar.gz` (Slackware) verarbeiten sowie die bereits oben
 genannten Verwaltungen APT, YUM und `urpmi` ansprechen. Weitere

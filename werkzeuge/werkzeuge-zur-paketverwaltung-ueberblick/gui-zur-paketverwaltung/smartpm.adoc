@@ -8,7 +8,7 @@
 
 // Stichworte für den Index
 (((Debianpaket, smartpm)))
-(((smartpm)))
+(((SmartPM)))
 Im Paket 'smartpm' <<Debian-Paket-smartpm>> verbirgt sich das
 gleichnamige Programm zur Paketverwaltung. Zunächst etwas unscheinbar,
 entpuppt es sich aber bei näherer Betrachtung als eine Art Alleskönner
