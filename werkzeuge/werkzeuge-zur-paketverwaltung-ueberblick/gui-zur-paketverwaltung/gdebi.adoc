@@ -114,13 +114,13 @@ handelt. Dies umfasst auch die Maintainer-Skripte.
 (((lintian)))
 Darüberhinaus zeigt Ihnen GDebi ab Version 0.9{empty}footnote:[Verfügbar
 ab Debian 8 'Jessie' und Ubuntu 14.04 LTS 'Trusty Tahr'] auch sämtliche
-Warnungen des Programms `lintian` (<<Debian-Paket-lintian>>) an, die von
+Warnungen des Programms `lintian` <<Debian-Paket-lintian>> an, die von
 dem ausgewählten Paket verursacht werden. Dies erlaubt Ihnen sowohl als
 Entwickler, als auch als normaler Benutzer, schnell einen groben
 Eindruck von der Qualität des Pakets zu bekommen, bevor Sie dieses auf
 ihrem Linux-System installieren und benutzen. Wie Sie mit dem
 referenzierten Programm `lintian` im Detail umgehen, lesen Sie unter
-Lintian in <<bugreports-lintian>>.
+``Nicht installierte Pakete mit lintian prüfen'' in <<bugreports-lintian>>.
 
 .`gdebi-gtk` mit den Informationen zum Paket 'zsh'
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/gdebi-new.png[id="fig.gdebi-new", width="50%"]
@@ -128,7 +128,7 @@ image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltun
 Ergibt sich bei der Veränderung des Paketbestands die Notwendigkeit,
 zusätzliche Paketabhängigkeiten aufzulösen, springt GDebi in die Bresche
 und klärt diese Situation automatisch mit Hilfe von APT
-(<<Vogt-gdebi>>). Fehlende Pakete werden von den vorab konfigurierten
+<<Vogt-gdebi>>. Fehlende Pakete werden von den vorab konfigurierten
 Paketmirrors (siehe <<etc-apt-sources.list-verstehen>>) nachgezogen.
 Diese Eigenschaft hebt GDebi deutlich von `dpkg` ab, das nur meckern
 kann, falls es auf nicht-erfüllte Abhängigkeiten stößt.
