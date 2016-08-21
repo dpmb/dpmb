@@ -71,11 +71,10 @@ Alternativen-System zurück, wenn es die Pakete unverändert von Debian
 (((Konfigurationsdatei, /etc/alternatives/)))
 (((update-alternatives)))
 Es basiert auf symbolischen Verweisen (kurz 'Symlink') nach und in das
-Verzeichnis `/etc/alternatives/` sowie gemäß der vom
-Paketbetreuer zuvor festgelegten Priorität pro Alternative. Folgen Sie
-den Vorgaben, wird dabei stets das Programm ausgeführt, welchem die
-höchste Priorität zugeordnet ist. Eine manuelle Festlegung hebt die
-Vorgaben auf.
+Verzeichnis `/etc/alternatives/` sowie gemäß der vom Paketbetreuer zuvor
+festgelegten Priorität pro Alternative. Folgen Sie den Vorgaben, wird
+dabei stets das Programm ausgeführt, welchem die höchste Priorität
+zugeordnet ist. Eine manuelle Festlegung hebt die Vorgaben auf.
 
 Das Werkzeug zur Verwaltung dieser Symlinks auf der Kommandozeile heißt
 `update-alternatives`, für die graphische Benutzerschnittstelle steht
@@ -89,29 +88,29 @@ image::praxis/alternatives/galternatives.png[id="fig.galternatives", width="50%"
 === Hintergrund: Warum alternative Standardprogramme? ===
 
 In Debian stellen mehrere Programme bzw. Pakete eine ähnliche oder
-gleiche Fähigkeit bereit.
+gleiche Fähigkeit bereit. Damit entscheiden Sie, welches Werkzeug zum
+Einsatz kommt. Ubuntu fährt hier eine wesentlich restriktivere Politik.
 
-Dazu zählen auf der einen Seite sehr generische Funktionalitäten wie
+Das betrifft auf der einen Seite sehr generische Funktionalitäten wie
 z.B. die eines Webbrowsers, eines (Text-)Editors oder eines Pagers, aber
 auch sehr spezifische Funktionalitäten, für die einfach mehrere
-Implementierungen vorliegen. Zu Letzeren gehören bspw. das Schweizer
+Implementierungen vorliegen. Zu Letzteren gehören bspw. das Schweizer
 Taschenmesser für TCP/IP namens `netcat` oder die Skriptsprache `awk`.
 Letztere liegt in drei Varianten vor -- in der eher umfangreicheren
 Implementation des GNU Projektes (`gawk`), in der kleineren und
 schnelleren Implementation von Mike Brennan (`mawk`) und in der
 originalen Awk-Implementation <<awk>>.
 
-Weiterhin gibt es von einigen Programmen mehr als eine
-Programmgeneration in Debian, so z.B. verschiedene Veröffentlichungen
-von GCC und Automake. In Debian 8 'Jessie' ist GCC in den beiden
-Versionen 4.8 und 4.9 enthalten, Automake in den Versionen 1.11 und
-1.14. Einer der Gründe für die verschiedenen Versionen ist, dass manche
-Pakete in Debian z.B. nur mit einer bestimmten Generation eines
-Compilers kompiliert werden können. So werden z.B. alle Linuxkernel in
-Debian 8 'Jessie' mit GCC 4.8 kompiliert, während GCC 4.9 der
-Standardcompiler ist. Je nach Einsatzzweck eines Systems kann es
-entsprechend auch hilfreich sein, den Standardcompiler systemweit auf
-eine bestimmte Generation festzulegen.
+Weiterhin gibt es in Debian von einigen Programmen mehr als eine
+Programmgeneration, so z.B. verschiedene Veröffentlichungen von GCC und
+Automake. In Debian 8 'Jessie' ist GCC in den beiden Versionen 4.8 und
+4.9 enthalten, Automake in den Versionen 1.11 und 1.14. Einer der Gründe
+für die verschiedenen Versionen ist, dass manche Pakete in Debian z.B.
+nur mit einer bestimmten Generation eines Compilers übersetzt werden
+können. So werden z.B. alle Linuxkernel in Debian 8 'Jessie' mit GCC 4.8
+kompiliert, während GCC 4.9 der Standardcompiler ist. Je nach
+Einsatzzweck eines Systems kann es entsprechend auch hilfreich sein, den
+Standardcompiler systemweit auf eine bestimmte Generation festzulegen.
 
 Ein weiterer Grund für die Verwendung des Alternativen-Systems
 innerhalb desselben Binärpakets oder von Binärpaketen auf der Basis
@@ -252,10 +251,10 @@ $
 [NOTE]
 .Alternative Darstellung
 ========================================================
-Benötigen Sie stattdessen eine maschinenlesbare Ausgabe, hilft Ihnen
-in diesem Fall der Schalter `--query` weiter. Dabei werden die Blöcke
-in einer an den RFC 822 angelehnten Weise formatiert und zwischen den
-einzelnen Blöcken zusätzliche Leerzeilen eingefügt.
+Benötigen Sie stattdessen eine maschinenlesbare Ausgabe, hilft Ihnen in
+diesem Fall der Schalter `--query` weiter. Dabei werden die Blöcke in
+einer an den RFC 822 <<RFC822>> angelehnten Weise formatiert und
+zwischen den einzelnen Blöcken zusätzliche Leerzeilen eingefügt.
 ========================================================
 
 === Standardprogramm ändern ===
