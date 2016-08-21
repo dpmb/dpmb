@@ -5,7 +5,22 @@
 [[fehlende-pakete-bei-bedarf-hinzufuegen]]
 == Fehlende Pakete bei Bedarf hinzufügen ==
 
+* bisher: 
+** Softwareauswahl/Pakete ist fest
+** Liste der installierte Pakete ist statisch, d.h. ändert sich nicht im
+   laufenden Betrieb
+
+* Bedarf ändert sich:
+** neue Hardware kommt hinzu
+** Software fehlt bzw. wird benötigt
+
+* nachfolgend vorgestellte Pakete zeigen, in welchem Rahmen eine
+Reaktion auf diese Bedarfsänderung möglich ist
+
+// - bei neuer Hardware
 include::neue-hardware.adoc[]
 
+// - bei fehlender Software
 include::neue-software.adoc[]
+
 // Datei (Ende): ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/fehlende-pakete-bei-bedarf-hinzufuegen.adoc
