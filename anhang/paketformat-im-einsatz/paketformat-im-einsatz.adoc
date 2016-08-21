@@ -40,8 +40,10 @@ LernStick:: Live-Distribution auf einem USB-Stick <<LernStick>>
 === Desktop ===
 
 // Stichworte für den Index
+(((Kubuntu)))
 (((LiMux)))
 (((Linux Mint)))
+(((Linux Mint Debian Edition (LMDE))))
 (((Tanglu)))
 (((Ubuntu)))
 (((Univention Corporate Server (UCS))))

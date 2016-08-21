@@ -647,6 +647,8 @@ https://packages.debian.org/jessie/packagekit-command-not-found
 
 - [[[Krafft-Debian-System137ff]]] Ebd., Kapitel 5, S. 137-294
 
+- [[[Kubuntu]]] Kubuntu, http://www.kubuntu.org/
+
 - [[[LernStick]]] LernStick, Fachhochschule Nordwestschweiz, Solothurn, http://www.imedias.ch/projekte/lernstick/index.cfm
 
 - [[[libelektra]]] Libelektra, http://community.libelektra.org/wp/?p=145

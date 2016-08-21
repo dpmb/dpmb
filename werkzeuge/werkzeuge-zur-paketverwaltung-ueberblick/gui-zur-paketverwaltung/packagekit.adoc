@@ -24,14 +24,15 @@ dafür gedacht, hochspezialisierte Paketverwaltungssoftware zu ersetzen.
 // Stichworte für den Index
 (((apper)))
 (((gnome-packagekit)))
+(((Kubuntu)))
 (((Muon)))
 (((OpenMoko)))
 
-Seit 2009 nutzt die Linuxdistribution Kubuntu diese Schnittstelle für
-seine Paketverwaltung im Rahmen von Muon (siehe <<gui-muon>>). Weitere
-Anwendungen, die auf PackageKit aufsetzen, sind z.B. das Paket 'apper'
-<<Debian-Paket-apper>> für den KDE, das Paket 'gnome-packagekit'
-<<Debian-Paket-gnome-packagekit>> für GNOME (siehe
+Seit 2009 nutzt die Linuxdistribution Kubuntu <<Kubuntu>> diese
+Schnittstelle für seine Paketverwaltung im Rahmen von Muon (siehe
+<<gui-muon>>). Weitere Anwendungen, die auf PackageKit aufsetzen, sind
+z.B. das Paket 'apper' <<Debian-Paket-apper>> für den KDE, das Paket
+'gnome-packagekit' <<Debian-Paket-gnome-packagekit>> für GNOME (siehe
 <<fig.gnome-packagekit>>) und das Installationsprogramm zu Openmoko
 <<OpenMoko>>.
 
