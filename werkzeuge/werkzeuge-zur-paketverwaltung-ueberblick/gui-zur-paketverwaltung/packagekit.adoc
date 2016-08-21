@@ -20,12 +20,19 @@ PolicyKit{empty}footnote:[Berechtigungsdienst, der die Kommunikation von Softwar
 DBus-Protokoll untereinander regelt] umzustellen. PackageKit ist nicht
 dafür gedacht, hochspezialisierte Paketverwaltungssoftware zu ersetzen.
 
+// Stichworte für den Index
+(((apper)))
+(((gnome-packagekit)))
+(((Muon)))
+(((OpenMoko)))
+
 Seit 2009 nutzt die Linuxdistribution Kubuntu diese Schnittstelle für
-seine Paketverwaltung. Weitere Anwendungen, die auf PackageKit
-aufsetzen, sind z.B. das Paket 'apper' <<Debian-Paket-apper>> für den
-KDE, das Paket 'gnome-packagekit' <<Debian-Paket-gnome-packagekit>> für
-GNOME (siehe <<fig.gnome-packagekit>>) und das Installationsprogramm zu
-Openmoko <<OpenMoko>>.
+seine Paketverwaltung im Rahmen von Muon (siehe <<gui-muon>>). Weitere
+Anwendungen, die auf PackageKit aufsetzen, sind z.B. das Paket 'apper'
+<<Debian-Paket-apper>> für den KDE, das Paket 'gnome-packagekit'
+<<Debian-Paket-gnome-packagekit>> für GNOME (siehe
+<<fig.gnome-packagekit>>) und das Installationsprogramm zu Openmoko
+<<OpenMoko>>.
 
 .Gnome Packagekit mit ausgewähltem Paket 'dctrl-tools'
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/gnome-packagekit.png[id="fig.gnome-packagekit", width="50%"]
