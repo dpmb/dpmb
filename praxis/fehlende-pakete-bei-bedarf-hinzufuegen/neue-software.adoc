@@ -6,6 +6,8 @@
 
 === Neue Software ===
 
+==== Installation bei Bedarf mittels `auto-apt` ====
+
 // Stichworte für den Index
 (((Debianpaket, auto-apt)))
 
@@ -32,22 +34,6 @@ welchem Paket diese gehören, und installiert die fehlenden Pakete
 inklusive aller Abhängigkeiten."
 
 // Stichworte für den Index
-(((Debianpaket, apprecommender)))
-(((Debianpaket, command-not-found)))
-
-* auto-apt ist "orphaned" und hat momentan keinen richtigen
-  Maintainer, siehe https://bugs.debian.org/541016
-
-* Wer nicht gleich das Paket installiert haben will, sondern nur beim
-  Aufruf auf der Kommandozeile den Hinweis bekommen, welches Paket
-  installiert werden müsste, für den ist vermutlich das Paket
-  'command-not-found' <<Debian-Paket-command-not-found>> das richtige.
-
-* Neu ab Debian _Stretch_: 'apprecommender'
-<<Debian-Paket-apprecommender>>, empfiehlt Anwendung basierend auf u.a.
-Debtags der installierten Anwendungen. Noch sehr neu und roh.
-
-// Stichworte für den Index
 (((auto-apt, run)))
 (((auto-apt, update)))
 (((auto-apt, update-local)))
@@ -62,5 +48,23 @@ nachinstalliert werden sollen
 *** `auto-apt update`
 *** `auto-apt updatedb`
 *** `auto-apt update-local`
+
+* `auto-apt` ist "orphaned" und hat momentan keinen richtigen
+  Maintainer, siehe https://bugs.debian.org/541016
+
+==== Empfehlungen mittels `command-not-found` und `apprecommender` ====
+
+// Stichworte für den Index
+(((Debianpaket, apprecommender)))
+(((Debianpaket, command-not-found)))
+
+* Wer nicht gleich das Paket installiert haben will, sondern nur beim
+  Aufruf auf der Kommandozeile den Hinweis bekommen, welches Paket
+  installiert werden müsste, für den ist vermutlich das Paket
+  'command-not-found' <<Debian-Paket-command-not-found>> das richtige.
+
+* Neu ab Debian 9 _Stretch_: 'apprecommender'
+<<Debian-Paket-apprecommender>>, empfiehlt Anwendung basierend auf u.a.
+Debtags der installierten Anwendungen. Noch sehr neu und roh.
 
 // Datei (Ende): ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/neue-software.adoc
