@@ -401,6 +401,9 @@
 
 - [[[Debian-Paket-packagekit-backend-smart]]] Debian-Paket 'packagekit-backend-smart', http://packages.debian.org/de/wheezy/packagekit-backend-smart
 
+- [[[Debian-Paket-packagekit-command-not-found]]] Debian-Paket 'packagekit-command-not-found',
+https://packages.debian.org/jessie/packagekit-command-not-found
+
 - [[[Debian-Paket-packagesearch]]] Debian-Paket 'packagesearch', http://packages.debian.org/de/stable/packagesearch
 
 - [[[Debian-Paket-perl]]] Debian-Paket 'perl', https://packages.debian.org/jessie/perl

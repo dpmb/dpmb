@@ -9,6 +9,7 @@
 // Stichworte für den Index
 (((Debianpaket, apper)))
 (((Debianpaket, gnome-packagekit)))
+(((Debianpaket, muon)))
 (((PackageKit)))
 PackageKit ist eine allgemeine, distributionsneutrale Schnittstelle für
 unterschiedliche Paketverwaltungen, eine sogenannte Abstraktionsebene
@@ -38,13 +39,20 @@ Anwendungen, die auf PackageKit aufsetzen, sind z.B. das Paket 'apper'
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/gnome-packagekit.png[id="fig.gnome-packagekit", width="50%"]
 
 // Stichworte für den Index
+(((Debianpaket, command-not-found)))
 (((Debianpaket, packagekit-backend-aptcc)))
 (((Debianpaket, packagekit-backend-smart)))
+(((Debianpaket, packagekit-command-not-found)))
 (((SmartPM)))
 PackageKit kann über die Interfaces APT und `aptcc` (Paket
 'packagekit-backend-aptcc' <<Debian-Paket-packagekit-backend-aptcc>>) an
 APT andocken. Ähnliches liefert das Paket 'packagekit-backend-smart'
 <<Debian-Paket-packagekit-backend-smart>> für die Zusammenarbeit mit
-SmartPM (<<gui-smartpm>>).
+SmartPM (<<gui-smartpm>>) bzw. 'packagekit-command-not-found'
+<<Debian-Paket-packagekit-command-not-found>> für die Installation
+fehlender Pakete via `command-not-found`. Das Werkzeug
+`command-not-found` steht unter ``Fehlende Pakete bei Bedarf
+hinzufügen'' in <<fehlende-pakete-bei-bedarf-hinzufuegen>> im
+Mittelpunkt.
 
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/packagekit.adoc
