@@ -11,32 +11,35 @@
 (((Kubuntu)))
 (((Muon)))
 (((Synaptic)))
+(((Ubuntupaket, muon)))
 
 Muon ist ein Paketmanager für KDE und als Klon von Synaptic (siehe
-<<gui-synaptic>>) einzustufen. Es setzt auf Qt auf und kommt bislang
-speziell in der Distribution Kubuntu <<Kubuntu>> zum Einsatz. Für
-Debian ist das gleichnamige Paket 'muon' <<Debian-Paket-muon>> ab der
-Veröffentlichung Debian 9 'Stretch' verfügbar.
-
-Pakete können durch Auswahllisten nach der Softwarekategorie, dem
-Paketstatus, der Architektur und der Herkunft gefiltert werden. Dazu
-kommt ein Filter nach Zeichenketten in Paketnamen und -beschreibung.
+<<gui-synaptic>>) einzustufen. Es setzt auf dem graphischen Framework Qt
+auf und kommt bislang speziell in der Distribution Kubuntu <<Kubuntu>>
+zum Einsatz. Für Debian ist das gleichnamige Paket 'muon'
+<<Debian-Paket-muon>> ab der Veröffentlichung Debian 9 'Stretch'
+verfügbar, für Ubuntu bereits ab der Veröffentlichung 12.04 'Precise
+Pangolin'.
 
 .Softwareauswahl in `muon`
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/muon.png[id="fig.muon", width="50%"]
 
-Die verschiedenen Auswahlmenüs der Filter werden mit "und" verknüpft,
-sodass es beim Wechsel in eine andere Filterkategorie schnell
-vorkommen kann, dass kein Paket in der Paketliste mehr angezeigt wird,
-falls man vergessen hat, den Filter einer vorherigen Suche wieder zu
-entfernen bzw. auf "Alle" zu setzen.
+Pakete können durch Auswahllisten nach der Softwarekategorie, dem
+Paketstatus, der Architektur und der Herkunft gefiltert werden. Dazu
+kommt ein Filter nach Zeichenketten in Paketnamen und -beschreibung.  Zu
+beachten ist dabei, dass die verschiedenen Auswahlmenüs der Filter mit
+"und" verknüpft werden. Beim Wechsel in eine andere Filterkategorie
+kommt es daher schnell vor, dass kein Paket mehr in der Paketliste
+angezeigt wird, falls man vergessen hat, den Filter einer vorherigen
+Suche wieder zu entfernen bzw. auf "Alle" zu setzen.
 
 Wählt man ein Paket mit einem Mausklick aus, so werden im
 Fensterbereich unter der Paketliste Metadaten und Details über das
 Paket dargestellt. Dies umfaßt u.a. die Paketbeschreibung, die
 Paketabhängigkeiten, verfügbare Versionen, den Paketinhalt (Dateien im
-Paket) sowie weiter Metadaten wie Paketbetreuer, installierte Größe,
-Downloadgröße, Quellpaket aus dem das Paket gebaut wurde, etc.
+Paket) sowie weiterhin Metadaten. Zu letzterem zählen bspw. der
+Paketbetreuer, die installierte Größe der Software, die Downloadgröße
+sowie das Quellpaket, aus dem das Paket gebaut wurde.
 
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/muon.adoc
 
