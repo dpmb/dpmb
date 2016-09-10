@@ -13,16 +13,30 @@
 (((Synaptic)))
 
 Muon ist ein Paketmanager für KDE und als Klon von Synaptic (siehe
-<<gui-synaptic>>) einzustufen. Es setzt auf dem Gimp Toolkit (GTK) auf
-und kommt bislang speziell in der Distribution Kubuntu <<Kubuntu>> zum
-Einsatz. Für Debian ist das gleichnamige Paket 'muon'
-<<Debian-Paket-muon>> ab der Veröffentlichung Debian 9 'Stretch'
-verfügbar.
+<<gui-synaptic>>) einzustufen. Es setzt auf Qt auf und kommt bislang
+speziell in der Distribution Kubuntu <<Kubuntu>> zum Einsatz. Für
+Debian ist das gleichnamige Paket 'muon' <<Debian-Paket-muon>> ab der
+Veröffentlichung Debian 9 'Stretch' verfügbar.
 
-Im Funktionsumfang ist die Auswahl nach der Softwarekategorie, dem
-Paketnamen, der Architektur und der Veröffentlichung enthalten. Die
-Darstellung umfaßt u.a. die Paketbeschreibung, die Paketabhängigkeiten
-und den Paketinhalt (Dateien im Paket).
+Pakete können durch Auswahllisten nach der Softwarekategorie, dem
+Paketstatus, der Architektur und der Herkunft gefiltert werden. Dazu
+kommt ein Filter nach Zeichenketten in Paketnamen und -beschreibung.
+
+.Softwareauswahl in `muon`
+image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/muon.png[id="fig.muon", width="50%"]
+
+Die verschiedenen Auswahlmenüs der Filter werden mit "und" verknüpft,
+sodass es beim Wechsel in eine andere Filterkategorie schnell
+vorkommen kann, dass kein Paket in der Paketliste mehr angezeigt wird,
+falls man vergessen hat, den Filter einer vorherigen Suche wieder zu
+entfernen bzw. auf "Alle" zu setzen.
+
+Wählt man ein Paket mit einem Mausklick aus, so werden im
+Fensterbereich unter der Paketliste Metadaten und Details über das
+Paket dargestellt. Dies umfaßt u.a. die Paketbeschreibung, die
+Paketabhängigkeiten, verfügbare Versionen, den Paketinhalt (Dateien im
+Paket) sowie weiter Metadaten wie Paketbetreuer, installierte Größe,
+Downloadgröße, Quellpaket aus dem das Paket gebaut wurde, etc.
 
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/muon.adoc
 
