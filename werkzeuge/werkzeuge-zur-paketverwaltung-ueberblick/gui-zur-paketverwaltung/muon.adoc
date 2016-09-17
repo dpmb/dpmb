@@ -36,10 +36,9 @@ Suche wieder zu entfernen bzw. auf "Alle" zu setzen.
 Wählen Sie ein Paket mit einem Mausklick aus, so stellt Muon im
 Fensterbereich unter der Paketliste Metadaten und Details über das Paket
 dar. Dies umfaßt u.a. die Paketbeschreibung, die Paketabhängigkeiten,
-verfügbare Versionen, den Paketinhalt (Dateien im Paket) sowie weiterhin
-Metadaten. Zu letzterem zählen bspw. der Paketbetreuer, die installierte
-Größe der Software, die Downloadgröße sowie das Quellpaket, aus dem das
-Binärpaket gebaut wurde.
+verfügbare Versionen, den Paketinhalt (Dateien im Paket), den
+Paketbetreuer, die installierte Größe der Software, die Downloadgröße
+und das Quellpaket, aus dem das Binärpaket gebaut wurde.
 
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/muon.adoc
 
