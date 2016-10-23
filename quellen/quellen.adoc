@@ -757,7 +757,7 @@ https://packages.debian.org/jessie/packagekit-command-not-found
 
 - [[[Skolelinux]]] Skolelinux, http://skolelinux.de/
 
-- [[[Skype]]] Skype, www.skype.com/
+- [[[Skype]]] Skype, https://www.skype.com/
 
 - [[[SmartPM]]] Smart Package Manager, Projektseite, http://labix.org/smart
 
