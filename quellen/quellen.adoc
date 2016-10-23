@@ -490,7 +490,7 @@ https://packages.debian.org/jessie/packagekit-command-not-found
 
 - [[[Debian-Social-Contract]]] Debian-Gesellschaftsvertrag, https://www.debian.org/social_contract.de.html
 
-- [[[Debian-Virtual-Packages-List]]] Liste aller offiziell verwendeten virtuellen Pakete, https://www.debian.org/doc/packaging-manuals/virtual-package-names-list.adoc
+- [[[Debian-Virtual-Packages-List]]] Liste aller offiziell verwendeten virtuellen Pakete, https://www.debian.org/doc/packaging-manuals/virtual-package-names-list.txt
 
 - [[[Debian-Webseite]]] Webseite des Debian-Projekts, https://www.debian.org/
 
@@ -723,7 +723,7 @@ https://packages.debian.org/jessie/packagekit-command-not-found
 
 - [[[Raspbian]]] Debian für das Raspberry Pi, https://www.raspbian.org/
 
-- [[[RFC822]]] RFC 822: Standard For The Format Of Text Messages, IETF, https://www.ietf.org/rfc/rfc0822.adoc
+- [[[RFC822]]] RFC 822: Standard For The Format Of Text Messages, IETF, https://www.ietf.org/rfc/rfc0822.txt
 
 - [[[Ritesh-apt-offline]]] Ritesh Sarraf: Offline Package Management for
   APT, https://www.debian-administration.org/article/648/Offline_Package_Management_for_APT
