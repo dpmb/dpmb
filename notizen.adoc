@@ -34,6 +34,8 @@ TODO für Axel
       [ Michael Vogt ]
          * add support for SRV record lookup before connect
 
+  Link und Infos dazu: http://deb.debian.org/
+
 
 TODO für Frank (will auch welche haben)
 =======================================
