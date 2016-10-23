@@ -177,7 +177,7 @@
 
 - [[[Debian-Archive]]] Archiv der von Debian nicht mehr unterstützten Veröffentlichungen, http://archive.debian.org/
 
-- [[[Debian-Backports]]] Debian Backports: http://backports-master.debian.org/
+- [[[Debian-Backports]]] Debian Backports: https://backports.debian.org/
 
 - [[[Debian-besorgen]]] Debian besorgen. Installationsmedien und ISO-Images auf der Debian-Webseite, https://www.debian.org/distrib/
 
