@@ -846,7 +846,7 @@ https://packages.debian.org/jessie/packagekit-command-not-found
 
 - [[[xtronics-Wiki]]] Wiki bei xtronics, https://wiki.xtronics.com/index.php/Wajig
 
-- [[[xubuntu-apt-offline]]] xubuntu Offline Documentation, http://docs.xubuntu.org/1304/offline-packages.html
+- [[[xubuntu-apt-offline]]] xubuntu Offline Documentation, http://docs.xubuntu.org/1404/offline-packages.html
 
 - [[[YUM]]] Yellowdog Updater, Modified (YUM), Projektseite, http://yum.baseurl.org/
 
