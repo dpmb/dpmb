@@ -1,6 +1,6 @@
 // Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/apt.adoc
 
-// Baustelle: Fertig
+// Baustelle: Rohtext (tlw.)
 
 [[apt]]
 
@@ -283,10 +283,17 @@ berücksichtigen.footnote:[Diese Eigenschaft stammt vom Programm
 Michael Vogt gepflegt wird.]
 
 Ebenfalls in produktivem Zustand und teilweise intensiver Benutzung
-befinden sich die Werkzeuge `aptsh`, `cupt`, `aptitude` und SmartPM.
-Während sich `aptsh` und `cupt` nur auf die Kommandozeile beschränken,
+befinden sich die Werkzeuge `cupt`, `aptitude` und SmartPM.
+Während sich und `cupt` nur auf die Kommandozeile beschränken,
 bieten Ihnen `aptitude` zusätzlich eine textbasierte bzw. SmartPM eine
 graphische Benutzeroberfläche. Auf diese Werkzeuge gehen wir nachfolgend
-genauer ein (siehe <<aptsh>>, <<Cupt>>, <<aptitude>> und <<gui-smartpm>>).
+genauer ein (siehe, <<Cupt>>, <<aptitude>> und <<gui-smartpm>>).
+
+`aptsh` war ebenfalls lange Zeit produktiv nutzbar, ist aber mit
+neueren APT-Versionen (1.2 und höher) nicht mehr kompatibel und wir
+voraussichtlich in neueren Debian- und Ubuntu-Veröffentlichungen nicht
+enthalten sein, da es nicht mehr weiterentwickelt wird
+<<aptsh-verwaist-Bug-Report-831493>>.  Bis Debian 8 Jessie ist `aptsh`
+aber durchaus noch benutzbar. Siehe auch <<aptsh>>.
 
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/apt.adoc

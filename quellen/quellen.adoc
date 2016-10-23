@@ -48,7 +48,11 @@
 
 - [[[Aptosid]]] Aptosid, http://aptosidusers.de/
 
+- [[[aptsh-BackupTheBerlios-Git-Repository]]] BackupTheBerlios: aptsh Git-Repository auf GitHub, https://github.com/BackupTheBerlios/aptsh-svn
+
 - [[[aptsh-Projekt]]] `aptsh`-Projektseite im Web-Archiv, https://web.archive.org/web/20100902235337/http://developer.berlios.de/projects/aptsh/
+
+- [[[aptsh-verwaist-Bug-Report-831493]]] Bug-Report: aptsh verwaist, https://bugs.debian.org/831493
 
 - [[[apt-cacher-ng-Projektseite]]] Projektseite zu 'apt-cacher-ng', http://www.unix-ag.uni-kl.de/~bloch/acng/
 
