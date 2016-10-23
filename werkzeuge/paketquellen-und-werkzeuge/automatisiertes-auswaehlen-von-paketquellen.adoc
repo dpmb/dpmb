@@ -326,7 +326,7 @@ Wenn Sie möchten, können Sie dieses Feature von APT natürlich auch
 nutzen, um eine Liste ihrer favorisierten Paketspiegel selbst
 zusammenzustellen -- auch unter Debian.
 
-Unter `http://www.debian-paketmanagement.de/hetzner-mirrors.txt` haben
+Unter `https://www.debian-paketmanagement.de/hetzner-mirrors.txt` haben
 wir z.B. eine Liste von Paketspiegeln für Debian erstellt, die alle bei
 dem deutschen Internetdienstleister Hetzner gehostet sind (ohne Gewähr)
 und somit für andere ebenfalls dort gehostete Server nicht mit ins

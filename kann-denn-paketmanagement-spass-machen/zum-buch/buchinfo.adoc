@@ -13,7 +13,7 @@
 (((Buch,Webseite dazu)))
 Wir pflegen eine buchbegleitende Webseite unter der URL:
 
-http://www.debian-paketmanagement.de/
+https://www.debian-paketmanagement.de/
 
 Darauf finden Sie neben einer Liste der Errata und deren Korrekturen
 auch inhaltliche Ergänzungen und Aktualisierungen. Natürlich freuen wir

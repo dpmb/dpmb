@@ -33,7 +33,7 @@ passende Pakete zur Verfügung stehen. Damit sehen Sie sofort, ob das
 Paket für ihre Veröffentlichung und Architektur existiert.
 
 // Stichworte für den Index
-(((http://screenshots.debian.net)))
+(((https://screenshots.debian.net)))
 Klicken Sie einen der Links unterhalb des Suchfeldes an, schränken Sie
 das Suchergebnis auf die jeweilige Veröffentlichung oder Architektur
 weiter ein und erhalten daraufhin detailliertere Informationen zu dem
@@ -45,7 +45,7 @@ screenshots.debian.net (sofern verfügbar), Fehlerberichte, die Liste der
 (``Maintainer''), die Projektwebseite und eine Liste ähnlicher Pakete.
 
 // Abbildung von packages.debian.org
-.Ergebnis der Paketsuche nach 'iftop' über http://packages.debian.org/
+.Ergebnis der Paketsuche nach 'iftop' über https://packages.debian.org/
 image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/paketsuche-debian-webseite.png[id="fig.packages-Webbrowser", width="50%"]
 
 // Stichworte für den Index

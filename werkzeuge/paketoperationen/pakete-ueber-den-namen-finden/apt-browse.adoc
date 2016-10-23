@@ -38,7 +38,7 @@ ebenso angezeigte Dateiliste des Paketinhalts läßt Sie in dem Paket
 datei- und verzeichnisweise schmökern.
 
 // Abbildung von apt-browse.org
-.Ergebnis der Paketsuche nach 'htop' über http://apt-browse.org/
+.Ergebnis der Paketsuche nach 'htop' über https://apt-browse.org/
 image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/paketsuche-apt-browse-webseite.png[id="fig.packages-apt-browse-Webbrowser", width="50%"]
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/apt-browse.adoc

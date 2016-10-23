@@ -17,7 +17,7 @@ und dem Begriff 'alert' (dt. Alarm, Warnung oder Meldung) ab. Inhaltlich
 folgt es dabei dem gleichen Ziel wie `popbugs` (siehe
 <<bugreports-popbugs>>) und sucht dabei ebenfalls nach 'RC bugs' vom
 Debian BTS über die URL
-http://bugs.debian.org/release-critical/other/all.html. Für brauchbare
+https://bugs.debian.org/release-critical/other/all.html. Für brauchbare
 Ergebnisse benötigt es ebenso eine Internetverbindung.
 
 // Stichworte für den Index

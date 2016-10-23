@@ -37,7 +37,7 @@ Doppelkreuz{empty}footnote:[Das Zeichen wird u.a. auch gerne Teppich
 (einer von Axels Informatikprofessoren), Gartenhag (schwiitzerdütsch)
 oder Hashtag (mindestens seit Twitter) genannt. Eine wesentlich
 umfangreichere Liste der gebräuchlichen Namen dieses Zeichens findet
-sich unter http://fsinfo.noone.org/~abe/Bloedsinn/Teppich.html] (`#`) am
+sich unter https://fsinfo.noone.org/~abe/Bloedsinn/Teppich.html] (`#`) am
 Zeilenanfang.
 
 // Stichworte für den Index

@@ -10,10 +10,10 @@ This is the freely available source code for the (for now German written)
 [Axel Beckert](https://axel.beckert.ch/) and
 [Frank Hofmann](http://www.efho.de/).
 
-The book is written in [AsciiDoc](http://asciidoc.org/) format and can
+The book is written in [AsciiDoc](https://asciidoc.org/) format and can
 be rendered to e.g. HTML, EPUB, PDF, or Mobipocket using
-[AsciiDoc](http://asciidoc.org/) or
-[Asciidoctor](http://asciidoctor.org/), and
+[AsciiDoc](https://asciidoc.org/) or
+[Asciidoctor](https://asciidoctor.org/), and
 [DocBook to LaTeX Publishing (dblatex)](http://dblatex.sourceforge.net/)
 and [Calibre](https://calibre-ebook.com/)'s `ebook-convert`.
 
@@ -39,7 +39,7 @@ MB) file from https://book.dpmb.org/. The book is also
 starting with Debian 9 Stretch.
 
 Additionally, the book is also available
-[online at GitBook](http://gitbook.dpmb.org/), but be aware that the
+[online at GitBook](https://gitbook.dpmb.org/), but be aware that the
 rendering over there at [Gitbook](https://www.gitbook.com/) still
 contains quite some bugs, i.e. neither references nor images work
 properly yet and there are superfluous table of contents at chapter
@@ -55,9 +55,9 @@ Dies ist der frei verfügbare Quelltext zum
 [Axel Beckert](https://axel.beckert.ch/) und
 [Frank Hofmann](http://www.efho.de/).
 
-Das Buch ist im [AsciiDoc](http://asciidoc.org/)-Format geschrieben
-und kann mit [AsciiDoc](http://asciidoc.org/) oder
-[Asciidoctor](http://asciidoctor.org/), und je nach Format via
+Das Buch ist im [AsciiDoc](https://asciidoc.org/)-Format geschrieben
+und kann mit [AsciiDoc](https://asciidoc.org/) oder
+[Asciidoctor](https://asciidoctor.org/), und je nach Format via
 [DocBook to LaTeX Publishing (dblatex)](http://dblatex.sourceforge.net/)
 und [Calibre](https://calibre-ebook.com/)s `ebook-convert` nach
 z.B. HTML, EPUB, PDF und Mobipocket gerendert werden.
@@ -82,7 +82,7 @@ oder von https://book.dpmb.org/ als
 MB) herunterladen.
 
 Zusätzlich gibt's das Buch auch
-[online bei GitBook](http://gitbook.dpmb.org/), aber das Rendering bei
+[online bei GitBook](https://gitbook.dpmb.org/), aber das Rendering bei
 [Gitbook](https://www.gitbook.com/) hat leider einige Probleme. So
 funktionieren aktuell weder Referenzen noch Bilder und es hat
 überflüssige Zusatzinhaltsverzeichnisse am Start einiger Kapitel. Die

@@ -106,7 +106,7 @@ In contrast to IMAP server, messages that are downloaded via POP3 are not
 supposed to stay on the server afterwards, since POP3 does not support
 multiple mailboxes for one account on the server.
 
-Link: http://en.wikipedia.org/wiki/Post_Office_Protocol
+Link: https://en.wikipedia.org/wiki/Post_Office_Protocol
 Link: http://www.ietf.org/rfc/rfc1939.adoc
 $
 ----
@@ -183,6 +183,6 @@ fetch tag sources from /etc/debtags/sources.list
 (((debtags-submit-patch)))
 
 `debtags-submit-patch`::
-submit tag patches to http://debtags.debian.net
+submit tag patches to https://debtags.debian.org/
 
 // Datei (Ende): ./praxis/debtags/verwendetes-vokabular-bearbeiten-und-erweitern.adoc
