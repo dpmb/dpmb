@@ -18,13 +18,12 @@ Jahre 2003 des Problems an. Er orientierte sich dabei an der Art und
 Weise, wie Bücher und Dokumente von je her anhand von Schlüsselworten
 und Kategorien indexiert und klassifiziert werden. Zur
 Debian-Entwicklerkonferenz DebConf im Jahre 2005 in Helsinki
-<<DebConf5>> stellte er sein Projekt 'Debtags' <<Debian-Debtags-Old>>
+<<DebConf5>> stellte er sein Projekt 'Debtags' <<Debian-Debtags>>
 vor, welches die Debianpakete und deren Beschreibung um geeignete
 Stichworte oder Attribute ergänzt und damit die Granularität der Suche
 deutlich erhöht. Seit Anfang 2016 ist die Webseite des Debtags-Projekts
-Bestandteil der offiziellen Webseite des Debian-Projekts
-<<Debian-Debtags>> (siehe auch ``Debtags Webseite''
-<<debtags-webseite>>).
+Bestandteil der offiziellen Webseite des Debian-Projekts (siehe auch
+``Debtags Webseite'' <<debtags-webseite>>).
 
 // Stichworte für den Index
 (((Debianpaket, debtags)))

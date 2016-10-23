@@ -17,7 +17,8 @@ Beginn des Jahres 2016 hat Enrico Zini aufgrund geänderter Prioritäten
 seine Aktivität im Debtags-Projekt eingeschränkt. Die bestehenden
 webbasierten Werkzeuge wurden daraufhin in die offizielle Webseite des
 Debian-Projekts integriert <<Debian-Debtags>>. Um ihrerseits am Projekt
-mitzuwirken, ist von nun an ein Debian-Account erforderlich.
+mitzuwirken, ist von nun an ein Debian-Konto erforderlich, z.B. ein
+Alioth-Konto <<Alioth-Konto-erstellen>>.
 
 Auf der Projektseite finden Sie neben den Basisdaten eine ausführliche
 Dokumentation inklusive der Informationen zum Application Programming
