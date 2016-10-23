@@ -840,7 +840,7 @@ https://packages.debian.org/jessie/packagekit-command-not-found
 
 - [[[Wizards-of-Foss-Blog]]] Blog der Wizards of FOSS, http://wizards-of-foss.de/de/weblog/
 
-- [[[xfce]]] XFCE Window Manager, https://www.xfce.org/
+- [[[xfce]]] XFCE Desktop-Umgebung, https://www.xfce.org/
 
 - [[[xtronics-Wiki]]] Wiki bei xtronics, https://wiki.xtronics.com/index.php/Wajig
 
