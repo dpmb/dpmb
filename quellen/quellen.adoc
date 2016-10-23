@@ -48,7 +48,7 @@
 
 - [[[Aptosid]]] Aptosid, http://aptosidusers.de/
 
-- [[[aptsh-Projekt]]] `aptsh`-Projektseite bei BerliOS, http://developer.berlios.de/projects/aptsh/
+- [[[aptsh-Projekt]]] `aptsh`-Projektseite im Web-Archiv, https://web.archive.org/web/20100902235337/http://developer.berlios.de/projects/aptsh/
 
 - [[[apt-cacher-ng-Projektseite]]] Projektseite zu 'apt-cacher-ng', http://www.unix-ag.uni-kl.de/~bloch/acng/
 
