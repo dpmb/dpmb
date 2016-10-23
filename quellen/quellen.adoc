@@ -201,7 +201,7 @@
 
 - [[[Debian-History]]] Debian Documentation Team: A Brief History of Debian, Chapter 3, Debian Releases, https://www.debian.org/doc/manuals/project-history/ch-releases.de.html
 
-- [[[Debian-Manpages]]] Debian Man Page Lookup, http://http://manpages.debian.org/
+- [[[Debian-Manpages]]] Debian Man Page Lookup, https://manpages.debian.org/
 
 - [[[Debian-Mirror-Checker]]] Debian Mirror Checker, http://mirror.debian.org/status.html
 
