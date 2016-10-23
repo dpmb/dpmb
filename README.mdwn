@@ -82,7 +82,7 @@ oder von https://book.dpmb.org/ als
 MB) herunterladen.
 
 Zusätzlich gibt's das Buch auch
-[online beo GitBook](http://gitbook.dpmb.org/), aber das Rendering bei
+[online bei GitBook](http://gitbook.dpmb.org/), aber das Rendering bei
 [Gitbook](https://www.gitbook.com/) hat leider einige Probleme. So
 funktionieren aktuell weder Referenzen noch Bilder und es hat
 überflüssige Zusatzinhaltsverzeichnisse am Start einiger Kapitel. Die
