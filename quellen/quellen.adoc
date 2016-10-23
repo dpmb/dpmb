@@ -213,7 +213,7 @@
 
 - [[[Debian-Paketsuche]]] Debian-Webseite, Paketsuche, https://www.debian.org/distrib/packages#search_contents
 
-- [[[Debian-Paket-adept]]] Debian-Paket 'adept', https://packages.debian.org/adept
+- [[[Debian-Paket-adept]]] Historisches Debian-Paket 'adept', https://packages.qa.debian.org/adept
 
 - [[[Debian-Paket-adequate]]] Debian-Paket 'adequate', https://packages.debian.org/de/jessie/adequate
 
