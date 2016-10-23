@@ -282,6 +282,13 @@ berücksichtigen.footnote:[Diese Eigenschaft stammt vom Programm
 `gdebi` (siehe <<gui-gdebi>>), welches ebenfalls vom APT-Entwickler
 Michael Vogt gepflegt wird.]
 
+In LinuxMint gibt es dagegen schon länger einen Befehl `apt`
+<<LinuxMint-apt>>, welcher allerdings ein in Python geschriebener
+Wrapper um `apt-get`, `apt-cache` und neuerdings auch `apt` ist.
+Dieser befindet sich in `/usr/local/bin/` und hat weitere
+LinuxMint-spezifische Features, wie z.B. das automatische Aufrufen der
+eigentlichen Befehle via `sudo` wo notwendig.
+
 Ebenfalls in produktivem Zustand und teilweise intensiver Benutzung
 befinden sich die Werkzeuge `cupt`, `aptitude` und SmartPM.
 Während sich und `cupt` nur auf die Kommandozeile beschränken,
