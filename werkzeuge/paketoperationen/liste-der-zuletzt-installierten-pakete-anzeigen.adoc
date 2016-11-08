@@ -7,20 +7,27 @@
 === Liste der zuletzt installierten Pakete anzeigen ===
 
 // Stichworte für den Index
-(((Logdatei, /var/log/dpkg.log)))
-(((logrotate)))
 (((Paket installieren, zuletzt installierte Pakete anzeigen)))
+(((Paket installieren, Auswerten der Logdateien)))
 Als Verantwortlicher für Ihr Linuxsystem möchten Sie ab und an wissen,
 was zuletzt auf dem System passiert ist. Dazu zählt insbesondere das
 Auswerten der Logdateien und beinhaltet die Änderungen der Paketliste –
-was wurde installiert, gelöscht bzw. aktualisiert etc. `dpkg` erfasst
-alle Änderungen im Paketbestand in der Logdatei `/var/log/dpkg.log`.
-Ältere `dpkg`-Logdateien werden vom Programm `logrotate` nach dem
-Rotationsprinzip archiviert und irgendwann auch komprimiert. Die zweit-
-und drittjüngsten Logdateien finden Sie beispielsweise in den beiden
-Dateien `/var/log/dpkg.log.1` und `/var/log/dpkg.log.2.gz` wieder.
-Nachfolgender Auszug zeigt die Suche in der aktuellen Logdatei von
-`dpkg` mittels `grep` anhand des Schlüsselwortes ``install''.
+was wurde installiert, gelöscht bzw. aktualisiert etc. Sowohl `dpkg`,
+als auch `apt` lassen Sie die Aktionen nachverfolgen.
+
+==== Statusdaten von `dpkg` ====
+
+// Stichworte für den Index
+(((Logdatei, /var/log/dpkg.log)))
+(((logrotate)))
+`dpkg` erfasst alle Änderungen im Paketbestand in der Logdatei
+`/var/log/dpkg.log`. Ältere `dpkg`-Logdateien werden vom Programm
+`logrotate` nach dem Rotationsprinzip archiviert und irgendwann auch
+komprimiert. Die zweit- und drittjüngsten Logdateien finden Sie
+beispielsweise in den beiden Dateien `/var/log/dpkg.log.1` und
+`/var/log/dpkg.log.2.gz` wieder. Nachfolgender Auszug zeigt die Suche in
+der aktuellen Logdatei von `dpkg` mittels `grep` anhand des
+Schlüsselwortes ``install''.
 
 .Recherche in den Logdateien von `dpkg` mittels `grep`
 ----
@@ -92,5 +99,43 @@ $ zgrep -h " install " /var/log/dpkg.log* | sort | tail -7
 2014-08-08 19:42:14 install ocrad:i386 <keine> 0.22~rc1-2
 $
 ----
+
+==== Statusdaten von `apt` ====
+
+// Stichworte für den Index
+(((Debianpaket, apt-rdepends)))
+(((Logdatei, /var/log/apt/history.log)))
+(((logrotate)))
+`apt` erfasst alle Änderungen im Paketbestand in der Logdatei
+`/var/log/apt/history.log`. Neben dem vollständigen Aufruf sind alle
+Pakete berücksichtigt, die in einer anderen Version eingespielt wurden. 
+Nachfolgender Auszug zeigt die Installation des Paketes `apt-rdepends`
+am 20. Juli 2016:
+
+.Installation des Paketes `apt-rdepends`
+----
+Start-Date: 2016-07-20  16:00:48
+Commandline: apt-get install apt-rdepends
+Install: apt-rdepends:amd64 (1.3.0-3)
+End-Date: 2016-07-20  16:00:49
+----
+
+// Stichworte für den Index
+(((Debianpaket, wireshark)))
+Nehmen Sie eine Aktualisierung der Software vor, resultiert das bspw. in
+folgendem Eintrag:
+
+.Aktualisierung des Paketes `wireshark` samt dessen Abhängigkeiten
+----
+Start-Date: 2016-07-08  15:41:42
+Upgrade: wireshark-common:amd64 (1.12.1+g01b65bf-4+deb8u6, 1.12.1+g01b65bf-4+deb8u7), wireshark-qt:amd64 (1.12.1+g01b65bf-4+deb8u6, 1.12.1+g01b65bf-4+deb8u7), wireshark:amd64 (1.12.1+g01b65bf-4+deb8u6, 1.12.1+g01b65bf-4+deb8u7)
+End-Date: 2016-07-08  15:41:48
+----
+
+Analog zu `dpkg` werden ältere Logdateien vom Programm `logrotate` nach
+dem Rotationsprinzip archiviert und von Zeit zu Zeit komprimiert. Die
+zweit- und drittjüngsten Logdateien finden Sie beispielsweise in den
+beiden Dateien `/var/log/apt/history.log.1.gz` und
+`/var/log/apt/history.log.2.gz` wieder.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/liste-der-zuletzt-installierten-pakete-anzeigen.adoc
