@@ -172,7 +172,9 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 (((rpm, -qa --last)))
 (((yum, list)))
 (((yum, list all)))
+(((yum, list available)))
 (((yum, list installed)))
+(((yum, list updates)))
 Mit den nachfolgenden Aufrufen listen Sie die vorhandenen Softwarepakete
 über die Kommandozeile auf. Für `dpkg`, APT und `aptitude` besprechen
 wir das detaillierter unter ``Liste der installierten Pakete anzeigen
@@ -195,7 +197,9 @@ für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
 |            | `rpm -qa --last` | alle zuletzt installierten Pakete auflisten, auch die (noch) nicht installierten Pakete
 | `YUM`      | `yum list` 'Paketname' | anzeigen, welche Versionen des Pakets installiert sind
 |            | `yum list all` | alle installierten Pakete auflisten
+|            | `yum list available` | alle verfügbaren Pakete auflisten
 |            | `yum list installed` | alle installierten Pakete auflisten
+|            | `yum list updates` | alle aktualisierbaren Pakete auflisten
 |====
 
 === Einzelpaket auflisten ===
@@ -403,6 +407,7 @@ beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
 (((Paket, aktualisierbare Pakete anzeigen)))
 (((Pakete aktualisieren, aktualisierbare Pakete anzeigen)))
 (((Pakete aktualisieren, Simulation)))
+(((yum, check-update)))
 (((yum, list updates)))
 Viele Pakete werden regelmäßig aktualisiert. Welches Kommando Ihnen die
 Pakete anzeigt, die in einer neuen Version bereitstehen, zeigt Ihnen die
@@ -421,7 +426,8 @@ nachfolgende Tabelle. In Abschnitt ``Aktualisierbare Pakete anzeigen``
 |            | `aptitude search ?upgradable` | alle aktualisierbaren Pakete anzeigen
 | DNF        | `dnf list upgrades` | alle aktualisierbaren Pakete anzeigen
 | `RPM`      | |
-| `YUM`      | `yum list updates`| alle aktualisierbaren Pakete anzeigen
+| `YUM`      | `yum check-updates`| Auflistung der Aktualisierungen für die bereits installierten Pakete
+|            | `yum list updates`| alle aktualisierbaren Pakete anzeigen
 |====
 
 === Verfügbare Pakete anzeigen ===
