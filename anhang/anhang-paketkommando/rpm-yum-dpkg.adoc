@@ -37,6 +37,7 @@ einzelne Schalter variiert recht stark <<RPM-Salve>> <<RPM-Gite>>
 (((apt-get, install)))
 (((apt-get, --no-download install)))
 (((aptitude, install)))
+(((dnf, group install)))
 (((dnf, install)))
 (((Paket, installieren)))
 (((rpm, -i)))
@@ -61,6 +62,7 @@ Paketcache vorliegen.
 | `aptitude` | `aptitude install` 'Paketname' | Paket wird dem Paketrepository entnommen
 | `DNF`      | `dnf install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |            | `dnf install` 'Paketdatei' | Paketdatei liegt also lokale Datei vor
+|            | `dnf group install` 'Paketgruppe' | alle Pakete aus der Paketgruppe installieren
 | `dpkg`     | `dpkg -i` 'Paketname' | Paket liegt lokal als Datei vor
 | `RPM`      | `rpm -i` 'Paketname' | Paket liegt lokal als Datei vor
 |            | `rpm -i --nodeps` 'Paketname' | Paket liegt lokal als Datei vor, Installation ohne Berücksichtigung der Paketabhängigkeiten
@@ -436,7 +438,9 @@ nachfolgende Tabelle. In Abschnitt ``Aktualisierbare Pakete anzeigen``
 (((Paket, bekannte Pakete auflisten)))
 (((Paket, verfügbare Pakete anzeigen)))
 (((apt-cache, pkgnames)))
+(((dnf, group list)))
 (((dnf, list available)))
+(((dnf, repository-list)))
 (((yum, list available)))
 Welche Pakete verfügbar sind, erfahren Sie mit den nachfolgend genannten
 Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten``
@@ -447,7 +451,9 @@ Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten``
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | APT        | `apt-cache pkgnames` | alle verfügbaren (bekannten) Pakete auflisten
-| DNF        | `dnf list available` | alle verfügbaren Pakete anzeigen
+| DNF        | `dnf group list` | alle Paketgruppen auflisten
+|            | `dnf list available` | alle verfügbaren Pakete anzeigen
+|            | `dnf repository-list repo list` | alle Pakete aus dem Repository 'repo' anzeigen
 | `RPM`      | |
 | `YUM`      | `yum list available`| alle verfügbaren Pakete anzeigen
 |====
