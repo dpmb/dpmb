@@ -534,8 +534,11 @@ ein.
 (((Paket, Transaktionshistorie anzeigen)))
 (((dnf, history)))
 (((dnf, history list)))
-DNF erlaubt es, die Transaktionshistorie darzustellen. Dabei helfen
-Ihnen diese Kommandos:
+`dpkg`, `apt` und `aptitude` besitzen keine expliziten Schalter dafür.
+Im Abschnitt ``Liste der zuletzt installierten Pakete anzeigen'' in
+<<liste-der-zuletzt-installierten-pakete-anzeigen>> zeigen wir Ihnen,
+wie Sie das über die Logdateien lösen. DNF erlaubt es hingegen , die
+Transaktionshistorie darzustellen. Dabei helfen Ihnen diese Kommandos:
 
 .Transaktionshistorie anzeigen 
 [frame="topbot",options="header",cols="2,4,4",id="tab.transaktionshistorie"]
