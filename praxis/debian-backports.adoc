@@ -10,7 +10,7 @@
 (((Paket, Rückportierung)))
 
 ----
-überarbeiteter Beitrag aus aus: http://www.wizards-of-foss.de/de/weblog/2013/03/08/debian-backports-verwenden/
+Der Beitrag erschien ursprünglich http://www.wizards-of-foss.de/de/weblog/2013/03/08/debian-backports-verwenden/ und wurde von uns überarbeitet.
 ----
 
 === Ausgangssituation ===
@@ -143,14 +143,20 @@ Backports sind nicht von Hause aus aktiviert und Sie müssen diese in der
 Paketverwaltung explizit ergänzen. Dazu fügen Sie in der Liste der
 Paketquellen unter `/etc/apt/sources.list` (siehe dazu
 <<etc-apt-sources.list-verstehen>>) einen entsprechenden Eintrag für die
-passenden Backports ihrer Distribution hinzu. Für Debian 7 'Wheezy' und
-die Distributionsbereiche 'main', 'contrib' und 'non-free' sieht der
-Eintrag wie folgt aus:
+passenden Backports ihrer Distribution hinzu. Für Debian 8 'Jessie' und
+Debian 7 'Wheezy' mit den dem Distributionsbereich 'main' sieht der
+jeweilige Eintrag wie folgt aus:
+
+.Eintrag zu Debian Backports für Debian 8 'Jessie'
+----
+# Backports
+deb http://ftp.debian.org/debian jessie-backports main
+----
 
 .Eintrag zu Debian Backports für Debian 7 'Wheezy'
 ----
 # Backports
-deb http://httpredir.debian.org/debian wheezy-backports main contrib non-free
+deb http://httpredir.debian.org/debian wheezy-backports main
 ----
 
 Wie bereits oben erwähnt, findet sich das APT-Repository für die
@@ -170,7 +176,8 @@ sondern dazu bedarf es noch eines expliziten Aufrufs mit zusätzlichen
 Schaltern. `apt-get` und `aptitude` benutzen dazu den Schalter `-t`
 gefolgt vom Namen des Backports-Archivs.
 
-Um bspw. das Paket 'asciidoc' aus den Backports für Debian 7 'Wheezy'
+Das Paket 'asciidoc' steht bspw. nicht für Debian 7 'Wheezy' bereit,
+existiert jedoch in den Backports. Um dieses aus den Backports
 nachzuziehen, geben Sie auf der Kommandozeile folgendes ein:
 
 .Installation eines Pakets mit expliziter Angabe der Distribution 'wheezy-backports'
