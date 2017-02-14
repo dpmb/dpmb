@@ -27,7 +27,7 @@ Informationen über verfügbare Pakete und deren Abhängigkeiten (siehe
 Wir empfehlen Ihnen zur Aktualisierung den folgenden Ablauf:
 
 . Erstellen Sie zuerst eine Sicherheitskopie der entsprechenden Datei,
-  z.B. `cp -pv /etc/apt/sources.list /etc/apt/sourceels.list.backup`.
+  z.B. `cp -pv /etc/apt/sources.list /etc/apt/sources.list.backup`.
   Gegebenenfalls macht das auch Ihr Texteditor automatisch.
 
 . Tragen Sie die neuen oder veränderten Paketquellen in die Datei 
