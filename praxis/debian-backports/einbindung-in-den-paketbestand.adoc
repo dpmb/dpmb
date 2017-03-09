@@ -1,0 +1,70 @@
+// Datei: ./praxis/debian-backports/einbindung-in-den-paketbestand.adoc
+// Baustelle: Rohtext
+
+// Stichworte für den Index
+(((Debian Backports, Aktivierung)))
+(((Debian Backports, Einbindung in Debian 8 'Jessie')))
+(((Debian Backports, Einbindung in Debian 7 'Wheezy')))
+(((Debian Backports, Einbindung in Debian 6 'Squeeze')))
+
+=== Einbindung in den Paketbestand ===
+
+Backports sind nicht von Hause aus aktiviert und Sie müssen diese in der
+Paketverwaltung explizit ergänzen. Dazu fügen Sie in der Liste der
+Paketquellen unter `/etc/apt/sources.list` (siehe dazu
+<<etc-apt-sources.list-verstehen>>) einen entsprechenden Eintrag für die
+passenden Backports ihrer Distribution hinzu. Für Debian 8 'Jessie' und
+Debian 7 'Wheezy' mit den dem Distributionsbereich 'main' sieht der
+jeweilige Eintrag wie folgt aus:
+
+.Eintrag zu Debian Backports für Debian 8 'Jessie'
+----
+# Backports
+deb http://ftp.debian.org/debian jessie-backports main
+----
+
+.Eintrag zu Debian Backports für Debian 7 'Wheezy'
+----
+# Backports
+deb http://httpredir.debian.org/debian wheezy-backports main
+----
+
+Wie bereits oben erwähnt, findet sich das APT-Repository für die
+Backports für Debian 6 'Squeeze' in einem getrennten Spiegelnetzwerk.
+Deswegen ist dort die kanonische Mirror-Adresse eine leicht andere:
+
+.Eintrag zu Debian Backports für Debian 6 'Squeeze'
+----
+# Backports
+deb http://httpredir.debian.org/debian-backports squeeze-backports main contrib non-free
+----
+
+// Stichworte für den Index
+(((apt-get, -t)))
+(((Debian Backports, Paketbezug)))
+(((Debian Backports, Pinning)))
+
+Nach der Aktualisierung der Paketquellen -- bspw. mittels `apt-get
+update` -- stehen Ihnen die zusätzlichen Pakete bereits zur Verfügung.
+Diese werden jedoch nicht automatisch berücksichtigt und installiert,
+sondern dazu bedarf es noch eines expliziten Aufrufs mit zusätzlichen
+Schaltern. `apt-get` und `aptitude` benutzen dazu den Schalter `-t`
+gefolgt vom Namen des Backports-Archivs.
+
+Das Paket 'asciidoc' steht bspw. nicht für Debian 7 'Wheezy' bereit,
+existiert jedoch in den Backports. Um dieses aus den Backports
+nachzuziehen, geben Sie auf der Kommandozeile folgendes ein:
+
+.Installation eines Pakets mit expliziter Angabe der Distribution 'wheezy-backports'
+----
+# apt-get -t wheezy-backports install asciidoc
+...
+#
+----
+
+Alternativ können Sie auch mittels Pinning paketweise bestimmen
+(siehe <<pinning-paketweise-festlegen>>), bei welchen Paketen Backports
+verwendet werden sollen.
+
+// Datei (Ende): ./praxis/debian-backports/einbindung-in-den-paketbestand.adoc
+
