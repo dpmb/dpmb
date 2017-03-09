@@ -10,56 +10,16 @@
 (((Paket, Rückportierung)))
 
 ----
-Der Beitrag erschien ursprünglich http://www.wizards-of-foss.de/de/weblog/2013/03/08/debian-backports-verwenden/ und wurde von uns überarbeitet.
+Der Beitrag erschien ursprünglich unter http://www.wizards-of-foss.de/de/weblog/2013/03/08/debian-backports-verwenden/ und wurde von uns überarbeitet.
 ----
 
 // Ausgangssituation
 
 include::ausgangssituation.adoc[]
 
-=== Gegenüberstellung der verschiedenen Lösungsansätze ===
+// Gegenüberstellung der verschiedenen Lösungsansätze
 
-Der erste Lösungsansatz -- das lokale Kompilieren und Installieren --
-geht am Paketsystem vorbei und Sie verlieren damit sämtliche Vorteile
-der Paketverwaltung. Handelt es sich um ein Programm, von dem andere
-Pakete abhängen, kommt noch das Problem hinzu, dass diese Abhängigkeiten
-dann im Paketsystem nicht mehr erfüllt sein müssen. Wir gehen daher auf
-diese Option nicht näher ein, auch wenn es sicher Fälle gibt, in denen
-dies nicht die schlechteste Variante ist.
-
-Das Nutzen von Debians 'testing'- oder 'unstable'-Zweigen anstatt
-'stable' bedingt, dass nicht nur die benötigte Software, sondern das
-komplette Betriebssystem mit allen Anwendungen in einer neueren
-Version verwendet wird. Dabei nehmen Sie das Risiko in Kauf, dass die
-Pakete noch nicht die Stabilitätskriterien von Debian erfüllen und
-daher durchaus Fehler, bei 'unstable' sogar Inkonsistenzen und
-Uninstallierbarkeit einzelner Pakete auftreten können. Dazu kommt, dass
-sich Pakete aus 'testing' und 'unstable' im dauernden Fluß befinden und
-sich daher relativ oft bezüglich der Konfigurationsformate oder ihrer
-unterstützten Funktionen ändern -- wie bei einem sogenannten 'Rolling
-Release'.
-
-Manchmal, aber lange nicht immer, sind die Abhängigkeiten eines Pakets
-aus 'testing' oder 'unstable' nicht allzu restriktiv und Sie können
-dieses -- z.B. mit dem Aufruf `dpkg -i` -- einfach so auch auf einem
-'stable'-System installieren. Das bedeutet aber nicht zwangsläufig, dass
-die nächste Version dieses Pakets aus Debians Entwicklungszweigen dies
-immer noch tut. Sie gehen damit das Risiko ein, das Paket nicht
-aktualisieren zu können oder es weiter benutzen zu können.
-
-Um nicht auf die Stabilität und die Sicherheitsupdates von Debians
-'stable'-Zweig zu verzichten und gleichzeitig einzelne Anwendungen in
-neueren Versionen nutzen zu können, ist der sauberste Weg die
-Rückportierung (engl. 'to backport'). Die Grundlage stellen die
-Versionszweige 'testing', 'unstable' und auch 'experimental' dar. Damit
-erreichen Sie, dass sich das ausgewählte Paket auch auf dem
-'stable'-Zweig bauen und installieren lässt. Es gehört meistens eine
-kleine Portion Glück dazu, das Paket ohne Murren zu portieren. Solche
-Backports sind nicht immer trivial in der Entwicklung und können auch
-vergleichsweise aufwendig in der Pflege sein, z.B. wenn neuere Versionen
-weitere Backports benötigen, weil in der nachfolgenden Entwicklung
-weitere Abhängigkeiten hinzukamen oder neuere Versionen der
-referenzierten Abhängigkeiten benötigt werden.
+include::loesungsansaetze.adoc[]
 
 === Debian Backports ===
 
