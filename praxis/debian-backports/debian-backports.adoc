@@ -1,0 +1,226 @@
+// Datei: ./praxis/debian-backports.adoc
+// Baustelle: Rohtext
+
+[[debian-backports]]
+
+== Backports ==
+
+// Stichworte für den Index
+(((Debian Backports)))
+(((Paket, Rückportierung)))
+
+----
+Der Beitrag erschien ursprünglich http://www.wizards-of-foss.de/de/weblog/2013/03/08/debian-backports-verwenden/ und wurde von uns überarbeitet.
+----
+
+=== Ausgangssituation ===
+
+Debian handhabt die Pakete seiner stabilen Veröffentlichung 'stable'
+(siehe <<veroeffentlichungen>>) äußerst konservativ und lässt (mit extrem
+wenig Ausnahmen) keinerlei neue Funktionalitäten zu. Die einzigen
+vorgesehenen Aktualisierungen in 'stable' sind Sicherheitsupdates oder
+die Behebung gröberer Bugs.
+
+Benötigen Sie dennoch von einzelnen Programmen neuere Versionen -- sei
+es wegen neuerer Funktionen oder aufgrund von Kundenanforderungen -- so
+gibt es verschiedene Wege, diese dennoch über das Paketsystem zu
+bekommen:
+
+. Die Anwendung lokal kompilieren und nach `/usr/local` installieren,
+. Nutzen der Entwicklungszweige 'testing' oder 'unstable',
+. Pakete aus den Entwicklungszweigen 'testing' oder 'unstable' auf 'stable' installieren,
+. Pakete aus den Entwicklungszweigen 'testing' oder 'unstable' auf 'stable' neu bauen, oder
+. Pakete aus dem Backports-Repository verwenden, falls diese darin verfügbar sind.
+
+=== Gegenüberstellung der verschiedenen Lösungsansätze ===
+
+Der erste Lösungsansatz -- das lokale Kompilieren und Installieren --
+geht am Paketsystem vorbei und Sie verlieren damit sämtliche Vorteile
+der Paketverwaltung. Handelt es sich um ein Programm, von dem andere
+Pakete abhängen, kommt noch das Problem hinzu, dass diese Abhängigkeiten
+dann im Paketsystem nicht mehr erfüllt sein müssen. Wir gehen daher auf
+diese Option nicht näher ein, auch wenn es sicher Fälle gibt, in denen
+dies nicht die schlechteste Variante ist.
+
+Das Nutzen von Debians 'testing'- oder 'unstable'-Zweigen anstatt
+'stable' bedingt, dass nicht nur die benötigte Software, sondern das
+komplette Betriebssystem mit allen Anwendungen in einer neueren
+Version verwendet wird. Dabei nehmen Sie das Risiko in Kauf, dass die
+Pakete noch nicht die Stabilitätskriterien von Debian erfüllen und
+daher durchaus Fehler, bei 'unstable' sogar Inkonsistenzen und
+Uninstallierbarkeit einzelner Pakete auftreten können. Dazu kommt, dass
+sich Pakete aus 'testing' und 'unstable' im dauernden Fluß befinden und
+sich daher relativ oft bezüglich der Konfigurationsformate oder ihrer
+unterstützten Funktionen ändern -- wie bei einem sogenannten 'Rolling
+Release'.
+
+Manchmal, aber lange nicht immer, sind die Abhängigkeiten eines Pakets
+aus 'testing' oder 'unstable' nicht allzu restriktiv und Sie können
+dieses -- z.B. mit dem Aufruf `dpkg -i` -- einfach so auch auf einem
+'stable'-System installieren. Das bedeutet aber nicht zwangsläufig, dass
+die nächste Version dieses Pakets aus Debians Entwicklungszweigen dies
+immer noch tut. Sie gehen damit das Risiko ein, das Paket nicht
+aktualisieren zu können oder es weiter benutzen zu können.
+
+Um nicht auf die Stabilität und die Sicherheitsupdates von Debians
+'stable'-Zweig zu verzichten und gleichzeitig einzelne Anwendungen in
+neueren Versionen nutzen zu können, ist der sauberste Weg die
+Rückportierung (engl. 'to backport'). Die Grundlage stellen die
+Versionszweige 'testing', 'unstable' und auch 'experimental' dar. Damit
+erreichen Sie, dass sich das ausgewählte Paket auch auf dem
+'stable'-Zweig bauen und installieren lässt. Es gehört meistens eine
+kleine Portion Glück dazu, das Paket ohne Murren zu portieren. Solche
+Backports sind nicht immer trivial in der Entwicklung und können auch
+vergleichsweise aufwendig in der Pflege sein, z.B. wenn neuere Versionen
+weitere Backports benötigen, weil in der nachfolgenden Entwicklung
+weitere Abhängigkeiten hinzukamen oder neuere Versionen der
+referenzierten Abhängigkeiten benötigt werden.
+
+=== Debian Backports ===
+
+Dass o.g. Bedürfnisse, Gedanken und Lösungen nichts Neues sind, können
+Sie sich sicher denken. Deswegen hat Norbert Tretkowski 2003
+'backports.org', kurz 'bpo', ins Leben gerufen -- einen zentralen
+Platz für solche Rückportierungen.
+
+Bedarf und Interesse an den Backports wuchs und es gab ein eigenes
+Spiegelnetzwerk analog zu dem von Debian. 2010 wurde das Projekt dann
+mit dem Umzug von 'backports.org' zu 'backports.debian.org' offizieller
+Bestandteil des Debian-Projektes <<backports.org-moved-to-backports.debian.org>>.
+
+Dennoch wurde die von nun an 'Debian Backports' genannten Pakete noch
+eine Weile getrennt von den offiziellen Paketen der Distribution
+verteilt. Erst seit Debian 7 'Wheezy' sind die Backports ebenfalls im
+selben Paketpool enthalten, jedoch nach wie vor in einem eigenen Zweig,
+der auf die Zeichenkette `-backports` endet. Aus diesem Grunde sind
+Backports für Debian 6 'Squeeze' leicht anders einzurichten, als für
+darauf folgende Veröffentlichungen.
+
+=== Welche Pakete gibt es als offiziellen Backport? ===
+
+Welche Pakete es auch als offiziellen Backport gibt, können Sie
+mittlerweile recht einfach in der Debian Paketsuche
+<<Debian-Paketsuche>> herausfinden. Ob es ein solches Paket auch als
+offiziellen Backport gibt, hängt von zwei Dingen ab -- dem Bedarf
+(wesentliche Änderungen gegenüber der Version im 'stable'-Zweig) und
+jemanden, der den Backport initial macht und dann auch weiterhin pflegt.
+
+Letzteres muss nicht der eigentliche Paketbetreuer des Pakets in
+Debian sein. Es kommt durchaus vor, dass dieser kein Bedarf bzw.
+Interesse an einem Backport hat. In diesem Fall ist es nicht unüblich,
+dass sich jemand anderes um den (nach wie vor offiziellen) Backport
+kümmert. U.a. aus diesem Grund sollten Sie Bug-Reports gegen Pakete aus
+den Debian Backports stets an die Backports-Mailingliste
+<<Backports-Mailingliste>> senden und nicht an das normale
+Bug-Tracking-System von Debian (Stand Januar 2015).
+
+=== Welche Versionen gibt es als offizielle Backports? ===
+
+Für den Zweig 'stable-backports' der Debian Backports sind nur Versionen
+erlaubt, die momentan in Debians 'testing'-Zweig enthalten sind. Für den
+'oldstable-backports'-Zweig -- quasi als Backports für die vorletzte
+'stable'-Veröffentlichung von Debian -- sind nur Paketversionen aus der
+aktuellen 'stable'-Veröffentlichung  zugelassen. Diese Varianten haben
+die Bezeichnung 'oldstable'. Hintergrund für diese Zuordnung ist, dass
+es möglich sein soll, bei der Aktualisierung eines Systems mit
+(offiziellen) Backports auf die jeweils nächste
+'stable'-Veröffentlichung alle bestehenden Backports automatisch durch
+die entsprechenden, neuen 'stable'-Pakete zu ersetzen.
+
+Trotzdem gibt es auch hier immer wieder Bedarf für Backports von
+'testing' nach 'oldstable', die von o.g. Regel des sauberen Upgrades
+abweichen. Aus diesem Grund gibt es für die
+'oldstable'-Veröffentlichungen von Debian neben den
+'oldstable-backports' auch noch 'oldstable-backports-sloppy'. Das
+englische Wort 'sloppy' steht für ``schlampig'', ``schluderig'' oder
+``nachlässig'' und besagt, dass diese Backports o.g. Anforderung an eine
+saubere Aktualisierbarkeit auf die nächste 'stable'-Veröffentlichung
+nicht entsprechen.
+
+=== Einbindung in den Paketbestand ===
+
+Backports sind nicht von Hause aus aktiviert und Sie müssen diese in der
+Paketverwaltung explizit ergänzen. Dazu fügen Sie in der Liste der
+Paketquellen unter `/etc/apt/sources.list` (siehe dazu
+<<etc-apt-sources.list-verstehen>>) einen entsprechenden Eintrag für die
+passenden Backports ihrer Distribution hinzu. Für Debian 8 'Jessie' und
+Debian 7 'Wheezy' mit den dem Distributionsbereich 'main' sieht der
+jeweilige Eintrag wie folgt aus:
+
+.Eintrag zu Debian Backports für Debian 8 'Jessie'
+----
+# Backports
+deb http://ftp.debian.org/debian jessie-backports main
+----
+
+.Eintrag zu Debian Backports für Debian 7 'Wheezy'
+----
+# Backports
+deb http://httpredir.debian.org/debian wheezy-backports main
+----
+
+Wie bereits oben erwähnt, findet sich das APT-Repository für die
+Backports für Debian 6 'Squeeze' in einem getrennten Spiegelnetzwerk.
+Deswegen ist dort die kanonische Mirror-Adresse eine leicht andere:
+
+.Eintrag zu Debian Backports für Debian 6 'Squeeze'
+----
+# Backports
+deb http://httpredir.debian.org/debian-backports squeeze-backports main contrib non-free
+----
+
+Nach der Aktualisierung der Paketquellen -- bspw. mittels `apt-get
+update` -- stehen Ihnen die zusätzlichen Pakete bereits zur Verfügung.
+Diese werden jedoch nicht automatisch berücksichtigt und installiert,
+sondern dazu bedarf es noch eines expliziten Aufrufs mit zusätzlichen
+Schaltern. `apt-get` und `aptitude` benutzen dazu den Schalter `-t`
+gefolgt vom Namen des Backports-Archivs.
+
+Das Paket 'asciidoc' steht bspw. nicht für Debian 7 'Wheezy' bereit,
+existiert jedoch in den Backports. Um dieses aus den Backports
+nachzuziehen, geben Sie auf der Kommandozeile folgendes ein:
+
+.Installation eines Pakets mit expliziter Angabe der Distribution 'wheezy-backports'
+----
+# apt-get -t wheezy-backports install asciidoc
+...
+#
+----
+
+Alternativ können Sie auch mittels Pinning paketweise bestimmen
+(siehe <<pinning-paketweise-festlegen>>), bei welchen Paketen Backports
+verwendet werden sollen.
+
+=== Weiterführende Dokumentation ===
+
+Die offizielle Dokumentation auf Englisch gibt es auf der
+Backports-Projektseite <<Debian-Backports>>. Eine deutschsprachige
+Anleitung finden Sie im Wiki von debianforum.de
+<<Debianforum-Wiki-Backports>>.
+
+=== Backports bei Ubuntu ===
+
+// Stichworte für den Index
+(((Veröffentlichung, Entwicklungsstand)))
+(((Veröffentlichung, Langzeitunterstützung)))
+(((Veröffentlichung, LTS)))
+
+Auch bei Ubuntu gibt es Backports. Diese funktionieren nach ähnlichen
+Regeln wie bei Debian. Da es bei Ubuntu aber keinen 'testing'-Zweig wie
+bei Debian gibt und die Veröffentlichungen wesentlich häufiger
+passieren, werden Backports dort üblicherweise von der aktuellen
+Veröffentlichung zur vorherigen Veröffentlichung oder zur vorherigen
+LTS-Veröffentlichung gemacht.
+
+=== Wichtige Fragen, die sich bei Backports ergeben ===
+
+* wie kommt ein Backport-Paket zustande? Sicher gibt es dazu einen definierten Arbeitsablauf
+* Laufen die Pakete außerhalb des üblichen Validierungsprozesses (ähnlich wie Ubuntu PPAs)
+* wann ist die Installation eines Backport-Pakets sinnvoll, wann nicht?
+* kann bei Backports was schiefgehen? Wenn ja, was? Kann ich das vorher irgendwie testen?
+* Gibt es Updates dazu? Pflege ich die über den üblichen `apt-get update`-Prozess ein, oder geht das anders, bspw. manuell?
+** Pakete werden wie ein normales Paket ausgewählt und gepflegt
+* Wie entferne ich ein Backport-Paket wieder (`apt-get remove Paketname`)?
+** ja
+* Oder meintest Du "Wie downgrade ich ein Backport-Paket wieder?"
+// Datei (Ende): ./praxis/debian-backports.adoc
