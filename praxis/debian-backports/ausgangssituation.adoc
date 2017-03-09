@@ -1,0 +1,28 @@
+// Datei: ./praxis/debian-backports/ausgangssituation.adoc
+// Baustelle: Rohtext
+
+// Stichworte für den Index
+(((Debian Backports)))
+(((Debian, Umgang mit Aktualisierungen)))
+(((Paket, Rückportierung)))
+
+=== Ausgangssituation ===
+
+Debian handhabt die Pakete seiner stabilen Veröffentlichung 'stable'
+(siehe <<veroeffentlichungen>>) äußerst konservativ und lässt (mit extrem
+wenig Ausnahmen) keinerlei neue Funktionalitäten zu. Die einzigen
+vorgesehenen Aktualisierungen in der Veröffentlichung 'stable' sind
+Sicherheitsupdates oder die Behebung gröberer Bugs.
+
+Benötigen Sie dennoch von einzelnen Programmen neuere Versionen -- sei
+es wegen neuerer Funktionen oder aufgrund von Kundenanforderungen -- so
+gibt es verschiedene Wege, diese dennoch über das Paketsystem zu
+bekommen:
+
+. Die Anwendung lokal kompilieren und in das Verzeichnis `/usr/local` installieren,
+. Nutzen der Entwicklungszweige 'testing' oder 'unstable',
+. Pakete aus den Entwicklungszweigen 'testing' oder 'unstable' auf 'stable' installieren,
+. Pakete aus den Entwicklungszweigen 'testing' oder 'unstable' auf 'stable' neu bauen, oder
+. Pakete aus dem Backports-Repository verwenden, falls diese darin verfügbar sind.
+
+// Datei (Ende): ./praxis/debian-backports/ausgangssituation.adoc

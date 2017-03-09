@@ -1,4 +1,4 @@
-// Datei: ./praxis/debian-backports.adoc
+// Datei: ./praxis/debian-backports/debian-backports.adoc
 // Baustelle: Rohtext
 
 [[debian-backports]]
@@ -13,24 +13,9 @@
 Der Beitrag erschien ursprünglich http://www.wizards-of-foss.de/de/weblog/2013/03/08/debian-backports-verwenden/ und wurde von uns überarbeitet.
 ----
 
-=== Ausgangssituation ===
+// Ausgangssituation
 
-Debian handhabt die Pakete seiner stabilen Veröffentlichung 'stable'
-(siehe <<veroeffentlichungen>>) äußerst konservativ und lässt (mit extrem
-wenig Ausnahmen) keinerlei neue Funktionalitäten zu. Die einzigen
-vorgesehenen Aktualisierungen in 'stable' sind Sicherheitsupdates oder
-die Behebung gröberer Bugs.
-
-Benötigen Sie dennoch von einzelnen Programmen neuere Versionen -- sei
-es wegen neuerer Funktionen oder aufgrund von Kundenanforderungen -- so
-gibt es verschiedene Wege, diese dennoch über das Paketsystem zu
-bekommen:
-
-. Die Anwendung lokal kompilieren und nach `/usr/local` installieren,
-. Nutzen der Entwicklungszweige 'testing' oder 'unstable',
-. Pakete aus den Entwicklungszweigen 'testing' oder 'unstable' auf 'stable' installieren,
-. Pakete aus den Entwicklungszweigen 'testing' oder 'unstable' auf 'stable' neu bauen, oder
-. Pakete aus dem Backports-Repository verwenden, falls diese darin verfügbar sind.
+include::ausgangssituation.adoc[]
 
 === Gegenüberstellung der verschiedenen Lösungsansätze ===
 
@@ -223,4 +208,5 @@ LTS-Veröffentlichung gemacht.
 * Wie entferne ich ein Backport-Paket wieder (`apt-get remove Paketname`)?
 ** ja
 * Oder meintest Du "Wie downgrade ich ein Backport-Paket wieder?"
-// Datei (Ende): ./praxis/debian-backports.adoc
+
+// Datei (Ende): ./praxis/debian/backports/debian-backports.adoc
