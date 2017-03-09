@@ -1,0 +1,47 @@
+// Datei: ./praxis/debian-backports/installierte-pakete-anzeigen.adoc
+// Baustelle: Rohtext
+
+// Stichworte für den Index
+(((Debian Backports, installierte Pakete anzeigen)))
+
+=== Die installierten Pakete anzeigen ===
+
+Wie bereits genannt, gliedern sich die Pakete aus Debian Backports
+recht nahtlos in den Paketbestand ein. Möchten Sie herausfinden, welche
+der installierten Pakete auf ihrem System aus den Backports stammen,
+kommt ihnen das Namens- und Versionsschema von Debian entgegen (siehe
+'Benennung einer Paketdatei' in <<benennung-eines-debian-pakets>>). 
+
+In der Versionsangabe des Pakets ist die Zeichenkette `~bpo` plus die
+Versionsnummer der Debianveröffentlichung enthalten, so bspw. `~bpo8`
+für eine Rückportierung auf Debian 8 'Jessie'. Mit Hilfe von `dpkg`,
+`grep` und `awk` filtern Sie aus der Paketliste alle Pakete samt
+Versionsnummer heraus, die diese Zeichenkette enthalten:
+
+.Auflisten der installierten Pakete samt Versionsnummer aus Debian Backports
+----
+$ dpkg -l | grep ~bpo8 | awk '{print $2 " " $3}'
+libroutino-slim0 3.1.1-1~bpo8+1
+libroutino0 3.1.1-1~bpo8+1
+qmapshack 1.7.2-1~bpo8+1
+routino 3.1.1-1~bpo8+1
+routino-common 3.1.1-1~bpo8+1
+$
+----
+
+Geht es Ihnen nur um die Paketnamen, vereinfacht sich der Aufruf wie
+folgt -- Sie filtern mittels `awk` und einem Regulären Ausdruck und
+geben danach nur noch die zweite Spalte jeder Zeile aus:
+
+.Auflisten der installierten Pakete aus Debian Backports
+----
+$ dpkg -l | awk '/~bpo8/{print $2}'
+libroutino-slim0
+libroutino0
+qmapshack
+routino
+routino-common
+$
+----
+
+// Datei: ./praxis/debian-backports/installierte-pakete-anzeigen.adoc

@@ -37,6 +37,10 @@ include::versionen.adoc[]
 
 include::einbindung-in-den-paketbestand.adoc[]
 
+// Die installierten Pakete aus Backports anzeigen
+
+include::installierte-pakete-anzeigen.adoc[]
+
 // Weiterführende Dokumentation
 
 include::dokumentation.adoc[]
