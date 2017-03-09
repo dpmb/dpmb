@@ -25,23 +25,9 @@ include::loesungsansaetze.adoc[]
 
 include::backports-intro.adoc[]
 
-=== Welche Pakete gibt es als offiziellen Backport? ===
+// Welche Pakete gibt es als offiziellen Backport?
 
-Welche Pakete es auch als offiziellen Backport gibt, können Sie
-mittlerweile recht einfach in der Debian Paketsuche
-<<Debian-Paketsuche>> herausfinden. Ob es ein solches Paket auch als
-offiziellen Backport gibt, hängt von zwei Dingen ab -- dem Bedarf
-(wesentliche Änderungen gegenüber der Version im 'stable'-Zweig) und
-jemanden, der den Backport initial macht und dann auch weiterhin pflegt.
-
-Letzteres muss nicht der eigentliche Paketbetreuer des Pakets in
-Debian sein. Es kommt durchaus vor, dass dieser kein Bedarf bzw.
-Interesse an einem Backport hat. In diesem Fall ist es nicht unüblich,
-dass sich jemand anderes um den (nach wie vor offiziellen) Backport
-kümmert. U.a. aus diesem Grund sollten Sie Bug-Reports gegen Pakete aus
-den Debian Backports stets an die Backports-Mailingliste
-<<Backports-Mailingliste>> senden und nicht an das normale
-Bug-Tracking-System von Debian (Stand Januar 2015).
+include::pakete.adoc[]
 
 === Welche Versionen gibt es als offizielle Backports? ===
 
