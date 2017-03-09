@@ -1,0 +1,16 @@
+// Datei: ./praxis/debian-backports/fragen.adoc
+// Baustelle: Notizen
+
+=== Wichtige Fragen, die sich bei Backports ergeben ===
+
+* wie kommt ein Backport-Paket zustande? Sicher gibt es dazu einen definierten Arbeitsablauf
+* Laufen die Pakete außerhalb des üblichen Validierungsprozesses (ähnlich wie Ubuntu PPAs)
+* wann ist die Installation eines Backport-Pakets sinnvoll, wann nicht?
+* kann bei Backports was schiefgehen? Wenn ja, was? Kann ich das vorher irgendwie testen?
+* Gibt es Updates dazu? Pflege ich die über den üblichen `apt-get update`-Prozess ein, oder geht das anders, bspw. manuell?
+** Pakete werden wie ein normales Paket ausgewählt und gepflegt
+* Wie entferne ich ein Backport-Paket wieder (`apt-get remove Paketname`)?
+** ja
+* Oder meintest Du "Wie downgrade ich ein Backport-Paket wieder?"
+
+// Datei (Ende): ./praxis/debian-backports/fragen.adoc
