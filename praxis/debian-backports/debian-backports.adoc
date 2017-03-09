@@ -41,19 +41,9 @@ include::einbindung-in-den-paketbestand.adoc[]
 
 include::dokumentation.adoc[]
 
-=== Backports bei Ubuntu ===
+// Backports bei Ubuntu
 
-// Stichworte für den Index
-(((Veröffentlichung, Entwicklungsstand)))
-(((Veröffentlichung, Langzeitunterstützung)))
-(((Veröffentlichung, LTS)))
-
-Auch bei Ubuntu gibt es Backports. Diese funktionieren nach ähnlichen
-Regeln wie bei Debian. Da es bei Ubuntu aber keinen 'testing'-Zweig wie
-bei Debian gibt und die Veröffentlichungen wesentlich häufiger
-passieren, werden Backports dort üblicherweise von der aktuellen
-Veröffentlichung zur vorherigen Veröffentlichung oder zur vorherigen
-LTS-Veröffentlichung gemacht.
+include::backports-ubuntu.adoc[]
 
 === Wichtige Fragen, die sich bei Backports ergeben ===
 

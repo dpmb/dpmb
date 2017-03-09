@@ -1,0 +1,19 @@
+// Datei: ./praxis/debian-backports/backports-ubuntu.adoc
+// Baustelle: Rohtext
+
+// Stichworte für den Index
+(((Debian Backports, Ubuntu)))
+(((Veröffentlichung, Entwicklungsstand)))
+(((Veröffentlichung, Langzeitunterstützung)))
+(((Veröffentlichung, LTS)))
+
+=== Backports bei Ubuntu ===
+
+Auch bei Ubuntu gibt es Backports. Diese funktionieren nach ähnlichen
+Regeln wie bei Debian. Da es bei Ubuntu aber keinen 'testing'-Zweig wie
+bei Debian gibt und die Veröffentlichungen wesentlich häufiger
+passieren, werden Backports dort üblicherweise von der aktuellen
+Veröffentlichung zur vorherigen Veröffentlichung oder zur vorherigen
+LTS-Veröffentlichung gemacht.
+
+// Datei (Ende): ./praxis/debian-backports/backports-ubuntu.adoc
