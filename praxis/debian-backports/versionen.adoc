@@ -1,0 +1,30 @@
+// Datei: ./praxis/debian-backports/versionen.adoc
+// Baustelle: Rohtext
+
+// Stichworte für den Index
+(((Debian Backports, Versionen)))
+
+=== Welche Versionen gibt es als offizielle Backports? ===
+
+Für den Zweig 'stable-backports' der Debian Backports sind nur Versionen
+erlaubt, die momentan in Debians 'testing'-Zweig enthalten sind. Für den
+'oldstable-backports'-Zweig -- quasi als Backports für die vorletzte
+'stable'-Veröffentlichung von Debian -- sind nur Paketversionen aus der
+aktuellen 'stable'-Veröffentlichung zugelassen. Diese Varianten haben
+die Bezeichnung 'oldstable'. Hintergrund für diese Zuordnung ist, dass
+es möglich sein soll, bei der Aktualisierung eines Systems mit
+(offiziellen) Backports auf die jeweils nächste
+'stable'-Veröffentlichung alle bestehenden Backports automatisch durch
+die entsprechenden, neuen 'stable'-Pakete zu ersetzen.
+
+Trotzdem gibt es auch hier immer wieder Bedarf für Backports von
+'testing' nach 'oldstable', die von o.g. Regel des sauberen Upgrades
+abweichen. Aus diesem Grund gibt es für die
+'oldstable'-Veröffentlichungen von Debian neben den
+'oldstable-backports' auch noch 'oldstable-backports-sloppy'. Das
+englische Wort 'sloppy' steht für ``schlampig'', ``schluderig'' oder
+``nachlässig'' und besagt, dass diese Backports o.g. Anforderung an eine
+saubere Aktualisierbarkeit auf die nächste 'stable'-Veröffentlichung
+nicht entsprechen.
+
+// Datei (Ende): ./praxis/debian-backports/versionen.adoc
