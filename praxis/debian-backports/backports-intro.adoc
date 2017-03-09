@@ -1,0 +1,29 @@
+// Datei: ./praxis/debian-backports/backports-intro.adoc
+// Baustelle: Rohtext
+
+// Stichworte für den Index
+(((backports.org)))
+(((backports.debian.org)))
+(((Debian Backports)))
+
+=== Debian Backports ===
+
+Dass o.g. Bedürfnisse, Gedanken und Lösungen nichts Neues sind, können
+Sie sich sicher denken. Deswegen hat Norbert Tretkowski 2003
+'backports.org', kurz 'bpo', ins Leben gerufen -- einen zentralen
+Platz für solche Rückportierungen.
+
+Bedarf und Interesse an den Backports wuchs und es gab ein eigenes
+Spiegelnetzwerk analog zu dem von Debian. 2010 wurde das Projekt dann
+mit dem Umzug von 'backports.org' zu 'backports.debian.org' offizieller
+Bestandteil des Debian-Projektes <<backports.org-moved-to-backports.debian.org>>.
+
+Dennoch wurde die von nun an 'Debian Backports' genannten Pakete noch
+eine Weile getrennt von den offiziellen Paketen der Distribution
+verteilt. Erst seit Debian 7 'Wheezy' sind die Backports ebenfalls im
+selben Paketpool enthalten, jedoch nach wie vor in einem eigenen Zweig,
+der auf die Zeichenkette `-backports` endet. Aus diesem Grunde sind
+Backports für Debian 6 'Squeeze' leicht anders einzurichten, als für
+darauf folgende Veröffentlichungen.
+
+// Datei (Ende): ./praxis/debian-backports/backports-intro.adoc
