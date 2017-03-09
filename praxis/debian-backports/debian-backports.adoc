@@ -37,12 +37,9 @@ include::versionen.adoc[]
 
 include::einbindung-in-den-paketbestand.adoc[]
 
-=== Weiterführende Dokumentation ===
+// Weiterführende Dokumentation
 
-Die offizielle Dokumentation auf Englisch gibt es auf der
-Backports-Projektseite <<Debian-Backports>>. Eine deutschsprachige
-Anleitung finden Sie im Wiki von debianforum.de
-<<Debianforum-Wiki-Backports>>.
+include::dokumentation.adoc[]
 
 === Backports bei Ubuntu ===
 
