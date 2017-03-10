@@ -87,4 +87,27 @@ auf, bevor es darauf herumrechnet. Von Vorteil ist, dass diese Variante
 unabhängig von einer Veröffentlichung funktioniert und somit auch gut
 mit älteren Debianvarianten nutzbar ist.
 
+// Stichworte für den Index
+(((Debian Backports, installierte Pakete anzeigen)))
+(((apt, installierte Pakete aus Debian Backports anzeigen)))
+
+Die Variante b) auf der Basis von `apt` und `fgrep` liefert das gleiche
+Ergebnis, jedoch eine andere Ausgabe. Jede Zeile beinhaltet den
+Paketnamen samt Repository, aus dem Paket stammt, sowie die
+Versionsnummer, die Architektur und den Installationsstatus.
+
+.Auflisten der installierten Pakete aus Debian Backports mittels `apt`
+----
+$ apt list --installed | fgrep backports
+
+WARNING: apt does not have a stable CLI interface yet. Use with caution in scripts.
+
+libroutino-slim0/jessie-backports,now 3.1.1-1~bpo8+1 amd64 [Installiert,automatisch]
+libroutino0/jessie-backports,now 3.1.1-1~bpo8+1 amd64 [Installiert,automatisch]
+qmapshack/jessie-backports,now 1.7.2-1~bpo8+1 amd64  [installiert]
+routino/jessie-backports,now 3.1.1-1~bpo8+1 amd64 [Installiert,automatisch]
+routino-common/jessie-backports,now 3.1.1-1~bpo8+1 all [Installiert,automatisch]
+$
+----
+
 // Datei: ./praxis/debian-backports/installierte-pakete-anzeigen.adoc
