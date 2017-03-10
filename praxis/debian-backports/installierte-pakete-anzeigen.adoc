@@ -3,6 +3,7 @@
 
 // Stichworte für den Index
 (((Debian Backports, installierte Pakete anzeigen)))
+(((dpkg, installierte Pakete aus Debian Backports anzeigen)))
 
 === Die installierten Pakete anzeigen ===
 
@@ -51,8 +52,39 @@ $
 ----
 
 Das Risiko bei den beiden Varianten ist, dass Sie auch andere Pakete
-erwischen, die diese Zeichenkette in der Versionsnummer tragen. Zudem
-müssen Sie das bspw. in Skripten immer wieder an die von Ihnen
-verwendete Debianversion anpassen.
+erwischen, die diese Zeichenkette in der Versionsnummer oder der
+Paketbeschreibung tragen. Zudem müssen Sie das bspw. in Skripten immer
+wieder an die von Ihnen verwendete Debianversion anpassen. Um diese
+Fallen zu umgehen, bestehen zwei weitere Lösungswege -- a) mit Hilfe von
+`aptitude` und b) mit Hilfe von `apt`. Letzteres gelingt Ihnen erst ab
+Debian 8 'Jessie', da es vorher `apt` nicht als Werkzeug in Debian gibt.
+
+// Stichworte für den Index
+(((Debian Backports, installierte Pakete anzeigen)))
+(((aptitude, installierte Pakete aus Debian Backports anzeigen)))
+
+Die Variante a) mit `aptitude` kombiniert mehrere Aufrufparameter -- so
+`search ~i` zur Suche in den installierten Paketen und dazu `?narrow()`
+zur weiteren Eingrenzung der Auswahl. `~VCURRENT` bezieht sich dabei auf
+die aktuelle Debianversion, `~Abackports` auf die Pakete, die aus den
+Paketquellen (Archiv) kommen, in denen Backports im Archivnamen
+vorkommt.
+
+.Auflisten der installierten Pakete aus Debian Backports mittels `aptitude`
+----
+$ aptitude search '~i ?narrow(~VCURRENT, ~Abackports)'
+i A libroutino-slim0                - Routino slim routing library
+i A libroutino0                     - Routino routing library
+i   qmapshack                       - GPS mapping (GeoTiff and vector) and GPSr
+i A routino                         - Set of tools to find a path between two po
+i A routino-common                  - Routino data
+$
+----
+
+Nachteilig ist, dass `aptitude` etwas Zeit benötigt, um das Ergebnis zu
+ermitteln. `aptitude` baut intern erst alle möglichen Datenstrukturen
+auf, bevor es darauf herumrechnet. Von Vorteil ist, dass diese Variante
+unabhängig von einer Veröffentlichung funktioniert und somit auch gut
+mit älteren Debianvarianten nutzbar ist.
 
 // Datei: ./praxis/debian-backports/installierte-pakete-anzeigen.adoc
