@@ -43,6 +43,7 @@ Corporate Server, UCS)
 * Wolfram Schneider für den Hinweis zu `dh-make-perl` als spezialisierte
 Variante von `checkinstall` sowie zum Aktualisieren von LTS-Versionen (siehe <<umgang-mit-lts>>)
 * Jörg Brühe für die Anregungen zu den Paketabhängigkeiten
+* Sebastian Andres für seine Anregungen zu Debian Backports
 
 Nicht zu vergessen sind die Probeleser, die sich durch unser Manuskript
 gekämpft haben: Arne Wichmann, Thomas Winde, Jana Pirat, Jörg Dölz,
