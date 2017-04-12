@@ -120,6 +120,7 @@ u.a. mit Maemo und damit ebenfalls mit dem `deb`-Paketformat laufen.
 (((Fink)))
 (((Hurd)))
 (((Illumian)))
+(((DilOS)))
 (((Nexenta OS)))
 (((StormOS)))
 (((UbuntuBSD)))
@@ -131,7 +132,7 @@ mit BSD- und GNU-Hurd-Kernel in Form von Debian GNU/kFreeBSD
 unter dem Namen UbuntuBSD <<UbuntuBSD>> eine Variante mit
 FreeBSD-Kernel.  Andererseits gibt es außerhalb des Debian-Projektes
 Portierungen auf den OpenSolaris bzw. Illumos-Kernel, z.B. Nexenta OS
-<<NexentaOS>>, Illumian <<Illumian>> und Dyson OS <<DysonOS>>. Das mit
+<<NexentaOS>>, Illumian <<Illumian>>, Dyson OS <<DysonOS>> und DilOS <<DilOS>>. Das mit
 Nexenta OS verwandte StormOS <<StormOS>> wurde allerdings bereits 2012
 wieder eingestellt.
 

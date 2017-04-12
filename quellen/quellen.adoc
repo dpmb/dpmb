@@ -544,6 +544,8 @@ https://packages.debian.org/jessie/packagekit-command-not-found
 
 - [[[DFSG]]] Debian Free Software Guidelines (DFSG), https://www.debian.org/social_contract#guidelines
 
+- [[[DilOS]]] DilOS, http://www.dilos.org/
+
 - [[[dinstall-status]]] dinstall Status, https://ftp-master.debian.org/dinstall.status
 
 - [[[DNF-Dokumentation]]] Dokumentation zu Dandified YUM (DNF), https://dnf.readthedocs.io/en/latest/
