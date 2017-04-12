@@ -130,10 +130,13 @@ mit BSD- und GNU-Hurd-Kernel in Form von Debian GNU/kFreeBSD
 <<Debian-Wiki-Debian-GNUkFreeBSD>> und Debian GNU/Hurd
 <<Debian-Wiki-Debian-GNUHurd>>. Auch von Ubuntu gibt es mittlerweile
 unter dem Namen UbuntuBSD <<UbuntuBSD>> eine Variante mit
-FreeBSD-Kernel.  Andererseits gibt es außerhalb des Debian-Projektes
-Portierungen auf den OpenSolaris bzw. Illumos-Kernel, z.B. Nexenta OS
-<<NexentaOS>>, Illumian <<Illumian>>, Dyson OS <<DysonOS>> und DilOS <<DilOS>>. Das mit
-Nexenta OS verwandte StormOS <<StormOS>> wurde allerdings bereits 2012
+FreeBSD-Kernel.
+
+Andererseits gibt es außerhalb des Debian-Projektes Portierungen auf
+den OpenSolaris bzw. Illumos-Kernel, z.B. Dyson OS <<DysonOS>> und
+DilOS <<DilOS>>. Weitere Distributionen mit dieser Kombination waren Nexenta
+OS <<NexentaOS-Illumian>> und die damit verwandten StormOS <<StormOS>>
+und Illumian <<NexentaOS-Illumian>>. Sie wurden aber allesamt bereits
 wieder eingestellt.
 
 Unter Mac OS X existieren mit Fink <<Finkproject>> zusätzliche, freie

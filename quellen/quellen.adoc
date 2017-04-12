@@ -624,8 +624,6 @@ https://packages.debian.org/jessie/packagekit-command-not-found
 
 - [[[Huy-Tran-Apt-Mirror]]] Huy Tran: How to update and upgrade with fastest mirror from the command line, http://www.namhuy.net/1040/how-to-update-and-upgrade-with-fastest-mirror-from-the-command-line.html
 
-- [[[Illumian]]] Illumian, http://illumian.org/
-
 - [[[ipbrick]]] IPBRICK, http://www.ipbrick.de/
 
 - [[[ipkg]]] Itsy Package Management System (IPKG) bei Wikipedia, https://de.wikipedia.org/wiki/IPKG
@@ -697,7 +695,7 @@ https://packages.debian.org/jessie/packagekit-command-not-found
 
 - [[[Neo900]]] Neo900-Projekt, https://neo900.org/
 
-- [[[NexentaOS]]] Wikipedia-Eintrag zu Nexenta OS, https://en.wikipedia.org/wiki/Nexenta_OS
+- [[[NexentaOS-Illumian]]] Wikipedia-Eintrag zu Nexenta OS und Illumian, https://en.wikipedia.org/wiki/Nexenta_OS
 
 - [[[nixcraft-apt-get]]] `apt-get`-Spickzettel im Nixcraft-Blog, http://www.cyberciti.biz/howto/question/linux/apt-get-cheat-sheet.php
 
