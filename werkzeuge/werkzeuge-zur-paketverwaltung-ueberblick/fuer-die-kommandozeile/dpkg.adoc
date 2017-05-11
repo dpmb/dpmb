@@ -49,7 +49,7 @@ entnehmen Sie bitte der Manpage zum Programm]:
 
 * Inhalt eines nicht installierten Pakets anzeigen (siehe <<paketinhalte-anzeigen-apt-file>>) mit `dpkg -c` 'Paketname'
 
-* Paket zu Datei finden (siehe <<paket-zu-datei-finden>>) mit `dpkg -S` 'Paketname' und 
+* Paket zu Datei finden (siehe <<paket-zu-datei-finden>>) mit `dpkg -S` 'Dateiname' und
 
 * Pakete konfigurieren (siehe <<pakete-konfigurieren>>) (Option `--configure`)
 
