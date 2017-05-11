@@ -52,7 +52,7 @@ beiden Hilfsprogramme `dpkg-deb` und `dpkg-query`. Dazu gehören bspw.
 die Schalter `-c` und `-L` zum Anzeigen des Inhalts eines Pakets (siehe
 <<paketinhalte-anzeigen-apt-file>>) sowie `-l` zur Auflistung der 
 installierten Pakete (siehe <<liste-der-installierten-pakete-anzeigen-und-deuten>>), 
-`-s` zum Erfragen des Paketstaus (siehe <<paketstatus-erfragen>>) und
+`-s` zum Erfragen des Paketstatus (siehe <<paketstatus-erfragen>>) und
 `-S`, um das Paket zu finden, in dem eine bestimmte Datei vorkommt
 (siehe <<paket-zu-datei-finden>>).
 

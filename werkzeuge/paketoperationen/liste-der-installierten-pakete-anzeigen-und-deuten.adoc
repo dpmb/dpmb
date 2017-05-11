@@ -177,7 +177,7 @@ $
 
 Graphische Programme wie beispielsweise Synaptic (siehe
 <<gui-synaptic>>) und SmartPM (siehe <<gui-smartpm>>) verwenden
-keine Buchstaben zur Kennzeichnung des Paketstaus, sondern nutzen
+keine Buchstaben zur Kennzeichnung des Paketstatus, sondern nutzen
 stattdessen verschiedenfarbige Kästchen (``Icons''). In
 <<fig.smartpm-icons>> sehen Sie alle Möglichkeiten in der vollständigen
 Übersicht. Installierte Pakete erkennen Sie an der grünen Farbe,
