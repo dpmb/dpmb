@@ -50,7 +50,7 @@ p   dphys-config                      - Werkzeug zum Verteilen von Konfiguration
 p   dphys-swapfile                    - Automatisches Generieren und Nutzen einer Au
 p   libapache2-mod-macro              - Create macros inside Apache config files
 p   links                             - Textmodus-Webbrowser
-i   links2                            - Webbrowser für den grafischen und den Textmo
+i   links2                            - Webbrowser für den graphischen und den Textmo
 ...
 $
 ----

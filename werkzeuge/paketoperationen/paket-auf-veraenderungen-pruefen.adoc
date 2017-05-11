@@ -50,7 +50,7 @@ _Trusty Tahr_ zur Verfügung.
 ==== MD5-Summen zur Erkennung von Änderungen ====
 
 Während Debian bei der Verifizierung der bezogenen Pakete auch SHA1-
-und SHA256-Hashsummen zur kryptografischen Absicherung verwendet (siehe
+und SHA256-Hashsummen zur kryptographischen Absicherung verwendet (siehe
 dazu <<bezogenes-paket-verifizieren>>), werden zum Erkennen von
 Änderungen an installierten Paketdateien nur MD5-Summen verwendet. Diese
 sind pro Paket in den Dateien `/var/lib/dpkg/info/*.md5sums`

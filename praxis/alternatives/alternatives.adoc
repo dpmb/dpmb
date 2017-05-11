@@ -17,7 +17,7 @@ Anwendungen über MIME (engl. 'MIME Applications Associations')
 <<mime-applications-associations>> und im Speziellen die Liste der
 Standardanwendungen (engl. 'Default Applications')
 <<mime-applications-associations-default-applications>>. Zur
-Konfiguration steht Ihnen meist eine passende grafische Oberfläche zur
+Konfiguration steht Ihnen meist eine passende graphische Oberfläche zur
 Verfügung.
 
 // Stichworte für den Index
@@ -123,8 +123,8 @@ Unterstützung moderner Desktops (`emacs23` bzw. `emacs24`). Dieses Paket
 hängt u.a. von D-Bus ab.
 * basierend auf dem schlankeren Lucid-Toolkit (`emacs23-lucid` bzw.
 `emacs24-lucid`). Mit Unterstützung für das X-Window-System, aber ohne
-allzuviele sonstige Abhängigkeiten. 
-* ganz ohne grafische Benutzeroberfläche (`emacs23-nox` bzw. `emacs24-nox`). 
+allzuviele sonstige Abhängigkeiten.
+* ganz ohne graphische Benutzeroberfläche (`emacs23-nox` bzw. `emacs24-nox`).
 
 Ein zweites Beispiel ist der Windowmanager `dwm`, bei welchem die
 Konfiguration zum Kompilierzeitpunkt festgelegt wird. Das Paket 'dwm'
@@ -267,7 +267,7 @@ und es gibt keine Auswahl zur Konfiguration.
 
 .Hinweis, falls für ein generisches Programm nur eine Alternative installiert ist.
 ----
-# update-alternatives --config emacs 
+# update-alternatives --config emacs
 Es gibt nur eine Alternative in Link-Gruppe emacs (die /usr/bin/emacs
 bereitstellt): /usr/bin/emacs24-x
 Nichts zu konfigurieren.
@@ -284,7 +284,7 @@ des Debian Policy Manuals festgelegt <<Debian-Policy-Manual>>.
 Installieren Sie bspw. `vim-gtk` auf einem System, auf dem bisher `nano`
 der Editor mit der höchsten Priorität war, so werden bspw. die Datei
 `/usr/bin/editor` und `/etc/alternatives/editor`
-automatisch auf die grafische Variante von Vim umgestellt.
+automatisch auf die graphische Variante von Vim umgestellt.
 
 .Hinweise über die automatische Auswahl von Alternativen bei der Paketinstallation
 ----
