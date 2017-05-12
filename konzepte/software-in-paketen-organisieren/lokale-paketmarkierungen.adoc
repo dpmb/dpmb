@@ -148,8 +148,9 @@ User-Tags: broken-by-807773
 ...
 ----
 
-Die benutzerspezifischen Markierungen werden auch in der TUI von
-`aptitude` angezeigt, jedoch können Sie diese dort nicht ändern.
+Diese benutzerspezifischen Markierungen werden auch in der Textoberfläche
+(text-based user interface, kurz TUI) von `aptitude` angezeigt, jedoch
+können Sie diese dort nicht ändern.
 
 ==== Lesen und Anzeigen einer Markierung mit `aptitude` ====
 
