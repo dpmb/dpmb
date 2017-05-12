@@ -11,9 +11,9 @@
 [NOTE]
 .Verfügbarkeit von `apt-spy`
 ====
-`apt-spy` ist bis einschließlich Debian 7 _Wheezy_ fester Bestandteil
-des Paketbestands. Für Debian 8 _Jessie_ gibt es kein offizielles Paket,
-jedoch weiterhin in _unstable_.
+`apt-spy` gehört bis einschließlich Debian 7 _Wheezy_ zum festen
+Paketbestand. Für Debian 8 _Jessie_ gibt es kein offizielles Paket mehr.
+Es steht jedoch weiterhin in _unstable_ zur Verfügung.
 ====
 
 Das Werkzeug `apt-spy` aus dem gleichnamigen Debian-Paket
