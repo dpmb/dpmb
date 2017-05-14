@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Debian Package Management Book
-Source: https://www.dpmb.org/
+Source: https://github.com/dpmb/dpmb
 
 Files: *
 Copyright: 2012-2016 Axel Beckert <abe@debian.org>

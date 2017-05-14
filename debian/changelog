@@ -2,6 +2,7 @@ dpmb (0~2017.05.14) UNRELEASED; urgency=medium
 
   * New snapshot.
   * debian/copyright: Add stanza for new file deploy/cc-88x31.png.
+  * debian/copyright: Use Github repo instead of website as "Source".
 
  -- Axel Beckert <abe@debian.org>  Sun, 14 May 2017 16:00:30 +0200
 
