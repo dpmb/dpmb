@@ -17,6 +17,12 @@ Copyright: 2008 Stuart Rackham <srackham@methods.co.nz>
 License: GPL-2
 Comment: Extract of /etc/asciidoc/html5.conf as of asciidoc/8.6.9-3
 
+Files: deploy/cc-88x31.png
+Copyright: Creative Commons, PO Box 1866, Mountain View, CA 94042
+License: CC-BY-SA-4.0
+Source: https://i.creativecommons.org/l/by-sa/4.0/88x31.png
+Comment: License according to https://creativecommons.org/policies/#license
+
 License: CC-BY-SA-4.0
  Creative Commons Attribution-ShareAlike 4.0 International Public License
  .

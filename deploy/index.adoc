@@ -14,7 +14,7 @@ Beckert]. For now only a German edition is available.
 
 == License
 
-image::https://i.creativecommons.org/l/by-sa/4.0/88x31.png["CC BY-SA 4.0",float="right"]
+image::cc-88x31.png["CC BY-SA 4.0",float="right"]
 
 The book "Debian Package Management" is licensed under the
 https://creativecommons.org/licenses/by-sa/4.0/[Creative Commons
