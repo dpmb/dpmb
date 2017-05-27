@@ -20,8 +20,8 @@ vergleichsweise viel ändert und durchaus auch etliches schief gehen
 kann, womit Sie nicht unbedingt rechnen. An der Stelle sei jedoch zu
 Ihrer Beruhigung angemerkt, dass der Wechsel von Debian 6 _Squeeze_ auf
 Debian 7 _Wheezy_ recht unspektakulär verlief und vielfach problemlos
-über die Bühne ging. Ähnliches gilt für den Wechsel auf den Debian 8
-_Jessie_.
+über die Bühne ging. Ähnliches gilt bislang für den Wechsel auf Debian 8
+_Jessie_ sowie Debian 9 _Stretch_.
 
 Trotzdem halten wir es für ganz praktisch, wenn wir Ihnen eine
 Schritt-für-Schritt-Abfolge zur Verfügung stellen, der Sie folgen
@@ -122,6 +122,9 @@ Stand (siehe ``Paketliste aktualisieren'' unter
 . Aktualisieren Sie die Distribution mittels `apt-get dist-upgrade`.
 Jetzt wird der Distributionswechsel vollzogen und alle bestehenden
 Pakete werden erneuert, sofern neue Varianten vorliegen.
+
+.Ausgabe während des Upgrades von _Jessie_ auf _Stretch_
+image::werkzeuge/paketoperationen/debian-jessie-upgrade.png[id="fig.debian-jessie-upgrade", width="50%"]
 
 ==== Anmerkungen ====
 
