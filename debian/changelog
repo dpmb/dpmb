@@ -4,6 +4,8 @@ dpmb (0~2017.05.14) UNRELEASED; urgency=medium
   * debian/copyright: Add stanza for new file deploy/cc-88x31.png.
   * debian/copyright: Use Github repo instead of website as "Source".
   * Declare compliance with Debian Policy 4.0.0. (No changes needed.)
+  * debian/copyright: Replace https://i.creativecommons.org/ with
+    https://licensebuttons.net/.
 
  -- Axel Beckert <abe@debian.org>  Sun, 14 May 2017 16:00:30 +0200
 
