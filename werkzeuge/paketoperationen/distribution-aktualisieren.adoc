@@ -10,7 +10,7 @@
 
 Das Aktualisieren einer bestehenden Linuxinstallation ist immer eine
 etwas heikle Geschichte und eine Frage des Selbstvertrauens sowie des
-Bauchgefühls. Es geht dabei schließlich nicht nur an vergleichbaren
+Bauchgefühls. Es geht dabei schließlich nicht nur um vergleichbaren
 Kleinkram wie ein einzelnes Paket, sondern um das ganze System, in
 dessen Pflege Sie bereits viel Zeit und Mühe gesteckt haben. Dieser
 Aufwand soll schließlich nicht umsonst gewesen sein. 
