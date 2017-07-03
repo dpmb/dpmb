@@ -23,7 +23,7 @@ von unterwegs aus (Zug oder Flugzeug), Reparaturen irgendwo in der
 unterversorgten Pampa, auf der Berghütte, auf einem Schiff ohne UMTS, in
 einem abgeschirmten Gebäude  wie einem Bunker oder auch hinter einer
 recht restriktiven Firewall -- bspw. in einem Hotel. Zu berücksichtigen
-sind außerdem teure Wählverbindungen via Satelit sowie autarke Geräte
+sind außerdem teure Wählverbindungen via Satellit sowie autarke Geräte
 und Installationen, die möglichst verbrauchsarm zusammengestellt sind
 oder gar keinen permanenten Netzzugang haben 'dürfen'. Dazu zählen bspw.
 Meßstationen von Sensornetzwerken in eher unzugänglichen Gebirgsregionen
