@@ -34,6 +34,9 @@ console-setup	console-setup/fontsize-text47	select	8x16
 #
 ----
 
+// Stichworte für den Index
+(((debconf-get-selections, --installer)))
+
 * Auslesen der Informationen des Installers
 ** Schalter `--installer`
 ** Hintergrund: Informationen, die während der Installation des Systems
@@ -53,9 +56,16 @@ partman-crypto	partman-crypto/confirm	boolean	false
 #
 ----
 
+// Stichworte für den Index
+(((debconf-set-selections, -c)))
+(((debconf-set-selections, -v)))
+(((debconf-set-selections, --checkonly)))
+(((debconf-set-selections, --verbose)))
+
 * wie spiele ich das lokal wieder ein
 ** `debconf-set-selections` (Paket 'debconf' <<Debian-Paket-debconf>>))
-
+** Schalter `-c` (Langformat `--checkonly`): Eingabedatei nur auf Fehler prüfen
+** Schalter `-v` (Langformat `--verbose`): ausführliche Ausgabe beim Einspielen
 
 
 === `apt-clone` ===
