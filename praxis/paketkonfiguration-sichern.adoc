@@ -8,7 +8,7 @@
 // Stichworte für den Index
 (((debconf-get-selections)))
 (((debconf-set-selections)))
-(((Debianpaket, debconf-utils)))
+(((Debianpaket, debconf)))
 
 * wie sichere ich die bestehende Paketkonfiguration aus der Debconf-Datenbank
 * wie spiele ich das lokal wieder ein

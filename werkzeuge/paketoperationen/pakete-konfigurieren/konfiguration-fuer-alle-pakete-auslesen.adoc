@@ -7,12 +7,12 @@
 // Stichworte für den Index
 (((debconf-get-selections)))
 (((debconf-set-selections)))
-(((Debianpaket, debconf-utils)))
+(((Debianpaket, debconf)))
 
 Die Konfiguration für alle Pakete ist in der Debconf-Datenbank
 gespeichert. Um diese Konfiguration auszulesen, bedienen Sie sich des
-Kommandos `debconf-get-selections` aus dem Paket 'debconf-utils'
-<<Debian-Paket-debconf-utils>>. Dieses Paket gehört nicht zur
+Kommandos `debconf-get-selections` aus dem Paket 'debconf'
+<<Debian-Paket-debconf>>. Dieses Paket gehört nicht zur
 Basisinstallation und ist daher ggf. noch von Ihnen nachzuinstallieren.
 
 Die Ausgabe des Programms erfolgt zeilenweise auf dem
@@ -38,13 +38,12 @@ grub-pc grub-pc/mixed_legacy_and_grub2  boolean true
 ----
 
 Das Gegenstück zu `debconf-get-selections` ist `debconf-set-selections`
-(Paket 'debconf-utils' <<Debian-Paket-debconf-utils>>). Dieses Werkzeug
-kann die Ausgabe von `debconf-get-selections` direkt verarbeiten und
-dient Ihnen bspw. zum Einspielen einer vorab gesicherten
-Paketkonfiguration auf dem gleichen oder einem anderen System.
-Ausführlicher besprechen wir diesen speziellen Anwendungsfall im
-Praxisteil unter ``Paketkonfiguration sichern'' in
-<<paketkonfiguration-sichern>>.
+(Paket 'debconf' <<Debian-Paket-debconf>>). Dieses Werkzeug kann die
+Ausgabe von `debconf-get-selections` direkt verarbeiten und dient Ihnen
+bspw. zum Einspielen einer vorab gesicherten Paketkonfiguration auf dem
+gleichen oder einem anderen System. Ausführlicher besprechen wir diesen
+speziellen Anwendungsfall im Praxisteil unter ``Paketkonfiguration
+sichern'' in <<paketkonfiguration-sichern>>.
 
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-konfigurieren/konfiguration-fuer-alle-pakete-auslesen.adoc

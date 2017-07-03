@@ -289,8 +289,6 @@
 
 - [[[Debian-Paket-debconf]]] Debian-Paket 'debconf', https://packages.debian.org/de/stable/debconf
 
-- [[[Debian-Paket-debconf-utils]]] Debian-Paket 'debconf-utils', https://packages.debian.org/de/stable/debconf-utils
-
 - [[[Debian-Paket-debdelta]]] Debian-Paket 'debdelta', https://packages.debian.org/de/stable/debdelta
 
 - [[[Debian-Paket-debfoster]]] Debian-Paket 'debfoster', https://packages.debian.org/de/stable/debfoster

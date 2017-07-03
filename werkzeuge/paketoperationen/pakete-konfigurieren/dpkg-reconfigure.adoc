@@ -9,7 +9,6 @@
 (((debconf)))
 (((debconf-get-selections)))
 (((Debianpaket, debconf)))
-(((Debianpaket, debconf-utils)))
 (((Debianpaket, dpkg)))
 (((Debianpaket, tzdata)))
 (((dpkg-reconfigure)))
@@ -17,8 +16,8 @@
 (((Paket, erneut konfigurieren)))
 
 Für diesen Schritt hilft Ihnen das Werkzeug `dpkg-reconfigure` aus dem
-Paket 'debconf-utils' <<Debian-Paket-debconf-utils>> weiter. Es greift
-dazu auf `debconf` zurück, welches wiederum eine Datenbank mit den
+Paket 'debconf' <<Debian-Paket-debconf>> weiter. Es greift dazu auf
+`debconf` zurück, welches wiederum eine Datenbank mit den
 Konfigurationseinträgen ihrer Pakete unter `/var/cache/debconf` benutzt.
 
 `dpkg-reconfigure` kennt diese Optionen zum Aufruf:
