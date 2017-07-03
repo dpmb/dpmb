@@ -10,12 +10,53 @@
 (((debconf-set-selections)))
 (((Debianpaket, debconf)))
 (((Debianpaket, debconf-utils)))
+(((Paketkonfiguration, bestehende Konfiguration sichern)))
+(((Paketkonfiguration, debconf-get-selections)))
+(((Paketkonfiguration, debconf-set-selections)))
+(((Paketkonfiguration, Konfiguration einspielen)))
 
 * wie sichere ich die bestehende Paketkonfiguration aus der Debconf-Datenbank
+** `debconf-get-selections` (Paket 'debconf-utils' <<Debian-Paket-debconf-utils>>)
+** Ausgabe erfolgt auf der Standardausgabe (stdout)
+
+.Auslesen der bestehenden Paketkonfiguration aus der Debconf-Datenbank (Ausschnitt)
+----
+# debconf-get-selections
+...
+# Nicht zugestellte E-Mails im »spool«-Verzeichnis löschen?
+exim4-base	exim4/purge_spool	boolean	false
+# Soll smb.conf automatisch konfiguriert werden?
+samba-common	samba-common/do_debconf	boolean	true
+# Schriftgröße:
+# Choices: 
+console-setup	console-setup/fontsize-text47	select	8x16
+...
+#
+----
+
+* Auslesen der Informationen des Installers
+** Schalter `--installer`
+** Hintergrund: Informationen, die während der Installation des Systems
+   gesetzt werden, sind in einer getrennten Datenbank
+   (`/var/log/installer/cdebconf`) abgelegt.
+
+.Auslesen der Konfiguration für den Installer (Ausschnitt)
+----
+# debconf-get-selections --installer
+...
+# Typ des drahtlosen Netzwerks (WLAN):
+# Choices: Infrastruktur-Netzwerk (Managed), Ad-hoc-Netzwerk (Peer-to-Peer)
+netcfg	netcfg/wireless_adhoc_managed	select	Infrastructure (Managed) network
+# Änderungen auf die Platte schreiben und verschlüsselte Datenträger konfigurieren?
+partman-crypto	partman-crypto/confirm	boolean	false
+...
+#
+----
+
 * wie spiele ich das lokal wieder ein
-* Werkzeuge:
-** `debconf-get-selections` (Paket 'debconf' <<Debian-Paket-debconf-utils>>)
 ** `debconf-set-selections` (Paket 'debconf' <<Debian-Paket-debconf>>))
+
+
 
 === `apt-clone` ===
 
