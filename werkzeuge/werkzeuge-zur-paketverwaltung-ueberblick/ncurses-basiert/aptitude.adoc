@@ -102,7 +102,7 @@ Pakets sowie der möglichen Aktualisierung
 (<<benennung-versionsnummer>>). Die Auswahl in der Baumstruktur erfolgt
 analog zu vi(m) mittels kbd:[j] und kbd:[k] (oder über die Pfeiltasten)
 und kbd:[Enter]. Die einzelnen Strukturebenen klappen Sie mit den Tasten
-kbd:[Enter], kbd:["["] und kbd:["]"] auf und zu.
+kbd:[Enter], kbd:["["] und kbd:["\]"] auf und zu.
 
 Dabei hinterlegt `aptitude` die einzelnen Pakete mit verschiedenen
 Farben, deren Bedeutung Sie <<tab.aptitude-farben>> entnehmen. Das
