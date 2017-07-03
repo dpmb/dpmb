@@ -15,7 +15,7 @@ Kleinkram wie ein einzelnes Paket, sondern um das ganze System, in
 dessen Pflege Sie bereits viel Zeit und Mühe gesteckt haben. Dieser
 Aufwand soll schließlich nicht umsonst gewesen sein. 
 
-Eine Aktualisierung sind stets größere Umbauarbeiten, bei dem sich
+Eine Aktualisierung bedeutet stets größere Umbauarbeiten, bei dem sich
 vergleichsweise viel ändert und durchaus auch etliches schief gehen
 kann, womit Sie nicht unbedingt rechnen. An der Stelle sei jedoch zu
 Ihrer Beruhigung angemerkt, dass der Wechsel von Debian 6 _Squeeze_ auf
