@@ -285,14 +285,13 @@ Abhängigkeiten mit installiert. Das Verhalten von `aptitude` regeln Sie
 (((gdebi)))
 
 Ab der Version 1.1 verfügt APT über interessante Erweiterungen. Diese
-Version ist vorraussichtlich ab Debian 8 _Jessie_ verfügbar. Mit dieser
-Version können die beiden Aufrufe `apt install` und `apt-get install`
-nicht nur Paketnamen verarbeiten, sondern auch Pfade zu lokal
-vorliegenden `deb`-Paketen als Parameter benutzen. Im Gegensatz zu
-`gdebi` (siehe <<gui-gdebi>>) besteht hier keine Beschränkung auf nur
-ein einziges Paket, sondern es gelten die weiter oben benannten
-Möglichkeiten zur Spezifikation von Paketen. Ein Beispielaufruf sieht
-wie folgt aus:
+Version war ab Debian 8 _Jessie_ verfügbar. Damit können die beiden
+Aufrufe `apt install` und `apt-get install` nicht nur Paketnamen
+verarbeiten, sondern auch Pfade zu lokal vorliegenden `deb`-Paketen als
+Parameter benutzen. Im Gegensatz zu `gdebi` (siehe <<gui-gdebi>>)
+besteht hier keine Beschränkung auf nur ein einziges Paket, sondern es
+gelten die weiter oben benannten Möglichkeiten zur Spezifikation von
+Paketen. Ein Beispielaufruf sieht wie folgt aus:
 
 .Installation eines zweier `deb`-Pakete ab APT 1.1
 ----
