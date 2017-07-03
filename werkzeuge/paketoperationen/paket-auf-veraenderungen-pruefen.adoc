@@ -59,13 +59,13 @@ gespeichert. Alle o.g. Programme verwenden die Hashsummen aus diesen via
 
 Die ausschließliche Verwendung von MD5-Summen an dieser Stelle bedeutet,
 dass diese nicht mehr den heutigen Ansprüchen für das Aufdecken von
-Datei-Ersetzungen entsprechen, auch wenn diese mit hoher krimineller
-Energie ausgeführt wurden. Sie können jedoch durchaus helfen, von
-dilettantischen Einbrechern durchgeführte Datei-Ersetzungen zu finden.
-Bedenken Sie jedoch dabei, dass die Einbrecher genauso gut auch die o.g.
-Dateien mit den MD5-Summen angepasst haben könnten. Möchten Sie sich
-jedoch stärker gegen Datei-Ersetzungen oder Änderungen durch
-professionelle Angreifer schützen, so reichen die hier genannten
+Datei-Ersetzungen entsprechen, insbesondere wenn diese mit hoher
+krimineller Energie ausgeführt wurden. Sie können jedoch durchaus
+helfen, von dilettantischen Einbrechern durchgeführte Datei-Ersetzungen
+zu finden. Bedenken Sie jedoch dabei, dass die Einbrecher genauso gut
+auch die o.g. Dateien mit den MD5-Summen angepasst haben könnten.
+Möchten Sie sich jedoch stärker gegen Datei-Ersetzungen oder Änderungen
+durch professionelle Angreifer schützen, so reichen die hier genannten
 Techniken nicht aus. Dazu gibt es spezialisierte Pakete wie z. B.
 'tripwire', 'samhain', 'aide', 'intergrit', 'fcheck', 'stealth' und
 'tiger'.
