@@ -2,17 +2,18 @@
 
 // Baustelle: Rohtext
 
+[[konfiguration-fuer-alle-pakete-auslesen]]
 ==== Konfiguration für alle Pakete auslesen ====
 
 // Stichworte für den Index
 (((debconf-get-selections)))
-(((debconf-set-selections)))
-(((Debianpaket, debconf)))
+(((Debianpaket, debconf-utils)))
+(((Paketkonfiguration, debconf-get-selections)))
 
 Die Konfiguration für alle Pakete ist in der Debconf-Datenbank
 gespeichert. Um diese Konfiguration auszulesen, bedienen Sie sich des
-Kommandos `debconf-get-selections` aus dem Paket 'debconf'
-<<Debian-Paket-debconf>>. Dieses Paket gehört nicht zur
+Kommandos `debconf-get-selections` aus dem Paket 'debconf-utils'
+<<Debian-Paket-debconf-utils>>. Dieses Paket gehört nicht zur
 Basisinstallation und ist daher ggf. noch von Ihnen nachzuinstallieren.
 
 Die Ausgabe des Programms erfolgt zeilenweise auf dem
@@ -36,6 +37,34 @@ grub-pc grub-pc/mixed_legacy_and_grub2  boolean true
 ...
 #
 ----
+
+// Stichworte für den Index
+(((debconf-get-selections, --installer)))
+(((Paketkonfiguration, Debian-Installer)))
+
+Das Installationsprogramm von Debian verfügt ebenfalls über eine solche
+Liste. Diese lesen Sie über den Schalter `--installer` aus. Der
+Hintergrund dazu ist, dass die Informationen, die während der
+Installation des Systems gesetzt werden, in einer getrennten Datenbank
+unter `/var/log/installer/cdebconf` abgelegt sind.
+
+.Auslesen der Konfiguration für den Installer (Ausschnitt)
+----
+# debconf-get-selections --installer
+...
+# Typ des drahtlosen Netzwerks (WLAN):
+# Choices: Infrastruktur-Netzwerk (Managed), Ad-hoc-Netzwerk (Peer-to-Peer)
+netcfg	netcfg/wireless_adhoc_managed	select	Infrastructure (Managed) network
+# Änderungen auf die Platte schreiben und verschlüsselte Datenträger konfigurieren?
+partman-crypto	partman-crypto/confirm	boolean	false
+...
+#
+----
+
+// Stichworte für den Index
+(((debconf-set-selections)))
+(((Debianpaket, debconf)))
+(((Paketkonfiguration, debconf-set-selections)))
 
 Das Gegenstück zu `debconf-get-selections` ist `debconf-set-selections`
 (Paket 'debconf' <<Debian-Paket-debconf>>). Dieses Werkzeug kann die
