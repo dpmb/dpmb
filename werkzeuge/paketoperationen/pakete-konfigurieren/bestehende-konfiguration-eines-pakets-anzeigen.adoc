@@ -6,15 +6,15 @@
 
 // Stichworte für den Index
 (((debconf-show)))
-(((Debianpaket, dpkg)))
+(((Debianpaket, debconf)))
 (((Debianpaket, tzdata)))
 (((Paket, bestehende Konfiguration anzeigen)))
 Die bestehende Konfiguration eines Paketes zeigen Sie mit Hilfe des
 Kommandos `debconf-show` 'Paketname' an. `debconf-show` ist Bestandteil
-des Pakets 'dpkg' <<Debian-Paket-dpkg>> und somit ein essentieller Teil
-ihrer Installation. Für das Paket 'tzdata' <<Debian-Paket-tzdata>> sieht
-das Ergebnis wie folgt aus, sofern Sie auf ihrem System als Zeitzone
-``Europa/Berlin'' eingestellt haben:
+des Pakets 'debconf' <<Debian-Paket-debconf>> und somit ein essentieller
+Teil ihrer Installation. Für das Paket 'tzdata' <<Debian-Paket-tzdata>>
+sieht das Ergebnis wie folgt aus, sofern Sie auf ihrem System als
+Zeitzone ``Europa/Berlin'' eingestellt haben:
 
 .Ausgabe der Konfiguration eines Pakets -- hier 'tzdata'
 ----
