@@ -57,6 +57,13 @@ Ausgabe aller Änderungen ab der angegebenen Version des Pakets.
 `-v` (Langform `--verbose`)::
 Ausgabe in ausführlicher Form.
 
+// Stichworte für den Index
+(((apt-listchanges, --which)))
+`--which=`'(news|changelogs|both)'::
+Wählt aus, welche Änderungen angezeigt werden. `news` schränkt auf
+NEWS.Debian ein, `changelogs` hingegen auf changelog.Debian. `both`
+wählt beide Informationsquellen aus.
+
 Im nachfolgenden Beispiel sehen Sie den Aufruf für das Paket
 'ruby-json', wobei die Ausgabe als einfacher Text im Terminal erfolgt.
 
