@@ -15,9 +15,16 @@
 (((Paketkonfiguration, debconf-set-selections)))
 (((Paketkonfiguration, Konfiguration einspielen)))
 
-* wie sichere ich die bestehende Paketkonfiguration aus der Debconf-Datenbank
-** `debconf-get-selections` (Paket 'debconf-utils' <<Debian-Paket-debconf-utils>>)
-** Ausgabe erfolgt auf der Standardausgabe (stdout)
+Hier gehen wir der Frage nach, wie Sie die bestehende Paketkonfiguration
+sichern und wieder einspielen, um bspw. ein System zu klonen. Alle
+Informationen dazu stehen in der Debconf-Datenbank. Zum Auslesen nutzen
+Sie das Werkzeug `debconf-get-selections` aus dem Paket 'debconf-utils'
+<<Debian-Paket-debconf-utils>>. Ausführlicher ist der Vorgang bereits unter
+'Konfiguration für alle Pakete auslesen' in 
+<<konfiguration-fuer-alle-pakete-auslesen>> beschrieben.
+
+Die Ausgabe von `debconf-get-selections` erfolgt auf der Standardausgabe
+(`stdout`) und ist nachfolgend als Ausschnitt dargestellt.
 
 .Auslesen der bestehenden Paketkonfiguration aus der Debconf-Datenbank (Ausschnitt)
 ----
@@ -35,28 +42,6 @@ console-setup	console-setup/fontsize-text47	select	8x16
 ----
 
 // Stichworte für den Index
-(((debconf-get-selections, --installer)))
-
-* Auslesen der Informationen des Installers
-** Schalter `--installer`
-** Hintergrund: Informationen, die während der Installation des Systems
-   gesetzt werden, sind in einer getrennten Datenbank
-   (`/var/log/installer/cdebconf`) abgelegt.
-
-.Auslesen der Konfiguration für den Installer (Ausschnitt)
-----
-# debconf-get-selections --installer
-...
-# Typ des drahtlosen Netzwerks (WLAN):
-# Choices: Infrastruktur-Netzwerk (Managed), Ad-hoc-Netzwerk (Peer-to-Peer)
-netcfg	netcfg/wireless_adhoc_managed	select	Infrastructure (Managed) network
-# Änderungen auf die Platte schreiben und verschlüsselte Datenträger konfigurieren?
-partman-crypto	partman-crypto/confirm	boolean	false
-...
-#
-----
-
-// Stichworte für den Index
 (((debconf-set-selections, -c)))
 (((debconf-set-selections, -v)))
 (((debconf-set-selections, --checkonly)))
@@ -66,7 +51,6 @@ partman-crypto	partman-crypto/confirm	boolean	false
 ** `debconf-set-selections` (Paket 'debconf' <<Debian-Paket-debconf>>))
 ** Schalter `-c` (Langformat `--checkonly`): Eingabedatei nur auf Fehler prüfen
 ** Schalter `-v` (Langformat `--verbose`): ausführliche Ausgabe beim Einspielen
-
 
 === `apt-clone` ===
 
