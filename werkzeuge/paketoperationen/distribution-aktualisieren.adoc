@@ -85,7 +85,7 @@ Daten auf ein möglichst externes Medium. Dazu zählen neben den
 Nutzerdaten insbesondere die Konfigurationseinstellungen Ihrer
 Programme. Häufig werden dabei Inhalte von Datenbanksystemen und
 Webpräsenzen übersehen, die sich unter dem Verzeichnis `/var` tummeln.
-Überprüfen Sie danach Ihr Backup auf Vollständigkeit. Nicht ist
+Überprüfen Sie danach Ihr Backup auf Vollständigkeit. Nichts ist
 enttäuschender als eine Datensicherung, welche sich im Nachhinein als
 unvollständig herausstellt.
 
