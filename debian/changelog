@@ -1,4 +1,4 @@
-dpmb (0~2017.05.14) UNRELEASED; urgency=medium
+dpmb (0~2017.07.04) unstable; urgency=medium
 
   * New snapshot.
   * debian/copyright: Add stanza for new file deploy/cc-88x31.png.
@@ -7,7 +7,7 @@ dpmb (0~2017.05.14) UNRELEASED; urgency=medium
   * debian/copyright: Replace https://i.creativecommons.org/ with
     https://licensebuttons.net/.
 
- -- Axel Beckert <abe@debian.org>  Sun, 14 May 2017 16:00:30 +0200
+ -- Axel Beckert <abe@debian.org>  Tue, 04 Jul 2017 15:19:01 +0200
 
 dpmb (0~2017.01.16) unstable; urgency=low
 
