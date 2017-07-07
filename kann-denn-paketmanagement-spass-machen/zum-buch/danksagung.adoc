@@ -20,8 +20,8 @@ Menschen gebührt unser Dank:
 * Mechtilde Stehmann (für die Sprachkorrekturen und die Vorschläge für die FAQ)
 * Marco Uhl (für die Idee zum FAQ-Eintrag über 'Debian Snapshots' <<Debian-Snapshots>> bei Testing- vs. Produktiv-Umgebung)
 * Werner Heuser (für die Installation und den Umgang auf Embedded und Mobile Devices)
-* Claude Becker (für Ideen und Korrekturlesen rund um das Parsen von
-  Debian-Versionsnummern und APT-Pinning)
+* Claude Becker (für Ideen, Korrekturlesen rund um das Parsen von
+  Debian-Versionsnummern und APT-Pinning sowie Konsistenzprüfung)
 * Christoph Berg (für Tipps und Tricks rund um `reprepro` und seine
 Erfahrungen mit `apt.postgresql.org`) <<APT-Repo-PostgreSQL>>
 * Dr. Thomas Fricke (für Ergänzungen rund um die Verteilung von Paketen auf mehrere Maschinen)
