@@ -159,7 +159,7 @@ Funktionserweiterungen wird die Versionsnummer des Pakets erhöht.
 (((apt-get, dist-upgrade)))
 (((apt, full-upgrade)))
 (((aptitude, full-upgrade)))
-(((Distribution, aktualisieren)))
+(((Distribution aktualisieren)))
 (((Sicherheitsaktualisierungen)))
 (((Veröffentlichung, Versionswechsel)))
 Was bei `apt-get` das Unterkommando `dist-upgrade` ist, heißt bei `apt`
