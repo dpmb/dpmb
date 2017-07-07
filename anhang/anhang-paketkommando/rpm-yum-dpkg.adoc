@@ -16,6 +16,10 @@
 (((FPM)))
 (((RPM)))
 (((Yellowdog Updater Modified (YUM))))
+(((Werkzeuge zur Paketverwaltung,Hierarchie)))
+(((Werkzeuge zur Paketverwaltung,Vergleich mit DNF)))
+(((Werkzeuge zur Paketverwaltung,Vergleich mit RPM)))
+(((Werkzeuge zur Paketverwaltung,Vergleich mit YUM)))
 Hier stellen wir Ihnen die jeweiligen Kommandos zur Paketverwaltung
 gegenüber, soweit dieser Schritt möglich ist. Im Rampenlicht stehen RPM,
 Yellowdog Updater Modified (YUM), seine Nachfolger Effing Package

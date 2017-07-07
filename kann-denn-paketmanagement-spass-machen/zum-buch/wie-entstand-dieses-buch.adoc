@@ -59,14 +59,17 @@ und auf eben diesem Weg möchte Sie unser Buch begleiten.
 
 // Stichworte für den Index
 (((Werkzeuge zur Paketverwaltung,Hierarchie)))
+(((Werkzeuge zur Paketverwaltung,Vergleich mit DNF)))
+(((Werkzeuge zur Paketverwaltung,Vergleich mit RPM)))
+(((Werkzeuge zur Paketverwaltung,Vergleich mit YUM)))
 Nach einem ersten, flüchtigen Blick auf die genannten Werkzeuge zur
 Paketverwaltung scheint es so, als sei es unerheblich, welches wann zum
 Einsatz kommt. Dem ist nicht so, denn jedes hat seine ureigene Aufgabe
 in der Hierarchie der Paketverwaltung. Subtile Unterschiede zwischen APT
 und `aptitude` sorgen mitunter für eine blutige Nase, und insbesondere
 Ein- und Umsteiger aus der RPM-Welt haben es zu Beginn nicht so leicht.
-Daher gibt es im Anhang eine Übersicht zu den Aufrufen von RPM und YUM
--- siehe <<kommandos-zur-paketverwaltung-im-vergleich>>. 
+Daher gibt es im Anhang eine Übersicht zu den Aufrufen von RPM, YUM und
+DNF -- siehe <<kommandos-zur-paketverwaltung-im-vergleich>>. 
 
 Das Buch will darum vor allem Klarheit schaffen und Ihnen die
 Zusammenhänge zwischen den Programmen deutlich machen. Es hilft Ihnen,
@@ -80,15 +83,15 @@ Systembetreuung.
 
 Rein technisch setzt das Buch auf AsciiDoc <<AsciiDoc>> auf -- einem
 Textformat, aus welchem dann über mehrere Zwischenstufen diverse
-Ausgabeformate wie PDF, EPUB oder HTML entstehen.
-Basierend auf einer einzigen Quelle stehen damit passende Ergebnisse für
-die verschiedenen Ausgabegeräte zur Verfügung. Die AsciiDoc-Dateien
-liegen in einem Versionskontrollsystem namens Git und sind auf der
-Plattform GitHub verfügbar <<dpmb-github>>. Neben der Möglichkeit,
-während des Arbeitens auch auf eine frühere Revision zurückgreifen zu
-können, ermöglicht das ein paralleles, verteiltes Arbeiten von
-verschiedenen Standorten aus. Zudem kann jeder Interessierte am Buch in
-Form von Vorschlägen und Korrekturen beitragen.
+Ausgabeformate wie PDF, EPUB oder HTML entstehen. Basierend auf einer
+einzigen Quelle stehen damit passende Ergebnisse für die verschiedenen
+Ausgabegeräte zur Verfügung. Die AsciiDoc-Dateien liegen in einem
+Versionskontrollsystem namens Git und sind auf der Plattform GitHub
+verfügbar <<dpmb-github>>. Neben der Möglichkeit, während des Arbeitens
+auch auf eine frühere Revision zurückgreifen zu können, ermöglicht das
+ein paralleles, verteiltes Arbeiten von verschiedenen Standorten aus.
+Zudem kann jeder Interessierte am Buch in Form von Vorschlägen und
+Korrekturen beitragen.
 
 [TIP]
 .Versionsverwaltung mit Git
