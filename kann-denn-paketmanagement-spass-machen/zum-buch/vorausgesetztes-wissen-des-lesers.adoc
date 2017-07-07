@@ -75,8 +75,11 @@ virtuelle Maschine oder auch nur eine `chroot`-Umgebung
 <<Debian-Wiki-chroot>>.
 
 Dabei spielt es kaum eine Rolle, welches APT-basierte System Sie
-verwenden. Die meisten Beispiele im Buch stammen von einem Debian 7
-'Wheezy' ('oldstable') oder einem Debian 8 'Jessie' ('stable').
-Alle Ausnahmen sind entsprechend gekennzeichnet.
+verwenden. Begonnen haben wir das Buch zu dem Zeitpunkt, als Debian 7
+'Wheezy' die stabile Debian-Veröffentlichung war. Daher stammen die
+meisten Beispiele im Buch auch daher. Spätere Inhalte setzen auf dem
+Nachfolger Debian 8 'Jessie' und Debian 9 'Stretch' auf. Alle Ausnahmen
+sind entsprechend gekennzeichnet, bspw. wenn wir auf ein Derivat wie
+Ubuntu zurückgegriffen haben.
 
 // Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/vorausgesetztes-wissen-des-lesers.adoc
