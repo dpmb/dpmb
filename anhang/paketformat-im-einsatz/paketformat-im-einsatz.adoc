@@ -29,11 +29,11 @@ Debian speziell für den Raspberry Pi <<Raspbian>>
 === Bildung ===
 
 // Stichworte für den Index
-(((Debian-Edu)))
+(((DebianEdu/Skolelinux)))
+(((Edubuntu)))
 (((LernStick)))
-(((Skolelinux)))
 
-Skolelinux:: früher Debian-Edu, für den Einsatz in Schulen <<Skolelinux>>
+Skolelinux:: früher DebianEdu, für den Einsatz in Schulen <<Skolelinux>>
 Edubuntu:: Ubuntu für Schule und Bildung <<Edubuntu>>
 LernStick:: Live-Distribution auf einem USB-Stick <<LernStick>>
 
