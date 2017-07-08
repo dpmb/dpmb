@@ -18,12 +18,11 @@ neueren Version verfügbar sind. Nachfolgender Ausdruck zeigt das für das
 Paket 'apt-doc' <<Debian-Paket-apt-doc>>.
 
 .Ausgabe von `apt-cache` mit dem Unterkommando `madison` für 'apt-doc'
+unter Debian 9 'Stretch' auf einem System mit der Architektur `i386`
 ----
 $ apt-cache madison apt-doc
-   apt-doc | 0.9.7.9+deb7u2 | http://ftp.de.debian.org/debian/ wheezy/main i386 Packages
-   apt-doc | 0.9.7.9+deb7u2 | http://security.debian.org/ wheezy/updates/main i386 Packages
-       apt | 0.9.7.9+deb7u2 | http://ftp.de.debian.org/debian/ wheezy/main Sources
-       apt | 0.9.7.9+deb7u2 | http://security.debian.org/ wheezy/updates/main Sources
+   apt-doc |      1.4.6 | http://ftp.ch.debian.org/debian stretch/main i386 Packages
+       apt |      1.4.6 | http://ftp.ch.debian.org/debian stretch/main Sources
 $
 ----
 
