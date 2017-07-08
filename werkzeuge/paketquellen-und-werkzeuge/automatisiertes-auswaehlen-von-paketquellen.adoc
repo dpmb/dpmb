@@ -2,6 +2,8 @@
 
 // Baustelle: Rohtext
 // TODO: cdn.debian.net ist tot, zeigt auf http.debian.net
+// TODO: http.debian.net wurde zu httpredir.debian.org
+// TODO: httpredir.debian.org wurde ersetzt durch statisches deb.debian.org
 
 [[automatisiertes-auswaehlen-von-paketquellen]]
 === Automatisiertes Auswählen von Paketquellen ===
