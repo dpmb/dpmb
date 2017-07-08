@@ -61,8 +61,8 @@ Paketcache vorliegen.
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketinstallation"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| APT        | `apt-get install` 'Paketname' | Paket wird dem Paketrepository entnommen
-|            | `apt-get --no-download install` 'Paketname' | Paket wird dem Paketcache entnommen und nicht vom Paketmirror bezogen
+| APT        | `apt install` 'Paketname' | Paket wird dem Paketrepository entnommen
+|            | `apt --no-download install` 'Paketname' | Paket wird dem Paketcache entnommen und nicht vom Paketmirror bezogen
 | `aptitude` | `aptitude install` 'Paketname' | Paket wird dem Paketrepository entnommen
 | `DNF`      | `dnf install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |            | `dnf install` 'Paketdatei' | Paketdatei liegt also lokale Datei vor
