@@ -84,7 +84,7 @@ Programmen entwickelt. Dazu zählen `apt-cdrom` (siehe dazu
 `add-apt-repository` (siehe dazu
 <<eintraege-mit-add-apt-repository-im-griff-behalten>>)). Sind Sie hingegen
 weniger tastaturaffin, bieten sich als weitere Möglichkeiten sowohl
-Synaptic, das Ubuntu Software Center sowie der Sources List Generator
+Synaptic sowie der Sources List Generator
 für Debian und Ubuntu an. Diese Programme stellen wir Ihnen in
 <<einstellungen-mit-synaptic-und-im-ubuntu-software-center>> und
 <<debian-und-ubuntu-sources-list-generator>> ausführlicher vor.
