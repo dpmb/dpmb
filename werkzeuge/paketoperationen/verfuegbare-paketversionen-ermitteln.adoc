@@ -39,16 +39,12 @@ bereits oben verwendete Paket 'apt-doc' sieht das wie folgt aus:
 .Auflistung der verfügbaren Paketversionen mit `rmadison`
 ----
 $ rmadison apt-doc
-debian:
- apt-doc | 0.8.10.3+squeeze1 | squeeze         | all
- apt-doc | 0.8.10.3+squeeze7 | squeeze-lts     | all
- apt-doc | 0.9.7.9+deb7u6    | wheezy-security | all
- apt-doc | 0.9.7.9+deb7u7    | wheezy          | all
- apt-doc | 1.0.9.8           | jessie-kfreebsd | all
- apt-doc | 1.0.9.8.2         | jessie          | all
- apt-doc | 1.2.2             | stretch         | all
- apt-doc | 1.2.3             | sid             | all
-new:
+apt-doc    | 0.9.7.9+deb7u7 | oldoldstable       | all
+apt-doc    | 1.0.9.8        | oldstable-kfreebsd | all
+apt-doc    | 1.0.9.8.4      | oldstable          | all
+apt-doc    | 1.4.6          | stable             | all
+apt-doc    | 1.4.6          | testing            | all
+apt-doc    | 1.5~beta1      | unstable           | all
 $
 ----
 
