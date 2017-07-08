@@ -40,7 +40,7 @@ Verwendung.
 
 .Einfache Suche nach 'RC bugs' für das Paket 'apt' mit Hilfe von `rc-alert` (Ausschnitt)
 ----
-# rc-alert apt
+$ rc-alert apt
 Package: apt
 Bug:     558784
 Title:   apt: re-adds removed keys
@@ -55,7 +55,7 @@ Title:   apt: upgrade from wheezy to jessie breaks in the middle
 Flags:   [        ] (none)
 Dists:   [TU] (testing, unstable)
 
-#
+$
 ----
 
 // Stichworte für den Index
