@@ -16,6 +16,8 @@ passenden Backports ihrer Distribution hinzu. Für Debian 9 'Stretch'
 und Debian 8 'Jessie' mit den dem Distributionsbereich 'main' sieht
 der jeweilige Eintrag wie folgt aus:
 
+// TODO: Doppelt! Siehe auch praxis/debian-backports.adoc
+
 .Eintrag zu Debian Backports für Debian 9 'Stretch'
 ----
 # Backports

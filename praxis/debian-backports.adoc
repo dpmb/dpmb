@@ -139,6 +139,8 @@ nicht entsprechen.
 
 === Einbindung in den Paketbestand ===
 
+// TODO: Doppelt! Siehe auch praxis/debian-backports/einbindung-in-den-paketbestand.adoc
+
 Backports sind nicht von Hause aus aktiviert und Sie müssen diese in der
 Paketverwaltung explizit ergänzen. Dazu fügen Sie in der Liste der
 Paketquellen unter `/etc/apt/sources.list` (siehe dazu

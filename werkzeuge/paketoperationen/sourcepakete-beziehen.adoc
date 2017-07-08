@@ -38,6 +38,8 @@ es einen entsprechenden Eintrag in der Liste der Paketquellen
 (siehe <<etc-apt-sources.list-verstehen>>). Für die Veröffentlichung
 Debian 9 'Stretch' sieht der Eintrag wie folgt aus:
 
+// TODO: contrib und non-free raus, evtl. auch noch das ".de."
+
 ----
 deb-src http://ftp.de.debian.org/debian/ stretch main contrib non-free
 ----
@@ -54,6 +56,8 @@ Gibt es zusätzliche Änderungen am Quellcode in Form von Patches, werden
 diese ebenfalls bezogen und nacheinander auf den entpackten Quellcode
 angewendet. Nachfolgendes Beispiel zeigt diesen Vorgang anhand des
 Pakets 'libapache2-mod-authn-yubikey' für den Webserver Apache:
+
+// TODO: Hier kommt noch Wheezy in einem Beispiel vor
 
 .Bezug des Sourcepakets 'libapache2-mod-authn-yubikey' mit APT
 ----

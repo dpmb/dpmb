@@ -4,6 +4,8 @@
 [[anhang-veraltete-debian-architekturen]]
 === Veraltete Architekturen ===
 
+// TODO -> Stretch
+
 Folgende Architekturen werden mit Debian 8.0 'Jessie' nicht mehr
 unterstützt:
 
