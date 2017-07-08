@@ -14,7 +14,7 @@
 // * Paketquellen eintragen und ändern
 // * Paketmirror festlegen
 //   - allgemein
-//   - netselect + apt-spy
+//   - netselect
 //   - automatisiert
 // * Werkzeuge zum Ändern der Paketliste
 //   - während der Installation (ggf. veraltet)
@@ -43,7 +43,7 @@ include::etc-apt-sources.list-verstehen/etc-apt-sources.list-verstehen.adoc[]
 // - allgemein
 include::geeigneten-paket-mirror-auswaehlen.adoc[]
 
-// - netselect + apt-spy
+// - netselect
 include::am-besten-erreichbaren-paketmirror-finden/am-besten-erreichbaren-paketmirror-finden.adoc[]
 
 // - automatisiert

@@ -25,20 +25,7 @@ beiden Programme `netselect` <<Debian-Paket-netselect>> und
 Wahl. Damit finden Sie den Paketmirror heraus, der netztechnisch von
 ihrem aktuellen Standort aus am besten erreichbar ist.
 
-// TODO: apt-spy hier und sonst überall entfernen, in Jessie und Stretch wegen  https://bugs.debian.org/779468 nicht mehr dabei und keine Besserung in Sicht.
-
-// Stichworte für den Index
-(((Debianpaket, apt-spy)))
-Bis einschließlich Debian 7 _Wheezy_ war das Programm `apt-spy`
-<<Debian-Paket-apt-spy>> fester Bestandteil der Veröffentlichung. Es
-hat es jedoch weder nach Debian 8 'Jessie' noch nach Debian 9
-'Stretch' geschafft, steht jedoch vorerst weiterhin für _unstable_ zur
-Verfügung.
-
 // netselect und netselect-apt
 include::netselect/netselect.adoc[]
-
-// apt-spy
-include::apt-spy/apt-spy.adoc[]
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/am-besten-erreichbaren-paketmirror-finden.adoc

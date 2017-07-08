@@ -54,7 +54,6 @@
 .. link:werkzeuge/paketquellen-und-werkzeuge/geeigneten-paket-mirror-auswaehlen.adoc[Geeigneten Paketmirror auswählen]
 .. link:werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/am-besten-erreichbaren-paketmirror-finden.adoc[Am besten erreichbaren Paketmirror finden]
 ... link:werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/netselect.adoc[Paketquellen mit `netselect` nach Pingzeiten und Entfernung auswählen]
-... link:werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/apt-spy.adoc[Paketquellen mit `apt-spy` nach Bandbreite auswählen]
 .. link:werkzeuge/paketquellen-und-werkzeuge/automatisiertes-auswaehlen-von-paketquellen.adoc[Automatisiertes Auswählen von Paketquellen]
 .. link:werkzeuge/paketquellen-und-werkzeuge/apt-setup.adoc[`apt-setup` -- Erstellung der Paketliste während der Installation]
 .. link:werkzeuge/paketquellen-und-werkzeuge/physische-installationsmedien-mit-apt-cdrom-einbinden.adoc[Physische Installationsmedien mit `apt-cdrom` einbinden]

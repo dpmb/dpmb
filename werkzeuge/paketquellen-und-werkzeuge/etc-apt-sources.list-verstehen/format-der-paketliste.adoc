@@ -75,7 +75,6 @@ Damit erleben Sie zukünftig keine bösen Überraschungen mehr.
 // Indexeinträge
 (((add-apt-repository)))
 (((apt-cdrom)))
-(((apt-spy)))
 (((Debian Sources List Generator)))
 (((Paketquelle,automatisierte Aktualisierung)))
 (((Ubuntu Sources List Generator)))
@@ -83,8 +82,7 @@ Zur Automatisierung des Vorgangs wurden ebenfalls eine Reihe von
 Programmen entwickelt. Dazu zählen `apt-cdrom` (siehe dazu
 <<physische-installationsmedien-mit-apt-cdrom-einbinden>>),
 `add-apt-repository` (siehe dazu
-<<eintraege-mit-add-apt-repository-im-griff-behalten>>) und `apt-spy`
-(siehe dazu <<paketquellen-mit-apt-spy-auswaehlen>>). Sind Sie hingegen
+<<eintraege-mit-add-apt-repository-im-griff-behalten>>)). Sind Sie hingegen
 weniger tastaturaffin, bieten sich als weitere Möglichkeiten sowohl
 Synaptic, das Ubuntu Software Center sowie der Sources List Generator
 für Debian und Ubuntu an. Diese Programme stellen wir Ihnen in
