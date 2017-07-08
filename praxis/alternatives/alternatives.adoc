@@ -102,15 +102,32 @@ schnelleren Implementation von Mike Brennan (`mawk`) und in der
 originalen Awk-Implementation <<awk>>.
 
 Weiterhin gibt es in Debian von einigen Programmen mehr als eine
-Programmgeneration, so z.B. verschiedene Veröffentlichungen von GCC und
-Automake. In Debian 8 'Jessie' ist GCC in den beiden Versionen 4.8 und
-4.9 enthalten, Automake in den Versionen 1.11 und 1.14. Einer der Gründe
-für die verschiedenen Versionen ist, dass manche Pakete in Debian z.B.
-nur mit einer bestimmten Generation eines Compilers übersetzt werden
-können. So werden z.B. alle Linuxkernel in Debian 8 'Jessie' mit GCC 4.8
-kompiliert, während GCC 4.9 der Standardcompiler ist. Je nach
-Einsatzzweck eines Systems kann es entsprechend auch hilfreich sein, den
-Standardcompiler systemweit auf eine bestimmte Generation festzulegen.
+Programmgeneration.
+
+In Debian 8 'Jessie' gibt z.B. verschiedene Veröffentlichungen von GCC
+und Automake. GCC ist in den beiden Versionen 4.8 und 4.9 enthalten
+und Automake in den Versionen 1.11 und 1.14. Einer der Gründe für die
+verschiedenen Versionen ist, dass manche Pakete in Debian z.B.  nur
+mit einer bestimmten Generation eines Compilers übersetzt werden
+können. So werden z.B. in 'Jessie' alle Linuxkernel in Debian 8
+'Jessie' mit GCC 4.8 kompiliert, während GCC 4.9 der Standardcompiler
+ist. Je nach Einsatzzweck eines Systems kann es entsprnechend auch
+hilfreich sein, den Standardcompiler systemweit auf eine bestimmte
+Generation festzulegen.
+
+In Debian 9 'Stretch' ist dagegen GCC wieder nur noch in einer Version
+enthalten, nämlich 6.3.0. Dafür ist in 'Stretch' OpenSSL in zwei
+verschiedenen Version (1.1.0 und 1.0.2) enthalten. Hintergrund hier
+ist, dass bestimmte Programme (noch) nicht sauber mit der neueren
+OpenSSL-Version kompiliert werden können und die dazu notwendigen
+Änderungen nicht-trivial sind. So ist z.B. in 'Stretch' ist Apache
+gegen OpenSSL 1.0.2 gelinkt, weil noch nicht alle SSL-nutzenden
+Apache-Module sauber mit OpenSSL 1.1 zusammenarbeiten. Eine
+Standard-Version in dem Sinne wie es beim GCC eine Standard-Version
+gibt, gibt es hier jedoch nicht. Gegen welche OpenSSL-Version ein
+Programm kompiliert und später gelinkt wird, hängt davon ab, welches
+der beiden sich gegenseitig ausschließenden Pakete `libssl-dev`
+(OpenSSL 1.1) oder `libssl1.0-dev` (OpenSSL 1.0.2) installiert ist.
 
 Ein weiterer Grund für die Verwendung des Alternativen-Systems
 innerhalb desselben Binärpakets oder von Binärpaketen auf der Basis
