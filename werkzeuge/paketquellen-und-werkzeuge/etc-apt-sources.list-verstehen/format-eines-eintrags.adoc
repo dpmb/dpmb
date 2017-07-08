@@ -52,7 +52,7 @@ Pakete installiert werden sollen. Typisch ist hier die Angabe des
 Entwicklungsstands (siehe
 <<bedeutung-der-verschiedenen-entwicklungsstaende>>) wie bspw. _stable_,
 _unstable_ oder _testing_ sowie die Nennung des alternativen
-Distributionsnamens wie bspw. _Wheezy_, _Jessie_ oder _Sid_ (siehe
+Distributionsnamens wie bspw. _Stretch_, _Buster_ oder _Sid_ (siehe
 <<alias-namen>>).
 +
 Bitte beachten Sie bei Debian und Ubuntu die Kleinschreibung des Namens.

@@ -92,7 +92,7 @@ Dennoch wurde die von nun an 'Debian Backports' genannten Pakete noch
 eine Weile getrennt von den offiziellen Paketen der Distribution
 verteilt. Erst seit Debian 7 'Wheezy' sind die Backports ebenfalls im
 selben Paketpool enthalten, jedoch nach wie vor in einem eigenen Zweig,
-der auf die Zeichenkette `-backports` endet. Aus diesem Grunde sind
+der auf die Zeichenkette `-backports` endet. Aus diesem Grunde waren
 Backports für Debian 6 'Squeeze' leicht anders einzurichten, als für
 darauf folgende Veröffentlichungen.
 
@@ -143,30 +143,20 @@ Backports sind nicht von Hause aus aktiviert und Sie müssen diese in der
 Paketverwaltung explizit ergänzen. Dazu fügen Sie in der Liste der
 Paketquellen unter `/etc/apt/sources.list` (siehe dazu
 <<etc-apt-sources.list-verstehen>>) einen entsprechenden Eintrag für die
-passenden Backports ihrer Distribution hinzu. Für Debian 8 'Jessie' und
-Debian 7 'Wheezy' mit den dem Distributionsbereich 'main' sieht der
-jeweilige Eintrag wie folgt aus:
+passenden Backports ihrer Distribution hinzu. Für Debian 9 'Stretch'
+und Debian 8 'Jessie' mit den dem Distributionsbereich 'main' sieht
+der jeweilige Eintrag wie folgt aus:
+
+.Eintrag zu Debian Backports für Debian 9 'stretch'
+----
+# Backports
+deb http://ftp.debian.org/debian stretch-backports main
+----
 
 .Eintrag zu Debian Backports für Debian 8 'Jessie'
 ----
 # Backports
 deb http://ftp.debian.org/debian jessie-backports main
-----
-
-.Eintrag zu Debian Backports für Debian 7 'Wheezy'
-----
-# Backports
-deb http://httpredir.debian.org/debian wheezy-backports main
-----
-
-Wie bereits oben erwähnt, findet sich das APT-Repository für die
-Backports für Debian 6 'Squeeze' in einem getrennten Spiegelnetzwerk.
-Deswegen ist dort die kanonische Mirror-Adresse eine leicht andere:
-
-.Eintrag zu Debian Backports für Debian 6 'Squeeze'
-----
-# Backports
-deb http://httpredir.debian.org/debian-backports squeeze-backports main contrib non-free
 ----
 
 Nach der Aktualisierung der Paketquellen -- bspw. mittels `apt-get

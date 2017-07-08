@@ -36,10 +36,10 @@ erwartet danach die Angabe eines oder mehrerer Paketnamen. Damit
 `apt-get` nach dem Aufruf die Quellpakete auch beziehen kann, benötigt
 es einen entsprechenden Eintrag in der Liste der Paketquellen
 (siehe <<etc-apt-sources.list-verstehen>>). Für die Veröffentlichung
-Debian 8 Jessie sieht der Eintrag wie folgt aus:
+Debian 9 'Stretch' sieht der Eintrag wie folgt aus:
 
 ----
-deb-src http://ftp.de.debian.org/debian/ jessie main contrib non-free
+deb-src http://ftp.de.debian.org/debian/ stretch main contrib non-free
 ----
 
 APT wertet die Paketbeschreibung aus, bezieht danach alle Quellpakete

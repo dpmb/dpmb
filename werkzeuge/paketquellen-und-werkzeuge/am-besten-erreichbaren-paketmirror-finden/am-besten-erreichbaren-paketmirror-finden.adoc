@@ -29,8 +29,9 @@ ihrem aktuellen Standort aus am besten erreichbar ist.
 (((Debianpaket, apt-spy)))
 Bis einschließlich Debian 7 _Wheezy_ war das Programm `apt-spy`
 <<Debian-Paket-apt-spy>> fester Bestandteil der Veröffentlichung. Es
-wurde nicht in Debian 8 _Jessie_ übernommen, steht jedoch weiterhin für
-_unstable_ zur Verfügung.
+hat es jedoch weder nach Debian 8 'Jessie' noch nach Debian 9
+'Stretch' geschafft, steht jedoch vorerst weiterhin für _unstable_ zur
+Verfügung.
 
 // netselect und netselect-apt
 include::netselect/netselect.adoc[]

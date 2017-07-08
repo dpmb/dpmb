@@ -3,9 +3,8 @@
 
 // Stichworte für den Index
 (((Debian Backports, Aktivierung)))
+(((Debian Backports, Einbindung in Debian 9 'Stretch')))
 (((Debian Backports, Einbindung in Debian 8 'Jessie')))
-(((Debian Backports, Einbindung in Debian 7 'Wheezy')))
-(((Debian Backports, Einbindung in Debian 6 'Squeeze')))
 
 === Einbindung in den Paketbestand ===
 
@@ -13,20 +12,20 @@ Backports sind nicht von Hause aus aktiviert und Sie müssen diese in der
 Paketverwaltung explizit ergänzen. Dazu fügen Sie in der Liste der
 Paketquellen unter `/etc/apt/sources.list` (siehe dazu
 <<etc-apt-sources.list-verstehen>>) einen entsprechenden Eintrag für die
-passenden Backports ihrer Distribution hinzu. Für Debian 8 'Jessie' und
-Debian 7 'Wheezy' mit den dem Distributionsbereich 'main' sieht der
-jeweilige Eintrag wie folgt aus:
+passenden Backports ihrer Distribution hinzu. Für Debian 9 'Stretch'
+und Debian 8 'Jessie' mit den dem Distributionsbereich 'main' sieht
+der jeweilige Eintrag wie folgt aus:
+
+.Eintrag zu Debian Backports für Debian 9 'Stretch'
+----
+# Backports
+deb http://ftp.debian.org/debian stretch-backports main
+----
 
 .Eintrag zu Debian Backports für Debian 8 'Jessie'
 ----
 # Backports
 deb http://ftp.debian.org/debian jessie-backports main
-----
-
-.Eintrag zu Debian Backports für Debian 7 'Wheezy'
-----
-# Backports
-deb http://httpredir.debian.org/debian wheezy-backports main
 ----
 
 Wie bereits oben erwähnt, findet sich das APT-Repository für die

@@ -20,8 +20,8 @@ kann wie folgt referenziert werden:
 * nach dem aktuellen Entwicklungsstand der Veröffentlichung (siehe
 <<bedeutung-der-verschiedenen-entwicklungsstaende>>), z.B. _stable_,
 _testing_ oder _unstable_
-* nach ihrem Alias-Namen (siehe <<alias-namen>>), z.B. _Wheezy_ oder
-_Jessie_
+* nach ihrem Alias-Namen (siehe <<alias-namen>>), z.B. _Wheezy_,
+_Jessie_ oder _Stretch_
 
 [[bedeutung-der-verschiedenen-entwicklungsstaende]]
 ==== Bedeutung der verschiedenen Entwicklungsstände ====
@@ -69,13 +69,16 @@ stabile Veröffentlichung freigegeben wird, erfolgt eine Umbenennung der
 aktuellen stabilen Veröffentlichung in _oldstable_. Diese wird von da an
 im Normalfall noch für ein Jahr weiter gepflegt und mit
 Sicherheitsaktualisierungen versehen.
-+
+
 Im Frühjahr 2014 wurden zusätzlich sogenannte _Long Term
 Support_-Varianten – kurz _LTS_ – eingeführt, die den Zeitraum der
 weiteren Verfügbarkeit und Pflege auf bis zu fünf Jahre verlängern. In
-Folge wird die im Jahr 2011 freigegebene und 2013 durch Debian 7
-_Wheezy_ abgelöste Veröffentlichung von Debian 6 _Squeeze_ bis 2016 mit
-Aktualisierungen versorgt.
+Folge wurde die im Jahr 2011 freigegebene und 2013 durch Debian 7
+_Wheezy_ abgelöste Veröffentlichung von Debian 6 _Squeeze_ bis 2016
+mit Aktualisierungen versorgt. Seither wurde jeder weitere stabile
+Veröffentlichung nach ihrem offiziellen Lebensende ebenfalls als _LTS_
+mit Einschränkungen (z.B. nur noch die beliebtesten Architekturen)
+weitergeführt.
 
 oldoldstable:: 
 Wenn vorhanden, ist dies die jeweils vorvorherige stabile
@@ -122,6 +125,7 @@ Im Detail gehen wir darauf unter ``Debian Backports'' in
 (((Veröffentlichung, Slink)))
 (((Veröffentlichung, Squeeze)))
 (((Veröffentlichung, Stretch)))
+(((Veröffentlichung, Buster)))
 (((Veröffentlichung, Toy Story)))
 (((Veröffentlichung, Wheezy)))
 (((Veröffentlichung, Woody)))

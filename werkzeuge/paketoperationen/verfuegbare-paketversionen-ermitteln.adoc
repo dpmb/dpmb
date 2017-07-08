@@ -61,15 +61,13 @@ Veröffentlichung und Architektur. Möchten Sie die Ausgabe hingegen auf
 eine bestimmte Veröffentlichung oder Architektur einschränken,
 akzeptiert `rmadison` die Schalter `-a` 'Architektur' und `-s`
 'Veröffentlichung'. Um zu sehen, welche Version des Paketes 'base-files'
-für die Veröffentlichung Debian 8 'Jessie' und die Architektur 'amd64'
+für die Veröffentlichung Debian 9 'Stretch' und die Architektur 'amd64'
 bereitstehen, nutzen Sie den folgenden Aufruf:
 
 .Gefilterte Auflistung der verfügbaren Paketversionen mit `rmadison`
 ----
-$ rmadison -s jessie -a amd64 base-files
-debian:
- base-files | 8+deb8u3 | jessie | amd64
-new:
+$ rmadison -s stretch -a amd64 base-files
+base-files | 9.9           | stable     | amd64
 $
 ----
 

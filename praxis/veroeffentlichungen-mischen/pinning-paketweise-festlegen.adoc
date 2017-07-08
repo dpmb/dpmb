@@ -52,7 +52,7 @@ entnehmen Sie bitte <<tab.apt-pinning-prioritaeten>> in
 | `a` (`archive`)	| Veröffentlichung (siehe <<veroeffentlichungen>>)| 'unstable'
 | `c` (`component`)	| Distributionsbereich (siehe <<distributionsbereiche>>) | 'main'
 | `l` (`label`)		| Bezeichner	| Debian
-| `n` (`name`)		| Aliasnamen der Veröffentlichung (siehe <<alias-namen>>) | 'Jessie'
+| `n` (`name`)		| Aliasnamen der Veröffentlichung (siehe <<alias-namen>>) | 'Stretch'
 | `o` (`origin`)	| Herkunft	| Debian
 | `v` (`version`)	| explizite Versionsnummer (siehe <<benennung-eines-debian-pakets>>) | 6.0.3
 |====

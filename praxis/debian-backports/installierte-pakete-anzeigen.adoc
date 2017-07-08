@@ -15,7 +15,8 @@ kommt ihnen das Namens- und Versionsschema von Debian entgegen (siehe
 
 In der Versionsangabe des Pakets ist die Zeichenkette `~bpo` plus die
 Versionsnummer der Debianveröffentlichung enthalten, so bspw. `~bpo8`
-für eine Rückportierung auf Debian 8 'Jessie'. Diese Angabe ist soweit
+für eine Rückportierung auf Debian 8 'Jessie' und `~bpo9` für eine
+Rückportierung auf Debian 9 'Stretch'. Diese Angabe ist soweit
 verlässlich, da sich die meisten Entwickler brav an diese Konvention für
 die Benennung halten. Zusätzlich achten die FTP-Master für Debian
 Backports recht pedantisch darauf, dass diese Schreibweise eingehalten

@@ -17,11 +17,11 @@ Aktualisierungen zu profitieren, ergänzen Sie die Datei
 `/etc/apt/sources.list` um den folgenden Eintrag:
 
 ----
-deb http://security.debian.org/ jessie/updates main contrib non-free
+deb http://security.debian.org/ stretch/updates main contrib non-free
 ----
 
 Obige Angabe beinhaltet beispielhaft wiederum die explizite Angabe des
-Aliasnamens der Veröffentlichung Debian 8 _Jessie_. Dieser Name wird
+Aliasnamens der Veröffentlichung Debian 9 _Stretch_. Dieser Name wird
 gefolgt vom Unterverzeichnis `updates` und den daraus gewünschten
 Distributionsbereichen _main_, _contrib_ und _non-free_.
 

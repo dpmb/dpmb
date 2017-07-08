@@ -7,9 +7,11 @@
 Debian unterstützt die folgenden Architekturen und Plattformen:
 
 i386 (i486/i586)::
+
 x86 (PC) 32-Bit. Trotz des Namens ab Debian 8 'Jessie' nur
-Pentium-kompatible Hardware. In Debian 6 'Squeeze' und 7 'Wheezy' umfasst
-das noch i486, jedoch bereits keine i486 SX mehr.
+Pentium-kompatible und ab Debian 9 'Stretch' nur noch
+Pentium-II-kompatible Hardware. In Debian 6 'Squeeze' und 7 'Wheezy'
+umfasst das noch i486, jedoch bereits keine i486 SX mehr.
 
 amd64 (x86_64)::
 x86 (PC) 64-Bit. AMD 64-Bit-CPUs mit AMD64-Erweiterung und Intel CPUs
