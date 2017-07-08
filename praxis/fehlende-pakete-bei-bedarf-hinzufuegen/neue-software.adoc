@@ -63,7 +63,7 @@ nachinstalliert werden sollen
   installiert werden müsste, für den ist vermutlich das Paket
   'command-not-found' <<Debian-Paket-command-not-found>> das richtige.
 
-* Neu ab Debian 9 _Stretch_: 'apprecommender'
+* Ab voraussichtlich Debian 10 _Buster_: 'apprecommender'
 <<Debian-Paket-apprecommender>>, empfiehlt Anwendung basierend auf u.a.
 Debtags der installierten Anwendungen. Noch sehr neu und roh.
 

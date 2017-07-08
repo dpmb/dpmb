@@ -35,8 +35,8 @@ or download as either
 (ca. 9 MB) or
 [Mobipocket](https://book.dpmb.org/debian-paketmanagement.mobi) (ca. 15
 MB) file from https://book.dpmb.org/. The book is also
-[available as package in Debian](https://tracker.debian.org/pkg/dpmb),
-starting with Debian 9 Stretch.
+[available as package in Debian](https://packages.debian.org/stable/debian-paketmanagement-buch)
+in Debian 9 Stretch or later.
 
 Additionally, the book is also available
 [online at GitBook](https://gitbook.dpmb.org/), but be aware that the

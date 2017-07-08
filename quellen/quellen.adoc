@@ -223,7 +223,7 @@
 
 - [[[Debian-Paket-apper]]] Debian-Paket 'apper', https://packages.debian.org/jessie/apper
 
-- [[[Debian-Paket-apprecommender]]] Debian-Paket 'apprecommender', https://packages.debian.org/de/stretch/apprecommender
+- [[[Debian-Paket-apprecommender]]] Debian-Paket 'apprecommender', https://packages.debian.org/de/buster/apprecommender
 
 - [[[Debian-Paket-approx]]] Debian-Paket 'approx', https://packages.debian.org/de/stable/approx
 
@@ -394,7 +394,7 @@
 
 - [[[Debian-Paket-module-assistant]]] Debian-Paket 'module-assistant', https://packages.debian.org/de/stable/module-assistant
 
-- [[[Debian-Paket-muon]]] Debian-Paket 'muon', https://packages.debian.org/de/stretch/muon
+- [[[Debian-Paket-muon]]] Debian-Paket 'muon', https://packages.debian.org/de/stable/muon
 
 - [[[Debian-Paket-netselect]]] Debian-Paket 'netselect', https://packages.debian.org/de/stable/netselect
 

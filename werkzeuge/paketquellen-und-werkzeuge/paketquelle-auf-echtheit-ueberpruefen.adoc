@@ -155,7 +155,7 @@ Schlüsselbund entfernt, die nicht mehr gültig sind. In Ubuntu ist auch
 die Option `net-update` anwendbar, die eine Synchronisation mit einem
 Schlüsselbund über das Netzwerk ermöglicht.
 
-NOTE: In Debian 9 'Stretch' ist diese Option als veraltet markiert.
+NOTE: Ab Debian 9 'Stretch' ist diese Option als veraltet markiert.
 
 ==== Beispiel: Ergänzung eines Schlüssels ====
 

@@ -124,7 +124,7 @@ https://packages.debian.org/stable/mail/
 Auch hier können Sie wieder ein Sprachkürzel an den Anfang des Pfades
 setzen, um eine bestimmte Sprache auszuwählen. 
 
-Anstelle des Namens einer Veröffentlichung -- 'jessie', 'stretch',
+Anstelle des Namens einer Veröffentlichung -- 'stretch', 'buster',
 'sid', etc. -- kann auch stets ein Entwicklungsstand -- 'stable',
 'testing', 'unstable', etc. -- verwendet werden.
 

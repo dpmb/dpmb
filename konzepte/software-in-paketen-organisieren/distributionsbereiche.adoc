@@ -164,9 +164,9 @@ Aus diesem Grund wurden 2006 einige Programme abgewandelt, bspw. der
 Webbrowser Iceweasel und das Mailprogramm Icedove, die im Original die
 Namen Firefox und Thunderbird tragen. Neben den beiden anderen Namen
 werden in Debian auch alternative Logos genutzt. Nach einer
-markenrechtlichen Einigung im Frühjahr 2016 steht an, dass ab Debian 9
-'Stretch' Firefox und Thunderbird wieder zu Debian zurückkehren und
-Iceweasel und Icedove aufgegeben werden.
+markenrechtlichen Einigung im Frühjahr 2016 sind seit Debian 9
+'Stretch' Firefox und Thunderbird wieder zu Debian zurückgekehrt und
+lösen Iceweasel und Icedove wieder ab.
 
 ==== Softwareverteilung ====
 

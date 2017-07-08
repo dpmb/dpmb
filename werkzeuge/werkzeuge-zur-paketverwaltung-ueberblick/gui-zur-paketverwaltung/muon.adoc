@@ -17,7 +17,7 @@ Muon ist ein Paketmanager für KDE und als Klon von Synaptic (siehe
 <<gui-synaptic>>) einzustufen. Es setzt auf dem graphischen Framework Qt
 auf und kommt bislang speziell in der Distribution Kubuntu <<Kubuntu>>
 zum Einsatz. Für Debian ist das gleichnamige Paket 'muon'
-<<Debian-Paket-muon>> ab der Veröffentlichung Debian 9 'Stretch'
+<<Debian-Paket-muon>> seit der Veröffentlichung Debian 9 'Stretch'
 verfügbar, für Ubuntu bereits ab der Veröffentlichung 12.04 'Precise
 Pangolin'.
 

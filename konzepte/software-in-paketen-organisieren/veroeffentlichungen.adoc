@@ -158,8 +158,7 @@ Pate:
 
 * Debian 8 _Jessie_ (25. April 2015; benannt nach der jodelnden Kuhhirtinnen-Puppe Jessica Jane ``Jessie'' Pride)
 
-* Debian 9 _Stretch_ (noch kein Veröffentlichungstermin zum Zeitpunkt der
-Drucklegung festgelegt, voraussichtlich 2017; benannt nach dem lila Kraken)
+* Debian 9 _Stretch_ (17. Juni 2017; benannt nach dem lila Kraken)
 
 * Debian 10 _Buster_ (noch kein Veröffentlichungstermin zum Zeitpunkt der
 Drucklegung festgelegt, voraussichtlich 2019; benannt nach dem Welpen aus 'Toy Story 2')
