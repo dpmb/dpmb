@@ -18,10 +18,14 @@ Aufwand soll schließlich nicht umsonst gewesen sein.
 Eine Aktualisierung bedeutet stets größere Umbauarbeiten, bei dem sich
 vergleichsweise viel ändert und durchaus auch etliches schief gehen
 kann, womit Sie nicht unbedingt rechnen. An der Stelle sei jedoch zu
-Ihrer Beruhigung angemerkt, dass der Wechsel von Debian 6 _Squeeze_ auf
-Debian 7 _Wheezy_ recht unspektakulär verlief und vielfach problemlos
-über die Bühne ging. Ähnliches gilt bislang für den Wechsel auf Debian 8
-_Jessie_ sowie Debian 9 _Stretch_.
+Ihrer Beruhigung angemerkt, dass der Wechsel von Debian 6 _Squeeze_
+auf Debian 7 _Wheezy_ recht unspektakulär verlief und vielfach
+problemlos über die Bühne ging. Beim Wechsel von Debian 7 auf Debian 8
+_Jessie_ war vor allem der Wechsel von Apache 2.2 auf Apache 2.4 mit
+manuellen Anpassungen ander Apache-Konfiguration verbunden. Beim
+Wechsel von Debian 8 nach Debian 9 _Stretch_ muss darauf geachtet
+werden, dass lokal installierte PHP-Anwendungen auch mit PHP 7.0
+kompatibel sind.
 
 Trotzdem halten wir es für ganz praktisch, wenn wir Ihnen eine
 Schritt-für-Schritt-Abfolge zur Verfügung stellen, der Sie folgen
