@@ -211,17 +211,17 @@
 
 - [[[Debian-Package-Basics]]] What is a Debian package? https://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html
 
-- [[[Debian-Paketliste]]] Debian-Webseite, Paketliste, https://packages.debian.org/de/jessie/
+- [[[Debian-Paketliste]]] Debian-Webseite, Paketliste, https://packages.debian.org/de/stable/
 
 - [[[Debian-Paketsuche]]] Debian-Webseite, Paketsuche, https://www.debian.org/distrib/packages#search_contents
 
 - [[[Debian-Paket-adept]]] Historisches Debian-Paket 'adept', https://packages.qa.debian.org/adept
 
-- [[[Debian-Paket-adequate]]] Debian-Paket 'adequate', https://packages.debian.org/de/jessie/adequate
+- [[[Debian-Paket-adequate]]] Debian-Paket 'adequate', https://packages.debian.org/de/stable/adequate
 
 - [[[Debian-Paket-alien]]] Debian-Paket 'alien', https://packages.debian.org/de/stable/alien
 
-- [[[Debian-Paket-apper]]] Debian-Paket 'apper', https://packages.debian.org/jessie/apper
+- [[[Debian-Paket-apper]]] Debian-Paket 'apper', https://packages.debian.org/de/stable/apper
 
 - [[[Debian-Paket-apprecommender]]] Debian-Paket 'apprecommender', https://packages.debian.org/de/buster/apprecommender
 
@@ -326,7 +326,7 @@
 
 - [[[Debian-Paket-dgit]]] Debian-Paket 'dgit', https://packages.debian.org/testing/dgit
 
-- [[[Debian-Paket-dh-make-perl]]] Debian-paket 'dh-make-perl', https://packages.debian.org/jessie/dh-make-perl
+- [[[Debian-Paket-dh-make-perl]]] Debian-paket 'dh-make-perl', https://packages.debian.org/de/stable/dh-make-perl
 
 - [[[Debian-Paket-dkms]]] Debian-Paket 'dkms' (Dynamic Kernel Modules Support), https://packages.debian.org/de/stable/dkms
 
@@ -340,7 +340,7 @@
 
 - [[[Debian-Paket-dwm]]] Debian-Paket 'dwm', https://packages.debian.org/de/stable/dwm
 
-- [[[Debian-Paket-etckeeper]]] Debian-Paket 'etckeeper', https://packages.debian.org/jessie/etckeeper
+- [[[Debian-Paket-etckeeper]]] Debian-Paket 'etckeeper', https://packages.debian.org/de/stable/etckeeper
 
 - [[[Debian-Paket-galternatives]]] Debian-Paket 'galternatives', https://packages.debian.org/de/stable/galternatives
 
@@ -358,13 +358,13 @@
 
 - [[[Debian-Paket-git-dpm]]] Debian-Paket 'git-dpm', https://packages.debian.org/de/stable/git-dpm
 
-- [[[Debian-Paket-gnome-packagekit]]] Debian-Paket 'gnome-packagekit', https://packages.debian.org/jessie/gnome-packagekit
+- [[[Debian-Paket-gnome-packagekit]]] Debian-Paket 'gnome-packagekit', https://packages.debian.org/de/stable/gnome-packagekit
 
 - [[[Debian-Paket-goplay]]] Debian-Paket 'goplay', https://packages.debian.org/de/stable/goplay
 
 - [[[Debian-Paket-gui-apt-key]]] Debian-Paket 'gui-apt-key', https://packages.debian.org/de/stable/gui-apt-key
 
-- [[[Debian-Paket-how-can-i-help]]] Debian-Paket 'how-can-i-help', https://packages.debian.org/jessie/how-can-i-help
+- [[[Debian-Paket-how-can-i-help]]] Debian-Paket 'how-can-i-help', https://packages.debian.org/de/stable/how-can-i-help
 
 - [[[Debian-Paket-ia32-libs]]] Debian-Paket 'ia32-libs', https://packages.debian.org/de/stable/ia32-libs
 
@@ -407,15 +407,15 @@
 - [[[Debian-Paket-packagekit-backend-smart]]] Debian-Paket 'packagekit-backend-smart', https://packages.debian.org/de/wheezy/packagekit-backend-smart
 
 - [[[Debian-Paket-packagekit-command-not-found]]] Debian-Paket 'packagekit-command-not-found',
-https://packages.debian.org/jessie/packagekit-command-not-found
+https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Paket-packagesearch]]] Debian-Paket 'packagesearch', https://packages.debian.org/de/stable/packagesearch
 
-- [[[Debian-Paket-perl]]] Debian-Paket 'perl', https://packages.debian.org/jessie/perl
+- [[[Debian-Paket-perl]]] Debian-Paket 'perl', https://packages.debian.org/de/stable/perl
 
 - [[[Debian-Paket-piuparts]]] Debian-Paket 'piuparts', https://packages.debian.org/de/stable/piuparts
 
-- [[[Debian-Paket-python-apt]]] Debian-Paket 'python-apt', https://packages.debian.org/jessie/python-apt
+- [[[Debian-Paket-python-apt]]] Debian-Paket 'python-apt', https://packages.debian.org/de/stable/python-apt
 
 - [[[Debian-Paket-python-software-properties]]] Debian-Paket 'python-software-properties', https://packages.debian.org/de/stable/python-software-properties
 
@@ -429,10 +429,10 @@ https://packages.debian.org/jessie/packagekit-command-not-found
 
 - [[[Debian-Paket-smartpm]]] Debian-Paket 'smartpm', https://packages.debian.org/de/stable/smartpm
 
-// ACHTUNG: Absichtlich "wheezy" und nicht "stable", weil ab Jessie nicht mehr in Debian!
+// ACHTUNG: Absichtlich "wheezy" und nicht "stable", weil nach Wheezy aus Debian entfernt!
 - [[[Debian-Paket-software-center]]] Debian-Paket 'software-center', https://packages.debian.org/de/wheezy/software-center
 
-- [[[Debian-Paket-software-properties-common]]] Debian-Paket 'software-properties-common', https://packages.debian.org/jessie/software-properties-common
+- [[[Debian-Paket-software-properties-common]]] Debian-Paket 'software-properties-common', https://packages.debian.org/de/stable/software-properties-common
 
 - [[[Debian-Paket-synaptic]]] Debian-Paket 'synaptic', https://packages.debian.org/de/stable/synaptic
 
@@ -448,7 +448,7 @@ https://packages.debian.org/jessie/packagekit-command-not-found
 
 - [[[Debian-Paket-wget]]] Debian-Paket 'wget', https://packages.debian.org/de/stable/wget
 
-- [[[Debian-Paket-whatmaps]]] Debian-Paket 'whatmaps', https://packages.debian.org/de/jessie/whatmaps
+- [[[Debian-Paket-whatmaps]]] Debian-Paket 'whatmaps', https://packages.debian.org/de/stable/whatmaps
 
 - [[[Debian-Paket-xara-gtk]]] Debian-Paket 'xara-gtk', https://packages.debian.org/de/stable/xara-gtk
 
