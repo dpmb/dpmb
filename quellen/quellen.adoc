@@ -269,8 +269,6 @@
 
 - [[[Debian-Paket-apt-transport-debtorrent]]] Debian-Paket 'apt-transport-debtorrent', https://packages.debian.org/de/stable/apt-transport-debtorrent
 
-- [[[Debian-Paket-apt-zip]]] Debian-Paket 'apt-zip', https://packages.debian.org/de/stable/apt-zip
-
 - [[[Debian-Paket-ara]]] Debian-Paket 'ara', https://packages.debian.org/de/stable/ara
 
 - [[[Debian-Paket-aria2]]] Debian-Paket 'aria2', https://packages.debian.org/de/stable/aria2

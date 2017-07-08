@@ -8,7 +8,6 @@
 
 // Stichworte für den Index
 (((Debianpaket, apt-offline)))
-(((Debianpaket, apt-zip)))
 (((Debianpaket, aptoncd)))
 (((Keryx)))
 
@@ -21,7 +20,7 @@ hier anbieten:
 
 Diese drei Wege basieren auf Werkzeugen und Verfahren, die wir bislang
 im Buch bereits angesprochen haben. Sagen Ihnen diese nicht zu, werfen
-Sie einen genaueren Blick auf die Projekte `apt-offline`, `apt-zip`,
+Sie einen genaueren Blick auf die Projekte `apt-offline`,
 `aptoncd` und Keryx, die wir im Anschluss unter Werkzeuge in
 <<paketverwaltung-offline-werkzeuge>> genauer vorstellen.
 
