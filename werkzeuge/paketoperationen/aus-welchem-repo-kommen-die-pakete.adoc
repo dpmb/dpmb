@@ -232,7 +232,7 @@ Debian 8 'Jessie', für das ein aktuelleres Paket bereitsteht:
 .Versionen anzeigen für das Paket 'vlc'
 ----
 $ apt-show-versions vlc
-vlc:amd64/jessie 2.2.0~rc2-2+deb8u1 upgradeable to 1:2.2.1-dmo3
+vlc:amd64/jessie 2.2.0~rc2-2 upgradeable to 2.2.0~rc2-2+deb8u1
 $
 ----
 
