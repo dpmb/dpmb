@@ -296,11 +296,11 @@ bieten Ihnen `aptitude` zusätzlich eine textbasierte bzw. SmartPM eine
 graphische Benutzeroberfläche. Auf diese Werkzeuge gehen wir nachfolgend
 genauer ein (siehe, <<Cupt>>, <<aptitude>> und <<gui-smartpm>>).
 
-`aptsh` war ebenfalls lange Zeit produktiv nutzbar, ist aber mit
-neueren APT-Versionen (1.2 und höher) nicht mehr kompatibel und wir
-voraussichtlich in neueren Debian- und Ubuntu-Veröffentlichungen nicht
-enthalten sein, da es nicht mehr weiterentwickelt wird
-<<aptsh-verwaist-Bug-Report-831493>>.  Bis Debian 8 Jessie ist `aptsh`
-aber durchaus noch benutzbar. Siehe auch <<aptsh>>.
+`aptsh` war ebenfalls lange Zeit produktiv nutzbar, ist mittlerweile
+verwaist <<aptsh-verwaist-Bug-Report-831493>> und wird deswegen nur
+noch vom Debian QA soweit nötig gepflegt. Es kann daher passieren,
+dass es in neueren Debian- und Ubuntu-Veröffentlichungen nicht
+enthalten sein, da es nicht mehr weiterentwickelt wird. Siehe auch
+<<aptsh>>.
 
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/apt.adoc
