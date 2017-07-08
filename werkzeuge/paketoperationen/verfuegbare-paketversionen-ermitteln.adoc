@@ -35,8 +35,7 @@ $
 Möchten Sie hingegen wissen, welche Versionen für die jeweiligen
 Veröffentlichungen bereitstehen, hilft Ihnen das Werkzeug `rmadison` aus
 dem Paket 'devscripts' weiter <<Debian-Paket-devscripts>>. Für das
-bereits oben verwendete Paket 'apt-doc' sieht das unter der
-Veröffentlichung Debian 8 'Jessie' wie folgt aus:
+bereits oben verwendete Paket 'apt-doc' sieht das wie folgt aus:
 
 .Auflistung der verfügbaren Paketversionen mit `rmadison`
 ----
