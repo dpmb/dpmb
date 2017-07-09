@@ -118,10 +118,10 @@ User-Bild auf https://github.com/dpmb ist
 /usr/share/icons/nuvola/128x128/mimetypes/application-x-deb.png aus
 dem Paket nuvola-icon-theme, Version 4:15.04.3-1.
 
-* daptup (https://packages.debian.org/stable/daptup)
+* daptup (https://packages.debian.org/de/stable/daptup)
   reporter of changes in list of available packages from repositories
 
-* packagekit-command-not-found (https://packages.debian.org/stable/packagekit-command-not-found)
+* packagekit-command-not-found (https://packages.debian.org/de/stable/packagekit-command-not-found)
   Offer to install missing programs automatically
 
   PackageKit allows performing simple software management tasks over a

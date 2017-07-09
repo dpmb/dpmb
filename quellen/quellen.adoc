@@ -384,7 +384,7 @@
 
 - [[[Debian-Paket-localepurge]]] Debian-Paket 'localepurge', https://packages.debian.org/stable/localepurge
 
-- [[[Debian-Paket-lsb]]] Debian-Paket 'lsb', https://packages.debian.org/stable/lsb
+- [[[Debian-Paket-lsb]]] Debian-Paket 'lsb', https://packages.debian.org/de/stable/lsb
 
 - [[[Debian-Paket-make]]] Debian-Paket 'make', https://packages.debian.org/de/stable/make
 
@@ -438,7 +438,7 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Paket-util-linux]]] Debian-Paket 'util-linux', https://packages.debian.org/de/stable/util-linux
 
-- [[[Debian-Paket-vrms]]] Debian-Paket 'vrms', https://packages.debian.org/stable/vrms
+- [[[Debian-Paket-vrms]]] Debian-Paket 'vrms', https://packages.debian.org/de/stable/vrms
 
 - [[[Debian-Paket-wajig]]] Debian-Paket 'wajig', https://packages.debian.org/de/stable/wajig
 
