@@ -13,14 +13,14 @@ ia64 (ia64-linux-gnu)::
 Intel Itanium IA-64. Wird auch in 'unstable' nicht mehr unterstützt.
 
 kfreebsd-amd64 (x86_64-kfreebsd-gnu)::
-x86 (PC) 64-Bit mit FreeBSD-Kernel. Technologievorschau, seit Debian 6.0
-'Squeeze', nur noch in 'unstable'.
+x86 (PC) 64-Bit mit FreeBSD-Kernel. Technologievorschau, bei Debian 6.0
+'Squeeze' und Debian 7 'Wheezy' dabei, mittlerweile nur noch in 'unstable'.
 
-kfreebsd-i386 (i486-kfreebsd-gnu/i586-kfreebsd-gnu)::
-x86 (PC) 32-Bit mit FreeBSD-Kernel. Technologievorschau, seit Debian 6.0
-'Squeeze' nur noch in 'unstable'. Seit 2014 nur Pentium-kompatible
-Hardware, in Debian 6 'Squeeze' und 7 'Wheezy' werden auch noch i486
-unterstützt.
+kfreebsd-i386 (i486-kfreebsd-gnu/i586-kfreebsd-gnu):: x86 (PC) 32-Bit
+mit FreeBSD-Kernel. Technologievorschau, bei Debian 6.0 'Squeeze' und
+Debian 7 'Wheezy' dabei, mittlerweile nur noch in 'unstable'. Seit
+2014 nur Pentium-kompatible Hardware, in Debian 6 'Squeeze' und 7
+'Wheezy' werden auch noch i486 unterstützt.
 
 s390 (s390-linux-gnu)::
 IBM S/390 und zSeries. Wird auch in 'unstable' nicht mehr unterstützt
