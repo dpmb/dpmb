@@ -132,6 +132,8 @@ $
 [[verfuegbare-paketversionen-ermitteln]]
 ==== Verfügbare Paketversionen mit `apt-cache madison` ermitteln ====
 
+// TODO: Doppelt! Siehe auch werkzeuge/paketoperationen/verfuegbare-paketversionen-ermitteln.adoc
+
 // Stichworte für den Index
 (((apt-cache, madison)))
 (((Debianpaket, apt-doc)))

@@ -240,6 +240,8 @@ Paketquelle nicht auf jeden Paketspiegel unter dem gleichen Pfad liegen.
 Möglich sind z.B. statt der Empfehlung `/debian/` auch
 `/pub/debian/` oder `/mirror/debian/`.
 
+// TODO: Doppelt! Der Inhalt der Fußnote ist mehr oder weniger auch in praxis/debian-backports/backports-intro.adoc und praxis/debian-backports/einbindung-in-den-paketbestand.adoc
+
 Das Verfahren mit HTTP-Weiterleitungen hat jedoch auch *Nachteile*.
 Einerseits funktioniert es ausschließlich per HTTP (oder HTTPS), da FTP
 keine Weiterleitungen kennt. Aus dieser Einschränkung leitet sich auch

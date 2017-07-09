@@ -8,6 +8,8 @@
 
 // vereinigen mit aus-welchem-repo-kommen-die-pakete
 
+// TODO: Doppelt! Siehe auch werkzeuge/paketoperationen/aus-welchem-repo-kommen-die-pakete.adoc
+
 // Stichworte für den Index
 (((apt-cache, madison)))
 (((Debianpaket, apt-doc)))
