@@ -14,9 +14,11 @@ Das in der Programmiersprache Python geschriebene Programm 'wajig'
 <<Debian-Paket-wajig>> ist vorrangig ein Wrapper um `dpkg` (<<dpkg>>)
 und APT (<<apt>>). Es zählt zur gleichen Kategorie wie die `aptsh`
 (siehe <<aptsh>>), beinhaltet aber auch Elemente von `cupt` (<<Cupt>>)
-und `aptitude` (<<aptitude>>) auf der Kommandozeile. Bis einschließlich
-Debian 6 'Squeeze' bestand zudem eine graphische Variante namens 'gjig',
-die mittlerweile obsolet ist.
+und `aptitude` (<<aptitude>>) auf der Kommandozeile footnote:[Bis
+einschließlich Debian 6 'Squeeze' bestand zudem eine graphische
+Variante namens 'gjig', die mittlerweile obsolet und in keiner
+unterstützten Debian- oder Ubuntu-Veröffentlichung mehr verfügbar
+ist.]
 
 `wajig` zielt darauf ab, alle im Alltag erforderlichen Aktionen zur
 Paketverwaltung in 'einem einzigen' Werkzeug für die Kommandozeile
