@@ -320,7 +320,7 @@
 
 - [[[Debian-Paket-debtree]]] Debian-Paket 'debtree', https://packages.debian.org/de/stable/debtree
 
-- [[[Debian-Paket-dgit]]] Debian-Paket 'dgit', https://packages.debian.org/testing/dgit
+- [[[Debian-Paket-dgit]]] Debian-Paket 'dgit', https://packages.debian.org/de/stable/dgit
 
 - [[[Debian-Paket-dh-make-perl]]] Debian-paket 'dh-make-perl', https://packages.debian.org/de/stable/dh-make-perl
 
