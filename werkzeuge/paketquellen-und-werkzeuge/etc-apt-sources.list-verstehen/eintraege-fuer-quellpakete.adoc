@@ -15,7 +15,7 @@ eine weitere Zeile in ihrer Paketliste. Im Vergleich zu Binärpaketen
 Paketquelle. Für die offiziellen Quellpakete sieht der Eintrag wie folgt
 aus, hier am Beispiel des deutschen Paketmirrors für Debian 9 _Stretch_:
 
-//.Paketeintrag für die Quellpakete zu Debian 9 'Stretch'
+//.Paketeintrag für die Quellpakete zu Debian 9 _Stretch_
 ----
 deb-src http://ftp.de.debian.org/debian/ stretch main
 ----
