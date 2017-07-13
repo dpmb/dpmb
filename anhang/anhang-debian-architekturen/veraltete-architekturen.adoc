@@ -6,21 +6,21 @@
 
 // TODO -> Stretch
 
-Folgende Architekturen werden mit Debian 8.0 'Jessie' nicht mehr
+Folgende Architekturen werden mit Debian 8 _Jessie_ nicht mehr
 unterstützt:
 
 ia64 (ia64-linux-gnu)::
 Intel Itanium IA-64. Wird auch in 'unstable' nicht mehr unterstützt.
 
 kfreebsd-amd64 (x86_64-kfreebsd-gnu)::
-x86 (PC) 64-Bit mit FreeBSD-Kernel. Technologievorschau, bei Debian 6.0
-'Squeeze' und Debian 7 'Wheezy' dabei, mittlerweile nur noch in 'unstable'.
+x86 (PC) 64-Bit mit FreeBSD-Kernel. Technologievorschau, bei Debian 6
+_Squeeze_ und Debian 7 _Wheezy_ dabei, mittlerweile nur noch in 'unstable'.
 
 kfreebsd-i386 (i486-kfreebsd-gnu/i586-kfreebsd-gnu):: x86 (PC) 32-Bit
-mit FreeBSD-Kernel. Technologievorschau, bei Debian 6.0 'Squeeze' und
-Debian 7 'Wheezy' dabei, mittlerweile nur noch in 'unstable'. Seit
-2014 nur Pentium-kompatible Hardware, in Debian 6 'Squeeze' und 7
-'Wheezy' werden auch noch i486 unterstützt.
+mit FreeBSD-Kernel. Technologievorschau, bei Debian 6 _Squeeze_ und
+Debian 7 _Wheezy_ dabei, mittlerweile nur noch in 'unstable'. Seit
+2014 nur Pentium-kompatible Hardware, in Debian 6 _Squeeze_ und 7
+_Wheezy_ werden auch noch i486 unterstützt.
 
 s390 (s390-linux-gnu)::
 IBM S/390 und zSeries. Wird auch in 'unstable' nicht mehr unterstützt
@@ -34,10 +34,10 @@ Die nachfolgenden Architekturen werden von Debian offiziell nicht mehr
 unterstützt, aber vom Debian-Ports-Projekt noch am Leben gehalten:
 
 alpha (alpha-linux-gnu)::
-Alpha. Unterstützt von Debian 2.1 'Slink' bis Debian 6.0 'Squeeze'.
+Alpha. Unterstützt von Debian 2.1 'Slink' bis Debian 6 _Squeeze_.
 
 hppa (hppa-linux-gnu)::
-HP PA-RISC. Unterstützt von Debian 3.0 'Woody' bis Debian 6.0 'Squeeze'.
+HP PA-RISC. Unterstützt von Debian 3 _Woody_ bis Debian 6 _Squeeze_.
 
 m68k (m68k-linux-gnu)::
 Motorola 68k. Die Unterstützung war komplett eingestellt, wurde aber
@@ -46,7 +46,7 @@ wiederbelebt.
 Diese Architekturen sind gar nicht mehr verfügbar:
 
 arm (arm-linux-gnu)::
-ARM (OABI). Seit Debian 6.0 'Squeeze' nicht mehr unterstützt und durch
+ARM (OABI). Seit Debian 6 _Squeeze_ nicht mehr unterstützt und durch
 'armel' ersetzt.
 
 m32::
