@@ -15,8 +15,8 @@ kommt ihnen das Namens- und Versionsschema von Debian entgegen (siehe
 
 In der Versionsangabe des Pakets ist die Zeichenkette `~bpo` plus die
 Versionsnummer der Debianveröffentlichung enthalten, so bspw. `~bpo8`
-für eine Rückportierung auf Debian 8 'Jessie' und `~bpo9` für eine
-Rückportierung auf Debian 9 'Stretch'. Diese Angabe ist soweit
+für eine Rückportierung auf Debian 8 _Jessie_ und `~bpo9` für eine
+Rückportierung auf Debian 9 _Stretch_. Diese Angabe ist soweit
 verlässlich, da sich die meisten Entwickler brav an diese Konvention für
 die Benennung halten. Zusätzlich achten die FTP-Master für Debian
 Backports recht pedantisch darauf, dass diese Schreibweise eingehalten
@@ -58,7 +58,7 @@ Paketbeschreibung tragen. Zudem müssen Sie das bspw. in Skripten immer
 wieder an die von Ihnen verwendete Debianversion anpassen. Um diese
 Fallen zu umgehen, bestehen zwei weitere Lösungswege -- a) mit Hilfe von
 `aptitude` und b) mit Hilfe von `apt`. Letzteres gelingt Ihnen erst ab
-Debian 8 'Jessie', da es vorher `apt` nicht als Werkzeug in Debian gibt.
+Debian 8 _Jessie_, da es vorher `apt` nicht als Werkzeug in Debian gibt.
 
 // Stichworte für den Index
 (((Debian Backports, installierte Pakete anzeigen)))
