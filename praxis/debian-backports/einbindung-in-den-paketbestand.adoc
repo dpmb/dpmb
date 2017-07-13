@@ -12,29 +12,29 @@ Backports sind nicht von Hause aus aktiviert und Sie müssen diese in der
 Paketverwaltung explizit ergänzen. Dazu fügen Sie in der Liste der
 Paketquellen unter `/etc/apt/sources.list` (siehe dazu
 <<etc-apt-sources.list-verstehen>>) einen entsprechenden Eintrag für die
-passenden Backports ihrer Distribution hinzu. Für Debian 9 'Stretch'
-und Debian 8 'Jessie' mit den dem Distributionsbereich 'main' sieht
+passenden Backports ihrer Distribution hinzu. Für Debian 9 _Stretch_
+und Debian 8 _Jessie_ mit den dem Distributionsbereich 'main' sieht
 der jeweilige Eintrag wie folgt aus:
 
 // TODO: Doppelt! Siehe auch praxis/debian-backports.adoc
 
-.Eintrag zu Debian Backports für Debian 9 'Stretch'
+.Eintrag zu Debian Backports für Debian 9 _Stretch_
 ----
 # Backports
 deb http://ftp.debian.org/debian stretch-backports main
 ----
 
-.Eintrag zu Debian Backports für Debian 8 'Jessie'
+.Eintrag zu Debian Backports für Debian 8 _Jessie_
 ----
 # Backports
 deb http://ftp.debian.org/debian jessie-backports main
 ----
 
 Wie bereits oben erwähnt, findet sich das APT-Repository für die
-Backports für Debian 6 'Squeeze' in einem getrennten Spiegelnetzwerk.
+Backports für Debian 6 _Squeeze_ in einem getrennten Spiegelnetzwerk.
 Deswegen ist dort die kanonische Mirror-Adresse eine leicht andere:
 
-.Eintrag zu Debian Backports für Debian 6 'Squeeze'
+.Eintrag zu Debian Backports für Debian 6 _Squeeze_
 ----
 # Backports
 deb http://httpredir.debian.org/debian-backports squeeze-backports main contrib non-free
@@ -52,7 +52,7 @@ sondern dazu bedarf es noch eines expliziten Aufrufs mit zusätzlichen
 Schaltern. `apt-get` und `aptitude` benutzen dazu den Schalter `-t`
 gefolgt vom Namen des Backports-Archivs.
 
-Das Paket 'asciidoc' steht bspw. nicht für Debian 7 'Wheezy' bereit,
+Das Paket 'asciidoc' steht bspw. nicht für Debian 7 _Wheezy_ bereit,
 existiert jedoch in den Backports. Um dieses aus den Backports
 nachzuziehen, geben Sie auf der Kommandozeile folgendes ein:
 
