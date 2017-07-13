@@ -114,16 +114,16 @@ mitsamt Patch <<github-pull-request>> ein.
 
 ==== Organisatorisch ====
 
-Beide Autoren leben und arbeiten etwa 90 Flugminuten (oder rund 850
-km) voneinander entfernt – in Zürich und Berlin. Regelmäßige
-Arbeitstreffen waren daher nur begrenzt möglich und wurden mit Hilfe
-von Buchsprints sowie elektronischer Kommunikation überbrückt. Das Buch
-entsteht seit dem Frühjahr 2013 und häufig auch im Rahmen von
-Linux-Events. Besonders hervorzuheben sind hierbei die Chemnitzer
-Linux-Tage <<CLT>>, die Rencontres Mondiales du Logiciel Libre <<RMLL>>
-und die Debian Entwicklerkonferenz <<DebConf>>. An diesen
-Veranstaltungen nehmen wir gern aktiv teil und nutzen die Gelegenheit,
-das Buch gemeinsam zu vervollständigen.
+Beide Autoren leben und arbeiten in recht unterschiedlichen Regionen --
+Axel Beckert in Zürich und Frank Hofmann in Berlin, Genf und Kapstadt.
+Aufgrund der Distanz sind regelmäßige Arbeitstreffen nur begrenzt
+möglich und wurden mit Hilfe von Buchsprints sowie elektronischer
+Kommunikation überbrückt. Das Buch entsteht seit dem Frühjahr 2013 und
+häufig auch im Rahmen von Linux-Events. Besonders hervorzuheben sind
+hierbei die Chemnitzer Linux-Tage <<CLT>>, die Rencontres Mondiales du
+Logiciel Libre <<RMLL>> und die Debian Entwicklerkonferenz <<DebConf>>.
+An diesen Veranstaltungen nehmen wir gern aktiv teil und nutzen die
+Gelegenheit, das Buch gemeinsam zu vervollständigen.
 
 Viele Texte verfassen wir zudem von unterwegs aus. Die bisherigen
 Stationen umfassen
