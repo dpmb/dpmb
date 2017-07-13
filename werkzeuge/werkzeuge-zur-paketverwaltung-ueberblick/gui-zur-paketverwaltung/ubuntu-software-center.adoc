@@ -17,10 +17,10 @@ auch in den Bestand von Debian als Paket namens 'software-center'
 <<Debian-Paket-software-center>> übernommen, aber bereits 2014 wieder
 ausgelistet. Die Begründung ist, dass das Programm nicht mehr
 aktuell in Debian sei und auch bessere Alternativen existieren
-<<RM-software-center>>. Es ist daher in Debian 7 'Wheezy' und Ubuntu
-16.10 "Yakkety Yak' <<Ubuntu-Paket-software-center>> noch enthalten,
-wurde aber vor der Veröffentlichung von Debian 8 'Jessie' und Ubuntu
-17.04 'Zesty Zapus' aus den Distributionen dauerhaft entfernt.
+<<RM-software-center>>. Es ist daher in Debian 7 _Wheezy_ und Ubuntu
+16.10 _Yakkety Yak_ <<Ubuntu-Paket-software-center>> noch enthalten,
+wurde aber vor der Veröffentlichung von Debian 8 _Jessie_ und Ubuntu
+17.04 _Zesty Zapus_ aus den Distributionen dauerhaft entfernt.
 
 Wie bei den anderen bereits weiter oben vorgestellten Programmen können
 Sie damit nicht nur die benutzten Paketquellen verwalten, d.h.
