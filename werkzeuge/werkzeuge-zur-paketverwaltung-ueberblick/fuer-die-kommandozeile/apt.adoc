@@ -298,9 +298,9 @@ genauer ein (siehe, <<Cupt>>, <<aptitude>> und <<gui-smartpm>>).
 
 `aptsh` war ebenfalls lange Zeit produktiv nutzbar, ist mittlerweile
 verwaist <<aptsh-verwaist-Bug-Report-831493>> und wird deswegen nur
-noch vom Debian QA soweit nötig gepflegt. Es kann daher passieren,
-dass es in neueren Debian- und Ubuntu-Veröffentlichungen nicht
-enthalten sein, da es nicht mehr weiterentwickelt wird. Siehe auch
-<<aptsh>>.
+noch vom Debian QA-Team gepflegt, soweit das nötig ist. Es kann Ihnen
+daher passieren, dass es in neueren Debian- und
+Ubuntu-Veröffentlichungen nicht enthalten ist, da es nicht mehr
+weiterentwickelt wird (siehe auch <<aptsh>>).
 
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/apt.adoc
