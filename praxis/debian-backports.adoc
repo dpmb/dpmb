@@ -90,10 +90,10 @@ Bestandteil des Debian-Projektes <<backports.org-moved-to-backports.debian.org>>
 
 Dennoch wurde die von nun an 'Debian Backports' genannten Pakete noch
 eine Weile getrennt von den offiziellen Paketen der Distribution
-verteilt. Erst seit Debian 7 'Wheezy' sind die Backports ebenfalls im
+verteilt. Erst seit Debian 7 _Wheezy_ sind die Backports ebenfalls im
 selben Paketpool enthalten, jedoch nach wie vor in einem eigenen Zweig,
 der auf die Zeichenkette `-backports` endet. Aus diesem Grunde waren
-Backports für Debian 6 'Squeeze' leicht anders einzurichten, als für
+Backports für Debian 6 _Squeeze_ leicht anders einzurichten, als für
 darauf folgende Veröffentlichungen.
 
 === Welche Pakete gibt es als offiziellen Backport? ===
@@ -145,17 +145,17 @@ Backports sind nicht von Hause aus aktiviert und Sie müssen diese in der
 Paketverwaltung explizit ergänzen. Dazu fügen Sie in der Liste der
 Paketquellen unter `/etc/apt/sources.list` (siehe dazu
 <<etc-apt-sources.list-verstehen>>) einen entsprechenden Eintrag für die
-passenden Backports ihrer Distribution hinzu. Für Debian 9 'Stretch'
-und Debian 8 'Jessie' mit den dem Distributionsbereich 'main' sieht
+passenden Backports ihrer Distribution hinzu. Für Debian 9 _Stretch_
+und Debian 8 _Jessie_ mit den dem Distributionsbereich 'main' sieht
 der jeweilige Eintrag wie folgt aus:
 
-.Eintrag zu Debian Backports für Debian 9 'stretch'
+.Eintrag zu Debian Backports für Debian 9 'Stretch'
 ----
 # Backports
 deb http://ftp.debian.org/debian stretch-backports main
 ----
 
-.Eintrag zu Debian Backports für Debian 8 'Jessie'
+.Eintrag zu Debian Backports für Debian 8 _Jessie_
 ----
 # Backports
 deb http://ftp.debian.org/debian jessie-backports main
@@ -168,7 +168,7 @@ sondern dazu bedarf es noch eines expliziten Aufrufs mit zusätzlichen
 Schaltern. `apt-get` und `aptitude` benutzen dazu den Schalter `-t`
 gefolgt vom Namen des Backports-Archivs.
 
-Das Paket 'asciidoc' steht bspw. nicht für Debian 7 'Wheezy' bereit,
+Das Paket 'asciidoc' steht bspw. nicht für Debian 7 _Wheezy_ bereit,
 existiert jedoch in den Backports. Um dieses aus den Backports
 nachzuziehen, geben Sie auf der Kommandozeile folgendes ein:
 
