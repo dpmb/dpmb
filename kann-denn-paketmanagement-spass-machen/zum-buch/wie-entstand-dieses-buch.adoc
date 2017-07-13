@@ -127,7 +127,7 @@ das Buch gemeinsam zu vervollständigen.
 
 Viele Texte verfassen wir zudem von unterwegs aus. Die bisherigen
 Stationen umfassen
-Aix les Bains,
+Aix-les-Bains,
 Ålesund (Norwegen),
 Andorra,
 Augsburg,
@@ -166,10 +166,10 @@ Port del Cantó (Katalanische Pyrenäen, Spanien),
 Radebeul bei Dresden,
 Rømø (Dänemark),
 Rostock-Warnemünde,
-Saint Cergue (Jura, Schweiz),
+Saint-Cergue (Jura, Schweiz),
 Saint-Étienne,
 Saint-Jouin-Bruneval (Normandie),
-Saint-Victor sur Loire,
+Saint-Victor-sur-Loire (Auvergne-Rhône-Alpes),
 Savines-le-Lac (Hautes Alpes, Frankreich)
 Insel Sokn (bei Stavanger, Norwegen),
 Tübingen,
