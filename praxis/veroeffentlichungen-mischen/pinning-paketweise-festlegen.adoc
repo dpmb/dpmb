@@ -6,7 +6,7 @@
 === Paketweise festlegen ===
 
 Für diesen Fall besteht eine Liste mit Einträgen für einzelne Pakete
-und ganze Paketgruppen. Bis Debian 6 'Squeeze' war die Datei
+und ganze Paketgruppen. Bis Debian 6 _Squeeze_ war die Datei
 `/etc/apt/preferences` die einzige Stelle, an der Prioritäten für
 Paketnamen, Veröffentlichungen, Hersteller oder Versionen eingetragen
 werden konnten.
