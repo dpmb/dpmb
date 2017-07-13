@@ -15,7 +15,7 @@ Das in der Programmiersprache Python geschriebene Programm 'wajig'
 und APT (<<apt>>). Es zählt zur gleichen Kategorie wie die `aptsh`
 (siehe <<aptsh>>), beinhaltet aber auch Elemente von `cupt` (<<Cupt>>)
 und `aptitude` (<<aptitude>>) auf der Kommandozeile footnote:[Bis
-einschließlich Debian 6 'Squeeze' bestand zudem eine graphische
+einschließlich Debian 6 _Squeeze_ bestand zudem eine graphische
 Variante namens 'gjig', die mittlerweile obsolet und in keiner
 unterstützten Debian- oder Ubuntu-Veröffentlichung mehr verfügbar
 ist.]
