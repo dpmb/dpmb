@@ -11,7 +11,7 @@ und ganze Paketgruppen. Bis Debian 6 'Squeeze' war die Datei
 Paketnamen, Veröffentlichungen, Hersteller oder Versionen eingetragen
 werden konnten.
 
-Ab Debian 7 'Wheezy' wurde Unterstützung für ein Verzeichnis
+Ab Debian 7 _Wheezy_ wurde Unterstützung für ein Verzeichnis
 `/etc/apt/preferences.d/` eingeführt. Jede Datei in diesem
 Verzeichnis darf beliebig viele Festlegungen beinhalten, wobei der
 Dateiname jeweils frei wählbar ist. Die Abarbeitung der einzelnen
@@ -37,7 +37,7 @@ Pakete.
 `Pin`::
 Nach dem Schlüsselwort `release` spezifizieren Sie die Veröffentlichung
 (siehe <<veroeffentlichungen>>). Dabei ist hier die Angabe eines
-Aliasnamens wie 'Wheezy' oder 'Sid' nicht erlaubt. Zulässig sind aber
+Aliasnamens wie _Wheezy_ oder _Sid_ nicht erlaubt. Zulässig sind aber
 bspw. die Versionsnummer, der Distributionsbereich und die Herkunft.
 Eine genaue Auflistung enthält <<tab.apt-pinning-parameter>>.
 
@@ -53,7 +53,7 @@ entnehmen Sie bitte <<tab.apt-pinning-prioritaeten>> in
 | `a` (`archive`)	| Veröffentlichung (siehe <<veroeffentlichungen>>)| 'unstable'
 | `c` (`component`)	| Distributionsbereich (siehe <<distributionsbereiche>>) | 'main'
 | `l` (`label`)		| Bezeichner	| Debian
-| `n` (`name`)		| Aliasnamen der Veröffentlichung (siehe <<alias-namen>>) | 'Stretch'
+| `n` (`name`)		| Aliasnamen der Veröffentlichung (siehe <<alias-namen>>) | _Stretch_
 | `o` (`origin`)	| Herkunft	| Debian
 | `v` (`version`)	| explizite Versionsnummer (siehe <<benennung-eines-debian-pakets>>) | 6.0.3
 |====
