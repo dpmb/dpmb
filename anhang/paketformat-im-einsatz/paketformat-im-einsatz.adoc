@@ -40,6 +40,7 @@ LernStick:: Live-Distribution auf einem USB-Stick <<LernStick>>
 === Desktop ===
 
 // Stichworte für den Index
+(((Deepin)))
 (((Kubuntu)))
 (((LiMux)))
 (((Linux Mint)))
@@ -47,6 +48,8 @@ LernStick:: Live-Distribution auf einem USB-Stick <<LernStick>>
 (((Tanglu)))
 (((Ubuntu)))
 (((Univention Corporate Server (UCS))))
+
+Deepin:: Angeblich die meistgenutzte Linux-Distribution Chinas <<Deepin>>
 
 LiMux:: Linux-Distribution, die im Rahmen der Migration der Stadtverwaltung München zum Einsatz kommt <<LiMux>>
 

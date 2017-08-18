@@ -535,6 +535,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[debtree-Projektseite]]] Webseite zum debtree-Projekt, https://collab-maint.alioth.debian.org/debtree/
 
+- [[[Deepin]]] Deepin, https://www.deepin.org/
+
 - [[[DEP-8]]] Debian Enhancement Proposal 'DEP 8': automatic as-installed package testing, http://dep.debian.net/deps/dep8/
 
 - [[[DFSG]]] Debian Free Software Guidelines (DFSG), https://www.debian.org/social_contract#guidelines
