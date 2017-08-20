@@ -1,0 +1,5 @@
+Paketverwaltung hinter einem http-Proxy
+
+* wo trage ich das für apt ein
+* welche Umgebungsvariablen brauche ich
+* Parameter / Schalter für apt-get
