@@ -7,8 +7,51 @@
 == Paketverwaltung hinter einem http-Proxy ==
 
 * wo trage ich das für apt ein
+** Datei `/etc/apt/apt.conf.d/70debconf`
+
+.Beispiel für einen Rechner `proxyserver` auf Port 8080
+----
+Acquire::http::Proxy "http://proxyserver:8080";
+----
+
+* was trage ich ein
+** Nutzername
+** Passwort (steht dann im Klartext in der Konfigurationsdatei)
+** Rechner
+** Port
+
+.Beispiel mit Zugangsdaten für Nutzer `pakete`
+----
+Acquire::http::Proxy "pakete:geheim@http://proxyserver:8080";
+----
+
 * welche Umgebungsvariablen brauche ich
-* Parameter / Schalter für apt-get
+** `http_proxy`
+
+* Parameter / Schalter im direkten Aufruf für apt-get
+
+// Aufruf noch überprüfen, ob das so geht
+.Beispielaufruf zur Installation von `mc` via Proxy
+----
+# apt-get -o http::Proxy="http://proxyserver:8080" install mc 
+----
+
+* Konfigurationsdialog bei Synaptic
+** Einstellungen -> Netzwerk -> Proxy
+** ToDo: Bild vom Dialogfenster
+
+* aus der Manpage zu `apt.conf` (Ausschnitt):
+
+----
+http::Proxy ist der zu benutzende Standard-HTTP-Proxy. Er wird
+standardmäßig in der Form http://[[Anwender][:Passwort]@]Rechner[:Port]/
+angegeben. Durch Rechner-Proxies kann außerdem in der Form
+http::Proxy::<host> mit dem speziellen Schlüsselwort DIRECT angegeben
+werden, dass keine Proxies benutzt werden. Falls keine der obigen
+Einstellungen angegeben wurde, wird die Umgebungsvariable http_proxy
+benutzt.
+----
+
 * Material:
 ** Setting up apt-get to use a http-proxy (https://help.ubuntu.com/community/AptGet/Howto#Setting_up_apt-get_to_use_a_http-proxy)
 ** Proxyserver (https://wiki.ubuntuusers.de/Proxyserver/)
