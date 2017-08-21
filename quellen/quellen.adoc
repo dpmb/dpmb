@@ -716,6 +716,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Plura-lts]]] Michael Plura: Am Leben halten, ix 12/2014, https://www.heise.de/ix/heft/Am-Leben-halten-2458886.html
 
+- [[[proxyArch]]] Proxy-Einstellungen im Wiki zu Arch Linux, https://wiki.archlinux.org/index.php/Proxy_settings
+
 - [[[RaspberryPi]]] Webseite zur Hardwareplattform Raspberry Pi, https://www.raspberrypi.org/
 
 - [[[Raspbian]]] Debian für das Raspberry Pi, https://www.raspbian.org/
