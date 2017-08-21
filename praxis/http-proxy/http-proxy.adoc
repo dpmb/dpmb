@@ -6,41 +6,61 @@
 
 == Paketverwaltung hinter einem http-Proxy ==
 
-// Rohmaterial von Annette -- so eine Art hübsche Einleitung zum Thema
+// aufbereitetes Rohmaterial von Annette -- so eine Art hübsche Einleitung zum Thema
 
+// Stichworte für den Index
+(((Proxy, Überblick)))
 Oftmals wird in größeren Netzen der Zugang zum Internet über einen Proxy
-geregelt. Ein Proxy ist so eine Art Pförtner, der den Datenfluss
-zwischen Subnetzen steuert. 
+Server -- häufig nur Proxy abgekürzt -- geregelt. Ein solcher Proxy ist
+vergleichbar mit einem Pförtner, der den Datenfluss zwischen zwei
+Netzsegmenten steuert.
 
 // ToDo: Bild ergänzen
 
-Es gibt unterschiedliche Arten von Proxies und Gründe warum diese
-betrieben werden. Einerseits möchten Sie z.B. Traffic oder
-Übertragungszeit sparen. Dabei werden Dateien nach der ersten Anfrage
-zwischengespeichert (gecached) und somit nicht erneut langwierig oder
-kostenverursachend aus dem Internet geladen. Werden diese Daten erneut
-angefordert, geht es schneller.
+=== Hintergrund ===
 
-Andererseits möchten Sie sicherstellen, dass nur bestimmte Internetseiten 
-besucht oder gar nur von berechtigen Nutzen abgerufen werden dürfen.
-Hier werden dann in der Regel auch Authentifizierungsdaten benötigt, um
-auf den Proxy zuzugreifen.
+// Stichworte für den Index
+(((Proxy, Hintergrund)))
+Es gibt unterschiedliche Gründe, warum Proxies überhaupt betrieben
+werden. Einerseits möchten Sie z.B. Traffic oder Übertragungszeit
+sparen. Dabei werden Dateien nach der ersten Anfrage zwischengespeichert
+(gecached) und somit nicht erneut langwierig oder kostenverursachend aus
+dem externen Netzsegment geladen, bspw. dem Internet. Werden diese Daten
+von einem Rechner im internen Netzsegment erneut angefordert, geht es
+aus dem Cache deutlich schneller.
 
-Neben transparenten Proxies, von denen der Benutzer in der Regel nichts
-mitbekommen sollte, gibt es protokollabhängige Installationen wie
-HTTP-Proxies oder FTP-Proxies. Diese werde nur für bestimmte
-Transportprotokolle eingesetzt. Allgemeinere Varianten wie die SOCKS4-
-und SOCKS5-Proxies[1] agieren hingegen protokollunabhängig. Ein
-Spezialfall ist [[Apt-Cacher-ng]] -- das ist ein Proxy für Debianpakete.
+Andererseits möchten Sie sicherstellen, dass nur bestimmte
+Internetseiten besucht oder gar nur von berechtigen Nutzern abgerufen
+werden dürfen. Hier werden dann in der Regel auch zusätzliche
+Authentifizierungsdaten benötigt, um über den Proxy darauf zuzugreifen.
+
+=== Varianten ===
+
+// Stichworte für den Index
+(((Proxy, SOCKS)))
+(((Proxy, Varianten)))
+Proxies existieren in verschiedenen Lebensformen. Neben transparenten
+Proxies, von denen Sie als Benutzer in der Regel nichts mitbekommen
+sollten, gibt es protokollunabhängige und protokollabhängige Proxies.
+Ersteres sind bspw. SOCKS4- und SOCKS5-Proxies <<SOCKS>>, das zweite
+hingegen HTTP-Proxies oder FTP-Proxies. Diese werden dann nur für das
+jeweilige Transportprotokoll eingesetzt.
+
+Ein Spezialfall ist ebenfalls `apt-cacher-ng` (siehe <<apt-cacher-ng>>).
+Hierbei handelt es sich um einen Proxy ausschließlich für Debianpakete.
 Er behält die bereits angefragten Pakete im Cache, um sie schneller an
 weitere Clients im Netz weitergeben zu können.
 
-Im Debian-Ökosystem gibt es unterschiedliche Stellen, wo hinterlegt
-werden kann, dass ein Proxy benutzt werden soll. Dies sind zunächst die
+=== Proxy konfigurieren ===
+
+Im Debian-Ökosystem gibt es unterschiedliche Stellen, wo Sie hinterlegen
+können, dass ein Proxy benutzt werden soll. 
+
+Dies sind zunächst die
 allgemeinen Umgebungsvariablen [...export bzw .profile ...], danach
 folgen die Einstellungen des Desktop-Environments [...][2] und die der
 Anwendungen, wie z.B. in Firefox. Für die Paketverwaltung kommt die
-apt.conf [0,4].
+apt.conf [0,4] ins Visier.
 
 Links:
 
