@@ -87,11 +87,12 @@ Nachfolgend sehen Sie den Eintrag für einen HTTP-Proxy namens
 Acquire::http::Proxy "http://proxyserver:8080";
 ----
 
-* was trage ich ein
-** Nutzername
-** Passwort (steht dann im Klartext in der Konfigurationsdatei)
-** Rechner
-** Port
+Obiges Beispiel beinhaltet lediglich die beiden essentiellen
+Bestandteile -- den Namen des Proxyservers und der Port, auf dem der
+Dienst lauscht. Für eine Authentifizierung sind ebenfalls ein Nutzername
+samt Passwort erlaubt. Bitte beachten Sie, dass diese Daten im Klartext
+in der Konfigurationsdatei hinterlegt sind. Nachfolgend sehen Sie das
+für den Nutzer `pakete` mit dem Passwort `geheim`.
 
 .Beispiel mit Zugangsdaten für Nutzer `pakete`
 ----
