@@ -89,10 +89,10 @@ Acquire::http::Proxy "http://proxyserver:8080";
 
 Obiges Beispiel beinhaltet lediglich die beiden essentiellen
 Bestandteile -- den Namen des Proxyservers und der Port, auf dem der
-Dienst lauscht. Für eine Authentifizierung sind ebenfalls ein Nutzername
-samt Passwort erlaubt. Bitte beachten Sie, dass diese Daten im Klartext
-in der Konfigurationsdatei hinterlegt sind. Nachfolgend sehen Sie das
-für den Nutzer `pakete` mit dem Passwort `geheim`.
+Dienst lauscht. Für eine Authentifizierung sind zusätzlich ein Nutzername
+samt Passwort notwendig. Bitte beachten Sie, dass dabei die Zugangsdaten
+im Klartext in der Konfigurationsdatei hinterlegt sind. Nachfolgend
+sehen Sie das für den Nutzer `pakete` mit dem Passwort `geheim`.
 
 .Beispiel mit Zugangsdaten für Nutzer `pakete`
 ----
