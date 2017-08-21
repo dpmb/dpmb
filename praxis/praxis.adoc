@@ -64,6 +64,9 @@ include::webbasierte-installation-von-paketen/webbasierte-installation-von-paket
 // - Paketverwaltung beschleunigen
 include::paketverwaltung-beschleunigen/paketverwaltung-beschleunigen.adoc[]
 
+// - mit einem http-Proxy
+include::http-proxy/http-proxy.adoc[]
+
 // - mit einem Paketcache
 include::apt-cache/apt-cache.adoc[]
 

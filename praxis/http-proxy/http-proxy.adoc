@@ -49,7 +49,9 @@ jeweilige Transportprotokoll eingesetzt.
 Ein Spezialfall ist ebenfalls `apt-cacher-ng` (siehe <<apt-cacher-ng>>).
 Hierbei handelt es sich um einen Proxy ausschließlich für Debianpakete.
 Er behält die bereits angefragten Pakete im Cache, um sie schneller an
-weitere Clients im Netz weitergeben zu können.
+weitere Clients im Netz weitergeben zu können. Ausführlicher gehen wir
+auf die unterschiedlichen Pakete unter ``Einen APT-Cache einrichten'' in
+<<apt-cache>> ein.
 
 === Einen Proxy konfigurieren ===
 
@@ -61,10 +63,9 @@ und die der Anwendungen, wie z.B. in Firefox. Für die Paketverwaltung
 kommt die Datei `apt.conf` bzw. die modularisierte Variante unter
 `/etc/apt/apt.conf.d/70debconf` ins Visier.
 
-Links:
-
-* [1b] https://tools.ietf.org/html/rfc1928
-* [4] man apt.conf  (da einfach mal nach proxy suchen)
+* Links:
+** [1b] https://tools.ietf.org/html/rfc1928
+** [4] man apt.conf  (da einfach mal nach proxy suchen)
 
 // weiteres Material
 
