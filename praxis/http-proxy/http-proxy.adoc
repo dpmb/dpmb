@@ -55,6 +55,8 @@ auf die unterschiedlichen Pakete unter ``Einen APT-Cache einrichten'' in
 
 === Einen Proxy konfigurieren ===
 
+// Stichworte für den Index
+(((Proxy, unter Debian konfigurieren)))
 Im Debian-Ökosystem gibt es unterschiedliche Stellen, wo Sie hinterlegen
 können, dass ein Proxy überhaupt benutzt werden soll. Dazu zählen
 zunächst die allgemeinen Umgebungsvariablen wie `export` und `profile`,
@@ -69,8 +71,16 @@ kommt die Datei `apt.conf` bzw. die modularisierte Variante unter
 
 // weiteres Material
 
-* wo trage ich das für apt ein
-** Datei `/etc/apt/apt.conf.d/70debconf`
+=== APT über HTTP-Proxy ===
+
+// Stichworte für den Index
+(((/etc/apt/apt.conf)))
+(((/etc/apt/apt.conf.d/70debconf)))
+Für `apt` tragen Sie den Proxy in der Datei
+`/etc/apt/apt.conf.d/70debconf` ein. Bei älteren
+Debian-Veröffentlichungen ist es die Datei `/etc/apt/apt.conf`.
+Nachfolgend sehen Sie den Eintrag für einen HTTP-Proxy namens
+`proxyserver`, der auf den Port 8080 lauscht.
 
 .Beispiel für einen Rechner `proxyserver` auf Port 8080
 ----
