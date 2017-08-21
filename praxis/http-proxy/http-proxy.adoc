@@ -6,6 +6,47 @@
 
 == Paketverwaltung hinter einem http-Proxy ==
 
+// Rohmaterial von Annette -- so eine Art hübsche Einleitung zum Thema
+
+Oftmals wird in größeren Netzen der Zugang zum Internet über einen Proxy
+geregelt. Es gibt unterschiedliche Arten von Proxies und Gründe warum
+diese betrieben werden. 
+
+Einerseits will man z.B. Traffic oder Zeit sparen, indem Dateien, die
+von mehreren Nutzern angefordert werden, nach der ersten Anfragen
+zwischenspeichert und somit nicht erneut langwierig oder
+kostenverursachend aus dem Internet geladen werden müssen, wenn sie
+erneut angefordert werden. Andererseits will man vielleicht
+sicherstellen, dass nur bestimmte Seiten besucht oder nur von
+berechtigen Nutzen abgerufen werden dürfen. Hier werden dann in der
+Regel auch Authentifizierungsdaten benötigt, um auf den Proxy
+zuzugreifen. Neben transparenten Proxies, von denen der Benutzer in der
+Regel nichts mitbekommen sollte, gibt es protokollabhängige
+Installationen wie HTTP-Proxies oder FTP-Proxies, die nur für bestimmte
+Transportprotokolle eingesetzt sind, oder auch allgemeinere Varianten
+wie die SOCKS4- und SOCKS5-Proxies[1], die protokollunabhängig agieren.
+[[Apt-Cacher-ng]] ist ebenfalls ein spezieller Proxy, in diesem Fall für
+Debianpakete. Er behält die bereits angefragten Pakete im Cache, um sie
+schneller an weitere Clients im Netz weitergeben zu können.
+
+Es gibt unterschiedliche Stellen im System, wo hinterlegt werden kann,
+dass ein Proxy benutzt werden soll. Dies sind erstmal die allgemeinen
+Umgebungsvariablen [...export bzw .profile ...], dann folgen die
+Einstellungen des Desktopenvironments [...][2] und die der Anwendungen,
+wie z.B. in Firefox. Für apt-get und co kann man z.B.
+Acquire::http::Proxy[0] in der apt conf setzen, es lassen sich auch
+diverse andere Einstellungen [...] treffen[4].
+
+Links:
+
+* [1] https://de.wikipedia.org/wiki/SOCKS
+* [1b] https://tools.ietf.org/html/rfc1928
+* [2] https://wiki.archlinux.org/index.php/Proxy_settings siehe den Abschnit zu Gnome etc.
+* [3] https://wiki.debian.org/AptConf
+* [4] man apt.conf  (da einfach mal nach proxy suchen)
+
+// weiteres Material
+
 * wo trage ich das für apt ein
 ** Datei `/etc/apt/apt.conf.d/70debconf`
 
