@@ -69,8 +69,8 @@ können, dass ein Proxy überhaupt benutzt werden soll. Dazu zählen
 zunächst die allgemeinen Umgebungsvariablen wie `export` und `profile`,
 danach folgen die Einstellungen des Desktop-Environments <<proxyArch>>
 und die der Anwendungen, wie z.B. in Firefox. Für die Paketverwaltung
-kommt die Datei `apt.conf` bzw. die modularisierte Variante unter
-`/etc/apt/apt.conf.d/70debconf` ins Visier.
+kommt die Datei `/etc/apt/apt.conf` bzw. die modularisierte Variante
+unter `/etc/apt/apt.conf.d/70debconf` ins Visier.
 
 * Links:
 ** [1b] https://tools.ietf.org/html/rfc1928
@@ -79,6 +79,8 @@ kommt die Datei `apt.conf` bzw. die modularisierte Variante unter
 // weiteres Material
 
 === APT über HTTP-Proxy ===
+
+==== Konfigurationsdateien und Einstellungen ====
 
 // Stichworte für den Index
 (((/etc/apt/apt.conf)))
@@ -95,19 +97,44 @@ Acquire::http::Proxy "http://proxyserver:8080";
 ----
 
 Obiges Beispiel beinhaltet lediglich die beiden essentiellen
-Bestandteile -- den Namen des Proxyservers und der Port, auf dem der
-Dienst lauscht. Für eine Authentifizierung sind zusätzlich ein Nutzername
-samt Passwort notwendig. Bitte beachten Sie, dass dabei die Zugangsdaten
-im Klartext in der Konfigurationsdatei hinterlegt sind. Nachfolgend
-sehen Sie das für den Nutzer `pakete` mit dem Passwort `geheim`.
+Bestandteile -- den Namen des Proxyservers (`proxyserver`) und dem Port
+(8080), auf dem der Dienst lauscht. Für eine Authentifizierung sind
+zusätzlich ein Nutzername samt Passwort notwendig. Bitte beachten Sie,
+dass dabei die Zugangsdaten im Klartext in der Konfigurationsdatei
+hinterlegt sind. Nachfolgend sehen Sie das für den Nutzer `pakete` mit
+dem Passwort `geheim`.
 
 .Beispiel mit Zugangsdaten für Nutzer `pakete`
 ----
 Acquire::http::Proxy "pakete:geheim@http://proxyserver:8080";
 ----
 
+Nutzen Sie statt APT hingegen Synaptic, geben Sie den HTTP-Proxy in
+einem separaten Konfigurationsdialog an. Diesen finden Sie unter dem
+Menüpunkt Einstellungen -> Netzwerk -> Proxy-Server. Selektieren Sie
+zuerst den Punkt ``Manuelle Proxy-Konfiguration'' und tragen danach den
+Servernamen ohne Protokoll im oberen Eingabefeld ein. Neben dem
+Eingabefeld befinden sich das Auswahlfeld für den Port sowie der Knopf
+``Legitimierung''. Mit einem Mausklick auf den Knopf erhalten Sie ein
+weiteres Dialogfenster, in dem Sie ihre Zugangsdaten für den Proxy
+hinterlegen.
+
+.Proxy-Einstellungen bei Synaptic
+image::praxis/http-proxy/synaptic-proxy.png[id="fig.synaptic-proxy", width="50%"]
+
+==== Schalter zur Steuerung des Cache-Verhaltens ====
+
+* `No-Cache`: unter keinen Umständen die zwischengespeicherten Inhalte
+verwenden
+* `Max-Age`: Alter der Indexdatei in Sekunden
+* `No-Store`: angefragte Daten nicht im Cache zwischenspeichern
+
+==== Umgebungsvariablen ====
+
 * welche Umgebungsvariablen brauche ich
 ** `http_proxy`
+
+==== Schalter für apt-get ====
 
 * Parameter / Schalter im direkten Aufruf für apt-get
 
@@ -116,10 +143,6 @@ Acquire::http::Proxy "pakete:geheim@http://proxyserver:8080";
 ----
 # apt-get -o http::Proxy="http://proxyserver:8080" install mc 
 ----
-
-* Konfigurationsdialog bei Synaptic
-** Einstellungen -> Netzwerk -> Proxy
-** ToDo: Bild vom Dialogfenster
 
 * aus der Manpage zu `apt.conf` (Ausschnitt):
 
