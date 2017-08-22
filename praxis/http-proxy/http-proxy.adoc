@@ -33,12 +33,13 @@ sparen. Dabei werden Dateien nach der ersten Anfrage zwischengespeichert
 (gecached) und somit nicht erneut langwierig oder kostenverursachend aus
 dem externen Netzsegment geladen, bspw. dem Internet. Werden diese Daten
 von einem Rechner im internen Netzsegment erneut angefordert, geht es
-aus dem Cache deutlich schneller.
+aus dem Cache des Proxies deutlich schneller.
 
 Andererseits möchten Sie sicherstellen, dass nur bestimmte
-Internetseiten besucht oder gar nur von berechtigen Nutzern abgerufen
-werden dürfen. Hier werden dann in der Regel auch zusätzliche
-Authentifizierungsdaten benötigt, um über den Proxy darauf zuzugreifen.
+Internetseiten besucht werden können oder gar nur von berechtigen
+Nutzern abgerufen werden dürfen. Benötigt werden hier dann in der Regel
+auch zusätzliche Authentifizierungsdaten, um über den Proxy darauf
+zuzugreifen.
 
 === Varianten ===
 
@@ -53,11 +54,11 @@ hingegen HTTP-Proxies oder FTP-Proxies. Diese werden dann nur für das
 jeweilige Transportprotokoll eingesetzt.
 
 Ein Spezialfall ist ebenfalls `apt-cacher-ng` (siehe <<apt-cacher-ng>>).
-Hierbei handelt es sich um einen Proxy ausschließlich für Debianpakete.
-Er behält die bereits angefragten Pakete im Cache, um sie schneller an
-weitere Clients im Netz weitergeben zu können. Ausführlicher gehen wir
-auf die unterschiedlichen Pakete unter ``Einen APT-Cache einrichten'' in
-<<apt-cache>> ein.
+Hierbei handelt es sich um einen Caching Proxy ausschließlich für
+Debianpakete. Er behält die bereits angefragten Pakete im Cache, um sie
+schneller an weitere Clients im Netz weitergeben zu können.
+Ausführlicher gehen wir auf die unterschiedlichen Entwicklungen unter
+``Einen APT-Cache einrichten'' in <<apt-cache>> ein.
 
 === Einen Proxy konfigurieren ===
 
