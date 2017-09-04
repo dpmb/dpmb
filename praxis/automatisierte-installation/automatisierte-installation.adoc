@@ -15,6 +15,12 @@
 
 * ganze Rechnerverbünde (Schulungs- und Klassenräume) mit identischer Hardware
 * Vorbereitung von Schulungsrechnern
+* automatische und identische Installation von Rechnerklassen
+* Beispiele:
+** Klasse Server
+** Klasse Client
+** Klasse Mailserver
+** Klasse Fileserver
 
 * https://wiki.debian.org/AutomatedInstallation
 
