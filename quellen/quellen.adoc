@@ -563,6 +563,12 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Emdebian]]] Debian für Embedded Devices, http://www.emdebian.org/
 
+- [[[FAI-Bornemann-Karg]]] Steffen Bornemann, Christoph Karg: Blitzstart. Automatisches System-Deployment mit FAI, Linux-Magazin 01/09, S. 58ff, http://www.linux-magazin.de/Ausgaben/2009/01/Blitzstart
+
+- [[[FAI-Cloud-Support]]] Ulrich Bantle: FAI 5.2 bringt Cloud-Support, Linux-Magazin, http://www.linux-magazin.de/NEWS/FAI-5.2-bringt-Cloud-Support
+
+- [[[FAI-Projekt]]] FAI - Fully Automatic Installation, https://fai-project.org/
+
 - [[[FHS-Linux-Foundation]]] Filesystem Hierarchy Standard (FHS), Linux Foundation, https://wiki.linuxfoundation.org/en/FHS
 
 - [[[Finkproject]]] Fink-Projekt, http://www.finkproject.org/
