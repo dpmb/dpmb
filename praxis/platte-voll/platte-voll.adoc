@@ -1,0 +1,43 @@
+// Datei: ./praxis/platte-voll/platte-voll.adoc
+
+// Baustelle: Notizen
+
+[[platte-voll]]
+
+== Platte läuft voll ==
+
+=== Hintergrund ===
+
+* Pakete werden heruntergeladen, bspw. durch aptitude
+* Speicherplatz reicht nicht aus, 
+** um alle herunterzuladenden Pakete zu speichern (cachen)
+** um alle benötigten Pakete zu installieren
+* wann passiert das
+** ist nicht ungewöhnlich, ...
+*** wenn System kleiner ausgelegt ist, als gedacht
+*** wenn sich das Ziel/der Einsatzzweck der Maschine ändert (Testsystem)
+*** neue Paketabhängigkeiten hinzugekommen sind, bspw. für Features, die
+    man vorher nicht brauchte
+
+.Kein Platz mehr
+image::praxis/platte-voll/platte-voll.png[id="fig.platte-voll", width="50%"]
+
+
+=== wie löst man diesen Zustand (Empfehlung zum Vorgehen) ===
+
+* Ziele:
+** produktives, stabiles System
+** alle gewünschten Pakete werden heruntergeladen und installiert
+
+=== Varianten ===
+
+* aptitude verlassen
+* mit df -h schauen, wieviel Platz noch verfügbar ist
+* mit aptitude clean den Paketcache aufräumen
+* mit aptitude autoremove Pakete entfernen, die nicht mehr benötigt
+  werden, aber noch installiert sind
+* Paketabhängigkeiten begutachten
+** schauen, ob wir Pakete einzeln (nacheinander) installieren können
+** nach jeder Installation wieder den Paketcache aufräumen
+
+// Datei (Ende): ./praxis/platte-voll/platte-voll.adoc

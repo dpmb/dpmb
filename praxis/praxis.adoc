@@ -79,6 +79,8 @@ include::apt-mirror/eigenen-apt-mirror-anlegen.adoc[]
 // - Plattenplatz sparen mit der Paketverwaltung
 include::plattenplatz-sparen-mit-der-paketverwaltung.adoc[]
 
+// - Platte voll
+include::platte-voll/platte-voll.adoc[]
 
 // == Ganze Systeminstallationen und die Pflege vereinfachen ==
 
