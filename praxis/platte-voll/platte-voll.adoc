@@ -18,10 +18,16 @@
 *** wenn sich das Ziel/der Einsatzzweck der Maschine ändert (Testsystem)
 *** neue Paketabhängigkeiten hinzugekommen sind, bspw. für Features, die
     man vorher nicht brauchte
+** bei der Aktualisierung des Systems (update, upgrade und dist-upgrade)
+*** irgendwo müssen die Pakete ja erstmal hin
+*** Reihenfolge des Downloads steht nicht wirklich fest
+*** Auswahl der Installation .... zufällig?
 
 .Kein Platz mehr
 image::praxis/platte-voll/platte-voll.png[id="fig.platte-voll", width="50%"]
 
+.Download-Fehler
+image::praxis/platte-voll/download-fehler.png[id="fig.download-fehler", width="50%"]
 
 === wie löst man diesen Zustand (Empfehlung zum Vorgehen) ===
 
@@ -39,5 +45,25 @@ image::praxis/platte-voll/platte-voll.png[id="fig.platte-voll", width="50%"]
 * Paketabhängigkeiten begutachten
 ** schauen, ob wir Pakete einzeln (nacheinander) installieren können
 ** nach jeder Installation wieder den Paketcache aufräumen
+
+=== Fehler beheben ===
+
+* kurz: 
+** geht
+* länger: 
+** ist etwas unschön
+** ist Kombination aus Automatismen und Handarbeit
+** braucht etwas Zeit und Geduld
+
+* wie bekomme ich heraus, welche Pakete unvollständig installiert sind
+** gibt es eine Bearbeitungs-Queue?
+** wie kann ich mir die anzeigen lassen?
+** kann ich die beeinflussen (was wird zuerst daraus installiert?)
+* wie repariere ich die Stück für Stück
+** wie bringe ich dpkg bzw. apt dazu, die Installation zu wiederholen
+** reparieren dpkg/apt das irgendwie von alleine?
+** wie repariere ich Pakete selber, sprich: wie stoße ich eine erneute
+   Installation des Pakets an?
+* fehlende Abhängigkeiten selber nachziehen
 
 // Datei (Ende): ./praxis/platte-voll/platte-voll.adoc
