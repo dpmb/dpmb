@@ -3,9 +3,11 @@
 // Baustelle: Notizen
 
 [[platte-voll]]
-
 == Platte läuft voll ==
 
+// Stichworte für den Index
+(((Platte läuft voll, Paketcache)))
+(((Platte läuft voll, Paketinstallation)))
 * ja, das gibt es heute immer noch
 * auch, wenn Festplatten vergleichsweise riesig sind
 * Hinweis: es gibt ältere Systeme, die klaglos ihren Dienst leisten
