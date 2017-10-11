@@ -6,6 +6,11 @@
 
 == Platte läuft voll ==
 
+* ja, das gibt es heute immer noch
+* auch, wenn Festplatten vergleichsweise riesig sind
+* Hinweis: es gibt ältere Systeme, die klaglos ihren Dienst leisten
+* also: genügend Anlässe, sich damit auseinanderzusetzen
+
 === Hintergrund ===
 
 * Pakete werden heruntergeladen, bspw. durch aptitude
@@ -15,11 +20,13 @@
 * wann passiert das
 ** ist nicht ungewöhnlich, ...
 *** wenn System kleiner ausgelegt ist, als gedacht
-*** wenn sich das Ziel/der Einsatzzweck der Maschine ändert (Testsystem)
+*** wenn sich das Ziel/der Einsatzzweck der Maschine ändert
+    (Testsystem, Testsystem wird "plötzlich" doch Produktivsystem)
 *** neue Paketabhängigkeiten hinzugekommen sind, bspw. für Features, die
     man vorher nicht brauchte
 ** bei der Aktualisierung des Systems (update, upgrade und dist-upgrade)
-*** irgendwo müssen die Pakete ja erstmal hin
+*** irgendwo müssen die Pakete ja erstmal hin -- sprich: also landen die
+    im Paketcache
 *** Reihenfolge des Downloads steht nicht wirklich fest
 *** Auswahl der Installation .... zufällig?
 
