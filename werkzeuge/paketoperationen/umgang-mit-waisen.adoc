@@ -25,9 +25,9 @@ Entwicklungsbibliotheken (_libdevel_).
 
 Der Umgang mit Waisen ist im Allgemeinen recht unproblematisch. Waisen
 können Sie bedenkenlos entfernen, um unnötigerweise belegten Speicherplatz
-auf ihrem System wieder freizugeben. Wir empfehlen Ihnen, diesen
+auf Ihrem System wieder freizugeben. Wir empfehlen Ihnen, diesen
 Aufräumvorgang bei der Systempflege als weiteren Schritt mit
-durchzuführen. Das hält ihr System sauber und befreit es von unnützen
+durchzuführen. Das hält Ihr System sauber und befreit es von unnützen
 Lasten.
 
 // Stichworte für den Index
