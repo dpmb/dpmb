@@ -76,10 +76,11 @@ image::werkzeuge/paketoperationen/aptitude-delete-unused.png[id="fig.aptitude-de
 // Stichworte für den Index
 (((apt-get, autoremove)))
 (((apt, autoremove)))
-Um den Vorgang der Paketentfernung explizit anzustoßen, verfügen `apt`
-und `apt-get`` über das Unterkommando `autoremove`. Seitdem nicht nur
-Aptitude sondern auch APT ein solche Funktionalität besitzt, hat die
-Bedeutung von `deborphan` und `debfoster` deutlich abgenommen.
+Um den Vorgang der Entfernung ungenutzter Pakete mit APT explizit
+anzustoßen, verfügen `apt` und `apt-get`` über das Unterkommando
+`autoremove`. Seitdem nicht nur Aptitude sondern auch APT ein solche
+Funktionalität besitzt, hat die Bedeutung von `deborphan` und
+`debfoster` deutlich abgenommen.
 
 .Pakete automatisch entfernen mit dem Unterkommando `autoremove`
 ----
