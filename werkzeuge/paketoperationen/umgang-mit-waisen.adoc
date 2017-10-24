@@ -60,9 +60,10 @@ Benutzer darauf hin. Ohne explizite Aufforderung entfernt APT keine
 Waisen. 
 
 Bei `aptitude` ist das ganze Prozedere ein klein wenig anders.
-`aptitude` räumt hinterher eigenständig auf. Das betrifft jedoch nur
-automatisch installierte Pakete, von denen wiederum kein manuell
-installiertes Paket abhängt (keine 'reverse dependencies' bestehen).
+`aptitude` räumt in der Standard-Einstellung eigenständig auf. Das
+betrifft jedoch nur Pakete, die als "automatisch installiert" markiert
+sind und von denen wiederum kein manuell installiertes Paket abhängt
+(keine 'reverse dependencies' bestehen).
 
 Über die `aptitude`-Option `aptitude::Delete-Unused` schalten Sie dieses
 Verhalten zu oder ab – entweder über die Benutzeroberfläche unter
