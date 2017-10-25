@@ -12,9 +12,9 @@ Während der Verwendung von APT und `aptitude` werden die
 Abhängigkeiten der Pakete automatisch aufgelöst und daher auch
 zusätzlich benötigte Pakete eingespielt. Deinstallieren Sie zu einem
 späteren Zeitpunkt Pakete, werden bei Aptitude alle nicht mehr
-benötigten Pakete wieder entfernt. APT (`apt`, `apt-get`) weißt im
-Gegensatz dazu nur auf nicht mehr benötigte Pakete hin, entfernt sie
-aber nicht automatisch.
+benötigten Pakete ebenfalls wieder entfernt. APT (`apt`, `apt-get`)
+weißt im Gegensatz dazu in der Standard-Einstellung nur auf nicht mehr
+benötigte Pakete hin, entfernt sie aber nicht automatisch.
 
 So verbleiben mitunter ``Reste'' auf dem System zurück, die ohne Bezug zu
 anderen Paketen sind. Hängt ein Paket von keinem weiteren mehr ab und
