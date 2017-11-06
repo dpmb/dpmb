@@ -39,7 +39,12 @@ image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/taskse
 Über die textbasierte Benutzeroberfläche und der dargestellten Liste
 wählen Sie zunächst mittels Pfeil- und Leertaste die gewünschten
 Aufgaben aus. Daraufhin werden alle Pakete ``in einem Rutsch'' auf Ihrem
-Linuxsystem installiert, die diesen Aufgaben zugeordnet sind.
+Linuxsystem installiert, die diesen Aufgaben zugeordnet sind. Daß das
+durchaus etwas mehr Zeit in Anspruch nehmen kann, zeigt
+<<fig.tasksel-download>>.
+
+.Softwareinstallation via `tasksel`
+image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/tasksel-download.png[id="fig.tasksel-download", width="50%"]
 
 Bei Debian und Ubuntu existieren viele Aufgaben als separate,
 vorgefertigte Pakete, die Ihnen die Einrichtung gemäß eines spezifischen
