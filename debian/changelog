@@ -2,6 +2,7 @@ dpmb (0~2017.12.03) UNRELEASED; urgency=medium
 
   * New snapshot
   * Declare compliance with Debian Policy 4.1.2. (No changes needed.)
+  * Alternatively recommend/suggest mupdf (now also an EPUB reader).
 
  -- Axel Beckert <abe@debian.org>  Fri, 18 Aug 2017 03:24:00 +0200
 

@@ -18,8 +18,8 @@ Vcs-Browser: https://github.com/dpmb/dpmb
 Package: debian-paketmanagement-buch
 Architecture: all
 Depends: ${misc:Depends}
-Recommends: www-browser | pdf-viewer | fbreader | calibre
-Suggests: www-browser, pdf-viewer, fbreader | calibre
+Recommends: www-browser | mupdf | pdf-viewer | fbreader | calibre
+Suggests: www-browser, mupdf | pdf-viewer, mupdf | fbreader | calibre
 Description: book about Debian package management written in German
  This package contains the book "Debian Paketmanagement" (aka DPMB,
  German edition) by Axel Beckert and Frank Hofmann as a single HTML
