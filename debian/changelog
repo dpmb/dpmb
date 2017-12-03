@@ -1,7 +1,7 @@
-dpmb (0~2017.08.18) UNRELEASED; urgency=medium
+dpmb (0~2017.12.03) UNRELEASED; urgency=medium
 
   * New snapshot
-  * Declare compliance with Debian Policy 4.0.1. (No changes needed.)
+  * Declare compliance with Debian Policy 4.1.2. (No changes needed.)
 
  -- Axel Beckert <abe@debian.org>  Fri, 18 Aug 2017 03:24:00 +0200
 

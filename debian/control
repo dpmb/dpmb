@@ -10,7 +10,7 @@ Build-Depends-Indep: asciidoc,
                      dblatex,
                      texlive-lang-german,
                      xmlto
-Standards-Version: 4.0.1
+Standards-Version: 4.1.2
 Homepage: https://www.dpmb.org/
 Vcs-Git: https://github.com/dpmb/dpmb.git
 Vcs-Browser: https://github.com/dpmb/dpmb
