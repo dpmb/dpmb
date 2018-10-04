@@ -205,7 +205,7 @@
 
 - [[[Debian-Manpages]]] Debian Man Page Lookup, https://manpages.debian.org/
 
-- [[[Debian-Mirror-Checker]]] Debian Mirror Checker, http://mirror.debian.org/status.html
+- [[[Debian-Mirror-Checker]]] Debian Mirror Checker, https://mirror-master.debian.org/status/mirror-status.html
 
 - [[[Debian-Mirror-Doku]]] Dokumentation zur Auswahl eines Netzwerk-Spiegel-Servers, https://www.debian.org/releases/stable/i386/ch06s03.html#apt-setup-mirror-selection
 
