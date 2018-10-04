@@ -45,8 +45,8 @@ ist, warten Sie lieber einen kleinen Moment länger.
 Sollten die Fehler trotz Ihrer intensiven Bemühungen bestehen bleiben,
 bleibt noch eine Überprüfung, ob der angefragte Spiegelserver auch
 aktuell ist. Eine Zustandsübersicht über alle offiziellen Spiegelserver,
-die bei Debian registriert sind, finden Sie unter dem Debian Mirror
-Checker <<Debian-Mirror-Checker>> (siehe <<fig.debian-mirror-checker>>).
+die bei Debian registriert sind, finden Sie auf der Debian Mirror
+Status-Seite <<Debian-Mirror-Status>> (siehe <<fig.debian-mirror-checker>>).
 
 .Status der verschiedenen Debian-Paketmirror
 image::werkzeuge/paketquellen-und-werkzeuge/debian-mirror-checker.png[id="fig.debian-mirror-checker", width="50%"]
