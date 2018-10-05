@@ -1,6 +1,6 @@
 // Datei: ./konzepte/software-in-paketen-organisieren/lokale-paketmarkierungen.adoc
 
-// Baustelle: Rohtext
+// Baustelle: Fertig
 
 [[lokale-paketmarkierungen]]
 === Lokale Paketmarkierungen ===
