@@ -218,6 +218,7 @@ Pakete mit `aptitude` anzeigen'' in
 (((apt-mark, showauto)))
 (((apt-mark, showhold)))
 (((apt-mark, showmanual)))
+(((Paketmarkierungen, anzeigen)))
 (((Paketmarkierungen, automatic)))
 (((Paketmarkierungen, hold)))
 (((Paketmarkierungen, manual)))
@@ -245,14 +246,8 @@ acpi-support-base
 #
 ----
 
-[TIP]
-.Liste der Pakete eingrenzen, die überprüft werden
-====
-Geben Sie beim Aufruf keine weiteren Parameter an, werden alle Pakete
-geprüft. Übergeben Sie hingegen eine eigene Paketliste als Datei,
-untersucht `apt-mark` die darin genannten Pakete auf das Vorhandensein
-des jeweiligen Paketmarkierungen.
-====
+`apt-mark` erlaubt keine Eingrenzung, welche Pakete überprüft werden. Es
+validiert stets den gesamten Paketbestand.
 
 [[setzen-und-entfernen-einer-markierung-mit-apt-mark]]
 ==== Setzen und Entfernen einer Markierung mit apt-mark ====
@@ -293,6 +288,20 @@ Für das Halten eines Pakets existieren die Unterkommandos `hold` und
 ``Ausgewählte Pakete nicht aktualisieren'' in
 <<ausgewaehlte-pakete-nicht-aktualisieren>>.
 
+[TIP]
+.Liste der Pakete eingrenzen, deren Markierung geändert wird
+====
+Um nur eine Auswahl an Paketen zu markieren, erlaubt `apt-mark` eine
+Paketliste in Form einer Datei, die Sie beim Aufruf mit übergeben:
+
+----
+apt-mark -f=paketliste manual
+----
+
+Damit werden alle Pakete auf ``manuell installiert'' gesetzt, die in der
+übermittelten Paketliste angegeben sind.
+====
+
 ==== Was passiert, wenn Paketmarkierungen geändert werden? ====
 
 // Stichworte für den Index
@@ -325,6 +334,7 @@ ausführlicher.
 (((aptitude, unmarkauto)))
 (((Debianpaket, zshdb)))
 (((Debianpaket, wireshark)))
+(((Paketmarkierungen, aufheben)))
 (((Paketmarkierungen, mit aptitude entfernen)))
 (((Paketmarkierungen, mit aptitude setzen)))
 Alternativ zu `apt-mark` bietet sich auch `aptitude` an. Dort heissen
