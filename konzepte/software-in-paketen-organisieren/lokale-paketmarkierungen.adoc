@@ -217,16 +217,32 @@ Pakete mit `aptitude` anzeigen'' in
 // Stichworte für den Index
 (((apt-mark, showauto)))
 (((apt-mark, showhold)))
+(((apt-mark, showinstall)))
 (((apt-mark, showmanual)))
+(((apt-mark, showpurge))
+(((apt-mark, showremove)))
 (((Paketmarkierungen, anzeigen)))
 (((Paketmarkierungen, automatic)))
 (((Paketmarkierungen, hold)))
 (((Paketmarkierungen, manual)))
+(((Paketmarkierungen, install)))
+(((Paketmarkierungen, remove)))
+(((Paketmarkierungen, purge)))
 Das Werkzeug `apt-mark` ist spezialisiert auf die Paketmarkierungen und
 kann Ihnen die Pakete ausgeben, bei denen nur ein bestimmtes Paketflag
-gesetzt ist. Es kennt dazu die drei Unterkommandos `showauto`,
-`showmanual` und `showhold` für alle automatisch oder manuell
-installierten Pakete bzw. die Pakete, deren Zustand beibehalten wird.
+gesetzt ist. Es kennt dazu die folgenden sechs Unterkommandos 
+
+`showauto`:: alle automatisch installierten Pakete
+
+`showmanual`:: alle manuell installierten Pakete
+
+`showinstall`:: alle Pakete, die installiert werden
+
+`showhold`:: alle Pakete, deren Zustand beibehalten wird
+
+`showremove`:: alle Pakete, die entfernt werden
+
+`showpurge`:: alle Pakete, die inklusive der Konfiguration entfernt werden
 
 Nachfolgend sehen Sie beispielhaft nur das Ergebnis des Aufrufs für die
 manuell installierten Pakete. Auf automatisch installierte Pakete gehen
@@ -250,25 +266,44 @@ acpi-support-base
 validiert stets den gesamten Paketbestand.
 
 [[setzen-und-entfernen-einer-markierung-mit-apt-mark]]
-==== Setzen und Entfernen einer Markierung mit apt-mark ====
+==== Setzen und Entfernen einer Markierung mit `apt-mark` ====
 
 // Stichworte für den Index
 (((apt-mark, automatic)))
 (((apt-mark, hold)))
 (((apt-mark, manual)))
+(((apt-mark, unhold)))
+(((apt-mark, install)))
+(((apt-mark, purge)))
+(((apt-mark, remove)))
 (((Paketmarkierungen, automatic)))
+(((Paketmarkierungen, auto)))
 (((Paketmarkierungen, hold)))
+(((Paketmarkierungen, install)))
 (((Paketmarkierungen, manual)))
+(((Paketmarkierungen, purge)))
+(((Paketmarkierungen, remove)))
 (((Paketmarkierungen, setzen)))
 Die Markierungen _automatic_ und _manual_ werden von den Programmen zur
 Paketverwaltung eigenständig gesetzt, wenn Sie Pakete installieren.
 Grundlage sind die ausgewerteten Paketabhängigkeiten. Trotzdem können
 Sie stets eigenhändig eingreifen, sofern dazu Ihrerseits Bedarf besteht.
+`apt-mark` kennt dafür diese sechs Schalter:
 
-`apt-mark` kennt dafür die drei Schalter `auto` für automatisch,
-`manual` für manuell und `hold` für gehalten, mit dem Sie die
-entsprechende Markierung für ein angegebenes Paket explizit setzen
-können. Dazu erwartet `apt-mark` als Parameter ein einzelnes Paket oder
+`auto`:: automatisch installiert
+
+`install`:: Paket wird installiert
+
+`manual`:: Paket wird manuell installiert
+
+`hold`:: Paket wird beibehalten
+
+`purge`:: Paket inklusive Konfiguration löschen
+
+`remove`:: Paket löschen
+
+Damit setzen Sie die entsprechende Markierung für ein angegebenes Paket
+explizit. Dazu erwartet `apt-mark` als Parameter ein einzelnes Paket oder
 eine Paketliste. Die nachfolgende Ausgabe zeigt das Setzen der
 Markierung _manual_ für das Paket 'wireshark'.
 
@@ -283,6 +318,7 @@ wireshark wurde als manuell installiert festgelegt.
 (((apt-mark, hold)))
 (((apt-mark, unhold)))
 (((Paketmarkierungen, hold)))
+(((Paketmarkierungen, unhold)))
 Für das Halten eines Pakets existieren die Unterkommandos `hold` und
 `unhold`. Welchen konkreten Nutzen das haben kann, erfahren Sie unter 
 ``Ausgewählte Pakete nicht aktualisieren'' in
@@ -298,8 +334,9 @@ Paketliste in Form einer Datei, die Sie beim Aufruf mit übergeben:
 apt-mark -f=paketliste manual
 ----
 
-Damit werden alle Pakete auf ``manuell installiert'' gesetzt, die in der
-übermittelten Paketliste angegeben sind.
+Die Datei ist eine Textdatei, in der pro Zeile ein Paketname steht. Mit
+obigem Aufruf werden alle Pakete auf ``manuell installiert'' gesetzt,
+die in der übermittelten Paketliste angegeben sind.
 ====
 
 ==== Was passiert, wenn Paketmarkierungen geändert werden? ====
@@ -321,13 +358,14 @@ werden.
 (((Paketmarkierungen, explizit setzen)))
 (((Paketmarkierungen, explizit entfernen)))
 (((Paketmarkierungen, hold)))
+(((Paketmarkierungen, unhold)))
 Setzen oder Entfernen Sie bewusst das _hold_-Flag und legen somit eine
 Version explizit fest, nehmen Sie Einfluss auf den Zustand Ihres Systems.
 Wobei Ihnen das von Nutzen sein kann, erklären wir unter ``Ausgewählte
 Pakete nicht aktualisieren'' (<<ausgewaehlte-pakete-nicht-aktualisieren>>)
 ausführlicher.
 
-==== Setzen und Entfernen einer Markierung mit aptitude ====
+==== Setzen und Entfernen einer Markierung mit `aptitude` ====
 
 // Stichworte für den Index
 (((aptitude, markauto)))
