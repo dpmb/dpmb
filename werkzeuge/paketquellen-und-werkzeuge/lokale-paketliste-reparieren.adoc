@@ -6,20 +6,26 @@
 
 === Lokale Paketliste reparieren ===
 
+// Stichworte für den Index
+(((apt-get, update)))
+(((Paketliste, reparieren)))
+(((Paketliste, /var/lib/apt/lists)))
+
 Es kann vorkommen, dass eine lokale Paketliste, die im Verzeichnis
 `/var/lib/apt/lists` liegt, bei deren Aktualisierung (siehe
 <<liste-der-verfuegbaren-pakete-aktualisieren>>) kaputtgeht. Das kommt
 sehr selten vor, aber bspw. dann, wenn nicht mehr genügend freier
 Speicherplatz für die neue Paketliste zur Verfügung steht oder das
-Entpacken der komprimierten Liste fehlschlägt. Sie bekommen das mit,
-wenn APT jammert und in Folge seine Arbeit verweigert.
+Entpacken der komprimierten Liste aus einem anderen Grund fehlschlägt.
+Sie bekommen das mit, wenn APT jammert und in Folge seine Arbeit
+verweigert.
 
 APT versucht von sich aus, eine defekte oder nicht mehr vorhandene Liste
 wieder zu reparieren. Dazu beauftragen Sie APT mit dem Kommando `apt-get
-update`. Es bezieht die aktuellen Paketlisten von den in
-`/etc/apt/sources.list` angebenen Paketquellen und ersetzt die
-bereits bestehenden lokalen Paketlisten. Falls diese nicht mehr
-vorhanden sein sollten, legt APT diese Listen neu an.
+update`. Damit bezieht es die aktuellen Paketlisten von den in
+`/etc/apt/sources.list` angebenen Paketquellen und ersetzt die bereits
+bestehenden lokalen Paketlisten. Falls diese nicht mehr vorhanden sein
+sollten, legt APT diese Listen neu an.:
 
 Ist das erfolglos, räumen Sie als nächsten Schritt das Verzeichnis
 `/var/lib/apt/lists/partial` auf. Darin hinterlegt APT alle
@@ -41,6 +47,9 @@ sicherzugehen, dass die Liste der Paketquellen auf dem neuesten Stand
 ist, warten Sie lieber einen kleinen Moment länger.
 
 ==== Aktualität des Mirrors überprüfen ====
+
+// Stichworte für den Index
+(((Paketmirror, auf Aktualität prüfen)))
 
 Sollten die Fehler trotz Ihrer intensiven Bemühungen bestehen bleiben,
 bleibt noch eine Überprüfung, ob der angefragte Spiegelserver auch
