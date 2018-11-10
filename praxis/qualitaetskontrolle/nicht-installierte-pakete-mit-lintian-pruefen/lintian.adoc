@@ -9,16 +9,21 @@
 
 // Stichworte für den Index
 (((Debianpaket, lintian)))
+(((Debianpaket, rpmlint)))
 (((Debian Policy Violations)))
 (((lintian)))
 (((Paketinhalt, Bestandteile)))
 (((Paketvalidierung, lintian)))
+(((Paketvalidierung, rpmlint)))
+(((rpmlint)))
 Das Werkzeug `lintian` <<Lintian>> steht in dem gleichnamigen Paket
 <<Debian-Paket-lintian>> bereit. Der Name leitet sich von engl. 'lint'
 für Fussel und dem 'ian' aus 'Debian' ab. Es analysiert die
 verschiedenen Bestandteile eines einzelnen Debianpakets hinsichtlich
 typischer Fehler und insbesondere auch bzgl. häufig vorkommender
 Verstöße gegen die Debian-Richtlinien ('Debian Policy Violations').
+Aus `lintian` wurde `rpmlint` <<Debian-Paket-rpmlint>> abgeleitet. Es
+leistet das gleiche für RPM-Pakete.
 
 Als Systemadministrator hilft Ihnen `lintian` primär dabei, sowohl
 eigene als auch die Pakete von Drittparteien aus nicht-Debian-eigenen
