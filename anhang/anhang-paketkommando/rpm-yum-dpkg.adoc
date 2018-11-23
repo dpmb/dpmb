@@ -122,6 +122,7 @@ ein.
 === Paket löschen / entfernen ===
 
 // Stichworte für den Index
+(((apt, remove)))
 (((apt-get, purge)))
 (((apt-get, --purge remove)))
 (((apt-get, remove)))
@@ -152,7 +153,8 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketentfernung"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-|  APT       | `apt-get remove` 'Paketname' | entfernt das Paket, die Konfigurationsdateien des Pakets bleiben erhalten
+| `apt`      | `apt remove` 'Paketname' | entfernt das Paket, die Konfigurationsdateien des Pakets bleiben erhalten
+| `apt-get`  | `apt-get remove` 'Paketname' | entfernt das Paket, die Konfigurationsdateien des Pakets bleiben erhalten
 |            | `apt-get purge` 'Paketname' | entfernt das Paket inklusive der Konfigurationsdateien des Pakets
 |            | `apt-get --purge remove` 'Paketname' | entfernt das Paket inklusive der Konfigurationsdateien des Pakets
 | `aptitude` | `aptitude remove` 'Paketname' | entfernt das Paket, die Konfigurationsdateien des Pakets bleiben erhalten
