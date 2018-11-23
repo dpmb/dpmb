@@ -38,8 +38,8 @@ Werkzeuge und deren einzelne Schalter variiert recht stark <<RPM-Salve>>
 === Paket installieren ===
 
 // Stichworte für den Index
-((apt, install))
-((apt, --no-download install))
+(((apt, install)))
+(((apt, --no-download install)))
 (((apt-get, install)))
 (((apt-get, --no-download install)))
 (((aptitude, install)))
@@ -82,6 +82,10 @@ Paketcache vorliegen.
 === Paket aktualisieren ===
 
 // Stichworte für den Index
+
+(((apt, install)))
+(((apt, safe-upgrade)))
+(((apt-get, install)))
 (((apt-get, upgrade)))
 (((aptitude, safe-upgrade)))
 (((dnf, update)))
@@ -100,8 +104,10 @@ ein.
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketaktualisierung"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| APT        | `apt-get upgrade` 'Paketname' | aktualisierte Version des Pakets einspielen
 | `apt`      | `apt safe-upgrade` 'Paketname' | aktualisierte Version des Pakets einspielen
+|            | `apt install` 'Paketname' | aktualisierte Version des Pakets einspielen, sofern das Paket bereits in einer früheren Version installiert ist
+| `apt-get`  | `apt-get install` 'Paketname' | aktualisierte Version des Pakets einspielen, sofern das Paket bereits in einer früheren Version installiert ist
+|            | `apt-get upgrade` 'Paketname' | aktualisierte Version des Pakets einspielen
 | `aptitude` | `aptitude safe-upgrade` 'Paketname' | aktualisierte Version des Pakets einspielen
 | `DNF`      | `dnf update` | alle installierten Pakete aktualisieren (veraltet)
 |            | `dnf update` 'Paketname' | nur 'Paketname' aktualisieren (veraltet)
