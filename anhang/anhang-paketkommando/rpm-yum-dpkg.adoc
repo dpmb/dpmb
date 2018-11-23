@@ -471,6 +471,7 @@ nachfolgende Tabelle. In Abschnitt ``Aktualisierbare Pakete anzeigen``
 // Stichworte für den Index
 (((Paket, bekannte Pakete auflisten)))
 (((Paket, verfügbare Pakete anzeigen)))
+(((apt, list)))
 (((apt-cache, pkgnames)))
 (((dnf, group list)))
 (((dnf, list available)))
@@ -484,7 +485,8 @@ Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten``
 [frame="topbot",options="header",cols="2,4,4",id="tab.verfuegbarepakete"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| APT        | `apt-cache pkgnames` | alle verfügbaren (bekannten) Pakete auflisten
+| `apt`      | `apt list` | alle verfügbaren (bekannten) Pakete samt Status auflisten
+| `apt-cache`| `apt-cache pkgnames` | alle verfügbaren (bekannten) Pakete auflisten
 | DNF        | `dnf group list` | alle Paketgruppen auflisten
 |            | `dnf list available` | alle verfügbaren Pakete anzeigen
 |            | `dnf repository-list repo list` | alle Pakete aus dem Repository 'repo' anzeigen
