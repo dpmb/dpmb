@@ -275,7 +275,7 @@ das zu `dpkg` und `aptitude` genauer.
 (((Paketabhängigkeiten, auflisten)))
 (((Paketabhängigkeiten, Rückwärtsabhängigkeiten auflisten)))
 (((rpm, -qpR)))
-(((rpm, -R)))
+(((rpm, -qR)))
 (((rpm, --requires)))
 (((yum, deplist)))
 (((yum, info)))
@@ -298,8 +298,10 @@ ein.
 |            | `aptitude search ~D` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 | `grep-status` | `grep-status -F Package -s Depends` 'Paketname' | Abhängigkeiten anzeigen
 |            | `grep-status -P -s Depends` 'Paketname' | Abhängigkeiten anzeigen
-| `RPM`      | `rpm -R` 'Paketname' | das Paket muß dazu lokal als Datei vorliegen
-|            | `rpm --requires` 'Paketname' | das Paket muß dazu lokal als Datei vorliegen
+| `RPM`      | `rpm -qR` 'Paketname' | das Paket muß lokal auf dem
+System installiert sein
+|            | `rpm --query --requires` 'Paketname' | das Paket muß
+lokal auf dem System installiert sein
 |            | `rpm -qpR` 'Paketdatei' | das Paket muß dazu lokal als Datei vorliegen
 | `YUM`      | `yum deplist` 'Paketname' |
 |            | `yum info` 'Paketname' |
