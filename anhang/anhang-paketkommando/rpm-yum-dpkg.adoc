@@ -497,6 +497,9 @@ Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten``
 === Paketsignatur überprüfen ===
 
 // Stichworte für den Index
+(((debsums)))
+(((dpkg, -V)))
+(((dpkg, --verify)))
 (((Paket, auf Veränderungen prüfen)))
 (((Paket, auf Vertrauenswürdigkeit prüfen)))
 (((Paket, Signatur überprüfen)))
@@ -516,7 +519,10 @@ Thema in ``Paket verifizieren'' in <<bezogenes-paket-verifizieren>> und
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketsignatur"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| APT        | |
+| `debsums`  | `debsums` 'Paketname`| alle Dateien des angegebenen Paketes überprüfen
+|            | `debsums` | alle Dateien überprüfen (außer Konfigurationsdateien)
+| `dpkg`     | `dpkg -V` 'Paketname'| alle Dateien des angegebenen Paketes überprüfen
+|            | `dpkg --veriy` 'Paketname' | alle Dateien des angegebenen Paketes überprüfen
 | DNF        | |
 | `RPM`      | `rpm -K` 'Paketname' |
 |            | `rpm --checksig` 'Paketname' |
