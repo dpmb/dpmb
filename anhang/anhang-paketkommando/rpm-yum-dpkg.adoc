@@ -328,6 +328,8 @@ lokal auf dem System installiert sein
 === Alle Dateien eines installierten Pakets anzeigen ===
 
 // Stichworte für den Index
+(((apt-file, list)))
+(((apt-file, show)))
 (((dpkg, -L)))
 (((dpkg, --listfiles)))
 (((dpkg-query, -L)))
@@ -343,7 +345,8 @@ widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketinhalte"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| APT        | |
+| `apt-file` | `apt-file list` 'Paketname' |
+|            | `apt-file show` 'Paketname' |
 | `dpkg`     | `dpkg -L` 'Paketname' |
 |            | `dpkg --listfiles` 'Paketname' |
 | `dpkg-query` | `dpkg-query -L` 'Paketname' |
