@@ -227,6 +227,8 @@ für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
 === Einzelpaket auflisten ===
 
 // Stichworte für den Index
+(((apt, list)))
+(((apt, show)))
 (((aptitude, show)))
 (((dnf, info)))
 (((dnf, list)))
@@ -254,6 +256,8 @@ das zu `dpkg` und `aptitude` genauer.
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketinfo"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
+| `apt`      | `apt list` 'Paketname' | Informationen und den Installationsstatus zu Paketname anzeigen
+|            | `apt show` 'Paketname' | Detaillierte Informationen und den Installationsstatus zu Paketname anzeigen
 | `aptitude` | `aptitude show` 'Paketname'|
 | `DNF`      | `dnf info` 'Paketname' | Informationen zu Paketname anzeigen
 |            | `dnf list installed` | alle installierten Pakete anzeigen
