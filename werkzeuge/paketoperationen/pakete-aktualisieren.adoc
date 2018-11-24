@@ -78,8 +78,9 @@ den drei Kommandos `apt-get`, `apt` und `aptitude` zur Verfügung. Es
 dient dabei nur zur Aktualisierung der Paketlisten, die in der Datei
 `/etc/apt/sources.list` hinterlegt sind. Es beinhaltet jedoch
 nicht die Erneuerung der Pakete selbst. Auf die Benutzung dieses
-Unterkommandos gehen wir ausführlich unter Liste der verfügbaren Pakete
-aktualisieren in <<liste-der-verfuegbaren-pakete-aktualisieren>> ein.
+Unterkommandos gehen wir ausführlich unter ``Liste der verfügbaren
+Pakete aktualisieren'' in <<liste-der-verfuegbaren-pakete-aktualisieren>> 
+ein.
 
 [[pakete-aktualisieren-install]]
 ==== `install` ====
@@ -94,10 +95,11 @@ Pakete installiert. Es kann jedoch noch etwas mehr -- nämlich das
 Aktualisieren einer bestehenden Installation. Beim Aufruf prüfen `apt`,
 `apt-get` und `aptitude` zunächst, ob das Paket bereits installiert ist.
 Falls nein, lösen Sie den üblichen Installationsvorgang aus. Falls das
-Paket jedoch schon da ist, prüfen sie, ob eine neue Version des Paketes
-in den Paketlisten steht. Ist das der Fall, wird die bestehende Version
-entfernt und die neue Version eingespielt. Dabei werden sich verändernde
-Abhängigkeiten zu anderen Paketen mit berücksichtigt.
+Paket jedoch schon da ist, prüfen die genannten Programme, ob eine neue
+Version des Paketes in den Paketlisten steht. Ist das der Fall, wird die
+bestehende Version entfernt und die neue Version eingespielt. Dabei
+werden sich verändernde Abhängigkeiten zu anderen Paketen mit
+berücksichtigt.
 
 .Aktualisierung eines Paketes mittels `apt-get install`
 ----
@@ -120,6 +122,7 @@ Vorbereitung zum Entpacken von .../ruby2.1_2.1.5-2+deb8u6_amd64.deb ...
 Entpacken von ruby2.1 (2.1.5-2+deb8u6) über (2.1.5-2+deb8u5) ...
 Trigger für man-db (2.7.0.2-5) werden verarbeitet ...
 ruby2.1 (2.1.5-2+deb8u6) wird eingerichtet ...
+#
 ----
 
 [[pakete-aktualisieren-upgrade]]
