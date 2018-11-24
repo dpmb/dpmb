@@ -129,4 +129,6 @@ dem Paket nuvola-icon-theme, Version 4:15.04.3-1.
   removing software packages or searching for multimedia codecs and file
   handlers.
 
+* Extended LTS, https://wiki.debian.org/LTS/Extended
+
 // Datei (Ende): ./notizen.adoc
