@@ -26,19 +26,20 @@ Schritt.
 
 // Stichworte für den Index
 (((apt-get, remove)))
+(((apt, remove)))
 (((aptitude, remove)))
 (((dpkg, -r)))
 (((dpkg, --remove)))
-Dazu dienen die beiden Kommandos `apt-get remove` 'Paketname' und
-`aptitude remove` 'Paketname'. Beide Aufrufe entfernen das Paket und ggf.
-auch alle weiteren Pakete, die davon abhängen. Dabei werden jedoch nur
-die Daten und die ausführbaren Dateien gelöscht – die dazugehörigen
-Konfigurationsdateien bleiben unversehrt. Das Vorgehen entspricht dem
-Aufruf `dpkg -r` 'Paketname' in der richtigen Reihenfolge der
-Paketabhängigkeiten. Der nachfolgende Aufruf zeigt das Vorgehen anhand
-des Pakets 'cssed' für `apt-get`.
+Dazu dienen die drei Kommandos `apt remove` 'Paketname', `apt-get
+remove` 'Paketname' und `aptitude remove` 'Paketname'. Alle Aufrufe
+entfernen das Paket und ggf. auch alle weiteren Pakete, die davon
+abhängen. Dabei werden jedoch nur die Daten und die ausführbaren Dateien
+gelöscht – die dazugehörigen Konfigurationsdateien bleiben unversehrt.
+Das Vorgehen entspricht dem Aufruf `dpkg -r` 'Paketname' in der
+richtigen Reihenfolge der Paketabhängigkeiten. Der nachfolgende Aufruf
+zeigt das Vorgehen anhand des Pakets 'cssed' für `apt-get`.
 
-.Löschen eines Pakets 'cssed' mittels APT
+.Löschen eines Pakets 'cssed' mittels `apt-get`
 ----
 # apt-get remove cssed
 Paketlisten werden gelesen... Fertig
@@ -108,16 +109,16 @@ ToDo: Beispiel mit Ersetzung durch alternatives Paket
 ----
 
 Bei der Möglichkeit drei entstehen Waisen – Pakete, die keine
-Abhängigkeiten mehr zu anderen Paketen mehr aufweisen. Unter Umgang mit
-Waisen in <<umgang-mit-waisen>> beleuchten wir dieses Thema näher.
+Abhängigkeiten mehr zu anderen Paketen mehr aufweisen. Unter ``Umgang mit
+Waisen'' in <<umgang-mit-waisen>> beleuchten wir dieses Thema näher.
 
 ==== Fall 2: Suche von Konfigurationsdateien bereits deinstallierter Pakete ====
 
 Um das zu tun, bedarf es zunächst der Lokalisierung der Pakete, welche
 zwar gelöscht wurden, aber noch als konfiguriert gelten. Dabei geht es
 nur um die Konfigurationsdateien ('conf files'), die sich unter dem
-Verzeichnis `/etc` befinden. Dateien in ihrem Homeverzeichnis
-bleiben unberührt.
+Verzeichnis `/etc` befinden. Dateien in ihrem Homeverzeichnis bleiben
+von der Löschaktion unberührt.
 
 Die passenden Werkzeuge sind dafür die Kombination aus `dpkg` mit `grep`
 sowie `aptitude`. APT hat u.E. bislang keinen entsprechenden Schalter
@@ -170,14 +171,16 @@ $
 
 // Stichworte für den Index
 (((aptitude, purge)))
+(((apt-get, purge)))
 (((apt-get, remove --purge)))
 Haben Sie die aus Ihrer Sicht unnützen Konfigurationsdateien eines
 bereits deinstallierten Pakets ausfindig gemacht und möchten diese
 endgültig ins digitale Nirwana befördern, sind Ihnen APT und `aptitude`
 gern dabei behilflich. APT unterstützt Sie mit der Kombination aus dem
 Kommando `apt-get`, dessen Schalter `remove` und der Option `--purge`
-'Paketname'. Bei `aptitude` besteht kein separater Schalter für den
-Schritt – stattdessen genügt hier der Schalter `purge` vollkommen.
+gefolgt vom Paketnamen oder ausschliesslich über den Schalter `purge`
+gefolgt vom Paketnamen. Bei `aptitude` genügt der Schalter `purge`
+vollkommen.
 
 .Löschen der Konfigurationsdateien mittels APT
 ----
