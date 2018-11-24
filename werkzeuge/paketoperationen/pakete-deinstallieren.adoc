@@ -15,12 +15,13 @@ Löschen der Dateien des eigentlichen Pakets, sondern auch das Aufräumen
 und Entsorgen der dazugehörigen Konfigurationsdateien aus Ihrem
 Linuxsystem.
 
-Wir unterscheiden daher an dieser Stelle vier Fälle. Fall 1 ist das
+Wir unterscheiden daher an dieser Stelle fünf Fälle. Fall 1 ist das
 einfache Deinstallieren eines Pakets, Fall 2 die Recherche, Fall 3 das
 Entfernen von noch verbliebenen Konfigurationsdateien bereits
 deinstallierter Pakete sowie als Fall 4 das vollständige Entsorgen von
 Pakets samt dazugehöriger Konfigurationsdateien in einem einzigen
-Schritt.
+Schritt. In Fall 5 zeigen wir Ihnen, wie sie Pakete für eine bestimmte
+Architektur entsorgen.
 
 ==== Fall 1: Paket einfach löschen ====
 
@@ -203,10 +204,11 @@ Trigger für menu werden verarbeitet ...
 ==== Fall 4: Paket samt Konfigurationsdateien deinstallieren ====
 
 // Stichworte für den Index
+(((aptitude, purge)))
+(((apt-get, purge)))
+(((apt-get, remove --purge)))
 (((dpkg, -P)))
 (((dpkg, --purge)))
-(((aptitude, purge)))
-(((apt-get, remove --purge)))
 APT und `aptitude` ermöglichen auch das Deinstallieren eines oder
 mehrerer Pakete samt zugehöriger Konfigurationsdateien in einem einzigen
 Schritt. Die Aufrufe entsprechen dem Kommando `dpkg -P` 'Paketname' für
@@ -214,8 +216,8 @@ eine Menge von Paketen in der richtigen Reihenfolge der
 Paketabhängigkeiten. 
 
 Für diese Aktion kombinieren Sie entweder `apt-get` mit dem Schalter
-`remove` und der Option `--purge` 'Paketname', `aptitude` kennt
-stattdessen nur den Schalter `purge`.
+`remove` und der Option `--purge` und dem Paketnamen oder dem Schalter
+`purge` und dem Paketnamen. `aptitude` kennt nur den Schalter `purge`.
 
 .Löschen des Pakets 'cssed' samt Konfigurationsdateien in einem Schritt
 ----
@@ -236,14 +238,20 @@ Trigger für desktop-file-utils werden verarbeitet ...
 #
 ----
 
+==== Fall 5: Paket für eine ausgewählte Architektur entfernen ====
+
+// Stichworte für den Index
+(((Multiarch)))
 Ein Sonderfall ist das Entfernen aller Pakete für eine bestimmte
 Architektur. Das tritt auf, wenn Sie bspw. mit dem 'Multiarch'-Feature
-experimentieren (siehe <<debian-architekturen-multiarch>>). Um alle
-Pakete für die Architektur 'i386' vollständig zu entfernen, nutzen Sie
-diesen Aufruf:
+experimentieren (siehe <<debian-architekturen-multiarch>>). An den
+Paketnamen fügen Sie einen Doppelpunkt und den Namen der Architektur an.
+Um beispielsweise alle Pakete für die Architektur 'i386' vollständig von
+ihrem System zu entfernen, nutzen Sie diesen Aufruf:
 
 .Vollständiges Entfernen aller installierten Pakete für die Architektur 'i386'
 ----
 # apt-get remove --purge ".*:i386"
 ----
+
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-deinstallieren.adoc
