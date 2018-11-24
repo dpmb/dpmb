@@ -183,17 +183,17 @@ verhindert haben.
 .Übersicht zu den aktualisierbaren Paketen erhalten
 ====
 Welche Pakete aktualisiert werden können, teilen Ihnen APT und
-`aptitude` mit. Ausführlicher gehen wir darauf unter
-<<aktualisierbare-pakete-anzeigen>> ein.
+`aptitude` mit. Ausführlicher gehen wir darauf unter ``Aktualisierbare
+Pakete anzeigen'' in <<aktualisierbare-pakete-anzeigen>> ein.
 ====
 
 // Stichworte für den Index
 (((Security Updates)))
 Sichtbar wird die Änderung auch im Paketnamen. Debian handhabt es so,
 dass bei Sicherheitsaktualisierungen (genannt 'security updates') dem
-Paketnamen die Zeichenkette `~deb7u1` für die erste Fehlerbereinigung
-für Debian 7 _Wheezy_ angefügt wird. Die zweite Fehlerbereinigung erhält
-dann die Zeichenkette `~deb7u2` (siehe dazu auch
+Paketnamen eine spezielle Zeichenkette angefügt wird. Die erste 
+Fehlerbereinigung für Debian 7 _Wheezy_ ist `~deb7u1`, die zweite
+`~deb7u2` (siehe dazu auch ``Bennenung eines Debian-Paketes'' unter
 <<benennung-eines-debian-pakets>>). Bei neuen Versionen mit
 Funktionserweiterungen wird die Versionsnummer des Pakets erhöht.
 
