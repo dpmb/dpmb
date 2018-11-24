@@ -53,16 +53,17 @@ das dadurch, dass sich bestehende Gewohnheiten i.d.R. nur Schritt für
 Schritt ändern und daher ihre Zeit brauchen, um sich durchzusetzen.
 
 Die Paketverwaltung mittels `apt-get`, `apt` (ab APT 1.0) und `aptitude`
-kennt jeweils drei Unterkommandos zur Aktualisierung:
+kennt jeweils vier Unterkommandos zur Aktualisierung:
 
 * `update`, verwendbar bei `apt-get`, `apt` und `aptitude`,
+* `install`, verwendbar bei `apt-get`, `apt` und `aptitude`,
 * `upgrade`, bei `apt` und `aptitude` genannt `safe-upgrade`, sowie
 * `dist-upgrade`, bei `apt` und `aptitude` genannt `full-upgrade`.
 
-Jedes Unterkommando beinhaltet eine spezifische Aktualisierung und wirkt
-sich entweder nur auf die Paketlisten (`update`) oder auf die Pakete
-selbst aus (`upgrade`, `dist-upgrade`, `safe-upgrade` und
-`full-upgrade`). 
+Jedes genannte Unterkommando beinhaltet eine spezifische Aktualisierung
+und wirkt sich entweder nur auf die Paketlisten (`update`) oder auf die
+Pakete selbst aus (`install`, `upgrade`, `dist-upgrade`, `safe-upgrade`
+und `full-upgrade`).
 
 [[pakete-aktualisieren-update]]
 ==== `update` ====
@@ -79,6 +80,47 @@ dient dabei nur zur Aktualisierung der Paketlisten, die in der Datei
 nicht die Erneuerung der Pakete selbst. Auf die Benutzung dieses
 Unterkommandos gehen wir ausführlich unter Liste der verfügbaren Pakete
 aktualisieren in <<liste-der-verfuegbaren-pakete-aktualisieren>> ein.
+
+[[pakete-aktualisieren-install]]
+==== `install` ====
+
+// Stichworte für den Index
+(((apt, install)))
+(((aptitude, install)))
+(((apt-get, install)))
+(((Paket, aktualisieren)))
+Bisher haben wir Ihnen nur verraten, dass das Unterkommando `install`
+Pakete installiert. Es kann jedoch noch etwas mehr -- nämlich das
+Aktualisieren einer bestehenden Installation. Beim Aufruf prüfen `apt`,
+`apt-get` und `aptitude` zunächst, ob das Paket bereits installiert ist.
+Falls nein, lösen Sie den üblichen Installationsvorgang aus. Falls das
+Paket jedoch schon da ist, prüfen sie, ob eine neue Version des Paketes
+in den Paketlisten steht. Ist das der Fall, wird die bestehende Version
+entfernt und die neue Version eingespielt. Dabei werden sich verändernde
+Abhängigkeiten zu anderen Paketen mit berücksichtigt.
+
+.Aktualisierung eines Paketes mittels `apt-get install`
+----
+# apt-get install ruby2.1
+Paketlisten werden gelesen... Fertig
+Abhängigkeitsbaum wird aufgebaut.       
+Statusinformationen werden eingelesen.... Fertig
+Die folgenden Pakete werden aktualisiert (Upgrade):
+  ruby2.1
+1 aktualisiert, 0 neu installiert, 0 zu entfernen und 235 nicht aktualisiert.
+Es müssen 277 kB an Archiven heruntergeladen werden.
+Nach dieser Operation werden 0 B Plattenplatz zusätzlich benutzt.
+Holen: 1 http://security.debian.org/ jessie/updates/main ruby2.1 amd64 2.1.5-2+deb8u6 [277 kB]
+Es wurden 277 kB in 0 s geholt (354 kB/s).
+Laden der Fehlerberichte … Erledigt
+»Found/Fixed«-Informationen werden ausgewertet … Erledigt
+Lese Changelogs... Fertig
+(Lese Datenbank ... 257112 Dateien und Verzeichnisse sind derzeit installiert.)
+Vorbereitung zum Entpacken von .../ruby2.1_2.1.5-2+deb8u6_amd64.deb ...
+Entpacken von ruby2.1 (2.1.5-2+deb8u6) über (2.1.5-2+deb8u5) ...
+Trigger für man-db (2.7.0.2-5) werden verarbeitet ...
+ruby2.1 (2.1.5-2+deb8u6) wird eingerichtet ...
+----
 
 [[pakete-aktualisieren-upgrade]]
 ==== `upgrade` und `safe-upgrade` ====
