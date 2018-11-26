@@ -36,7 +36,7 @@ von Debian oder Ubuntu.
 (((Paketquelle, USB-Stick)))
 Eine Paketquelle kann dabei aber auch ein externes Speichermedium wie
 eine CD, DVD, Blu-ray, eine Speicherkarte oder ein USB-Stick sein, aber
-auch ein lokales oder über das Netzwerk angebundenes Verzeichnis auf
+ebenso ein lokales oder über das Netzwerk angebundenes Verzeichnis auf
 einer Festplatte. Waren noch vor wenigen Jahren die erstgenannten,
 festen Installationsmedien üblich, werden heute als Paketquelle aufgrund
 der weitestgehend flächendeckenden Verfügbarkeit des Internets
@@ -67,7 +67,7 @@ dieser o.g. Ressourcen beschränkt. Sie können diese beliebig mischen und
 somit auch Konzepte zur Ausfallsicherung umsetzen. Diese Konstellation
 kommt genau dann zum Tragen, wenn Ihre primäre Paketquelle nicht in der
 gewohnten Art und Weise zur Verfügung steht, bspw. bei einem Ausfall des
-Internetzugangs oder der Wartung des bevorzugten Paketspiegels.
+Internetzugangs oder der Wartung des von Ihnen bevorzugten Paketspiegels.
 
 ==== Aufbau und Struktur einer Paketquelle ====
 
