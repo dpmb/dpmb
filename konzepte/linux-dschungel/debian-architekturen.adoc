@@ -114,7 +114,8 @@ diese auf beliebigen Architekturen installieren.
 Dazu zählen z.B. Pakete von Programmen, die vollständig in den
 Skriptsprachen Perl, Python, Ruby oder Tcl geschrieben wurden. Ebenfalls
 gehören zu dieser Gruppe Pakete, die lediglich Daten enthalten, die auf
-jeder Architektur identisch sind. Das betrifft z.B. Bilder und Musik.
+jeder Architektur identisch sind. Das betrifft z.B. Bilder, Musik und
+Dokumentation.
 
 .Auswahl der installierten, architektur-unabhängigen Pakete
 ----
