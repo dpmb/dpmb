@@ -60,7 +60,7 @@ Anstatt alle Einträge direkt in die Datei `/etc/apt/sources.list` zu
 schreiben, können Sie einen oder mehrere Einträge auch in separate
 Dateien unter `/etc/apt/sources.list.d/` ablegen. Dateien in diesem
 Verzeichnis bedürfen der Endung '.list', um von APT beachtet zu werden.
-+
+ 
 So könnten Sie z.B. die Beispiele in diesem Abschnitt in den Dateien
 `/etc/apt/sources.list.d/postgresql.list`,
 `/etc/apt/sources.list.d/x2go.list` und
