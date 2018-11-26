@@ -18,7 +18,7 @@ weltweit verteilt und werden meist ehrenamtlich von einem
 Verantwortlichen für den jeweiligen Standort oder im Rahmen seiner
 administrativen Aufgaben vor Ort betreut. Viele Spiegelserver werden
 automatisch über neue Pakete informiert und abgeglichen und verfügen
-somit stets über den aktuelle Paketbestand.
+somit stets über den aktuellen Paketbestand.
 
 Wir empfehlen Ihnen, bei der Auswahl eines Paketmirrors einen solchen zu
 bevorzugen, der eine möglichst kurze Entfernung zu ihrem Standort hat,
@@ -53,6 +53,7 @@ in <<eigenen-apt-mirror-aufsetzen>>.
 (((Paketmirror, Namensschema)))
 (((Paketmirror, offizielle Liste (Debian))))
 (((Paketmirror, primäre (Debian))))
+(((Paketmirror, sekundäre (Debian))))
 Das Debian-Projekt pflegt eine offizielle Liste seiner Paketmirrors
 <<Debian-Spiegel-Liste>>. Diese Liste ist in _primäre_ und _sekundäre_
 Mirrors gegliedert.
@@ -98,11 +99,9 @@ Paketmirrors, die darüber verfügbaren Architekturen (siehe
 <<debian-architekturen>>) sowie die Informationen zum genauen Standort,
 zum Betreuer bzw. Betreiber und der Anbindung (IPv4 oder IPv6).
 Nachfolgender Auszug zeigt die Details für den Paketmirror
-`ftp.de.debian.org`, der an der TU Dresden beheimatet ist.
-{empty}footnote:[Die Auswahl des Mirrors erfolgte aus zwei Gründen –
-erstens tief verwurzeltem Lokalpatriotismus von Frank, und zweitens aus
-dem angebotenen Leistungsumfang heraus. Von diesem Mirror bekommen Sie
-das ganze Debian-Spektrum.]
+`ftp.de.debian.org`, der an der TU Dresden beheimatet ist. Die Auswahl
+des Mirrors erfolgte daher, weil dieser den vollen Leistungsumfang
+bietet -- von diesem Mirror bekommen Sie das ganze Debian-Spektrum.
 
 .Informationen zum Paketmirror ftp.de.debian.org (TU Dresden)
 ----
