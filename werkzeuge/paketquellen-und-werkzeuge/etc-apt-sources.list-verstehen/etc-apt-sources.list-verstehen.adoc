@@ -4,7 +4,7 @@
 
 [[etc-apt-sources.list-verstehen]]
 
-=== `/etc/apt/sources.list` verstehen ===
+=== Die Datei `/etc/apt/sources.list` verstehen ===
 
 // Format der Paketliste
 include::format-der-paketliste.adoc[]
