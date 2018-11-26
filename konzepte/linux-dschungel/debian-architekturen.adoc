@@ -25,12 +25,12 @@ Hardware-Architektur abhängig, auf der die Programme einsetzbar sind,
 sondern auch von weiteren Punkten. Dazu zählen etwa der
 Betriebssystemkern, wie Linux, GNU Hurd <<Hurd>> oder FreeBSD
 <<FreeBSD>>, aber auch die Art, wie die Programme kompiliert wurden
-('Application Binary Interface', ABI). Daher bezeichnen Entwickler dies
-als 'Portierung' ('Port') und sich selbst als 'Porters'. Hier verwenden
-wir durchgängig den Begriff 'Architektur', da das entsprechende Feld in
-den Metadaten eines Pakets (siehe <<debian-paketformat-im-detail>>)
-'architecture' heißt und Debian selbst die Begriffe bislang nicht
-konsistent verwendet.
+('Application Binary Interface', kurz 'ABI'). Daher bezeichnen
+Entwickler dies als 'Portierung' ('Port') und sich selbst als 'Porters'.
+Hier verwenden wir durchgängig den Begriff 'Architektur', da das
+entsprechende Feld in den Metadaten eines Pakets (siehe
+<<debian-paketformat-im-detail>>) 'architecture' heißt und Debian selbst
+die Begriffe bislang nicht konsistent verwendet.
 
 // Stichworte für den Index
 (((dpkg-architecture, -L)))
@@ -54,11 +54,11 @@ $
 
 // Stichworte für den Index
 (((Perl-Modul Dpkg::Arch)))
-Die Übersicht im Anhang (siehe <<anhang-debian-architekturen>>)
-beschreibt die einzelnen Architekturen näher. Die verwendeten
-Bezeichnungen in Klammern geben dabei das entsprechende GNU-Triplet an,
-sofern dieses bekannt ist. Das GNU-Triplet besteht aus der
-Hardware-Plattform, dem Kernel und dem ABI.
+Die Übersicht der Architekturen im Anhang (siehe
+<<anhang-debian-architekturen>>) beschreibt die einzelnen Architekturen
+näher. Die verwendeten Bezeichnungen in Klammern geben dabei das
+entsprechende GNU-Triplet an, sofern dieses bekannt ist. Das GNU-Triplet
+besteht aus der Hardware-Plattform, dem Kernel und dem ABI.
 
 Mit Hilfe des Perl-Moduls `Dpkg::Arch` ermitteln Sie diese Bezeichnungen
 im Handumdrehen selbst. Nachfolgend sehen Sie einen Aufruf für die
