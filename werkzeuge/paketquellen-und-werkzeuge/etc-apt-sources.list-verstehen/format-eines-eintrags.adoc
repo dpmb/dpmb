@@ -23,28 +23,31 @@ Jedes dieser Felder hat eine bestimmte Funktion und erlaubt nur
 ausgewählte Inhalte:
 
 Art der Quelle:: 
-bezeichnet den verwendeten Pakettyp, `deb` für Debian-Binärpakete und
-`deb-src` für Debian-Quellpakete. Genauer gehen wir dazu unter ``Debians
-Paketvarianten'' in <<debian-pakete-varianten>> und ``Debian-Paketformat'' im
-Detail in <<debian-paketformat-im-detail>> ein.
+bezeichnet den verwendeten Pakettyp. Zulässig sind entweder `deb` für
+Debian-Binärpakete und `deb-src` für Debian-Quellpakete. Genauer gehen
+wir dazu unter ``Debians Paketvarianten'' in <<debian-pakete-varianten>>
+und ``Debian-Paketformat'' im Detail in <<debian-paketformat-im-detail>>
+ein.
 
 URI:: 
-legt die Art der Installationsquelle fest. Hierbei stehen:
-* `file`: Installationsquelle ist ein Verzeichnis. Dieses kann sowohl
-lokal vorliegen, als auch von extern eingebunden sein, bspw. über ein
-Netzwerkdateisystem wie AFS, NFS oder SMB
-* `cdrom`: CD, DVD oder Blu-ray
-* `http`: HTTP-Server
-* `ftp`: FTP-Server
-* `copy`: identisch zu `file`, aber die bezogenen Debianpakete werden
-zusätzlich im lokalen Verzeichnis `/var/cache/apt/archives/`
+legt die Art der Installationsquelle fest. Hierbei sind diese Angaben
+zulässig:
+* `file`: die Installationsquelle ist ein Verzeichnis. Dieses kann
+sowohl lokal vorliegen, als auch von extern eingebunden sein, bspw. über
+ein Netzwerkdateisystem wie AFS, NFS oder SMB
+* `cdrom`: genutzt wird eine CD, eine DVD oder eine Blu-ray als Installationsmedium
+* `http`: die Installationsquelle ist ein HTTP-Server
+* `ftp`: die Installationsquelle ist ein FTP-Server
+* `copy`: identisch zum Eintrag `file`, aber die bezogenen Debianpakete
+werden zusätzlich im lokalen Verzeichnis `/var/cache/apt/archives/`
 abgelegt
 * `mirror`: Auswahl einer Installationsquelle anhand der GeoIP des
 Servers (siehe <<paketquellen-ueber-geoip-auswaehlen>>)
 * `debtorrent`: die Pakete werden über DebTorrent auf der Basis des
-BitTorrent-Protokolls bezogen <<Debian-Wiki-DebTorrent>>. Basis dafür
-ist das Debianpaket 'apt-transport-debtorrent'
-<<Debian-Paket-apt-transport-debtorrent>>.
+BitTorrent-Protokolls bezogen <<Debian-Wiki-DebTorrent>>. Die Grundlage
+dafür bildet das Debianpaket 'apt-transport-debtorrent'
+<<Debian-Paket-apt-transport-debtorrent>>, welches installiert sein
+muss.
 
 Distribution:: 
 benennt die Veröffentlichung (siehe <<veroeffentlichungen>>), aus der
@@ -55,9 +58,10 @@ _unstable_ oder _testing_ sowie die Nennung des alternativen
 Distributionsnamens wie bspw. _Stretch_, _Buster_ oder _Sid_ (siehe
 <<alias-namen>>).
 +
-Bitte beachten Sie bei Debian und Ubuntu die Kleinschreibung des Namens.
-Nicht-offizielle Paketquellen können an dieser Stelle jedoch auch
-sonstige Zeichenketten bis hin zu einem _._ verlangen.
+Bitte beachten Sie bei Debian und Ubuntu die vollständige
+Kleinschreibung des Namens. Nicht-offizielle Paketquellen können an
+dieser Stelle jedoch auch sonstige Zeichenketten bis hin zu einem _._
+verlangen.
 
 Komponente:: 
 bestimmt den Distributionsbereich, d.h. bspw. bei Debian _main_,
