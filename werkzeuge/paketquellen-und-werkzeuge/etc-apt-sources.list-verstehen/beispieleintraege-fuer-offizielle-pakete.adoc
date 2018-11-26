@@ -31,23 +31,25 @@ die lokale Paketdatenbank (siehe ``Distribution aktualisieren'' in
 
 Um hingegen zusätzlich die Pakete aus weiteren Paketbereichen wie bspw.
 _contrib_ und _non-free_ zu verwenden, ändern Sie den Eintrag auf das
-Folgende, hier wiederum mit expliziter Angabe des Aliasnamens _stretch_.
-In welcher Reihenfolge Sie die Paketbereiche angeben, spielt keine
-Rolle. Üblich ist jedoch die Abfolge anhand des Freiheitsgrades der
-Softwarelizenz in der Form von _main contrib non-free_.
+Folgende, hier wiederum mit expliziter Angabe des Aliasnamens _stretch_:
 
 ----
 deb http://ftp.de.debian.org/debian/ stretch main contrib non-free
 ----
+
+In welcher Reihenfolge Sie die einzelnen, gewünschten Paketbereiche
+angeben, spielt keine Rolle. Üblich ist jedoch die Abfolge anhand des
+Freiheitsgrades der Softwarelizenz in der Form von _main contrib
+non-free_.
 
 [TIP]
 .Auswahl eines Paketmirrors
 ====
 Mehr Informationen zur Auswahl eines für Sie am besten geeigneten
 Paketmirrors erfahren Sie unter ``Geeigneten Paketmirror auswählen'' in 
-<<geeigneten-paketmirror-auswaehlen>>. Mit dieser Angabe können Sie die
-Bezugszeiten für Aktualisierungen der Paketlisten und der Pakete
-erheblich zu ihren Gunsten beeinflussen.
+<<geeigneten-paketmirror-auswaehlen>>. Mit dieser Angabe beeinflussen
+Sie die Bezugszeiten für Aktualisierungen der Paketlisten und der Pakete
+erheblich zu ihren Gunsten.
 ====
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/beispieleintraege-fuer-offizielle-pakete.adoc
