@@ -7,6 +7,7 @@
 
 // Indexeinträge
 (((/etc/apt/sources.list,Einträge für Quellpakete)))
+(((Paketvarianten, Quellpaket)))
 (((Paketvarianten, Sourcepaket)))
 Um Debian-Quellpakete (siehe <<sourcepakete>>) zu nutzen, benötigen Sie
 eine weitere Zeile in ihrer Paketliste. Im Vergleich zu Binärpaketen
