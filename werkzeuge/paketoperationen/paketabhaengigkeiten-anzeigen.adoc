@@ -494,9 +494,9 @@ Mit einer Reihe von speziellen Suchmustern zum Unterkommando `search`
 unterstützt Sie `aptitude` bei der Recherche in der
 Paketdatenbank. Eines davon ist `~D`'muster' und dessen Langform
 `?depends(`'muster'`)`. Sie suchen in den
-Abhängigkeiten\footnote{Engl. 'Dependencies'; ohne weitere Angaben
-wird in den Abhängigkeiten des Feldes `Depends` gesucht.} aller Pakete
-nach dem regulrären Ausdruck 'muster'. Dabei findet es nicht nur
+Abhängigkeiten{empty}footnote:[Engl. 'Dependencies'; ohne weitere
+Angaben wird in den Abhängigkeiten des Feldes `Depends` gesucht.] aller
+Pakete nach dem regulrären Ausdruck 'muster'. Dabei findet es nicht nur
 vollständige Paketnamen sondern auch Bestandteile von Paketnamen. Für
 diese Information muss das entsprechende Paket nicht auf ihrem System
 installiert sein, aber in der Paketdatenbank vorhanden sein.
