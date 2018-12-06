@@ -519,10 +519,10 @@ p   wiipdf               - Präsentiert eine PDF-Datei mittels Wiimote
 $
 ----
 
-Diese Liste beinhaltet auch das Paket impressive, welches eine
-Abhängigkeit auf `poppler-utils | mupdf-tools | xpdf-utils` hat. Will
-man nur Abhängigkeiten auf das Paket 'xpdf', so muß man Anfangs- und
-End-Anker verwenden:
+Diese Liste beinhaltet auch das Paket 'impressive', welches eine
+Abhängigkeit auf 'poppler-utils', 'mupdf-tools' und 'xpdf-utils' hat.
+Will man nur Abhängigkeiten auf das Paket 'xpdf', so muß man Anfangs-
+und End-Anker verwenden:
 
 .Auflistung aller Pakete, die eine harte Abhängigkeit auf das Paket 'xpdf' beinhalten, mit `aptitude`
 ----
