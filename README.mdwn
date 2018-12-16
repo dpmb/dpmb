@@ -140,7 +140,7 @@ Dann als Benutzer das entsprechende Git-Repository klonen und ins
 entsprechende Verzeichnis wechseln:
 
 ```sh
-git clone git://github.com/dpmb/dpmb.git
+git clone https://github.com/dpmb/dpmb.git
 cd dpmb
 ```
 
