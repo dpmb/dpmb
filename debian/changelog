@@ -1,11 +1,11 @@
-dpmb (0~2018.12.12) UNRELEASED; urgency=medium
+dpmb (0~2018.12.16) unstable; urgency=medium
 
   * New snapshot
   * Declare compliance with Debian Policy 4.2.1. (No changes needed.)
   * Alternatively recommend/suggest mupdf (now also an EPUB reader).
   * Set "Rules-Requires-Root: no".
 
- -- Axel Beckert <abe@debian.org>  Wed, 12 Dec 2018 02:15:40 +0100
+ -- Axel Beckert <abe@debian.org>  Sun, 16 Dec 2018 02:38:15 +0100
 
 dpmb (0~2017.07.16) unstable; urgency=medium
 
