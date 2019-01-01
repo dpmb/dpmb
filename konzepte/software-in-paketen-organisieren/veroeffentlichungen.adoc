@@ -154,11 +154,11 @@ Pate:
 
 * Debian 4.0 _Etch_ (8. April 2007; benannt nach der Zeichentafel Etch-A-Sketch)
 
-* Debian 5.0 _Lenny_ (Februar 2009; benannt nach dem aufziehbaren Fernglas)
+* Debian 5.0 _Lenny_ (14. Februar 2009; benannt nach dem aufziehbaren Fernglas)
 
-* Debian 6.0 _Squeeze_ (Februar 2011; benannt nach den grünen dreiäugigen Aliens)
+* Debian 6.0 _Squeeze_ (6. Februar 2011; benannt nach den grünen dreiäugigen Aliens)
 
-* Debian 7 _Wheezy_ (Mai 2013; benannt nach Wheezy the Penguin, dem Gummi-Spielzeugpinguin mit der roten Fliege)
+* Debian 7 _Wheezy_ (4. Mai 2013; benannt nach Wheezy the Penguin, dem Gummi-Spielzeugpinguin mit der roten Fliege)
 
 * Debian 8 _Jessie_ (25. April 2015; benannt nach der jodelnden Kuhhirtinnen-Puppe Jessica Jane ``Jessie'' Pride)
 
