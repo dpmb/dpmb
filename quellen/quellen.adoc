@@ -464,6 +464,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Ports-Projekt]]] Debian-Ports Projekt, https://www.ports.debian.org/
 
+- [[[Debian-Project-History]]] Debian-Projekthistorie, https://www.debian.org/doc/manuals/project-history/ch-releases.en.html
+
 - [[[Debian-Pure-Blends]]] Andreas Tille, Ben Armstrong, Emmanouil Kiagias: Debian Pure Blends, http://blends.debian.org/blends/
 
 - [[[DebianQA]]] Debian Quality Assurance (QA) Team, https://qa.debian.org/
