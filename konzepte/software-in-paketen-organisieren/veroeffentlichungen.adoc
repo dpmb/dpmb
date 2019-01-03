@@ -8,10 +8,13 @@
 === Veröffentlichungen ===
 
 // Stichworte für den Index
+(((/etc/debian_version)))
+(((Debianpaket, lsb-release)))
 (((Veröffentlichung, Benennung)))
 (((Veröffentlichung, Referenzierung)))
 (((Veröffentlichung, Releases)))
 (((Veröffentlichung, Varianten)))
+(((Veröffentlichung, Version anzeigen)))
 Debian GNU/Linux wird in verschiedenen Veröffentlichungen angeboten, die
 jeweils als ``Releases'' bezeichnet werden. Eine solche Veröffentlichung
 kann wie folgt referenziert werden:
@@ -22,6 +25,30 @@ kann wie folgt referenziert werden:
 _testing_ oder _unstable_
 * nach ihrem Alias-Namen (siehe <<alias-namen>>), z.B. _Wheezy_,
 _Jessie_ oder _Stretch_
+
+Welche Veröffentlichung Sie auf ihrem System verwenden, entnehmen Sie
+der Datei `/etc/debian_version` wie folgt:
+
+.Die genutzte Debian-Version anzeigen
+----
+$ cat /etc/debian_version 
+9.6
+$
+----
+
+Ausführlichere Informationen erhalten Sie mit Hilfe des Kommandos
+`lsb_release -a` aus dem Debianpaket `lsb-release` <<Debian-Paket-lsb-release>>:
+
+.Ausführliche Informationen zur genutzen Debian-Version anzeigen
+----
+$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Debian
+Description:    Debian GNU/Linux 9.6 (stretch)
+Release:        9.6
+Codename:       stretch
+$
+----
 
 [[bedeutung-der-verschiedenen-entwicklungsstaende]]
 ==== Bedeutung der verschiedenen Entwicklungsstände ====
