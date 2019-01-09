@@ -8,14 +8,14 @@
 // Stichworte für den Index
 (((netselect-apt, -o)))
 (((netselect-apt, --outfile)))
-Wie oben bereits angesprochen, erzeugt `netselect-apt` eine Datei
-`sources.list` im aktuellen Verzeichnis. Dazu verfügt es über
-den Schalter `-o` (Langform `--outfile`), mit dem Sie die entsprechende
-Veröffentlichung (siehe <<veroeffentlichungen>>) angeben und eine
-passende Liste dazu generieren lassen. `netselect-apt` akzeptiert dazu
-Angaben wie _stable_ oder _unstable_, aber auch die Alternativnamen der
-Veröffentlichung wie _Wheezy_ oder _Sid_ (siehe ``Veröffentlichungen''
-in <<veroeffentlichungen>>).
+Wie bereits in <<netselect-und-netselect-apt>> angesprochen, erzeugt
+`netselect-apt` eine Datei `sources.list` im aktuellen Verzeichnis. Es
+verfügt zudem über den Schalter `-o` (Langform `--outfile`), mit dem Sie
+die entsprechende Ausgabedatei angeben und eine passende Liste darin
+generieren lassen. `netselect-apt` akzeptiert für die Wahl der
+Veröffentlichung auch Angaben wie _stable_ oder _unstable_, aber auch
+die Alternativnamen der Veröffentlichung wie _Wheezy_ oder _Sid_ (siehe
+``Veröffentlichungen'' in <<veroeffentlichungen>>).
 
 // Stichworte für den Index
 (((netselect-apt, -a)))
@@ -30,7 +30,7 @@ in <<veroeffentlichungen>>).
 (((netselect-apt, --outfile)))
 (((netselect-apt, -s)))
 (((netselect-apt, --sources)))
-Desweiteren kennt `netselect-apt` diese Schalter:
+Insgesamt kennt `netselect-apt` diese Schalter zur Steuerung der Liste:
 
 `-a` (Langform `--arch`):: Erzeugung der Liste für die angegebene
 Prozessorarchitektur. Eine Übersicht zu den von Debian unterstützten
@@ -47,13 +47,17 @@ angegebenen Land.
 Distributionsbereich `nonfree` (siehe ``Distributionsbereiche'' in
 <<distributionsbereiche>>).
 
+`-o` (Langform `--outfile`):: Speichere die erzeugte Liste in der
+angegebenen Datei.
+
 `-s` (Langform `--sources`):: zusätzliche Erzeugung von Einträgen für
 den Bezug von Quellpaketen (siehe ``Sourcepakete'' in <<sourcepakete>>
 und ``Einträge für Quellpakete'' in <<eintraege-fuer-quellpakete>>).
 
-Im nachfolgenden Beispiel kommt lediglich der Schalter `-o` 'test.list'
-zum Einsatz. Das führt dazu, dass `netselect-apt` die ermittelten
-Paketmirrors in die Datei 'test.list' im lokalen Verzeichnis ausgibt.
+Im nachfolgenden Beispiel kommt zunächst lediglich der Schalter `-o`
+'test.list' zum Einsatz. `netselect-apt` erzeugt die Liste der
+ermittelten Paketmirrors in der Datei 'test.list' im lokalen
+Verzeichnis.
 
 .Speicherung der ermittelten Paketmirrors in einer separaten Datei
 ----
@@ -101,13 +105,60 @@ Done.
 #
 ----
 
-Die von `netselect-apt` erzeugte Datei `test.list` enthält neben
-den Paketmirrors auch eine ganze Reihe Kommentare. Diese helfen Ihnen
-dabei, zu verstehen, wofür jeder einzelne Eintrag gedacht ist.
+Das zweite Beispiel kommt aus dem Alltag. Wir kombinieren die vier
+Schalter `-c`, `-t`, `-n` und `-a`, um die besten fünf Paketmirror für
+die Architektur `amd64` in Frankreich zu finden:
+
+.Ermittlung der besten fünf Paketmirror
+----
+# netselect-apt -c france -t 5 -a amd64 -n stable
+Using distribution stable.
+Retrieving the list of mirrors from www.debian.org...
+
+--2019-01-09 11:47:21--  http://www.debian.org/mirror/mirrors_full
+Auflösen des Hostnamen »www.debian.org (www.debian.org)«... 130.89.148.14, 5.153.231.4, 2001:41c8:1000:21::21:4, ...
+Verbindungsaufbau zu www.debian.org (www.debian.org)|130.89.148.14|:80... verbunden.
+HTTP-Anforderung gesendet, warte auf Antwort... 302 Found
+Platz: https://www.debian.org/mirror/mirrors_full[folge]
+--2019-01-09 11:47:22--  https://www.debian.org/mirror/mirrors_full
+Verbindungsaufbau zu www.debian.org (www.debian.org)|130.89.148.14|:443... verbunden.
+HTTP-Anforderung gesendet, warte auf Antwort... 200 OK
+Länge: 189770 (185K) [text/html]
+In »»/tmp/netselect-apt.Kp2SNk«« speichern.
+
+/tmp/netselect-apt.Kp2SNk     100%[================================================>] 185,32K  1,19MB/s   in 0,2s   
+
+2019-01-09 11:47:22 (1,19 MB/s) - »»/tmp/netselect-apt.Kp2SNk«« gespeichert [189770/189770]
+
+Choosing a main Debian mirror using netselect.
+(will filter only for mirrors in country france)
+netselect: 19 (19 active) nameserver request(s)...      
+Duplicate address 212.27.32.66 (http://debian.proxad.net/debian/, http://ftp.fr.debian.org/debian/); keeping only under first name.
+Running netselect to choose 5 out of 18 addresses.       
+..................................................................................................................................
+The fastest 5 servers seem to be:
+
+	http://debian.proxad.net/debian/
+	http://debian.mirror.ate.info/
+	http://debian.mirrors.ovh.net/debian/
+	http://ftp.rezopole.net/debian/
+	http://mirror.plusserver.com/debian/debian/
+
+Of the hosts tested we choose the fastest valid for HTTP:
+        http://debian.proxad.net/debian/
+
+Writing sources.list.
+Done.
+#
+----
+
+Die von `netselect-apt` erzeugte Datei enthält neben den Paketmirrors
+auch eine ganze Reihe Kommentare. Diese helfen Ihnen dabei, zu
+verstehen, wofür jeder einzelne Eintrag gedacht ist.
 
 .Inhalt der automatisch generierten Liste der Paketmirrors
 ----
-# cat test.list
+# cat sources.list
 
 # Debian packages for stable
 deb http://artfiles.org/debian/ stable main contrib
