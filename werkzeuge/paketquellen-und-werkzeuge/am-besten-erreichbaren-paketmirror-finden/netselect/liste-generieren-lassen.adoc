@@ -14,7 +14,8 @@ den Schalter `-o` (Langform `--outfile`), mit dem Sie die entsprechende
 Veröffentlichung (siehe <<veroeffentlichungen>>) angeben und eine
 passende Liste dazu generieren lassen. `netselect-apt` akzeptiert dazu
 Angaben wie _stable_ oder _unstable_, aber auch die Alternativnamen der
-Veröffentlichung wie _Wheezy_ oder _Sid_.
+Veröffentlichung wie _Wheezy_ oder _Sid_ (siehe ``Veröffentlichungen''
+in <<veroeffentlichungen>>).
 
 // Stichworte für den Index
 (((netselect-apt, -a)))
