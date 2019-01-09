@@ -22,9 +22,12 @@ besser ist das für Sie.
 Der Unterschied zwischen `netselect` und `netselect-apt` ist folgender:
 `netselect` gibt nur den ermittelten Zahlenwert für den evaluierten
 Spiegelserver aus, während `netselect-apt` eine Datei namens
-`sources.list` im aktuellen Verzeichnis erzeugt. Diese beinhaltet die
-besten gefundenen Spiegelserver und kann von Ihnen sofort als neue Liste
-der Paketquellen benutzt werden.
+`sources.list` in dem Verzeichnis erzeugt, in welchem Sie
+`netselect-apt` aufrufen. `netselect-apt` überschreibt dabei die Datei
+`/etc/apt/sources.list` nicht von sich aus. Die generierte Datei
+beinhaltet die besten gefundenen Spiegelserver und kann von Ihnen danach
+als neue Liste der Paketquellen benutzt werden. Dazu kopieren Sie die
+generierte Datei `sources.list` in das Verzeichnis `/etc/apt/`.
 
 [NOTE]
 .Aktualisierung der Liste der Paketquellen
