@@ -9,11 +9,17 @@
 (((Paketmirror, Auswahl)))
 (((Paketmirror, Leistungskriterien)))
 Jeder Paketmirror hat eine spezifische Leistungsfähigkeit, die sich an
-den beiden Kriterien Netzanbindung und Hardwareausstattung messen lässt.
-Auf diese Merkmale haben Sie zwar nur begrenzt Einfluss, steuern jedoch
-über die Einträge in der Datei `/etc/apt/sources.list` (siehe
-<<etc-apt-sources.list-verstehen>>), welchen verfügbaren Paketmirror Sie
-benutzen.
+den drei Kriterien Netzanbindung, Hardwareausstattung und Grundlast
+messen lässt. Auf die ersten beiden Merkmale haben Sie von außen als
+Nutzer keinen Einfluss, auf den dritten nur bedingt. Leistungsfähigere
+Paketmirror werden in der Regel auch häufiger nachgefragt. 
+
+Über die Einträge in der Datei `/etc/apt/sources.list` (siehe
+<<etc-apt-sources.list-verstehen>>) steuern Sie, welchen verfügbaren
+Paketmirror Sie benutzen, um den Softwarebestand auf ihrem System
+aktuell zu halten. Je leistungsfähiger der von Ihnen gewählte
+Paketmirror ist, umso weniger Zeit benötigen Sie im Endeffekt, um die
+lokale Aktualisierung vorzubereiten und durchzuführen.
 
 // Stichworte für den Index
 (((Debianpaket, netselect)))
@@ -23,7 +29,8 @@ Werkzeuge wie `ping` oder `traceroute` zu ermitteln, sind hier die
 beiden Programme `netselect` <<Debian-Paket-netselect>> und
 `netselect-apt` <<Debian-Paket-netselect-apt>> die besseren Mittel der
 Wahl. Damit finden Sie den Paketmirror heraus, der netztechnisch von
-ihrem aktuellen Standort aus am besten erreichbar ist.
+ihrem aktuellen Standort aus am besten erreichbar ist, sprich: Ihnen die
+geringste Bezugszeit für Pakete ermöglicht.
 
 // netselect und netselect-apt
 include::netselect/netselect.adoc[]
