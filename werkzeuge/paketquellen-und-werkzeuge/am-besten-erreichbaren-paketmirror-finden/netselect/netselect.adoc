@@ -2,6 +2,7 @@
 
 // Baustelle: Rohtext
 
+[[netselect-und-netselect-apt]]
 ==== `netselect` und `netselect-apt` ====
 
 // Stichworte für den Index
@@ -19,15 +20,23 @@ werden lokale Paketmirrors, was sich auch im daraus errechneten
 Zahlenwert niederschlägt. Je kleiner der ermittelte Wert ist, umso
 besser ist das für Sie.
 
-Der Unterschied zwischen `netselect` und `netselect-apt` ist folgender:
-`netselect` gibt nur den ermittelten Zahlenwert für den evaluierten
-Spiegelserver aus, während `netselect-apt` eine Datei namens
-`sources.list` in dem Verzeichnis erzeugt, in welchem Sie
-`netselect-apt` aufrufen. `netselect-apt` überschreibt dabei die Datei
-`/etc/apt/sources.list` nicht von sich aus. Die generierte Datei
-beinhaltet die besten gefundenen Spiegelserver und kann von Ihnen danach
-als neue Liste der Paketquellen benutzt werden. Dazu kopieren Sie die
-generierte Datei `sources.list` in das Verzeichnis `/etc/apt/`.
+Zwischen `netselect` und `netselect-apt` bestehen die folgenden
+Unterschiede:
+
+* `netselect` gibt nur den ermittelten Zahlenwert für den evaluierten
+Spiegelserver aus. 
+
+* `netselect-apt` erzeugt eine Datei namens `sources.list` in dem
+Verzeichnis, in welchem Sie `netselect-apt` aufrufen. `netselect-apt`
+überschreibt dabei die Datei `/etc/apt/sources.list` nicht von sich aus.
+Die generierte Datei beinhaltet die besten gefundenen Spiegelserver und
+kann von Ihnen danach als neue Liste der Paketquellen benutzt werden.
+Dazu kopieren Sie die generierte Datei `sources.list` in das Verzeichnis
+`/etc/apt/`.
+
+* `netselect-apt` ist nicht (mehr) für Ubuntu paketiert
+<<netselect-apt-ubuntu>>. Es steht für Debian zur Verfügung und
+funktioniert zuverlässig in allen Debian-Versionen.
 
 [NOTE]
 .Aktualisierung der Liste der Paketquellen

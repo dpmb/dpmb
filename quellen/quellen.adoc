@@ -704,6 +704,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Neo900]]] Neo900-Projekt, https://neo900.org/
 
+- [[[netselect-apt-ubuntu]]] Netselect-Apt und Ubuntu, https://bugs.launchpad.net/ubuntu/+bug/337377
+
 - [[[NexentaOS-Illumian]]] Wikipedia-Eintrag zu Nexenta OS und Illumian, https://en.wikipedia.org/wiki/Nexenta_OS
 
 - [[[nixcraft-apt-get]]] `apt-get`-Spickzettel im Nixcraft-Blog, http://www.cyberciti.biz/howto/question/linux/apt-get-cheat-sheet.php
