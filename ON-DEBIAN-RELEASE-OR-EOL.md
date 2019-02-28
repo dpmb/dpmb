@@ -18,6 +18,11 @@ What we needed to do if a Debian Release happened
   "$URL" | fgrep -q "200 OK" || echo $URL no more returns 200 OK.;
   done`
 
+* Especially check which packages are no more part of the upcoming
+  stable release:
+
+  `for i in $(git grep -hEo 'https://packages.debian.org/de/stable/[-a-z0-9+]+' | sed -e s/stable/testing/) ; do echo -n $i" = "; GET -SUsed $i | fgrep Title; done | fgrep "Debian -- Error"`
+
 What we needed to do if a Debian Release goes End of Life
 ---------------------------------------------------------
 
