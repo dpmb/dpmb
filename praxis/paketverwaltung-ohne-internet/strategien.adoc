@@ -8,7 +8,6 @@
 
 // Stichworte für den Index
 (((Debianpaket, apt-offline)))
-(((Debianpaket, aptoncd)))
 (((Keryx)))
 
 Aus unserer Sicht bestehen mehrere, grundlegende Verfahren, die sich
@@ -20,8 +19,8 @@ hier anbieten:
 
 Diese drei Wege basieren auf Werkzeugen und Verfahren, die wir bislang
 im Buch bereits angesprochen haben. Sagen Ihnen diese nicht zu, werfen
-Sie einen genaueren Blick auf die Projekte `apt-offline`,
-`aptoncd` und Keryx, die wir im Anschluss unter Werkzeuge in
+Sie einen genaueren Blick auf die Projekte `apt-offline` und Keryx,
+die wir im Anschluss unter Werkzeuge in
 <<paketverwaltung-offline-werkzeuge>> genauer vorstellen.
 
 ==== Benötigte Pakete vorher explizit herunterladen ====

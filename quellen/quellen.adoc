@@ -229,8 +229,6 @@
 
 - [[[Debian-Paket-apt]]] Debian-Paket 'apt', https://packages.debian.org/de/stable/apt
 
-- [[[Debian-Paket-aptoncd]]] Debian-Paket 'aptoncd', https://packages.debian.org/de/stable/aptoncd
-
 - [[[Debian-Paket-apt-cacher]]] Debian-Paket 'apt-cacher', https://packages.debian.org/de/stable/apt-cacher
 
 - [[[Debian-Paket-apt-cacher-ng]]] Debian-Paket 'apt-cacher-ng', https://packages.debian.org/de/stable/apt-cacher-ng

@@ -243,7 +243,6 @@
 .. link:praxis/paketverwaltung-ohne-internet/werkzeuge.adoc[Werkzeuge]
 ... link:praxis/paketverwaltung-ohne-internet/offline-verwaltung-mit-apt-get-und-wget.adoc[Offline-Verwaltung mit 'apt-get' und 'wget']
 ... link:praxis/paketverwaltung-ohne-internet/apt-offline.adoc[Das Projekt 'apt-offline']
-... link:praxis/paketverwaltung-ohne-internet/aptoncd.adoc[aptoncd]
 .... link:praxis/paketverwaltung-ohne-internet/keryx.adoc[Keryx]
 . link:praxis/systeme-mit-schlechter-anbindung-warten/systeme-mit-schlechter-anbindung-warten.adoc[Systeme mit schlechter Internet-Anbindung warten]
 .. link:praxis/systeme-mit-schlechter-anbindung-warten/debdelta.adoc[debdelta]

@@ -14,9 +14,6 @@ include::apt-offline.adoc[]
 // Pakete zerlegen mit dpkg-split
 include::dpkg-split.adoc[]
 
-// Offline-Verwaltung mit 'aptoncd'
-include::aptoncd.adoc[]
-
 // Offline-Verwaltung mit 'keryx'
 include::keryx.adoc[]
 
