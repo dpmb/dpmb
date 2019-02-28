@@ -235,7 +235,7 @@
 
 - [[[Debian-Paket-apt-cacher-ng]]] Debian-Paket 'apt-cacher-ng', https://packages.debian.org/de/stable/apt-cacher-ng
 
-- [[[Debian-Paket-apt-clone]]] Debian-Paket 'apt-clone', https://packages.debian.org/stable/apt-clone
+- [[[Debian-Paket-apt-clone]]] Debian-Paket 'apt-clone', https://packages.debian.org/de/stable/apt-clone
 
 - [[[Debian-Paket-apt-cdrom-setup]]] Debian-Paket 'apt-cdrom-setup', https://packages.debian.org/de/stable/apt-cdrom-setup
 
@@ -382,7 +382,7 @@
 
 - [[[Debian-Paket-lintian]]] Debian-Paket 'lintian', https://packages.debian.org/de/stable/lintian
 
-- [[[Debian-Paket-localepurge]]] Debian-Paket 'localepurge', https://packages.debian.org/stable/localepurge
+- [[[Debian-Paket-localepurge]]] Debian-Paket 'localepurge', https://packages.debian.org/de/stable/localepurge
 
 - [[[Debian-Paket-lsb]]] Debian-Paket 'lsb', https://packages.debian.org/de/stable/lsb
 
