@@ -14,6 +14,5 @@ Packages not in Debian Buster
 -----------------------------
 
 ```
-https://packages.debian.org/de/testing/ara = Title: Debian -- Error
 https://packages.debian.org/de/testing/gui-apt-key = Title: Debian -- Error
 ```
