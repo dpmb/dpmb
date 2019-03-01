@@ -17,7 +17,7 @@ Versionskontrollsystem wie bspw. Git oder Bzr zu verwenden (siehe
 
 // ToDo weil unklar:
 // Git-Dpm hat _nichts_ mit dem Paketformat zu tun, das ist eine ganz
-// andere Ebene: <<Debian-Paket-git-dpm>>,<<Debian-Wiki-git-dpm>>,
+// andere Ebene: <<Debian-Paket-git-dpm>>, <<Debian-Salsa-git-dpm>>,
 // <<Debian-Wiki-git-dpm-packaging>>
 
 

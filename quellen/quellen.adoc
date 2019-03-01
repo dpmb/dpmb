@@ -487,6 +487,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[Debian-Release-Notes]]] Veröffentlichungshinweise zur
   Debian-Distribution, https://www.debian.org/releases/stable/releasenotes
 
+- [[[Debian-Salsa-git-dpm]]] Git-Repository auf Debian Salsa: `git-dpm` -- debian packages in git manager, https://salsa.debian.org/brlink/git-dpm
+
 - [[[Debian-Social-Contract]]] Debian-Gesellschaftsvertrag, https://www.debian.org/social_contract.de.html
 
 - [[[Debian-Virtual-Packages-List]]] Liste aller offiziell verwendeten virtuellen Pakete, https://www.debian.org/doc/packaging-manuals/virtual-package-names-list.txt
@@ -520,8 +522,6 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[Debian-Wiki-DiskImage]]] Debian Wiki: Diskimage, https://wiki.debian.org/DiskImage
 
 - [[[Debian-Wiki-FAI]]] Debian Wiki: FAI (Fully Automatic Installation) for Debian GNU/Linux, https://wiki.debian.org/FAI
-
-- [[[Debian-Wiki-git-dpm]]] Debian Wiki: `git-dpm` -- debian packages in git manager, https://git-dpm.alioth.debian.org/
 
 - [[[Debian-Wiki-git-dpm-packaging]]] Debian Wiki: Maintaining Debian source packages in git with git-dpm, https://wiki.debian.org/PackagingWithGit/GitDpm
 
