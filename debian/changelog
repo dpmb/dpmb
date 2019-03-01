@@ -1,6 +1,7 @@
 dpmb (0~2019.03.01) UNRELEASED; urgency=medium
 
   * New snapshot, adapted to what will be in Buster and what not.
+  * Declare compliance with Debian Policy 4.3.0. (No changes neeeded.)
 
  -- Axel Beckert <abe@debian.org>  Fri, 01 Mar 2019 23:30:01 +0100
 
