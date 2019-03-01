@@ -267,7 +267,7 @@
 
 - [[[Debian-Paket-auto-apt]]] Debian-Paket 'auto-apt', https://packages.debian.org/de/stable/auto-apt
 
-- [[[Debian-Paket-checkinstall]]] Debian-Paket 'checkinstall', https://packages.debian.org/de/stable/checkinstall
+- [[[Debian-Paket-checkinstall]]] Debian-Paket 'checkinstall', https://packages.debian.org/de/stretch/checkinstall
 
 - [[[Debian-Paket-command-not-found]]] Debian-Paket 'command-not-found', https://packages.debian.org/de/stable/command-not-found
 

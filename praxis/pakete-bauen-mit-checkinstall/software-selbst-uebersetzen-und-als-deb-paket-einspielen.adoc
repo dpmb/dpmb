@@ -11,7 +11,9 @@
 (((Debianpaket, dh-make-perl)))
 An dieser Stelle kommt das Projekt `checkinstall` <<checkinstall>> ins
 Spiel. Es steht unter der GPLv2 und ist über das gleichnamige Paket aus
-den Repositories verfügbar <<Debian-Paket-checkinstall>>. 
+den Repositories bis Debian 9 Stretch verfügbar
+<<Debian-Paket-checkinstall>>. In Debian 10 Buster ist es nicht
+enthalten.
 
 // Hinweis auf dh-make-perl
 [NOTE]
