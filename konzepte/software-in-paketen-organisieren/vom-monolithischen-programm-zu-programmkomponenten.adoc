@@ -30,8 +30,8 @@ bereitgestellt wird.
 (((Debianpaket, apt-doc)))
 (((Debianpaket, apt-transport-https)))
 (((Debianpaket, apt-utils)))
-(((Debianpaket, libapt-inst)))
-(((Debianpaket, libapt-pkg)))
+(((Debianpaket, libapt-inst2.0)))
+(((Debianpaket, libapt-pkg5.0)))
 (((Debianpaket, libapt-pkg-dev)))
 (((Debianpaket, libapt-pkg-doc)))
 (((Debianpaket, libapt-pkg-perl)))
@@ -70,8 +70,8 @@ genauer in ``APT und Bibliotheken'' in <<apt-und-bibliotheken>> ein.
 | 'apt-doc' | Dokumentation ('doc') | Dokumentation zum Paket 'apt'
 | 'apt-transport-https' | Administration ('admin') | APT-Plugin für HTTPS-Support
 | 'apt-utils' | Administration ('admin') | Hilfsprogramme für APT
-| 'libapt-inst' | Bibliotheken ('libs') | Laufzeitbibliothek zum Paketformat
-| 'libapt-pkg' | Bibliotheken ('libs') | Laufzeitbibliothek zur Paketverwaltung
+| 'libapt-instX.Y' | Bibliotheken ('libs') | Laufzeitbibliothek zum Paketformat
+| 'libapt-pkg.X.Y' | Bibliotheken ('libs') | Laufzeitbibliothek zur Paketverwaltung
 | 'libapt-pkg-dev' | Bibliotheken zur Entwicklung ('libdevel') | Entwicklerdateien zu 'libapt-pkg'
 | 'libapt-pkg-doc' | Dokumentation ('doc') | Dokumentation zur Laufzeitbibliothek 'libapt-pkg'
 | 'libapt-pkg-perl' | Bibliotheken ('libs') | Laufzeitbibliothek zur Paketverwaltung, Perl-Schnittstelle

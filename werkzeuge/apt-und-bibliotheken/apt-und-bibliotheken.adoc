@@ -19,13 +19,14 @@ Paketverwaltung entwickeln.
 
 // Stichworte für den Index
 (((Bibliothek, libapt-pkg)))
-(((Debianpaket, libapt-pkg4.12)))
+(((Debianpaket, libapt-pkg5.0)))
 (((libapt-pkg)))
-Diese Bibliothek aus dem Paket 'libapt-pkg4.12'
-<<Debian-Paket-libapt-pkg4.12>> enthält die Basiskomponenten zum Zugriff
-auf die einzelnen Softwarepakete. Das umfasst Funktionen zur Suche nach
-Paketen, deren Verwaltung sowie die Ausgabe der Paketinformationen. Dazu
-gehören:
+Diese Bibliothek aus dem Paket 'libapt-pkgX.Y' (`X.Y` ist in Debian 9
+Stretch und Debian 10 Buster `5.0`, siehe
+<<Debian-Paket-libapt-pkg5.0>> enthält die Basiskomponenten zum
+Zugriff auf die einzelnen Softwarepakete. Das umfasst Funktionen zur
+Suche nach Paketen, deren Verwaltung sowie die Ausgabe der
+Paketinformationen. Dazu gehören:
 
 * der Abruf von Informationen zu einem Paket aus den verschiedenen Paketquellen
 * der Abruf eines Pakets und der vollständigen Auflösung der
@@ -76,13 +77,14 @@ HTML-Dokument bereit.
 
 // Stichworte für den Index
 (((Bibliothek, libapt-inst)))
-(((Debianpaket, libapt-inst)))
+(((Debianpaket, libapt-inst2.0)))
 (((libapt-inst)))
 (((Paketinterna abfragen)))
 // Worin liegt der Unterschied und Nutzen im Vergleich zu libapt-pkg?
 
 Um Informationen aus `deb`-Paketen zur erhalten, nutzen Sie diese
-Bibliothek aus dem Paket 'libapt-inst' <<Debian-Paket-libapt-inst>>.
+Bibliothek aus dem Paket 'libapt-instX.Y' (`X.Y` ist in Debian 9
+Stretch und Debian 10 Buster `2.0`, siehe <<Debian-Paket-libapt-inst2.0>>).
 Darüber steht eine Schnittstelle zur Abfrage der Paketinterna bereit,
 die sowohl den Paketinhalt, als auch die Steuerdaten der Komponente
 `control.tar.gz` umfassen (siehe ``Debian-Paketformat im Detail'' in

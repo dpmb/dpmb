@@ -362,9 +362,9 @@
 
 - [[[Debian-Paket-libapache2-mod-authn-yubikey]]] Debian-Paket 'libapache2-mod-authn-yubikey', https://packages.debian.org/de/stable/libapache2-mod-authn-yubikey
 
-- [[[Debian-Paket-libapt-inst]]] Debian-Paket 'libapt-inst', https://packages.debian.org/de/stable/libapt-inst
+- [[[Debian-Paket-libapt-inst2.0]]] Debian-Paket 'libapt-inst2.0', https://packages.debian.org/de/stable/libapt-inst2.0
 
-- [[[Debian-Paket-libapt-pkg4.12]]] Debian-Paket 'libapt-pkg4.12', https://packages.debian.org/de/stable/libapt-pkg4.12
+- [[[Debian-Paket-libapt-pkg5.0]]] Debian-Paket 'libapt-pkg5.0', https://packages.debian.org/de/stable/libapt-pkg5.0
 
 - [[[Debian-Paket-libapt-pkg-doc]]] Debian-Paket 'libapt-pkg-doc', https://packages.debian.org/de/stable/libapt-pkg-doc
 
