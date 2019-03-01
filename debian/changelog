@@ -1,9 +1,10 @@
-dpmb (0~2019.03.01) UNRELEASED; urgency=medium
+dpmb (0~2019.03.01) unstable; urgency=medium
 
-  * New snapshot, adapted to what will be in Buster and what not.
-  * Declare compliance with Debian Policy 4.3.0. (No changes neeeded.)
+  * New snapshot
+    + Contains updates wrt. what will be in Buster and what not.
+  * Declare compliance with Debian Policy 4.3.0. (No changes needed.)
 
- -- Axel Beckert <abe@debian.org>  Fri, 01 Mar 2019 23:30:01 +0100
+ -- Axel Beckert <abe@debian.org>  Fri, 01 Mar 2019 23:46:34 +0100
 
 dpmb (0~2018.12.16) unstable; urgency=medium
 
