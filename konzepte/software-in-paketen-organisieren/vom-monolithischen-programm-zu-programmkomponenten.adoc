@@ -68,7 +68,7 @@ genauer in ``APT und Bibliotheken'' in <<apt-und-bibliotheken>> ein.
 | Paketname | Paketkategorie | Komponente und Bedeutung
 | 'apt' | Administration ('admin') | Paketmanager für die Kommandozeile (siehe <<apt>>)
 | 'apt-doc' | Dokumentation ('doc') | Dokumentation zum Paket 'apt'
-| 'apt-transport-https' | Administration ('admin') | APT-Plugin für HTTPS-Support
+| 'apt-transport-https' | Administration ('admin') | APT-Plugin für HTTPS-Support (obsolet seit APT 1.5)
 | 'apt-utils' | Administration ('admin') | Hilfsprogramme für APT
 | 'libapt-instX.Y' | Bibliotheken ('libs') | Laufzeitbibliothek zum Paketformat
 | 'libapt-pkg.X.Y' | Bibliotheken ('libs') | Laufzeitbibliothek zur Paketverwaltung
