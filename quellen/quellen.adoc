@@ -374,8 +374,6 @@
 
 - [[[Debian-Paket-localepurge]]] Debian-Paket 'localepurge', https://packages.debian.org/de/stable/localepurge
 
-- [[[Debian-Paket-lsb]]] Debian-Paket 'lsb', https://packages.debian.org/de/stable/lsb
-
 - [[[Debian-Paket-lsb-release]]] Debian-Paket 'lsb-release', https://packages.debian.org/de/stable/lsb-release
 
 - [[[Debian-Paket-make]]] Debian-Paket 'make', https://packages.debian.org/de/stable/make
