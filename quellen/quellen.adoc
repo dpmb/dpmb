@@ -30,15 +30,15 @@
 
 - [[[aptitude-categorical-browser-to-be-removed]]] Kategorie-Browser in Aptitude wird voraussichtlich entfernt, https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=686124#44
 
-- [[[aptitude-dokumentation]]] Dokumentation zu `aptitude` in allen bisher verfügbaren Sprachen, https://aptitude.alioth.debian.org/doc/
+- [[[aptitude-dokumentation]]] Dokumentation zu `aptitude` in allen bisher verfügbaren Sprachen, https://www.debian.org/doc/user-manuals#aptitude
 
-- [[[aptitude-dokumentation-package-list]]] Dokumentation zu `aptitude`: Darstellung der Paketliste, https://aptitude.alioth.debian.org/doc/en/ch02s05s01.html
+- [[[aptitude-dokumentation-package-list]]] Dokumentation zu `aptitude`: Darstellung der Paketliste, https://www.debian.org/doc/manuals/aptitude/ch02s05s01.html
 
-- [[[aptitude-dokumentation-paketdarstellung]]] Dokumentation zu `aptitude`: Paketdarstellung, https://aptitude.alioth.debian.org/doc/en/ch02s05s01.html#secDisplayFormat
+- [[[aptitude-dokumentation-paketdarstellung]]] Dokumentation zu `aptitude`: Paketdarstellung, https://www.debian.org/doc/manuals/aptitude/ch02s05s01.html#secDisplayFormat
 
-- [[[aptitude-dokumentation-text-colors-and-styles]]] Dokumentation zu `aptitude`: Text colors and Styles, https://aptitude.alioth.debian.org/doc/en/ch02s05s03.html
+- [[[aptitude-dokumentation-text-colors-and-styles]]] Dokumentation zu `aptitude`: Text colors and Styles, https://www.debian.org/doc/manuals/aptitude/ch02s05s03.html
 
-- [[[aptitude-dokumentation-themes]]] Dokumentation zu `aptitude`: Themes, https://aptitude.alioth.debian.org/doc/en/ch02s05s06.html
+- [[[aptitude-dokumentation-themes]]] Dokumentation zu `aptitude`: Themes, https://www.debian.org/doc/manuals/aptitude/ch02s05s06.html
 
 - [[[aptitude-dokumentation-veraltet]]] veraltete Dokumentation zu `aptitude`, http://www.algebraicthunk.net/~dburrows/projects/aptitude/doc/
 
