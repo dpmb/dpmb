@@ -70,7 +70,7 @@
 
 - [[[apt-mirror-ubuntu2]]] Create a Local Ubuntu Repository using Apt-Mirror and Apt-Cacher, Packt Publishing, https://www.packtpub.com/books/content/create-local-ubuntu-repository-using-apt-mirror-and-apt-cacher
 
-- [[[apt-offline-Projektseite]]] Projektseite zu 'apt-offline', https://apt-offline.alioth.debian.org/
+- [[[apt-offline-Projektseite]]] Projektseite zu 'apt-offline', https://github.com/rickysarraf/apt-offline
 
 - [[[APT-Repo-PostgreSQL]]] APT-Repositories von PostgreSQL, https://wiki.postgresql.org/wiki/Apt
 
@@ -180,6 +180,8 @@
 - [[[Debian-besorgen]]] Debian besorgen. Installationsmedien und ISO-Images auf der Debian-Webseite, https://www.debian.org/distrib/
 
 - [[[Debian-Bug-Tracking-System]]] Debian Bug Tracking System (Debian BTS), https://www.debian.org/Bugs/
+
+- [[[Debian-Bug-apt-offline-871656]]] Debian Bug Report #871656: apt-offline: Does not validate Packages or .deb files in bundle, https://bugs.debian.org/871656
 
 - [[[Debian-DebSrc3.0]]] Projects DebSrc3.0, https://wiki.debian.org/Projects/DebSrc3.0
 
