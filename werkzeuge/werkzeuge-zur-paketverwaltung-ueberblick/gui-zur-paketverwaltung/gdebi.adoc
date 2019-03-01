@@ -26,13 +26,14 @@ auch manuell heruntergeladene Pakete zu installieren.
 (((Debianpaket, gdebi-core)))
 (((Debianpaket, gdebi-kde)))
 // Komponenten
-GDebi besteht aus drei *Komponenten* -- einem Kommandozeilenprogramm
+GDebi besteht aus mehreren *Komponenten* -- einem Kommandozeilenprogramm
 namens `gdebi` (aus dem Paket 'gdebi-core' <<Debian-Paket-gdebi-core>>)
-und zwei graphischen Bedienoberflächen. Es existiert eine GTK-basierte
+und einer, ehemals zwei graphischen Bedienoberflächen. Die GTK-basierte
 Variante namens `gdebi-gtk` (aus dem Paket 'gdebi'
-<<Debian-Paket-gdebi>> -- siehe <<fig.gdebi-gtk>>) und eine
-KDE-Variante namens `gdebi-kde` (aus dem gleichnamigen Paket 'gdebi-kde'
-<<Debian-Paket-gdebi-kde>>). 
+<<Debian-Paket-gdebi>> -- siehe <<fig.gdebi-gtk>>) wird aktiv gepflegt
+und weiterentwicklet. Die KDE-Variante namens `gdebi-kde` (aus dem
+gleichnamigen Paket 'gdebi-kde' <<Debian-Paket-gdebi-kde>>) wird nicht
+mehr weiterentwickelt und gab es zuletzt in Debian 9 Stretch..
 
 .`gdebi` mit den Informationen zum Paket 'apt-doc'
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/gdebi-gtk.png[id="fig.gdebi-gtk", width="50%"]

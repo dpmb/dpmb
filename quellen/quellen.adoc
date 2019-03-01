@@ -332,7 +332,7 @@
 
 - [[[Debian-Paket-gdebi-core]]] Debian-Paket 'gdebi-core', https://packages.debian.org/de/stable/gdebi-core
 
-- [[[Debian-Paket-gdebi-kde]]] Debian-Paket 'gdebi-kde', https://packages.debian.org/de/stable/gdebi-kde
+- [[[Debian-Paket-gdebi-kde]]] Debian-Paket 'gdebi-kde', https://packages.debian.org/de/stretch/gdebi-kde
 
 - [[[Debian-Paket-geoip-database]]] Debian-Paket 'geoip-database', https://packages.debian.org/de/stable/geoip-database
 
