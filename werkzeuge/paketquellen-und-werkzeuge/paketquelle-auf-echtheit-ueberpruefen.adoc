@@ -246,6 +246,9 @@ einen Fingerabdruck zu einem Schlüssel anzeigen zu lassen.
 .Hauptfenster von gui-apt-key
 image::werkzeuge/paketquellen-und-werkzeuge/gui-apt-key.png[id="fig.gui-apt-key", width="50%"]
 
+`gui-apt-key` ist allerdings in Debian 10 _Buster_ nicht enthalten,
+könnte aber in späteren Veröffentlichungen wieder zurückkehren.
+
 `curses-apt-key` nutzt dieselben Backend-Bibliotheken wie
 `gui-apt-key`. Daher bietet es die gleichen Funktionalitäten, braucht
 jedoch dazu keine graphische Umgebung und eignet sich daher

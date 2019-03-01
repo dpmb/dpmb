@@ -139,7 +139,11 @@ uid                  Wheezy Stable Release Key <debian-release@lists.debian.org>
 <<paketquelle-auf-echtheit-ueberpruefen>> aufgeführt.
 
 Für eine graphische Darstellung nutzen Sie stattdessen das Werkzeug
-`gui-apt-key` aus den gleichnamigen Paket <<Debian-Paket-gui-apt-key>>.
+`gui-apt-key` aus den gleichnamigen Paket
+<<Debian-Paket-gui-apt-key>>. Es ist allerdings in Debian 10 _Buster_
+nicht enthalten, könnte aber in späteren Veröffentlichungen wieder
+zurückkehren.
+
 Es existiert auch eine TUI-Variante namens `curses-apt-key`
 <<curses-apt-key>>. Diese ist aber zur Zeit noch nicht offizieller
 Bestandteil von Debian, da dazu zuerst das Paket `gui-apt-key` in

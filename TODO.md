@@ -9,10 +9,3 @@ Alle Alioth-Links raus oder ersetzen
 ```
 https://collab-maint.alioth.debian.org/debtree/
 ```
-
-Packages not in Debian Buster
------------------------------
-
-```
-https://packages.debian.org/de/testing/gui-apt-key = Title: Debian -- Error
-```
