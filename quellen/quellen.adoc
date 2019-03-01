@@ -247,9 +247,9 @@
 
 - [[[Debian-Paket-apt-move]]] Debian-Paket 'apt-move', https://packages.debian.org/de/stable/apt-move
 
-- [[[Debian-Paket-apt-offline]]] Debian-Paket 'apt-offline', https://packages.debian.org/de/stable/apt-offline
+- [[[Debian-Paket-apt-offline]]] Debian-Paket 'apt-offline', https://packages.debian.org/de/stretch/apt-offline
 
-- [[[Debian-Paket-apt-offline-gui]]] Debian-Paket 'apt-offline-gui', https://packages.debian.org/de/stable/apt-offline-gui
+- [[[Debian-Paket-apt-offline-gui]]] Debian-Paket 'apt-offline-gui', https://packages.debian.org/de/stretch/apt-offline-gui
 
 - [[[Debian-Paket-apt-rdepends]]] Debian-Paket 'apt-rdepends', https://packages.debian.org/de/stable/apt-rdepends
 
