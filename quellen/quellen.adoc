@@ -259,8 +259,6 @@
 
 - [[[Debian-Paket-apt-show-versions]]] Debian-Paket 'apt-show-versions', https://packages.debian.org/de/stable/apt-show-versions
 
-- [[[Debian-Paket-apt-transport-debtorrent]]] Debian-Paket 'apt-transport-debtorrent', https://packages.debian.org/de/stable/apt-transport-debtorrent
-
 - [[[Debian-Paket-ara]]] Debian-Paket 'ara', https://packages.debian.org/de/stable/ara
 
 - [[[Debian-Paket-aria2]]] Debian-Paket 'aria2', https://packages.debian.org/de/stable/aria2
@@ -305,8 +303,6 @@
 - [[[Debian-Paket-debtags]]] Debian-Paket 'debtags', https://packages.debian.org/de/stable/debtags
 
 - [[[Debian-Paket-debtags-edit]]] Debian-Paket 'debtags-edit', https://packages.debian.org/de/stable/debtags-edit
-
-- [[[Debian-Paket-debtorrent]]] Debian-Paket 'debtorrent', https://packages.debian.org/sid/debtorrent
 
 - [[[Debian-Paket-devscripts]]] Debian-Paket 'devscripts', https://packages.debian.org/de/stable/devscripts
 
@@ -517,8 +513,6 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Wiki-Debian-Repository-Format]]] Debian Wiki: Debian Repository Format, https://wiki.debian.org/RepositoryFormat
 
-- [[[Debian-Wiki-DebTorrent]]] Debian Wiki: DebTorrent, https://wiki.debian.org/DebTorrent
-
 - [[[Debian-Wiki-DiskImage]]] Debian Wiki: Diskimage, https://wiki.debian.org/DiskImage
 
 - [[[Debian-Wiki-FAI]]] Debian Wiki: FAI (Fully Automatic Installation) for Debian GNU/Linux, https://wiki.debian.org/FAI
@@ -536,8 +530,6 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[Debian-Wiki-WNPP]]] Debian Wiki: Work-Needing and Prospective Packages (WNPP), https://wiki.debian.org/WNPP
 
 - [[[Debian-WNPP-RFP-apt-fast]]] Debian Request for Package: apt-fast, https://bugs.debian.org/690183
-
-- [[[debtorrent-Projektseite]]] Webseite zum DebTorrent-Projekt, https://debtorrent.alioth.debian.org/
 
 - [[[debtree-Projektseite]]] Webseite zum debtree-Projekt, https://collab-maint.alioth.debian.org/debtree/
 

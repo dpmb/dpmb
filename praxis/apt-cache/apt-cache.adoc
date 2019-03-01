@@ -18,6 +18,4 @@ include::apt-cacher.adoc[]
 // apt-cacher-ng
 include::apt-cacher-ng.adoc[]
 
-// debtorrent
-include::debtorrent.adoc[]
 // Datei (Ende): ./praxis/apt-cache/apt-cache.adoc
