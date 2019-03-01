@@ -1,0 +1,47 @@
+// Datei: ./anhang/anhang-entfernte-werkzeuge/anhang-entfernte-werkzeuge.adoc
+// Baustelle: Rohtext
+
+[[anhang-entfernte-werkzeuge]]
+== Früher im Buch erwähnte Werkzeuge  ==
+
+`apprecommender`::
+Ein Programm, das anhand von `debtags` und der Liste der installierten
+Paketen weitere, ähnliche, aber noch nicht installierte Paket
+vorschlug. Wurde 2016 in Debian Unstable aufgenommen, aber 2017
+bereits wieder entfernt. War nie Bestandteil einer stabilen
+Debian-Veröffentlichung.
+
+`apt-transport-debtorrent`::
+Ein P2P-Plugin zum Kopieren von von anderen Maschinen im LAN bereits
+heruntergeladenen Paketen aus `/var/cache/apt/archives/`. War zuletzt
+in Debian 7 _Wheezy_ und wurde 2013 aus Debian Unstable entfernt.
+
+`aptoncd`::
+Eine weitere Lösung zum Aktualisierungen einspielen auf Systemen ohne
+Netzwerkanschluss. War zuletzt in Debian 8 _Jessie_ und wurde 2018 aus
+Debian Unstable entfernt.
+
+`ara` and `xara-gtk`::
+Kommandozeilen- und graphische Programme zum Durchsuchen der
+Debian-Paket-Listen. Zuletzt in Debian 9 _Stretch_, waren zum
+Zeitpunkt der Entfernung bereits 7 Jahre verweist und waren nicht mehr
+kompatibel mit den aktuellen Versionen der internen
+(Text-)Datenbank-Formaten von apt und dpkg.
+
+`auto-apt`::
+Programm ähnlich zu `command-not-found`, das jedoch das nicht
+installierte Programm, das versucht wurde zu benutzen, gleich
+installiert. (Passende Rechte vorausgesetzt.). War zuletzt in Debian 8
+_Jessie_ und wurde 2017 aus Debian Unstable entfernt.
+
+`debtags-edit`::
+Ein graphisches Programm zum Bearbeiten von Paket-Tags. Wurde obsolet
+mit der Umstellung der debtags-Webseite auf Single-Sign-On.
+
+`gdebi-kde`::
+graphische, KDE-basierte Benutzerschnittstelle zu gdebi, siehe
+<<gui-gdebi>>. Zuletzt in Debian 9 _Stretch_, war das letzte Paket,
+das noch pykde4 brauchte.
+
+
+// Datei (Ende): ./anhang/anhang-entfernte-werkzeuge/anhang-entfernte-werkzeuge.adoc

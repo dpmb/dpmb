@@ -12,4 +12,7 @@ include::anhang-paketkommando/rpm-yum-dpkg.adoc[]
 // welche Distributionen setzen das deb-Paketformat ein
 include::paketformat-im-einsatz/paketformat-im-einsatz.adoc[]
 
+// Aus dem Buch wieder entfernte Pakete/Tools
+include::anhang-entfernte-werkzeuge/anhang-entfernte-werkzeuge.adoc[]
+
 // Datei (Ende): ./anhang/anhang.adoc
