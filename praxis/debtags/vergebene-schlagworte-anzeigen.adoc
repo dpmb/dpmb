@@ -113,8 +113,7 @@ ebenfalls zutreffend ist.
 (((Debianpaket, ara)))
 (((Debianpaket, goplay)))
 (((PackageSearch)))
-(((Xara)))
-Debtags zeigen Ihnen PackageSearch und Xara an, ebenso die bereits oben
+Debtags zeigt Ihnen z.B. PackageSearch an, ebenso die bereits oben
 genannten Programme aus dem Paket 'goplay'. Alle Werkzeuge haben
 gemeinsam, dass die Debtags-Informationen auf der rechten Seite der
 Benutzeroberfläche zu finden sind – entweder in der oberen oder unteren
@@ -122,22 +121,7 @@ Hälfte.
 
 Bei PackageSearch tragen Sie zuerst das gewünschte Paket über das
 Suchfeld unten rechts ein und sehen danach die Debtags-Informationen im
-darunter angeordneten Reiter `Details`. Bei Xara ist Ihr Ziel das
-Informationsfeld oben rechts, welches gefüllt wird, nachdem Sie zuvor
-links unten das Paket und danach links oben den Eintrag `Tag` aus der
-Liste der Paketdetails ausgewählt haben.
-
-<<fig.xara-show-debtags>> zeigt Ihnen das Suchergebnis zum Paket 'ara'.
-Dieses Softwarepaket wurde in den beiden Sprachen C++ und Ocaml
-entwickelt (`implemented-in::c++`, `implemented-in::ocaml`), verfügt
-über eine Kommandozeilenschnittstelle (`interface::commandline`) und
-zählt ebenfalls zu den Anwendungen (`role::program`,
-`scope::application`). `ara` dient zur Suche in den Softwarepaketen
-(`use::searching`, `works-with::software-package`) und ist mit dem
-Debtag `suite::debian` als Debian-spezifisches Programm gekennzeichnet.
-
-.Darstellung der Schlagworte zum Paket 'xara-gtk' in Xara
-image::praxis/debtags/xara-show-debtags.png[id="fig.xara-show-debtags", width="50%"]
+darunter angeordneten Reiter `Details`.
 
 ==== Über den Webbrowser ====
 

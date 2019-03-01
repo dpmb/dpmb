@@ -101,20 +101,17 @@ $
 (((Debianpaket, adept)))
 (((Debianpaket, ara)))
 (((Debianpaket, packagesearch)))
-(((Debianpaket, xara-gtk)))
 (((PackageSearch)))
-(((Xara)))
 Die in <<gui-zur-paketverwaltung>> bereits vorgestellten _graphischen
 Werkzeuge_ Synaptic, SmartPM, das Ubuntu Software Center, Gdebi und
 PackageKit können bislang nicht mit dem Thema Debtags umgehen.
 Stattdessen entstanden auf der Grundlage der Bibliotheken zu Debtags
 mehrere Alternativen, die von Ihnen zum Teil ein sehr unübliches
 Bedienritual erfordern. Dazu gehören PackageSearch
-<<Debian-Paket-packagesearch>>, Adept <<Debian-Paket-adept>> und Xara
-<<Debian-Paket-xara-gtk>>. Letzteres ist die X11-Version des bereits
-oben gezeigten Kommandozeilenwerkzeugs `ara`. Alle Programme bieten die
-Suche anhand der Debtags über die Paketdatenbank an und verfügen
-darüber hinaus auch über eine einfache Schnittstelle zur Paketverwaltung.
+<<Debian-Paket-packagesearch>> und Adept <<Debian-Paket-adept>>. Alle
+Programme bieten die Suche anhand der Debtags über die Paketdatenbank
+an und verfügen darüber hinaus auch über eine einfache Schnittstelle
+zur Paketverwaltung.
 
 // Stichworte für den Index
 (((Debianpaket, goplay)))
@@ -151,7 +148,7 @@ Eine Möglichkeit, Schlagworte zu Paketen zu ergänzen oder Schlagworte
 zu korrigieren, besprechen wir in <<pakete-um-schlagworte-ergaenzen>>
 genauer.
 
-.Debian Tags zum Paket 'xara-gtk'
+.Debian Tags zum Paket 'xara-gtk' (zuletzt in Debian 9 Stretch)
 image::praxis/debtags/debtags-xara-gtk.png[id="fig.debtags-xara-gtk", width="50%"]
 
 // Datei (Ende): ./praxis/debtags/debtags-werkzeuge.adoc

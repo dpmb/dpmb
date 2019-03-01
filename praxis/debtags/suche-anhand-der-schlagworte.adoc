@@ -162,21 +162,14 @@ image::praxis/debtags/aptitude-debtags-browser.png[id="fig.aptitude-debtags-brow
 
 // Stichworte für den Index
 (((PackageSearch)))
-(((Xara)))
+
 In dieser Kategorie bleiben aus der Liste der Werkzeuge zur
-Paketverwaltung nur die beiden Kandidaten PackageSearch und Xara übrig
-(siehe <<fig.packagesearch>> und <<fig.xara>>). Bei ersterem stöbern Sie
-über Liste oben rechts und selektieren daraus die gewünschten Einträge.
-Bei Xara tragen Sie eine Suchanfrage in das Eingabefeld unter dem Reiter
-`Advanced` rechts unten ein und lösen danach mit `Run query` die
-Recherche aus. Alternativ wählen Sie den Reiter `Simple` aus und
-befüllen die (vielen) Eingabefelder entsprechend.
+Paketverwaltung nur PackageSearch (siehe <<fig.packagesearch>>)
+übrig. Bei PackageSearch stöbern Sie über die Liste oben rechts und
+selektieren daraus die gewünschten Einträge.
 
 .PackageSearch im Einsatz
 image::praxis/debtags/packagesearch.png[id="fig.packagesearch", width="50%"]
-
-.Xara im Einsatz
-image::praxis/debtags/xara.png[id="fig.xara", width="50%"]
 
 ==== Suche über den Webbrowser ====
 

@@ -41,7 +41,6 @@ beziehen.
 (((SmartPM)))
 (((Synaptic)))
 (((tasksel)))
-(((xara)))
 Daraufhin begann die Entwicklung von `dselect`, welches aus dem
 Quellcode von `dpkg` gebaut wird, aber als eigenständiges Programm
 gilt. Später folgten `console-apt` (inzwischen aufgegeben) und
@@ -61,9 +60,8 @@ Heute stehen weitere textbasierte und graphische Benutzeroberflächen für
 `dpkg` zur Verfügung. Neben `aptitude` sind das Synaptic (siehe
 <<gui-synaptic>>), PackageKit (siehe <<gui-packagekit>>) – als Basis für
 Gnome-PackageKit und Apper bei KDE – sowie Muon (siehe <<gui-muon>>),
-PackageSearch (siehe <<debtags-werkzeuge>>), Xara
-<<Debian-Paket-xara-gtk>> und SmartPM (siehe <<gui-smartpm>>). Einen
-genaueren Blick werfen wir auf diese Programme in
+PackageSearch (siehe <<debtags-werkzeuge>>) und SmartPM (siehe
+<<gui-smartpm>>). Einen genaueren Blick werfen wir auf diese Programme in
 <<werkzeuge-zur-paketverwaltung>>.
 
 // Datei (Ende): ./konzepte/linux-dschungel/debians-paketsystem.adoc
