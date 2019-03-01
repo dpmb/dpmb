@@ -405,7 +405,7 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Paket-python-apt]]] Debian-Paket 'python-apt', https://packages.debian.org/de/stable/python-apt
 
-- [[[Debian-Paket-python-software-properties]]] Debian-Paket 'python-software-properties', https://packages.debian.org/de/stable/python-software-properties
+- [[[Debian-Paket-python-software-properties]]] Debian-Paket 'python-software-properties', https://packages.debian.org/de/jessie/python-software-properties
 
 - [[[Debian-Paket-reportbug]]] Debian-Paket 'reportbug', https://packages.debian.org/de/stable/reportbug
 
@@ -769,6 +769,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[SmartPM]]] Smart Package Manager, Projektseite, http://labix.org/smart
 
 - [[[SOCKS]]] SOCKS-Proxy, Wikipedia, https://de.wikipedia.org/wiki/SOCKS
+
+- [[[Software-Properties]]] Projekt Software Properties, https://salsa.debian.org/pkgutopia-team/software-properties
 
 - [[[SourceForge]]] SourceForge, https://sourceforge.net/
 

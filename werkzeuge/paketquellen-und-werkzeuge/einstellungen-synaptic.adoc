@@ -14,8 +14,10 @@ Center (siehe <<gui-ubuntu-software-center>>) können Sie die Datei
 Dialog unter dem Menüpunkt menu:Einstellungen[Paketquellen]. Unter
 Gnome/GTK erfolgt daraufhin ein Aufruf des Programms
 `software-properties-gtk` aus dem bereits weiter oben genannten Projekt
-Python Software Properties <<Debian-Paket-python-software-properties>>.
-Das Pendant unter KDE heißt `software-properties-kde`.
+Software Properties <<software-properties>>.
+Das Pendant unter KDE heißt `software-properties-kde` und kommt aus
+dem selben Projekt.
+
 
 Über die verschiedenen Reiter stellen Sie die gewünschten Paketquellen
 ein. <<fig.synaptic-paketquellen>> zeigt die Einstellungen zu den 
