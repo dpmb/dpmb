@@ -243,8 +243,6 @@
 
 - [[[Debian-Paket-apt-doc]]] Debian-Paket 'apt-doc', https://packages.debian.org/de/stable/apt-doc
 
-- [[[Debian-Paket-apt-fast]]] Debian-Paket 'apt-fast', https://packages.debian.org/de/stable/apt-fast
-
 - [[[Debian-Paket-apt-listbugs]]] Debian-Paket 'apt-listbugs', https://packages.debian.org/de/stable/apt-listbugs
 
 - [[[Debian-Paket-apt-listchanges]]] Debian-Paket 'apt-listchanges', https://packages.debian.org/de/stable/apt-listchanges
@@ -534,6 +532,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[Debian-Wiki-Skype]]] Debian Wiki: Skype, https://wiki.debian.org/skype
 
 - [[[Debian-Wiki-WNPP]]] Debian Wiki: Work-Needing and Prospective Packages (WNPP), https://wiki.debian.org/WNPP
+
+- [[[Debian-WNPP-RFP-apt-fast]]] Debian Request for Package: apt-fast, https://bugs.debian.org/690183
 
 - [[[debtorrent-Projektseite]]] Webseite zum DebTorrent-Projekt, https://debtorrent.alioth.debian.org/
 

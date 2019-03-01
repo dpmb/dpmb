@@ -17,7 +17,7 @@ Benutzer stört oder beeinträchtigt
 ** eigener Mirror (siehe <<eigenen-apt-mirror-aufsetzen>>)
 
 * weitere Softwarepakete zur Beschleunigung
-** 'apt-fast' <<apt-fast>> und <<Debian-Paket-apt-fast>>
+** 'apt-fast' <<apt-fast>> (bisher existiert kein offizielles Debian-Paket, siehe auch <<Debian-WNPP-RFP-apt-fast>>)
 *** Shell-Wrapper um APT und `aptitude`
 *** Download der Pakete über mehrere, parallele Verbindungen
 *** benötigt den Downloadhelfer 'aria2' <<Debian-Paket-aria2>> oder 'axel'
