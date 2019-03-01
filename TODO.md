@@ -1,5 +1,5 @@
-TODO bzg. nicht mehr aktueller Links, Pakete, etc.
-==================================================
+TODO bzgl. nicht mehr aktueller Links, Pakete, etc.
+===================================================
 
 Alle Alioth-Links raus oder ersetzen
 ------------------------------------
