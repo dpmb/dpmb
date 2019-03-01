@@ -209,8 +209,11 @@ Sicherheitsaktualisierungen der entsprechenden Bibliotheken
 aufgefrischt.
 
 Allein die Pflege dieses Pakets war schon recht mühsam. Ab der
-Einführung von 'multiarch' wurde es gegenstandslos. Darum ist es seit
+Einführung von 'multiarch' wurde es gegenstandslos. Darum ist es in
 Debian 7.0 'Wheezy' ein (leeres) Übergangspaket auf die passenden
-'multiarch'-fähigen Einzelpakete der Architektur 'i386'.
+'multiarch'-fähigen Einzelpakete der Architektur 'i386'. In Debian 8
+Jessie ist bereits nicht mehr enthalten, auch wenn man selbst
+heutzutage hier und da noch über Pakete von Drittparteien findet, die
+davon abhängen zu scheinen.
 
 // Datei (Ende): ./konzepte/linux-dschungel/debian-architekturen.adoc

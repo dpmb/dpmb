@@ -350,7 +350,7 @@
 
 - [[[Debian-Paket-how-can-i-help]]] Debian-Paket 'how-can-i-help', https://packages.debian.org/de/stable/how-can-i-help
 
-- [[[Debian-Paket-ia32-libs]]] Debian-Paket 'ia32-libs', https://packages.debian.org/de/stable/ia32-libs
+- [[[Debian-Paket-ia32-libs]]] Historisches Debian-Paket 'ia32-libs', https://packages.qa.debian.org/ia32-libs
 
 - [[[Debian-Paket-init]]] Debian-Paket 'init', https://packages.debian.org/de/stable/init
 
