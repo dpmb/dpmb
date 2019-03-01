@@ -138,25 +138,18 @@ Spiele (siehe <<fig.goplay>>), `golearn` auf Lernprogramme und
 image::praxis/debtags/goplay.png[id="fig.goplay", width="50%"]
 
 // Stichworte für den Index
-(((Debianpaket, debtags-edit)))
-(((Debtags, Debtags Editor)))
-(((Debtags, Enrico Zini)))
-Zur vereinfachten Bearbeitung des Vokabulars hat Enrico Zini vor Jahren
-eine graphische Benutzeroberfläche namens 'Debtags Editor' entworfen (Paket
-'debtags-edit' <<Debian-Paket-debtags-edit>>. Diese befindet sich
-derzeit im Dornröschenschlaf und darauf gehen wir in
-<<verwendetes-vokabular-bearbeiten-und-erweitern>> ein.
-
-// Stichworte für den Index
 (((Debtags, Debtags Editor)))
 (((Debtags, Schnittstellen)))
 (((Debtags, Suche anhand von Schlagworten)))
-Als _Schnittstellen über den Webbrowser_ stehen Ihnen als Variante eins
+Als _Schnittstellen über den Webbrowser_ stehen Ihnen
 die Paketsuche über die Debian-Webseite zur Verfügung
 <<Debian-Debtags-Search>>. Bei den Suchergebnissen werden die Debtags
 des jeweiligen Pakets von vornherein mit angezeigt (siehe
-<<fig.debtags-xara-gtk>>). Variante zwei ist der 'Debtags Editor',
-welchen wir in <<pakete-um-schlagworte-ergaenzen>> genauer besprechen.
+<<fig.debtags-xara-gtk>>).
+
+Eine Möglichkeit, Schlagworte zu Paketen zu ergänzen oder Schlagworte
+zu korrigieren, besprechen wir in <<pakete-um-schlagworte-ergaenzen>>
+genauer.
 
 .Debian Tags zum Paket 'xara-gtk'
 image::praxis/debtags/debtags-xara-gtk.png[id="fig.debtags-xara-gtk", width="50%"]

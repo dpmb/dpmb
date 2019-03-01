@@ -302,8 +302,6 @@
 
 - [[[Debian-Paket-debtags]]] Debian-Paket 'debtags', https://packages.debian.org/de/stable/debtags
 
-- [[[Debian-Paket-debtags-edit]]] Debian-Paket 'debtags-edit', https://packages.debian.org/de/stable/debtags-edit
-
 - [[[Debian-Paket-devscripts]]] Debian-Paket 'devscripts', https://packages.debian.org/de/stable/devscripts
 
 - [[[Debian-Paket-debsums]]] Debian-Paket 'debsums', https://packages.debian.org/de/stable/debsums
