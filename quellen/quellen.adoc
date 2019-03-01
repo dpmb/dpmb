@@ -413,7 +413,7 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Paket-rpm]]] Debian-Paket 'rpm', https://packages.debian.org/de/stable/rpm
 
-- [[[Debian-Paket-rpmlint]]] Debian-Paket 'rpmlint', https://packages.debian.org/de/stable/rpmlint
+- [[[Debian-Paket-rpmlint]]] Debian-Paket 'rpmlint', https://packages.debian.org/de/stretch/rpmlint
 
 - [[[Debian-Paket-sensible-utils]]] Debian-Paket 'sensible-utils', https://packages.debian.org/de/stable/sensible-utils
 
