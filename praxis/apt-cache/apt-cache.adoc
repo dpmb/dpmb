@@ -4,7 +4,7 @@
 
 [[apt-cache]]
 
-== Einen APT-Cache einrichten ==
+== Einen APT-Paket-Cache einrichten ==
 
 // Begriff
 include::begriff.adoc[]
