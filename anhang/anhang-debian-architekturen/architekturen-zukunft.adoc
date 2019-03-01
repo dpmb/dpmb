@@ -16,6 +16,11 @@ PowerPC-Prozessoren mit Signal Processing Engine.
 ppc64 (powerpc64-linux-gnu)::
 64-Bit-PowerPC-Prozessoren mit VMX-Einheit.
 
+riscv64 (riscv64-linux-gnu)::
+RISC-V ist eine offene Befehlssatzarchitektur, die auf dem bewährten
+Design von RISC (Reduced Instruction Set Computer) aufbaut und unter
+einer BSD-Lizenz für jedermann verfügbar ist.
+
 sh4::
 SuperH, eine Portierung auf Hitachis SuperH-Prozessoren.
 

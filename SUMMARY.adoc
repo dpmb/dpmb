@@ -253,6 +253,7 @@
  link:anhang/teil-anhang.adoc[Anhang]
 . link:anhang/anhang-debian-architekturen/anhang-debian-architekturen.adoc[Debian-Architekturen]
 .. link:anhang/anhang-debian-architekturen/offizielle-architekturen.adoc[Offizielle Architekturen]
+.. link:anhang/anhang-debian-architekturen/non-linux-architekturen.adoc[Architekturen, die nicht den Linux-Kernel verwenden]
 .. link:anhang/anhang-debian-architekturen/veraltete-architekturen.adoc[Veraltete Architekturen]
 .. link:anhang/anhang-debian-architekturen/architekturen-zukunft.adoc[Architekturen, deren Unterstützung vorgesehen ist]
 . link:anhang/anhang-paketkommando/rpm-yum-dpkg.adoc[Kommandos zur Paketverwaltung im Vergleich]

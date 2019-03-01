@@ -4,10 +4,9 @@
 [[anhang-offizielle-debian-architekturen]]
 === Offizielle Architekturen ===
 
-Debian unterstützt die folgenden Architekturen und Plattformen:
+Debian 10 _Buster_  unterstützt die folgenden Architekturen und Plattformen:
 
 i386 (i486/i586/i686)::
-
 x86 (PC) 32-Bit. Trotz des Namens ab Debian 8 _Jessie_ nur
 Pentium-kompatible und ab Debian 9 _Stretch_ nur noch
 Pentium-II-kompatible Hardware. In Debian 6 _Squeeze_ und 7 _Wheezy_
@@ -29,19 +28,16 @@ armhf (arm-linux-gnueabihf)::
 ARM. Hardware Floating Point ABI, ab Debian 7.0 'Wheezy' unterstützt
 <<Debian-Wiki-ARM-EABI-Port>>.
 
-hurd-i386 (i486-gnu)::
-32-Bit-PC (i386) mit GNU-Hurd-Kernel (nur in Debian 'unstable').
-
 mips (mips-linux-gnu)::
 MIPS (Big Endian).
 
 mipsel (mipsel-linux-gnu)::
 MIPS (Little Endian).
 
-powerpc (powerpc-linux-gnu)::
-Motorola/IBM PowerPC. Läuft auf vielen der Apple Macintosh
-PowerMac-Modelle sowie auf Rechnern der offenen CHRP- und
-PReP-Architekturen.
+mips64el (mips64el-linux-gnuabi64)::
+64-Bit MIPS (Little Endian) mit der N64 ABI,
+Hardware-Fließkommazahlen-Unterstützung und der MIPS64R2
+Befehlssatzarchitektur.
 
 ppc64el (powerpc64le-linux-gnu)::
 PowerPC 64-Bit (POWER7+, POWER8). Little-Endian-Portierung von ppc64,

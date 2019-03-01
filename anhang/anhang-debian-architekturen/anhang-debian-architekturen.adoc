@@ -7,6 +7,9 @@
 // offizielle Architekturen
 include::offizielle-architekturen.adoc[]
 
+// Architekturen, die nicht einen Linux-Kernel verwenden
+include::non-linux-architekturen.adoc[]
+
 // veraltete Architekturen
 include::veraltete-architekturen.adoc[]
 
