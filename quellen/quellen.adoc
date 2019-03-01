@@ -482,7 +482,7 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-SSO-Alioth]] Debian Single-Sign-On (SSO) via Alioth-Konto, https://wiki.debian.org/DebianSingleSignOn#If_you_ARE_NOT_.28yet.29_a_Debian_Developer
 
-- [[[Debian-udeb]]] Debian-Dokumentation zu 'udeb', https://d-i.alioth.debian.org/doc/internals/ch03.html
+- [[[Debian-udeb]]] Debian-Dokumentation zu 'udeb', https://d-i.debian.org/doc/internals/ch03.html
 
 - [[[Debian-Release-Notes]]] Veröffentlichungshinweise zur
   Debian-Distribution, https://www.debian.org/releases/stable/releasenotes
