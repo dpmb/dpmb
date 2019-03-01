@@ -6,65 +6,14 @@
 
 === Neue Software ===
 
-==== Installation bei Bedarf mittels `auto-apt` ====
+==== Empfehlungen mittels `command-not-found` ====
 
 // Stichworte für den Index
-(((Debianpaket, auto-apt)))
-
-* Paket 'auto-apt' (<<Debian-Paket-auto-apt>>)
-* Kurzfassung: "package search by file and on-demand package
-installation tool auto-apt checks the file access of programs running
-within its environments, and if a program tries to access a file known
-to belong in an uninstalled package, auto-apt will install that package
-using apt-get. This feature requires apt and sudo to work. It also
-provides simple database to search which package contains a requesting
-file."
-
-* Beschreibung aus dem Debian-Anwenderhandbuch:
-
-** "auto-apt dient zur Installation von Programmen „bei Bedarf“. Dies
-kann beispielsweise bei der Software-Entwicklung oder auch schon beim
-einfachen Übersetzen eines neuen Kernels sinnvoll sein. Mitunter fehlt
-auf frisch installierten Debian Systemen noch das Paket bin86, das für
-das Erzeugen eines Kernels benötigt wird. Um automatisch die fehlenden
-Pakete zu installieren, stellen Sie einfach dem Aufruf von make das
-Kommando auto-apt voran: auto-apt make bzImage. Werden nun während des
-Durchlaufs fehlende Programme festgestellt, so ermittelt auto-apt, zu
-welchem Paket diese gehören, und installiert die fehlenden Pakete
-inklusive aller Abhängigkeiten."
-
-// Stichworte für den Index
-(((auto-apt, run)))
-(((auto-apt, update)))
-(((auto-apt, update-local)))
-(((auto-apt, updatedb)))
-
-* Aufruf: `auto-apt run Kommando`
-** werden zusätzliche Dateien benötigt, fragt `auto-apt`, ob diese
-nachinstalliert werden sollen
-
-* Basis: kleine Datenbank, die aktuell gehalten sein sollte
-** Kommandos dazu:
-*** `auto-apt update`
-*** `auto-apt updatedb`
-*** `auto-apt update-local`
-
-* `auto-apt` ist "orphaned" und hat momentan keinen richtigen
-  Maintainer, siehe https://bugs.debian.org/541016
-
-==== Empfehlungen mittels `command-not-found` und `apprecommender` ====
-
-// Stichworte für den Index
-(((Debianpaket, apprecommender)))
 (((Debianpaket, command-not-found)))
 
 * Wer nicht gleich das Paket installiert haben will, sondern nur beim
   Aufruf auf der Kommandozeile den Hinweis bekommen, welches Paket
   installiert werden müsste, für den ist vermutlich das Paket
   'command-not-found' <<Debian-Paket-command-not-found>> das richtige.
-
-* Ab voraussichtlich Debian 10 _Buster_: 'apprecommender'
-<<Debian-Paket-apprecommender>>, empfiehlt Anwendung basierend auf u.a.
-Debtags der installierten Anwendungen. Noch sehr neu und roh.
 
 // Datei (Ende): ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/neue-software.adoc

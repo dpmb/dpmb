@@ -54,12 +54,6 @@ Benutzung auf lokalen Rechnern und Einzelsystemen -- bspw. im Rahmen
 einer ``Testinstallation'' -- nichts im Wege. Einem großflächigen
 Alltagsbetrieb des erzeugten Pakets stehen wir skeptisch gegenüber.
 
-Interessant ist die Verwendung von `checkinstall` in Kombination mit dem
-Werkzeug `auto-apt` <<Debian-Paket-auto-apt>>. Damit fügen Sie fehlende Pakete
-bei Bedarf hinzu und lösen offene Paketabhängigkeiten auf. Genauer gehen
-wir drauf unter ``Fehlende Pakete bei Bedarf hinzufügen'' in
-<<fehlende-pakete-bei-bedarf-hinzufuegen>> ein.
-
 ==== Weitere noch unbearbeitete Notizen ====
 
 * Vorteile:

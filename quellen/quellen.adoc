@@ -221,8 +221,6 @@
 
 - [[[Debian-Paket-apper]]] Debian-Paket 'apper', https://packages.debian.org/de/stable/apper
 
-- [[[Debian-Paket-apprecommender]]] Debian-Paket 'apprecommender', https://packages.debian.org/de/buster/apprecommender
-
 - [[[Debian-Paket-approx]]] Debian-Paket 'approx', https://packages.debian.org/de/stable/approx
 
 - [[[Debian-Paket-apt]]] Debian-Paket 'apt', https://packages.debian.org/de/stable/apt
@@ -264,8 +262,6 @@
 - [[[Debian-Paket-aria2]]] Debian-Paket 'aria2', https://packages.debian.org/de/stable/aria2
 
 - [[[Debian-Paket-autopkgtest]]] Debian-Paket 'autopkgtest', https://packages.debian.org/de/stable/autopkgtest
-
-- [[[Debian-Paket-auto-apt]]] Debian-Paket 'auto-apt', https://packages.debian.org/de/stable/auto-apt
 
 - [[[Debian-Paket-checkinstall]]] Debian-Paket 'checkinstall', https://packages.debian.org/de/stretch/checkinstall
 
