@@ -41,7 +41,7 @@ Ihren Händen.
 Uns fasziniert die Paketverwaltung unter Debian, deren Mächtigkeit und
 unglaubliche Robustheit. Sie funktioniert so klaglos, dass man schon
 wieder skeptisch werden müsste und nach konzeptionellen Fehlern sucht –
-aber es gibt tatsächlich keine. Wie in jedem größeren IT-Projekt gibt
+aber es gibt tatsächlich kaum welche. Wie in jedem größeren IT-Projekt gibt
 es neben den intensiv genutzten, gut dokumentierten Bereichen aber auch
 ``dunkle Ecken'' und unangenehme Bugs, kuriose Lösungen und kurzfristige
 Workarounds; es sind allerdings nur wenige, die auch nur in recht
