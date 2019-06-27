@@ -72,7 +72,7 @@ Hintergrund für die Recherche nach Alternativen zur `aptsh` war der
 Fakt, dass das Projekt seit Debian 6 'Squeeze' leider verwaist ist
 <<aptsh-verwaist-Bug-Report-831493>>. Alle später veröffentlichten
 Pakete sind lediglich Non-Maintainer-Uploads (NMU) oder QA-Uploads und
-damit ohne kontinuierliche Betreuung.
+damit sowieso nicht mehr mit kontinuierlicher Betreuung.
 
 Zudem kommt hinzu, dass das Projekt seit dem Auf-und-Ab von berliOS
 <<berliOS>> unter wechselnden Adressen auffindbar war. Die Projektseite
@@ -80,6 +80,8 @@ Zudem kommt hinzu, dass das Projekt seit dem Auf-und-Ab von berliOS
 "Wayback-Machine" des Web-Archives. Da das Projekt
 'BackupTheBerlios' u.a. die aptsh-Subversion-Versionsgeschichte auf 
 GitHub importiert hat <<aptsh-BackupTheBerlios-Git-Repository>>,
-erleichert eine zukünftige Weiterentwicklung.
+erleichert eine potentielle zukünftige Weiterentwicklung und Rückkehr
+nach Debian.
+
 
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/aptsh.adoc
