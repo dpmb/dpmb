@@ -102,6 +102,18 @@ Verteilte Versionsverwaltung für Code und Dokumente, Open Source Press,
 München, 2. Auflage November 2014, ISBN 978-3-95539-119-5).
 ====
 
+==== Online-Fassung ====
+
+Unter https://buch.dpmb.org/ gibt es den jeweils aktuellsten Stand des
+Buches auch in diversen Formaten zum Online-Lesen oder
+Herunterladen. Diese Fassungen werden automatisch bei jedem `git push`
+frisch generiert.
+
+Sollte die Ihnen vorliegende Fassung (sei es als Paket in einer
+Debian-Veröffentlichung oder als gedrucktes Buch) nicht aktuell genug
+sein, so schauen Sie doch mal in die Online-Fassung. Vielleicht ist
+die entsprechende Stelle dort bereits aktualisiert worden.
+
 ==== Quellcode und Lizenz ====
 
 Der o.g. Quellcode des Buches findet sich auf GitHub <<dpmb-github>> und ist unter der
