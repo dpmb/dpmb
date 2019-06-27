@@ -54,6 +54,8 @@
 
 - [[[aptsh-verwaist-Bug-Report-831493]]] Bug-Report: aptsh verwaist, https://bugs.debian.org/831493
 
+- [[[aptsh-entfernen-Bug-Report-930680]]] Bug-Report: Bitte aptsh entfernen, https://bugs.debian.org/930680
+
 - [[[apt-cacher-ng-Projektseite]]] Projektseite zu 'apt-cacher-ng', https://www.unix-ag.uni-kl.de/~bloch/acng/
 
 - [[[apt-dater-Projektseite]]] Projektseite zu `apt-dater`, https://www.ibh.de/apt-dater/

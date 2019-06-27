@@ -12,12 +12,14 @@
 (((Debianpaket, libapt-pkg)))
 (((libapt-pkg)))
 Bei der `aptsh` (kurz für 'APT Shell') handelt es sich um eine Shell
-für die Paketverwaltung, die verfügbar war bis Debian 9 'Stretch' und
-Ubuntu 19.04 'Disco'. Es war zuletzt verwaist
+für die Paketverwaltung. Sie ist verfügbar war bis Debian 9 'Stretch'
+und Ubuntu 19.04 'Disco'. 'aptsh' war zuletzt mehrere Jahre verwaist
 <<aptsh-verwaist-Bug-Report-831493>> und hatte immer mehr Probleme,
 gegen neuere APT-Version zu bauen. Kurz vor dem Release von Debian 10
-'Buster' wurde es dann entfernt, weil es mit der APT-Verrsion nach
-'Buster' (≥ 1.9) nicht baute und seit Jahren verwaist war.
+'Buster' wurde es dann aus Debian Unstable und Testing (zu dem
+Zeitpunkt 'Buster') entfernt <<aptsh-entfernen-Bug-Report-930680>>,
+weil es mit der APT-Verrsion nach 'Buster' (≥ 1.9) nicht baute und
+seit Jahren verwaist war.
 
 Die Grundlage für `aptsh` bildet die Bibliothek 'libapt-pkg' (siehe ``apt und
 Bibliotheken'' in <<apt-und-bibliotheken>>). Als Inspirationsquelle für
