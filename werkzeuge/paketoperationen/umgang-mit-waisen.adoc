@@ -579,6 +579,8 @@ image::werkzeuge/paketoperationen/aptsh-orphans.png[id="fig.aptsh-orphans", widt
 .`aptsh` mit der Ausgabe des Kommandos `orphans-all`
 image::werkzeuge/paketoperationen/aptsh-orphans-all.png[id="fig.aptsh-orphans-all", width="50%"]
 
+`aptsh` ist verfügbar bis Debian 9 'Stretch' und Ubuntu 19.04 'Disco'.
+
 [[wajig]]
 
 ==== `wajig` ====
