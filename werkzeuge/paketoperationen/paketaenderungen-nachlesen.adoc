@@ -6,15 +6,23 @@
 
 === Paketänderungen nachlesen ===
 
+==== Das Änderungsprotokoll beziehen ====
+
+// Stichworte für den Index
+(((Paket, Änderungsprotokoll)))
 Für jedes Debianpaket existiert im entsprechenden Quellpaket (siehe
-<<sourcepakete>>) eine Datei mit den erfolgten Änderungen im Paket, ein
-sogenanntes 'Changelog'. Daraus ersehen Sie, was sich im Vergleich zur
-vorherigen Veröffentlichung getan hat und welche Änderungen der
-Maintainer zum Originalquellcode vorgenommen hat.
+<<sourcepakete>>) ein Protokoll mit den erfolgten Änderungen im Paket,
+ein sogenanntes 'Changelog' (Datei `debian/changelog`). Das ist eine
+Textdatei mit einzelnen Einträgen (siehe unten). Daraus ersehen Sie
+überblicksweise, was die Entwickler im Vergleich zur vorherigen
+Veröffentlichung des Paketes verändert haben und welche Änderungen oder
+Debian-spezifischen Anpassungen der Maintainer im Vergleich zum
+Originalquellcode zusätzlich vorgenommen hat.
 
 // Stichworte für den Index
 (((apt-get, changelog)))
 (((Paket, Änderungen nachlesen)))
+(((Paket, Changelog anzeigen)))
 Für APT bietet `apt-get` das Unterkommando `changelog`. Es bezieht das
 Protokoll der Änderungen für das angefragte Paket direkt vom Paketmirror
 und gibt dieses im Terminal aus. Die nachfolgenden Ausgaben zeigen den
@@ -34,7 +42,7 @@ $
 `aptitude` verfügt dazu ebenfalls über den Schalter `changelog`. Als
 zusätzlichen Parameter erwartet es den Namen eines Pakets, zudem diese
 Informationen bezogen und ausgegeben werden. Das angefragte Paket muss
-dazu nicht auf Ihrem Debiansystem installiert sein.
+dazu nicht einmal auf Ihrem Debiansystem installiert sein.
 
 .Die Paketänderungen zum Paket 'smartpm' ausgeben
 ----
@@ -59,5 +67,35 @@ smart (1.4-1) unstable; urgency=low
 
 $
 ----
+
+Die Beschreibung der vorgenommenen Änderungen folgt dabei einem
+festgelegten Schema. Dieses Schema ist im 'Debian Policy Manual'
+<<Debian-Policy-Manual>> im Abschnitt 'Source packages/Debian changelog'
+genau erklärt. Kurz zusammengefasst, ist jeder Version eines Paketes ein
+separater Block gewidment:
+
+.Format der erfolgten Änderungen
+----
+package (version) distribution(s); urgency=urgency
+  [optional blank line(s), stripped]
+  * change details
+  more change details
+  [blank line(s), included in output of dpkg-parsechangelog]
+  * even more change details
+  [optional blank line(s), stripped]
+-- maintainer name <email address>[two spaces]  date
+----
+
+Jeder dieser Blöcke beginnt stets mit dem Namen des Quellpakets, gefolgt
+von der Versionsnummer des Pakets, der Veröffentlichung
+<<veroeffentlichungen>> (zumeist `unstable`), sowie der Dringlichkeit
+oder dem Schweregrad der vorgenommenen Änderungen. Dieser Wert ist einer
+aus `low`, `medium`, `high`, `emergency` und `critical`. Darunter stehen
+die jeweiligen Änderungen als einfache Aufzählung.
+
+==== Zwei Paketversionen miteinander vergleichen ====
+
+Das Änderungsprotokoll beschreibt, welche Korrekturen das Paket erfahren
+hat.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/paketaenderungen-nachlesen.adoc
