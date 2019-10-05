@@ -310,6 +310,8 @@
 
 - [[[Debian-Paket-dh-make-perl]]] Debian-paket 'dh-make-perl', https://packages.debian.org/de/stable/dh-make-perl
 
+- [[[Debian-Paket-diffoscope]]] Debian-Paket 'diffoscope', https://packages.debian.org/buster/diffoscope
+
 - [[[Debian-Paket-dkms]]] Debian-Paket 'dkms' (Dynamic Kernel Modules Support), https://packages.debian.org/de/stable/dkms
 
 - [[[Debian-Paket-dlocate]]] Debian-Paket 'dlocate', https://packages.debian.org/de/stable/dlocate
@@ -721,6 +723,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[RaspberryPi]]] Webseite zur Hardwareplattform Raspberry Pi, https://www.raspberrypi.org/
 
 - [[[Raspbian]]] Debian für das Raspberry Pi, https://www.raspbian.org/
+
+- [[[ReproducibleBuilds]]] Reproducible Builds, https://reproducible-builds.org/
 
 - [[[RFC822]]] RFC 822: Standard For The Format Of Text Messages, IETF, https://www.ietf.org/rfc/rfc0822.txt
 

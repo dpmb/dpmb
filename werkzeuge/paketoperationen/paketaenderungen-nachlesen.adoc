@@ -87,15 +87,32 @@ package (version) distribution(s); urgency=urgency
 ----
 
 Jeder dieser Blöcke beginnt stets mit dem Namen des Quellpakets, gefolgt
-von der Versionsnummer des Pakets, der Veröffentlichung
-<<veroeffentlichungen>> (zumeist `unstable`), sowie der Dringlichkeit
-oder dem Schweregrad der vorgenommenen Änderungen. Dieser Wert ist einer
-aus `low`, `medium`, `high`, `emergency` und `critical`. Darunter stehen
-die jeweiligen Änderungen als einfache Aufzählung.
+von der Versionsnummer des Pakets, der Veröffentlichung (zumeist
+`unstable`) (siehe Abschnitt <<veroeffentlichungen>>), sowie der
+Dringlichkeit oder dem Schweregrad der vorgenommenen Änderungen. Dieser
+Wert ist einer aus `low`, `medium`, `high`, `emergency` und `critical`.
+Darunter stehen die jeweiligen Änderungen als einfache Aufzählung.
 
 ==== Zwei Paketversionen miteinander vergleichen ====
 
-Das Änderungsprotokoll beschreibt, welche Korrekturen das Paket erfahren
-hat.
+Wie oben bereits genannt, beschreibt das Änderungsprotokoll lediglich in
+groben Zügen, welche Korrekturen ein Paket erfahren hat. Mit Hilfe des
+Werkzeugs `diffoscope` <<Debian-Paket-diffoscope>> aus dem Projekt
+'Reproducible Builds' <<ReproducibleBuilds>> erhalten Sie eine
+Auswertung, welche Dateien oder Verzeichnisse aus einem Paket im
+Vergleich zur vorherigen Version entfernt wurden sowie welche
+hinzugekommen, umbenannt oder verschoben wurden und welche Änderungen in
+bestehenden Dateien erfolgt sind. Der Aufruf ist dazu wie folgt:
+
+.Aufruf von `diffoscope` für zwei Pakete
+----
+$ diffoscope cheese_3.14.1-1_amd64.deb cheese_3.14.1-2_amd64.deb
+----
+
+Nachfolgend sehen Sie die Ausgabe der entdeckten Änderungen. Es ist eine
+Art Baumstruktur, die durchaus länger werden kann.
+
+.Von `diffoscope` gefundene Änderungen (Ausschnitt)
+image::werkzeuge/paketoperationen/diffoscope-debian-package.png[id="fig.diffoscope", width="30%"]
 
 // Datei (Ende): ./werkzeuge/paketoperationen/paketaenderungen-nachlesen.adoc
