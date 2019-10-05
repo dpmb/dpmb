@@ -710,6 +710,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Piuparts]]] Piuparts (Package Installation, UPgrading And Removal Testing Suite), https://piuparts.debian.org/
 
+- [[[Pixar]]] Pixar Animation Studios, https://www.pixar.com/
+
 // - [[[Plenz-Haenel-Git]]] Julius Plenz und Valentin Haenel: Git. Verteilte Versionsverwaltung für Code und Dokumente, Open Source Press, München, 1. Auflage Juni 2011, ISBN 978-3-941841-42-0
 
 - [[[Plura-lts]]] Michael Plura: Am Leben halten, ix 12/2014, https://www.heise.de/ix/heft/Am-Leben-halten-2458886.html

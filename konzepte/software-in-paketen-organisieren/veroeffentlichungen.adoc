@@ -21,10 +21,8 @@ kann wie folgt referenziert werden:
 
 * nach ihrer Versionsnummer, z.B. _Debian 7_ oder _Debian 8_
 * nach dem aktuellen Entwicklungsstand der Veröffentlichung (siehe
-<<bedeutung-der-verschiedenen-entwicklungsstaende>>), z.B. _stable_,
-_testing_ oder _unstable_
-* nach ihrem Alias-Namen (siehe <<alias-namen>>), z.B. _Wheezy_,
-_Jessie_ oder _Stretch_
+<<bedeutung-der-verschiedenen-entwicklungsstaende>>), z.B. _oldstable_, _stable_, _testing_ oder _unstable_
+* nach ihrem Alias-Namen (siehe <<alias-namen>>), z.B. _Wheezy_, _Jessie_ oder _Stretch_
 
 Welche Veröffentlichung Sie auf ihrem System verwenden, entnehmen Sie
 der Datei `/etc/debian_version` wie folgt:
@@ -39,7 +37,7 @@ $
 Ausführlichere Informationen erhalten Sie mit Hilfe des Kommandos
 `lsb_release -a` aus dem Debianpaket `lsb-release` <<Debian-Paket-lsb-release>>:
 
-.Ausführliche Informationen zur genutzen Debian-Version anzeigen
+.Ausführliche Informationen zur genutzen Debian-Version mit Hilfe von `lsb_release` anzeigen
 ----
 $ lsb_release -a
 No LSB modules are available.
@@ -139,6 +137,8 @@ Im Detail gehen wir darauf unter ``Debian Backports'' in
 
 // Stichworte für den Index
 (((Bruce Perens)))
+(((Toy Story)))
+(((Pixar)))
 (((Veröffentlichung, Alias-Name)))
 (((Veröffentlichung, Bookworm)))
 (((Veröffentlichung, Bullseye)))
@@ -160,16 +160,17 @@ Im Detail gehen wir darauf unter ``Debian Backports'' in
 (((Veröffentlichung, Wheezy)))
 (((Veröffentlichung, Woody)))
 Jede Veröffentlichung von Debian GNU/Linux hat einen Alias-Namen, der
-nach einer Figur aus Pixars Filmreihe Toy Story benannt ist. Bruce
-Perens -- der Projektleiter für die Version 1.x -- arbeitete bei Pixar
-und legte das Namenschema fest. Für die bisherigen Veröffentlichungen
-standen die folgenden Figuren aus der Filmserie Pate:
+nach einer Figur aus Pixars Filmreihe 'Toy Story' benannt ist. Bruce
+Perens -- der Projektleiter für die Version 1.x -- arbeitete zu dieser
+Zeit bei Pixar <<Pixar>> und legte das bis heute genutzte Namenschema
+fest. Für die bisherigen Veröffentlichungen von Debian standen die
+folgenden Figuren aus der Filmserie Pate:
 
 * Debian 1.0 wurde nie offiziell veröffentlicht, da ein CD-Verteiler
 bedauerlicherweise eine Entwicklungsversion als Version 1.0 bezeichnet
 hatte <<Debian-Project-History>>. Daher entschlossen sich Debian und der
-CD-Verteiler zur gemeinsamen Veröffentlichung, dass die beigefügte
-Version fehlerhaft war ("this release was screwed") und das Projekt
+CD-Verteiler zur gemeinsamen Bekanntmachung, dass die beigefügte Version
+fehlerhaft war ("this release was screwed") und das Projekt
 veröffentlichte die Version 1.1 ein halbes Jahr später.
 
 * Debian 1.1 _Buzz_ (17. Juni 1996; benannt nach Buzz Lightyear, dem Astronauten)
@@ -200,11 +201,9 @@ veröffentlichte die Version 1.1 ein halbes Jahr später.
 
 * Debian 9 _Stretch_ (17. Juni 2017; benannt nach dem lila Kraken)
 
-* Debian 10 _Buster_ (noch kein Veröffentlichungstermin zum Zeitpunkt der
-Drucklegung festgelegt, voraussichtlich 2019; benannt nach dem Welpen aus 'Toy Story 2')
+* Debian 10 _Buster_ (7. September 2019; benannt nach dem Welpen aus 'Toy Story 2')
 
-Zu Beginn des Jahres 2019 stehen bereits die Namen von zwei zukünftigen
-Veröffentlichungen fest:
+Es stehen bereits ebenfalls die Namen von zwei zukünftigen Veröffentlichungen fest:
 
 * Debian 11 _Bullseye_ -- benannt nach dem Pferd von _Woody Pride_
 
@@ -212,9 +211,9 @@ Veröffentlichungen fest:
 einem Spielzeug mit eingebauter Leuchte aus 'Toy Story 3'
 
 Mehr Details zu den einzelnen Veröffentlichungen finden sich in der
-Debian-Historie <<Debian-History>>. Die Figuren aus Toy Story und
-insbesondere deren Charakterzüge sind ausführlich im Disney Wiki
-<<ToyStory>> dokumentiert (siehe <<fig.toystory>>).
+Debian-Geschichte <<Debian-History>>. Die Figuren aus den verschiedenen
+'Toy Story'-Filmen und insbesondere deren Charakterzüge sind ausführlich
+im Disney Wiki <<ToyStory>> dokumentiert (siehe <<fig.toystory>>).
 
 .Beschreibung der Filmserie 'Toy Story' im Disney Wiki
 image::konzepte/software-in-paketen-organisieren/toystory.png[id="fig.toystory", width="50%"]
