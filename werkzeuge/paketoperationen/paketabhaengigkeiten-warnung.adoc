@@ -10,7 +10,7 @@ Abhängigkeiten aller Pakete nach einem Muster, sucht also nach
 Abhängigkeiten auf ein Paket bzw. einer Zeichenkette oder einem
 regulären Ausdruck.
   
-Daher entspricht `apt-cache depends` dem Aufruf `aptitude search ~R`
+Daher entspricht `apt-cache depends` dem Aufruf `aptitude search '~R'`
 bzw. `aptitude search ?reverse-depends(…)` sowie `apt-cache rdepends`
-dem Aufruf `aptitude search ~D` bzw. `aptitude search ?depends(…)`.
+dem Aufruf `aptitude search '~D'` bzw. `aptitude search ?depends(…)`.
 ====

@@ -209,7 +209,7 @@ sowie unter ``Aktualisierbare Pakete anzeigen'' in
 | Werkzeug   | Aufruf | Anmerkungen
 | `apt`      | `apt list --installed` | alle installierten Pakete auflisten
 | `apt-cache`| `apt-cache search` 'Paketname' |
-| `aptitude` | `aptitude search ~i`| alle installierten Pakete auflisten
+| `aptitude` | `aptitude search '~i'`| alle installierten Pakete auflisten
 |            | `aptitude versions` 'Paketname'| alle verfügbaren Pakete
 für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
 | `DNF`      | `dnf list installed` | alle installierten Pakete anzeigen
@@ -312,8 +312,8 @@ ein.
 |            | `apt-cache rdepends` 'Paketname' | Abhängigkeiten anzeigen
 | `apt-rdepends` | `apt-rdepends -r` 'Paketname' | Abhängigkeiten anzeigen
 |            | `apt-rdepends` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
-| `aptitude` | `aptitude search ~R` 'Paketname' | Abhängigkeiten anzeigen
-|            | `aptitude search ~D` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
+| `aptitude` | `aptitude search '~R'` 'Paketname' | Abhängigkeiten anzeigen
+|            | `aptitude search '~D'` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 | `grep-status` | `grep-status -F Package -s Depends` 'Paketname' | Abhängigkeiten anzeigen
 |            | `grep-status -P -s Depends` 'Paketname' | Abhängigkeiten anzeigen
 | `RPM`      | `rpm -qR` 'Paketname' | das Paket muß lokal auf dem
@@ -458,7 +458,7 @@ nachfolgende Tabelle. In Abschnitt ``Aktualisierbare Pakete anzeigen``
 |            | `apt-get upgrade --show-upgraded` | analog zu `-u` (Langform)
 |            | `apt-get upgrade -u -s ` | Simulation, analog zu `-u`
 |            | `apt-get upgrade --show-upgraded --simulate` | Simulation, analog zu `-u -s` (Langform)
-| `aptitude` | `aptitude search ~U` | alle aktualisierbaren Pakete anzeigen
+| `aptitude` | `aptitude search '~U'` | alle aktualisierbaren Pakete anzeigen
 |            | `aptitude search ?upgradable` | alle aktualisierbaren Pakete anzeigen
 | DNF        | `dnf list upgrades` | alle aktualisierbaren Pakete anzeigen
 | `RPM`      | |

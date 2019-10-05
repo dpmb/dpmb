@@ -80,7 +80,7 @@ dieses damit nicht die üblichen Qualitätsstandards von Debian erfüllt.
 
 .Suche nach obsoleten Paketen mittels `aptitude`
 ----
-$ aptitude search ~o
+$ aptitude search '~o'
 i   cupswrapperhl2250dn - Brother HL2250DN CUPS wrapper driver
 i   foxitreader         - FoxitReader is a browsing program designed for read
 i   gtkdiskfree         - A program to show free/used space on filesystems

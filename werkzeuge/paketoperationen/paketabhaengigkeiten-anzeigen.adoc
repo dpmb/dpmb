@@ -332,7 +332,7 @@ anzeigen und deuten'' in
 
 .Anzeige der Paketabhängigkeiten mit `aptitude`
 ----
-$ aptitude search ~Rxpdf
+$ aptitude search '~Rxpdf'
 i   libc6                           - GNU C-Bibliothek: Dynamische Bibliotheken 
 i   libgcc1                         - GCC Support-Bibliothek                    
 i A libpoppler46                    - Bibliothek zur PDF-Darstellung            
@@ -503,7 +503,7 @@ installiert sein, aber in der Paketdatenbank vorhanden sein.
 
 Um beispielsweise alle Pakete zu erhalten, die eine Abhängigkeit auf ein
 Paket mit der Zeichenkette 'xpdf' im Paketnamen haben, nutzen Sie das
-Kommando `aptitude search ~Dxpdf`. Das Ergebnis ist eine mehrspaltige
+Kommando `aptitude search '~Dxpdf'`. Das Ergebnis ist eine mehrspaltige
 Auflistung der Pakete mit deren Installationsstatus, Paketnamen und
 Kurzbeschreibung (siehe dazu ``Liste der installierten Pakete anzeigen
 und deuten'' in <<liste-der-installierten-pakete-anzeigen-und-deuten>>).

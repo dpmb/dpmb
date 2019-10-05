@@ -55,7 +55,7 @@ Kurzform für `?upgradable`.
 
 .Aktualisierbare Pakete mit `aptitude` anzeigen
 ----
-$ aptitude search ~U
+$ aptitude search '~U'
 i A cups-common                - Common UNIX Printing System(tm) - gemeinsa
 i   iceweasel                  - Webbrowser auf Basis von Firefox
 i A libc-bin                   - Die »Embedded GNU C Library«: Binärdateien

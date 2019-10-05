@@ -159,7 +159,7 @@ nicht.
 
 .Suche nach konfigurierten Paketen mittels `aptitude`
 ----
-$ aptitude search ~c
+$ aptitude search '~c'
 c   akonadi-backend-mysql   - MySQL-Speicher-Backend für Akonadi
 c   akonadi-server          - PIM-Speicherdienst Akonadi
 c   atop                    - Überwachung für Systemressourcen und Proze

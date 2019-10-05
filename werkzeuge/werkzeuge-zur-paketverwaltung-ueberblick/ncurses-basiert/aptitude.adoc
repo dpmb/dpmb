@@ -48,7 +48,7 @@ jeweils Angabe der Unterkommandos auf der Kommandozeile):
 (((aptitude, why-not)))
 
 * die Liste der installierten Pakete anzeigen und ausgeben
-(<<liste-der-installierten-pakete-anzeigen-und-deuten>>) mit `aptitude search ~i`
+(<<liste-der-installierten-pakete-anzeigen-und-deuten>>) mit `aptitude search '~i'`
 * Recherche und Paketliste filtern anhand von Paketkategorien,
 Veröffentlichungen und Mustern (Teilzeichenketten, Reguläre Ausdrücke) bzgl. des Paketnamens,
 der Metadaten und der Paketbeschreibung

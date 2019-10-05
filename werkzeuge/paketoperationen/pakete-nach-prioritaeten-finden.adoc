@@ -48,7 +48,7 @@ eine Ausgabe auf dem Terminal, die ähnlich zu nachfolgender ist:
 
 .Auflistung der essentiellen Pakete durch `aptitude`
 ----
-$ aptitude search ~E
+$ aptitude search '~E'
 i A apt              - Paketverwaltung für die Befehlszeile
 i   base-files       - Verschiedene Dateien für das Debian-Basiss
 i   base-passwd      - Debian Base System Password- und Group-Dat

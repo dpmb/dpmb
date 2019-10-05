@@ -24,7 +24,7 @@ Paket' --, gefolgt vom Paketnamen und der Kurzbeschreibung zum Paket.
 
 .Auflistung aller neuen Pakete mittels `aptitude` (Auszug)
 ----
-$ aptitude search ~N
+$ aptitude search '~N'
 p   0ad              - Echtzeit-Strategiespiel über antike Kriegs
 p   0ad-data         - Real-time strategy game of ancient warfare
 p   0ad-dbg          - Echtzeit-Strategiespiel über antike Kriegs

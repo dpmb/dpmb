@@ -33,7 +33,7 @@ ob es vollständig entfernt wurde oder noch ``Reste'' übrig sind, bspw.
 paketspezifische Konfigurationsdateien.
 
 Für die Kommandozeile existieren zwei grundlegende Möglichkeiten.
-Einerseits ist das `dpkg -l` und andererseits `aptitude search ~i`. Die
+Einerseits ist das `dpkg -l` und andererseits `aptitude search '~i'`. Die
 Darstellung in den graphischen Programme klären wir weiter unten
 genauer.
 
@@ -144,7 +144,7 @@ seinem derzeitigen Zustand belassen (siehe Paketflags in
 <<lokale-paketmarkierungen>>).
 |====
 
-==== `aptitude search ~i` ====
+==== `aptitude search '~i'` ====
 
 // Stichworte für den Index
 (((aptitude, search ~i)))
@@ -163,7 +163,7 @@ Ausgabe noch den Namen und die Kurzbeschreibung zum jeweiligen Paket.
 
 .`aptitude` listet die installierten LaTeX-Pakete auf
 ----
-$ aptitude search ~i | grep texlive
+$ aptitude search '~i' | grep texlive
 i   texlive                         - TeX Live: Eine anständige Auswahl der TeX-
 i A texlive-base                    - TeX Live: Grundlegende Programme und Datei
 i A texlive-bibtex-extra            - TeX Live: Extra BibTeX styles

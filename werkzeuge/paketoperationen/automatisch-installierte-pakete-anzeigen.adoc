@@ -55,7 +55,7 @@ installiert_ gekennzeichnet.
 
 .Automatisch installierte Pakete mit `aptitude` anzeigen
 ----
-$ aptitude search ~M | more
+$ aptitude search '~M' | more
 i A a2ps                            - GNU a2ps - »Alles nach PostScript«-Konvert
 i A abiword-common                  - Effiziente, mächtige Textverarbeitung, unt
 i A abiword-plugin-grammar          - Grammatik-Prüfung für AbiWord
