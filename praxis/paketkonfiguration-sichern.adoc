@@ -8,19 +8,46 @@
 // Stichworte für den Index
 (((debconf-get-selections)))
 (((debconf-set-selections)))
+(((Debianpaket, apt-clone)))
 (((Debianpaket, debconf)))
 (((Debianpaket, debconf-utils)))
-(((Paketkonfiguration, bestehende Konfiguration sichern)))
+(((Debianpaket, dpkg)))
+(((Paketkonfiguration, Klonen einer bestehenden Installation)))
+(((Paketkonfiguration, bestehende Installation sichern)))
 (((Paketkonfiguration, debconf-get-selections)))
 (((Paketkonfiguration, debconf-set-selections)))
-(((Paketkonfiguration, Konfiguration einspielen)))
+(((Paketkonfiguration, gesicherte Konfiguration wieder einspielen)))
+(((Paketliste verstehen)))
 
-Hier gehen wir der Frage nach, wie Sie die bestehende Paketkonfiguration
-sichern und wieder einspielen, um bspw. ein System zu klonen. Alle
-Informationen dazu stehen in der Debconf-Datenbank. Zum Auslesen nutzen
-Sie das Werkzeug `debconf-get-selections` aus dem Paket 'debconf-utils'
-<<Debian-Paket-debconf-utils>>. Ausführlicher ist der Vorgang bereits unter
-'Konfiguration für alle Pakete auslesen' in 
+Betreuen Sie eine Reihe von Rechnern, die jeweils aktuell und identisch 
+bleiben müssen, ist das manuelle Sichern, Pflegen und Einspielen einer 
+Paketliste etwas mühselig. Der händische Abgleich mit Hilfe von `dpkg` und 
+`diff` braucht einfach zu lange, ist zudem fehleranfällig und hält Sie von 
+weitaus spannenderen Aufgaben ab. 
+
+Daher betrachten wir in diesem Kapitel verschiedene Wege, um diesen Schritt 
+möglichst zu automatisieren. Zum Einsatz kommen die Werkzeuge `dpkg`, 
+`debconf-get-selections`, `debconf-set-selections` und `apt-clone`.
+
+=== Die bestehende Paketkonfiguration auslesen ===
+
+Zunächst gehen wir der Frage nach, wie Sie die bestehende Konfiguration
+ihrer installierten Pakete auslesen und sichern. Das nutzen Sie in einem 
+späteren Schritt, um diese Pakete wieder einspielen zu können -- sei es auf 
+dem gleichen System oder einem neuen Rechner, welcher identisch zum 
+erstgenannten werden muss. Alle benötigten Informationen dazu stehen in der 
+Debconf-Datenbank. 
+
+==== Mit `dpkg` ====
+
+* `dpkg -l | egrep '^ii' > paketliste`
+* `dpkg --get-selections > paketliste`
+
+==== Mit `debconf-get-selections` ====
+
+Zum Auslesen nutzen Sie das Werkzeug `debconf-get-selections` aus dem Paket 
+'debconf-utils' <<Debian-Paket-debconf-utils>>. Ausführlicher ist der Vorgang 
+bereits unter 'Konfiguration für alle Pakete auslesen' in 
 <<konfiguration-fuer-alle-pakete-auslesen>> beschrieben.
 
 Die Ausgabe von `debconf-get-selections` erfolgt auf der Standardausgabe
@@ -41,18 +68,7 @@ console-setup	console-setup/fontsize-text47	select	8x16
 #
 ----
 
-// Stichworte für den Index
-(((debconf-set-selections, -c)))
-(((debconf-set-selections, -v)))
-(((debconf-set-selections, --checkonly)))
-(((debconf-set-selections, --verbose)))
-
-* wie spiele ich das lokal wieder ein
-** `debconf-set-selections` (Paket 'debconf' <<Debian-Paket-debconf>>))
-** Schalter `-c` (Langformat `--checkonly`): Eingabedatei nur auf Fehler prüfen
-** Schalter `-v` (Langformat `--verbose`): ausführliche Ausgabe beim Einspielen
-
-=== `apt-clone` ===
+==== Mit `apt-clone` ====
 
 // Stichworte für den Index
 (((apt-clone)))
@@ -65,5 +81,27 @@ console-setup	console-setup/fontsize-text47	select	8x16
 * Projektseite im Launchpad
 * Aufgabe: "Script to create state bundles"
 * Kurzbeschreibung: "This package can be used to clone/restore the packages on a apt based system. It will save/restore the packages, sources.list, keyring and automatic-installed states. It can also save/restore no longer downloadable packages using dpkg-repack. "
+
+=== Eine gesicherte Paketkonfiguration wieder einspielen ===
+
+==== Mit `debconf-set-selections` ====
+
+// Stichworte für den Index
+(((debconf-set-selections, -c)))
+(((debconf-set-selections, -v)))
+(((debconf-set-selections, --checkonly)))
+(((debconf-set-selections, --verbose)))
+
+* wie spiele ich das lokal wieder ein
+** `debconf-set-selections` (Paket 'debconf' <<Debian-Paket-debconf>>))
+** Schalter `-c` (Langformat `--checkonly`): Eingabedatei nur auf Fehler prüfen
+** Schalter `-v` (Langformat `--verbose`): ausführliche Ausgabe beim Einspielen
+
+==== Mit `apt-clone` ====
+
+// Stichworte für den Index
+(((apt-clone)))
+(((Debianpaket, apt-clone)))
+(((Ubuntupaket, apt-clone)))
 
 // Datei (Ende): ./praxis/paketkonfiguration-sichern.adoc
