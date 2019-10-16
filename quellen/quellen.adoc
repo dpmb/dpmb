@@ -298,13 +298,13 @@
 
 - [[[Debian-Paket-debpartial-mirror]]] Debian-Paket 'debpartial-mirror',  https://packages.debian.org/de/stable/debpartial-mirror
 
-- [[[Debian-Paket-debtags]]] Debian-Paket 'debtags', https://packages.debian.org/de/stable/debtags
-
-- [[[Debian-Paket-devscripts]]] Debian-Paket 'devscripts', https://packages.debian.org/de/stable/devscripts
-
 - [[[Debian-Paket-debsums]]] Debian-Paket 'debsums', https://packages.debian.org/de/stable/debsums
 
+- [[[Debian-Paket-debtags]]] Debian-Paket 'debtags', https://packages.debian.org/de/stable/debtags
+
 - [[[Debian-Paket-debtree]]] Debian-Paket 'debtree', https://packages.debian.org/de/stable/debtree
+
+- [[[Debian-Paket-devscripts]]] Debian-Paket 'devscripts', https://packages.debian.org/de/stable/devscripts
 
 - [[[Debian-Paket-dgit]]] Debian-Paket 'dgit', https://packages.debian.org/de/stable/dgit
 
@@ -319,6 +319,8 @@
 - [[[Debian-Paket-dpkg]]] Debian-Paket 'dpkg', https://packages.debian.org/de/stable/dpkg
 
 - [[[Debian-Paket-dpkg-dev]]] Debian-Paket 'dpkg-dev', https://packages.debian.org/de/stable/dpkg-dev
+
+- [[[Debian-Paket-dpkg-repack]]] Debian-Paket 'dpkg-repack', https://packages.debian.org/de/stable/dpkg-repack
 
 - [[[Debian-Paket-dpkg-www]]] Debian-Paket 'dpkg-www', https://packages.debian.org/de/stable/dpkg-www
 

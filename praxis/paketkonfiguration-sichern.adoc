@@ -26,8 +26,12 @@ Paketliste etwas mühselig. Der händische Abgleich mit Hilfe von `dpkg` und
 weitaus spannenderen Aufgaben ab. 
 
 Daher betrachten wir in diesem Kapitel verschiedene Wege, um diesen Schritt 
-möglichst zu automatisieren. Zum Einsatz kommen die Werkzeuge `dpkg`, 
-`debconf-get-selections`, `debconf-set-selections` und `apt-clone`.
+möglichst zu automatisieren. Zum Einsatz kommen die Werkzeuge `dpkg` (siehe
+<<paketkonfiguration-sichern-mit-dpkg>>), `debconf-get-selections`, 
+`debconf-set-selections` und `apt-clone` (siehe 
+<<paketkonfiguration-sichern-mit-apt-clone>>). Zu nutze machen wir uns dabei 
+auch die Beispiele zum Filtern der bereits auf dem System installierten 
+Pakete aus dem Abschnitt <<liste-der-installierten-pakete-anzeigen-und-deuten>>. 
 
 === Die bestehende Paketkonfiguration auslesen ===
 
@@ -38,6 +42,7 @@ dem gleichen System oder einem neuen Rechner, welcher identisch zum
 erstgenannten werden muss. Alle benötigten Informationen dazu stehen in der 
 Debconf-Datenbank. 
 
+[[paketkonfiguration-sichern-mit-dpkg]]
 ==== Mit `dpkg` ====
 
 * `dpkg -l | egrep '^ii' > paketliste`
@@ -68,22 +73,72 @@ console-setup	console-setup/fontsize-text47	select	8x16
 #
 ----
 
+[[paketkonfiguration-sichern-mit-apt-clone]]
 ==== Mit `apt-clone` ====
 
 // Stichworte für den Index
 (((apt-clone)))
 (((Debianpaket, apt-clone)))
+(((Debianpaket, dpkg-repack)))
 (((Ubuntupaket, apt-clone)))
 
-* Werkzeug/Paket: 'apt-clone' 
-** für Debian <<Debian-Paket-apt-clone>>
-** für Ubuntu <<Ubuntu-Paket-apt-clone>>
-* Projektseite im Launchpad
-* Aufgabe: "Script to create state bundles"
-* Kurzbeschreibung: "This package can be used to clone/restore the packages on a apt based system. It will save/restore the packages, sources.list, keyring and automatic-installed states. It can also save/restore no longer downloadable packages using dpkg-repack. "
+Dieses Werkzeug steht über die gleichnamigen Pakete bei Debian und Ubuntu 
+bereit (siehe <<Debian-Paket-apt-clone>> und <<Ubuntu-Paket-apt-clone>>).
+Es sieht sich selbst als 'helper script', welches das Klonen einer bestehenden
+Linuxinstallation vereinfacht. 
+
+Es stellt daher nach Möglichkeit auf dem Bestandssystem so viele 
+Informationen zur Installation zusammen, wie möglich sind. Das umfasst neben 
+der Datei `/etc/apt/sources.list` den Debian-Schlüsselring mit den darin 
+hinterlegten GPG-Schlüsseln für die verwendeten Paketquellen sowie auch den 
+Paketstatus. Ergebnis der Ausführung ist ein Archiv im Format `tar.gz`, welches
+Sie auf dem Zielsystem einspielen.
+
+Das erzeugte Archiv beinhaltet auch die Pakete, die nicht mehr von den 
+Paketquellen heruntergeladen werden können. Dazu bedient sich `apt-clone` des 
+Werkzeugs `dpkg-repack` <<Debian-Paket-dpkg-repack>>, welches aus den bereits
+installierten Dateien wieder Binärpakete erstellt, sofern das möglich ist. Im 
+nachfolgenden Listing sehen Sie, dass das nicht immer gelingt und auch zu
+Paketen führen kann, die nicht wiedereinspielbar sind:
+
+.`apt-clone` sammelt Informationen
+----
+# apt-clone clone --with-dpkg-repack packagelist/.
+dpkg-deb: building package 'sge' in './sge_8.1.8_amd64.deb'.
+dpkg-deb: building package 'libnccl2' in './libnccl2_2.3.5-2+cuda10.0_amd64.deb'.
+dpkg-repack: warning: unknown information field 'Original-Maintainer' in input data in entry in dpkg's status file
+dpkg-deb: building package 'lesstif2' in './lesstif2_0.95.2-1_amd64.deb'.
+dpkg-repack: warning: unknown information field 'Original-Maintainer' in input data in entry in dpkg's status file
+dpkg-deb: building package 'libcudnn7' in './libcudnn7_7.3.1.20-1+cuda10.0_amd64.deb'.
+dpkg-deb: building package 'libcudnn7-dev' in './libcudnn7-dev_7.3.1.20-1+cuda10.0_amd64.deb'.
+dpkg-deb: error: conffile '/opt/sge/util/install_modules/inst_template.conf' does not appear in package
+dpkg-repack: Error running: dpkg-deb --build dpkg-repack.sge-common.3EAu1a .
+dpkg-repack: Problems were encountered in processing.
+dpkg-repack: The package may be broken.
+not installable: sge, libnccl2, lesstif2, libdb5.1, libcudnn7, libcudnn7-dev, sge-common, cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48, libnccl-dev, libxp6, db5.1-util, libdb5.1++
+version mismatch: libssl1.1, mdadm, python3-distutils, libitm1, libmagic-mgc, samba-libs, lxd-client, wget, postfix, cpp, 
+...
+# 
+----
+
+Bitte beachten Sie bei der Vewendung von `apt-clone` die folgenden Punkte:
+
+* Das Zielsystem muss das gleiche Betriebssystem und die gleiche Veröffentlichung
+wie das Originalsystem besitzen.
+
+* `apt-clone` gleicht den Paketbestand des Originalsystems mit den Paketquellen 
+ab. Es merkt an, wenn installierte Pakete nicht mehr aktuell sind. Um das o.g.
+erzeugte Archiv möglichst klein zu halten, aktualisieren Sie das Originalsystem 
+vor dem Aufruf von `apt-clone`, sofern das möglich ist (siehe 
+<<pakete-aktualisieren>>).
+
+* Führen Sie `apt-clone` später auf dem Zielsystem aus, überschreibt es ihre 
+bereits bestehende Paketliste. Es löscht Pakete bzw. installiert fehlende nach
+(siehe <<paketkonfiguration-wieder-einspielen-mit-apt-clone>>).
 
 === Eine gesicherte Paketkonfiguration wieder einspielen ===
 
+[[paketkonfiguration-wieder-einspielen-mit-debconf-set-selections]]
 ==== Mit `debconf-set-selections` ====
 
 // Stichworte für den Index
@@ -97,11 +152,18 @@ console-setup	console-setup/fontsize-text47	select	8x16
 ** Schalter `-c` (Langformat `--checkonly`): Eingabedatei nur auf Fehler prüfen
 ** Schalter `-v` (Langformat `--verbose`): ausführliche Ausgabe beim Einspielen
 
+[[paketkonfiguration-wieder-einspielen-mit-apt-clone]]
 ==== Mit `apt-clone` ====
 
 // Stichworte für den Index
 (((apt-clone)))
 (((Debianpaket, apt-clone)))
 (((Ubuntupaket, apt-clone)))
+
+----
+# apt-clone restore packagelist.tar.gz
+...
+# 
+----
 
 // Datei (Ende): ./praxis/paketkonfiguration-sichern.adoc
