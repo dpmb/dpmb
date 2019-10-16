@@ -8,6 +8,7 @@
 
 // Stichworte für den Index
 (((Paket, installiertes anzeigen)))
+(((Paketliste, vollständig ausgeben)))
 Diese Aktion betrifft häufig nicht nur ein einzelnes Paket, sondern den
 Gesamtbestand an Software, die auf Ihrem Linuxsystem installiert sind
 oder waren. Im Alltag ergeben sich eine ganze Reihe von
@@ -73,6 +74,7 @@ $
 // Stichworte für den Index
 (((Paket, Status anzeigen)))
 (((Paket, Zustand anzeigen)))
+(((Paketliste, verstehen)))
 (((Paketstatus)))
 (((Paketzustand)))
 Die ersten drei Spalten jeder ausgegebenen Zeile interpretieren Sie
@@ -143,6 +145,26 @@ Softwareaktualisierungen wird das Paket nicht berücksichtigt und in
 seinem derzeitigen Zustand belassen (siehe Paketflags in
 <<lokale-paketmarkierungen>>).
 |====
+
+// Stichworte für den Index
+(((Paketliste, nur Paketnamen ausgeben)))
+Geht es Ihnen lediglich um die Namen der derzeit vollständig installierten 
+Pakete ohne deren Versionsnummer und Beschreibung, kombinieren Sie am besten 
+mehrere UNIX/Linux-Werkzeuge miteinander. `dpkg` bietet von sich aus bislang 
+keinen entsprechenden Schalter an, der diese spezifische Ausgabe ermöglicht.
+Das nachfolgende Beispiel kombiniert `dpkg`, `egrep` und `awk` miteinander:
+
+.Nur die Paketnamen ausgeben
+----
+$ dpkg -l | egrep "^ii" | awk ' {print $2} '
+aapt
+acl
+acpi
+adduser
+adwaita-icon-theme
+...
+$
+----
 
 ==== `aptitude search '~i'` ====
 
