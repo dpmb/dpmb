@@ -43,13 +43,17 @@ genauer.
 // Stichworte für den Index
 (((dpkg, -l)))
 (((dpkg, --list)))
-`dpkg` wird für diese Aufgabe sehr häufig genutzt. Ohne die Angabe des
-Paketnamens zeigen Sie alle Pakete und Paketreste an, die auf Ihrem
-System derzeit installiert sind. Geben Sie ein oder mehrere Pakete als
-Parameter durch Leerzeichen getrennt an, erhalten Sie nur Informationen
-zu diesen benannten Paketen. In nachfolgender Paketliste zeigen die
-einzelnen Spalten nacheinander den Paketzustand, den Namen des Pakets
-(siehe <<benennung-eines-debian-pakets>>), dessen Version und die
+(((dpkg-query, -l)))
+(((dpkg-query, --list)))
+`dpkg` wird für diese Aufgabe sehr häufig genutzt. Intern leitet `dpkg` den
+Aufruf an das Abfragewerkzeug `dpkg-query` weiter.
+
+Ohne die Angabe des Paketnamens zeigen Sie alle Pakete und Paketreste an, die 
+auf Ihrem System derzeit installiert sind. Geben Sie ein oder mehrere Pakete 
+als Parameter durch Leerzeichen getrennt an, erhalten Sie nur Informationen
+zu diesen benannten Paketen. In nachfolgender Paketliste zeigen die einzelnen 
+Spalten nacheinander den Paketzustand, den Namen des Pakets (siehe 
+<<benennung-eines-debian-pakets>>), dessen Version und die dazugehörige
 Kurzbeschreibung dazu.
 
 .Vollständige Paketliste mit `dpkg`
@@ -147,16 +151,43 @@ seinem derzeitigen Zustand belassen (siehe Paketflags in
 |====
 
 // Stichworte für den Index
-(((Paketliste, nur Paketnamen ausgeben)))
+(((dpkg-query, -f)))
+(((dpkg-query, --show)))
+(((dpkg-query, --showformat)))
+(((dpkg-query, -W)))
+(((Paketliste, nur die Paketnamen ausgeben)))
 Geht es Ihnen lediglich um die Namen der derzeit vollständig installierten 
-Pakete ohne deren Versionsnummer und Beschreibung, kombinieren Sie am besten 
-mehrere UNIX/Linux-Werkzeuge miteinander. `dpkg` bietet von sich aus bislang 
-keinen entsprechenden Schalter an, der diese spezifische Ausgabe ermöglicht.
-Das nachfolgende Beispiel kombiniert `dpkg`, `egrep` und `awk` miteinander:
+Pakete ohne deren Versionsnummer und Beschreibung, haben Sie zwei 
+Möglichkeiten zur Lösung -- a) `dpkg-query` mit einem speziellen Formatstring
+für die Ausgabe in Kombination mit `egrep`, `awk` und `sort`, und b) die 
+Kombination aus `dpkg`, `egrep`, `awk` und `sort`. `dpkg` selbst bietet von 
+sich aus bislang keinen entsprechenden, einzelnen Schalter an, der diese 
+spezifische Ausgabe ermöglicht.
 
-.Nur die Paketnamen ausgeben
+Für den Fall a) nutzen Sie den Schalter `-W` (Langform `--show`) und den 
+Formatstring `-f='${db:Status-Abbrev} ${binary:Package}\n'`. Dabei kürzt `-f` 
+die Langform `--showformat` ab. Die Angabe `'${db:Status-Abbrev}'` liefert 
+Ihnen den Installationsstatus des Pakets und `$'{binary:Package}\n'` den 
+Paketnamen aus der Paketbeschreibung samt Zeilenumbruch am Ende der Zeile. 
+Der vollständige Aufruf ist dann wie folgt:
+
+.Nur die Paketnamen ausgeben (`dpkg-query`)
 ----
-$ dpkg -l | egrep "^ii" | awk ' {print $2} '
+$ dpkg-query -W -f='${db:Status-Abbrev} ${binary:Package}\n' * | egrep "^ii" | awk '{ print $2 }' | sort
+aapt
+acl
+acpi
+adduser
+adwaita-icon-theme
+...
+$
+----
+
+Fall b) ist kürzer und kombiniert `dpkg`, `egrep`, `awk` und `sort` miteinander:
+ 
+.Nur die Paketnamen ausgeben (`dpkg`, `egrep`, `awk` und `sort` kombiniert)
+----
+$ dpkg -l | egrep "^ii" | awk ' {print $2} ' | sort
 aapt
 acl
 acpi
