@@ -91,6 +91,8 @@ console-setup	console-setup/fontsize-text47	select	8x16
 
 // Stichworte für den Index
 (((apt-clone)))
+(((apt-clone, clone)))
+(((apt-clone, info)))
 (((Debianpaket, apt-clone)))
 (((Debianpaket, dpkg-repack)))
 (((Ubuntupaket, apt-clone)))
@@ -139,7 +141,24 @@ version mismatch: libssl1.1, mdadm, python3-distutils, libitm1, libmagic-mgc, sa
 # 
 ----
 
-Bitte beachten Sie bei der Vewendung von `apt-clone` die folgenden Punkte:
+Das Archiv wird im vorgenannten Verzeichnis erzeugt. Dessen Name setzt sich aus
+`apt-clone-state-` und dem Hostnamen zusammen, also bspw. 
+`apt-clone-state-kiste.tar.gz`. Mit dem Schalter `info` analysieren Sie das 
+soeben erzeugte Archiv:
+
+.Informationen zum erzeugten `apt-clone`-Archiv anzeigen
+----
+$ apt-clone info apt-clone-state-kiste.tar.gz 
+Hostname: kiste
+Arch: amd64
+Distro: bionic
+Meta: 
+Installed: 1301 pkgs (751 automatic)
+Date: Tue Oct 15 14:55:03 2019
+$
+----
+
+Bitte beachten Sie bei der Verwendung von `apt-clone` noch die folgenden Punkte:
 
 * Das Zielsystem muss das gleiche Betriebssystem und die gleiche Veröffentlichung
 wie das Originalsystem besitzen.
@@ -179,12 +198,14 @@ bereits bestehende Paketliste. Es löscht Pakete bzw. installiert fehlende nach
 
 // Stichworte für den Index
 (((apt-clone)))
+(((apt-clone, restore)))
+(((apt-clone, restore-new-distro)))
 (((Debianpaket, apt-clone)))
 (((Ubuntupaket, apt-clone)))
 
 Haben Sie ein Archiv wie unter <<paketkonfiguration-sichern-mit-apt-clone>> 
 beschrieben erstellt, besprechen wir hier, wie Sie das auf dem Zielsystem
-einspielen-
+einspielen. Als erstes übertragen Sie das 
 
 ----
 # apt-clone restore packagelist.tar.gz
