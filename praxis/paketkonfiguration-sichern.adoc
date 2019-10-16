@@ -30,7 +30,9 @@ möglichst zu automatisieren. Zum Einsatz kommen die Werkzeuge `dpkg` (siehe
 <<paketkonfiguration-sichern-mit-dpkg>>), `debconf-get-selections` (siehe
 <<paketkonfiguration-sichern-mit-debconf-get-selections>>), 
 `debconf-set-selections` und `apt-clone` (siehe 
-<<paketkonfiguration-sichern-mit-apt-clone>>). 
+<<paketkonfiguration-sichern-mit-apt-clone>>). Zum Schluß reißen wir 
+graphische Werkzeuge kurz an (siehe dazu 
+<<paketkonfiguration-sichern-graphische-werkzeuge>>).
 
 [[paketkonfiguration-auslesen]]
 === Die bestehende Paketkonfiguration auslesen ===
@@ -204,15 +206,36 @@ bereits bestehende Paketliste. Es löscht Pakete bzw. installiert fehlende nach
 (((Ubuntupaket, apt-clone)))
 
 Haben Sie ein Archiv wie unter <<paketkonfiguration-sichern-mit-apt-clone>> 
-beschrieben erstellt, besprechen wir hier, wie Sie das auf dem Zielsystem
-einspielen. Als erstes übertragen Sie das 
+beschrieben erstellt, besprechen wir nun, wie Sie das auf dem Zielsystem
+einspielen. Als erstes übertragen Sie das Archiv auf ihr Zielsystem, bspw. per
+USB-Stick, externe Festplatte oder mit Hilfe des Kommandos `scp`. 
 
+Ist das erfolgt, rufen Sie `apt-clone` als administrativer Benutzer mit dem 
+Schalter `restore` und dem Namen des zuvor erzeugten Archivs auf. Daraufhin 
+entpackt `apt-clone` das Archiv und spielt die darin enthaltene 
+Paketkonfiguration auf dem Zielsystem ein. Fehlende Pakete werden dabei 
+heruntergeladen und eingerichtet; ebenso werden die Paketabhängigkeiten 
+sauber aufgelöst.
+
+.Mit `apt-clone` erzeugte Paketkonfiguration wieder einspielen
 ----
-# apt-clone restore packagelist.tar.gz
+# apt-clone restore apt-clone-state-kiste.tar.gz
 ...
 # 
 ----
 
+Das Werkzeug `apt-clone` bietet zwei Schalter an:
+
+`restore`:: packe das Archiv aus und spiele den Paketbestand auf dem
+Zielsystem ein
+
+`restore-new-distro`:: packe das Archiv aus, spiele den Paketbestand 
+auf dem Zielsystem ein und aktualisiere diesen, sofern möglich
+
+Letzteres kann genutzt werden, um das Einspielen und Aktualisieren eines
+Systems in einem einzigen Aufruf durchzuführen.
+
+[[paketkonfiguration-sichern-graphische-werkzeuge]]
 === Graphische Werkzeuge ===
 
 ==== Aptik ====
