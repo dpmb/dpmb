@@ -28,6 +28,8 @@
 
 - [[[apt-browse]]] Apt-browse, https://apt-browse.org/
 
+- [[[aptik]]] Aptik, https://github.com/teejee2008/aptik/
+
 - [[[aptitude-categorical-browser-to-be-removed]]] Kategorie-Browser in Aptitude wird voraussichtlich entfernt, https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=686124#44
 
 - [[[aptitude-dokumentation]]] Dokumentation zu `aptitude` in allen bisher verfügbaren Sprachen, https://www.debian.org/doc/user-manuals#aptitude
@@ -685,6 +687,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[mime-applications-associations]]] MIME Application Associations, https://www.freedesktop.org/wiki/Specifications/mime-apps-spec/
 
 - [[[mime-applications-associations-default-applications]]] Default Applications, https://specifications.freedesktop.org/mime-apps-spec/latest/ar01s04.html
+
+- [[[mintbackup]]] mintbackup, https://community.linuxmint.com/software/view/mintbackup
 
 - [[[Naumann-Abakus-Internet]]] Dr. Friedrich Naumann: Vom Abakus zum Internet: die Geschichte der Informatik. Darmstadt, Primus-Verlag, 2001, ISBN 3-89678-224-X
 

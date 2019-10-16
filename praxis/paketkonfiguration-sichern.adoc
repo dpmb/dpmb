@@ -27,29 +27,42 @@ weitaus spannenderen Aufgaben ab.
 
 Daher betrachten wir in diesem Kapitel verschiedene Wege, um diesen Schritt 
 möglichst zu automatisieren. Zum Einsatz kommen die Werkzeuge `dpkg` (siehe
-<<paketkonfiguration-sichern-mit-dpkg>>), `debconf-get-selections`, 
+<<paketkonfiguration-sichern-mit-dpkg>>), `debconf-get-selections` (siehe
+<<paketkonfiguration-sichern-mit-debconf-get-selections>>), 
 `debconf-set-selections` und `apt-clone` (siehe 
-<<paketkonfiguration-sichern-mit-apt-clone>>). Zu nutze machen wir uns dabei 
-auch die Beispiele zum Filtern der bereits auf dem System installierten 
-Pakete aus dem Abschnitt <<liste-der-installierten-pakete-anzeigen-und-deuten>>. 
+<<paketkonfiguration-sichern-mit-apt-clone>>). 
 
+[[paketkonfiguration-auslesen]]
 === Die bestehende Paketkonfiguration auslesen ===
 
+// Stichworte für den Index
+(((Paketkonfiguration, auslesen)))
 Zunächst gehen wir der Frage nach, wie Sie die bestehende Konfiguration
 ihrer installierten Pakete auslesen und sichern. Das nutzen Sie in einem 
 späteren Schritt, um diese Pakete wieder einspielen zu können -- sei es auf 
 dem gleichen System oder einem neuen Rechner, welcher identisch zum 
 erstgenannten werden muss. Alle benötigten Informationen dazu stehen in der 
-Debconf-Datenbank. 
+Debconf-Datenbank.
 
 [[paketkonfiguration-sichern-mit-dpkg]]
 ==== Mit `dpkg` ====
 
-* `dpkg -l | egrep '^ii' > paketliste`
-* `dpkg --get-selections > paketliste`
+// Stichworte für den Index
+(((debconf-get-selections)))
+(((Debianpaket, debconf)))
+(((Debianpaket, dpkg)))
 
+Zu nutze machen wir uns die Beispiele zum Filtern der bereits auf dem System 
+installierten Pakete aus dem Abschnitt <<liste-der-installierten-pakete-anzeigen-und-deuten>>. 
+
+* `dpkg -l | egrep '^ii' > paketliste`
+
+[[paketkonfiguration-sichern-mit-debconf-get-selections]]
 ==== Mit `debconf-get-selections` ====
 
+// Stichworte für den Index
+(((debconf-get-selections)))
+(((Debianpaket, debconf-utils)))
 Zum Auslesen nutzen Sie das Werkzeug `debconf-get-selections` aus dem Paket 
 'debconf-utils' <<Debian-Paket-debconf-utils>>. Ausführlicher ist der Vorgang 
 bereits unter 'Konfiguration für alle Pakete auslesen' in 
@@ -98,8 +111,13 @@ Das erzeugte Archiv beinhaltet auch die Pakete, die nicht mehr von den
 Paketquellen heruntergeladen werden können. Dazu bedient sich `apt-clone` des 
 Werkzeugs `dpkg-repack` <<Debian-Paket-dpkg-repack>>, welches aus den bereits
 installierten Dateien wieder Binärpakete erstellt, sofern das möglich ist. Im 
-nachfolgenden Listing sehen Sie, dass das nicht immer gelingt und auch zu
-Paketen führen kann, die nicht wiedereinspielbar sind:
+nachfolgenden Beispiel sehen Sie, dass das nicht immer gelingt und auch zu
+Paketen führen kann, die defekt sind (`broken`) und nicht sauber 
+wiedereinspielbar sind.
+
+Bevor Sie `apt-clone` ausführen, legen Sie ein Verzeichnis fest, in dem das 
+Archiv abgelegt werden soll. Im nachfolgenden Beispiel heißt das Verzeichnis 
+schlicht und einfach `packagelist`.
 
 .`apt-clone` sammelt Informationen
 ----
@@ -136,7 +154,11 @@ vor dem Aufruf von `apt-clone`, sofern das möglich ist (siehe
 bereits bestehende Paketliste. Es löscht Pakete bzw. installiert fehlende nach
 (siehe <<paketkonfiguration-wieder-einspielen-mit-apt-clone>>).
 
+[[paketkonfiguration-einspielen]]
 === Eine gesicherte Paketkonfiguration wieder einspielen ===
+
+// Stichworte für den Index
+(((Paketkonfiguration, gesicherte Konfiguration wieder einspielen)))
 
 [[paketkonfiguration-wieder-einspielen-mit-debconf-set-selections]]
 ==== Mit `debconf-set-selections` ====
@@ -160,10 +182,38 @@ bereits bestehende Paketliste. Es löscht Pakete bzw. installiert fehlende nach
 (((Debianpaket, apt-clone)))
 (((Ubuntupaket, apt-clone)))
 
+Haben Sie ein Archiv wie unter <<paketkonfiguration-sichern-mit-apt-clone>> 
+beschrieben erstellt, besprechen wir hier, wie Sie das auf dem Zielsystem
+einspielen-
+
 ----
 # apt-clone restore packagelist.tar.gz
 ...
 # 
 ----
+
+=== Graphische Werkzeuge ===
+
+==== Aptik ====
+
+* siehe Projektseite <<aptik>>
+* bislang nur als PPA für Ubuntu verfügbar
+* Werkzeuge `aptik` und `aptik-gtk` 
+* graphisches Werkzeug zum Backup
+** Software-Repositories
+** Paketcache
+** installierte Software
+* aktuelle Version ist kostenpflichtig
+
+* Artikel unter https://vitux.com/backup-and-restore-ubuntu-applications-using-aptik/
+
+==== Mintbackup ====
+
+* Projektseite <<mintbackup>>
+* kann Paketlisten sichern und wieder einspielen
+
+.Sicherungsdialog von Mintbackup
+image::praxis/mintbackup.png[id="fig.mintbackup", width="50%"]
+
 
 // Datei (Ende): ./praxis/paketkonfiguration-sichern.adoc
