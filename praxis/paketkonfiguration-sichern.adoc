@@ -196,24 +196,28 @@ einspielen-
 
 ==== Aptik ====
 
-* siehe Projektseite <<aptik>>
-* bislang nur als PPA für Ubuntu verfügbar
-* Werkzeuge `aptik` und `aptik-gtk` 
-* graphisches Werkzeug zum Backup
-** Software-Repositories
-** Paketcache
-** installierte Software
-* aktuelle Version ist kostenpflichtig
+// Stichworte für den Index
+(((aptik)))
+(((aptik-gtk)))
+(((Ubuntupaket, aptik)))
 
-* Artikel unter https://vitux.com/backup-and-restore-ubuntu-applications-using-aptik/
+Seit einigen Jahren steht Aptik für Ubuntu über die Projektseite <<aptik>> 
+bereit. Bislang ist es nur nur als PPA für Ubuntu verfügbar und enthält die 
+beiden Werkzeuge `aptik` und `aptik-gtk`. Letzteres ist ein graphisches 
+Werkzeug zum Backup und dem Wiedereinspielen von Paketlisten, dem Paketcache 
+und der installierten Software. Bislang kostenfrei, wurde inzwischen das
+Vertriebsmodell geändert und die aktuelle Version ist kostenpflichtig.
 
 ==== Mintbackup ====
 
-* Projektseite <<mintbackup>>
-* kann Paketlisten sichern und wieder einspielen
+// Stichworte für den Index
+(((mintbackup)))
+
+Für Linux Mint steht das Werkzeug `mintbackup` bereit <<mintbackup>>. Es ist
+ein graphisches Werkzeug, welches Paketlisten sichern und wieder einspielen
+kann.
 
 .Sicherungsdialog von Mintbackup
 image::praxis/mintbackup.png[id="fig.mintbackup", width="50%"]
-
 
 // Datei (Ende): ./praxis/paketkonfiguration-sichern.adoc
