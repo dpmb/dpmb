@@ -144,7 +144,7 @@ version mismatch: libssl1.1, mdadm, python3-distutils, libitm1, libmagic-mgc, sa
 Das Archiv wird im vorgenannten Verzeichnis erzeugt. Dessen Name setzt sich aus
 `apt-clone-state-` und dem Hostnamen zusammen, also bspw. 
 `apt-clone-state-kiste.tar.gz`. Mit dem Schalter `info` analysieren Sie das 
-soeben erzeugte Archiv:
+soeben erzeugte Archiv. Nachfolgendes Listing stammt von einem Ubuntu 18 Bionic:
 
 .Informationen zum erzeugten `apt-clone`-Archiv anzeigen
 ----
