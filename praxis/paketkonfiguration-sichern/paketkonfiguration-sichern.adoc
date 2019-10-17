@@ -155,8 +155,9 @@ version mismatch: libssl1.1, mdadm, python3-distutils, libitm1, libmagic-mgc, sa
 
 Das Archiv wird im vorgenannten Verzeichnis erzeugt. Dessen Name setzt sich aus
 `apt-clone-state-` und dem Hostnamen zusammen, also bspw. 
-`apt-clone-state-kiste.tar.gz`. Mit dem Schalter `info` analysieren Sie das 
-soeben erzeugte Archiv. Nachfolgendes Listing stammt von einem Ubuntu 18 Bionic:
+`apt-clone-state-kiste.tar.gz` für den Hostnamen `kiste`. Mit dem Schalter `info` 
+analysieren Sie das soeben erzeugte Archiv. Nachfolgendes Listing stammt von 
+einem Archiv für ein Ubuntu 18 'Bionic':
 
 .Informationen zum erzeugten `apt-clone`-Archiv anzeigen
 ----
@@ -176,10 +177,16 @@ Bitte beachten Sie bei der Verwendung von `apt-clone` noch die folgenden Punkte:
 wie das Originalsystem besitzen.
 
 * `apt-clone` gleicht den Paketbestand des Originalsystems mit den Paketquellen 
-ab. Es merkt an, wenn installierte Pakete nicht mehr aktuell sind. Um das o.g.
-erzeugte Archiv möglichst klein zu halten, aktualisieren Sie das Originalsystem 
-vor dem Aufruf von `apt-clone`, sofern das möglich ist (siehe 
-<<pakete-aktualisieren>>).
+ab. Es merkt an, wenn installierte Pakete nicht mehr aktuell sind und im 
+Paketmirror neuere Versionen vorliegen. Um das o.g. erzeugte Archiv möglichst klein 
+zu halten, aktualisieren Sie das Originalsystem vor dem Aufruf von `apt-clone`, 
+sofern das möglich und auch praktikabel ist (siehe <<pakete-aktualisieren>>).
+
+* `apt-clone` benachrichtigt Sie, wenn Dateien vorliegen, die nicht im 
+Originalpaket enthalten sind, bspw. Konfigurationsdateien.
+
+* `apt-clone` gibt am Ende eine Liste der Pakete aus, die es für nicht 
+installierbar hält.
 
 * Führen Sie `apt-clone` später auf dem Zielsystem aus, überschreibt es ihre 
 bereits bestehende Paketliste. Es löscht Pakete bzw. installiert fehlende nach
