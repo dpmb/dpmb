@@ -1,6 +1,6 @@
 // Datei: ./praxis/paketkonfiguration-sichern.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[paketkonfiguration-sichern]]
 == Paketkonfiguration sichern ==
@@ -104,24 +104,34 @@ bereit (siehe <<Debian-Paket-apt-clone>> und <<Ubuntu-Paket-apt-clone>>).
 Es sieht sich selbst als 'helper script', welches das Klonen einer bestehenden
 Linuxinstallation vereinfacht. 
 
-Es stellt daher nach Möglichkeit auf dem Bestandssystem so viele 
-Informationen zur Installation zusammen, wie möglich sind. Das umfasst neben 
-der Datei `/etc/apt/sources.list` den Debian-Schlüsselring mit den darin 
-hinterlegten GPG-Schlüsseln für die verwendeten Paketquellen sowie auch den 
-Paketstatus. Ergebnis der Ausführung ist ein Archiv im Format `tar.gz`, welches
-Sie auf dem Zielsystem einspielen.
+Es stellt daher nach Möglichkeit auf dem Bestandssystem so viele Informationen 
+zur zu klonenden Installation zusammen, wie möglich sind. Das umfasst: 
 
-Das erzeugte Archiv beinhaltet auch die Pakete, die nicht mehr von den 
-Paketquellen heruntergeladen werden können. Dazu bedient sich `apt-clone` des 
-Werkzeugs `dpkg-repack` <<Debian-Paket-dpkg-repack>>, welches aus den bereits
-installierten Dateien wieder Binärpakete erstellt, sofern das möglich ist. Im 
-nachfolgenden Beispiel sehen Sie, dass das nicht immer gelingt und auch zu
-Paketen führen kann, die defekt sind (`broken`) und nicht sauber 
-wiedereinspielbar sind.
+* die Paketquellen über die Datei `/etc/apt/sources.list` 
+* die Paketquellen über das komplette Verzeichnis `/etc/apt/sources.list.d` 
+samt Inhalt
+* die hinterlegten Voreinstellungen über das Verzeichnis `/etc/apt/preferences.d/`
+* den Debian-Schlüsselring mit den darin hinterlegten GPG-Schlüsseln für die 
+verwendeten Paketquellen unter `/etc/apt/trusted.gpg` und dem Verzeichnis 
+`/etc/apt/trusted.gpg.d`
+* den Paketstatus aus der Paketdatenbank
+* die zusätzlichen Pakete, d.h. Pakete, die nicht über die hinterlegten
+Paketquellen installiert wurden. Dazu legt es im Archiv ein Verzeichnis
+`/var/lib/apt-clone/debs` an.
+* die Pakete, die nicht mehr von den Paketquellen heruntergeladen werden können. 
+Diese landen ebenfalls unter `/var/lib/apt-clone/debs` im Archiv. Dazu bedient 
+sich `apt-clone` des Werkzeugs `dpkg-repack` <<Debian-Paket-dpkg-repack>>, 
+welches aus den bereits installierten Dateien wieder Binärpakete erstellt, 
+sofern das möglich ist. Im nachfolgenden Beispiel sehen Sie, dass das nicht 
+immer gelingt und auch zu Paketen führen kann, die defekt sind (`broken`) und 
+nicht sauber wiedereinspielbar sind.
 
-Bevor Sie `apt-clone` ausführen, legen Sie ein Verzeichnis fest, in dem das 
-Archiv abgelegt werden soll. Im nachfolgenden Beispiel heißt das Verzeichnis 
-schlicht und einfach `packagelist`.
+Bevor Sie `apt-clone clone` ausführen, legen Sie ein (lokales) Verzeichnis 
+fest, in dem das Archiv abgelegt werden soll. Im nachfolgenden Beispiel heißt 
+das lokale Verzeichnis schlicht und einfach `packagelist`. Ergebnis des 
+Aufrufs von `apt-clone` ist ein Archiv im Format `tar.gz`, welches Sie auf 
+dem Zielsystem wieder mit Hilfe von `apt-clone` einspielen (siehe
+<<paketkonfiguration-wieder-einspielen-mit-apt-clone>>).
 
 .`apt-clone` sammelt Informationen
 ----
