@@ -19,19 +19,23 @@
 (((Paketkonfiguration, gesicherte Konfiguration wieder einspielen)))
 (((Paketliste verstehen)))
 
-Betreuen Sie eine Reihe von Rechnern, die jeweils aktuell und identisch 
-bleiben müssen, ist das manuelle Sichern, Pflegen und Einspielen einer 
-Paketliste etwas mühselig. Der händische Abgleich mit Hilfe von `dpkg` und 
-`diff` braucht einfach zu lange, ist zudem fehleranfällig und hält Sie von 
-weitaus spannenderen Aufgaben ab. 
+Betreuen Sie eine Reihe von Rechnern, die jeweils aktuell und zumindest 
+bezogen auf die Paketauswahl identisch bleiben müssen, ist das manuelle 
+Sichern, Pflegen und Einspielen einer Paketliste etwas mühselig. Der 
+händische Abgleich mit Hilfe von `dpkg` und `diff` braucht einfach zu lange, 
+ist zudem fehleranfällig und hält Sie von weitaus spannenderen Aufgaben auf 
+ihrem System ab. 
 
-Daher betrachten wir in diesem Kapitel verschiedene Wege, um diesen Schritt 
-möglichst zu automatisieren. Zum Einsatz kommen die Werkzeuge `dpkg` (siehe
-<<paketkonfiguration-sichern-mit-dpkg>>), `debconf-get-selections` (siehe
+Daher schauen wir uns in diesem Kapitel verschiedene Wege an, um diese Schritte 
+möglichst zu automatisieren. Unterteilt haben wir das in das Auslesen der 
+Paketkonfiguration und das Einspielen der zuvor gesicherten Paketkonfiguration. 
+Zum Einsatz kommen dabei die Werkzeuge `dpkg` (siehe 
+<<paketkonfiguration-sichern-mit-dpkg>>), `debconf-get-selections` (siehe 
 <<paketkonfiguration-sichern-mit-debconf-get-selections>>), 
-`debconf-set-selections` und `apt-clone` (siehe 
-<<paketkonfiguration-sichern-mit-apt-clone>>). Zum Schluß reißen wir 
-graphische Werkzeuge kurz an (siehe dazu 
+`debconf-set-selections` (siehe 
+<<paketkonfiguration-wieder-einspielen-mit-debconf-set-selections>>) und 
+`apt-clone` (siehe <<paketkonfiguration-sichern-mit-apt-clone>>). Zum Schluß 
+reißen wir eine Auswahl graphischer Werkzeuge kurz an (siehe dazu den Abschnitt
 <<paketkonfiguration-sichern-graphische-werkzeuge>>).
 
 [[paketkonfiguration-auslesen]]
