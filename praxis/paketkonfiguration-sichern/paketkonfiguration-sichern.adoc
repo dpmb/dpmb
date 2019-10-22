@@ -117,6 +117,7 @@ einem anderen System wieder einzuspielen.
 (((apt-clone, info)))
 (((Debianpaket, apt-clone)))
 (((Debianpaket, dpkg-repack)))
+(((dpkg-repack)))
 (((Ubuntupaket, apt-clone)))
 
 Dieses Werkzeug steht über die gleichnamigen Pakete bei Debian und Ubuntu 
@@ -124,8 +125,15 @@ bereit (siehe <<Debian-Paket-apt-clone>> und <<Ubuntu-Paket-apt-clone>>).
 Es sieht sich selbst als 'helper script', welches das Klonen einer bestehenden
 Linuxinstallation vereinfacht. 
 
-Es stellt daher nach Möglichkeit auf dem Bestandssystem so viele Informationen 
-zur zu klonenden Installation zusammen, wie möglich sind. Das umfasst: 
+Das Debian- bzw. Ubuntupaket beinhaltet das Python-Skript `apt-clone` sowie 
+eine passende, gleichnamige Python-Klasse für Python 3. Intern ruft es das 
+Werkzeug `dpkg-repack` <<Debian-Paket-dpkg-repack>> auf, welches aus den 
+bereits installierten Dateien wieder Binärpakete erstellt, sofern das möglich 
+ist.
+
+Es stellt beim Aufruf nach Möglichkeit auf dem Bestandssystem so viele 
+Informationen zur zu klonenden Installation zusammen, wie möglich sind. Das 
+umfasst: 
 
 * die Paketquellen über die Datei `/etc/apt/sources.list` 
 * die Paketquellen über das komplette Verzeichnis `/etc/apt/sources.list.d` 
@@ -140,11 +148,10 @@ Paketquellen installiert wurden. Dazu legt es im Archiv ein Verzeichnis
 `/var/lib/apt-clone/debs` an.
 * die Pakete, die nicht mehr von den Paketquellen heruntergeladen werden können. 
 Diese landen ebenfalls unter `/var/lib/apt-clone/debs` im Archiv. Dazu bedient 
-sich `apt-clone` des Werkzeugs `dpkg-repack` <<Debian-Paket-dpkg-repack>>, 
-welches aus den bereits installierten Dateien wieder Binärpakete erstellt, 
-sofern das möglich ist. Im nachfolgenden Beispiel sehen Sie, dass das nicht 
-immer gelingt und auch zu Paketen führen kann, die defekt sind (`broken`) und 
-nicht sauber wiedereinspielbar sind.
+sich `apt-clone` des Werkzeugs `dpkg-repack` <<Debian-Paket-dpkg-repack>>. Im 
+nachfolgenden Beispiel sehen Sie, dass das nicht immer sauber gelingt und auch 
+zu Paketen führen kann, die defekt sind (`broken`) -- d.h. unvollständige 
+Abhängigkeiten besitzen -- und nicht ohne weiteres wiedereinspielbar sind.
 
 Bevor Sie `apt-clone clone` ausführen, legen Sie ein (lokales) Verzeichnis 
 fest, in dem das Archiv abgelegt werden soll. Im nachfolgenden Beispiel heißt 
