@@ -60,11 +60,12 @@ Debconf-Datenbank.
 (((dpkg, --list)))
 Wie bereits in <<liste-der-installierten-pakete-anzeigen-und-deuten>> erklärt,
 liest `dpkg` die Paketdatenbank aus und listet Ihnen die derzeit installierten 
-und (noch) konfigurierten Pakete auf. Über das nachfolgende Kommando erhalten
-Sie eine entsprechende Liste mit den Namen der Pakete. Zusatzinformationen wie
-Installationsstatus, Kurzbeschreibung des Pakets und die Version des Pakets 
-werden dabei mit Hilfe von `awk` herausgefiltert. Die Ausgabe des Kommandos 
-landet dabei in der Datei `paketliste` im aktuellen Verzeichnis:
+und (noch) konfigurierten Pakete auf der Standardausgabe (`stdout`) auf. Über 
+das nachfolgende Kommando erhalten Sie eine entsprechende Liste mit den Namen 
+der Pakete. Zusatzinformationen wie Installationsstatus, Kurzbeschreibung des 
+Pakets und die Version des Pakets werden dabei mit Hilfe von `awk` 
+herausgefiltert. Die Ausgabe des Kommandos landet dabei in der Datei 
+`paketliste` im aktuellen Verzeichnis:
 
 .Liste der installierten Pakete namentlich sortiert in einer Datei ablegen
 ----
@@ -221,15 +222,32 @@ bereits bestehende Paketliste. Es löscht Pakete bzw. installiert fehlende nach
 ==== Mit `debconf-set-selections` ====
 
 // Stichworte für den Index
+(((Automatisierte Installation, Preseeding)))
 (((debconf-set-selections, -c)))
 (((debconf-set-selections, -v)))
 (((debconf-set-selections, --checkonly)))
 (((debconf-set-selections, --verbose)))
 
-* wie spiele ich das lokal wieder ein
-** `debconf-set-selections` (Paket 'debconf' <<Debian-Paket-debconf>>))
-** Schalter `-c` (Langformat `--checkonly`): Eingabedatei nur auf Fehler prüfen
-** Schalter `-v` (Langformat `--verbose`): ausführliche Ausgabe beim Einspielen
+Haben Sie zuvor eine Liste der Paketkonfiguration mit Hilfe des Werkzeugs
+`debconf-get-selections` aus dem Paket 'debconf' <<Debian-Paket-debconf>>
+erstellt (siehe <<paketkonfiguration-sichern-mit-debconf-get-selections>>), 
+spielen Sie diese Liste mit dem Kommando `debconf-set-selections` aus dem 
+gleichen Paket wieder ein. Das Werkzeug bietet diese hilfreichen Schalter
+an:
+
+`-c` (Langform `--checkonly`) :: Eingabedatei nur auf Fehler prüfen
+
+`-v` (Langform `--verbose`) :: ausführliche Ausgabe beim Einspielen
+
+Über den folgenden Aufruf spielen Sie die gespeicherte Konfiguration als 
+Benutzer mit administrativen Rechten wieder ein:
+
+.Einspielen der gespeicherten Konfiguration
+----
+# debconf-set-selections paketliste
+...
+#
+----
 
 [[paketkonfiguration-wieder-einspielen-mit-apt-clone]]
 ==== Mit `apt-clone` ====
