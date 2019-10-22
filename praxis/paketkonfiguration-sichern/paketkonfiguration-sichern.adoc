@@ -160,6 +160,10 @@ Aufrufs von `apt-clone` ist ein Archiv im Format `tar.gz`, welches Sie auf
 dem Zielsystem wieder mit Hilfe von `apt-clone` einspielen (siehe
 <<paketkonfiguration-wieder-einspielen-mit-apt-clone>>).
 
+`apt-clone` liest alle installierten Pakete auf dem Ursprungsrechner ein. 
+Möchten Sie ebenfalls alle zusätzlichen, manuell installierten Pakete mit
+erfassen, geben Sie beim Aufruf den Schalter `--with-dpkg-repack` mit an.
+
 .`apt-clone` sammelt Informationen
 ----
 # apt-clone clone --with-dpkg-repack packagelist/.
@@ -180,11 +184,12 @@ version mismatch: libssl1.1, mdadm, python3-distutils, libitm1, libmagic-mgc, sa
 # 
 ----
 
-Das Archiv wird im vorgenannten Verzeichnis erzeugt. Dessen Name setzt sich aus
-`apt-clone-state-` und dem Hostnamen zusammen, also bspw. 
-`apt-clone-state-kiste.tar.gz` für den Hostnamen `kiste`. Mit dem Schalter `info` 
-analysieren Sie das soeben erzeugte Archiv. Nachfolgendes Listing stammt von 
-einem Archiv für ein Ubuntu 18 'Bionic':
+Das Archiv wird im vorgenannten Verzeichnis erzeugt. Der Name des Archivs 
+setzt sich aus `apt-clone-state-` und dem Hostnamen zusammen, also bspw. 
+`apt-clone-state-kiste.tar.gz` für den Computer mit dem Hostnamen `kiste`. 
+Mit dem Schalter `info` analysieren Sie das soeben erzeugte Archiv. 
+Nachfolgendes Listing stammt von einem Archiv für ein Ubuntu 18 'Bionic', 
+welcher den Rechnernamen 'kiste' trägt:
 
 .Informationen zum erzeugten `apt-clone`-Archiv anzeigen
 ----
@@ -205,12 +210,19 @@ wie das Originalsystem besitzen.
 
 * `apt-clone` gleicht den Paketbestand des Originalsystems mit den Paketquellen 
 ab. Es merkt an, wenn installierte Pakete nicht mehr aktuell sind und im 
-Paketmirror neuere Versionen vorliegen. Um das o.g. erzeugte Archiv möglichst klein 
-zu halten, aktualisieren Sie das Originalsystem vor dem Aufruf von `apt-clone`, 
-sofern das möglich und auch praktikabel ist (siehe <<pakete-aktualisieren>>).
+Paketmirror bereits eine neuere Version vorliegt. Um das o.g. erzeugte Archiv 
+möglichst klein zu halten, aktualisieren Sie das Originalsystem vor dem Aufruf von 
+`apt-clone`, sofern das möglich und auch praktikabel ist (siehe 
+<<pakete-aktualisieren>>) und dem Vorgehen nichts entgegenspricht.
+
+* Räumen Sie ihr Originalsystem vor dem Klonen auf. Entfernen Sie nicht mehr 
+benötigte Software und auch verwaiste Pakete, bspw. über das Kommando
+`apt-get autoremove` (siehe <<umgang-mit-waisen>>).
 
 * `apt-clone` benachrichtigt Sie, wenn Dateien vorliegen, die nicht im 
-Originalpaket enthalten sind, bspw. Konfigurationsdateien.
+Originalpaket enthalten sind, bspw. Konfigurationsdateien. Es ist so angelegt,
+dass es bestehende, geänderte Dateien übernimmt und somit eine exakte Kopie des
+Zustands des installierten Pakets erzeugt.
 
 * `apt-clone` gibt am Ende eine Liste der Pakete aus, die es für nicht 
 installierbar hält.
@@ -249,9 +261,19 @@ an:
 Über den folgenden Aufruf spielen Sie die gespeicherte Konfiguration als 
 Benutzer mit administrativen Rechten wieder ein:
 
-.Einspielen der gespeicherten Konfiguration
+.Einspielen der gespeicherten Konfiguration mit Hilfe von `debconf-set-selections`
 ----
 # debconf-set-selections paketliste
+...
+#
+----
+
+Verwenden Sie eine Datei, die lediglich aus den Namen der Pakete besteht,
+hilft Ihnen dieses Kommando beim Wiedereinspielen:
+
+.Einspielen der gespeicherten Paketliste mit Hilfe von `xargs` und `apt-get`
+----
+# xargs -a "paketliste" apt-get install -y
 ...
 #
 ----
@@ -266,17 +288,15 @@ Benutzer mit administrativen Rechten wieder ein:
 (((Debianpaket, apt-clone)))
 (((Ubuntupaket, apt-clone)))
 
-Haben Sie ein Archiv wie unter <<paketkonfiguration-sichern-mit-apt-clone>> 
-beschrieben erstellt, besprechen wir nun, wie Sie das auf dem Zielsystem
-einspielen. Als erstes übertragen Sie das Archiv auf ihr Zielsystem, bspw. per
-USB-Stick, externe Festplatte oder mit Hilfe des Kommandos `scp`. 
+Haben Sie zuvor ein Archiv wie unter <<paketkonfiguration-sichern-mit-apt-clone>> 
+beschrieben erstellt, lernen Sie nun, wie Sie das auf dem Zielsystem einspielen. 
+Als erstes übertragen Sie das Archiv auf ihr Zielsystem, bspw. per USB-Stick, 
+externe Festplatte oder mit Hilfe des Kommandos `scp`. 
 
-Ist das erfolgt, rufen Sie `apt-clone` als administrativer Benutzer mit dem 
-Schalter `restore` und dem Namen des zuvor erzeugten Archivs auf. Daraufhin 
-entpackt `apt-clone` das Archiv und spielt die darin enthaltene 
-Paketkonfiguration auf dem Zielsystem ein. Fehlende Pakete werden dabei 
-heruntergeladen und eingerichtet; ebenso werden die Paketabhängigkeiten 
-sauber aufgelöst.
+Ist das erfolgt, rufen Sie auf dem Zielsystem `apt-clone` als administrativer 
+Benutzer mit dem Schalter `restore` und dem Namen des zuvor erzeugten Archivs 
+auf. Daraufhin entpackt `apt-clone` das Archiv und spielt die darin enthaltenen
+Pakete samt deren Konfiguration auf wieder dem Zielsystem ein. 
 
 .Mit `apt-clone` erzeugte Paketkonfiguration wieder einspielen
 ----
@@ -284,6 +304,12 @@ sauber aufgelöst.
 ...
 # 
 ----
+
+Bei der Ausführung greift `apt-clone` auf die Mechanismen der Paketverwaltung 
+zurück. Fehlende Pakete werden somit heruntergeladen und eingerichtet und die 
+Paketabhängigkeiten sauber aufgelöst. Das funktioniert reibungslos, wenn 
+Original- und Zielsystem die gleiche Version bzw. Veröffentlichung der 
+Distribution benutzen.
 
 Das Werkzeug `apt-clone` bietet zwei Schalter an:
 
