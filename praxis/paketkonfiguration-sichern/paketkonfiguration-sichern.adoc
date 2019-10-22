@@ -34,8 +34,9 @@ Zum Einsatz kommen dabei die Werkzeuge `dpkg` (siehe
 <<paketkonfiguration-sichern-mit-debconf-get-selections>>), 
 `debconf-set-selections` (siehe 
 <<paketkonfiguration-wieder-einspielen-mit-debconf-set-selections>>) und 
-`apt-clone` (siehe <<paketkonfiguration-sichern-mit-apt-clone>>). Zum Schluß 
-reißen wir eine Auswahl graphischer Werkzeuge kurz an (siehe dazu den Abschnitt
+`apt-clone` (siehe <<paketkonfiguration-sichern-mit-apt-clone>> und 
+<<paketkonfiguration-wieder-einspielen-mit-apt-clone>>). Zum Schluß reißen wir 
+eine Auswahl graphischer Werkzeuge kurz an (siehe 
 <<paketkonfiguration-sichern-graphische-werkzeuge>>).
 
 [[paketkonfiguration-auslesen]]
@@ -54,43 +55,57 @@ Debconf-Datenbank.
 ==== Mit `dpkg` ====
 
 // Stichworte für den Index
-(((debconf-get-selections)))
-(((Debianpaket, debconf)))
 (((Debianpaket, dpkg)))
+(((dpkg, -l)))
+(((dpkg, --list)))
+Wie bereits in <<liste-der-installierten-pakete-anzeigen-und-deuten>> erklärt,
+liest `dpkg` die Paketdatenbank aus und listet Ihnen die derzeit installierten 
+und (noch) konfigurierten Pakete auf. Über das nachfolgende Kommando erhalten
+Sie eine entsprechende Liste mit den Namen der Pakete. Zusatzinformationen wie
+Installationsstatus, Kurzbeschreibung des Pakets und die Version des Pakets 
+werden dabei mit Hilfe von `awk` herausgefiltert. Die Ausgabe des Kommandos 
+landet dabei in der Datei `paketliste` im aktuellen Verzeichnis:
 
-Zu nutze machen wir uns die Beispiele zum Filtern der bereits auf dem System 
-installierten Pakete aus dem Abschnitt <<liste-der-installierten-pakete-anzeigen-und-deuten>>. 
+.Liste der installierten Pakete namentlich sortiert in einer Datei ablegen
+----
+$ dpkg -l | egrep "^ii" | awk ' {print $2} ' | sort > paketliste
+$
+---- 
 
-* `dpkg -l | egrep '^ii' > paketliste`
+Diese soeben erzeugte Liste nutzen Sie als Referenz, um andere Systeme identisch
+aufzusetzen, bspw. via `apt-get install < paketliste`. Bitte beachten Sie, dass 
+bestehende Konfigurationsdateien für die Pakete nicht mit in der Liste gesichert 
+werden und beim Einspielen bzw. Installieren des Pakets aus dem jeweiligen Paket 
+extrahiert bzw. neu angelegt werden.
 
 [[paketkonfiguration-sichern-mit-debconf-get-selections]]
 ==== Mit `debconf-get-selections` ====
 
 // Stichworte für den Index
+(((Automatisierte Installation, Preseeding)))
 (((debconf-get-selections)))
 (((Debianpaket, debconf-utils)))
-Zum Auslesen nutzen Sie das Werkzeug `debconf-get-selections` aus dem Paket 
-'debconf-utils' <<Debian-Paket-debconf-utils>>. Ausführlicher ist der Vorgang 
-bereits unter 'Konfiguration für alle Pakete auslesen' in 
-<<konfiguration-fuer-alle-pakete-auslesen>> beschrieben.
+Das Werkzeug `debconf-get-selections` aus dem Paket 'debconf-utils' 
+<<Debian-Paket-debconf-utils>> erzeugt eine Liste der Pakete, die installiert 
+sind und für die eine weitere Konfiguration notwendig ist. Das kommt im Rahmen 
+des sogenannten 'preseeding' zum Einsatz, auf Deutsch mit 'Vorbelegen von 
+Konfigurationswerten' übersetzbar.
 
-Die Ausgabe von `debconf-get-selections` erfolgt auf der Standardausgabe
-(`stdout`) und ist nachfolgend als Ausschnitt dargestellt.
+Die Ausgabe von `debconf-get-selections` erfolgt auf der Standardausgabe 
+(`stdout`). Eine Liste in einer Datei `paketliste`, die lediglich die 
+Paketnamen in sortierter Reihenfolge enthält, erzeugen Sie mit Hilfe der 
+Kombination aus den Werkzeugen `debconf-get-selection`, `grep`, `awk` und `sort` 
+wie folgt:
 
-.Auslesen der bestehenden Paketkonfiguration aus der Debconf-Datenbank (Ausschnitt)
+.Auslesen der bestehenden Paketkonfiguration aus der Debconf-Datenbank
 ----
-# debconf-get-selections
-...
-# Nicht zugestellte E-Mails im »spool«-Verzeichnis löschen?
-exim4-base	exim4/purge_spool	boolean	false
-# Soll smb.conf automatisch konfiguriert werden?
-samba-common	samba-common/do_debconf	boolean	true
-# Schriftgröße:
-# Choices: 
-console-setup	console-setup/fontsize-text47	select	8x16
-...
-#
+$ debconf-get-selections | grep -v "^#" | awk ' { print $1 } ' | sort | uniq | > paketliste
+$
 ----
+
+In <<paketkonfiguration-wieder-einspielen-mit-debconf-set-selections>> lesen 
+Sie, wie Sie die erzeugte Liste benutzen, um die darin genannten Pakete auf 
+einem anderen System wieder einzuspielen.
 
 [[paketkonfiguration-sichern-mit-apt-clone]]
 ==== Mit `apt-clone` ====
