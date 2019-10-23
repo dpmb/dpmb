@@ -32,7 +32,7 @@ Verzeichnis:
 
 `debian-binary`:: enthält die Versionsnummer des verwendeten Debian-Paketformats, beispielsweise "2.0".
 `control.tar.gz`:: ist ein komprimiertes tar-Archiv mit den Metadaten des Pakets.
-`data.tar.gz` :: ist ein komprimiertes tar-Archiv mit den eigentlichen Dateien, die vom Programm benötigt werden.
+`data.tar.gz`, `data.tar.xz`, `data.tar.bz2` :: ist ein komprimiertes tar-Archiv mit den eigentlichen Dateien, die vom Programm benötigt werden.
 
 `ar` ist so nett und erlaubt Ihnen auch nur das Auspacken einer einzelnen 
 Komponente. Um bspw. lediglich die Versionsnummer zu erhalten, sieht ihr Aufruf
