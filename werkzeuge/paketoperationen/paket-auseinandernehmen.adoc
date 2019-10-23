@@ -8,8 +8,8 @@
 
 // Stichworte für den Index
 (((ar)))
-(((ar, x)))
-(((ar, v)))
+(((ar, -x)))
+(((ar, -v)))
 (((deb-Paketformat, Bestandteile)))
 (((deb-Paketformat, Daten)))
 (((deb-Paketformat, Metainformationen)))
@@ -27,7 +27,8 @@ $
 ----
 
 Der Schalter `-x` sorgt für das Auspacken und `-v` steht für `verbose`, d.h.
-ausführliche Ausgabe. Als Ergebnis erhalten Sie diese drei Dateien:
+ausführliche Ausgabe. Als Ergebnis erhalten Sie diese drei Dateien im aktuellen
+Verzeichnis:
 
 `debian-binary`:: enthält die Versionsnummer des verwendeten Debian-Paketformats, beispielsweise "2.0".
 `control.tar.gz`:: ist ein komprimiertes tar-Archiv mit den Metadaten des Pakets.

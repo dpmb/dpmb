@@ -119,8 +119,8 @@ die beiden Klammern.
 ==== Binärpakete ====
 
 // Stichworte für den Index
-(((ar, t)))
-(((ar, x)))
+(((ar, -t)))
+(((ar, -x)))
 (((Paketvarianten, Binärpaket)))
 
 ===== Komponenten =====
@@ -131,7 +131,7 @@ für das Paket 'autotools-dev'.
 
 .Auspacken von Paketen mit `ar`
 ----
-$ ar t autotools-dev_20100122.1_all.deb
+$ ar -t autotools-dev_20100122.1_all.deb
 debian-binary
 control.tar.gz
 data.tar.gz
@@ -147,11 +147,11 @@ Binär-Paketformats enthält. Nachfolgender Auszug zeigt die
 Versionsnummer für das Paket 'mplayer':
 
 ----
-$ ar t mplayer_2%3a1.0~rc4.dfsg1+svn34540-1+b2_i386.deb 
+$ ar -t mplayer_2%3a1.0~rc4.dfsg1+svn34540-1+b2_i386.deb 
 debian-binary
 control.tar.gz
 data.tar.gz
-$ ar x mplayer_2%3a1.0~rc4.dfsg1+svn34540-1+b2_i386.deb debian-binary
+$ ar -x mplayer_2%3a1.0~rc4.dfsg1+svn34540-1+b2_i386.deb debian-binary
 $ cat debian-binary 
 2.0
 $
