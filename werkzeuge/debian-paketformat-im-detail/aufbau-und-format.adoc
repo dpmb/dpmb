@@ -119,6 +119,8 @@ die beiden Klammern.
 ==== Binärpakete ====
 
 // Stichworte für den Index
+(((ar, t)))
+(((ar, x)))
 (((Paketvarianten, Binärpaket)))
 
 ===== Komponenten =====

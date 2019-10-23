@@ -1,0 +1,50 @@
+// Datei: ./werkzeuge/paketoperationen/paket-auseinandernehmen.adoc
+
+// Baustelle: Rohtext
+
+[[paket-auseinandernehmen]]
+
+=== Paket auseinandernehmen ===
+
+// Stichworte für den Index
+(((ar)))
+(((ar, x)))
+(((ar, v)))
+(((deb-Paketformat, Bestandteile)))
+(((deb-Paketformat, Daten)))
+(((deb-Paketformat, Metainformationen)))
+Manchmal kann es ganz nützlich sein, wenn Sie ein `.deb`-Paket vorliegen haben 
+und dieses in seine Bestandteile zerlegen können. Mit dem folgenden Aufruf über 
+das Kommando `ar` gelingt Ihnen das wie folgt:
+
+.Ein Debianpaket auseinandernehmen
+----
+$ ar -xv atom-amd64.deb 
+x - debian-binary
+x - control.tar.gz
+x - data.tar.xz
+$
+----
+
+Der Schalter `-x` sorgt für das Auspacken und `-v` steht für `verbose`, d.h.
+ausführliche Ausgabe. Als Ergebnis erhalten Sie diese drei Dateien:
+
+`debian-binary`:: enthält die Versionsnummer des verwendeten Debian-Paketformats, beispielsweise "2.0".
+`control.tar.gz`:: ist ein komprimiertes tar-Archiv mit den Metadaten des Pakets.
+`data.tar.gz` :: ist ein komprimiertes tar-Archiv mit den eigentlichen Dateien, die vom Programm benötigt werden.
+
+`ar` ist so nett und erlaubt Ihnen auch nur das Auspacken einer einzelnen 
+Komponente. Um bspw. lediglich die Versionsnummer zu erhalten, sieht ihr Aufruf
+dann wie folgt aus:
+
+.Eine Komponente des Debianpakets herausziehen
+----
+$ ar -xv atom-amd64.deb debian-binary
+x - debian-binary
+$
+----
+
+Weitere Informationen zu den verschiedenen Paketformaten und deren Komponenten 
+entnehmen Sie bitte dem <<aufbau-und-format>>.
+
+// Datei (Ende): ./werkzeuge/paketoperationen/paket-auseinandernehmen.adoc

@@ -60,6 +60,8 @@ include::paket-nach-maintainer-finden.adoc[]
 
 include::paket-zu-datei-finden.adoc[]
 
+include::paket-auseinandernehmen.adoc[]
+
 include::paketinhalte-anzeigen-apt-file.adoc[]
 
 include::nach-muster-in-einem-paket-suchen.adoc[]
