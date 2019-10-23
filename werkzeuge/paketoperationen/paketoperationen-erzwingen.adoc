@@ -6,6 +6,8 @@
 
 === Paketoperationen erzwingen ===
 
+// Stichworte für den Index
+(((Paketoperationen, erzwingen)))
 Die vorgestellten Werkzeuge zur Paketverwaltung sind als sehr pingeling
 bekannt, um den Zustand Ihres Systems möglichst stabil und benutzbar zu
 halten. Dazu zählen beispielsweise eine saubere Installation, keine
@@ -21,30 +23,80 @@ ignorieren und Aktionen trotzdessen durchzuführen. Bitte behalten Sie
 dabei stets im Hinterkopf, dass diese Schritte und Optionen Ihr System
 auch unbenutzbar machen können.
 
+==== Aktionen mit `dpkg` erzwingen ====
+
 // Stichworte für den Index
 (((dpkg, --force-help)))
 
-ToDo
+Eine Übersicht zu den verschiedenen Schaltern von `dpkg` erhalten Sie
+mit Hilfe von `--force-help`. 
 
-* Details: `dpkg --force-help`
-** warnen, aber fortsetzen: `--force-`
-** mit Fehler anhalten: `--no-force-` und `--refuse-`
+.Die verschiedenen Schalter von `dpkg` zum Erzwingen einzelner Aktionen
+----
+$ dpkg --force-help
+dpkg-Optionen zum Erzwingen - Verhalten steuern, wenn Probleme gefunden werden:
+  Warnen aber fortsetzen: --force-<Ding>,<Ding>,...
+  Mit Fehler anhalten:    --refuse-<Ding>,<Ding>,... | --no-force-<Ding>,...
+ Dinge erzwingen:
+  [!] all                Alle Optionen zum Erzwingen setzen
+  [*] downgrade          Paket durch eine niedrigere Version ersetzen
+      configure-any      Jedes Paket konfigurieren, das diesem helfen könnte
+...
+  [!] remove-reinstreq   Pakete entfernen, die Installation erfordern
+  [!] remove-essential   Ein essenzielles Paket entfernen
 
-* `dpkg`-Schalter (Auswahl):
-** `bad-verify`: Paket installieren, selbst wenn Authentizitätsüberprüfung misslingt
-** `overwrite` : Datei eines anderen Pakets überschreiben
-** `confmiss`  : Fehlende Konf.-Dateien immer installieren
-** `conflicts` : Installation kollidierender Pakete erlauben
-** `depends`   : Alle Abhängigkeitsprobleme in Warnungen umwandeln
-** `remove-essential`:  Ein essenzielles Paket entfernen
-** `--force-architecture`: Paket installieren, welches nicht zur Architektur passt
-** `--force-remove-reinstreq`: 
+WARNUNG - Anwenden der mit [!] markierten Optionen kann Ihre Installation
+schwer beschädigen. Mit [*] markierte Optionen sind per Vorgabe aktiviert.
+$
+----
+
+`dpkg` kennt zwei Wege -- über den Schalter `--force-Aktion` sowie 
+`--no-force-Aktion` und `--refuse-Aktion`. Bei ersterem warnt `dpkg` nur, setzt 
+aber die ausgewählte Aktion fort. Bei den beiden letztgenannten hält es die 
+Ausführung der Aktion an, sobald ein Fehler auftritt. Das sind die Schalter für 
+die Aktionen im Einzelnen:
+
+`all`:: Alle Optionen zum Erzwingen setzen
+`architecture`:: Selbst Pakete mit falscher oder fehlender Architektur bearbeiten
+`bad-verify`:: Paket installieren, selbst wenn Authentizitätsüberprüfung misslingt
+`bad-path`:: Wichtige Programme nicht in PATH, Probleme wahrscheinlich
+`bad-version`:: Selbst Pakete mit fehlerhafter Version bearbeiten 
+`breaks`:: Installieren, selbst wenn es andere Pakete beschädigt
+`confask`:: Anbieten, Konfigurationsdateien durch nicht neue Versionen zu ersetzen
+`confdef`:: Vorgabe für neue Konfigurationsdateien benutzen, wenn es eine gibt, nicht nachfragen. Wenn Vorgaben nicht gefunden werden können, nachfragen, außer `confold` oder `confnew` ist auch angegeben.
+`configure-any`:: Jedes Paket konfigurieren, das diesem helfen könnte
+`conflicts` :: Installation kollidierender Pakete erlauben
+`confmiss`:: Fehlende Konfigurationsdateien immer installieren
+`confnew`:: Immer neue Konfigurationsdateien verwenden, nicht nachfragen
+`confold`:: Immer alte Konfigurationsdateien verwenden, nicht nachfragen
+`hold`:: Nebensächliche Pakete bearbeiten, auch wenn auf 'halten' gesetzt
+`depends` :: Alle Abhängigkeitsprobleme in Warnungen umwandeln
+`depends-version` :: Versionsabhängigkeitsprobleme in Warnungen umwandeln
+`not-root`:: Dinge versuchen zu (de)installieren, selbst wenn nicht root
+`overwrite`:: Datei eines anderen Pakets überschreiben
+`overwrite-dir`:: Verzeichnis eines Paketes mit Datei eines anderen überschreiben
+`overwrite-diverted`:: Umgeleitete Datei mit einer nicht umgeleiteten Version überschreiben
+`remove-reinstreq` :: Pakete entfernen, die Installation erfordern
+`remove-essential` :: Ein essenzielles Paket entfernen
+`script-chrootless`:: Nicht in die Umgebung von Betreuerskripten wechseln
+`unsafe-io`:: Beim Entpacken keine sicheren Ein/Ausgabe-Operationen durchführen
+
+Die <<fig.dpkg-force-depends>> zeigt den Aufruf von `dpkg` mit den beiden Schaltern 
+`--force-depends` und `-i` zur Installation eines Pakets ohne Prüfung der 
+Abhängigkeiten zu anderen Paketen.
+
+.Die Installation eines Paketes erzwingen
+image::werkzeuge/paketoperationen/dpkg-force-depends.png[id="fig.dpkg-force-depends", width="50%"]
+
+==== Aktionen mit `apt` erzwingen ====
 
 // Stichworte für den Index
 (((apt, -f)))
 
 * `apt`
 ** Option `-f`
+
+==== Aktionen an der Paketverwaltung vorbei ====
 
 * in `/var/lib/dpkg/status` herumpfuschen
 ** siehe https://tipstricks.itmatrix.eu/force-aptitudeapt-get-ingoring-broken-dependencies/
