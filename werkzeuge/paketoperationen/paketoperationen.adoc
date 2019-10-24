@@ -35,6 +35,8 @@ include::obsolete-pakete-anzeigen.adoc[]
 
 include::aktualisierbare-pakete-anzeigen.adoc[]
 
+include::paketversionen-anzeigen.adoc[]
+
 include::installationsgroesse-eines-pakets.adoc[]
 
 include::groesstes-installiertes-paket-finden.adoc[]

@@ -7,19 +7,22 @@
 === Aktualisierbare Pakete anzeigen ===
 
 // Stichworte für den Index
+(((Paket, aktualisierbare Pakete anzeigen)))
+(((Paket, verfügbare Versionen anzeigen)))
+(((Pakete aktualisieren, aktualisierbare Pakete anzeigen)))
+(((Pakete aktualisieren, verfügbare Versionen anzeigen)))
+Sowohl APT als auch `aptitude` zeigen Ihnen an, für welche Pakete eine
+neuere Version bereitsteht. Alle Werkzeuge bieten dafür recht
+unterschiedliche Parameter und Ausgaben auf dem Terminal.
+
+==== `apt-get` verwenden ====
+
+// Stichworte für den Index
 (((apt-get, upgrade -u)))
 (((apt-get, upgrade --show-upgraded)))
 (((apt-get, upgrade -s)))
 (((apt-get, upgrade --simulate)))
-(((Paket, aktualisierbare Pakete anzeigen)))
-(((Paket, verfügbare Versionen anzeigen)))
-(((Pakete aktualisieren, aktualisierbare Pakete anzeigen)))
 (((Pakete aktualisieren, Simulation)))
-(((Pakete aktualisieren, verfügbare Versionen anzeigen)))
-Sowohl APT als auch `aptitude` zeigen Ihnen an, für welche Pakete eine
-neuere Version bereitsteht. Beide Werkzeuge bieten dafür recht
-unterschiedliche Parameter und Ausgaben auf dem Terminal.
-
 APT mit dem Kommando `apt-get upgrade -u` (Langform `--show-upgraded`)
 zeigt Ihnen an, welche Pakete aktualisiert werden. Sie erhalten eine
 Ausgabe, die der nachfolgenden ähnelt. Die mögliche Option `-s`
@@ -27,7 +30,7 @@ Ausgabe, die der nachfolgenden ähnelt. Die mögliche Option `-s`
 Letzteres ist nützlich, um zu sehen, was sich ändern wird, wenn Sie das
 Kommando ausführen.
 
-.Anzeige aller Pakete, für die eine neue Version bereitsteht
+.Anzeige aller Pakete mit `apt-get`, für die eine neue Version bereitsteht
 ----
 # apt-get upgrade -u -s
 Paketlisten werden gelesen...
@@ -45,6 +48,27 @@ Conf libc-bin (2.13-38+deb7u4 Debian-Security:7.0/stable [i386]) [libc6:i386 ]
 ...
 #
 ----
+
+==== `apt` benutzen ====
+
+// Stichworte für den Index
+(((apt, aktualisierbare Pakete anzeigen)))
+(((apt, list --upgradable)))
+Das Werkzeug `apt` kennt für diesen Fall die beiden Schalter `list` und 
+`--upgradable`. In der Praxis sieht das wie folgt aus (die nachfolgende Ausgabe 
+stammt von einem Ubuntu 18 'Bionic'):
+
+.Aktualisierbare Pakete mit `apt` anzeigen
+----
+$ apt list --upgradable
+Auflistung... Fertig
+aspell/bionic-updates,bionic-security 0.60.7~20110707-4ubuntu0.1 amd64 [aktualisierbar von : 0.60.7~20110707-4]
+distro-info-data/bionic-updates,bionic-updates,bionic-security,bionic-security 0.37ubuntu0.6 all [aktualisierbar von : 0.37ubuntu0.5]
+...
+$
+----
+
+==== `aptitude` verwenden ====
 
 // Stichworte für den Index
 (((aptitude, aktualisierbare Pakete anzeigen)))
@@ -66,72 +90,7 @@ i A libc6-dev                  - Die »Embedded GNU C Library«: Entwicklungs
 $
 ----
 
-// Stichworte für den Index
-(((aptitude, versions)))
-(((Paket, verfügbare Versionen anzeigen)))
-(((Pakete aktualisieren, verfügbare Versionen anzeigen)))
-Um alle verfügbaren Varianten eines Pakets für alle Veröffentlichungen
-anzuzeigen, nutzen Sie die `aptitude`-Option `versions`. Nachfolgende
-Ausgabe illustriert die Recherche nach den Paketen, in denen die
-Zeichenkette 'tzdata' im Paketnamen enthalten ist. Hier werden zudem
-ausschließlich Pakete aus der Veröffentlichung _stable_ bezogen. Die
-Sortierung erfolgt paketweise, d.h. zunächst erhalten Sie eine Zeile mit
-dem Paketnamen und darunter zusätzliche Informationen zur verfügbaren
-Version. Die erste Spalte zeigt dabei den Paketstatus an, danach die
-Versionsnummer, die Veröffentlichung und als letztes die Priorität
-(siehe dazu ``Veröffentlichungen mischen'' in
-<<veroeffentlichungen-mischen>>).
-
-.Die verfügbaren Versionen zu den Paketen 'tzdata' anzeigen
-----
-aptitude versions 'tzdata'
-Paket tzdata:
-p   2015f-0+deb8u1               stable  500 
-i   2015g-0+deb8u1               stable- 500 
-
-Paket tzdata-java:
-p A 2015f-0+deb8u1               stable  500 
-i A 2015g-0+deb8u1               stable- 500
-$
-----
-
-// Stichworte für den Index
-(((aptitude, versions --show-package-names)))
-(((aptitude, versions --group-ny)))
-(((Paket, verfügbare Versionen anzeigen)))
-Wünschen Sie nur eine kompakte Ausgabe zu einem konkreten Paket ohne
-Darstellung des Paketnamens, helfen Ihnen die beiden Schalter
-`--show-package-names` mit dem Wert `never` und `--group-by` mit dem
-Wert `none` weiter. Ersteres blendet den Paketnamen aus, während der
-zweite Schalter die Gruppierung in der Ausgabe deaktiviert.
-Ausführlicher gehen wir auf die Gruppierung in <<aptitude-gruppierung>>
-ein.
-
-.Kompakte Ausgabe ohne Paketname
-----
-$ aptitude versions 'tzdata-java' --show-package-names=never --group-by=none
-p A 2015f-0+deb8u1               stable  500
-i A 2015g-0+deb8u1               stable- 500
-$
-----
-
-// Stichworte für den Index
-(((Debianpaket, apt-show-versions)))
-(((Debianpaket, base-files)))
-(((apt-show-versions)))
-Als gleichwertige Alternative steht Ihnen auch das zusätzliche Werkzeug
-`apt-show-versions` aus dem gleichnamigen Debianpaket zur Verfügung
-<<Debian-Paket-apt-show-versions>> (siehe auch ``Aus welchem Repo kommen
-die Pakete'' in <<aus-welchem-repo-kommen-die-pakete>>). Die
-nachfolgende Ausgabe zeigt den Status des Pakets `base-files` an. Daraus
-erkennen Sie, daß für dieses ein neueres Paket bereitsteht.
-
-.Kompakte Ausgabe mittels `apt-show-versions`
-----
-$ apt-show-versions base-files
-base-files:amd64/jessie 8+deb8u2 upgradeable to 8+deb8u3
-$
-----
+==== Synaptic verwenden ====
 
 Bei den graphischen Programmen zur Paketverwaltung kann lediglich
 Synaptic (siehe <<gui-synaptic>>) die aktualisierbaren Pakete anzeigen.
