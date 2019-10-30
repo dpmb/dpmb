@@ -106,7 +106,7 @@ dem Passwort `geheim`.
 
 .Beispiel mit Zugangsdaten für Nutzer `pakete`
 ----
-Acquire::http::Proxy "pakete:geheim@http://proxyserver:8080";
+Acquire::http::Proxy "http://pakete:geheim@proxyserver:8080";
 ----
 
 Nutzen Sie statt APT hingegen Synaptic, geben Sie den HTTP-Proxy in
