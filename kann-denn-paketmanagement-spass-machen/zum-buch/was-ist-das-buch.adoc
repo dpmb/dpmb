@@ -36,8 +36,12 @@ erklären, wie Sie in einem solchen Fall am besten verfahren.
 
 Weiterhin ist dieses Werk kein Entwicklerhandbuch, aus dem Sie erfahren,
 wie Sie `deb`-Pakete bauen und diese in Debian einbringen. Dieses Thema
-würde den Rahmen des vorliegenden Werkes um ein Mehrfaches sprengen
-und bleibt daher außen vor.
+würde den Rahmen des vorliegenden Werkes um ein Mehrfaches sprengen und 
+bleibt daher außen vor. Was Sie allerdings im Buch finden, ist die 
+Zusammenstellung eines `deb`-Pakets -- sprich: aus welchen Einzelteilen 
+es besteht (siehe <<aufbau-und-format>>), wie Sie dieses in die 
+Komponenten zerlegen (siehe <<paket-auseinandernehmen>>) und auch wieder 
+zusammenbauen (siehe <<pakete-bauen-mit-checkinstall>>).
 
 // *Teil 1 ('Konzepte')* ist als Rundgang angelegt. Neben dem Paketaufbau,
 // deren Varianten und deren Sortierung lernen Sie zunächst die einzelnen
