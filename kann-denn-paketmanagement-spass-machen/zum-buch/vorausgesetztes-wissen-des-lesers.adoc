@@ -47,21 +47,25 @@ Abschnitt ``ans Eingemachte'' geht.
 
 Hilfreich sind darüber hinaus _Englischkenntnisse_: Viele
 Bildschirmausgaben sind englisch, nicht zuletzt weil die Lokalisierung
-der einzelnen Pakete bislang unvollständig ist.
+der einzelnen Pakete bislang unvollständig ist. Die verwendenten Ausgaben 
+auf dem Bildschirm und die Screenshots stammen hierbei von ganz 
+unterschiedlichen Linux-Varianten -- Debian GNU/Linux, Ubuntu, Xubuntu 
+und Linux Mint. Die dabei eingestellten Lokalisierungen sind Deutsch oder
+Englisch.
 
 // Stichworte für den Index
 (((Buch, administrative Benutzerrechte)))
 (((Werkzeuge,su)))
 (((Werkzeuge,sudo)))
 Sie müssen auf Ihrem System über _administrative Benutzerrechte_
-verfügen, um manche Beispiele nachvollziehen zu können. Wir weisen nicht
-jedes Mal explizit darauf hin{empty}footnote:[Sie erlangen diese je nach
-Konfiguration Ihres Systems über die Kommandos `su` oder `sudo` – oder
-indem Sie sich als Benutzer `root` auf Ihrem System anmelden.]. In den
-Beispielen für die Kommandozeile erkennen Sie anhand des
-Prompt-Zeichens, ob administrative Rechte notwendig sind oder nicht (`#`
-falls ja, und `$`, falls nicht). Auf Ausnahmen weisen wir Sie an der
-betreffenden Stelle explizit hin.
+verfügen, um einen Großteil der Beispiele nachvollziehen zu können. Wir 
+weisen nicht jedes Mal explizit darauf hin{empty}footnote:[Sie erlangen 
+diese Berechtigung je nach Konfiguration Ihres Systems über die Kommandos 
+`su` oder `sudo` – oder indem Sie sich als Benutzer `root` auf Ihrem 
+System anmelden.]. In den Beispielen für die Kommandozeile erkennen Sie 
+anhand des verwendeten Prompt-Zeichens, ob dafür administrative Rechte 
+notwendig sind oder nicht: `#` bedeutet hierbei ja und `$` bedeutet nein. 
+Auf Ausnahmen weisen wir Sie an der betreffenden Stelle explizit hin.
 
 // Stichworte für den Index
 (((Werkzeuge,Administratorrechte-Umgebung)))
@@ -77,9 +81,9 @@ virtuelle Maschine oder auch nur eine `chroot`-Umgebung
 Dabei spielt es kaum eine Rolle, welches APT-basierte System Sie
 verwenden. Begonnen haben wir das Buch zu dem Zeitpunkt, als Debian 7
 'Wheezy' die stabile Debian-Veröffentlichung war. Daher stammen die
-meisten Beispiele im Buch auch daher. Spätere Inhalte setzen auf dem
-Nachfolger Debian 8 'Jessie' und Debian 9 'Stretch' auf. Alle Ausnahmen
-sind entsprechend gekennzeichnet, bspw. wenn wir auf ein Derivat wie
-Ubuntu zurückgegriffen haben.
+meisten Beispiele im Buch auch diesem Zeitraum. Spätere Inhalte setzen 
+auf dem Nachfolgern Debian 8 'Jessie', Debian 9 'Stretch' und Debian 10 
+'Buster' auf. Alle Ausnahmen sind entsprechend gekennzeichnet, bspw. 
+wenn wir zur Illustration auf ein Derivat wie Ubuntu zurückgegriffen haben.
 
 // Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/vorausgesetztes-wissen-des-lesers.adoc

@@ -13,7 +13,7 @@ Haben Sie das Buch gelesen und die Beispiele am Rechner
 nachvollzogen, verfügen Sie über profunde Kenntnisse in der
 Paketverwaltung unter Debian GNU/Linux. Dazu gehört:
 
-* Debian-Pakete sauber verwalten
+* Debian-Pakete sauber verwalten, d.h. installieren, aktualisieren und löschen
 * kleinere und mittlere Debian-basierte Infrastrukturen pflegen
 * die richtigen Werkzeuge für die Pflege benutzen und mit der Paketverwaltung sowie den Werkzeugen effektiv umgehen
 * nicht nur die Software verwenden, sondern auch wissen, _warum_ etwas funktioniert
@@ -23,11 +23,10 @@ Paketverwaltung unter Debian GNU/Linux. Dazu gehört:
 //Schlagworte, Index
 (((LPI)))
 (((Debian, Paketmaintainer)))
-All dies qualifiziert Sie für das entsprechende Lernziel der
-LPI-Prüfungen. Darüber hinaus schaffen Sie sich damit die Grundlagen, um
-später eigene und fremde Pakete zu bauen und die Paketierung für Debian
-durchzuführen. Das ist zugleich eine Voraussetzung, um später als
-Debian-Paket-Maintainer agieren zu können
-<<Debian-Wiki-Debian-Entwickler>>.
+All dies qualifiziert Sie für das entsprechende Lernziel einer 
+Linux-Zertifizierung. Darüber hinaus schaffen Sie sich damit die Grundlagen, 
+um später eigene und fremde Pakete zu bauen und die Paketierung für Debian
+durchzuführen. Das ist zugleich eine Voraussetzung, um später auch als
+Debian-Paket-Maintainer agieren zu können <<Debian-Wiki-Debian-Entwickler>>.
 
 // Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/was-koennen-sie-als-leser-am-ende.adoc
