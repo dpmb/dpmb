@@ -18,6 +18,7 @@ Rules-Requires-Root: no
 
 Package: debian-paketmanagement-buch
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends}
 Recommends: www-browser | mupdf | pdf-viewer | fbreader | calibre
 Suggests: www-browser, mupdf | pdf-viewer, mupdf | fbreader | calibre
