@@ -15,17 +15,29 @@
 
 Ändert sich ihr Aufgabenbereich von der Betreuung von Einzelsystemen hin zu
 ganzen Rechnerverbünden mit weitestgehend ähnlicher oder im Idealfall sogar
-identischer Hardware, müssen Sie sich Gedanken darüber machen, wie Sie diese 
-Herde in Schach halten -- das heißt installieren und pflegen (sofern es sich
-nicht um Wegwerf-Systeme handelt). Das können dabei nicht nur Rechner für 
-Schulungs- und Klassenräume sein, sondern auch eine Sammlung gefüllter Racks 
-in Rechenzentren umfassen. 
+identischer Software, müssen Sie sich Gedanken darüber machen, wie Sie diese 
+Herde an Systemen in Schach halten -- das heißt diese Softwarelandschaft 
+installieren und pflegen (sofern es sich nicht um Wegwerf-Systeme handelt). 
+Das können dabei nicht nur Rechner für Schulungs- und Klassenräume sein, 
+sondern auch eine Sammlung gefüllter Racks in Rechenzentren umfassen. 
 
 Behalten Sie bei der Auswahl der Lösung auch im Blick, dass es verschiedene 
 Rechnerklassen geben kann. Beispiele dafür sind Anwendungsserver ('application 
 server')m Client ('end user client'), Mailserver und auch Fileserver 
-('storage systems'). Als Kriterien für eine passende Lösung sind die 
-nachfolgenden Punkte hilfreich (entnommen aus <<Debian-Wiki-Automated-Installation>>):
+('storage systems'). 
+
+Das Klonen eines bestehenden Systems, d.h. das Erstellen einer Eins-zu-eins-Kopie 
+von einem Datenträger, ist möglich, aber hier nicht sinnvoll. Der Aufwand, aus 
+dem Klon ein Individualsystem durch nachträgliche Anpassung zu erreichen, ist 
+recht hoch. Dabei ist das Ändern des Hostnamens und der Netzwerkeinstellungen 
+noch der kleinere Anteil -- aufwendiger wird es bspw. beim Bereinigen von 
+Benutzer/Diensten samt deren Einstellungen, Logs und Daten. Eine Installation 
+auf der Basis der Softwarepakete samt Voreinstellungen für das neue System ist
+einfacher und insbesondere automatisierbar. Diesem Blickwinkel folgen wir hier.
+
+Als Kriterien für eine passende Lösung sind die nachfolgenden Punkte hilfreich.
+Diese haben wir dem Debian-Wiki entnommen (siehe dazu 
+<<Debian-Wiki-Automated-Installation>>):
 
 unbeaufsichtigtes Ablaufen :: Installationen sollten ohne oder mit möglichst 
 wenig menschlicher Interaktion ablaufen
@@ -43,10 +55,14 @@ Umgebungen und Gegebenheiten anzupassen
 
 
 
+
 * Historie
 ** jumpstart (Sun OS) -- https://en.wikipedia.org/wiki/Jumpstart_(Solaris)
 ** Kickstart und Cobbler -- http://www.cobblerd.org/
 ** FAI
+** Spacewalk
+** OpenQRM
+** Foreman
 ** Preseeding -- Beantworten der Fragen des Debian Installers im Vorfeld
 
 === FAI ===
