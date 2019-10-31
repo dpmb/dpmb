@@ -17,7 +17,7 @@ Menschen gebührt unser Dank:
 * Arne Wichmann (für das Diagramm der Vertrauenskette in Debian – unter GPL)
 * Annette Kalbow (für inhaltliche Vorschläge mit `apt-file`, `dpkg -l`
   und `dpkg -L`, die graphische Umsetzung der Landkarte sowie die vielen
-Anregungen zum Aufsetzen und Betreiben eines Proxies <<http-proxy>>)
+Anregungen zum Aufsetzen und Betreiben eines Proxies -- siehe <<http-proxy>>)
 * Mechtilde Stehmann (für die Sprachkorrekturen und die Vorschläge für die FAQ)
 * Marco Uhl (für die Idee zum FAQ-Eintrag über 'Debian Snapshots' <<Debian-Snapshots>> bei Testing- vs. Produktiv-Umgebung)
 * Werner Heuser (für die Installation und den Umgang auf Embedded und Mobile Devices)
@@ -45,9 +45,8 @@ Corporate Server, UCS)
 Variante von `checkinstall` sowie zum Aktualisieren von LTS-Versionen (siehe <<umgang-mit-lts>>)
 * Jörg Brühe für die Anregungen zu den Paketabhängigkeiten
 * Sebastian Andres für seine Anregungen zu Debian Backports
-* gregor herrmann für den Hinweis, das Buch auf Links zu
-  alioth.debian.org-Webseiten hin zu überprüfen.
-* Alf Gaida für Hinweise auf nicht shell-unabhängige Beispiele.
+* Gregor Herrmann für den Hinweis, das Buch auf Links zu alioth.debian.org-Webseiten hin zu überprüfen
+* Alf Gaida für Hinweise auf nicht shell-unabhängige Beispiele
 
 Nicht zu vergessen sind die Probeleser, die sich durch unser Manuskript
 gekämpft haben: Arne Wichmann, Thomas Winde, Jana Pirat, Jörg Dölz,
