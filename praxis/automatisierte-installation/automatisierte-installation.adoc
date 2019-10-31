@@ -13,16 +13,35 @@
 (((kickstart)))
 (((Preseeding)))
 
-* ganze Rechnerverbünde (Schulungs- und Klassenräume) mit identischer Hardware
-* Vorbereitung von Schulungsrechnern
-* automatische und identische Installation von Rechnerklassen
-* Beispiele:
-** Klasse Server
-** Klasse Client
-** Klasse Mailserver
-** Klasse Fileserver
+Ändert sich ihr Aufgabenbereich von der Betreuung von Einzelsystemen hin zu
+ganzen Rechnerverbünden mit weitestgehend ähnlicher oder im Idealfall sogar
+identischer Hardware, müssen Sie sich Gedanken darüber machen, wie Sie diese 
+Herde in Schach halten -- das heißt installieren und pflegen (sofern es sich
+nicht um Wegwerf-Systeme handelt). Das können dabei nicht nur Rechner für 
+Schulungs- und Klassenräume sein, sondern auch eine Sammlung gefüllter Racks 
+in Rechenzentren umfassen. 
 
-* https://wiki.debian.org/AutomatedInstallation
+Behalten Sie bei der Auswahl der Lösung auch im Blick, dass es verschiedene 
+Rechnerklassen geben kann. Beispiele dafür sind Anwendungsserver ('application 
+server')m Client ('end user client'), Mailserver und auch Fileserver 
+('storage systems'). Als Kriterien für eine passende Lösung sind die 
+nachfolgenden Punkte hilfreich (entnommen aus <<Debian-Wiki-Automated-Installation>>):
+
+unbeaufsichtigtes Ablaufen :: Installationen sollten ohne oder mit möglichst 
+wenig menschlicher Interaktion ablaufen
+
+parallele Installation :: mehrere Systeme werden gleichzeitig installiert
+
+Skalierbarkeit :: neue Klienten und Veröffentlichungen von Betriebssystemn 
+können einfach integriert werden
+
+Flexibilität :: eine Konfiguration sollte möglich sein, die viele Eigenschaften
+erlaubt
+
+Anpassbarkeit :: es sollte möglich sein, das System nach Bedarf an spezifische 
+Umgebungen und Gegebenheiten anzupassen
+
+
 
 * Historie
 ** jumpstart (Sun OS) -- https://en.wikipedia.org/wiki/Jumpstart_(Solaris)
