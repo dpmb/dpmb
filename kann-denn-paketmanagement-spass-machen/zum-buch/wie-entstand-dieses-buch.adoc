@@ -49,7 +49,8 @@ ausgefallenen Situationen zutage treten.
 
 Genießen Sie also das beruhigende Gefühl, dass bei der Verwendung der
 Werkzeuge eigentlich nichts schiefgehen kann – und wenn doch, gibt es
-immer einen kurzen Weg, das Malheur wieder zu beseitigen.
+immer einen kurzen Weg, das Malheur wieder zu beseitigen. Hier im Buch
+zeigen wir Ihnen die verschiedenen (Schleich-)Wege, die wir kennen.
 
 Sich hingegen in dem vielschichtigen Geflecht aus `dpkg`, APT und
 `aptitude` zurechtzufinden und ein Verständnis für die einzelnen
@@ -68,16 +69,22 @@ Einsatz kommt. Dem ist nicht so, denn jedes hat seine ureigene Aufgabe
 in der Hierarchie der Paketverwaltung. Subtile Unterschiede zwischen APT
 und `aptitude` sorgen mitunter für eine blutige Nase, und insbesondere
 Ein- und Umsteiger aus der RPM-Welt haben es zu Beginn nicht so leicht.
-Daher gibt es im Anhang eine Übersicht zu den Aufrufen von RPM, YUM und
-DNF -- siehe <<kommandos-zur-paketverwaltung-im-vergleich>>. 
+Daher gibt es im Anhang eine Übersicht zu den analogen Aufrufen von RPM, 
+YUM, DNF und Zypper -- siehe <<kommandos-zur-paketverwaltung-im-vergleich>>. 
+Bitte beachten Sie, dass sich nicht alle Verhaltensweisen identisch in
+beiden Welten abbilden lassen.
 
-Das Buch will darum vor allem Klarheit schaffen und Ihnen die
-Zusammenhänge zwischen den Programmen deutlich machen. Es hilft Ihnen,
-in jeder Situation das passende Werkzeug zur Paketverwaltung auszuwählen
-und es gekonnt einzusetzen. Dazu fassen wir den aktuellen Stand der
-Entwicklung zusammen und beleuchten darüber hinaus die angrenzenden
-Programme bzw. die damit verbundenen Fragestellungen im Alltag der
-Systembetreuung.
+Das vorliegende Buch will darum vor allem Klarheit schaffen und Ihnen die
+Zusammenhänge zwischen den einzelnen Programmen deutlich machen. Es hilft 
+Ihnen, in jeder Situation das passende Werkzeug zur Paketverwaltung 
+auszuwählen und es danach gekonnt einzusetzen. Die einzelnen Kapitel sind 
+aufgabenbezogen zusammengestellt. In jedem Abschnitt finden Sie Lösungen,
+wie Sie die jeweilige Aufgabe mit den verschiedenen Werkzeugen umsetzen.
+
+Der Praxisteil fokussiert auf komplexere Fragestellungen. Dazu fassen wir 
+den aktuellen Stand der Entwicklung zusammen und beleuchten darüber 
+hinaus die angrenzenden Programme bzw. die damit verbundenen Situationen
+im Alltag der Systembetreuung.
 
 ==== Technische Basis ====
 
@@ -116,9 +123,10 @@ die entsprechende Stelle dort bereits aktualisiert worden.
 
 ==== Quellcode und Lizenz ====
 
-Der o.g. Quellcode des Buches findet sich auf GitHub <<dpmb-github>> und ist unter der
-Creative Commons Namensnennung -- Weitergabe unter gleichen Bedingungen 4.0
-International Lizenz <<CreativeCommons>> frei verfügbar.
+Der o.g. Quellcode des Buches findet sich auf GitHub <<dpmb-github>> und 
+ist unter der Creative Commons Namensnennung -- Weitergabe unter den 
+gleichen Bedingungen 4.0 International Lizenz <<CreativeCommons>> frei 
+verfügbar.
 
 Änderungswünsche oder -vorschläge zum Buch senden Sie bitte dort als
 Issue <<github-issue>> -- oder sogar noch besser -- als Pull-Request
@@ -127,15 +135,17 @@ mitsamt Patch <<github-pull-request>> ein.
 ==== Organisatorisch ====
 
 Beide Autoren leben und arbeiten in recht unterschiedlichen Regionen --
-Axel Beckert in Zürich und Frank Hofmann in Berlin, Genf und Kapstadt.
-Aufgrund der Distanz sind regelmäßige Arbeitstreffen nur begrenzt
-möglich und wurden mit Hilfe von Buchsprints sowie elektronischer
-Kommunikation überbrückt. Das Buch entsteht seit dem Frühjahr 2013 und
-häufig auch im Rahmen von Linux-Events. Besonders hervorzuheben sind
-hierbei die Chemnitzer Linux-Tage <<CLT>>, die Rencontres Mondiales du
-Logiciel Libre <<RMLL>> und die Debian Entwicklerkonferenz <<DebConf>>.
-An diesen Veranstaltungen nehmen wir gern aktiv teil und nutzen die
-Gelegenheit, das Buch gemeinsam zu vervollständigen.
+Axel Beckert in Zürich und Frank Hofmann in Besançon (nach Berlin und 
+Kapstadt). Aufgrund der mitunter recht großen Distanz sind regelmäßige 
+Arbeitstreffen nur begrenzt möglich und wurden daher mit Hilfe von 
+Buchsprints sowie elektronischer Kommunikation überbrückt. 
+
+Das Buch entsteht seit dem Frühjahr 2013 und häufig auch im Rahmen von 
+Linux-Events. Besonders hervorzuheben sind hierbei die Chemnitzer 
+Linux-Tage <<CLT>>, die Rencontres Mondiales du Logiciel Libre <<RMLL>> 
+und die Debian Entwicklerkonferenz <<DebConf>>. An diesen 
+Veranstaltungen nehmen wir gern aktiv teil und nutzen die Gelegenheit, 
+das Buch gemeinsam zu vervollständigen.
 
 Viele Texte verfassen wir zudem von unterwegs aus. Die bisherigen
 Stationen umfassen
@@ -166,14 +176,13 @@ Großer Sankt-Bernhard-Paß,
 Hamburg,
 Hannover,
 Heidelberg,
-Hout Bay (Western Cape, Südafrika),
-Kapstadt,
+Hout Bay und Kapstadt (beide Western Cape, Südafrika),
 Koblenz,
 Lauchringen (Baden, Wutachtal),
 Laveno Mombello (Italien, Lago Maggiore),
 Lausanne,
 Magdeburg,
-Meersburg,
+Meersburg (Bodensee),
 Montpellier,
 Montreux,
 München,
@@ -191,12 +200,15 @@ Savines-le-Lac (Hautes Alpes, Frankreich),
 Insel Sokn (bei Stavanger, Norwegen),
 Tübingen,
 Tvinnefossen (Norwegen),
-Zernez (Engadin) und
+Zernez (Engadin, Schweiz) und
 Zürich
-(siehe <<fig.buchkarte>>). Wir nahmen uns dabei an der Philosophie von
-Debian GNU/Linux ein Beispiel: ohne Hektik, mit dem Blick fürs Detail
-und zumeist pedantisch bis ins letzte i-Tüpfelchen, aber trotzdem mit
-viel Freude, Neugierde und unserem Entdeckerdrang folgend.
+(siehe <<fig.buchkarte>>). Orange Kreise mit rotem Rand markieren Axels 
+Stationen, rote Kreise mit orangenem Rand die Arbeitsorte von Frank. 
+Manchmal überlappt sich das auch -- dann ist es nur einer von beiden. 
+Wir nahmen uns dabei an der Philosophie von Debian GNU/Linux ein Beispiel: 
+ohne Hektik, mit dem Blick fürs Detail und zumeist pedantisch bis ins 
+letzte i-Tüpfelchen, aber trotzdem mit viel Freude, Neugierde und 
+unserem Entdeckerdrang folgend.
 
 .Orte, an denen das vorliegende Buch entstand
 image::kann-denn-paketmanagement-spass-machen/zum-buch/buchkarte.png[id="fig.buchkarte",width="50%"]
