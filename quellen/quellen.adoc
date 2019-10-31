@@ -141,6 +141,8 @@
 
 - [[[Communtu]]] Webseite des Communtu-Projekts, http://de.communtu.org/
 
+- [[[comptia-linux]]] CompTIA Linux+, https://www.comptia.org/certifications/linux
+
 - [[[CreativeCommons]]] Creative Commons Namensnennung -- Weitergabe
   unter gleichen Bedingungen 4.0 International Lizenz, https://creativecommons.org/licenses/by-sa/4.0/
 
@@ -601,8 +603,6 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Hackerfunk]]] Hackerfunk Zürich, Folge 65, Fachliteratur Schreiben, https://www.hackerfunk.ch/?id=127
 
-- [[[Heinlein-LPIC-1]]] Peer Heinlein: LPIC-1. Vorbereitung auf die Prüfung des Linux Professional Institute, OpenSource Press, 5. Auflage, ISBN 978-3-95539-012-9, deutsch, 501 Seiten, http://www.opensourcepress.de/de/produkte/LPIC-1/452/978-3-95539-012-9
-
 - [[[Hertzog-Mas-Debian-Administrators-Handbook]]] Raphael Hertzog, Roland Mas: The Debian Administrator's Handbook, 2012, ISBN 979-10-91414-00-5, https://debian-handbook.info/
 
 - [[[Hertzog-Obsolete-Packages]]] Raphael Hertzog: Debian Cleanup Tip #2: Get rid of obsolete packages, https://raphaelhertzog.com/2011/02/07/debian-cleanup-tip-2-get-rid-of-obsolete-packages/
@@ -656,6 +656,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[LernStick]]] LernStick, Fachhochschule Nordwestschweiz, Solothurn, https://www.imedias.ch/projekte/lernstick/index.cfm
 
+- [[lfc]] Trainings der Linux Foundation, https://training.linuxfoundation.org/
+
 - [[[libelektra]]] Libelektra, http://community.libelektra.org/wp/?p=145
 
 - [[[LiMux]]] LiMux -- Linux in der Stadtverwaltung München, http://www.muenchen.de/rathaus/Stadtverwaltung/Direktorium/LiMux.html
@@ -680,7 +682,7 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Mandriva-Wiki]]] Mandriva Control Center im Mandriva Wiki, http://wiki.mandriva.com/en/Tools/Control_Center
 
-- [[[Maassen-LPIC-1]]] Harald Maaßen: LPIC-1. Sicher zur erfolgreichen Linux-Zertifizierung, Rheinwerk Computing, Bonn, 4. Auflage, 2015, ISBN 978-3-8362-3527-3, https://www.rheinwerk-verlag.de/lpic-1_3781/
+- [[[Maassen-LPIC-1]]] Harald Maaßen: LPIC-1. Sicher zur erfolgreichen Linux-Zertifizierung, Rheinwerk Computing, Bonn, 5. Auflage, 2018, ISBN 978-3-8362-6375-7, https://www.rheinwerk-verlag.de/lpic-1_4668/
 
 - [[[MeeGo]]] MeeGo, https://meego.com/
 
