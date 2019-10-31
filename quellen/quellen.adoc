@@ -497,6 +497,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Wiki-ARM-EABI-Port]]] Debian Wiki: ARM EABI Port, https://wiki.debian.org/ArmPorts
 
+- [[[Debian-Wiki-Automated-Installation]]] Debian Wiki: Automated Installation, https://wiki.debian.org/AutomatedInstallation
+
 - [[[Debian-Wiki-chroot]]] Debian Wiki: `chroot` (deutschsprachig), https://wiki.debian.org/de/chroot
 
 - [[[Debian-Wiki-cupt]]] Debian Wiki: Eintrag zu `cupt`, https://wiki.debian.org/Cupt
