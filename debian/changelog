@@ -1,3 +1,10 @@
+dpmb (0~2019.10.31) UNRELEASED; urgency=medium
+
+  * Mark package as "Multi-Arch: foreign" as recommended by the Multi-Arch
+    Hinter.
+
+ -- Axel Beckert <abe@debian.org>  Thu, 31 Oct 2019 15:49:13 +0100
+
 dpmb (0~2019.03.01) unstable; urgency=medium
 
   * New snapshot
