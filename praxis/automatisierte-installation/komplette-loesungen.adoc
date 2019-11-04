@@ -1,0 +1,14 @@
+// Datei: ./praxis/automatisierte-installation/komplette-loesungen.adoc
+
+// Baustelle: Rohtext
+
+=== Komplette Lösungen ===
+
+// - FAI
+include::fai.adoc[]
+
+// - Kickstart
+include::kickstart.adoc[]
+
+// Datei: ./praxis/automatisierte-installation/komplette-loesungen.adoc
+

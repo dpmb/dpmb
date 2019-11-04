@@ -67,8 +67,8 @@ Jumpstart (Sun OS) <<jumpstart>>, Kickstart <<kickstart>> und Cobbler
 <<cobbler>>, FAI <<FAI-Projekt>>, Crowbar <<crowbar>>, Foreman <<foreman>>, 
 OpenQRM <<openqrm>> und Spacewalk <<spacewalk>>. Für b) stehen Ihnen die 
 Werkzeuge `dpkg`, `debconf-get-selections`, `debconf-set-selections` und 
-`apt-clone` zur Verfügung. Darauf gehen wir unter 'Paketkonfiguration sichern' 
-in <<paketkonfiguration-sichern>> ausführlich ein.
+`apt-clone` zur Verfügung. Darauf gehen wir unter 'Mit Debian-Werkzeugen'
+in Abschnitt <<automatisierteInstallationOnBoard>> ausführlich ein.
 
 // Datei (Ende): ./praxis/automatisierte-installation/einstieg.adoc
 

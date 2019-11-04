@@ -2,7 +2,7 @@
 
 // Baustelle: Notizen
 
-=== Kickstart ===
+==== Kickstart ====
 
 * https://cobbler.github.io/
 * http://www.debian.itopstube.com/2011/11/automating-installation-with-kickstart.html

@@ -12,6 +12,12 @@ include::einstieg.adoc[]
 // - Kriterien
 include::kriterien.adoc[]
 
+// - Mit Debian-Werkzeugen
+include::mit-debian-werkzeugen.adoc[]
+
+// - Extra-Werkzeuge/Komplette Lösungen
+include::komplette-loesungen.adoc[]
+
 // - FAI
 include::fai.adoc[]
 

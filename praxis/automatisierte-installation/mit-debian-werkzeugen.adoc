@@ -1,0 +1,16 @@
+// Datei: ./praxis/automatisierte-installation/mit-debian-werkzeugen.adoc[]
+
+// Baustelle: Notizen
+
+[[automatisierteInstallationOnBoard]]
+=== Mit Debian-Werkzeugen ===
+
+* Rückgriff auf Beschreibung aus 'Paketkonfiguration sichern' 
+<<paketkonfiguration-sichern>>::
+
+* `dpkg`
+* `debconf-get-selections`
+* `debconf-get-selections`
+* `apt-clone`
+
+// Datei (Ende): ./praxis/automatisierte-installation/mit-debian-werkzeugen.adoc[]

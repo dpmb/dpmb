@@ -2,7 +2,7 @@
 
 // Baustelle: Notizen
 
-=== FAI ===
+==== FAI ====
 
 * Fully-automatic installation (FAI) <<FAI-Projekt>>
 * Eintrag im Debian Wiki <<Debian-Wiki-FAI>>
