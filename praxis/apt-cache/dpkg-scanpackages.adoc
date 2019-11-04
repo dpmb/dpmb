@@ -1,0 +1,22 @@
+// Datei: ./praxis/apt-cache/dpkg-scanpackages.adoc
+
+// Baustellenstatus: Notizen
+
+=== dpkg-scanpackages ===
+
+* `dpkg-scanpackages` aus dem Paket 'dpkg-dev' <<Debian-Paket-dpkg-dev>>
+
+----
+First thing is installing dpkg-dev which provides dpkg-scanpackages.
+
+apt install dpkg-dev
+
+Next put the deb files you created in some local repository such as /usr/local/debian and cd into it.
+
+# dpkg-scanpackages -m . | gzip -c > Packages.gz
+
+will scan all the *.deb files in the directory and create an appropriate Packages.gz file. You need to repeat this step whenever you add new packages to /usr/local/debian.
+----
+
+// Datei (Ende): ./praxis/apt-cache/dpkg-scanpackages.adoc
+
