@@ -6,44 +6,78 @@
 
 == Automatisierte Installation ==
 
+=== Einstieg ===
+
 // Stichworte für den Index
 (((cobbler)))
 (((FAI)))
+(((Hardware provisioning)))
 (((jumpstart)))
 (((kickstart)))
+(((Konfigurationsmanagement)))
+(((OS provisioning)))
 (((Preseeding)))
+(((Provisioning)))
+(((Provisioning, Betriebssystem)))
+(((Provisioning, Hardware)))
+(((Provisioning, Rechnerklasse)))
 
 Ändert sich ihr Aufgabenbereich von der Betreuung von Einzelsystemen hin zu
 ganzen Rechnerverbünden mit weitestgehend ähnlicher oder im Idealfall sogar
 identischer Software, müssen Sie sich Gedanken darüber machen, wie Sie diese 
-Herde an Systemen in Schach halten -- das heißt diese Softwarelandschaft 
-installieren und pflegen (sofern es sich nicht um Wegwerf-Systeme handelt). 
-Das können dabei nicht nur Rechner für Schulungs- und Klassenräume sein, 
-sondern auch eine Sammlung gefüllter Racks in Rechenzentren umfassen. 
+Herde an Systemen in Schach halten -- das heißt diese Softwarelandschaft auf
+allen betreffenden Systemen installieren und pflegen (sofern es sich nicht 
+um Wegwerf-Systeme handelt). Beispielsweise zählen dazu Rechner für Klassen- 
+und Schulungsräume, Cloud-Infrastrukturen sowie Rechencluster. Behalten Sie 
+bei der Auswahl einer Lösung auch im Blick, dass es durchaus auch 
+verschiedene Rechnerklassen in ihrem Verbund geben kann. Beispiele dafür 
+sind Anwendungsserver ('application server'), Clients ('end user client'), 
+Mailserver und auch Fileserver ('storage system'). 
 
-Das Klonen eines bestehenden Systems, d.h. das Erstellen einer Eins-zu-eins-Kopie 
-von einem Datenträger, ist möglich, aber hier nicht sinnvoll. Der Aufwand, aus 
-dem Klon ein Individualsystem durch nachträgliche Anpassung zu erreichen, ist 
-recht hoch. Dabei ist das Ändern des Hostnamens und der Netzwerkeinstellungen 
-noch der kleinere Anteil -- aufwendiger wird es bspw. beim Bereinigen von 
-Benutzer/Diensten samt deren Einstellungen, Logs und Daten. Eine Installation 
-auf der Basis der Softwarepakete samt Voreinstellungen für das neue System ist
-einfacher und insbesondere automatisierbar. Diesem Blickwinkel folgen wir hier.
+Drei Begriffe, die häufig in diesem Zusammenhang genutzt werden, sind: 
 
-Behalten Sie bei der Auswahl der Lösung auch im Blick, dass es verschiedene 
-Rechnerklassen geben kann. Beispiele dafür sind Anwendungsserver 
-('application server'), Client ('end user client'), Mailserver und auch 
-Fileserver ('storage system'). Begriffe, die hier häufig genutzt werden, 
-sind 'Hardware provisioning', 'OS provisioning' und 'Konfigurationsmanagement'. 
-Die ersten beiden Begriffe beschreiben das vorherige Auswählen von 
+'Hardware provisioning' und 'OS provisioning' :: das vorherige Auswählen von 
 Softwarekomponenten für die im System verbaute Hardware und das darauf 
-genutzte Betriebssystem, bspw. das Paket für den passenden Grafiktreiber 
-samt Einstellungen plus Linux-Kernel. Konfigurationsmanagement ist das 
-Verwalten und Pflegen der definierten Rechnerklassen samt Liste der 
-Softwarepakete und den Einstellungen zum jeweiligen Paket.
+genutzte Betriebssystem, bspw. der Linux-Kernel und das Paket für den 
+passenden Grafiktreiber samt Einstellungen.
 
-Als Kriterien für eine passende Lösung sind die nachfolgenden Punkte hilfreich.
-Diese haben wir dem Debian-Wiki entnommen (siehe dazu 
+'Konfigurationsmanagement' :: das Verwalten und Pflegen der zuvor definierten 
+Rechnerklassen samt Liste der Softwarepakete und den Einstellungen zum 
+jeweiligen Paket.
+
+Unabhängig davon, wieviele Einzelrechner oder Rechenknoten letztendlich im 
+Verbund zu berücksichtigen sind, gibt es für jede Rechnerklasse stets entweder 
+eine bestehende Referenzinstallation (genannt 'Master') oder zumindest eine 
+hinterlegte Konfiguration, auf deren Basis sich die weiteren Rechner identisch 
+zur Referenz aufsetzen lassen. Dieses Kapitel beleuchtet anhand verschiedener 
+Vorgehensweisen, wie Sie diesen Schritt in der Praxis umsetzen. Übliche 
+Varianten sind:
+
+* Klonen des Masters durch Erstellen einer Eins-zu-eins-Kopie (auch 'Image' 
+genannt) ausgewählter Inhalte und eine nachträgliche, mimimale Detailanpassung, 
+bspw. der Netzwerkkonfiguration. Aktualisierungen erfolgen durch Beziehen und 
+Überspielen des Images, wobei die Detailanpassung, zusätzliche Software und 
+auch persönliche Daten auf dem Zielsystem nicht in jedem Fall verändert werden. 
+Beispiele aus der Praxis sind Netzwerkrouter für WLAN/DSL sowie Smartphones 
+und Tablets.
+
+* Die Referenz bildet eine Paketliste samt Konfiguration der einzelnen Pakete.
+Debian kennt das unter dem Begriff 'Preseeding' und beschreibt das Beantworten 
+der Fragen des Debian Installers im Vorfeld. Paketliste und Konfiguration 
+liegen entweder a) in einer Datenbank oder b) werden direkt aus dem Master 
+vorher ausgelesen. In der Vergangenheit wurden dafür bereits verschiedene 
+Lösungen entworfen und genutzt. Zu den Vertretern für a) gehören bspw. 
+Jumpstart (Sun OS) <<jumpstart>>, Kickstart <<kickstart>> und Cobbler 
+<<cobbler>>, FAI <<FAI-Projekt>>, Crowbar <<crowbar>>, Foreman <<foreman>>, 
+OpenQRM <<openqrm>> und Spacewalk <<spacewalk>>. Für b) stehen Ihnen die 
+Werkzeuge `dpkg`, `debconf-get-selections`, `debconf-set-selections` und 
+`apt-clone` zur Verfügung. Darauf gehen wir unter 'Paketkonfiguration sichern' 
+in Abschnitt <<paketkonfiguration-sichern>> ausführlich ein.
+
+=== Kriterien für die Auswahl einer geeigneten Lösung ===
+
+Folgende Punkte halten wir bei der Auswahl einer geeigneten Lösung für 
+hilfreich. Diese Punkte haben wir dem Debian-Wiki entnommen (siehe dazu 
 <<Debian-Wiki-Automated-Installation>>):
 
 unbeaufsichtigtes Ablaufen :: Installationen sollten ohne oder mit möglichst 
@@ -59,13 +93,6 @@ erlaubt
 
 Anpassbarkeit :: es sollte möglich sein, das System nach Bedarf an spezifische 
 Umgebungen und Gegebenheiten anzupassen
-
-In der Vergangenheit wurden dafür bereits verschiedene Lösungen entworfen und 
-genutzt. Zu den Vertretern gehören bspw. Jumpstart (Sun OS) <<jumpstart>>, 
-Kickstart <<kickstart>> und Cobbler <<cobbler>>, FAI <<FAI-Projekt>>, Crowbar 
-<<crowbar>>, Foreman <<foreman>>, OpenQRM <<openqrm>> und Spacewalk 
-<<spacewalk>>. Debian selbst bringt als Technologie das sogenannte 'Preseeding' 
-mit -- das Beantworten der Fragen des Debian Installers im Vorfeld.
 
 === FAI ===
 
