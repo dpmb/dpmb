@@ -1,111 +1,22 @@
 // Datei: ./praxis/automatisierte-installation/automatisierte-installation.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[automatisierte-installation]]
 
 == Automatisierte Installation ==
 
-=== Einstieg ===
+// - Einstieg
+include::einstieg.adoc[]
 
-// Stichworte für den Index
-(((cobbler)))
-(((FAI)))
-(((Hardware provisioning)))
-(((jumpstart)))
-(((kickstart)))
-(((Konfigurationsmanagement)))
-(((OS provisioning)))
-(((Preseeding)))
-(((Provisioning)))
-(((Provisioning, Betriebssystem)))
-(((Provisioning, Hardware)))
-(((Provisioning, Rechnerklasse)))
+// - Kriterien
+include::kriterien.adoc[]
 
-Ändert sich ihr Aufgabenbereich von der Betreuung von Einzelsystemen hin zu
-ganzen Rechnerverbünden mit weitestgehend ähnlicher oder im Idealfall sogar
-identischer Software, müssen Sie sich Gedanken darüber machen, wie Sie diese 
-Herde an Systemen in Schach halten -- das heißt diese Softwarelandschaft auf
-allen betreffenden Systemen installieren und pflegen (sofern es sich nicht 
-um Wegwerf-Systeme handelt). Beispielsweise zählen dazu Rechner für Klassen- 
-und Schulungsräume, Cloud-Infrastrukturen sowie Rechencluster. Behalten Sie 
-bei der Auswahl einer Lösung auch im Blick, dass es durchaus auch 
-verschiedene Rechnerklassen in ihrem Verbund geben kann. Beispiele dafür 
-sind Anwendungsserver ('application server'), Clients ('end user client'), 
-Mailserver und auch Fileserver ('storage system'). 
+// - FAI
+include::fai.adoc[]
 
-Drei Begriffe, die häufig in diesem Zusammenhang genutzt werden, sind: 
-
-'Hardware provisioning' und 'OS provisioning' :: das vorherige Auswählen von 
-Softwarekomponenten für die im System verbaute Hardware und das darauf 
-genutzte Betriebssystem, bspw. der Linux-Kernel und das Paket für den 
-passenden Grafiktreiber samt Einstellungen.
-
-'Konfigurationsmanagement' :: das Verwalten und Pflegen der zuvor definierten 
-Rechnerklassen samt Liste der Softwarepakete und den Einstellungen zum 
-jeweiligen Paket.
-
-Unabhängig davon, wieviele Einzelrechner oder Rechenknoten letztendlich im 
-Verbund zu berücksichtigen sind, gibt es für jede Rechnerklasse stets entweder 
-eine bestehende Referenzinstallation (genannt 'Master') oder zumindest eine 
-hinterlegte Konfiguration, auf deren Basis sich die weiteren Rechner identisch 
-zur Referenz aufsetzen lassen. Dieses Kapitel beleuchtet anhand verschiedener 
-Vorgehensweisen, wie Sie diesen Schritt in der Praxis umsetzen. Übliche 
-Varianten sind:
-
-* Klonen des Masters durch Erstellen einer Eins-zu-eins-Kopie (auch 'Image' 
-genannt) ausgewählter Inhalte und eine nachträgliche, mimimale Detailanpassung, 
-bspw. der Netzwerkkonfiguration. Aktualisierungen erfolgen durch Beziehen und 
-Überspielen des Images, wobei die Detailanpassung, zusätzliche Software und 
-auch persönliche Daten auf dem Zielsystem nicht in jedem Fall verändert werden. 
-Beispiele aus der Praxis sind Netzwerkrouter für WLAN/DSL sowie Smartphones 
-und Tablets.
-
-* Die Referenz bildet eine Paketliste samt Konfiguration der einzelnen Pakete.
-Debian kennt das unter dem Begriff 'Preseeding' und beschreibt das Beantworten 
-der Fragen des Debian Installers im Vorfeld. Paketliste und Konfiguration 
-liegen entweder a) in einer Datenbank oder b) werden direkt aus dem Master 
-vorher ausgelesen. In der Vergangenheit wurden dafür bereits verschiedene 
-Lösungen entworfen und genutzt. Zu den Vertretern für a) gehören bspw. 
-Jumpstart (Sun OS) <<jumpstart>>, Kickstart <<kickstart>> und Cobbler 
-<<cobbler>>, FAI <<FAI-Projekt>>, Crowbar <<crowbar>>, Foreman <<foreman>>, 
-OpenQRM <<openqrm>> und Spacewalk <<spacewalk>>. Für b) stehen Ihnen die 
-Werkzeuge `dpkg`, `debconf-get-selections`, `debconf-set-selections` und 
-`apt-clone` zur Verfügung. Darauf gehen wir unter 'Paketkonfiguration sichern' 
-in Abschnitt <<paketkonfiguration-sichern>> ausführlich ein.
-
-=== Kriterien für die Auswahl einer geeigneten Lösung ===
-
-Folgende Punkte halten wir bei der Auswahl einer geeigneten Lösung für 
-hilfreich. Diese Punkte haben wir dem Debian-Wiki entnommen (siehe dazu 
-<<Debian-Wiki-Automated-Installation>>):
-
-unbeaufsichtigtes Ablaufen :: Installationen sollten ohne oder mit möglichst 
-wenig menschlicher Interaktion ablaufen
-
-parallele Installation :: mehrere Systeme werden gleichzeitig installiert
-
-Skalierbarkeit :: neue Klienten und Veröffentlichungen von Betriebssystemn 
-können einfach integriert werden
-
-Flexibilität :: eine Konfiguration sollte möglich sein, die viele Eigenschaften
-erlaubt
-
-Anpassbarkeit :: es sollte möglich sein, das System nach Bedarf an spezifische 
-Umgebungen und Gegebenheiten anzupassen
-
-=== FAI ===
-
-* Fully-automatic installation (FAI) <<FAI-Projekt>>
-* Eintrag im Debian Wiki <<Debian-Wiki-FAI>>
-* Beitrag im Linux Magazin 01/09 <<FAI-Bornemann-Karg>>
-* FAI 5.2 bringt Cloud-Support <<FAI-Cloud-Support>>
-
-=== Kickstart ===
-
-* https://cobbler.github.io/
-* http://www.debian.itopstube.com/2011/11/automating-installation-with-kickstart.html
-* https://fak3r.com/2011/08/18/howto-automate-debian-installs-with-preseed/
+// - Kickstart
+include::kickstart.adoc[]
 
 === Erfahrungen aus der Praxis ===
 

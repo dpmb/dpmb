@@ -1,0 +1,13 @@
+// Datei: ./praxis/automatisierte-installation/fai.adoc
+
+// Baustelle: Notizen
+
+=== FAI ===
+
+* Fully-automatic installation (FAI) <<FAI-Projekt>>
+* Eintrag im Debian Wiki <<Debian-Wiki-FAI>>
+* Beitrag im Linux Magazin 01/09 <<FAI-Bornemann-Karg>>
+* FAI 5.2 bringt Cloud-Support <<FAI-Cloud-Support>>
+
+// Datei (Ende): ./praxis/automatisierte-installation/fai.adoc
+

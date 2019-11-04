@@ -1,0 +1,28 @@
+// Datei: ./praxis/automatisierte-installation/kriterien.adoc
+
+// Baustelle: Rohtext
+
+=== Kriterien für die Auswahl einer geeigneten Lösung ===
+
+Folgende Punkte halten wir bei der Auswahl einer geeigneten Lösung für 
+hilfreich. Diese Punkte haben wir dem Debian-Wiki entnommen (siehe dazu 
+<<Debian-Wiki-Automated-Installation>>):
+
+unbeaufsichtigtes Ablaufen :: Installationen sollten ohne oder mit möglichst 
+wenig menschlicher Interaktion ablaufen
+
+parallele Installation :: mehrere Systeme werden gleichzeitig installiert
+
+Skalierbarkeit :: neue Klienten und Veröffentlichungen von Betriebssystemn 
+können einfach integriert werden
+
+Flexibilität :: eine Konfiguration sollte möglich sein, die viele Eigenschaften
+erlaubt
+
+Anpassbarkeit :: es sollte möglich sein, das System nach Bedarf an spezifische 
+Umgebungen und Gegebenheiten anzupassen
+
+Bitte passen Sie diese Liste an ihre jeweiligen Gegebenheiten an.
+
+// Datei (Ende): ./praxis/automatisierte-installation/kriterien.adoc
+

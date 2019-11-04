@@ -90,6 +90,9 @@ include::automatisierte-installation/automatisierte-installation.adoc[]
 // - automatisierte Aktualisierung
 include::automatisierte-aktualisierung/automatisierte-aktualisierung.adoc[]
 
+// - Paketkonfiguration sichern und wiederherstellen
+include::paketkonfiguration-sichern/paketkonfiguration-sichern.adoc[]
+
 // - Qualitätskontrolle
 include::qualitaetskontrolle/qualitaetskontrolle.adoc[]
 
@@ -98,9 +101,6 @@ include::versionierte-paketverwaltung.adoc[]
 
 // - Schnappschüsse einer Installation
 include::snapshots.adoc[]
-
-// - Paketkonfiguration sichern und wiederherstellen
-include::paketkonfiguration-sichern/paketkonfiguration-sichern.adoc[]
 
 // == Paketverwaltung mit eingeschränkten Ressourcen für Embedded und Mobile Devices ==
 
