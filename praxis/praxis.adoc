@@ -84,14 +84,14 @@ include::platte-voll/platte-voll.adoc[]
 
 // == Ganze Systeminstallationen und die Pflege vereinfachen ==
 
+// - Paketkonfiguration sichern und wiederherstellen
+include::paketkonfiguration-sichern/paketkonfiguration-sichern.adoc[]
+
 // - automatisierte Installation
 include::automatisierte-installation/automatisierte-installation.adoc[]
 
 // - automatisierte Aktualisierung
 include::automatisierte-aktualisierung/automatisierte-aktualisierung.adoc[]
-
-// - Paketkonfiguration sichern und wiederherstellen
-include::paketkonfiguration-sichern/paketkonfiguration-sichern.adoc[]
 
 // - Qualitätskontrolle
 include::qualitaetskontrolle/qualitaetskontrolle.adoc[]
