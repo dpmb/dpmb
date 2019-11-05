@@ -1,11 +1,45 @@
 // Datei: ./praxis/eigenes-apt-repository-anlegen/pakete-in-verzeichnis.adoc
 
-// Baustellenstatus: Notizen
+// Baustellenstatus: Rohtext
 
 === Verzeichnis mit Paketen ===
 
-* Verzeichnis anlegen
-* deb-Pakete darin ablegen
-* Pakete mit `dpkg -i` 'Verzeichnis/Paketname' installieren
+// Stichworte für den Index
+(((dpkg, -i)))
+(((dpkg, --install)))
+(((Paket, installieren)))
+(((Paket, bereitstellen)))
+(((Paketquelle, lokal)))
+
+Diese Variante ist aus technischer Sicht sehr simpel. Als **1. Schritt** 
+legen Sie ein Verzeichnis fest, welches Sie als Ablage für die Pakete benutzen
+möchten. Sofern noch nicht bestehend, legen Sie dieses an, bspw. wie folgt:
+
+----
+# mkdir -p /opt/paketarchiv
+----
+
+Der Parameter `-p` sorgt dafür, dass der vollständige Pfad angelegt wird.
+Damit umgehen Sie die Situation, dass `mkdir` seine Ausführung abbricht, falls 
+eine angegebene Verzeichnisebene noch nicht existiert.
+
+Im **2. Schritt** kopieren Sie alle gewünschten `.deb`-Pakete in dieses 
+Verzeichnis, bspw. mit Hilfe von diesem Kommando:
+
+----
+# cp *.deb /opt/paketarchiv/.
+----
+
+Benötigen Sie bspw. das Paket 'software-0.2.3' aus ihrem Archiv, installieren 
+Sie dieses nun mit Hilfe von `dpkg` und mit dem Verweis auf das oben genannte 
+Paketarchiv wie folgt:
+
+----
+# dpkg -i /opt/paketarchiv/software-0.2.3.deb
+----
+
+Um dieses Paketarchiv zu pflegen, genügt es vollkommen, neue oder 
+aktualisierte Pakete in dieses Verzeichnis zu kopieren. Bitte beachten Sie, 
+dass es bei dieser Variante keinerlei Integritätsprüfung der Pakete gibt.
 
 // Datei (Ende): ./praxis/eigenes-apt-repository-anlegen/pakete-in-verzeichnis.adoc
