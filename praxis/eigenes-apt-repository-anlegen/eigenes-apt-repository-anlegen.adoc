@@ -1,0 +1,16 @@
+// Datei: ./praxis/eigenes-apt-repository-anlegen/eigenes-apt-repository-anlegen.adoc
+
+// Baustellenstatus: Notizen
+
+[[eigenes-apt-repository-anlegen]]
+
+== Eigenes APT-Repository anlegen ==
+
+// Verzeichnis mit Paketen
+include::pakete-in-verzeichnis.adoc[]
+
+// dpkg-scanpackages
+include::dpkg-scanpackages.adoc[]
+
+// Datei (Ende): ./praxis/eigenes-apt-repository-anlegen/eigenes-apt-repository-anlegen.adoc
+

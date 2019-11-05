@@ -1,0 +1,11 @@
+// Datei: ./praxis/eigenes-apt-repository-anlegen/pakete-in-verzeichnis.adoc
+
+// Baustellenstatus: Notizen
+
+=== Verzeichnis mit Paketen ===
+
+* Verzeichnis anlegen
+* deb-Pakete darin ablegen
+* Pakete mit `dpkg -i` 'Verzeichnis/Paketname' installieren
+
+// Datei (Ende): ./praxis/eigenes-apt-repository-anlegen/pakete-in-verzeichnis.adoc
