@@ -1,16 +1,48 @@
 // Datei: ./praxis/eigenes-apt-repository-anlegen/eigenes-apt-repository-anlegen.adoc
 
-// Baustellenstatus: Notizen
+// Baustellenstatus: Rohtext
 
 [[eigenes-apt-repository-anlegen]]
 
 == Eigenes APT-Repository anlegen ==
+
+// Stichworte für den Index
+(((APT-Repository)))
+(((APT-Repository, eigenes erstellen)))
+(((Paket, bereitstellen)))
+(((Paketquelle, APT-Repository)))
+(((Paketquelle, lokal)))
+
+Wie Sie in den vorhergehenden Abschnitten gesehen haben, hängt es von 
+verschiedenen Faktoren ab, ob ein Paket Bestandteil der offiziellen 
+Veröffentlichung von Debian wird. Benötigen Sie eine bestimmte Software 
+häufiger, die noch nicht oder auch nicht mehr in einem offiziellen Repository 
+enthalten ist, ist das Anlegen eines eigenen APT-Repositorys durchaus 
+sinnvoll. Damit verringern Sie die Anzahl der Arbeitsschritte zur Pflege 
+ihres Softwarebestands erheblich. Als Motivation für eigene APT-Repositorys 
+sehen wir:
+
+* das Bereitstellen einer lokalen Paketauswahl, sprich: einfach nur Pakete mit 
+einem bestimmten Zweck oder Funktionsbereich vorhalten, bspw. für eine eigene 
+Distribution (quasi ein unvollständiger Paketmirror)
+
+* das Erstellen eigener, bislang nicht paketierter Software 
+
+* das Neubauen bestehender Software als Paket und dessen lokale Bereitstellung,
+bspw. mit Optimierung für die tatsächlich genutzte Hardware bzw. Architektur
+
+Die nachfolgend vorgestellten Lösungsvarianten sind recht unterschiedlich und 
+reichen von einem schlichten Verzeichnis bishin zu einem eigenen Paketmirror, 
+den Sie auch später offiziell referenzieren können.
 
 // Verzeichnis mit Paketen
 include::pakete-in-verzeichnis.adoc[]
 
 // dpkg-scanpackages
 include::dpkg-scanpackages.adoc[]
+
+// mini-dinstall
+include::mini-dinstall.adoc[]
 
 // Datei (Ende): ./praxis/eigenes-apt-repository-anlegen/eigenes-apt-repository-anlegen.adoc
 
