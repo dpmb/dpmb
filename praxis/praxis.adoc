@@ -73,6 +73,9 @@ include::apt-cache/apt-cache.adoc[]
 // - mit einem separaten Paketverzeichnis
 include::cache-verzeichnis-auf-separater-partition/cache-verzeichnis-auf-separater-partition.adoc[]
 
+// - eigenes APT-Repository anlegen
+include::eigenes-apt-repository-anlegen/eigenes-apt-repository-anlegen.adoc[]
+
 // - mit Hilfe eines eigenen Mirrors
 include::apt-mirror/eigenen-apt-mirror-anlegen.adoc[]
 

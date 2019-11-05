@@ -9,9 +9,6 @@
 // Begriff
 include::begriff.adoc[]
 
-// dpkg-scanpackages
-include::dpkg-scanpackages.adoc[]
-
 // approx
 include::approx.adoc[]
 
