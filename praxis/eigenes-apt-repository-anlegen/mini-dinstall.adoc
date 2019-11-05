@@ -1,0 +1,13 @@
+// Datei: ./praxis/eigenes-apt-repository-anlegen/mini-dinstall.adoc
+
+// Baustellenstatus: Notizen
+
+=== mini-dinstall ===
+
+* Debianpaket 'mini-dinstall' <<Debian-Paket-mini-dinstall>>
+* "daemon for updating Debian packages in a repository"
+* " This program implements a miniature version of the "dinstall" program which installs packages in the Debian archive. It doesn't require a PostgreSQL database, and is very easy to set up, maintain, and use. mini-dinstall can be run via cron, or as a daemon. This package is expressly designed for personal apt repositories, and the like. In this vein, it contains fewer sanity checks; for example, it will happily install a lower version of a package. You can also generally just 'rm' files from the repository, and mini-dinstall won't care. In fact, (when run as a daemon) it will automatically detect that the directory changed, and update the Packages file. "
+
+* Creating a Package Repository for APT (see https://debian-handbook.info/browse/stable/sect.setup-apt-package-repository.html)
+
+// Datei (Ende): ./praxis/eigenes-apt-repository-anlegen/mini-dinstall.adoc
