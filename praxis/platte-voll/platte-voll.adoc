@@ -7,7 +7,7 @@
 
 // Stichworte für den Index
 (((Platte läuft voll, Paketcache)))
-(((Platte läuft voll, Paketinstallation)))
+(((Platte läuft voll, Paket installieren)))
 * ja, das gibt es heute immer noch
 * auch, wenn Festplatten vergleichsweise riesig sind
 * Hinweis: es gibt ältere Systeme, die klaglos ihren Dienst leisten

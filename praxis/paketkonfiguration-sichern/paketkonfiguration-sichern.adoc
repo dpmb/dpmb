@@ -17,7 +17,7 @@
 (((Paketkonfiguration, debconf-get-selections)))
 (((Paketkonfiguration, debconf-set-selections)))
 (((Paketkonfiguration, gesicherte Konfiguration wieder einspielen)))
-(((Paketliste verstehen)))
+(((Paketliste, verstehen)))
 
 Betreuen Sie eine Reihe von Rechnern, die jeweils aktuell und zumindest 
 bezogen auf die Paketauswahl identisch bleiben müssen, ist das manuelle 
