@@ -2,6 +2,8 @@
 
 // Baustellenstatus: Rohtext
 
+[[eigenes-apt-repository-anlegen-verzeichnis]]
+
 === Verzeichnis mit Paketen ===
 
 // Stichworte für den Index
@@ -12,7 +14,7 @@
 (((Paketquelle, lokal)))
 
 Diese Variante ist aus technischer Sicht sehr simpel. Im **1. Schritt** legen 
-Sie ein Verzeichnis fest, welches Sie als Ablage für die Pakete benutzen
+Sie ein Verzeichnis fest, welches Sie als Ablage für die `.deb`-Pakete benutzen
 möchten. Sofern noch nicht vorhanden, legen Sie dieses an, bspw. wie folgt:
 
 ----
