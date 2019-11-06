@@ -1,0 +1,31 @@
+// Datei: ./praxis/eigenes-apt-repository-anlegen/apt-ftparchive.adoc
+
+// Baustellenstatus: Notizen
+
+=== apt-ftparchive ===
+
+* Goals: Superset of `dpkg-scanpackages` and `dpkg-scansources`
+
+* Pros:
+** Does not rely on any external programs aside from gzip.
+** Creates Release and Contents files without providing `*.changes` 
+
+* Cons:
+** Can be slow on large repositories, unless the input file (?FileList) is sorted first (the sort command works).
+
+* Package: apt
+* Distributions: oldstable, stable, testing, unstable, experimental
+
+* Dependencies: unstable/admin/apt-utils
+* Automatic repositories: No (Yes with dupload)
+* Incoming mechanism: No (Yes with custom move cron script with dupload)
+* Pools: Yes
+* GPG signing: No (Yes with dupload with script)
+* Inclusion of .deb without .changes: ??
+* Several versions of each package: ??
+
+* HOWTOs:
+** Debian Reference (lenny) -- SecureAPT in combination with dupload (aimed at someone who has shell access to a web server) -- https://www.debian.org/doc/manuals/debian-reference/ch02.en.html#_small_public_package_archive
+** apt-ftparchive generate Roberto Sanchez how-to -- he now recommends to use reprepro
+
+// Datei (Ende): ./praxis/eigenes-apt-repository-anlegen/apt-ftparchive.adoc

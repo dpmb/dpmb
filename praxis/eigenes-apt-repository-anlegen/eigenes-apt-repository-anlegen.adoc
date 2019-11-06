@@ -44,5 +44,8 @@ include::dpkg-scanpackages.adoc[]
 // mini-dinstall
 include::mini-dinstall.adoc[]
 
+// apt-ftparchive
+include::apt-ftparchive.adoc[]
+
 // Datei (Ende): ./praxis/eigenes-apt-repository-anlegen/eigenes-apt-repository-anlegen.adoc
 
