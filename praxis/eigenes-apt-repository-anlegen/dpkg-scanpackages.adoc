@@ -133,8 +133,8 @@ Um ihr Paketarchiv via HTTPS anzubieten, greifen Sie zusätzlich auf das Paket
 
 Mit obigem Eintrag vertraut APT nun allen Paketen aus ihrem Paketarchiv. 
 Aktualisieren Sie nun ihre Liste der verfügbaren Pakete -- bspw. mit 
-`apt-get update` -- "lernt" APT ihr Paketarchiv und kann Softwarepakete daraus
-in ihr System einbinden.
+`apt-get update` -- ``lernt'' APT ihr Paketarchiv und kann Softwarepakete 
+daraus in ihr System einbinden.
 
 [NOTE]
 ====
