@@ -1,0 +1,13 @@
+// Datei: ./praxis/eigenes-apt-repository-anlegen/debify
+
+// Baustellenstatus: Notizen
+
+=== debify ===
+
+* Goal: takes a directory full of Debian packages and creates a signed and properly-structured Debian repository (wrapper around aptly)
+
+* Download: https://hub.docker.com/r/spotify/debify/ (docker container)
+
+* Source: GitHub
+
+// Datei (Ende): ./praxis/eigenes-apt-repository-anlegen/debify.adoc
