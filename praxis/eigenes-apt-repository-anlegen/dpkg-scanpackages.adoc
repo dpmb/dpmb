@@ -6,8 +6,6 @@
 
 // Stichworte für den Index
 (((Debianpaket, dpkg-dev)))
-(((dpkg, -i)))
-(((dpkg, --install)))
 (((dpkg-scanpackages)))
 (((dpkg-scanpackages, -m)))
 (((Paket, installieren)))
@@ -16,10 +14,11 @@
 
 Die nachfolgend vorgestellte Lösung ist ähnlich zu der in  
 <<eigenes-apt-repository-anlegen-verzeichnis>>. Es ergänzt diese jedoch noch
-um passende Metadaten. Die Basis bildet hier ebenfalls ein Verzeichnis, 
-welches Sie als Ablage für ihre Softwarepakete benutzen möchten. Hier heißt 
-es schlicht und einfach `/opt/paketarchiv`. Sofern es noch nicht vorhanden 
-ist, legen Sie dieses im **1. Schritt** noch wie folgt an:
+um passende Metadaten (auch 'Packages index files' genannt). Die Basis bildet 
+hier ebenfalls ein Verzeichnis, welches Sie als Ablage für ihre Softwarepakete 
+benutzen möchten. Hier heißt es schlicht und einfach `/opt/paketarchiv`. 
+Sofern es noch nicht vorhanden ist, legen Sie dieses im **1. Schritt** noch wie 
+folgt an:
 
 ----
 # mkdir -p /opt/paketarchiv
@@ -88,9 +87,51 @@ Description: OpenJDK Java runtime, using Hotspot JIT
  from the IcedTea project.
 ----
 
+[NOTE]
+====
 Bitte beachten Sie, dass Sie diesen Schritt mittels `dpkg-scanpackages` jedes 
 Mal wiederholen müssen, wenn Sie Pakete im Paketarchiv hinzufügen oder Pakete 
-daraus entfernen.
+daraus entfernen. Mit dem folgenden Shellskript lässt sich der Schritt 
+automatisieren:
+
+----
+#! /bin/bash
+dpkg-scanpackages /opt/paketarchiv | gzip -c > /opt/paketarchiv/Packages.gz
+----
+
+Idealerweise legen Sie das Skript unter einen passenden Pfad wie bspw. 
+`/usr/bin` ab. Damit vereinfacht sich ihr Aufruf.
+====
+
+Nun folgt der **4. Schritt** -- das Hinzufügen ihres soeben erzeugten, lokalen
+Paketarchivs zur Liste der von Ihnen genutzten Repositorys (siehe 
+<<etc-apt-sources.list-verstehen>>). Entweder ergänzen Sie die Datei 
+`/etc/apt/sources.list` um eine Zeile mit ihrem Paketarchiv oder Sie erstellen 
+eine separate Datei im Verzeichnis `/etc/apt/sources.list.d`. Für obiges 
+Beispiel sieht die Zeile wie folgt aus, um ihr Paketarchiv zunächst lokal 
+einzubinden:
+
+----
+deb [trusted=yes] file:/opt/paketarchiv ./
+----
+
+Um das Paketarchiv auch für andere Benutzer via HTTP zugänglich zu machen, 
+stellen Sie das Verzeichnis bspw. mit Hilfe eines lokalen Webservers bereit. 
+Ein gültiger Eintrag wäre bspw. der folgende:
+
+----
+deb [trusted=yes] http://www.webserver.com/paketarchiv ./
+----
+
+// Stichworte für den Index
+(((Debianpaket, apt-transport-https)))
+Um ihr Paketarchiv via HTTPS anzubieten, greifen Sie zusätzlich auf das Paket
+'apt-transport-https' <<Debian-Paket-apt-transport-https>> zurück.
+
+Mit obigem Eintrag vertraut APT nun allen Paketen aus ihrem Paketarchiv. 
+Aktualisieren Sie nun ihre Liste der verfügbaren Pakete -- bspw. mit 
+`apt-get update` -- "lernt" APT ihr Paketarchiv und kann Softwarepakete daraus
+in ihr System einbinden.
 
 // Datei (Ende): ./praxis/eigenes-apt-repository-anlegen/dpkg-scanpackages.adoc
 
