@@ -8,46 +8,64 @@
 
 // Stichworte für den Index
 (((Paketmirror, aufsetzen)))
-(((Paketmirror, öffentlich zugänglich machen)))
 (((Paketmirror, Unterschied zu Paketcache)))
 (((Paketmirror, Varianten)))
 
-Wie bereits in ``Geeigneten Paketmirror auswählen''
-<<geeigneten-paketmirror-auswaehlen>> deutlich wurde, stellen die
-offiziellen Paketmirrors stets aktuelle Debian-Pakete für alle
-Interessierten zur Verfügung. Diese Spiegelserver sind weltweit verteilt
-und werden weitestgehend individuell betreut.
+Wie bereits in ``Geeigneten Paketmirror auswählen'' (siehe 
+<<geeigneten-paketmirror-auswaehlen>>) deutlich wurde, stellen die 
+offiziellen Paketmirrors (auch ``Spiegelserver'' genannt) stets aktuelle 
+Debian-Pakete für alle Benutzer und Interessierten zur Verfügung. Diese 
+Spiegelserver sind weltweit verteilt und werden weitestgehend individuell 
+betreut.
 
-Entsprechen die bereits bestehenden und für Sie netztechnisch
-erreichbaren Spiegelserver nicht ihren Anforderungen an Bezugszeit der
-Pakete, Aktualität der Software und Verfügbarkeit des Dienstes, kann das
-Aufsetzen einer eigenen Instanz eine mögliche Option zur Verbesserung
-sein. Prinzipiell erreichen Sie damit das gleiche Ergebnis wie mit einem
-Paketcache (siehe ``Einen APT-Cache einrichten'' in <<apt-cache>>), da
-darüber ebenfalls Debian-Softwarepakete in einer Art lokalem Puffer
-bereitgestellt werden.
+Entsprechen die bereits bestehenden und für Sie netztechnisch erreichbaren 
+Spiegelserver nicht ihren Anforderungen an die Bezugszeit der Pakete, 
+Aktualität der Software und Verfügbarkeit des Dienstes, kann das Aufsetzen 
+einer eigenen Instanz eine mögliche Lösung zur Verbesserung ihrer Situation 
+sein. Prinzipiell erreichen Sie damit das gleiche Ergebnis wie mit einem 
+Paketcache (siehe ``Einen APT-Cache einrichten'' in <<apt-cache>>), da darüber 
+ebenfalls Debian-Softwarepakete in einer Art lokalem Puffer bereitgestellt 
+werden.
 
-Der Unterschied zwischen einem Paketcache und einem Paketmirror besteht
-darin, dass bei ersterem nur die Pakete vorgehalten werden, die bisher
-nachgefragt wurden, d.h. über diesen Dienst bezogen wurden. Im Gegensatz
-dazu stellt ein Paketmirror i.d.R. die gesamte Distribution inkl.
-ausgewählter Veröffentlichungen bereit. Er spiegelt den offiziellen
-Paketbestand und macht ihn somit für die Benutzer, Dienste und Geräte in
-ihrem lokalen Netzwerk verfügbar. Damit geht eine Entlastung der
-offiziellen Paketmirror und eine Verringerung des Netzwerkverkehrs zu
-diesem einher -- die verfügbare Bandbreite der Außenanbindung kann
-anderweitig genutzt werden. An der Stelle ist jedoch dafür zu sorgen,
-dass der lokale Paketmirror stets aktuelle Pakete vorhält.
+Der Unterschied zwischen einem Paketcache und einem Paketmirror besteht darin, 
+dass bei ersterem nur die Pakete vorgehalten werden, die bisher nachgefragt 
+wurden, d.h. über die Paketverwaltung bezogen wurden. Im Gegensatz dazu stellt 
+ein Paketmirror die gesamte Distribution inkl. ausgewählter Veröffentlichungen 
+bereit. Er spiegelt den offiziellen, aktuellen Paketbestand und macht ihn somit 
+für die Benutzer, Dienste und Geräte in ihrem lokalen Netzwerk verfügbar. Damit 
+geht eine Entlastung der offiziellen Paketmirror und eine Verringerung des 
+Netzwerkverkehrs zu diesem einher -- die verfügbare Bandbreite der 
+Außenanbindung kann anderweitig genutzt werden. An der Stelle ist jedoch dafür 
+zu sorgen, dass der lokale Spiegelserver auch stets aktuelle Pakete vorhält. 
+Das gelingt über eine Synchronisation mit einem anderen Paketmirror als 
+Referenz.
 
-Nachfolgend stellen wir Ihnen mehrere Varianten anhand der Pakete
-'apt-mirror' (<<apt-mirror>>), 'debmirror' (<<debmirror>>),
-'debpartial-mirror' (<<debpartial-mirror>>) 'ubumirror' <<ubumirror>>
-und 'reprepro' (<<reprepro>>) genauer vor.
+// Stichworte für den Index
+(((Debian Archive Kit (dak))))
+(((minidak)))
+Das Debian-Projekt nutzt als Werkzeuge zur Erzeugung und Pflege eines 
+Spiegelservers 'dak' und 'minidak'. 'dak' <<DebianArchiveKit>> kürzt 'Debian 
+Archive Kit' ab, ist die offizielle Lösung und besitzt eine Anbindung an das 
+DBMS PostgreSQL. 'minidak' <<minidak>> ist eine Reimplementierung von 'dak' 
+ohne Anbindung an eine Datenbank. Die offiziellen Empfehlungen für private
+Spiegelserver sind 'reprepro' (siehe <<reprepro>>) und 'minid-install' (siehe
+<<eigenes-apt-repository-anlegen-mini-dinstall>>).
 
-Möchten Sie nach der erfolgreichen Inbetriebnahme ihren eigenen
-Paketmirror auch öffentlich zugänglich machen, nutzen Sie dazu am besten
-das bereits dafür vorbereitete Formular auf der Webseite des
-Debian-Projekts <<Debian-Spiegel-Informationen>>.
+Nachfolgend stellen wir Ihnen mehrere Varianten vor. Diese benutzen die Pakete
+'apt-mirror' (siehe <<apt-mirror>>), 'debmirror' (siehe <<debmirror>>),
+'debpartial-mirror' (siehe <<debpartial-mirror>>), 'ubumirror' (siehe 
+<<ubumirror>>), 'debarchiver' (siehe <<debarchiver>>) und 'reprepro' (siehe 
+<<reprepro>>).
+
+// Stichworte für den Index
+(((Paketmirror, öffentlich zugänglich machen)))
+[NOTE]
+====
+Möchten Sie nach der erfolgreichen Inbetriebnahme ihren eigenen Spiegelserver
+auch öffentlich zugänglich machen, nutzen Sie dazu am besten das bereits dafür 
+vorbereitete Formular auf der Webseite des Debian-Projekts 
+<<Debian-Spiegel-Informationen>>.
+====
 
 // apt-mirror
 include::apt-mirror.adoc[]
@@ -60,6 +78,9 @@ include::debpartial-mirror.adoc[]
 
 // ubumirror
 include::ubumirror.adoc[]
+
+// debarchiver
+include::debarchiver.adoc[]
 
 // reprepo
 include::reprepro.adoc[]

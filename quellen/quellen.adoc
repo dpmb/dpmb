@@ -168,6 +168,8 @@
 
 - [[[Debdelta]]] Debdelta, Pakete als Differenzen zur vorherigen Paket-Version, http://debdelta.debian.net/
 
+- [[[DebianArchiveKit]]] Debian Archive Kit (dak), https://salsa.debian.org/ftp-team/dak
+
 - [[[DebianDerivativeCensus]]] Debian-Derivate-Zensus, https://wiki.debian.org/Derivatives/Census
 
 - [[[Debianforum-Wiki-Backports]]] Debian Backports im Debianforum Wiki: https://wiki.debianforum.de/Backports
@@ -280,6 +282,8 @@
 - [[[Debian-Paket-command-not-found]]] Debian-Paket 'command-not-found', https://packages.debian.org/de/stable/command-not-found
 
 - [[[Debian-Paket-cupt]]] Debian-Paket 'cupt', https://packages.debian.org/de/stable/cupt
+
+- [[[Debian-Paket-debarchiver]]] Debian-Paket 'debarchiver', https://packages.debian.org/de/stable/debarchiver
 
 - [[[Debian-Paket-dctrl-tools]]] Debian-Paket 'dctrl-tools', https://packages.debian.org/de/stable/dctrl-tools
 
@@ -705,6 +709,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[mime-applications-associations]]] MIME Application Associations, https://www.freedesktop.org/wiki/Specifications/mime-apps-spec/
 
 - [[[mime-applications-associations-default-applications]]] Default Applications, https://specifications.freedesktop.org/mime-apps-spec/latest/ar01s04.html
+
+- [[[minidak]]] `minidak`, https://www.hadrons.org/~guillem/debian/mini-dak/
 
 - [[[mintbackup]]] mintbackup, https://community.linuxmint.com/software/view/mintbackup
 

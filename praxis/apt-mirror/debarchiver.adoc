@@ -1,0 +1,43 @@
+// Datei: ./praxis/apt-mirror/debarchiver.adoc
+
+// Baustelle: Notizen
+
+[[debarchiver]]
+
+=== debarchiver ===
+
+// Stichworte für den Index
+(((Debianpaket, debarchiver)))
+
+* Goals: Make a simpler version of dak.
+* Pros:
+
+** Easy to use incoming mechanism - even on remote systems - by using a cron-job
+** Packages can be moved into a distribution by
+** reading the Distribution value from .changes file or
+** directly putting the whole package into a distributions-incoming directory. 
+** Standard repository (can be pinned) 
+
+* Cons:
+
+** No Pool-architecture at the moment
+** Some useful checks are missing
+** Cleaning needs to be done manually 
+
+* Package: 'debarchiver' <<Debian-Paket-debarchiver>>
+
+* Distributions: oldstable, stable, testing, unstable
+
+* Dependencies: unstable/devel/debarchiver
+** adduser, apt-utils (recommended) | dpkg-dev, opalmod (Perl modules), gnupg (optional) 
+
+* Automatic repositories: Yes
+* Incoming mechanism: Yes
+
+* Pools: No (but suggested somewhere at BTS).
+* GPG signing: Yes (with gnupg, post-Sarge feature).
+* Inclusion of .deb without .changes: ??
+* Several versions of each package: ?? 
+
+// Datei (Ende): ./praxis/apt-mirror/debarchiver.adoc
+

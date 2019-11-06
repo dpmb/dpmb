@@ -2,6 +2,7 @@
 
 // Baustellenstatus: Notizen
 
+[[eigenes-apt-repository-anlegen-mini-dinstall]]
 === mini-dinstall ===
 
 * Debianpaket 'mini-dinstall' <<Debian-Paket-mini-dinstall>>
