@@ -47,5 +47,11 @@ include::mini-dinstall.adoc[]
 // apt-ftparchive
 include::apt-ftparchive.adoc[]
 
+// aptly
+include::aptly.adoc[]
+
+// debify
+include::debify.adoc[]
+
 // Datei (Ende): ./praxis/eigenes-apt-repository-anlegen/eigenes-apt-repository-anlegen.adoc
 

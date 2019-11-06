@@ -1,0 +1,28 @@
+// Datei: ./praxis/eigenes-apt-repository-anlegen/aptly.adoc
+
+// Baustellenstatus: Notizen
+
+=== aptly ===
+
+* Goals: manage local repositories, snapshot them and publish
+* Pros:
+** supports multiple versions of package in one repo
+** has supported for mirroring in the same tool 
+
+* Download & Documentation: http://www.aptly.info/
+
+* Distributions: stable, testing, unstable
+
+* Source: GitHub
+* Automatic repositories: Yes (?)
+
+* Incoming mechanism: Yes (inoticoming -> aptly repo include)
+* Pools: Yes
+* GPG signing: Yes
+* Inclusion of .deb without .changes: Yes
+* Several versions of each package: Yes
+* HOWTOs:
+** aptly tutorials: https://www.aptly.info/tutorial/
+** Example of setup with incoming: http://oar.imag.fr/wiki:aptly 
+
+// Datei (Ende): ./praxis/eigenes-apt-repository-anlegen/aptly.adoc
