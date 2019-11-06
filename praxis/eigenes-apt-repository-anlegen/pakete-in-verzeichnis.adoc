@@ -11,35 +11,47 @@
 (((Paket, bereitstellen)))
 (((Paketquelle, lokal)))
 
-Diese Variante ist aus technischer Sicht sehr simpel. Als **1. Schritt** 
-legen Sie ein Verzeichnis fest, welches Sie als Ablage für die Pakete benutzen
-möchten. Sofern noch nicht bestehend, legen Sie dieses an, bspw. wie folgt:
+Diese Variante ist aus technischer Sicht sehr simpel. Im **1. Schritt** legen 
+Sie ein Verzeichnis fest, welches Sie als Ablage für die Pakete benutzen
+möchten. Sofern noch nicht vorhanden, legen Sie dieses an, bspw. wie folgt:
 
 ----
 # mkdir -p /opt/paketarchiv
 ----
 
-Der Parameter `-p` sorgt dafür, dass der vollständige Pfad angelegt wird.
-Damit umgehen Sie die Situation, dass `mkdir` seine Ausführung abbricht, falls 
-eine angegebene Verzeichnisebene noch nicht existiert.
+Der Schalter `-p` sorgt dafür, dass der vollständige Pfad `/opt/paketarchiv` 
+angelegt wird. Damit umgehen Sie die Situation, dass `mkdir` seine Ausführung 
+abbricht, falls eine von Ihnen im Pfad angegebene Verzeichnisebene noch nicht 
+existiert.
 
 Im **2. Schritt** kopieren Sie alle gewünschten `.deb`-Pakete in dieses 
 Verzeichnis, bspw. mit Hilfe von diesem Kommando:
 
 ----
-# cp *.deb /opt/paketarchiv/.
+# cp -v *.deb /opt/paketarchiv/.
 ----
 
-Benötigen Sie bspw. das Paket 'software-0.2.3' aus ihrem Archiv, installieren 
-Sie dieses nun mit Hilfe von `dpkg` und mit dem Verweis auf das oben genannte 
+Die Angabe des Schalters `-v` sorgt dafür, dass alle Kopieraktionen sichtbar 
+werden, sprich: sie sehen in der Ausgabe im Terminal, welche Dateien in ihr 
+Paketarchiv kopiert werden. Danach ist ihr Paketarchiv bereit zur Benutzung.
+
+Benötigen Sie nun bspw. das Paket 'software-0.2.3' aus ihrem Archiv, 
+installieren Sie dieses nun mit Hilfe von `dpkg` und mit dem Verweis auf ihr 
 Paketarchiv wie folgt:
 
 ----
 # dpkg -i /opt/paketarchiv/software-0.2.3.deb
 ----
 
-Um dieses Paketarchiv zu pflegen, genügt es vollkommen, neue oder 
-aktualisierte Pakete in dieses Verzeichnis zu kopieren. Bitte beachten Sie, 
-dass es bei dieser Variante keinerlei Integritätsprüfung der Pakete gibt.
+Um dieses Paketarchiv zu pflegen, genügt es vollkommen, nicht mehr benötigte 
+Pakete aus dem Verzeichnis zu löschen und neue oder aktualisierte Pakete in 
+dieses Verzeichnis zu kopieren. Mehr ist dafür nicht zu tun.
+
+[NOTE]
+====
+Bitte beachten Sie, dass es bei dieser Lösung keine Authentifizierung und 
+Integritätsprüfung der Pakete im Archiv gibt. Die Verantwortung über die 
+bereitgestellten Softwarepakete liegt bei Ihnen.
+====
 
 // Datei (Ende): ./praxis/eigenes-apt-repository-anlegen/pakete-in-verzeichnis.adoc
