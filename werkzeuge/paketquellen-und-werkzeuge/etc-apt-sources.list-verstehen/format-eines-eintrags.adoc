@@ -37,6 +37,7 @@ sowohl lokal vorliegen, als auch von extern eingebunden sein, bspw. über
 ein Netzwerkdateisystem wie AFS, NFS oder SMB
 * `cdrom`: genutzt wird eine CD, eine DVD oder eine Blu-ray als Installationsmedium
 * `http`: die Installationsquelle ist ein HTTP-Server
+* `https`: die Installationsquelle ist ein HTTPS-Server
 * `ftp`: die Installationsquelle ist ein FTP-Server
 * `copy`: identisch zum Eintrag `file`, aber die bezogenen Debianpakete
 werden zusätzlich im lokalen Verzeichnis `/var/cache/apt/archives/`
