@@ -44,12 +44,14 @@ Referenz.
 (((Debian Archive Kit (dak))))
 (((minidak)))
 Das Debian-Projekt nutzt als Werkzeuge zur Erzeugung und Pflege eines 
-Spiegelservers 'dak' und 'minidak'. 'dak' <<DebianArchiveKit>> kürzt 'Debian 
-Archive Kit' ab, ist die offizielle Lösung und besitzt eine Anbindung an das 
-DBMS PostgreSQL. 'minidak' <<minidak>> ist eine Reimplementierung von 'dak' 
-ohne Anbindung an eine Datenbank. Die offiziellen Empfehlungen für private
-Spiegelserver sind 'reprepro' (siehe <<reprepro>>) und 'minid-install' (siehe
-<<eigenes-apt-repository-anlegen-mini-dinstall>>).
+Spiegelservers 'dak' und 'minidak'. 'dak' kürzt 'Debian Archive Kit' ab
+<<DebianArchiveKit>>, ist die offizielle Lösung auf der Basis von Python und 
+besitzt eine Anbindung an das DBMS PostgreSQL. 'minidak' <<minidak>> ist eine 
+schlankere Reimplementierung von 'dak' in Form von Shellskripten ohne die 
+Erfordernis einer Datenbank. Die offiziellen Empfehlungen für private 
+Spiegelserver, die nicht die gesamte Distribution oder nur eine bestimmte
+Veröffentlichung bereitstellen, sind 'reprepro' (siehe <<reprepro>>) und 
+'minid-install' (siehe <<eigenes-apt-repository-anlegen-mini-dinstall>>).
 
 Nachfolgend stellen wir Ihnen mehrere Varianten vor. Diese benutzen die Pakete
 'apt-mirror' (siehe <<apt-mirror>>), 'debmirror' (siehe <<debmirror>>),
