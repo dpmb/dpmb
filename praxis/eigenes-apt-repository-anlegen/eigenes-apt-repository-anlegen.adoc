@@ -41,6 +41,9 @@ include::pakete-in-verzeichnis.adoc[]
 // dpkg-scanpackages
 include::dpkg-scanpackages.adoc[]
 
+// reprepro
+include::reprepro.adoc[]
+
 // mini-dinstall
 include::mini-dinstall.adoc[]
 

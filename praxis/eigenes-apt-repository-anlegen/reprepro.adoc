@@ -1,0 +1,27 @@
+// Datei: ./praxis/eigenes-apt-repository-anlegen/reprepro.adoc
+
+// Baustellenstatus: Notizen
+
+[[eigenes-apt-repository-anlegen-reprepro]]
+=== reprepro ===
+
+// Stichworte für den Index
+(((APT-Repository, eigenes erstellen)))
+(((Debianpaket, reprepro)))
+(((Paket, bereitstellen)))
+(((Paketquelle, APT-Repository)))
+(((Paketquelle, lokal)))
+
+_reprepro_ <<Debian-Paket-reprepro>> ist ein Programm, das
+APT-Repositories aus unterschiedlichen Quellen bauen kann, u.a. als
+Mirror oder aus lokalen Binär- oder Quellpaketen.
+
+TODO:
+
+* Querverweise zum Aufsetzen eines eigenen Mirrors
+* Die unterschiedlichen Unterkommandos.
+* Wie werden verschiedene Distributions-Releases verwaltet
+* Handhabung von reinen Quell- oder Binär-Paketen als auch `.changes`-Dateien.
+* gpg-Schlüssel zum Signieren der bereitgestellten Pakete
+
+// Datei (Ende): ./praxis/eigenes-apt-repository-anlegen/reprepro.adoc
