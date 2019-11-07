@@ -5,9 +5,33 @@
 [[eigenes-apt-repository-anlegen-mini-dinstall]]
 === mini-dinstall ===
 
-* Debianpaket 'mini-dinstall' <<Debian-Paket-mini-dinstall>>
-* "daemon for updating Debian packages in a repository"
-* " This program implements a miniature version of the "dinstall" program which installs packages in the Debian archive. It doesn't require a PostgreSQL database, and is very easy to set up, maintain, and use. mini-dinstall can be run via cron, or as a daemon. This package is expressly designed for personal apt repositories, and the like. In this vein, it contains fewer sanity checks; for example, it will happily install a lower version of a package. You can also generally just 'rm' files from the repository, and mini-dinstall won't care. In fact, (when run as a daemon) it will automatically detect that the directory changed, and update the Packages file. "
+// Stichworte für den Index
+(((APT-Repository, eigenes erstellen)))
+(((Debian Archive Kit (dak))))
+(((Debianpaket, mini-dinstall)))
+(((Paket, bereitstellen)))
+(((Paketquelle, APT-Repository)))
+(((Paketquelle, lokal)))
+
+Das Projekt _mini-dinstall_ verfolgt den gleichen Zweck wie _minidak_: eine
+kleinere Version von _dak_ und zielt auf das Betreiben eigener APT-Repositories
+ab. Daher ist es mit weniger Automatismen und Komfort als die größeren 
+Varianten ausgelegt. Es steht als gleichnamiges Debianpaket für die aktuelle, 
+stabile Veröffentlichung von Debian bereit <<Debian-Paket-mini-dinstall>>. 
+Abhängig is es vom Paket _dput_ <<Debian-Paket-dput>>, welches dazu dient, 
+Softwarepakete auf Übereinstimmung mit den Debian-Richtlinien zu prüfen und 
+diese dann in ein Repository hochzuladen.
+
+* Voraussetzungen
+** Webserver
+** Verzeichnis mit Paketen
+
+* Ergänzungen
+** cron oder daemon
+
+* Einrichtung
+** Konfigurationsdatei
+** gpg-Schlüssel zum Signieren der bereitgestellten Pakete
 
 * Creating a Package Repository for APT (see https://debian-handbook.info/browse/stable/sect.setup-apt-package-repository.html)
 
