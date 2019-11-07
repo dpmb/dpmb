@@ -283,6 +283,8 @@
 
 - [[[Debian-Paket-cupt]]] Debian-Paket 'cupt', https://packages.debian.org/de/stable/cupt
 
+- [[[Debian-Paket-daptup]]] Debian-Paket 'daptup', https://packages.debian.org/de/stable/daptup
+
 - [[[Debian-Paket-debarchiver]]] Debian-Paket 'debarchiver', https://packages.debian.org/de/stable/debarchiver
 
 - [[[Debian-Paket-dctrl-tools]]] Debian-Paket 'dctrl-tools', https://packages.debian.org/de/stable/dctrl-tools
@@ -337,6 +339,8 @@
 - [[[Debian-Paket-dpkg-repack]]] Debian-Paket 'dpkg-repack', https://packages.debian.org/de/stable/dpkg-repack
 
 - [[[Debian-Paket-dpkg-www]]] Debian-Paket 'dpkg-www', https://packages.debian.org/de/stable/dpkg-www
+
+- [[[Debian-Paket-dput]]] Debian-Paket 'dput', https://packages.debian.org/de/stable/dput
 
 - [[[Debian-Paket-dwm]]] Debian-Paket 'dwm', https://packages.debian.org/de/stable/dwm
 

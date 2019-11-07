@@ -71,7 +71,7 @@ Paketquellen in `/etc/apt/sources.list` (siehe
 <<etc-apt-sources.list-verstehen>>) gelesen. Jeder Eintrag darin
 bezeichnet eine Paketquelle. Von diesen Paketquellen wird nacheinander
 jeweils eine aktuelle Liste der Pakete bezogen, die von dieser
-angegebenen Paketquelle verfügbar sind.
+angegebenen Paketquelle verfügbar sind. 
 
 Jede bezogene Liste wird danach auf deren Echtheit geprüft. Dazu ist
 diese digital signiert (siehe <<paketquelle-auf-echtheit-ueberpruefen>>). 
@@ -130,6 +130,13 @@ Es wurden 421 kB in 0 s geholt (428 kB/s).
 Paketlisten werden gelesen... Fertig
 #
 ----
+
+// Stichworte für den Index
+(((Debianpaket, daptup)))
+Für diese Mitteilungen greifen `apt-get` und `apt` auf das Werkzeug `daptup` 
+aus dem gleichnamigen Paket zurück <<Debian-Paket-daptup>>. Es ist als eine
+direkte Abhängigkeit zu beiden definiert und wird daher automatisch 
+installiert.
 
 [IMPORTANT]
 .Überprüfung der Paketsignaturen
