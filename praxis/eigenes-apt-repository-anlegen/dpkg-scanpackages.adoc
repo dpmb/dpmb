@@ -115,20 +115,23 @@ einzubinden:
 deb [trusted=yes] file:/opt/paketarchiv ./
 ----
 
-Um das Paketarchiv auch für andere Benutzer via HTTP zugänglich zu machen, 
+Um das Paketarchiv auch für andere Benutzer via HTTPS zugänglich zu machen, 
 stellen Sie das Verzeichnis bspw. mit Hilfe eines lokalen Webservers bereit. 
 Ein gültiger Eintrag wäre bspw. der folgende:
 
 ----
-deb [trusted=yes] http://www.webserver.com/paketarchiv ./
+deb [trusted=yes] https://www.webserver.com/paketarchiv ./
 ----
 
 // Stichworte für den Index
 (((Debianpaket, apt-transport-https)))
 [NOTE]
 ====
-Um ihr Paketarchiv via HTTPS anzubieten, greifen Sie zusätzlich auf das Paket
-'apt-transport-https' <<Debian-Paket-apt-transport-https>> zurück.
+Ab APT in der Version 1.5 (verfügbar ab Debian 10 'Buster') unterstützt es
+HTTPS von sich aus. Nutzen Sie (noch) eine frühere Veröffentlichung und 
+möchten ihr Paketarchiv ebenfalls via HTTPS anzubieten, greifen Sie zusätzlich 
+auf das Paket 'apt-transport-https' <<Debian-Paket-apt-transport-https>> 
+zurück. Mehr Informationen dazu finden Sie unter <<LambAptHTTPS>>.
 ====
 
 Mit obigem Eintrag vertraut APT nun allen Paketen aus ihrem Paketarchiv. 

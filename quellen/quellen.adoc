@@ -674,6 +674,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Kubuntu]]] Kubuntu, https://www.kubuntu.org/
 
+- [[[LambAptHTTPS]]] Chris Lamb: Why does APT not use HTTPS?, https://whydoesaptnotusehttps.com/
+
 - [[[LernStick]]] LernStick, Fachhochschule Nordwestschweiz, Solothurn, https://www.imedias.ch/projekte/lernstick/index.cfm
 
 - [[lfc]] Trainings der Linux Foundation, https://training.linuxfoundation.org/
