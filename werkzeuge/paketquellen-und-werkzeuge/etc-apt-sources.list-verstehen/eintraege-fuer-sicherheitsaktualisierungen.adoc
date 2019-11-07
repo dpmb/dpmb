@@ -15,10 +15,10 @@ ist – kündigt das Debian Security-Team <<Debian-Security>>
 Sicherheitsaktualisierungen an und stellt diese bereit. Um von diesen
 Aktualisierungen zu profitieren, ergänzen Sie die Datei
 `/etc/apt/sources.list` um den folgenden Eintrag (hier am Beispiel von
-Debian 9 _Stretch_):
+Debian 10 _Buster_):
 
 ----
-deb http://security.debian.org/ stretch/updates main contrib non-free
+deb https://security.debian.org/ Buster/updates main contrib non-free
 ----
 
 Obige Angabe beinhaltet beispielhaft wiederum die explizite Angabe des

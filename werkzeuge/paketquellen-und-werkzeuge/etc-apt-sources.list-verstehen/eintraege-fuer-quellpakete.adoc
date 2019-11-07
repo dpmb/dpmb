@@ -14,11 +14,11 @@ eine weitere Zeile in ihrer Paketliste. Im Vergleich zu Binärpaketen
 ändert sich lediglich das Schlüsselwort am Anfang eines Eintrags von
 `deb` auf `deb-src`. Danach erwartet APT wie gewohnt den Eintrag der
 Paketquelle. Für die offiziellen Quellpakete sieht der Eintrag wie folgt
-aus, hier am Beispiel des deutschen Paketmirrors für Debian 9 _Stretch_:
+aus, hier am Beispiel des deutschen Paketmirrors für Debian 10 _Buster_:
 
-//.Paketeintrag für die Quellpakete zu Debian 9 _Stretch_
+//.Paketeintrag für die Quellpakete zu Debian 10 _Buster_
 ----
-deb-src http://ftp.de.debian.org/debian/ stretch main
+deb-src https://ftp.de.debian.org/debian/ buster main
 ----
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/eintraege-fuer-quellpakete.adoc

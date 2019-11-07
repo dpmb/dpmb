@@ -16,19 +16,19 @@ enthält die Datei typischerweise die folgenden Einträge:
 
 //.Inhalt der `/etc/apt/sources.list` für den deutschen Sprachraum
 ----
-deb http://ftp.de.debian.org/debian/ stretch main contrib non-free
-deb-src http://ftp.de.debian.org/debian/ stretch main contrib non-free
+deb https://ftp.de.debian.org/debian/ buster main contrib non-free
+deb-src https://ftp.de.debian.org/debian/ buster main contrib non-free
 
-deb http://security.debian.org/ stretch/updates main contrib non-free
-deb-src http://security.debian.org/ stretch/updates main contrib non-free
+deb https://security.debian.org/ buster/updates main contrib non-free
+deb-src https://security.debian.org/ buster/updates main contrib non-free
 ----
 
 Mit den ersten beiden Zeilen beziehen Sie alle Binär- und Sourcepakete
 für die Distributionsbereiche _main_, _contrib_ und _non-free_ für die
-Veröffentlichung Debian 9 _Stretch_ vom primären deutschen
+Veröffentlichung Debian 1ß _Buster_ vom primären deutschen
 Debian-Spiegelserver. Mit den Zeilen drei und vier beziehen Sie
 zusätzlich die dazugehörigen Sicherheitsaktualisierungen für alle
 Distributionsbereiche der gleichen Veröffentlichung von der zentralen
-Stelle security.debian.org.
+Stelle `security.debian.org`.
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/eintraege-fuer-deutschland.adoc

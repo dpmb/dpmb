@@ -14,11 +14,11 @@ von der stabilen Veröffentlichung von Debian unterscheiden.
 
 Im folgenden Beispiel sehen Sie die Einbindung der Paketquellen des
 PostgreSQL-Projekts <<APT-Repo-PostgreSQL>> und des X2Go-Projekts
-<<APT-Repo-X2Go>> für Debian 7 _Wheezy_:
+<<APT-Repo-X2Go>> für Debian 10 _Buster_:
 
 ----
-deb http://apt.postgresql.org/pub/repos/apt/ wheezy-pgdg main
-deb http://packages.x2go.org/debian wheezy main
+deb https://apt.postgresql.org/pub/repos/apt/ buster-pgdg main
+deb https://packages.x2go.org/debian buster main
 ----
 
 Ähnliches gilt für Unternehmen, die erfreulicherweise inzwischen

@@ -12,7 +12,7 @@ Bereich _main_ mit dem deutschen Spiegelserver als Paketquelle sieht
 folgendermaßen aus:
 
 ----
-deb http://ftp.de.debian.org/debian/ stable main
+deb https://ftp.de.debian.org/debian/ stable main
 ----
 
 Mit diesem Eintrag beziehen Sie stets nur Pakete aus der aktuellen,
@@ -34,7 +34,7 @@ _contrib_ und _non-free_ zu verwenden, ändern Sie den Eintrag auf das
 Folgende, hier wiederum mit expliziter Angabe des Aliasnamens _stretch_:
 
 ----
-deb http://ftp.de.debian.org/debian/ stretch main contrib non-free
+deb https://ftp.de.debian.org/debian/ stretch main contrib non-free
 ----
 
 In welcher Reihenfolge Sie die einzelnen, gewünschten Paketbereiche
