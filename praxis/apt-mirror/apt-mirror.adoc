@@ -7,13 +7,15 @@
 === apt-mirror ===
 
 // Stichworte für den Index
+(((Debian, Distribution spiegeln)))
 (((Debianpaket, apt-mirror)))
+(((Paketmirror, spiegeln)))
 
-Das Paket 'apt-mirror' <<Debian-Paket-apt-mirror>> beinhaltet die
-Software, mit der Sie die gesamte Debian-Distribution oder eine
-beliebige Paketquelle auf der Basis von APT lokal spiegeln können.
-Ubuntu hat dieses Paket im Distrbutionsbereich 'universe' einsortiert,
-da es eher in den administrativen Bereich fällt.
+Das Paket 'apt-mirror' <<Debian-Paket-apt-mirror>> beinhaltet die Software, mit 
+der Sie die gesamte Debian-Distribution oder eine beliebige Paketquelle auf der 
+Basis von APT lokal spiegeln können. Ubuntu hat dieses Paket in seinem 
+Distributionsbereich 'universe' einsortiert, da es weniger von Endbenutzern 
+verwendet wird und in den administrativen Bereich fällt.
 
 * Projektseite <<apt-mirror-Projektseite>>
 * Funktionsumfang (aus der Paketbeschreibung):

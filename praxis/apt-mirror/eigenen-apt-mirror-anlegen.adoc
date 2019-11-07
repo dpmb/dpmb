@@ -8,8 +8,13 @@
 
 // Stichworte für den Index
 (((Paketmirror, aufsetzen)))
+(((Paketmirror, spiegeln)))
 (((Paketmirror, Unterschied zu Paketcache)))
 (((Paketmirror, Varianten)))
+(((Paketspiegel)))
+(((Spiegelserver, aufsetzen)))
+(((Spiegelserver, Unterschied zu Paketcache)))
+(((Spiegelserver, Varianten)))
 
 Wie bereits in ``Geeigneten Paketmirror auswählen'' (siehe 
 <<geeigneten-paketmirror-auswaehlen>>) deutlich wurde, stellen die 
@@ -43,6 +48,8 @@ Referenz.
 // Stichworte für den Index
 (((Debian Archive Kit (dak))))
 (((minidak)))
+(((Paketmirror, Softwareempfehlungen)))
+(((Spiegelserver, Softwareempfehlungen)))
 Das Debian-Projekt nutzt als Werkzeuge zur Erzeugung und Pflege eines 
 Spiegelservers 'dak' und 'minidak'. 'dak' kürzt 'Debian Archive Kit' ab
 <<DebianArchiveKit>>, ist die offizielle Lösung auf der Basis von Python und 
@@ -61,6 +68,7 @@ Nachfolgend stellen wir Ihnen mehrere Varianten vor. Diese benutzen die Pakete
 
 // Stichworte für den Index
 (((Paketmirror, öffentlich zugänglich machen)))
+(((Spiegelserver, öffentlich zugänglich machen)))
 [NOTE]
 ====
 Möchten Sie nach der erfolgreichen Inbetriebnahme ihren eigenen Spiegelserver
