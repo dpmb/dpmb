@@ -9,6 +9,7 @@
 (((APT-Repository, eigenes erstellen)))
 (((Debian Archive Kit (dak))))
 (((Debianpaket, dput)))
+(((Debianpaket, dput-ng)))
 (((Debianpaket, mini-dinstall)))
 (((Paket, bereitstellen)))
 (((Paketquelle, APT-Repository)))
@@ -19,7 +20,9 @@ kleinere Version von _dak_ und zielt auf das Betreiben eigener APT-Repositories
 ab. Daher ist es mit weniger Automatismen und Komfort als die größeren 
 Varianten ausgelegt. Es steht als gleichnamiges Debianpaket für die aktuelle, 
 stabile Veröffentlichung von Debian bereit <<Debian-Paket-mini-dinstall>>. 
-Abhängig ist es vom Paket _dput_ <<Debian-Paket-dput>>, welches dazu dient, 
+
+Hinzukommen entweder das Paket _dput_ <<Debian-Paket-dput>> oder dessen 
+Neufassung _dput-ng_ <<Debian-Paket-dput-ng>>. Beide Werkzeuge dienen dazu,
 Softwarepakete auf Übereinstimmung mit den Debian-Richtlinien zu prüfen und 
 diese dann in das bereits von ihnen vorbereitete APT-Repository hochzuladen.
 
@@ -45,12 +48,32 @@ einen Pfad unterhalb des Wurzelverzeichnisses des Webservers, bspw.
 [[mini-dinstall-einrichtung]]
 ==== Einrichtung ====
 
+Als erstes stellen Sie sicher, dass das Verzeichnis des APT-Repositorys 
+vorhanden ist und legen es an, falls es noch nicht existiert:
+
+.Verzeichnis für das APT-Repository anlegen
+----
+# mkdir -vp /var/www/debian
+mkdir: Verzeichnis '/var/www/debian' angelegt
+#
+----
+
+Danach legen Sie ein Unterverzeichnis an, indem die neuen, von Ihnen später
+hochgeladenen Pakete zunächst landen. In unserem Fall heißt dieses lediglich 
+`neuepakete`:
+
+.Verzeichnis für neue Pakete anlegen
+----
+# mkdir -vp /var/www/debian/neuepakete
+mkdir: Verzeichnis '/var/www/debian/neuepakete' angelegt
+#
+----
+
 Als nächstes legen Sie zwei Konfigurationsdateien an -- eine für `mini-dinstall`
 selbst und eine weitere für `dput`. Übliche Namen sind `.mini-dinstall.conf` 
 und `.dput.cf` in dem Home-Verzeichnis des Benutzers, der die Pakete später in 
-das APT-Repository hochlädt. Eine Konfigurationsdatei `.mini-dinstall.conf` für 
-ein APT-Repository, welches später via HTTP oder HTTPS erreichbar sein wird, 
-sieht wie folgt aus:
+das APT-Repository hochlädt. Eine einfache Konfigurationsdatei 
+`.mini-dinstall.conf` sieht wie folgt aus:
 
 .Basiseinstellungen zu `mini-dinstall`
 ----
@@ -65,12 +88,14 @@ Damit liegt das APT-Repository unter `/var/www/debian` mit einer flachen
 Struktur (alle Binärpakete landen im gleichen Unterverzeichnis) und
 Unterverzeichnisse werden nur für die beiden Architekturen 'amd64' und 'all'
 angelegt. Es erfolgt keine Benachrichtigung bei einem erfolgreichen Upload.
-Die Einstellungen gelten für alle Archive (Abschnitt `DEFAULT`).
+Die Einstellungen gelten für alle Archive (Abschnitt `DEFAULT`), spezifische
+Einstellungen pro Veröffentlichungsstatus bestehen nicht.
 
 [NOTE]
 ====
-Eine Übersicht zu den Schaltern und zulässigen Einträgen in der Konfigurationsdatei 
-finden Sie unter <<mini-dinstall-schalter-und-konfiguration>>.
+Eine Übersicht zu den einzelnen Schaltern von `mini-dinstall` und den 
+zulässigen Einträgen in der Konfigurationsdatei finden Sie unter 
+<<mini-dinstall-schalter-und-konfiguration>>.
 ====
 
 * Einrichtung

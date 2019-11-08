@@ -342,6 +342,8 @@
 
 - [[[Debian-Paket-dput]]] Debian-Paket 'dput', https://packages.debian.org/de/stable/dput
 
+- [[[Debian-Paket-dput-ng]]] Debian-Paket 'dput-ng', https://packages.debian.org/de/stable/dput-ng
+
 - [[[Debian-Paket-dwm]]] Debian-Paket 'dwm', https://packages.debian.org/de/stable/dwm
 
 - [[[Debian-Paket-etckeeper]]] Debian-Paket 'etckeeper', https://packages.debian.org/de/stable/etckeeper
