@@ -30,6 +30,7 @@ _mini-dinstall_ sowie in der Manpage des Programms. Für die nachfolgende
 Beschreibung hat auch das intensive Lesen und Vergleichen verschiedener 
 Blogbeiträge sehr viel geholfen.
 
+[[mini-dinstall-vorausetzungen]]
 ==== Voraussetzungen ====
 
 Die grundlegende Voraussetzung ist ein Verzeichnis für das APT-Repository -- 
@@ -41,6 +42,7 @@ erreichbar sein, benötigen Sie neben einem Webserver wie Apache oder Nginx auch
 einen Pfad unterhalb des Wurzelverzeichnisses des Webservers, bspw. 
 `/var/www/debian`. Genau diesen Fall zeigen wir hier.
 
+[[mini-dinstall-einrichtung]]
 ==== Einrichtung ====
 
 Als nächstes legen Sie zwei Konfigurationsdateien an -- eine für `mini-dinstall`
@@ -65,17 +67,58 @@ Unterverzeichnisse werden nur für die beiden Architekturen 'amd64' und 'all'
 angelegt. Es erfolgt keine Benachrichtigung bei einem erfolgreichen Upload.
 Die Einstellungen gelten für alle Archive (Abschnitt `DEFAULT`).
 
+[NOTE]
+====
+Eine Übersicht zu den Schaltern und zulässigen Einträgen in der Konfigurationsdatei 
+finden Sie unter <<mini-dinstall-schalter-und-konfiguration>>.
+====
+
 * Einrichtung
 ** gpg-Schlüssel zum Signieren der bereitgestellten Pakete
 
+[[mini-dinstall-laufender-betrieb]]
 ==== Laufender Betrieb ====
 
 * Ergänzungen
 ** cron oder daemon
 
+[[mini-dinstall-schalter-und-konfiguration]]
 ==== Schalter und Konfiguration ====
 
-Weitere Schalter sind:
+`mini-dinstall` kommt mit einer ganzen Reihe von Schaltern daher. Auch die 
+Einträge für die Konfigurationsdatei sind etwas länger. Als **Schalter** 
+unterstützt `mini-dinstall` die folgenden:
+
+`-b` (Langform `--batch`) :: laufe im Stapelmodus ('batch mode')
+
+`-c` (Langform `--config=file`) :: benutze `file` als Konfigurationsdatei. Der
+Standardwert ist `~/.mini-dinstall.conf`
+
+`-d` (Langform `--debug`) :: Gib zusätzliche Debuginformationen im Terminal 
+und dem Logfile aus
+
+`-k` (Langform `--kill`) :: beende den laufenden Daemon sofort
+
+`-n` (Langform `--no-act`) :: führe keine Änderungen aus. Der Schalter ist 
+nützlich in Kombination mit dem Schalter `-v`
+
+`-q` (Langform `--quiet`) :: zeige so wenig Informationen an, wie nur möglich
+
+`-r` (Langform `--run`) :: teile dem aktuell laufenden Daemon mit, dass er die
+Abarbeitungsschlange sofort bearbeiten soll
+
+`-v` (Langform `--verbose`) :: zeige ausführliche Informationen an
+
+`--help` :: zeige eine kurze Liste der Schalter an
+
+`--no-db` :: schalte das Nachschauen in der Paketdatenbank ab. `apt-ftparchive`
+läuft ohne den Schalter `--db`.
+
+`--no-log` :: schreibe kein Logfile
+
+`--version` :: zeige die Version von `mini-dinstall` an
+
+In der **Konfigurationsdatei** sind die folgenden Einträge zulässig:
 
 `archivedir` :: The root of the mini-dinstall archive. Must be set, either here or on the command line.
 
