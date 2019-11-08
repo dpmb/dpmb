@@ -21,7 +21,7 @@ Varianten ausgelegt. Es steht als gleichnamiges Debianpaket für die aktuelle,
 stabile Veröffentlichung von Debian bereit <<Debian-Paket-mini-dinstall>>. 
 Abhängig ist es vom Paket _dput_ <<Debian-Paket-dput>>, welches dazu dient, 
 Softwarepakete auf Übereinstimmung mit den Debian-Richtlinien zu prüfen und 
-diese dann in das vorbereitete APT-Repository hochzuladen.
+diese dann in das bereits von ihnen vorbereitete APT-Repository hochzuladen.
 
 Bislang ist die Dokumentation zu `mini-dinstall` recht überschaubar. Eine 
 Übersicht zur Benutzung anhand von Beispielen sowie den einzelnen Einträgen in 
@@ -32,23 +32,23 @@ Blogbeiträge sehr viel geholfen.
 
 ==== Voraussetzungen ====
 
-Voraussetzung ist ein Verzeichnis für das APT-Repository -- sprich: wo möchten
-Sie die Pakete ablegen. `mini-dinstall` ist da flexibel und folgt ihren 
-Vorgaben. Soll das APT-Repository lediglich lokal bereitstehen, genügt ein 
-Pfad wie bspw. `/opt/paketarchiv` vollkommen. Soll das APT-Repository hingegen 
-auch von anderen Rechnern aus via HTTP oder HTTPS erreichbar sein, benötigen 
-Sie neben einem Webserver wie Apache oder Nginx auch einen Pfad unterhalb des 
-Wurzelverzeichnisses des Webservers, bspw. `/var/www/debian`. Die nachfolgenden
-Beispiele zeigen letzteres.
+Die grundlegende Voraussetzung ist ein Verzeichnis für das APT-Repository -- 
+sprich: wo möchten Sie ihre Pakete ablegen. `mini-dinstall` ist da recht 
+flexibel und folgt ihren Angaben. Soll das APT-Repository lediglich lokal 
+bereitstehen, genügt ein Pfad wie bspw. `/opt/paketarchiv` vollkommen. Soll 
+das APT-Repository hingegen auch von anderen Rechnern aus via HTTP oder HTTPS 
+erreichbar sein, benötigen Sie neben einem Webserver wie Apache oder Nginx auch 
+einen Pfad unterhalb des Wurzelverzeichnisses des Webservers, bspw. 
+`/var/www/debian`. Genau diesen Fall zeigen wir hier.
 
 ==== Einrichtung ====
 
 Als nächstes legen Sie zwei Konfigurationsdateien an -- eine für `mini-dinstall`
-und eine weitere für `dput`. Üblich sind `.mini-dinstall.conf` und `.dput.cf`
-in ihrem Home-Verzeichnis bzw. dem Home-Verzeichnis des Benutzers, der die 
-Pakete später in das APT-Repository hochlädt. Eine Konfigurationsdatei 
-`.mini-dinstall.conf` für ein APT-Repository, welches später via HTTP oder 
-HTTPS erreichbar sein wird, sieht wie folgt aus:
+selbst und eine weitere für `dput`. Übliche Namen sind `.mini-dinstall.conf` 
+und `.dput.cf` in dem Home-Verzeichnis des Benutzers, der die Pakete später in 
+das APT-Repository hochlädt. Eine Konfigurationsdatei `.mini-dinstall.conf` für 
+ein APT-Repository, welches später via HTTP oder HTTPS erreichbar sein wird, 
+sieht wie folgt aus:
 
 .Basiseinstellungen zu `mini-dinstall`
 ----
@@ -63,7 +63,7 @@ Damit liegt das APT-Repository unter `/var/www/debian` mit einer flachen
 Struktur (alle Binärpakete landen im gleichen Unterverzeichnis) und
 Unterverzeichnisse werden nur für die beiden Architekturen 'amd64' und 'all'
 angelegt. Es erfolgt keine Benachrichtigung bei einem erfolgreichen Upload.
-Die Einstellungen gelten für alle Archive (`DEFAULT`).
+Die Einstellungen gelten für alle Archive (Abschnitt `DEFAULT`).
 
 * Einrichtung
 ** gpg-Schlüssel zum Signieren der bereitgestellten Pakete
