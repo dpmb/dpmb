@@ -45,8 +45,11 @@ include::debian-backports/debian-backports.adoc[]
 // - Pakete unterschiedlicher Veröffentlichungen mischen
 include::veroeffentlichungen-mischen/veroeffentlichungen-mischen.adoc[]
 
-// - eigene Pakete passend zur Installation erstellen
+// - eigene Pakete passend zur Installation erstellen (checkinstall)
 include::pakete-bauen-mit-checkinstall/checkinstall.adoc[]
+
+// - Metapakete bauen
+include::metapakete-bauen/metapakete-bauen.adoc[]
 
 // - unterschiedliche Paketformate mischen (deb, rpm)
 include::paketformate-mischen/paketformate-mischen.adoc[]

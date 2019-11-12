@@ -1,0 +1,44 @@
+// Datei: ./praxis/metapakete-bauen/metapakete-bauen.adoc[]
+
+// Baustellenstatus: Notizen
+
+[[metapakete-bauen]]
+
+== Metapakete bauen ==
+
+* warum:
+** Paket schnüren, welches Pakete für einen bestimmten Zweck referenziert
+** nur ein Paket installieren, was aber auch gleich alle Abhängigkeiten
+mit berücksichtigt
+
+* was brauchen Sie:
+** Debianpaket 'equivs'
+
+* Ablauf:
+* `ns-control` erzeugen
+----
+$ equivs-control ns-control
+----
+
+* Inhalt entsprechend ändern, d.h. die Felder richtig ausfüllen
+** Paketname
+** Abhängigkeiten zu anderen Paketen
+
+* `deb`-Paket vorbereiten
+----
+$ equivs-build --full ns-control
+----
+
+* Ergebnis: eine `deb`-Datei`
+
+* was machen Sie dann damit:
+** Paket installieren
+** Paket auf Mirror hochladen (siehe <<eigenes-apt-repository-anlegen>>)
+
+* installieren über eine der folgenden Varianten
+** `dpkg -i paket.deb` , danach `apt-get install -f` (Auflösen der 
+fehlenden Paketabhängigkeiten)
+** `gdebi paket.deb` (löst die Paketabhängigkeiten auf)
+** `apt install ./paket.deb` (löst die Paketabhängigkeiten auf)
+
+// Datei (Ende): ./praxis/metapakete-bauen/metapakete-bauen.adoc[]
