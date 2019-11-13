@@ -70,10 +70,12 @@ mkdir: Verzeichnis '/var/www/debian/neuepakete' angelegt
 ----
 
 Als nächstes legen Sie zwei Konfigurationsdateien an -- eine für `mini-dinstall`
-selbst und eine weitere für `dput`. Übliche Namen sind `.mini-dinstall.conf` 
-und `.dput.cf` in dem Home-Verzeichnis des Benutzers, der die Pakete später in 
-das APT-Repository hochlädt. Eine einfache Konfigurationsdatei 
-`.mini-dinstall.conf` sieht wie folgt aus:
+selbst und eine weitere für `dput` footnote:[Die beiden Werkzeuge `dput` und 
+`dput-ng` sind nicht unbedingt erforderlich. Beide vereinfachen Ihnen nur das 
+Hochladen von Paketen. Ohne `dput` müssen Sie das manuell machen.]. Übliche 
+Namen sind `.mini-dinstall.conf` und `.dput.cf` in dem Home-Verzeichnis des 
+Benutzers, der die Pakete später in das APT-Repository hochlädt. Eine einfache 
+Konfigurationsdatei `.mini-dinstall.conf` sieht wie folgt aus:
 
 .Basiseinstellungen zu `mini-dinstall`
 ----
@@ -98,9 +100,10 @@ zulässigen Einträgen in der Konfigurationsdatei finden Sie unter
 <<mini-dinstall-schalter-und-konfiguration>>.
 ====
 
-* dput konfigurieren (passend zu obigem APT-Repo)
+Als nächstes konfigurieren sie `dput`, d.h. passend zu obigem APT-Repository. 
+Dabei hilft Ihnen eine entsprechende Datei namens `.dput.cf`. 
 
-.dput.cf-Beispiel:
+.`.dput.cf`-Beispiel:
 ----
 [local]
 fqdn = localhost
@@ -110,7 +113,21 @@ run_dinstall = 0
 post_upload_command = mini-dinstall -b
 ----
 
-* Aufrufen von `mini-dinstall -b`
+Die Angabe `[local]` bezeichnet den Namen des Repositorys und alle danach 
+folgenden Angaben beziehen sich auf dieses Repository. `fqdn` kürzt den 
+Begriff 'fully-qualified domain name' ab und bezeichnet die URL bzw. den 
+Rechnernamen, auf dem sich das APT-Repository befindet. Der Pfad bei `incoming` 
+gibt das Unterverzeichnis an, indem neue Pakete landen und muß mit obigem Wert
+identisch sein. Die Angabe `run_dinstall = 0` legt fest, dass kein Aufruf von 
+`dinstall -n` erfolgen soll, sprich: kein Installationstest für das Paket. Die 
+letzte Zeile (`post_upload_command`) gibt das Kommando an, welches nach dem 
+Hochladen ausgeführt wird. Die Angabe von `mini-dinstall -b` versetzt 
+`mini-dinstall` in den Batchbetrieb, d.h. `mini-dinstall` integriert neue 
+Pakete in das Paketarchiv, sobald diese im Unterverzeichnis für die 
+hochgeladenen Pakete gelandet sind. 
+
+Jetzt laden Sie ihr Paket hoch. Das nachfolgende Beispiel nutzt das in 
+<<metapakete-bauen>> erzeugte Metapaket 'meta-mc'.
 
 .Hochladen eines Paketes mit `dput`
 ----
@@ -120,11 +137,9 @@ Successfully uploaded packages.
 #
 ----
 
-* Alternative (falls Sie kein `dput` oder `dput-ng` benutzen wollen)
-** Paket erzeugen, bspw. mit `equivs-build --full ns-control` (erzeugt u.a. 
-eine Datei `.changes`)
-** alle Dateien, die im `.changes`-File des Pakets benannt sind, in das 
-Incoming-Verzeichnis (oben `neuepakete` genannt) hochladen
+Benutzen Sie kein `dput` oder `dput-ng`, laden Sie alle Dateien, die in der
+`.changes`-Datei zum Paket benannt sind, in das Unterverzeichnis, indem neue 
+Pakete landen (`dput` macht nichts anderes).
 
 * Einrichtung (was noch schön wäre)
 ** gpg-Schlüssel zum Signieren der bereitgestellten Pakete
