@@ -53,13 +53,13 @@ Datendateien.
 (((Debianpaket, equivs)))
 
 Zur Erstellung des Metapakets 'meta-mc' greifen wir auf das Debianpaket 
-'equivs' <<Debian-Paket-equivs>> zurück, was diesen Schritt für alle Seiten 
+'equivs' <<Debian-Paket-equivs>> zurück, was diesen Vorgang für alle Seiten 
 sehr stark vereinfacht. Das Paket 'equivs' bringt die beiden Werkzeuge 
 `equivs-control` und `equivs-build` mit.
 
-Ausgangspunkt ist das Erzeugen einer Beschreibung des zu erstellenden 
-Metapakets. Dazu benutzen Sie `equivs-control`. Dieses erwartet einen 
-Dateinamen, in der die Beschreibung landet -- nachfolgend genannt 
+Ausgangspunkt (**Schritt 1**) ist das Erzeugen einer Beschreibung des zu 
+erstellenden Metapakets. Dazu benutzen Sie `equivs-control`. Dieses erwartet 
+einen Dateinamen, in der die Beschreibung landet -- nachfolgend genannt 
 `ns-control`:
 
 .Beschreibungsdatei für das Metapaket erzeugen
@@ -72,9 +72,9 @@ Die mittels `equivs-control` erzeugte Beschreibung ist nur eine Vorlage, die
 Sie nun noch entsprechend ändern, damit es auch auf das Metapakets 'meta-mc' 
 passt. Das betrifft insbesondere die Felder `Section` (Paketkategorie), 
 `Priority` (Priorität des Pakets), `Package` (Paketname des Metapakets), 
-`Depends` (Paket hängt ab von) und `Description` (Paketbeschreibung). Passende
-Felder kommentieren Sie aus und hinterlegen den gewünschten Wert. In unserem
-Fall sieht das wie folgt aus:
+`Maintainer` (Name des Paketbetreuers), `Depends` (Paket hängt ab von) und 
+`Description` (Paketbeschreibung). Passende Felder kommentieren Sie aus und 
+hinterlegen den gewünschten Wert. In unserem Fall sieht das wie folgt aus:
 
 .Angepasste Beschreibungsdatei `ns-control` für das Metapaket 'meta-mc'
 ----
@@ -88,7 +88,7 @@ Standards-Version: 3.9.2
 
 Package: meta-mc
 # Version: <enter version here; defaults to 1.0>
-# Maintainer: Your Name <yourname@example.com>
+Maintainer: Frank Hofmann <frank.hofmann@efho.de>
 # Pre-Depends: <comma-separated list of packages>
 Depends: mc, mc-data
 # Recommends: <comma-separated list of packages>
@@ -110,16 +110,169 @@ Description: Installs the Midnight Commander
 
 [NOTE]
 ====
-Beachten Sie bitte die Leerzeile am Ende der Beschreibungsdatei `ns-control`. Ohne 
-diese kann das Paket später nicht sauber gebaut werden.
+Beachten Sie bitte die Leerzeile am Ende der Beschreibungsdatei `ns-control`. 
+Ohne diese kann das Paket später nicht sauber gebaut werden.
 ====
 
-* `deb`-Paket vorbereiten
+Nach dem Erstellen der Beschreibungsdatei kommt **Schritt 2** -- das Bauen des 
+`deb`-Pakets auf der Basis der Beschreibungsdatei. Das gelingt Ihnen mit Hilfe 
+des Werkzeugs `equivs-build`. Es erwartet zwei Parameter -- `-f` (Langform 
+`--full`) und den Namen der Beschreibungsdatei. Der verwendete Schalter `-f` sorgt
+dafür, dass der Bauprozeß vollständig durchlaufen wird. Das Paket wird gebaut und
+auch signiert, sofern ein entsprechender GnuPG-Schlüssel hinterlegt ist.
+
+.Bauen des Metapakets auf der Basis der Beschreibungsdatei
 ----
 $ equivs-build --full ns-control
+dpkg-buildpackage: Information: Quellpaket meta-mc
+dpkg-buildpackage: Information: Quellversion 1.0
+dpkg-buildpackage: Information: Quelldistribution unstable
+dpkg-buildpackage: Information: Quelle geändert durch Frank Hofmann <frank.hofmann@efho.de>
+dpkg-buildpackage: Information: Host-Architektur amd64
+ dpkg-source --before-build equivs.x2AVPx
+ fakeroot debian/rules clean
+dh_testdir
+dh_clean
+dh_clean: Compatibility levels before 9 are deprecated (level 7 in use)
+ dpkg-source -b equivs.x2AVPx
+dpkg-source: Information: Quellformat »1.0« wird verwendet
+dpkg-source: Warnung: Quellverzeichnis »equivs.x2AVPx« lautet nicht <Quellpaket>-<Ursprungsversion> »meta-mc-1.0«
+dpkg-source: Information: meta-mc wird in meta-mc_1.0.tar.gz gebaut
+dpkg-source: Information: meta-mc wird in meta-mc_1.0.dsc gebaut
+ debian/rules build
+make: Für das Ziel „build“ ist nichts zu tun.
+ fakeroot debian/rules binary
+dh_testdir
+dh_testroot
+dh_prep
+dh_testdir
+dh_testroot
+dh_install
+dh_install: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_installdocs
+dh_installdocs: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_installchangelogs
+dh_compress
+dh_fixperms
+dh_installdeb
+dh_installdeb: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_gencontrol
+dh_md5sums
+dh_builddeb
+dpkg-deb: Paket »meta-mc« wird in »../meta-mc_1.0_all.deb« gebaut.
+ dpkg-genbuildinfo
+ dpkg-genchanges  >../meta-mc_1.0_amd64.changes
+...
+$ 
 ----
 
-* Ergebnis: eine `deb`-Datei`
+Das Ergebnis umfaßt eine Reihe von Dateien und sieht dann wie folgt aus:
+
+.Ergebnis nach dem Bauen des Pakets
+----
+$ ls meta-mc*
+meta-mc_1.0_all.deb          meta-mc_1.0_amd64.changes  meta-mc_1.0.tar.gz
+meta-mc_1.0_amd64.buildinfo  meta-mc_1.0.dsc            
+$
+----
+
+`meta-mc_1.0_all.deb` :: das erzeugte Metapaket
+`meta-mc_1.0_amd64.buildinfo` :: Dateien und Softwarepakete, die zum Zeitpunkt
+der Erstellung des Pakets installiert sind
++
+----
+$ cat meta-mc_1.0_amd64.buildinfo
+Format: 1.0
+Source: meta-mc
+Binary: meta-mc
+Architecture: all source
+Version: 1.0
+Checksums-Md5:
+ 0e03c6890fc8a72762cf994a0cdcafb7 487 meta-mc_1.0.dsc
+ 5050e909c14b6ccf703cf00ebf831594 2050 meta-mc_1.0_all.deb
+Checksums-Sha1:
+ 91ab2cf66937c606ff3abb8853f1555b78521a7d 487 meta-mc_1.0.dsc
+ c5640969e2e515a0fca2f49fc5835846a1d9a8fa 2050 meta-mc_1.0_all.deb
+Checksums-Sha256:
+ ced0cf69f3eeeef5b4370b0c5654f0db3c5eb77809fc8057b79f91bd154d3c83 487 meta-mc_1.0.dsc
+ c2ca1265083bf413856c29afdfd00e47b8850fa28a89c85510867b6a65644538 2050 meta-mc_1.0_all.deb
+Build-Origin: Debian
+Build-Architecture: amd64
+Build-Date: Wed, 13 Nov 2019 14:55:05 +0100
+Installed-Build-Depends:
+ autoconf (= 2.69-10),
+ automake (= 1:1.15-6),
+ autopoint (= 0.19.8.1-2+deb9u1),
+...
+$
+----
+
+`meta-mc_1.0_amd64.changes` :: die Änderungshistorie zum erzeugten Paket. Diese 
+Datei wird benötigt, um das erzeugte Paket später auf einem Paketmirror 
+hochzuladen.
++
+----
+$ cat meta-mc_1.0_amd64.changes
+Format: 1.8
+Date: Wed, 13 Nov 2019 14:55:04 +0100
+Source: meta-mc
+Binary: meta-mc
+Architecture: source all
+Version: 1.0
+Distribution: unstable
+Urgency: low
+Maintainer: Frank Hofmann <frank.hofmann@efho.de>
+Changed-By: Frank Hofmann <frank.hofmann@efho.de>
+Description:
+ meta-mc    - Installs the Midnight Commander
+Changes:
+ meta-mc (1.0) unstable; urgency=low
+ .
+   * First version
+Checksums-Sha1:
+ 91ab2cf66937c606ff3abb8853f1555b78521a7d 487 meta-mc_1.0.dsc
+ 68ae676fb11fcca32674557510327830499e17a2 1826 meta-mc_1.0.tar.gz
+ c5640969e2e515a0fca2f49fc5835846a1d9a8fa 2050 meta-mc_1.0_all.deb
+ 42ece0cc919f8be786615c6fd5e0c992946455ca 5230 meta-mc_1.0_amd64.buildinfo
+Checksums-Sha256:
+ ced0cf69f3eeeef5b4370b0c5654f0db3c5eb77809fc8057b79f91bd154d3c83 487 meta-mc_1.0.dsc
+ 27e3c42c64e1243371ff68bf62f255e863e54c8f5922326b5ddc494d8c3cb6cd 1826 meta-mc_1.0.tar.gz
+ c2ca1265083bf413856c29afdfd00e47b8850fa28a89c85510867b6a65644538 2050 meta-mc_1.0_all.deb
+ f94aec05b0f2aea1f83e95debe3f842cf0a317f18cc8ff2a737025b33ad4e672 5230 meta-mc_1.0_amd64.buildinfo
+Files:
+ 0e03c6890fc8a72762cf994a0cdcafb7 487 misc optional meta-mc_1.0.dsc
+ 396fa6392e9518bb302d88c4c038e095 1826 misc optional meta-mc_1.0.tar.gz
+ 5050e909c14b6ccf703cf00ebf831594 2050 misc optional meta-mc_1.0_all.deb
+ 261b4cb586d5d8d11a22badf6fb3c914 5230 misc optional meta-mc_1.0_amd64.buildinfo
+$
+----
+
+`meta-mc_1.0.dsc` :: die Paketbeschreibung für die Paketverwaltung (Quellcode)
++
+----
+$ cat meta-mc_1.0.dsc
+Format: 1.0
+Source: meta-mc
+Binary: meta-mc
+Architecture: all
+Version: 1.0
+Maintainer: Frank Hofmann <frank.hofmann@efho.de>
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 7)
+Package-List:
+ meta-mc deb misc optional arch=all
+Checksums-Sha1:
+ 68ae676fb11fcca32674557510327830499e17a2 1826 meta-mc_1.0.tar.gz
+Checksums-Sha256:
+ 27e3c42c64e1243371ff68bf62f255e863e54c8f5922326b5ddc494d8c3cb6cd 1826 meta-mc_1.0.tar.gz
+Files:
+ 396fa6392e9518bb302d88c4c038e095 1826 meta-mc_1.0.tar.gz
+$
+----
+
+`meta-mc_1.0.tar.gz` :: das Quellpaket zum erzeugten Metapaket
+
+
 
 * was machen Sie dann damit:
 ** Paket installieren
