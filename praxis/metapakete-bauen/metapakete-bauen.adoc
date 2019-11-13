@@ -38,28 +38,78 @@ Zürich beigesteuert hat. Vielleicht ist dieses Namensschema auch für Sie
 nützlich.
 
 // Stichworte für den Index
-(((Debianpaket, equivs)))
 (((Debianpaket, mc)))
 (((Debianpaket, mc-data)))
 In diesem Kapitel lernen Sie, wie Sie ein Metapaket für den Midnight Commander 
-erstellen <<mc>>. Hier heißt dieses schlicht und einfach 'meta-mc'. Dieses 
-Werkzeug 'mc' setzt sich aus zwei Paketen zusammen -- 'mc' <<Debian-Paket-mc>> 
-für die Binärdateien und 'mc-data' <<Debian-Paket-mc-data>> für die 
-architekturunabhängigen Datendateien. 
+erstellen <<mc>>. Hier heißt dieses schlicht und einfach 'meta-mc'. 'mc' setzt 
+sich aus zwei Paketen zusammen -- 'mc' <<Debian-Paket-mc>> für die Binärdateien 
+und 'mc-data' <<Debian-Paket-mc-data>> für die architekturunabhängigen 
+Datendateien. 
+
+[[metapakete-bauen-vorbereitungen]]
+=== Vorbereitungen ===
+
+// Stichworte für den Index
+(((Debianpaket, equivs)))
 
 Zur Erstellung des Metapakets 'meta-mc' greifen wir auf das Debianpaket 
-'equivs' <<Debian-Paket-equivs>> zurück, was diesen Schritt für uns sehr stark 
-vereinfacht. 
+'equivs' <<Debian-Paket-equivs>> zurück, was diesen Schritt für alle Seiten 
+sehr stark vereinfacht. Das Paket 'equivs' bringt die beiden Werkzeuge 
+`equivs-control` und `equivs-build` mit.
 
-* Ablauf:
-* `ns-control` erzeugen
+Ausgangspunkt ist das Erzeugen einer Beschreibung des zu erstellenden 
+Metapakets. Dazu benutzen Sie `equivs-control`. Dieses erwartet einen 
+Dateinamen, in der die Beschreibung landet -- nachfolgend genannt 
+`ns-control`:
+
+.Beschreibungsdatei für das Metapaket erzeugen
 ----
 $ equivs-control ns-control
+$
 ----
 
-* Inhalt entsprechend ändern, d.h. die Felder richtig ausfüllen
-** Paketname
-** Abhängigkeiten zu anderen Paketen
+Die mittels `equivs-control` erzeugte Beschreibung ist nur eine Vorlage, die 
+Sie nun noch entsprechend ändern, damit es auch auf das Metapakets 'meta-mc' 
+passt. Das betrifft insbesondere die Felder `Section` (Paketkategorie), 
+`Priority` (Priorität des Pakets), `Package` (Paketname des Metapakets), 
+`Depends` (Paket hängt ab von) und `Description` (Paketbeschreibung). Passende
+Felder kommentieren Sie aus und hinterlegen den gewünschten Wert. In unserem
+Fall sieht das wie folgt aus:
+
+.Angepasste Beschreibungsdatei für das Metapaket 'meta-mc'
+----
+### Commented entries have reasonable defaults.
+### Uncomment to edit them.
+# Source: <source package name; defaults to package name>
+Section: misc
+Priority: optional
+# Homepage: <enter URL here; no default>
+Standards-Version: 3.9.2
+
+Package: meta-mc
+# Version: <enter version here; defaults to 1.0>
+# Maintainer: Your Name <yourname@example.com>
+# Pre-Depends: <comma-separated list of packages>
+Depends: mc, mc-data
+# Recommends: <comma-separated list of packages>
+# Suggests: <comma-separated list of packages>
+# Provides: <comma-separated list of packages>
+# Replaces: <comma-separated list of packages>
+# Architecture: all
+# Multi-Arch: <one of: foreign|same|allowed>
+# Copyright: <copyright file; defaults to GPL2>
+# Changelog: <changelog file; defaults to a generic changelog>
+# Readme: <README.Debian file; defaults to a generic one>
+# Extra-Files: <comma-separated list of additional files for the doc directory>
+# Files: <pair of space-separated paths; First is file to include, second is destination>
+#  <more pairs, if there's more than one file to include. Notice the starting space>
+Description: Installs the Midnight Commander
+ Installs the Midnight Commander
+
+----
+
+Beachten Sie bitte die Leerzeile am Ende der Datei. Ohne diese kann das Paket
+später nicht gebaut werden.
 
 * `deb`-Paket vorbereiten
 ----
