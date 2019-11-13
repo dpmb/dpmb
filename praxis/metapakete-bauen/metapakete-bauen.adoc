@@ -362,7 +362,51 @@ meta-mc (1.0) wird eingerichtet ...
 #
 ----
 
-** `gdebi paket.deb` (löst die Paketabhängigkeiten auf)
+==== Mittels `gdebi` ==== 
+
+// Stichworte für den Index
+(((Debianpaket, gdebi)))
+(((gdebi)))
+Dem Werkzeug `gdebi` <<Debian-Paket-gdebi>> ist in <<gui-gdebi>> ein eigener
+Bereich gewidmet. Es untersucht das zuvor erzeugte Metapaket vor dessen
+Installation und löst die Paketabhängigkeiten sauber auf.
+
+.Installation des Metapakets mittels `gdebi`
+----
+# gdebi meta-mc_1.0_all.deb
+Reading package lists... Done
+Building dependency tree        
+Reading state information... Done
+Reading state information... Done
+Erfordert die Installation folgender Pakete: mc mc-data 
+
+Installs the Midnight Commander
+ Installs the Midnight Commander
+Wollen Sie das Software-Paket installieren? [j/N]:j
+Fetched 0 B in 0s (0 B/s)                                                      
+Vormals nicht ausgewähltes Paket mc-data wird gewählt.
+(Lese Datenbank ... 240891 Dateien und Verzeichnisse sind derzeit installiert.)
+Vorbereitung zum Entpacken von .../mc-data_3%3a4.8.18-1_all.deb ...
+Entpacken von mc-data (3:4.8.18-1) ...
+Vormals nicht ausgewähltes Paket mc wird gewählt.
+Vorbereitung zum Entpacken von .../mc_3%3a4.8.18-1_amd64.deb ...
+Entpacken von mc (3:4.8.18-1) ...
+Trigger für mime-support (3.60) werden verarbeitet ...
+Trigger für desktop-file-utils (0.23-1) werden verarbeitet ...
+mc-data (3:4.8.18-1) wird eingerichtet ...
+Trigger für man-db (2.7.6.1-2) werden verarbeitet ...
+Trigger für hicolor-icon-theme (0.15-1) werden verarbeitet ...
+mc (3:4.8.18-1) wird eingerichtet ...
+Vormals nicht ausgewähltes Paket meta-mc wird gewählt.
+(Lese Datenbank ... 241248 Dateien und Verzeichnisse sind derzeit installiert.)
+Vorbereitung zum Entpacken von meta-mc_1.0_all.deb ...
+Entpacken von meta-mc (1.0) ...
+meta-mc (1.0) wird eingerichtet ...
+#
+----
+
+==== Mittels `apt` ==== 
+
 ** `apt install ./paket.deb` (löst die Paketabhängigkeiten auf)
 
 // Datei (Ende): ./praxis/metapakete-bauen/metapakete-bauen.adoc[]
