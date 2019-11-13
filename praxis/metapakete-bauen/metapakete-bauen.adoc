@@ -57,9 +57,9 @@ Zur Erstellung des Metapakets 'meta-mc' greifen wir auf das Debianpaket
 sehr stark vereinfacht. Das Paket 'equivs' bringt die beiden Werkzeuge 
 `equivs-control` und `equivs-build` mit.
 
-Ausgangspunkt (**Schritt 1**) ist das Erzeugen einer Beschreibung des zu 
-erstellenden Metapakets. Dazu benutzen Sie `equivs-control`. Dieses erwartet 
-einen Dateinamen, in der die Beschreibung landet -- nachfolgend genannt 
+Ausgangspunkt ist das Erzeugen einer Beschreibung des zu erstellenden 
+Metapakets. Dazu benutzen Sie `equivs-control`. Dieses erwartet einen 
+Dateinamen, in der die Beschreibung landet -- nachfolgend genannt 
 `ns-control`:
 
 .Beschreibungsdatei für das Metapaket erzeugen
@@ -114,11 +114,16 @@ Beachten Sie bitte die Leerzeile am Ende der Beschreibungsdatei `ns-control`.
 Ohne diese kann das Paket später nicht sauber gebaut werden.
 ====
 
-Nach dem Erstellen der Beschreibungsdatei kommt **Schritt 2** -- das Bauen des 
-`deb`-Pakets auf der Basis der Beschreibungsdatei. Das gelingt Ihnen mit Hilfe 
-des Werkzeugs `equivs-build`. Es erwartet zwei Parameter -- `-f` (Langform 
-`--full`) und den Namen der Beschreibungsdatei. Der verwendete Schalter `-f` sorgt
-dafür, dass der Bauprozeß vollständig durchlaufen wird. Das Paket wird gebaut und
+[[metapakete-bauen-bauen]]
+=== Das Paket bauen ===
+
+// Stichworte für den Index
+(((equivs-build, --full)))
+Nun kommt Schritt 2 -- das Bauen des `deb`-Pakets auf der Basis der zuvor
+erstellten Beschreibungsdatei. Das gelingt Ihnen mit Hilfe des Werkzeugs 
+`equivs-build`. Es erwartet zwei Parameter -- `-f` (Langform `--full`) und 
+den Namen der Beschreibungsdatei. Der verwendete Schalter `-f` sorgt dafür, 
+dass der Bauprozeß vollständig durchlaufen wird. Das Paket wird gebaut und 
 auch signiert, sofern ein entsprechender GnuPG-Schlüssel hinterlegt ist.
 
 .Bauen des Metapakets auf der Basis der Beschreibungsdatei
@@ -272,15 +277,91 @@ $
 
 `meta-mc_1.0.tar.gz` :: das Quellpaket zum erzeugten Metapaket
 
+[[metapakete-bauen-benutzen]]
+=== Das neue Paket benutzen ===
 
+Das fertige Paket steht nun zum Einsatz bereit. Entweder laden Sie dieses
+auf einen Paketmirror hoch (siehe <<eigenes-apt-repository-anlegen>>) oder
+Sie installieren das Paket gleich direkt auf ihrem System. Für letzteres haben 
+Sie mehrere Möglichkeiten.
 
-* was machen Sie dann damit:
-** Paket installieren
-** Paket auf Mirror hochladen (siehe <<eigenes-apt-repository-anlegen>>)
+==== Mittels `dpkg` und APT ==== 
 
-* installieren über eine der folgenden Varianten
-** `dpkg -i paket.deb` , danach `apt-get install -f` (Auflösen der 
-fehlenden Paketabhängigkeiten)
+Zuerst rufen Sie `dpkg -i paket.deb` auf, danach `apt-get install -f`. Ersteres 
+veranlasst `dpkg`, ihr Paket zu installieren. 
+
+.Installieren des Metapakets `meta-mc` mittels `dpkg`
+----
+# dpkg -i meta-mc_1.0_all.deb
+Vormals nicht ausgewähltes Paket meta-mc wird gewählt.
+(Lese Datenbank ... 239663 Dateien und Verzeichnisse sind derzeit installiert.)
+Vorbereitung zum Entpacken von meta-mc_1.0_all.deb ...
+Entpacken von meta-mc (1.0) ...
+dpkg: Abhängigkeitsprobleme verhindern Konfiguration von meta-mc:
+ meta-mc hängt ab von mc; aber:
+  Paket mc ist nicht installiert.
+ meta-mc hängt ab von mc-data; aber:
+  Paket mc-data ist nicht installiert.
+
+dpkg: Fehler beim Bearbeiten des Paketes meta-mc (--install):
+ Abhängigkeitsprobleme - verbleibt unkonfiguriert
+Fehler traten auf beim Bearbeiten von:
+ meta-mc
+#
+----
+
+`dpkg` lässt das Paket unkonfiguriert, da es die im Paket benannten 
+Paketabhängigkeiten nicht selbst auflösen kann. Sie erkennen den Status an der
+Buchstabenkombination `iU` für 'Paket installiert' und 'nicht konfiguriert':
+
+.Installationsstatus von `meta-mc`
+----
+# dpkg -l | grep meta-mc
+iU  meta-mc                               1.0                               all          Installs the Midnight Commander
+# 
+----
+
+// Stichworte für den Index
+(((apt-get, install -f)))
+
+Nun rufen Sie `apt-get install -f` auf. APT behebt nun die fehlenden 
+Abhängigkeiten und konfiguriert `meta-mc` wie folgt: 
+
+.Auflösen der Paketabhängigkeiten mit `apt-get`
+----
+# apt-get install -f
+Paketlisten werden gelesen... Fertig
+Abhängigkeitsbaum wird aufgebaut.       
+Statusinformationen werden eingelesen.... Fertig
+Abhängigkeiten werden korrigiert ... Fertig
+The following additional packages will be installed:
+  mc mc-data
+Vorgeschlagene Pakete:
+  arj dbview djvulibre-bin gv libaspell-dev odt2txt python-boto python-tz
+Die folgenden NEUEN Pakete werden installiert:
+  mc mc-data
+0 aktualisiert, 2 neu installiert, 0 zu entfernen und 2 nicht aktualisiert.
+1 nicht vollständig installiert oder entfernt.
+Es müssen noch 0 B von 1.780 kB an Archiven heruntergeladen werden.
+Nach dieser Operation werden 7.175 kB Plattenplatz zusätzlich benutzt.
+Möchten Sie fortfahren? [J/n] j
+Vormals nicht ausgewähltes Paket mc-data wird gewählt.
+(Lese Datenbank ... 239667 Dateien und Verzeichnisse sind derzeit installiert.)
+Vorbereitung zum Entpacken von .../mc-data_3%3a4.8.18-1_all.deb ...
+Entpacken von mc-data (3:4.8.18-1) ...
+Vormals nicht ausgewähltes Paket mc wird gewählt.
+Vorbereitung zum Entpacken von .../mc_3%3a4.8.18-1_amd64.deb ...
+Entpacken von mc (3:4.8.18-1) ...
+Trigger für mime-support (3.60) werden verarbeitet ...
+Trigger für desktop-file-utils (0.23-1) werden verarbeitet ...
+mc-data (3:4.8.18-1) wird eingerichtet ...
+Trigger für man-db (2.7.6.1-2) werden verarbeitet ...
+Trigger für hicolor-icon-theme (0.15-1) werden verarbeitet ...
+mc (3:4.8.18-1) wird eingerichtet ...
+meta-mc (1.0) wird eingerichtet ...
+#
+----
+
 ** `gdebi paket.deb` (löst die Paketabhängigkeiten auf)
 ** `apt install ./paket.deb` (löst die Paketabhängigkeiten auf)
 
