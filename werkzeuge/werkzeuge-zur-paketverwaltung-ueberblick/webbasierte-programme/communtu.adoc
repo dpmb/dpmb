@@ -40,10 +40,11 @@ Installation gleichartiger Systeme, bspw. für einen Klassenraum in einer
 Schule.
 
 // Stichworte für den Index
+(((apturl)))
 (((Ubuntupaket, apturl)))
 (((Paketvarianten, Metapaket)))
 Die technische Basis hinter dem Angebot der Plattform bilden Metapakete
-(siehe <<uebergangs-und-metapakete>>) sowie
+(siehe <<uebergangs-und-metapakete>>) sowie das Werkzeug `apturl` (siehe
 <<webbasierte-installation-von-paketen-mit-apturl>>). Nachdem Sie über
 die Webseite Ihre gewünschte Software ausgewählt haben, wird automatisch
 ein erstes passendes Metapaket erzeugt. Dieses beinhaltet lediglich die
@@ -52,6 +53,6 @@ Gleichzeitig stellt die Plattform ein weiteres, spezifisches Metapaket
 bereit, welches ihre Liste der Paketquellen entsprechend anpasst, um
 damit die Anbindung von weiteren Paketquellen zu ermöglichen. Mittels
 'apturl' beziehen Sie die erzeugten Metapakete über ihrem Webbrowser, so
-dass die Paketverwaltung diese Pakete einspielen kann.
+dass die Paketverwaltung diese Pakete auch einspielen kann.
 
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/webbasierte-programme/communtu.adoc
