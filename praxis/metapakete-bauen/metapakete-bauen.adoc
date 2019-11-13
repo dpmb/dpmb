@@ -1,18 +1,55 @@
 // Datei: ./praxis/metapakete-bauen/metapakete-bauen.adoc[]
 
-// Baustellenstatus: Notizen
+// Baustellenstatus: Rohtext
 
 [[metapakete-bauen]]
 
 == Metapakete bauen ==
 
-* warum:
-** Paket schnüren, welches Pakete für einen bestimmten Zweck referenziert
-** nur ein Paket installieren, was aber auch gleich alle Abhängigkeiten
-mit berücksichtigt
+// Stichworte für den Index
+(((Metapaket, benennen)))
+(((Metapaket, erstellen)))
+(((Paketvarianten, Metapaket)))
+Metapakete sind spezielle Binärpakete, die keine Daten, sondern lediglich 
+Abhängigkeiten auf andere Pakete beinhalten. Genauer erklären wir Ihnen diese 
+Paketvariante unter ``Übergangspakete, Metapakete und Tasks'' in 
+<<uebergangs-und-metapakete>>.
 
-* was brauchen Sie:
-** Debianpaket 'equivs'
+Sehr nützlich sind Metapakete genau dann, wenn Sie immer wieder eine bestimmte 
+Kombination von Paketen benötigen, bspw. um eine Reihe gleichartiger Systeme zu
+pflegen. Definieren Sie einen LAMP-Server bestehend aus Linux, dem Webserver 
+Apache, dem Datenbankmanagementsystem MariaDB und der Programmiersprache PHP 
+über das Metapaket namens 'meta-lamp', enthält dieses bspw. die Abhängigkeiten 
+zu den vier Paketen 'apache2', 'mariadb-server', 'mariadb-client' und 'php'. 
+Installieren Sie später das Metapaket 'meta-lamp', werden diese Abhängigkeiten 
+von der Paketverwaltung aufgelöst und die genannten Pakete samt deren 
+Abhängigkeiten installiert.
+
+// Stichworte für den Index
+(((Debianpaket, dphys-config)))
+(((Debianpaket, dphys-swapfile)))
+Für die Benennung von eigenen Metapaketen gibt es keine Festlegung -- 
+Namenskonflikte mit Paketen aus eigenen Repositories sind daher nie 
+vollständig auszuschliessen. Im offiziellen Bestand finden sich Pakete, die 
+den Namen der Einrichtung tragen, an denen das Paket entstanden ist. Dazu 
+gehören bspw. 'dphys-config' <<Debian-Paket-dphys-config>> und 'dphys-swapfile' 
+<<Debian-Paket-dphys-swapfile>>, die beide das Departement für Physik der ETH 
+Zürich beigesteuert hat. Vielleicht ist dieses Namensschema auch für Sie 
+nützlich.
+
+// Stichworte für den Index
+(((Debianpaket, equivs)))
+(((Debianpaket, mc)))
+(((Debianpaket, mc-data)))
+In diesem Kapitel lernen Sie, wie Sie ein Metapaket für den Midnight Commander 
+erstellen <<mc>>. Hier heißt dieses schlicht und einfach 'meta-mc'. Dieses 
+Werkzeug 'mc' setzt sich aus zwei Paketen zusammen -- 'mc' <<Debian-Paket-mc>> 
+für die Binärdateien und 'mc-data' <<Debian-Paket-mc-data>> für die 
+architekturunabhängigen Datendateien. 
+
+Zur Erstellung des Metapakets 'meta-mc' greifen wir auf das Debianpaket 
+'equivs' <<Debian-Paket-equivs>> zurück, was diesen Schritt für uns sehr stark 
+vereinfacht. 
 
 * Ablauf:
 * `ns-control` erzeugen

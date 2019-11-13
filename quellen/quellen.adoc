@@ -332,6 +332,10 @@
 
 - [[[Debian-Paket-dlocate]]] Debian-Paket 'dlocate', https://packages.debian.org/de/stable/dlocate
 
+- [[[Debian-Paket-dphys-config]]] Debian-Paket 'dphys-config', https://packages.debian.org/de/stable/dphys-config
+
+- [[[Debian-Paket-dphys-swapfile]]] Debian-Paket 'dphys-swapfile', https://packages.debian.org/de/stable/dphys-swapfile
+
 - [[[Debian-Paket-dpkg]]] Debian-Paket 'dpkg', https://packages.debian.org/de/stable/dpkg
 
 - [[[Debian-Paket-dpkg-dev]]] Debian-Paket 'dpkg-dev', https://packages.debian.org/de/stable/dpkg-dev
@@ -345,6 +349,8 @@
 - [[[Debian-Paket-dput-ng]]] Debian-Paket 'dput-ng', https://packages.debian.org/de/stable/dput-ng
 
 - [[[Debian-Paket-dwm]]] Debian-Paket 'dwm', https://packages.debian.org/de/stable/dwm
+
+- [[[Debian-Paket-equivs]]] Debian-Paket 'equivs', https://packages.debian.org/de/stable/equivs
 
 - [[[Debian-Paket-etckeeper]]] Debian-Paket 'etckeeper', https://packages.debian.org/de/stable/etckeeper
 
@@ -397,6 +403,10 @@
 - [[[Debian-Paket-lsb-release]]] Debian-Paket 'lsb-release', https://packages.debian.org/de/stable/lsb-release
 
 - [[[Debian-Paket-make]]] Debian-Paket 'make', https://packages.debian.org/de/stable/make
+
+- [[[Debian-Paket-mc]]] Debian-Paket 'mc', https://packages.debian.org/de/stable/mc
+
+- [[[Debian-Paket-mc-data]]] Debian-Paket 'mc-data', https://packages.debian.org/de/stable/mc-data
 
 - [[[Debian-Paket-mini-dinstall]]] Debian-Paket 'mini-dinstall', https://packages.debian.org/de/stable/mini-dinstall
 
@@ -711,6 +721,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[Mandriva-Wiki]]] Mandriva Control Center im Mandriva Wiki, http://wiki.mandriva.com/en/Tools/Control_Center
 
 - [[[Maassen-LPIC-1]]] Harald Maaßen: LPIC-1. Sicher zur erfolgreichen Linux-Zertifizierung, Rheinwerk Computing, Bonn, 5. Auflage, 2018, ISBN 978-3-8362-6375-7, https://www.rheinwerk-verlag.de/lpic-1_4668/
+
+- [[[mc]]] Midnight Commander, https://midnight-commander.org/
 
 - [[[MeeGo]]] MeeGo, https://meego.com/
 
