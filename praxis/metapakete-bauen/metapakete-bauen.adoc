@@ -76,7 +76,7 @@ passt. Das betrifft insbesondere die Felder `Section` (Paketkategorie),
 Felder kommentieren Sie aus und hinterlegen den gewünschten Wert. In unserem
 Fall sieht das wie folgt aus:
 
-.Angepasste Beschreibungsdatei für das Metapaket 'meta-mc'
+.Angepasste Beschreibungsdatei `ns-control` für das Metapaket 'meta-mc'
 ----
 ### Commented entries have reasonable defaults.
 ### Uncomment to edit them.
@@ -108,8 +108,11 @@ Description: Installs the Midnight Commander
 
 ----
 
-Beachten Sie bitte die Leerzeile am Ende der Datei. Ohne diese kann das Paket
-später nicht gebaut werden.
+[NOTE]
+====
+Beachten Sie bitte die Leerzeile am Ende der Beschreibungsdatei `ns-control`. Ohne 
+diese kann das Paket später nicht sauber gebaut werden.
+====
 
 * `deb`-Paket vorbereiten
 ----
