@@ -70,13 +70,12 @@ $
 (((Paketvarianten, Mikro-Binärpaket)))
 (((Paketvarianten, Tasks)))
 (((Paketvarianten, Übergangspaket)))
-Es gibt ein paar besondere Varianten von Binärpaketen –
-_Übergangspakete_ und _Metapakete_. Vom Aufbau her unterscheiden sich
-diese nicht von normalen Binärpaketen, aber vom Inhalt.
-
-Übergangspakete und Metapakete sind reguläre Binärpakete, die jedoch
-im Normalfall keine eigenen Programme, Daten oder ähnliches beinhalten.
-Stattdessen liefern diese Abhängigkeiten auf andere Pakete.
+Es gibt ein paar besondere Varianten von Binärpaketen – _Übergangspakete_ 
+und _Metapakete_. Vom Aufbau her unterscheiden sich diese nicht von normalen 
+Binärpaketen, aber vom Inhalt. Übergangspakete und Metapakete sind reguläre 
+Binärpakete, die jedoch im Normalfall keine eigenen Programme, Daten oder 
+ähnliches beinhalten. Stattdessen liefern diese Abhängigkeiten auf andere 
+Pakete.
 
 // Stichworte für den Index
 (((Paketvarianten, Übergangspaket)))
@@ -137,6 +136,22 @@ für Serverfunktionen, bspw. 'task-dns-server' und
 und wird ab Debian 7 _Wheezy_ intensiv verwendet. Auf das angesprochene
 Programm `tasksel` gehen wir in <<tasksel>> ausführlicher ein.
 
+[TIP]
+.Aufbau und Format von Übergangs- und Metapaketen
+====
+Mehr Informationen zum Aufbau dieser Pakete finden Sie unter ``Aufbau
+und Format von Übergangs- und Metapaketen'' in
+<<aufbau-und-format-uebergang-und-metapakete>>.
+====
+
+[TIP]
+.Metapakete selber bauen
+====
+Wie Sie ihre eigenen Metapakete erstellen und diese dann auch zum Bezug in 
+einem Repository bereithalten, lernen Sie unter ``Metapakete bauen'' in 
+<<metapakete-bauen>>. 
+====
+
 [[mikro-binaerpakete]]
 
 ==== Mikro-Binärpakete ====
@@ -155,14 +170,6 @@ Zeitpunkts der Installation. Deswegen gibt es auch nur solche Pakete als
 `udeb`-Variante, die vom Debian Installer selbst gebraucht werden.
 Darunter zählen bspw. Pakete mit den Programmen zum Anlegen von
 Dateisystemen.
-
-[TIP]
-.Aufbau und Format von Übergangs- und Metapaketen
-====
-Mehr Informationen zum Aufbau dieser Pakete finden Sie unter ``Aufbau
-und Format von Übergangs- und Metapaketen'' in
-<<aufbau-und-format-uebergang-und-metapakete>>.
-====
 
 [[sourcepakete]]
 
