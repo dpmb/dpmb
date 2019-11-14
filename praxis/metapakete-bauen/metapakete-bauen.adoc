@@ -343,6 +343,19 @@ Haupt-Fingerabdruck  = 35F8 DF9C 884E 36AB 9744  60AF CFA7 2978 D431 AC07
 $
 ----
 
+Abschließend signieren Sie noch das gesamte Paket mit Hilfe des Werkzeugs 
+`debsigs`. Nachfolgender Aufruf signiert das Paket 'meta-mc' mit dem Schlüssel
+`D431AC07`. Die Angabe `--sign=origin` ist die kryptographische Signatur der 
+Organisation, die das Paket bereitstellt. Erlaubte Alternativen sind `maint` für
+den Paketmaintainer und `archive` für das Archiv, welches das Paket bereitstellt.
+
+.Debianpaket signieren
+----
+$ debsigs --sign=origin -k D431AC07 meta-mc_1.0_all.deb 
+gpg: "D431AC07" wird als voreingestellter geheimer Signaturschlüssel benutzt
+$
+----
+
 Nun ist auch der Sicherheitscheck über die Bühne und das Paket kann zum Einsatz 
 kommen. Auf gehts!
 
