@@ -196,9 +196,10 @@ gelandet sind.
 (((dput, -u)))
 (((dput, --unchecked)))
 Jetzt laden Sie ihr Paket hoch. Das nachfolgende Beispiel nutzt das in 
-<<metapakete-bauen>> erzeugte Metapaket 'meta-mc'. Der Schalter `-u` im Aufruf 
-kürzt `--unchecked` ab und überspringt den Test der kryptographischen 
-Signaturen zum Paket.
+<<metapakete-bauen>> erzeugte Metapaket 'meta-mc'. 
+
+Der Schalter `-u` im Aufruf kürzt `--unchecked` ab und überspringt den Test 
+der kryptographischen Signaturen zum Paket. Das ist zum Testen ganz praktisch.
 
 .Hochladen eines Paketes mit `dput`
 ----
