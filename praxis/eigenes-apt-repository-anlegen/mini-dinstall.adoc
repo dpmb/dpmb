@@ -71,13 +71,13 @@ mkdir: Verzeichnis '/var/www/debian/neuepakete' angelegt
 #
 ----
 
-===== Konfigurationsdateien für `mini-dinstall` und `dput` =====
+===== Konfiguration für `mini-dinstall` =====
 
-Als nächstes legen Sie zwei Konfigurationsdateien an -- eine für `mini-dinstall`
-selbst und eine weitere für `dput` footnote:[Die beiden Werkzeuge `dput` und 
-`dput-ng` sind nicht unbedingt erforderlich. Beide vereinfachen Ihnen nur das 
-Hochladen von Paketen. Ohne `dput` müssen Sie das manuell machen.]. Übliche 
-Namen sind `.mini-dinstall.conf` und `.dput.cf` in dem Home-Verzeichnis des 
+// Stichworte für den Index
+(((mini-dinstall, Konfiguration)))
+(((mini-dinstall, .mini-dinstall.conf)))
+Als nächstes legen Sie eine Konfigurationsdatei für `mini-dinstall` an. Der
+übliche Name dafür ist `.mini-dinstall.conf` in dem Home-Verzeichnis des 
 Benutzers, der die Pakete später in das APT-Repository hochlädt. Eine einfache 
 Konfigurationsdatei `.mini-dinstall.conf` sieht wie folgt aus:
 
@@ -151,8 +151,21 @@ zulässigen Einträgen in der Konfigurationsdatei finden Sie unter
 <<mini-dinstall-schalter-und-konfiguration>>.
 ====
 
-Als nächstes konfigurieren sie `dput`, d.h. passend zu obigem APT-Repository. 
-Dabei hilft Ihnen eine entsprechende Datei namens `.dput.cf`. 
+===== Konfiguration für `dput` =====
+
+// Stichworte für den Index
+(((dput, Konfiguration)))
+(((dput, .dput.cf)))
+(((mini-dinstall, -b)))
+(((mini-dinstall, --batch)))
+Nun folgt `dput` oder `dput-ng`. Die beiden Werkzeuge sind nicht unbedingt 
+erforderlich. Beide vereinfachen Ihnen nur das Hochladen von Paketen. Ohne 
+`dput` müssen Sie das manuell machen. 
+
+Ein üblicher Name für die Konfigurationsdatei ist `.dput.cf` im 
+Home-Verzeichnis des Benutzers, der die Pakete später in das APT-Repository
+hochlädt. Darin stellen sie `dput` passend zum weiter oben genannten 
+APT-Repository ein, bspw. wie folgt:
 
 .`.dput.cf`-Beispiel:
 ----
@@ -168,19 +181,24 @@ Die Angabe `[local]` bezeichnet den Namen des Repositorys und alle danach
 folgenden Angaben beziehen sich auf dieses Repository. `fqdn` kürzt den 
 Begriff 'fully-qualified domain name' ab und bezeichnet die URL bzw. den 
 Rechnernamen, auf dem sich das APT-Repository befindet. Der Pfad bei `incoming` 
-gibt das Unterverzeichnis an, indem neue Pakete landen und muß mit obigem Wert
-identisch sein. Die Angabe `run_dinstall = 0` legt fest, dass kein Aufruf von 
-`dinstall -n` erfolgen soll, sprich: kein Installationstest für das Paket. Die 
-letzte Zeile (`post_upload_command`) gibt das Kommando an, welches nach dem 
-Hochladen ausgeführt wird. Die Angabe von `mini-dinstall -b` versetzt 
-`mini-dinstall` in den Batchbetrieb, d.h. `mini-dinstall` integriert neue 
-Pakete in das Paketarchiv, sobald diese im Unterverzeichnis für die 
-hochgeladenen Pakete gelandet sind. 
+gibt das Unterverzeichnis an, indem neue Pakete landen. Die Angabe 
+`run_dinstall = 0` legt fest, dass kein Aufruf von `dinstall -n` erfolgen soll, 
+sprich: kein Installationstest für das Paket. Die letzte Zeile 
+(`post_upload_command`) gibt das Kommando an, welches nach dem Hochladen 
+ausgeführt wird. Die Angabe von `mini-dinstall -b` versetzt `mini-dinstall` 
+in den Batchbetrieb, d.h. `mini-dinstall` integriert neue Pakete in das 
+Paketarchiv, sobald diese im Unterverzeichnis für die hochgeladenen Pakete 
+gelandet sind. 
 
 ===== Paket in das Repository hochladen =====
 
+// Stichworte für den Index
+(((dput, -u)))
+(((dput, --unchecked)))
 Jetzt laden Sie ihr Paket hoch. Das nachfolgende Beispiel nutzt das in 
-<<metapakete-bauen>> erzeugte Metapaket 'meta-mc'.
+<<metapakete-bauen>> erzeugte Metapaket 'meta-mc'. Der Schalter `-u` im Aufruf 
+kürzt `--unchecked` ab und überspringt den Test der kryptographischen 
+Signaturen zum Paket.
 
 .Hochladen eines Paketes mit `dput`
 ----
