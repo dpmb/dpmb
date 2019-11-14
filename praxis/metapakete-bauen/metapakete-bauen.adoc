@@ -292,7 +292,59 @@ GnuPG-Schlüssel. In Anwendung kommen die drei Werkzeuge `debsign` aus dem Paket
 'devscripts' <<Debian-Paket-devscripts>>, `gpg` aus dem Paket 
 <<Debian-Paket-gpg>> und `debsigs` aus dem Paket <<Debian-Paket-devsigs>>.
 
-und kann benutzt werden. Auf gehts!
+Zunächst signieren Sie das Quellpaket und die Änderungen (`.changes`-Datei) 
+mit Hilfe des Werkzeugs `debsign` wie folgt:
+
+.Signieren des Quellpakets
+----
+$ debsign -k D431AC07 meta-mc_1.0.dsc
+ signfile dsc meta-mc_1.0.dsc D431AC07
+
+Successfully signed dsc file
+$
+----
+
+`debsign` freut sich über den Schalter `-k`, den Wert ihres GnuPG-Schlüssels
+und den Namen der zu signierenden Datei. Ist es im obigen Aufruf das Quellpaket,
+geben Sie im unteren Aufruf die `.changes`-Datei an.
+
+.Signieren der Änderungen
+----
+$ debsign -k D431AC07 meta-mc_1.0_amd64.changes 
+The .dsc file is already signed.
+Would you like to use the current signature? [Yn]Y
+Leaving current signature unchanged.
+ fixup_buildinfo meta-mc_1.0.dsc meta-mc_1.0_amd64.buildinfo
+ signfile buildinfo meta-mc_1.0_amd64.buildinfo D431AC07
+
+ fixup_changes dsc meta-mc_1.0.dsc meta-mc_1.0_amd64.changes
+ fixup_changes buildinfo meta-mc_1.0_amd64.buildinfo meta-mc_1.0_amd64.changes
+ signfile changes meta-mc_1.0_amd64.changes D431AC07
+
+Successfully signed buildinfo, changes files
+$
+----
+
+Zur Sicherheit prüfen Sie die Signatur mit Hilfe von `gpg` nach. In Anwendung
+ist der Schalter `--verify` gefolgt von der signierten Datei. Nachfolgende 
+Ausgabe zeigt, dass die Signatur korrekt ist, aber nicht garantiert werden kann,
+dass der verwendete kryptographische Schlüssel authentisch ist. Einen Schlüssel
+mit einem fremden Namen erzeugen kann ja jeder.
+
+.Prüfen der Signatur des Quellpakets
+----
+$ gpg --verify meta-mc_1.0.dsc
+gpg: Signatur vom Do 14 Nov 2019 15:12:00 CET
+gpg:                mittels RSA-Schlüssel 35F8DF9C884E36AB974460AFCFA72978D431AC07
+gpg: Korrekte Signatur von "Frank Hofmann (Hofmann EDV) <frank.hofmann@efho.de>" [unbekannt]
+gpg: WARNUNG: Dieser Schlüssel trägt keine vertrauenswürdige Signatur!
+gpg:          Es gibt keinen Hinweis, daß die Signatur wirklich dem vorgeblichen Besitzer gehört.
+Haupt-Fingerabdruck  = 35F8 DF9C 884E 36AB 9744  60AF CFA7 2978 D431 AC07
+$
+----
+
+Nun ist auch der Sicherheitscheck über die Bühne und das Paket kann zum Einsatz 
+kommen. Auf gehts!
 
 [[metapakete-bauen-benutzen]]
 === Das neue Paket benutzen ===
