@@ -277,7 +277,22 @@ $
 
 `meta-mc_1.0.tar.gz` :: das Quellpaket zum erzeugten Metapaket
 
-Jetzt ist das Paket gebaut und kann benutzt werden. Auf gehts!
+Jetzt wurde das Paket erfolgreich gebaut -- Gratulation!
+
+[[metapakete-bauen-signieren]]
+=== Die Komponenten des Pakets kryptographisch signieren ===
+
+Das zuvor gebaute Paket können Sie uneingeschränkt benutzen (und direkt bei
+<<metapakete-bauen-benutzen>> weiterlesen). In diesem Abschnitt gehen wir 
+noch einen Schritt in Richtung Sicherheit und signieren die Komponenten des
+Pakets zusätzlich kryptographisch. Das garantiert jedem Nutzer die Echtheit 
+des Pakets -- sprich: es stammt auch tatsächlich von Ihnen. Sie signieren nun 
+noch den Quellcode, die `.changes`-Datei sowie das fertige Paket mit ihrem 
+GnuPG-Schlüssel. In Anwendung kommen die drei Werkzeuge `debsign` aus dem Paket
+'devscripts' <<Debian-Paket-devscripts>>, `gpg` aus dem Paket 
+<<Debian-Paket-gpg>> und `debsigs` aus dem Paket <<Debian-Paket-devsigs>>.
+
+und kann benutzt werden. Auf gehts!
 
 [[metapakete-bauen-benutzen]]
 === Das neue Paket benutzen ===

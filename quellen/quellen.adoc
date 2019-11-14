@@ -322,6 +322,8 @@
 
 - [[[Debian-Paket-devscripts]]] Debian-Paket 'devscripts', https://packages.debian.org/de/stable/devscripts
 
+- [[[Debian-Paket-devsigs]]] Debian-Paket 'devsigs', https://packages.debian.org/de/stable/devsigs
+
 - [[[Debian-Paket-dgit]]] Debian-Paket 'dgit', https://packages.debian.org/de/stable/dgit
 
 - [[[Debian-Paket-dh-make-perl]]] Debian-paket 'dh-make-perl', https://packages.debian.org/de/stable/dh-make-perl
@@ -373,6 +375,8 @@
 - [[[Debian-Paket-gnome-packagekit]]] Debian-Paket 'gnome-packagekit', https://packages.debian.org/de/stable/gnome-packagekit
 
 - [[[Debian-Paket-goplay]]] Debian-Paket 'goplay', https://packages.debian.org/de/stable/goplay
+
+- [[[Debian-Paket-gpg]]] Debian-Paket 'gpg', https://packages.debian.org/de/stable/gpg
 
 - [[[Debian-Paket-gui-apt-key]]] Debian-Paket 'gui-apt-key', https://packages.debian.org/de/stable/gui-apt-key
 
