@@ -11,28 +11,25 @@
 (((Paket, downgraden)))
 (((Paket installieren, bestimmte Version)))
 
-Allgemein gesprochen, steht der Begriff 'Downgrade' für einen
-Niedergang, eine Abwertung oder einen Rückschritt. Bezogen auf die
-Verwaltung von Softwarepaketen umfasst es das Einspielen oder
-Zurückgehen zu einer vorherigen Paketversion. Es stellt damit das
-Gegenstück zu einer Aktualisierung mittels `apt-get upgrade` dar (siehe
-dazu <<pakete-aktualisieren>>).
+Allgemein gesprochen, steht der Begriff 'Downgrade' für einen Niedergang, eine 
+Abwertung oder einen Rückschritt. Bezogen auf die Verwaltung von 
+Softwarepaketen umfasst es das Einspielen oder Zurückgehen zu einer vorherigen 
+Paketversion. Es stellt damit das Gegenstück zu einer Aktualisierung mittels 
+`apt-get upgrade` dar (siehe dazu <<pakete-aktualisieren>>).
 
-Ein Downgrade ist in Betracht zu ziehen, wenn die derzeit installierte
-Version eines Softwarepakets nicht das leistet, was sie verspricht,
-bspw. dabei Fehler auftreten oder Inkompatibilitäten mit anderen
-Softwarepaketen deren Benutzung unmöglich machen. Häufig fallen in
-letztere Kategorie geänderte Schnittstellen, die noch nicht auf allen
-nachfolgenden Ebenen konsequent umgesetzt wurden.
+Ein Downgrade ist in Betracht zu ziehen, wenn die derzeit installierte Version 
+eines Softwarepakets nicht das leistet, was sie verspricht, bspw. dabei Fehler 
+auftreten oder Inkompatibilitäten mit anderen Softwarepaketen deren Benutzung 
+unmöglich machen. Häufig fallen in letztere Kategorie geänderte Schnittstellen, 
+die noch nicht auf allen nachfolgenden Ebenen konsequent umgesetzt wurden.
 
-Ein Downgrade wird vom Release-Team von Debian GNU/Linux offiziell nicht
-unterstützt. Alle Mechanismen zur Paketverwaltung und Aktualisierung
-sind auf das Einspielen einer neueren Version ausgerichtet. Daher
-verfügt auch keines der hier im Buch vorgestellten Werkzeuge zur
-Paketverwaltung bislang über einen spezifischen Schalter, um ein
-Downgrade explizit anzustoßen. Es bleibt daher nur ein Vorgehen über
-andere Wege, die jedoch auf den bereits zuvor beschriebenen Mechanismen
-aufsetzen.
+Ein Downgrade wird vom Release-Team von Debian GNU/Linux offiziell nicht 
+unterstützt. Alle Mechanismen zur Paketverwaltung und Aktualisierung sind auf 
+das Einspielen einer neueren Version ausgerichtet. Daher verfügt auch keines 
+der hier im Buch vorgestellten Werkzeuge zur Paketverwaltung bislang über 
+einen spezifischen Schalter, um ein Downgrade explizit anzustoßen. Es bleibt 
+daher nur ein Vorgehen über andere Wege. Glücklicherweise setzen diese jedoch 
+auf den bereits zuvor beschriebenen Mechanismen auf.
 
 ==== Hintergrund und Fragen zum Downgrade ====
 
@@ -42,41 +39,39 @@ aufsetzen.
 (((Maintainer-Skripte, preinst)))
 (((Maintainer-Skripte, prerm)))
 
-Das Einspielen einer neueren Version ist vom prinzipiellen Ablauf her
-nicht anders als die Aktualisierung -- es laufen die gleichen
-Mechanismen ab und es kommen die gleichen Werkzeuge zum Einsatz. Der
-Unterschied ist jedoch die Komplexität, die hier deutlich höher ist.
+Das Einspielen einer neueren Version ist vom prinzipiellen Ablauf her nicht 
+anders als die Aktualisierung -- es laufen die gleichen Mechanismen ab und es 
+kommen die gleichen Werkzeuge zum Einsatz. Der Unterschied ist jedoch die 
+Komplexität, die hier deutlich höher ist.
 
-Vergleichbar ist der Vorgang wie das Bewegen entgegen der Fahrtrichtung
-in einer Einbahnstraße -- es geht so lange gut, wie Ihnen keiner
-entgegenkommt. Schwierigkeiten können Ihnen nämlich die
-Maintainerskripte (siehe ``Binärpakete'' in
-<<aufbau-und-format-binaer>>) bereiten, die das Downgrade im Normalfall
-nicht unterstützen. Eventuell ist der Mechanismus, der sie aufruft, auch
-nicht darauf vorbereitet. Kritisch sind insbesondere die Fälle, wo eine
-konzeptuelle Änderung im Paket in der Rückrichtung nicht umgebaut werden
-kann (siehe dazu bspw. den Debian-Bug 764503
+Vergleichbar ist der Vorgang wie das Bewegen entgegen der Fahrtrichtung in 
+einer Einbahnstraße -- es geht so lange gut, wie Ihnen keiner entgegenkommt. 
+Schwierigkeiten können Ihnen nämlich die Maintainerskripte (siehe 
+``Binärpakete'' in <<aufbau-und-format-binaer>>) bereiten, die das Downgrade 
+im Normalfall nicht unterstützen. Eventuell ist der Mechanismus, der sie 
+aufruft, auch nicht darauf vorbereitet. Kritisch sind insbesondere die Fälle, 
+wo eine konzeptuelle Änderung im Paket in der Rückrichtung nicht umgebaut 
+werden kann (siehe dazu bspw. den Debian-Bug 764503 
 <<apt-get-update-bug-764503>>).
 
-Ein Downgrade ist mit einer Aktualisierung gleichzusetzen. Hierbei
-benennen Sie jedoch explizit eine ältere Paketversion, die Sie entweder
-über einen Parameter -- ``target release'' oder Versionsnummer -- beim
-Aufruf von `dpkg` bzw. `apt-get` angeben oder in der Textoberfläche von
-Aptitude auswählen. Berechnet die Paketverwaltung nun die Abhängigkeiten
-zu den übrigen Paketen, kann am Ende dieses Vorgangs auch eine
-großflächige Änderung am Restbestand der Pakete stehen. Dieser Fall ist
-nicht ungewöhnlich, denn er kann ebenso bei einer Aktualisierung
-vorkommen. Die Wahrscheinlichkeit, daß die Änderungen erheblich sind,
-ist sehr groß.
+Ein Downgrade ist mit einer Aktualisierung gleichzusetzen. Hierbei benennen 
+Sie jedoch explizit eine ältere Paketversion, die Sie entweder über einen 
+Parameter -- ``target release'' oder Versionsnummer -- beim Aufruf von `dpkg` 
+bzw. `apt-get` angeben oder in der Textoberfläche von Aptitude auswählen. 
+Berechnet die Paketverwaltung nun die Abhängigkeiten zu den übrigen Paketen, 
+kann am Ende dieses Vorgangs auch eine großflächige Änderung am Restbestand 
+der Pakete stehen. Dieser Fall ist nicht ungewöhnlich, denn er kann ebenso 
+bei einer Aktualisierung vorkommen. Die Wahrscheinlichkeit, daß die 
+Änderungen erheblich sind, ist sehr groß.
 
-Wie oben schon benannt, sind diese Änderungen nicht immer
-rückwärtskompatibel und lösen Verwicklungen aus (Aktualisierungen sind
-eigentlich bereits hinreichend komplex). Wir empfehlen Ihnen daher, ein
-Downgrade nur bei dem tatsächlichen Bedarf dafür durchzuführen. Prüfen
-Sie bitte vorher, ob das Mischen von Veröffentlichungen mittels
-`apt-pinning` (siehe <<veroeffentlichungen-mischen>>) oder das
-Übersetzen des Pakets aus den Quellen und das nachfolgende Einspielen
-des eigenen Binärpakets risikoärmer ist.
+Wie oben schon benannt, sind diese Änderungen nicht immer rückwärtskompatibel 
+und lösen Verwicklungen aus (Aktualisierungen sind eigentlich bereits 
+hinreichend komplex). Wir empfehlen Ihnen daher, ein Downgrade nur bei dem 
+tatsächlichen Bedarf dafür durchzuführen. Prüfen Sie bitte vorher, ob das 
+Mischen von Veröffentlichungen mittels `apt-pinning` (siehe dazu 
+<<veroeffentlichungen-mischen>>) oder das Übersetzen des Pakets aus den 
+Quellen und das nachfolgende Einspielen des eigenen Binärpakets risikoärmer 
+ist.
 
 ==== Ablauf und Durchführung ====
 ===== Bestehende Paketversionen klären =====
@@ -89,20 +84,18 @@ des eigenen Binärpakets risikoärmer ist.
 (((Paket, verfügbare Versionen anzeigen)))
 (((Pakete aktualisieren, verfügbare Versionen anzeigen)))
 
-Als Schritt eins bringen Sie in Erfahrung, welche Paketversionen
-überhaupt installiert und darüberhinaus aus dem Repository ihrer
-genutzten Veröffentlichung verfügbar sind. Dabei helfen ihnen bspw. die
-Werkzeuge `apt-cache`, `aptitude`, `rmadison` und `apt-show-versions`
-weiter (siehe ``Paketstatus erfragen'' in
-<<paketstatus-apt-cache-showpkg>>, ``Verfügbare Paketversionen
-ermitteln'' in <<verfuegbare-paketversionen-ermitteln>> und ``Aus
-welchem Repo kommen die Pakete'' in
-<<aus-welchem-repo-kommen-die-pakete>>). Im Aufruf benötigen alle
-Programme zusätzlich den Namen des gewünschten Pakets und listen in der
-Ausgabe die letzte Version auf, ggf. noch spezifiziert für die jeweilige
-Veröffentlichung. Die nachfolgende Ausgabe nutzt `apt-show-versions` und
-zeigt das anhand des Paketes `openvpn` aus der stabilen
-Veröffentlichung.
+Als Schritt eins bringen Sie in Erfahrung, welche Paketversionen überhaupt 
+installiert und darüberhinaus aus dem Repository ihrer genutzten 
+Veröffentlichung verfügbar sind. Dabei helfen ihnen bspw. die Werkzeuge 
+`apt-cache`, `aptitude`, `rmadison` und `apt-show-versions` weiter (siehe 
+``Paketstatus erfragen'' in <<paketstatus-apt-cache-showpkg>>, 
+``Verfügbare Paketversionen ermitteln'' in 
+<<verfuegbare-paketversionen-ermitteln>> und ``Aus welchem Repo kommen die 
+Pakete'' in <<aus-welchem-repo-kommen-die-pakete>>). Im Aufruf benötigen alle 
+Programme zusätzlich den Namen des gewünschten Pakets und listen in der 
+Ausgabe die letzte Version auf, ggf. noch spezifiziert für die jeweilige 
+Veröffentlichung. Die nachfolgende Ausgabe nutzt `apt-show-versions` und zeigt 
+das anhand des Paketes `openvpn` aus der Veröffentlichung von Debian 8 'Jessie'.
 
 .Auflistung der verfügbaren Versionen zum Paket `openvpn`
 ----
@@ -111,16 +104,15 @@ openvpn:amd64/jessie 2.3.4-5+deb8u1 uptodate
 $
 ----
 
-Die oben benannten Werkzeuge können Ihnen jedoch nicht darstellen,
-welche vorherigen Versionen eines Pakets existieren und noch verfügbar
-sind. Aus obiger Ausgabe von `apt-show-versions` wird nur ersichtlich,
-daß derzeit die Version `2.3.4-5+deb8u1` installiert ist und es sich
-dabei um das derzeit aktuellste Paket handelt. Das Suffix `deb8u1`
-deutet auf eine (Sicherheits-)Aktualisierung der Vorgängerversion
-`2.3.4-5` hin.
+Die oben benannten Werkzeuge können Ihnen jedoch nicht darstellen, welche 
+vorherigen Versionen eines Pakets existieren und noch verfügbar sind. Aus 
+obiger Ausgabe von `apt-show-versions` wird nur ersichtlich, daß derzeit die 
+Version `2.3.4-5+deb8u1` installiert ist und es sich dabei um das derzeit 
+aktuellste Paket handelt. Das Suffix `deb8u1` deutet auf eine 
+(Sicherheits-)Aktualisierung der Vorgängerversion `2.3.4-5` hin.
 
-Um diese Version aufzuspüren, kann ein Blick in den Paketcache bereits
-zum Erfolg führen:
+Um diese Version aufzuspüren, kann ein Blick in den Paketcache bereits zum 
+Erfolg führen:
 
 .Recherche im Paketcache
 ----
@@ -130,72 +122,111 @@ $ ls /var/cache/apt/archives/openvpn*
 $
 ----
 
-Sie sehen, dass das Paket mit der Version `2.3.4-5` noch lokal
-herumliegt. Dieses Paket können Sie nachfolgend benutzen.
+Sie sehen, dass das Paket mit der Version `2.3.4-5` noch lokal herumliegt. 
+Dieses Paket benutzen Sie nachfolgend zum Downgrade.
 
 // Stichworte für den Index
 (((Debian Snapshots, Paketarchiv)))
-Sollte obiger Schritt jedoch nicht (mehr) von Erfolg gekrönt sein --
-weil Sie bspw. den Paketcache aufgeräumt haben -- benötigen Sie Plan B.
-Dieser beinhaltet eine Recherche im Paketarchiv unter 'Debian Snapshots'
-<<Debian-Snapshots>> (siehe <<fig.snapshots>>). 
+Sollte obiger Schritt jedoch nicht (mehr) von Erfolg gekrönt sein -- weil Sie 
+bspw. den Paketcache schon aufgeräumt haben -- benötigen Sie einen Plan B. 
+Eine Recherche im Paketarchiv unter 'Debian Snapshots' <<Debian-Snapshots>> 
+(siehe <<fig.snapshots>>) ist ein solcher Plan.
 
 .Das Debian-Paketarchiv
 image::werkzeuge/paketoperationen/snapshots.png[id="fig.snapshots", width="50%"]
 
-Dieses Archiv beinhaltet den Zugriff auf alle Varianten eines Pakets,
-welche jemals Bestandteil einer Veröffentlichung von Debian waren. Über
-diese Webseite stöbern Sie veröffentlichungsbezogen oder anhand des
-Paketnamens für das Quell- bzw. Binärpaket. <<fig.snapshots-openvpn>>
-zeigt das Suchergebnis für das Paket `openvpn`. Mit einem Klick auf die
-gesuchte Version aus der Liste beziehen das benötigte Paket aus dem
-Archiv und speichern es im Paketcache unter `/var/cache/apt/archives'.
+Dieses Archiv beinhaltet den Zugriff auf alle Varianten eines Pakets, welche 
+jemals Bestandteil einer Veröffentlichung von Debian waren. Über diese Webseite 
+stöbern Sie veröffentlichungsbezogen oder anhand des Paketnamens für das Quell- 
+bzw. Binärpaket. <<fig.snapshots-openvpn>> zeigt das Suchergebnis für das Paket 
+'openvpn'. Mit einem Klick auf die gesuchte Version aus der Liste beziehen das 
+benötigte Paket aus dem Archiv und speichern es lokal im Paketcache unter 
+`/var/cache/apt/archives` ab.
 
 .Suchergebnis nach dem Paket `openvpn` im Paketarchiv
 image::werkzeuge/paketoperationen/snapshots-openvpn.png[id="fig.snapshots-openvpn", width="50%"]
 
 ===== Paket austauschen =====
 
-Im sich nun anschließenden Schritt zwei ersetzen Sie das aktuelle Paket
-durch dessen Vorgänger. Dieser Schritt ist unkompliziert, sofern keine
-größeren Paketabhängigkeiten bestehen und repariert werden müssen. Im
-vorliegenden Fall genügt dazu folgendes:
+// Stichworte für den Index
+(((apt-get, install -f)))
+(((apt-get, install --fix-broken)))
+(((dpkg, -ihv)))
+Im sich nun anschließenden Schritt zwei ersetzen Sie das aktuelle Paket durch 
+dessen Vorgänger. Dieser Schritt ist unkompliziert, sofern keine größeren 
+Paketabhängigkeiten bestehen und repariert werden müssen. Im vorliegenden Fall 
+genügt dazu folgendes:
 
-. Entfernen des derzeit installierten `openvpn`-Pakets mittels `apt-get
+* Entfernen des derzeit installierten 'openvpn'-Pakets mittels `apt-get
 remove openvpn`
 
-. Einspielen des älteren `openvpn`-Pakets mittels `dpkg -ihv
+* Einspielen des älteren 'openvpn'-Pakets mittels `dpkg -ihv
 /var/cache/apt/archives/openvpn_2.3.4-5_amd64.deb`.
 
 Bei dieser Vorgehensweise bleiben alle Konfigurationsdateien unverändert
-erhalten.
+erhalten. Es kann jedoch passieren, dass nicht alle Abhängigkeiten erhalten
+bleiben und andere Pakete ebenfalls ausgetauscht werden müssen. Das erreichen
+Sie mit Hilfe des nachfolgenden Aufrufs `apt-get install -f`. Der Schalter `-f`
+kürzt `--fix-broken` ab.
 
 ===== Paket über die Angabe der Versionsnummer austauschen =====
 
 // Stichworte für den Index
-(((apt-get, -t install)))
+(((apt-get, install)))
+(((apt-get, install --reinstall)))
 (((Debianpaket, openvpn)))
 (((Paket, bestimmte Version installieren)))
+(((Paket, erneut installieren)))
 (((Paket installieren, bestimmte Version)))
 
-* über die explizite Angabe der Versionsnummer des Pakets: 
+APT akzeptiert als Parameter auch die explizite Angabe der Versionsnummer des 
+Pakets. Falls das Paket noch nicht installiert ist, hilft dieser Aufruf:
 
 ----
 apt-get install <package-name>=<package-version-number>
+----
+
+Ist das Paket jedoch schon installiert, gelingt dieser Aufruf:
+
+----
+apt-get install --reinstall <package-name>=<package-version-number>
+----
+
+In beiden Fällen ersetzen Sie '<package-name>' durch den tatsächlichen Namen
+des Paketes und '<package-version-number>' durch die gewünschte Versionsnummer.
+Für die Version 2.3.4-5 des Paketes 'openvpn' sieht der Aufruf wie folgt aus:
+
+.Paket mit konkreter Versionsangabe (neu) installieren
+----
+# apt-get install --reinstall openvpn=2.3.4-5
 ----
 
 ===== Paket über die Angabe der Veröffentlichung austauschen =====
 
 // Stichworte für den Index
 (((apt-get, -t install)))
+(((apt-get, --target-release)))
 (((Debianpaket, openvpn)))
 (((Paket, bestimmte Version installieren)))
 (((Paket installieren, Auswahl anhand der Veröffentlichung)))
 
-* über die explizite Angabe der Veröffentlichung: 
+APT ist flexibel und erlaubt ebenfalls die Referenzierung eines Paketes über 
+die explizite Angabe der Veröffentlichung. Dazu kommt der Schalter `-t` 
+(Langform: `--target-release`) zum Einsatz:
 
 ----
 apt-get -t=<target release> install <package-name>
+----
+
+Die Angabe `<target release>` benennt die Veröffentlichung, also bspw. 'stable'
+oder 'unstable', aber auch den Namen wie 'Stretch' oder 'Buster'. Für den Wert
+'<package-name>' geben Sie den tatsächlichen Namen des Paketes an. Für das
+Paket 'openvpn' aus der vorherigen, stabilen Veröffentlichung (genannt 
+'oldstable') sieht der Aufruf dann wie folgt aus:
+
+.Paket mit Angabe der Veröffentlichung installieren
+----
+# apt-get -t=oldstable install openvpn
 ----
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-downgraden.adoc
