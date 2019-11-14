@@ -48,6 +48,8 @@ einen Pfad unterhalb des Wurzelverzeichnisses des Webservers, bspw.
 [[mini-dinstall-einrichtung]]
 ==== Einrichtung ====
 
+===== Verzeichnisstruktur des APT-Repositorys =====
+
 Als erstes stellen Sie sicher, dass das Verzeichnis des APT-Repositorys 
 vorhanden ist und legen es an, falls es noch nicht existiert:
 
@@ -69,6 +71,8 @@ mkdir: Verzeichnis '/var/www/debian/neuepakete' angelegt
 #
 ----
 
+===== Konfigurationsdateien für `mini-dinstall` und `dput` =====
+
 Als nächstes legen Sie zwei Konfigurationsdateien an -- eine für `mini-dinstall`
 selbst und eine weitere für `dput` footnote:[Die beiden Werkzeuge `dput` und 
 `dput-ng` sind nicht unbedingt erforderlich. Beide vereinfachen Ihnen nur das 
@@ -77,7 +81,7 @@ Namen sind `.mini-dinstall.conf` und `.dput.cf` in dem Home-Verzeichnis des
 Benutzers, der die Pakete später in das APT-Repository hochlädt. Eine einfache 
 Konfigurationsdatei `.mini-dinstall.conf` sieht wie folgt aus:
 
-.Basiseinstellungen zu `mini-dinstall`
+.Basiseinstellungen zu `.mini-dinstall.conf`
 ----
 [DEFAULT]
 archivedir = /var/www/debian
@@ -89,9 +93,56 @@ mail_on_success = false
 Damit liegt das APT-Repository unter `/var/www/debian` mit einer flachen 
 Struktur (alle Binärpakete landen im gleichen Unterverzeichnis) und
 Unterverzeichnisse werden nur für die beiden Architekturen 'amd64' und 'all'
-angelegt. Es erfolgt keine Benachrichtigung bei einem erfolgreichen Upload.
-Die Einstellungen gelten für alle Archive (Abschnitt `DEFAULT`), spezifische
+angelegt. Es erfolgt keine Benachrichtigung bei einem erfolgreichen Upload. 
+Die Einstellungen gelten für alle Archive (Abschnitt `[DEFAULT]`), spezifische
 Einstellungen pro Veröffentlichungsstatus bestehen nicht.
+
+Mit obigen Angaben ist ihr APT-Repository bereits benutzbar. APT und `aptitude`
+erwarten jedoch noch zusätzliche Informationen, um die Pakete in ihrem eigenen 
+Repository auch als vertrauenswürdig anzuerkennen. **Schritt 1** ist eine 
+`Release`-Datei. Dafür ergänzen Sie die folgende Zeile am Ende der obigen Datei 
+`.mini-dinstall.conf`:
+
+.Ergänzungen zu `.mini-dinstall.conf`
+----
+generate_release = 1
+----
+
+Laden Sie später ein Paket hoch oder rufen Sie `mini-dinstall` direkt auf,
+erzeugt es eine solche `Release`-Datei mit den Hashwerten der Pakete in ihrem
+Repository. Diese hat dann bspw. den folgenden Inhalt:
+
+.Inhalt der `Release`-Datei
+----
+# cat /var/www/debian/unstable/Release 
+Origin: root
+Label: root
+Suite: unstable
+Codename: unstable
+Date: Wed, 13 Nov 2019 17:02:23 UTC
+Architectures: all amd64
+MD5Sum:
+ d41d8cd98f00b204e9800998ecf8427e               0 Packages
+ f88f7e4006faa70eb958d8db16b863c3              33 Packages.gz
+ 4059d198768f9f8dc9372dc1c54bc3c3              14 Packages.bz2
+ d41d8cd98f00b204e9800998ecf8427e               0 Sources
+ e86c520b4bec9c320a71529fdf92275f              32 Sources.gz
+ 4059d198768f9f8dc9372dc1c54bc3c3              14 Sources.bz2
+SHA1:
+ da39a3ee5e6b4b0d3255bfef95601890afd80709               0 Packages
+ 91199c61d2cf161208659f6218378c86498df72e              33 Packages.gz
+ 64a543afbb5f4bf728636bdcbbe7a2ed0804adc2              14 Packages.bz2
+ da39a3ee5e6b4b0d3255bfef95601890afd80709               0 Sources
+ 17beadd3c12ddc3e8079627fc4a7f31f203c5705              32 Sources.gz
+ 64a543afbb5f4bf728636bdcbbe7a2ed0804adc2              14 Sources.bz2
+SHA256:
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855               0 Packages
+ adffd98c43936b6d4263f0ae73f49ca71b98675143f3bd76d62182dafd7f25dc              33 Packages.gz
+ d3dda84eb03b9738d118eb2be78e246106900493c0ae07819ad60815134a8058              14 Packages.bz2
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855               0 Sources
+ 2340b8ea571b7f6c0ed490857b3828d19334bf03693cb846114f82770b9facaf              32 Sources.gz
+ d3dda84eb03b9738d118eb2be78e246106900493c0ae07819ad60815134a8058              14 Sources.bz2
+----
 
 [NOTE]
 ====
@@ -126,6 +177,8 @@ Hochladen ausgeführt wird. Die Angabe von `mini-dinstall -b` versetzt
 Pakete in das Paketarchiv, sobald diese im Unterverzeichnis für die 
 hochgeladenen Pakete gelandet sind. 
 
+===== Paket in das Repository hochladen =====
+
 Jetzt laden Sie ihr Paket hoch. Das nachfolgende Beispiel nutzt das in 
 <<metapakete-bauen>> erzeugte Metapaket 'meta-mc'.
 
@@ -146,6 +199,16 @@ Pakete landen (`dput` macht nichts anderes).
 
 [[mini-dinstall-laufender-betrieb]]
 ==== Laufender Betrieb ====
+
+* APT-Repository zu ihren Paketquellen hinzufügen
+** neuer Eintrag in der `/etc/apt/sources.list`
+----
+# local repo
+deb file:/var/www/debian/ unstable/
+deb-src file:/var/www/debian/ unstable/
+----
+
+* `apt-get update`
 
 * Ergänzungen
 ** cron oder daemon
