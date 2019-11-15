@@ -282,6 +282,9 @@ Jetzt wurde das Paket erfolgreich gebaut -- Gratulation!
 [[metapakete-bauen-signieren]]
 === Die Komponenten des Pakets kryptographisch signieren ===
 
+// Stichworte für den Index
+(((debsign, -k)))
+(((Debianpaket signieren)))
 Das zuvor gebaute Paket können Sie uneingeschränkt benutzen (und direkt bei
 <<metapakete-bauen-benutzen>> weiterlesen). In diesem Abschnitt gehen wir 
 noch einen Schritt in Richtung Sicherheit und signieren die Komponenten des
@@ -325,6 +328,8 @@ Successfully signed buildinfo, changes files
 $
 ----
 
+// Stichworte für den Index
+(((gpg, --verify)))
 Zur Sicherheit prüfen Sie die Signatur mit Hilfe von `gpg` nach. In Anwendung
 ist der Schalter `--verify` gefolgt von der signierten Datei. Nachfolgende 
 Ausgabe zeigt, dass die Signatur korrekt ist, aber nicht garantiert werden kann,
@@ -343,13 +348,19 @@ Haupt-Fingerabdruck  = 35F8 DF9C 884E 36AB 9744  60AF CFA7 2978 D431 AC07
 $
 ----
 
+// Stichworte für den Index
+(((debsigs, --default-key)))
+(((debsigs, --sign)))
+(((debsigs, -k)))
 Abschließend signieren Sie noch das gesamte Paket mit Hilfe des Werkzeugs 
-`debsigs`. Nachfolgender Aufruf signiert das Paket 'meta-mc' mit dem Schlüssel
-`D431AC07`. Die Angabe `--sign=origin` ist die kryptographische Signatur der 
-Organisation, die das Paket bereitstellt. Erlaubte Alternativen sind `maint` für
-den Paketmaintainer und `archive` für das Archiv, welches das Paket bereitstellt.
+`debsigs`. Nachfolgender Aufruf signiert das Paket 'meta-mc' über den Schalter 
+`-k` (Langform `--default-key`) mit dem Schlüssel `D431AC07`. Die Angabe von 
+`--sign` ist die kryptographische Signatur der Organisation, die das Paket 
+bereitstellt. Erlaubte Werte sind `origin` für den Originalautor, `maint` für 
+den Paketmaintainer und `archive` für den Namen des Archivs, welches das Paket 
+bereitstellt.
 
-.Debianpaket signieren
+.Das Debianpaket signieren
 ----
 $ debsigs --sign=origin -k D431AC07 meta-mc_1.0_all.deb 
 gpg: "D431AC07" wird als voreingestellter geheimer Signaturschlüssel benutzt
@@ -369,6 +380,9 @@ Sie mehrere Möglichkeiten.
 
 ==== Mittels `dpkg` und APT ==== 
 
+// Stichworte für den Index
+(((apt-get, install -f)))
+(((dpkg, -i)))
 Zuerst rufen Sie `dpkg -i paket.deb` auf, danach `apt-get install -f`. Ersteres 
 veranlasst `dpkg`, ihr Paket zu installieren. 
 
@@ -490,6 +504,7 @@ meta-mc (1.0) wird eingerichtet ...
 ==== Mittels `apt` ==== 
 
 // Stichworte für den Index
+(((apt, install)))
 (((apt, lokales Paket installieren)))
 (((Debianpaket, apt)))
 Das Werkzeug `apt` steht `gdebi` in nichts nach -- es löst ebenfalls die 
