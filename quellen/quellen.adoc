@@ -344,6 +344,8 @@
 
 - [[[Debian-Paket-dpkg-repack]]] Debian-Paket 'dpkg-repack', https://packages.debian.org/de/stable/dpkg-repack
 
+- [[[Debian-Paket-dpkg-sig]]] Debian-Paket 'dpkg-sig', https://packages.debian.org/de/stable/dpkg-sig
+
 - [[[Debian-Paket-dpkg-www]]] Debian-Paket 'dpkg-www', https://packages.debian.org/de/stable/dpkg-www
 
 - [[[Debian-Paket-dput]]] Debian-Paket 'dput', https://packages.debian.org/de/stable/dput

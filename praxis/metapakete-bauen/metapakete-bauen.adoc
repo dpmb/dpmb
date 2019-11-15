@@ -351,12 +351,15 @@ $
 [[metapakete-bauen-paket-signieren]]
 === Das Debianpaket kryptographisch signieren ===
 
-Für diesen abschließenden Schritt stehen zwei verschiedene Werkzeuge bereit,
-deren Ergebnisse leider nicht zueinander kompatibel sind. Das erste Werkzeug
-heißt `dpkg-sig` (Debianpaket 'dpkg-sig' <<Debian-Paket-dpkg-sig>>) und das 
-zweite `debsigs` (Debianpaket 'debsigs' <<Debian-Paket-debsigs>>).
+Für diesen abschließenden Schritt stehen zwei verschiedene Werkzeuge bereit --
+`dpkg-sig` (Debianpaket 'dpkg-sig' <<Debian-Paket-dpkg-sig>>) und `debsigs` 
+(Debianpaket 'debsigs' <<Debian-Paket-debsigs>>). Leider sind deren Ergebnisse 
+nicht zueinander kompatibel.
 
 ==== `dpkg-sig` verwenden ====
+
+// Stichworte für den Index
+(((Debianpaket, dpkg-sig)))
 
 ==== `debsigs` benutzen ====
 
@@ -364,13 +367,12 @@ zweite `debsigs` (Debianpaket 'debsigs' <<Debian-Paket-debsigs>>).
 (((debsigs, --default-key)))
 (((debsigs, --sign)))
 (((debsigs, -k)))
-Abschließend signieren Sie noch das gesamte Paket mit Hilfe des Werkzeugs 
-`debsigs`. Nachfolgender Aufruf signiert das Paket 'meta-mc' über den Schalter 
-`-k` (Langform `--default-key`) mit dem Schlüssel `D431AC07`. Die Angabe von 
-`--sign` ist die kryptographische Signatur der Organisation, die das Paket 
-bereitstellt. Erlaubte Werte sind `origin` für den Originalautor, `maint` für 
-den Paketmaintainer und `archive` für den Namen des Archivs, welches das Paket 
-bereitstellt.
+Die Alternative zu `dpkg-sig` ist `debsigs`. Nachfolgender Aufruf signiert das 
+Paket 'meta-mc' über den Schalter `-k` (Langform `--default-key`) mit dem 
+Schlüssel `D431AC07`. Die Angabe von `--sign` ist die kryptographische Signatur 
+der Organisation, die das Paket bereitstellt. Erlaubte Werte sind `origin` 
+für den Originalautor, `maint` für den Paketmaintainer und `archive` für den 
+Namen des Archivs, welches das Paket bereitstellt.
 
 .Das Debianpaket signieren
 ----
@@ -378,6 +380,10 @@ $ debsigs --sign=origin -k D431AC07 meta-mc_1.0_all.deb
 gpg: "D431AC07" wird als voreingestellter geheimer Signaturschlüssel benutzt
 $
 ----
+
+// ToDo: Überprüfen der Signatur mit debsigs -t
+// Stichworte für den Index
+(((debsigs, -t)))
 
 Nun ist auch der Sicherheitscheck über die Bühne und das Paket kann zum Einsatz 
 kommen. Auf gehts!
