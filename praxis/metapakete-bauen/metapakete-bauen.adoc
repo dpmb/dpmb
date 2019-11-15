@@ -360,6 +360,57 @@ nicht zueinander kompatibel.
 
 // Stichworte für den Index
 (((Debianpaket, dpkg-sig)))
+(((dpkg-sig, -k)))
+(((dpkg-sig, --sign)))
+(((dpkg-sig, --verify)))
+(((gpg, --verify)))
+
+Rufen Sie `dpkg-sig` auf, erzeugt es eine Debian-`control`-Datei mit einer 
+Reihe nützlicher Einträge:
+
+* der Version von `dpkg-sig`, die die Signatur erzeugt hat
+* die GnuPG-Information über denjenigen, in dessen Namen die Signierung 
+vorgenommen wurde
+* dessen Rolle
+* einen Abschnitt mit Checksummen, Dateigrößen und Dateinamen der Binär-,
+Kontroll- und Datendateien im Debianpaket.
+
+Der Name der erzeugten Datei hängt von der ausgewählten Rolle ab. Falls nicht
+weiter spezifiziert, ist das derjenige, der das Paket gebaut hat. Dann heißt 
+die neue Datei `_gpgbuilder`. Die Datei wir dem Debianpaket hinzugefügt, das 
+Paket wird mit GnuPG signiert und die Signatur als Klartext ergänzt. 
+
+.Das Debianpaket signieren
+----
+$ dpkg-sig -k D431AC07 --sign builder meta-mc_1.0_all.deb 
+Processing meta-mc_1.0_all.deb...
+gpg: "D431AC07" wird als voreingestellter geheimer Signaturschlüssel benutzt
+Signed deb meta-mc_1.0_all.deb
+$
+----
+
+Somit können Sie jetzt über mehrere Ebenen hinweg die Echtheit der Daten prüfen
+-- entweder mittels `gpg --verify`, oder mittels `dpkg-sig --verify`.
+
+.Prüfen der Signatur mittels `gpg`
+----
+$ gpg --verify meta-mc_1.0_all.deb 
+gpg: Signatur vom Fr 15 Nov 2019 14:10:36 CET
+gpg:                mittels RSA-Schlüssel 35F8DF9C884E36AB974460AFCFA72978D431AC07
+gpg: Korrekte Signatur von "Frank Hofmann (Hofmann EDV) <frank.hofmann@efho.de>" [unbekannt]
+gpg: WARNUNG: Dieser Schlüssel trägt keine vertrauenswürdige Signatur!
+gpg:          Es gibt keinen Hinweis, daß die Signatur wirklich dem vorgeblichen Besitzer gehört.
+Haupt-Fingerabdruck  = 35F8 DF9C 884E 36AB 9744  60AF CFA7 2978 D431 AC07
+$
+----
+
+.Prüfen der Signatur mittels `dpkg-sig`
+----
+$ dpkg-sig --verify meta-mc_1.0_all.deb 
+Processing meta-mc_1.0_all.deb...
+GOODSIG _gpgbuilder 35F8DF9C884E36AB974460AFCFA72978D431AC07 1573823436
+$
+----
 
 ==== `debsigs` benutzen ====
 
