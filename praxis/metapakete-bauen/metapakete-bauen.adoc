@@ -285,18 +285,18 @@ Jetzt wurde das Paket erfolgreich gebaut -- Gratulation!
 // Stichworte für den Index
 (((debsign, -k)))
 (((Debianpaket signieren)))
-Das zuvor gebaute Paket können Sie uneingeschränkt benutzen (und direkt bei
-<<metapakete-bauen-benutzen>> weiterlesen). In diesem Abschnitt gehen wir 
-noch einen Schritt in Richtung Sicherheit und signieren die Komponenten des
-Pakets zusätzlich kryptographisch. Das garantiert jedem Nutzer die Echtheit 
-des Pakets -- sprich: es stammt auch tatsächlich von Ihnen. Sie signieren nun 
-noch den Quellcode, die `.changes`-Datei sowie das fertige Paket mit ihrem 
-GnuPG-Schlüssel. In Anwendung kommen die drei Werkzeuge `debsign` aus dem Paket
-'devscripts' <<Debian-Paket-devscripts>>, `gpg` aus dem Paket 
-<<Debian-Paket-gpg>> und `debsigs` aus dem Paket <<Debian-Paket-devsigs>>.
+Das zuvor gebaute Paket können Sie uneingeschränkt benutzen (und auch direkt 
+bei <<metapakete-bauen-benutzen>> weiterlesen). In den nun folgenden 
+Abschnitten gehen wir noch einen Schritt weiter in Richtung Sicherheit und 
+versehen sowohl die einzelnen Komponenten des Pakets als auch das gesamte 
+Paket selbst mit einer kryptographischen Signatur. Das garantiert jedem Nutzer 
+die Echtheit des Pakets -- sprich: der Inhalt und das Paket selbst stammt aus 
+einer verlässlichen Quelle. 
 
-Zunächst signieren Sie das Quellpaket und die Änderungen (`.changes`-Datei) 
-mit Hilfe des Werkzeugs `debsign` wie folgt:
+Zunächst signieren Sie den Quellcode und die Änderungen (`.changes`-Datei) mit 
+ihrem GnuPG-Schlüssel. In Anwendung kommen dafür die beiden Werkzeuge `debsign` 
+aus dem Paket 'devscripts' <<Debian-Paket-devscripts>> und `gpg` aus dem Paket 
+<<Debian-Paket-gpg>>.
 
 .Signieren des Quellpakets
 ----
@@ -347,6 +347,18 @@ gpg:          Es gibt keinen Hinweis, daß die Signatur wirklich dem vorgebliche
 Haupt-Fingerabdruck  = 35F8 DF9C 884E 36AB 9744  60AF CFA7 2978 D431 AC07
 $
 ----
+
+[[metapakete-bauen-paket-signieren]]
+=== Das Debianpaket kryptographisch signieren ===
+
+Für diesen abschließenden Schritt stehen zwei verschiedene Werkzeuge bereit,
+deren Ergebnisse leider nicht zueinander kompatibel sind. Das erste Werkzeug
+heißt `dpkg-sig` (Debianpaket 'dpkg-sig' <<Debian-Paket-dpkg-sig>>) und das 
+zweite `debsigs` (Debianpaket 'debsigs' <<Debian-Paket-debsigs>>).
+
+==== `dpkg-sig` verwenden ====
+
+==== `debsigs` benutzen ====
 
 // Stichworte für den Index
 (((debsigs, --default-key)))

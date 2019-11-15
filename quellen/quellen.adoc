@@ -314,6 +314,8 @@
 
 - [[[Debian-Paket-debpartial-mirror]]] Debian-Paket 'debpartial-mirror',  https://packages.debian.org/de/stable/debpartial-mirror
 
+- [[[Debian-Paket-debsigs]]] Debian-Paket 'debsigs', https://packages.debian.org/de/stable/debsigs
+
 - [[[Debian-Paket-debsums]]] Debian-Paket 'debsums', https://packages.debian.org/de/stable/debsums
 
 - [[[Debian-Paket-debtags]]] Debian-Paket 'debtags', https://packages.debian.org/de/stable/debtags
@@ -321,8 +323,6 @@
 - [[[Debian-Paket-debtree]]] Debian-Paket 'debtree', https://packages.debian.org/de/stable/debtree
 
 - [[[Debian-Paket-devscripts]]] Debian-Paket 'devscripts', https://packages.debian.org/de/stable/devscripts
-
-- [[[Debian-Paket-devsigs]]] Debian-Paket 'devsigs', https://packages.debian.org/de/stable/devsigs
 
 - [[[Debian-Paket-dgit]]] Debian-Paket 'dgit', https://packages.debian.org/de/stable/dgit
 
