@@ -219,7 +219,7 @@ Pakete mit `aptitude` anzeigen'' in
 (((apt-mark, showhold)))
 (((apt-mark, showinstall)))
 (((apt-mark, showmanual)))
-(((apt-mark, showpurge))
+(((apt-mark, showpurge)))
 (((apt-mark, showremove)))
 (((Paketmarkierungen, anzeigen)))
 (((Paketmarkierungen, automatic)))
@@ -244,12 +244,11 @@ gesetzt ist. Es kennt dazu die folgenden sechs Unterkommandos
 
 `showpurge`:: alle Pakete, die inklusive der Konfiguration entfernt werden
 
-Nachfolgend sehen Sie beispielhaft nur das Ergebnis des Aufrufs für die
-manuell installierten Pakete. Auf automatisch installierte Pakete gehen
-wir genauer in <<automatisch-installierte-pakete-anzeigen>> ein. Dem
-Umgang mit dem _hold_-Flag in der Praxis ist der Abschnitt ``Ausgewählte
-Pakete nicht aktualisieren'' in
-<<ausgewaehlte-pakete-nicht-aktualisieren>> gewidmet.
+Nachfolgend sehen Sie beispielhaft nur das Ergebnis des Aufrufs für die 
+manuell installierten Pakete. Auf automatisch installierte Pakete gehen wir 
+genauer in <<automatisch-installierte-pakete-anzeigen>> ein. Dem Umgang mit 
+dem _hold_-Flag in der Praxis ist der Abschnitt ``Ausgewählte Pakete nicht 
+aktualisieren'' in <<ausgewaehlte-pakete-nicht-aktualisieren>> gewidmet.
 
 .Auflistung aller manuell installierten Pakete mittels `apt-mark`
 ----
