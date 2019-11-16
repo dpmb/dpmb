@@ -451,6 +451,7 @@ Sie mehrere Möglichkeiten.
 
 // Stichworte für den Index
 (((apt-get, install -f)))
+(((apt-get, install --fix-broken)))
 (((dpkg, -i)))
 Zuerst rufen Sie `dpkg -i paket.deb` auf, danach `apt-get install -f`. Ersteres 
 veranlasst `dpkg`, ihr Paket zu installieren. 
@@ -488,9 +489,10 @@ iU  meta-mc                               1.0                               all 
 
 // Stichworte für den Index
 (((apt-get, install -f)))
+(((apt-get, install --fix-broken)))
 
 Nun rufen Sie `apt-get install -f` auf. APT behebt nun die fehlenden 
-Abhängigkeiten und konfiguriert `meta-mc` wie folgt: 
+Abhängigkeiten und konfiguriert das Paket `meta-mc` wie folgt: 
 
 .Auflösen der Paketabhängigkeiten mit `apt-get`
 ----
@@ -579,7 +581,7 @@ meta-mc (1.0) wird eingerichtet ...
 Das Werkzeug `apt` steht `gdebi` in nichts nach -- es löst ebenfalls die 
 Paketabhängigkeiten sauber auf. `apt` kann ebenfalls mit lokalen Paketen
 umgehen, sofern im Aufruf ein Verzeichnistrenner enthalten ist. Liegt das 
-Paket im lokalen Verzeichnis, sieht der Aufruf wie nachfolgend aus.
+Paket im lokalen Verzeichnis, sieht der Aufruf wie nachfolgend gezeigt aus.
 
 .`apt` bei der Installation des Metapakets 'meta-mc'
 image::praxis/metapakete-bauen/apt.png[id="fig.metapakete-apt", width="50%"]
