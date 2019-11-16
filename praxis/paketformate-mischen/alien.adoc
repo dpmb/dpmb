@@ -261,6 +261,7 @@ Umwandlung eines Paketes an
 
 // Stichworte für den Index
 (((apt-get, install -f)))
+(((apt-get, install --fix-broken)))
 (((dpkg, -i)))
 (((dpkg, --install)))
 Haben Sie das Paket erfolgreich in das `deb`-Format umgewandelt, spielen
