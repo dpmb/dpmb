@@ -29,7 +29,7 @@ Plattform portiert.
 
 Helfen Ihnen an dieser Stelle 'Debian Backports' (siehe
 <<debian-backports>>) oder das Mischen von Veröffentlichungen (siehe
-<<veroeffentlichungen-mischen>> nicht weiter, stellt die Verwendung
+<<veroeffentlichungen-mischen>>) nicht weiter, stellt die Verwendung
 eines Pakets im Fremdformat eine Variante zur Lösung dar. Nachfolgend
 gehen wir darauf ein, wie Ihnen dabei das Programm `alien` helfen kann
 (siehe <<fremdformate-mit-alien-hinzufuegen>>).
