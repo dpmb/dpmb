@@ -108,25 +108,67 @@ diese über die Paketverwaltung nach (siehe ``Pakete installieren'' in
 (((alien, --to-slp)))
 (((alien, --to-tgz)))
 
-* Umwandlung eines rpm in ein deb mittels expliziter Angabe des
-Paketformats über den Schalter `-d` (Langform `--to-deb`)
+Die Umwandlung eines `rpm`-Pakets in ein `deb`-Paket erfolgt mittels
+`alien` und der Angabe des Paketformats über den Schalter `-d` (Langform
+`--to-deb`). Nachfolgend demonstrieren wir Ihnen das anhand des Pakets
+'mc' für den Midnight Commander:
 
+.Umwandlung eines `rpm`-Pakets in ein `deb`-Paket
 ----
-alien --to-deb paket.rpm
+# alien -d mc-4.8.22-1.mga7.x86_64.rpm
+mc_4.8.22-2_amd64.deb generated
+#
 ----
 
-* `--to-deb` ist der Standardfall, d.h. kann man im Aufruf weglassen
+Der Schalter `-d` ist der Standardfall und kann im Aufruf weggelassen
+werden. `alien` unterstützt noch die folgenden, weiteren Schalter zur 
+Umwandlung in andere Formate:
 
-* Alternative Formate:
-** rpm: `-r` (Langform `--to-rpm`)
-** tgz: `-t` (Langform `--to-tgz`)
-** slp: `--to-slp` (keine Kurzform)
-** pkg: (Open)Solaris-Pakete mittels `-p` (Langform `--to-pkg`)
+`-r` (Langform `--to-rpm`) :: Umwandlung in ein RPM
 
-Am Ende überprüfen Sie das Paket, um sicherzugehen, ob es auch
-tatsächlich zu ihrer bestehenden Installation passt.
+`-t` (Langform `--to-tgz`) :: Umwandlung in ein mit `gzip` komprimiertes
+`tar`-Archiv (`tar.gz`)
 
-* wie macht man diese Überprüfung?
+`--to-slp` (keine Kurzform) :: Umwandlung nach Stampede
+
+`-p` (Langform `--to-pkg`) :: Umwandlung zu (Open)Solaris-Paketen (pkg)
+
+// Stichworte für den Index
+(((dpkg, -c)))
+(((dpkg, --contents)))
+(((dpkg, --info)))
+Am Ende überprüfen Sie das Paket, um sicherzugehen, dass es auch
+tatsächlich zu ihrer bestehenden Installation passt. Dabei hilft Ihnen
+der Schalter `-c` (Langform `--contents`) von `dpkg`, um zu erkennen, an
+welche Stellen die Komponenten des neuen Pakets installiert werden. Mit
+`--info` sehen Sie, welche Paketabhängigkeiten bestehen und erfüllt sein
+müssen. 
+
+.Informationen zu einem umgewandelten Paket
+----
+# dpkg --info mc_4.8.22-2_amd64.deb 
+ neues Debian-Paket, Version 2.0.
+ Größe 1722852 Byte: control-Archiv= 9580 Byte.
+     231 Byte,    11 Zeilen      conffiles            
+     662 Byte,    15 Zeilen      control              
+   21102 Byte,   317 Zeilen      md5sums              
+ Package: mc
+ Version: 4.8.22-2
+ Architecture: amd64
+ Maintainer: Frank Hofmann <frank@fehmarn.efho.local>
+ Installed-Size: 7436
+ Depends: libc6 (>= 2.15), libglib2.0-0 (>= 2.35.9), libgpm2 (>= 1.20.4), libslang2 (>= 2.2.4), libssh2-1 (>= 1.2.8)
+ Section: alien
+ Priority: extra
+ Description: A user-friendly file manager and visual shell
+  Midnight Commander is a visual shell much like a file manager, only with way
+  more features.  It is text mode, but also includes mouse support if you are
+  running GPM.  Its coolest feature is the ability to ftp, view tar, zip
+  files, and poke into RPMs for specific files.
+  .
+  (Converted from a rpm package by alien version 8.92.)
+#
+----
 
 ===== Besonderheiten bei der Umwandlung =====
 
@@ -168,9 +210,9 @@ alien -i paket.rpm
 ==== Umgewandelte Pakete einspielen ====
 
 // Stichworte für den Index
+(((apt-get, install -f)))
 (((dpkg, -i)))
 (((dpkg, --install)))
-
 Haben Sie das Paket erfolgreich in das `deb`-Format umgewandelt, spielen
 Sie dieses mittels `dpkg -i` 'paketname.deb' ein. APT und `aptitude`
 bekommen von der Aktion erstmal nichts mit, stören sich aber nicht
@@ -178,9 +220,11 @@ daran, dass das Paket eingespielt ist.
 
 Dabei können mehrere Ergebnisse eintreten -- alles geht glatt und das Paket
 funktioniert, alles geht glatt und das Paket funktioniert nicht, oder
-das Einspielen geht schief. Da bleibt nur manuelle Nacharbeitung:
+das Einspielen geht schief. Da bleibt nur manuelle Nacharbeitung.
+Abhängigkeitsprobleme beheben Sie mit dem Aufruf von `apt-get install
+-f`. Mit dem Schritt löst APT alle bestehenden Abhängigkeiten auf.
 
-* was ist da zu tun?
-* woran kann das hängen? (Ursachenforschung)
+// * was ist da zu tun?
+// * woran kann das hängen? (Ursachenforschung)
 
 // Datei (Ende): ./praxis/paketformate-mischen/alien.adoc
