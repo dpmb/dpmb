@@ -95,6 +95,7 @@ Pakete könnten noch fehlen. Falls letzteres zutrifft, installieren Sie
 diese über die Paketverwaltung nach (siehe ``Pakete installieren'' in
 <<pakete-installieren>>).
 
+[[fremdformate-mit-alien-hinzufuegen-durchfuehrung]]
 ===== Durchführung =====
 
 // Stichworte für den Index
@@ -174,39 +175,88 @@ müssen.
 
 // Stichworte für den Index
 (((alien, -c)))
+(((alien, FHS)))
 (((alien, -g)))
+(((alien, -h)))
 (((alien, -k)))
+(((alien, -s)))
+(((alien, -T)))
+(((alien, -v)))
+(((alien, -V)))
 (((alien, --anypatch)))
+(((alien, --bump)))
+(((alien, --description)))
+(((alien, --fixperms)))
 (((alien, --generate)))
+(((alien, --help)))
 (((alien, --keep-version)))
 (((alien, --nopatch)))
 (((alien, --patch)))
 (((alien, --scripts)))
+(((alien, --single)))
+(((alien, --target)))
+(((alien, --test)))
+(((alien, --version)))
+(((alien, --verbose)))
 (((alien, --veryverbose)))
 
 `deb`-basierte Systeme haben ihre Eigenheiten. Die folgenden Schalter
-von `alien` helfen Ihnen bei der Paketumwandlung:
+von `alien` helfen Ihnen, auch mit Sonderfällen bei der 
+Paketumwandlung klarzukommen:
 
-* `--patch=Datei`, `--anypatch` und `--nopatch` zum automatischen Anpassen von Startup-Skripten und Pfaden gemäß dem File Hierarchy Standard (FHS)
-* `-c` (Langform `--scripts`) um bestehende Pre- und Post-Install- sowie Remove-Skripte zu erhalten
-* `-k` (Langform `--keep-version`), um die Versionsnummer beizubehalten -- normalerweise zählt alien diese um eins hoch
-* `-g` (Langform `--generate`) und `--veryverbose` um die Fehlersuche zu erweitern
-* `-g` (Langform `--generate`), um das Paket vor der Umwandlung zu bearbeiten
-** erzeugt ein Verzeichnis mit dem Paketinhalt
-** ermöglich Ihnen die Ergänzung und Korrektur des Paketinhalts
+`--bump=`'Wert' :: ähnlich zu `--version`. Erhöhe die Versionsnummer
+nicht um 1, sondern um den angegebenen Wert.
 
-==== Pakete umwandeln und einspielen ====
+`--description=`'Beschreibung' :: Füge dem neuen Paket die genannte
+Beschreibung hinzu. Das ist insbesondere bei `tar.gz`-Dateien sinnvoll,
+da diese normalerweise noch keine Paketbeschreibung beinhalten.
 
-// Stichworte für den Index
-(((alien, -i)))
-(((alien, --install)))
+`--fixperms` :: bringe alle Angaben zu den Berechtigungen und den
+Eigentümern in Ordnung
 
-* Paket von rpm nach deb umwandeln und gleich einspielen (Kurzform)
+`--patch=`'Dateiname', `--anypatch` und `--nopatch` :: automatisches
+Anpassen von Startup-Skripten und Pfaden gemäß dem File Hierarchy
+Standard (FHS)
 
-----
-alien -i paket.rpm
-----
+`--target=`'Architektur' :: setze die Plattform für das Paket auf den
+angegebenen Wert. siehe <<debian-architekturen>> zu weiteren Angaben zur
+Plattform bzw. Architektur eines Paketes
 
+`--version=`'Versionsnummer' :: Füge dem neuen Paket die angegebene
+Versionsnummer hinzu. Das ist insbesondere bei `tar.gz`-Dateien
+sinnvoll, da diese normalerweise noch keine Versionsnummer beinhalten.
+
+`--veryverbose` :: noch ausführlicher als `-v` bzw. `--verbose`
+
+`-c` (Langform `--scripts`) :: bestehende Pre- und Post-Install- sowie
+Remove-Skripte eines Paketes erhalten
+
+`-g` (Langform `--generate`) und `--veryverbose` :: erweitern der Fehlersuche
+
+`-g` (Langform `--generate`) :: das Paket vor der Umwandlung noch
+bearbeiten. Der Schalter erzeugt ein Verzeichnis mit dem Paketinhalt und
+ermöglicht Ihnen damit die Ergänzung und Korrektur des Paketinhalts,
+bevor daraus ein neues Paket gebaut wird.
+
+`-k` (Langform `--keep-version`) :: die Versionsnummer des Paketes
+beibehalten. Normalerweise zählt `alien` diese bei der Umwandlung um
+eins hoch
+
+`-s` (Langform `--single`) :: wie `-g`, aber ohne das Verzeichnis
+`packagename.orig` zu erstellen. Der Schalter ist nützlich, wenn Sie ein
+Debianpaket erstellen und zu wenig Speicherplatz zur Verfügung haben.
+
+`-T` (Langform `--test`) :: teste das erzeugte Debianpaket mit `lintian`
+<<Debian-Paket-lintian>> (siehe ``Qualitätskontrolle'' in
+<<qualitaetskontrolle>>).
+
+`-v` (Langform `--verbose`) :: aktiviere die ausführliche Ausgabe.
+`alien` gibt damit Informationen zu jedem einzelnen Schritt bei der
+Umwandlung eines Paketes an
+
+`-V` (Langform `--version`) :: Ausgabe der Version von `alien`
+
+[[fremdformate-mit-alien-hinzufuegen-einspielen]]
 ==== Umgewandelte Pakete einspielen ====
 
 // Stichworte für den Index
@@ -220,11 +270,39 @@ daran, dass das Paket eingespielt ist.
 
 Dabei können mehrere Ergebnisse eintreten -- alles geht glatt und das Paket
 funktioniert, alles geht glatt und das Paket funktioniert nicht, oder
-das Einspielen geht schief. Da bleibt nur manuelle Nacharbeitung.
-Abhängigkeitsprobleme beheben Sie mit dem Aufruf von `apt-get install
--f`. Mit dem Schritt löst APT alle bestehenden Abhängigkeiten auf.
+das Einspielen geht schief. Da bleibt nur manuelle Nacharbeitung. Dabei
+auftretende Abhängigkeitsprobleme beheben Sie mit dem Aufruf von
+`apt-get install -f`. Mit dem Schritt löst APT alle bestehenden
+Abhängigkeiten auf.
 
 // * was ist da zu tun?
 // * woran kann das hängen? (Ursachenforschung)
+
+==== Pakete umwandeln und einspielen ====
+
+// Stichworte für den Index
+(((alien, -i)))
+(((alien, --install)))
+
+In den obigen Schritten in
+<<fremdformate-mit-alien-hinzufuegen-durchfuehrung>> und
+<<fremdformate-mit-alien-hinzufuegen-einspielen>> haben Sie zuerst ein
+Paket umgewandelt und danach installiert. `alien` kann jedoch auch beide
+Schritte durchführen -- ein Paket von RPM nach `deb` umwandeln und
+danach gleich auf ihrem System einspielen. Dazu benutzen Sie den
+Schalter `-i` (Langform `--install`).
+
+.Ein Paket mit `alien` umwandeln und einspielen
+----
+# alien -i paket.rpm
+...
+#
+----
+
+[NOTE]
+====
+Nach der Installation des Paketes löscht `alien` die lokal vorliegende
+Paketdatei.
+====
 
 // Datei (Ende): ./praxis/paketformate-mischen/alien.adoc
