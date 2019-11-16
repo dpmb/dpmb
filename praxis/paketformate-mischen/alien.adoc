@@ -13,7 +13,7 @@
 (((Fremdformate hinzufügen)))
 Den Begriff 'alien' übersetzen Sie am ehesten mit 'fremd', 'Fremdling'
 oder 'Ausländer'. So heißt auch das gleichnamige Debianpaket
-<<Debian-Paket-alien>>, welches Ihnen hilft, eine Software, welche nicht
+<<Debian-Paket-alien>>. Es hilft Ihnen, eine Software, welche nicht
 als `deb`-Paket vorliegt, entsprechend umzuwandeln und für Ihre
 Debian-Installation vorzubereiten.
 
@@ -22,18 +22,20 @@ Wie bereits in ``Gestaltwandler. Programmpakete richtig konvertieren''
 Umwandlung des Pakets nach Möglichkeit die folgenden Bestandteile
 erhalten bleiben:
 
-* die Paketbeschreibungen. Damit erkennen Sie später über die
+die Paketbeschreibungen :: damit erkennen Sie später über die
 Paketverwaltung, um was für eine Software es sich handelt, wer der Autor
 ist oder wo sich die dazugehörige Homepage des Projekts befindet.
 
-* die Informationsdateien. Diese beschreiben, wie Sie das Paket wieder
+die Informationsdateien :: diese beschreiben, wie Sie das Paket wieder
 entfernen oder aktualisieren. Häufig befinden sich auch Hinweise dabei,
 die benennen, was dabei gegebenenfalls zu beachten ist.
 
-* die Informationen über Abhängigkeiten zu anderer Software.
+Paketabhängigkeiten :: die Informationen über Abhängigkeiten zu anderer 
+Software.
 
-* die Angabe der Prozessorarchitektur im Dateinamen, wie etwa 'amd64'
-bei `deb`-Paketen und 'x86_64' bei `rpm`-Archiven.
+Architektur oder Plattform :: die Angabe der Prozessorarchitektur im 
+Dateinamen, wie etwa 'amd64' bei `deb`-Paketen und 'x86_64' bei 
+`rpm`-Archiven.
 
 Bei der Umwandlung des Paketformats bestehen mehrere Fallstricke. Diese
 führen regelmäßig dazu, dass die gewünschte Software nicht wie erhofft
@@ -43,7 +45,7 @@ funktioniert:
 bspw. veraltet) oder sind nicht auffindbar (sind bspw. nicht installiert
 oder haben einen anderen Paketnamen)
 * die angegebenen Pfade im Originalpaket stimmen nicht mit Ihrer lokalen
-Verzeichnisstruktur überein
+Verzeichnisstruktur oder der von Debian genutzten Struktur überein
 * der Binärcode passt nicht zu Ihrer genutzten Plattform und Architektur
 * das Format der Konfiguration sorgt für Ärger, bspw. die verfügbaren
 Optionen und Schalter
@@ -52,7 +54,7 @@ Optionen und Schalter
 Verwenden Sie daher möglichst die Version der Software, die auch zu
 Ihrer Distribution und Architektur passt. Diese lässt sich i.d.R. am
 einfachsten in Ihren Softwarebestand integrieren. Weitere Informationen
-dazu finden auf der Projektwebseite von `alien` <<alien>>.
+dazu finden auf der Projektwebseite von 'alien' <<alien>>.
 
 ==== Pakete umwandeln ====
 
@@ -80,11 +82,11 @@ benötigen Sie:
 die Konvertierung von `rpm`-Paketen nach `deb` (<<Debian-Paket-rpm>> und
 <<Debian-Paket-yum>>)
 
-* die Werkzeuge `dpkg`, `dpkg-dev` und `debhelper` 
-(<<Debian-Paket-dpkg>>, <<Debian-Paket-dpkg-dev>>,
-<<Debian-Paket-debhelper>>) zur Erzeugung von Debianpaketen
+* die Werkzeuge `dpkg`, `dpkg-dev` und `debhelper` aus den Paketen 
+<<Debian-Paket-dpkg>>, <<Debian-Paket-dpkg-dev>> und 
+<<Debian-Paket-debhelper>> zur Erzeugung von Debianpaketen
 
-* der GNU-C-Compiler `gcc` und `make` (<<Debian-Paket-gcc>> und
+* den GNU-C-Compiler `gcc` und `make` (<<Debian-Paket-gcc>> und
 <<Debian-Paket-make>>), sofern Software aus dem Quellcode zu übersetzen ist
 
 Die beiden Pakete `perl` und `dpkg` gehören zu den essentiellen Paketen

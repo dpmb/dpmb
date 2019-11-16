@@ -10,8 +10,8 @@ Debian GNU/Linux und seine Derivate setzen auf das `deb`-Format auf.
 Eine Vielzahl Pakete stehen in diesem Format bereit und erlauben die
 Zusammenstellung und den Betrieb stabiler Systeme. Mitunter treten
 Situationen auf, die die Einbindung weiterer Software erfordern, die in
-einem anderen Paketformat vorliegt, bspw. `rpm`. Die Gründe dafür sind
-vielfältig:
+einem anderen Paketformat vorliegt, bspw. `tar.gz` oder `rpm`. Die 
+Gründe dafür sind vielfältig:
 
 * Die Software wurde nur zusammengestellt und liegt bislang nur als
 `tar.gz`-Archiv vor.
@@ -23,7 +23,7 @@ neuere Features werden benötigt. Eine neuere Variante ist jedoch in
 einem anderen Paketformat erhältlich.
 * Das gewünschte Paket oder die benötigte Version wurde noch nicht in
 die stabile Veröffentlichung aufgenommen. Das Paket ist noch zu neu und
-liegt ``in Quarantäne''. 
+liegt daher ``in Quarantäne''. 
 * Die Software bzw. das Debianpaket wurde noch nicht für ihre gewünschte
 Plattform portiert.
 
