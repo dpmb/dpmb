@@ -30,10 +30,10 @@ Pakete sowie das Anzeigen von Paketabhängigkeiten.
 
 Diese Zusammenstellung basiert auf umfangreichen Tests und Recherchen,
 bspw. mit Fedora 23, CentOS 6 und 7 sowie Ubuntu 15.10 _Wily Werewolf_,
-Debian 8 _Jessie_ und Debian 9 _Stretch_. Die Verfügbarkeit der
-Werkzeuge und deren einzelne Schalter variiert recht stark <<RPM-Salve>>
-<<RPM-Gite>> <<RPM-Canepa>> <<YUM-Salve>> <<dpkg-Kumar>> <<apt-Salve>>
-<<DNF-Dokumentation>>.
+Debian 8 _Jessie_, Debian 9 _Stretch_und Debian 10 _Buster_. Die
+Verfügbarkeit der genannten Werkzeuge und deren einzelne Schalter
+variiert recht stark <<RPM-Salve>> <<RPM-Gite>> <<RPM-Canepa>>
+<<YUM-Salve>> <<dpkg-Kumar>> <<apt-Salve>> <<DNF-Dokumentation>>.
 
 === Paket installieren ===
 
