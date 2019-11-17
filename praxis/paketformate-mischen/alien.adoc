@@ -163,7 +163,7 @@ drwxr-xr-x root/root         0 2019-11-16 12:11 ./etc/mc/
 #
 ----
 
-Mit einer Kombination aus `dpkg --info `'Pakename' und `grep Depends` sehen 
+Mit einer Kombination aus `dpkg --info ` 'Pakename' und `grep Depends` sehen 
 Sie, welche Paketabhängigkeiten bestehen und erfüllt sein müssen.
 
 .Abhängigkeiten von einem umgewandelten Paket
