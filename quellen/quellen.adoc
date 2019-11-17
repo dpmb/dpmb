@@ -762,6 +762,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[openqrm]]] OpenQRM, https://openqrm-enterprise.com/
 
+- [[[OpenSolaris]]] Open Solaris, Wikipedia, https://de.wikipedia.org/wiki/OpenSolaris
+
 - [[[opkg]]] OpenMoko Package Format, http://wiki.openmoko.org/wiki/Opkg
 
 - [[[PackageKit]]] Webseite zu PackageKit, http://www.packagekit.org/
@@ -827,6 +829,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[SOCKS]]] SOCKS-Proxy, Wikipedia, https://de.wikipedia.org/wiki/SOCKS
 
 - [[[Software-Properties]]] Projekt Software Properties, https://salsa.debian.org/pkgutopia-team/software-properties
+
+- [[[Solaris]]] Solaris, Wikipedia, https://de.wikipedia.org/wiki/Solaris_(Betriebssystem)
 
 - [[[SourceForge]]] SourceForge, https://sourceforge.net/
 

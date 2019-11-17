@@ -113,7 +113,7 @@ Sie diese über die Paketverwaltung nach (siehe ``Pakete installieren'' in
 Die Umwandlung eines `rpm`-Pakets in ein `deb`-Paket erfolgt mit Hilfe
 des Werkzeugs `alien` und der Angabe des Paketformats über den Schalter 
 `-d` (Langform `--to-deb`). Nachfolgend demonstrieren wir Ihnen das anhand 
-des Pakets 'mc' für den Midnight Commander:
+des Pakets 'mc' für den Midnight Commander <<mc>>:
 
 .Umwandlung eines `rpm`-Pakets in ein `deb`-Paket
 ----
@@ -135,8 +135,8 @@ Slackware genutzt
 `--to-slp` :: Umwandlung nach Paketen für Stampede Linux <<stampedeLinux>> 
 (Erweiterung `.slp`). Zu diesem Schalter besteht keine Kurzform.
 
-`-p` (Langform `--to-pkg`) :: Umwandlung zu (Open)Solaris-Paketen
-(Erweiterung `.pkg`)
+`-p` (Langform `--to-pkg`) :: Umwandlung zu (Open)Solaris-Paketen 
+mit der Erweiterung `.pkg` (siehe <<Solaris>> und <<OpenSolaris>>).
 
 // Stichworte für den Index
 (((dpkg, -c)))
