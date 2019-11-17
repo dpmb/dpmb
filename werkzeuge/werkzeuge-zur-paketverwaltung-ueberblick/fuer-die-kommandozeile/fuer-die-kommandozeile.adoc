@@ -19,6 +19,8 @@ include::aptsh.adoc[]
 
 include::wajig.adoc[]
 
+include::sysget.adoc[]
+
 include::cupt.adoc[]
 
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/fuer-die-kommandozeile.adoc

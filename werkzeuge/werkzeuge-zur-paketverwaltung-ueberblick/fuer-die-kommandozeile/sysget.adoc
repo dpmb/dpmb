@@ -1,0 +1,38 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/sysget.adoc
+
+// Baustelle: Rohtext
+
+[[sysget-cmd]]
+
+==== `sysget` ====
+
+// Stichworte für den Index
+(((sysget)))
+`sysget` ist ein Wrapper, welches den Aufruf zu den verschiedenen,
+tatsächlichen Paketwerkzeugen übernimmt. Ziel ist, eine einheitliche
+Schnittstelle zu den Programmen wie APT, `yum` oder `DNF` herzustellen
+und damit auch Einsteigern die ersten Schritte nach einem Wechsel der
+Distribution zu erleichtern. `sysget` wird als Projekt auf GitHub
+gepflegt <<sysgetGitHub>>.
+
+Das Werkzeug orientiert sich an APT und versteht derzeit die folgenden
+Unterkommandos:
+
+`autoremove` :: Paketwaisen entfernen
+
+`clean` :: Aufräumen des Paketcaches
+
+`install` :: ein Paket installieren
+
+`remove` :: ein installiertes Paket wieder entfernen
+
+`search` :: Suche nach einem Paket
+
+`update` :: die Paketdatenbank aktualisieren
+
+`upgrade` :: ein einzelnes Paket oder das gesamte System aktualisieren
+
+`sysget` ist derzeit nicht als Debian-Paket verfügbar, sondern lediglich
+als Quellcode von der Projektwebseite.
+
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/sysget.adoc
