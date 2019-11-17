@@ -835,6 +835,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[Stackexchange-LTS]]] How to work around ``Release file expired''
   problem on a local mirror, https://unix.stackexchange.com/questions/2544/how-to-work-around-release-file-expired-problem-on-a-local-mirror
 
+- [[[stampedeLinux]]] Stampede Linux, http://www.stampede.org/
+
 - [[[Stapelberg-Debian-Repo]]] Michael Stapelberg: Kurz-Howto: Eigenes
   Debian-Repository aufbauen, http://michael.stapelberg.de/Artikel/Debian_Repository/
 

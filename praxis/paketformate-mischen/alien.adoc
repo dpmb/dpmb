@@ -11,10 +11,10 @@
 // Stichworte für den Index
 (((Debianpaket, alien)))
 (((Fremdformate hinzufügen)))
-Den Begriff 'alien' übersetzen Sie am ehesten mit 'fremd', 'Fremdling'
-oder 'Ausländer'. So heißt auch das gleichnamige Debianpaket
-<<Debian-Paket-alien>>. Es hilft Ihnen, eine Software, welche nicht
-als `deb`-Paket vorliegt, entsprechend umzuwandeln und für Ihre
+Den Begriff 'alien' übersetzen Sie am ehesten mit 'fremd', 'Fremdling' oder 
+'Ausländer'. 'alien' heißt auch das gleichnamige Debianpaket 
+<<Debian-Paket-alien>>. Es hilft Ihnen, eine Software, welche nicht als 
+`deb`-Paket vorliegt, entsprechend umzuwandeln und für Ihre 
 Debian-Installation vorzubereiten.
 
 Wie bereits in ``Gestaltwandler. Programmpakete richtig konvertieren''
@@ -89,10 +89,10 @@ die Konvertierung von `rpm`-Paketen nach `deb` (<<Debian-Paket-rpm>> und
 * den GNU-C-Compiler `gcc` und `make` (<<Debian-Paket-gcc>> und
 <<Debian-Paket-make>>), sofern Software aus dem Quellcode zu übersetzen ist
 
-Die beiden Pakete `perl` und `dpkg` gehören zu den essentiellen Paketen
-und sind auf ihrer Debian-Installation vorhanden. Die anderen genannten
-Pakete könnten noch fehlen. Falls letzteres zutrifft, installieren Sie
-diese über die Paketverwaltung nach (siehe ``Pakete installieren'' in
+Die beiden Pakete `perl` und `dpkg` gehören zu den essentiellen Paketen und 
+sind somit stets bereits auf ihrer Debian-Installation vorhanden. Die anderen 
+genannten Pakete könnten noch fehlen. Falls letzteres zutrifft, installieren 
+Sie diese über die Paketverwaltung nach (siehe ``Pakete installieren'' in
 <<pakete-installieren>>).
 
 [[fremdformate-mit-alien-hinzufuegen-durchfuehrung]]
@@ -108,11 +108,12 @@ diese über die Paketverwaltung nach (siehe ``Pakete installieren'' in
 (((alien, --to-rpm)))
 (((alien, --to-slp)))
 (((alien, --to-tgz)))
+(((Stampede Linux)))
 
-Die Umwandlung eines `rpm`-Pakets in ein `deb`-Paket erfolgt mittels
-`alien` und der Angabe des Paketformats über den Schalter `-d` (Langform
-`--to-deb`). Nachfolgend demonstrieren wir Ihnen das anhand des Pakets
-'mc' für den Midnight Commander:
+Die Umwandlung eines `rpm`-Pakets in ein `deb`-Paket erfolgt mit Hilfe
+des Werkzeugs `alien` und der Angabe des Paketformats über den Schalter 
+`-d` (Langform `--to-deb`). Nachfolgend demonstrieren wir Ihnen das anhand 
+des Pakets 'mc' für den Midnight Commander:
 
 .Umwandlung eines `rpm`-Pakets in ein `deb`-Paket
 ----
@@ -121,18 +122,21 @@ mc_4.8.22-2_amd64.deb generated
 #
 ----
 
-Der Schalter `-d` ist der Standardfall und kann im Aufruf weggelassen
-werden. `alien` unterstützt noch die folgenden, weiteren Schalter zur 
-Umwandlung in andere Formate:
+Der Schalter `-d` ist der von `alien` angenommene Standardfall und kann im 
+Aufruf weggelassen werden. `alien` unterstützt ebenso noch die folgenden, 
+weiteren Schalter zur Umwandlung zwischen anderen Formaten:
 
-`-r` (Langform `--to-rpm`) :: Umwandlung in ein RPM
+`-r` (Langform `--to-rpm`) :: Umwandlung in ein `rpm`-Paket
 
 `-t` (Langform `--to-tgz`) :: Umwandlung in ein mit `gzip` komprimiertes
-`tar`-Archiv (`tar.gz`)
+`tar`-Archiv (Erweiterung `.tar.gz`), bspw. von der Linux-Distribution 
+Slackware genutzt
 
-`--to-slp` (keine Kurzform) :: Umwandlung nach Stampede
+`--to-slp` :: Umwandlung nach Paketen für Stampede Linux <<stampedeLinux>> 
+(Erweiterung `.slp`). Zu diesem Schalter besteht keine Kurzform.
 
-`-p` (Langform `--to-pkg`) :: Umwandlung zu (Open)Solaris-Paketen (pkg)
+`-p` (Langform `--to-pkg`) :: Umwandlung zu (Open)Solaris-Paketen
+(Erweiterung `.pkg`)
 
 // Stichworte für den Index
 (((dpkg, -c)))
@@ -141,33 +145,31 @@ Umwandlung in andere Formate:
 Am Ende überprüfen Sie das Paket, um sicherzugehen, dass es auch
 tatsächlich zu ihrer bestehenden Installation passt. Dabei hilft Ihnen
 der Schalter `-c` (Langform `--contents`) von `dpkg`, um zu erkennen, an
-welche Stellen die Komponenten des neuen Pakets installiert werden. Mit
-`--info` sehen Sie, welche Paketabhängigkeiten bestehen und erfüllt sein
-müssen. 
+welche Stellen in ihrer Installation die einzelnen Komponenten des neuen 
+Pakets installiert werden. 
 
-.Informationen zu einem umgewandelten Paket
+.Wohin wird der Paketinhalt installiert
 ----
-# dpkg --info mc_4.8.22-2_amd64.deb 
- neues Debian-Paket, Version 2.0.
- Größe 1722852 Byte: control-Archiv= 9580 Byte.
-     231 Byte,    11 Zeilen      conffiles            
-     662 Byte,    15 Zeilen      control              
-   21102 Byte,   317 Zeilen      md5sums              
- Package: mc
- Version: 4.8.22-2
- Architecture: amd64
- Maintainer: Frank Hofmann <frank@fehmarn.efho.local>
- Installed-Size: 7436
+# dpkg --contents mc_4.8.22-2_amd64.deb 
+drwxr-xr-x root/root         0 2019-11-16 12:11 ./
+drwxr-xr-x root/root         0 2019-11-16 12:11 ./etc/
+drwxr-xr-x root/root         0 2019-11-16 12:11 ./etc/profile.d/
+-rw-r--r-- root/root       153 2019-01-01 18:36 ./etc/profile.d/20mc.sh
+-rw-r--r-- root/root        49 2019-01-01 18:36 ./etc/profile.d/20mc.csh
+drwxr-xr-x root/root         0 2019-11-16 12:11 ./etc/mc/
+-rw-r--r-- root/root     21874 2019-01-01 18:35 ./etc/mc/mc.ext
+-rwxr-xr-x root/root       791 2018-12-28 20:35 ./etc/mc/edit.indent.rc
+...
+#
+----
+
+Mit einer Kombination aus `dpkg --info `'Pakename' und `grep Depends` sehen 
+Sie, welche Paketabhängigkeiten bestehen und erfüllt sein müssen.
+
+.Abhängigkeiten von einem umgewandelten Paket
+----
+# dpkg --info mc_4.8.22-2_amd64.deb | grep Depends
  Depends: libc6 (>= 2.15), libglib2.0-0 (>= 2.35.9), libgpm2 (>= 1.20.4), libslang2 (>= 2.2.4), libssh2-1 (>= 1.2.8)
- Section: alien
- Priority: extra
- Description: A user-friendly file manager and visual shell
-  Midnight Commander is a visual shell much like a file manager, only with way
-  more features.  It is text mode, but also includes mouse support if you are
-  running GPM.  Its coolest feature is the ability to ftp, view tar, zip
-  files, and poke into RPMs for specific files.
-  .
-  (Converted from a rpm package by alien version 8.92.)
 #
 ----
 
@@ -201,8 +203,8 @@ müssen.
 (((alien, --veryverbose)))
 
 `deb`-basierte Systeme haben ihre Eigenheiten. Die folgenden Schalter
-von `alien` helfen Ihnen, auch mit Sonderfällen bei der 
-Paketumwandlung klarzukommen:
+von `alien` helfen Ihnen, auch mit Sonderfällen bei der Umwandlung von
+Paketen klarzukommen:
 
 `--bump=`'Wert' :: ähnlich zu `--version`. Erhöhe die Versionsnummer
 nicht um 1, sondern um den angegebenen Wert.
@@ -219,7 +221,7 @@ Anpassen von Startup-Skripten und Pfaden gemäß dem File Hierarchy
 Standard (FHS)
 
 `--target=`'Architektur' :: setze die Plattform für das Paket auf den
-angegebenen Wert. siehe <<debian-architekturen>> zu weiteren Angaben zur
+angegebenen Wert. Siehe <<debian-architekturen>> zu weiteren Angaben zur
 Plattform bzw. Architektur eines Paketes
 
 `--version=`'Versionsnummer' :: Füge dem neuen Paket die angegebene
@@ -244,7 +246,8 @@ eins hoch
 
 `-s` (Langform `--single`) :: wie `-g`, aber ohne das Verzeichnis
 `packagename.orig` zu erstellen. Der Schalter ist nützlich, wenn Sie ein
-Debianpaket erstellen und zu wenig Speicherplatz zur Verfügung haben.
+Debianpaket erstellen möchten und zu wenig Speicherplatz zur Verfügung 
+haben.
 
 `-T` (Langform `--test`) :: teste das erzeugte Debianpaket mit `lintian`
 <<Debian-Paket-lintian>> (siehe ``Qualitätskontrolle'' in
@@ -269,15 +272,13 @@ Sie dieses mittels `dpkg -i` 'paketname.deb' ein. APT und `aptitude`
 bekommen von der Aktion erstmal nichts mit, stören sich aber nicht
 daran, dass das Paket eingespielt ist.
 
-Dabei können mehrere Ergebnisse eintreten -- alles geht glatt und das Paket
-funktioniert, alles geht glatt und das Paket funktioniert nicht, oder
-das Einspielen geht schief. Da bleibt nur manuelle Nacharbeitung. Dabei
-auftretende Abhängigkeitsprobleme beheben Sie mit dem Aufruf von
-`apt-get install -f`. Mit dem Schritt löst APT alle bestehenden
-Abhängigkeiten auf.
-
-// * was ist da zu tun?
-// * woran kann das hängen? (Ursachenforschung)
+Bei diesem Schritt können mehrere Ergebnisse eintreten -- alles geht glatt 
+und die eingespielte Software funktioniert, alles geht glatt und Software 
+funktioniert nicht, oder das Einspielen geht komplett schief. Da bleibt nur 
+manuelle Nacharbeitung. Ursache dafür sind in der Regel Abhängigkeitsprobleme
+zu anderen Paketen. Diese Probleme beheben Sie mit dem Aufruf von 
+`apt-get install -f`. Mit dem Schritt löst APT alle bestehenden Abhängigkeiten 
+auf und installiert dabei fehlende Pakete nach.
 
 ==== Pakete umwandeln und einspielen ====
 
@@ -289,11 +290,11 @@ In den obigen Schritten in
 <<fremdformate-mit-alien-hinzufuegen-durchfuehrung>> und
 <<fremdformate-mit-alien-hinzufuegen-einspielen>> haben Sie zuerst ein
 Paket umgewandelt und danach installiert. `alien` kann jedoch auch beide
-Schritte durchführen -- ein Paket von RPM nach `deb` umwandeln und
-danach gleich auf ihrem System einspielen. Dazu benutzen Sie den
-Schalter `-i` (Langform `--install`).
+Schritte in einem Rutsch durchführen -- ein Paket von `rpm` nach `deb` 
+umwandeln und danach gleich auf ihrem System einspielen. Dazu benutzen 
+Sie den Schalter `-i` (Langform `--install`).
 
-.Ein Paket mit `alien` umwandeln und einspielen
+.Das Paket `paket.rpm` mit `alien` umwandeln und einspielen
 ----
 # alien -i paket.rpm
 ...
