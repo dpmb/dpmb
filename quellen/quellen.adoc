@@ -872,6 +872,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Ubuntu-Paket-apt-clone]]] Ubuntu-Paket 'apt-clone', https://launchpad.net/apt-clone
 
+- [[[Ubuntu-Paket-pacapt]]] Ubuntu-Paket 'pacapt', https://launchpad.net/ubuntu/bionic/+package/pacapt
+
 - [[[Ubuntu-Paket-software-center]]] Ubuntu-Paket 'software-center', https://launchpad.net/software-center
 
 - [[[Ubuntu-Paket-ubumirror]]] Ubuntu-Paket 'ubumirror', https://launchpad.net/ubumirror

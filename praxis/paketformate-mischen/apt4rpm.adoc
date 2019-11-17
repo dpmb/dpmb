@@ -1,51 +1,36 @@
 // Datei: ./praxis/paketformate-mischen/apt4rpm.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[deb-pakete-in-rpm-strukturen]]
 ==== `deb`-Pakete in `rpm`-Strukturen
 
-// - RPM-basierte Linux-Distributionen mit
-//   link:http://apt4rpm.sourceforge.net/[apt4rpm] (Original für
-//   Conectiva geschrieben) bzw. link:http://apt-rpm.org/[APT-RPM]
-//   (RedHat)
+// Stichworte für den Index
+(((alien, --to-rpm)))
+(((alien, -r)))
+(((apt4rpm)))
+(((apt-rpm)))
+(((pacapt)))
 
 Auch für Linux-Distributionen, die auf dem `rpm`-Paketformat aufsetzen,
-können Sie `deb`-Pakete einspielen und nutzen. Möglich machen das die
-beiden Projekte 'apt4rpm' <<apt4rpm>> bzw. 'apt-rpm' <<apt-rpm>>. Während
-ersteres im Original von Conectiva stammt, steuerte RedHat das zweitgenannte
-bei.
+können Sie `deb`-Pakete einspielen und benutzen. Diese Möglichkeiten 
+sind uns bekannt:
 
-Releases und entsprechende Pakete beziehen Sie von der jeweiligen
-Webseite des Projekts. Leider gibt es seit längerem keine neueren
-Veröffentlichungen mehr -- 'apt4rpm' schweigt seit 2005, 'apt-rpm' seit
-2008. 2012 verkündete 'apt4rpm', dass es die weitere Entwicklung
-einstellt.
+`alien` mit dem Schalter `-r` (Langform `--to-rpm`) :: Umwandlung eines
+`deb`-Paketes in ein `rpm`-Paket.
 
-// - Entwicklungsstand
-// -- letzte Release von 2005 (apt4rpm) bzw. 2008 (apt-rpm)
-// -- apt4rpm: Last Update: 2012-10-08, "As of 2012-12-11, this project is no longer
-//    under active development."
-// -- apt-rpm: unklar
+Projekt 'apt4rpm' <<apt4rpm>> :: stammt im Original von Conectiva Linux.
+Releases und entsprechende Pakete waren von der jeweiligen Webseite des 
+Projekts verfügbar. Das Projekt wurde bereits 2012 eingestellt.
 
-- wie gut ist das dann überhaupt?
-- wann braucht man das? wann kann das nützlich sein?
-- wer kümmert sich darum?
+Projekt 'apt-rpm' <<apt-rpm>> :: stammt aus der Feder von RedHat. Das
+Projekt wurde leider bereits 2008 eingestellt.
 
-[TIP]
-====
-Wie Sie die beiden Werkzeuge verwenden können, entnehmen Sie bitte
-der Dokumentation der Werkzeuge. 
-====
-
-[TIP]
-====
-Für Arch Linux existiert 'pacapt' <<Arch-Linux-pacapt>>, welches die
-unterschiedlichen Paketmanager auf den einzelnen Plattformen anspricht.
-Derzeit verarbeitet es neben `dpkg` und `apt-get` auch `pacman` (Arch
-Linux, ArchBang), `homebrew` (Mac OS X), `yum`/`rpm` (RedHat, CentOS,
-Fedora) und `portage` (Gentoo).
-====
-
+Projekt 'pacapt' <<Arch-Linux-pacapt>> :: Werkzeug unter Arch Linux. Es
+spricht die unterschiedlichen Paketmanager auf den einzelnen Plattformen
+an. Derzeit verarbeitet es neben `dpkg` und `apt-get` auch `pacman`
+(Arch Linux, ArchBang), `homebrew` (Mac OS X), `yum`/`rpm` (RedHat,
+CentOS, Fedora) und `portage` (Gentoo). Es steht ebenfalls als Paket für
+Ubuntu bereit <<Ubuntu-Paket-pacapt>>.
 
 // Datei (Ende): ./praxis/paketformate-mischen/apt4rpm.adoc
