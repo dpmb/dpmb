@@ -4,32 +4,10 @@
 // Axel: Rohtext
 
 [[konfigurationsdateien-von-apt]]
-=== Konfigurationsdateien von APT ===
+=== Konfigurationsdateien von APT im Detail ===
 
-// Stichworte für den Index
-(((Debianpaket, apt)))
-(((run-parts)))
-
-APT und auch alle Programme, die APTs Bibliotheken benutzen, greifen auf
-diverse Konfigurationsdateien zu. Über diese Dateien werden
-unterschiedliche Funktionen abgebildet.
-
-Alle Varianten der Konfigurationsdateien gibt es in zwei Geschmäckern:
-
-* als einzelne Datei -- diese ist typischerweise dem lokalen
-  Systemadministrator vorbehalten
-
-* als Verzeichnis mit dem Suffix `.d`. Alle Dateien in einem solchen
-  Verzeichnis, die bestimmten Regeln hinsichtlich dem Dateinamen
-  entsprechen, werden so interpretiert, als wären sie an der
-  gleichnamigen Datei ohne `.d` angehängt (siehe u.a. Man-Page
-  `run-parts(8)`. Insbesondere dürfen keine Punkte im Dateinamen
-  vorkommen. Diese Verzeichnisse werden  typischerweise von Paketen
-  verwendet, um paketspezifische Konfigurationsschnipsel darin abzulegen.
-  Auch Sie als lokaler Systemadministrator legen darin Dateien ab, bspw.
-  über das Konfigurationsmanagement.
-
-==== Verhalten von APT und Hooks: /etc/apt/apt.conf(.d) ====
+[[konfigurationsdateien-von-apt-apt.conf]]
+==== `/etc/apt/apt.conf(.d)` verstehen ====
 
 // Stichworte für den Index
 (((/etc/apt/apt.conf)))
@@ -82,7 +60,7 @@ Um das Vorgehen besser zu verstehen, werfen Sie am besten einen Blick in
 das Verzeichnis `/etc/apt/apt.conf.d/`. Das nachfolgende Listing zeigt
 den typischen Inhalt auf einem Debian 8 'Jessie'.
 
-.Beispielhafter Inhalt von /etc/apt/apt.conf.d/
+.Beispielhafter Inhalt von `/etc/apt/apt.conf.d/`
 ----
 $ ls /etc/apt/apt.conf.d/
 00trustcdrom    10periodic           20packagekit           99synaptic
@@ -91,43 +69,10 @@ $ ls /etc/apt/apt.conf.d/
 $
 ----
 
-==== Konfigurationsdateien von Aptitude ====
+[[konfigurationsdateien-von-apt-preferences]]
+==== `preferences` bzw. `preferences.d` ====
 
-// Stichworte für den Index
-(((~/.aptitude/config)))
-(((aptitude, lokale Konfigurationsdateien)))
-
-`aptitude` verwendet alle Konfigurationsdateien von APT plus seine
-eigenen. Diese finden Sie im Verzeichnis `~/.aptitude/` in der Datei
-`config`. Hier werden auch die interaktiven Änderungen der Konfiguration
-in der Textoberfläche von `aptitude` gespeichert.
-
-Dabei verwendet die Konfiguration von `aptitude` die gleiche Syntax wie
-die von APT. Sie kann auch manuell in den Konfigurationsdateien von APT
-abgespeichert werden, z.B. als Datei
-`/etc/apt/apt.conf.d/lokale-aptitude-einstellungen`. Diese stören APT
-nicht, da sie alle mit dem Präfix `Aptitude::` beginnen.
-
-.Beispiel einer lokalen Konfigurationsdatei von `aptitude`
-----
-aptitude "";
-aptitude::Keep-Unused-Pattern "";
-aptitude::Delete-Unused-Pattern "";
-----
-
-==== APT-Hooks ====
-
-// Stichworte für den Index
-(((APT-Hooks)))
-
-* Begriff und Nutzen
-** Ergänzungen, kleine Erweiterungen, Eingriffe
-** standardisierte Abläufe um eigene, paketbezogene Schritte ergänzen
-
-* Festlegung in der APT-Konfiguration
-** wo speichert man das
-** was ist erlaubt, was nicht
-** was sind Gepflogenheiten
+* ToDo
 
 ==== cron.daily/apt ====
 
