@@ -36,20 +36,21 @@ Das Unterkommando `localinstall` veranlasst `yum`, nicht in den hinterlegten
 Repositories zu suchen, sondern das Paket aus dem lokalen Verzeichnis zu 
 verwenden. Die Vorgehensweise ist vergleichbar mit dem Aufruf von `dpkg -i`.
 
-Projekt 'apt4rpm' <<apt4rpm>> :: stammt im Original von Conectiva Linux.
-Releases und entsprechende Pakete waren von der jeweiligen Webseite des 
-Projekts verfügbar. Das Projekt wurde bereits 2012 eingestellt.
+Projekt 'apt4rpm' <<apt4rpm>> :: stammt im Original von Conectiva Linux 
+<<Conectiva>>. Es erstellt aus einem APT-Repository ein lokales RPM-Repository, 
+so dass die Pakete für `yum` verfügbar werden. Leider wird das Projekt seit 
+2012 nicht mehr weiterentwickelt.
 
 Projekt 'apt-rpm' <<apt-rpm>> :: war offizieller Bestandteil RedHat und später
-Connectiva. Das Projekt und dessen Weiterentwicklung wurde leider bereits 2008 
-eingestellt. Verwendet wird es jedoch bis heute als Werkzeug bei den beiden 
-Linux-Distributionen ALT Linux <<altLinux>> und PCLinuxOS <<PCLinuxOS>>.
+Conectiva <<Conectiva>>. Das Projekt und dessen Weiterentwicklung wurde leider 
+bereits 2008 eingestellt. Verwendet wird es jedoch bis heute als Werkzeug bei den 
+beiden Linux-Distributionen ALT Linux <<altLinux>> und PCLinuxOS <<PCLinuxOS>>.
 
 Projekt 'pacapt' <<Arch-Linux-pacapt>> :: Werkzeug unter Arch Linux. Es
 spricht die unterschiedlichen Paketmanager auf den einzelnen Plattformen
 an. Derzeit verarbeitet es neben `dpkg` und `apt-get` auch `pacman`
 (Arch Linux, ArchBang), `homebrew` (Mac OS X), `yum`/`rpm` (RedHat,
 CentOS, Fedora) und `portage` (Gentoo). Es steht ebenfalls als Paket für
-Ubuntu bereit <<Ubuntu-Paket-pacapt>>.
+Ubuntu bereit <<Ubuntu-Paket-pacapt>> und wird aktiv gepflegt.
 
 // Datei (Ende): ./praxis/paketformate-mischen/apt4rpm.adoc
