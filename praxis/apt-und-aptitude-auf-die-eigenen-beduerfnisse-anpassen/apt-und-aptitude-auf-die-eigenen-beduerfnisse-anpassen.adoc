@@ -5,13 +5,34 @@
 [[apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen]]
 == APT und `aptitude` auf die eigenen Bedürfnisse anpassen ==
 
-// Konfigurationsdateien von APT
-include::konfigurationsdateien-von-apt.adoc[]
+// Einführung
+Die Werkzeuge für `deb`-Pakete -- `apt-get`, `apt` und auch `aptitude` -- sind 
+sehr flexibel in ihrer Ausführung. Die von Debian mitgelieferte Konfiguration
+ist alltagstauglich und sorgt für ein stabiles Arbeiten.
+
+Recherchieren Sie nach der Konfiguration von APT, erhalten Sie viele Beiträge, 
+die sich auf die Liste der Paketquellen konzentrieren. Diesem Thema gehen wir
+bereits ausführlich in <<etc-apt-sources.list-verstehen>> nach. Dieses Kapitel
+konzentriert sich auf die weiteren Einstellungen von `apt-get`, `apt` und 
+`aptitude` und soll Ihnen helfen, das Verhalten dieser Werkzeuge auf ihre 
+eigenen Bedürfnisse anzupassen.
+
+// Konfiguration von APT
+include::konfiguration-von-apt.adoc[]
 
 // Konfiguration von APT anzeigen
 include::konfiguration-von-apt-anzeigen.adoc[]
 
-// Interaktives Ändern von Optionen
+// Konfigurationsdateien von APT im Detail
+include::konfigurationsdateien-von-apt.adoc[]
+
+// APT-Hooks
+include::apt-hooks.adoc[]
+
+// Konfiguration von aptitude
+include::konfiguration-von-aptitude.adoc[]
+
+// aptitude: Interaktives Ändern von Optionen
 include::interaktives-aendern-von-optionen.adoc[]
 
 // aptitude Formatstrings
