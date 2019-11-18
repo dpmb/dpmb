@@ -4,7 +4,7 @@
 
 [[interaktives-aendern-von-optionen]]
 
-=== Interaktives Ändern von Optionen ===
+=== `aptitude`: Interaktives Ändern von Optionen ===
 
 * `.aptitude/config` (root vs non-root; interaktives Ändern von Optionen) (1)
 * Überschreiben von Optionen während des Aufrufs
