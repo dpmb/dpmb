@@ -1,0 +1,21 @@
+// Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/apt-hooks.adoc
+
+// Baustelle: Rohtext
+
+[[apt-hooks]]
+=== APT-Hooks ===
+
+// Stichworte für den Index
+(((APT-Hooks)))
+
+* Begriff und Nutzen
+** Ergänzungen, kleine Erweiterungen, Eingriffe
+** standardisierte Abläufe um eigene, paketbezogene Schritte ergänzen
+
+* Festlegung in der APT-Konfiguration
+** wo speichert man das
+** was ist erlaubt, was nicht
+** was sind Gepflogenheiten
+
+// Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/apt-hooks.adoc
+
