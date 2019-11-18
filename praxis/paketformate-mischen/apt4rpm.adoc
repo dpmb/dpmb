@@ -3,7 +3,7 @@
 // Baustelle: Rohtext
 
 [[deb-pakete-in-rpm-strukturen]]
-==== `deb`-Pakete in `rpm`-Strukturen
+=== `deb`-Pakete in `rpm`-Strukturen ===
 
 // Stichworte für den Index
 (((alien, --to-rpm)))
@@ -11,20 +11,39 @@
 (((apt4rpm)))
 (((apt-rpm)))
 (((pacapt)))
+(((RPM-Paket installieren)))
+(((yum, localinstall)))
 
 Auch für Linux-Distributionen, die auf dem `rpm`-Paketformat aufsetzen,
-können Sie `deb`-Pakete einspielen und benutzen. Diese Möglichkeiten 
-sind uns bekannt:
+können Sie `deb`-Pakete einspielen und benutzen. Es gelten dabei die 
+gleichen Hinweise wie bereits oben genannt -- es ist nicht garantiert,
+dass das Paket in ihr System passt und erwartungsgemäß funktioniert. 
+Diese Möglichkeiten sind uns bekannt:
 
 `alien` mit dem Schalter `-r` (Langform `--to-rpm`) :: Umwandlung eines
-`deb`-Paketes in ein `rpm`-Paket.
+`deb`-Paketes in ein `rpm`-Paket. Haben Sie das Paket erfolgreich 
+umgewandelt, installieren Sie es bspw. wie folgt mittels `yum` auf ihrem 
+System:
++
+.Installation des umgewandelten Pakets mittels `yum`
+----
+# yum localinstall paket.rpm
+...
+#
+----
++
+Das Unterkommando `localinstall` veranlasst `yum`, nicht in den hinterlegten
+Repositories zu suchen, sondern das Paket aus dem lokalen Verzeichnis zu 
+verwenden. Die Vorgehensweise ist vergleichbar mit dem Aufruf von `dpkg -i`.
 
 Projekt 'apt4rpm' <<apt4rpm>> :: stammt im Original von Conectiva Linux.
 Releases und entsprechende Pakete waren von der jeweiligen Webseite des 
 Projekts verfügbar. Das Projekt wurde bereits 2012 eingestellt.
 
-Projekt 'apt-rpm' <<apt-rpm>> :: stammt aus der Feder von RedHat. Das
-Projekt wurde leider bereits 2008 eingestellt.
+Projekt 'apt-rpm' <<apt-rpm>> :: war offizieller Bestandteil RedHat und später
+Connectiva. Das Projekt und dessen Weiterentwicklung wurde leider bereits 2008 
+eingestellt. Verwendet wird es jedoch bis heute als Werkzeug bei den beiden 
+Linux-Distributionen ALT Linux <<altLinux>> und PCLinuxOS <<PCLinuxOS>>.
 
 Projekt 'pacapt' <<Arch-Linux-pacapt>> :: Werkzeug unter Arch Linux. Es
 spricht die unterschiedlichen Paketmanager auf den einzelnen Plattformen

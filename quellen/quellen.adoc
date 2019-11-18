@@ -12,6 +12,8 @@
 
 - [[[Allbery-Debian-Popularity]]] Debian and popularity, Blog-Posting von Russ Allbery, https://www.eyrie.org/~eagle/journal/2012-01/004.html
 
+- [[[altLinux]]] ALT Linux, https://www.altlinux.org/
+
 - [[[Amberg-Linux-Server-Praxishandbuch]]] Eric Amberg: Linux-Server mit Debian 6 GNU/Linux: Das   umfassende Praxishandbuch -- Aktuell für die Versionen Debian 6.0 (Squeeze) und Debian 5.0 (Lenny), mitp; Auflage: 2012 (24. April 2012), Sprache: Deutsch, ISBN-10: 3826655346, ISBN-13: 978-3826655340
 
 - [[[Aoki-Debian-Referenz]]] Osamu Aoki: Debian Referenz, deutsche Übersetzung, https://www.debian.org/doc/manuals/debian-reference/index.de.html
@@ -769,6 +771,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[PackageKit]]] Webseite zu PackageKit, http://www.packagekit.org/
 
 - [[[Pacman-Rosetta]]] Pacman Rosetta -- Vergleich der Kommandozeilenparameter von `pacman`, `yum`, `apt-get`, `rug`, `zypper` und `emerge`, ArchLinux-Wiki, https://wiki.archlinux.org/index.php/Pacman_Rosetta
+
+- [[[PCLinuxOS]]] PCLinuxOS, https://www.pclinuxos.com/
 
 - [[[Piuparts]]] Piuparts (Package Installation, UPgrading And Removal Testing Suite), https://piuparts.debian.org/
 
