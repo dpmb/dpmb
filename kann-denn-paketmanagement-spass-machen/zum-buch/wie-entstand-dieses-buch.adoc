@@ -86,6 +86,18 @@ den aktuellen Stand der Entwicklung zusammen und beleuchten darüber
 hinaus die angrenzenden Programme bzw. die damit verbundenen Situationen
 im Alltag der Systembetreuung.
 
+==== Baustellenstatus ====
+
+Zum aktuellen Zeitpunkt (Herbst 2019) bewegt sich das Buch stramm auf den
+Umfang von 500 Seiten zu. Als inhaltlich vollendet sehen wir den Teil 1 
+``Konzepte'' an. Kleinere Baustellen finden sich noch in Teil 2 
+``Werkzeuge''. Hingegen klaffen im Teil 3 ``Praxis'' noch größere Lücken.
+Wir arbeiten kontinuierlich daran, diese Lücken zu schließen. Das gelingt 
+nicht so einfach, weil dafür bspw. komplexere Setups notwendig sind oder 
+auch weil die Dokumentation der Werkzeuge für den betrachteten Fall 
+schlicht und einfach nicht vorhanden, (bislang) unverständlich oder gar 
+veraltet ist. 
+
 ==== Technische Basis ====
 
 Rein technisch setzt das Buch auf AsciiDoc <<AsciiDoc>> auf -- einem
@@ -135,10 +147,10 @@ mitsamt Patch <<github-pull-request>> ein.
 ==== Organisatorisch ====
 
 Beide Autoren leben und arbeiten in recht unterschiedlichen Regionen --
-Axel Beckert in Zürich und Frank Hofmann in Besançon (nach Berlin und 
-Kapstadt). Aufgrund der mitunter recht großen Distanz sind regelmäßige 
-Arbeitstreffen nur begrenzt möglich und wurden daher mit Hilfe von 
-Buchsprints sowie elektronischer Kommunikation überbrückt. 
+Axel Beckert in Zürich und Frank Hofmann in Besançon. Aufgrund der 
+mitunter recht großen Distanz sind regelmäßige Arbeitstreffen nur 
+begrenzt möglich und wurden daher mit Hilfe von Buchsprints sowie 
+elektronischer Kommunikation überbrückt. 
 
 Das Buch entsteht seit dem Frühjahr 2013 und häufig auch im Rahmen von 
 Linux-Events. Besonders hervorzuheben sind hierbei die Chemnitzer 
