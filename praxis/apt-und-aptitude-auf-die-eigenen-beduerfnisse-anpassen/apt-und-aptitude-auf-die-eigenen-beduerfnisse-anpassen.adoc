@@ -34,6 +34,9 @@ include::konfiguration-von-apt-anzeigen.adoc[]
 // Konfigurationsdateien von APT im Detail
 include::konfigurationsdateien-von-apt.adoc[]
 
+// Konfigurationsoptionen von APT
+include::konfigurationsoptionen-von-apt.adoc[]
+
 // APT-Hooks
 include::apt-hooks.adoc[]
 

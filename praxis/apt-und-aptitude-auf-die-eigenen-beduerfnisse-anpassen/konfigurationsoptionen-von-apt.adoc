@@ -1,0 +1,10 @@
+// Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfigurationsoptionen-von-apt.adoc
+
+// Baustelle: Rohtext
+
+[[konfigurationsoptionen-von-apt]]
+=== Konfigurationsoptionen von APT ===
+
+* Dazu verwenden Sie als Schalter `-o`, gefolgt von der Form `<Schlüssel>=<Wert>`.
+
+// Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfigurationsoptionen-von-apt.adoc
