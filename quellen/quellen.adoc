@@ -304,6 +304,8 @@
 
 - [[[Debian-Paket-debhelper]]] Debian-Paket 'debhelper', https://packages.debian.org/de/stable/debhelper
 
+- [[[Debian-Paket-debianutils]]] Debian-Paket 'debianutils', https://packages.debian.org/de/stable/debianutils
+
 - [[[Debian-Paket-debian-archive-keyring]]] Debian-Paket 'debian-archive-keyring', https://packages.debian.org/de/stable/debian-archive-keyring
 
 - [[[Debian-Paket-debian-goodies]]] Debian-Paket 'debian-goodies', https://packages.debian.org/de/stable/debian-goodies

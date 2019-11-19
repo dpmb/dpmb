@@ -31,14 +31,15 @@ Bedienschnittstellen (Frontends). Siehe dazu
 
 `listchanges.conf` :: Hinterlegte Einstellungen zu den Änderungen, die bei
 der Aktualisierung von Paketen durchgeführt werden. Diese Datei wird vom 
-Werkzeug `apt-listchanges` gepflegt (siehe dazu <<qualitaetskontrolle>>).
+Werkzeug `apt-listchanges` <<Debian-Paket-apt-listchanges>> gepflegt. Genauer
+verwenden wir das Werkzeug in <<qualitaetskontrolle>>.
 
 `preferences` bzw. `preferences.d` :: Diese Einträge steuern, welche Versionen 
 von Paketen zur Installation ausgewählt werden (siehe dazu 
 <<konfigurationsdateien-von-apt-preferences>>).
 
 `sources.list` bzw. `sources.list.d` :: Beinhaltet die Liste der Paketquellen,
-von denen APT Pakete bezieht. Ausführlich gehen wir darauf bereits in 
+von denen APT Pakete bezieht. Ausführlich gehen wir darauf in 
 <<etc-apt-sources.list-verstehen>> ein.
 
 `trusted.gpg` bzw. `trusted.gpg.d` :: Beinhaltet die kryptographischen 
@@ -48,17 +49,18 @@ wird sichergestellt, welchen Paketquellen APT vertraut (siehe dazu
 
 Alle Varianten der Konfigurationsdateien gibt es in zwei Geschmäckern:
 
-als einzelne Datei :: Diese ist typischerweise Ihnen als lokaler 
-Systemadministrator vorbehalten.
+als einzelne Datei :: Das ist die ursprüngliche Variante der Konfigurationsdatei. 
+Diese ist Ihnen als lokaler Systemadministrator vorbehalten.
 
-als Verzeichnis mit dem Suffix `.d` :: Alle Dateien in einem solchen 
-Verzeichnis werden so interpretiert, als wären sie an der gleichnamigen Datei 
-ohne `.d` angehängt (siehe dazu die Manpage zu `run-parts(8)`). Die einzelnen
-Dateien müssen bestimmten Regeln hinsichtlich dem Dateinamen entsprechen. 
-Insbesondere dürfen keine Punkte im Dateinamen vorkommen. Diese Verzeichnisse 
-werden typischerweise von Paketen verwendet, um paketspezifische 
-Konfigurationsschnipsel darin abzulegen. Auch Sie als Systemadministrator 
-legen darin Dateien ab, bspw. über das Konfigurationsmanagement.
+als Verzeichnis mit dem Suffix `.d` :: Alle Dateien in einem solchen Verzeichnis 
+werden so interpretiert, als wären sie an der gleichnamigen Datei ohne `.d` 
+angehängt -- wie einzelne ``Schnipsel'' von Einstellungen, die aneinandergereiht 
+werden (siehe dazu die Manpage zu `run-parts(8)` <<Debian-Paket-debianutils>>). 
+Ohne zusätzliche Parameter erfolgt die Aneinanderreihung der Schnipsel 
+entsprechend der lexikalisch sortierten Reihenfolge (gemäß den 
+C/POSIX-Locale-Sortierregeln) ihrer Namen. Die einzelnen Dateien müssen zudem 
+bestimmten Regeln hinsichtlich des Dateinamens entsprechen. Insbesondere dürfen 
+keine Punkte im Dateinamen vorkommen. 
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfiguration-von-apt.adoc
 
