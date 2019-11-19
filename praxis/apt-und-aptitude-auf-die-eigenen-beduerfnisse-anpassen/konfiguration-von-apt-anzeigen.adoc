@@ -40,4 +40,43 @@ APT::NeverAutoRemove:: "^kfreebsd-image.*";
 $
 ----
 
+Weitere nützliche Schalter und Optionen von `apt-config` sind:
+
+`--empty` :: Damit schließen Sie Optionen ein, die einen leeren Wert haben. Das
+ist die Standardeinstellung. Das Gegenstück dazu ist `--no-empty`.
+
+`--format` :: Darstellung der Ausgabe steuern. Zulässig sind diese Werte:
++
+* `%f` -- vollständiger, hierarchischer Name der Option
+* `%n` -- Zeilenumbruch
+* `%N` -- Tabulator
+* `%t` -- individueller Name der Option (Kurzform von `%f`)
+* `%v` -- Wert der Option
++
+Die Standardeinstellung ist `%f "%v";%n`. Die nachfolgende Ausgabe zeigt die 
+Kurzform der Option inklusive deren Wert. Jede Zeile wird mit einem Semikolon 
+abgeschlossen.
++
+----
+$ apt-config dump --format '%t "%v"; %n'
+APT ""; 
+Architecture "amd64"; 
+Build-Essential ""; 
+ "build-essential"; 
+Install-Recommends "1"; 
+Install-Suggests "0"; 
+Sandbox ""; 
+...
+$ 
+----
+
+`--no-empty` :: Damit schließen Sie Optionen aus, die einen leeren Wert haben. 
+Das Gegenstück dazu ist `--empty`.
+
+`-c` (Langform `--config-file`) :: Angabe einer Konfigurationsdatei. Diese Datei
+wird zusätzlich zur üblichen Konfigurationsdatei gelesen.
+
+`-o` (Langform `--option`) :: Angabe einer Option direkt beim Aufruf. Diesen
+Schalter können Sie mehrfach angeben.
+
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfiguration-von-apt-anzeigen.adoc
