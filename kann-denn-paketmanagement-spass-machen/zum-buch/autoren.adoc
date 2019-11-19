@@ -17,10 +17,10 @@ Maintainer des Pakets `aptitude` und kümmert sich primär um die
 Paketierung.
 
 *Dipl.-Inf. Frank Hofmann* hat Informatik mit Nebenfach Englisch an der
-Technischen Universität Chemnitz studiert. Er arbeitet weitestgehend von
-unterwegs aus als Entwickler, Trainer und Autor. Bevorzugte Arbeitsorte
-sind Berlin, Genf und Kapstadt. Seit Sommer 2013 ist er Mitglied im
-Debtags-Projekt <<Debian-Debtags>>, das sich die Verschlagwortung der
-einzelnen Debian-Pakete zum Ziel gesetzt hat.
+Technischen Universität Chemnitz studiert. Er bevorzugt das Arbeiten von
+unterwegs aus als Entwickler, Trainer und Autor. Nach Berlin und Kapstadt
+arbeitet er derzeit in Besançon (Franche-Comté). Seit Sommer 2013 ist er 
+Mitglied im Debtags-Projekt <<Debian-Debtags>>, das sich die 
+Verschlagwortung der einzelnen Debian-Pakete zum Ziel gesetzt hat.
 
 // Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/autoren.adoc
