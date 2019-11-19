@@ -1,12 +1,19 @@
 // Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfiguration-von-apt-anzeigen.adoc
 
-// Baustelle: Fertig
+// Baustelle: Rohtext
 
 [[konfiguration-von-apt-anzeigen]]
 === Konfiguration von APT anzeigen ===
 
 // Stichworte für den Index
 (((apt-config, dump)))
+(((apt-config, -c)))
+(((apt-config, -o)))
+(((apt-config, --config-file)))
+(((apt-config, --empty)))
+(((apt-config, --format)))
+(((apt-config, --no-empty)))
+(((apt-config, --option)))
 (((apt, Konfiguration anzeigen)))
 (((Debianpaket, apt)))
 Zu diesem Zweck steht Ihnen das Werkzeug `apt-config` zur Verfügung. Es ist
@@ -78,5 +85,40 @@ wird zusätzlich zur üblichen Konfigurationsdatei gelesen.
 
 `-o` (Langform `--option`) :: Angabe einer Option direkt beim Aufruf. Diesen
 Schalter können Sie mehrfach angeben.
+
+Was uns `apt-config` bislang nicht freiwillig verraten hat, ist, welche Option
+in welchem Konfigurationsschnipsel gesetzt wurde. Das ist bspw. dann wichtig, 
+wenn Sie herausfinden müssen, welche Optionen sich überschreiben oder auch 
+gegenseitig wieder aufheben. Für Debian 9 'Stretch' haben wir diese 
+(provisorische) Lösung, um zumindest herauszubekommen, welche 
+Konfigurationsdateien gelesen werden:
+
+.Welche Dateien liest `apt-config` (Lösung für Debian 9 'Stretch')
+----
+$ strace -f -e open apt-config dump | grep "open("
+...
+open("/etc/apt/apt.conf.d/", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+open("/etc/apt/apt.conf.d/00CDMountPoint", O_RDONLY) = 4
+open("/etc/apt/apt.conf.d/00trustcdrom", O_RDONLY) = 4
+open("/etc/apt/apt.conf.d/01autoremove", O_RDONLY) = 4
+open("/etc/apt/apt.conf.d/01autoremove-kernels", O_RDONLY) = 4
+open("/etc/apt/apt.conf.d/20listchanges", O_RDONLY) = 4
+open("/etc/apt/apt.conf.d/20packagekit", O_RDONLY) = 4
+open("/etc/apt/apt.conf.d/70debconf", O_RDONLY) = 4
+...
+open("/var/lib/apt/lists/", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+...
+$
+----
+
+Da sich in Debian 10 'Buster' der interne Aufruf von `open()` zu `openat()`
+geändert hat, sieht der Aufruf von `apt-config` nun wie folgt aus:
+
+.Welche Dateien liest `apt-config` (Lösung für Debian 10 'Buster')
+----
+$ strace -f -e openat apt-config dump | grep "openat("
+...
+$
+----
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfiguration-von-apt-anzeigen.adoc
