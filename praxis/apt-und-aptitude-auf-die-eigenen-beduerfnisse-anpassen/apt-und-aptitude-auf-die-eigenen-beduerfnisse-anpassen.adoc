@@ -11,11 +11,19 @@ sehr flexibel in ihrer Ausführung. Die von Debian mitgelieferte Konfiguration
 ist alltagstauglich und sorgt für ein stabiles Arbeiten.
 
 Recherchieren Sie nach der Konfiguration von APT, erhalten Sie viele Beiträge, 
-die sich auf die Liste der Paketquellen konzentrieren. Diesem Thema gehen wir
-bereits ausführlich in <<etc-apt-sources.list-verstehen>> nach. Dieses Kapitel
-konzentriert sich auf die weiteren Einstellungen von `apt-get`, `apt` und 
-`aptitude` und soll Ihnen helfen, das Verhalten dieser Werkzeuge auf ihre 
-eigenen Bedürfnisse anzupassen.
+die sich lediglich auf die Liste der Paketquellen konzentrieren. Diesem Thema 
+gehen wir bereits ausführlich in <<etc-apt-sources.list-verstehen>> nach. Das 
+nun folgende Kapitel konzentriert sich hingegen auf die weiteren Einstellungen 
+von `apt-get`, `apt` und `aptitude`. Es soll Ihnen dabei helfen, das Verhalten 
+dieser Werkzeuge auf ihre eigenen Bedürfnisse anzupassen, insbesondere wenn es 
+um Spezialfälle geht. 
+
+Alle drei Werkzeuge greifen auf die gleichen Dateien zur Konfiguration zurück. 
+APT liefert Erweiterungen -- genannt Hooks (siehe <<apt-hooks>>), und 
+`aptitude` erlaubt sowohl permanente, globale Einstellungen als auch lokale 
+Einstellungen (siehe <<konfigurationsdateien-von-aptitude>>) sowie das Ändern 
+der Verhaltens beim Aufruf von `aptitude` (siehe dazu 
+<<interaktives-aendern-von-optionen>>).
 
 // Konfiguration von APT
 include::konfiguration-von-apt.adoc[]
