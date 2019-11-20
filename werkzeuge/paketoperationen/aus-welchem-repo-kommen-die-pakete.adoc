@@ -14,13 +14,13 @@ Aktualisierung entnehmen würde. Bei der Beantwortung dieser Frage helfen
 Ihnen die Programme `apt-cache`, `apt-show-versions`, `apt` und
 `aptitude` weiter – aber jedes auf seine Art.
 
-==== Paketquelle untersuchen mit `apt-cache policy` ====
+==== Paketquellen untersuchen mit `apt-cache policy` ====
 
 // Stichworte für den Index
 (((apt-cache, policy)))
 (((apt-pinning, Priorität eines Eintrags)))
-Rufen Sie `apt-cache` lediglich mit dem Schalter `policy` und _ohne_ die
-weitere Angabe eines Pakets auf, untersucht das Programm jede einzelne
+Dazu rufen Sie `apt-cache` mit dem Schalter `policy` und _ohne_ Angabe 
+eines Pakets auf. Das Programm untersucht daraufhin jede einzelne 
 Paketquelle, die Sie in `/etc/apt/sources.list` eingetragen haben. Das
 Ergebnis der Analyse ist zweispaltig. In der linken Spalte erscheint ein
 Zahlenwert zur Priorität des jeweiligen Eintrags, wie er von
@@ -66,6 +66,8 @@ Paketdateien:
 Mit Pinning verwaltete Pakete:
 $
 ----
+
+==== Informationen für ein bestimmtes Paket erhalten ====
 
 Geben Sie hingegen beim Aufruf als Parameter einen Paketnamen an, prüft
 `apt-cache`, ob das Paket bereits auf Ihrem System installiert ist oder
@@ -130,111 +132,10 @@ $
 ----
 
 [[verfuegbare-paketversionen-ermitteln]]
-==== Verfügbare Paketversionen mit `apt-cache madison` ermitteln ====
+==== Verfügbare Paketversionen ermitteln ====
 
-// TODO: Doppelt! Siehe auch werkzeuge/paketoperationen/verfuegbare-paketversionen-ermitteln.adoc
-
-// Stichworte für den Index
-(((apt-cache, madison)))
-(((Debianpaket, apt-doc)))
-`apt-cache` verfügt ebenso über ein Unterkommando namens `madison`.
-Damit finden Sie heraus, welche Pakete derzeit von den Spiegelservern in
-einer neueren Version verfügbar sind. Nachfolgender Ausdruck zeigt das
-für das Paket 'apt-doc'.
-
-.Ausgabe von `apt-cache` mit dem Unterkommando `madison` für 'apt-doc'
-----
-$ apt-cache madison apt-doc
-   apt-doc | 0.9.7.9+deb7u2 | http://ftp.de.debian.org/debian/ wheezy/main i386 Packages
-   apt-doc | 0.9.7.9+deb7u2 | http://security.debian.org/ wheezy/updates/main i386 Packages
-       apt | 0.9.7.9+deb7u2 | http://ftp.de.debian.org/debian/ wheezy/main Sources
-       apt | 0.9.7.9+deb7u2 | http://security.debian.org/ wheezy/updates/main Sources
-$
-----
-
-// Stichworte für den Index
-(((Debianpaket, devscripts)))
-(((rmadison)))
-Wollen Sie diese Informationen nicht nur für die auf Ihrem System
-genutzten Architekturen und Veröffentlichungen sehen, sondern für alle
-Architekturen und Veröffentlichungen von Debian, so können Sie das
-Programm `rmadison` aus dem Paket 'devscripts'
-<<Debian-Paket-devscripts>> verwenden. Es fragt dazu per HTTP eine
-regelmäßig aktualisierte Quelle im Internet ab, d.h. Sie brauchen
-Internetzugriff, um `rmadison` zu nutzen.
-
-Als Parameter erwartet `rmadison` einen oder mehrere Paketnamen, nach
-denen es dann recherchiert. Als Ergebnis sehen Sie in der linken Spalte
-den Paketnamen, gefolgt von der Versionsnummer des Pakets, der
-Veröffentlichung und am Schluss die Architektur, für die das Paket
-verfügbar ist. Im nachfolgenden Beispielaufruf ist die Architektur
-'all', da es sich um das Dokumentationspaket 'apt-doc' handelt, welches
-auf allen Plattformen gleich ist.
-
-.Ausgabe von `rmadison` für 'apt-doc'
-----
-$ rmadison apt-doc
- apt-doc | 0.8.10.3+squeeze1 | squeeze         | all
- apt-doc | 0.8.10.3+squeeze2 | squeeze-lts     | all
- apt-doc | 0.9.7.9+deb7u2    | wheezy-security | all
- apt-doc | 0.9.7.9+deb7u2    | wheezy          | all
- apt-doc | 1.0.6             | jessie          | all
- apt-doc | 1.0.6             | sid             | all
- apt-doc | 1.1~exp1          | experimental    | all
- apt-doc | 1.1~exp2          | experimental    | all
-$
-----
-
-// Schlagworte für den Index
-(((apt-cache, madison)))
-(((madison)))
-(((rmadison)))
-Sowohl das `apt-cache`-Unterkommando `madison` als auch `rmadison`
-sind benannt nach `madison`, einem Programm welches beim Verwalten der
-Debian-APT-Archive zum Einsatz kommt. Da das originale `madison` aber
-direkt auf dem Server aufgerufen werden muss, auf dem das
-Debian-APT-Archiv zusammengebaut wurde, ist es nur für
-Debian-Entwickler nutzbar – und selbst für diese eher umständlich, da
-sie sich erst per SSH auf jenem Server einloggen müssen. Diese beiden
-Ersatzkommandos sind da doch wesentlich einfacher und vor allem für
-jedermann zu benutzen.
-
-// TODO: Obiger Absatz könnte evtl. auch an den Anfang dieses
-// Abschnittes als Motivation. Und vermutlich braucht er nochmal eine
-// Entbandwurmsatzisierung. ;-)
-
-==== Verfügbare Paketversionen mit `apt-show-versions` ermitteln ====
-
-// Stichworte für den Index
-(((Debianpaket, apt-show-versions)))
-(((Debianpaket, vlc)))
-(((Debianpaket, zsh)))
-(((apt-show-versions)))
-'apt-show-versions' <<Debian-Paket-apt-show-versions>> ist ein Paket,
-welches jedoch nicht zur Standardinstallation von Debian zählt. Auf 
-dessen Benutzung gehen wir ausführlich in <<paketversionen-anzeigen>> 
-ein.
-
-==== APT 1.0 mit dem Unterkommando `list` ====
-
-// Stichworte für den Index
-(((Debianpaket, apt)))
-(((apt, list)))
-Ab Debian 8 'Jessie' und Ubuntu 14.04 LTS 'Trusty Tahr' wird APT auf der
-Basis der Version 1.0 ausgeliefert. Ab dieser Version verlieren die
-bereits vorgestellten Kommandos `apt-cache` und `apt-show-versions` etwas
-an Bedeutung, da das Kommando `apt` mit dem neuen Unterkommando `list`
-und einem Paketnamen als Parameter ähnliches leistet. Genauer gehen wir
-darauf unter ``Paketversionen anzeigen'' in <<paketversionen-anzeigen>> 
-ein.
-
-==== Aktualisierbare Pakete mit `aptitude` ermitteln ====
-
-// Stichworte für den Index
-(((aptitude, aktualisierbare Pakete anzeigen)))
-(((Paket, aktualisierbare Pakete anzeigen)))
-Auch `aptitude` hilft Ihnen dabei, die Pakete zu finden, für die es
-Neuerungen gibt. Näheres dazu lesen Sie unter ``Aktualisierbare Pakete
-anzeigen'' in <<aktualisierbare-pakete-anzeigen>>.
+Hier spielen die Programme `apt-cache`, `rmadison`, `aptitude`, `apt` und
+`apt-show-versions` ihre Stärken aus. Darauf gehen wir ausführlich in 
+<<paketversionen-anzeigen>> ein.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/aus-welchem-repo-kommen-die-pakete.adoc

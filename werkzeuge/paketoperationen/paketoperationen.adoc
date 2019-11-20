@@ -37,6 +37,8 @@ include::aktualisierbare-pakete-anzeigen.adoc[]
 
 include::paketversionen-anzeigen.adoc[]
 
+include::aus-welchem-repo-kommen-die-pakete.adoc[]
+
 include::installationsgroesse-eines-pakets.adoc[]
 
 include::groesstes-installiertes-paket-finden.adoc[]
@@ -46,10 +48,6 @@ include::warum-ist-ein-paket-installiert.adoc[]
 include::liste-der-zuletzt-installierten-pakete-anzeigen.adoc[]
 
 include::paketabhaengigkeiten-anzeigen.adoc[]
-
-include::aus-welchem-repo-kommen-die-pakete.adoc[]
-
-// include::verfuegbare-paketversionen-ermitteln.adoc[]
 
 // in Pakete hineinschauen
 include::pakete-ueber-den-namen-finden/pakete-ueber-den-namen-finden.adoc[]
