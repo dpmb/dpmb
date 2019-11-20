@@ -152,6 +152,7 @@ Diese benutzerspezifischen Markierungen werden auch in der Textoberfläche
 (text-based user interface, kurz TUI) von `aptitude` angezeigt, jedoch
 können Sie diese dort nicht ändern.
 
+[[lokale-paketmarkierungen-aptitude]]
 ==== Lesen und Anzeigen einer Markierung mit `aptitude` ====
 
 // Stichworte für den Index
@@ -212,6 +213,7 @@ das spezielle Muster `?automatic` (Kurzform `~M`) zum Unterkommando
 Pakete mit `aptitude` anzeigen'' in
 <<automatisch-installierte-pakete-mit-aptitude>>.
 
+[[lokale-paketmarkierungen-apt-mark]]
 ==== Lesen und Anzeigen einer Markierung mit `apt-mark` ====
 
 // Stichworte für den Index
@@ -236,19 +238,20 @@ gesetzt ist. Es kennt dazu die folgenden sechs Unterkommandos
 
 `showmanual`:: alle manuell installierten Pakete
 
-`showinstall`:: alle Pakete, die installiert werden
+`showinstall`:: alle Pakete, die zur Installation vorgemerkt sind
 
 `showhold`:: alle Pakete, deren Zustand beibehalten wird
 
-`showremove`:: alle Pakete, die entfernt werden
+`showremove`:: alle Pakete, die zur Entfernung vorgemerkt sind
 
-`showpurge`:: alle Pakete, die inklusive der Konfiguration entfernt werden
+`showpurge`:: alle Pakete, die zur Entfernung inklusive der Konfiguration vorgemerkt sind
 
 Nachfolgend sehen Sie beispielhaft nur das Ergebnis des Aufrufs für die 
 manuell installierten Pakete. Auf automatisch installierte Pakete gehen wir 
 genauer in <<automatisch-installierte-pakete-anzeigen>> ein. Dem Umgang mit 
-dem _hold_-Flag in der Praxis ist der Abschnitt ``Ausgewählte Pakete nicht 
-aktualisieren'' in <<ausgewaehlte-pakete-nicht-aktualisieren>> gewidmet.
+dem Unterkommando `showhold` für die Verwendung des _hold_-Flags in der 
+Praxis ist der Abschnitt ``Ausgewählte Pakete nicht aktualisieren'' in 
+<<ausgewaehlte-pakete-nicht-aktualisieren>> gewidmet.
 
 .Auflistung aller manuell installierten Pakete mittels `apt-mark`
 ----
