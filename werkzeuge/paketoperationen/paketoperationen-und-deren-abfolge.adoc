@@ -8,10 +8,11 @@
 
 Als Paketoperation verstehen wir hier im Buch ein Kommando oder einen
 Aufruf eines Programms zur Paketverwaltung, mit dem Sie entweder den
-aktuellen Paketbestand ausgeben, in diesem Paketbestand nach bestimmten
-Kriterien suchen oder Änderungen im Paketbestand veranlassen. Für
-letzteres heißt das bspw. Paketlisten aktualisieren oder modifizieren,
-Pakete hinzufügen und auch Pakete wieder deinstallieren.
+aktuellen Paketbestand auf ihrem System ausgeben, in diesem Paketbestand 
+nach bestimmten Kriterien suchen oder Änderungen im lokalen Paketbestand 
+veranlassen. Für letzteres heißt das bspw. Paketlisten aktualisieren 
+oder modifizieren, Pakete hinzufügen und auch Pakete wieder 
+deinstallieren.
 
 Wir besprechen die Paketoperationen in gleicher Reihenfolge. Den Anfang
 machen Aufrufe ohne Änderung des Paketbestands, d.h. bspw.
