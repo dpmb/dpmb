@@ -39,6 +39,10 @@ texlive-luatex
 $
 ----
 
+Eine ausführliche Beschreibung zu den genutzten Paketflags sowie ein 
+Beispiel für das Aufspüren manuell installierter Pakete mit `apt-mark` 
+erhalten Sie in <<lokale-paketmarkierungen-apt-mark>>.
+
 [[automatisch-installierte-pakete-mit-aptitude]]
 ==== `aptitude` benutzen ====
 
