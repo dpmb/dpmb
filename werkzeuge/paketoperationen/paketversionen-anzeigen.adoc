@@ -93,6 +93,8 @@ $
 // Stichworte für den Index
 (((Debianpaket, apt-show-versions)))
 (((Debianpaket, base-files)))
+(((Debianpaket, mc)))
+(((Debianpaket, xpdf)))
 (((apt-show-versions)))
 Als gleichwertige Alternative zu `aptitude` und `apt` steht Ihnen auch das 
 Werkzeug `apt-show-versions` aus dem gleichnamigen Debianpaket zur Verfügung 
@@ -101,12 +103,33 @@ Pakete'' in <<aus-welchem-repo-kommen-die-pakete>>). Dieses Paket gehört
 nicht zur Standardinstallation und ist daher zusätzlich zu installieren.
 
 Die nachfolgende Ausgabe zeigt den Status des Pakets `base-files` an. Daraus
-erkennen Sie, daß für dieses ein neueres Paket bereitsteht.
+erkennen Sie, daß dieses Paket installiert ist und für dieses eine neuere 
+Version bereitsteht. `apt-show-versions` zeigt Ihnen zudem an, auf welche 
+konkrete Version sie das bestehende Paket aktualisieren können.
 
 .Kompakte Ausgabe mittels `apt-show-versions`
 ----
 $ apt-show-versions base-files
 base-files:amd64/jessie 8+deb8u2 upgradeable to 8+deb8u3
+$
+----
+
+Gibt es keine aktuellere Version, sehen Sie die folgende Ausgabe:
+
+.Ausgabe von `apt-show-versions` für ein aktuelles Paket
+----
+$ apt-show-versions xpdf
+xpdf:amd64/stretch 3.04-4 uptodate
+$
+----
+
+Ist das Paket jedoch noch nicht auf ihrem System installiert, ist es 
+etwas schmallippig:
+
+.Ausgabe von `apt-show-versions` für ein noch nicht installiertes Paket
+----
+$ apt-show-versions mc
+mc:amd64 not installed
 $
 ----
 
