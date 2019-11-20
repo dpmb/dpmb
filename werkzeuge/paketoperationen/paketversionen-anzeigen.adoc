@@ -57,14 +57,45 @@ i A 2015g-0+deb8u1               stable- 500
 $
 ----
 
+==== Mit `apt` stöbern ====
+
+// Stichworte für den Index
+(((Debianpaket, apt)))
+(((apt, list --all-versions)))
+
+Auch `apt` liefert mittlerweile einen Schalter mit, der Ihnen bei der 
+Recherche nach neuen Versionen weiterhilft. Dieser heißt `--all-versions`
+und entfaltet seine Wirkung in Kombination mit dem Unterkommando `list`.
+Ohne weitere Angabe eines Paketes überprüft es alle Pakete im Repository.
+
+Das nachfolgende Beispiel stammt von einem Debian 9 'Stretch', während
+bereits der Nachfolger 10 'Buster' als stabile Veröffentlichung gilt. Sie 
+sehen, dass `apt` die beiden Pakete 'mc' und 'xpdf' überprüft und die Pakete
+der Veröffentlichung _oldstable_ zuordnet. 'mc' war bereits installiert, da 
+die Konfigurationsdateien noch vorhanden sind. 'xpdf' ist hingegen noch 
+vollständig installiert. Beide Pakete stehen in einer neueren Version im 
+Repository bereit. `apt` listet nach dem Namen die Paketversion und die 
+Architektur auf.
+
+.Status der installierten Pakete anzeigen
+----
+$ apt list --all-versions mc xpdf
+Auflistung... Fertig
+mc/oldstable,now 3:4.8.18-1 amd64 [Konfiguration-verbleibend]
+
+xpdf/oldstable,now 3.04-4 amd64  [installiert]
+
+$
+----
+
 ==== `apt-show-versions` verwenden ====
 
 // Stichworte für den Index
 (((Debianpaket, apt-show-versions)))
 (((Debianpaket, base-files)))
 (((apt-show-versions)))
-Als gleichwertige Alternative zu `aptitude` steht Ihnen auch das Werkzeug 
-`apt-show-versions` aus dem gleichnamigen Debianpaket zur Verfügung 
+Als gleichwertige Alternative zu `aptitude` und `apt` steht Ihnen auch das 
+Werkzeug `apt-show-versions` aus dem gleichnamigen Debianpaket zur Verfügung 
 <<Debian-Paket-apt-show-versions>> (siehe auch ``Aus welchem Repo kommen die 
 Pakete'' in <<aus-welchem-repo-kommen-die-pakete>>). Dieses Paket gehört 
 nicht zur Standardinstallation und ist daher zusätzlich zu installieren.
