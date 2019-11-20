@@ -211,32 +211,9 @@ jedermann zu benutzen.
 (((Debianpaket, zsh)))
 (((apt-show-versions)))
 'apt-show-versions' <<Debian-Paket-apt-show-versions>> ist ein Paket,
-welches jedoch nicht zur Standardinstallation von Debian zählt. Als
-Parameter geben Sie dem gleichnamigen Programm den Namen des gewünschten
-Pakets an, für welches Sie Informationen zu den verfügbaren Varianten
-wünschen. Das Programm ist insbesondere in gemischten Umgebungen
-interessant, d.h. wenn Pakete aus verschiedenen Veröffentlichungen
-gleichzeitig verwendet werden.
-
-Nachfolgendes Beispiel zeigt die Ausgabe für das Paket 'zsh' auf einem
-Debian 7 'Wheezy'. Hier ist kein neueres Paket verfügbar:
-
-.Versionen anzeigen für das Paket 'zsh'
-----
-$ apt-show-versions zsh
-zsh/wheezy uptodate 4.3.17-1
-$
-----
-
-Anders als bei dem obigen Beispiel ist es für das Paket 'vlc' unter
-Debian 8 'Jessie', für das ein aktuelleres Paket bereitsteht:
-
-.Versionen anzeigen für das Paket 'vlc'
-----
-$ apt-show-versions vlc
-vlc:amd64/jessie 2.2.0~rc2-2 upgradeable to 2.2.0~rc2-2+deb8u1
-$
-----
+welches jedoch nicht zur Standardinstallation von Debian zählt. Auf 
+dessen Benutzung gehen wir ausführlich in <<paketversionen-anzeigen>> 
+ein.
 
 ==== APT 1.0 mit dem Unterkommando `list` ====
 
@@ -245,25 +222,11 @@ $
 (((apt, list)))
 Ab Debian 8 'Jessie' und Ubuntu 14.04 LTS 'Trusty Tahr' wird APT auf der
 Basis der Version 1.0 ausgeliefert. Ab dieser Version verlieren die
-zuvor vorgestellten Kommandos `apt-cache` und `apt-show-versions` etwas
+bereits vorgestellten Kommandos `apt-cache` und `apt-show-versions` etwas
 an Bedeutung, da das Kommando `apt` mit dem neuen Unterkommando `list`
-und einem Paketnamen als Parameter ähnliches leistet. Die Ausgabe des
-Paketnamens auf dem Terminal erfolgt in Farbe, nur lässt sich das hier
-im Buch leider weniger gut illustrieren.
-
-Nachfolgend sehen Sie wiederum die Ausgabe für das Paket 'zsh'. Nach dem
-Paketnamen erscheinen die Veröffentlichung, die Versionsnummer und die
-genutzte Architektur (hier 'amd64'). In den Klammern sehen Sie neben dem
-Installationsstatus eine kurze Angabe, auf welche Version Sie das Paket
-aktualisieren können.
-
-.Neue Möglichkeiten mit APT 1.0
-----
-$ apt list zsh
-Listing... Done
-zsh/unstable,testing,now 5.0.5-3 amd64 [installed,upgradable to: 5.0.5-4]
-$
-----
+und einem Paketnamen als Parameter ähnliches leistet. Genauer gehen wir
+darauf unter ``Paketversionen anzeigen'' in <<paketversionen-anzeigen>> 
+ein.
 
 ==== Aktualisierbare Pakete mit `aptitude` ermitteln ====
 
