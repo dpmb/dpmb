@@ -54,8 +54,8 @@ Auf der Kommandozeile suchen Sie im Paketbestand Ihres Linuxsystems
 mittels `aptitude` über das Unterkommando `search` und dem speziellen
 Muster `~M` (Langform `?automatic`). Sie erhalten danach eine Liste, die
 den Paketstatus, den Paketnamen und eine kurze Paketbeschreibung
-enthält. Alle Pakete sind mit dem Buchstaben `A` für _automatisch
-installiert_ gekennzeichnet.
+enthält. In der Ausgabe sind alle Pakete mit dem Buchstaben `A` für 
+_automatisch installiert_ gekennzeichnet.
 
 .Automatisch installierte Pakete mit `aptitude` anzeigen
 ----
