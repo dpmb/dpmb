@@ -20,7 +20,7 @@ keine Erinnerung mehr an das Paket und betrachtet es wieder als neu.
 `aptitude` verfügt mit `~N` (Langform `?new`) über ein Suchmuster, um
 diese Pakete aufzuspüren. Jede ausgegebene Zeile beginnt mit dem
 Paketstatus -- hier der Kleinbuchstabe `p` zur Kennzeichnung als 'neues
-Paket' --, gefolgt vom Paketnamen und der Kurzbeschreibung zum Paket.
+Paket' -- , gefolgt vom Paketnamen und der Kurzbeschreibung zum Paket.
 
 .Auflistung aller neuen Pakete mittels `aptitude` (Auszug)
 ----
@@ -33,5 +33,8 @@ p   2vcard           - Perl-Skript zur Konvertierung eines Adress
 ...
 $
 ----
+
+Die Werkzeuge `dpkg`, `apt` und `apt-get` verfügen nicht über einen 
+entsprechenden Schalter, um neue Pakete aufzulisten.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/neue-pakete-anzeigen.adoc
