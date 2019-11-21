@@ -7,7 +7,7 @@
 
 *Dipl.-Inf. Axel Beckert* <<Beckert-Webseite>> hat Informatik mit
 Nebenfach Biologie an der Universität des Saarlandes studiert. Er
-arbeitet als u.a. Linux-Systemadministrator an der ETH Zürich, ist im
+arbeitet u.a. als Linux-Systemadministrator an der ETH Zürich, ist im
 Vorstand der Linux User Group Switzerland (LUGS) und Mitglied des
 Debian-Projekts. Er benutzt `aptitude` seit über 15 Jahren und ist seit
 der Neuformierung des `aptitude`-Teams zum Jahreswechsel 2011/2012 als
