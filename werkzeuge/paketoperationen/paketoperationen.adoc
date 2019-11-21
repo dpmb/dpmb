@@ -75,7 +75,9 @@ include::konfigurationsdateien-eines-pakets-anzeigen.adoc[]
 // - Veränderungen zur vorherigen Version
 include::paketaenderungen-nachlesen.adoc[]
 
-// - Veränderungen zwischen dem Paket auf dem Paketmirror und den lokalen Dateien
+// - Veränderungen 
+//   * Verifizierung via GnuPG-Schlüssel
+//   * zwischen dem Paket auf dem Paketmirror und den lokalen Dateien
 include::paket-auf-veraenderungen-pruefen.adoc[]
 
 include::liste-der-zuletzt-geaenderten-abhaengigkeiten.adoc[]
@@ -90,8 +92,6 @@ include::installation-zwischengespeicherter-pakete-aus-dem-paketcache.adoc[]
 include::sourcepakete-beziehen.adoc[]
 
 include::sourcepakete-anzeigen.adoc[]
-
-include::bezogenes-paket-verifizieren.adoc[]
 
 include::pakete-installieren.adoc[]
 

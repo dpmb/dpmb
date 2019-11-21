@@ -3,7 +3,6 @@
 // Baustelle: Fertig
 
 [[paket-auf-veraenderungen-pruefen]]
-
 === Paket auf unerwünschte Veränderungen prüfen ===
 
 // Stichworte für den Index
@@ -12,29 +11,144 @@
 (((Paket, Signatur überprüfen)))
 (((Paket, verifizieren)))
 (((Paketsignatur, überprüfen)))
-Installieren Sie ein Debianpaket, landen die darin enthaltenen Dateien
-üblicherweise eins-zu-eins auf dem Speichermedium. Als Administrator
-gehört zu Ihren Aufgaben, das System und die Dateien auf Integrität zu
-prüfen. Das umfasst auch das Nachschauen, ob die lokalen Dateien aus
-einem gerade installierten Paket verändert wurden, d.h. ob zwischen der
-Version vom Paketmirror und der lokalen Version Unterschiede bestehen.
-Falls ja, ist von Ihnen zu klären, welche Dateien verändert wurden. Es
-gibt mehrere Situationen, in denen das wichtig ist, gewollte oder
-unerwünschte Änderungen von Daten festzustellen.
+Das Thema Vertrauen und Authentizität der bereitgestellten Softwarepakete
+wird bei Debian großgeschrieben. Ziel ist, dass Sie sicher sein können,
+dass die von einem Debian-Spiegelserver bezogene Software unverändert ist. 
+Es greifen dabei eine ganze Reihe von automatischen Überprüfungen. Mit 
+den nachfolgend beschriebenen Vorgehensweisen können Sie die entsprechenden
+Einzelschritte selbst nachvollziehen und durchführen.
 
-* Welche Unterschiede bestehen zwischen der offiziell verfügbaren
-Version (und dessen Konfiguration) und den lokalen Einstellungen,
-sprich: welche Änderungen haben Sie vorgenommen und müssen ggf. bei
-einer Aktualisierung der Pakete oder des Systems berücksichtigt werden?
-(Bei der Installation fragt Debian mittlerweile, ob ihre Anpassungen
-bestehen bleiben sollen.)
+Wir unterscheiden hier zwei Fälle:
 
-* Vorher hat ein anderer Administrator den Rechner betreut. Sie
-  möchten wissen, an welchen Dateien Änderungen von demjenigen
-  vorgenommen wurden.
+beziehen eines Paketes und Prüfung auf Unversehrtheit :: wurde das
+Paket korrekt übertragen und ist die Quelle vertrauenswürdig. Diese 
+Überprüfungen stellen sicher, dass ein von Ihnen bezogenenes Debianpaket 
+dem Paketmirror so entnommen wurde, wie es von der Distribution in der 
+Veröffentlichung zur Verfügung gestellt wurde. Sie schließen damit aus, 
+dass zwischenzeitlich Veränderungen von einer dritten Partei oder auf dem 
+Paketmirror stattgefunden haben. Weiterhin wissen Sie danach ebenfalls, 
+dass das Paket vollständig zu Ihnen übertragen wurde und dass das Paket 
+auf dem Weg vom Paketmirror zu Ihnen nicht verändert wurde. U.a. bilden 
+diese Schritte die Vertrauensbasis für die von Ihnen bezogene Software.
 
-* Nach einer Reparatur des Dateisystems, bei der zu Paketen gehörende
-Dateien verändert wurden, prüfen Sie nach, ob die Reparatur erfolgreich
+überprüfen, ob die Inhalte eines installierten Pakets verändert wurden ::
+bestehen zwischen der Version vom Paketmirror und der lokalen Version 
+Unterschiede, und wenn ja, welche sind das.
+
+[[bezogenes-paket-verifizieren]]
+==== Prüfung eines Paketes auf Unversehrtheit ====
+
+// Stichworte für den Index
+(((Debian, Vertrauenskette)))
+(((Paket, auf Vertrauenswürdigkeit prüfen)))
+(((Paket, Signatur überprüfen)))
+(((Paket, verifizieren)))
+(((Paketsignatur, überprüfen)))
+(((Paketsignaturen)))
+
+Die offiziellen Paketquellen von Debian, als auch die darüber referenzierten 
+sind Quellpakete kryptographisch signiert (siehe dazu 
+<<paketquelle-auf-echtheit-ueberpruefen>>). Die Signaturen werden mit Hilfe 
+der Public-Key-Kryptographie erststellt. Mit dem entsprechenden öffentlichen 
+Schlüssel (engl. 'Public Key') können Sie (und jeder andere Benutzer ebenso) 
+überprüfen, ob das Paket vertrauenswürdig ist.
+
+Die Grundlage dazu bildet die Vertrauenskette bei Debian, die sich vom
+Entwickler zum Build-Daemon (kurz ``buildd'') bis hin zum FTP-Master-Server, 
+den Paketlisten, dem Debian-Archive-Keyring und dem Debian-Keyring erstreckt. 
+Genutzt wird dabei eine Kombination aus kryptographischen Hashsummen und 
+einer digitalen Signatur.
+
+Auf den Debian-Spiegelservern befindet sich pro Veröffentlichung eine digital 
+signierte Datei namens `Release`. Sie beinhaltet die Namen der Paketlisten 
+(heutzutage meist `Packages`, `Packages.gz` und `Packages.xz`, früher oft 
+auch noch `Packages.bz2`) sowie deren Hashsummen als MD5-, SHA1- und 
+SHA256-Variante. Mit der digitalen Signatur der Release-Datei und den darin 
+enthalten Hashsummen wird sichergestellt, dass diese Dateien nicht verändert 
+wurden.
+
+Die Datei `Packages` (wie auch deren komprimierten Varianten) beinhaltet 
+wiederum eine Liste von Paketen bzw. deren Dateien, die für diese 
+Veröffentlichung zur Verfügung stehen – und deren Hash-Summen. Dies stellt 
+wiederum sicher, dass die Paketdateien aus der Liste nicht verändert wurden.
+
+Durch die gesamte Kette aus Paket-Hashsummen in den Paketlisten und 
+Paketliste-Hashsummen in der Release-Datei garantiert die einzelne digitale 
+Signatur auf der Release-Datei die Integrität sämtlicher Pakete einer 
+Veröffentlichung.
+
+// Stichworte für den Index
+(((apt-key)))
+(((apt-key, add)))
+(((/etc/apt/trusted.gpg)))
+(((Debianpaket, apt)))
+(((Debianpaket, debian-archive-keyring)))
+Vertrauenswürdige Schlüssel verwalten Sie mit dem Programm `apt-key` aus
+dem Paket 'apt' <<Debian-Paket-apt>>. Auf die Bedienung von `apt-key` 
+gehen wir unter <<apt-key-unterkommandos>> ein. 
+
+Zu dem Programm gehört ein Schlüsselring von öffentlichen GnuPG-Schlüsseln, 
+sog. ``Public Keys'', mit denen die Signaturen in der Datei `Release.gpg` 
+auf den Debian-Spiegelservern überprüft werden können. Dieser 
+Schlüsselring ist im Paket 'debian-archive-keyring' enthalten und lokal 
+in Dateien im Verzeichnis `/etc/apt/trusted.gpg.d` gespeichert. Dazu 
+kommt noch die Datei `/etc/apt/trusted.gpg`, welche heutzutage nur noch 
+manuell per `apt-key add` hinzugefügte Schlüssel enthält. Bei früheren 
+Veröffentlichungen war diese Datei die alleinige Quelle zur Überprüfung 
+von Veröffentlichungssignaturen.
+
+===== Nur ein Einzelpaket prüfen =====
+
+* `apt-key` (siehe <<Debian-Wiki-SecureApt>>)
+* empfohlene Vorgehensweise zur Validierung
+** ToDo
+* was passiert, wenn das Paket keinen gültigen GPG-Key hat
+** wie erkenne ich das bzw. bekomme das heraus
+** Ausgabe einer Warnung (W) bei `apt-get` und `aptitude` (siehe <<fig.aptitude-paket-ohne-gpg>>)
+
+.Aktualisierung der Paketlisten mit erkanntem GPG-Fehler
+----
+# apt-get update
+...
+Hole:10 http://deb.opera.com squeeze/non-free i386 Packages [774 B]
+Es wurden 1.250 kB in 3 s geholt (329 kB/s)
+Paketlisten werden gelesen... Fertig
+W: GPG-Fehler: http://deb.opera.com squeeze Release: Die folgenden Signaturen konnten 
+nicht überprüft werden, weil ihr öffentlicher Schlüssel nicht verfügbar ist: 
+NO_PUBKEY E585066A30C18A2B
+#
+----
+
+.Ausgabe einer 'deutlichen' Warnung bei `aptitude`
+image::werkzeuge/paketoperationen/aptitude-paket-ohne-gpg.png[id="fig.aptitude-paket-ohne-gpg", width="50%"]
+
+===== Mehrere Pakete prüfen =====
+
+* Todo
+
+==== Die Inhalte eines bereits installierten Paketes überprüfen ====
+
+Installieren Sie ein Debianpaket, landen die darin enthaltenen Dateien 
+üblicherweise eins-zu-eins auf dem Speichermedium. Als Administrator gehört 
+zu Ihren Aufgaben, das System und die Dateien auf Integrität zu prüfen. Das 
+umfasst auch das Nachschauen, ob die lokalen Dateien aus einem gerade 
+installierten Paket später verändert wurden, d.h. ob zwischen der Version 
+vom Paketmirror und der lokalen Version Unterschiede bestehen. Falls ja, ist 
+von Ihnen zu klären, welche Dateien verändert wurden. Es gibt mehrere 
+Situationen, in denen das wichtig ist, gewollte oder unerwünschte Änderungen 
+von Daten festzustellen.
+
+* Welche Unterschiede bestehen zwischen der offiziell verfügbaren Version 
+(und dessen Konfiguration) und den lokalen Einstellungen, sprich: welche 
+Änderungen haben Sie vorgenommen und müssen ggf. bei einer Aktualisierung 
+der Pakete oder des Systems berücksichtigt werden? (Bei der Installation 
+fragt Debian mittlerweile, ob ihre Anpassungen bestehen bleiben sollen.)
+
+* Vorher hat ein anderer Administrator den Rechner betreut. Sie möchten 
+wissen, an welchen Dateien Änderungen von demjenigen vorgenommen wurden.
+
+* Nach einer Reparatur des Dateisystems, bei der zu Paketen gehörende 
+Dateien verändert wurden, prüfen Sie nach, ob die Reparatur erfolgreich 
 war, d.h. ob die Dateien nach wie vor den erwarteten Inhalt haben.
 
 // Stichworte für den Index
@@ -51,7 +165,7 @@ Verfügung.
 
 // siehe dazu: http://debiananwenderhandbuch.de/debsums.html
 
-==== MD5-Summen zur Erkennung von Änderungen ====
+===== MD5-Summen zur Erkennung von Änderungen =====
 
 Während Debian bei der Verifizierung der bezogenen Pakete auch SHA1-
 und SHA256-Hashsummen zur kryptographischen Absicherung verwendet (siehe
@@ -103,7 +217,7 @@ f059e3f0159a5aeb761d41514a117310  usr/share/menu/htop
 $
 ----
 
-==== Dateien paketbezogen mit `dlocate` überprüfen ====
+===== Dateien paketbezogen mit `dlocate` überprüfen =====
 
 // Stichworte für den Index
 (((Debianpaket, dlocate)))
@@ -133,7 +247,7 @@ usr/share/pixmaps/htop.png: OK
 $
 ----
 
-==== Dateien überprüfen mit `debsums` ====
+===== Dateien überprüfen mit `debsums` =====
 
 // Stichworte für den Index
 (((Debianpaket, debsums)))
@@ -274,7 +388,7 @@ $ sudo debsums -e sudo
 $
 ----
 
-==== Dateien mit `dpkg -V` überprüfen ====
+===== Dateien mit `dpkg -V` überprüfen =====
 
 // Stichworte für den Index
 (((Debianpaket, dpkg)))
