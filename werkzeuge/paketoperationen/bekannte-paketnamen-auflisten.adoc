@@ -35,48 +35,6 @@ $
 ----
 
 // Stichworte für den Index
-(((Debianpaket, dctrl-tools)))
-(((dpkg, -s)))
-(((grep-aptavail, -PX)))
-(((grep-available)))
-In eine ähnliche Richtung gehen die beiden Werkzeuge `grep-available`
-und `grep-aptavail` aus dem Paket 'dctrl-tools'
-<<Debian-Paket-dctrl-tools>>. Beide liefern Ihnen Informationen darüber,
-ob und in welcher Version das von Ihnen angefragte Paket aus den
-Paketquellen zur Verfügung steht. Während `grep-available` weitestgehend
-die Informationen ausgibt, die Sie mittels `dpkg -s` erhalten, liefert
-Ihnen `grep-aptavail` die vollständigen Informationen, so bspw. auch, wo
-Sie das Paket in der Verzeichnishierarchie der Paketquellen finden.
-Nachfolgendes Beispiel zeigt die Recherche anhand des Pakets 'xpdf'.
-
-.Paketinformationen zu 'xpdf'
-----
-$ grep-aptavail -PX xpdf
-Package: xpdf
-Version: 3.03-10
-Installed-Size: 447
-Maintainer: Michael Gilbert <mgilbert@debian.org>
-Architecture: i386
-Provides: pdf-viewer
-Depends: lesstif2 (>= 1:0.94.4), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libpoppler19 (>= 0.18.4), libstdc++6 (>= 4.1.1), libx11-6, libxt6
-Recommends: poppler-utils, poppler-data, gsfonts-x11, cups-bsd
-Description: Portable Document Format (PDF) reader
-Homepage: http://www.foolabs.com/xpdf/
-Description-md5: fa7a14f325304cc49bbc0086a88d330e
-Tag: implemented-in::c++, interface::x11, role::program, scope::application,
- uitoolkit::motif, use::viewing, works-with-format::pdf,
- works-with::text, x11::application
-Section: text
-Priority: optional
-Filename: pool/main/x/xpdf/xpdf_3.03-10_i386.deb
-Size: 196690
-MD5sum: 02e96c8b0c4b82a496deb2c386ed1042
-SHA1: 233ddb2074f1694e8fda75c63fb714464d42e15b
-SHA256: 2cced2a99c1b028bd5b2c5e37c3a6206c643167b1a5465481e5621f2d3f390a3
-$
-----
-
-// Stichworte für den Index
 (((apt-cache, pkgnames)))
 Kennen Sie jedoch nur ein Fragment eines Paketnamens, gibt es einen
 üblichen Weg und eine Abkürzung. Der _übliche Weg_ kombiniert
