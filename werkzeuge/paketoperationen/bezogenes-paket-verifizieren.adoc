@@ -74,89 +74,21 @@ einer Veröffentlichung.
 (((Debianpaket, apt)))
 (((Debianpaket, debian-archive-keyring)))
 Vertrauenswürdige Schlüssel verwalten Sie mit dem Programm `apt-key` aus
-dem Paket 'apt'. Dazu gehört ein Schlüsselring von öffentlichen
-GnuPG-Schlüsseln, sog. ``Public Keys'', mit denen die Signaturen in der
-Datei `Release.gpg` auf den Debian-Spiegelservern überprüft
-werden können. Dieser Schlüsselring ist im Paket
-'debian-archive-keyring' enthalten und lokal in Dateien im Verzeichnis
-`/etc/apt/trusted.gpg.d` gespeichert.
+dem Paket 'apt' <<Debian-Paket-apt>>. Auf die Bedienung von `apt-key` 
+gehen wir unter <<apt-key-unterkommandos>> ein. 
 
-Dazu kommt noch die Datei `/etc/apt/trusted.gpg`, welche
-heutzutage nur noch manuell per `apt-key add` hinzugefügte Schlüssel
-enthält. Bei früheren Veröffentlichungen war diese Datei die
-alleinige Quelle zur Überprüfung von Veröffentlichungssignaturen.
-
-// Stichworte für den Index
-(((apt-key, finger)))
-Die Signaturen der von Ihnen verwendeten Paketquellen zeigen Sie mit dem 
-Aufruf `apt-key finger` an{empty}footnote:[Da die Datei 
-`/etc/apt/trusted.gpg` teilweise für normale User nicht lesbar ist, kann 
-es sein, dass Sie dieses Kommando mit Root-Rechten ausführen müssen.]. 
-Nachfolgend sehen Sie beispielhaft die Signaturen zum Opera Software 
-Archive, dem Mendeley Desktop Team und dem Debian Archive für die beiden 
-Veröffentlichungen _Wheezy_ und _Jessie_.
-
-.Liste der Signaturen (Ausschnitt)
-----
-# apt-key finger
-/etc/apt/trusted.gpg
-- -------------------
-pub   1024D/30C18A2B 2012-10-29 [verfallen: 2014-10-29]
-  Schl.-Fingerabdruck = ABCD 165A F57C AC92 18D2  872B E585 066A 30C1 8A2B
-uid                  Opera Software Archive Automatic Signing Key 2013 <packager@opera.com>
-
-pub   2048R/6F036044 2011-02-21
-  Schl.-Fingerabdruck = 26BB 0219 1EF4 588D 3A7B  C30F D800 C7D6 6F03 6044
-uid                  Mendeley Desktop Team <desktop@mendeley.com>
-sub   2048R/F9CE0BFD 2011-02-21
-
-/etc/apt/trusted.gpg.d/debian-archive-jessie-stable.gpg
-- -------------------------------------------------------
-pub   4096R/518E17E1 2013-08-17 [verfällt: 2021-08-15]
-  Schl.-Fingerabdruck = 75DD C3C4 A499 F1A1 8CB5  F3C8 CBF8 D6FD 518E 17E1
-uid                  Jessie Stable Release Key <debian-release@lists.debian.org>
-
-/etc/apt/trusted.gpg.d/debian-archive-wheezy-automatic.gpg
-- ----------------------------------------------------------
-pub   4096R/46925553 2012-04-27 [verfällt: 2020-04-25]
-  Schl.-Fingerabdruck = A1BD 8E9D 78F7 FE5C 3E65  D8AF 8B48 AD62 4692 5553
-uid                  Debian Archive Automatic Signing Key (7.0/wheezy) <ftpmaster@debian.org>
-
-/etc/apt/trusted.gpg.d/debian-archive-wheezy-stable.gpg
-- -------------------------------------------------------
-pub   4096R/65FFB764 2012-05-08 [verfällt: 2019-05-07]
-  Schl.-Fingerabdruck = ED6D 6527 1AAC F0FF 15D1  2303 6FB2 A1C2 65FF B764
-uid                  Wheezy Stable Release Key <debian-release@lists.debian.org>
-
-#
-----
-
-// Stichworte für den Index
-(((Debianpaket, gui-apt-key)))
-(((gui-apt-key)))
-
-**TODO:** gui-apt-key/curses-apt-key doppelt gemoppelt: Auch schon in
-<<paketquelle-auf-echtheit-ueberpruefen>> aufgeführt.
-
-Für eine graphische Darstellung nutzen Sie stattdessen das Werkzeug
-`gui-apt-key` aus den gleichnamigen Paket
-<<Debian-Paket-gui-apt-key>>. Es ist allerdings in Debian 10 _Buster_
-nicht enthalten, könnte aber in späteren Veröffentlichungen wieder
-zurückkehren.
-
-Es existiert auch eine TUI-Variante namens `curses-apt-key`
-<<curses-apt-key>>. Diese ist aber zur Zeit noch nicht offizieller
-Bestandteil von Debian, da dazu zuerst das Paket `gui-apt-key` in
-Bibliothek und Frontend aufgespalten werden müsste. Details dazu finden
-Sie im Debian-Bugtracker
-<<curses-apt-key-braucht-gui-apt-key-aufsplittung>>. In
-<<fig.gui-apt-key2-gpg>> sehen Sie `gui-apt-key` mit der Überprüfung des
-(inzwischen abgelaufenen) Schlüssels für das Opera Software Archive.
-
-.Informationen zu einem ausgewählten Schlüssel in `gui-apt-key` anzeigen
-image::werkzeuge/paketoperationen/gui-apt-key2.png[id="fig.gui-apt-key2-gpg", width="50%"]
+Zu dem Programm gehört ein Schlüsselring von öffentlichen GnuPG-Schlüsseln, 
+sog. ``Public Keys'', mit denen die Signaturen in der Datei `Release.gpg` 
+auf den Debian-Spiegelservern überprüft werden können. Dieser 
+Schlüsselring ist im Paket 'debian-archive-keyring' enthalten und lokal 
+in Dateien im Verzeichnis `/etc/apt/trusted.gpg.d` gespeichert. Dazu 
+kommt noch die Datei `/etc/apt/trusted.gpg`, welche heutzutage nur noch 
+manuell per `apt-key add` hinzugefügte Schlüssel enthält. Bei früheren 
+Veröffentlichungen war diese Datei die alleinige Quelle zur Überprüfung 
+von Veröffentlichungssignaturen.
 
 ==== Nur ein Einzelpaket prüfen ====
+
 * `apt-key` (siehe <<Debian-Wiki-SecureApt>>)
 * empfohlene Vorgehensweise zur Validierung
 ** ToDo
