@@ -88,13 +88,13 @@ alleinige Quelle zur Überprüfung von Veröffentlichungssignaturen.
 
 // Stichworte für den Index
 (((apt-key, finger)))
-Die Signaturen der von Ihnen verwendeten Paketquellen zeigen Sie mit dem
-Aufruf `apt-key finger'{empty}footnote:[Da die Datei `/etc/apt/trusted.gpg`
-teilweise für normale User nicht lesbar ist, kann es sein, dass Sie dieses
-Kommando mit Root-Rechten ausführen müssen.] an. Nachfolgend sehen Sie
-beispielhaft die Signaturen zum Opera Software Archive, dem Mendeley
-Desktop Team und dem Debian Archive für die beiden Veröffentlichungen
-_Wheezy_ und _Jessie_.
+Die Signaturen der von Ihnen verwendeten Paketquellen zeigen Sie mit dem 
+Aufruf `apt-key finger` an{empty}footnote:[Da die Datei 
+`/etc/apt/trusted.gpg` teilweise für normale User nicht lesbar ist, kann 
+es sein, dass Sie dieses Kommando mit Root-Rechten ausführen müssen.]. 
+Nachfolgend sehen Sie beispielhaft die Signaturen zum Opera Software 
+Archive, dem Mendeley Desktop Team und dem Debian Archive für die beiden 
+Veröffentlichungen _Wheezy_ und _Jessie_.
 
 .Liste der Signaturen (Ausschnitt)
 ----
