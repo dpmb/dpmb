@@ -87,9 +87,9 @@ die abgelaufenen oder zurückgezogenen Schlüssel vergangener
 Debian-Veröffentlichungen verfügbar.
 
 Ähnliche Schlüsselringe gibt es auch für andere Veröffentlichungen, bspw.
-`debian-edu-archive-keyring` für Skolelinux/DebianEdu
-(<<Skolelinux>>) und `debian-ports-archive-keyring` für das
-Debian-Ports-Projekt (<<debian-architekturen-ports-projekt>>.
+`debian-edu-archive-keyring` für Skolelinux/DebianEdu <<Skolelinux>> und 
+`debian-ports-archive-keyring` für das Debian-Ports-Projekt (siehe 
+<<debian-architekturen-ports-projekt>>).
 
 ==== Unterkommandos von `apt-key` ====
 
