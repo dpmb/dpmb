@@ -6,9 +6,7 @@
 
 === Verfügbare Paketversionen ermitteln ===
 
-// vereinigen mit aus-welchem-repo-kommen-die-pakete
-
-// TODO: Doppelt! Siehe auch werkzeuge/paketoperationen/aus-welchem-repo-kommen-die-pakete.adoc
+==== `apt-cache` benutzen ====
 
 // Stichworte für den Index
 (((apt-cache, madison)))
@@ -27,6 +25,8 @@ $ apt-cache madison apt-doc
        apt |      1.4.6 | http://ftp.ch.debian.org/debian stretch/main Sources
 $
 ----
+
+==== `rmadison` einsetzen ====
 
 // Stichworte für den Index
 (((rmadison)))
@@ -68,6 +68,8 @@ $ rmadison -s stretch -a amd64 base-files
 base-files | 9.9           | stable     | amd64
 $
 ----
+
+==== `aptitude` befragen ====
 
 // Stichworte für den Index
 (((aptitude, search '~U')))
