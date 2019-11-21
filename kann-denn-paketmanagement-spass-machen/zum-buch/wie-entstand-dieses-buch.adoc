@@ -22,7 +22,7 @@ versuchten uns in einem Screencast zum Thema.
 Im Herbst 2012 hatte Axel die Idee, einen LinuxUser-Artikel zu
 `aptitude` im Alltagsgebrauch zu schreiben. Dazu kam es bisher noch
 nicht{empty}footnote:[Jörg, bitte nicht böse sein!], denn eine Reihe von
-Vorarbeiten war dazu notwendig. Wir einigten uns daher auf einen Beitrag
+Vorarbeiten waren dazu notwendig. Wir einigten uns daher auf einen Beitrag
 zu den Unterschieden zwischen `apt-get` und `aptitude`, der jedoch immer
 länger und länger wurde und schließlich im Frühjahr 2013 in einen
 Zweiteiler mündete <<Beckert-Hofmann-Aptitude-1-LinuxUser>>
