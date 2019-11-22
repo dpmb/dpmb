@@ -44,7 +44,7 @@ Wir empfehlen Ihnen zur Aktualisierung den folgenden Ablauf:
   haben. Unter ``Paketquelle auf Echtheit überprüfen'' in
   <<paketquelle-auf-echtheit-ueberpruefen>> erfahren Sie, wie das zu
   erfolgen hat. Offizielle Paketquellen verifizieren Sie mit den bereits
-  mitgelieferten Schlüsseln ihrer Debian-Installation.
+  mitgelieferten Schlüsseln ihrer Debian-Installation. 
 
 . Aktualisieren Sie die lokalen Paketlisten mit einem der Kommandos
   namens `apt-get update`, `aptitude update` oder seit Debian 8 'Jessie'

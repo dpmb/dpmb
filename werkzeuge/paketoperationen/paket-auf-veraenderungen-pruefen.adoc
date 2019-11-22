@@ -86,9 +86,9 @@ Veröffentlichung.
 (((Debian, Debian-Archive-Keyring)))
 (((Debianpaket, apt)))
 (((Debianpaket, debian-archive-keyring)))
-Vertrauenswürdige Schlüssel verwalten Sie mit dem Programm `apt-key` aus
-dem Paket 'apt' <<Debian-Paket-apt>>. Auf die Bedienung von `apt-key` 
-gehen wir unter <<apt-key-unterkommandos>> ein. 
+Eine lokale Kopie der vertrauenswürdigen Schlüssel passend zur Veröffentlichung 
+verwalten Sie mit dem Programm `apt-key` aus dem Paket 'apt' <<Debian-Paket-apt>>. 
+Auf dessen Bedienung gehen wir unter <<apt-key-unterkommandos>> ein. 
 
 Zu dem Programm gehört ein Schlüsselring von öffentlichen GnuPG-Schlüsseln, 
 sog. ``Public Keys'', mit denen die Signaturen in der Datei `Release.gpg` 
@@ -100,30 +100,88 @@ manuell per `apt-key add` hinzugefügte Schlüssel enthält. Bei früheren
 Veröffentlichungen war diese Datei die alleinige Quelle zur Überprüfung 
 von Veröffentlichungssignaturen.
 
-===== Nur ein Einzelpaket prüfen =====
+Debian signiert seine einzelnen Pakete nicht kryptographisch mittels 
+`dpkg-sig`, sondern vertraut auf die signierte `RELEASE`-Datei und die darin
+gespeicherten Hashsummen der Pakete.
 
-* `apt-key` (siehe <<Debian-Wiki-SecureApt>>)
-* empfohlene Vorgehensweise zur Validierung
-** ToDo
-* was passiert, wenn das Paket keinen gültigen GPG-Key hat
-** wie erkenne ich das bzw. bekomme das heraus
-** Ausgabe einer Warnung (W) bei `apt-get` und `aptitude` (siehe <<fig.aptitude-paket-ohne-gpg>>)
+===== Nur ein Einzelpaket kryptographisch prüfen =====
 
-.Aktualisierung der Paketlisten mit erkanntem GPG-Fehler
+// Stichworte für den Index
+(((Debianpaket, dpkg-sig)))
+(((Paket, Signatur überprüfen)))
+(((Paketsignatur, überprüfen)))
+
+Die kyptographische Signatur eines einzelnen Paketes überprüfen Sie mit 
+Hilfe des Werkzeugs `dpkg-sig` <<Debian-Paket-dpkg-sig>>. Hat das Paket
+keine kyptographische Signatur, sieht die Ausgabe so aus:
+
+.Paket ohne kryptographische Signatur
 ----
-# apt-get update
-...
-Hole:10 http://deb.opera.com squeeze/non-free i386 Packages [774 B]
-Es wurden 1.250 kB in 3 s geholt (329 kB/s)
-Paketlisten werden gelesen... Fertig
-W: GPG-Fehler: http://deb.opera.com squeeze Release: Die folgenden Signaturen konnten 
-nicht überprüft werden, weil ihr öffentlicher Schlüssel nicht verfügbar ist: 
-NO_PUBKEY E585066A30C18A2B
-#
+$ dpkg-sig --verify /var/cache/apt/archives/mc-data_3%3a4.8.18-1_all.deb
+Processing /var/cache/apt/archives/mc-data_3%3a4.8.18-1_all.deb...
+NOSIG
+$
 ----
 
-.Ausgabe einer 'deutlichen' Warnung bei `aptitude`
-image::werkzeuge/paketoperationen/aptitude-paket-ohne-gpg.png[id="fig.aptitude-paket-ohne-gpg", width="50%"]
+Im positiven Fall sehen Sie das folgende Ergebnis, hier für das in 
+<<metapakete-bauen>> erzeugte Metapaket 'meta-mc':
+
+.Paket mit kryptographischer Signatur
+----
+$ dpkg-sig --verify meta-mc_1.0_all.deb
+Processing meta-mc_1.0_all.deb...
+GOODSIG _gpgbuilder 35F8DF9C884E36AB974460AFCFA72978D431AC07 1573823436
+$
+----
+
+Nun überprüfen Sie, ob ein Debianpaket selbst noch eine kryptographische 
+Signatur enthält. Sie packen dieses aus und schauen, nach ob darin eine 
+Datei namens `_gpgbuilder` enthalten ist:
+
+.Dateiliste eines Pakets mit kryptographischer Signatur
+----
+$ ar vx meta-mc_1.0_all.deb
+x - debian-binary
+x - control.tar.gz
+x - data.tar.xz
+x - _gpgbuilder
+$
+----
+
+Im vorliegenden Fall enthält die Datei `_gpgbuilder` folgendes 
+Klartextzertifikat (``clearsign GnuPG signature''):
+
+.Enthaltenes Klartextzertifikat
+----
+$ cat _gpgbuilder 
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Version: 4
+Signer: Frank Hofmann (Hofmann EDV) <frank.hofmann@efho.de>
+Date: Fri Nov 15 14:10:36 2019
+Role: builder
+Files: 
+	3cf918272ffa5de195752d73f3da3e5e 7959c969e092f2a5a8604e2287807ac5b1b384ad 4 debian-binary
+	9fd3b3462326a863565c1ca251ff0fe7 46aebc946b932b8b7e9ab541a01231d474e08330 458 control.tar.gz
+	0baf7633e67bbcd272663089133a9cbc 2ad0ecd5fa6e5f2dd6b296e786fc4569050ea025 1400 data.tar.xz
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBAgAdFiEENfjfnIhONquXRGCvz6cpeNQxrAcFAl3Oo8wACgkQz6cpeNQx
+rAeExhAAp7zBeBjijB6De5myMolGxGx9JqLNA2sF48RHsibFJwf4LmXC8NMcGHwO
+q9c4TvIdUXb/94pIPTSLdLXSpPiEC4sFRx5SU7zwLaHO/HO7O+Qn0Y9XvuuJJDXm
+0Fj+M8LyJPBpV7VgngTvXP7mX9mTPGD+ZxidJuZrR028LjxZYQ1kX6yiivZS4HBU
+cKJlmRlopKaJ5Kdfypa52Nr9PB5MSTdaKm0jYz9W1nW+LCo4IDJAnii8VU2F7VuP
+6ISTtcdC3sa4nh6+PaWC7lWR8wpj9A/Bc/n6ddGql3VaswUNNHGuVfxqoim7hrPc
+uGckJ8sUgqYtWbCG+zyF4jgwoc+DtLwMHjoSIJPtxgEBI1R4GIzxF8Poa8ZVEuOY
+fvRc9158oZVQpBc9w4MaWWtuImzjaQGLOgyutN4ow8UiQxzEIc7pep2N0zMw+Ir4
+7C69KOjJ0exA+Fu34aLghe1SOhiNLSFu52r1axyomuN2cQfzw2cuVn2eLWZDxqAD
+qlMQjMwtuYR9yED7R/PVC2B2Hq5pzBltN2kekhe3XL9yLgy3tyyGh7vNOeQn15+j
+QKAxD31KZHIDdExeifRhQrLwBU3YVyuj1kSFIULO5kAD6v+i6dd341IUBNip2B7z
++2M2eryG8LOriFw5m7C39WmYcJr14tdm0ENmxqnEBzh+EhBwkhk=
+=/SDv
+-----END PGP SIGNATURE-----
+----
 
 ===== Mehrere Pakete prüfen =====
 

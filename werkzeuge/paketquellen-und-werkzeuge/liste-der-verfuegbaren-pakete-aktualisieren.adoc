@@ -6,6 +6,8 @@
 
 === Liste der verfügbaren Pakete aktualisieren ===
 
+==== Grundlegendes Vorgehen ====
+
 // Stichworte für den Index
 (((Paketliste, aktualisieren)))
 Bevor Sie Veränderungen am Paketbestand veranlassen, empfehlen wir
@@ -138,25 +140,40 @@ aus dem gleichnamigen Paket zurück <<Debian-Paket-daptup>>. Es ist als eine
 direkte Abhängigkeit zu beiden definiert und wird daher automatisch 
 installiert.
 
-[IMPORTANT]
-.Überprüfung der Paketsignaturen
-====
+==== Überprüfung der Paketsignaturen ====
+
 Konnten bei der Aktualisierung für neue Paketlisten keine gültigen Signaturen
 gefunden werden, wird eine Warnung ausgegeben. Entsprechende Zeilen beginnen mit
-`W:`. Pakete, die nicht korrekt signiert sind, können Schadcode enthalten und
-sollten nicht installiert werden. Zur Überprüfung auf korrekte Pakete tragen Sie
-bitte den passenden GPG-Key nach. Näheres dazu finden Sie unter
-``Bezogenes Paket verifizieren'' in <<bezogenes-paket-verifizieren>>.
-====
+`W:`. Bei einer Paketquelle ohne Schlüssel beschwert sich APT wie folgt:
 
-[TIP]
-.Veröffentlichung wechseln
-====
+.Aktualisierung der Paketlisten ohne passenden GPG-Schlüssel
+----
+# apt-get update
+...
+Hole:10 http://deb.opera.com squeeze/non-free i386 Packages [774 B]
+Es wurden 1.250 kB in 3 s geholt (329 kB/s)
+Paketlisten werden gelesen... Fertig
+W: GPG-Fehler: http://deb.opera.com squeeze Release: Die folgenden Signaturen konnten 
+nicht überprüft werden, weil ihr öffentlicher Schlüssel nicht verfügbar ist: 
+NO_PUBKEY E585066A30C18A2B
+#
+----
+
+Pakete, die nicht korrekt signiert sind, können Schadcode enthalten und sollten 
+nicht installiert werden. `aptitude` warnt Sie in diesem Fall sehr deutlich: 
+
+.Ausgabe einer 'deutlichen' Warnung bei `aptitude`
+image::werkzeuge/paketquellen-und-werkzeuge/aptitude-paket-ohne-gpg.png[id="fig.aptitude-paket-ohne-gpg", width="50%"]
+
+Zur Überprüfung auf korrekte Pakete tragen Sie bitte den passenden GPG-Key 
+für die Paketliste der Veröffentlichung nach. 
+
+==== Die Veröffentlichung wechseln ====
+
 Möchten Sie neuere Versionen von Paketen installieren oder auf eine
 andere Veröffentlichung von Debian wechseln, ist zusätzlich ein
 'upgrade' bzw. 'dist-upgrade' erforderlich. Weitere Informationen dazu
 erhalten Sie unter ``Pakete aktualisieren'' in <<pakete-aktualisieren>>
 bzw. ``Distribution aktualisieren'' in <<distribution-aktualisieren>>.
-====
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/liste-der-verfuegbaren-pakete-aktualisieren.adoc
