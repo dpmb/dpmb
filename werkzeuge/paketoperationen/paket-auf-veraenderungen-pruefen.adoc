@@ -20,20 +20,19 @@ Einzelschritte selbst nachvollziehen und durchführen.
 
 Wir unterscheiden hier zwei Fälle:
 
-beziehen eines Paketes und Prüfung auf Unversehrtheit :: wurde das
-Paket korrekt übertragen und ist die Quelle vertrauenswürdig. Diese 
-Überprüfungen stellen sicher, dass ein von Ihnen bezogenenes Debianpaket 
-dem Paketmirror so entnommen wurde, wie es von der Distribution in der 
-Veröffentlichung zur Verfügung gestellt wurde. Sie schließen damit aus, 
-dass zwischenzeitlich Veränderungen von einer dritten Partei oder auf dem 
-Paketmirror stattgefunden haben. Weiterhin wissen Sie danach ebenfalls, 
-dass das Paket vollständig zu Ihnen übertragen wurde und dass das Paket 
-auf dem Weg vom Paketmirror zu Ihnen nicht verändert wurde. U.a. bilden 
-diese Schritte die Vertrauensbasis für die von Ihnen bezogene Software.
+beziehen eines Paketes und Prüfung auf Unversehrtheit der Übertragung :: 
+wurde das Paket korrekt zu Ihnen übertragen und ist die genutzte Quelle 
+vertrauenswürdig. Diese Überprüfungen stellen sicher, dass ein von Ihnen 
+bezogenenes Debianpaket dem Paketmirror so entnommen wurde, wie es von 
+der Distribution in der Veröffentlichung zur Verfügung gestellt wurde. 
+Sie schließen damit aus, dass zwischenzeitlich Veränderungen von einer 
+dritten Partei auf dem Paketmirror oder dem Übertragungsweg stattgefunden 
+haben. Diese Schritte bilden die Vertrauensbasis für die von Ihnen bezogene 
+Software.
 
 überprüfen, ob die Inhalte eines installierten Pakets verändert wurden ::
-bestehen zwischen der Version vom Paketmirror und der lokalen Version 
-Unterschiede, und wenn ja, welche sind das.
+bestehen zwischen der Version vom Paketmirror und den installierten Dateien 
+auf ihrem System Unterschiede, und wenn ja, welche sind das.
 
 [[bezogenes-paket-verifizieren]]
 ==== Prüfung eines Paketes auf Unversehrtheit ====
