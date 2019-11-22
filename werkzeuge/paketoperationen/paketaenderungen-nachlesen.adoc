@@ -9,7 +9,10 @@
 ==== Das Änderungsprotokoll beziehen ====
 
 // Stichworte für den Index
+(((apt-get, changelog)))
+(((Paket, Änderungen nachlesen)))
 (((Paket, Änderungsprotokoll)))
+(((Paket, Changelog anzeigen)))
 Für jedes Debianpaket existiert im entsprechenden Quellpaket (siehe
 <<sourcepakete>>) ein Protokoll mit den erfolgten Änderungen im Paket,
 ein sogenanntes 'Changelog' (Datei `debian/changelog`). Das ist eine
@@ -17,34 +20,46 @@ Textdatei mit einzelnen Einträgen (siehe unten). Daraus ersehen Sie
 überblicksweise, was die Entwickler im Vergleich zur vorherigen
 Veröffentlichung des Paketes verändert haben und welche Änderungen oder
 Debian-spezifischen Anpassungen der Maintainer im Vergleich zum
-Originalquellcode zusätzlich vorgenommen hat.
+Originalquellcode zusätzlich vorgenommen hat. 
 
-// Stichworte für den Index
-(((apt-get, changelog)))
-(((Paket, Änderungen nachlesen)))
-(((Paket, Changelog anzeigen)))
-Für APT bietet `apt-get` das Unterkommando `changelog`. Es bezieht das
-Protokoll der Änderungen für das angefragte Paket direkt vom Paketmirror
-und gibt dieses im Terminal aus. Die nachfolgenden Ausgaben zeigen den
-Vorgang für `apt-get` und `aptitude` sowie einen Ausschnitt des
-Changelogs zum Paket 'smartpm'.
+Die nachfolgenden Ausgaben zeigen den Vorgang für die beiden Werkzeuge 
+`apt-get` und `aptitude` mit einem Ausschnitt des Changelogs zum Paket 
+'smartpm'. Beide Programme kennen für den Aufruf das Unterkommando 
+`changelog` und benötigen zusätzlich den Namen des Debianpakets. Das 
+angefragte Paket muss dazu nicht auf Ihrem Debiansystem installiert sein.
 
-.Beziehen der Changelog-Informationen zum Paket 'smartpm'
+.Beziehen der Changelog-Informationen zum Paket 'smartpm' mittels `apt-get`
 ----
 $ apt-get changelog smartpm
 Holen:1 http://metadata.ftp-master.debian.org smart 1.4-2 Changelog [8.573 B]
 Es wurden 8.573 B in 1 s geholt (4.754 B/s).
+
+...
+
+smart (1.4-2) unstable; urgency=low
+
+  * Switch to dh_python2 (Thanks to Barry Warsaw)
+
+ -- Free Ekanayaka <freee@debian.org>  Fri, 12 Aug 2011 17:27:20 +0100
+
+smart (1.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Drop several patches (02_fix_fetcher_test, 03_setup,
+    06_CVE-2009-3560.patch and 06_CVE-2009-3720.patch) as they were
+    all merged upstream
+
+ -- Free Ekanayaka <freee@debian.org>  Tue, 31 May 2011 16:04:52 +0200
+
+...
 $
 ----
 
 // Stichworte für den Index
 (((aptitude, changelog)))
-`aptitude` verfügt dazu ebenfalls über den Schalter `changelog`. Als
-zusätzlichen Parameter erwartet es den Namen eines Pakets, zudem diese
-Informationen bezogen und ausgegeben werden. Das angefragte Paket muss
-dazu nicht einmal auf Ihrem Debiansystem installiert sein.
+Bei `aptitude` sieht das wie folgt aus:
 
-.Die Paketänderungen zum Paket 'smartpm' ausgeben
+.Die Paketänderungen zum Paket 'smartpm' mit Hilfe von `aptitude` ausgeben
 ----
 $ aptitude changelog smartpm
 
@@ -68,11 +83,11 @@ smart (1.4-1) unstable; urgency=low
 $
 ----
 
-Die Beschreibung der vorgenommenen Änderungen folgt dabei einem
-festgelegten Schema. Dieses Schema ist im 'Debian Policy Manual'
-<<Debian-Policy-Manual>> im Abschnitt 'Source packages/Debian changelog'
-genau erklärt. Kurz zusammengefasst, ist jeder Version eines Paketes ein
-separater Block gewidment:
+Die Beschreibung der vorgenommenen Änderungen folgt dabei einem festgelegten 
+Schema. Dieses Schema ist im 'Debian Policy Manual' <<Debian-Policy-Manual>> 
+im Abschnitt 'Source packages/Debian changelog' genau erklärt. Kurz 
+zusammengefasst, ist jeder Version eines Paketes ein separater Block 
+gewidment:
 
 .Format der erfolgten Änderungen
 ----
@@ -86,23 +101,27 @@ package (version) distribution(s); urgency=urgency
 -- maintainer name <email address>[two spaces]  date
 ----
 
-Jeder dieser Blöcke beginnt stets mit dem Namen des Quellpakets, gefolgt
-von der Versionsnummer des Pakets, der Veröffentlichung (zumeist
-`unstable`) (siehe Abschnitt <<veroeffentlichungen>>), sowie der
-Dringlichkeit oder dem Schweregrad der vorgenommenen Änderungen. Dieser
-Wert ist einer aus `low`, `medium`, `high`, `emergency` und `critical`.
-Darunter stehen die jeweiligen Änderungen als einfache Aufzählung.
+Jeder dieser Blöcke beginnt stets mit dem Namen des Quellpakets, gefolgt von 
+der Versionsnummer des Pakets, der Veröffentlichung (zumeist `unstable`) 
+(siehe <<veroeffentlichungen>>), sowie der Dringlichkeit oder dem Schweregrad 
+der vorgenommenen Änderungen. Dieser Wert ist einer aus `low`, `medium`, 
+`high`, `emergency` und `critical`. Darunter stehen die jeweiligen Änderungen 
+als einfache Aufzählung.
 
 ==== Zwei Paketversionen miteinander vergleichen ====
 
-Wie oben bereits genannt, beschreibt das Änderungsprotokoll lediglich in
+// Stichworte für den Index
+(((Debianpaket, diffoscope)))
+(((Paket, Änderungen nachlesen)))
+(((Debian, Reproducible Builds)))
+Wie oben bereits genannt, beschreibt das Änderungsprotokoll lediglich in 
 groben Zügen, welche Korrekturen ein Paket erfahren hat. Mit Hilfe des
 Werkzeugs `diffoscope` <<Debian-Paket-diffoscope>> aus dem Projekt
-'Reproducible Builds' <<ReproducibleBuilds>> erhalten Sie eine
-Auswertung, welche Dateien oder Verzeichnisse aus einem Paket im
-Vergleich zur vorherigen Version entfernt wurden sowie welche
-hinzugekommen, umbenannt oder verschoben wurden und welche Änderungen in
-bestehenden Dateien erfolgt sind. Der Aufruf ist dazu wie folgt:
+'Reproducible Builds' <<ReproducibleBuilds>> erhalten Sie eine Auswertung, 
+welche Dateien oder Verzeichnisse aus einem Paket im Vergleich zur 
+vorherigen Version entfernt wurden sowie welche hinzugekommen, umbenannt 
+oder auch verschoben wurden und welche Änderungen in bestehenden Dateien 
+erfolgt sind. Der Aufruf ist dazu wie folgt:
 
 .Aufruf von `diffoscope` für zwei Pakete
 ----
@@ -114,5 +133,9 @@ Art Baumstruktur, die durchaus länger werden kann.
 
 .Von `diffoscope` gefundene Änderungen (Ausschnitt)
 image::werkzeuge/paketoperationen/diffoscope-debian-package.png[id="fig.diffoscope", width="30%"]
+
+Die Farbgebung der Ausgabe folgt den üblichen Gepflogenheiten -- rot für 
+Entfernungen und grün für Zeilen, die hinzugefügt wurden. Die Angaben in 
+hellblau benennen die Position in der jeweiligen Datei.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/paketaenderungen-nachlesen.adoc
