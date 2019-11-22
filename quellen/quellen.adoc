@@ -514,9 +514,9 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Spiegel-Liste]]] Liste der Debian-Mirror, https://www.debian.org/mirror/list
 
-- [[[Debian-SSO]] Debian Single-Sign-On (SSO), https://sso.debian.org/
+- [[[Debian-SSO]]] Debian Single-Sign-On (SSO), https://sso.debian.org/
 
-- [[[Debian-SSO-Alioth]] Debian Single-Sign-On (SSO) via Alioth-Konto, https://wiki.debian.org/DebianSingleSignOn#If_you_ARE_NOT_.28yet.29_a_Debian_Developer
+- [[[Debian-SSO-Alioth]]] Debian Single-Sign-On (SSO) via Alioth-Konto, https://wiki.debian.org/DebianSingleSignOn#If_you_ARE_NOT_.28yet.29_a_Debian_Developer
 
 - [[[Debian-udeb]]] Debian-Dokumentation zu 'udeb', https://d-i.debian.org/doc/internals/ch03.html
 
