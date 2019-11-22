@@ -39,6 +39,8 @@ auf ihrem System Unterschiede, und wenn ja, welche sind das.
 
 // Stichworte für den Index
 (((Debian, Vertrauenskette)))
+(((Debian, Debian-Archive-Keyring)))
+(((Debian, Keyring)))
 (((Paket, auf Vertrauenswürdigkeit prüfen)))
 (((Paket, Signatur überprüfen)))
 (((Paket, verifizieren)))
@@ -46,7 +48,7 @@ auf ihrem System Unterschiede, und wenn ja, welche sind das.
 (((Paketsignaturen)))
 
 Die offiziellen Paketquellen von Debian, als auch die darüber referenzierten 
-sind Quellpakete kryptographisch signiert (siehe dazu 
+Quellpakete sind kryptographisch signiert (siehe dazu 
 <<paketquelle-auf-echtheit-ueberpruefen>>). Die Signaturen werden mit Hilfe 
 der Public-Key-Kryptographie erststellt. Mit dem entsprechenden öffentlichen 
 Schlüssel (engl. 'Public Key') können Sie (und jeder andere Benutzer ebenso) 
@@ -80,6 +82,8 @@ Veröffentlichung.
 (((apt-key)))
 (((apt-key, add)))
 (((/etc/apt/trusted.gpg)))
+(((/etc/apt/trusted.gpg.d)))
+(((Debian, Debian-Archive-Keyring)))
 (((Debianpaket, apt)))
 (((Debianpaket, debian-archive-keyring)))
 Vertrauenswürdige Schlüssel verwalten Sie mit dem Programm `apt-key` aus
