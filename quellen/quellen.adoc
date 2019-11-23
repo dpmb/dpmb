@@ -935,9 +935,9 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[xubuntu-apt-offline]]] xubuntu Offline Documentation, http://docs.xubuntu.org/1404/offline-packages.html
 
-- [[[YUM]]] Yellowdog Updater, Modified (YUM), Projektseite, http://yum.baseurl.org/
+- [[[YUM]]] Yellowdog Updater Modified (YUM), Projektseite, http://yum.baseurl.org/
 
-- [[[YUM-Salve]]] Ravi Salve: 20 Linux YUM (Yellowdog Updater, Modified) Commands for Package Management, http://www.tecmint.com/20-linux-yum-yellowdog-updater-modified-commands-for-package-mangement/
+- [[[YUM-Salve]]] Ravi Salve: 20 Linux YUM (Yellowdog Updater Modified) Commands for Package Management, http://www.tecmint.com/20-linux-yum-yellowdog-updater-modified-commands-for-package-mangement/
 
 - [[[Zypper]]] Zypper, Projektseite, https://de.opensuse.org/Zypper
 
