@@ -346,6 +346,8 @@
 
 - [[[Debian-Paket-dpkg]]] Debian-Paket 'dpkg', https://packages.debian.org/de/stable/dpkg
 
+- [[[Debian-Paket-dpkg-awk]]] Debian-Paket 'dpkg-awk', https://packages.debian.org/de/stable/dpkg-awk
+
 - [[[Debian-Paket-dpkg-dev]]] Debian-Paket 'dpkg-dev', https://packages.debian.org/de/stable/dpkg-dev
 
 - [[[Debian-Paket-dpkg-repack]]] Debian-Paket 'dpkg-repack', https://packages.debian.org/de/stable/dpkg-repack

@@ -156,15 +156,15 @@ seinem derzeitigen Zustand belassen (siehe Paketflags in
 (((dpkg-query, --showformat)))
 (((dpkg-query, -W)))
 (((Paketliste, nur die Paketnamen ausgeben)))
-Geht es Ihnen lediglich um die Namen der derzeit vollständig installierten 
-Pakete ohne deren Versionsnummer und Beschreibung, haben Sie zwei 
-Möglichkeiten zur Lösung -- a) `dpkg-query` mit einem speziellen Formatstring
-für die Ausgabe in Kombination mit `egrep`, `awk` und `sort`, und b) die 
-Kombination aus `dpkg`, `egrep`, `awk` und `sort`. `dpkg` selbst bietet von 
+Geht es Ihnen lediglich um die Namen der derzeit vollständig installierten Pakete 
+ohne deren Versionsnummer und Beschreibung, haben Sie drei Möglichkeiten zur 
+Lösung -- a) `dpkg-query` mit einem speziellen Formatstring für die Ausgabe in 
+Kombination mit `egrep`, `awk` und `sort`, b) die Kombination aus `dpkg`, `egrep`, 
+`awk` und `sort` sowie c) die Verwendung von `dpkg-awk`. `dpkg` selbst bietet von 
 sich aus bislang keinen entsprechenden, einzelnen Schalter an, der diese 
 spezifische Ausgabe ermöglicht.
 
-Für den Fall a) nutzen Sie den Schalter `-W` (Langform `--show`) und den 
+Für den *Fall a)* nutzen Sie den Schalter `-W` (Langform `--show`) und den 
 Formatstring `-f='${db:Status-Abbrev} ${binary:Package}\n'`. Dabei kürzt `-f` 
 die Langform `--showformat` ab. Die Angabe `'${db:Status-Abbrev}'` liefert 
 Ihnen den Installationsstatus des Pakets und `$'{binary:Package}\n'` den 
@@ -183,7 +183,8 @@ adwaita-icon-theme
 $
 ----
 
-Fall b) ist kürzer und kombiniert `dpkg`, `egrep`, `awk` und `sort` miteinander:
+*Fall b)* ist kürzer und kombiniert die Werkzeuge `dpkg`, `egrep`, `awk` und 
+`sort` miteinander:
  
 .Nur die Paketnamen ausgeben (`dpkg`, `egrep`, `awk` und `sort` kombiniert)
 ----
@@ -196,6 +197,41 @@ adwaita-icon-theme
 ...
 $
 ----
+
+// Stichworte für den Index
+(((Debianpaket, dpkg-awk)))
+(((dpkg-awk)))
+(((dpkg, /var/lib/dpkg/available)))
+(((dpkg, /var/lib/dpkg/status)))
+Der dritte *Fall c)* benutzt das Werkzeug `dpkg-awk` aus dem gleichnamigen Paket
+<<Debian-Paket-dpkg-awk>>. Das Paket gehört nicht zur Standardinstallation und 
+ist daher von ihnen vor der Benutzung nachzuinstallieren. `dpkg-awk` wertet die 
+beiden Dateien `/var/lib/dpkg/status` und `/var/lib/dpkg/available` aus.
+
+Mit dem nachfolgenden Aufruf erhalten Sie eine Liste aller Pakete, die
+auf ihrem System gerade installiert sind. `dpkg-awk` filtert alle Zeilen
+heraus, auf die der regulräre Ausdruck `Status: .* installed$` passt. Mit der 
+Angabe `Package` weisen Sie `dpkg-awk` an, nur in die Felder mit den Paketnamen 
+zu durchsuchen.
+
+.Die Liste der installierten Pakete mit `dpkg-awk` ermitteln
+----
+$ dpkg-awk "Status: .* installed$" -- Package
+Package: libasan0
+
+Package: libvorbisfile3
+
+Package: libquadmath0
+
+Package: libxkbfile1
+
+...
+$
+----
+
+Obige Ausgabe bearbeiten Sie mit UNIX/Linux-Tools weiter, bspw. mit `cut` oder 
+`sort`, um die Ausgabe ihren Wünschen anzupassen.
+
 
 ==== `aptitude search '~i'` ====
 
