@@ -16,36 +16,41 @@ Die nachfolgend vorgestellte Lösung ist ähnlich zu der in
 <<eigenes-apt-repository-anlegen-verzeichnis>>. Es ergänzt diese jedoch noch
 um passende Metadaten (auch 'Packages index files' genannt). Die Basis bildet 
 hier ebenfalls ein Verzeichnis, welches Sie als Ablage für ihre Softwarepakete 
-benutzen möchten. Hier heißt es schlicht und einfach `/opt/paketarchiv`. 
-Sofern es noch nicht vorhanden ist, legen Sie dieses im **1. Schritt** noch wie 
-folgt an:
+benutzen möchten. Hier heißt dieses Verzeichnis schlicht und einfach 
+`/opt/paketarchiv/local`. Sofern es noch nicht vorhanden ist, legen Sie dieses im 
+**1. Schritt** noch wie folgt an:
 
+.Schritt 1: Verzeichnis für das Paketarchiv anlegen
 ----
-# mkdir -p /opt/paketarchiv
+# mkdir -p /opt/paketarchiv/local
 ----
 
 Im **2. Schritt** kopieren Sie alle gewünschten `.deb`-Pakete in dieses 
 Verzeichnis:
 
+.Schritt 2: Daten hineinkopieren
 ----
-# cp -v *.deb /opt/paketarchiv
+# cp -v *.deb /opt/paketarchiv/local
 ----
 
 Im **3. Schritt** erzeugen Sie noch zusätzliche Metadaten für ihr Paketarchiv.
 Dabei kommt das Werkzeug `dpkg-scanpackages` aus dem Paket 'dpkg-dev' 
 <<Debian-Paket-dpkg-dev>> zum Einsatz. Sofern Sie bisher noch keine 
-Debian-Pakete selbst gebaut haben, dürfte das Paket 'dpkg-dev' noch nicht auf 
-ihrem System vorhanden sein und Sie müssen es daher vor der Benutzung 
-nachinstallieren.
+Debian-Pakete selbst gebaut haben, dürfte dieses Paket noch nicht auf ihrem 
+System vorhanden sein und Sie müssen es daher vor der Benutzung nachinstallieren.
 
 Nun erstellen Sie die benötigten Metadaten mittels `dpkg-scanpackages`. Als 
 minimale Angabe erwartet `dpkg-scanpackages` den Pfad zum Paketarchiv und 
 schreibt dann seine Ausgabe auf `stdout`. Besser ist es, die Ausgabe mittels 
-`>` gleich in eine passende Datei umzulenken. Der nachfolgende Aufruf geht noch 
-einen Schritt weiter und komprimiert die Ausgabe zusätzlich mittels `gzip`:
+`>` gleich in eine passende Datei namens `Packages` umzulenken (Schreibweise
+mit großem `P`). Der nachfolgende Aufruf geht noch einen Schritt weiter und 
+komprimiert die Ausgabe zusätzlich mittels `gzip`, so dass als Ergebnis die 
+Datei `Packages.gz` entsteht:
 
+.Schritt 3: Metadaten zum Paketarchiv erzeugen (`Packages.gz`)
 ----
-# dpkg-scanpackages /opt/paketarchiv | gzip -c > /opt/paketarchiv/Packages.gz
+# cd /opt/paketarchiv
+# dpkg-scanpackages local/ | gzip -c > local/Packages.gz
 dpkg-scanpackages: Information: 6 Einträge wurden in Ausgabe-Paketdatei geschrieben.
 #
 ----
@@ -57,35 +62,35 @@ zunächst und speichert diese dann als Datei `Packages.gz` im Verzeichnis des
 Paketarchivs. Die erzeugte Datei `Packages.gz` beinhaltet Informationen pro 
 Paket in der folgenden Form:
 
-.Paketinformationen zum Paket 'openjdk-8-jre'
+.Paketinformationen zum beispielhaft verwendeten Paket 'meta-mc'
 ----
-Package: openjdk-8-jre
-Source: openjdk-8
-Version: 8u232-b09-1~deb9u1
-Architecture: amd64
-Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
-Installed-Size: 254
-Depends: openjdk-8-jre-headless (= 8u232-b09-1~deb9u1), libglib2.0-0 (>= 2.24), libxrandr2, libxinerama1, libgl1-mesa-glx | libgl1, libgtk2.0-0 (>= 2.14), libatk-wrapper-java-jni (>= 0.33.3-9~), libasound2 (>= 1.0.16), libc6 (>= 2.14), libgif7 (>= 5.1), libjpeg62-turbo (>= 1.3.1), libpng16-16 (>= 1.6.2-1), libpulse0 (>= 0.99.1), libx11-6, libxext6, zlib1g (>= 1:1.1.4)
-Recommends: fonts-dejavu-extra
-Suggests: icedtea-8-plugin
-Replaces: openjdk-8-jre-headless (<< 8u20~b20-3)
-Provides: java2-runtime, java5-runtime, java6-runtime, java7-runtime, java8-runtime
-Filename: ./openjdk-8-jre_8u232-b09-1~deb9u1_amd64.deb
-Size: 69506
-MD5sum: 139071a27ce3d94da67652f941752057
-SHA1: 51a88b51fcf2e324b91f6b9a96702503c4ce5801
-SHA256: 75057205b56791edbc4dd0358cb56efd7d20ce0cb730d6ecba38e37267d72b9b
-Section: java
+# cat local/Packages 
+Package: meta-mc
+Version: 1.0
+Architecture: all
+Maintainer: Frank Hofmann <frank.hofmann@efho.de>
+Installed-Size: 9
+Depends: mc, mc-data
+Filename: local/meta-mc_1.0_all.deb
+Size: 3392
+MD5sum: e8889ea18c25b40ba4cac00b7faf1518
+SHA1: 58e5f6b03643d6da7fa471f63f387335a2df5e55
+SHA256: fb6ee7948c5a5b243b6940b172af96fa72123d9c031caca62541d8c4f14aa7de
+Section: misc
 Priority: optional
-Multi-Arch: same
-Homepage: http://openjdk.java.net/
-Description: OpenJDK Java runtime, using Hotspot JIT
- Full Java runtime environment - needed for executing Java GUI and Webstart
- programs, using Hotspot JIT.
- .
- The packages are built using the IcedTea build support and patches
- from the IcedTea project.
+Multi-Arch: foreign
+Description: Installs the Midnight Commander
+ Installs the Midnight Commander
+
+...
+#
 ----
+
+Die Pfadangabe, die Sie `dpkg-scanpackages` geben, ist tückisch. Laut Manpage
+und den von uns online gefundenen Beipspielen kann jeder Pfad verwendet werden, 
+in unseren Tests können wir das jedoch nicht bestätigen. Die von uns oben 
+genutzte Form funktioniert auch später mit APT und `aptitude` zur Installation
+von Paketen.
 
 [NOTE]
 ====
@@ -94,9 +99,10 @@ Mal wiederholen müssen, wenn Sie Pakete im Paketarchiv hinzufügen oder Pakete
 daraus entfernen. Mit dem folgenden Shellskript lässt sich der Schritt 
 automatisieren:
 
+.Automatisierung mit Hilfe eines Shellskriptes
 ----
 #! /bin/bash
-dpkg-scanpackages /opt/paketarchiv | gzip -c > /opt/paketarchiv/Packages.gz
+dpkg-scanpackages /opt/paketarchiv/local | gzip -c > /opt/paketarchiv/local/Packages.gz
 ----
 
 Idealerweise legen Sie das Skript unter einen passenden Pfad wie bspw. 
@@ -111,14 +117,20 @@ eine separate Datei im Verzeichnis `/etc/apt/sources.list.d`. Für obiges
 Beispiel sieht die Zeile wie folgt aus, um ihr Paketarchiv zunächst lokal 
 einzubinden:
 
+.Schritt 4: Zusätzlicher Eintrag in der Datei `/etc/apt/sources.list`
 ----
-deb [trusted=yes] file:/opt/paketarchiv ./
+deb [trusted=yes] file:///opt/paketarchiv local/
 ----
 
-Um das Paketarchiv auch für andere Benutzer via HTTPS zugänglich zu machen, 
-stellen Sie das Verzeichnis bspw. mit Hilfe eines lokalen Webservers bereit. 
-Ein gültiger Eintrag wäre bspw. der folgende:
+Die Angabe `[trusted=yes]` teilt APT mit, dass die Pakete aus der angegebenen,
+lokalen Paketquelle vertrauenswürdig sind. Damit sparen Sie sich (zunächst) den
+kryptographischen Überbau.
 
+Um das Paketarchiv auch für andere Benutzer via HTTP oder HTTPS zugänglich zu 
+machen, stellen Sie das Verzeichnis bspw. mit Hilfe eines lokalen Webservers 
+bereit. Ein gültiger Eintrag wäre bspw. der folgende:
+
+.Zusätzlicher Eintrag in der Datei `/etc/apt/sources.list` (Webserver)
 ----
 deb [trusted=yes] https://www.webserver.com/paketarchiv ./
 ----
@@ -143,7 +155,7 @@ daraus in ihr System einbinden.
 ====
 Bitte beachten Sie, dass es bei dieser Lösung keine Authentifizierung und 
 Integritätsprüfung der Pakete im Archiv gibt. Die Verantwortung über die 
-bereitgestellten Softwarepakete liegt bei Ihnen.
+bereitgestellten Softwarepakete liegt vollständig bei Ihnen.
 ====
 
 // Datei (Ende): ./praxis/eigenes-apt-repository-anlegen/dpkg-scanpackages.adoc
