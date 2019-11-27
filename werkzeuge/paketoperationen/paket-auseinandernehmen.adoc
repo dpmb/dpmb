@@ -6,6 +6,8 @@
 
 === Paket auseinandernehmen ===
 
+==== Mit `ar` in seine Bestandteile zerlegen ====
+
 // Stichworte für den Index
 (((ar)))
 (((ar, -x)))
@@ -13,9 +15,9 @@
 (((deb-Paketformat, Bestandteile)))
 (((deb-Paketformat, Daten)))
 (((deb-Paketformat, Metainformationen)))
-Manchmal kann es ganz nützlich sein, wenn Sie ein `.deb`-Paket vorliegen haben 
-und dieses in seine Bestandteile zerlegen können. Mit dem folgenden Aufruf über 
-das Kommando `ar` gelingt Ihnen das wie folgt:
+Manchmal kann es ganz nützlich sein, wenn Sie ein Debianpaket vorliegen haben 
+und dieses `deb`-Datei in seine Bestandteile zerlegen können. Mit dem folgenden 
+Aufruf über das Kommando `ar` gelingt Ihnen das wie folgt:
 
 .Ein Debianpaket auseinandernehmen
 ----
@@ -47,5 +49,27 @@ $
 
 Weitere Informationen zu den verschiedenen Paketformaten und deren Komponenten 
 entnehmen Sie bitte dem <<aufbau-und-format>>.
+
+==== Mit `dpkg` die Installationsstruktur herausfinden ====
+
+// Stichworte für den Index
+(((dpkg, -x)))
+(((dpkg, --extract)))
+(((dpkg-deb, -x)))
+(((dpkg-deb, --extract)))
+(((deb-Paketformat, lokal auspacken)))
+Im Gegensatz zu `ar` hilft Ihnen `dpkg` dabei, herauszufinden, in welche 
+einzelnen Verzeichnisse die Inhalte eines Pakets kopiert werden. Der
+Schalter `-L` (Langform `--listfiles`) zeigt Ihnen lediglich den 
+entsprechenden Pfad an (siehe <<paketinhalte-anzeigen-apt-file>>). Mit Hilfe 
+von `-x` (Langform `--extract`) packt `dpkg` das Paket hingegen vollständig 
+aus. Intern reicht es dabei die Ausführung an das Werkzeug `dpkg-deb` weiter. 
+
+Als zusätzlichen Parameter geben Sie im Aufruf ein Verzeichnis an, in das die 
+Inhalte aus dem Paket kopiert werden sollen. Das nachfolgende Beispiel nutzt 
+`.` für das lokale Verzeichnis.
+
+.Ein Paket mit `dpkg -x` auspacken
+image::werkzeuge/paketoperationen/dpkg-x.png[id="fig.dpkg-x"]
 
 // Datei (Ende): ./werkzeuge/paketoperationen/paket-auseinandernehmen.adoc
