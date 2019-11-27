@@ -17,6 +17,7 @@ Diese Variante ist aus technischer Sicht sehr simpel. Im **1. Schritt** legen
 Sie ein Verzeichnis fest, welches Sie als Ablage für die `.deb`-Pakete benutzen
 möchten. Sofern noch nicht vorhanden, legen Sie dieses an, bspw. wie folgt:
 
+.Schritt 1: Verzeichnis für das Paketarchiv anlegen
 ----
 # mkdir -p /opt/paketarchiv
 ----
@@ -29,18 +30,20 @@ existiert.
 Im **2. Schritt** kopieren Sie alle gewünschten `.deb`-Pakete in dieses 
 Verzeichnis, bspw. mit Hilfe von diesem Kommando:
 
+.Schritt 2: Daten hineinkopieren
 ----
 # cp -v *.deb /opt/paketarchiv/.
 ----
 
 Die Angabe des Schalters `-v` sorgt dafür, dass alle Kopieraktionen sichtbar 
 werden, sprich: sie sehen in der Ausgabe im Terminal, welche Dateien in ihr 
-Paketarchiv kopiert werden. Danach ist ihr Paketarchiv bereit zur Benutzung.
+Paketarchiv kopiert werden. Danach können Sie ihr Paketarchiv bereits benutzen.
 
 Benötigen Sie nun bspw. das Paket 'software-0.2.3' aus ihrem Archiv, 
 installieren Sie dieses nun mit Hilfe von `dpkg` und mit dem Verweis auf ihr 
 Paketarchiv wie folgt:
 
+.Paket mittels `dpkg` aus dem Paketarchiv installieren
 ----
 # dpkg -i /opt/paketarchiv/software-0.2.3.deb
 ----
@@ -52,8 +55,10 @@ dieses Verzeichnis zu kopieren. Mehr ist dafür nicht zu tun.
 [NOTE]
 ====
 Bitte beachten Sie, dass es bei dieser Lösung keine Authentifizierung und 
-Integritätsprüfung der Pakete im Archiv gibt. Die Verantwortung über die 
-bereitgestellten Softwarepakete liegt bei Ihnen.
+Integritätsprüfung der Pakete im Archiv gibt. Zudem werden entstehende 
+Abhängigkeiten zu anderen Paketen nicht automatisch aufgelöst. Die 
+Verantwortung über die bereitgestellten Softwarepakete liegt vollständig bei 
+Ihnen.
 ====
 
 // Datei (Ende): ./praxis/eigenes-apt-repository-anlegen/pakete-in-verzeichnis.adoc
