@@ -7,17 +7,18 @@
 
 === Danksagung ===
 
-Eine Reihe von Menschen haben uns bei der Realisierung dieses Buches
-direkt oder indirekt unterstützt, sei es in Form von Anregungen, Kritik,
-Vorschlägen zur Ergänzung oder Fach- und Verständnisfragen. Diesen
-Menschen gebührt unser Dank:
+Eine Reihe von Menschen haben uns bei der Realisierung dieses Buches direkt 
+oder indirekt unterstützt, sei es in Form von Anregungen, Kritik, Vorschlägen 
+zur Ergänzung oder Fach- und Verständnisfragen. Diesen Menschen gebührt unser 
+Dank:
 
 * Elmar Heeb (für `aptitude-robot` und viele interessante Diskussionen)
 * Dirk Deimeke (für Tipps zum Autor-Werden) <<Hackerfunk>>
 * Arne Wichmann (für das Diagramm der Vertrauenskette in Debian – unter GPL)
-* Annette Kalbow (für inhaltliche Vorschläge mit `apt-file`, `dpkg -l`
-  und `dpkg -L`, die graphische Umsetzung der Landkarte sowie die vielen
-Anregungen zum Aufsetzen und Betreiben eines Proxies -- siehe <<http-proxy>>)
+* Annette Kalbow (für inhaltliche Vorschläge mit `apt-file`, `dpkg -l`, 
+`dpkg -L` und `dpkg -x`, die graphische Umsetzung der Landkarte, die vielen 
+Anregungen zum Aufsetzen und Betreiben eines Proxies (siehe <<http-proxy>>)
+sowie dem Thema ``Kryptographische Signaturen in Debian-Repositories''
 * Mechtilde Stehmann (für die Sprachkorrekturen und die Vorschläge für die FAQ)
 * Marco Uhl (für die Idee zum FAQ-Eintrag über 'Debian Snapshots' <<Debian-Snapshots>> bei Testing- vs. Produktiv-Umgebung)
 * Werner Heuser (für die Installation und den Umgang auf Embedded und Mobile Devices)
