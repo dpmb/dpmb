@@ -132,7 +132,7 @@ bereit. Ein gültiger Eintrag wäre bspw. der folgende:
 
 .Zusätzlicher Eintrag in der Datei `/etc/apt/sources.list` (Webserver)
 ----
-deb [trusted=yes] https://www.webserver.com/paketarchiv ./
+deb [trusted=yes] https://www.webserver.com/paketarchiv local/
 ----
 
 // Stichworte für den Index
