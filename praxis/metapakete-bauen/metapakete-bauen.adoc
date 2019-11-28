@@ -580,8 +580,10 @@ meta-mc (1.0) wird eingerichtet ...
 (((Debianpaket, apt)))
 Das Werkzeug `apt` steht `gdebi` in nichts nach -- es löst ebenfalls die 
 Paketabhängigkeiten sauber auf. `apt` kann ebenfalls mit lokalen Paketen
-umgehen, sofern im Aufruf ein Verzeichnistrenner enthalten ist. Liegt das 
-Paket im lokalen Verzeichnis, sieht der Aufruf wie nachfolgend gezeigt aus.
+umgehen, sofern im Pfadnamen zum Paket ein Verzeichnistrenner enthalten 
+ist. Liegt das Paket im lokalen Verzeichnis, fügen Sie vor dem Namen der 
+Paketdatei die Zeichen `./` hinzu. Der Aufruf sieht dann wie nachfolgend 
+gezeigt aus.
 
 .`apt` bei der Installation des Metapakets 'meta-mc'
 image::praxis/metapakete-bauen/apt.png[id="fig.metapakete-apt", width="50%"]
