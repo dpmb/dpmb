@@ -60,26 +60,27 @@ Debconf-Datenbank.
 (((dpkg, --list)))
 Wie bereits in <<liste-der-installierten-pakete-anzeigen-und-deuten>> erklärt,
 ist `dpkg` das zentrale Werkzeug, um die Paketdatenbank auszulesen und Ihnen 
-die derzeit installierten und (noch) konfigurierten Pakete auf der 
+die derzeit installierten und vollständig konfigurierten Pakete auf der 
 Standardausgabe (`stdout`) aufzulisten. Über das nachfolgend gezeigte Kommando 
-erhalten Sie eine entsprechende Liste mit den Namen der Pakete. Die zusätzlichen
-informationen wie Installationsstatus, Kurzbeschreibung und die Version des 
-jeweiligen Pakets werden dabei mit Hilfe von `grep` und `awk` herausgefiltert. 
-Anschließend wird die Liste der Paketnamen mit Hilfe von `sort` alphabetisch
-aufsteigend sortiert. Die Ausgabe des Kommandos landet in der Datei `paketliste` 
-im aktuellen Verzeichnis:
+erhalten Sie eine entsprechende Liste mit den Namen der Pakete. 
+
+`egrep` filtert zunächst nur die Zeilen aus der Ausgabe von `dpkg` heraus, die 
+mit `ii` beginnen -- sprich: die installierten und konfigurierten Pakete. Die 
+zusätzlichen informationen wie Installationsstatus, Kurzbeschreibung und die 
+Version des jeweiligen Pakets werden dann mit Hilfe von `awk` aus jeder 
+verbliebenen Zeile herausgefiltert. Anschließend wird die Liste der Paketnamen 
+mit Hilfe von `sort` noch alphabetisch aufsteigend sortiert. Die Ausgabe des 
+Kommandos landet in der Datei `paketliste` im aktuellen Verzeichnis:
 
 .Liste der installierten Pakete namentlich sortiert in einer Datei ablegen
 ----
-$ dpkg -l | egrep "^ii" | awk ' {print $2} ' | sort > paketliste
+$ dpkg -l | egrep "^ii" | awk ' { print $2 } ' | sort > paketliste
 $
 ---- 
 
 Diese soeben erzeugte Liste nutzen Sie als Referenz, um andere Systeme identisch
-aufzusetzen, bspw. mit dem darauffolgenden Aufruf `apt-get install < paketliste`. 
-Bitte beachten Sie, dass bei der Ausführung die bestehenden Konfigurationsdateien 
-für die Pakete nicht gesichert werden und beim Einspielen bzw. Installieren des 
-jeweiligen Pakets daraus extrahiert oder neu erzeugt werden.
+aufzusetzen. Wie das geht, lesen Sie in 
+<<paketkonfiguration-wieder-einspielen-mit-apt-get>> nach.
 
 [[paketkonfiguration-sichern-mit-debconf-get-selections]]
 ==== Mit `debconf-get-selections` ====
@@ -238,6 +239,27 @@ bereits bestehende Paketliste. Es löscht Pakete bzw. installiert fehlende nach
 
 // Stichworte für den Index
 (((Paketkonfiguration, gesicherte Konfiguration wieder einspielen)))
+
+[[paketkonfiguration-wieder-einspielen-mit-apt-get]]
+==== Mit `apt-get` ====
+
+// Stichworte für den Index
+(((Debianpaket, apt)))
+(((apt-get, install)))
+Haben Sie eine Paketliste wie in <<paketkonfiguration-sichern-mit-dpkg>> erzeugt,
+ist das Einspielen dieser Liste auf einem neuen System vergleichsweise einfach, 
+bspw. mit diesem Aufruf:
+
+.Einspielen der gespeicherten Paketliste mit Hilfe von `dpkg`
+----
+# apt-get install < paketliste
+...
+#
+----
+
+Bitte beachten Sie, dass in der Paketliste keine Konfigurationsdateien enthalten
+sind. Beim Einspielen bzw. Installieren des jeweiligen Pakets werden die Dateien 
+daraus extrahiert oder neu erzeugt.
 
 [[paketkonfiguration-wieder-einspielen-mit-debconf-set-selections]]
 ==== Mit `debconf-set-selections` ====
