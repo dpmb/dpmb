@@ -58,6 +58,7 @@ Debconf-Datenbank.
 // Stichworte für den Index
 (((Debianpaket, dpkg)))
 (((dpkg, -l)))
+(((dpkg, --get-selections)))
 (((dpkg, --list)))
 Wie bereits in <<liste-der-installierten-pakete-anzeigen-und-deuten>> erklärt,
 ist `dpkg` das zentrale Werkzeug, um die Paketdatenbank auszulesen und Ihnen 
@@ -73,14 +74,25 @@ verbliebenen Zeile herausgefiltert. Anschließend wird die Liste der Paketnamen
 mit Hilfe von `sort` noch alphabetisch aufsteigend sortiert. Die Ausgabe des 
 Kommandos landet in der Datei `paketliste` im aktuellen Verzeichnis:
 
-.Liste der installierten Pakete namentlich sortiert in einer Datei ablegen
+.Liste der installierten Pakete namentlich sortiert in einer Datei ablegen (Version 1)
 ----
 $ dpkg -l | egrep "^ii" | awk ' { print $2 } ' | sort > paketliste
 $
 ---- 
 
-Diese soeben erzeugte Liste nutzen Sie als Referenz, um andere Systeme identisch
-aufzusetzen. Wie das geht, lesen Sie in 
+Um den Aufwand zu verringern, ist der Schalter `--get-selections` spannend. 
+Dieser sorgt dafür, daß `dpkg` nur den Paketnamen samt Installationsstatus
+ausgibt. Kombiniert mit `grep` und `awk` bauen Sie sich daraus eine sortierte
+Liste wie folgt:
+
+.Liste der installierten Pakete namentlich sortiert in einer Datei ablegen (Version 2)
+----
+$ dpkg --get-selections | grep -v deinstall | awk ' { print $1 } ' > paketliste
+$
+----
+
+Diese soeben erzeugten Liste nutzen Sie als Referenz, um nun andere Systeme 
+identisch aufzusetzen. Wie das geht, lesen Sie in 
 <<paketkonfiguration-wieder-einspielen-mit-apt-get>> nach.
 
 [[paketkonfiguration-sichern-mit-apt]]
@@ -108,6 +120,9 @@ android-framework-res
 ...
 #
 ----
+
+Bitte beachten Sie, daß `apt` nur die Namen der Pakete ermittelt. Sämtliche 
+Konfiguration bleibt unbeachtet.
 
 [[paketkonfiguration-sichern-mit-debconf-get-selections]]
 ==== Mit `debconf-get-selections` ====
