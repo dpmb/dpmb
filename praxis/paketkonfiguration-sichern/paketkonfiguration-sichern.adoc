@@ -30,7 +30,8 @@ Daher schauen wir uns in diesem Kapitel verschiedene Wege an, um diese Schritte
 möglichst zu automatisieren. Unterteilt haben wir das in das Auslesen der 
 Paketkonfiguration und das Einspielen der zuvor gesicherten Paketkonfiguration. 
 Zum Einsatz kommen dabei die Werkzeuge `dpkg` (siehe 
-<<paketkonfiguration-sichern-mit-dpkg>>), `debconf-get-selections` (siehe 
+<<paketkonfiguration-sichern-mit-dpkg>>), `apt` (siehe
+<<paketkonfiguration-sichern-mit-apt>>), `debconf-get-selections` (siehe 
 <<paketkonfiguration-sichern-mit-debconf-get-selections>>), 
 `debconf-set-selections` (siehe 
 <<paketkonfiguration-wieder-einspielen-mit-debconf-set-selections>>) und 
@@ -81,6 +82,32 @@ $
 Diese soeben erzeugte Liste nutzen Sie als Referenz, um andere Systeme identisch
 aufzusetzen. Wie das geht, lesen Sie in 
 <<paketkonfiguration-wieder-einspielen-mit-apt-get>> nach.
+
+[[paketkonfiguration-sichern-mit-apt]]
+==== Mit `apt` ====
+
+// Stichworte für den Index
+(((Debianpaket, apt)))
+(((apt, list --installed)))
+Die Kombination aus `apt`, `awk` und `tail` liefert Ihnen ebenfalls eine Liste 
+der installierten Pakete in alphabetisch aufsteigender Sortierung:
+
+.`apt` zur Erstellung der Paketliste benutzen
+----
+# apt list --installed | awk -F "/" ' { print $1 } ' | tail -n +2 > paketliste
+# cat paketliste
+aapt
+acl
+acpi
+adduser
+adwaita-icon-theme
+alsa-base
+alsa-utils
+anacron
+android-framework-res
+...
+#
+----
 
 [[paketkonfiguration-sichern-mit-debconf-get-selections]]
 ==== Mit `debconf-get-selections` ====
