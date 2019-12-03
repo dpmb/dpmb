@@ -91,19 +91,40 @@ aufzusetzen. Wie das geht, lesen Sie in
 (((Debianpaket, debconf-utils)))
 Das Werkzeug `debconf-get-selections` aus dem Paket 'debconf-utils' 
 <<Debian-Paket-debconf-utils>> erzeugt eine Liste der Pakete, die installiert 
-sind und für die eine weitere Konfiguration notwendig ist. Das kommt im Rahmen 
-des sogenannten 'preseeding' zum Einsatz, auf Deutsch mit 'Vorbelegen von 
-Konfigurationswerten' übersetzbar.
+sind und für die eine weitere Konfiguration durch APT bei der Installation des
+Paketes notwendig ist. Das Verfahren kommt im Rahmen des sogenannten 
+'preseeding' zum Einsatz, auf Deutsch mit 'Vorbelegen von Konfigurationswerten' 
+übersetzbar. 
+
+Die Ausgabe von `debconf-get-selections` umfaßt den Paketnamen und dessen 
+Konfiguration, sprich: die Fragen plus die Antworten, aus denen Sie bei der 
+Installation des Paketes durch APT wählen können sowie ihre tatsächliche 
+Antwort. Der nachfolgende Ausschnitt zeigt das für das Paket 'cups':
+
+.Die Ausgabe von `debconf-get-selections`
+----
+...
+# Backends für die Kommunikation mit dem Drucker:
+# Choices: lpd, Socket, USB, SNMP, dnssd
+cups	cupsys/backend	multiselect	lpd, socket, usb, snmp, dnssd
+...
+----
+
+<<fig.dpkg-reconfigure-cups>> zeigt den dazugehörigen Konfigurationsdialog, den
+Sie auch stets mit Hilfe von `dpkg-reconfigure cups` erreichen können.
+
+.Fragen zum Paket 'cups'
+image::praxis/paketkonfiguration-sichern/dpkg-reconfigure-cups.png[id="fig.dpkg-reconfigure-cups", width="50%"]
 
 Die Ausgabe von `debconf-get-selections` erfolgt auf der Standardausgabe 
 (`stdout`). Eine Liste in einer Datei `paketliste`, die lediglich die 
 Paketnamen in sortierter Reihenfolge enthält, erzeugen Sie mit Hilfe der 
-Kombination aus den Werkzeugen `debconf-get-selection`, `grep`, `awk` und `sort` 
-wie folgt:
+Kombination aus den fünf Werkzeugen `debconf-get-selection`, `grep`, `awk`, 
+`sort` und `uniq` wie folgt:
 
 .Auslesen der bestehenden Paketkonfiguration aus der Debconf-Datenbank
 ----
-$ debconf-get-selections | grep -v "^#" | awk ' { print $1 } ' | sort | uniq | > paketliste
+$ debconf-get-selections | grep -v "^#" | awk ' { print $1 } ' | sort | uniq > paketliste
 $
 ----
 
@@ -250,7 +271,7 @@ Haben Sie eine Paketliste wie in <<paketkonfiguration-sichern-mit-dpkg>> erzeugt
 ist das Einspielen dieser Liste auf einem neuen System vergleichsweise einfach, 
 bspw. mit diesem Aufruf:
 
-.Einspielen der gespeicherten Paketliste mit Hilfe von `dpkg`
+.Einspielen der gespeicherten Paketliste mit Hilfe von `apt-get`
 ----
 # apt-get install < paketliste
 ...
@@ -270,13 +291,15 @@ daraus extrahiert oder neu erzeugt.
 (((debconf-set-selections, -v)))
 (((debconf-set-selections, --checkonly)))
 (((debconf-set-selections, --verbose)))
+(((Debianpaket, debconf-utils)))
 
-Haben Sie zuvor eine Liste der Paketkonfiguration mit Hilfe des Werkzeugs
-`debconf-get-selections` aus dem Paket 'debconf' <<Debian-Paket-debconf>>
-erstellt (siehe <<paketkonfiguration-sichern-mit-debconf-get-selections>>), 
-spielen Sie diese Liste mit dem Kommando `debconf-set-selections` aus dem 
-gleichen Paket wieder ein. Das Werkzeug bietet diese hilfreichen Schalter
-an:
+Haben Sie zuvor eine Liste der Pakete samt deren Voreinstellung mit Hilfe des 
+Werkzeugs `debconf-get-selections` erstellt (siehe 
+<<paketkonfiguration-sichern-mit-debconf-get-selections>>), ist 
+`debconf-set-selections` das passende Gegenstück dazu. Sie finden es ebenfalls
+im Paket 'debconf-utils' <<Debian-Paket-debconf-utils>>. Darüber spielen Sie 
+diese Liste auf dem Zielsystem wieder ein. Das Werkzeug bietet Ihnen diese 
+hilfreichen Schalter an:
 
 `-c` (Langform `--checkonly`) :: Eingabedatei nur auf Fehler prüfen
 
