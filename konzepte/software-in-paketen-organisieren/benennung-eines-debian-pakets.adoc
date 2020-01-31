@@ -175,7 +175,7 @@ Update des Pakets mit der Version 121-3 in Debian 7 _Wheezy_ (<x>=7 und
 <y>=2).
 
 `ubuntu<n>` ::
-ein Debianpaket, welches für Ubuntu angepaßt wurde. `<n>` bezeichnet die
+ein Debianpaket, welches für Ubuntu angepasst wurde. `<n>` bezeichnet die
 Ubuntu-Revisionsnummer, so bspw. `121-3ubuntu4` für die vierte
 Ubuntu-Revision des Debian-Pakets mit der Versionsnummer `121-3`.
 

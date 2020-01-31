@@ -35,7 +35,7 @@ vollständig und daher nicht in gedruckter Form verfügbar.
 
 // Stichworte für den Index
 (((Debianpaket, debian-handbook)))
-Das Buch wird jeweils für die aktuelle Debian-Veröffentlichung angepaßt.
+Das Buch wird jeweils für die aktuelle Debian-Veröffentlichung angepasst.
 Gleichzeitig entsteht daraus auch ein reguläres Debianpakete namens
 'debian-handbook' <<Debian-Paket-debian-handbook>> welches in die
 Distribution wieder einfließt. Das Paket beinhaltet derzeit den

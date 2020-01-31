@@ -100,7 +100,7 @@ Support_-Varianten – kurz _LTS_ – eingeführt, die den Zeitraum der
 weiteren Verfügbarkeit und Pflege auf bis zu fünf Jahre verlängern. In
 Folge wurde die im Jahr 2011 freigegebene und 2013 durch Debian 7
 _Wheezy_ abgelöste Veröffentlichung von Debian 6 _Squeeze_ bis 2016
-mit Aktualisierungen versorgt. Seither wurde jeder weitere stabile
+mit Aktualisierungen versorgt. Seither wurde jede weitere stabile
 Veröffentlichung nach ihrem offiziellen Lebensende ebenfalls als _LTS_
 mit Einschränkungen (z.B. nur noch die beliebtesten Architekturen)
 weitergeführt.
@@ -272,7 +272,7 @@ umschreibt.
 
 _Experimental_ trägt – analog zu _unstable_ – immer den Alias-Namen
 _rc-buggy_, was im Debian-Jargon eine Kurzform für ``contains
-release-critcal bugs'' darstellt. Das läßt sich sinngemäß als ``in
+release-critcal bugs'' darstellt. Das lässt sich sinngemäß als ``in
 dieser Form ungeeignet zur Aufnahme in eine Veröffentlichung''
 übersetzen.
 

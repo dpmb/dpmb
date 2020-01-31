@@ -377,7 +377,7 @@ ausführlicher.
 (((Paketmarkierungen, aufheben)))
 (((Paketmarkierungen, mit aptitude entfernen)))
 (((Paketmarkierungen, mit aptitude setzen)))
-Alternativ zu `apt-mark` bietet sich auch `aptitude` an. Dort heissen
+Alternativ zu `apt-mark` bietet sich auch `aptitude` an. Dort heißen
 die Unterkommandos etwas anders, ebenso agiert `aptitude` vielleicht
 ungewohnt. In der Standardeinstellung will es Pakete entfernen, die
 mangels geänderter Abhängigkeiten nicht mehr benötigt werden. Im u.g.
