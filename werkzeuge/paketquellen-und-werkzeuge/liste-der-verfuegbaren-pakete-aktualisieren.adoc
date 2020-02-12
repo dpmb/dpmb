@@ -168,6 +168,10 @@ image::werkzeuge/paketquellen-und-werkzeuge/aptitude-paket-ohne-gpg.png[id="fig.
 Zur Überprüfung auf korrekte Pakete tragen Sie bitte den passenden GPG-Key 
 für die Paketliste der Veröffentlichung nach. 
 
+==== Platz für den Paketcache ====
+
+Aktua
+
 ==== Die Veröffentlichung wechseln ====
 
 Möchten Sie neuere Versionen von Paketen installieren oder auf eine

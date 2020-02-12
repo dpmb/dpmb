@@ -46,10 +46,10 @@ des Paketspiegels stattfindet und genau das Paket durch ein neueres
 ersetzt wird, welches Sie gerade zum installieren oder aktualisieren
 herunterladen möchten.
 
-`apt-get` bricht in diesem Fall ab (TODO: Verifizieren), `aptitude`
-fragt Sie hingegen als Benutzer, ob Sie trotzdem fortsetzen oder
-abbrechen möchten. Zu überlegen ist das beispielsweise, wenn nur ein
-einziges Paket fehlschlug, welches von den anderen unabhängig ist.
+`apt-get` bricht in diesem Fall ab, `aptitude` fragt Sie hingegen als 
+Benutzer, ob Sie trotzdem fortsetzen oder den Vorgang abbrechen möchten. 
+Zu überlegen ist das beispielsweise, wenn nur ein einziges Paket 
+fehlschlug, welches von den anderen unabhängig ist.
 
 Wenn die Netzwerkverbindung (wieder) in Ordnung ist, beheben Sie eine
 solche Situation in den meisten Situationen ohne viel Aufwand. Das gilt

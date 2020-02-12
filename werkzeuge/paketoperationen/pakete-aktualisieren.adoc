@@ -125,6 +125,24 @@ ruby2.1 (2.1.5-2+deb8u6) wird eingerichtet ...
 #
 ----
 
+Bei diesem Schritt werden die zu installierenden Softwarepakete zunächst 
+im Paketcache unter `/var/cache/apt/archives/` abgelegt. `apt` prüft dabei, 
+ob für die heruntergeladenen Pakete auch genügend Speicherplatz zur 
+Verfügung steht. Ist das nicht der Fall, beschwert es sich bei Ihnen mit 
+nachfolgender Ausgabe:
+
+.Fehlender Speicherplatz für den Paketcache
+----
+1734 aktualisiert, 716 neu installiert, 29 zu entfernen und 0 nicht aktualisiert.
+Es müssen 3.292 MB an Archiven heruntergeladen werden.
+Nach dieser Operation werden 3.195 MB Plattenplatz zusätzlich benutzt.
+E: Sie haben nicht genug Platz in /var/cache/apt/archives/.
+----
+
+Um die Situation zu bereinigen, räumen Sie vor der Aktualisierung der 
+Pakete den Paketcache auf (siehe ``Paketcache aufräumen'' in 
+<<paketcache-aufraeumen>>).
+
 [[pakete-aktualisieren-upgrade]]
 ==== `upgrade` und `safe-upgrade` ====
 
