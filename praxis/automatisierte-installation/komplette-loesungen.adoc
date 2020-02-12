@@ -4,6 +4,13 @@
 
 === Komplette Lösungen ===
 
+// - Ansible
+
+// - Chef
+
+// - Cobbler
+include::cobbler.adoc[]
+
 // - FAI
 include::fai.adoc[]
 

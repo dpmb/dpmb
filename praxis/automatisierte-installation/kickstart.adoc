@@ -2,7 +2,20 @@
 
 // Baustelle: Notizen
 
+[[kickstart]]
 ==== Kickstart ====
+
+* Textdatei, welche die Systemkonfiguration und das Setup beschreibt
+** Disklayout und Dateisysteme
+** Bootloader
+** Netzwerkkonfiguration
+** Benutzer und Zugänge
+** Softwareeinrichtung
+
+* nicht für Debian verfügbar
+* verfügbar für Ubuntu (siehe https://doc.ubuntu-fr.org/kickstart)
+** graphisches Werkzeug im Paket 'system-config-kickstart' <<Ubuntu-Paket-system-config-kickstart>>
+
 
 * https://cobbler.github.io/
 * http://www.debian.itopstube.com/2011/11/automating-installation-with-kickstart.html

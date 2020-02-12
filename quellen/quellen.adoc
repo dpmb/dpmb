@@ -892,6 +892,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Ubuntu-Paket-software-center]]] Ubuntu-Paket 'software-center', https://launchpad.net/software-center
 
+- [[[Ubuntu-Paket-system-config-kickstart]]] Ubuntu-Paket 'system-config-kickstart', https://packages.ubuntu.com/xenial/admin/system-config-kickstart
+
 - [[[Ubuntu-Paket-ubumirror]]] Ubuntu-Paket 'ubumirror', https://launchpad.net/ubumirror
 
 - [[[Ubuntu-Paket-ubuntu-keyring]]] Ubuntu-Paket 'ubuntu-keyring', http://packages.ubuntu.com/de/trusty/ubuntu-keyring
