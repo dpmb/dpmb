@@ -1,0 +1,11 @@
+// Datei: ./praxis/automatisierte-installation/cobbler.adoc
+
+// Baustelle: Notizen
+
+[[cobbler]]
+==== Cobbler ====
+
+* https://cobbler.github.io/
+
+// Datei (Ende): ./praxis/automatisierte-installation/cobbler.adoc
+

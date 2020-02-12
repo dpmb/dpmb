@@ -16,10 +16,7 @@
 * verfügbar für Ubuntu (siehe https://doc.ubuntu-fr.org/kickstart)
 ** graphisches Werkzeug im Paket 'system-config-kickstart' <<Ubuntu-Paket-system-config-kickstart>>
 
-
-* https://cobbler.github.io/
 * http://www.debian.itopstube.com/2011/11/automating-installation-with-kickstart.html
-* https://fak3r.com/2011/08/18/howto-automate-debian-installs-with-preseed/
 
 // Datei (Ende): ./praxis/automatisierte-installation/kickstart.adoc
 

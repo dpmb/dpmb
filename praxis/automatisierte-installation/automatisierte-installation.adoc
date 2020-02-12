@@ -18,12 +18,6 @@ include::mit-debian-werkzeugen.adoc[]
 // - Extra-Werkzeuge/Komplette Lösungen
 include::komplette-loesungen.adoc[]
 
-// - FAI
-include::fai.adoc[]
-
-// - Kickstart
-include::kickstart.adoc[]
-
 === Erfahrungen aus der Praxis ===
 
 ToDo
