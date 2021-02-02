@@ -147,10 +147,10 @@ mitsamt Patch <<github-pull-request>> ein.
 ==== Organisatorisch ====
 
 Beide Autoren leben und arbeiten in recht unterschiedlichen Regionen --
-Axel Beckert in Zürich und Frank Hofmann in Besançon. Aufgrund der 
-mitunter recht großen Distanz sind regelmäßige Arbeitstreffen nur 
-begrenzt möglich und wurden daher mit Hilfe von Buchsprints sowie 
-elektronischer Kommunikation überbrückt. 
+Axel Beckert in Zürich und Frank Hofmann in Kirchzarten bei Freiburg.
+Aufgrund der mitunter recht großen Distanz sind regelmäßige
+Arbeitstreffen nur begrenzt möglich und wurden daher mit Hilfe von
+Buchsprints sowie elektronischer Kommunikation überbrückt.
 
 Das Buch entsteht seit dem Frühjahr 2013 und häufig auch im Rahmen von 
 Linux-Events. Besonders hervorzuheben sind hierbei die Chemnitzer 
@@ -170,7 +170,7 @@ Beauvais (Picardie),
 Bergneustadt,
 Berlin,
 Besançon,
-Biel,
+Biel/Bienne,
 Bottighofen (Bodensee, Schweiz),
 Bratland (bei Bergen, Norwegen),
 Bruchsal,
@@ -189,6 +189,7 @@ Hamburg,
 Hannover,
 Heidelberg,
 Hout Bay und Kapstadt (beide Western Cape, Südafrika),
+Kirchzarten bei Freiburg im Breisgau,
 Koblenz,
 Lauchringen (Baden, Wutachtal),
 Laveno Mombello (Italien, Lago Maggiore),
