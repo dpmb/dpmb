@@ -155,8 +155,8 @@ Im Detail gehen wir darauf unter ``Debian Backports'' in
 (((Veröffentlichung, Slink)))
 (((Veröffentlichung, Squeeze)))
 (((Veröffentlichung, Stretch)))
-(((Veröffentlichung, Buster)))
 (((Veröffentlichung, Toy Story)))
+(((Veröffentlichung, Trixie)))
 (((Veröffentlichung, Wheezy)))
 (((Veröffentlichung, Woody)))
 Jede Veröffentlichung von Debian GNU/Linux hat einen Alias-Namen, der
@@ -201,14 +201,16 @@ veröffentlichte die Version 1.1 ein halbes Jahr später.
 
 * Debian 9 _Stretch_ (17. Juni 2017; benannt nach dem lila Kraken)
 
-* Debian 10 _Buster_ (7. September 2019; benannt nach dem Welpen aus 'Toy Story 2')
-
-Es stehen bereits ebenfalls die Namen von zwei zukünftigen Veröffentlichungen fest:
+* Debian 10 _Buster_ (6. Juli 2019; benannt nach dem Welpen aus 'Toy Story 2')
 
 * Debian 11 _Bullseye_ -- benannt nach dem Pferd von _Woody Pride_
 
+Es stehen bereits ebenfalls die Namen von zwei zukünftigen Veröffentlichungen fest:
+
 * Debian 12 _Bookworm_ -- benannt nach dem intelligenten Bücherwurm,
 einem Spielzeug mit eingebauter Leuchte aus 'Toy Story 3'
+
+* Debian 13 _Trixie_ -- benannt nach dem blauen Dinosaurier
 
 Mehr Details zu den einzelnen Veröffentlichungen finden sich in der
 Debian-Geschichte <<Debian-History>>. Die Figuren aus den verschiedenen
