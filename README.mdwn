@@ -75,15 +75,9 @@ oder von https://book.dpmb.org/ als
 [Mobipocket](https://book.dpmb.org/debian-paketmanagement.mobi) (ca. 15
 MB) herunterladen.
 
-Zusätzlich gibt's das Buch auch
-[online bei GitBook](https://gitbook.dpmb.org/), aber das Rendering bei
-[Gitbook](https://www.gitbook.com/) hat leider einige Probleme. So
-funktionieren aktuell weder Referenzen noch Bilder und es hat
-überflüssige Zusatzinhaltsverzeichnisse am Start einiger Kapitel. Die
-herunterladbaren
-[PDF](https://www.gitbook.com/download/pdf/book/dpmb/dpmb)- und
-[EPUB](https://www.gitbook.com/download/epub/book/dpmb/dpmb)-Varianten
-von Gitbook sind von denselben Problemen betroffen.
+Das zusätzliche Bauen des Buches auf GitBook haben wir eingestellt, es
+hat nie richtig funktioniert, zuletzt Schreibrechte verlangt und mit
+diesen dann Dateien im Git-Repository ungefragt umbenannt.
 
 ### Klappentext
 
