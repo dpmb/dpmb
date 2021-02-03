@@ -2,6 +2,7 @@ dpmb (0~2021.02.02) UNRELEASED; urgency=medium
 
   * New snapshot
     + Removes GitBook support. (Wasn't used in the Debian package anyways.)
+    + Update asciidoc-macros/*.conf to fix image embedding with Python 3.
   * Mark package as "Multi-Arch: foreign" as recommended by the Multi-Arch
     Hinter.
 
