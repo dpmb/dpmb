@@ -1,10 +1,11 @@
-dpmb (0~2019.10.31) UNRELEASED; urgency=medium
+dpmb (0~2021.02.02) UNRELEASED; urgency=medium
 
+  * New snapshot
+    + Removes GitBook support. (Wasn't used in the Debian package anyways.)
   * Mark package as "Multi-Arch: foreign" as recommended by the Multi-Arch
     Hinter.
-  * Removes GitBook support. (Wasn't used in the Debian package anyways.)
 
- -- Axel Beckert <abe@debian.org>  Thu, 31 Oct 2019 15:49:13 +0100
+ -- Axel Beckert <abe@debian.org>  Wed, 03 Feb 2021 02:15:15 +0100
 
 dpmb (0~2019.03.01) unstable; urgency=medium
 
