@@ -3,7 +3,7 @@ Section: doc
 Priority: optional
 Maintainer: Axel Beckert <abe@debian.org>
 Uploaders: Frank Hofmann <frank.hofmann@efho.de>
-Build-Depends: debhelper (>= 9)
+Build-Depends: debhelper-compat (= 13)
 Build-Depends-Indep: asciidoc,
                      asciidoc-dblatex (>= 8.6.9-5) | asciidoc (<= 8.6.9-3.1),
                      calibre,

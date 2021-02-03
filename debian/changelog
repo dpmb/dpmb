@@ -5,6 +5,10 @@ dpmb (0~2021.02.02) UNRELEASED; urgency=medium
     + Update asciidoc-macros/*.conf to fix image embedding with Python 3.
   * Mark package as "Multi-Arch: foreign" as recommended by the Multi-Arch
     Hinter.
+  * Bump debhelper compatibility level to 13.
+    + Build-depend on "debhelper-compat (= 13)" to replace debian/compat.
+    + debian/rules: Update manual installation paths,
+    + debian/rules: Drop --parallel, it's default now.
 
  -- Axel Beckert <abe@debian.org>  Wed, 03 Feb 2021 02:15:15 +0100
 
