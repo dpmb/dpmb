@@ -9,11 +9,6 @@ override_dh_auto_build:
 	dh_auto_build -- allinone.html pdf epub mobi
 
 override_dh_auto_install:
-	# Install all images manually for now.
-	for i in `find . '(' '(' -name deploy -o -name debian ')' -prune -o -name '*.png' ')' -type f`; do \
-	    mkdir -pv `dirname "debian/debian-paketmanagement-buch/usr/share/doc/$(P)/$$i"`; \
-	    cp -pv "$$i" "debian/debian-paketmanagement-buch/usr/share/doc/$(P)/$$i"; \
-	done
 
 override_dh_compress:
 	dh_compress -X.pdf -X.mobi
