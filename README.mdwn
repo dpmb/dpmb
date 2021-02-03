@@ -38,15 +38,9 @@ MB) file from https://book.dpmb.org/. The book is also
 [available as package in Debian](https://packages.debian.org/stable/debian-paketmanagement-buch)
 in Debian 9 Stretch or later.
 
-Additionally, the book is also available
-[online at GitBook](https://gitbook.dpmb.org/), but be aware that the
-rendering over there at [Gitbook](https://www.gitbook.com/) still
-contains quite some bugs, i.e. neither references nor images work
-properly yet and there are superfluous table of contents at chapter
-starts. The downloadable
-[PDF](https://www.gitbook.com/download/pdf/book/dpmb/dpmb) and
-[EPUB](https://www.gitbook.com/download/epub/book/dpmb/dpmb) variants
-at Gitbook suffer from the same symptoms, too.
+The additional building of the book on GitBook has been disabled as it
+never worked properly, it recently requested write access and then
+renamed some files without asking first.
 
 ## German / Deutsch
 
