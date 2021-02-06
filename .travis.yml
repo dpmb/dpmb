@@ -1,11 +1,11 @@
 sudo: required
-dist: trusty
-language: generic
+dist: focal
 
 before_install:
+   - sudo apt-get install -y --no-install-recommends moreutils texlive-lang-german calibre calibre-bin python-sip epubcheck build-essential xmlto fakeroot locales-all asciidoc-dblatex asciidoc
+   - echo 'deb http://archive.ubuntu.com/ubuntu groovy main universe' | sudo tee -a /etc/apt/sources.list
    - sudo apt-get update
-   - sudo apt-get install -y --no-install-recommends moreutils dblatex asciidoc texlive-lang-german calibre calibre-bin python-sip epubcheck build-essential debhelper xmlto fakeroot
-
+   - sudo apt-get install -y --no-install-recommends debhelper
 script:
    - make -j4 verbose
    - make test
