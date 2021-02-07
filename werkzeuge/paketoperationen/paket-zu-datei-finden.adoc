@@ -257,23 +257,23 @@ $
 Die Webseite bietet ebenfalls eine Suche anhand einer Zeichenfolge an
 (siehe <<fig.paketsuche-web1>>). Über verschiedene Auswahlfelder grenzen
 Sie ein, ob die Zeichenfolge auf feste Verzeichnisse passen soll, die
-mit einem Suchwort enden oder Pakete mit Dateien beinhalten soll, die so
+mit einem Suchwort enden, oder Pakete mit Dateien beinhalten soll, die so
 benannt sind oder deren Namen das Suchwort enthalten. Desweiteren
 filtern Sie die Suchergebnisse nach der gewünschten Veröffentlichung und
 Architektur (siehe dazu <<veroeffentlichungen>> und
 <<debian-architekturen>>).
 
-.Suche nach `xara-gtk` über die Webseite
+.Suche nach `mupdf` über die Webseite
 image::werkzeuge/paketoperationen/paketsuche-web1.png[id="fig.paketsuche-web1", width="50%"]
 
 Die <<fig.paketsuche-web2>> zeigt das Suchergebnis für die
-Veröffentlichung _Wheezy_, welches hier recht übersichtlich ausfällt.
-Beide Treffer zeigen das Paket 'xara-gtk' samt der dazu gefundenen
-Dateien mit dem Suchmuster. Klicken Sie auf einen der Links zwischen dem
-Suchfeld und dem Suchergebnis, schränken Sie die Suche anhand der
-gewählten Veröffentlichung bzw. Architektur weiter ein.
+Veröffentlichung _Bullseye_, welches hier recht lang ausfällt. Die
+Treffer zeigen das Paket 'mupdf' samt der dazu gefundenen Dateien mit
+dem Suchmuster. Klicken Sie auf einen der Links zwischen dem Suchfeld
+und dem Suchergebnis, schränken Sie die Suche anhand der gewählten
+Veröffentlichung bzw. Architektur weiter ein.
 
-.Suche nach dem Paket 'xara-gtk' über die Webseite des Debian-Projekts (Suchergebnis)
+.Suche nach der Zeichenkette 'mupdf' über die Webseite des Debian-Projekts (Suchergebnis)
 image::werkzeuge/paketoperationen/paketsuche-web2.png[id="fig.paketsuche-web2", width="50%"]
 
 // Datei (Ende): ./werkzeuge/paketoperationen/paket-zu-datei-finden.adoc
