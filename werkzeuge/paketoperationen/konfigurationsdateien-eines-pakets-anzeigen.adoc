@@ -52,7 +52,7 @@ durch Anhängen von `| grep /etc/` an den entsprechenden Befehlen
 herausfiltern.
 
 Es gibt jedoch ein paar Programme, die diesen Schritt ohne Zuhilfenahme
-von `grep` durchführen können. Diese Programme wollen wir ihnen im
+von `grep` durchführen können. Diese Programme wollen wir Ihnen im
 Folgenden vorstellen.
 
 // Stichworte für den Index
@@ -172,12 +172,14 @@ Eine dritte Variante bietet das Programm `debsums` aus dem
 gleichnamigen Paket <<Debian-Paket-debsums>> mit seinem Schalter `-e`
 bzw. dessen Langfassung `--config`. Die eigentliche Aufgabe von
 `debsums` ist, anzuzeigen, welche Dateien vom Auslieferungszustand
-abweichen. Somit erhalten wir die gewünschte Information -- `debsums`
-zeigt die Unterschiede gleich mit an. Im Falle einer Abweichung ergänzt
-`debsums` das etwas alarmierende Wort "FAILED", auf Deutsch
-"fehlgeschlagen". Insbesondere bei Conffiles, bei denen Änderungen durch
-den Systemadministrator ja explizit vorgesehen sind, ist die Meldung
-"FAILED" im Normalfall kein Grund zur Besorgnis.
+abweichen. Somit erhalten wir nicht nur die gewünschte Information
+über die Conffiles im Paket sondern auch gleich noch, ob sich diese
+Dateien noch im Auslieferungszustand befinden oder nicht. Im Falle
+einer Abweichung ergänzt `debsums` das etwas alarmierende Wort
+"FAILED", auf Deutsch "fehlgeschlagen". Insbesondere bei Conffiles,
+bei denen Änderungen durch den Systemadministrator ja explizit
+vorgesehen sind, ist die Meldung "FAILED" im Normalfall kein Grund zur
+Besorgnis.
 
 .Anzeige der Conffiles des Paketes 'bash' und ihrer Unversehrtheit mittels `debsums`
 ----
