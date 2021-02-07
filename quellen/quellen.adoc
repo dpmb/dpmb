@@ -804,6 +804,10 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[proxyArch]]] Proxy-Einstellungen im Wiki zu Arch Linux, https://wiki.archlinux.org/index.php/Proxy_settings
 
+- [[[PureOS]]] PureOS, https://www.pureos.net/
+
+- [[[Purism]]] Purism, https://puri.sm/
+
 - [[[RaspberryPi]]] Webseite zur Hardwareplattform Raspberry Pi, https://www.raspberrypi.org/
 
 - [[[Raspbian]]] Debian für das Raspberry Pi, https://www.raspbian.org/
@@ -877,8 +881,6 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[SWITCH]]] SWITCH, das Hochleistungsnetzwerk der Schweizer Hochschulen, https://www.switch.ch/
 
 - [[[sysgetGitHub]]] sysget auf GitHub, https://github.com/emilengler/sysget
-
-- [[[Tanglu]]] Tanglu GNU/Linux, http://www.tanglu.org/de/
 
 //- [[[Thalmayr-LUGA2012]]] Dieter Thalmayr in: Oberflächliches -- Enlightenment als Alternative zu Gnome und KDE, Vortrag im Rahmen des 11. Linux-Infotages Augsburg, 24. März 2012, https://www.luga.de/Aktionen/LIT-2012/
 

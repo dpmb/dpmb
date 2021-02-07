@@ -45,7 +45,7 @@ LernStick:: Live-Distribution auf einem USB-Stick <<LernStick>>
 (((LiMux)))
 (((Linux Mint)))
 (((Linux Mint Debian Edition (LMDE))))
-(((Tanglu)))
+(((PureOS)))
 (((Ubuntu)))
 (((Univention Corporate Server (UCS))))
 
@@ -55,7 +55,7 @@ LiMux:: Linux-Distribution, die im Rahmen der Migration der Stadtverwaltung Mün
 
 Linux Mint, Linux Mint Debian Edition (LMDE):: basiert auf Ubuntu bzw. Debian 'testing' <<LinuxMint>>
 
-Tanglu:: Rein community-basiertes Desktop-Linux <<Tanglu>>
+PureOS:: Linux-Distribution für Smartphones und Notebooks der Firma Purism. <<PureOS>>, <<Purism>>
 
 Ubuntu (und dessen Ableger):: Linux für Einsteiger und den Desktop <<Ubuntu>>
 
