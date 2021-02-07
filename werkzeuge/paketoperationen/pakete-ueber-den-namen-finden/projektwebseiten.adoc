@@ -97,10 +97,11 @@ https://packages.debian.org/de/stable/screen
 
 `https://packages.debian.org/source/`'release'`/`'sourcepaketname'::
 zeigt die Informationen zum Quellpaket 'sourcepaketname' in der
-Veröffentlichung 'release' an, z.B. so für die Paketbeschreibung und die
-Abhängigkeiten des Paketes `screen` in Debian _Testing_:
+Veröffentlichung 'release' an, z.B. so für die Informationen und die
+zum Bau notwendigen Pakete des Quellpaketes `screen` in Debian 10
+_Buster_:
 ----
-https://packages.debian.org/source/testing/screen
+https://packages.debian.org/source/buster/screen
 ----
 Analog zu den Binärpaketen können Sie hier auch noch ein Sprachkürzel an
 den Anfang des Pfades setzen, um eine bestimmte Sprache zu erzwingen.
