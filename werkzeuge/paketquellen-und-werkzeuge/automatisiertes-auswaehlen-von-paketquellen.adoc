@@ -64,16 +64,6 @@ Diese Funktionalitat lässt sich nutzen, um anhand der anfragenden
 IP-Adresse automatisiert einen geographisch nahen Paketmirror zu
 finden. Bei Debian ist dies an mehreren Stellen im Einsatz.
 
-==== Immer per GeoIP: Security-Updates ====
-
-Security-Updates kommen bei Debian nicht über das normale
-Spiegelnetzwerk, welches regulär nur alle sechs Stunden aktualisiert
-wird. Stattdessen besteht ein separates Spiegelnetzwerk unter dem
-Hostnamen `security.debian.org`, das nur nach Bedarf aktualisiert wird.
-Dieses Spiegelnetzwerk verwendet immer GeoIP per DNS und gibt stets eine
-Liste von Paketspiegeln auf demselben Kontinent zurück, auf dem Sie sich
-netztechnisch gerade aufhalten.
-
 ==== GeoIP per DNS ====
 
 // TODO: cdn.debian.net ist tot, zeigt auf http.debian.net
@@ -160,6 +150,14 @@ $ host cdn.debian.net
 Host cdn.debian.net not found: 3(NXDOMAIN)
 $
 ----
+
+==== Immer per CDN: Security-Updates ====
+
+Security-Updates kommen bei Debian nicht über das normale
+Spiegelnetzwerk, welches regulär nur alle sechs Stunden aktualisiert
+wird. Stattdessen besteht ein separates Spiegelnetzwerk unter dem
+Hostnamen `security.debian.org`, das nur nach Bedarf aktualisiert
+wird.  Dieses Spiegelnetzwerk verwendet schon seit längerem ein CDN.
 
 ==== GeoIP per HTTP-Redirect ====
 

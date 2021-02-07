@@ -20,3 +20,10 @@ Release-bezogene Updates
 ### Veraltete Beispiele
 
 * Beispiele mit Wheezy durch neuere Beispiele ersetzen
+
+Infrastruktur-Doku aktualisieren
+--------------------------------
+
+* `werkzeuge/paketquellen-und-werkzeuge/automatisiertes-auswaehlen-von-paketquellen.adoc`:
+  `deb.debian.org` / Fastly besser
+  dokumentieren. `httpredir.debian.org` ist nur noch ein ALias dafür.
