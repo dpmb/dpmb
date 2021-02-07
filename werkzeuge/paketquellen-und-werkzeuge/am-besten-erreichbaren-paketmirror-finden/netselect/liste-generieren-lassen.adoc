@@ -158,8 +158,6 @@ verstehen, wofür jeder einzelne Eintrag gedacht ist.
 
 .Inhalt der automatisch generierten Liste der Paketmirrors
 ----
-# cat sources.list
-
 # Debian packages for stable
 deb http://artfiles.org/debian/ stable main contrib
 # Uncomment the deb-src line if you want 'apt-get source'
@@ -168,7 +166,6 @@ deb http://artfiles.org/debian/ stable main contrib
 
 # Security updates for stable
 deb http://security.debian.org/ stable-security main contrib
-#
 ----
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/am-besten-erreichbaren-paketmirror-finden/netselect/liste-generieren-lassen.adoc
