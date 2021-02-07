@@ -110,6 +110,13 @@ automatisch installiert wurde{empty}footnote:[Bislang scheint SmartPM diese
 Markierungen nicht mit APT oder `aptitude` zu synchronisieren. Dieses
 Verhalten ist als Bug registriert.].
 
+Allerdings stammt die letzte Veröffentlichung von SmartPM von 2011
+<<SmartPM>> und es wurde 2019 aus Debian entfernt <<SmartPM-RM>>,
+nachdem ebenfalls seit 2011 kein Änderungen mehr am Paket passiert und
+es auf Python 2 und PyGTK aufbaute, die beide "End of Live" sind,
+d.h. keinerlei Sicherheitsaktualisierungen mehr bekommen. Noch
+enthalten ist es in Debian 10 _Buster_ und Ubuntu 18.04 LTS _Bionic_.
+
 // TODO: Es gibt einen Bug-Report wegen der Nicht-Synchronisierung von
 // SmartPMs "lock flag" und dpkgs "hold"-Zustand. Eventuell will man
 // darauf verweisen.

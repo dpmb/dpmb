@@ -850,7 +850,9 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Skype]]] Skype, https://www.skype.com/
 
-- [[[SmartPM]]] Smart Package Manager, Projektseite, http://labix.org/smart
+- [[[SmartPM]]] Smart Package Manager, Projektseite, https://labix.org/smart
+
+- [[SmartPM-RM]] Entfernung von SmartPM aus Debian, https://bugs.debian.org/946692
 
 - [[[SOCKS]]] SOCKS-Proxy, Wikipedia, https://de.wikipedia.org/wiki/SOCKS
 
