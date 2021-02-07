@@ -25,8 +25,8 @@ in möglichst stabiler Form verfügbar bleibt <<Debian-Wiki-Maintainer>>.
 (((Paketsuche, mittels aptitude)))
 (((Synaptic)))
 Diese Information liefern Ihnen mehrere Werkzeuge – `aptitude`,
-`grep-dctrl` sowie `ara` und Synaptic. Die Unterschiede liegen im Aufruf
-und den Parametern.
+`grep-dctrl` und Synaptic. Die Unterschiede liegen im Aufruf und den
+Parametern.
 
 `aptitude` kennt den Schalter `~m` gefolgt von der Emailadresse des
 Maintainers. Damit finden Sie die 'Binärpakete', in denen dieser
@@ -114,49 +114,6 @@ Maintainer: Axel Beckert <abe@debian.org>
 ...
 $
 ----
-
-// Stichworte für den Index
-(((ara)))
-(((ara, -progress)))
-(((ara, -table)))
-(((Debianpaket, ara)))
-(((Paketsuche, anhand des Maintainers)))
-(((Paketsuche, anhand des Uploaders)))
-(((Paketsuche, mittels ara)))
-Das Programm `ara` aus dem gleichnamigen Paket <<Debian-Paket-ara>>
-erlaubt eine sehr kompakte Schreibweise. Es sucht dabei in den Binär-
-und den Sourcepaketen, sofern diese vorhanden sind und gibt dabei
-trotzdem die Namen der dazugehörigen Binärpakete aus. Nachfolgender
-Aufruf zeigt die Recherche nach den Feldern 'uploaders' und 'maintainer'
-für den Benutzer mit der Emailadresse `abe@debian.org`. Bitte
-berücksichtigen Sie bei eigenen Experimenten die unterschiedlichen
-Trennzeichen zwischen den Komponenten und den abschließenden
-Schrägstrich nach der Emailadresse.
-
-.Einfache Recherche nach Paketen mit Hilfe von `ara`
-----
-$ ara uploaders,maintainer:/abe@debian.org/
-aha
-amora-applet
-amora-cli
-amora-server
-autocutsel
-autossh
-conkeror
-conkeror-spawn-process-helper
-...
-$
-----
-
-Besonders schön sehen Sie das bei der nachfolgenden Abfrage in
-<<fig.ara-suche>>. Die verwendeten Schalter `-progress` und `-table`
-zählen nicht nur die überprüften Pakete und zeigen die gerade
-untersuchte Paketquelle an, sondern zeichnen auch noch eine hübsche
-Tabelle ringsrum. Zu jedem gefundenen Source-Paket werden in der
-jeweiligen Spalte die dazugehörigen Binärpakete aufgelistet.
-
-.Recherche nach Paketen mittels `ara`
-image::werkzeuge/paketoperationen/ara-suche.png[id="fig.ara-suche", width="50%"]
 
 // Stichworte für den Index
 (((Synaptic)))
