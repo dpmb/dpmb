@@ -262,43 +262,25 @@ sicher sein, ob der bezogene Schlüssel wirklich von Opera ist und Sie
 ihm vertrauen können, oder ob nicht zufällig eine
 Man-in-the-Middle-Attacke im Gange ist.
 
+==== Abkündigung von apt-key  ====
+
+Seit APT 2.1.8 ist `apt-key` offiziell abgekündigt. Ersatz ist das
+Ablegen von Keyring-Dateien im Verzeichnis `/etc/apt/trusted.gpg.d/`,
+z.B. als Bestandteil eines Paketes. Solche Pakete heißen
+typischerweise `<herausgeber>-archive-keyring`,
+z.B. `debian-archive-keyring`, `ubuntu-archive-keyring` oder
+`pkg-mozilla-archive-keyring`.
+
 ==== Alternative Benutzerschnittstellen zur APT-Schlüsselverwaltung ====
 
 // Stichworte für den Index
 (((curses-apt-key)))
 (((gui-apt-key)))
-Neben dem Kommandozeilenprogramm `apt-key` existieren auch noch zwei
-interaktive Bedienoberflächen dazu: das auf GTK aufbauende `gui-apt-key`
-aus dem gleichnamigen Paket <<Debian-Paket-gui-apt-key>> und das auf
-Ncurses aufbauende `curses-apt-key` <<curses-apt-key>>. Beide besprechen
-wir hier nur kurz.
-
-`gui-apt-key` starten Sie zunächst als Benutzer `root` oder mittels `sudo`. 
-Im Dialogfenster (<<fig.gui-apt-key>>) sehen Sie die Inhaber und das 
-Ablaufdatum aller von APT als vertrauenswürdig eingestuften GPG-Schlüssel. 
-Über das Menü haben Sie die Möglichkeit, weitere Schlüssel aus Dateien zu 
-importieren, die Schlüssel gegen den Debian-Archiv-Schlüsselring zu 
-aktualisieren (analog zu `apt-key update`), einen Schlüssel aus der Liste 
-zu löschen oder Details wie einen Fingerabdruck zu einem Schlüssel 
-anzeigen zu lassen.
-
-.Hauptfenster von gui-apt-key
-image::werkzeuge/paketquellen-und-werkzeuge/gui-apt-key.png[id="fig.gui-apt-key", width="50%"]
-
-`gui-apt-key` ist allerdings in Debian 10 _Buster_ nicht enthalten, könnte 
-aber in späteren Veröffentlichungen wieder zurückkehren.
-
-`curses-apt-key` nutzt dieselben Backend-Bibliotheken wie `gui-apt-key`. 
-Daher bietet es die gleichen Funktionalitäten, braucht jedoch dazu keine 
-graphische Umgebung und eignet sich daher insbesondere für die Nutzung auf 
-Servern (siehe <<fig.curses-apt-key>>). `curses-apt-key` ist aber zur Zeit 
-noch nicht offizieller Bestandteil von Debian, da dazu zuerst das Paket 
-`gui-apt-key` in Bibliothek und Frontend aufgespalten werden müsste. Eine 
-Aufnahme in Debian ist jedoch geplant <<curses-apt-key-itp>>. Details dazu 
-finden Sie im Debian-Bugtracker 
-<<curses-apt-key-braucht-gui-apt-key-aufsplittung>>. 
-
-.curses-apt-key in einem xterm
-image::werkzeuge/paketquellen-und-werkzeuge/curses-apt-key.png[id="fig.curses-apt-key", width="50%"]
+Die Abkündigung von `apt-key` ist auch einer der Gründe, warum sich
+niemand mehr darum gekümmert hat, `gui-apt-key`
+<<Debian-Paket-gui-apt-key>>, das verwaiste GUI-Frontend zu `apt-key`,
+weiterzuentwickeln. Entsprechend ist auch die darauf aufbauende,
+curses-basierende TUI-Programm `curses-apt-key` <<curses-apt-key>>
+nicht mehr weiterentwickelt wird.
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/paketquelle-auf-echtheit-ueberpruefen.adoc

@@ -43,6 +43,14 @@ graphische, KDE-basierte Benutzerschnittstelle zu gdebi, siehe
 <<gui-gdebi>>. Zuletzt in Debian 9 _Stretch_, war das letzte Paket,
 das noch pykde4 brauchte.
 
+`gui-apt-key` und `curses-apt-key`::
+// Stichworte für den Index
+(((curses-apt-key)))
+(((gui-apt-key)))
+U.a. weil `apt-key` abgekündigt wurde, werden auch dessen alternative
+Frontends `gui-apt-key` <<Debian-Paket-gui-apt-key>> und `curses-apt-key`
+<<curses-apt-key>> nicht mehr weiterentwickelt.
+
 `software-center`::
 von Ubuntu entwickelte, grafische Benutzerschnittstelle zum Pakete
 verwalten im Stile eines "App Stores". Zuletzt in Debian 7 _Wheezy_
