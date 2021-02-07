@@ -376,7 +376,6 @@ Teams <<Debian-Security>> an.
 (((Veröffentlichung, Langzeitunterstützung)))
 (((Veröffentlichung, LTS)))
 (((LTS)))
-
 Im Frühjahr 2014 wurden zusätzlich sogenannte _Long Term
 Support_-Varianten <<Debian-LTS>> -- auf Deutsch "Langzeitunterstützung"
 und kurz _LTS_ -- eingeführt. Diese verlängern den Zeitraum der weiteren
@@ -416,7 +415,6 @@ abgelaufen ist, ist das heute von keiner Relevanz mehr.)
 (((Veröffentlichung, Erweiterte Langzeitunterstützung)))
 (((Veröffentlichung, ELTS)))
 (((Veröffentlichung, Extended LTS)))
-
 Da manchen Anwendern -- vor allem aus dem professionellen Umfeld -- auch
 die LTS-Varianten nicht lange genug Unterstützung anboten, gibt seit
 2018 eine weitere Stufe der Verlängerung. Seit dem Auslaufen von LTS für
