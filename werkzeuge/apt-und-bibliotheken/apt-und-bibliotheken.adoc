@@ -21,12 +21,13 @@ Paketverwaltung entwickeln.
 (((Bibliothek, libapt-pkg)))
 (((Debianpaket, libapt-pkg5.0)))
 (((libapt-pkg)))
+
 Diese Bibliothek aus dem Paket 'libapt-pkgX.Y' (`X.Y` ist in Debian 9
 Stretch und Debian 10 Buster `5.0`, siehe
-<<Debian-Paket-libapt-pkg5.0>> enthält die Basiskomponenten zum
-Zugriff auf die einzelnen Softwarepakete. Das umfasst Funktionen zur
-Suche nach Paketen, deren Verwaltung sowie die Ausgabe der
-Paketinformationen. Dazu gehören:
+<<Debian-Paket-libapt-pkg5.0>>, und bei Debian 11 _Bullseye_ ist es
+`6.0`) enthält die Basiskomponenten zum Zugriff auf die einzelnen
+Softwarepakete. Das umfasst Funktionen zur Suche nach Paketen, deren
+Verwaltung sowie die Ausgabe der Paketinformationen. Dazu gehören:
 
 * der Abruf von Informationen zu einem Paket aus den verschiedenen Paketquellen
 * der Abruf eines Pakets und der vollständigen Auflösung der
@@ -89,6 +90,9 @@ Darüber steht eine Schnittstelle zur Abfrage der Paketinterna bereit,
 die sowohl den Paketinhalt, als auch die Steuerdaten der Komponente
 `control.tar.gz` umfassen (siehe ``Debian-Paketformat im Detail'' in
 <<aufbau-und-format>>).
+
+Seit APT 1.9.0, Debian 11 _Bullseye_ und Ubuntu 19.10 _Eoan_ ist
+`libapt-inst` in `libapt-pkg` aufgegangen.
 
 // ==== `libdpkg-perl` ====
 //

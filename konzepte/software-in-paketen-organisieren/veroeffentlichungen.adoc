@@ -196,7 +196,7 @@ veröffentlichte die Version 1.1 ein halbes Jahr später.
 
 * Debian 10 _Buster_ (6. Juli 2019; benannt nach dem Welpen aus 'Toy Story 2')
 
-* Debian 11 _Bullseye_ -- benannt nach dem Pferd von _Woody Pride_
+* Debian 11 _Bullseye_ (Mitte 2021; benannt nach dem Pferd von _Woody Pride_)
 
 Es stehen bereits ebenfalls die Namen von zwei zukünftigen Veröffentlichungen fest:
 

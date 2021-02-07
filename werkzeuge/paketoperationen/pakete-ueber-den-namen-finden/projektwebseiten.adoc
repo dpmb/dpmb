@@ -98,10 +98,10 @@ https://packages.debian.org/de/stable/screen
 `https://packages.debian.org/source/`'release'`/`'sourcepaketname'::
 zeigt die Informationen zum Quellpaket 'sourcepaketname' in der
 Veröffentlichung 'release' an, z.B. so für die Informationen und die
-zum Bau notwendigen Pakete des Quellpaketes `screen` in Debian 10
-_Buster_:
+zum Bau notwendigen Pakete des Quellpaketes `screen` in Debian 11
+_Bullseye_:
 ----
-https://packages.debian.org/source/buster/screen
+https://packages.debian.org/source/bullseye/screen
 ----
 Analog zu den Binärpaketen können Sie hier auch noch ein Sprachkürzel an
 den Anfang des Pfades setzen, um eine bestimmte Sprache zu erzwingen.
@@ -125,7 +125,7 @@ https://packages.debian.org/stable/mail/
 Auch hier können Sie wieder ein Sprachkürzel an den Anfang des Pfades
 setzen, um eine bestimmte Sprache auszuwählen. 
 
-Anstelle des Namens einer Veröffentlichung -- 'stretch', 'buster',
+Anstelle des Namens einer Veröffentlichung -- 'buster', 'bullseye',
 'sid', etc. -- kann auch stets ein Entwicklungsstand -- 'stable',
 'testing', 'unstable', etc. -- verwendet werden.
 

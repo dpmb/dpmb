@@ -113,12 +113,12 @@ auch nicht herunter.)
 .Liste der Paketinhaltslisten anzeigen (`apt-file` Version 3.0 aufwärts)
 ----
 $ ls /var/lib/apt/lists/*Contents*
-/var/lib/apt/lists/debian.ethz.ch_debian_dists_buster_contrib_Contents-amd64.lz4
-/var/lib/apt/lists/debian.ethz.ch_debian_dists_buster_main_Contents-amd64.lz4
-/var/lib/apt/lists/debian.ethz.ch_debian_dists_buster_non-free_Contents-amd64.lz4
-/var/lib/apt/lists/debian.ethz.ch_debian_dists_buster-updates_main_Contents-amd64.diff_Index
-/var/lib/apt/lists/debian.ethz.ch_debian_dists_buster-updates_main_Contents-amd64.lz4
-/var/lib/apt/lists/debian.ethz.ch_debian_dists_buster-updates_non-free_Contents-amd64.lz4
+/var/lib/apt/lists/debian.ethz.ch_debian_dists_bullseye_contrib_Contents-amd64.lz4
+/var/lib/apt/lists/debian.ethz.ch_debian_dists_bullseye_main_Contents-amd64.lz4
+/var/lib/apt/lists/debian.ethz.ch_debian_dists_bullseye_non-free_Contents-amd64.lz4
+/var/lib/apt/lists/debian.ethz.ch_debian_dists_bullseye-secrutiy_main_Contents-amd64.diff_Index
+/var/lib/apt/lists/debian.ethz.ch_debian_dists_bullseye-security_main_Contents-amd64.lz4
+/var/lib/apt/lists/debian.ethz.ch_debian_dists_bullseye-security_non-free_Contents-amd64.lz4
 $
 ----
 

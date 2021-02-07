@@ -4,7 +4,7 @@
 [[anhang-offizielle-debian-architekturen]]
 === Offizielle Architekturen ===
 
-Debian 10 _Buster_  unterstützt die folgenden Architekturen und Plattformen:
+Debian 11 _Bullseye_  unterstützt die folgenden Architekturen und Plattformen:
 
 i386 (i486/i586/i686)::
 x86 (PC) 32-Bit. Trotz des Namens ab Debian 8 _Jessie_ nur
@@ -27,9 +27,6 @@ ARM (EABI) <<Debian-Wiki-ARM-EABI-Port>>.
 armhf (arm-linux-gnueabihf)::
 ARM. Hardware Floating Point ABI, ab Debian 7.0 'Wheezy' unterstützt
 <<Debian-Wiki-ARM-EABI-Port>>.
-
-mips (mips-linux-gnu)::
-MIPS (Big Endian).
 
 mipsel (mipsel-linux-gnu)::
 MIPS (Little Endian).

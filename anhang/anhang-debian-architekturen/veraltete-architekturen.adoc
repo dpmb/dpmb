@@ -4,7 +4,7 @@
 [[anhang-veraltete-debian-architekturen]]
 === Veraltete Architekturen ===
 
-Folgende Architekturen werden von Debian 10 _Buster_ (und ggf. auch
+Folgende Architekturen werden von Debian 11 _Bullseye_ (und ggf. auch
 schon älteren stabilen Debian-Veröffentlichungen) nicht mehr
 unterstützt:
 
@@ -27,6 +27,10 @@ Motorola/IBM PowerPC. Läuft auf vielen der Apple Macintosh
 PowerMac-Modelle sowie auf Rechnern der offenen CHRP- und
 PReP-Architekturen. Seit Debian 9 _Stretch_ nicht Bestandteil der
 stabilen Veröffentlichungen.
+
+mips (mips-linux-gnu)::
+MIPS (Big Endian). War zuletzt in Debian 10 _Buster_ Bestandteil einer
+stabilen Veröffentlichung.
 
 Diese Architekturen sind gar nicht mehr verfügbar:
 

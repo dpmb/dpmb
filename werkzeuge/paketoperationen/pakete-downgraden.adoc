@@ -219,7 +219,7 @@ apt-get -t=<target release> install <package-name>
 ----
 
 Die Angabe `<target release>` benennt die Veröffentlichung, also bspw. 'stable'
-oder 'unstable', aber auch den Namen wie 'Stretch' oder 'Buster'. Für den Wert
+oder 'unstable', aber auch den Namen wie 'Buster' oder 'Bullseye'. Für den Wert
 '<package-name>' geben Sie den tatsächlichen Namen des Paketes an. Für das
 Paket 'openvpn' aus der vorherigen, stabilen Veröffentlichung (genannt 
 'oldstable') sieht der Aufruf dann wie folgt aus:

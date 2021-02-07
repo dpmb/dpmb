@@ -24,7 +24,8 @@ typischer Fehler und insbesondere auch bzgl. häufig vorkommender
 Verstöße gegen die Debian-Richtlinien ('Debian Policy Violations').
 Aus `lintian` wurde `rpmlint` <<Debian-Paket-rpmlint>> abgeleitet. Es
 leistet das gleiche für RPM-Pakete, wird aber anscheinend nicht mehr
-weiterentwickelt und ist nicht Bestandteil von Debian 10 Buster.
+weiterentwickelt und ist weder Bestandteil von Debian 10 _Buster_ noch
+von Debian 11 _Bullseye_.
 
 Als Systemadministrator hilft Ihnen `lintian` primär dabei, sowohl
 eigene als auch die Pakete von Drittparteien aus nicht-Debian-eigenen
