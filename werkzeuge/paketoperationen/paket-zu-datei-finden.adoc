@@ -102,64 +102,42 @@ $
 
 // Stichworte für den Index
 (((apt-file, search)))
-(((/var/cache/apt/apt-file/)))
-Dafür gibt es `apt-file`. Grundlage seiner Aktivitäten ist die Liste der
-Paketquellen in `/etc/apt/sources.list/` und die Liste der Dateien in
-jedem der Pakete, die von dort bezogen werden. Letztere befindet sich im
-Verzeichnis `/var/cache/apt/apt-file/`.
+(((apt-get, update)))
+(((apt, update)))
+(((/var/lib/apt/lists/)))
+Dafür gibt es `apt-file`. Grundlage seiner Aktivitäten ist die Liste
+der Paketquellen in `/etc/apt/sources.list/` und die Liste der Dateien
+in jedem der Pakete, die von dort bezogen werden. Diese Inhaltslisten
+haben typischerweise einen Dateinamen der Form
+`Contents-<Architektur>.<Kompressions-Suffix>`, sind selbst
+komprimiert bis zu 50 MB groß und werden seit `apt-file` Version 3.0
+aufwärts bei einer Aktualisierung der Paketlisten (z.B. mittels `apt
+update`) automatisch mitheruntergeladen und wie die normalen
+Paketlisten im Verzeichnis `/var/lib/apt/lists/` abgespeichert. (Ist
+`apt-file` nicht installiert, so lädt `apt update` diese Inhaltslisten
+auch nicht herunter.)
 
-.Liste der Paketquellen anzeigen
+.Liste der Paketinhaltslisten anzeigen (`apt-file` Version 3.0 aufwärts)
 ----
-$ ls /var/cache/apt/apt-file
-ftp.de.debian.org_debian_dists_wheezy_contrib_Contents-i386.gz
-ftp.de.debian.org_debian_dists_wheezy_main_Contents-i386.gz
-ftp.de.debian.org_debian_dists_wheezy_non-free_Contents-i386.gz
-httpredir.debian.org_debian_dists_wheezy_contrib_Contents-i386.gz
-httpredir.debian.org_debian_dists_wheezy_main_Contents-i386.gz
-httpredir.debian.org_debian_dists_wheezy_non-free_Contents-i386.gz
+$ ls /var/lib/apt/lists/*Contents*
+/var/lib/apt/lists/debian.ethz.ch_debian_dists_buster_contrib_Contents-amd64.lz4
+/var/lib/apt/lists/debian.ethz.ch_debian_dists_buster_main_Contents-amd64.lz4
+/var/lib/apt/lists/debian.ethz.ch_debian_dists_buster_non-free_Contents-amd64.lz4
+/var/lib/apt/lists/debian.ethz.ch_debian_dists_buster-updates_main_Contents-amd64.diff_Index
+/var/lib/apt/lists/debian.ethz.ch_debian_dists_buster-updates_main_Contents-amd64.lz4
+/var/lib/apt/lists/debian.ethz.ch_debian_dists_buster-updates_non-free_Contents-amd64.lz4
 $
 ----
 
 // Stichworte für den Index
 (((apt-file, update)))
 (((/var/cache/apt/apt-file/)))
-
-Sollte diese Liste noch nicht vorhanden sein, erhalten Sie diese mit dem
-Aufruf `apt-file update`. Danach bezieht `apt-file` ein durchaus
-größeres Archiv (20 MB) von den angegebenen Paketmirrors und legt diese
-Dateien im Verzeichnis `/var/cache/apt/apt-file/` ab.
-
-Im nachfolgenden Beispiel zu `apt-file update` wird der Paketmirror
-dynamisch ausgewählt. Hintergrundinformationen dazu finden Sie in
-<<etc-apt-sources.list-verstehen>> und
-<<paketquellen-ueber-geoip-auswaehlen>>:
-
-.Suchdatenbank von APT aktualisieren
-----
-# apt-file update
-Downloading complete file http://httpredir.debian.org/debian/dists/wheezy/main/Contents-i386.gz
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100 20.6M  100 20.6M    0     0  3917k      0  0:00:05  0:00:05 --:--:-- 4111k
-Downloading complete file http://httpredir.debian.org/debian/dists/wheezy/contrib/Contents-i386.gz
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100 73552  100 73552    0     0   302k      0 --:--:-- --:--:-- --:--:--  302k
-Downloading complete file http://httpredir.debian.org/debian/dists/wheezy/non-free/Contents-i386.gz
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100  723k  100  723k    0     0  1428k      0 --:--:-- --:--:-- --:--:-- 1428k
-Ignoring source without Contents File:
-  http://security.debian.org/dists/wheezy/updates/main/Contents-i386.gz
-Ignoring source without Contents File:
-  http://security.debian.org/dists/wheezy/updates/contrib/Contents-i386.gz
-Ignoring source without Contents File:
-  http://security.debian.org/dists/wheezy/updates/non-free/Contents-i386.gz
-#
-----
+`apt-file` Version 3 und höher ist seit Debian 9 Stretch mit
+dabei. Bei älteren Version von `apt-file`, wie z.B. auf Debian 8
+Jessie und früher musste man diese Paketinhaltslisten mittels
+`apt-file update` manuell aktualisieren. Außerdem sie wurden auch in
+einem anderen Verzeichnis abgespeichert, nämlich in
+`/var/lib/apt/lists/`.
 
 `apt-file` verfügt über eine ganze Reihe von Unterkommandos und
 Schaltern, von denen wir Ihnen die wichtigsten vorstellen. Weitere
@@ -173,21 +151,21 @@ Schalter entnehmen Sie bitte der Manpage zum Programm.
 (((dpkg, -L)))
 (((dpkg, --listfiles)))
 
-`search Muster`:: 
+`search Suchmuster`::
 Suche danach, in welchem Paket die als `Muster` angegebene Datei
 enthalten ist. Ergebnis ist eine Liste aller Pakete, die das angegebene
 `Muster` enthalten. `apt-file` sucht dabei nur nach Dateinamen, nicht
 jedoch nach Verzeichnisnamen.
 
-`find Muster`:: 
+`find Suchmuster`::
 Alias für den Schalter `search`.
 
-`list Muster`:: 
+`list Paketname`::
 gibt den Paketinhalt aus, auf den das Muster passt. Diese Aktion ist
 sehr ähnlich zum Aufruf `dpkg -L`, nur das hier die Pakete noch nicht
 installiert sein müssen.
 
-`show Muster`:: 
+`show Paketname`::
 Alias für den Schalter `list`.
 
 `-a` (Langform `--architecture`)::
@@ -207,12 +185,25 @@ versteht (PCRE). Ohne diesen Schalter wird das Muster als schlichte
 Zeichenkette aufgefasst.
 
 `-v` (Langform `--verbose`):: 
-verbose, d.h. die Ausgabe wird deutlich ausführlicher.
+verbose, macht die Ausgabe deutlich ausführlicher, zeigt, wo das
+Programm seine Informationen herholt und nach was es genau sucht. Die
+Ausgabe ist spätestens seit Version 3.0 sehr verbos und eigentlich nur
+noch zum Debuggen gedacht.
 
-Etwas nachteilig an `apt-file` ist, dass es alle Paketquellen durchsucht
-und Ihnen dabei nicht anzeigt, in welcher davon es den Treffer gefunden
-hat. Das führt zu Verwirrung, bspw. wenn in der Liste der Paketquellen
-die Veröffentlichungen _stable_ und _stable-backports_ eingetragen sind.
+`-f` (Langform `--from-file`)::
+Sucht nach Vorkommen aller Suchmuster in der als Parameter angegebenen
+Textdatei.
+
+`-D` (Langform `--from-deb`)::
+Sucht nach Vorkommen aller Dateien in der als Parameter angegebenen
+`.deb`-Datei. Nützlich, um nach Dateikonflikten mit anderen Paketen zu
+suchen.
+
+Etwas nachteilig an `apt-file` ist, dass es in der
+Standard-Einstellung alle Paketquellen durchsucht und Ihnen dabei
+nicht anzeigt, in welcher davon es den Treffer gefunden hat. Das führt
+zu Verwirrung, bspw. wenn in der Liste der Paketquellen die
+Veröffentlichungen _stable_ und _stable-backports_ eingetragen sind.
 `apt-file` verfügt bislang nicht über einen Schalter, um die Ausgabe
 dementsprechend zu beeinflussen.
 
@@ -222,46 +213,50 @@ dementsprechend zu beeinflussen.
 [NOTE]
 .Aktuelle Strukturdatenbank
 ===========================
-Um vernünftig mit `apt-file` arbeiten zu können, empfehlen wir Ihnen,
-zuerst mit `apt-file update` die bestehende Dateiliste zu aktualisieren
-und danach darin zu stöbern. Damit nutzen Sie eine aktuelle Datenbasis.
+
+Um mit `apt-file` arbeiten zu können, müssen nach der Installation
+mindestens einmal die Paketinhaltslisten aktualisiert werden, entweder
+nur die Paketinhaltslisten mittels `apt-file update` oder grade auch
+zusammen mit den Paketlisten, z.B. mittels `apt update`. (Bei
+`apt-file` vor Version 3.0 geht dies nur mittels `apt-file update`.)
+
+Andernfalls quittiert `apt-file` einen Aufruf mit der Fehlermeldung
+»The cache is empty. You need to run "apt-file update" first.« (auf
+Deutsch: »Der Cache ist leer. Sie zuerst müssen "apt-file update"
+aufrufen.«)
 ===========================
 
 // Stichwort für den Index
 (((apt-file, show)))
 (((apt-file, -v)))
-(((apt-file, --verbose)))
 
 Das nachfolgende Beispiel zeigt die Suche der Zeichenkette `aptsh`.
-Zusätzlich kommt der Schalter `-v` (Langform `--verbose`) zum Einsatz,
-um eine ausführlichere Ausgabe zu erhalten.
 
 .Suche über die Strukturdatenbank mittels `apt-file`
 ----
-# apt-file -v show aptsh
-D: Using cache directory /var/cache/apt/apt-file
-D: reading sources file /etc/apt/sources.list
-D: got 'deb http://httpredir.debian.org/debian/ wheezy main contrib non-free'
-D: kept 'deb http://httpredir.debian.org/debian/ wheezy main contrib non-free'
-D: got 'deb http://security.debian.org/ wheezy/updates main contrib non-free'
-D: kept 'deb http://security.debian.org/ wheezy/updates main contrib non-free'
-D: regexp: ^\s*(.*?)\s+(\S*/\S*aptsh\S*)\s*$
-D: Search in \/var\/cache\/apt\/apt\-file\/httpredir\.debian\.org_debian_dists_wheezy_main_Contents\-i386\.gz using zfgrep  -- aptsh
-.........
-D: Search in \/var\/cache\/apt\/apt\-file\/httpredir\.debian\.org_debian_dists_wheezy_contrib_Contents\-i386\.gz using zfgrep  -- aptsh
-
-D: Search in \/var\/cache\/apt\/apt\-file\/httpredir\.debian\.org_debian_dists_wheezy_non\-free_Contents\-i386\.gz using zfgrep  -- aptsh
-
-aptsh: /etc/aptsh.conf
-aptsh: /usr/bin/aptsh
-aptsh: /usr/lib/aptsh/aptsh_ls
-aptsh: /usr/lib/aptsh/aptsh_printer
-aptsh: /usr/lib/aptsh/aptsh_rls
-aptsh: /usr/share/doc/aptsh/HOWTO.gz
-aptsh: /usr/share/doc/aptsh/changelog.gz
-aptsh: /usr/share/doc/aptsh/copyright
-aptsh: /usr/share/man/man1/aptsh.1.gz
-#
+$ apt-file search fping
+cacti: /usr/share/cacti/site/scripts/ss_fping.php
+fping: /usr/bin/fping
+fping: /usr/bin/fping6
+fping: /usr/share/bug/fping
+fping: /usr/share/doc/fping/NEWS.Debian.gz
+fping: /usr/share/doc/fping/changelog.Debian.gz
+fping: /usr/share/doc/fping/changelog.gz
+fping: /usr/share/doc/fping/copyright
+fping: /usr/share/lintian/overrides/fping
+fping: /usr/share/man/man8/fping.8.gz
+fping: /usr/share/man/man8/fping6.8.gz
+icingaweb2-module-graphite: /usr/share/icingaweb2/modules/graphite/templates/fping.ini
+mon: /usr/lib/mon/mon.d/fping.monitor
+monitoring-plugins-standard: /usr/lib/nagios/plugins/check_fping
+monitoring-plugins-standard: /usr/share/monitoring-plugins/templates-standard/fping.cfg
+netdata-core: /usr/lib/netdata/conf.d/health.d/fping.conf
+netdata-plugins-bash: /usr/lib/netdata/conf.d/fping.conf
+netdata-plugins-bash: /usr/lib/netdata/plugins.d/fping.plugin
+python3-nova: /usr/lib/python3/dist-packages/nova/api/openstack/compute/fping.py
+python3-nova: /usr/lib/python3/dist-packages/nova/tests/functional/api_sample_tests/test_fping.py
+smokeping: /usr/share/doc/smokeping/examples/config.fping-instances.gz
+$
 ----
 
 ==== Suche über die Webseite des Debian-Projekts ====
