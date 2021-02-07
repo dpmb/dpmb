@@ -188,25 +188,25 @@ die Pakete `ajaxterm`, `kxterm` und `xtermcontrol`.
 ==== Einsatz von `dglob` ====
 
 // Stichworte für den Index
-(((dglob, -af)))
 (((dglob, -f)))
 (((Debianpaket, debian-goodies)))
 Analog zu `apt-file` arbeitet das Werkzeug `dglob` aus dem Paket
 'debian-goodies' <<Debian-Paket-debian-goodies>>. Die Ausgabe ist
 ähnlich kompakt wie von `apt-file`. Der Schalter `-f` dient dabei zur
 Ausgabe der Dateien im angefragten Paket, was wir nachfolgend erneut
-anhand des Pakets 'xara-gtk' illustrieren.
+anhand des Pakets 'xterm' illustrieren.
 
-.Ergebnis der Recherche zum Paket 'xara-gtk'
+.Ergebnis der Recherche zum Paket 'xterm'
 ----
-$ dglob -f xara-gtk
-/etc/xara.config
-/etc/xara-gtkrc-2.0
-/usr/bin/xara
-/usr/share/man/man1/xara.1.gz
-/usr/share/menu/xara-gtk
-/usr/share/doc/xara-gtk/copyright
-/usr/share/doc/xara-gtk/changelog.gz
+$ dglob -f xterm
+/etc/X11/app-defaults/UXTerm-color
+/etc/X11/app-defaults/UXTerm
+/etc/X11/app-defaults/KOI8RXTerm-color
+/etc/X11/app-defaults/KOI8RXTerm
+/etc/X11/app-defaults/XTerm-color
+/etc/X11/app-defaults/XTerm
+/usr/share/man/man1/lxterm.1.gz
+...
 $
 ----
 
