@@ -25,49 +25,37 @@ zudem die Netzlast.
 
 Die nachfolgende Auflistung ist typisch, wenn Sie als Paketmirror
 `ftp.ch.debian.org` und die Distributionsbereiche 'main', 'contrib'
-und 'non-free' im der Veröffentlichung `bullseye` benutzen und
+und 'non-free' im der Veröffentlichung `buster` benutzen und
 zusätzlich auch `deb-src`-Zeilen in der `sources.list` haben (deswegen
 die Dateien mit `Sources` im Namen) und `apt-file` installiert haben
-(deswegen die Dateien mit `Contents` im Namen)
+(deswegen die Dateien mit `Contents` im Namen).
 
 .Übersicht zu den lokalen Dateien, in denen die Paketlisten hinterlegt sind
 ----
-$ ls /var/lib/apt/lists
-ftp.ch.debian.org_debian_dists_bullseye-backports_InRelease
-ftp.ch.debian.org_debian_dists_bullseye_contrib_binary-amd64_Packages
-ftp.ch.debian.org_debian_dists_bullseye_contrib_binary-amd64_Packages.diff_Index
-ftp.ch.debian.org_debian_dists_bullseye_contrib_Contents-all.diff_Index
-ftp.ch.debian.org_debian_dists_bullseye_contrib_Contents-all.lz4
-ftp.ch.debian.org_debian_dists_bullseye_contrib_Contents-amd64.diff_Index
-ftp.ch.debian.org_debian_dists_bullseye_contrib_Contents-amd64.lz4
-ftp.ch.debian.org_debian_dists_bullseye_contrib_i18n_Translation-en
-ftp.ch.debian.org_debian_dists_bullseye_contrib_i18n_Translation-en.diff_Index
-ftp.ch.debian.org_debian_dists_bullseye_contrib_source_Sources
-ftp.ch.debian.org_debian_dists_bullseye_contrib_source_Sources.diff_Index
-ftp.ch.debian.org_debian_dists_bullseye_InRelease
-ftp.ch.debian.org_debian_dists_bullseye_main_binary-amd64_Packages
-ftp.ch.debian.org_debian_dists_bullseye_main_binary-amd64_Packages.diff_Index
-ftp.ch.debian.org_debian_dists_bullseye_main_Contents-all.diff_Index
-ftp.ch.debian.org_debian_dists_bullseye_main_Contents-all.lz4
-ftp.ch.debian.org_debian_dists_bullseye_main_Contents-amd64.diff_Index
-ftp.ch.debian.org_debian_dists_bullseye_main_Contents-amd64.lz4
-ftp.ch.debian.org_debian_dists_bullseye_main_i18n_Translation-en
-ftp.ch.debian.org_debian_dists_bullseye_main_i18n_Translation-en.diff_Index
-ftp.ch.debian.org_debian_dists_bullseye_main_source_Sources
-ftp.ch.debian.org_debian_dists_bullseye_main_source_Sources.diff_Index
-ftp.ch.debian.org_debian_dists_bullseye_non-free_binary-amd64_Packages
-ftp.ch.debian.org_debian_dists_bullseye_non-free_binary-amd64_Packages.diff_Index
-ftp.ch.debian.org_debian_dists_bullseye_non-free_Contents-all.diff_Index
-ftp.ch.debian.org_debian_dists_bullseye_non-free_Contents-all.lz4
-ftp.ch.debian.org_debian_dists_bullseye_non-free_Contents-amd64.diff_Index
-ftp.ch.debian.org_debian_dists_bullseye_non-free_Contents-amd64.lz4
-ftp.ch.debian.org_debian_dists_bullseye_non-free_i18n_Translation-en
-ftp.ch.debian.org_debian_dists_bullseye_non-free_i18n_Translation-en.diff_Index
-ftp.ch.debian.org_debian_dists_bullseye_non-free_source_Sources
-ftp.ch.debian.org_debian_dists_bullseye_non-free_source_Sources.diff_Index
+$ ls -F /var/lib/apt/lists
+auxfiles/
+ftp.ch.debian.org_debian_dists_buster_contrib_binary-amd64_Packages
+ftp.ch.debian.org_debian_dists_buster_contrib_Contents-amd64.lz4
+ftp.ch.debian.org_debian_dists_buster_contrib_i18n_Translation-en
+ftp.ch.debian.org_debian_dists_buster_contrib_source_Sources
+ftp.ch.debian.org_debian_dists_buster_InRelease
+ftp.ch.debian.org_debian_dists_buster_main_binary-amd64_Packages
+ftp.ch.debian.org_debian_dists_buster_main_Contents-amd64.lz4
+ftp.ch.debian.org_debian_dists_buster_main_i18n_Translation-en
+ftp.ch.debian.org_debian_dists_buster_main_source_Sources
+ftp.ch.debian.org_debian_dists_buster_non-free_binary-amd64_Packages
+ftp.ch.debian.org_debian_dists_buster_non-free_Contents-amd64.lz4
+ftp.ch.debian.org_debian_dists_buster_non-free_i18n_Translation-en
+ftp.ch.debian.org_debian_dists_buster_non-free_source_Sources
 lock
-partial
-security.debian.org_dists_bullseye-security_InRelease
+partial/
+security.debian.org_dists_buster_updates_InRelease
+security.debian.org_dists_buster_updates_main_binary-amd64_Packages
+security.debian.org_dists_buster_updates_main_i18n_Translation-en
+security.debian.org_dists_buster_updates_main_source_Sources
+security.debian.org_dists_buster_updates_non-free_binary-amd64_Packages
+security.debian.org_dists_buster_updates_non-free_i18n_Translation-en
+security.debian.org_dists_buster_updates_non-free_source_Sources
 $
 ----
 
