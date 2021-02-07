@@ -103,8 +103,8 @@ Wenn vorhanden, ist dies die jeweils vorvorherige stabile
 Veröffentlichung. Zum ersten Mal trat dieser Entwicklungsstand auf, als im
 Frühjahr 2015 Debian 8 _Jessie_ zur stabilen Veröffentlichung erklärt
 wurde. Gleichzeitig wurde Debian 6 _Squeeze_ zur neuen Suite
-_oldoldstable_ und wird per Long Term Support (LTS) weiterhin noch
-eingeschränkt unterstützt.
+_oldoldstable_ und wurde seitdem per Long Term Support (LTS) weiterhin
+noch für 5 Jahre eingeschränkt unterstützt.
 
 experimental:: 
 Dies ist der einzige Entwicklungsstand, der keine alleinstehende
