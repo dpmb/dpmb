@@ -60,28 +60,22 @@ Die Langform des Schalters ist `--listfiles`. Beide Schalter versteht
 ebenso das Hilfsprogramm `dpkg-query` und erzeugt die gleiche Ausgabe.
 Damit listen Sie den Paketinhalt mit allen Pfaden auf. Jede
 Verzeichnisebene ist separat aufgeführt. Das nachfolgende Beispiel
-verdeutlicht das am Paket 'xara-gtk'.
+verdeutlicht das am Paket 'xterm'.
 
 .Auflistung des Paketinhalts mit allen Pfaden via `dpkg`
 ----
-$ dpkg -L xara-gtk 
+$ dpkg -L xterm 
 /.
 /etc
-/etc/xara.config
-/etc/xara-gtkrc-2.0
-/usr
-/usr/bin
-/usr/bin/xara
-/usr/share
-/usr/share/man
-/usr/share/man/man1
-/usr/share/man/man1/xara.1.gz
-/usr/share/menu
-/usr/share/menu/xara-gtk
-/usr/share/doc
-/usr/share/doc/xara-gtk
-/usr/share/doc/xara-gtk/copyright
-/usr/share/doc/xara-gtk/changelog.gz
+/etc/X11
+/etc/X11/app-defaults
+/etc/X11/app-defaults/UXTerm-color
+/etc/X11/app-defaults/UXTerm
+/etc/X11/app-defaults/KOI8RXTerm-color
+/etc/X11/app-defaults/KOI8RXTerm
+/etc/X11/app-defaults/XTerm-color
+/etc/X11/app-defaults/XTerm
+...
 $
 ----
 
@@ -104,24 +98,18 @@ bezogen auf alle Dateien, die in dem Paket enthalten sind.
 
 .Auflistung des Paketinhalts in ausführlicherer Form via `dlocate`
 ----
-$ dlocate -ls xara-gtk
-drwxr-xr-x   24 root root    4096 Mär 13 09:44 /./
-drwxr-xr-x  182 root root   12288 Jun 22 23:21 /etc/
--rw-r--r--    1 root root     658 Jun 11  2010 /etc/xara.config
--rw-r--r--    1 root root     136 Jun 11  2010 /etc/xara-gtkrc-2.0
-drwxr-xr-x   11 root root    4096 Jan  8 00:44 /usr/
-drwxr-xr-x    2 root root  110592 Jun 13 16:34 /usr/bin/
--rwxr-xr-x    1 root root 1828064 Mai 21  2012 /usr/bin/xara*
-drwxr-xr-x  396 root root   12288 Jun 13 16:34 /usr/share/
-drwxr-xr-x 2292 root root   77824 Jun 13 16:34 /usr/share/doc/
-drwxr-xr-x    2 root root    4096 Jan  8 01:55 /usr/share/doc/xara-gtk/
--rw-r--r--    1 root root    5488 Mai 20  2012 /usr/share/doc/xara-gtk/changelog.gz
--rw-r--r--    1 root root    1281 Apr 18  2011 /usr/share/doc/xara-gtk/copyright
-drwxr-xr-x   50 root root    4096 Jan  8 01:56 /usr/share/man/
-drwxr-xr-x    2 root root  131072 Jun 13 16:34 /usr/share/man/man1/
--rw-r--r--    1 root root    6121 Mai 21  2012 /usr/share/man/man1/xara.1.gz
-drwxr-xr-x    2 root root    4096 Jun 13 16:34 /usr/share/menu/
--rw-r--r--    1 root root     160 Apr 18  2011 /usr/share/menu/xara-gtk
+$ dlocate -ls xterm
+drwxr-xr-x   22 root root   4096 Sep 11 09:12 /./
+drwxr-xr-x  160 root root  12288 Feb  7 05:58 /etc/
+drwxr-xr-x   13 root root   4096 Dez 30  2017 /etc/X11/
+drwxr-xr-x    2 root root   4096 Jul  8  2020 /etc/X11/app-defaults/
+-rw-r--r--    1 root root   2400 Mär  1  2015 /etc/X11/app-defaults/KOI8RXTerm
+-rw-r--r--    1 root root   6217 Mär  1  2015 /etc/X11/app-defaults/KOI8RXTerm-color
+-rw-r--r--    1 root root   3609 Mär  1  2015 /etc/X11/app-defaults/UXTerm
+-rw-r--r--    1 root root   6209 Mär  1  2015 /etc/X11/app-defaults/UXTerm-color
+-rw-r--r--    1 root root  10201 Mär  1  2015 /etc/X11/app-defaults/XTerm
+-rw-r--r--    1 root root   6207 Mär  1  2015 /etc/X11/app-defaults/XTerm-color
+...
 $
 ----
 
@@ -142,24 +130,18 @@ separat aufrufen können.
 
 .Auflistung des Paketinhalts mit allen Informationen via `dpkg`
 ----
-$ dpkg -c /var/cache/apt/archives/xara-gtk_1.0.31_i386.deb 
-drwxr-xr-x root/root         0 2012-05-21 01:04 ./
-drwxr-xr-x root/root         0 2012-05-21 01:04 ./etc/
--rw-r--r-- root/root       658 2011-04-18 19:29 ./etc/xara.config
--rw-r--r-- root/root       136 2011-04-18 19:29 ./etc/xara-gtkrc-2.0
-drwxr-xr-x root/root         0 2012-05-21 01:04 ./usr/
-drwxr-xr-x root/root         0 2012-05-21 01:04 ./usr/bin/
--rwxr-xr-x root/root   1828064 2012-05-21 01:04 ./usr/bin/xara
-drwxr-xr-x root/root         0 2012-05-21 01:04 ./usr/share/
-drwxr-xr-x root/root         0 2012-05-21 01:04 ./usr/share/man/
-drwxr-xr-x root/root         0 2012-05-21 01:04 ./usr/share/man/man1/
--rw-r--r-- root/root      6121 2012-05-21 01:04 ./usr/share/man/man1/xara.1.gz
-drwxr-xr-x root/root         0 2012-05-21 01:04 ./usr/share/menu/
--rw-r--r-- root/root       160 2011-04-18 19:28 ./usr/share/menu/xara-gtk
-drwxr-xr-x root/root         0 2012-05-21 01:04 ./usr/share/doc/
-drwxr-xr-x root/root         0 2012-05-21 01:04 ./usr/share/doc/xara-gtk/
--rw-r--r-- root/root      1281 2011-04-18 19:28 ./usr/share/doc/xara-gtk/copyright
--rw-r--r-- root/root      5488 2012-05-20 23:18 ./usr/share/doc/xara-gtk/changelog.gz
+$ dpkg -c /var/cache/apt/archives/xterm_312-2_amd64.deb
+drwxr-xr-x root/root         0 2015-03-01 12:47 ./
+drwxr-xr-x root/root         0 2015-03-01 12:47 ./etc/
+drwxr-xr-x root/root         0 2015-03-01 12:47 ./etc/X11/
+drwxr-xr-x root/root         0 2015-03-01 12:47 ./etc/X11/app-defaults/
+-rw-r--r-- root/root      6209 2015-03-01 12:47 ./etc/X11/app-defaults/UXTerm-color
+-rw-r--r-- root/root      3609 2015-03-01 12:47 ./etc/X11/app-defaults/UXTerm
+-rw-r--r-- root/root      6217 2015-03-01 12:47 ./etc/X11/app-defaults/KOI8RXTerm-color
+-rw-r--r-- root/root      2400 2015-03-01 12:47 ./etc/X11/app-defaults/KOI8RXTerm
+-rw-r--r-- root/root      6207 2015-03-01 12:47 ./etc/X11/app-defaults/XTerm-color
+-rw-r--r-- root/root     10201 2015-03-01 12:47 ./etc/X11/app-defaults/XTerm
+...
 $
 ----
 
@@ -177,16 +159,31 @@ Zeile mit an.
 
 .Paketinhalt in kompakter Form mittels `apt-file`
 ----
-$ apt-file show xara-gtk
-xara-gtk: /etc/xara-gtkrc-2.0
-xara-gtk: /etc/xara.config
-xara-gtk: /usr/bin/xara
-xara-gtk: /usr/share/doc/xara-gtk/changelog.gz
-xara-gtk: /usr/share/doc/xara-gtk/copyright
-xara-gtk: /usr/share/man/man1/xara.1.gz
-xara-gtk: /usr/share/menu/xara-gtk
+$ apt-file show xterm
+xterm: /etc/X11/app-defaults/KOI8RXTerm
+xterm: /etc/X11/app-defaults/KOI8RXTerm-color
+xterm: /etc/X11/app-defaults/UXTerm
+xterm: /etc/X11/app-defaults/UXTerm-color
+xterm: /etc/X11/app-defaults/XTerm
+xterm: /etc/X11/app-defaults/XTerm-color
+xterm: /usr/bin/koi8rxterm
+xterm: /usr/bin/lxterm
+xterm: /usr/bin/resize
+xterm: /usr/bin/uxterm
+xterm: /usr/bin/xterm
+...
 $
 ----
+
+[NOTE]
+.Unterschiedliches Verhalten von `apt-file` in den Veröffentlichungen
+====
+In Debian 8 _Jessie_ verhält sich `apt-file` anders als in den
+nachfolgenden Debian-Veröffentlichungen. Eine Suche mittels `list` und
+`show` gibt alle Pakete aus, in denen das Suchmuster im Paketnamen
+vorkommt. Eine Suche nach `xterm` liefert zum Beispiel auch Treffer für
+die Pakete `ajaxterm`, `kxterm` und `xtermcontrol`.
+====
 
 ==== Einsatz von `dglob` ====
 
