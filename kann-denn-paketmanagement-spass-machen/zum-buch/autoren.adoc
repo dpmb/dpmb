@@ -8,13 +8,14 @@
 *Dipl.-Inf. Axel Beckert* <<Beckert-Webseite>> hat Informatik mit
 Nebenfach Biologie an der Universität des Saarlandes studiert. Er
 arbeitet u.a. als Linux-Systemadministrator an der ETH Zürich, ist
-Mitglied des Debian-Projekts als auch im Vorstand des Vereins Debian.ch
-und der Linux User Group Switzerland (LUGS). Er benutzt `aptitude`
-seit Anfang der 2000er Jahre und ist seit der Neuformierung des
-`aptitude`-Teams zum Jahreswechsel 2011/2012 als Mentor,
-Versuchskaninchen für neue Versionen und Paketsponsor bei `aptitude`
-mit an Bord. Seit 2015 ist er auch offiziell einer der Maintainer des
-Pakets `aptitude` und kümmert sich primär um die
+sowohl Mitglied des Debian-Projekts als auch in den Vorständen des
+Vereins Debian.ch und der Linux User Group Switzerland (LUGS).
+
+Er benutzt `aptitude` seit Anfang der 2000er Jahre und ist seit der
+Neuformierung des `aptitude`-Teams zum Jahreswechsel 2011/2012 als
+Mentor, Versuchskaninchen für neue Versionen und Paketsponsor bei
+`aptitude` mit an Bord. Seit 2015 ist er auch offiziell einer der
+Maintainer des Pakets `aptitude` und kümmert sich primär um die
 Paketierung. Desweiteren hat er im Namen des Debian Perl Teams die
 Pflege der im Buch erwähnten Pakete `debsums` und `equivs` übernommen.
 
