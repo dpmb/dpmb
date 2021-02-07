@@ -575,7 +575,7 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-WNPP-RFP-apt-fast]]] Debian Request for Package: apt-fast, https://bugs.debian.org/690183
 
-- [[[debtree-Projektseite]]] Webseite zum debtree-Projekt, https://collab-maint.alioth.debian.org/debtree/
+- [[[debtree-Projektseite]]] Webseite zum debtree-Projekt, https://salsa.debian.org/debian/debtree
 
 - [[[Deepin]]] Deepin, https://www.deepin.org/
 

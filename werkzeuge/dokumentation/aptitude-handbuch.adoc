@@ -22,7 +22,7 @@ in 7 Sprachen verfügbar <<aptitude-dokumentation>>, für Debian 8
 'Jessie' kamen zudem niederländisch und russisch dazu. Zuvor war es
 längere Zeit recht ruhig um die Dokumentation, da der bisherige
 Maintainer nicht mehr erreichbar war. Nachdem das neue `aptitude`-Team
-vollen Zugriff auf die Daten bei Alioth – Debians
+vollen Zugriff auf die Daten bei Alioth – Debians damalige
 FusionForge-Installation – hatte, ging es flink voran. Leider verweisen
 etliche Suchmaschinen auch heute noch auf die vorherige Version 0.4.11.2
 aus dem Jahr 2008 <<aptitude-dokumentation-veraltet>>.
