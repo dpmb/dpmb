@@ -79,36 +79,29 @@ sowie die Checksummen der Pakete und das Sourcepaket
 folgen die Projektwebseite sowie das Verzeichnis, in dem das Paket auf
 dem Paketmirror abgelegt ist. Zum Schluss stehen die Priorität, der
 Distributionsbereich (<<distributionsbereiche>>) und die Paketkategorie
-(<<sortierung-der-pakete-nach-verwendungszweck>>). Nachfolgender Kasten zeigt die Informationen
-anhand des Pakets 'easyspice' aus der Paketkategorie Elektronik
-('electronics').
+(<<sortierung-der-pakete-nach-verwendungszweck>>). Nachfolgender
+Kasten zeigt die Informationen anhand des Pakets '0ad-data' aus der
+Paketkategorie Spiele ('games').
 
-.Paketinformationen zum Paket 'easyspice'
+.Eintrag in `/var/lib/apt/lists/debian.ethz.ch_debian_dists_bullseye_main_binary-amd64_Packages` zum Paket '0ad-data'
 ----
-Package: easyspice
-Binary: easyspice
-Version: 0.6.8-2
-Maintainer: Gudjon I. Gudjonsson <gudjon@gudjon.org>
-Build-Depends: debhelper (>= 5), autotools-dev, libgtk2.0-dev, quilt
-Architecture: any
-Standards-Version: 3.7.3
-Format: 1.0
-Files:
- 2a6ef8e1bd3e38220d44754e107c55ca 1037 easyspice_0.6.8-2.dsc
- 6ffaab8c2dcdfc30ecdca52f3c8bcded 201627 easyspice_0.6.8.orig.tar.gz
- e4b3a00ad900341424cb6052e9f56a53 2607 easyspice_0.6.8-2.diff.gz
-Checksums-Sha1:
- d76bcb68824a1866598bc453c81af2e0c4a4366d 1037 easyspice_0.6.8-2.dsc
- 37ae8dea4522254c3de25f300f6fc9b568b87c10 201627 easyspice_0.6.8.orig.tar.gz
- ec13581034d9ef441a2cd7acddc0f5289c5f6c57 2607 easyspice_0.6.8-2.diff.gz
-Checksums-Sha256:
- 5b119deafa50846c6736b8b63e0be8c18e407e18b31c17a43590e2301cc39bec 1037 easyspice_0.6.8-2.dsc
- 55158436e05e372d48e03e59edc2dc2b49fbf366629a2943b265eb4562f1e975 201627 easyspice_0.6.8.orig.tar.gz
- 7c5d3460457e89f69d050e42d394a89d95536b1efd178c99c49e505e7807f3fa 2607 easyspice_0.6.8-2.diff.gz
-Homepage: http://easy-spice.sourceforge.net
-Directory: pool/contrib/e/easyspice
-Priority: source
-Section: contrib/electronics
+Package: 0ad-data
+Version: 0.0.23.1-1.1
+Installed-Size: 2044173
+Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Architecture: all
+Pre-Depends: dpkg (>= 1.15.6~)
+Suggests: 0ad
+Description: Real-time strategy game of ancient warfare (data files)
+Homepage: http://play0ad.com/
+Description-md5: 26581e685027d5ae84824362a4ba59ee
+Tag: role::app-data
+Section: games
+Priority: optional
+Filename: pool/main/0/0ad-data/0ad-data_0.0.23.1-1.1_all.deb
+Size: 701833824
+MD5sum: b2b6e5510898abf0eee79da48995f92f
+SHA256: afb3f0ddaceb36dc2d716d83d7fee4ada419511a948e4a06fa44bbc1b486e2c0
 ----
 
 TODO: Querverweis auf `cron-apt` und `/etc/cron.daily/apt`.
