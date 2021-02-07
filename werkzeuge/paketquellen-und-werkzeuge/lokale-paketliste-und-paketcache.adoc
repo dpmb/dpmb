@@ -24,8 +24,11 @@ geringerer Verzögerung nutzbar als externe Ressourcen und reduzieren
 zudem die Netzlast.
 
 Die nachfolgende Auflistung ist typisch, wenn Sie als Paketmirror
-`ftp.ch.debian.org` und die Distributionsbereiche 'main', 'contrib' und
-'non-free' im der Veröffentlichung `bullseye` benutzen:
+`ftp.ch.debian.org` und die Distributionsbereiche 'main', 'contrib'
+und 'non-free' im der Veröffentlichung `bullseye` benutzen und
+zusätzlich auch `deb-src`-Zeilen in der `sources.list` haben (deswegen
+die Dateien mit `Sources` im Namen) und `apt-file` installiert haben
+(deswegen die Dateien mit `Contents` im Namen)
 
 .Übersicht zu den lokalen Dateien, in denen die Paketlisten hinterlegt sind
 ----
