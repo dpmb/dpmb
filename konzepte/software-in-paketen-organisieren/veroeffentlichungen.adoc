@@ -388,7 +388,7 @@ _Wheezy_ abgelöste Veröffentlichung von Debian 6 _Squeeze_ bis 2016
 mit Aktualisierungen versorgt. Seither wurde jede weitere stabile
 Veröffentlichung nach ihrem offiziellen Lebensende ebenfalls als _LTS_
 mit Einschränkungen — z.B. nur noch die beliebtesten Architekturen —
-weitergeführt. Anfangs waren es nur die beiden x86-basierten
+weitergeführt. Anfangs waren dies nur die beiden x86-basierten
 Architekturen 'i386' und 'amd64', momentan beinhaltet das zusätzlich
 auch noch alle drei ARM-basierten Architekturen ('armel', 'armhf' und
 'arm64').
