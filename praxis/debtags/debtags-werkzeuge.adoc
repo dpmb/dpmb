@@ -103,7 +103,7 @@ $
 (((Debianpaket, packagesearch)))
 (((PackageSearch)))
 Die in <<gui-zur-paketverwaltung>> bereits vorgestellten _graphischen
-Werkzeuge_ Synaptic, SmartPM, das Ubuntu Software Center, Gdebi und
+Werkzeuge_ Synaptic, SmartPM, Gdebi und
 PackageKit können bislang nicht mit dem Thema Debtags umgehen.
 Stattdessen entstanden auf der Grundlage der Bibliotheken zu Debtags
 mehrere Alternativen, die von Ihnen zum Teil ein sehr unübliches

@@ -91,12 +91,10 @@ Pacman-Rosetta (siehe <<pacman-rosetta-beschreibung>>) sowie in unserer
 (((Softwarestapel, obere Ebene)))
 (((Softwarestapel, PackageKit)))
 (((Softwarestapel, Synaptic)))
-(((Softwarestapel, Ubuntu Software Center)))
 Bei `deb`-basierten Distributionen besteht die obere Ebene
 typischerweise aus dem Werkzeug APT (siehe <<apt>>). Häufig ist
 mindestens eines der weiteren Programme wie `aptitude` (siehe
-<<aptitude>>), Synaptic (siehe <<gui-synaptic>>), Ubuntu Software Center
-(siehe <<gui-ubuntu-software-center>>), Muon (siehe <<gui-muon>>) oder
+<<aptitude>>), Synaptic (siehe <<gui-synaptic>>), Muon (siehe <<gui-muon>>) oder
 auch PackageKit (siehe <<gui-packagekit>>) installiert. Die Auswahl
 variiert und hängt von der von Ihnen gewählten Linux-Distribution und
 ihren Vorlieben ab.

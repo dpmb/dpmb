@@ -13,9 +13,11 @@ Das Programm steht im gleichnamigen Paket 'synaptic'
 <<Debian-Paket-synaptic>> bereit. Es verfügt über eine graphische
 Bedienoberfläche auf der Basis des Gimp Toolkits (GTK2) und war lange
 Zeit das empfohlene Programm zur Paketverwaltung für die Benutzer des
-Ubuntu-Desktops. Inzwischen hat das mehr an Apples App-Store denn an
-Aptitude erinnernde Ubuntu Software Center
-(<<gui-ubuntu-software-center>>) viele Fans abgeworben.
+Ubuntu-Desktops. Zwischenzeitlich sind bei Ubuntu diverse, mehr an
+Apples App-Store denn an Aptitude erinnernde GUI-Frontends gekommen
+und wieder gegangen. Aber zumindest scheint sich Ubuntu auf PackageKit als
+Middleware zwischen GUI und dem eigentlichen Pakete installieren,
+aktualisieren und entfernen eingeschossen zu haben.
 
 .Softwareauswahl in `synaptic`
 image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/gui-zur-paketverwaltung/synaptic.png[id="fig.synaptic", width="50%"]

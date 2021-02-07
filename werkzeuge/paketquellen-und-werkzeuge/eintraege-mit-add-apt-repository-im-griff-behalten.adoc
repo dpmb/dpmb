@@ -31,11 +31,9 @@ und ab Debian 8 _Jessie_ in 'software-properties-common'
 Quellpaket und Projekt Software Properties
 <<software-properties>>. Es stellt graphische
 Komponenten bereit, die bspw. auch im Rahmen von Synaptic (siehe
-<<gui-synaptic>>) und dem Ubuntu Software Center (siehe
-<<gui-ubuntu-software-center>>) zum Einsatz kommen. Diese graphischen
+<<gui-synaptic>>) zum Einsatz kommen. Diese graphischen
 Komponenten beschreiben wir ausführlich unter Einstellungen mit Synaptic
-und im Ubuntu Software Center in
-<<einstellungen-mit-synaptic-und-im-ubuntu-software-center>>.
+<<einstellungen-mit-synaptic>>.
 
 // Stichworte für den Index
 (((add-apt-repository)))

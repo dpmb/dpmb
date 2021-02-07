@@ -43,5 +43,10 @@ graphische, KDE-basierte Benutzerschnittstelle zu gdebi, siehe
 <<gui-gdebi>>. Zuletzt in Debian 9 _Stretch_, war das letzte Paket,
 das noch pykde4 brauchte.
 
+`software-center`::
+von Ubuntu entwickelte, grafische Benutzerschnittstelle zum Pakete
+verwalten im Stile eines "App Stores". Zuletzt in Debian 7 _Wheezy_
+<<RM-software-center>> und Ubuntu 16.04 _Xenial_
+<<Ubuntu-Paket-software-center>> vorhanden.
 
 // Datei (Ende): ./anhang/anhang-entfernte-werkzeuge/anhang-entfernte-werkzeuge.adoc

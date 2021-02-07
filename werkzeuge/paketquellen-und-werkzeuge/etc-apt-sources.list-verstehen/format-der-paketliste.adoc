@@ -91,7 +91,7 @@ Programmen entwickelt. Dazu zählen `apt-cdrom` (siehe dazu
 hingegen weniger tastaturaffin, bieten sich als weitere Möglichkeiten
 sowohl Synaptic sowie der Sources List Generator für Debian und Ubuntu
 an. Diese Programme stellen wir Ihnen in
-<<einstellungen-mit-synaptic-und-im-ubuntu-software-center>> und
+<<einstellungen-mit-synaptic>> und
 <<debian-und-ubuntu-sources-list-generator>> ausführlicher vor.
  
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/format-der-paketliste.adoc

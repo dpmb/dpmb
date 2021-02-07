@@ -17,8 +17,6 @@ include::muon.adoc[]
 
 include::smartpm.adoc[]
 
-include::ubuntu-software-center.adoc[]
-
 include::packagekit.adoc[]
 
 include::gdebi.adoc[]

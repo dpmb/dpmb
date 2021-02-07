@@ -469,10 +469,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Paket-sensible-utils]]] Debian-Paket 'sensible-utils', https://packages.debian.org/de/stable/sensible-utils
 
-- [[[Debian-Paket-smartpm]]] Debian-Paket 'smartpm', https://packages.debian.org/de/stable/smartpm
-
-// ACHTUNG: Absichtlich "wheezy" und nicht "stable", weil nach Wheezy aus Debian entfernt!
-- [[[Debian-Paket-software-center]]] Debian-Paket 'software-center', https://packages.debian.org/de/wheezy/software-center
+// ACHTUNG: Absichtlich "buster" und nicht "stable", weil nach Buster aus Debian entfernt!
+- [[[Debian-Paket-smartpm]]] Debian-Paket 'smartpm', https://packages.debian.org/de/buster/smartpm
 
 - [[[Debian-Paket-software-properties-common]]] Debian-Paket 'software-properties-common', https://packages.debian.org/de/stable/software-properties-common
 
