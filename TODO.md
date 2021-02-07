@@ -21,6 +21,10 @@ Release-bezogene Updates
 
 * Beispiele mit Wheezy durch neuere Beispiele ersetzen
 
+### Wichtige Änderungen
+
+* Rapsbian vs Raspberry Pi OS
+
 Infrastruktur-Doku aktualisieren
 --------------------------------
 
