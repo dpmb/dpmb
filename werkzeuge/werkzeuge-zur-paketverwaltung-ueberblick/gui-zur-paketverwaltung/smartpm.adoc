@@ -19,8 +19,7 @@ SmartPM verfügt über drei Bedienmodi. Erstens hat es ebenfalls eine
 graphische Bedienoberfläche auf der Basis des Gimp Toolkits (GTK2), lässt
 sich jedoch zweitens auch über die Kommandozeile mit mehreren Schaltern
 steuern und verfügt als drittes noch über eine Paketverwaltungsshell
-analog zur 'aptsh' (<<aptsh>>), zu 'wajig' (<<wajig>>) und zu 'cupt'
-(<<Cupt>>).
+analog zu 'wajig' (<<wajig>>) und zu 'cupt' (<<Cupt>>).
 
 // Stichworte für den Index
 (((smart, --gui)))

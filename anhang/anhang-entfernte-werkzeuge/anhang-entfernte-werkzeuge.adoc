@@ -21,6 +21,17 @@ Eine weitere Lösung zum Aktualisierungen einspielen auf Systemen ohne
 Netzwerkanschluss. War zuletzt in Debian 8 _Jessie_ und wurde 2018 aus
 Debian Unstable entfernt.
 
+`aptsh`::
+Bei der `aptsh` (kurz für 'APT Shell') handelte es sich um eine Shell
+für die Paketverwaltung. Sie war verfügbar war bis Debian 9 'Stretch'
+und Ubuntu 19.04 'Disco'. 'aptsh' war zuletzt mehrere Jahre verwaist
+<<aptsh-verwaist-Bug-Report-831493>> und hatte immer mehr Probleme,
+gegen neuere APT-Version zu bauen. Kurz vor dem Release von Debian 10
+'Buster' wurde es dann aus Debian Unstable und Testing (zu dem
+Zeitpunkt 'Buster') entfernt <<aptsh-entfernen-Bug-Report-930680>>,
+weil es mit der APT-Verrsion nach 'Buster' (≥ 1.9) nicht baute und
+seit Jahren verwaist war.
+
 `ara` and `xara-gtk`::
 Kommandozeilen- und graphische Programme zum Durchsuchen der
 Debian-Paket-Listen. Zuletzt in Debian 9 _Stretch_, waren zum

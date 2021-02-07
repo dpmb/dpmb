@@ -9,7 +9,9 @@ Paketbezogene Updates
 Nach anhang/anhang-entfernte-werkzeuge/anhang-entfernte-werkzeuge.adoc
 verschieben:
 
-* aptsh seit Buster nicht mehr dabei
+* aptsh-Beispiel aus
+  `./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/projektwebseiten.adoc`
+  herausoperieren.
 * ara/xara-gtk seit Buster nicht mehr dabei, Beispiele mit xara-gtk ersetzen
 
 Release-bezogene Updates

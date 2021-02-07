@@ -297,7 +297,7 @@ graphische Benutzeroberfläche. Auf diese Werkzeuge gehen wir nachfolgend
 genauer ein (siehe, <<Cupt>>, <<aptitude>> und <<gui-smartpm>>).
 
 `aptsh` war auch lange Zeit verfügbar, wurde aber kurz vor dem Release
-von Debian 10 'Buster' entfernt, siehe auch <<aptsh>>).  Es ist
+von Debian 10 'Buster' entfernt).  Es ist
 verfügbar bis Debian 9 'Stretch' und Ubuntu 19.04 'Disco'.
 
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/fuer-die-kommandozeile/apt.adoc

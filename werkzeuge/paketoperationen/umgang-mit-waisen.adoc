@@ -31,7 +31,6 @@ durchzuführen. Das hält Ihr System sauber und befreit es von unnützen
 Lasten.
 
 // Stichworte für den Index
-(((aptsh)))
 (((debfoster)))
 (((deborphan)))
 (((editkeep)))
@@ -43,9 +42,9 @@ von weiteren Programmen, um Waisen aufzuspüren und auch zu entfernen.
 Für die Kommandozeile sind das `debfoster` (siehe <<debfoster>>) und
 `deborphan` (siehe <<deborphan>>). Auf Ncurses basieren Orphaner und
 Editkeep (siehe <<orphaner-und-editkeep>>) und auf GTK+ das Pendant
-Gtkorphan (siehe <<Gtkorphan>>). Darüber hinaus bieten die `aptsh` (siehe
-<<aptsh-orphans>>) und `wajig` (<<wajig>>) entsprechende Möglichkeiten
-zur Suche, die wir Ihnen nicht ebenfalls vorenthalten möchten.
+Gtkorphan (siehe <<Gtkorphan>>). Darüber hinaus bietet `wajig`
+(<<wajig>>) entsprechende Möglichkeiten zur Suche, die wir Ihnen nicht
+ebenfalls vorenthalten möchten.
 
 ==== APT und `aptitude` ====
 
@@ -251,7 +250,7 @@ Ausgabe der `debfoster`-Datenbank
 # debfoster -a
 Die folgenden Pakete stehen auf der Aufbewahrungsliste:
   abiword acpi acpi-support anacron apache2-utils apcalc apmd app-install-data apt-doc
-  apt-dpkg-ref apt-rdepends aptsh apvlv aqbanking-tools arora ascii asciidoc ash aspell-de at
+  apt-dpkg-ref apt-rdepends apvlv aqbanking-tools arora ascii asciidoc ash aspell-de at
 ...
 #
 ----
@@ -550,37 +549,6 @@ entfernt, die Sie zuvor aus der Paketliste ausgewählt haben.
 .`gtkorphan` bei der Arbeit
 image::werkzeuge/paketoperationen/gtkorphan.png[id="fig.gtkorphan", width="50%"]
 
-[[aptsh-orphans]]
-
-==== aptsh ====
-
-// Stichworte für den Index
-(((aptsh, orphans)))
-(((aptsh, orphans-all)))
-Die Terminalemulation `aptsh` (siehe <<aptsh>>) verfügt über die
-integrierten Kommandos `orphans` und `orphans-all`, mit denen Sie ebenso
-Waisen aufspüren können. Grundlage sind die Ergebnisse, die `deborphan`
-mit Hilfe der Paketbeschreibungen liefert.
-
-Während das erstgenannte Kommando nur nach vereinsamten Bibliotheken
-sucht und analog zu `deborphan` arbeitet, entspricht `orphans-all` eher
-dem Aufruf `deborphan -a` und bezieht alle installierten Pakete in die
-Suche mit ein. Als Ergebnis erhalten Sie eine unsortierte Liste, bei
-letzterem Kommando zweispaltig mit der Aufteilung aus
-Distributionsbereich (siehe <<distributionsbereiche>>) und Kategorie
-(siehe <<sortierung-der-pakete-nach-verwendungszweck>>) (linke Spalte)
-sowie dem Paketnamen (siehe <<benennung-eines-debian-pakets>>) (rechte
-Spalte). Die nachfolgenden Abbildungen stammen aus einem xubuntu 13.04
-und zeigen die beiden Aufrufe.
-
-.`aptsh` mit der Ausgabe des Kommandos `orphans`
-image::werkzeuge/paketoperationen/aptsh-orphans.png[id="fig.aptsh-orphans", width="50%"]
-
-.`aptsh` mit der Ausgabe des Kommandos `orphans-all`
-image::werkzeuge/paketoperationen/aptsh-orphans-all.png[id="fig.aptsh-orphans-all", width="50%"]
-
-`aptsh` ist verfügbar bis Debian 9 'Stretch' und Ubuntu 19.04 'Disco'.
-
 [[wajig]]
 
 ==== `wajig` ====
@@ -588,7 +556,8 @@ image::werkzeuge/paketoperationen/aptsh-orphans-all.png[id="fig.aptsh-orphans-al
 // Stichworte für den Index
 (((wajig, orphans)))
 (((wajig, list-orphans))) 
-Ähnlich wie die `aptsh` verfügt `wajig` <<Debian-Paket-wajig>> über
+Ähnlich wie die nicht mehr verfügbare `aptsh` verfügt `wajig`
+<<Debian-Paket-wajig>> über
 Kommandos zur Suche nach Waisen – `orphans` und `list-orphans`. Beide
 liefern Ihnen das gleiche Ergebnis. Möglich ist ein Aufruf mittels
 `wajig orphans` oder die Eingabe des Kommandos in der `wajig`-Shell.

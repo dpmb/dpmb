@@ -15,8 +15,6 @@ include::dpkg.adoc[]
 
 include::apt.adoc[]
 
-include::aptsh.adoc[]
-
 include::wajig.adoc[]
 
 include::sysget.adoc[]

@@ -29,7 +29,7 @@ das jeweilige Programm benutzen können. Einige Programme sind Zwitter
 und stellen mehrere Bedienmodi zur Verfügung, so bspw. SmartPM
 (<<gui-smartpm>>), welches Sie sowohl über die Kommandozeile, als auch
 über eine graphische Oberfläche (GUI) bedienen können. `aptitude`
-(<<aptitude>>), `aptsh` (<<aptsh>>), `cupt` (<<Cupt>>) und `wajig`
+(<<aptitude>>), `cupt` (<<Cupt>>) und `wajig`
 (<<wajig>>) stellen über die Kommandozeile hinaus auch ein eigenes Text
 User Interface (TUI) bereit. Die nachfolgende Zusammenstellung in
 <<tab.frontends>> ist daher nicht ganz diskussionsfrei und erhebt zudem
@@ -39,7 +39,7 @@ keinen Anspruch auf Vollständigkeit.
 [options="header", id="tab.frontends"]
 |=============================
 | Kategorie | `deb`-basierte Systeme | `rpm`-basierte Systeme | andere Paketformate
-| Kommandozeile| `dpkg`, `dpkg-www`, APT, `aptitude`, `aptsh`, `cupt`, SmartPM, `gdebi` ('gdebi-core'), `wajig`, `sysget`| `rpm`, `yum`, `dnf`, `urpmi`, `zypper`, SmartPM, `sysget` | `emerge`, `pacman`, `sysget`
+| Kommandozeile| `dpkg`, `dpkg-www`, APT, `aptitude`, `cupt`, SmartPM, `gdebi` ('gdebi-core'), `wajig`, `sysget`| `rpm`, `yum`, `dnf`, `urpmi`, `zypper`, SmartPM, `sysget` | `emerge`, `pacman`, `sysget`
 | Text User Interface (TUI) | `tasksel`, `aptitude`, Debian Installer, Univention Installer für Univention Corporate Server (UCS) | Yet another Setup Tool (YaST), DrakConf oder Mandriva Linux Control Center (MCC) <<Mandriva-Wiki>> bzw. Mageia Control Center (MCC) (Textkonsole) | pcurses
 | Graphical User Interface (GUI) | Synaptic, SmartPM, Muon, PackageKit, Apper (früher 'KPackageKit'), `gdebi` | Yet another Setup Tool 2 (YaST2), DrakConf
 oder Mandriva Linux Control Center (MCC) <<Mandriva-Wiki>> bzw. Mageia Control Center (MCC) | PacmanXG4, PacmanExpress, tkPacman, GNOME PackageKit, Zenity Pacman GUI, Octopi
@@ -49,7 +49,7 @@ oder Mandriva Linux Control Center (MCC) <<Mandriva-Wiki>> bzw. Mageia Control C
 
 // Kommandozeile:: 
 // * `deb`-basierte Systeme: `dpkg` <<dpkg>>, APT <<apt>>, `aptitude`
-// <<aptitude>>, `aptsh` <<aptsh>>, `cupt` <<Cupt>>, SmartPM <<gui-smartpm>>, `gdebi`
+// <<aptitude>>, `cupt` <<Cupt>>, SmartPM <<gui-smartpm>>, `gdebi`
 // (gdebi-core) <<gdebi>>, `wajig` <<wajig>>
 // * `rpm`-basierte Systeme: `rpm`, `yum`, `urpmi`, `zypper`, SmartPM <<gui-smartpm>>
 // * andere Paketformate: `emerge`, `pacman`
@@ -112,7 +112,7 @@ Programme wie `tasksel`, APT, `aptitude`, SmartPM, das Ubuntu Software
 Center und die PackageKit-Varianten 'apper' (KDE) und 'gnome-packagekit'
 (GNOME).
 
-Eine Mischform stellen hingegen die Programme `aptsh`, `cupt`, `wajig`
+Eine Mischform stellen hingegen die Programme `cupt`, `wajig`
 und `gdebi` dar. Deren Anspruch ist es, beide Ebenen in einem einzigen
 Programm abzudecken und alle erforderlichen Funktionen zur
 Paketverwaltung bereitzustellen. Die genannten Programme kommen diesem
