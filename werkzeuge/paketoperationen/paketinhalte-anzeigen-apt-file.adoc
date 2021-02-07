@@ -4,7 +4,7 @@
 
 [[paketinhalte-anzeigen-apt-file]]
 
-=== Paketinhalte anzeigen (`apt-file`) ===
+=== Paketinhalte anzeigen ===
 
 // Stichworte für den Index
 (((apt-file, list)))
@@ -36,7 +36,7 @@ das Paket ist bereits installiert::
 'Paketname' bezeichnet lediglich den Namen des Pakets (siehe
 <<benennung-eines-debian-pakets>>) ohne Angabe der Versionsnummer.
 
-das Paket ist noch nicht installiert:: 
+das Paket ist nicht installiert, liegt aber als Datei vor::
 `dpkg -c` 'deb-Datei' oder `dpkg-deb -c` 'deb-Datei'. Der Parameter
 'deb-Datei' ist ein Paketarchiv in Form einer lokal vorliegenden Datei.
 Befindet sich die Datei nicht im aktuellen Verzeichnis, von dem aus Sie
@@ -44,7 +44,7 @@ das Kommando aufrufen, ergänzen Sie im Aufruf den dazugehörigen
 Verzeichnispfad, in dem das Paketarchiv liegt.
 
 das Paket muss nicht installiert sein, kann aber:: 
-`apt-file show` 'Paketname', `apt-file list` 'Paketname' und `dglob -af`
+`apt-file show` 'Paketname', `apt-file list` 'Paketname' und `dglob -f`
 'Paketname'. Der Parameter 'Paketname' bezeichnet hier lediglich den
 Namen eines Pakets (siehe <<benennung-eines-debian-pakets>>) ohne Angabe
 der Versionsnummer.
@@ -169,8 +169,11 @@ $
 (((apt-file, list)))
 (((apt-file, show)))
 Die beiden Optionen `show` und `list` des Werkzeugs `apt-file` sind
-synonym zueinander und liefern den gleichen Inhalt wie `dpkg -L`. Dabei
-ist die Darstellung von `apt-file` jedoch deutlich kompakter.
+synonym zueinander. Wie `dpkg -L liefern sie den Inhalt des Paketes,
+allerdings nur die Dateien und nicht wie `dpkg -L` auch noch die
+enthaltenen (potentiell sogar leeren) Verzeichnisse. Dafür zeigt
+`apt-file show` immer auch noch den Paketnamen als Präfix in jeder
+Zeile mit an.
 
 .Paketinhalt in kompakter Form mittels `apt-file`
 ----
