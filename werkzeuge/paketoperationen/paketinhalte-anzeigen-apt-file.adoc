@@ -178,11 +178,16 @@ $
 [NOTE]
 .Unterschiedliches Verhalten von `apt-file` in den Veröffentlichungen
 ====
-In Debian 8 _Jessie_ verhält sich `apt-file` anders als in den
-nachfolgenden Debian-Veröffentlichungen. Eine Suche mittels `list` und
-`show` gibt alle Pakete aus, in denen das Suchmuster im Paketnamen
-vorkommt. Eine Suche nach `xterm` liefert zum Beispiel auch Treffer für
-die Pakete `ajaxterm`, `kxterm` und `xtermcontrol`.
+In Debian 8 _Jessie_ bzw. vor Version 3.0 verhält sich `apt-file show`
+bzw. `apt-file list` anders als in den nachfolgenden
+Debian-Veröffentlichungen. Eine Suche mittels `list` und `show` gibt
+alle Pakete aus, in denen das Suchmuster im Paketnamen vorkommt. Eine
+Suche nach `xterm` liefert zum Beispiel auch Treffer für die Pakete
+`ajaxterm`, `kxterm` und `xtermcontrol`.
+
+Ab Debian 9 _Stretch_ bzw. `apt-file` Version 3.0 zeigen `apt-file
+show` und `apt-file list` nur noch die Dateien für genau das
+angegebene Paket an.
 ====
 
 ==== Einsatz von `dglob` ====
