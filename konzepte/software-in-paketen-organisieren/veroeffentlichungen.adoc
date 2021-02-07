@@ -434,7 +434,7 @@ Sicherheitsaktualisierungen desselben Paketes, so werden die Kosten
 entsprechend aufgeteilt. Die Koordination erfolgt über die französische
 Firma Freexian <<Freexian>>.
 
-Desweiteren gibt es im Vergleich zu LTS diese Einschränkungen:
+Desweiteren gibt es im Vergleich zu LTS weitere Einschränkungen:
 
 * Es werden nur Pakete unterstützt, für die sich Sponsoren finden. Die
   aktuelle Liste unterstützter Pakete findet sich unter
