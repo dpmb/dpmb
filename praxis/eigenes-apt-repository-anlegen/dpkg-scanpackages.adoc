@@ -8,17 +8,18 @@
 (((Debianpaket, dpkg-dev)))
 (((dpkg-scanpackages)))
 (((dpkg-scanpackages, -m)))
+(((dpkg-scanpackages, --multiversion)))
 (((Paket, installieren)))
 (((Paket, bereitstellen)))
 (((Paketquelle, lokal)))
 
-Die nachfolgend vorgestellte Lösung ist ähnlich zu der in  
-<<eigenes-apt-repository-anlegen-verzeichnis>>. Es ergänzt diese jedoch noch
-um passende Metadaten (auch 'Packages index files' genannt). Die Basis bildet 
-hier ebenfalls ein Verzeichnis, welches Sie als Ablage für ihre Softwarepakete 
-benutzen möchten. Hier heißt dieses Verzeichnis schlicht und einfach 
-`/opt/paketarchiv/local`. Sofern es noch nicht vorhanden ist, legen Sie dieses im 
-**1. Schritt** noch wie folgt an:
+Die nachfolgend vorgestellte Lösung ist ähnlich zu der in
+<<eigenes-apt-repository-anlegen-verzeichnis>>. Es ergänzt diese jedoch
+noch um passende Metadaten (auch 'Packages index files' genannt). Die
+Basis bildet hier ebenfalls ein Verzeichnis, welches Sie als Ablage für
+ihre Softwarepakete benutzen möchten. Hier heißt dieses Verzeichnis
+beispielhaft `/opt/paketarchiv/local`. Sofern es noch nicht vorhanden
+ist, legen Sie dieses im **1. Schritt** noch wie folgt an:
 
 .Schritt 1: Verzeichnis für das Paketarchiv anlegen
 ----
@@ -33,19 +34,21 @@ Verzeichnis:
 # cp -v *.deb /opt/paketarchiv/local
 ----
 
-Im **3. Schritt** erzeugen Sie noch zusätzliche Metadaten für ihr Paketarchiv.
-Dabei kommt das Werkzeug `dpkg-scanpackages` aus dem Paket 'dpkg-dev' 
-<<Debian-Paket-dpkg-dev>> zum Einsatz. Sofern Sie bisher noch keine 
-Debian-Pakete selbst gebaut haben, dürfte dieses Paket noch nicht auf ihrem 
-System vorhanden sein und Sie müssen es daher vor der Benutzung nachinstallieren.
+Im **3. Schritt** erzeugen Sie noch zusätzliche Metadaten für ihr
+Paketarchiv. Dabei kommt das Werkzeug `dpkg-scanpackages` aus dem Paket
+'dpkg-dev' <<Debian-Paket-dpkg-dev>> zum Einsatz. Sofern Sie bisher noch
+keine Debian-Pakete selbst gebaut haben, dürfte dieses Paket noch nicht
+auf ihrem System vorhanden sein und Sie müssen es daher vor der
+Benutzung nachinstallieren.
 
-Nun erstellen Sie die benötigten Metadaten mittels `dpkg-scanpackages`. Als 
-minimale Angabe erwartet `dpkg-scanpackages` den Pfad zum Paketarchiv und 
-schreibt dann seine Ausgabe auf `stdout`. Besser ist es, die Ausgabe mittels 
-`>` gleich in eine passende Datei namens `Packages` umzulenken (Schreibweise
-mit großem `P`). Der nachfolgende Aufruf geht noch einen Schritt weiter und 
-komprimiert die Ausgabe zusätzlich mittels `gzip`, so dass als Ergebnis die 
-Datei `Packages.gz` entsteht:
+Nun erstellen Sie die benötigten Metadaten mittels `dpkg-scanpackages`.
+Als minimale Angabe erwartet `dpkg-scanpackages` den Pfad zum
+Paketarchiv und schreibt dann seine Ausgabe auf `stdout`. Besser ist es,
+die Ausgabe mittels Umleitungsoperator `>` gleich in eine passende Datei
+namens `Packages` umzulenken (Schreibweise des Dateinamens mit großem
+`P`). Der nachfolgende Aufruf geht noch einen Schritt weiter und
+komprimiert die Ausgabe zusätzlich mittels `gzip`, so dass als Ergebnis
+die Datei `Packages.gz` entsteht:
 
 .Schritt 3: Metadaten zum Paketarchiv erzeugen (`Packages.gz`)
 ----
@@ -55,12 +58,12 @@ dpkg-scanpackages: Information: 6 Einträge wurden in Ausgabe-Paketdatei geschri
 #
 ----
 
-Liegen bspw. 6 Debian-Pakete in Form von `.deb`-Dateien im Paketarchiv, liest 
-`dpkg-scanpackages` deren Metadaten, gibt eine Meldung wie oben aus und leitet 
-die Informationen an `gzip` weiter. `gzip` komprimiert die empfangenen Daten 
-zunächst und speichert diese dann als Datei `Packages.gz` im Verzeichnis des
-Paketarchivs. Die erzeugte Datei `Packages.gz` beinhaltet Informationen pro 
-Paket in der folgenden Form:
+Liegen bspw. 6 Debian-Pakete in Form von `.deb`-Dateien im Paketarchiv,
+liest `dpkg-scanpackages` deren Metadaten, gibt eine Meldung wie oben
+aus und leitet die Informationen an `gzip` weiter. `gzip` komprimiert
+die empfangenen Daten zunächst und speichert diese dann als Datei
+`Packages.gz` im Verzeichnis des Paketarchivs. Die erzeugte Datei
+`Packages.gz` beinhaltet Informationen pro Paket in der folgenden Form:
 
 .Paketinformationen zum beispielhaft verwendeten Paket 'meta-mc'
 ----
@@ -86,18 +89,18 @@ Description: Installs the Midnight Commander
 #
 ----
 
-Die Pfadangabe, die Sie `dpkg-scanpackages` geben, ist tückisch. Laut Manpage
-und den von uns online gefundenen Beipspielen kann jeder Pfad verwendet werden, 
-in unseren Tests können wir das jedoch nicht bestätigen. Die von uns oben 
-genutzte Form funktioniert auch später mit APT und `aptitude` zur Installation
-von Paketen.
+Die Pfadangabe, die Sie `dpkg-scanpackages` geben, ist jedoch tückisch.
+Laut Manpage und den von uns online gefundenen Beispielen kann jeder
+Pfad verwendet werden, in unseren Tests können wir das jedoch nicht
+bestätigen. Die von uns oben genutzte Form funktioniert auch später mit
+APT und `aptitude` zur Installation von Paketen.
 
 [NOTE]
 ====
-Bitte beachten Sie, dass Sie diesen Schritt mittels `dpkg-scanpackages` jedes 
-Mal wiederholen müssen, wenn Sie Pakete im Paketarchiv hinzufügen oder Pakete 
-daraus entfernen. Mit dem folgenden Shellskript lässt sich der Schritt 
-automatisieren:
+Bitte beachten Sie, dass Sie diesen Schritt mittels `dpkg-scanpackages`
+jedes Mal wiederholen müssen, wenn Sie Pakete im Paketarchiv hinzufügen
+oder Pakete daraus entfernen. Mit dem folgenden Shellskript lässt sich
+der Schritt automatisieren:
 
 .Automatisierung mit Hilfe eines Shellskriptes
 ----
@@ -109,26 +112,27 @@ Idealerweise legen Sie das Skript unter einen passenden Pfad wie bspw.
 `/usr/bin` ab. Damit vereinfacht sich ihr Aufruf.
 ====
 
-Nun folgt der **4. Schritt** -- das Hinzufügen ihres soeben erzeugten, lokalen
-Paketarchivs zur Liste der von Ihnen genutzten Repositorys (siehe 
-<<etc-apt-sources.list-verstehen>>). Entweder ergänzen Sie die Datei 
-`/etc/apt/sources.list` um eine Zeile mit ihrem Paketarchiv oder Sie erstellen 
-eine separate Datei im Verzeichnis `/etc/apt/sources.list.d`. Für obiges 
-Beispiel sieht die Zeile wie folgt aus, um ihr Paketarchiv zunächst lokal 
-einzubinden:
+Nun folgt der **4. Schritt** -- das Hinzufügen ihres soeben erzeugten,
+lokalen Paketarchivs zur Liste der von Ihnen genutzten Repositorys
+(siehe <<etc-apt-sources.list-verstehen>>). Entweder ergänzen Sie die
+Datei `/etc/apt/sources.list` um eine Zeile mit ihrem Paketarchiv oder
+Sie erstellen eine separate Datei im Verzeichnis
+`/etc/apt/sources.list.d`. Für obiges Beispiel sieht die Zeile wie folgt
+aus, um ihr Paketarchiv zunächst lokal einzubinden:
 
 .Schritt 4: Zusätzlicher Eintrag in der Datei `/etc/apt/sources.list`
 ----
 deb [trusted=yes] file:///opt/paketarchiv local/
 ----
 
-Die Angabe `[trusted=yes]` teilt APT mit, dass die Pakete aus der angegebenen,
-lokalen Paketquelle vertrauenswürdig sind. Damit sparen Sie sich (zunächst) den
-kryptographischen Überbau.
+Die Angabe `[trusted=yes]` teilt APT mit, dass die Pakete aus der
+angegebenen, lokalen Paketquelle vertrauenswürdig sind. Damit sparen Sie
+sich (zunächst) den kryptographischen Überbau und können ihr Archiv
+sofort verwenden.
 
-Um das Paketarchiv auch für andere Benutzer via HTTP oder HTTPS zugänglich zu 
-machen, stellen Sie das Verzeichnis bspw. mit Hilfe eines lokalen Webservers 
-bereit. Ein gültiger Eintrag wäre bspw. der folgende:
+Um das Paketarchiv nun auch für andere Benutzer via HTTP oder HTTPS
+zugänglich zu machen, stellen Sie das Verzeichnis bspw. mit Hilfe eines
+lokalen Webservers bereit. Ein gültiger Eintrag wäre bspw. der folgende:
 
 .Zusätzlicher Eintrag in der Datei `/etc/apt/sources.list` (Webserver)
 ----
@@ -139,17 +143,18 @@ deb [trusted=yes] https://www.webserver.com/paketarchiv local/
 (((Debianpaket, apt-transport-https)))
 [NOTE]
 ====
-Ab APT in der Version 1.5 (verfügbar ab Debian 10 'Buster') unterstützt es
-HTTPS von sich aus. Nutzen Sie (noch) eine frühere Veröffentlichung und 
-möchten ihr Paketarchiv ebenfalls via HTTPS anzubieten, greifen Sie zusätzlich 
-auf das Paket 'apt-transport-https' <<Debian-Paket-apt-transport-https>> 
-zurück. Mehr Informationen dazu finden Sie unter <<LambAptHTTPS>>.
+Ab APT in der Version 1.5 (verfügbar ab Debian 10 'Buster') unterstützt
+es HTTPS von sich aus. Nutzen Sie (noch) eine frühere Veröffentlichung
+und möchten ihr Paketarchiv ebenfalls via HTTPS anzubieten, greifen Sie
+zusätzlich auf das Paket 'apt-transport-https'
+<<Debian-Paket-apt-transport-https>> zurück. Mehr Informationen dazu
+finden Sie unter <<LambAptHTTPS>>.
 ====
 
-Mit obigem Eintrag vertraut APT nun allen Paketen aus ihrem Paketarchiv. 
+Mit obigem Eintrag vertraut APT nun allen Paketen aus ihrem Paketarchiv.
 Aktualisieren Sie nun Ihre Liste der verfügbaren Pakete -- bspw. mit
-`apt-get update` -- ``lernt'' APT ihr Paketarchiv und kann Softwarepakete 
-daraus in ihr System einbinden.
+`apt-get update` -- ``lernt'' APT ihr Paketarchiv und kann
+Softwarepakete daraus in ihr System einbinden.
 
 [NOTE]
 ====
