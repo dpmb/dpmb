@@ -21,6 +21,6 @@ Pflege der im Buch erwähnten Pakete `debsums` und `equivs` übernommen.
 *Dipl.-Inf. Frank Hofmann* hat Informatik mit Nebenfach Englisch an der
 Technischen Universität Chemnitz studiert. Er bevorzugt das Arbeiten von
 unterwegs aus als Entwickler, Trainer und Autor. Nach Berlin, Kapstadt
-und Besançon (Franche-Comté) arbeitet er von Freiburg aus.
+und Besançon (Franche-Comté) arbeitet er von Freiburg im Breisgau aus.
 
 // Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/autoren.adoc
