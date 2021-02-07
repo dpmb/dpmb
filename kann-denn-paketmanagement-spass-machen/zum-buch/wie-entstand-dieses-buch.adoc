@@ -88,15 +88,15 @@ im Alltag der Systembetreuung.
 
 ==== Baustellenstatus ====
 
-Zum aktuellen Zeitpunkt (Herbst 2019) bewegt sich das Buch stramm auf den
-Umfang von 500 Seiten zu. Als inhaltlich vollendet sehen wir den Teil 1 
-``Konzepte'' an. Kleinere Baustellen finden sich noch in Teil 2 
-``Werkzeuge''. Hingegen klaffen im Teil 3 ``Praxis'' noch größere Lücken.
-Wir arbeiten kontinuierlich daran, diese Lücken zu schließen. Das gelingt 
-nicht so einfach, weil dafür bspw. komplexere Setups notwendig sind oder 
-auch weil die Dokumentation der Werkzeuge für den betrachteten Fall 
-schlicht und einfach nicht vorhanden, (bislang) unverständlich oder gar 
-veraltet ist. 
+Zum aktuellen Zeitpunkt (Frühjahr 2021) bewegt sich das Buch stramm
+darauf zu, den Umfang von 500 Seiten zu überschreiten. Als inhaltlich
+vollendet sehen wir den Teil 1 ``Konzepte'' an. Kleinere Baustellen
+finden sich noch in Teil 2 ``Werkzeuge''. Hingegen klaffen im Teil 3
+``Praxis'' noch größere Lücken. Wir arbeiten kontinuierlich daran, diese
+Lücken zu schließen. Das gelingt  nicht so einfach, weil dafür bspw.
+komplexere Setups notwendig sind oder auch weil die Dokumentation der
+Werkzeuge für den betrachteten Fall schlicht und einfach nicht
+vorhanden, (bislang) unverständlich oder gar veraltet ist.
 
 ==== Technische Basis ====
 
