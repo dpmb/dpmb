@@ -380,7 +380,6 @@ es `apt-file`, welches wir genauer in ``Paket zu Datei finden'' in
 | Werkzeug   | Aufruf | Anmerkungen
 | `apt-file` | `apt-file find` 'Dateiname' | Suche in allen verfügbaren Paketen
 |            | `apt-file search` 'Dateiname' | Suche in allen verfügbaren Paketen
-| `aptitude` | kein Schalter |
 | `DNF`      | `dnf provides` 'Dateiname'| 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
 | `dpkg`     | `dpkg -S` 'Dateiname' | Suche nach dem Dateiname in den installierten Paketen
 |            | `dpkg --search` 'Dateiname' | Suche nach dem Dateiname in den installierten Paketen
