@@ -474,6 +474,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Paket-tzdata]]] Debian-Paket 'tzdat', https://packages.debian.org/de/stable/tzdata
 
+- [[[Debian-Paket-ucf]]] Debian-Paket 'ucf', https://packages.debian.org/de/stable/ucf
+
 - [[[Debian-Paket-util-linux]]] Debian-Paket 'util-linux', https://packages.debian.org/de/stable/util-linux
 
 - [[[Debian-Paket-vrms]]] Debian-Paket 'vrms', https://packages.debian.org/de/stable/vrms

@@ -8,34 +8,136 @@
 
 Die meisten Programme verfügen über Konfigurationsdateien, mit denen Sie
 das jeweilige Programm auf ihre Bedürfnisse individuell einstellen
-können. Dazu hilft es Ihnen, zu wissen, welche das überhaupt sind und an
+können.
+
+Dazu hilft es Ihnen, zu wissen, welche das überhaupt sind und an
 welcher Stelle sich diese Dateien befinden. 
 
 // Stichworte für den Index
-(((apt-file, show)))
-(((Paket, Konfigurationsdateien anzeigen)))
-Mit den beiden Werkzeugen `apt-file` und `dlocate` bringen Sie Licht ins
-Dunkel. Dabei werden jedoch nur die Konfigurationsdateien aufgespürt,
-die im jeweiligen Paket bereits mitgeliefert werden. Zusätzliche
-Dateien, die Sie selbst angelegt haben oder im laufenden Betrieb
-entstanden, kann keines der beiden Werkzeuge erahnen.
+(((Conffiles)))
+Debian macht hier typischerweise einen Unterschied zwischen
+Konfigurationsdateien, die im Paket mitgliefert werden und bei denen
+`dpkg` beim Auspacken von Paketaktualisierungen darauf achtet, dass
+lokale Änderungen daran nicht überschrieben werden. Diese von `dpkg`
+speziell behandelten Dateien nennt Debian "Conffiles".
 
-Als _Variante 1_ nutzen Sie den Aufruf `apt-file show Paketname` und
-lassen sich den Inhalt des Pakets ausgeben. Ausführlich erklären wir
-Ihnen das Vorgehen unter <<paketinhalte-anzeigen-apt-file>>.
+In fast allen Fällen sind in Paketen enthaltene Dateien, die unter
+`/etc/` liegen, solche "Conffiles" während alle anderen Dateien aus
+Paketen typischerweise keine "Conffiles" sind. Den Autoren dieses
+Buches sind zumindest bisher keine Ausnahmen von diesen Regeln
+bewusst.
+
+Es kann aber auch sein, dass Pakete Dateien unter `/etc/` erst bei der
+Installation anlegen, inbesondere wenn deren Inhalt dynamisch
+generiert wird. Diese sind dann keine "Conffiles", werden tlw. aber
+von Programmen wie `ucf` <<Debian-Paket-ucf>> analog zu Conffiles
+behandelt. Dies hängt aber vom jeweiligen Paket ab.
+
+Um solche bei Installation oder Aktualisierung eines Paketes erzeugte
+Konfigurationsdateien aufzufinden kommt man ums direkt in die
+entsprechenden Verzeichnisse schauen nicht umhin. Meistens wird aber
+zumindest das Verzeichnis schon im Paket mitgeliefert.
+
+// Stichworte für den Index
+(((Paket, Konfigurationsdateien anzeigen)))
+(((grep)))
+Die sog. Conffiles sind aber leicht aufzufinden. Einerseits können Sie
+wie unter <<paketinhalte-anzeigen-apt-file>> beschrieben, alle Dateien
+eines Paketes auflisten lassen. Praktisch alle so aufgelisteten
+Dateien im Verzeichnis `/etc/` und dessen Unterverzeichnissen sind
+"Conffiles" und damit auch Konfigurationsdateien. Diese lassen sich
+typischerweise durch Anhängen von `| grep /etc/` an den entsprechenden
+Befehl herausfiltern.
+
+Es gibt aber ein paar Programme, die dies ohne Zurhilfenahme von
+`grep` können. Diese wollen wir ihnen im Folgenden vorstellen.
+
+// Stichworte für den Index
+(((dpkg, -s)))
+(((dpkg, --status)))
+(((dpkg-query, -s)))
+(((dpkg-query, --status)))
+Einerseits weiß natürlich `dpkg` selbst, welche Dateien "Conffiles"
+sind und welche nicht. Und wir können uns das auch anzeigen
+lassen. Dazu fragen wir den Status eines installierten Paketes mittels
+`dpkg-query --status` ab. Dieser zeigt zwar viel mehr an, als wir
+wissen wollen, aber die gewünschten Informationen sind dabei.
+
+Und da es sich um eine Abfrage der Status-Datenbank von `dpkg`
+handelt, sollten wir eigentlich `dpkg-query` verwenden. Aber da `dpkg`
+mehr oder weniger alle `dpkg-query`-Schalter und -Parameter direkt an
+`dpkg-query` durchreicht und es außerdem auch noch die Kurzform `-s`
+für `--status` gibt, können wir den Befehl auf `dpkg -s` abkürzen.
+
+.Statusabfrage für das Paket 'bash' mittels `dpkg -s`
+----
+$ dpkg -s bash
+Package: bash
+Essential: yes
+Status: install ok installed
+Priority: required
+Section: shells
+Installed-Size: 6469
+Maintainer: Matthias Klose <doko@debian.org>
+Architecture: amd64
+Multi-Arch: foreign
+Version: 5.1-2
+Replaces: bash-completion (<< 20060301-0), bash-doc (<= 2.05-1)
+Depends: base-files (>= 2.1.12), debianutils (>= 2.15)
+Pre-Depends: libc6 (>= 2.25), libtinfo6 (>= 6)
+Recommends: bash-completion (>= 20060301-0)
+Suggests: bash-doc
+Conflicts: bash-completion (<< 20060301-0)
+Conffiles:
+ /etc/bash.bashrc 89269e1298235f1b12b4c16e4065ad0d
+ /etc/skel/.bash_logout 22bfb8c1dd94b5f3813a2b25da67463f
+ /etc/skel/.bashrc ee35a240758f374832e809ae0ea4883a
+ /etc/skel/.profile f4e81ade7d6f9fb342541152d08e7a97
+Description: GNU Bourne Again SHell
+ Bash is an sh-compatible command language interpreter that executes
+ commands read from the standard input or from a file.  Bash also
+ incorporates useful features from the Korn and C shells (ksh and csh).
+ .
+ Bash is ultimately intended to be a conformant implementation of the
+ IEEE POSIX Shell and Tools specification (IEEE Working Group 1003.2).
+ .
+ The Programmable Completion Code, by Ian Macdonald, is now found in
+ the bash-completion package.
+Homepage: http://tiswww.case.edu/php/chet/bash/bashtop.html
+$
+----
+
+// Stichworte für den Index
+(((grep)))
+Da das ein bißchen sehr viel Ausgabe ist im Vergleich zu dem, was uns
+interessiert, juckt es uns in den Fingern, doch wieder `grep` zu
+bemühen:
+
+.Filtern nach Conffiles einer Statusabfrage mit `dpkg -s`
+----
+$ dpkg -s bash | grep '^ /'
+ /etc/bash.bashrc 89269e1298235f1b12b4c16e4065ad0d
+ /etc/skel/.bash_logout 22bfb8c1dd94b5f3813a2b25da67463f
+ /etc/skel/.bashrc ee35a240758f374832e809ae0ea4883a
+ /etc/skel/.profile f4e81ade7d6f9fb342541152d08e7a97
+$
+----
 
 // Stichworte für den Index
 (((dlocate, -conf)))
-Für _Variante 2_ nutzen Sie das Programm `dlocate` aus dem gleichnamigen
-Paket <<Debian-Paket-dlocate>>. `dlocate` kennt dazu den Schalter
-`-conf` gefolgt vom Paketnamen. Nachfolgend zeigen wir das für den
-PDF-Betrachter 'xpdf'.
+Direkter zur gewünschten Information kommen Sie mit dem Programm
+`dlocate` aus dem gleichnamigen Paket
+<<Debian-Paket-dlocate>>. `dlocate` kennt dazu den Schalter `-conf`
+gefolgt vom Paketnamen. Wieder zeigen wir das für
+Kommandozeilen-Shell 'bash'.
 
-.Ermittlung der Konfigurationsdateien zum Paket 'xpdf' mittels `dlocate`
+.Ermittlung der Conffiles zum Paket 'bash' mittels `dlocate`
 ----
-$ dlocate -conf xpdf
-/etc/xpdf/xpdfrc
-/etc/X11/Xresources/xpdf
+$ dlocate -conf bash
+/etc/bash.bashrc
+/etc/skel/.bash_logout
+/etc/skel/.bashrc
+/etc/skel/.profile
 $
 ----
 
@@ -46,11 +148,40 @@ deren Besitzer und Eigentümer sowie deren Größe und Zugriffsdatum, ist der
 Schalter `-lsconf` von großem Nutzen. Dieser bewirkt eine Ausgabe wie
 das Kommando `ls -la`, wie die nachfolgende Ausgabe deutlich macht:
 
-.Ermittlung der Konfigurationsdateien zum Paket 'xpdf' mittels `dlocate` (ausführliche Ansicht)
+.Ermittlung der Konfigurationsdateien zum Paket 'bash' mittels `dlocate` (ausführliche Ansicht)
 ----
-$ dlocate -lsconf xpdf
--rw-r--r-- 1 root root   43 Aug 21  2010 /etc/X11/Xresources/xpdf
--rw-r--r-- 1 root root 2215 Apr 17  2012 /etc/xpdf/xpdfrc
+$ dlocate -lsconf bash
+-rw-r--r-- 1 root root 1987  7. Dez 04:24 /etc/bash.bashrc
+-rw-r--r-- 1 root root  220  2. Dez 2015  /etc/skel/.bash_logout
+-rw-r--r-- 1 root root 3526  2. Dez 2015  /etc/skel/.bashrc
+-rw-r--r-- 1 root root  807  6. Feb 2018  /etc/skel/.profile
+$
+----
+
+Nachteil von `dlocate`: Es muss installiert sein und seine Datenbank
+muß dazu aktuell sein. In der Standard-Einstellung wird die Datenbank
+aber nur einmal pro Tag aktualisiert und funktioniert daher
+typischerweise nicht für frisch installierte Pakete.
+
+// Stichworte für den Index
+(((debsums, -e)))
+Eine dritte Variante bietet das Programm `debsums` aus dem
+gleichnamigen Paket <<Debian-Paket-debsums>> mit seinem Schalter `-e`
+bzw. dessen Langfassung `--config`. Da die eigentliche Aufgabe von
+`debsums` ist, anzuzeigen, welche Dateien vom Auslieferungszustand
+abweichen, zeigt es dies auch gleich mit an. Im Falle einer Abweichung
+mit dem etwas alarmierenden Wort "FAILED", auf Deutsch
+"fehlgeschlagen". Insbesondere bei Conffiles, bei denen Änderungen
+durch den Systemadministrator ja explizit vorgesehen sind, ist die
+Meldung "FAILED" im Normalfall kein Grund zur Besorgnis.
+
+.Anzeige der Conffiles des Paketes 'bash' und ihrer Unversehrtheit mittels `debsums`
+----
+$ debsums -e bash
+/etc/skel/.bash_logout                OK
+/etc/bash.bashrc                  FAILED
+/etc/skel/.profile                    OK
+/etc/skel/.bashrc                     OK
 $
 ----
 
