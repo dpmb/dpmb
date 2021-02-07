@@ -17,11 +17,6 @@ verschieben:
 Release-bezogene Updates
 ------------------------
 
-### Neues / Änderungen
-
-* ELTS erklären
-* https://bugs.debian.org/970063 flicken.
-
 ### Veraltete Beispiele
 
 * Beispiele mit Wheezy durch neuere Beispiele ersetzen
