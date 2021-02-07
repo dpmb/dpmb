@@ -11,9 +11,10 @@
 (((Paket, bekannte Pakete auflisten)))
 (((Paket, verfügbare Pakete anzeigen)))
 APT kann Ihnen ausgeben, welche Pakete es überhaupt kennt. Dazu verfügt
-das Werkzeug `apt-cache` über das Unterkommando `pkgnames`. Die Ausgabe,
-die Sie nach dessen Aufruf erhalten, hängt von den von Ihnen genutzten
-Paketquellen und den darüber verfügbaren Paketen ab. 
+das Werkzeug `apt-cache` (aber nicht `apt`) über das Unterkommando
+`pkgnames`. Die Ausgabe, die Sie nach dessen Aufruf erhalten, hängt
+von den von Ihnen genutzten Paketquellen und den darüber verfügbaren
+Paketen ab.
 
 Die nachfolgende Ausgabe listet die Pakete zusätzlich alphabetisch
 aufsteigend sortiert und seitenweise auf. Im Aufruf kommen dazu die
@@ -35,57 +36,219 @@ $
 ----
 
 // Stichworte für den Index
-(((apt-cache, pkgnames)))
-Kennen Sie jedoch nur ein Fragment eines Paketnamens, gibt es einen
-üblichen Weg und eine Abkürzung. Der _übliche Weg_ kombiniert
-`apt-cache` und das UNIX-Kommando `grep` über eine Pipe miteinander.
-'Muster' bezeichnet hier das Ihnen bereits bekannte Fragment.
-Nachfolgend sehen Sie die Recherche nach dem Muster `aptitude`.
+(((apt-cache, search, -n)))
+(((apt, search, -n)))
+(((aptitude, search, ~n)))
+Kennen Sie jedoch nur ein Fragment eines Paketnamens, gibt es verschiedene
+Wege.
 
-.Suche nach dem Muster `aptitude`
+Der gebräuchliste Weg war für lange Zeit `apt-cache search -n`
+'Suchmuster'. Seit APT 1.0 kann man sich aber das `-cache` sparen und
+`apt search -n` 'Suchmuster' verwenden. Allerdings sieht die Ausgabe
+jeweils unterschiedlich aus, u.a. sind bei `apt` die Paketnamen noch
+in grün hervogehoben und die Ausgabe ist mehrzeilig pro Paket.
+
+In beiden Fällen schränkt der Schalter `-n` die Suche auf Paketnamen
+inklusive bereitgestellter Paketnamen ein.
+
+Will man `aptitude` verwenden, so braucht muss man statt dem `-n` an
+das Suchmuster selbst `~n` vorne dranhängen und quoten, damit es von
+der Kommandozeilen-Shell nicht als persönliches Verzeichnis eines
+Nutzers interpretiert wurd: `aptitude search '~n …'` (Das Leerzeichen
+nach `~n` ist optional. Im Beispiel unten wurde es weggelassen.)
+Aptitude zeigt dann allerdings bei Systemen mit mehr als einer
+installierten Architektur jedes Paket einmal pro Architektur an.
+
+.Suche nach dem Muster `lynx` in Paketnamen.
 ----
-$ apt-cache pkgnames | grep aptitude
-aptitude
-aptitude-common
-aptitude-doc-cs
-aptitude-doc-fi
-aptitude-doc-en
-aptitude-doc-es
-aptitude-doc-fr
-aptitude-doc-ja
-aptitude-doc-it
-aptitude-dbg
+$ apt-cache search -n lynx
+lynx - Klassischer Textmodus-Webbrowser (nicht graphisch)
+lynx-common - Gemeinsame Dateien für Lynx
+lynx-dbgsym - debug symbols for lynx
+$ apt search -n lynx
+Sortierung# Fertig
+Volltextsuche# Fertig
+lynx/bullseye,now 2.9.0dev.6-1 amd64  [Installiert,automatisch]
+  Klassischer Textmodus-Webbrowser (nicht graphisch)
+
+lynx-common/bullseye,now 2.9.0dev.6-1 all  [Installiert,automatisch]
+  Gemeinsame Dateien für Lynx
+
+lynx-dbgsym/bullseye-debug,now 2.9.0dev.6-1 amd64  [installiert]
+  debug symbols for lynx
+
+$ aptitude search '~nlynx'
+i A lynx             - Klassischer Textmodus-Webbrowser (nicht graphisch)
+p   lynx:i386        - Klassischer Textmodus-Webbrowser (nicht graphisch)
+i A lynx-common      - Gemeinsame Dateien für Lynx
+v   lynx-common:i386 - Gemeinsame Dateien für Lynx
+i   lynx-dbgsym      - debug symbols for lynx
+p   lynx-dbgsym:i386 - debug symbols for lynx
 $
 ----
 
 // Stichworte für den Index
-(((apt-file)))
+(((apt-cache, pkgnames)))
+(((apt-cache, search, -n, ^)))
+(((apt, search, -n), ^)))
+(((aptitude, search, ~n, ^)))
+Weiß man den Anfang des Paketnamens, aber den Rest nicht, kann man
+auch noch `apt-cache pkgnames` mit Parameter verwenden oder aber eine
+der o.g. Suchen mit dem Anker `^` zum Markieren des Anfangs der
+Zeichenkette:
+
+.Suche nach dem Muster `links` am Anfang des Paketnamens.
+----
+$ apt-cache pkgnames links
+links2
+links
+links-dbgsym
+links2-dbgsym
+$ apt-cache search -n '^links'
+links - Textmodus-Webbrowser
+links2 - Webbrowser für den grafischen und den Textmodus
+links-dbgsym - debug symbols for links
+links2-dbgsym - debug symbols for links2
+$  apt search -n '^links'
+Sortierung# Fertig
+Volltextsuche# Fertig
+links/bullseye,now 2.21-1+b1 amd64  [Installiert,automatisch]
+  Textmodus-Webbrowser
+
+links-dbgsym/bullseye-debug,now 2.21-1+b1 amd64  [installiert]
+  debug symbols for links
+
+links2/bullseye,now 2.21-1+b1 amd64  [Installiert,automatisch]
+  Webbrowser für den grafischen und den Textmodus
+
+links2-dbgsym/bullseye,now 2.21-1+b1 amd64  [installiert]
+  debug symbols for links2
+
+$  aptitude search '~n^links'
+i A links              - Textmodus-Webbrowser
+p   links:i386         - Textmodus-Webbrowser
+i   links-dbgsym       - debug symbols for links
+p   links-dbgsym:i386  - debug symbols for links
+i A links2             - Webbrowser für den grafischen und den Textmodus
+p   links2:i386        - Webbrowser für den grafischen und den Textmodus
+i   links2-dbgsym      - debug symbols for links2
+p   links2-dbgsym:i386 - debug symbols for links2
+$
+----
+
+// Stichworte für den Index
+(((apt-cache, pkgnames)))
+(((egrep)))
+(((apt-cache, search, -n, $)))
+(((apt, search, -n), $)))
+(((aptitude, search, ~n, $)))
+Will man nur nach dem Ende eines Paketnamens suchen, so kommt man um
+die Verwendung des Zeichenketten-Ende-Ankers `$` nicht umhin. Auch
+dieser sollte wieder gequotet werden, um in der Kommandozeilen-Shell
+nicht als Beginn einer Variablen angesehen zu werden.
+
+.Suche nach dem Muster `mlinks` am Ende eines Paketnamens
+----
+$ apt-cache pkgnames | egrep 'mlinks$'
+symlinks
+python3-sphinx-paramlinks
+$ apt-cache search -n 'mlinks$'  
+python3-sphinx-paramlinks - Sphinx extension to make param links linkable (Python 3 version)
+symlinks - Scannen und Ändern symbolischer Links
+$ apt search -n 'mlinks$'
+Sortierung# Fertig
+Volltextsuche# Fertig
+python3-sphinx-paramlinks/unstable,unstable 0.5.0-1 all
+  Sphinx extension to make param links linkable (Python 3 version)
+
+symlinks/unstable,testing,now 1.4-4 amd64  [Installiert,automatisch]
+  Scannen und Ändern symbolischer Links
+
+$ aptitude search '~n mlinks$'
+p   python3-sphinx-paramlinks - Sphinx extension to make param links linkable (Python 
+i A symlinks                  - Scannen und Ändern symbolischer Links                 
+p   symlinks:i386             - Scannen und Ändern symbolischer Links       
+$
+----
+
+Daß eine Suche nach "links" nicht nur am Anfang oder Ende des
+Paketnamens zu wesentlich mehr Treffern führt, sei dem Leser als Übung
+überlassen.
+
+// Stichworte für den Index
+(((apt-cache, search, -n)))
+(((apt-cache, pkgnames)))
+(((cut)))
+(((awk)))
+(((sed)))
+(((grep)))
 (((Debianpaket, debian-goodies)))
 (((dglob, -a)))
-Die _Abkürzung_ führt über das Werkzeug `dglob` aus dem Paket
-'debian-goodies' <<Debian-Paket-debian-goodies>>. Es setzt auf
-`apt-file` auf und liefert eine identische Ausgabe – aber der
-Tippaufwand ist geringer. Nachfolgende Ausgabe zeigt Ihnen das
-Suchergebnis zu den Paketen, die das Muster `ttd` beinhalten. Damit
-finden Sie beispielsweise alle Pakete, die zum Spiel Open Transport
-Tycoon Deluxe (openttd) gehören.
+Will man zwingend nur die Paketnamen sehen, gibt es ebenfalls mehrere
+Möglichkeiten:
 
-Die im Aufruf verwendete Option `-a` listet Ihnen alle Pakete in
-alphabetisch aufsteigender Reihenfolge auf – unabhängig davon, ob diese
-jeweils auf Ihrem System installiert sind oder nicht. Ohne die Option
-beschränkt sich `dglob` nur auf die bereits installierten Pakete.
+* O.g. Ausgaben von `apt-cache` mittels `awk`, `cut` oder `sed` nach
+  dem ersten Leerzeichen abschneiden.
+* Die Ausgabe von `apt-cache pkgnames` mittels `grep` o.ä. durchsuchen.
+* `dglob` aus dem Paket 'debian-goodies'
+  <<Debian-Paket-debian-goodies>> mit der Option `-a` und einem Muster verwenden.
 
-.Rechercheergebnis von `dglob` mit dem Muster `ttd`
+Da `dglob` einiges anders macht als in den o.g. Paketen, schauen wir
+es uns hier getrennt an.
+
+// Stichworte für den Index
+(((dglob)))
+(((Platzhalter)))
+(((Wildcards)))
+Das Werkzeug `dglob` setzt auf `grep-aptavail` und `grep-dctrl` auf um
+die von APT heruntergeladenen Paketlisten zu durchsuchen.  Im
+Gegensatz zu `apt`, `apt-cache` und `aptitude` arbeitet es nicht mit
+regulären Ausdrücken sondern mit Platzhaltern
+(engl. "wildcards"). Dies ist ähnlich zu `dpkg -l`, allerdings sind
+Platzhalter für beliebige Zeichenketten an Anfang und Ende des
+Suchmusters bei `dglob` implizit.
+
+// Stichworte für den Index
+(((dpkg, -l)))
+(((dglob, -a)))
+Ebenfalls áhnlich zu `dpkg -l` listet `dglob ohne weitere Schalter nur
+installierte Pakete auf. Mit dem Schalter `-a` ändern Sie seine
+Verhaltensweise dahingehend, daß es alle bekannten Paketen in Erwägung
+zieht — unabhängig davon, ob diese jeweils auf Ihrem System
+installiert sind oder nicht. Ohne die Option beschränkt sich `dglob`
+nur auf die bereits installierten Pakete.
+
+.Suche nach `elinks` mit `dglob`, `dglob -a` und `dpkg -l` im Vergleich
 ----
-$ dglob -a ttd
-liblttd-dev
-liblttd0
-openttd
-openttd-data
-openttd-dbg
-openttd-opengfx
-openttd-openmsx
-openttd-opensfx
+$ dpkg -l elinks
+Gewünscht=Unbekannt/Installieren/R=Entfernen/P=Vollständig Löschen/Halten
+| Status=Nicht/Installiert/Config/U=Entpackt/halb konFiguriert/
+         Halb installiert/Trigger erWartet/Trigger anhängig
+|/ Fehler?=(kein)/R=Neuinstallation notwendig (Status, Fehler: GROSS=schlecht)
+||/ Name           Version      Architektur  Beschreibung
++++-==============-============-============-=================================
+ii  elinks         0.13.2-1+b1  amd64        advanced text-mode WWW browser
+$ dpkg -l '*elinks*'
+Gewünscht=Unbekannt/Installieren/R=Entfernen/P=Vollständig Löschen/Halten
+| Status=Nicht/Installiert/Config/U=Entpackt/halb konFiguriert/
+         Halb installiert/Trigger erWartet/Trigger anhängig
+|/ Fehler?=(kein)/R=Neuinstallation notwendig (Status, Fehler: GROSS=schlecht)
+||/ Name           Version      Architektur  Beschreibung
++++-==============-============-============-===========================================
+ii  elinks         0.13.2-1+b1  amd64        advanced text-mode WWW browser
+ii  elinks-data    0.13.2-1     all          advanced text-mode WWW browser - data files
+un  elinks-doc     <keine>      <keine>      (keine Beschreibung vorhanden)
+un  elinks-lite    <keine>      <keine>      (keine Beschreibung vorhanden)
+$ dglob elinks
+elinks:amd64
+elinks-data:all
+$ dglob -a elinks
+elinks:amd64
+elinks-data:all
+elinks-doc:all
+elinks:i386
+elinks-dbgsym:amd64
+elinks-dbgsym:i386
 $
 ----
 
