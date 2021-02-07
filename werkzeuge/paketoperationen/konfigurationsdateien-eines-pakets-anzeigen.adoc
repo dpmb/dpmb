@@ -8,18 +8,19 @@
 
 Die meisten Programme verfügen über Konfigurationsdateien, mit denen Sie
 das jeweilige Programm auf ihre Bedürfnisse individuell einstellen
-können.
-
-Dazu hilft es Ihnen, zu wissen, welche das überhaupt sind und an
-welcher Stelle sich diese Dateien befinden. 
+können. Um das tun zu können, hilft es Ihnen, zu wissen, welche Dateien
+das überhaupt sind und an welcher Stelle im Verzeichnisbaum sich diese
+Dateien befinden.
 
 // Stichworte für den Index
 (((Conffiles)))
-Debian macht hier typischerweise einen Unterschied zwischen
-Konfigurationsdateien, die im Paket mitgliefert werden und bei denen
-`dpkg` beim Auspacken von Paketaktualisierungen darauf achtet, dass
-lokale Änderungen daran nicht überschrieben werden. Diese von `dpkg`
-speziell behandelten Dateien nennt Debian "Conffiles".
+Debian macht hier typischerweise einen Unterschied zwischen den
+Konfigurationsdateien. Es gibt Dateien, die bereits im Paket
+mitgeliefert werden und Dateien, die erst nach der Installation angelegt
+werden. Bei ersteren achtet `dpkg` beim Auspacken von
+Paketaktualisierungen darauf, dass -- sofern bereits vorhanden --
+erfolgte lokale Änderungen daran nicht überschrieben werden. Diese
+Dateien nennt Debian "Conffiles".
 
 In fast allen Fällen sind in Paketen enthaltene Dateien, die unter
 `/etc/` liegen, solche "Conffiles" während alle anderen Dateien aus
@@ -27,30 +28,32 @@ Paketen typischerweise keine "Conffiles" sind. Den Autoren dieses
 Buches sind zumindest bisher keine Ausnahmen von diesen Regeln
 bewusst.
 
-Es kann aber auch sein, dass Pakete Dateien unter `/etc/` erst bei der
-Installation anlegen, inbesondere wenn deren Inhalt dynamisch
-generiert wird. Diese sind dann keine "Conffiles", werden tlw. aber
-von Programmen wie `ucf` <<Debian-Paket-ucf>> analog zu Conffiles
-behandelt. Dies hängt aber vom jeweiligen Paket ab.
+Es kommt vor, dass Pakete Dateien unter `/etc/` erst bei der
+Installation anlegen. Das ist inbesondere dann der Fall, wenn deren
+Inhalt dynamisch generiert wird. Diese sind dann keine "Conffiles" im
+eigentlichen Sinne, werden aber teilweise von Programmen wie `ucf`
+<<Debian-Paket-ucf>> analog zu Conffiles behandelt. Diese Einstufung
+hängt vom jeweiligen Paket ab.
 
 Um solche bei Installation oder Aktualisierung eines Paketes erzeugte
-Konfigurationsdateien aufzufinden kommt man ums direkt in die
-entsprechenden Verzeichnisse schauen nicht umhin. Meistens wird aber
-zumindest das Verzeichnis schon im Paket mitgeliefert.
+Konfigurationsdateien aufzufinden, kommt man nicht umhin, direkt in die
+entsprechenden Verzeichnisse zu schauen. Meistens wird aber zumindest
+das Verzeichnis schon im Paket mitgeliefert.
 
 // Stichworte für den Index
 (((Paket, Konfigurationsdateien anzeigen)))
 (((grep)))
-Die sog. Conffiles sind aber leicht aufzufinden. Einerseits können Sie
+Die sogenannten Conffiles sind leicht aufzufinden. Einerseits können Sie
 wie unter <<paketinhalte-anzeigen-apt-file>> beschrieben, alle Dateien
-eines Paketes auflisten lassen. Praktisch alle so aufgelisteten
-Dateien im Verzeichnis `/etc/` und dessen Unterverzeichnissen sind
-"Conffiles" und damit auch Konfigurationsdateien. Diese lassen sich
-typischerweise durch Anhängen von `| grep /etc/` an den entsprechenden
-Befehl herausfiltern.
+eines Paketes auflisten lassen. Praktisch alle so aufgelisteten Dateien
+im Verzeichnis `/etc/` und dessen Unterverzeichnisse sind "Conffiles"
+und damit auch Konfigurationsdateien. Diese lassen sich typischerweise
+durch Anhängen von `| grep /etc/` an den entsprechenden Befehlen
+herausfiltern.
 
-Es gibt aber ein paar Programme, die dies ohne Zurhilfenahme von
-`grep` können. Diese wollen wir ihnen im Folgenden vorstellen.
+Es gibt jedoch ein paar Programme, die diesen Schritt ohne Zuhilfenahme
+von `grep` durchführen können. Diese Programme wollen wir ihnen im
+Folgenden vorstellen.
 
 // Stichworte für den Index
 (((dpkg, -s)))
@@ -58,16 +61,16 @@ Es gibt aber ein paar Programme, die dies ohne Zurhilfenahme von
 (((dpkg-query, -s)))
 (((dpkg-query, --status)))
 Einerseits weiß natürlich `dpkg` selbst, welche Dateien "Conffiles"
-sind und welche nicht. Und wir können uns das auch anzeigen
+sind und welche nicht. Glücklicherweise können wir uns das auch anzeigen
 lassen. Dazu fragen wir den Status eines installierten Paketes mittels
-`dpkg-query --status` ab. Dieser zeigt zwar viel mehr an, als wir
-wissen wollen, aber die gewünschten Informationen sind dabei.
+`dpkg-query --status` ab. Dieser zeigt zwar viel mehr an, als wir wissen
+wollen, aber die gewünschten Informationen sind dabei.
 
-Und da es sich um eine Abfrage der Status-Datenbank von `dpkg`
-handelt, sollten wir eigentlich `dpkg-query` verwenden. Aber da `dpkg`
-mehr oder weniger alle `dpkg-query`-Schalter und -Parameter direkt an
-`dpkg-query` durchreicht und es außerdem auch noch die Kurzform `-s`
-für `--status` gibt, können wir den Befehl auf `dpkg -s` abkürzen.
+Da es sich um eine Abfrage der Statusdatenbank von `dpkg` handelt, wäre
+die Benutzung von `dpkg-query` eigentlich besser. Aber da `dpkg` mehr oder
+weniger alle `dpkg-query`-Schalter und -Parameter direkt an `dpkg-query`
+durchreicht und es außerdem auch noch die Kurzform `-s` für `--status`
+gibt, gelingt eine Abkürzung des Befehls auf `dpkg -s`.
 
 .Statusabfrage für das Paket 'bash' mittels `dpkg -s`
 ----
@@ -111,7 +114,7 @@ $
 (((grep)))
 Da das ein bißchen sehr viel Ausgabe ist im Vergleich zu dem, was uns
 interessiert, juckt es uns in den Fingern, doch wieder `grep` zu
-bemühen:
+bemühen, um die Ausgabe auf das Relevante zu kürzen:
 
 .Filtern nach Conffiles einer Statusabfrage mit `dpkg -s`
 ----
@@ -126,10 +129,9 @@ $
 // Stichworte für den Index
 (((dlocate, -conf)))
 Direkter zur gewünschten Information kommen Sie mit dem Programm
-`dlocate` aus dem gleichnamigen Paket
-<<Debian-Paket-dlocate>>. `dlocate` kennt dazu den Schalter `-conf`
-gefolgt vom Paketnamen. Wieder zeigen wir das für
-Kommandozeilen-Shell 'bash'.
+`dlocate` aus dem gleichnamigen Paket <<Debian-Paket-dlocate>>.
+`dlocate` kennt dazu den Schalter `-conf` gefolgt vom Paketnamen. Wieder
+zeigen wir das für Kommandozeilen-Shell 'bash'.
 
 .Ermittlung der Conffiles zum Paket 'bash' mittels `dlocate`
 ----
@@ -164,16 +166,18 @@ aber nur einmal pro Tag aktualisiert und funktioniert daher
 typischerweise nicht für frisch installierte Pakete.
 
 // Stichworte für den Index
+(((debsums, --config)))
 (((debsums, -e)))
 Eine dritte Variante bietet das Programm `debsums` aus dem
 gleichnamigen Paket <<Debian-Paket-debsums>> mit seinem Schalter `-e`
-bzw. dessen Langfassung `--config`. Da die eigentliche Aufgabe von
+bzw. dessen Langfassung `--config`. Die eigentliche Aufgabe von
 `debsums` ist, anzuzeigen, welche Dateien vom Auslieferungszustand
-abweichen, zeigt es dies auch gleich mit an. Im Falle einer Abweichung
-mit dem etwas alarmierenden Wort "FAILED", auf Deutsch
-"fehlgeschlagen". Insbesondere bei Conffiles, bei denen Änderungen
-durch den Systemadministrator ja explizit vorgesehen sind, ist die
-Meldung "FAILED" im Normalfall kein Grund zur Besorgnis.
+abweichen. Somit erhalten wir die gewünschte Information -- `debsums`
+zeigt die Unterschiede gleich mit an. Im Falle einer Abweichung ergänzt
+`debsums` das etwas alarmierende Wort "FAILED", auf Deutsch
+"fehlgeschlagen". Insbesondere bei Conffiles, bei denen Änderungen durch
+den Systemadministrator ja explizit vorgesehen sind, ist die Meldung
+"FAILED" im Normalfall kein Grund zur Besorgnis.
 
 .Anzeige der Conffiles des Paketes 'bash' und ihrer Unversehrtheit mittels `debsums`
 ----
