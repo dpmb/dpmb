@@ -1,9 +1,9 @@
-dpmb (0~2021.02.03) UNRELEASED; urgency=medium
+dpmb (0~2021.02.07) unstable; urgency=medium
 
   * New snapshot
     + Removes GitBook support. (Wasn't used in the Debian package anyways.)
-    + Updates asciidoc-macros/*.conf to fix image embedding with Python 3.
-    + Updates for the Bullseye stable release. (Closes: #970063)
+    + Fixes image embedding via asciidoc-macros/*.conf with Asciidoc-Py3.
+    + Many updates for the Bullseye stable release. (Closes: #970063)
     + Improved documentation about Debian LTS and Extended LTS.
   * Mark package as "Multi-Arch: foreign" as recommended by the Multi-Arch
     Hinter.
@@ -15,7 +15,7 @@ dpmb (0~2021.02.03) UNRELEASED; urgency=medium
   * Declare compliance with Debian Policy 4.5.1. No other changes needed.
   * Update copyright years in debian/copyright.
 
- -- Axel Beckert <abe@debian.org>  Wed, 03 Feb 2021 02:15:15 +0100
+ -- Axel Beckert <abe@debian.org>  Sun, 07 Feb 2021 23:07:01 +0100
 
 dpmb (0~2019.03.01) unstable; urgency=medium
 
