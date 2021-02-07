@@ -8,6 +8,7 @@
 
 // Stichworte für den Index
 (((apt-file, search)))
+(((Debianpaket, apt-file)))
 (((Debianpaket, dlocate)))
 (((dlocate, -S)))
 (((dpkg, -S)))
@@ -59,42 +60,36 @@ Langform `--search`. Das Textfragment oder Muster beschreibt, wonach die
 Programme in der Dateiliste der installierten Pakete suchen sollen.
 Beginnt das Textfragment mit einem `/`, wird die Zeichenkette als
 absoluter Pfad interpretiert. Nachfolgendes Beispiel illustriert den
-Aufruf nach dem Muster `aptsh` mittels `dpkg` in allen installierten
-Paketen.
+Aufruf nach dem Muster `mupdf-tools` mittels `dpkg` in allen
+installierten Paketen.
 
-.Suche nach dem Muster `aptsh` mittels `dpkg`
+.Suche nach dem Muster `mupdf-tools` mittels `dpkg`
 ----
-$ dpkg -S aptsh
-aptsh: /usr/lib/aptsh/aptsh_ls
-aptsh: /usr/share/doc/aptsh/changelog.gz
-aptsh: /usr/share/man/man1/aptsh.1.gz
-aptsh: /usr/share/doc/aptsh/copyright
-aptsh: /usr/share/doc/aptsh
-aptsh: /etc/aptsh.conf
-aptsh: /usr/lib/aptsh/aptsh_printer
-aptsh: /usr/bin/aptsh
-aptsh: /usr/share/doc/aptsh/HOWTO.gz
-aptsh: /usr/lib/aptsh/aptsh_rls
-aptsh: /usr/lib/aptsh
+$ dpkg -S mupdf-tools
+mupdf-tools: /usr/share/doc/mupdf-tools
+mupdf-tools: /usr/share/doc/mupdf-tools/copyright
+mupdf-tools: /usr/share/doc/mupdf-tools/changelog.gz
+mupdf-tools: /usr/share/doc/mupdf-tools/README
+mupdf-tools: /usr/share/doc/mupdf-tools/changelog.Debian.gz
 $
 ----
 
 `dlocate` liefert im Allgemeinen ein identisches Ergebnis zu `dpkg` bzw.
 `dpkg-query`. Da `dlocate` zur Suche auf `grep` zurückgreift, hat es
 mitunter eine höhere Trefferrate. Nachfolgendes Beispiel zeigt die Suche
-nach dem absoluten Pfad `/xara-gtk` – sowohl für `dpkg`, als auch zu
+nach dem absoluten Pfad `/mupdf-tools` – sowohl für `dpkg`, als auch zu
 `dlocate` im Vergleich.
 
-.Suche nach der Pfadangabe `/xara-gtk`
+.Suche nach der Pfadangabe `/mupdf-tools`
 ----
-$ dpkg -S /xara-gtk
-dpkg-query: Kein Pfad gefunden, der auf Muster /xara-gtk passt
-$ dlocate -S /xara-gtk
-xara-gtk: /etc/xara-gtkrc-2.0
-xara-gtk: /usr/share/menu/xara-gtk
-xara-gtk: /usr/share/doc/xara-gtk
-xara-gtk: /usr/share/doc/xara-gtk/copyright
-xara-gtk: /usr/share/doc/xara-gtk/changelog.gz
+$ dpkg -S /mupdf-tools
+dpkg-query: Kein Pfad gefunden, der auf Muster /mupdf-tools passt
+$ dlocate -S /mupdf-tools
+mupdf-tools: /usr/share/doc/mupdf-tools
+mupdf-tools: /usr/share/doc/mupdf-tools/changelog.gz
+mupdf-tools: /usr/share/doc/mupdf-tools/changelog.Debian.gz
+mupdf-tools: /usr/share/doc/mupdf-tools/README
+mupdf-tools: /usr/share/doc/mupdf-tools/copyright
 $
 ----
 
@@ -104,17 +99,19 @@ $
 (((apt-file, search)))
 (((apt-get, update)))
 (((apt, update)))
+(((Debianpaket, apt-file)))
 (((/var/lib/apt/lists/)))
-Dafür gibt es `apt-file`. Grundlage seiner Aktivitäten ist die Liste
-der Paketquellen in `/etc/apt/sources.list/` und die Liste der Dateien
-in jedem der Pakete, die von dort bezogen werden. Diese Inhaltslisten
-haben typischerweise einen Dateinamen der Form
-`Contents-<Architektur>.<Kompressions-Suffix>`, sind selbst
-komprimiert bis zu 50 MB groß und werden seit `apt-file` Version 3.0
-aufwärts bei einer Aktualisierung der Paketlisten (z.B. mittels `apt
-update`) automatisch mitheruntergeladen und wie die normalen
-Paketlisten im Verzeichnis `/var/lib/apt/lists/` abgespeichert. (Ist
-`apt-file` nicht installiert, so lädt `apt update` diese Inhaltslisten
+Dafür gibt es das Werkzeug `apt-file` aus dem gleichnamigen
+Debian-Paket. Grundlage seiner Aktivitäten ist die Liste der
+Paketquellen in `/etc/apt/sources.list/` und die Liste der Dateien in
+jedem der Pakete, die von dort bezogen werden. Diese Inhaltslisten haben
+typischerweise einen Dateinamen der Form
+`Contents-<Architektur>.<Kompressions-Suffix>` und sind selbst
+komprimiert bis zu 50 MB groß. Seit `apt-file` Version 3.0 aufwärts
+werden diese bei einer Aktualisierung der Paketlisten (z.B. mittels `apt
+update`) automatisch mitheruntergeladen und wie die normalen Paketlisten
+im Verzeichnis `/var/lib/apt/lists/` abgespeichert. (Ist `apt-file`
+hingegen nicht installiert, so lädt `apt update` diese Inhaltslisten
 auch nicht herunter.)
 
 .Liste der Paketinhaltslisten anzeigen (`apt-file` Version 3.0 aufwärts)
@@ -132,12 +129,11 @@ $
 // Stichworte für den Index
 (((apt-file, update)))
 (((/var/cache/apt/apt-file/)))
-`apt-file` Version 3 und höher ist seit Debian 9 Stretch mit
-dabei. Bei älteren Version von `apt-file`, wie z.B. auf Debian 8
-Jessie und früher musste man diese Paketinhaltslisten mittels
-`apt-file update` manuell aktualisieren. Außerdem sie wurden auch in
-einem anderen Verzeichnis abgespeichert, nämlich in
-`/var/lib/apt/lists/`.
+`apt-file` Version 3.0 und höher ist seit Debian 9 Stretch mit dabei.
+Bei älteren Version von `apt-file`, wie z.B. auf Debian 8 Jessie und
+früher musste man diese Paketinhaltslisten mittels `apt-file update`
+stets manuell aktualisieren. Außerdem sie wurden auch in einem anderen
+Verzeichnis abgespeichert, nämlich in `/var/lib/apt/lists/`.
 
 `apt-file` verfügt über eine ganze Reihe von Unterkommandos und
 Schaltern, von denen wir Ihnen die wichtigsten vorstellen. Weitere
@@ -152,16 +148,16 @@ Schalter entnehmen Sie bitte der Manpage zum Programm.
 (((dpkg, --listfiles)))
 
 `search Suchmuster`::
-Suche danach, in welchem Paket die als `Muster` angegebene Datei
+Suche danach, in welchem Paket die als `Suchmuster` angegebene Datei
 enthalten ist. Ergebnis ist eine Liste aller Pakete, die das angegebene
-`Muster` enthalten. `apt-file` sucht dabei nur nach Dateinamen, nicht
+`Suchmuster` enthalten. `apt-file` sucht dabei nur nach Dateinamen, nicht
 jedoch nach Verzeichnisnamen.
 
 `find Suchmuster`::
 Alias für den Schalter `search`.
 
 `list Paketname`::
-gibt den Paketinhalt aus, auf den das Muster passt. Diese Aktion ist
+gibt den Paketinhalt aus, auf den das Suchmuster passt. Diese Aktion ist
 sehr ähnlich zum Aufruf `dpkg -L`, nur das hier die Pakete noch nicht
 installiert sein müssen.
 
@@ -172,40 +168,39 @@ Alias für den Schalter `list`.
 Einschränkung der Suche auf die angegebene Architektur (siehe
 <<debian-architekturen>>).
 
-`-i` (Langform `--ignore-case`):: 
-Suche unabhängig von Groß- und Kleinschreibung des Musters.
-
-`-l` (Langform `--package-only`):: 
-Das Ergebnis ist nur der Paketname, auf den das Muster passt. Dateinamen
-werden nicht berücksichtigt.
-
-`-x` (Langform `--regexp`):: 
-interpretiert das Muster als Regulären Ausdruck, so wie ihn Perl
-versteht (PCRE). Ohne diesen Schalter wird das Muster als schlichte
-Zeichenkette aufgefasst.
-
-`-v` (Langform `--verbose`):: 
-verbose, macht die Ausgabe deutlich ausführlicher, zeigt, wo das
-Programm seine Informationen herholt und nach was es genau sucht. Die
-Ausgabe ist spätestens seit Version 3.0 sehr verbos und eigentlich nur
-noch zum Debuggen gedacht.
-
-`-f` (Langform `--from-file`)::
-Sucht nach Vorkommen aller Suchmuster in der als Parameter angegebenen
-Textdatei.
-
 `-D` (Langform `--from-deb`)::
-Sucht nach Vorkommen aller Dateien in der als Parameter angegebenen
+sucht nach Vorkommen aller Dateien in der als Parameter angegebenen
 `.deb`-Datei. Nützlich, um nach Dateikonflikten mit anderen Paketen zu
 suchen.
 
-Etwas nachteilig an `apt-file` ist, dass es in der
-Standard-Einstellung alle Paketquellen durchsucht und Ihnen dabei
-nicht anzeigt, in welcher davon es den Treffer gefunden hat. Das führt
-zu Verwirrung, bspw. wenn in der Liste der Paketquellen die
-Veröffentlichungen _stable_ und _stable-backports_ eingetragen sind.
-`apt-file` verfügt bislang nicht über einen Schalter, um die Ausgabe
-dementsprechend zu beeinflussen.
+`-f` (Langform `--from-file`)::
+sucht nach dem Vorkommen aller Suchmuster, die in der angegebenen
+Textdatei stehen.
+
+`-i` (Langform `--ignore-case`):: 
+Suche unabhängig von Groß- und Kleinschreibung des Suchmusters.
+
+`-l` (Langform `--package-only`):: 
+Das Ergebnis ist nur der Paketname, auf den das Suchmuster passt.
+Dateinamen werden nicht berücksichtigt.
+
+`-v` (Langform `--verbose`):: 
+Schalter für eine ausführliche Ausgabe. Damit zeigt `apt-file` an, wo es
+seine Informationen herholt und wonach es genau sucht. Die Ausgabe ist
+spätestens seit Version 3.0 sehr verbos und eigentlich nur noch zum
+Debuggen gedacht, aber dennoch nützlich.
+
+`-x` (Langform `--regexp`):: 
+interpretiert das Suchmuster als Regulären Ausdruck, so wie ihn Perl
+versteht (PCRE). Ohne diesen Schalter fasst `apt-file` das Suchmuster
+als schlichte Zeichenkette auf.
+
+Etwas nachteilig an `apt-file` ist, dass es in der Standardeinstellung
+alle Paketquellen durchsucht und Ihnen dabei nicht anzeigt, in welcher
+davon es den Treffer gefunden hat. Das führt zu Verwirrung, bspw. wenn
+in der Liste der Paketquellen die Veröffentlichungen _stable_ und
+_stable-backports_ eingetragen sind. `apt-file` verfügt bislang nicht
+über einen Schalter, um die Ausgabe dementsprechend zu beeinflussen.
 
 // Stichwort für den Index
 (((apt-file, update)))
