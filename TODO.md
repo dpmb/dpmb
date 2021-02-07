@@ -25,5 +25,6 @@ Infrastruktur-Doku aktualisieren
 --------------------------------
 
 * `werkzeuge/paketquellen-und-werkzeuge/automatisiertes-auswaehlen-von-paketquellen.adoc`:
-  `deb.debian.org` / Fastly besser
-  dokumentieren. `httpredir.debian.org` ist nur noch ein ALias dafür.
+   * `deb.debian.org` / Fastly besser
+     dokumentieren. `httpredir.debian.org` ist nur noch ein ALias dafür.
+  * `debug.mirrors.debian.org` dokumentieren.

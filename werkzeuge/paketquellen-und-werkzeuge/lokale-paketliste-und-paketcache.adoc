@@ -24,34 +24,51 @@ geringerer Verzögerung nutzbar als externe Ressourcen und reduzieren
 zudem die Netzlast.
 
 Die nachfolgende Auflistung ist typisch, wenn Sie als Paketmirror
-`ftp.de.debian.org` und die Distributionsbereiche 'main', 'contrib' und
-'non-free' benutzen:
+`ftp.ch.debian.org` und die Distributionsbereiche 'main', 'contrib' und
+'non-free' im der Veröffentlichung `bullseye` benutzen:
 
 .Übersicht zu den lokalen Dateien, in denen die Paketlisten hinterlegt sind
 ----
 $ ls /var/lib/apt/lists
-ftp.de.debian.org_debian_dists_wheezy_contrib_source_Sources
-ftp.de.debian.org_debian_dists_wheezy_main_source_Sources
-ftp.de.debian.org_debian_dists_wheezy_non-free_source_Sources
-ftp.de.debian.org_debian_dists_wheezy_Release
-ftp.de.debian.org_debian_dists_wheezy_Release.gpg
+ftp.ch.debian.org_debian_dists_bullseye-backports_InRelease
+ftp.ch.debian.org_debian_dists_bullseye_contrib_binary-amd64_Packages
+ftp.ch.debian.org_debian_dists_bullseye_contrib_binary-amd64_Packages.diff_Index
+ftp.ch.debian.org_debian_dists_bullseye_contrib_Contents-all.diff_Index
+ftp.ch.debian.org_debian_dists_bullseye_contrib_Contents-all.lz4
+ftp.ch.debian.org_debian_dists_bullseye_contrib_Contents-amd64.diff_Index
+ftp.ch.debian.org_debian_dists_bullseye_contrib_Contents-amd64.lz4
+ftp.ch.debian.org_debian_dists_bullseye_contrib_i18n_Translation-en
+ftp.ch.debian.org_debian_dists_bullseye_contrib_i18n_Translation-en.diff_Index
+ftp.ch.debian.org_debian_dists_bullseye_contrib_source_Sources
+ftp.ch.debian.org_debian_dists_bullseye_contrib_source_Sources.diff_Index
+ftp.ch.debian.org_debian_dists_bullseye_InRelease
+ftp.ch.debian.org_debian_dists_bullseye_main_binary-amd64_Packages
+ftp.ch.debian.org_debian_dists_bullseye_main_binary-amd64_Packages.diff_Index
+ftp.ch.debian.org_debian_dists_bullseye_main_Contents-all.diff_Index
+ftp.ch.debian.org_debian_dists_bullseye_main_Contents-all.lz4
+ftp.ch.debian.org_debian_dists_bullseye_main_Contents-amd64.diff_Index
+ftp.ch.debian.org_debian_dists_bullseye_main_Contents-amd64.lz4
+ftp.ch.debian.org_debian_dists_bullseye_main_i18n_Translation-en
+ftp.ch.debian.org_debian_dists_bullseye_main_i18n_Translation-en.diff_Index
+ftp.ch.debian.org_debian_dists_bullseye_main_source_Sources
+ftp.ch.debian.org_debian_dists_bullseye_main_source_Sources.diff_Index
+ftp.ch.debian.org_debian_dists_bullseye_non-free_binary-amd64_Packages
+ftp.ch.debian.org_debian_dists_bullseye_non-free_binary-amd64_Packages.diff_Index
+ftp.ch.debian.org_debian_dists_bullseye_non-free_Contents-all.diff_Index
+ftp.ch.debian.org_debian_dists_bullseye_non-free_Contents-all.lz4
+ftp.ch.debian.org_debian_dists_bullseye_non-free_Contents-amd64.diff_Index
+ftp.ch.debian.org_debian_dists_bullseye_non-free_Contents-amd64.lz4
+ftp.ch.debian.org_debian_dists_bullseye_non-free_i18n_Translation-en
+ftp.ch.debian.org_debian_dists_bullseye_non-free_i18n_Translation-en.diff_Index
+ftp.ch.debian.org_debian_dists_bullseye_non-free_source_Sources
+ftp.ch.debian.org_debian_dists_bullseye_non-free_source_Sources.diff_Index
 lock
-partial/
-security.debian.org_dists_wheezy_updates_contrib_binary-i386_Packages
-security.debian.org_dists_wheezy_updates_contrib_i18n_Translation-en
-security.debian.org_dists_wheezy_updates_contrib_source_Sources
-security.debian.org_dists_wheezy_updates_main_binary-i386_Packages
-security.debian.org_dists_wheezy_updates_main_i18n_Translation-en
-security.debian.org_dists_wheezy_updates_main_source_Sources
-security.debian.org_dists_wheezy_updates_non-free_binary-i386_Packages
-security.debian.org_dists_wheezy_updates_non-free_i18n_Translation-en
-security.debian.org_dists_wheezy_updates_non-free_source_Sources
-security.debian.org_dists_wheezy_updates_Release
-security.debian.org_dists_wheezy_updates_Release.gpg
+partial
+security.debian.org_dists_bullseye-security_InRelease
 $
 ----
 
-Für jede Paketquelle aus `/etc/apt/sources.list` wird eine eigene,
+Für jede Paketquelle aus `/etc/apt/sources.list` wird eine oder mehrere eigene,
 lokale Datei gepflegt. Diese ist eine Textdatei und beinhaltet alle
 Informationen zu den beziehbaren Paketen, bspw. den genauen Paketnamen
 und dessen Version (<<benennung-eines-debian-pakets>>), den Maintainer
