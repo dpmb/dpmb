@@ -32,8 +32,8 @@ Es kommt vor, dass Pakete Dateien unter `/etc/` erst bei der
 Installation anlegen. Das ist inbesondere dann der Fall, wenn deren
 Inhalt dynamisch generiert wird. Diese sind dann keine "Conffiles" im
 eigentlichen Sinne, werden aber teilweise von Programmen wie `ucf`
-<<Debian-Paket-ucf>> analog zu Conffiles behandelt. Diese Einstufung
-hängt vom jeweiligen Paket ab.
+<<Debian-Paket-ucf>> analog zu Conffiles behandelt. Wie dies
+gehandhabt wird, hängt vom jeweiligen Paket ab.
 
 Um solche bei Installation oder Aktualisierung eines Paketes erzeugte
 Konfigurationsdateien aufzufinden, kommt man nicht umhin, direkt in die
