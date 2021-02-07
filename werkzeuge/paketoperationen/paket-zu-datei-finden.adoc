@@ -203,22 +203,24 @@ _stable-backports_ eingetragen sind. `apt-file` verfügt bislang nicht
 über einen Schalter, um die Ausgabe dementsprechend zu beeinflussen.
 
 // Stichwort für den Index
+(((apt-file, Strukturdatenbank aktualisieren)))
 (((apt-file, update)))
 
 [NOTE]
 .Aktuelle Strukturdatenbank
 ===========================
 
-Um mit `apt-file` arbeiten zu können, müssen nach der Installation
-mindestens einmal die Paketinhaltslisten aktualisiert werden, entweder
-nur die Paketinhaltslisten mittels `apt-file update` oder grade auch
-zusammen mit den Paketlisten, z.B. mittels `apt update`. (Bei
-`apt-file` vor Version 3.0 geht dies nur mittels `apt-file update`.)
+Um mit `apt-file` arbeiten zu können, müssen nach der Installation des
+Paketes mindestens einmal die Paketinhaltslisten aktualisiert werden.
+Das nehmen Sie entweder mittels `apt-file update` vor, oder indem Sie
+die Paketlisten aktualisieren -- z.B. mittels `apt update` oder `apt-get
+update`. Bei Versionen von `apt-file` vor Version 3.0 geht dies noch
+nicht automatisch und nur mittels `apt-file update`.
 
-Andernfalls quittiert `apt-file` einen Aufruf mit der Fehlermeldung
-»The cache is empty. You need to run "apt-file update" first.« (auf
-Deutsch: »Der Cache ist leer. Sie zuerst müssen "apt-file update"
-aufrufen.«)
+Unterbleibt dieser Schritt, quittiert `apt-file` einen Aufruf zur Suche
+mit der Fehlermeldung »The cache is empty. You need to run "apt-file
+update" first.« (auf Deutsch: »Der Cache ist leer. Sie zuerst müssen
+"apt-file update" aufrufen.«)
 ===========================
 
 // Stichwort für den Index
