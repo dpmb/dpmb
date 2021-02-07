@@ -3,6 +3,8 @@ dpmb (0~2021.02.03) UNRELEASED; urgency=medium
   * New snapshot
     + Removes GitBook support. (Wasn't used in the Debian package anyways.)
     + Updates asciidoc-macros/*.conf to fix image embedding with Python 3.
+    + Updates for the Bullseye stable release. (Closes: #970063)
+    + Improved documentation about Debian LTS and Extended LTS.
   * Mark package as "Multi-Arch: foreign" as recommended by the Multi-Arch
     Hinter.
   * Bump debhelper compatibility level to 13.
