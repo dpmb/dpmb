@@ -13,17 +13,49 @@
 Häufig, aber in unregelmäßigen Abständen – d.h. wenn es erforderlich
 ist – kündigt das Debian Security-Team <<Debian-Security>>
 Sicherheitsaktualisierungen an und stellt diese bereit. Um von diesen
-Aktualisierungen zu profitieren, ergänzen Sie die Datei
-`/etc/apt/sources.list` um den folgenden Eintrag (hier am Beispiel von
-Debian 10 _Buster_):
+Aktualisierungen zu profitieren, braucht es einen entsprechenden
+Eintrag in der Datei `/etc/apt/sources.list`.
 
+Typischerweise wird dieser bereits zum Installationzeitpunkt vom
+Debian Installer angelegt, falls die entsprechende Frage mit "Ja"
+beantwortet haben.
+
+Hatten Sie während der Installation bei der Frage nach
+Sicherheitsaktualisierungen "Nein" ausgewählt, oder fehlt der Eintrag
+aus sonstigen Gründen, so können Sie diesen manuell nachtragen.
+
+Allerdings ist an dieser Stelle darauf zu achten, dass sich das Format
+des Eintrages zwischen Debian 10 _Buster_ und Debian 11 _Bullseye_
+leicht geändert hat.
+
+.`sources.list`-Eintrag für Sicherheitsaktualisierungen bis Debian 10
+----
+deb http://security.debian.org/ <veröffentlichungsname>/updates <archivbereiche>
+----
+
+.`sources.list`-Eintrag für Sicherheitsaktualisierungen ab Debian 11
+----
+deb http://security.debian.org/ <veröffentlichungsname>-security <archivbereiche>
+----
+
+Entsprechend hier Beispiele für Debian 10 _Buster_ und Debian 11
+_Bullseye_:
+
+.`sources.list`-Eintrag für Sicherheitsaktualisierungen in Debian 10 _Buster_
 ----
 deb http://security.debian.org/ buster/updates main contrib non-free
 ----
 
-Obige Angabe beinhaltet beispielhaft wiederum die explizite Angabe des
-Aliasnamens der Veröffentlichung. Dieser Name wird gefolgt vom
-Unterverzeichnis `updates` und den daraus gewünschten
-Distributionsbereichen _main_, _contrib_ und _non-free_.
+.`sources.list`-Eintrag für Sicherheitsaktualisierungen in Debian 11 _Bullseye_
+----
+deb http://security.debian.org/ bullseye-security main contrib non-free
+----
+
+Obige Angaben beinhalten wiederum die empfohlene explizite Verwendung
+des Aliasnamens der Veröffentlichung anstatt des Suite-Namens. Dieser
+Name wird gefolgt vom Unterverzeichnis `updates` und den daraus
+gewünschten Distributionsbereichen _main_, _contrib_ und
+_non-free_. Je nach System nicht benötigte Archiv-Bereiche
+(z.B. _non-free_) können Sie einfach weglassen.
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/eintraege-fuer-sicherheitsaktualisierungen.adoc

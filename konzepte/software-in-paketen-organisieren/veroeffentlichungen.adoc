@@ -376,7 +376,6 @@ Teams <<Debian-Security>> an.
 (((Veröffentlichung, Langzeitunterstützung)))
 (((Veröffentlichung, LTS)))
 (((LTS)))
-
 Im Frühjahr 2014 wurden zusätzlich sogenannte _Long Term
 Support_-Varianten <<Debian-LTS>> -- auf Deutsch "Langzeitunterstützung"
 und kurz _LTS_ -- eingeführt. Diese verlängern den Zeitraum der weiteren
@@ -388,7 +387,7 @@ _Wheezy_ abgelöste Veröffentlichung von Debian 6 _Squeeze_ bis 2016
 mit Aktualisierungen versorgt. Seither wurde jede weitere stabile
 Veröffentlichung nach ihrem offiziellen Lebensende ebenfalls als _LTS_
 mit Einschränkungen — z.B. nur noch die beliebtesten Architekturen —
-weitergeführt. Anfangs waren es nur die beiden x86-basierten
+weitergeführt. Anfangs waren dies nur die beiden x86-basierten
 Architekturen 'i386' und 'amd64', momentan beinhaltet das zusätzlich
 auch noch alle drei ARM-basierten Architekturen ('armel', 'armhf' und
 'arm64').
@@ -416,7 +415,6 @@ abgelaufen ist, ist das heute von keiner Relevanz mehr.)
 (((Veröffentlichung, Erweiterte Langzeitunterstützung)))
 (((Veröffentlichung, ELTS)))
 (((Veröffentlichung, Extended LTS)))
-
 Da manchen Anwendern -- vor allem aus dem professionellen Umfeld -- auch
 die LTS-Varianten nicht lange genug Unterstützung anboten, gibt seit
 2018 eine weitere Stufe der Verlängerung. Seit dem Auslaufen von LTS für
@@ -436,7 +434,7 @@ Sicherheitsaktualisierungen desselben Paketes, so werden die Kosten
 entsprechend aufgeteilt. Die Koordination erfolgt über die französische
 Firma Freexian <<Freexian>>.
 
-Desweiteren gibt es im Vergleich zu LTS diese Einschränkungen:
+Desweiteren gibt es im Vergleich zu LTS weitere Einschränkungen:
 
 * Es werden nur Pakete unterstützt, für die sich Sponsoren finden. Die
   aktuelle Liste unterstützter Pakete findet sich unter
