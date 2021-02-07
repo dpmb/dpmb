@@ -1,6 +1,20 @@
 TODO bzgl. nicht mehr aktueller Links, Pakete, etc.
 ===================================================
 
+Paketbezogene Updates
+---------------------
+
+### Aus Debian entfernte Pakete
+
+Nach anhang/anhang-entfernte-werkzeuge/anhang-entfernte-werkzeuge.adoc
+verschieben:
+
 * aptsh seit Buster nicht mehr dabei
 * ara/xara-gtk seit Buster nicht mehr dabei, Beispiele mit xara-gtk ersetzen
+
+Release-bezogene Updates
+------------------------
+
+### Veraltete Beispiele
+
 * Beispiele mit Wheezy durch neuere Beispiele ersetzen
