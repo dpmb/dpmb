@@ -60,36 +60,32 @@ Langform `--search`. Das Textfragment oder Muster beschreibt, wonach die
 Programme in der Dateiliste der installierten Pakete suchen sollen.
 Beginnt das Textfragment mit einem `/`, wird die Zeichenkette als
 absoluter Pfad interpretiert. Nachfolgendes Beispiel illustriert den
-Aufruf nach dem Muster `mupdf-tools` mittels `dpkg` in allen
-installierten Paketen.
+Aufruf nach dem Muster `bsod.` mittels `dpkg` in allen installierten
+Paketen.
 
-.Suche nach dem Muster `mupdf-tools` mittels `dpkg`
+.Suche nach dem Muster `bsod.` mittels `dpkg`
 ----
-$ dpkg -S mupdf-tools
-mupdf-tools: /usr/share/doc/mupdf-tools
-mupdf-tools: /usr/share/doc/mupdf-tools/copyright
-mupdf-tools: /usr/share/doc/mupdf-tools/changelog.gz
-mupdf-tools: /usr/share/doc/mupdf-tools/README
-mupdf-tools: /usr/share/doc/mupdf-tools/changelog.Debian.gz
+$ dpkg -S bsod.
+xscreensaver-screensaver-bsod: /usr/share/applications/screensavers/bsod.desktop
+xscreensaver-screensaver-bsod: /usr/share/man/man6/bsod.6x.gz
+xscreensaver-screensaver-bsod: /usr/share/xscreensaver/config/bsod.xml
 $
 ----
 
 `dlocate` liefert im Allgemeinen ein identisches Ergebnis zu `dpkg` bzw.
 `dpkg-query`. Da `dlocate` zur Suche auf `grep` zurückgreift, hat es
 mitunter eine höhere Trefferrate. Nachfolgendes Beispiel zeigt die Suche
-nach dem absoluten Pfad `/mupdf-tools` – sowohl für `dpkg`, als auch zu
+nach dem absoluten Pfad `/bsod.` – sowohl für `dpkg`, als auch zu
 `dlocate` im Vergleich.
 
-.Suche nach der Pfadangabe `/mupdf-tools`
+.Suche nach der Pfadangabe `/bsod.`
 ----
-$ dpkg -S /mupdf-tools
-dpkg-query: Kein Pfad gefunden, der auf Muster /mupdf-tools passt
-$ dlocate -S /mupdf-tools
-mupdf-tools: /usr/share/doc/mupdf-tools
-mupdf-tools: /usr/share/doc/mupdf-tools/changelog.gz
-mupdf-tools: /usr/share/doc/mupdf-tools/changelog.Debian.gz
-mupdf-tools: /usr/share/doc/mupdf-tools/README
-mupdf-tools: /usr/share/doc/mupdf-tools/copyright
+$ dpkg -S /bsod.
+dpkg-query: Kein Pfad gefunden, der auf Muster /bsod. passt
+$ dlocate -S /bsod.
+xscreensaver-screensaver-bsod: /usr/share/applications/screensavers/bsod.desktop
+xscreensaver-screensaver-bsod: /usr/share/man/man6/bsod.6x.gz
+xscreensaver-screensaver-bsod: /usr/share/xscreensaver/config/bsod.xml
 $
 ----
 
@@ -227,7 +223,7 @@ update" first.« (auf Deutsch: »Der Cache ist leer. Sie zuerst müssen
 (((apt-file, show)))
 (((apt-file, -v)))
 
-Das nachfolgende Beispiel zeigt die Suche der Zeichenkette `aptsh`.
+Das nachfolgende Beispiel zeigt die Suche nach der Zeichenkette `fping`.
 
 .Suche über die Strukturdatenbank mittels `apt-file`
 ----
