@@ -20,9 +20,7 @@ Pflege der im Buch erwähnten Pakete `debsums` und `equivs` übernommen.
 
 *Dipl.-Inf. Frank Hofmann* hat Informatik mit Nebenfach Englisch an der
 Technischen Universität Chemnitz studiert. Er bevorzugt das Arbeiten von
-unterwegs aus als Entwickler, Trainer und Autor. Nach Berlin und Kapstadt
-arbeitet er derzeit in Besançon (Franche-Comté). Seit Sommer 2013 ist er 
-Mitglied im Debtags-Projekt <<Debian-Debtags>>, das sich die 
-Verschlagwortung der einzelnen Debian-Pakete zum Ziel gesetzt hat.
+unterwegs aus als Entwickler, Trainer und Autor. Nach Berlin, Kapstadt
+und Besançon (Franche-Comté) arbeitet von Freiburg aus. 
 
 // Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/autoren.adoc
