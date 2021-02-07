@@ -103,8 +103,8 @@ Wenn vorhanden, ist dies die jeweils vorvorherige stabile
 Veröffentlichung. Zum ersten Mal trat dieser Entwicklungsstand auf, als im
 Frühjahr 2015 Debian 8 _Jessie_ zur stabilen Veröffentlichung erklärt
 wurde. Gleichzeitig wurde Debian 6 _Squeeze_ zur neuen Suite
-_oldoldstable_ und wird per Long Term Support (LTS) weiterhin noch
-eingeschränkt unterstützt.
+_oldoldstable_ und wurde seitdem per Long Term Support (LTS) weiterhin
+noch für 5 Jahre eingeschränkt unterstützt.
 
 experimental:: 
 Dies ist der einzige Entwicklungsstand, der keine alleinstehende
@@ -375,32 +375,31 @@ Teams <<Debian-Security>> an.
 // Stichworte für den Index
 (((Veröffentlichung, Langzeitunterstützung)))
 (((Veröffentlichung, LTS)))
-((LTS))
+(((LTS)))
 
 Im Frühjahr 2014 wurden zusätzlich sogenannte _Long Term
-Support_-Varianten <<Debian-LTS>>– auf Deutsch "Langzeitunterstützung"
-und kurz _LTS_ – eingeführt, die den Zeitraum der weiteren
-Verfügbarkeit und Pflege von den typischerweise drei Jahren auf bis zu
-fünf Jahre verlängern.
+Support_-Varianten <<Debian-LTS>> -- auf Deutsch "Langzeitunterstützung"
+und kurz _LTS_ -- eingeführt. Diese verlängern den Zeitraum der weiteren
+Verfügbarkeit und Pflege einer Veröffentlichung von den typischerweise
+drei Jahren auf bis zu fünf Jahre.
 
 In Folge wurde die im Jahr 2011 freigegebene und 2013 durch Debian 7
 _Wheezy_ abgelöste Veröffentlichung von Debian 6 _Squeeze_ bis 2016
 mit Aktualisierungen versorgt. Seither wurde jede weitere stabile
 Veröffentlichung nach ihrem offiziellen Lebensende ebenfalls als _LTS_
 mit Einschränkungen — z.B. nur noch die beliebtesten Architekturen —
-weitergeführt. Anfangs waren die nur die beiden x86-basierten
-Architekturen 'i386' und 'amd64', momentan sind zusätzlich auch noch
-alle drei ARM-basierten Architekturen ('armel', 'armhf' und 'arm64')
-unterstützt.
+weitergeführt. Anfangs waren es nur die beiden x86-basierten
+Architekturen 'i386' und 'amd64', momentan beinhaltet das zusätzlich
+auch noch alle drei ARM-basierten Architekturen ('armel', 'armhf' und
+'arm64').
 
 Debian LTS wird nicht wie die normalen Sicherheitsaktualisierungen vom
-Debian-Security-Team gehandhabt sondern von einer Gruppe Freiwilliger
+Debian-Security-Team gehandhabt, sondern von einer Gruppe Freiwilliger
 wie auch Firmen, die daran interessiert sind, daß Debian LTS ein
-Erfolg wird — oft auch aus Eigenbedarf heraus.
-
-Entsprechend übernimmt das Debian-LTS-Team das Bereitsstellen von
-Sicherheitsaktualisierungen vom Debian-Security-Team am Ende der
-normalen Unterstützungsdauer der Veröffentlichung.
+Erfolg wird — oft auch aus Eigenbedarf heraus. Dementsprechend übernimmt
+das Debian-LTS-Team das Bereitsstellen von Sicherheitsaktualisierungen
+vom Debian-Security-Team am Ende der normalen Unterstützungsdauer der
+Veröffentlichung.
 
 Zur Nutzung von Debian LTS nach Ablauf des normalen
 Unterstützungszeitraumes muß an der Konfiguration des Systems nichts
@@ -412,38 +411,38 @@ abgelaufen ist, ist das heute von keiner Relevanz mehr.)
 ==== Extended Long Term Support (ELTS) ====
 
 // Stichworte für den Index
+(((ELTS)))
+(((Extended LTS)))
 (((Veröffentlichung, Erweiterte Langzeitunterstützung)))
 (((Veröffentlichung, ELTS)))
 (((Veröffentlichung, Extended LTS)))
-((ELTS))
-((Extended LTS))
 
-Da manchen, vor allem im professionellen Umfeld, auch die
-LTS-Varianten nicht lange genug Unterstützung anboten, wird seit 2018
-— seit dem Auslaufen von LTS für Debian 7 _Wheezy_ — mit dem Projekt
-"Extended LTS", auf deutsch "Erweiterte Langzeitunterstützung" und
-kurz "ELTS", die Unterstützung von Debian Veröffentlichungen um
-weitere zwei Jahre auf ca. sieben Jahre verlängert.
-
-Im Gegensatz zu Debian LTS, welches immer noch ein Projekt unter dem
-Dach von Debian ist, ist Extended LTS ein kommerzielles Angebot,
-dessen Aktualisierungen jedoch trotzdem jeder nutzen kann.
+Da manchen Anwendern -- vor allem aus dem professionellen Umfeld -- auch
+die LTS-Varianten nicht lange genug Unterstützung anboten, gibt seit
+2018 eine weitere Stufe der Verlängerung. Seit dem Auslaufen von LTS für
+Debian 7 _Wheezy_ besteht das Projekt "Extended LTS", auf deutsch
+"Erweiterte Langzeitunterstützung" und kurz "ELTS", die die
+Unterstützung von Debian-Veröffentlichungen um weitere zwei Jahre auf
+ca. sieben Jahre verlängert. Im Gegensatz zu Debian LTS, welches immer
+noch ein Projekt unter dem Dach von Debian ist, ist Extended LTS ein
+kommerzielles Angebot, dessen Aktualisierungen jedoch trotzdem jeder
+nutzen kann.
 
 Für welche Pakete es Aktualisierungen gibt, hängt jedoch davon ab, ob
 ein Paket jemandem wichtig genug ist, um sich am Arbeitsaufwand für
 dessen Sicherheitsaktualisierungen zu beteiligen. Interessieren sich
 mehrere Personen oder Organisationen für die
 Sicherheitsaktualisierungen desselben Paketes, so werden die Kosten
-entsprechend aufgeteilt. Koordinieren tut das Ganze die französischen
+entsprechend aufgeteilt. Die Koordination erfolgt über die französische
 Firma Freexian <<Freexian>>.
 
-Außerdem gibt es im Vergleich zu LTS weitere Einschränkungen:
+Desweiteren gibt es im Vergleich zu LTS diese Einschränkungen:
 
 * Es werden nur Pakete unterstützt, für die sich Sponsoren finden. Die
   aktuelle Liste unterstützter Pakete findet sich unter
   <<Debian-ELTS-Packages>>.
 
-* Es sind ggf. noch weniger Architekturen unterstützt. Im Falle von
+* Es werden ggf. noch weniger Architekturen unterstützt. Im Falle von
   Debian 8 _Jessie_ sind dies nur noch 'i386', 'amd64' und 'armel'.
 
 * Der Linux-Kernel wird nicht unterstützt. Es wird jedoch ein Backport
@@ -465,25 +464,22 @@ Debian ELTS werden kann, ist auf der ELTS-Webseite von Freexian
 
 Um die von der erweiterten Langzeitunterstützung bereitgestellten
 Paketaktualisierungen nutzen zu können, müssen Sie im Gegensatz zu
-Debian LTS ein weiteres APT-Repository zu Ihrer
+Debian LTS zwei Dinge tun -- 1.) ein weiteres APT-Repository zu Ihrer
 `/etc/apt/sources.list` (oder einer Datei im Verzeichnis
-`/etc/apt/sources.list.d/`) hinzufügen als auch den PGP-Schlüssel des
-Extended-LTS-Projektes importieren.
+`/etc/apt/sources.list.d/`) hinzufügen, und 2.) den PGP-Schlüssel des
+Extended-LTS-Projektes importieren. Wie das erfolgt, ist im 'Debian
+ELTS- HowTo <<Debian-ELTS-HowTo>> beschrieben. Im Folgenden dazu eine
+kurze Zusammenfassung:
 
-Wie das geht ist unter <<Debian-ELTS-HowTo>> beschrieben. Im Folgenden
-eine kurze Zusammenfassung:
-
-Zuerst von
+Der erste Schritt ist das Herunterladen des aktuellen Schlüsselrings des
+Projektes als `.deb`-Paket von
 https://deb.freexian.com/extended-lts/pool/main/f/freexian-archive-keyring/
-den aktuellen Schlüsselring des Projektes als `.deb`-Paket
-herunterladen. Man vertraut hierbei nur auf das HTTPS-Zertifikat des
-Webservers.
+. Das Vertrauen liegt hierbei nur auf dem HTTPS-Zertifikat des Webservers.
 
-Dann die heruntergeladene Datei mit Administrator-Rechten (d.h. als
-`root` oder z.B. mittels `sudo`) mit `dpkg -i
-freexian-archive-keyring*.deb` installieren.
-
-Nun das APT-Repository durch Hinzufügen der folgenden Zeile aktivieren:
+Danach wird das heruntergeladene Paket mit Administrator-Rechten (d.h. als
+`root` oder z.B. mittels `sudo`) über den Aufruf `dpkg -i
+freexian-archive-keyring*.deb` installiert. Nun wird das APT-Repository
+durch das Hinzufügen der folgenden Zeile aktiviert:
 
 .`sources.list`-Eintrag für Extended LTS
 ----
@@ -494,9 +490,9 @@ deb http://deb.freexian.com/extended-lts veröffentlichung-lts sektionen
 deb http://deb.freexian.com/extended-lts jessie-lts main contrib non-free
 ----
 
-Abschließend noch `apt update` oder ein Äquivalent aufrufen, um die
-ELTS-Paketlisten herunterzuladen. Sind bereits Aktualisierungen
-verfügbar, so kann man diese direkt auch mit `apt upgrade` oder
-ggf. `apt full-upgrade` einspielen.
+Abschließend ist noch `apt update` oder ein Äquivalent aufzurufen, um
+die ELTS-Paketlisten herunterzuladen. Sind bereits Aktualisierungen
+verfügbar, so kann man diese direkt auch mit `apt upgrade` oder ggf.
+`apt full-upgrade` einspielen.
 
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/veroeffentlichungen.adoc
