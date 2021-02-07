@@ -352,7 +352,8 @@ widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 | `dpkg-query` | `dpkg-query -L` 'Paketname' |
 |            | `dpkg-query --listfiles` 'Paketname' |
 | `RPM`      | `rpm -ql` 'Paketname' |
-| `YUM`      | |
+| `YUM`      | `repoquery -l` 'Paketname' | aus Paket `yum-utils`
+|            | `repoquery --list` 'Paketname' |
 |====
 
 === Paket identifizieren, aus dem eine Datei stammt ===
