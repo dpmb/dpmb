@@ -13,6 +13,7 @@ dpmb (0~2021.02.03) UNRELEASED; urgency=medium
   * Drop override_dh_auto_install. Images are not needed as they are
     embedded as data:-URLs. Fixes bailing out of dh_missing.
   * Declare compliance with Debian Policy 4.5.1. No other changes needed.
+  * Update copyright years in debian/copyright.
 
  -- Axel Beckert <abe@debian.org>  Wed, 03 Feb 2021 02:15:15 +0100
 
