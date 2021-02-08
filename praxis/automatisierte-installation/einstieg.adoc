@@ -63,8 +63,8 @@ der Fragen des Debian Installers im Vorfeld. Paketliste und Konfiguration
 liegen entweder a) in einer Datenbank oder b) werden direkt aus dem Master 
 vorher ausgelesen. In der Vergangenheit wurden dafür bereits verschiedene 
 Lösungen entworfen und genutzt. Zu den Vertretern für a) gehören bspw. 
-Jumpstart (Sun OS) <<jumpstart>>, Kickstart <<kickstart>> und Cobbler 
-<<cobbler>>, FAI <<FAI-Projekt>>, Crowbar <<crowbar>>, Foreman <<foreman>>, 
+Jumpstart (Sun OS) <<jumpstart>>, Kickstart <<kickstart-webseite>> und Cobbler
+<<cobbler-webseite>>, FAI <<FAI-Projekt>>, Crowbar <<crowbar>>, Foreman <<foreman>>,
 OpenQRM <<openqrm>> und Spacewalk <<spacewalk>>. Für b) stehen Ihnen die 
 Werkzeuge `dpkg`, `debconf-get-selections`, `debconf-set-selections` und 
 `apt-clone` zur Verfügung. Darauf gehen wir unter 'Mit Debian-Werkzeugen'

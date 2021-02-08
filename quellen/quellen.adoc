@@ -145,7 +145,7 @@
 
 - [[[comptia-linux]]] CompTIA Linux+, https://www.comptia.org/certifications/linux
 
-- [[[cobbler]]] Cobbler, https://cobbler.github.io/
+- [[[cobbler-webseite]]] Cobbler, https://cobbler.github.io/
 
 - [[[Conectiva]]] Conectiva Linux, Wikipedia (portugiesisch), https://pt.wikipedia.org/wiki/Conectiva
 
@@ -701,7 +701,7 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Keryx]]] Keryx im Ubuntu Launchpad, https://launchpad.net/keryx
 
-- [[[kickstart]]] Kickstart, https://en.wikipedia.org/wiki/Kickstart_(Linux)
+- [[[kickstart-webseite]]] Kickstart, https://en.wikipedia.org/wiki/Kickstart_(Linux)
 
 - [[[Knoppix]]] Knoppix, http://www.knopper.net/knoppix/
 
