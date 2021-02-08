@@ -8,20 +8,11 @@
 
 // Stichworte für den Index
 (((Armbian)))
-(((Emdebian)))
 (((Raspbian)))
-
-// TODO: "As of July 2014, updates to the Emdebian distributions
-// ceased. There will be no further updates and no further stable
-// releases." emdebian-archive-keyring ist jedoch grade wieder frisch
-// nach Debian Unstable gekommen → Im Auge behalten.
 
 Armbian:: 
 Debian für ARM-basierte Geräte, bspw. ein Cubieboard oder Cubietruck
 <<Armbian>>
-
-Emdebian:: 
-Debian für Embedded Devices <<Emdebian>>
 
 Raspbian:: 
 Debian GNU/Linux so rekompiliert, dass er mit bestöglicher Optimierung auch auf
