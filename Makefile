@@ -60,6 +60,10 @@ doctor.html: $(BASE).doctor.html
 %.doctor.html: $(DEFAULTDEPENDENCIES)
 	asciidoctor $(DOCTORDEFAULTOPTIONS) -o $@ $(BASE).adoc
 
+doctor.pdf: $(BASE).doctor.pdf
+%.doctor.pdf: $(DEFAULTDEPENDENCIES)
+	asciidoctor-pdf $(DOCTORDEFAULTOPTIONS) -o $@ $(BASE).adoc
+
 version.adoc: debian-paketmanagement.adoc *-docinfo.xml */*.adoc */*/*.adoc Makefile
 	echo ":revdate: "$$(date --utc --date="@$${SOURCE_DATE_EPOCH:-$$(date +%s)}"  '+%FT%T%:z') > version.adoc
 	echo -n ":revnumber: " >> version.adoc; \
