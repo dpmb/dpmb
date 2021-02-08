@@ -60,7 +60,7 @@ einzelnen Buchstaben stehen für den aktuellen Paketstatus (`%c`), die
 Aktion des Pakets (`%a`), automatische Installation (`%M`), den
 Paketnamen (`%p`) und die Paketbeschreibung (`%d`). Eine detaillierte
 Übersicht zu allen zulässigen Formatoptionen erklären wir Ihnen unter
-```aptitude` Format Strings'' in <<aptitude-format-strings>>. Eine
+''`aptitude` Format Strings'' in <<aptitude-format-strings>>. Eine
 Alternative bietet zudem das Aptitude Handbuch
 <<aptitude-dokumentation-paketdarstellung>>.
 
