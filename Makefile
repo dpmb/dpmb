@@ -74,6 +74,8 @@ test-epub: $(BASE).epub
 	epubcheck $(BASE).epub
 
 # Formerly used for divshot.io, but rather generic
+deployverbose: VERBOSE=-v -v
+deployverbose: deploy
 deploy: all version.adoc
 	for suffix in $(FORMATS); do cp -pvfr $(BASE).$$suffix deploy/; done
 	for i in `find . -name '*.png' -not -path './deploy/*'`; do \
