@@ -1,3 +1,11 @@
+dpmb (0~2021.02.08) UNRELEASED; urgency=medium
+
+  * New snapshot
+    + Drop mentioning Emdebian.
+    + Distinguish between Raspbian and Raspberry Pi OS.
+
+ -- Axel Beckert <abe@debian.org>  Mon, 08 Feb 2021 04:14:30 +0100
+
 dpmb (0~2021.02.07) unstable; urgency=medium
 
   * New snapshot
