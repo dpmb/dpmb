@@ -29,7 +29,7 @@ und Ubuntu 19.04 'Disco'. 'aptsh' war zuletzt mehrere Jahre verwaist
 gegen neuere APT-Version zu bauen. Kurz vor dem Release von Debian 10
 'Buster' wurde es dann aus Debian Unstable und Testing (zu dem
 Zeitpunkt 'Buster') entfernt <<aptsh-entfernen-Bug-Report-930680>>,
-weil es mit der APT-Verrsion nach 'Buster' (≥ 1.9) nicht baute und
+weil es mit der APT-Verrsion nach 'Buster' (APT ≥ 1.9) nicht baute und
 seit Jahren verwaist war.
 
 `ara` and `xara-gtk`::
