@@ -63,16 +63,15 @@ beinhaltet die Python-Schnittstelle zum Zugriff auf die einzelnen
 Softwarepakete. Es hat die gleiche Funktionalität wie die weiter oben
 beschriebenen Pakete 'libapt-pkg' und 'libapt-pkg-perl'.
 
-=== Bibliothek `libapt-pkg-doc` ===
+=== Paket `libapt-pkg-doc` ===
 
 // Stichworte für den Index
-(((Bibliothek, libapt-pkg-doc)))
 (((Debianpaket, libapt-pkg-doc)))
 (((libapt-pkg-doc)))
-Dieses Paket <<Debian-Paket-libapt-pkg-doc>> stellt die Dokumentation
-zur Verfügung, auf deren Grundlage Sie eigene Entwicklungen in APT
-anstoßen können. Die Dokumentation steht als Plaintext und als
-HTML-Dokument bereit.
+Das Paket <<Debian-Paket-libapt-pkg-doc>> stellt die Dokumentation zu
+libapt-pkg zur Verfügung, auf deren Grundlage Sie die Bibliothek in
+eigenen Entwicklungen verwenden können. Die Dokumentation steht als
+Plaintext und als HTML-Dokument bereit.
 
 === Bibliothek `libapt-inst` ===
 
