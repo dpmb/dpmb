@@ -35,7 +35,7 @@ seit Jahren verwaist war.
 `ara` and `xara-gtk`::
 Kommandozeilen- und graphische Programme zum Durchsuchen der
 Debian-Paket-Listen. Zuletzt in Debian 9 _Stretch_, waren zum
-Zeitpunkt der Entfernung bereits 7 Jahre verweist und waren nicht mehr
+Zeitpunkt der Entfernung bereits 7 Jahre verwaist und waren nicht mehr
 kompatibel mit den aktuellen Versionen der internen
 (Text-)Datenbank-Formaten von apt und dpkg.
 
