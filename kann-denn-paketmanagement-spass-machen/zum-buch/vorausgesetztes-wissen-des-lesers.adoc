@@ -80,8 +80,8 @@ virtuelle Maschine oder auch nur eine `chroot`-Umgebung
 
 Dabei spielt es kaum eine Rolle, welches APT-basierte System Sie
 verwenden. Begonnen haben wir das Buch zu dem Zeitpunkt, als Debian 7
-'Wheezy' die stabile Debian-Veröffentlichung war. Daher stammen die
-meisten Beispiele im Buch aus diesem Zeitraum. Spätere Inhalte setzen 
+'Wheezy' die stabile Debian-Veröffentlichung war. Daher stammen 
+viele Beispiele im Buch aus diesem Zeitraum. Spätere Inhalte setzen 
 auf dem Nachfolgern Debian 8 'Jessie', Debian 9 'Stretch', Debian 10
 'Buster' und Debian 11 'Bullseye' auf. Alle Ausnahmen sind
 entsprechend gekennzeichnet, bspw.  wenn wir zur Illustration auf ein
