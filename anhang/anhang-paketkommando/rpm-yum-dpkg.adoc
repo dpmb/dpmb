@@ -419,7 +419,7 @@ beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
 | `aptitude` | `aptitude show` 'Paketname' | Suche in allen verfügbaren Paketen
 | `dpkg`     | `dpkg -s` 'Paketname' | 'Paketname' muß lokal installiert sein
 |            | `dpkg --status` 'Paketname' | 'Paketname' muß lokal installiert sein
-|            | `dpkg -i` 'Dateiname' | 'Dateiname' bezeichnet eine lokale Datei
+|            | `dpkg -I` 'Dateiname' | 'Dateiname' bezeichnet eine lokale Datei
 |            | `dpkg --info` 'Dateiname' | 'Dateiname' bezeichnet eine lokale Datei
 | `dpkg-query` | `dpkg-query -s` 'Paketname' | 'Paketname' muß lokal installiert sein
 |            | `dpkg-query --status` 'Paketname' | 'Paketname' muß lokal installiert sein
