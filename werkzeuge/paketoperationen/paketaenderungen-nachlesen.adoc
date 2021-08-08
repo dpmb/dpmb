@@ -111,17 +111,52 @@ als einfache Aufzählung.
 ==== Zwei Paketversionen miteinander vergleichen ====
 
 // Stichworte für den Index
+(((Debianpaket, devscripts)))
 (((Debianpaket, diffoscope)))
 (((Paket, Änderungen nachlesen)))
+(((Paket, Zwei Paketversionen miteinander vergleichen)))
 (((Debian, Reproducible Builds)))
 Wie oben bereits genannt, beschreibt das Änderungsprotokoll lediglich in 
-groben Zügen, welche Korrekturen ein Paket erfahren hat. Mit Hilfe des
-Werkzeugs `diffoscope` <<Debian-Paket-diffoscope>> aus dem Projekt
-'Reproducible Builds' <<ReproducibleBuilds>> erhalten Sie eine Auswertung, 
-welche Dateien oder Verzeichnisse aus einem Paket im Vergleich zur 
-vorherigen Version entfernt wurden sowie welche hinzugekommen, umbenannt 
-oder auch verschoben wurden und welche Änderungen in bestehenden Dateien 
-erfolgt sind. Der Aufruf ist dazu wie folgt:
+groben Zügen, welche Korrekturen ein Paket erfahren hat. Um die
+detaillierten Änderungen zwischen zwei (aufeinanderfolgenden)
+Paketversionen zu erfahren, bedarf es einer genaueren Inspektion.
+
+Zwei Werkzeuge sind uns bislang bekannt -- `debdiff` und `diffoscope`
+<<Debian-Paket-diffoscope>>. Das Erstgenannte satmmt aus dem Paket
+`devscripts` <<Debian-Paket-devscripts>> stammt, das zweite gehört
+hingegen zu dem Projekt 'Reproducible Builds' <<ReproducibleBuilds>>.
+Während das Paket 'devscripts' für `debdiff` eine recht überschaubare
+Paketgröße besitzt (derzeit etwa 1 MB), ist 'diffoscope' zwar nur rund
+60 KB groß, zieht aber die gesamte Entwicklungsumgebung für
+'Reproducible Builds' als Paketabhängigkeit mit -- das kann dann
+durchaus 2 GB Platz beanspruchen.
+
+Mit beiden Werkzeugen erhalten Sie eine Auswertung darüber, welche
+Dateien oder Verzeichnisse aus einem Paket im Vergleich zur vorherigen
+Version entfernt wurden sowie welche hinzugekommen, umbenannt oder auch
+verschoben wurden und welche Besitz- und Ausführungsrechte sich ggf.
+noch geändert haben. Der nachfolgende Aufruf zeigt `debdiff` mit zwei
+Versionen des Pakets 'xpenguins' über den folgenden Aufruf:
+
+.Aufruf von `debdiff` für zwei Pakete
+----
+$ debdiff xpenguins*
+[The following lists of changes regard files as different if they have
+different names, permissions or owners.]
+
+Files in second .deb but not in first
+-------------------------------------
+-rw-r--r--  root/root   /usr/share/doc/xpenguins/changelog.Debian.amd64.gz
+
+Control files: lines which differ (wdiff format)
+------------------------------------------------
+Installed-Size: [-1119-] {+1114+}
+{+Source: xpenguins (2.2-10)+}
+Version: [-2.2-10-] {+2.2-10+b1+}
+----
+
+Der Aufruf von `diffoscope` ist ähnlich, hier am Beispiel für zwei
+Pakete von 'cheese':
 
 .Aufruf von `diffoscope` für zwei Pakete
 ----
@@ -129,7 +164,8 @@ $ diffoscope cheese_3.14.1-1_amd64.deb cheese_3.14.1-2_amd64.deb
 ----
 
 Nachfolgend sehen Sie die Ausgabe der entdeckten Änderungen. Es ist eine
-Art Baumstruktur, die durchaus länger werden kann.
+Art Baumstruktur, die durchaus länger werden kann. Daher zeigt das
+nachfolgende Bild nur einen Ausschnitt.
 
 .Von `diffoscope` gefundene Änderungen (Ausschnitt)
 image::werkzeuge/paketoperationen/diffoscope-debian-package.png[id="fig.diffoscope", width="30%"]
