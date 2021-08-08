@@ -145,11 +145,11 @@ $ debdiff xpenguins*
 different names, permissions or owners.]
 
 Files in second .deb but not in first
--------------------------------------
+- ------------------------------------
 -rw-r--r--  root/root   /usr/share/doc/xpenguins/changelog.Debian.amd64.gz
 
 Control files: lines which differ (wdiff format)
-------------------------------------------------
+- -----------------------------------------------
 Installed-Size: [-1119-] {+1114+}
 {+Source: xpenguins (2.2-10)+}
 Version: [-2.2-10-] {+2.2-10+b1+}
