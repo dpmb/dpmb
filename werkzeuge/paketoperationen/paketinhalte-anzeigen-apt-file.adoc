@@ -151,11 +151,12 @@ $
 (((apt-file, list)))
 (((apt-file, show)))
 Die beiden Optionen `show` und `list` des Werkzeugs `apt-file` sind
-synonym zueinander. Wie `dpkg -L liefern sie den Inhalt des Paketes,
+synonym zueinander. Wie `dpkg -L` liefern sie den Inhalt des Paketes,
 allerdings nur die Dateien und nicht wie `dpkg -L` auch noch die
 enthaltenen (potentiell sogar leeren) Verzeichnisse. Dafür zeigt
 `apt-file show` immer auch noch den Paketnamen als Präfix in jeder
-Zeile mit an.
+Zeile mit an. Das nachfolgende Beispiel zeigt den Aufruf für das Paket
+'xterm'.
 
 .Paketinhalt in kompakter Form mittels `apt-file`
 ----
