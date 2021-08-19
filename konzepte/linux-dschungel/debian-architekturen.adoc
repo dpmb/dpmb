@@ -143,6 +143,8 @@ $
 // Stichworte für den Index
 (((Debian, Architekturen)))
 (((Debian, multiarch)))
+(((Fedora, biarch)))
+(((RedHat, biarch)))
 Seit etwa 2004 läuft unter den Debian-Entwicklern die Diskussion um den
 Support für 'multiarch' <<Debian-Wiki-multiarch>>. Unterstützung dafür
 gibt es in Debian seit Version 7 'Wheezy' und in Ubuntu seit Version
@@ -196,6 +198,7 @@ Schritt mit `dpkg` und `apt` erfolgreich bewerkstelligen.
 // Stichworte für den Index
 (((Debian, Architekturen)))
 (((Debian, multiarch)))
+(((Debianpaket, ia32-libs)))
 Wie oben bereits beschrieben, ist einer der Gründe hinter 'multiarch' das
 Nutzen bereits kompilierter 32-Bit-Software auf 64-Bit-Systemen. Der Bedarf
 hierfür war auch schon vor der Entstehung von 'multiarch' sehr groß.
@@ -215,8 +218,8 @@ Allein die Pflege dieses Pakets war schon recht mühsam. Ab der
 Einführung von 'multiarch' wurde es gegenstandslos. Darum ist es in
 Debian 7.0 'Wheezy' ein (leeres) Übergangspaket auf die passenden
 'multiarch'-fähigen Einzelpakete der Architektur 'i386'. In Debian 8
-Jessie ist bereits nicht mehr enthalten, auch wenn man selbst
-heutzutage hier und da noch über Pakete von Drittparteien findet, die
-davon abhängen zu scheinen.
+'Jessie' ist es bereits nicht mehr enthalten, auch wenn man selbst
+heutzutage hier und da noch Pakete von Drittparteien findet, die davon
+abzuhängen scheinen.
 
 // Datei (Ende): ./konzepte/linux-dschungel/debian-architekturen.adoc
