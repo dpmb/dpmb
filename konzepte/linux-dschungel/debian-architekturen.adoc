@@ -85,6 +85,9 @@ $
 // Stichworte für den Index
 (((Debian, Architekturen)))
 (((Debian, Ports)))
+(((Debian, Ports-Projekt)))
+(((Veröffentlichung, unreleased)))
+(((Veröffentlichung, unstable)))
 Das Debian-Ports-Projekt <<Debian-Ports-Projekt>> stellt die
 Infrastruktur für APT-Archive und automatisiertes Bauen von Paketen für
 Architekturen bereit, die Debian noch nicht oder nicht mehr unterstützt.
