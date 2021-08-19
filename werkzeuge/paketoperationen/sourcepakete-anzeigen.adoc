@@ -86,7 +86,7 @@ installierten unterscheidet. Nachfolgend sehen Sie das für das Paket
 $ apt-show-source -p libspice-server1
 
 Inst. Package (Version)                | Newest Source Package (Version)
--------------------------------------------------------------------------------
+- -----------------------------------------------------------------------------
 libspice-server1 (0.12.5-1+deb8u8)     | spice (0.12.5-1+deb8u7)
 $
 ----
