@@ -39,7 +39,7 @@ $
 (((lsb_release, -a)))
 (((lsb_release, --all)))
 Ausführlichere Informationen erhalten Sie mit Hilfe des Kommandos
-`lsb_release -a` (Langform `--all`) aus dem Debianpaket `lsb-release`
+`lsb_release -a` (Langform `--all`) aus dem Debianpaket 'lsb-release'
 <<Debian-Paket-lsb-release>>:
 
 .Ausführliche Informationen zur genutzen Debian-Version mit Hilfe von `lsb_release` anzeigen
