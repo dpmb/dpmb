@@ -6,13 +6,21 @@
 
 === Sourcepakete anzeigen ===
 
+Zur Philosophie der Freien Software gehört der vollständige Zugang zu
+den Quelldaten der Binärpakete. Zwei Werkzeuge ermöglichen es Ihnen,
+Informationen zu einem bestimmten Quellpaket anzuzeigen. Während
+`apt-cache` mit dem Unterkommando `showsrc` alle Informationen zu einem
+bestimmten Quellpaket anzeigt, vergleicht `apt-show-source` das aktuell
+installierte Paket mit dem verfügbaren Paket.
+
+==== `apt-cache` verwenden ====
+
 // Stichworte für den Index
 (((Paketvarianten, Sourcepaket)))
 (((apt-cache, showsrc)))
-Zur Philosophie der Freien Software gehört der vollständige Zugang zu
-den Quelldaten der Binärpakete. Das Werkzeug `apt-cache` ermöglicht es
-Ihnen, über das Unterkommando `showsrc` alle Informationen zu einem
-bestimmten Quellpaket anzuzeigen, welches in Debian verfügbar ist.
+Das Werkzeug `apt-cache` ermöglicht es Ihnen, über das Unterkommando
+`showsrc` alle Informationen zu einem bestimmten Quellpaket anzuzeigen,
+welches in Debian verfügbar ist.
 
 Die nachfolgende Ausgabe zeigt das Ergebnis zum Paket 'htop' an. Neben
 dem Paketnamen für das Binär- und Quellpaket (`Binary` und `Package`)
@@ -57,6 +65,29 @@ Package-List:
 Directory: pool/main/h/htop
 Priority: source
 Section: utils
+$
+----
+
+==== `apt-show-source` verwenden ====
+
+// Stichworte für den Index
+(((Paketvarianten, Sourcepaket)))
+(((apt-show-source, -p)))
+(((Debianpaket, apt-show-source)))
+
+`apt-show-source` aus dem gleichnamigen Debianpaket analysiert die
+APT-Listen der Quellcode-Pakete und die Statusdatei von `dpkg`. Das
+Werkzeug listet jedes Paket auf, dessen Versionsnummer sich von der
+installierten unterscheidet. Nachfolgend sehen Sie das für das Paket
+'libspice-server1'.
+
+.Ausgabe der Informationen zum Sourcepaket zu 'libspice-server1'
+----
+$ apt-show-source -p libspice-server1
+
+Inst. Package (Version)                | Newest Source Package (Version)
+-------------------------------------------------------------------------------
+libspice-server1 (0.12.5-1+deb8u8)     | spice (0.12.5-1+deb8u7)
 $
 ----
 
