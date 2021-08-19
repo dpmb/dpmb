@@ -7,10 +7,13 @@
 
 === Danksagung ===
 
-Eine Reihe von Menschen haben uns bei der Realisierung dieses Buches direkt 
-oder indirekt unterstützt, sei es in Form von Anregungen, Kritik, Vorschlägen 
-zur Ergänzung oder Fach- und Verständnisfragen. Diesen Menschen gebührt unser 
-Dank:
+// Stichworte für den Index
+(((Buch,Danksagung)))
+
+Etliche Menschen haben uns bei der Realisierung dieses Buches direkt
+oder indirekt unterstützt, sei es in Form von Anregungen, Kritik,
+Vorschlägen zur Ergänzung oder Fach- und Verständnisfragen. Diesen
+Menschen gebührt unser Dank:
 
 * Elmar Heeb (für `aptitude-robot` und viele interessante Diskussionen)
 * Dirk Deimeke (für Tipps zum Autor-Werden) <<Hackerfunk>>
