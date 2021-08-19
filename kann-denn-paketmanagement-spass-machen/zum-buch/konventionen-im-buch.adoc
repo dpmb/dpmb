@@ -41,7 +41,7 @@ sich unter https://fsinfo.noone.org/~abe/Bloedsinn/Teppich.html] (`#`) am
 Zeilenanfang.
 
 // Stichworte für den Index
-indexterm:[Konventionen,Debian]
+(((Konventionen,Debian)))
 
 Im Buch verwenden wir die beiden Begriffe 'Debian' und 'Debian
 GNU/Linux' in gleicher Art und Weise. Worin die genauen Unterschiede und
