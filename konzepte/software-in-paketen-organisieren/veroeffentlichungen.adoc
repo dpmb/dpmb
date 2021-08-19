@@ -53,6 +53,13 @@ Codename:       stretch
 $
 ----
 
+Alternativen dazu sind bspw. `linuxinfo`, `inxi` und `sosreport` aus den
+gleichnamigen Paketen. Mögen Sie es bunt, ist `neofetch`
+<<Debian-Paket-neofetch>> vielleicht das richtige Werkzeug für Sie.
+
+.`neofetch` im Einsatz auf Debian 11 'Bullseye'
+image::konzepte/software-in-paketen-organisieren/neofetch.png[id="fig.neofetch", width="50%"]
+
 [[bedeutung-der-verschiedenen-entwicklungsstaende]]
 ==== Bedeutung der verschiedenen Entwicklungsstände ====
 

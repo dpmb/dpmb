@@ -436,6 +436,8 @@
 
 - [[[Debian-Paket-muon]]] Debian-Paket 'muon', https://packages.debian.org/de/stable/muon
 
+- [[[Debian-Paket-neofetch]]] Debian-Paket 'neofetch', https://packages.debian.org/de/stable/neofetch
+
 - [[[Debian-Paket-netselect]]] Debian-Paket 'netselect', https://packages.debian.org/de/stable/netselect
 
 - [[[Debian-Paket-netselect-apt]]] Debian-Paket 'netselect-apt', https://packages.debian.org/de/stable/netselect-apt
