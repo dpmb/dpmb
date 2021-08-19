@@ -45,13 +45,16 @@ Anwendungsfälle aus dem Alltag. Voraussetzung dafür ist eine
 Vertrautheit mit den Werkzeugen zur Paketverwaltung, da es in diesem
 Abschnitt ``ans Eingemachte'' geht.
 
+// Stichworte für den Index
+(((Buch, Englischkenntnisse)))
+(((Buch, Lokalisierung der Ausgaben)))
 Hilfreich sind darüber hinaus _Englischkenntnisse_: Viele
-Bildschirmausgaben sind englisch, nicht zuletzt weil die Lokalisierung
-der einzelnen Pakete bislang unvollständig ist. Die verwendenten Ausgaben 
-auf dem Bildschirm und die Screenshots stammen hierbei von ganz 
-unterschiedlichen Linux-Varianten -- Debian GNU/Linux, Ubuntu, Xubuntu 
-und Linux Mint. Die dabei eingestellten Lokalisierungen sind Deutsch oder
-Englisch.
+Bildschirmausgaben erscheinen in englischer Sprache, nicht zuletzt weil
+die Lokalisierung der einzelnen Pakete bislang unvollständig ist. Die
+verwendeten Ausgaben auf dem Bildschirm und die Screenshots stammen
+hierbei von ganz unterschiedlichen Linux-Varianten und
+Veröffentlichungen -- Debian GNU/Linux, Ubuntu, Xubuntu und Linux Mint.
+Die dabei eingestellten Lokalisierungen sind Deutsch oder Englisch.
 
 // Stichworte für den Index
 (((Buch, administrative Benutzerrechte)))
