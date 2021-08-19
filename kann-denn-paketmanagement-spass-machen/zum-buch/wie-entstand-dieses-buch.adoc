@@ -88,6 +88,8 @@ im Alltag der Systembetreuung.
 
 ==== Baustellenstatus ====
 
+// Stichworte für den Index
+(((Buch, Baustellenstatus)))
 Zum aktuellen Zeitpunkt (Frühjahr 2021) bewegt sich das Buch stramm
 darauf zu, den Umfang von 500 Seiten zu überschreiten. Als inhaltlich
 vollendet sehen wir den Teil 1 ``Konzepte'' an. Kleinere Baustellen
@@ -100,6 +102,12 @@ vorhanden, (bislang) unverständlich oder gar veraltet ist.
 
 ==== Technische Basis ====
 
+// Stichworte für den Index
+(((Buch, Asciidoc)))
+(((Buch, Ausgabeformate)))
+(((Buch, Mitmachen)))
+(((Buch, Repository auf Github)))
+(((Buch, Technische Basis)))
 Rein technisch setzt das Buch auf AsciiDoc <<AsciiDoc>> auf -- einem
 Textformat, aus welchem dann über mehrere Zwischenstufen diverse
 Ausgabeformate wie PDF, EPUB oder HTML entstehen. Basierend auf einer
@@ -110,7 +118,8 @@ verfügbar <<dpmb-github>>. Neben der Möglichkeit, während des Arbeitens
 auch auf eine frühere Revision zurückgreifen zu können, ermöglicht das
 ein paralleles, verteiltes Arbeiten von verschiedenen Standorten aus.
 Zudem kann jeder Interessierte am Buch in Form von Vorschlägen und
-Korrekturen beitragen.
+Korrekturen beitragen. Wir freuen uns über alle Anmerkungen, die uns
+erreichen und helfen, das Buch für alle besser zu machen.
 
 [TIP]
 .Versionsverwaltung mit Git
@@ -123,18 +132,28 @@ München, 2. Auflage November 2014, ISBN 978-3-95539-119-5).
 
 ==== Online-Fassung ====
 
+// Stichworte für den Index
+(((Buch, Ausgabeformate)))
+(((Buch, Online-Fassung)))
+(((Buch, Repository auf Github)))
 Unter https://buch.dpmb.org/ gibt es den jeweils aktuellsten Stand des
 Buches auch in diversen Formaten zum Online-Lesen oder
-Herunterladen. Diese Fassungen werden automatisch bei jedem `git push`
-frisch generiert.
+Herunterladen. Derzeit sind es HTML, PDF und EPUB. Diese Fassungen
+werden automatisch bei jedem `git push` frisch generiert.
 
 Sollte die Ihnen vorliegende Fassung (sei es als Paket in einer
 Debian-Veröffentlichung oder als gedrucktes Buch) nicht aktuell genug
-sein, so schauen Sie doch mal in die Online-Fassung. Vielleicht ist
-die entsprechende Stelle dort bereits aktualisiert worden.
+sein, so schauen Sie doch mal in die Online-Fassung. Vielleicht wurde
+die entsprechende Stelle dort bereits aktualisiert.
 
 ==== Quellcode und Lizenz ====
 
+// Stichworte für den Index
+(((Buch, Creative Commons)))
+(((Buch, Lizenz)))
+(((Buch, Mitmachen)))
+(((Buch, Quellcode)))
+(((Buch, Repository auf Github)))
 Der o.g. Quellcode des Buches findet sich auf GitHub <<dpmb-github>> und 
 ist unter der Creative Commons Namensnennung -- Weitergabe unter den 
 gleichen Bedingungen 4.0 International Lizenz <<CreativeCommons>> frei 
@@ -146,6 +165,8 @@ mitsamt Patch <<github-pull-request>> ein.
 
 ==== Organisatorisch ====
 
+// Stichworte für den Index
+(((Buch, Wie das Buch gepflegt wird)))
 Beide Autoren leben und arbeiten in recht unterschiedlichen Regionen --
 Axel Beckert in Zürich und Frank Hofmann in Kirchzarten bei Freiburg.
 Aufgrund der mitunter recht großen Distanz sind regelmäßige
