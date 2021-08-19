@@ -8,6 +8,7 @@
 ==== Und das können Sie nach der Lektüre ... ====
 
 //Schlagworte, Index
+(((Buch,Lernziele)))
 (((Lernziele)))
 Haben Sie das Buch gelesen und die Beispiele am Rechner
 nachvollzogen, verfügen Sie über profunde Kenntnisse in der
@@ -21,6 +22,7 @@ Paketverwaltung unter Debian GNU/Linux. Dazu gehört:
 * alternative Auflösungen für Paketabhängigkeiten finden, verstehen und anwenden
 
 //Schlagworte, Index
+(((Buch,Linux-Zertifizierung)))
 (((LPI)))
 (((Debian, Paketmaintainer)))
 All dies qualifiziert Sie für das entsprechende Lernziel einer 
