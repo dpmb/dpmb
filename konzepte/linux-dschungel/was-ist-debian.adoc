@@ -8,6 +8,7 @@
 
 // Stichworte für den Index
 (((Debian, Betriebssystem)))
+(((Debian, Debian Developer)))
 (((Debian, Projekt)))
 (((Debian, Varianten)))
 Je nach Kontext bezeichnet ``Debian'' entweder
