@@ -9,6 +9,7 @@
 (((aptitude,Dokumentation)))
 (((aptitude,Dokumentation online)))
 (((aptitude,Dokumentation offline)))
+(((Dokumentation,aptitude)))
 Das vorliegende Buch resultiert auch aus einem Ärgernis, das zur
 weltweit verteilten Zusammenarbeit über das Netz gehört: Das Internet
 vergisst nichts, und irgendwo ist immer noch eine veraltete
