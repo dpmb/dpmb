@@ -7,22 +7,34 @@
 === Pakete über die Paketbeschreibung finden ===
 
 // Stichworte für den Index
-(((Debianpaket, dctrl-tools)))
-(((grep-available)))
-(((grep-status)))
-(((Paketsuche, mittels grep-available)))
-(((Paketsuche, mittels grep-status)))
 (((Paketsuche, über die Paketbeschreibung)))
 Bleibt ihre Recherche über den Paketnamen ohne Erfolg, dehnen Sie ihre
 Suche am besten auf die gesamte Paketbeschreibung aus. Zur Recherche
-darin helfen Ihnen die darauf spezialisierten Programme `grep-available`
-und `grep-status` aus dem Paket 'dctrl-tools' <<Debian-Paket-dctrl-tools>>.
+darin helfen Ihnen die darauf spezialisierten Programme `apt-cache` aus
+dem Paket 'apt' <<Debian-Paket-apt>>, `grep-available` und `grep-status`
+(beide aus dem Paket 'dctrl-tools' <<Debian-Paket-dctrl-tools>>) sowie
+`axi-cache` aus dem Paket 'apt-xapian-index'
+<<Debian-Paket-apt-xapian-index>>.
+
+==== Suche mit `apt-cache` ====
 
 // Stichworte für den Index
+(((apt-cache, search)))
+(((Debianpaket, apt)))
+
+* `apt-cache search` 'Begriff'
+
+==== Suche mit `grep-available` und `grep-status` ====
+
+// Stichworte für den Index
+(((Debianpaket, dctrl-tools)))
 (((grep-available, -F)))
 (((grep-available, --field)))
 (((grep-available, -i)))
 (((grep-available, --ignore-case)))
+(((grep-status)))
+(((Paketsuche, mittels grep-available)))
+(((Paketsuche, mittels grep-status)))
 Ohne die Angabe weiterer Parameter durchsucht `grep-available` die
 gesamte Paketbeschreibung. Mit Hilfe der Option `-F` (Langform
 `--field`) schränken Sie den Vorgang auf einen darüber ausgewählten
@@ -88,5 +100,14 @@ $
 Analog zu `grep` verfügt `grep-status` ebenfalls über den hilfreichen
 Schalter `-v` (Langversion `--invert-match`). Bei Bedarf verkehren Sie
 mit diesem das Suchergebnis in das Gegenteil.
+
+==== Suche mit `axi-cache` ====
+
+// Stichworte für den Index
+(((Debianpaket, apt-xapian-index)))
+(((Paketsuche, mittels axi-cache)))
+
+* `axi-cache search` 'Begriff'
+* Sortierung der Ergebnisse nach Relevanz, sprich Grad der Übereinstimmung mit dem Suchtreffer
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-die-paketbeschreibung-finden.adoc
