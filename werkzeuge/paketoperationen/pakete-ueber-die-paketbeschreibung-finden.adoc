@@ -24,6 +24,21 @@ dem Paket 'apt' <<Debian-Paket-apt>>, `grep-available` und `grep-status`
 
 * `apt-cache search` 'Begriff'
 
+.Suche nach verfügbaren Paketen mittels `apt-cache`
+----
+$ apt-cache search OpenTTD
+catcodec - Werkzeug zum De-/kodieren der Sample-Kataloge für OpenTTD
+openttd - Erweiterte Neuumsetzung von »Transport Tycoon Deluxe«
+openttd-data - Gemeinsame Datendateien für das Spiel OpenTTD
+openttd-opengfx - Freier Grafiksatz für das Spiel OpenTTD
+grfcodec - suite of programs to modify Transport Tycoon Deluxe's GRF files
+nml - newgrf meta language compiler
+openttd-dbg - debugging symbols for openttd
+openttd-openmsx - free music set for use with the OpenTTD game
+openttd-opensfx - sound set for use with the OpenTTD game
+$
+----
+
 ==== Suche mit `grep-available` und `grep-status` ====
 
 // Stichworte für den Index
