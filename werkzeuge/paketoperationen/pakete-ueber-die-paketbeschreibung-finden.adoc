@@ -182,6 +182,7 @@ Paketbeschreibung.
 
 // Stichworte für den Index
 (((Debianpaket, dctrl-tools)))
+(((grep-available)))
 (((grep-available, -F)))
 (((grep-available, --field)))
 (((grep-available, -i)))
@@ -190,61 +191,57 @@ Paketbeschreibung.
 (((Paketsuche, mittels grep-available)))
 (((Paketsuche, mittels grep-status)))
 (((Paketsuche, über die Paketbeschreibung)))
-Ohne die Angabe weiterer Parameter durchsucht `grep-available` die
-gesamte Paketbeschreibung. Mit Hilfe der Option `-F` (Langform
-`--field`) schränken Sie den Vorgang auf einen darüber ausgewählten
-Feldnamen ein. Nachfolgender Aufruf zeigt Ihnen von allen verfügbaren
-Paketen die Paketnamen an, bei denen in der Beschreibung und im
-Paketnamen die Zeichenfolge `xpdf` enthalten ist. Durch den Schalter
-`-i` (Langform `--ignore-case`) erfolgt die Suche dabei unabhängig von
-der Groß- und Kleinschreibung. Das abschließende `sort`-Kommando sorgt
-darüber hinaus für eine Ausgabe in alphabetisch aufsteigender Abfolge.
+Die beiden Werkzeuge `grep-available` und `grep-status` gehören zum
+Paket 'dctrl-tools' <<Debian-Paket-dctrl-tools>>. Mit den Angaben
+`-F Description` (Beschreibungsfeld, Langform `--field`), `-i`
+(unabhängig von Groß- und Kleinschreibung, Langform `--ignore-case`)
+sowie dem Suchbegriff als Parameter durchstöbert `grep-available` die
+gesamte Paketbeschreibung und liefert als Ergebnis den gesamten
+Datensatz zum gefundenen Paket zurück.
 
-.Verfügbare Pakete anzeigen, bei denen in der Beschreibung und im Paketnamen die Zeichenfolge `xpdf` enthalten ist
+Nachfolgender Aufruf für die Praxis schränkt die Ausgabe noch weiter ein
+und zeigt Ihnen von allen gefundenen Paketen nur die entsprechenden
+Paketnamen an. `grep` filtert dazu aus der Ausgabe die Zeile heraus, in
+der das Suchwort `Package` vorkommt. Das abschließende `sort`-Kommando
+sorgt darüberhinaus für eine Ausgabe in alphabetisch aufsteigender
+Abfolge.
+
+.Verfügbare Pakete anzeigen, bei denen in der Beschreibung die Zeichenfolge `deb` enthalten ist
 ----
-$ grep-available -F Description -F Package -i xpdf | grep Package | sort
-Package: flpsed
-Package: libpoppler19
-Package: libpoppler3
-Package: libpoppler5
-Package: libpoppler-cpp0
-Package: libpoppler-glib3
-Package: libpoppler-glib4
-Package: libpoppler-glib8
-Package: libpoppler-qt2
-Package: libpoppler-qt4-3
-Package: poppler-utils
-Package: python-poppler
-Package: xpdf
+$ grep-available -F Description -i deb | grep Package | sort
+Package: base-files
+Package: base-passwd
+Package: debconf
+Package: debconf-i18n
+Package: debian-archive-keyring
+Package: debianutils
+Package: dpkg
+Package: libapt-inst1.5
+Package: libdebconfclient0
+Package: tasksel
+Package: tasksel-data
 $
 ----
 
 // Stichworte für den Index
-(((grep-available, -P)))
-(((grep-available, -S)))
-Um den Aufruf für den Paketnamen zu vereinfachen, stellt Ihnen
-`grep-available` zudem die beiden Abkürzungen `-P` für `-FPackage` und
-`-S` für `-FSource:Package` bereit.
-
-// Stichworte für den Index
+(((grep-status, -F)))
 (((grep-status, -s)))
 (((grep-status, --show-field)))
-Obige Liste enthält alle Pakete – unabhängig davon, ob diese auf ihrem
-System installiert sind, oder nicht. Mit dem nachfolgenden Aufruf
-reduzieren Sie die Liste entsprechend. Dabei kommt der Schalter `-s`
-(Langform `--show-field`) zum tragen, der den Paketstatus passend
-auswertet.
+`grep-available` findet alle Pakete – unabhängig davon, ob diese auf
+ihrem System installiert sind, oder nicht. Mit dem nachfolgenden Aufruf
+erhalten Sie die Liste der installierten Pakete, bei denen in der
+Beschreibung die Zeichenfolge `xpdf` enthalten ist. Zum Einsatz kommt
+hierbei der zusätzliche Schalter `-s` (Langform `--show-field`). Darüber
+wertet `grep-status` den Paketstatus aus.
 
-.Lediglich die installierten Pakete anzeigen, bei denen in der Beschreibung und im Paketnamen die Zeichenfolge `xpdf` enthalten ist
+.Lediglich die installierten Pakete anzeigen, bei denen in der Beschreibung die Zeichenfolge `xpdf` enthalten ist
 ----
-$ grep-status -F Description -P -i -s Package xpdf | grep Package | sort
-Package: flpsed
-Package: libpoppler19
+$ grep-status -F Description -i -s Package xpdf | grep Package | sort
+Package: libpoppler46
 Package: libpoppler-cpp0
 Package: libpoppler-glib8
-Package: libpoppler-qt4-3
+Package: libpoppler-qt4-4
 Package: poppler-utils
-Package: python-poppler
 Package: xpdf
 $
 ----
