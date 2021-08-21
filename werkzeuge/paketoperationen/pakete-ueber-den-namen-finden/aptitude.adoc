@@ -8,14 +8,9 @@
 
 // Stichworte für den Index
 (((aptitude, search)))
-// (((Paketsuche, anhand der Architektur)))
-// (((Paketsuche, anhand des Maintainers)))
-// (((Paketsuche, anhand der Markierung)))
-// (((Paketsuche, anhand der Paketversion)))
 (((Paketsuche, mittels aptitude)))
 (((Paketsuche, über den Paketnamen)))
 (((Paketsuche, über die Paketbeschreibung)))
-// (((Paketsuche, über die Paketliste)))
 (((Paketsuche, über ein Suchmuster)))
 (((Paketsuche, über ein Textfragment)))
 Rufen Sie `aptitude` über die *Kommandozeile* auf, berücksichtigt es bei
