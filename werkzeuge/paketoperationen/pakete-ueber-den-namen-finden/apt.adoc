@@ -2,37 +2,51 @@
 
 // Baustelle: Fertig
 
-===== APT =====
+[[pakete-ueber-den-Paketnamen-finden-apt-cache]]
+
+===== APT und `apt-cache` =====
 
 // Stichworte für den Index
-(((apt-cache, search)))
+(((apt-cache, search -n)))
+(((apt-cache, search --names-only)))
 (((Paketsuche, mittels APT)))
 (((Paketsuche, mittels apt-cache)))
 (((Paketsuche, über den Paketnamen)))
-(((Paketsuche, über die Paketbeschreibung)))
-(((Paketsuche, über die Paketliste)))
-(((Paketsuche, über ein Textfragment)))
-Das Kommando `apt-cache` liefert in der Standardeinstellung das
-umfangreichste Suchergebnis auf der Kommandozeile. Ohne weitere
-Suchoptionen durchsucht `apt-cache search` die Paketliste und erstöbert
-den Paketnamen, die Paketabhängigkeiten sowie die kurze als auch die
-ausführliche Paketbeschreibung.
 
-`apt-cache` erwartet nach dem Unterkommando `search` ein Textfragment
-als Suchbegriff. Nachfolgend sehen Sie das Suchergebnis zum Paket
-'lintian' <<Debian-Paket-lintian>>. Es beinhaltet das gefundene Paket
-sowie dessen Kurzbeschreibung.
+Das Kommando `apt-cache` rufen Sie mit dem Unterkommando `search`, dem
+Schalter `-n` (Langform `--names-only`) und den gewünschten
+Suchbegriffen als Parameter auf. Danach führt `apt-cache` eine Suche
+ausschließlich über den Paketnamen durch. Es bezieht dabei alle Pakete
+mit ein, die über die hinterlegten Paketlisten bei Ihnen verfügbar sind
+und findet somit auch die Pakete, die derzeit nicht auf ihrem System
+installiert sind. Ohne weitere Aufrufparameter zur Ausgabesteuerung
+besteht das Suchergebnis aus einer Liste mit dem Paketnamen gefolgt von
+der ersten Zeile der Kurzbeschreibung des jeweiligen Pakets.
 
-.Suche nach einem Paket
+Jeder Suchbegriff wird als Regulärer Ausdruck gemäß dem POSIX-Standard
+interpretiert. Eine Unterscheidung zwischen Groß- und Kleinschreibung
+findet nicht statt. Nachfolgend sehen Sie das Suchergebnis zum Begriff
+'clint'. Es beinhaltet die gefundenen Pakete sowie deren
+Kurzbeschreibung.
+
+.Suche nach dem Begriff 'clint' mittels `apt-cache search`
 ----
-$ apt-cache search lintian
-dput - Debian package upload tool
-elida - pbuilder mail interface
-fixincludes - Fix non-ANSI header files
-libdebian-package-html-perl - generates HTML from a Debian source/binary package
-debaux - Debian-Hilfsprogramme
-devscripts - Skripte, die das Leben eines Debian-Paketbetreuers erleichtern
-lintian - Debian-Paketprüfer
+$ apt-cache search --names-only clint
+python-clint - Python Command-line Application Tools
+python3-clint - Python Command-line Application Tools
+$
+----
+
+Mehrere Suchbegriffe trennen Sie im Aufruf mittels Leerzeichen
+voneinander. Diese Begriffe werden dann mittels "und" als boolescher
+Ausdruck miteinander verknüpft. Das Suchergebnis enthält dann nur
+Ergebnisse, in denen beide Suchbegriffe vorkommen. Das nächste Beispiel
+verwendet `lint` und `rpm` und listet nur das Paket 'rpmlint' auf.
+
+.Einfache Suche nach verfügbaren Paketen mittels `apt-cache search` und zwei Suchbegriffen
+----
+$ apt-cache search --names-only lint rpm
+rpmlint - RPM package checker
 $
 ----
 
