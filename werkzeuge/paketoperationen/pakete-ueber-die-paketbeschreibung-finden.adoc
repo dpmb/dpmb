@@ -16,6 +16,8 @@ Paket, `grep-available` und `grep-status` (beide aus dem Paket
 'dctrl-tools' <<Debian-Paket-dctrl-tools>>) sowie `axi-cache` aus dem
 Paket 'apt-xapian-index' <<Debian-Paket-apt-xapian-index>>.
 
+[[pakete-ueber-die-paketbeschreibung-finden-apt-cache]]
+
 ==== Suche mit `apt-cache` ====
 
 // Stichworte für den Index
@@ -127,9 +129,13 @@ der Ausgabe farblich hervorzuheben. Hier bleibt Ihnen nur die
 Erweiterung des Aufrufs mittels `grep` und dem dazugehörigen Schalter
 `--color`.
 
+[[pakete-ueber-die-paketbeschreibung-finden-aptitude]]
+
 ==== Suche mit Hilfe von `aptitude` ====
 
 ToDo
+
+[[pakete-ueber-die-paketbeschreibung-finden-grep-available]]
 
 ==== Suche mit `grep-available` und `grep-status` ====
 
@@ -208,6 +214,8 @@ $
 Analog zu `grep` verfügt `grep-status` ebenfalls über den hilfreichen
 Schalter `-v` (Langversion `--invert-match`). Bei Bedarf verkehren Sie
 mit diesem das Suchergebnis in das Gegenteil.
+
+[[pakete-ueber-die-paketbeschreibung-finden-axi-cache]]
 
 ==== Suche mit `axi-cache` ====
 
