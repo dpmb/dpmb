@@ -253,15 +253,4 @@ Analog zu `grep` verfügt `grep-status` ebenfalls über den hilfreichen
 Schalter `-v` (Langversion `--invert-match`). Bei Bedarf verkehren Sie
 mit diesem das Suchergebnis in das Gegenteil.
 
-[[pakete-ueber-die-paketbeschreibung-finden-axi-cache]]
-
-==== Suche mit `axi-cache` ====
-
-// Stichworte für den Index
-(((Debianpaket, apt-xapian-index)))
-(((Paketsuche, mittels axi-cache)))
-
-* `axi-cache search` 'Begriff'
-* Sortierung der Ergebnisse nach Relevanz, sprich Grad der Übereinstimmung mit dem Suchtreffer
-
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-die-paketbeschreibung-finden.adoc
