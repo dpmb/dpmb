@@ -133,7 +133,48 @@ Erweiterung des Aufrufs mittels `grep` und dem dazugehörigen Schalter
 
 ==== Suche mit Hilfe von `aptitude` ====
 
-ToDo
+// Stichworte für den Index
+(((aptitude, search)))
+(((Debianpaket, aptitude)))
+(((Paketsuche, über die Paketbeschreibung)))
+
+Ohne weitere Parameter im Aufruf gleicht `aptitude` den Suchbegriff nur
+mit den Paketnamen ab. Für die Suche über die Paketbeschreibung versteht
+es eine Reihe von Parametern:
+
+`~dsuchbegriff` (Langform `?description(suchbegriff)`):: 
+Suche nach dem 'suchbegriff' in der Paketbeschreibung.
+
+`?term(suchbegriff)`::
+Volltextsuche nach 'suchbegriff' im Namen und der Beschreibung des Pakets.
+
+`?term-prefix(suchbegriff)`::
+Volltextsuche nach Begriffen, die den 'suchbegriff' als Präfix
+beinhalten. Suche im Namen und der Beschreibung des Pakets.
+
+Das nachfolgende Beispiel sucht nach allen Paketen, in deren
+Paketbeschreibung der Begriff `lintian' vorkommt:
+
+.Suche in der Paketbeschreibung mittels `aptitude`
+----
+$ aptitude search ~dlintian
+p   debaux                         - Debian-Hilfsprogramme
+i   devscripts                     - scripts to make the life of a Debian Package maintainer easi
+i A dput                           - Werkzeug für das Hochladen von Debian-Paketen
+p   elida                          - pbuilder mail interface
+p   fixincludes                    - Repariert Header-Dateien, die nicht ANSI-kompatibel sind
+p   gdebi                          - Einfaches Programm für Betrachtung und Installation von deb-
+p   libconfig-model-dpkg-perl      - editor for Dpkg source files with validation
+p   libdebian-package-html-perl    - generates HTML from a Debian source/binary package
+i A lintian                        - Debian-Paketprüfung
+p   pkg-perl-tools                 - collection of tools to aid packaging Perl modules in Debian 
+p   rpmlint                        - RPM package checker
+$
+----
+
+Die anderen beiden Filter liefern eine ähnliche Ausgabe wie oben,
+berücksichtigen jedoch sowohl den Paketnamen, als auch die
+Paketbeschreibung.
 
 [[pakete-ueber-die-paketbeschreibung-finden-grep-available]]
 
