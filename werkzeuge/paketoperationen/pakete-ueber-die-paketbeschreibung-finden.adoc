@@ -1,6 +1,6 @@
 // Datei: ./werkzeuge/paketoperationen/pakete-ueber-die-paketbeschreibung-finden.adoc
 
-// Baustelle: Fertig
+// Baustelle: Rohtext
 
 [[pakete-ueber-die-paketbeschreibung-finden]]
 
@@ -11,33 +11,125 @@
 Bleibt ihre Recherche über den Paketnamen ohne Erfolg, dehnen Sie ihre
 Suche am besten auf die gesamte Paketbeschreibung aus. Zur Recherche
 darin helfen Ihnen die darauf spezialisierten Programme `apt-cache` aus
-dem Paket 'apt' <<Debian-Paket-apt>>, `grep-available` und `grep-status`
-(beide aus dem Paket 'dctrl-tools' <<Debian-Paket-dctrl-tools>>) sowie
-`axi-cache` aus dem Paket 'apt-xapian-index'
-<<Debian-Paket-apt-xapian-index>>.
+dem Paket 'apt' <<Debian-Paket-apt>>, `aptitude` aus dem gleichnamigen
+Paket, `grep-available` und `grep-status` (beide aus dem Paket
+'dctrl-tools' <<Debian-Paket-dctrl-tools>>) sowie `axi-cache` aus dem
+Paket 'apt-xapian-index' <<Debian-Paket-apt-xapian-index>>.
 
 ==== Suche mit `apt-cache` ====
 
 // Stichworte für den Index
 (((apt-cache, search)))
 (((Debianpaket, apt)))
+(((Paketsuche, mittels APT)))
+(((Paketsuche, mittels apt-cache)))
+(((Paketsuche, über die Paketbeschreibung)))
 
-* `apt-cache search` 'Begriff'
+Das Kommando `apt-cache` rufen Sie mit dem Unterkommando `search` und
+den gewünschten Suchbegriffen als Parameter auf. Es durchsucht daraufhin
+die Kurz- und Langbeschreibung des Pakets und gibt den Paketnamen samt
+einem Auszug aus der Paketbeschreibung aus. Die Suche über den
+Paketnamen besprechen wir ausführlich in
+<<pakete-ueber-den-Paketnamen-finden-apt-cache>>.
 
-.Suche nach verfügbaren Paketen mittels `apt-cache`
+Der nachfolgende Aufruf demonstriert die Suche zum Stichwort `lintian`.
+Das Ergebnis ist eine zeilenweise Auflistung aus dem Paketnamen gefolgt
+von einem Auszug aus der Kurzbeschreibung zum Paket.
+
+.Suche nach verfügbaren Paketen mittels `apt-cache search` und dem Suchbegriff `lintian`
 ----
-$ apt-cache search OpenTTD
-catcodec - Werkzeug zum De-/kodieren der Sample-Kataloge für OpenTTD
-openttd - Erweiterte Neuumsetzung von »Transport Tycoon Deluxe«
-openttd-data - Gemeinsame Datendateien für das Spiel OpenTTD
-openttd-opengfx - Freier Grafiksatz für das Spiel OpenTTD
-grfcodec - suite of programs to modify Transport Tycoon Deluxe's GRF files
-nml - newgrf meta language compiler
-openttd-dbg - debugging symbols for openttd
-openttd-openmsx - free music set for use with the OpenTTD game
-openttd-opensfx - sound set for use with the OpenTTD game
+$ apt-cache search lintian
+debaux - Debian-Hilfsprogramme
+dput - Werkzeug für das Hochladen von Debian-Paketen
+fixincludes - Repariert Header-Dateien, die nicht ANSI-kompatibel sind
+gdebi - Einfaches Programm für Betrachtung und Installation von deb-Dateien - GNOME-GUI
+lintian - Debian-Paketprüfung
+devscripts - scripts to make the life of a Debian Package maintainer easier
+elida - pbuilder mail interface
+libconfig-model-dpkg-perl - editor for Dpkg source files with validation
+libdebian-package-html-perl - generates HTML from a Debian source/binary package
+pkg-perl-tools - collection of tools to aid packaging Perl modules in Debian
+rpmlint - RPM package checker
 $
 ----
+
+Das Suchergebnis grenzen Sie ein, in dem Sie im Aufruf von `apt-cache`
+einen oder mehrere Suchbegriffe angeben. Hier sehen Sie obigen Aufruf
+mit den beiden Suchbegriffen `lintian` und `rpm`. Wie Sie sehen,
+reduziert sich die Liste der Suchtreffer auf zwei Pakete.
+
+.Suche nach verfügbaren Paketen mittels `apt-cache search` und zwei Suchbegriffen
+----
+$ apt-cache search lintian rpm
+debaux - Debian-Hilfsprogramme
+rpmlint - RPM package checker
+$
+----
+
+// Stichworte für den Index
+(((apt-cache, search -f)))
+(((apt-cache, search --full)))
+(((apt-cache, show)))
+(((Debianpaket, apt)))
+(((Paketsuche, über die Paketbeschreibung)))
+
+Für ein noch ausführlicheres Suchergebnis kommt der Schalter `-f`
+(Langform `--full`) ins Spiel. Damit ist die Ausgabe identisch zum
+Aufruf `apt-cache search show` und gibt den vollständigen Datensatz für
+das Paket aus. Dieser umfaßt den Paketnamen, den Hashwert zum Paket
+sowie die hinterlegte Paketbeschreibung. 
+
+.Suche nach verfügbaren Paketen mittels `apt-cache search` und zwei Suchbegriffen (vollständige Paketbeschreibung)
+----
+$ apt-cache search --full lintian rpm
+Package: debaux
+Description-md5: fee7fd0fa25d42a9151a2e3b88577a50
+Description-de: Debian-Hilfsprogramme
+ Dies Paket enthält Perlprogramme und -module für die
+ Erstellung und Veröffentlichung von Debian-Paketen.
+ .
+ debaus-build lädt automatisch APT-Quellen vor dem Erzeugen
+ herunter, fügt Patches und zusätzliche Quellen hinzu. Es kann
+ die Pakete in einer chroot-Umgebung anlegen, die erzeugten
+ Pakete werden lintian geprüft, auf dem lokalen Rechner installiert
+ oder konvertiert nach RPM.
+ .
+ debaux-build besitzt experimentel die Unterstützung für das 
+ downloaden von Perl-Modulen von CPAN und das Erzeugen
+ passender Debian-Pakete.
+ .
+ debaux-publish lädt die Pakete hoch und führt Skripte zum Erstellen
+ der APT-Quellen und Paketdateien auf dem entfernten Rechner aus.
+ debaux-publish unterstützt z.Zt. noch nicht die Pool-Struktur.
+
+Package: rpmlint
+Description-md5: b8da9a736db7db144d0b4163fc42d180
+Description-en: RPM package checker
+ rpmlint is a tool for checking common errors in rpm packages.  rpmlint
+ can be used to test individual packages before uploading or to check
+ an entire distribution.  By default all applicable checks are
+ performed but specific checks can be performed by using command line
+ parameters.
+ .
+ rpmlint can check binary rpms (files and installed ones), source rpms,
+ and plain specfiles, but all checks do not apply to all argument
+ types.  For best check coverage, run rpmlint on source rpms instead of
+ plain specfiles, and installed binary rpms instead of uninstalled
+ binary rpm files.
+ .
+ The idea for rpmlint is from the lintian tool of the Debian project.
+
+$ 
+----
+
+`apt-cache` bringt bislang keinen Schalter mit, um den Suchbegriff in
+der Ausgabe farblich hervorzuheben. Hier bleibt Ihnen nur die
+Erweiterung des Aufrufs mittels `grep` und dem dazugehörigen Schalter
+`--color`.
+
+==== Suche mit Hilfe von `aptitude` ====
+
+ToDo
 
 ==== Suche mit `grep-available` und `grep-status` ====
 
@@ -50,6 +142,7 @@ $
 (((grep-status)))
 (((Paketsuche, mittels grep-available)))
 (((Paketsuche, mittels grep-status)))
+(((Paketsuche, über die Paketbeschreibung)))
 Ohne die Angabe weiterer Parameter durchsucht `grep-available` die
 gesamte Paketbeschreibung. Mit Hilfe der Option `-F` (Langform
 `--field`) schränken Sie den Vorgang auf einen darüber ausgewählten
