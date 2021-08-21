@@ -27,7 +27,7 @@ gesamte Paketbeschreibung (siehe
 der Option `-F` (Langform `--field`) schränken Sie den Vorgang auf einen
 darüber ausgewählten Feldnamen ein. Nachfolgender Aufruf zeigt Ihnen von
 allen verfügbaren Paketen die Paketnamen an, bei denen in der
-Beschreibung und im Paketnamen die Zeichenfolge `xpdf` enthalten ist.
+Beschreibung oder im Paketnamen die Zeichenfolge `xpdf` enthalten ist.
 Durch den Schalter `-i` (Langform `--ignore-case`) erfolgt die Suche
 dabei unabhängig von der Groß- und Kleinschreibung. Das abschließende
 `sort`-Kommando sorgt darüber hinaus für eine Ausgabe in alphabetisch
@@ -56,8 +56,10 @@ $
 (((grep-available, -P)))
 (((grep-available, -S)))
 Um den Aufruf für den Paketnamen zu vereinfachen, stellt Ihnen
-`grep-available` zudem die beiden Abkürzungen `-P` für `-FPackage` und
-`-S` für `-FSource:Package` bereit.
+`grep-available` zudem die beiden Abkürzungen `-P` für `-F Package` und
+`-S` für `-F Source:Package` bereit. Darüber filtern Sie ganz nach
+Bedarf nach Binär- und Quellpaketen, deren Namen durchaus
+unterschiedlich sein können.
 
 // Stichworte für den Index
 (((grep-status, -s)))
@@ -66,7 +68,7 @@ Obige Liste enthält alle Pakete – unabhängig davon, ob diese auf ihrem
 System installiert sind, oder nicht. Um das einzugrenzen, kommt das
 Werkzeug `grep-status` ins Spiel. Mit dem nachfolgenden Aufruf
 reduzieren Sie die Liste entsprechend. Dabei kommt der Schalter `-s`
-(Langform `--show-field`) zum tragen, der den Paketstatus passend
+(Langform `--show-field`) zum tragen, der den Paketstatus noch passend
 auswertet.
 
 .Lediglich die installierten Pakete anzeigen, bei denen in der Beschreibung und im Paketnamen die Zeichenfolge `xpdf` enthalten ist
