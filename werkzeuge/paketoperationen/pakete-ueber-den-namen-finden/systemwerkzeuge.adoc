@@ -13,6 +13,9 @@ include::apt.adoc[]
 // - aptitude
 include::aptitude.adoc[]
 
+// - grep-available und grep-status
+include::grep-available.adoc[]
+
 // - Synaptic
 include::synaptic.adoc[]
 
