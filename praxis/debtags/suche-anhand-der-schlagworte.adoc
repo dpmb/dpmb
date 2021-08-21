@@ -7,6 +7,8 @@
 
 ==== Über die Kommandozeile ====
 
+===== Suche mittels `debtags` =====
+
 // Stichworte für den Index
 (((debtags, grep)))
 (((debtags, search)))
@@ -146,6 +148,29 @@ Minimalist's web browser
 
 $
 ----
+
+[[pakete-ueber-die-debtags-finden-axi-cache]]
+
+===== Suche mit `axi-cache` =====
+
+// Stichworte für den Index
+(((Debianpaket, apt-xapian-index)))
+(((Paketsuche, anhand von Debtags)))
+(((Paketsuche, mittels axi-cache)))
+
+Eine Alternative zum bereits zuvor vorgestellten Werkzeug `debtags` ist
+das Programm `axi-cache` aus dem Paket 'apt-xapian-index'
+<<Debian-Paket-apt-xapian-index>>. Es sucht ebenfalls in der
+Paketdatenbank anhand der Debtags nach passenden Paketen.
+
+* `axi-cache search` 'Begriff'
+* Sortierung der Ergebnisse nach Relevanz, sprich Grad der Übereinstimmung mit dem Suchtreffer
+
+.Ergebnis der Paketsuche nach dem Tag 'use::searching' mit Hilfe von `axi-cache`
+image::praxis/debtags/axi-cache.png[id="fig.axi-cache", width="50%"]
+
+
+
 
 ==== Textoberfläche von `aptitude` ====
 
