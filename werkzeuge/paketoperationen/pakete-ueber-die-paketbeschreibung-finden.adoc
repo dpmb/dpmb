@@ -158,17 +158,17 @@ Paketbeschreibung der Begriff `lintian' vorkommt:
 .Suche in der Paketbeschreibung mittels `aptitude`
 ----
 $ aptitude search ~dlintian
-p   debaux                         - Debian-Hilfsprogramme
-i   devscripts                     - scripts to make the life of a Debian Package maintainer easi
-i A dput                           - Werkzeug für das Hochladen von Debian-Paketen
-p   elida                          - pbuilder mail interface
-p   fixincludes                    - Repariert Header-Dateien, die nicht ANSI-kompatibel sind
-p   gdebi                          - Einfaches Programm für Betrachtung und Installation von deb-
-p   libconfig-model-dpkg-perl      - editor for Dpkg source files with validation
-p   libdebian-package-html-perl    - generates HTML from a Debian source/binary package
-i A lintian                        - Debian-Paketprüfung
-p   pkg-perl-tools                 - collection of tools to aid packaging Perl modules in Debian 
-p   rpmlint                        - RPM package checker
+p   debaux                      - Debian-Hilfsprogramme
+i   devscripts                  - scripts to make the life of a Debian Package maintainer 
+i A dput                        - Werkzeug für das Hochladen von Debian-Paketen
+p   elida                       - pbuilder mail interface
+p   fixincludes                 - Repariert Header-Dateien, die nicht ANSI-kompatibel sind
+p   gdebi                       - Einfaches Programm für Betrachtung und Installation von 
+p   libconfig-model-dpkg-perl   - editor for Dpkg source files with validation
+p   libdebian-package-html-perl - generates HTML from a Debian source/binary package
+i A lintian                     - Debian-Paketprüfung
+p   pkg-perl-tools              - collection of tools to aid packaging Perl modules in Deb
+p   rpmlint                     - RPM package checker
 $
 ----
 
