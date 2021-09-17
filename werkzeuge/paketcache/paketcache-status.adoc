@@ -7,8 +7,11 @@
 === Paketcache-Status ===
 
 // Stichworte für den Index
-(((Paketcache, Status)))
 (((apt-cache, stats)))
+(((Paketabhängigkeiten, zählen)))
+(((Paketcache, Status anzeigen)))
+(((Paketcache, Zustand anzeigen)))
+(((Paketvarianten, virtuelles Paket)))
 Den aktuellen Zustand des Paketcaches erfahren Sie mit Hilfe das
 Kommandos `apt-cache stats`. Es wertet den Paketcache hinsichtlich der
 gefundenen Symbole aus -- d.h. die Namen, die Varianten und die Bezüge
