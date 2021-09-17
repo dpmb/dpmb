@@ -34,12 +34,102 @@ Gesamtzahl an Mustern: 164 (1.732 )
 Gesamtmenge des Abhängigkeits-/Versionsspeichers: 911 k
 Gesamtmenge an Slack: 73,0 k
 Gesamtmenge an Speicher: 11,8 M
+Total buckets in PkgHashTable: 196613
+  Unused: 108138
+  Used: 88475
+  Utilization: 44.9996%
+  Average entries: 1.33334
+  Longest: 17
+  Shortest: 1
+Total buckets in GrpHashTable: 196613
+  Unused: 101900
+  Used: 94713
+  Utilization: 48.1723%
+  Average entries: 1.3668
+  Longest: 7
+  Shortest: 1
 $
 ----
 
-Ist der Platz auf ihrem Speichermedium knapp, sehen Sie in der letzten
-Zeile der Ausgabe, welche Menge durch den Paketcache gerade belegt wird.
-Wie Sie darin wieder für Ordnung sorgen, lesen Sie unter ``Paketcache
-aufräumen'' in <<paketcache-aufraeumen>> nach.
+Die nachfolgenden Beschreibungen zu den einzelnen Zeilen der Ausgabe
+basieren auf der Manpage zu `apt-cache`. In Klammern finden sie die
+dazugehörige englische Übersetzung der Schlüsselworte. Findet sich als
+Beschreibung die Angabe 'ToDo', liegt noch keine Beschreibung vor --
+auch nicht in der Manpage zu `apt-cache`.
+
+Gesamtzahl an Paketnamen ('total package names') :: gibt die Gesamtzahl
+der im Paketcache gefundenen Pakete an.
+
+Gesamtzahl an Paketstrukturen ('total package structures') ::
+
+Gewöhnliche Pakete ('normal packages') ::: gibt die Anzahl der
+regulären, gewöhnlichen Paketnamen an. Dieses sind Pakete, die eine
+Eins-zu-Eins-Entsprechung zwischen ihren Namen und den Namen, die andere
+Pakete für ihre Abhängigkeiten benutzen, tragen. Die Mehrzahl der Pakete
+fällt in diese Kategorie.
+
+Rein virtuelle Pakete ('pure virtual packages') ::: gibt die Anzahl der
+Pakete an, die nur als ein virtueller Paketname existieren. Das kommt
+vor, wenn Pakete nur den virtuellen Paketnamen 'bereitstellen' und
+aktuell kein Paket den Namen benutzt. Zum Beispiel ist
+'mail-transport-agent' ein rein virtuelles Paket. Mehrere Pakete stellen
+dieses bereit, aber es gibt kein tatsächliches Paket mit dem Namen.
+
+Einzelne virtuelle Pakete ('single virtual packagess') ::: gibt die
+Anzahl der Pakete mit nur einem Paket an, das ein bestimmtes virtuelles
+Paket bereitstellt. Beispielsweise ist 'X11-text-viewer' ein solches
+Paket, aber nur das Paket 'xless' stellt dieses bereit.
+
+Gemischte virtuelle Pakete ('mixed virtual packages') ::: gibt die
+Anzahl der Pakete an, die entweder ein bestimmtes virtuelles Paket
+bereitstellen oder den virtuellen Paketnamen als Paketnamen haben.
+Beispielsweise ist 'debconf' solches Paket, dieses wird aber auch vom
+Paket 'debconf-tiny' bereitgestellt.
+
+Fehlende Pakete ('missing') ::: das benennt die Anzahl der Paketnamen,
+auf die eine Abhängigkeit verweist, die aber von keinem Paket
+bereitgestellt werden. Fehlende Pakete könnten auftauchen, wenn nicht
+auf eine vollständige Veröffentlichung zugegriffen oder ein (echtes oder
+virtuelles) Paket aus einer Veröffentlichung gestrichen wurde.
+Normalerweise erfolgt der Bezug in der Paketbeschreibung über die Tags
+`Conflicts` oder `Breaks`.
+
+Gesamtzahl an unterschiedlichen Versionen ('total distinct versions') ::
+diese Angabe benennt die Anzahl der im Paketcache gefundenen
+Paketversionen. Dieser Wert ist meistens identisch mit der Anzahl der
+gesamten Paketnamen. Wenn auf mehr als eine Veröffentlichung zugegriffen
+wird -- zum Beispiel 'stable' und 'unstable' zusammen -- , kann dieser
+Wert deutlich größer als die gesamte Anzahl der Paketnamen sein.
+
+Gesamtzahl an unterschiedlichen Beschreibungen ('total distinct descriptions') :: Angabe zur Anzahl unterschiedlicher Beschreibungen.
+
+Gesamtzahl an Abhängigkeiten ('total dependencies') :: beschreibt die
+Anzahl der Abhängigkeitsbeziehungen, den alle Pakete im Paketcache
+beanspruchen.
+
+Gesamtzahl an Version/Datei-Beziehungen ('total ver/file relations') ::
+ToDo
+
+Gesamtzahl an Beschreibung/Datei-Beziehungen ('total desc/file relations') :: ToDo
+
+Gesamtzahl an Bereitstellungen ('total provides mappings') :: ToDo
+
+Gesamtzahl an Mustern ('total globbed strings') :: ToDo
+
+Gesamtmenge des Abhängigkeits-/Versionsspeichers :: ToDo
+
+Gesamtmenge an Slack ('total slack space') :: ToDo
+
+Gesamtmenge an Speicher ('total space accounted for') :: Angabe zur
+Gesamtgröße des Paketcaches.
+
+Gesamtzahl der Einträge in der PkgHashTable ('total buckets in PkgHashTable') :: ToDo
+
+Gesamtzahl der Einträge in der GrpHashTable ('total buckets in GrpHashTable') :: ToDo
+
+Ist der Platz auf ihrem Speichermedium knapp, sehen Sie in Zeile
+'Gesamtmenge an Speicher' die Angabe, welche Menge durch den Paketcache
+gerade belegt wird. Wie Sie darin wieder für Ordnung sorgen, lesen Sie
+unter ``Paketcache aufräumen'' in <<paketcache-aufraeumen>> nach.
 
 // Datei (Ende): ./werkzeuge/paketcache/paketcache-status.adoc
