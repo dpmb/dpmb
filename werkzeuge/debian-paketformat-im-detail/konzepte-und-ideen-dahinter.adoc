@@ -39,6 +39,8 @@ zulässigen Operatoren samt einem Beispiel aus der Praxis.
 | `>>` | später als | `libaa1 (>> 1.4)`
 |=============================
 
+[[konzepte-und-ideen-dahinter-binaerpakete]]
+
 ==== Binärpakete ====
 
 // Stichworte für den Index
@@ -188,6 +190,8 @@ PDF-Bibliothek 'poppler-utils':
    * pdftotext -- text extraction
    * pdfunite -- document merging tool
 ----
+
+[[konzepte-und-ideen-dahinter-sourcepakete]]
 
 ==== Sourcepakete ====
 

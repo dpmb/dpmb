@@ -94,8 +94,9 @@ auf die eine Abhängigkeit verweist, die aber von keinem Paket
 bereitgestellt werden. Fehlende Pakete könnten auftauchen, wenn nicht
 auf eine vollständige Veröffentlichung zugegriffen oder ein (echtes oder
 virtuelles) Paket aus einer Veröffentlichung gestrichen wurde.
-Normalerweise erfolgt der Bezug in der Paketbeschreibung über die Tags
-`Conflicts` oder `Breaks`.
+Normalerweise erfolgt der Bezug in der Paketbeschreibung über die
+Schlüsselworte `Conflicts` oder `Breaks` (siehe dazu
+<<konzepte-und-ideen-dahinter-binaerpakete>>).
 
 Gesamtzahl an unterschiedlichen Versionen ('total distinct versions') ::
 diese Angabe benennt die Anzahl der im Paketcache gefundenen
