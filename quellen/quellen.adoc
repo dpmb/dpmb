@@ -746,7 +746,7 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Loschwitz-Sourceformat]]] Martin Loschwitz: Zusammenpacken! Das neue Sourceformat für Debian-Pakete, Linux-Magazin 06/2011, http://www.linux-magazin.de/Ausgaben/2011/06/Debian-Src-3.0
 
-- [[[lpic-101]]] Linux Professional Institute, Unterlagen für LPIC 101, https://www.lpi.org/study-resources/lpic-1-101-exam-objectives/
+- [[[lpic-101]]] Linux Professional Institute, Unterlagen für LPIC 101, https://www.lpice.eu/de/unsere-zertifizierungen/lpic-1
 
 - [[[lug.berlin]]] Das Berliner Community-Portal lug.berlin, http://lug.berlin/
 
@@ -807,7 +807,7 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[Piuparts]]] Piuparts (Package Installation, UPgrading And Removal Testing Suite), https://piuparts.debian.org/
 
 - [[[Pixar]]] Pixar Animation Studios, https://www.pixar.com/
-
+// 
 // - [[[Plenz-Haenel-Git]]] Julius Plenz und Valentin Haenel: Git. Verteilte Versionsverwaltung für Code und Dokumente, Open Source Press, München, 1. Auflage Juni 2011, ISBN 978-3-941841-42-0
 
 - [[[Plura-lts]]] Michael Plura: Am Leben halten, ix 12/2014, https://www.heise.de/ix/heft/Am-Leben-halten-2458886.html
@@ -895,7 +895,7 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[SWITCH]]] SWITCH, das Hochleistungsnetzwerk der Schweizer Hochschulen, https://www.switch.ch/
 
 - [[[sysgetGitHub]]] sysget auf GitHub, https://github.com/emilengler/sysget
-
+//
 //- [[[Thalmayr-LUGA2012]]] Dieter Thalmayr in: Oberflächliches -- Enlightenment als Alternative zu Gnome und KDE, Vortrag im Rahmen des 11. Linux-Infotages Augsburg, 24. März 2012, https://www.luga.de/Aktionen/LIT-2012/
 
 - [[[ToyStory]]] Toy Story im Disney Wiki, http://disney.wikia.com/wiki/Toy_Story
