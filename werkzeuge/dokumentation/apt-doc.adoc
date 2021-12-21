@@ -13,9 +13,10 @@
 Das Paket 'apt-doc' <<Debian-Paket-apt-doc>> beinhaltet das
 Benutzerhandbuch zu APT. Es wurde bereits 1998 von Jason Gunthorpe
 begonnen und zwischenzeitlich mehrfach aktualisiert und in diverse
-Sprachen übersetzt. Es steht Ihnen als HTML- und Textversion in
-englisch, deutsch, spanisch, französisch, polnisch und portugiesisch zur
-Verfügung. Alle Übersetzungen finden Sie im gleichen Paket.
+Sprachen übersetzt. Es steht Ihnen inzwischen als HTML- und Textversion
+in englisch, deutsch, spanisch, französisch, italienisch,
+niederländisch, japanisch, polnisch und portugiesisch zur Verfügung.
+Alle Übersetzungen finden Sie im gleichen Paket.
 
 Nach der Installation finden Sie die deutsche Dokumentation als
 HTML-Dokument im Verzeichnis `/usr/share/doc/apt-doc/guide.de.html/`
