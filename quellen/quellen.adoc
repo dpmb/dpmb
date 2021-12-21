@@ -906,6 +906,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 //
 //- [[[Thalmayr-LUGA2012]]] Dieter Thalmayr in: Oberflächliches -- Enlightenment als Alternative zu Gnome und KDE, Vortrag im Rahmen des 11. Linux-Infotages Augsburg, 24. März 2012, https://www.luga.de/Aktionen/LIT-2012/
 
+- [[[TinyCoreLinux]]] Tiny Core Linux, http://tinycorelinux.net/
+
 - [[[TorProject]]] Tor Project, https://www.torproject.org/
 
 - [[[ToyStory]]] Toy Story im Disney Wiki, http://disney.wikia.com/wiki/Toy_Story

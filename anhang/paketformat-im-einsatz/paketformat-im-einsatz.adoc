@@ -8,6 +8,7 @@
 
 // Stichworte für den Index
 (((Armbian)))
+(((Raspberry Pi OS)))
 (((Raspbian)))
 
 Armbian:: 
@@ -64,11 +65,15 @@ Univention Corporate Server (UCS):: Linux mit integriertem Managementsystem für
 // Stichworte für den Index
 (((Aptosid)))
 (((BackTrack)))
+(((Debian Live System)))
 (((Finnix)))
 (((Grml)))
 (((Kali Linux)))
 (((Knoppix)))
+(((MX Linux)))
 (((Siduction)))
+(((Slax)))
+(((Tails)))
 
 Aptosid:: Linux-Distributionen für Desktop-Computer und Notebooks, basierend auf Debian 'unstable' <<Aptosid>>
 
@@ -105,8 +110,17 @@ nur Live-CDs.
 
 // Stichworte für den Index
 (((Damn Small Linux (DSL))))
+(((Finnix)))
+(((Tiny Core Linux)))
 
 Damn Small Linux:: wird seit Mitte 2012 nicht mehr weiterentwickelt <<DamnSmallLinux>>
+
+Finnix:: Debian-Minimalsystem, gedacht für Systemadministratoren zur
+Wartung und Reparatur im Rahmen von Notfällen <<Finnix>>
+
+Tiny Core Linux:: Nachfolger von Damn Small Linux. Die dCore-Variante
+basiert auf der Infrastruktur und den Paketen von Debian und Ubuntu
+<<TinyCoreLinux>>
 
 === Spieleplattform ===
 
