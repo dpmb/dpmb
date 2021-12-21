@@ -633,6 +633,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Finkproject]]] Fink-Projekt, http://www.finkproject.org/
 
+- [[[Finnix]]] Finnix, https://www.finnix.org/
+
 - [[[Flatpak]]] Flatpak, https://flatpak.org/
 
 - [[[foreman]]] Foreman, https://www.theforeman.org/

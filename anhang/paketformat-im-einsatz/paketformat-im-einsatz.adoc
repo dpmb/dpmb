@@ -64,6 +64,7 @@ Univention Corporate Server (UCS):: Linux mit integriertem Managementsystem für
 // Stichworte für den Index
 (((Aptosid)))
 (((BackTrack)))
+(((Finnix)))
 (((Grml)))
 (((Kali Linux)))
 (((Knoppix)))
@@ -74,6 +75,9 @@ Aptosid:: Linux-Distributionen für Desktop-Computer und Notebooks, basierend au
 BackTrack, Kali Linux:: gedacht zur Netzwerk- und Sicherheitsanalyse. BackTrack <<BackTrack>> wurde im Frühjahr 2013 eingestellt, Kali Linux <<Kali-Linux>> ist dessen Nachfolger
 
 Debian Live System:: Projekt zur Erstellung und Pflege von Debian-basierten Live-Systemen und Debian Live Images <<DebianLiveSystem>>
+
+Finnix:: Debian-Minimalsystem, gedacht für Systemadministratoren zur
+Wartung und Reparatur im Rahmen von Notfällen <<Finnix>>.
 
 Grml:: textbasiert, gedacht als Rettungssystem und für die Systemanalyse, basiert auf Debian 'unstable' <<Grml>>
 
