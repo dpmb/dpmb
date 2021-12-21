@@ -350,6 +350,8 @@
 
 - [[[Debian-Paket-dlocate]]] Debian-Paket 'dlocate', https://packages.debian.org/de/stable/dlocate
 
+- [[[Debian-Paket-docker]]] Debian-Paket 'docker', https://packages.debian.org/de/stable/docker
+
 - [[[Debian-Paket-dphys-config]]] Debian-Paket 'dphys-config', https://packages.debian.org/de/stable/dphys-config
 
 - [[[Debian-Paket-dphys-swapfile]]] Debian-Paket 'dphys-swapfile', https://packages.debian.org/de/stable/dphys-swapfile
@@ -375,6 +377,8 @@
 - [[[Debian-Paket-equivs]]] Debian-Paket 'equivs', https://packages.debian.org/de/stable/equivs
 
 - [[[Debian-Paket-etckeeper]]] Debian-Paket 'etckeeper', https://packages.debian.org/de/stable/etckeeper
+
+- [[[Debian-Paket-flatpak]]] Debian-Paket 'flatpak', https://packages.debian.org/de/stable/flatpak
 
 - [[[Debian-Paket-galternatives]]] Debian-Paket 'galternatives', https://packages.debian.org/de/stable/galternatives
 
@@ -426,6 +430,8 @@
 
 - [[[Debian-Paket-lsb-release]]] Debian-Paket 'lsb-release', https://packages.debian.org/de/stable/lsb-release
 
+- [[[Debian-Paket-lxc]]] Debian-Paket 'lxc', https://packages.debian.org/de/stable/lxc
+
 - [[[Debian-Paket-make]]] Debian-Paket 'make', https://packages.debian.org/de/stable/make
 
 - [[[Debian-Paket-mc]]] Debian-Paket 'mc', https://packages.debian.org/de/stable/mc
@@ -443,6 +449,8 @@
 - [[[Debian-Paket-netselect]]] Debian-Paket 'netselect', https://packages.debian.org/de/stable/netselect
 
 - [[[Debian-Paket-netselect-apt]]] Debian-Paket 'netselect-apt', https://packages.debian.org/de/stable/netselect-apt
+
+- [[[Debian-Paket-oci-image-tool]]] Debian-Paket 'oci-image-tool', https://packages.debian.org/de/stable/oci-image-tool
 
 - [[[Debian-Paket-packagekit]]] Debian-Paket 'packagekit', https://packages.debian.org/de/stable/packagekit
 
@@ -625,7 +633,7 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Finkproject]]] Fink-Projekt, http://www.finkproject.org/
 
-- [[[Flatpack]]] Flatpack, https://flatpak.org/
+- [[[Flatpak]]] Flatpak, https://flatpak.org/
 
 - [[[foreman]]] Foreman, https://www.theforeman.org/
 
@@ -741,6 +749,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[lpic-101]]] Linux Professional Institute, Unterlagen für LPIC 101, https://www.lpi.org/study-resources/lpic-1-101-exam-objectives/
 
 - [[[lug.berlin]]] Das Berliner Community-Portal lug.berlin, http://lug.berlin/
+
+- [[[LXC]]] Linux Containers (LXC), https://linuxcontainers.org/lxc/introduction/
 
 - [[[Maemo]]] Maemo Community, http://maemo.org/
 
@@ -931,6 +941,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[UCS]]] Univention Corporate Server (UCS), https://www.univention.de/produkte/ucs/
 
 - [[[univention-errata]]] Aktualisierungen bei UCS, https://errata.univention.de/
+
+- [[[VirtualBox]]] VirtualBox, https://www.virtualbox.org/
 
 - [[[Vogt-apturl]]] Michael Vogt: apturl bei Ubuntu Users, http://wiki.ubuntuusers.de/apturl
 

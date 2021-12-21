@@ -42,23 +42,33 @@ ein schlichtes `tar`-Archiv, welches entweder mit `gzip` oder ab Release
 
 // Stichworte für den Index
 (((Containerformat, Docker)))
-(((Containerformat, Flatpack)))
-(((Containerformat, OpenContainer)))
+(((Containerformat, Flatpak)))
+(((Containerformat, LXC)))
+(((Containerformat, Linux Containers)))
+(((Containerformat, OpenContainers)))
 (((Containerformat, Snappy)))
-Seit 2015 und der Popularisierung von Docker bestehen Containerformate.
-Ziel ist, in diesen Containern bereits fertig installierte Anwendungen
-bereitzustellen. Dazu zählen bspw. die Formate Flatpack, OpenContainer
-und Snappy (siehe <<Docker>>, <<Flatpack>>, <<OpenContainer>> und
-<<Ubuntu-Snappy-Projekt>>).
+(((Containerformat, VirtualBox)))
+(((Debianpaket, docker)))
+(((Debianpaket, flatpak)))
+(((Debianpaket, lxc)))
+(((Debianpaket, oci-image-tool)))
+Seit 2007 bestehen Containerformate, die insbesondere mit VirtualBox und
+Docker populär wurden. Ziel ist, in diesen Containern bereits fertig
+installierte Anwendungen bereitzustellen. Dazu zählen bspw. die Formate
+Flatpak, OpenContainers, Linux Containers (LXC), Snappy und VirtualBox
+(VDI) (siehe <<Docker>>, <<Flatpak>>, <<OpenContainer>>, <<LXC>>,
+<<Ubuntu-Snappy-Projekt>> und <<VirtualBox>>).
 
 .Übersicht zu Containerformaten und deren Verbreitung
 [frame="topbot",options="header",id="tab.containerformate"]
 |====
-| Abkürzung  | Format                 | in Verwendung | Distribution
-| Docker     | Containerformat        | seit 2014 | Debian, Ubuntu, RedHat/Fedora
-| Flatpack   | Containerformat        | seit 2015 | RedHat/Fedora, Ubuntu
-| OpenContainer | Containerformat     | seit 2015 | Virtualisierer
-| Snappy     | Containerformat        | seit 2015 | Ubuntu
+| Abkürzung              | in Verwendung | Distribution | Name des Debianpakets
+| Docker                 | seit 2014 | Debian, Ubuntu, RedHat/Fedora, openSUSE, CentOS | 'docker' <<Debian-Paket-docker>>
+| Flatpak                | seit 2015 | RedHat/Fedora, Ubuntu, CentOS | 'flatpak' <<Debian-Paket-flatpak>>
+| Linux Containers (LXC) | seit 2008 | Debian, Ubuntu, RedHat/Fedora, CentOS | 'lxc' <<Debian-Paket-lxc>>
+| OpenContainers          | seit 2015 | Debian, Ubuntu, RedHat/Fedora, CentOS | 'oci-image-tool' <<Debian-Paket-oci-image-tool>>
+| Snappy                 | seit 2015 | Ubuntu | nicht vorhanden
+| VirtualBox (VDI)       | seit 2007 | Debian, Ubuntu, RedHat/Fedora, openSUSE, CentOS, Oracle Linux | 'virtualbox' (kein offizielles Debianpaket)
 |====
 
 // Stichworte für den Index
