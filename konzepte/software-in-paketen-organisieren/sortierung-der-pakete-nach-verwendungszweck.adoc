@@ -175,7 +175,7 @@ Spiele (_games_)::
 Spiele und Unterhaltung ('freeciv-server', 'gcompris', 'openttd')
 
 Sprachpakete (_localization_)::
-Lokalisierungsunterstützung für große Softwarepakete ('iceweasel-l10n-all', 'kde-l10n-es', 'libreoffice-l10n-ar')
+Lokalisierungsunterstützung für große Softwarepakete ('firefox-l10n-all', 'kde-l10n-es', 'libreoffice-l10n-ar')
 
 TeX (_tex_)::
 alles zum Schriftsatzsystem TeX, inkl. LaTeX und XeTeX ('dvi2ps', 'biblatex', 'gummi')
@@ -196,7 +196,7 @@ Video (_video_)::
 Videobetrachter, -editoren, -rekorder, -sender ('dvb-apps', 'dvbstream', 'gnome-mplayer', 'mpv')
 
 Web (_web_)::
-Webbrowser, Download-Tools, HTML-Editoren, usw. ('bluefish', 'iceweasel')
+Webbrowser, Download-Tools, HTML-Editoren, usw. ('bluefish', 'firefox')
 
 Webserver (_httpd_)::
 Webserver und ihre Module ('apache2', 'nginx', 'lighttpd', 'libapache2-mod-perl2', 'libapache2-mod-php5')
