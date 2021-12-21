@@ -774,6 +774,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[mintbackup]]] mintbackup, https://community.linuxmint.com/software/view/mintbackup
 
+- [[[MXLinux]]] MX Linux, https://mxlinux.org/
+
 - [[[Naumann-Abakus-Internet]]] Dr. Friedrich Naumann: Vom Abakus zum Internet: die Geschichte der Informatik. Darmstadt, Primus-Verlag, 2001, ISBN 3-89678-224-X
 
 - [[[Ncurses]]] Ncurses-Projektseite beim GNU-Projekt, https://www.gnu.org/software/ncurses/

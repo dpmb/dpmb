@@ -77,11 +77,14 @@ BackTrack, Kali Linux:: gedacht zur Netzwerk- und Sicherheitsanalyse. BackTrack 
 Debian Live System:: Projekt zur Erstellung und Pflege von Debian-basierten Live-Systemen und Debian Live Images <<DebianLiveSystem>>
 
 Finnix:: Debian-Minimalsystem, gedacht für Systemadministratoren zur
-Wartung und Reparatur im Rahmen von Notfällen <<Finnix>>.
+Wartung und Reparatur im Rahmen von Notfällen <<Finnix>>
 
 Grml:: textbasiert, gedacht als Rettungssystem und für die Systemanalyse, basiert auf Debian 'unstable' <<Grml>>
 
 Knoppix:: basiert auf einer Mischung aus Debian 'stable', 'unstable' und 'testing' <<Knoppix>>
+
+MX Linux:: Linux-Distributionen für Desktop-Computer und Notebooks,
+basierend auf Debian 'stable' <<MXLinux>>
 
 Siduction:: Linux-Distributionen für Desktop-Computer und Notebooks, basierend auf Debian 'unstable' <<Siduction>>
 
