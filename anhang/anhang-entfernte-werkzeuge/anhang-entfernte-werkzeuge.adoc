@@ -39,7 +39,7 @@ weil es mit der APT-Version nach 'Buster' (APT ≥ 1.9) nicht mehr
 übersetzbar war und zudem seit Jahren verwaist war, sprich: ohne aktiven
 Paketmaintainer.
 
-`ara` and `xara-gtk`::
+`ara` und `xara-gtk`::
 Kommandozeilen- und graphische Programme zum Durchsuchen der
 Debian-Paket-Listen. Zuletzt in Debian 9 _Stretch_ enthalten. Beide
 waren zum Zeitpunkt der Entfernung bereits 7 Jahre verwaist und nicht
