@@ -4,68 +4,79 @@
 [[anhang-entfernte-werkzeuge]]
 == Früher im Buch erwähnte Werkzeuge  ==
 
+Das Universum der Werkzeuge für Debian GNU/Linux unterliegt stetigen
+Veränderungen und entwickelt sich weiter. Eine ganze Reihe davon haben
+wir in früheren Versionen dieses Buches besprochen, inzwischen wurden
+diese jedoch obsolet. Das betrifft die folgenden Werkzeuge:
+
 `apprecommender`::
-Ein Programm, das anhand von `debtags` und der Liste der installierten
-Paketen weitere, ähnliche, aber noch nicht installierte Paket
-vorschlug. Wurde 2016 in Debian Unstable aufgenommen, aber 2017
-bereits wieder entfernt. War nie Bestandteil einer stabilen
-Debian-Veröffentlichung.
+Ein Programm, dass anhand von `debtags` und der Liste der installierten
+Pakete weitere, ähnliche, aber noch nicht installierte Pakete
+vorschlägt. Dieses wurde 2016 in Debian 'unstable' aufgenommen, aber
+bereits 2017 wieder entfernt. `apprecommender` war nie Bestandteil einer
+stabilen Debian-Veröffentlichung.
 
 `apt-transport-debtorrent`::
-Ein P2P-Plugin zum Kopieren von von anderen Maschinen im LAN bereits
-heruntergeladenen Paketen aus `/var/cache/apt/archives/`. War zuletzt
-in Debian 7 _Wheezy_ und wurde 2013 aus Debian Unstable entfernt.
+Ein P2P-Plugin zum Abgleichen und Kopieren von bereits heruntergeladenen
+Paketen zwischen verschiedenen Maschinen mit einer Debian-Installation
+im LAN. `apt-transport-debtorrent` war zuletzt in Debian 7 _Wheezy_
+enthalten und wurde 2013 aus Debian 'unstable' entfernt.
 
 `aptoncd`::
-Eine weitere Lösung zum Aktualisierungen einspielen auf Systemen ohne
-Netzwerkanschluss. War zuletzt in Debian 8 _Jessie_ und wurde 2018 aus
-Debian Unstable entfernt.
+Werkzeug, um Aktualisierungen auf Systemen ohne Netzwerkanschluss
+einzuspielen. `aptoncd` war zuletzt in Debian 8 _Jessie_ enthalten und
+wurde 2018 aus Debian 'unstable' entfernt.
 
 `aptsh`::
-Bei der `aptsh` (kurz für 'APT Shell') handelte es sich um eine Shell
+Bei der `aptsh` (kurz für 'APT Shell') handelt es sich um eine Shell
 für die Paketverwaltung. Sie war verfügbar war bis Debian 9 'Stretch'
 und Ubuntu 19.04 'Disco'. 'aptsh' war zuletzt mehrere Jahre verwaist
 <<aptsh-verwaist-Bug-Report-831493>> und hatte immer mehr Probleme,
 gegen neuere APT-Version zu bauen. Kurz vor dem Release von Debian 10
-'Buster' wurde es dann aus Debian Unstable und Testing (zu dem
+'Buster' wurde es dann aus Debian 'unstable' und 'testing' (zu dem
 Zeitpunkt 'Buster') entfernt <<aptsh-entfernen-Bug-Report-930680>>,
-weil es mit der APT-Verrsion nach 'Buster' (APT ≥ 1.9) nicht baute und
-seit Jahren verwaist war.
+weil es mit der APT-Version nach 'Buster' (APT ≥ 1.9) nicht mehr
+übersetzbar war und zudem seit Jahren verwaist war, sprich: ohne aktiven
+Paketmaintainer.
 
 `ara` and `xara-gtk`::
 Kommandozeilen- und graphische Programme zum Durchsuchen der
-Debian-Paket-Listen. Zuletzt in Debian 9 _Stretch_, waren zum
-Zeitpunkt der Entfernung bereits 7 Jahre verwaist und waren nicht mehr
-kompatibel mit den aktuellen Versionen der internen
-(Text-)Datenbank-Formaten von apt und dpkg.
+Debian-Paket-Listen. Zuletzt in Debian 9 _Stretch_ enthalten. Beide
+waren zum Zeitpunkt der Entfernung bereits 7 Jahre verwaist und nicht
+mehr kompatibel mit den aktuellen Versionen der internen
+(Text-)Datenbank-Formate von `apt` und `dpkg`.
 
 `auto-apt`::
-Programm ähnlich zu `command-not-found`, das jedoch das nicht
-installierte Programm, das versucht wurde zu benutzen, gleich
-installiert. (Passende Rechte vorausgesetzt.). War zuletzt in Debian 8
-_Jessie_ und wurde 2017 aus Debian Unstable entfernt.
+Programm ähnlich zu `command-not-found`, welches jedoch ein nicht
+installiertes Programm, dass versucht wurde zu benutzen, gleich
+installiert. (Passende Benutzerrechte vorausgesetzt.). `auto-apt` war
+zuletzt in Debian 8 _Jessie_ enthalten und wurde 2017 aus Debian
+'unstable' entfernt.
 
 `debtags-edit`::
-Ein graphisches Programm zum Bearbeiten von Paket-Tags. Wurde obsolet
-mit der Umstellung der debtags-Webseite auf Single-Sign-On.
+Ein graphisches Programm zum Bearbeiten von Paket-Tags. `debtags-edit`
+wurde obsolet mit der Umstellung der Debtags-Webseite auf
+Single-Sign-On.
 
 `gdebi-kde`::
-graphische, KDE-basierte Benutzerschnittstelle zu gdebi, siehe
-<<gui-gdebi>>. Zuletzt in Debian 9 _Stretch_, war das letzte Paket,
-das noch pykde4 brauchte.
+Eine graphische, KDE-basierte Benutzerschnittstelle zu Gdebi (siehe
+<<gui-gdebi>>). `gdebi-kde` war zuletzt in Debian 9 _Stretch_ enthalten.
+Es war das letzte Paket, dass noch die Bibliothek 'pykde4' benötigte.
 
 `gui-apt-key` und `curses-apt-key`::
 // Stichworte für den Index
 (((curses-apt-key)))
 (((gui-apt-key)))
-U.a. weil `apt-key` abgekündigt wurde, werden auch dessen alternative
-Frontends `gui-apt-key` <<Debian-Paket-gui-apt-key>> und `curses-apt-key`
-<<curses-apt-key>> nicht mehr weiterentwickelt.
+Das Werkzeug `apt-key` wurde abgekündigt. In Folge werden auch dessen
+alternative Bedienschnittstellen `gui-apt-key`
+<<Debian-Paket-gui-apt-key>> und `curses-apt-key` <<curses-apt-key>>
+nicht mehr weiterentwickelt. Beide waren zuletzt in Debian 9 _Stretch_
+enthalten.
 
 `software-center`::
-von Ubuntu entwickelte, grafische Benutzerschnittstelle zum Pakete
-verwalten im Stile eines "App Stores". Zuletzt in Debian 7 _Wheezy_
-<<RM-software-center>> und Ubuntu 16.04 _Xenial_
+Eine von Ubuntu entwickelte, grafische Benutzerschnittstelle zur
+Verwaltung von Softwarepaketen im Stile eines "App Stores". Zuletzt war
+es in Debian 7 _Wheezy_ <<RM-software-center>> und Ubuntu 16.04 _Xenial_
 <<Ubuntu-Paket-software-center>> vorhanden.
 
 // Datei (Ende): ./anhang/anhang-entfernte-werkzeuge/anhang-entfernte-werkzeuge.adoc
