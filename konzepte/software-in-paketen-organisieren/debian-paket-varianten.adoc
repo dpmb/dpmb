@@ -159,15 +159,16 @@ einem Repository bereithalten, lernen Sie unter ``Metapakete bauen'' in
 // Stichworte für den Index
 (((Mikro-Binärpaket, udeb)))
 (((Paketvarianten, Mikro-Binärpaket)))
-Ausschließlich die _Mikro-Binärpakete_ mit der Dateiendung `udeb` sind
-technisch keine gewöhnlichen Binärpakete. Sie sind aufs Kleinste
-heruntergestutzte Pakete, die nur eine Art von Paketrelation namens
-``hängt ab von'' kennen, desweiteren keine Maintainer-Skripte beinhalten
-und auch sonst kaum Metainformationen mitführen. Einziger Einsatzzweck
-dieser Mikro-Debs{empty}footnote:[das ``u'' soll den griechischen
-Buchstaben Mu (``µ'') darstellen] ist im Debian Installer während des
-Zeitpunkts der Installation. Deswegen gibt es auch nur solche Pakete als
-`udeb`-Variante, die vom Debian Installer selbst gebraucht werden.
+_Mikro-Binärpakete_ tragen die Dateiendung `udeb`, wobei das 'u' den
+griechischen Buchstaben 'Mu' (``µ'') repräsentiert. Sie sind technisch
+keine gewöhnlichen Binärpakete, sondern aufs Kleinste heruntergestutzte
+Pakete. Sie kennen nur eine einzige Art von Paketrelation namens ``hängt
+ab von''. Desweiteren beinhalten sie keine Maintainer-Skripte und führen
+auch sonst kaum Metainformationen mit. 
+
+Einziger Einsatzzweck dieser Mikro-Debs ist im Debian Installer während
+des Zeitpunkts der Installation. Deswegen gibt es auch nur solche Pakete
+als `udeb`-Variante, die vom Debian Installer selbst gebraucht werden.
 Darunter zählen bspw. Pakete mit den Programmen zum Anlegen von
 Dateisystemen.
 
