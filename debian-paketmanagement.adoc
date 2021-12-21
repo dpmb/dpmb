@@ -23,9 +23,9 @@ include::praxis/praxis.adoc[]
 include::ausblick/ausblick.adoc[]
 
 [appendix]
-include::quellen/quellen.adoc[]
-
 include::anhang/anhang.adoc[]
+
+include::quellen/quellen.adoc[]
 
 include::index/index.adoc[]
 
