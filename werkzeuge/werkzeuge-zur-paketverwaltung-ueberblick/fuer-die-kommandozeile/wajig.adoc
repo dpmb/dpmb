@@ -18,7 +18,11 @@ und `aptitude` (<<aptitude>>) auf der Kommandozeile footnote:[Bis
 einschließlich Debian 6 _Squeeze_ bestand zudem eine graphische
 Variante namens 'gjig', die mittlerweile obsolet und in keiner
 unterstützten Debian- oder Ubuntu-Veröffentlichung mehr verfügbar
-ist.]
+ist.]. 
+
+NOTE: Die bisher letzte stabile Veröffentlichung von 'wajig' befindet
+sich in Debian 10 'Buster', danach ist es nur noch im Bereich 'unstable'
+vorrätig.
 
 `wajig` zielt darauf ab, alle im Alltag erforderlichen Aktionen zur
 Paketverwaltung in 'einem einzigen' Werkzeug für die Kommandozeile
