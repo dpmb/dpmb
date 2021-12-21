@@ -868,6 +868,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Skype]]] Skype, https://www.skype.com/
 
+- [[[Slax]]] Slax, https://www.slax.org/
+
 - [[[SmartPM]]] Smart Package Manager, Projektseite, https://labix.org/smart
 
 - [[SmartPM-RM]] Entfernung von SmartPM aus Debian, https://bugs.debian.org/946692

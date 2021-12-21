@@ -81,19 +81,25 @@ Wartung und Reparatur im Rahmen von Notfällen <<Finnix>>
 
 Grml:: textbasiert, gedacht als Rettungssystem und für die Systemanalyse, basiert auf Debian 'unstable' <<Grml>>
 
-Knoppix:: basiert auf einer Mischung aus Debian 'stable', 'unstable' und 'testing' <<Knoppix>>
+Knoppix:: Mutter aller Live-Systeme mit dem Vater Klaus Knopper. Es
+basiert auf einer Mischung aus Debian 'stable', 'unstable' und 'testing'
+sowie zusätzlichen, nicht-freien Komponenten <<Knoppix>>
 
 MX Linux:: Linux-Distributionen für Desktop-Computer und Notebooks,
 basierend auf Debian 'stable' <<MXLinux>>
 
 Siduction:: Linux-Distributionen für Desktop-Computer und Notebooks, basierend auf Debian 'unstable' <<Siduction>>
 
+Slax:: Live-Distribution mit dem Fokus auf Anpassbarkeit an die eigenen
+Bedürfnisse <<Slax>>.
+
 Tails:: The Amnesic Incognito Live System (TAILS) <<TAILS>> -- eine
 speziell auf Privatsphäre ausgelegte Debian-Distribution. TAILS kommt
 beim Tor-Projekt <<TorProject>> zum Einsatz.
 
-Zumindest Aptosid, Siduction, Grml und Knoppix lassen sich auch auf der
-Festplatte installieren und sind damit nicht nur Live-CDs.
+Nach aktuellem Stand lassen sich zumindest Aptosid, Siduction, Grml und
+Knoppix ebenfalls auf der Festplatte installieren und sind damit nicht
+nur Live-CDs.
 
 === Minimalsysteme ===
 
