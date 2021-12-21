@@ -88,6 +88,10 @@ basierend auf Debian 'stable' <<MXLinux>>
 
 Siduction:: Linux-Distributionen für Desktop-Computer und Notebooks, basierend auf Debian 'unstable' <<Siduction>>
 
+Tails:: The Amnesic Incognito Live System (TAILS) <<TAILS>> -- eine
+speziell auf Privatsphäre ausgelegte Debian-Distribution. TAILS kommt
+beim Tor-Projekt <<TorProject>> zum Einsatz.
+
 Zumindest Aptosid, Siduction, Grml und Knoppix lassen sich auch auf der
 Festplatte installieren und sind damit nicht nur Live-CDs.
 
