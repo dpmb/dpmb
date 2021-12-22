@@ -36,5 +36,14 @@
    anschauen.
 *** Gehört eigentlich nicht zur Paketverwaltung... Kann man
    entsprechend zum Kürzen wieder rauskippen.
+** siehe ReduceDebian -- Reducing the size of the Debian Installation
+unter Footprint unter https://wiki.debian.org/ReduceDebian
+*** nicht-kritische Pakete entfernen
+*** apt umkonfigurieren, so dass es nicht automatisch zusätzliche Pakete installiert
+*** Pakete durch kleinere Äquivalente ersetzen
+*** unnötige Pakete entfernen
+*** unnötige Locales entfernen, bspw. mittels localepurge
+*** unnötige Kernelmodule entfernen
+** bleachbit benutzen (https://www.bleachbit.org/)
 
 // Datei (Ende): ./praxis/plattenplatz-sparen-mit-der-paketverwaltung.adoc
