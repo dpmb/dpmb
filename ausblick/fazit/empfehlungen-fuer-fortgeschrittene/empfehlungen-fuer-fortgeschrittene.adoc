@@ -1,0 +1,10 @@
+// Datei: ./ausblick/fazit/empfehlungen-fuer-fortgeschrittene/empfehlungen-fuer-fortgeschrittene.adoc
+
+// Baustelle: Notizen
+
+[[ausblick-empfehlungen-fuer-fortgeschrittene-und-profis]]
+=== Empfehlungen für Fortgeschrittene und Profis ===
+
+ToDo
+
+// Datei (Ende): ./ausblick/fazit/empfehlungen-fuer-fortgeschrittene/empfehlungen-fuer-fortgeschrittene.adoc

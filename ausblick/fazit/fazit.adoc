@@ -4,9 +4,13 @@
 
 == Fazit / Zusammenfassung ==
 
-TODO: Mehr und Aufsplitten
+// Was können Sie jetzt?
+include::was-koennen-sie-jetzt/was-koennen-sie-jetzt.adoc[]
 
 // Empfehlungen für Einsteiger
 include::empfehlungen-fuer-einsteiger/empfehlungen-fuer-einsteiger.adoc[]
+
+// Empfehlungen für Fortgeschrittene und Profis
+include::empfehlungen-fuer-fortgeschrittene/empfehlungen-fuer-fortgeschrittene.adoc[]
 
 // Datei (Ende): ./ausblick/fazit/fazit.adoc

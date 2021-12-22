@@ -1,0 +1,10 @@
+// Datei: ./ausblick/fazit/was-koennen-sie-jetzt/was-koennen-sie-jetzt.adoc
+
+// Baustelle: Notizen
+
+[[ausblick-was-koennen-sie-jetzt]]
+=== Was können Sie jetzt? ===
+
+ToDo
+
+// Datei (Ende): ./ausblick/fazit/was-koennen-sie-jetzt/was-koennen-sie-jetzt.adoc
