@@ -8,6 +8,8 @@
 
 // [bibliography]
 
+- [[[ArchLinux]]] Arch Linux, https://archlinux.org/
+
 - [[[alien]]] Joey Hess: Projektseite zu 'alien', https://joeyh.name/code/alien/
 
 - [[[Allbery-Debian-Popularity]]] Debian and popularity, Blog-Posting von Russ Allbery, https://www.eyrie.org/~eagle/journal/2012-01/004.html
@@ -614,6 +616,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[dpkg-Kumar]]] Avishek Kumar: 15 Practical Examples of "dpkg commands" for Debian Based Distros, http://www.tecmint.com/dpkg-command-examples/
 
 - [[[dpmb-github]]] Debian Package Management Book, GitHub-Repository, https://github.com/dpmb
+
+- [[[DraugerOS]]] Drauger OS, https://draugeros.org/
 
 - [[[Drilling-APT-Pinning-LinuxUser]]] Thomas Drilling: Festgenagelt. Tricks zum Mischen von Debian-Releases, LinuxUser 06/2012, LinuxNewMedia AG, München, 2012, S. 35ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2012/06/Tricks-zum-Mischen-von-Debian-Releases
 

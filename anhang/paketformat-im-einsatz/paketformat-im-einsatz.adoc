@@ -125,9 +125,15 @@ basiert auf der Infrastruktur und den Paketen von Debian und Ubuntu
 === Spieleplattform ===
 
 // Stichworte für den Index
+(((Drauger OS)))
 (((Steam OS)))
 
-Steam OS:: ausgelegt für Spiele und die Verwendung großer Bildschirme <<SteamOS>>
+Drauger OS:: Betriebssystem für Linux Desktop Gaming auf der Basis von Ubuntu LTS <<DraugerOS>>
+
+Steam OS:: ausgelegt für Spiele und die Verwendung großer Bildschirme.
+Version 1.0 basiert auf Debian 7 _Wheezy_ und Version 2.0 auf Debian 8
+_Jessie_. Ab Version 3.0 benutzt Steam OS <<SteamOS>> hingegen Arch Linux
+<<ArchLinux>> als Basis.
 
 === Mobile Architekturen ===
 
@@ -135,12 +141,13 @@ Steam OS:: ausgelegt für Spiele und die Verwendung großer Bildschirme <<SteamO
 (((Maemo)))
 (((Meego)))
 (((OpenMoko)))
-Desweiteren kommt das `deb`-Paketformat auf mobilen Architekturen und
-Plattformen zum Einsatz. Dazu zählen etwa die Mobiltelefone Nokia N900
-mit Maemo <<Maemo>>, Nokia N9 mit Meego <<MeeGo>> sowie diverse
-Distributionen für das OpenMoko <<OpenMoko>>. Auch der
-community-getragene, inoffizielle N900-Nachfolger Neo900 <<Neo900>> soll
-u.a. mit Maemo und damit ebenfalls mit dem `deb`-Paketformat laufen.
+Neben der x86-Architektur kommt das `deb`-Paketformat auf mobilen
+Architekturen und Plattformen zum Einsatz. Dazu zählen etwa die
+Mobiltelefone Nokia N900 mit Maemo <<Maemo>>, Nokia N9 mit Meego
+<<MeeGo>> sowie diverse Distributionen für das OpenMoko <<OpenMoko>>.
+Auch der community-getragene, inoffizielle N900-Nachfolger Neo900
+<<Neo900>> soll u.a. mit Maemo und damit ebenfalls mit dem
+`deb`-Paketformat laufen.
 
 === Anstatt Linux ===
 
@@ -156,9 +163,9 @@ u.a. mit Maemo und damit ebenfalls mit dem `deb`-Paketformat laufen.
 (((Nexenta OS)))
 (((StormOS)))
 (((UbuntuBSD)))
-Auch mit Nicht-Linux-Kerneln wird das Paketformat
-eingesetzt. Einerseits gibt es Debian im Rahmen der Debian Ports auch
-mit BSD- und GNU-Hurd-Kernel in Form von Debian GNU/kFreeBSD
+Auch mit Nicht-Linux-Kerneln wird das Paketformat eingesetzt. Einerseits
+gibt es Debian im Rahmen der Debian Ports auch mit BSD- und
+GNU-Hurd-Kernel in Form von Debian GNU/kFreeBSD
 <<Debian-Wiki-Debian-GNUkFreeBSD>> und Debian GNU/Hurd
 <<Debian-Wiki-Debian-GNUHurd>>. Auch von Ubuntu gibt es mittlerweile
 unter dem Namen UbuntuBSD <<UbuntuBSD>> eine Variante mit
