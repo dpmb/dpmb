@@ -5,33 +5,40 @@
 [[ausblick-empfehlungen-fuer-einsteiger]]
 === Empfehlungen für Einsteiger ===
 
-==== Mit welchem Programm zur Paketverwaltung soll ich anfangen? ====
-
 // Stichworte für den Index
 (((apt)))
 (((apt-cache)))
 (((apt-get)))
 (((aptitude)))
 (((Synaptic)))
-Das hängt sehr davon ab, welche Art von Benutzerschnittstelle Sie
-bevorzugen -- oder auch, in welcher Situation (Desktop, Server via ssh)
-Sie gerade sind:
+Häufig erreicht uns die Frage, mit welchem Programm zur Paketverwaltung
+der Einstieg am leichtesten gelingt. Eine richtige Antwort darauf fällt
+schwer, weil das einserseits von ihren Vorkenntnissen abhängt,
+andererseits darauf basiert, welcher Art Benutzerschnittstelle Sie
+bevorzugen und drittens in welcher Situation Sie sich gerade befinden.
+Es macht einen großen Unterschied, ob Sie einen Desktop mit graphischer
+Oberfläche vor sich haben oder bspw. über 'ssh' auf einem Server
+eingeloggt sind. Von daher geben wir Ihnen drei Empfehlungen -- eine für
+die Kommandozeile, eine für den interaktiven Textmodus und eine für die
+graphische Benutzerschnittstelle.
 
 Kommandozeile::
-`apt`. Es ist einfach und intuitiv, schnell getippt, hat angenehme
-farbliche Hervorhebungen in der Ausgabe und kann praktisch alles, womit
-Sie im Alltag zu tun haben. Bei älteren Veröffentlichungen ohne `apt`
-als Befehl weichen Sie auf die Befehle `apt-get` und `apt-cache` aus,
-aber die Nachteile sind nur geringfügig. Im wesentlichen umfaßt das mehr
-Tippen, je nach Aufgabe das passende Programm auswählen und keine Farbe
-in der Standard-Einstellung.
+`apt` (siehe <<apt>>). Es ist einfach und intuitiv, schnell getippt, hat
+angenehme farbliche Hervorhebungen in der Ausgabe und kann praktisch
+alles, womit Sie im Alltag zu tun haben. Bei älteren Veröffentlichungen
+ohne `apt` als Befehl weichen Sie auf die Befehle `apt-get` und
+`apt-cache` aus, aber die Nachteile sind nur geringfügig. Im
+wesentlichen umfaßt das mehr Tippen, je nach Aufgabe die Auswahl des
+passenden Programms und den Verzicht auf farbliche Hervorhebung in der
+Ausgabe.
 
 Interaktiver Textmodus::
-`aptitude`. Nicht nur, weil es auch das einzige Programm mit dieser
-Benutzerschnittstelle ist, sondern auch, weil es einem sehr viele
-Informationen und Möglichkeiten bietet. Diese Darstellung in der
-Gesamtheit auf der Kommandozeile zu erreichen, gelingt nur mit einem
-Dutzend parallel geöffneter Terminalfenster.
+`aptitude` (siehe <<aptitude>>). Nicht nur, weil es auch das einzige
+Programm mit dieser Benutzerschnittstelle ist, sondern auch, weil es
+Ihnen sehr viele Informationen und Möglichkeiten zu den einzelnen
+Paketen und deren Status bietet. Diese Darstellung in der Gesamtheit auf
+der Kommandozeile zu erreichen, gelingt nur mit einem Dutzend parallel
+geöffneter Terminalfenster.
 
 Graphische Benutzerschnittstelle:: 
 Synaptic (siehe <<gui-synaptic>>). Es bildet unserer Meinung nach das
