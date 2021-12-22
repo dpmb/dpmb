@@ -7,34 +7,52 @@
 
 // Stichworte für den Index
 (((aptitude, Format Strings)))
-(((aptitude, die Ausgabe anpassen)))
-'Format Strings' sind eine spezifische Schreibweise einer Ausgabe anhand
-von Platzhaltern. Sie ähneln der Art und Weise, wie sie in der
+(((aptitude, die Ausgabe mit Platzhaltern anpassen)))
+Mit 'Format Strings' legen Sie die Ausgabe anhand von vorgegebenen
+Platzhaltern fest. Sie ähneln der Art und Weise, wie sie in der
 `printf()`-Funktion in der Programmiersprache C respektive der
 `print()`-Funktion in Python üblich sind. Eine ausführliche Beschreibung
 der Platzhalter finden Sie im `aptitude`-Handbuch unter 'Customizing the
 package list' <<aptitude-dokumentation-package-list>>.
 
 <<tab.aptitude-format-strings>> gibt Ihnen eine Übersicht zu den
-verfügbaren Format Strings. Diese Platzhalter helfen Ihnen in
-Kombination mit der Suche nach Paketen und bei der Gestaltung der
-Ausgabe. Sie bestimmen damit, welche Informationen `aptitude`
-spaltenweise zu einem Paket darstellt.
+verfügbaren Platzhaltern. Diese Platzhalter helfen Ihnen in Kombination
+mit der Suche nach Paketen und bei der Gestaltung der Ausgabe. Sie
+bestimmen damit, welche Informationen `aptitude` spaltenweise zu einem
+Paket darstellt.
 
 .Format Strings in `aptitude`
 [frame="topbot",options="header",cols="1,9",id="tab.aptitude-format-strings"]
 |====
 | Platzhalter | Bedeutung
-| `%a` | Flag für die Aktion des Pakets ('Action Flag')
-| `%c` | aktueller Paketstatus ('Current State Flag')
+| `%a` | das Flag für die Aktion des Pakets ('Action Flag')
+| `%A` | die ausführlichere Beschreibung des Flags der Aktion
+| `%B` | die Anzahl der kaputten Pakete ('Broken Packages')
+| `%c` | der aktuelle Paketstatus ('Current State Flag')
+| `%C` | eine ausführlichere Beschreibung des aktuellen Paketstatus
 | `%d` | die kurze Paketbeschreibung ('description')
-| `%E` | Name des Source-Pakets
+| `%D` | die Größe der Paketdatei
+| `%E` | der Name des Source-Pakets
+| `%H` | der Name des Rechners, auf dem 'aptitude' gerade ausgeführt wird ('Hostname')
+| `%i` | benennt die höchste Priorität, die einer Paketversion zugewiesen wurde
 | `%I` | die (geschätzte) Installationsgröße ('installed size')
 | `%m` | der Name des Paketmaintainers ('maintainer')
 | `%M` | gesetzt, falls das Paket automatisch installiert wurde ('Automatic Flag')
-| `%p` | Paketname ('package name')
-| `%P` | Paketpriorität ('priority')
-| `%s` | Bereich, in den das Paket eingeordnet ist ('section')
+| `%n` | gibt die Programmversion von 'aptitude' aus
+| `%N` | gibt den Namen des Programms aus, i.d.R 'aptitude'
+| `%o` | gibt eine Schätzung der Datenmenge zurück, die vom Repository bezogen wird
+| `%p` | der Paketname ('package name')
+| `%P` | die Paketpriorität ('priority')
+| `%r` | gibt die geschätzte Anzahl Pakete an, die von diesem Paket abhängen ('Reverse Depends Count')
+| `%R` | eine Abkürzung für die Priorität des Paketes ('Abbreviated Priority')
+| `%s` | der Bereich, in den das Paket eingeordnet ist ('section')
+| `%S` | der Vertrauensstatus des Paketes; ist `U`, falls es nicht aus einer vertrauenswürdigen Quelle stammt
+| `%t` | der Name des Archivs, aus dem das Paket stammt
+| `%T` | gibt einen `*` zurück, falls das Paket getagged wurde, ansonsten nichts
+| `%u` | falls die anstehenden Aktionen die Größe des verfügbaren Speicherplatzes auf dem Datenträger verändern, gibt dieser Platz eine entsprechende Mitteilung aus
+| `%v` | die aktuell installierte Version des Pakets, falls installiert ('Version')
+| `%V` | gibt die Paketversion aus, die installiert würde, falls die Aktion 'Paket installieren' ausgeführt wird ('Candidate Version')
+| `%Z` | die Größe des Speicherplatzes, der zusätzlich benutzt oder freigegeben wird, wenn das Paket installiert, entfernt oder aktualisiert wird ('Size Change')
 |====
 
 Die Voreinstellung von `aptitude` beinhaltet die Platzhalter `%c`, `%a`,
