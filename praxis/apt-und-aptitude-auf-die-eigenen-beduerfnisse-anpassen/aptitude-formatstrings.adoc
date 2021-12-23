@@ -30,22 +30,22 @@ Paket darstellt.
 | `%B` | die Anzahl der kaputten Pakete ('Broken Packages')
 | `%c` | der aktuelle Paketstatus ('Current State Flag')
 | `%C` | eine ausführlichere Beschreibung des aktuellen Paketstatus
-| `%d` | die kurze Paketbeschreibung ('description')
+| `%d` | die kurze Paketbeschreibung ('Description')
 | `%D` | die Größe der Paketdatei
 | `%E` | der Name des Source-Pakets
 | `%H` | der Name des Rechners, auf dem 'aptitude' gerade ausgeführt wird ('Hostname')
 | `%i` | benennt die höchste Priorität, die einer Paketversion zugewiesen wurde
-| `%I` | die (geschätzte) Installationsgröße ('installed size')
-| `%m` | der Name des Paketmaintainers ('maintainer')
+| `%I` | die (geschätzte) Installationsgröße ('Installed Size')
+| `%m` | der Name des Paketmaintainers ('Maintainer')
 | `%M` | gesetzt, falls das Paket automatisch installiert wurde ('Automatic Flag')
 | `%n` | gibt die Programmversion von 'aptitude' aus
 | `%N` | gibt den Namen des Programms aus, i.d.R 'aptitude'
 | `%o` | gibt eine Schätzung der Datenmenge zurück, die vom Repository bezogen wird
-| `%p` | der Paketname ('package name')
-| `%P` | die Paketpriorität ('priority')
+| `%p` | der Paketname ('Package Name')
+| `%P` | die Paketpriorität ('Priority')
 | `%r` | gibt die geschätzte Anzahl Pakete an, die von diesem Paket abhängen ('Reverse Depends Count')
 | `%R` | eine Abkürzung für die Priorität des Paketes ('Abbreviated Priority')
-| `%s` | der Bereich, in den das Paket eingeordnet ist ('section')
+| `%s` | der Bereich, in den das Paket eingeordnet ist ('Section')
 | `%S` | der Vertrauensstatus des Paketes; ist `U`, falls es nicht aus einer vertrauenswürdigen Quelle stammt
 | `%t` | der Name des Archivs, aus dem das Paket stammt
 | `%T` | gibt einen `*` zurück, falls das Paket getagged wurde, ansonsten nichts
@@ -62,6 +62,7 @@ der Paketbeschreibung.
 
 // Stichworte für den Index
 (((aptitude, Ausgabespalten festlegen)))
+(((aptitude, die Ausgabe mit Platzhaltern anpassen)))
 (((aptitude, search --display-format)))
 (((aptitude, search -F)))
 Möchten Sie eine andere Ausgabe erhalten, benutzen Sie im Aufruf den
@@ -81,6 +82,8 @@ i asciidoctor-doc
 $
 ----
 
+// Stichworte für den Index
+(((Paketversion anzeigen, verfügbare Pakete)))
 Die Format Strings erlaubt ebenfalls zusätzliche Trennzeichen und
 dezimale Angaben vor einem Platzhalter. Damit legen Sie die weitere
 Gestaltung der Ausgabe und die jeweilige Spaltenbreite fest. Das
@@ -101,6 +104,11 @@ i | 0.1.4-3              | asciidoctor-doc
 $
 ----
 
+// Stichworte für den Index
+(((aptitude, search ?installed)))
+(((aptitude, search ~i)))
+(((aptitude, search ~M)))
+(((Paketmarkierungen, automatic)))
 In der Praxis ist es oft so, dass weitere Schalter im Aufruf miteinander
 zu kombinieren sind. Das nachfolgende Beispiel listet nur den Namen aller
 verfügbaren Pakete auf, die nicht als Abhängigkeiten installiert wurden.
@@ -141,6 +149,26 @@ $ aptitude search '~i' -F '%p' | grep asciidoc
 asciidoc
 asciidoctor
 asciidoctor-doc
+$
+----
+
+// Stichworte für den Index
+(((Paketsuche, nach Paketen aus nicht-vertrauenswürdiger Quelle)))
+Arbeiten Sie mit Repositorys vom Fremdanbietern, hängt die
+Zuverlässigkeit der Pakete vom Fremdanbieter ab. Mit dem nachfolgenden
+Aufruf -- einer Kombination aus `aptitude` und `egrep` -- finden Sie
+alle installierten Pakete, die aus nicht-vertrauenswürdigen Quellen
+stammen. Die Angabe `%S` am Beginn des Format Strings veranlasst
+`aptitude`, ein `U` zu produzieren, sollte der entsprechende Fall
+eintreten. Der angeflanschte Aufruf von `egrep` benutzt einen regulären
+Ausdruck, um für diejenigen Zeilen einen Treffer zu landen, die mit
+einem großen `U` beginnen. Im Beispiel ist es das ausgedachte Paket
+'libblafaselsonstwas'.
+
+.Pakete aus nicht-vertrauenswürdiger Quelle herausfischen
+----
+$ aptitude search '~i' -F '%S %p' | egrep "^U 
+U libblafaselsonstwas
 $
 ----
 
