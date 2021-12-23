@@ -71,8 +71,7 @@ verfügbaren Pakete samt deren Installationsstatus (`%c`) auf, in dessen
 Paketname die Zeichenkette `asciidoc' enthalten ist (`%p`). Zwischen dem
 Paketstatus und dem Paketnamen wird lediglich ein Leerzeichen eingefügt.
 
-.Individuelle Gestaltung des Ausgabeformats von `aptitude` bei der Suche
-nach den verfügbaren Paketen mit 'asciidoc' im Namen
+.Individuelle Gestaltung des Ausgabeformats von `aptitude` bei der Suche nach den verfügbaren Paketen mit 'asciidoc' im Namen
 ----
 $ aptitude search -F '%c %p' asciidoc
 i asciidoc
@@ -104,15 +103,15 @@ $
 
 In der Praxis ist es oft so, dass weitere Schalter im Aufruf miteinander
 zu kombinieren sind. Das nachfolgende Beispiel listet nur den Namen aller
-Pakete auf, die nicht als Abhängigkeiten installiert wurden. Dabei
-bewirkt die Angabe `'~i !~M'` , dass nur die installierten Pakete
+verfügbaren Pakete auf, die nicht als Abhängigkeiten installiert wurden.
+Dabei bewirkt die Angabe `'~i !~M'` , dass nur die installierten Pakete
 berücksichtigt werden (Angabe `'~i'`), und `'!~M'` , dass nur die
 einbezogen werden, bei denen das 'Automatic Flag' nicht gesetzt ist (das
 `!` bewirkt eine Negation).
 
-Das Ergebnis ist zunächst erstmal der komplette Ausgabestring aus
-Installationsstatus, Paketname und Kurzbeschreibung. Um das noch auf den
-Paketnamen zu reduzieren, kommt der Format String `%p` ins Spiel. 
+Das Ergebnis ist zunächst erstmal der komplette, übliche Ausgabestring
+aus Installationsstatus, Paketname und Kurzbeschreibung. Um das noch auf
+den Paketnamen zu reduzieren, kommt der Format String `%p` ins Spiel.
 
 .Lediglich nicht automatisch installierte Pakete auflisten
 ----
@@ -129,6 +128,21 @@ adduser
 adequate
 ...
 $
+----
+
+Geht es Ihnen jedoch darum, lediglich die Namen der Pakete auszugeben,
+die den Begriff 'asciidoc' im Namen tragen und auch installiert sind,
+hilft aus unserer Sicht nur die Kombination aus `asciidoc` und `grep`
+wie folgt weiter:
+
+.Alle installierten Pakete auflisten, die `asciidoc` im Namen tragen
+----
+$ aptitude search '~i' -F '%p' | grep asciidoc
+asciidoc
+asciidoctor
+asciidoctor-doc
+$
+----
 ----
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-formatstrings.adoc
