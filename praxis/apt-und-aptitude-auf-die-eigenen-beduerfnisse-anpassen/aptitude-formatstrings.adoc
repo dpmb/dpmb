@@ -107,7 +107,7 @@ $
 // Stichworte für den Index
 (((aptitude, search ?installed)))
 (((aptitude, search ~i)))
-(((aptitude, search ~M)))
+// (((aptitude, search ~M)))
 (((Paketmarkierungen, automatic)))
 In der Praxis ist es oft so, dass weitere Schalter im Aufruf miteinander
 zu kombinieren sind. Das nachfolgende Beispiel listet nur den Namen aller
