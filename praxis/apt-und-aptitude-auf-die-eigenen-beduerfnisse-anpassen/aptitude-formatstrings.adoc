@@ -118,8 +118,9 @@ einbezogen werden, bei denen das 'Automatic Flag' nicht gesetzt ist (das
 `!` bewirkt eine Negation).
 
 Das Ergebnis ist zunächst erstmal der komplette, übliche Ausgabestring
-aus Installationsstatus, Paketname und Kurzbeschreibung. Um das noch auf
-den Paketnamen zu reduzieren, kommt der Format String `%p` ins Spiel.
+aus Paketstatus, der Aktion, dem 'Automatic Flag', dem Paketnamen und
+der kurzen Paketbeschreibung. Um das noch auf den Paketnamen zu
+reduzieren, kommt der Format String `%p` ins Spiel.
 
 .Lediglich nicht automatisch installierte Pakete auflisten
 ----
