@@ -139,6 +139,31 @@ adequate
 $
 ----
 
+// Stichworte für den Index
+(((Paketmarkierungen, essentiell)))
+Die obige Liste beinhaltet auch alle essentiellen Pakete (siehe
+<<paket-prioritaet-und-essentielle-pakete>>). Diese filtern Sie über die
+zusätzliche Angabe `'!~E'` heraus. Damit ändert sich ihr Aufruf wie
+folgt:
+
+.Nicht automatisch installierte und nicht essentielle Pakete auflisten
+----
+$ aptitude search '~i !~M' -F '%p'
+abiword
+abs-guide
+ack-grep
+...
+$
+----
+
+[NOTE] 
+Bitte beachten Sie, dass `aptitude` nur die Pakete berücksichtigt, die
+auch das 'Automatic Flag' tragen. Nicht alle Distributionen sind da
+konsequent. Zum Beispiel ist Raspberry Pi OS dafür bekannt, die
+Markierung kaum zu benutzen. Obiger Aufruf auf einem Raspberry Pi
+liefert wohl deswegen auch viele C-Bibliotheken im Ergebnis mit, die
+tatsächlicht nicht gebraucht werden.
+
 Geht es Ihnen jedoch darum, lediglich die Namen der Pakete auszugeben,
 die den Begriff 'asciidoc' im Namen tragen und auch installiert sind,
 hilft aus unserer Sicht nur die Kombination aus `asciidoc` und `grep`
