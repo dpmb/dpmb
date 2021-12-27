@@ -7,13 +7,18 @@
 
 // Stichworte für den Index
 (((apt-config, dump)))
+(((apt-config, shell)))
 (((apt-config, -c)))
+(((apt-config, -h)))
 (((apt-config, -o)))
+(((apt-config, -v)))
 (((apt-config, --config-file)))
 (((apt-config, --empty)))
 (((apt-config, --format)))
+(((apt-config, --help)))
 (((apt-config, --no-empty)))
 (((apt-config, --option)))
+(((apt-config, --version)))
 (((apt, Konfiguration anzeigen)))
 (((Debianpaket, apt)))
 Zu diesem Zweck steht Ihnen das Werkzeug `apt-config` zur Verfügung. Es ist
@@ -47,7 +52,22 @@ APT::NeverAutoRemove:: "^kfreebsd-image.*";
 $
 ----
 
-Weitere nützliche Schalter und Optionen von `apt-config` sind:
+Nützliche Schalter und Optionen von `apt-config` sind:
+
+`dump` :: Nur der Inhalt des Konfigurationsbereichs wird angezeigt.
+
+`shell` :: Zugriff auf die Konfigurationsinformationen aus einem
+Shellskript heraus.
+
+`-c` (Langform `--config-file`) :: Angabe einer Konfigurationsdatei. Diese Datei
+wird zusätzlich zur üblichen Konfigurationsdatei gelesen.
+
+`-h` (Langform `--help`) :: Ausgabe der Hilfe zum Programm.
+
+`-o` (Langform `--option`) :: Angabe einer Option direkt beim Aufruf. Diesen
+Schalter können Sie mehrfach angeben.
+
+`-v` (Langform `--version`) :: Ausgabe der Version samt Architektur
 
 `--empty` :: Damit schließen Sie Optionen ein, die einen leeren Wert haben. Das
 ist die Standardeinstellung. Das Gegenstück dazu ist `--no-empty`.
@@ -79,12 +99,6 @@ $
 
 `--no-empty` :: Damit schließen Sie Optionen aus, die einen leeren Wert haben. 
 Das Gegenstück dazu ist `--empty`.
-
-`-c` (Langform `--config-file`) :: Angabe einer Konfigurationsdatei. Diese Datei
-wird zusätzlich zur üblichen Konfigurationsdatei gelesen.
-
-`-o` (Langform `--option`) :: Angabe einer Option direkt beim Aufruf. Diesen
-Schalter können Sie mehrfach angeben.
 
 Was uns `apt-config` bislang nicht freiwillig verraten hat, ist, welche Option
 in welchem Konfigurationsschnipsel gesetzt wurde. Das ist bspw. dann wichtig, 
@@ -120,5 +134,8 @@ $ strace -f -e openat apt-config dump | grep "openat("
 ...
 $
 ----
+
+Nach unseren Tests funktioniert obige Lösung ebenfalls für Debian 11
+'Bullseye'.
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfiguration-von-apt-anzeigen.adoc
