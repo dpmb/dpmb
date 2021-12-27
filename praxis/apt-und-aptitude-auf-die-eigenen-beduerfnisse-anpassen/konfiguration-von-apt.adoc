@@ -20,47 +20,84 @@
 (((Debianpaket, apt-listchanges)))
 (((run-parts)))
 
-APT und auch alle Programme, die die Bibliotheken von APT benutzen, greifen 
-auf diverse Konfigurationsdateien zu. Über die Einstellungen darin werden
-unterschiedliche Funktionen abgebildet. Alle globalen Konfigurationsdateien 
-befinden sich im Verzeichnis `/etc/apt` und beinhalten:
+APT und auch alle Programme, die die Bibliotheken von APT benutzen,
+greifen auf diverse Konfigurationsdateien zu. Über die Einstellungen
+darin werden unterschiedliche Funktionen abgebildet. Alle globalen
+Konfigurationsdateien befinden sich im Verzeichnis `/etc/apt` und
+beinhalten:
 
-`apt.conf` bzw. `apt.conf.d` :: Grundlegende Einstellungen von APT und den
-Bedienschnittstellen (Frontends). Siehe dazu 
+`apt.conf` bzw. `apt.conf.d` :: Grundlegende Einstellungen von APT und
+den Bedienschnittstellen (Frontends). Siehe dazu
 <<konfigurationsdateien-von-apt-apt.conf>>.
 
-`listchanges.conf` :: Hinterlegte Einstellungen zu den Änderungen, die bei
-der Aktualisierung von Paketen durchgeführt werden. Diese Datei wird vom 
-Werkzeug `apt-listchanges` <<Debian-Paket-apt-listchanges>> gepflegt. Genauer
-verwenden wir das Werkzeug in <<qualitaetskontrolle>>.
+`listchanges.conf` :: Hinterlegte Einstellungen zu den Änderungen, die
+bei der Aktualisierung von Paketen durchgeführt werden. Diese Datei wird
+vom  Werkzeug `apt-listchanges` <<Debian-Paket-apt-listchanges>>
+gepflegt. Genauer besprechen wir das Werkzeug in
+<<qualitaetskontrolle>>.
 
-`preferences` bzw. `preferences.d` :: Diese Einträge steuern, welche Versionen 
-von Paketen zur Installation ausgewählt werden (siehe dazu 
-<<konfigurationsdateien-von-apt-preferences>>).
+`preferences` bzw. `preferences.d` :: Diese Einträge steuern, welche
+Versionen von Paketen zur Installation ausgewählt werden. Siehe dazu
+<<konfigurationsdateien-von-apt-preferences>>.
 
-`sources.list` bzw. `sources.list.d` :: Beinhaltet die Liste der Paketquellen,
-von denen APT Pakete bezieht. Ausführlich gehen wir darauf in 
-<<etc-apt-sources.list-verstehen>> ein.
+`sources.list` bzw. `sources.list.d` :: Beinhaltet die Liste der
+Paketquellen, von denen APT Pakete bezieht. Ausführlich gehen wir darauf
+in <<etc-apt-sources.list-verstehen>> ein.
 
-`trusted.gpg` bzw. `trusted.gpg.d` :: Beinhaltet die kryptographischen 
-Signaturen in Form von GnuPG-Schlüsseln der verwendeten Paketquellen. Darüber 
-wird sichergestellt, welchen Paketquellen APT vertraut (siehe dazu 
-<<paketquelle-auf-echtheit-ueberpruefen>>).
+`trusted.gpg` bzw. `trusted.gpg.d` :: Beinhaltet die kryptographischen
+Signaturen in Form von GnuPG-Schlüsseln der verwendeten Paketquellen.
+Darüber wird sichergestellt, welchen Paketquellen APT vertraut. Siehe
+dazu <<paketquelle-auf-echtheit-ueberpruefen>>.
 
-Alle Varianten der Konfigurationsdateien gibt es in zwei Geschmäckern:
+Wie Sie bereits der obigen Auflistung entnehmen können, gibt es alle
+Varianten der Konfigurationsdateien in zwei Geschmäckern -- als einzelne
+Datei sowie als gleichnamiges Verzeichnis mit dem Suffix `.d` (eine
+Ausnahme davon bildet lediglich `listchanges.conf`):
 
-als einzelne Datei :: Das ist die ursprüngliche Variante der Konfigurationsdatei. 
-Diese ist Ihnen als lokaler Systemadministrator vorbehalten.
+als einzelne Datei :: Das ist die ursprüngliche Variante der
+Konfigurationsdatei. Diese ist Ihnen als lokaler Systemadministrator
+vorbehalten.
 
-als Verzeichnis mit dem Suffix `.d` :: Alle Dateien in einem solchen Verzeichnis 
-werden so interpretiert, als wären sie an der gleichnamigen Datei ohne `.d` 
-angehängt -- wie einzelne ``Schnipsel'' von Einstellungen, die aneinandergereiht 
-werden (siehe dazu die Manpage zu `run-parts(8)` <<Debian-Paket-debianutils>>). 
-Ohne zusätzliche Parameter erfolgt die Aneinanderreihung der Schnipsel 
-entsprechend der lexikalisch sortierten Reihenfolge (gemäß den 
-C/POSIX-Locale-Sortierregeln) ihrer Namen. Die einzelnen Dateien müssen zudem 
-bestimmten Regeln hinsichtlich des Dateinamens entsprechen. Insbesondere dürfen 
-keine Punkte im Dateinamen vorkommen. 
+als gleichnamiges Verzeichnis mit dem Suffix `.d` :: Alle Dateien in
+diesem Verzeichnis werden so interpretiert, als wären sie an der
+gleichnamigen Datei ohne `.d` angehängt -- wie einzelne ``Schnipsel''
+von Einstellungen, die aneinandergereiht werden. Mehr Details liefert
+Ihnen dazu die Manpage zu `run-parts(8)` <<Debian-Paket-debianutils>>).
+~
+Ohne zusätzliche Parameter erfolgt die Aneinanderreihung der einzelnen
+``Schnipsel'' entsprechend der lexikalischen Sortierreihenfolge (gemäß
+den C/POSIX-Locale-Sortierregeln) ihrer Namen. Die einzelnen Dateien
+müssen zudem bestimmten Regeln hinsichtlich des Dateinamens entsprechen.
+Insbesondere dürfen keine Punkte im Dateinamen vorkommen. 
+
+Nachfolgend sehen beispielhaft den Inhalt des Verzeichnisses
+`/etc/apt/sources.list.d/`, wie er durchaus auf einer
+Desktopinstallation vorkommen kann. Enthalten sind die separaten
+Paketquellen für den Webbrowser 'Google Chrome' sowie die beiden
+Messenger 'Signal' und 'Skype'. 
+
+.Zusätzliche Paketquellen als separate Dateien
+----
+$ ls /etc/apt/sources.list.d/
+google-chrome.list
+signal-xenial.list
+skype-stable.list
+$
+----
+
+Jede aufgeführte Datei enthält eine oder mehrere, zusätzliche
+Paketquellen für das entsprechende Programm. Für den Messenger 'Signal'
+sieht das bspw. wie folgt aus:
+
+.Zusätzliche Paketquelle für 'Signal' (Release für Xenial)
+----
+$ cat /etc/apt/sources.list.d/signal-xenial.list 
+deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main
+$
+----
+
+Der Aufbau eines Eintrags entspricht der Datei `/etc/apt/sources.list`
+(siehe dazu Abschnitt <<etc-apt-sources.list-verstehen>>).
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfiguration-von-apt.adoc
 
