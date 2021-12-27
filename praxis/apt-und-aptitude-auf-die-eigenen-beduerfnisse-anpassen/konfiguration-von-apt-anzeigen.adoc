@@ -19,8 +19,8 @@
 Zu diesem Zweck steht Ihnen das Werkzeug `apt-config` zur Verfügung. Es ist
 Bestandteil des Debianpakets 'apt' <<Debian-Paket-apt>>. Das Ziel des von 
 den Entwicklern gewählten Schnittstellendesigns besteht in der leichten 
-Benutzbarkeit des Programms -- auch von Shellskripten aus (siehe dazu 
-<<Debian-Wiki-AptConf>>).
+Benutzbarkeit des Programms -- auch von Shellskripten aus (siehe dazu
+den Abschnitt 'AptConf' im Debian Wiki <<Debian-Wiki-AptConf>>).
 
 Die Konfiguration von APT erhalten Sie mit dem Schalter `dump`. Nachfolgend 
 sehen Sie einen Auszug der Ausgabe. Um diese Informationen zusammenzustellen, 
