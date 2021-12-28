@@ -5,6 +5,10 @@
 [[pinning-default]]
 === Die bevorzugte Veröffentlichung für alle Pakete festlegen ===
 
+// Stichworte für den Index
+(((APT-Konfiguration, APT::Default-Release)))
+(((APT-Konfiguration, /etc/apt/apt.conf)))
+(((apt-pinning, Target Release)))
 Hilfreich ist die Festlegung einer bevorzugten Veröffentlichung -- einer
 sogenannten 'target release'. Daran orientiert sich APT und benutzt nur
 Pakete dieser Veröffentlichung -- egal, was sonst noch an anderen
