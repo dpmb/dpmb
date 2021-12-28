@@ -119,26 +119,27 @@ APT::NeverAutoRemove
 ==== `preferences` bzw. `preferences.d` ====
 
 // Stichworte für den Index
-(((apt-pinning, /etc/apt/preferences)))
-(((apt-pinning, /etc/apt/preferences.d/)))
-(((apt-pinning, Priorität eines Eintrags)))
+(((APT-Pinning, /etc/apt/preferences)))
+(((APT-Pinning, /etc/apt/preferences.d/)))
+(((APT-Pinning, Priorität eines Eintrags)))
 (((/etc/apt/preferences)))
 (((/etc/apt/preferences.d/)))
-* Datei/Verzeichnis, um die Priorität eines oder mehrerer Pakete im
-Rahmen des 'Pinning' festzulegen (siehe <<veroeffentlichungen-mischen>>)
-* Pinning erlaubt es Ihnen, gewisse Pakete aus einer bestimmten
-Debian-Veröffentlichung zu verwenden ('stable', 'testing', 'unstable'),
-ohne die Notwendigkeit, dabei gleich das ganze System aktualisieren zu
-müssen
-* 'Pinning' steht für das Festlegen einer Version und/oder
-Veröffentlichung eines Paketes. Die Paketverwaltung respektiert ihre
-Festlegung und berücksichtigt das bei der Aktualisierung sowie bei den
-Paketabhängigkeiten.
-* Priorität ist ein Zahlenwert, je höher, desto wichtiger
+Hier handelt es sich um eine Datei bzw. ein Verzeichnis, in welchem Sie
+die Priorität eines oder mehrerer Pakete festlegen (siehe dazu
+<<veroeffentlichungen-mischen>>). Der Vorgang heißt 'Pinning' und
+erlaubt es Ihnen, Pakete aus einer anderen Debian-Veröffentlichung zu
+verwenden -- bspw. 'stable', 'testing' oder 'unstable' -- ohne die
+Notwendigkeit, dabei gleich ihr ganzes System auf diese Veröffentlichung
+aktualisieren zu müssen. 
 
-Nachfolgendes Beispiel gibt Paketen aus 'testing' eine höhere Priorität
-als den Paketen aus 'unstable':
+Die Paketverwaltung respektiert ihre Festlegung und berücksichtigt das
+bei der Aktualisierung sowie bei den Paketabhängigkeiten. Genutzt wird
+ein Zahlenwert als Priorität -- je höher dieser ist, umso mehr wird
+die gewählte Veröffentlichung bevorzugt. Nachfolgendes Beispiel gibt
+Paketen aus 'testing' eine höhere Priorität als den Paketen aus
+'unstable':
 
+.Veröffentlichungen priorisieren
 ----
 Package: *
 Pin: release n=testing
@@ -149,7 +150,9 @@ Pin: release n=unstable
 Pin-Priority: 800
 ----
 
-* Detaillierte Beschreibung in <<pinning-paketweise-festlegen>>
+Die Datei `preferences` bzw. das Verzeichnis `preferences.d` ist
+ursprünglich leer. Eine detaillierte Beschreibung zu Pinning finden Sie
+bspw. in <<pinning-paketweise-festlegen>>.
 
 ==== cron.daily/apt ====
 

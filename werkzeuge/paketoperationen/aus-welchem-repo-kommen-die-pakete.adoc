@@ -18,7 +18,7 @@ Ihnen die Programme `apt-cache`, `apt-show-versions`, `apt` und
 
 // Stichworte für den Index
 (((apt-cache, policy)))
-(((apt-pinning, Priorität eines Eintrags)))
+(((APT-Pinning, Priorität eines Eintrags)))
 Dazu rufen Sie `apt-cache` mit dem Schalter `policy` und _ohne_ Angabe 
 eines Pakets auf. Das Programm untersucht daraufhin jede einzelne 
 Paketquelle, die Sie in `/etc/apt/sources.list` eingetragen haben. Das
@@ -69,6 +69,8 @@ $
 
 ==== Informationen für ein bestimmtes Paket erhalten ====
 
+// Stichworte für den Index
+(((apt-cache, policy)))
 Geben Sie hingegen beim Aufruf als Parameter einen Paketnamen an, prüft
 `apt-cache`, ob das Paket bereits auf Ihrem System installiert ist oder
 ob es ein neueres Paket gibt und falls ja, von welchem Paketmirror das

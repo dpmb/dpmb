@@ -6,9 +6,9 @@
 === Paketweise festlegen ===
 
 // Stichworte für den Index
-(((apt-pinning, /etc/apt/preferences)))
-(((apt-pinning, /etc/apt/preferences.d/)))
-(((apt-pinning, Priorität eines Eintrags)))
+(((APT-Pinning, /etc/apt/preferences)))
+(((APT-Pinning, /etc/apt/preferences.d/)))
+(((APT-Pinning, Priorität eines Eintrags)))
 Für diesen Fall besteht eine Liste mit Einträgen für einzelne Pakete
 und ganze Paketgruppen. Bis Debian 6 _Squeeze_ war die Datei
 `/etc/apt/preferences` die einzige Stelle, an der Prioritäten für
