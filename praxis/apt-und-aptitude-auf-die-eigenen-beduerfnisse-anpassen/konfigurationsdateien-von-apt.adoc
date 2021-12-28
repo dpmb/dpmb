@@ -118,7 +118,38 @@ APT::NeverAutoRemove
 [[konfigurationsdateien-von-apt-preferences]]
 ==== `preferences` bzw. `preferences.d` ====
 
-* ToDo
+// Stichworte für den Index
+(((apt-pinning, /etc/apt/preferences)))
+(((apt-pinning, /etc/apt/preferences.d/)))
+(((apt-pinning, Priorität eines Eintrags)))
+(((/etc/apt/preferences)))
+(((/etc/apt/preferences.d/)))
+* Datei/Verzeichnis, um die Priorität eines oder mehrerer Pakete im
+Rahmen des 'Pinning' festzulegen (siehe <<veroeffentlichungen-mischen>>)
+* Pinning erlaubt es Ihnen, gewisse Pakete aus einer bestimmten
+Debian-Veröffentlichung zu verwenden ('stable', 'testing', 'unstable'),
+ohne die Notwendigkeit, dabei gleich das ganze System aktualisieren zu
+müssen
+* 'Pinning' steht für das Festlegen einer Version und/oder
+Veröffentlichung eines Paketes. Die Paketverwaltung respektiert ihre
+Festlegung und berücksichtigt das bei der Aktualisierung sowie bei den
+Paketabhängigkeiten.
+* Priorität ist ein Zahlenwert, je höher, desto wichtiger
+
+Nachfolgendes Beispiel gibt Paketen aus 'testing' eine höhere Priorität
+als den Paketen aus 'unstable':
+
+----
+Package: *
+Pin: release n=testing
+Pin-Priority: 900
+
+Package: *
+Pin: release n=unstable
+Pin-Priority: 800
+----
+
+* Detaillierte Beschreibung in <<pinning-paketweise-festlegen>>
 
 ==== cron.daily/apt ====
 
