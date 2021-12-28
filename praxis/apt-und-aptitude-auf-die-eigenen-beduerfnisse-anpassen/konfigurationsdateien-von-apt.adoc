@@ -12,6 +12,12 @@
 // Stichworte für den Index
 (((/etc/apt/apt.conf)))
 (((/etc/apt/apt.conf.d/)))
+(((APT-Konfiguration, APT::Compressor)))
+(((APT-Konfiguration, APT::Install-Recommends)))
+(((APT-Konfiguration, APT::Install-Suggests)))
+(((APT-Konfiguration, APT::Periodic)))
+(((APT-Konfiguration, APT::NeverAutoRemove)))
+(((APT-Konfiguration, Dpkg::Progress-Fancy)))
 (((Debianpaket, adequate)))
 (((Debianpaket, whatmaps)))
 
@@ -22,25 +28,29 @@ explizit auch auf der Kommandozeile (siehe <<konfigurationsoptionen-von-apt>>).
 Darunter fallen u.a.:
 
 * wie oft APT selbstständig Paketlisten und Pakete herunterladen soll
-  (alle Einstellungen, die mit `APT::Periodic::` beginnen),
+  (Schlüsselwort `APT::Periodic`),
 
 * ob empfohlene ('Recommends') oder vorgeschlagene Pakete ('Suggests')
-per Default installiert werden sollen,
+per Default installiert werden sollen (Schlüsselworte
+`APT::Install-Recommends` und `APT::Install-Suggests`),
 
-* welche Pakete nie automatisch entfernt werden sollen,
+* welche Pakete nie automatisch entfernt werden sollen (Schlüsselwort
+`APT::NeverAutoRemove`),
 
 * ob Paketlisten lokal entpackt oder komprimiert gespeichert werden
   sollen,
 
 * welche Kompressionsalgorithmen beim Herunterladen von Paketlisten
-  bevorzugt werden sollen,
+  bevorzugt werden sollen (alle Schlüsselworte beginnend mit
+`APT::Compressor`),
 
-* wohin APT Paketlisten und Pakete herunterladen soll. (Sollte man
+* wohin APT Paketlisten und Pakete herunterladen soll. (Sollten Sie
   nicht systemweit ändern, kann aber beim Bearbeiten einer
   Chroot-Umgebung von außen durchaus als Einstellung auf der
   Kommandozeile nützlich sein.)
 
-* An- und Abschalten von Fortschrittsbalken (verfügbar ab APT 1.0),
+* An- und Abschalten von Fortschrittsbalken (verfügbar ab APT 1.0)
+(Schlüsselwort `Dpkg::Progress-Fancy`),
 
 * wo Changelogs heruntergeladen werden können,
 
