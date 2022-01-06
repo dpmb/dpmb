@@ -8,14 +8,48 @@
 // Stichworte für den Index
 (((Debianpaket, dpkg)))
 (((dpkg-split)))
+(((dpkg-split, -?)))
+(((dpkg-split, --help)))
+(((dpkg-split, -a)))
+(((dpkg-split, --auto)))
+(((dpkg-split, -d)))
+(((dpkg-split, --discard)))
+(((dpkg-split, -I)))
+(((dpkg-split, --info)))
+(((dpkg-split, -j)))
+(((dpkg-split, --join)))
+(((dpkg-split, -l)))
+(((dpkg-split, --listq)))
+(((dpkg-split, -o)))
+(((dpkg-split, --output)))
+(((dpkg-split, -Q)))
+(((dpkg-split, --npquiet)))
+(((dpkg-split, -S)))
+(((dpkg-split, --partsize)))
+(((dpkg-split, -s)))
+(((dpkg-split, --split)))
+(((dpkg-split, --depotdir)))
+(((dpkg-split, --msdos)))
+(((dpkg-split, --version)))
 
 * Werkzeug `dpkg-split` aus dem Paket 'dpkg' <<Debian-Paket-dpkg>>
 * zerlegt eine `deb`-Datei in kleinere Stücke und kann diese Stücke
   wieder zusammensetzen
 * nützlich, um Binärpakete auf mehrere Medien mit geringer Kapazität zu
   verteilen (wenn man grade nichts anderes zur Hand hat ...)
-* Schalter (Auswahl):
-** `-s` (Langform: `--split`)
+* Schalter:
+** `-?` (Langform: `--help`)
+** `-a` (Langform: `--auto`)
+** `-d` (Langform: `--discard`)
+** `-I` (Langform: `--info`)
 ** `-j` (Langform: `--join`)
+** `-l` (Langform: `--listq`)
+** `-o` (Langform: `--output`)
+** `-Q` (Langform: `--npquiet`)
+** `-S` (Langform: `--partsize`)
+** `-s` (Langform: `--split`)
+** `--depotdir`
+** `--msdos`
+** `--version`
 
 // Datei (Ende): ./praxis/paketverwaltung-ohne-internet/dpkg-split.adoc
