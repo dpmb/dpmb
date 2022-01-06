@@ -67,7 +67,8 @@ Vorbereitete Installationsmedien bekommen Sie von der Webseite des
 Debian-Projekts als ISO-Image und Live-CD bzw. -DVD <<Debian-besorgen>>.
 Alternativ können Sie auch selbst Diskimages erstellen und benutzen
 <<Debian-Wiki-DiskImage>>. Ein solches Installationsmedium binden Sie
-als lokales Paketarchiv wie folgt ein:
+als lokales Paketarchiv wie folgt ein, hier unter dem Verzeichnis
+`/mnt/iso`:
 
 .Einbindung eines lokalen CD/DVD-Images namens `image.iso` als `loop device` unter `/mnt/iso`
 ----
