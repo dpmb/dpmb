@@ -61,6 +61,7 @@ betrifft nicht nur APT, sondern auch `aptitude`.
 
 // Stichworte für den Index
 (((Paketquelle, Installationsmedium einbinden)))
+(((Paketquelle, lokales Paketarchiv)))
 (((Paketquelle, Versionskonflikte)))
 
 Vorbereitete Installationsmedien bekommen Sie von der Webseite des
@@ -106,16 +107,20 @@ kommen. Diesen Datenträger mounten Sie zunächst und tragen den
 Paketmirror danach als zusätzliche Paketquelle ('Repository') in der
 Datei `/etc/apt/sources.list` auf Ihrem lokalen System ein. Ist der
 Datenträger bspw. als `/mnt/mirror` gemounted, sieht der Eintrag in der
-Liste der Paketquellen wie folgt aus:
+Liste ihrer Paketquellen wie folgt aus:
 
 .Einbinden einer externen Festplatte als Paketmirror
 ----
 deb file:/mnt/mirror/debian stable main contrib non-free
 ----
 
-Fügen Sie nun Pakete zu Ihrem lokalen System hinzu, sucht die
-Paketverwaltung die Pakete auf der angegebenen Paketquelle und bezieht
-diese von dort.
+Haben Sie den lokalen Paketmirror als zusätzliche Paketquelle in der
+Datei `/etc/apt/sources.list` eingetragen, speichern Sie die Datei und
+informieren danach ihr Debian-System über die Ergänzung. Aktualisieren
+Sie den Paketbestand mittels `apt-get update`, `apt update` oder
+`aptitude update`. Installieren Sie nun Pakete auf Ihrem lokalen System,
+sucht die Paketverwaltung die Pakete ebenfalls in der angegebenen, neuen
+Paketquelle.
 
 Dieser Schritt setzt voraus, dass Sie über eine genügend großen,
 zusätzlichen, mobilen Datenträger verfügen, um einen solchen Paketmirror
@@ -123,7 +128,7 @@ vorzubereiten (meist unproblematisch). Weiterhin probieren Sie zuvor
 aus, ob die Paketinstallation von diesem Paketmirror klappt, um im
 Ernstfall handlungsfähig zu sein (auch unproblematisch). Als drittes
 sind Sie angeraten, diesen Datenträger dann auch mitzunehmen und nicht
-im Büro vergessen (schon eher problematisch) -- ansonsten ist alle Mühe
-umsonst.
+im Büro zu vergessen (schon eher problematisch) -- ansonsten ist nämlich
+alle Mühe umsonst.
 
 // Datei (Ende): ./praxis/paketverwaltung-ohne-internet/strategien.adoc
