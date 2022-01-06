@@ -4,28 +4,31 @@
 
 [[paketverwaltung-offline-keryx]]
 
-===== Keryx ===== 
+==== Keryx ==== 
 
 // Stichworte für den Index
+(((Debianpaket, python-wxversion)))
 (((Keryx)))
 
-* Projekt: <<Keryx>> 
-* ``Keryx is a free, open source application for updating Linux. The
-Keryx Project started as a way for users with dialup, or low-bandwidth
-internet to be able to download and update packages on their debian
-based distribution of linux. Mainly built for Ubuntu, Keryx allows users
-to select packages to install, check for updates, and download these
-packages onto a USB portable storage device. The packages are saved onto
-the device and are then taken back to the Linux box that it originated
-from and are then installed.''
+Das Projekt 'Keryx' <<Keryx>> beschreibt sich als eine freie,
+plattformunabhängige Softwareanwendung, um Linuxsysteme ohne
+Internetanbindung zu aktualisieren. Es hat den Fokus auf Benutzer mit
+Einwahlverbindungen und Systeme, die nur über eine dünne Leitung an das
+Internet verfügen.
 
-* ``a portable, cross platform offline package manager for Debian based
-Linux distributions (Ubuntu and derivatives).''
-* ``Download software on computer connected to internet (it may be on
-Linux or Windows) and then install them to offline PC.''
-* basiert auf dem Gimp Tool Kit
-* letzte Veröffentlichung als Ubuntu PPA: 2011 (Version 1)
+Ursprünglich nur für Ubuntu entwickelt, erlaubt es mittlerweile das
+Auswählen und Herunterladen von Paketen auf Debian-basierten Systemen
+und auch anderen Betriebssystemen wie bspw. Microsoft Windows. Die
+bezogenen Pakete werden auf einem mobilen Speichermedium abgelegt und
+können von da aus auf dem eigentlichen System eingespielt werden.
+Geschieht das in einem größeren Rahmen, ist für das Vorgehen der Begriff
+``Turnschuhnetzwerk'' <<Turnschuhnetzwerk>> gebräuchlich.
 
-* (Stichwort Turnschuhnetzwerk, Sneakernet: https://de.wikipedia.org/wiki/Turnschuhnetzwerk)
+Keryx basiert auf dem Gimp Tool Kit. Die letzte Veröffentlichung als
+Ubuntu-PPA erfolgte 2011 (Version 1), 2017 wurde die Version 0.92.5
+freigegeben. Aktuellere Veröffentlichungen sind nicht bekannt.
+
+Es existiert zudem eine Erweiterung um eine graphische Bedienoberfläche,
+die auf wxPython (Paket 'python-wxversion') aufsetzt.
 
 // Datei (Ende): ./praxis/paketverwaltung-ohne-internet/keryx.adoc
