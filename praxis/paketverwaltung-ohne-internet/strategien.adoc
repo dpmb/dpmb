@@ -17,11 +17,14 @@ hier anbieten:
 * die Einbindung fester Installationsmedien
 * die Einbindung eines lokalen Paketmirrors
 
-Diese drei Wege basieren auf Werkzeugen und Verfahren, die wir bislang
-im Buch bereits angesprochen haben. Sagen Ihnen diese nicht zu, werfen
-Sie einen genaueren Blick auf die Projekte `apt-offline` und Keryx,
-die wir im Anschluss unter Werkzeuge in
-<<paketverwaltung-offline-werkzeuge>> genauer vorstellen.
+Diese drei Wege basieren auf den Werkzeugen und Verfahren, die wir
+bislang im Buch bereits angesprochen haben. Nachfolgend beleuchten wir
+die Verfahren noch etwas genauer.
+
+Sagen Ihnen unsere Empfehlungen nicht zu, werfen Sie bitte einen
+genaueren Blick auf die beiden Projekte `apt-offline` und Keryx. Diese
+stellen wir Ihnen im Anschluss in <<paketverwaltung-offline-werkzeuge>>
+genauer vor.
 
 ==== Benötigte Pakete vorher explizit herunterladen ====
 
