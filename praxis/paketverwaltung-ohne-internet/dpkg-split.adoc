@@ -73,5 +73,29 @@ insgesamt 136K
 $
 ----
 
+** Informationen zu einem Stück eines mittels `dpkg-split` zerlegten
+deb-Pakets ausgeben
+*** Schalter `-I`
+*** Parameter: Dateiname, hier: 'xsnow_1%3a1.42-9_amd64.3of4.deb'
+*** Ausgabe: Formatversion, Paketinformationen, Nummer des Stücks (hier
+3 von 4), Größe ("Teil-Länge"), Offset im Originalpaket ("Teil-Offset")
+
+----
+$ dpkg-split -I xsnow_1%3a1.42-9_amd64.3of4.deb 
+xsnow_1%3a1.42-9_amd64.3of4.deb:
+    Teil-Formatversion:            2.1
+    Teil des Paketes:               xsnow
+        ... Version:                1:1.42-9
+        ... Architektur:            amd64
+        ... MD5-Prüfsumme:          3ddeabaec77416662e45de36d9960a2a
+        ... Länge:                  35836 Byte
+        ... geteilt alle:           9216 Byte
+    Teil-Nummer:                    3/4
+    Teil-Länge:                     9216 Byte
+    Teil-Offset:                    18432 Byte
+    Teil-Dateigröße (ben. Anteil):  9418 Byte
+
+$
+----
 
 // Datei (Ende): ./praxis/paketverwaltung-ohne-internet/dpkg-split.adoc
