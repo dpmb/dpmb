@@ -39,38 +39,70 @@ Werkzeug ist nützlich, um Binärpakete auf mehrere Medien mit geringer
 Kapazität zu verteilen, bspw. wenn Sie gerade nichts anderes zur Hand
 haben.
 
-`dpkg-split` kommt mit einer ganzen Reihe von Schaltern:
+`dpkg-split` kommt mit einer ganzen Reihe von nützlichen Schaltern:
 
-`-?` (Langform: `--help`) ::
+`-?` (Langform: `--help`) :: Zeigt die Hilfeseite zu `dpkg-split` an.
 
-`-a` (Langform: `--auto`) ::
+`-a` (Langform: `--auto`) :: Reiht die Stücke automatisch in die
+Warteschlange und setzt, falls möglich, das Paket wieder zusammen.
 
-`-d` (Langform: `--discard`) ::
+`-d` (Langform: `--discard`) :: Löscht Einträge aus der Warteschlange
+derer, die auf die verbleibenden Stücke ihrer Pakete warten.
 
-`-I` (Langform: `--info`) ::
+`-I` (Langform: `--info`) :: Gibt Informationen zu einem Stück aus,
+welches zuvor von `dpkg-split` erzeugt wurde.
 
-`-j` (Langform: `--join`) ::
+`-j` (Langform: `--join`) :: Vereinigt einzelne Stücke zu einer
+`.deb`-Datei. Standardmäßig folgt der Name der Ausgabedatei
+'Paket-Version_Architektur.deb'.
 
-`-l` (Langform: `--listq`) ::
+`-l` (Langform: `--listq`) :: Listet den Inhalt der Warteschlange der wieder zusammenzubauenden Pakete auf.
 
-`-o` (Langform: `--output`) ::
+`-o` (Langform: `--output`) :: Gibt den Ausgabedateinamen für ein
+Wiederzusammenbauen an. Ohne diesen Schalter erzeugt `dpkg-split` eine
+Ausgabedatei mit dem Namen basierend auf 'Paket-Version_Architektur.deb'.
 
-`-Q` (Langform: `--npquiet`) ::
+`-Q` (Langform: `--npquiet`) :: Führen Sie ein automatisches Einreihen
+oder Wiederzusammensetzen durch, gibt `dpkg-split` normalerweise eine
+Meldung aus, falls ein übergebener Teil kein Binärpaketteil ist. Dieser
+Schalter unterdrückt diese Meldung, um Programmen wie `dpkg` zu
+erlauben, sowohl mit geteilten als auch ungeteilten Paketen umzugehen,
+ohne störende Meldungen zu erzeugen.
 
-`-S` (Langform: `--partsize`) ::
+`-S` (Langform: `--partsize`) :: Legt die Größe der Stücke fest. Die
+Angabe erfolgt in Kilobytes zur Basis 1024 Byte. Die Standardgröße
+beträgt 450 KB.
 
-`-s` (Langform: `--split`) ::
+`-s` (Langform: `--split`) :: Teilt ein einzelnes Debian-Binärpaket in
+mehrere Stücke. Die Benennung der Ausgabedateien folgt
+'Paketname.nofm.deb' mit 'n' als Stücknummer und 'm' als Anzahl der
+Stücke.
++
+Geben Sie im Aufruf kein Präfix an, wird der Dateiname vom
+Komplettarchiv entnommen, einschließlich Verzeichnis, wobei das
+abschließende `.deb` entfernt wird.
 
-`--depotdir` ::
+`--depotdir` :: Spezifiziert ein alternatives Verzeichnis für die
+Warteschlange  von den Stücken, die auf automatisches
+Wiederzusammenführen warten. Standardmäßig ist dies das Verzeichnis
+`/var/lib/dpkg`.
 
-`--msdos` ::
+`--msdos` :: Erzwingt, dass die von `-s` erzeugten Ausgabedateinamen
+MSDOS-kompatibel sind.
++
+Dies verstümmelt das Präfix -- entweder den voreingestellten aus dem
+Eingabedateinamen abgeleiteten oder den als Argument übergebenen. Dabei
+werden alphanummerische Zeichen durch Kleinbuchstaben und Pluszeichen
+durch `x` ersetzt sowie alle anderen Zeichen entfernt. Das Ergebnis wird
+dann soweit wie nötig abgeschnitten. Ergebnis ist ein Dateiname der Form
+'Präfixnofm.deb' mit 'n' als Stücknummer und 'm' als Anzahl der Stücke.
 
-`--version` ::
+`--version` :: Gibt die verwendete Version von `dpkg-split` aus.
 
 // Stichworte für den Index
 (((Debianpaket, xsnow)))
-Nachfolgend erklären wir anhand des Paketes 'xsnow', wie sich
-`dpkg-split` benutzen lässt.
+Nachfolgend erklären wir anhand des Paketes 'xsnow', wie Sie
+`dpkg-split` benutzen.
 
 
 * Beispiele
