@@ -32,25 +32,46 @@
 (((dpkg-split, --msdos)))
 (((dpkg-split, --version)))
 
-* Werkzeug `dpkg-split` aus dem Paket 'dpkg' <<Debian-Paket-dpkg>>
-* zerlegt eine `deb`-Datei in kleinere Stücke und kann diese Stücke
-  wieder zusammensetzen
-* nützlich, um Binärpakete auf mehrere Medien mit geringer Kapazität zu
-  verteilen (wenn man grade nichts anderes zur Hand hat ...)
-* Schalter:
-** `-?` (Langform: `--help`)
-** `-a` (Langform: `--auto`)
-** `-d` (Langform: `--discard`)
-** `-I` (Langform: `--info`)
-** `-j` (Langform: `--join`)
-** `-l` (Langform: `--listq`)
-** `-o` (Langform: `--output`)
-** `-Q` (Langform: `--npquiet`)
-** `-S` (Langform: `--partsize`)
-** `-s` (Langform: `--split`)
-** `--depotdir`
-** `--msdos`
-** `--version`
+Für diesen Fall bietet sich das Werkzeug `dpkg-split` aus dem Paket
+'dpkg' <<Debian-Paket-dpkg>> an. Es zerlegt eine `deb`-Datei in kleinere
+Stücke und kann diese Stücke dann auch wieder zusammensetzen. Dieses
+Werkzeug ist nützlich, um Binärpakete auf mehrere Medien mit geringer
+Kapazität zu verteilen, bspw. wenn Sie gerade nichts anderes zur Hand
+haben.
+
+`dpkg-split` kommt mit einer ganzen Reihe von Schaltern:
+
+`-?` (Langform: `--help`) ::
+
+`-a` (Langform: `--auto`) ::
+
+`-d` (Langform: `--discard`) ::
+
+`-I` (Langform: `--info`) ::
+
+`-j` (Langform: `--join`) ::
+
+`-l` (Langform: `--listq`) ::
+
+`-o` (Langform: `--output`) ::
+
+`-Q` (Langform: `--npquiet`) ::
+
+`-S` (Langform: `--partsize`) ::
+
+`-s` (Langform: `--split`) ::
+
+`--depotdir` ::
+
+`--msdos` ::
+
+`--version` ::
+
+// Stichworte für den Index
+(((Debianpaket, xsnow)))
+Nachfolgend erklären wir anhand des Paketes 'xsnow', wie sich
+`dpkg-split` benutzen lässt.
+
 
 * Beispiele
 ** das Paket 'xsnow' in Stücke mit einer Größe von 10 KB zerlegen

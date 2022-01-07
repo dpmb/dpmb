@@ -506,6 +506,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Paket-whatmaps]]] Debian-Paket 'whatmaps', https://packages.debian.org/de/stable/whatmaps
 
+- [[[Debian-Paket-xsnow]]] Debian-Paket 'xsnow', https://packages.debian.org/de/stable/xsnow
+
 - [[[Debian-Paket-yum]]] Debian-Paket 'yum', https://packages.debian.org/de/stable/yum
 
 - [[[Debian-Paket-zutils]]] Debian-Paket 'zutils', https://packages.debian.org/de/stable/zutils
