@@ -99,12 +99,24 @@ $
 ----
 
 ** Paket aus Stücken wieder zusammensetzen
-*** Schalter `-j`
+*** Schalter `-j` für die Aktion Zusammensetzen
+*** Schalter `-o` für den Namen der Ausgabedatei
 *** Parameter: Dateinamen der Stücke
-*** erzeugt als Ausgabedatei 'xsnow_1:1.42-9_amd64.deb', Benennung folgt
-Paket-Version_Architektur.deb
+*** ohne `-o` erzeugt es als Ausgabedatei 'xsnow_1:1.42-9_amd64.deb', Benennung folgt Paket-Version_Architektur.deb
+
+.Einfaches Zusammenfügen der Paketstücke
 ----
 $ dpkg-split -j xsnow_1%3a1.42-9_amd64.*
+Paket xsnow wird aus 4 Teilen zusammengesetzt: 1 2 3 4 fertig
+$
+----
+
+*** Zusammenfügen mit Angabe der Ausgabedatei: erst Schalter `-o`, dann
+`-j`
+
+.Zusammenfügen der Paketstücke mit Ausgabedatei
+----
+$ dpkg-split -o xsnow_1%3a1.42-9_amd64.deb -j xsnow_1%3a1.42-9_amd64.*
 Paket xsnow wird aus 4 Teilen zusammengesetzt: 1 2 3 4 fertig
 $
 ----
@@ -113,8 +125,8 @@ $
 überprüfen:
 
 ----
-$ md5sum "xsnow_1:1.42-9_amd64.deb" /var/cache/apt/archives/xsnow_1%3a1.42-9_amd64.deb 
-3ddeabaec77416662e45de36d9960a2a  xsnow_1:1.42-9_amd64.deb
+$ md5sum xsnow_1%3a1.42-9_amd64.deb /var/cache/apt/archives/xsnow_1%3a1.42-9_amd64.deb 
+3ddeabaec77416662e45de36d9960a2a  xsnow_1%3a1.42-9_amd64.deb
 3ddeabaec77416662e45de36d9960a2a  /var/cache/apt/archives/xsnow_1%3a1.42-9_amd64.deb
 $
 ----
