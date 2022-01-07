@@ -98,4 +98,25 @@ xsnow_1%3a1.42-9_amd64.3of4.deb:
 $
 ----
 
+** Paket aus Stücken wieder zusammensetzen
+*** Schalter `-j`
+*** Parameter: Dateinamen der Stücke
+*** erzeugt als Ausgabedatei 'xsnow_1:1.42-9_amd64.deb', Benennung folgt
+Paket-Version_Architektur.deb
+----
+$ dpkg-split -j xsnow_1%3a1.42-9_amd64.*
+Paket xsnow wird aus 4 Teilen zusammengesetzt: 1 2 3 4 fertig
+$
+----
+
+*** hat alles beim Zusammenbau geklappt? Zur Sicherheit mit `md5sum`
+überprüfen:
+
+----
+$ md5sum "xsnow_1:1.42-9_amd64.deb" /var/cache/apt/archives/xsnow_1%3a1.42-9_amd64.deb 
+3ddeabaec77416662e45de36d9960a2a  xsnow_1:1.42-9_amd64.deb
+3ddeabaec77416662e45de36d9960a2a  /var/cache/apt/archives/xsnow_1%3a1.42-9_amd64.deb
+$
+----
+
 // Datei (Ende): ./praxis/paketverwaltung-ohne-internet/dpkg-split.adoc
