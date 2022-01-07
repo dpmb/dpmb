@@ -52,4 +52,26 @@
 ** `--msdos`
 ** `--version`
 
+* Beispiele
+** das Paket 'xsnow' in Stücke mit einer Größe von 10 KB zerlegen
+*** `-s`: zerlegen
+*** `-S 10`: Blockgröße von maximal 10 KB
+*** ergibt vier Blöcke
+*** Benennung (default-Werte): 'Paketname.nofm.deb' mit 'n' als
+Stücknummer (im Beispiel die Werte 1 bis 4) und 'm' als Anzahl der
+Stücke (im Beispiel 4)
+
+----
+$ dpkg-split -s -S 10 xsnow_1%3a1.42-9_amd64.deb 
+Paket xsnow wird in 4 Teile aufgeteilt: 1 2 3 4 fertig
+$ ls -lh
+insgesamt 136K
+-rw-r--r--  1 frank frank 9,2K Jan  7 11:09 xsnow_1%3a1.42-9_amd64.1of4.deb
+-rw-r--r--  1 frank frank 9,2K Jan  7 11:09 xsnow_1%3a1.42-9_amd64.2of4.deb
+-rw-r--r--  1 frank frank 9,2K Jan  7 11:09 xsnow_1%3a1.42-9_amd64.3of4.deb
+-rw-r--r--  1 frank frank 8,2K Jan  7 11:09 xsnow_1%3a1.42-9_amd64.4of4.deb
+$
+----
+
+
 // Datei (Ende): ./praxis/paketverwaltung-ohne-internet/dpkg-split.adoc
