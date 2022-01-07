@@ -53,14 +53,16 @@ derer, die auf die verbleibenden Stücke ihrer Pakete warten.
 welches zuvor von `dpkg-split` erzeugt wurde.
 
 `-j` (Langform: `--join`) :: Vereinigt einzelne Stücke zu einer
-`.deb`-Datei. Standardmäßig folgt der Name der Ausgabedatei
-'Paket-Version_Architektur.deb'.
+`.deb`-Datei. Standardmäßig folgt der Name der Ausgabedatei basierend
+auf dem Paketnamen, der Version und der Architektur
+('Paket-Version_Architektur.deb').
 
 `-l` (Langform: `--listq`) :: Listet den Inhalt der Warteschlange der wieder zusammenzubauenden Pakete auf.
 
 `-o` (Langform: `--output`) :: Gibt den Ausgabedateinamen für ein
 Wiederzusammenbauen an. Ohne diesen Schalter erzeugt `dpkg-split` eine
-Ausgabedatei mit dem Namen basierend auf 'Paket-Version_Architektur.deb'.
+Ausgabedatei mit dem Namen basierend auf dem Paketnamen, der Version und
+der Architektur ('Paket-Version_Architektur.deb').
 
 `-Q` (Langform: `--npquiet`) :: Führen Sie ein automatisches Einreihen
 oder Wiederzusammensetzen durch, gibt `dpkg-split` normalerweise eine
@@ -158,8 +160,9 @@ zusammensetzen. Dazu benutzen Sie den Schalter `-j` für die Aktion
 "Zusammensetzen".
 
 Nun erzeugt `dpkg-split` als Ausgabedatei 'xsnow_1:1.42-9_amd64.deb', da
-die Benennung den Angaben 'Paket-Version_Architektur.deb' folgt. Am Ende
-des Aufrufs geben Sie noch die Dateinamen der Stücke an, die Sie wieder
+die Benennung den Angaben zum Paketnamen, der Paketversion sowie der
+Architektur ('Paket-Version_Architektur.deb') folgt. Am Ende des Aufrufs
+geben Sie noch die Dateinamen der Stücke an, die Sie wieder
 zusammensetzen möchten.
 
 .Einfaches Zusammenfügen der Paketstücke
@@ -184,7 +187,7 @@ $
 ----
 
 Anschließend raten wir Ihnen, zu überprüfen, ober alles beim Zusammenbau
-geklappt hat? Mittels `md5sum` vergleichen Sie die Hashwerte der beiden
+geklappt hat. Mittels `md5sum` vergleichen Sie die Hashwerte der beiden
 Pakete wie folgt:
 
 .Vergleichen zweier Dateien mittels `md5sum`
