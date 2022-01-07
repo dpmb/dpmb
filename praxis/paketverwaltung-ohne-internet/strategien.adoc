@@ -22,9 +22,9 @@ bislang im Buch bereits angesprochen haben. Nachfolgend beleuchten wir
 die Verfahren noch etwas genauer.
 
 Sagen Ihnen unsere Empfehlungen nicht zu, werfen Sie bitte einen
-genaueren Blick auf die beiden Projekte `apt-offline` und Keryx. Diese
-stellen wir Ihnen im Anschluss in <<paketverwaltung-offline-werkzeuge>>
-genauer vor.
+genaueren Blick auf die drei Projekte bzw. Werkzeuge `apt-offline`,
+`dpkg-split` und Keryx. Diese stellen wir Ihnen im Anschluss in
+<<paketverwaltung-offline-werkzeuge>> genauer vor.
 
 ==== Benötigte Pakete vorher explizit herunterladen ====
 

@@ -1,6 +1,6 @@
 // Datei: ./praxis/paketverwaltung-ohne-internet/dpkg-split.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[paketverwaltung-offline-dpkg-split]]
 ==== Pakete mit `dpkg-split` aufteilen ====
@@ -32,7 +32,8 @@
 (((dpkg-split, --msdos)))
 (((dpkg-split, --version)))
 
-Für diesen Fall bietet sich das Werkzeug `dpkg-split` aus dem Paket
+Möchten Sie nicht mit den Schaltern von `tar`, `rar`, `zip` oder `hoz`
+hantieren, bietet sich hier das Werkzeug `dpkg-split` aus dem Paket
 'dpkg' <<Debian-Paket-dpkg>> an. Es zerlegt eine `deb`-Datei in kleinere
 Stücke und kann diese Stücke dann auch wieder zusammensetzen. Dieses
 Werkzeug ist nützlich, um Binärpakete auf mehrere Medien mit geringer
@@ -103,6 +104,10 @@ dann soweit wie nötig abgeschnitten. Ergebnis ist ein Dateiname der Form
 
 // Stichworte für den Index
 (((Debianpaket, xsnow)))
+(((dpkg-split, -j)))
+(((dpkg-split, -o)))
+(((dpkg-split, -s)))
+(((dpkg-split, -S)))
 Nachfolgend erklären wir anhand des Paketes 'xsnow', wie Sie
 `dpkg-split` benutzen.
 
