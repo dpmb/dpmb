@@ -104,16 +104,16 @@ dann soweit wie nötig abgeschnitten. Ergebnis ist ein Dateiname der Form
 Nachfolgend erklären wir anhand des Paketes 'xsnow', wie Sie
 `dpkg-split` benutzen.
 
+*Beispiel 1* ist das Zerlegen des Pakets 'xsnow' in Stücke mit einer
+Größe von 10 KB. Zum Einsatz kommen im Aufruf die beiden Schalter `-s`
+(zerlegen) und `-S 10`. Letzteres bestimmt die Größe der Ausgabedatei
+von maximal 10 KB. 
 
-* Beispiele
-** das Paket 'xsnow' in Stücke mit einer Größe von 10 KB zerlegen
-*** `-s`: zerlegen
-*** `-S 10`: Blockgröße von maximal 10 KB
-*** ergibt vier Blöcke
-*** Benennung (default-Werte): 'Paketname.nofm.deb' mit 'n' als
-Stücknummer (im Beispiel die Werte 1 bis 4) und 'm' als Anzahl der
-Stücke (im Beispiel 4)
+Als Ergebnis erhalten Sie vier Stücke. Diese werden in der Form
+'Paketname.nofm.deb' mit 'n' als Stücknummer (im Beispiel die Werte 1
+bis 4) und 'm' als Anzahl der Stücke (im Beispiel 4) benannt.
 
+.Zerlegen des Debianpakets 'xsnow' in Stücke zu 10 KB
 ----
 $ dpkg-split -s -S 10 xsnow_1%3a1.42-9_amd64.deb 
 Paket xsnow wird in 4 Teile aufgeteilt: 1 2 3 4 fertig
@@ -126,13 +126,15 @@ insgesamt 136K
 $
 ----
 
-** Informationen zu einem Stück eines mittels `dpkg-split` zerlegten
-deb-Pakets ausgeben
-*** Schalter `-I`
-*** Parameter: Dateiname, hier: 'xsnow_1%3a1.42-9_amd64.3of4.deb'
-*** Ausgabe: Formatversion, Paketinformationen, Nummer des Stücks (hier
-3 von 4), Größe ("Teil-Länge"), Offset im Originalpaket ("Teil-Offset")
+In *Beispiel 2* zeigen Sie die Informationen zu einem Stück eines
+mittels `dpkg-split` zerlegten deb-Pakets an. Dazu benutzen Sie den
+Schalter `-I` gefolgt von einem Dateiname als Parameter, hier:
+`xsnow_1%3a1.42-9_amd64.3of4.deb`. Die Ausgabe umfasst die
+Formatversion, die Paketinformationen, die Nummer des Stücks (hier 3 von
+4), die Größe ("Teil-Länge") sowie den Offset im Originalpaket
+("Teil-Offset").
 
+.Informationen zum Teil `xsnow_1%3a1.42-9_amd64.3of4.deb` erhalten
 ----
 $ dpkg-split -I xsnow_1%3a1.42-9_amd64.3of4.deb 
 xsnow_1%3a1.42-9_amd64.3of4.deb:
@@ -151,11 +153,14 @@ xsnow_1%3a1.42-9_amd64.3of4.deb:
 $
 ----
 
-** Paket aus Stücken wieder zusammensetzen
-*** Schalter `-j` für die Aktion Zusammensetzen
-*** Schalter `-o` für den Namen der Ausgabedatei
-*** Parameter: Dateinamen der Stücke
-*** ohne `-o` erzeugt es als Ausgabedatei 'xsnow_1:1.42-9_amd64.deb', Benennung folgt Paket-Version_Architektur.deb
+Das *Beispiel 3* zeigt, wie Sie ein Paket wieder aus einzelnen Stücken
+zusammensetzen. Dazu benutzen Sie den Schalter `-j` für die Aktion
+"Zusammensetzen".
+
+Nun erzeugt `dpkg-split` als Ausgabedatei 'xsnow_1:1.42-9_amd64.deb', da
+die Benennung den Angaben 'Paket-Version_Architektur.deb' folgt. Am Ende
+des Aufrufs geben Sie noch die Dateinamen der Stücke an, die Sie wieder
+zusammensetzen möchten.
 
 .Einfaches Zusammenfügen der Paketstücke
 ----
@@ -164,8 +169,12 @@ Paket xsnow wird aus 4 Teilen zusammengesetzt: 1 2 3 4 fertig
 $
 ----
 
-*** Zusammenfügen mit Angabe der Ausgabedatei: erst Schalter `-o`, dann
-`-j`
+Um eine Ausgabedatei mit einem spezifischen Dateinamen zu erhalten,
+kommt nun noch der Schalter `-o` für die Angabe der Ausgabedatei zum
+Einsatz. Bitte beachten Sie dabei, dass Sie im Aufruf zuerst den
+Schalter `-o` und erst danach den Schalter `-j` angeben. Nachfolgend
+sehen den vollständigen Aufruf, der als Ergebnis die Datei
+`xsnow_1%3a1.42-9_amd64.deb` liefert.
 
 .Zusammenfügen der Paketstücke mit Ausgabedatei
 ----
@@ -174,9 +183,11 @@ Paket xsnow wird aus 4 Teilen zusammengesetzt: 1 2 3 4 fertig
 $
 ----
 
-*** hat alles beim Zusammenbau geklappt? Zur Sicherheit mit `md5sum`
-überprüfen:
+Anschließend raten wir Ihnen, zu überprüfen, ober alles beim Zusammenbau
+geklappt hat? Mittels `md5sum` vergleichen Sie die Hashwerte der beiden
+Pakete wie folgt:
 
+.Vergleichen zweier Dateien mittels `md5sum`
 ----
 $ md5sum xsnow_1%3a1.42-9_amd64.deb /var/cache/apt/archives/xsnow_1%3a1.42-9_amd64.deb 
 3ddeabaec77416662e45de36d9960a2a  xsnow_1%3a1.42-9_amd64.deb
