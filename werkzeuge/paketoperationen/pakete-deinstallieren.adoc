@@ -172,18 +172,44 @@ $
 
 // Stichworte für den Index
 (((aptitude, purge)))
+(((apt, purge)))
 (((apt-get, purge)))
 (((apt-get, remove --purge)))
 Haben Sie die aus Ihrer Sicht unnützen Konfigurationsdateien eines
 bereits deinstallierten Pakets ausfindig gemacht und möchten diese
 endgültig ins digitale Nirwana befördern, sind Ihnen APT und `aptitude`
-gern dabei behilflich. APT unterstützt Sie mit der Kombination aus dem
-Kommando `apt-get`, dessen Schalter `remove` und der Option `--purge`
-gefolgt vom Paketnamen oder ausschliesslich über den Schalter `purge`
-gefolgt vom Paketnamen. Bei `aptitude` genügt der Schalter `purge`
-vollkommen.
+gern dabei behilflich. `apt`, `apt-get` und `aptitude` unterstützen Sie
+mit der Kombination aus dem jeweiligen Namen des Werkzeugs und dem
+Unterkommando `purge` gefolgt vom Paketnamen, bspw. `apt purge mc` für
+die restlose Entfernung des Pakets 'mc'.
 
-.Löschen der Konfigurationsdateien mittels APT
+.Löschen der Konfigurationsdateien mittels `apt`
+----
+# apt purge mc
+Paketlisten werden gelesen... Fertig
+Abhängigkeitsbaum wird aufgebaut.       
+Statusinformationen werden eingelesen.... Fertig
+Die folgenden Pakete wurden automatisch installiert und werden nicht mehr benötigt:
+  libconfuse-common libconfuse0
+Verwenden Sie »apt-get autoremove«, um sie zu entfernen.
+Die folgenden Pakete werden ENTFERNT:
+  mc*
+0 aktualisiert, 0 neu installiert, 1 zu entfernen und 108 nicht aktualisiert.
+Nach dieser Operation werden 0 B Plattenplatz zusätzlich benutzt.
+Möchten Sie fortfahren? [J/n] 
+(Lese Datenbank ... 253598 Dateien und Verzeichnisse sind derzeit installiert.)
+Entfernen von mc (3:4.8.13-3) ...
+Löschen der Konfigurationsdateien von mc (3:4.8.13-3) ...
+# 
+----
+
+In früheren Versionen kennt `apt-get` das Unterkommando `purge` noch
+nicht. In diesem Fall benutzen Sie stattdessen die Kombination aus dem
+Unterkommando `remove` gefolgt von der Option `--purge` und den Namen
+der zu entfernenden Pakete. Nachfolgend sehen Sie das für `apt-get` und
+das zu entfernende Paket 'cssed'.
+
+.Löschen der Konfigurationsdateien mittels `apt-get`
 ----
 # apt-get remove --purge cssed
 Paketlisten werden gelesen... Fertig
@@ -205,6 +231,7 @@ Trigger für menu werden verarbeitet ...
 
 // Stichworte für den Index
 (((aptitude, purge)))
+(((apt, purge)))
 (((apt-get, purge)))
 (((apt-get, remove --purge)))
 (((dpkg, -P)))
@@ -217,7 +244,9 @@ Paketabhängigkeiten.
 
 Für diese Aktion kombinieren Sie entweder `apt-get` mit dem Schalter
 `remove` und der Option `--purge` und dem Paketnamen oder dem Schalter
-`purge` und dem Paketnamen. `aptitude` kennt nur den Schalter `purge`.
+`purge` und dem Paketnamen. `aptitude` und `apt` kennen hingegen nur den
+Schalter `purge` für diese Aktion. Das nachfolgende Beispiel zeigt den
+entsprechenden Aufruf von `aptitude`.
 
 .Löschen des Pakets 'cssed' samt Konfigurationsdateien in einem Schritt
 ----
