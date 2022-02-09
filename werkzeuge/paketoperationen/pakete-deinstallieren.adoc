@@ -254,6 +254,70 @@ thunderbird
 #
 ----
 
+Um alle diese "Paketreste" in einem Rutsch aufzuräumen, kombinieren Sie
+diesen Aufruf bspw. mit `apt purge` wie folgt:
+
+.Rückfrage vor dem Löschen aufgespürter, noch konfigurierter Pakete
+----
+# apt purge $(dpkg -l | grep -E "^rc " | awk '{ print $2; }')
+Paketlisten werden gelesen... Fertig
+Abhängigkeitsbaum wird aufgebaut.       
+Statusinformationen werden eingelesen.... Fertig
+Die folgenden Pakete werden ENTFERNT:
+  alsa-tools-gui* alsamixergui* bmon* bomber* cifs-utils* d2x-rebirth* 
+  doxygen-gui* evince* firebird2.5-common* firebird2.5-server-common* geany* 
+  geany-common* gedit* gkrellm* grass-core* gv* htdig* ibus* icedove* 
+  iceweasel-l10n-de* im-config* jed* jed-common* kdiff3* keyutils* ktorrent* 
+  libacpi0* libastro1* libatk1.0-0:i386* libavahi-compat-libdnssd1* libc-ares2* 
+  libcairo2:i386* libclucene-contribs1* libcmis-0.4-4* libcoin80* libdee-1.0-4*
+  libegl1-nvidia* libeot0* libexttextcat-2.0-0* libfbclient2* libfbembed2.5* 
+  libfftw3-single3* libg15-1* libg15daemon-client1* libg15render1* 
+  libgdk-pixbuf2.0-0:i386* libgit2-21* libgit2-glib-1.0-0* libgl1-nvidia-glx*
+  libgles1-nvidia* libgles2-nvidia* libglew1.10* libgltf-0.0-0* libgmpxx4ldbl* 
+  libgraphicsmagick3* libgraphite2-3:i386* libgssglue1* libgtk2.0-0:i386* 
+  libguess1* libharfbuzz0b:i386* libhdb9-heimdal* libhyphen0* libibus-1.0-5*
+  libjasper1:i386* libkdegames6abi1* libkeybinder-3.0-0* libkworkspace4abi2* 
+  liblangtag1* liblvm2app2.2* libmarblewidget19* libmythes-1.2-0* 
+  libnvidia-eglcore* libnvidia-ml1* libodfgen-0.1-1* libopencore-amrnb0*
+  libopencore-amrwb0* libopenscenegraph100* libpango-1.0-0:i386* 
+  libpangocairo-1.0-0:i386* libpangoft2-1.0-0:i386* libphysfs1* 
+  libpixman-1-0:i386* libpyside1.2* libqextserialport1* libqgis-analysis2.4.0* 
+  libqgis-core2.4.0* libqgis-gui2.4.0* libqgis-networkanalysis2.4.0* 
+  libqgisgrass2.4.0* libqgispython2.4.0* libqscintilla2-11* libqtlocation1* 
+  libquazip1* libqwt6* libsdl-mixer1.2* libsdl2-2.0-0* libshiboken1.2* libshp2* 
+  libsidplay1* libsmi2ldbl* libspatialindex3* libspeechd2* libva-glx1* 
+  libwebrtc-audio-processing-0* libwireshark-data* libwiretap4* 
+  linux-image-3.16.0-4-amd64* mediathekview* nvidia-settings* php5-mysqlnd* 
+  qgis-plugin-grass* samba* skype:i386* subversion* svn-workbench* thunderbird* 
+  wireshark*
+0 aktualisiert, 0 neu installiert, 117 zu entfernen und 108 nicht aktualisiert.
+Nach dieser Operation werden 0 B Plattenplatz zusätzlich benutzt.
+Möchten Sie fortfahren? [J/n]
+...
+#
+----
+
+Nach ihrer Bestätigung löscht `apt` alle "Paketreste" wie oben genannt
+-- eines nach dem anderen. Möchten Sie hingegen für jedes Paket dessen
+Entfernung nochmals einzeln bestätigen (oder ggf. auch ablehnen), kommt
+eine `for`-Schleife in ihrer Shell zum tragen. Das nachfolgende Beispiel
+zeigt den Aufruf in einer Bash.
+
+.Paketweises Löschen aufgespürter, noch konfigurierter Pakete
+----
+# for paket in $(dpkg -l | grep -E "^rc " | awk '{ print $2; }'); do apt purge $paket; done
+Paketlisten werden gelesen... Fertig
+Abhängigkeitsbaum wird aufgebaut.       
+Statusinformationen werden eingelesen.... Fertig
+Die folgenden Pakete werden ENTFERNT:
+  alsa-tools-gui*
+0 aktualisiert, 0 neu installiert, 1 zu entfernen und 108 nicht aktualisiert.
+Nach dieser Operation werden 0 B Plattenplatz zusätzlich benutzt.
+Möchten Sie fortfahren? [J/n]
+...
+#
+----
+
 ==== Fall 4: Paket samt Konfigurationsdateien deinstallieren ====
 
 // Stichworte für den Index
