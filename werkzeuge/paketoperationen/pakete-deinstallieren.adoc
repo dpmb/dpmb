@@ -237,7 +237,7 @@ beginnen (entfernte, aber noch konfigurierte Pakete). Daraus wiederum
 schneidet `awk` aus jeder Zeile die zweite Spalte aus, die den
 Paketnamen enthält. Bei Systemen, die bereits länger in Gebrauch sind
 und auf denen viel experimentiert wurde, kann die Liste der hierüber 
-gefundenen "Paketreste durchaus länger werden und Überraschungen zu Tage 
+gefundenen "Paketreste" durchaus länger werden und Überraschungen zu Tage 
 fördern.
 
 .Aufspüren noch konfigurierter Pakete
