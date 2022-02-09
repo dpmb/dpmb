@@ -227,6 +227,33 @@ Trigger für menu werden verarbeitet ...
 #
 ----
 
+Die obigen Beispiele besprechen das Entfernen der Konfigurationsdateien
+eines 'einzigen' Pakets. Um herauszufinden, welche "Paketreste" sich
+insgesamt auf ihrem System tummeln, hilft die nachfolgende Kombination
+aus `dpkg`, `egrep` und `awk`. Aus der mit `dpkg` erstellten Liste der
+installierten Pakete filtert `egrep` zunächst mit Hilfe eines Regulären
+Ausdrucks alle Zeilen heraus, die mit den beiden Buchstaben `rc`
+beginnen (entfernte, aber noch konfigurierte Pakete). Daraus wiederum
+schneidet `awk` aus jeder Zeile die zweite Spalte aus, die den
+Paketnamen enthält. Bei Systemen, die bereits länger in Gebrauch sind
+und auf denen viel experimentiert wurde, kann die Liste der hierüber 
+gefundenen "Paketreste durchaus länger werden und Überraschungen zu Tage 
+fördern.
+
+.Aufspüren noch konfigurierter Pakete
+----
+# dpkg -l | grep -E "^rc " | awk '{ print $2; }'
+mediathekview
+php5-mysqlnd
+qgis-plugin-grass
+samba
+skype
+subversion
+svn-workbench
+thunderbird
+#
+----
+
 ==== Fall 4: Paket samt Konfigurationsdateien deinstallieren ====
 
 // Stichworte für den Index
