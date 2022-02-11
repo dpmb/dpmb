@@ -244,7 +244,7 @@ fördern.
 
 .Aufspüren noch konfigurierter Pakete
 ----
-# dpkg -l | grep -E "^rc " | awk '{ print $2; }'
+# dpkg -l | egrep "^rc " | awk '{ print $2; }'
 mediathekview
 php5-mysqlnd
 qgis-plugin-grass
@@ -261,7 +261,7 @@ diesen Aufruf bspw. mit `apt purge` wie folgt:
 
 .Rückfrage vor dem Löschen aufgespürter, noch konfigurierter Pakete
 ----
-# apt purge $(dpkg -l | grep -E "^rc " | awk '{ print $2; }')
+# apt purge $(dpkg -l | egrep "^rc " | awk '{ print $2; }')
 Paketlisten werden gelesen... Fertig
 Abhängigkeitsbaum wird aufgebaut.       
 Statusinformationen werden eingelesen.... Fertig
@@ -307,7 +307,7 @@ zeigt den Aufruf in einer Bash.
 
 .Paketweises Löschen aufgespürter, noch konfigurierter Pakete
 ----
-# for paket in $(dpkg -l | grep -E "^rc " | awk '{ print $2; }'); do apt purge $paket; done
+# for paket in $(dpkg -l | egrep "^rc " | awk '{ print $2; }'); do apt purge $paket; done
 Paketlisten werden gelesen... Fertig
 Abhängigkeitsbaum wird aufgebaut.       
 Statusinformationen werden eingelesen.... Fertig
@@ -335,11 +335,12 @@ Schritt. Die Aufrufe entsprechen dem Kommando `dpkg -P` 'Paketname' für
 eine Menge von Paketen in der richtigen Reihenfolge der
 Paketabhängigkeiten. 
 
-Für diese Aktion kombinieren Sie entweder `apt-get` mit dem Schalter
-`remove` und der Option `--purge` und dem Paketnamen oder dem Schalter
-`purge` und dem Paketnamen. `aptitude` und `apt` kennen hingegen nur den
-Schalter `purge` für diese Aktion. Das nachfolgende Beispiel zeigt den
-entsprechenden Aufruf von `aptitude`.
+Für diese Aktion gilt das gleiche wie in Fall3. Sie kombinieren entweder
+`apt-get` mit dem Schalter `remove`, der Option `--purge` und dem
+Paketnamen oder nur dem Schalter `purge` und dem Paketnamen. `aptitude`
+und `apt` kennen hingegen auschließlich den Schalter `purge` für diese
+Aktion. Das nachfolgende Beispiel zeigt den entsprechenden Aufruf von
+`aptitude` und das Paket 'cssed'.
 
 .Löschen des Pakets 'cssed' samt Konfigurationsdateien in einem Schritt
 ----
