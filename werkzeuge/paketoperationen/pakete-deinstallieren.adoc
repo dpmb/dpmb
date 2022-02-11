@@ -203,11 +203,13 @@ Löschen der Konfigurationsdateien von mc (3:4.8.13-3) ...
 # 
 ----
 
-In früheren Versionen kennt `apt-get` das Unterkommando `purge` noch
-nicht. In diesem Fall benutzen Sie stattdessen die Kombination aus dem
-Unterkommando `remove` gefolgt von der Option `--purge` und den Namen
-der zu entfernenden Pakete. Nachfolgend sehen Sie das für `apt-get` und
-das zu entfernende Paket 'cssed'.
+In den Versionen vor 0.7.2 kennt `apt-get` das Unterkommando `purge`
+noch nicht. Ab der Version 0.7.7 (veröffentlicht 2007) funktionieren
+auch die Patches dazu zuverlässig. Falls Sie in die Situation kommen,
+mit einer Version vor 0.7.7 arbeiten zu müssen, benutzen Sie stattdessen
+im Aufruf die Kombination aus dem Unterkommando `remove` gefolgt von der
+Option `--purge` und den Namen der zu entfernenden Pakete. Nachfolgend
+sehen Sie das für `apt-get` und das zu entfernende Paket 'cssed'.
 
 .Löschen der Konfigurationsdateien mittels `apt-get`
 ----
