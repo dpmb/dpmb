@@ -16,14 +16,18 @@
 
 Auch für Linux-Distributionen, die auf dem `rpm`-Paketformat aufsetzen,
 können Sie `deb`-Pakete einspielen und benutzen. Es gelten dabei die 
-gleichen Hinweise wie bereits oben genannt -- es ist nicht garantiert,
-dass das Paket in ihr System passt und erwartungsgemäß funktioniert. 
-Diese Möglichkeiten sind uns bekannt:
+gleichen Hinweise wie bereits unter "Fremdformate mit `alien`
+hinzufügen" <<fremdformate-mit-alien-hinzufuegen>> genannt -- es ist
+nicht garantiert, dass das Paket in ihr System passt und erwartungsgemäß
+funktioniert.
+
+Diese Möglichkeiten zur Umwandlung und Integration von `deb`-Paketen
+sind uns bekannt:
 
 `alien` mit dem Schalter `-r` (Langform `--to-rpm`) :: Umwandlung eines
 `deb`-Paketes in ein `rpm`-Paket. Haben Sie das Paket erfolgreich 
-umgewandelt, installieren Sie es bspw. wie folgt mittels `yum` auf ihrem 
-System:
+umgewandelt, installieren Sie es bspw. wie folgt mittels `yum` und
+dessen Schalter `localinstall` auf ihrem System:
 +
 .Installation des umgewandelten Pakets mittels `yum`
 ----
@@ -32,9 +36,10 @@ System:
 #
 ----
 +
-Das Unterkommando `localinstall` veranlasst `yum`, nicht in den hinterlegten
-Repositories zu suchen, sondern das Paket aus dem lokalen Verzeichnis zu 
-verwenden. Die Vorgehensweise ist vergleichbar mit dem Aufruf von `dpkg -i`.
+Das Unterkommando `localinstall` veranlasst `yum`, nicht in den
+hinterlegten Paketquellen zu suchen, sondern das Paket aus dem lokalen
+Verzeichnis zu verwenden. Die Vorgehensweise ist vergleichbar mit dem
+Aufruf von `dpkg -i`.
 
 Projekt 'apt4rpm' <<apt4rpm>> :: stammt im Original von Conectiva Linux 
 <<Conectiva>>. Es erstellt aus einem APT-Repository ein lokales RPM-Repository, 
