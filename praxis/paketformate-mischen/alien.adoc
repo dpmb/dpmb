@@ -37,24 +37,12 @@ Architektur oder Plattform :: die Angabe der Prozessorarchitektur im
 Dateinamen, wie etwa 'amd64' bei `deb`-Paketen und 'x86_64' bei 
 `rpm`-Archiven.
 
-Bei der Umwandlung des Paketformats bestehen mehrere Fallstricke. Diese
-führen regelmäßig dazu, dass die gewünschte Software nicht wie erhofft
-funktioniert:
-
-* die referenzierten Bibliotheken passen gar nicht, nicht mehr (sind
-bspw. veraltet) oder sind nicht auffindbar (sind bspw. nicht installiert
-oder haben einen anderen Paketnamen)
-* die angegebenen Pfade im Originalpaket stimmen nicht mit Ihrer lokalen
-Verzeichnisstruktur oder der von Debian genutzten Struktur überein
-* der Binärcode passt nicht zu Ihrer genutzten Plattform und Architektur
-* das Format der Konfiguration sorgt für Ärger, bspw. die verfügbaren
-Optionen und Schalter
-* es bestehen Konflikte mit anderer, bereits installierter Software
-
-Verwenden Sie daher möglichst die Version der Software, die auch zu
-Ihrer Distribution und Architektur passt. Diese lässt sich i.d.R. am
-einfachsten in Ihren Softwarebestand integrieren. Weitere Informationen
-dazu finden auf der Projektwebseite von 'alien' <<alien>>.
+Diese Bestandteile benötigt die Paketverwaltung von Debian GNU/Linux, um
+die umgewandelten Softwarepakete korrekt in den Paketbestand einordnen
+zu können. Ohne die Informationen besteht bspw. keine Möglichkeit, die
+Abhängigkeiten zu anderen Softwarepaketen zu prüfen und sicherzustellen,
+dass alle benötigten Komponenten verfügbar sind und ggf. installiert
+werden können.
 
 ==== Pakete umwandeln ====
 
@@ -87,13 +75,14 @@ die Konvertierung von `rpm`-Paketen nach `deb` (<<Debian-Paket-rpm>> und
 <<Debian-Paket-debhelper>> zur Erzeugung von Debianpaketen
 
 * den GNU-C-Compiler `gcc` und `make` (<<Debian-Paket-gcc>> und
-<<Debian-Paket-make>>), sofern Software aus dem Quellcode zu übersetzen ist
+<<Debian-Paket-make>>), sofern Software im Quellcode vorliegt und aus
+diesem zu übersetzen ist
 
 Die beiden Pakete `perl` und `dpkg` gehören zu den essentiellen Paketen und 
 sind somit stets bereits auf ihrer Debian-Installation vorhanden. Die anderen 
-genannten Pakete könnten noch fehlen. Falls letzteres zutrifft, installieren 
-Sie diese über die Paketverwaltung nach (siehe ``Pakete installieren'' in
-<<pakete-installieren>>).
+genannten Pakete gehören nicht dazu und könnten somit noch fehlen. Falls
+letzteres zutrifft, installieren Sie diese über die Paketverwaltung nach
+(siehe ``Pakete installieren'' in <<pakete-installieren>>).
 
 [[fremdformate-mit-alien-hinzufuegen-durchfuehrung]]
 ===== Durchführung =====
@@ -111,9 +100,10 @@ Sie diese über die Paketverwaltung nach (siehe ``Pakete installieren'' in
 (((Stampede Linux)))
 
 Die Umwandlung eines `rpm`-Pakets in ein `deb`-Paket erfolgt mit Hilfe
-des Werkzeugs `alien` und der Angabe des Paketformats über den Schalter 
-`-d` (Langform `--to-deb`). Nachfolgend demonstrieren wir Ihnen das anhand 
-des Pakets 'mc' für den Midnight Commander <<mc>>:
+des Werkzeugs `alien`, der Angabe des gewünschten Paketformats sowie
+über die originale Paketdatei. Das Paketformat geben Sie über den
+Schalter `-d` (Langform `--to-deb`) an. Nachfolgend demonstrieren wir
+Ihnen das anhand des Pakets 'mc' für den Midnight Commander <<mc>>:
 
 .Umwandlung eines `rpm`-Pakets in ein `deb`-Paket
 ----
@@ -122,9 +112,10 @@ mc_4.8.22-2_amd64.deb generated
 #
 ----
 
-Der Schalter `-d` ist der von `alien` angenommene Standardfall und kann im 
-Aufruf weggelassen werden. `alien` unterstützt ebenso noch die folgenden, 
-weiteren Schalter zur Umwandlung zwischen anderen Formaten:
+Der Schalter `-d` ist der von `alien` angenommene Standardfall und
+diesen können Sie somit im Aufruf weglassen. Darüberhinaus unterstützt
+`alien` noch die folgenden, weiteren Schalter zur Umwandlung zwischen
+anderen Formaten:
 
 `-r` (Langform `--to-rpm`) :: Umwandlung in ein `rpm`-Paket
 
@@ -163,8 +154,8 @@ drwxr-xr-x root/root         0 2019-11-16 12:11 ./etc/mc/
 #
 ----
 
-Mit einer Kombination aus `dpkg --info ` 'Pakename' und `grep Depends` sehen 
-Sie, welche Paketabhängigkeiten bestehen und erfüllt sein müssen.
+Mit einer Kombination aus `dpkg --info ` 'Paketname' und `grep Depends`
+sehen Sie, welche Paketabhängigkeiten bestehen und erfüllt sein müssen.
 
 .Abhängigkeiten von einem umgewandelten Paket
 ----
@@ -173,10 +164,14 @@ Sie, welche Paketabhängigkeiten bestehen und erfüllt sein müssen.
 #
 ----
 
-===== Besonderheiten bei der Umwandlung =====
+Aus der obigen Ausgabe ersehen Sie, dass das Paket von den Bibliotheken
+'Libc', 'Glib2', 'Gpm2', 'Slang2' und 'Ssh2' abhängt.
+
+===== Fallstricke und Besonderheiten bei der Umwandlung =====
 
 // Stichworte für den Index
 (((alien, -c)))
+(((alien, Fallstricke)))
 (((alien, FHS)))
 (((alien, -g)))
 (((alien, -h)))
@@ -202,12 +197,36 @@ Sie, welche Paketabhängigkeiten bestehen und erfüllt sein müssen.
 (((alien, --verbose)))
 (((alien, --veryverbose)))
 
-`deb`-basierte Systeme haben ihre Eigenheiten. Die folgenden Schalter
-von `alien` helfen Ihnen, auch mit Sonderfällen bei der Umwandlung von
-Paketen klarzukommen:
+Bei der Umwandlung des Paketformats bestehen mehrere Fallstricke. Diese
+führen regelmäßig dazu, dass die umgewandelte Software nicht wie erhofft
+funktioniert:
+
+* die referenzierten Bibliotheken passen entweder gar nicht, nicht mehr
+(sind bspw. veraltet) oder sind nicht auffindbar. Bei letzterem sind
+diese bspw. nicht installiert oder haben schlicht und einfach einen
+anderen Paketnamen.
+
+* die angegebenen Pfade im Originalpaket stimmen nicht mit Ihrer lokalen
+Verzeichnisstruktur oder der von Debian GNU/Linux genutzten Struktur
+überein. Hier helfen ggf. symbolische Links weiter, die dann auf das
+richtige Ziel verweisen.
+
+* der Binärcode passt nicht zu Ihrer genutzten Plattform und
+Architektur. Prüfen Sie, ob es das Softwarepaket auch für ihre Plattform
+bzw. Architektur gibt.
+
+* das Format der Konfiguration sorgt für Ärger, bspw. die verfügbaren
+Optionen und Schalter
+
+* es bestehen Konflikte mit anderer, bereits installierter Software
+
+Desweiteren haben `deb`-basierte Systeme zudem ihre Eigenheiten. Die
+folgenden Schalter von `alien` helfen Ihnen dabei, auch mit weiteren
+Sonderfällen bei der Umwandlung von Paketen klarzukommen:
 
 `--bump=`'Wert' :: ähnlich zu `--version`. Erhöhe die Versionsnummer
-nicht um 1, sondern um den angegebenen Wert.
+des neuen Softwarepakets nicht um 1, sondern um den von ihnen im Aufruf
+angegebenen Wert.
 
 `--description=`'Beschreibung' :: Füge dem neuen Paket die genannte
 Beschreibung hinzu. Das ist insbesondere bei `tar.gz`-Dateien sinnvoll,
@@ -230,8 +249,8 @@ sinnvoll, da diese normalerweise noch keine Versionsnummer beinhalten.
 
 `--veryverbose` :: noch ausführlicher als `-v` bzw. `--verbose`
 
-`-c` (Langform `--scripts`) :: bestehende Pre- und Post-Install- sowie
-Remove-Skripte eines Paketes erhalten
+`-c` (Langform `--scripts`) :: erhalte die bestehenden Pre- und
+Post-Install- sowie Remove-Skripte eines Paketes
 
 `-g` (Langform `--generate`) und `--veryverbose` :: erweitern der Fehlersuche
 
@@ -270,7 +289,8 @@ Umwandlung eines Paketes an
 Haben Sie das Paket erfolgreich in das `deb`-Format umgewandelt, spielen
 Sie dieses mittels `dpkg -i` 'paketname.deb' ein. APT und `aptitude`
 bekommen von der Aktion erstmal nichts mit, stören sich aber nicht
-daran, dass das Paket eingespielt ist.
+daran, dass das Paket eingespielt ist. Bei `aptitude` finden Sie das
+Paket später in der Kategorie "Veraltete und selbst erstellte Pakete".
 
 Bei diesem Schritt können mehrere Ergebnisse eintreten -- alles geht glatt 
 und die eingespielte Software funktioniert, alles geht glatt und Software 
@@ -306,5 +326,14 @@ Sie den Schalter `-i` (Langform `--install`).
 Nach der Installation des Paketes löscht `alien` die lokal vorliegende
 Paketdatei.
 ====
+
+==== Fazit ====
+
+Das Werkzeug `alien` hilft ihnen dabei, Software verfügbar zu machen,
+die es nicht für `deb`-basierte Systeme gibt. Wir raten ihnen dazu,
+dafür die Version der Software zu benutzen, die auch zu Ihrer
+Distribution und Architektur passt. Diese lässt sich i.d.R. am
+einfachsten in Ihren Softwarebestand integrieren. Weitere Informationen
+dazu finden auf der Projektwebseite von 'alien' <<alien>>.
 
 // Datei (Ende): ./praxis/paketformate-mischen/alien.adoc
