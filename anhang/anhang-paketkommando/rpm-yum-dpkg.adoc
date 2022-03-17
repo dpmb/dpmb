@@ -96,6 +96,7 @@ Paketcache vorliegen.
 (((rpm, -U)))
 (((rpm, --upgrade)))
 (((yum, update)))
+(((yum, upgrade)))
 Mit den nachfolgenden Aufrufen aktualisieren Sie ein Softwarepaket über
 die Kommandozeile. Unter ``Pakete aktualisieren'' in
 <<pakete-aktualisieren>> gehen wir detaillierter auf die Vorgehensweise
