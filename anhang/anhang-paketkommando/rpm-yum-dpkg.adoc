@@ -196,6 +196,7 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 (((yum, list available)))
 (((yum, list installed)))
 (((yum, list updates)))
+(((yum, show-installed)))
 Mit den nachfolgenden Aufrufen listen Sie die vorhandenen Softwarepakete
 über die Kommandozeile auf. Für `dpkg`, APT und `aptitude` besprechen
 wir das detaillierter unter ``Liste der installierten Pakete anzeigen
@@ -222,6 +223,7 @@ für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
 |            | `yum list available` | alle verfügbaren Pakete auflisten
 |            | `yum list installed` | alle installierten Pakete auflisten
 |            | `yum list updates` | alle aktualisierbaren Pakete auflisten
+|            | `yum show-installed` | alle installierten Pakete auflisten
 |====
 
 === Einzelpaket auflisten ===
