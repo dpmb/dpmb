@@ -359,12 +359,24 @@ widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 === Alle Konfigurationsdateien eines Pakets anzeigen ===
 
 // Stichworte für den Index
+(((Paket, Konfigurationsdateien auflisten)))
 (((rpm, -qc)))
+(((rpm, -ql)))
 
-*Todo*
+- listet alle Dateien auf, die im rpm-Paket als Dokumentation geflaggt
+  sind
+- Hinweis: listet nur die Einträge auf, die sich bereits im Paket
+  befinden und nicht diese, die erst zur Laufzeit angelegt werden
 
 ----
 rpm -qc Paketname
+----
+
+- Alternative: alle Dateien und Verzeichnisse auflisten, die sich im
+  Verzeichnis `/etc` befinden
+
+----
+rpm -ql | grep "/etc"
 ----
 
 === Alle Dokumentationsdateien eines Pakets anzeigen ===
