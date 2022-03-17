@@ -356,6 +356,17 @@ widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 |            | `repoquery --list` 'Paketname' |
 |====
 
+=== Alle Konfigurationsdateien eines Pakets anzeigen ===
+
+// Stichworte für den Index
+(((rpm, -qc)))
+
+*Todo*
+
+----
+rpm -qc Paketname
+----
+
 === Paket identifizieren, aus dem eine Datei stammt ===
 
 // Stichworte für den Index
