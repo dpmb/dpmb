@@ -363,7 +363,7 @@ widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 (((rpm, -qc)))
 (((rpm, -ql)))
 
-- listet alle Dateien auf, die im rpm-Paket als Dokumentation geflaggt
+- listet alle Dateien auf, die im rpm-Paket als Konfiguration geflaggt
   sind
 - Hinweis: listet nur die Einträge auf, die sich bereits im Paket
   befinden und nicht diese, die erst zur Laufzeit angelegt werden
@@ -384,10 +384,20 @@ rpm -ql | grep "/etc"
 // Stichworte für den Index
 (((rpm, -qd)))
 
-*Todo*
+- listet alle Dateien auf, die im rpm-Paket als Dokumentation geflaggt
+  sind
+- Hinweis: listet nur die Einträge auf, die sich bereits im Paket
+  befinden und nicht diese, die erst zur Laufzeit angelegt werden
 
 ----
 rpm -qd Paketname
+----
+
+- Alternative: alle Dateien und Verzeichnisse auflisten, die sich im
+  Verzeichnis `/usr/share/doc` befinden
+
+----
+rpm -ql | grep "/usr/share/doc"
 ----
 
 === Paket identifizieren, aus dem eine Datei stammt ===
