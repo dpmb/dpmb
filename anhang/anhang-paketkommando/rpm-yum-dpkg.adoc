@@ -50,6 +50,7 @@ variiert recht stark <<RPM-Salve>> <<RPM-Gite>> <<RPM-Canepa>>
 (((rpm, -ihv)))
 (((yum, install)))
 (((yum, localinstall)))
+(((yum, reinstall)))
 Mit den nachfolgenden Aufrufen installieren Sie ein Softwarepaket über
 die Kommandozeile. Unter ``Pakete installieren'' in
 <<pakete-installieren>> gehen wir detaillierter auf `dpkg`, APT und
@@ -77,6 +78,7 @@ Paketcache vorliegen.
 |            | `rpm -ihv` 'Paketname' | Paket liegt lokal als Datei vor, Installation mit Kommentaren
 | `YUM`      | `yum localinstall` 'Paketname' | Paket liegt lokal als Datei vor
 |            | `yum install` 'Paketname' | Paket wird dem Paketrepository entnommen
+|            | `yum reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen und erneut installiert
 |====
 
 === Paket aktualisieren ===
