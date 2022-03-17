@@ -119,6 +119,8 @@ ein.
 |            | `rpm --upgrade` 'Paketname' | Paket liegt lokal als Datei vor
 | `YUM`      | `yum update` | die gesamte Veröffentlichung aktualisieren
 |            | `yum update` 'Paketname' | nur 'Paketname' aktualisieren
+|            | `yum upgrade` | die gesamte Veröffentlichung aktualisieren und dabei auch die Pakete berücksichtigen, die veraltet sind
+|            | `yum upgrade` 'Paketname' | nur 'Paketname' aktualisieren und dabei auch die Pakete berücksichtigen, die veraltet sind
 |====
 
 === Paket löschen / entfernen ===
