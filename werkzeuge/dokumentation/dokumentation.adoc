@@ -26,6 +26,25 @@ Ausgegliederte Pakete mit Dokumentation installieren Sie bei Bedarf
 einfach nach.
 
 // Stichworte für den Index
+(((Debianpaket, debian-goodies)))
+(((debman)))
+(((debmany)))
+(((Dokumentation, installierter Pakete)))
+(((Dokumentation, nicht installierter Pakete)))
+(((Dokumentation, Manpages installierter Pakete anzeigen)))
+(((Dokumentation, Manpages nicht installierter Pakete anzeigen)))
+* TODO: `debman` und `debmany` aus dem Paket 'debian-goodies' <<Debian-Paket-debian-goodies>>
+  debman :: read man pages from uninstalled packages
+  debmany :: Wählen von Manpages oder Dokumentationen aus installierten Paketen, Paketen des Repositories oder .deb-Dateien zum Betrachten mit "man" bzw. "sensible-pager" oder einem alternativen Viewer.
+
+.Aufruf von `debmany` für das Paket 'apt'
+----
+$ debmany apt
+----
+
+ToDo: Screenshot
+
+// Stichworte für den Index
 (((Debianpaket, apt-doc)))
 (((Debianpaket, aptitude-doc)))
 (((Dokumentation, /usr/share/doc/)))
