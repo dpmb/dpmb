@@ -42,6 +42,7 @@ das Verzeichnis schon im Paket mitgeliefert.
 
 // Stichworte für den Index
 (((Paket, Konfigurationsdateien anzeigen)))
+(((Paket, Konfigurationsdateien auflisten)))
 (((grep)))
 Die sogenannten Conffiles sind leicht aufzufinden. Einerseits können Sie
 wie unter <<paketinhalte-anzeigen-apt-file>> beschrieben, alle Dateien

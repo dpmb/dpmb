@@ -366,14 +366,16 @@ widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 === Alle Konfigurationsdateien eines Pakets anzeigen ===
 
 // Stichworte für den Index
+(((Conffiles)))
+(((Paket, Konfigurationsdateien anzeigen)))
 (((Paket, Konfigurationsdateien auflisten)))
 (((rpm, -qc)))
 (((rpm, -ql)))
 
-- listet alle Dateien auf, die im rpm-Paket als Konfiguration geflaggt
-  sind
-- Hinweis: listet nur die Einträge auf, die sich bereits im Paket
-  befinden und nicht diese, die erst zur Laufzeit angelegt werden
+- `rpm` kann das, für `dpkg` und `apt` siehe dazu <<konfigurationsdateien-eines-pakets-anzeigen>>
+- `rpm`
+  - listet alle Dateien auf, die im rpm-Paket als Konfiguration geflaggt sind
+  - Hinweis: listet nur die Einträge auf, die sich bereits im Paket befinden und nicht diese, die erst zur Laufzeit angelegt werden
 
 ----
 rpm -qc Paketname
