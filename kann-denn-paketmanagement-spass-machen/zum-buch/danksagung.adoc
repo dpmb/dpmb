@@ -51,6 +51,7 @@ Variante von `checkinstall` sowie zum Aktualisieren von LTS-Versionen (siehe <<u
 * Sebastian Andres für seine Anregungen zu Debian Backports
 * Gregor Herrmann für den Hinweis, das Buch auf Links zu alioth.debian.org-Webseiten hin zu überprüfen
 * Alf Gaida für Hinweise auf nicht shell-unabhängige Beispiele
+* Ingo Wichmann für die Hinweise zu den `rpm`- und `yum`-Kommandos
 
 Nicht zu vergessen sind die Probeleser, die sich durch unser Manuskript
 gekämpft haben: Arne Wichmann, Thomas Winde, Jana Pirat, Jörg Dölz,
