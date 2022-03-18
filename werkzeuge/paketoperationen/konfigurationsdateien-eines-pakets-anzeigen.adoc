@@ -129,10 +129,23 @@ $
 
 // Stichworte für den Index
 (((dlocate, -conf)))
-Direkter zur gewünschten Information kommen Sie mit dem Programm
-`dlocate` aus dem gleichnamigen Paket <<Debian-Paket-dlocate>>.
+Direkter zur gewünschten Information kommen Sie mit den beiden
+Programmem `cat` und `dlocate` aus dem gleichnamigen Paket
+<<Debian-Paket-dlocate>>. Mit `cat` lesen Sie die Paketdatenbank wie
+folgt aus (hier für das Paket 'bash'):
+
+.Anzeigen der Konfigurationsdateien über die Paketdatenbank
+----
+$ cat /var/lib/dpkg/info/bash.conffiles 
+/etc/bash.bashrc
+/etc/skel/.bash_logout
+/etc/skel/.bashrc
+/etc/skel/.profile
+$
+----
+
 `dlocate` kennt dazu den Schalter `-conf` gefolgt vom Paketnamen. Wieder
-zeigen wir das für Kommandozeilen-Shell 'bash'.
+zeigen wir das für das Paket 'bash'.
 
 .Ermittlung der Conffiles zum Paket 'bash' mittels `dlocate`
 ----
