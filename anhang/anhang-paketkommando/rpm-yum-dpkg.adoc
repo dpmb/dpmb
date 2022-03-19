@@ -393,6 +393,7 @@ rpm -ql | grep "/etc"
 // Stichworte für den Index
 (((rpm, -qd)))
 
+- `dpkg` und `apt` können das nicht
 - listet alle Dateien auf, die im rpm-Paket als Dokumentation geflaggt
   sind
 - Hinweis: listet nur die Einträge auf, die sich bereits im Paket
