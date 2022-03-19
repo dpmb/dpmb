@@ -139,8 +139,8 @@ Das Werkzeug `debmany` funktionert etwas anders. Es sammelt Manpages
 oder Dokumentation zu einem Paket zusammen, welches entweder bereits als
 Paket installiert ist, sich noch in einem Repository befindet oder als
 lokale `deb`-Datei vorliegt. Es wertet dazu die Paketdatenbank aus. 
-Ergebnis ist ein Auswahlmenü wie in Abbildung <<fig.debmany-apt>>, über
-das Sie die Betrachtung der gewünschten Dokumentation auswählen. Für das
+Ergebnis ist ein Auswahlmenü wie in <<fig.debmany-apt>>, über das Sie
+die Betrachtung der gewünschten Dokumentation auswählen. Für das
 Debianpaket 'apt' sieht der vereinfachte Aufruf wie folgt aus:
 
 .Aufruf von `debmany` für das Paket 'apt'
@@ -188,8 +188,8 @@ französischsprachige Manpages. Die Angabe `de*` liefert alle Varianten,
 bspw. `de_DE`, `de_AT` und `de_CH`.
 
 `-z` :: Zur Darstellung des Auswahlmenüs wird Zenity benutzt (siehe
-Abbildung <<fig.debmany-apt-zenity>>). Default ist `whiptail`,
-alternativ `dialog` oder `curl`.
+<<fig.debmany-apt-zenity>>). Default ist `whiptail`, alternativ `dialog`
+oder `curl`.
 +
 .Aufruf von `debmany` für das Paket `apt` mit Hilfe von Zenity
 image::werkzeuge/paketoperationen/debmany-apt-zenity.png[id="fig.debmany-apt-zenity", width="50%"]
