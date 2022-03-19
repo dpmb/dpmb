@@ -21,6 +21,8 @@ beides existieren verschiedene Unterkommandos und Aufrufmöglichkeiten.
 // Stichworte für den Index
 (((aptitude, download)))
 (((apt-get, download)))
+(((debget)))
+(((dget)))
 (((Paket, nur herunterladen)))
 Für den Modus 1 akzeptieren `apt-get` und `aptitude` das Unterkommando
 `download`. Das Paket 'bash-doc' beinhaltet die Dokumentation zur Bash
@@ -44,6 +46,24 @@ Verzeichnis ab (siehe <<fig.webbrowser-paket-download>>).
 
 .Bezug des Pakets 'bash-doc' über den Webbrowser
 image::werkzeuge/paketoperationen/webbrowser-paket-download.png[id="fig.webbrowser-paket-download", width="50%"]
+
+Im Paket 'debian-goodies' <<Debian-Paket-debian-goodies>> befindet sich
+noch das Werkzeug `debget`, welches intern wieder `apt-get` aufruft. Im
+Gegensatz zum Webbrowser benötigt es administrative Rechte, um ein Paket
+zu beziehen.
+
+.Download des Pakets 'nano' mittels `debget`
+----
+# debget nano
+(nano -> 2.2.6-3)
+Downloading nano from http://ftp.de.debian.org/debian/pool/main/n/nano/nano_2.2.6-3_amd64.deb
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  360k  100  360k    0     0  1124k      0 --:--:-- --:--:-- --:--:-- 1121k
+----
+
+`debget` kann jedoch keine Quellpakete beziehen, dafür steht Ihnen dann
+`dget` aus dem Paket 'devscripts' <<Debian-Paket-devscripts>> zur Verfügung.
 
 // Stichworte für den Index
 (((apt-get, -d install)))
