@@ -27,94 +27,9 @@ Hilfedokumente sind Bestandteil der Pakete und werden mitgeliefert.
 Ausgegliederte Pakete mit Dokumentation installieren Sie bei Bedarf
 einfach nach.
 
-// Stichworte für den Index
-(((Debianpaket, debian-goodies)))
-(((debget)))
-(((debman)))
-(((debmany)))
-(((Dokumentation, installierter Pakete)))
-(((Dokumentation, nicht installierter Pakete)))
-(((Dokumentation, Manpages installierter Pakete anzeigen)))
-(((Dokumentation, Manpages nicht installierter Pakete anzeigen)))
-Benötigen Sie Hilfe zu einem Paket, welches Sie nicht installiert haben,
-sind die beiden  Werkzeuge `debman` und `debmany` aus dem Paket
-'debian-goodies' <<Debian-Paket-debian-goodies>> für Sie nützlich.
-`debman` zeigt Ihnen nur die Manpages zu einem Paket an, welches nicht
-installiert ist. Es unterstützt dabei diese beiden Schalter:
-
-`-f` 'Dateiname' 'Name' :: Anzeigen der Manpage 'Name' zu einem bereits lokal vorliegenden `deb`-Paket 'Dateiname'
-+
-.Aufruf der Manpage 'chase' zur lokal vorliegenden Datei 'chase_0.5.2-4_amd64.deb'
-----
-$ debman -f chase_0.5.2-4_amd64.deb chase
-----
-
-`-p` 'Paketname' 'Name' :: Herunterladen des Pakets 'Paketname' mittels
-`debget` und Anzeigen der darin enthaltenen Manpage 'Name'
-+
-.Herunterladen des Pakets 'chase' und Anzeigen der darin enthaltenen Manpage 'chase'
-----
-$ debman -p chase chase
-----
-
-Das Werkzeug `debmany` funktionert etwas anders. Es sammelt Manpages
-oder Dokumentation zu einem Paket zusammen, welches entweder bereits als
-Paket installiert ist, sich noch in einem Repository befindet oder als
-lokale `deb`-Datei vorliegt. Es wertet dazu die Paketdatenbank aus. 
-Ergebnis ist ein Auswahlmenü wie in Abbildung <<fig.debmany-apt>>, über
-das Sie die Betrachtung der gewünschten Dokumentation auswählen. Für das
-Debianpaket 'apt' sieht der vereinfachte Aufruf wie folgt aus:
-
-.Aufruf von `debmany` für das Paket 'apt'
-----
-$ debmany apt
-----
-
-.Aufruf von `debmany` für das Paket `apt`
-image::werkzeuge/dokumentation/debmany-apt.png[id="fig.debmany-apt", width="50%"]
-
-Wählen Sie einen Menüeintrag aus, öffnet sich ihr bevorzugtes
-Anzeigeprogramm dafür. `debmany` bietet Ihnen zudem mehrere Schalter
-an, über die Sie dieses Anzeigeprogramm angeben können:
-
-`-g` :: Sinnvoll für GNOME, das Anzeigeprogramm muß dazu `.gz`-Dateien
-unterstützen. Kurzform von `-m 'gnome-open man:%s'`.
-
-`-k` :: Sinnvoll für KDE bzw. Konqueror, das Anzeigeprogramm muß dazu `.gz`-Dateien
-unterstützen. Kurzform von `-m 'kfmclient  exec  man:%s'` bzw. `-m
-'kfmclient exec %s'` für andere Dateien.
-
-`-m` 'Programm' :: Bezeichnet das Anzeigeprogramm zur Darstellung der
-Manpages. Dieses muß dazu `.gz`-Dateien unterstützen.
-
-`-o` 'Programm' :: Bezeichnet das Anzeigeprogramm zur Darstellung
-sonstiger Dokumentation im Verzeichnis `/usr/share/doc`.
-
-`-x` :: Sinnvoll für KDE, GNOME und XFCE, das Anzeigeprogramm muß dazu `.gz`-Dateien
-unterstützen. Kurzform von `-m 'xdg-open  man:%s'`. `xdg-open` ist
-Bestandteil des Pakets 'xdg-utils'.
-
-Weiterhin stehen diese Schalter zur Verfügung, über die Sie das
-Verhalten von `debmany` steuern können:
-
-`-L` 'Limit' :: Gibt die maximale Dateigröße der Dokumentation an, die
-heruntergeladen wird. Überschreitet die Datei das angegebene Limit, so
-werden Sie gefragt, ob der Download stattfinden soll. Ohne Angabe einer
-Einheit ist die Angabe in Bytes. Durch Anhängen der Buchstaben 'K', 'M',
-'G' oder 'T' passen Sie die Einheit an.
-
-`-l` 'Sprachliste' :: Legt fest, in welchen zusätzlichen Sprachen außer
-Englisch die Manpages angezeigt werden. 'Sprachliste' ist eine durch
-Komma getrennte Liste der Sprachkürzel, bspw. `de,fr` für deutsch- und
-französischsprachige Manpages. Die Angabe `de*` liefert alle Varianten,
-bspw. `de_DE`, `de_AT` und `de_CH`.
-
-`-z` :: Zur Darstellung des Auswahlmenüs wird Zenity benutzt (siehe
-Abbildung <<fig.debmany-apt-zenity>>). Default ist `whiptail`,
-alternativ `dialog` oder `curl`.
-+
-.Aufruf von `debmany` für das Paket `apt` mit Hilfe von Zenity
-image::werkzeuge/dokumentation/debmany-apt-zenity.png[id="fig.debmany-apt-zenity", width="50%"]
+Benötigen Sie Hilfe für ein Paket, welches noch nicht installiert ist,
+helfen Ihnen die beiden Werkzeuge `debman` und `debmany` weiter. Diese
+besprechen wir ausführlich in Abschnitt <<manpages-anzeigen-nicht-installiert>>.
 
 === Dokumentation in `/usr/share/doc/` ===
 
