@@ -199,10 +199,10 @@ an. Damit erfolgt das Aufräumen via `autoclean` oder `clean` vor oder
 nach der Installation von Paketen automatisch:
 
 Schalter `--clean-on-startup`::
-entspricht dem Aufruf `aptitude autoclean`
+entspricht dem Aufruf `aptitude clean`
 
 Schalter `--autoclean-on-startup`::
-entspricht dem Aufruf `aptitude clean`
+entspricht dem Aufruf `aptitude autoclean`
 
 Ähnliches ermöglicht Ihnen `aptitude` auch über die
 Text-Modus-Bedienoberfläche. Setzen Sie in den Einstellungen unter
