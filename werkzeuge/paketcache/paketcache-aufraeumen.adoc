@@ -11,22 +11,27 @@
 // Stichworte für den Index
 (((Paketcache, aufräumen)))
 (((Paketcache, /var/cache/apt/archives)))
-Der Paketcache belegt Speicherplatz auf dem Datenträger ihres
-Debian-Systems. Da dieser Bereich lediglich temporäre Daten beinhaltet,
-raten wir Ihnen, diesen regelmäßig aufzuräumen.
+(((Paketcache, /var/cache/apt/archives/partial)))
+Während APT Softwarepakete von der hinterlegten Paketquelle bezieht --
+in der Regel von einem Paketmirror -- behält APT die Pakete im
+Verzeichnis `/var/cache/apt/archives/partial`. Ist der Download
+abgeschlossen, werden diese in das Verzeichnis `/var/cache/apt/archives`
+verschoben, anschließend ausgepackt und installiert. Die bezogenen
+Pakete verbleiben im Cache und belegen Speicherplatz auf dem Datenträger
+ihres Debian-Systems. Wir raten Ihnen, diesen Speicherplatz regelmäßig
+aufzuräumen.
 
-Sie finden den Paketcache im Verzeichnis `/var`. Je nach
-Partitionierung ihres Datenträgers ist der Bereich nicht separat und
-somit Bestandteil der `/`-Partition. Wenn diese vollständig mit
-Daten gefüllt ist, funktioniert vieles auf ihrem Linuxsystem nicht mehr.
+Sie finden den Paketcache im Verzeichnis `/var`. Je nach Partitionierung
+ihres Datenträgers ist der Bereich nicht separat und möglicherweise
+Bestandteil der `/`-Partition. Ist diese vollständig mit Daten gefüllt,
+funktioniert vieles auf ihrem Linuxsystem nicht mehr.
 
 Bei ausgefeilteren Installationen bestehen häufig separate Partitionen
-für `/var`, `/var/cache` oder gar
-`/var/cache/apt/archives`. Läuft nur einer dieser Bereiche voll,
-können im einfachsten Fall keine weiteren Pakete zwischengespeichert und
-auch nicht temporär entpackt werden. Falls der Bereich `/var`
-vollständig belegt ist, können auch keine Logdateien mehr angelegt oder
-weitere Informationen daran angehängt werden.
+für `/var` oder `/var/cache`. Läuft einer dieser Bereiche voll, können
+im einfachsten Fall keine weiteren Pakete zwischengespeichert und auch
+nicht temporär entpackt werden. Falls der Bereich `/var` vollständig
+belegt ist, können auch keine Logdateien mehr angelegt oder weitere
+Informationen daran angehängt werden.
 
 Einen Ausweg aus diesem Dilemma gelingt Ihnen mit dem Anlegen einer
 separaten Partition für `/var/cache/apt/archives`. Wie Sie diese
