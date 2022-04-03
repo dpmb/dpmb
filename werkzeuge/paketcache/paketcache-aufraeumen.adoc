@@ -16,10 +16,18 @@ Während APT Softwarepakete von der hinterlegten Paketquelle bezieht --
 in der Regel von einem Paketmirror -- behält APT die Pakete im
 Verzeichnis `/var/cache/apt/archives/partial`. Ist der Download
 abgeschlossen, werden diese in das Verzeichnis `/var/cache/apt/archives`
-verschoben, anschließend ausgepackt und installiert. Die bezogenen
-Pakete verbleiben im Cache und belegen Speicherplatz auf dem Datenträger
-ihres Debian-Systems. Wir raten Ihnen, diesen Speicherplatz regelmäßig
-aufzuräumen.
+verschoben, anschließend ausgepackt und installiert. 
+
+Die bezogenen Pakete verbleiben im Cache. Werden die Pakete zu einem
+späteren Zeitpunkt nochmals benötigt und die Paketversion ist (noch)
+identisch, schaut APT zuerst im Paketcache nach und entnimmt diese von
+dort, bevor es die Pakete erneut von der Quelle bezieht.
+
+Nachteil ist, dass diese Pakete Speicherplatz auf dem Datenträger ihres
+Debian-Systems belegen. Wir raten Ihnen daher, diesen Speicherplatz
+regelmäßig aufzuräumen. Mittlerweile ist die Bezugszeit der Pakete über
+das Internet vielfach so gering, dass sich ein Vorhalten im Paketcache
+erübrigt.
 
 Sie finden den Paketcache im Verzeichnis `/var`. Je nach Partitionierung
 ihres Datenträgers ist der Bereich nicht separat und möglicherweise
