@@ -54,24 +54,37 @@ Partition'' in <<cache-verzeichnis-auf-separater-partition>>.
 
 Die Programme `dpkg`, `apt-get`, `aptitude` und Synaptic räumen den
 Paketcache in der Standardeinstellung nicht eigenständig auf und
-belassen die Pakete im Paketcache. Ob überhaupt, wann und insbesondere
-wie aufgeräumt wird, entscheiden Sie als Systembetreuer selbst und
-müssen dazu das Werkzeug entsprechend konfigurieren.
+belassen die Pakete nach der Installation oder Aktualisierung im
+Paketcache. Ob überhaupt, wann und insbesondere wie aufgeräumt wird,
+entscheiden Sie als Systembetreuer selbst und müssen dazu das von ihnen
+verwendete Werkzeug entsprechend konfigurieren. 
 
-*Todo* Beobachtungen:
+Aus unserer Sicht sind die einzelnen Werkzeuge in Debian GNU/Linux wie
+folgt konfiguriert:
 
-bei `dpkg` :: belässt sowohl die `.deb`-Datei, als auch den Paketcache
+bei `dpkg` :: Es belässt sowohl die `.deb`-Datei im Verzeichnis, als
+rührt auch den Paketcache nicht an.
 
-bei `apt-get` :: Pakete bleiben im Cache.
+bei `apt-get` :: Die Pakete verbleiben im Paketcache und werden nicht
+daraus entfernt.
 
-bei `aptitude` :: Pakete bleiben im Cache. Steuerbar über den Eintrag
-`aptitude::AutoClean-After-Update` in `~/.aptitude/config`, Default-Wert
-ist `false` (im Paketcache belassen), `true` aktiviert das Aufräumen.
+bei `aptitude` :: Die Pakete verbleiben im Paketcache und werden nicht
+daraus entfernt. Dieses Verhalten steuern Sie über den Eintrag
+`aptitude::AutoClean-After-Update` in der Konfigurationsdatei
+`~/.aptitude/config`. Der Default-Wert ist `false`, d.h. das Paket
+verbleibt im Paketcache. Mit der Angabe `true` aktivieren Sie das
+Aufräumen. Alternativ setzen Sie die Option über den Menüpunkt
+``Einstellungen'' aus dem Menü ``Optionen'' (siehe
+<<fig.aptitude-alte-pakete-entfernen>>):
++
+.Alte Pakete aus dem Paketcache mittels Aptitude entfernen
+image::werkzeuge/paketcache/aptitude-alte-pakete-entfernen.png[id="fig.aptitude-alte-pakete-entfernen", width="50%"]
 
 bei `apt` :: Laden Sie ein oder mehrere Pakete mittels `apt install`
 oder `apt upgrade` herunter und installieren diese erfolgreich, entfernt
-`apt` diese Pakete danach aus dem Paketcache. Steuerbar über die Angabe
-`Clean-Installed` in `apt.conf`, Default-Wert ist `on` (aufräumen).
+`apt` diese Pakete danach aus dem Paketcache. Dieses Verhalten wird über
+den Eintrag `Clean-Installed` in `apt.conf` gesteuert, der Default-Wert
+dafür ist `on` und steht für das Aufräumen.
 
 ==== Kommandos zum Aufräumen ====
 
