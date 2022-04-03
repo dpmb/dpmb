@@ -28,9 +28,11 @@ Nachteil ist, dass diese Pakete Speicherplatz auf dem Datenträger ihres
 Debian-Systems belegen. Wird es damit knapp, raten wir Ihnen daher,
 diesen Speicherplatz regelmäßig aufzuräumen. Mittlerweile ist die
 Bezugszeit der Pakete über das Internet vielfach so gering, dass sich
-ein Vorhalten im Paketcache erübrigt.
+ein längerfristiges Vorhalten im Paketcache eigentlich erübrigt. Es ist
+in diesem Fall Abwägungssache und hängt davon ab, wie häufig Sie Pakete
+entfernen und später wieder einspielen.
 
-Sie finden den Paketcache im Verzeichnis `/var`. Je nach Partitionierung
+Den Paketcache finden Sie im Verzeichnis `/var`. Je nach Partitionierung
 ihres Datenträgers ist der Bereich nicht separat und möglicherweise
 Bestandteil der `/`-Partition. Ist diese vollständig mit Daten gefüllt,
 funktioniert vieles auf ihrem Linuxsystem nicht mehr.
