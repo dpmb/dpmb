@@ -21,13 +21,14 @@ verschoben, anschließend ausgepackt und installiert.
 Die bezogenen Pakete verbleiben im Cache. Werden die Pakete zu einem
 späteren Zeitpunkt nochmals benötigt und die Paketversion ist (noch)
 identisch, schaut APT zuerst im Paketcache nach und entnimmt diese von
-dort, bevor es die Pakete erneut von der Quelle bezieht.
+dort, bevor es die Pakete erneut von der Quelle bezieht. Das geht meist
+schneller, als diese erneut herunterzuladen.
 
 Nachteil ist, dass diese Pakete Speicherplatz auf dem Datenträger ihres
-Debian-Systems belegen. Wir raten Ihnen daher, diesen Speicherplatz
-regelmäßig aufzuräumen. Mittlerweile ist die Bezugszeit der Pakete über
-das Internet vielfach so gering, dass sich ein Vorhalten im Paketcache
-erübrigt.
+Debian-Systems belegen. Wird es damit knapp, raten wir Ihnen daher,
+diesen Speicherplatz regelmäßig aufzuräumen. Mittlerweile ist die
+Bezugszeit der Pakete über das Internet vielfach so gering, dass sich
+ein Vorhalten im Paketcache erübrigt.
 
 Sie finden den Paketcache im Verzeichnis `/var`. Je nach Partitionierung
 ihres Datenträgers ist der Bereich nicht separat und möglicherweise
@@ -47,13 +48,30 @@ einrichten und mit welchen Vor- und Nachteilen dieser Schritt verbunden
 ist, zeigen wir Ihnen unter ``Cache-Verzeichnis auf separater
 Partition'' in <<cache-verzeichnis-auf-separater-partition>>.
 
-==== Kommandos zum Aufräumen ====
+==== Paketverwaltung passend konfigurieren ====
 
 Die Programme `dpkg`, `apt-get`, `aptitude` und Synaptic räumen den
-Paketcache in der Standardeinstellung nicht eigenständig auf. Ob
-überhaupt, wann und insbesondere wie aufgeräumt wird, entscheiden Sie
-als Systembetreuer selbst und müssen dazu das Werkzeug entsprechend
-konfigurieren.
+Paketcache in der Standardeinstellung nicht eigenständig auf und
+belassen die Pakete im Paketcache. Ob überhaupt, wann und insbesondere
+wie aufgeräumt wird, entscheiden Sie als Systembetreuer selbst und
+müssen dazu das Werkzeug entsprechend konfigurieren.
+
+*Todo* Beobachtungen:
+
+bei `dpkg` :: belässt sowohl die `.deb`-Datei, als auch den Paketcache
+
+bei `apt-get` :: Pakete bleiben im Cache.
+
+bei `aptitude` :: Pakete bleiben im Cache. Steuerbar über den Eintrag
+`aptitude::AutoClean-After-Update` in `~/.aptitude/config`, Default-Wert
+ist `false` (im Paketcache belassen), `true` aktiviert das Aufräumen.
+
+bei `apt` :: Laden Sie ein oder mehrere Pakete mittels `apt install`
+oder `apt upgrade` herunter und installieren diese erfolgreich, entfernt
+`apt` diese Pakete danach aus dem Paketcache. Steuerbar über die Angabe
+`Clean-Installed` in `apt.conf`, Default-Wert ist `on` (aufräumen).
+
+==== Kommandos zum Aufräumen ====
 
 // Stichworte für den Index
 (((apt-get, autoclean)))
