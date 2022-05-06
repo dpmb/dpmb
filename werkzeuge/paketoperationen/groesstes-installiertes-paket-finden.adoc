@@ -7,6 +7,26 @@
 
 === Größtes installiertes Paket finden ===
 
+==== dpkg ====
+
+* Baustelle
+
+----
+$ dpkg-query -Wf '${Installed-size}\t${Package}\n' | column -t | sort
+-nr | head
+447204  texlive-latex-extra-doc
+230940  google-chrome-stable
+221350  skypeforlinux
+183555  signal-desktop
+178041  firefox-esr
+174484  discord
+163796  linux-image-3.16.0-7-amd64
+130914  python-matplotlib-doc
+114557  upwork
+110348  texlive-publishers-doc
+$
+----
+
 ==== dpigs ====
 
 // Stichworte für den Index
