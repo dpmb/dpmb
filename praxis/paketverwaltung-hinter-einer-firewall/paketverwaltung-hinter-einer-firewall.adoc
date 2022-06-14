@@ -1,0 +1,17 @@
+// Datei: ./paketverwaltung-hinter-einer-firewall.adoc
+
+// Baustelle: Notizen
+
+[[Firewall]]
+
+== Paketverwaltung hinter einer Firewall ==
+
+* Ausgangspunkt: abgesichertes Netz mit Firewall
+* Ziel: Aktualisierung der Pakete auf einem System hinter der Firewall
+
+* Fragen dazu:
+** was muss ich da beachten?
+** welche Ports benutzt APT (http/80 und https/443) ?
+** was ist bei ftp zu beachten?
+
+// Datei: ./paketverwaltung-hinter-einer-firewall.adoc (Ende)

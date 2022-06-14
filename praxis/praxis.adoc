@@ -119,6 +119,8 @@ include::paketverwaltung-ohne-internet/paketverwaltung-ohne-internet.adoc[]
 // - Paketveraltung mit schlechter Anbindung
 include::systeme-mit-schlechter-anbindung-warten/systeme-mit-schlechter-anbindung-warten.adoc[]
 
+// - Paketverwaltung hinter einer Firewall
+include::paketverwaltung-hinter-einer-firewall/paketverwaltung-hinter-einer-firewall.adoc[]
 
 // == Was fehlt uns noch ==
 
