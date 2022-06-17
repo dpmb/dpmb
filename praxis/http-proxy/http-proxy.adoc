@@ -132,7 +132,9 @@ verwenden
 ==== Umgebungsvariablen ====
 
 * welche Umgebungsvariablen brauche ich
+** `ftp_proxy`
 ** `http_proxy`
+** `https_proxy`
 
 ==== Schalter für apt-get ====
 
