@@ -553,7 +553,7 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Social-Contract]]] Debian-Gesellschaftsvertrag, https://www.debian.org/social_contract.de.html
 
-- [[[Debian-Virtual-Packages-List]]] Liste aller offiziell verwendeten virtuellen Pakete, https://www.debian.org/doc/packaging-manuals/virtual-package-names-list.txt
+- [[[Debian-Virtual-Packages-List]]] Liste aller offiziell verwendeten virtuellen Pakete, https://www.debian.org/doc/packaging-manuals/virtual-package-names-list.yaml
 
 - [[[Debian-Webseite]]] Webseite des Debian-Projekts, https://www.debian.org/
 
