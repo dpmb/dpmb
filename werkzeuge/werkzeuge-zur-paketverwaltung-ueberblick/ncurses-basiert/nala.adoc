@@ -1,0 +1,45 @@
+// Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/nala.adoc
+
+// Baustelle: Notizen
+
+[[nala]]
+
+==== Nala ====
+
+// Stichworte für den Index
+(((Debianpaket, nala)))
+(((nala)))
+
+* Frontend für APT
+* benutzt die Python-apt-API zur Verwaltung der Pakete
+* derzeit noch im Test, d.h. noch nicht in der stabilen Veröffentlichung verfügbar
+* Verhalten und Bedienung angelehnt an `dnf`
+
+// Stichworte für den Index
+(((nala, history)))
+(((nala, install)))
+(((nala, list)))
+(((nala, list -i)))
+(((nala, list --installed)))
+(((nala, list -N)))
+(((nala, list --nala-installed)))
+(((nala, purge)))
+(((nala, remove)))
+(((nala, remove --purge)))
+(((nala, show)))
+(((nala, update)))
+(((nala, upgrade)))
+* Kommandos:
+** `nala update`
+** `nala upgrade`
+** `nala list`
+** `nala list -i` (`nala list --installed`)
+** `nala list -N` (`nala list --nala-installed`)
+** `nala show` 'Paketname'
+** `nala install` 'Paketname'
+** `nala remove` 'Paketname'
+** `nala purge` 'Paketname'
+** `nala purge --remove` 'Paketname'
+** `nala history`
+
+// Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/tasksel.adoc

@@ -14,4 +14,7 @@
 include::tasksel.adoc[]
 
 include::aptitude.adoc[]
+
+include::nala.adoc[]
+
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/ncurses-basiert.adoc
