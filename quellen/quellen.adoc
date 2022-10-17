@@ -492,6 +492,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Paket-tasksel]]] Debian-Paket 'tasksel', https://packages.debian.org/de/stable/tasksel
 
+- [[[Debian-Paket-tasksel-data]]] Debian-Paket 'tasksel-data', https://packages.debian.org/de/stable/tasksel-data
+
 - [[[Debian-Paket-tzdata]]] Debian-Paket 'tzdat', https://packages.debian.org/de/stable/tzdata
 
 - [[[Debian-Paket-ucf]]] Debian-Paket 'ucf', https://packages.debian.org/de/stable/ucf

@@ -20,9 +20,9 @@ und `aptitude` bei den Routineaufgaben.
 Der Name ist eine Abkürzung und steht für 'task select', auf Deutsch
 übersetzbar mit ``Aufgabe auswählen''. Das Paket 'tasksel'
 <<Debian-Paket-tasksel>> beinhaltet lediglich die Benutzeroberfläche,
-das Paket 'tasksel-data' hingegen eine Liste mit vorab festgelegten
-Standardaufgaben. Jeder genannten Aufgabe sind eine Reihe von Paketen
-zugeordnet.
+das Paket 'tasksel-data' <<Debian-Paket-tasksel-data>> hingegen eine
+Liste mit vorab festgelegten Standardaufgaben. Jeder genannten Aufgabe
+sind eine Reihe von Paketen zugeordnet.
 
 // Stichworte für den Index
 (((tasksel, Metapaket)))
