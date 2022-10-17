@@ -14,47 +14,55 @@
 (((nala, remove)))
 (((nala, remove --purge)))
 
-Das Werkzeug Nala ist bislang noch recht unbekannt und versteht sich als
-Frontend für APT. Ziel ist, eine übersichtlichere Darstellung vom
-aktuellen Paketbestand sowie bei dessen Änderung zu erhalten, indem
-graphische Elemente in die Ausgabe einfließen.
+Das Werkzeug Nala <<Debian-Paket-nala>> ist bislang noch recht unbekannt
+und versteht sich als Frontend für APT. Ziel ist, eine übersichtlichere
+Darstellung vom aktuellen Paketbestand sowie bei dessen Änderungen zu
+erhalten, indem graphische Elemente in die Ausgabe einfließen. Abbildung
+<<fig.nala>> zeigt den Dialog auf der Kommandozeile zur Entfernung des
+Paketes 'xsnow'.
+
+.Entfernen des Paketes 'xsnow' mittels `Nala`
+image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/nala.png[id="fig.nala", width="50%"]
 
 Das gesamte Verhalten und die Bedienung von Nala lehnt sich an `DNF` an
-- 'DNF für APT' wäre eine gute Zusammenfassung. An Schaltern versteht es
-die Unterkommandos von APT, bspw. `install` zur Installation von
-Softwarepaketen, `remove` zum Löschen sowie `purge` und `remove --purge`
-zum vollständigen Löschen eines Softwarepakets.
+- 'DNF für APT' wäre somit eine gute Zusammenfassung. An Schaltern
+  versteht es die Unterkommandos von APT, bspw. `install` zur
+Installation von Softwarepaketen, `remove` zum Löschen sowie `purge` und
+`remove --purge` zum vollständigen Löschen eines Softwarepakets. Mit dem
+Unterkommando `history` stöbern Sie in der Historie von Nala, sprich:
+Sie sehen daraus, welche Paketaktionen bereits vorher durchgeführt
+wurden.
 
 Nala benutzt dabei nicht die APT-Bibliotheken, sondern stattdessen die
 Python-apt-API zur Verwaltung der Pakete. Derzeit -- das heißt im Herbst
 2022 -- befindet es sich noch im Test und ist daher noch nicht in der
-stabilen Veröffentlichung enthalten.
+stabilen Veröffentlichung von Debian GNU/Linux enthalten.
 
 // Stichworte für den Index
-(((nala, history)))
-(((nala, install)))
-(((nala, list)))
-(((nala, list -i)))
-(((nala, list --installed)))
-(((nala, list -N)))
-(((nala, list --nala-installed)))
-(((nala, purge)))
-(((nala, remove)))
-(((nala, remove --purge)))
-(((nala, show)))
-(((nala, update)))
-(((nala, upgrade)))
-* Kommandos:
-** `nala update`
-** `nala upgrade`
-** `nala list`
-** `nala list -i` (`nala list --installed`)
-** `nala list -N` (`nala list --nala-installed`)
-** `nala show` 'Paketname'
-** `nala install` 'Paketname'
-** `nala remove` 'Paketname'
-** `nala purge` 'Paketname'
-** `nala purge --remove` 'Paketname'
-** `nala history`
+//(((nala, history)))
+//(((nala, install)))
+//(((nala, list)))
+//(((nala, list -i)))
+//(((nala, list --installed)))
+//(((nala, list -N)))
+//(((nala, list --nala-installed)))
+//(((nala, purge)))
+//(((nala, remove)))
+//(((nala, remove --purge)))
+//(((nala, show)))
+//(((nala, update)))
+//(((nala, upgrade)))
+//* Kommandos:
+//** `nala update`
+//** `nala upgrade`
+//** `nala list`
+//** `nala list -i` (`nala list --installed`)
+//** `nala list -N` (`nala list --nala-installed`)
+//** `nala show` 'Paketname'
+//** `nala install` 'Paketname'
+//** `nala remove` 'Paketname'
+//** `nala purge` 'Paketname'
+//** `nala purge --remove` 'Paketname'
+//** `nala history`
 
 // Datei (Ende): ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/tasksel.adoc
