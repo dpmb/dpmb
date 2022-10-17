@@ -17,7 +17,7 @@
 Das Werkzeug Nala <<Debian-Paket-nala>> ist bislang noch recht unbekannt
 und versteht sich als Frontend für APT. Ziel ist, eine übersichtlichere
 Darstellung vom aktuellen Paketbestand sowie bei dessen Änderungen zu
-erhalten, indem graphische Elemente in die Ausgabe einfließen. Abbildung
+erhalten, indem graphische Elemente in die Ausgabe einfließen.
 <<fig.nala>> zeigt den Dialog auf der Kommandozeile zur Entfernung des
 Paketes 'xsnow'.
 
