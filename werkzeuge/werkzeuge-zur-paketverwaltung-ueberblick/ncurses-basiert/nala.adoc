@@ -9,11 +9,26 @@
 // Stichworte für den Index
 (((Debianpaket, nala)))
 (((nala)))
+(((nala, install)))
+(((nala, purge)))
+(((nala, remove)))
+(((nala, remove --purge)))
 
-* Frontend für APT
-* benutzt die Python-apt-API zur Verwaltung der Pakete
-* derzeit noch im Test, d.h. noch nicht in der stabilen Veröffentlichung verfügbar
-* Verhalten und Bedienung angelehnt an `dnf`
+Das Werkzeug Nala ist bislang noch recht unbekannt und versteht sich als
+Frontend für APT. Ziel ist, eine übersichtlichere Darstellung vom
+aktuellen Paketbestand sowie bei dessen Änderung zu erhalten, indem
+graphische Elemente in die Ausgabe einfließen.
+
+Das gesamte Verhalten und die Bedienung von Nala lehnt sich an `DNF` an
+- 'DNF für APT' wäre eine gute Zusammenfassung. An Schaltern versteht es
+die Unterkommandos von APT, bspw. `install` zur Installation von
+Softwarepaketen, `remove` zum Löschen sowie `purge` und `remove --purge`
+zum vollständigen Löschen eines Softwarepakets.
+
+Nala benutzt dabei nicht die APT-Bibliotheken, sondern stattdessen die
+Python-apt-API zur Verwaltung der Pakete. Derzeit -- das heißt im Herbst
+2022 -- befindet es sich noch im Test und ist daher noch nicht in der
+stabilen Veröffentlichung enthalten.
 
 // Stichworte für den Index
 (((nala, history)))
