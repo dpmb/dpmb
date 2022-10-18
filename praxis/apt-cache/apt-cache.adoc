@@ -9,6 +9,9 @@
 // Begriff
 include::begriff.adoc[]
 
+// Besonderheiten des APT-Cache
+include::besonderheiten-apt-cache.adoc[]
+
 // approx
 include::approx.adoc[]
 
