@@ -446,6 +446,8 @@
 
 - [[[Debian-Paket-muon]]] Debian-Paket 'muon', https://packages.debian.org/de/stable/muon
 
+- [[[Debian-Paket-nala]]] Debian-Paket 'nala', https://packages.debian.org/de/bookwork/nala
+
 - [[[Debian-Paket-neofetch]]] Debian-Paket 'neofetch', https://packages.debian.org/de/stable/neofetch
 
 - [[[Debian-Paket-netselect]]] Debian-Paket 'netselect', https://packages.debian.org/de/stable/netselect
