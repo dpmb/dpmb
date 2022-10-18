@@ -6,8 +6,12 @@
 
 === approx ===
 
+==== Überblick ====
+
 // Stichworte für den Index
+(((APT-Cache)))
 (((Debianpaket, approx)))
+(((Paketcache)))
 (((Paketproxy)))
 
 * 'approx' <<Debian-Paket-approx>>
@@ -23,5 +27,35 @@ ersetzen, ohne die Datei `/etc/apt/sources.list`-Dateien der Clients zu
 ändern.
 ** ... oder als Alternative zu 'apt-cacher' eingesetzt werden (siehe
 <<apt-cacher>>).
+
+==== Setup und Installation ====
+
+----
+apt-get install approx
+----
+
+==== Konfiguration ====
+
+===== Server =====
+
+* anpassen der Datei `/etc/approx/approx.conf`
+
+* Inhalt (beispielhaft):
+
+----
+interval 120
+max_wait 10
+debian       http://http.uk.debian.org/debian
+security     http://security.debian.org/debian-security
+non-us       http://non-us.debian.org/debian-non-US
+----
+
+* `approx` neustarten
+
+----
+/etc/init.d/approx restart
+----
+
+===== Client =====
 
 // Datei (Ende): ./praxis/apt-cache/approx.adoc
