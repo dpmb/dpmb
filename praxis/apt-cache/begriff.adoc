@@ -7,27 +7,28 @@
 === Begriff ===
 
 // Stichworte für den Index
-(((Cache, Paketcache)))
-(((Cache, APT-Cache)))
+(((Paketcache, APT-Cache)))
+(((Paketcache, Bezug eines Softwarepaketes)))
+(((Paketcache, Cache)))
 (((Paketmirror)))
-Im Allgemeinen bezeichnet ein 'cache' einen Datenpuffer oder
+Im Allgemeinen bezeichnet ein 'Cache' einen Datenpuffer oder
 Zwischenspeicher, der bereits angefragte Daten weiter vorhält und auf
-den im Bedarfsfall zurückgegriffen wird, wenn die Daten angefordert
-werden. Im vorliegenden Fall handelt es sich um eine Sonderform -- einen
-lokalen Zwischenspeicher häufig benötigter Softwarepakete. Diese werden
-gepuffert und erlauben damit im Vergleich zum Bezug von Paketmirror aus
-dem Internet eine wesentlich geringere Zugriffszeit, da die
-Transportwege kürzer sind und weniger Zwischenstationen (``Hops'') mit
-einbezogen werden müssen.
+den im Bedarfsfall zurückgegriffen wird, wenn die gleichen Daten erneut
+angefordert werden. Im vorliegenden Fall handelt es sich um eine
+Sonderform -- einen lokalen Zwischenspeicher häufig benötigter
+Softwarepakete. Diese werden darin gepuffert und erlauben damit im
+Vergleich zum Bezug von Paketmirror aus dem Internet eine wesentlich
+geringere Zugriffszeit, da der Transportweg für die Daten kürzer ist.
 
 Das macht sich insbesondere dann deutlich bemerkbar, wenn mehrere
 Rechner diesen Datenpuffer verwenden und daraus die gleichen
 Softwarepakete beziehen. Liegt das angefragte Softwarepaket bereits im
-Cache vor, wird es von dort entnommen. Falls dieses jedoch noch nicht
-vorhanden sein sollte, wird es über das Internet vom Paketmirror bezogen
-und dem Cache hinzugefügt. Die nachfolgend Anfragenden erhalten dann das
-Softwarepaket deutlich schneller, da es dann bereits im Cache vorliegt
-und daraus bezogen werden kann.
+Datenpuffer vor, wird es von dort entnommen. Falls dieses jedoch noch
+nicht vorhanden sein sollte, wird es zunächst über das Internet vom
+hinterlegten Paketmirror bezogen und danach dem Datenpuffer hinzugefügt.
+Bei nachfolgenden Anfragen nach dem Softwarepaket wird dieses deutlich
+schneller ausgeliefert, da es dann bereits im Cache vorliegt und sofort
+daraus bezogen wird.
 
 Der APT-Cache funktioniert ähnlich wie der Puffer aus <<paketcache>>,
 ist allerdings nicht rechnerspezifisch, sondern eher als Vorstufe für
