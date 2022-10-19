@@ -18,8 +18,9 @@
 * aus der Selbstbeschreibung:
 ** HTTP-Proxyserver für debian-artige Paketarchive
 ** Paketdepots müssen nur in den Konfigurationsdateien von 'approx'
-geändert werden, und nicht in der `/etc/apt/sources.list`-Datei
+eingetragen werden, und nicht in der `/etc/apt/sources.list`-Datei
 jedes Clients
+* Realität: auch Anpassungen in den Clients notwendig
 
 * Approx kann ... 
 ** ... vorher verfügbare Konzepte wie 'apt-proxy' <<apt-proxy>>
@@ -30,6 +31,10 @@ ersetzen, ohne die Datei `/etc/apt/sources.list`-Dateien der Clients zu
 
 ==== Setup und Installation ====
 
+// Stichworte für den Index
+(((Approx, Installation)))
+* Paket 'approx' <<Debian-Paket-approx>> herunterladen und installieren
+
 ----
 apt-get install approx
 ----
@@ -38,6 +43,9 @@ apt-get install approx
 
 ===== Server =====
 
+// Stichworte für den Index
+(((Approx, /etc/approx/approx.conf)))
+(((Approx, Serverkonfiguration)))
 * anpassen der Datei `/etc/approx/approx.conf`
 
 * Inhalt (beispielhaft):
@@ -56,6 +64,33 @@ non-us       http://non-us.debian.org/debian-non-US
 /etc/init.d/approx restart
 ----
 
+* Approx lauscht nun auf Port 9999 für Anfragen von Clients
+
 ===== Client =====
+
+// Stichworte für den Index
+(((Approx, Clientkonfiguration)))
+* anpassen der Datei `/etc/hosts` -- ergänzen des Approx-Servers mit
+IP-Adresse und Hostname
+
+----
+1.2.3.4 approx-server
+----
+
+* ergänzen der Datei `/etc/apt/sources.list` um Verweise auf den
+Approx-Server
+
+----
+deb http://approx-server:9999/debian stable main contrib non-free
+deb-src http://approx-server:9999/debian stable main contrib non-free
+deb http://approx-server:9999/security stable/updates main contrib non-free
+----
+
+* die Paketliste aktualisieren mittels `apt-get update`
+
+==== Beobachtungen aus dem Alltag ====
+
+* Verzögerungen einplanen, bis Pakete im Approx-Cache gelandet sind
+
 
 // Datei (Ende): ./praxis/apt-cache/approx.adoc
