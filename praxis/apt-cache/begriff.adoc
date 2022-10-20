@@ -12,22 +12,17 @@
 (((Paketcache, Cache)))
 (((Paketmirror)))
 Im Allgemeinen bezeichnet ein 'Cache' einen Datenpuffer oder
-Zwischenspeicher, der bereits angefragte Daten weiter vorhält und auf
-den im Bedarfsfall zurückgegriffen wird, wenn die gleichen Daten erneut
-angefordert werden. Im vorliegenden Fall handelt es sich um eine
-Sonderform -- einen lokalen Zwischenspeicher häufig benötigter
-Softwarepakete. Diese werden darin gepuffert und erlauben damit im
-Vergleich zum Bezug von Paketmirror aus dem Internet eine wesentlich
-geringere Zugriffszeit, da der Transportweg für die Daten kürzer ist.
+Zwischenspeicher, der Daten weiter vorhält und auf den im Bedarfsfall
+zurückgegriffen wird, wenn die gleichen Daten erneut angefordert oder
+ausgetauscht werden. Hier beinhaltet der Cache wiederholt benötigte
+Softwarepakete. Diese werden darin gespeichert, sobald sie das erste Mal
+vom Paketmirror bezogen wurden, beispielsweise bei der Installation oder
+Aktualisierung eines Softwarepakets.
 
 Das macht sich insbesondere dann deutlich bemerkbar, wenn mehrere
-Rechner diesen Datenpuffer verwenden und daraus die gleichen
-Softwarepakete beziehen. Liegt das angefragte Softwarepaket bereits im
-Datenpuffer vor, wird es von dort entnommen. Falls dieses jedoch noch
-nicht vorhanden sein sollte, wird es zunächst über das Internet vom
-hinterlegten Paketmirror bezogen und danach dem Datenpuffer hinzugefügt.
-Bei nachfolgenden Anfragen nach dem Softwarepaket wird dieses deutlich
-schneller ausgeliefert, da es dann bereits im Cache vorliegt und sofort
-daraus bezogen wird.
+Rechner diesen Cache verwenden und daraus die gleichen Softwarepakete
+beziehen. Bei nachfolgenden Anfragen nach den Softwarepaketen sind diese
+in deutlich kürzerer Zeit verfügbar und die benötigte Zeit für den
+gesamten Vorgang verringert sich.
 
 // Datei (Ende): ./praxis/apt-cache/begriff.adoc
