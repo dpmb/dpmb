@@ -6,59 +6,75 @@
 
 === Besonderheiten des APT-Cache ===
 
+==== Funktionsweise ====
+
 // Stichworte für den Index
 (((Paketcache, Optimierungspotential)))
 Der APT-Cache funktioniert ähnlich wie der Puffer aus <<paketcache>>,
 ist allerdings nicht rechnerspezifisch, sondern separat und als
-Ergänzung für ein Netzwerk mit mehreren Knoten gedacht. Daher liegt er
-einmalig vor, bspw. auf einer eigenen Hardware, als Virtuelle Maschine 
-oder auch in einer Docker-Instanz.
+Ergänzung für ein ganzes Netzwerk mit mehreren, möglichst identischen
+Knoten gedacht. Daher liegt er einmalig vor, bspw. auf einer eigenen
+Hardware, als Virtuelle Maschine oder auch in einer Docker-Instanz.
 
 .Schematische Darstellung mit Paketcache in der Netzwerkinfrastruktur
 ----
 * ToDo: Bild
 ----
 
-Neben dem geringeren Bedarf an Speicherplatz ergibt sich weiteres 
-Potential zur Einsparung bzgl. des Datenvolumens des Netzwerks: die 
-Netzwerklast nach außen verringert sich. Bemerkbar macht sich das 
-insbesondere dann, wenn die Abrechnung ihrer Internetanbindung 
-entsprechend des transportierten Datenvolumens (sogenannte 
-'trafficbasierte Abrechnung') erfolgt. Das spart Ihnen auf Dauer 
-somit bares Geld.
+==== Vor- und Nachteile ====
 
-Werden beispielsweise einer oder mehrere Knoten im Netzwerk aktualisiert,
-landen die neuen Softwarepakete zunächst im APT-Cache. Ab dem zweiten
-Zugriff liegt das benötigte Paket bereits im APT-Cache vor und wird
-daraus entnommen, anstatt es erneut vom externen Paketmirror zu beziehen
-und wiederholt die Leitung zu belasten. Das verringert ebenso die
-Bezugszeit der Softwarepakete, steigert ihre Produktivität im Netzwerk
-und kann auch als Failover angesehen werden: fällt der externe
-Paketmirror oder gar der Internetzugang aus, stehen ihnen immer noch die
-Pakete aus dem APT-Cache zur Verfügung.
+Als vorteilhaft sehen wir zunächst den geringeren Bedarf an
+Speicherplatz an -- die Softwarepakete werden nur ein einziges Mal
+vorgehalten und nicht auf jedem Knoten im Netzwerk. In Folge verringert
+sich die Anzahl der Lese- und Schreibzugriffe auf den Speichermedien der
+einzelnen Knoten und verlängert somit auch deren Lebensdauer.
+
+Weiteres Potential zur Einsparung ergibt sich bzgl. des Datenvolumens
+des Netzwerks: die Netzwerklast 'nach außen' verringert sich. Erfolgt
+die Abrechnung ihrer Internetanbindung entsprechend des transportierten
+Datenvolumens -- sogenannte 'trafficbasierte Abrechnung' -- wird das
+Datenvolumen geringer und spart Ihnen auf Dauer somit bares Geld.
+
+Der APT-Cache läßt sich auch als Element zur Erhöhung der
+Ausfallsicherheit des Netzwerks ansehen: fällt der externe Paketmirror
+oder gar der Internetzugang aus, stehen ihnen immer noch die bislang
+bezogenen Softwarepakete zur Verfügung, die sich bereits im APT-Cache
+befinden.
+
+Nachteilig am APT-Cache ist, dass die Softwarepakete darin nicht
+automatisch aufgeräumt werden, wenn diese veralten oder auf keinem
+Knoten im Netzwerk mehr benötigt werden. Dieser Schritt fällt dann in 
+ihren Aufgabenbereich als Verwalter des APT-Caches und liesse sich 
+bspw. mit Hilfe eines Cronjobs automatisieren.
+
+==== Abgrenzung zum Betreiben eines eigenen Paketmirrors ====
 
 // Stichworte für den Index
 (((Paketcache, Abgrenzung zum eigenen Paketmirror)))
-Vor der Einrichtung ist zwischen einem APT-Cache und einem eigenem
-Paketmirror abzuwägen (siehe <<eigenen-apt-mirror-aufsetzen>>). Während
+(((Paketcache, Kombination von Paketcache und eigenem Paketmirror)))
+Vor der Einrichtung wägen Sie bitte zwischen einem APT-Cache und einem 
+eigenen Paketmirror ab (siehe <<eigenen-apt-mirror-aufsetzen>>). Während
 letzterer stets alle Softwarepakete der Veröffentlichung vorhält -- also
 auch die, die Sie nicht benötigen -- landen im APT-Cache hingegen nur
-die Pakete, die bisher tatsächlich von einem der Netzwerkknoten
-angefragt wurden. Er ist daher auch schlanker als ein eigener,
-vollständiger Paketmirror.
+die Pakete, die bisher tatsächlich von mindestens einem der Netzwerkknoten
+angefragt wurden. Ein APT-cache ist daher auch schlanker als ein eigener 
+Paketmirror.
 
-Nachteilig ist, dass die Softwarepakete im APT-Cache nicht automatisch 
-aufgeräumt werden, wenn diese veralten oder auf keinem Knoten im
-Netzwerk mehr benötigt werden. Die Softwarepakete auf dem Paketmirror
-spiegeln hingegen stets den aktuellen Veröffentlichungsstand der
-Distribution wieder.
+Zusätzliche Zeit ist hingegen einmalig einzuplanen, wenn Softwarepakete
+von einem externen Paketmirror bezogen werden, weil diese sich noch
+nicht im APT-Cache befinden. Betreiben Sie hingegen einen eigenen
+Paketmirror, entsteht regelmäßiger, zusätzlicher Traffic, da der
+Paketmirror seinen eigenen Paketbestand mit dem seines Referenzmirrors
+abgleicht und seinen Bestand entsprechend aktualisiert.
 
-// Abzuschätzen ist zudem der Betreuungsaufwand, der bei beiden Varianten
-// einzuplanen ist.
+Vom Betreiben eines eigenen Paketmirrors mit vorgeschaltetem APT-Cache 
+'im gleichen Netzwerk' raten wir Ihnen ab. Wir sehen in dieser Kombination
+von Diensten keinen wesentlichen Leistungsgewinn.
 
-* ToDo: Betreuungsaufwand abschätzen
+==== Softwareauswahl für einen APT-Cache ====
 
 Nachfolgend stellen wir Ihnen unterschiedliche Lösungen vor, mit denen
-Sie einen Paketcache einrichten und betreiben können.
+Sie einen APT-Cache einrichten und betreiben können. Welche Lösung für
+Sie am besten passt, hängt von ihrer konkreten Situation ab.
 
 // Datei (Ende): ./praxis/apt-cache/besonderheiten-apt-cache.adoc
