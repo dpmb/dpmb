@@ -15,11 +15,11 @@ ist allerdings nicht rechnerspezifisch, sondern separat und als
 Ergänzung für ein ganzes Netzwerk mit mehreren, möglichst identischen
 Knoten gedacht. Daher liegt er einmalig vor, bspw. auf einer eigenen
 Hardware, als Virtuelle Maschine oder auch in einer Docker-Instanz.
+<<fig.apt-cache>> stellt die Integration des APT-Cache in der
+Netzwerkinfrastruktur schematisch dar.
 
-.Schematische Darstellung mit Paketcache in der Netzwerkinfrastruktur
-----
-* ToDo: Bild
-----
+.Schematische Darstellung mit APT-Cache in der Netzwerkinfrastruktur
+image::praxis/apt-cache/apt-cache.png[id="fig.apt-cache", width="50%"]
 
 ==== Vor- und Nachteile ====
 
