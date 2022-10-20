@@ -57,7 +57,7 @@ eigenen Paketmirror ab (siehe <<eigenen-apt-mirror-aufsetzen>>). Während
 letzterer stets alle Softwarepakete der Veröffentlichung vorhält -- also
 auch die, die Sie nicht benötigen -- landen im APT-Cache hingegen nur
 die Pakete, die bisher tatsächlich von mindestens einem der Netzwerkknoten
-angefragt wurden. Ein APT-cache ist daher auch schlanker als ein eigener 
+angefragt wurden. Ein APT-Cache ist daher auch schlanker als ein eigener 
 Paketmirror.
 
 Zusätzliche Zeit ist hingegen einmalig einzuplanen, wenn Softwarepakete
