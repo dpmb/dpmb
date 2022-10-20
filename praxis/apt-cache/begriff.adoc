@@ -17,12 +17,19 @@ zurückgegriffen wird, wenn die gleichen Daten erneut angefordert oder
 ausgetauscht werden. Hier beinhaltet der Cache wiederholt benötigte
 Softwarepakete. Diese werden darin gespeichert, sobald sie das erste Mal
 vom Paketmirror bezogen wurden, beispielsweise bei der Installation oder
-Aktualisierung eines Softwarepakets.
+Aktualisierung eines Softwarepakets. 
 
-Das macht sich insbesondere dann deutlich bemerkbar, wenn mehrere
+Der Cache macht sich insbesondere dann deutlich bemerkbar, wenn mehrere
 Rechner diesen Cache verwenden und daraus die gleichen Softwarepakete
-beziehen. Bei nachfolgenden Anfragen nach den Softwarepaketen sind diese
-in deutlich kürzerer Zeit verfügbar und die benötigte Zeit für den
-gesamten Vorgang verringert sich.
+beziehen. Bei nachfolgenden Anfragen nach den Softwarepaketen verringert
+sich die Bezugszeit der Pakete und somit auch der gesamte Vorgang.
+
+Nachfolgend bezeichnen wir diesen Cache schlicht als 'APT-Cache', da wir
+ihn in Zusammenhang mit APT als Bestandteil der Debian-Paketverwaltung
+benutzen. Sofern wir nicht explizit darauf hinweisen, kommt der
+APT-Cache auch zum Einsatz, wenn Sie andere Werkzeuge zur
+Paketverwaltung einsetzen, bspw. Aptitude oder Synaptic. Hintergrund ist,
+dass alle Werkzeuge auf die gleichen Konfigurationsdateien zur
+Paketverwaltung zurückgreifen.
 
 // Datei (Ende): ./praxis/apt-cache/begriff.adoc
