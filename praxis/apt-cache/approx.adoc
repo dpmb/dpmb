@@ -4,7 +4,7 @@
 
 [[approx]]
 
-=== approx ===
+=== Approx ===
 
 ==== Überblick ====
 
@@ -12,23 +12,26 @@
 (((APT-Cache)))
 (((Debianpaket, approx)))
 (((Paketcache)))
-(((Paketproxy)))
+(((Paketproxy, approx)))
 
-* 'approx' <<Debian-Paket-approx>>
-* aus der Selbstbeschreibung:
-** HTTP-Proxyserver für debian-artige Paketarchive
-** Paketdepots müssen nur in den Konfigurationsdateien von 'approx'
-eingetragen werden, und nicht in der `/etc/apt/sources.list`-Datei
-jedes Clients
-* Realität: auch Anpassungen in den Clients notwendig
+Approx <<Debian-Paket-approx>> ist ein Proxyserver für Debianpakete und
+dient als Paketcache zwischen einem Paketmirror und Debian-basierten
+Clients. Mit Approx halten Sie Debianpakete vor, die von den Clients zur
+lokalen Installation oder Aktualisierung angefragt werden und liefern
+diese aus dem Paketcache an die Clients aus.
 
-* Approx kann ... 
-** ... vorher verfügbare Konzepte wie 'apt-proxy' <<apt-proxy>>
-ersetzen, ohne die Datei `/etc/apt/sources.list`-Dateien der Clients zu
-ändern.
-** ... oder als Alternative zu 'apt-cacher' eingesetzt werden (siehe
-<<apt-cacher>>).
+Gemäß der Selbstbeschreibung von Approx sind lediglich die Repositorys
+in den Konfigurationsdateien von Approx anzupassen, jedoch nicht die
+Konfigurationsdateien jedes Clients selbst (bspw.
+`/etc/apt/sources.list`). In der Realität sieht es jedoch etwas anders 
+aus und es sind ebenfalls Änderungen in den Clients notwendig, damit 
+diese mit dem Paketproxy kommunizieren (siehe 
+<<approx-Konfiguration-Client>>).
 
+Approx präsentiert sich als Alternative zu APT Cacher (siehe
+<<apt-cacher>>) und APT Cacher-NG (siehe <<apt-cacher-ng>>).
+
+[[approx-Setup]]
 ==== Setup und Installation ====
 
 // Stichworte für den Index
@@ -39,8 +42,10 @@ ersetzen, ohne die Datei `/etc/apt/sources.list`-Dateien der Clients zu
 apt-get install approx
 ----
 
+[[approx-Konfiguration]]
 ==== Konfiguration ====
 
+[[approx-Konfiguration-Server]]
 ===== Server =====
 
 // Stichworte für den Index
@@ -66,6 +71,7 @@ non-us       http://non-us.debian.org/debian-non-US
 
 * Approx lauscht nun auf Port 9999 für Anfragen von Clients
 
+[[approx-Konfiguration-Client]]
 ===== Client =====
 
 // Stichworte für den Index
