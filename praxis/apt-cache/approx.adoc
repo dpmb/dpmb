@@ -29,18 +29,28 @@ diese mit dem Paketproxy kommunizieren (siehe
 <<approx-Konfiguration-Client>>).
 
 Approx präsentiert sich als Alternative zu APT Cacher (siehe
-<<apt-cacher>>) und APT Cacher-NG (siehe <<apt-cacher-ng>>).
+<<apt-cacher>>) und APT Cacher-NG (siehe <<apt-cacher-ng>>), dem
+Nachfolger von APT Cacher.
 
 [[approx-Setup]]
 ==== Setup und Installation ====
 
 // Stichworte für den Index
 (((Approx, Installation)))
-* Paket 'approx' <<Debian-Paket-approx>> herunterladen und installieren
+Als *ersten Schritt* laden Sie das Paket 'approx' <<Debian-Paket-approx>>
+herunter und installieren es, bspw. mittels `apt-get` wie folgt:
 
+.Installation von Approx mit `apt-get`
 ----
 apt-get install approx
 ----
+
+Das Paket 'approx' ist rund 1.5 MB groß und belegt nach dem Entpacken
+des Softwarearchivs etwa 6.6 MB Platz in ihrem System. Weitere Pakete
+sind zur Installation nicht erforderlich. Die *Schritte 2 und 3*
+beinhalten nun die Konfiguration des Approx-Serverdienstes (siehe
+<<approx-Konfiguration-Server>> und der Clients (siehe
+<<approx-Konfiguration-Client>>).
 
 [[approx-Konfiguration]]
 ==== Konfiguration ====
@@ -52,6 +62,7 @@ apt-get install approx
 (((Approx, /etc/approx/approx.conf)))
 (((Approx, Serverkonfiguration)))
 * anpassen der Datei `/etc/approx/approx.conf`
+
 
 * Inhalt (beispielhaft):
 
