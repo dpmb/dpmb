@@ -200,23 +200,29 @@ Softwarepakete beziehen.
 
 // Stichworte für den Index
 (((Approx, Clientkonfiguration)))
-* anpassen der Datei `/etc/hosts` -- ergänzen des Approx-Servers mit
-IP-Adresse und Hostname
+Die Konfiguration des Clients passen Sie in drei Schritten an. *Schritt
+1* ist die Ergänzung der Datei `/etc/hosts` um den APT-Cache mit der
+entsprechenden IP-Adresse und dem Hostname. Heißt ihr APT-Cache 'skye'
+und hat die IP-Adresse 192.168.10.250, fügen Sie diesen Eintrag zur
+Datei hinzu:
 
 ----
-1.2.3.4 approx-server
+192.168.10.250 skye
 ----
 
-* ergänzen der Datei `/etc/apt/sources.list` um Verweise auf den
-Approx-Server
+In *Schritt 2* ergänzen Sie in der Datei `/etc/apt/sources.list` die
+Einträge der Paketmirror um den Verweis auf den zuvor angelegten
+APT-Cache. 
 
 ----
-deb http://approx-server:9999/debian stable main contrib non-free
-deb-src http://approx-server:9999/debian stable main contrib non-free
-deb http://approx-server:9999/security stable/updates main contrib non-free
+deb     http://skye:8000/debian stable main contrib non-free
+deb-src http://skye:8000/debian stable main contrib non-free
+deb     http://skye:8000/security stable/updates main contrib non-free
 ----
 
-* die Paketliste aktualisieren mittels `apt-get update`
+*Schritt 3* ist das abschließende Aktualisieren der lokalen Paketliste
+mittels `apt-get update`. Jetzt kennt ihr Client den APT-Cache und
+bezieht alle Softwarepakete über ihn.
 
 ==== Beobachtungen aus dem Alltag ====
 
