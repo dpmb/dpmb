@@ -68,37 +68,55 @@ Funktionalität des Service steuern. Nachfolgend listen wir diese
 Variablen samt deren Bedeutung in alphabetischer Reihenfolge auf.
 
 `$cache` :: legt den Pfad fest, den Approx für seinen eigenen Paketcache
-verwendet. Der Defaultwert ist `/var/cache/approx`.
+verwendet. Der *Defaultwert* ist `/var/cache/approx`.
 
-`$curl_path` :: x
+`$curl_path` :: legt den Pfad zum Programm `curl` fest. Der
+*Defaultwert* ist `/usr/bin/curl`.
 
-`$debug` :: x
+`$debug` :: legt fest, ob Logeinträge zur erweiterten Fehlersuche
+erstellt werden sollen. Der *Defaultwert* ist `false` und somit
+ausgeschaltet.
 
-`$group` :: x
+`$group` :: legt den Namen der Gruppe fest, dem die Dateien im
+Cacheverzeichnis von Approx gehören. Der *Defaultwert* ist `approx`.
 
 `$interval` :: gibt die Zeitdauer in Minuten an, nach der eine Datei im
 Cache als zu alt angesehen wird, um noch sofort von Approx ausgeliefert
 zu werden. Ist das Intervall überschritten, schaut Approx zuerst auf dem
 Paketmirror nach, ob es zwischenzeitlich eine neuere Version gibt. Der
-Defaultwert ist 60 für 60 Minuten.
+*Defaultwert* ist 60 für 60 Minuten.
 
-`$max_rate` :: x
+`$max_rate` :: legt die Obergrenze für die Breite des Datenstroms in
+Bytes pro Sekunde fest, mit der Daten vom Paketmirror bezogen werden.
+Der *Defaultwert* ist `unlimited` für unbegrenzte Bandbreite. Geben Sie
+stattdessen einen Zahlenwert an und ergänzen ihn mit `K`, `M` oder `G`,
+begrenzen Sie die Bandbreite auf den entsprechenden Wert in Kilobyte,
+Megabyte oder Gigabyte pro Sekunde.
 
-`$max_redirects` :: x
+`$max_redirects` :: legt die maximale Anzahl von HTTP-Weiterleitungen
+('HTTP redirects') fest, denen gefolgt wird, wenn ein Paket
+heruntergeladen wird. Der *Defaultwert* ist 5.
 
-`$max_wait` :: x
+`$max_wait` :: gibt an, wieviele Sekunden der Prozess von Approx im
+Falle eines konkurrierenden Downloads wartet, bevor es die Datei selbst
+bezieht. Der *Defaultwert* ist 10 für 10 Sekunden.
 
-`$offline` :: x
+`$offline` :: gibt an, ob Approx auch möglicherweise veraltete Dateien
+ausliefern soll, wenn keine Verbindung zum Paketmirror zustandekommt.
+Der *Defaultwert* ist `false` und diese Funktionalität ist somit
+ausgeschaltet.
 
-`$pdiffs` :: x
+`$pdiffs` :: legt fest, ob IndexFile Diffs genutzt werden sollen. Der
+*Defaultwert* steht auf `true` für 'eingeschaltet'.
 
-`$offline` :: x
+`$syslog` :: legt das Verhalten von 'syslog' fest, wenn mit Logdateien
+umgegangen wird. Der *Defaultwert* ist `daemon`.
 
-`$syslog` :: x
+`$user` :: legt den Namen des Benutzers fest, dem die Dateien im
+Cacheverzeichnis von Approx gehören. Der *Defaultwert* ist `approx`.
 
-`$user` :: x
-
-`$verbose` :: x
+`$verbose` :: legt fest, ob ausführlichere Logeinträge erstellt werden
+sollen. Der *Defaultwert* ist `false` und somit ausgeschaltet.
 
 Alle weiteren Einträge bezeichnen den Namen und die URL eines
 Paketmirrors, von denen Approx im Falle einer Anfrage nach passenden
