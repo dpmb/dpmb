@@ -61,8 +61,48 @@ beinhalten nun die Konfiguration des Approx-Serverdienstes (siehe
 // Stichworte für den Index
 (((Approx, /etc/approx/approx.conf)))
 (((Approx, Serverkonfiguration)))
-* anpassen der Datei `/etc/approx/approx.conf`
+Hierzu passen Sie die Datei `/etc/approx/approx.conf` auf ihre
+eigenen Bedürfnisse an. Approx versteht dazu eine Reihe von Variablen in
+Form von Paaren aus einem Namen und Wert, über die Sie die
+Funktionalität des Service steuern. Nachfolgend listen wir diese
+Variablen samt deren Bedeutung in alphabetischer Reihenfolge auf.
 
+`$cache` :: legt den Pfad fest, den Approx für seinen eigenen Paketcache
+verwendet. Der Defaultwert ist `/var/cache/approx`.
+
+`$curl_path` :: x
+
+`$debug` :: x
+
+`$group` :: x
+
+`$interval` :: gibt die Zeitdauer in Minuten an, nach der eine Datei im
+Cache als zu alt angesehen wird, um noch sofort von Approx ausgeliefert
+zu werden. Ist das Intervall überschritten, schaut Approx zuerst auf dem
+Paketmirror nach, ob es zwischenzeitlich eine neuere Version gibt. Der
+Defaultwert ist 60 für 60 Minuten.
+
+`$max_rate` :: x
+
+`$max_redirects` :: x
+
+`$max_wait` :: x
+
+`$offline` :: x
+
+`$pdiffs` :: x
+
+`$offline` :: x
+
+`$syslog` :: x
+
+`$user` :: x
+
+`$verbose` :: x
+
+Alle weiteren Einträge bezeichnen den Namen und die URL eines
+Paketmirrors, von denen Approx im Falle einer Anfrage nach passenden
+Softwarepaketen suchen soll.
 
 * Inhalt (beispielhaft):
 
