@@ -61,11 +61,12 @@ beinhalten nun die Konfiguration des Approx-Serverdienstes (siehe
 // Stichworte für den Index
 (((Approx, /etc/approx/approx.conf)))
 (((Approx, Serverkonfiguration)))
-Hierzu passen Sie die Datei `/etc/approx/approx.conf` auf ihre
+Hierzu passen Sie zunächst die Datei `/etc/approx/approx.conf` auf ihre
 eigenen Bedürfnisse an. Approx versteht dazu eine Reihe von Variablen in
-Form von Paaren aus einem Namen und Wert, über die Sie die
-Funktionalität des Service steuern. Nachfolgend listen wir diese
-Variablen samt deren Bedeutung in alphabetischer Reihenfolge auf.
+Form von Name-Wert-Paaren, wobei Name und Wert mit mindestens einem 
+Leerzeichen voneinander zu trennen sind. Darüber steuern Sie die
+Funktionalität des Service. Nachfolgend listen wir diese Variablen samt
+deren Bedeutung in alphabetischer Reihenfolge auf.
 
 `$cache` :: legt den Pfad fest, den Approx für seinen eigenen Paketcache
 verwendet. Der *Defaultwert* ist `/var/cache/approx`.
@@ -119,26 +120,80 @@ Cacheverzeichnis von Approx gehören. Der *Defaultwert* ist `approx`.
 sollen. Der *Defaultwert* ist `false` und somit ausgeschaltet.
 
 Alle weiteren Einträge bezeichnen den Namen und die URL eines
-Paketmirrors, von denen Approx im Falle einer Anfrage nach passenden
-Softwarepaketen suchen soll.
+Paketmirrors, von denen Approx im Falle einer Anfrage passende
+Softwarepakete suchen und beziehen soll. Bitte beachten Sie, dass
+hierbei keine Veröffentlichung oder ein Distributionsname angegeben
+wird. Diese Angabe verbleibt in der Konfiguration des Clients.
 
-* Inhalt (beispielhaft):
+Nachfolgend sehen Sie in beispielhaft die Einstellungen für einen
+Paketmirror, welcher die Softwarepakete unter `/var/cache/paketcache`
+zwischenpuffert.
+
+.Beispielkonfiguration für Approx
+----
+debian    http://deb/debian.org/debian
+security  http://security.debian.org/debian-security
+
+$interval 60
+$max_wait 10
+$cache    /var/cache/paketcache
+----
+
+Ohne weitere Änderungen lauscht Approx auf dem *Port* 9999 für Anfragen
+von Clients. Um das zu ändern und Approx bspw. auf Port 8000 lauschen zu
+lassen, passen Sie die Servicebeschreibung von Approx an. Verwenden Sie
+*Systemd* als Prozessmanager, hilft ihnen dabei das Kommando `systemctl`
+weiter.
+
+.Anpassen der Servicebeschreibung von Approx bei Systemd
+----
+systemctl edit approx.socket
+----
+
+Die Servicebeschreibung beinhaltet die drei Abschnitte 'Unit', 'Socket'
+und 'Install'. Ändern Sie im Abschnitt 'Socket' die Einstellung
+`ListenStream=9999` auf `ListenStream=8000`.
+
+.Veränderte Servicebeschreibung von Approx bei Systemd
+----
+[Unit]
+Description=caching proxy server for Debian archive files
+Documentation=man:approx(8)
+
+[Socket]
+ListenStream=8000
+Accept=yes
+
+[Install]
+WantedBy=sockets.target
+----
+
+Starten Sie anschließend Approx mittels `systemctl restart
+approx.socket` neu, um die Änderungen auch wirksam werden zu lassen.
+
+Verwenden Sie hingegen *Init.d* als Prozessmanager, ändern Sie zunächst
+in der Konfigurationsdatei `/etc/inetd.conf` diese Zeile von
 
 ----
-interval 120
-max_wait 10
-debian       http://http.uk.debian.org/debian
-security     http://security.debian.org/debian-security
-non-us       http://non-us.debian.org/debian-non-US
+9999          stream  tcp     nowait  approx  /usr/sbin/approx /usr/sbin/approx
 ----
 
-* `approx` neustarten
+in
+
+----
+8000          stream  tcp     nowait  approx  /usr/sbin/approx /usr/sbin/approx
+----
+
+und speichern die Konfigurationsdatei. Danach starten Sie Approx wie
+folgt neu:
 
 ----
 /etc/init.d/approx restart
 ----
 
-* Approx lauscht nun auf Port 9999 für Anfragen von Clients
+Danach passen Sie die Konfiguration des Clients an -- dieser soll ja
+jetzt auch mit dem APT-Cache kommunizieren und nur darüber seine
+Softwarepakete beziehen.
 
 [[approx-Konfiguration-Client]]
 ===== Client =====
