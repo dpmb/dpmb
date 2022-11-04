@@ -38,9 +38,10 @@ Schalter `Acquire::Check-Valid-Until`, mit dem Sie die Überprüfung auf
 das Ende der Langzeitunterstützung überspringen und bei Bedarf auch
 vollständig abschalten können.
 
-=== Kurzzeitiges Abschalten ===
+=== Kurzzeitiges Abschalten der Gültigkeitsüberprüfung des Release Files ===
 
 // Stichworte für den Index
+(((Abschalten der Gültigkeitsüberprüfung des Release Files, einmalig)))
 (((apt-get, -o)))
 (((apt-get, Acquire::Check-Valid-Until)))
 (((apt-get, update)))
@@ -50,16 +51,18 @@ ignorieren, rufen Sie `apt-get` mit dem Schalter `-o
 Acquire::Check-Valid-Until=false` auf. In Folge aktualisiert `apt-get`
 ihre Paketdatenbank anstandslos.
 
-.Deaktivieren der Gültigkeitsüberprüfung des Release Files bei `apt-get`
+.Deaktivieren der Gültigkeitsüberprüfung des Release Files beim Aufruf von `apt-get`
 ----
 # apt-get -o Acquire::Check-Valid-Until=false update
 ----
 
 Da Aptitude und `apt` den Schalter ebenfalls verstehen, können Sie den 
-Aufruf somit auch mit diesen beiden Werkzeugen durchführen.
+Aufruf somit auch mit diesen beide Werkzeugen durchführen.
 
-=== Dauerhaftes Abschalten ===
+=== Dauerhaftes Abschalten der Gültigkeitsüberprüfung des Release Files ===
 
+// Stichworte für den Index
+(((Abschalten der Gültigkeitsüberprüfung des Release Files, dauerhaft)))
 Brauchen Sie das Abschalten häufiger -- bspw. bis zum geplanten,
 tatsächlichen Versionswechsel -- legen Sie am besten eine Datei im
 Verzeichnis `/etc/apt/apt.conf.d/` mit dem entsprechenden Schalter an.
@@ -67,6 +70,7 @@ Mit dem nachfolgenden Aufruf erzeugen Sie eine Datei
 `/etc/apt/apt.conf.d/10no-check-valid-until` und setzen den Schalter
 dauerhaft <<Stackexchange-LTS>>:
 
+.Dauerhaftes Deaktivieren der Gültigkeitsüberprüfung des Release Files 
 ----
 # echo "Acquire::Check-Valid-Until=False;" > /etc/apt/apt.conf.d/10no-check-valid-until
 ----
