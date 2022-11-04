@@ -299,11 +299,13 @@ das zu `dpkg` und `aptitude` genauer.
 (((Paket, Rückwärtsabhängigkeiten auflisten)))
 (((Paketabhängigkeiten, auflisten)))
 (((Paketabhängigkeiten, Rückwärtsabhängigkeiten auflisten)))
+(((repoquery, --requires)))
 (((rpm, -qpR)))
 (((rpm, -qR)))
 (((rpm, --requires)))
 (((yum, deplist)))
 (((yum, info)))
+(((yumdownloader, --resolve)))
 Mit den nachfolgenden Aufrufen zeigen Sie die Abhängigkeiten zu anderen
 Paketen an. Für `dpkg` und APT gehen wir dazu genauer in
 ``Paketabhängigkeiten anzeigen'' in <<paketabhaengigkeiten-anzeigen>>
@@ -330,6 +332,8 @@ lokal auf dem System installiert sein
 |            | `rpm -qpR` 'Paketdatei' | das Paket muß dazu lokal als Datei vorliegen
 | `YUM`      | `yum deplist` 'Paketname' |
 |            | `yum info` 'Paketname' |
+|            | `repoquery --requires` 'Paketname' |
+|            | `yumdownloader --resolve` 'Paketname' |
 |====
 
 === Alle Dateien eines installierten Pakets anzeigen ===
@@ -342,6 +346,8 @@ lokal auf dem System installiert sein
 (((dpkg-query, -L)))
 (((dpkg-query, --listfiles)))
 (((Paket, Inhalte anzeigen)))
+(((repoquery, -l)))
+(((repoquery, --list)))
 (((rpm, -ql)))
 Mit den nachfolgenden Aufrufen zeigen Sie an, welche Dateien und
 Verzeichnisse zu dem installierten Paket gehören. Für Debianpakete
