@@ -12,7 +12,7 @@
 (((Debianpaket, alien)))
 (((Fremdformate hinzufügen)))
 Den Begriff 'alien' übersetzen Sie am ehesten mit 'fremd', 'Fremdling' oder 
-'Ausländer'. 'alien' heißt auch das gleichnamige Debianpaket 
+'Ausländer'. 'alien' heißt jedoch auch das gleichnamige Debianpaket 
 <<Debian-Paket-alien>>. Es hilft Ihnen, eine Software, welche nicht als 
 `deb`-Paket vorliegt, entsprechend umzuwandeln und für Ihre 
 Debian-Installation vorzubereiten.
