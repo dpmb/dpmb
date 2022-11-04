@@ -64,7 +64,7 @@ ihre Paketdatenbank anstandslos.
 ----
 
 Da Aptitude und `apt` den Schalter ebenfalls verstehen, können Sie den 
-Aufruf somit auch mit diesen beide Werkzeugen durchführen.
+Aufruf somit auch mit diesen beiden Werkzeugen durchführen.
 
 [[longterm-check-permanent-abschalten]]
 === Dauerhaftes Abschalten der Gültigkeitsüberprüfung des Release Files ===
