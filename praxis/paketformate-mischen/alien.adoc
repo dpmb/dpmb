@@ -49,6 +49,7 @@ werden können.
 ===== Voraussetzungen =====
 
 // Stichworte für den Index
+(((alien, Voraussetzungen zur Paketumwandlung)))
 (((Debianpaket, alien)))
 (((Debianpaket, debhelper)))
 (((Debianpaket, dpkg)))
@@ -97,6 +98,7 @@ letzteres zutrifft, installieren Sie diese über die Paketverwaltung nach
 (((alien, --to-rpm)))
 (((alien, --to-slp)))
 (((alien, --to-tgz)))
+(((alien, Paketumwandlung durchführen)))
 (((Stampede Linux)))
 
 Die Umwandlung eines `rpm`-Pakets in ein `deb`-Paket erfolgt mit Hilfe
@@ -198,6 +200,7 @@ Bibliotheken 'Libc', 'Glib2', 'Gpm2', 'Slang2' und 'Ssh2' abhängt.
 (((alien, --version)))
 (((alien, --verbose)))
 (((alien, --veryverbose)))
+(((alien, Fallen bei der Paketumwandlung)))
 
 Bei der Umwandlung des Paketformats bestehen mehrere Fallstricke. Diese
 führen regelmäßig dazu, dass die umgewandelte Software nicht wie erhofft
@@ -284,6 +287,7 @@ Umwandlung eines Paketes an
 ==== Umgewandelte Pakete einspielen ====
 
 // Stichworte für den Index
+(((alien, umgewandeltes Fremdformat installieren)))
 (((apt-get, install -f)))
 (((apt-get, install --fix-broken)))
 (((dpkg, -i)))
@@ -299,14 +303,16 @@ und die eingespielte Software funktioniert, alles geht glatt und Software
 funktioniert nicht, oder das Einspielen geht komplett schief. Da bleibt nur 
 manuelle Nacharbeitung. Ursache dafür sind in der Regel Abhängigkeitsprobleme
 zu anderen Paketen. Diese Probleme beheben Sie mit dem Aufruf von 
-`apt-get install -f`. Mit dem Schritt löst APT alle bestehenden Abhängigkeiten 
-auf und installiert dabei fehlende Pakete nach.
+`apt-get install -f` (oder `--fix-broken` als Langform). Mit dem Schritt löst 
+APT alle bestehenden Abhängigkeiten auf und installiert dabei fehlende Pakete 
+nach.
 
 ==== Pakete umwandeln und einspielen ====
 
 // Stichworte für den Index
 (((alien, -i)))
 (((alien, --install)))
+(((alien, Fremdformat umwandeln und direkt installieren)))
 
 In den obigen Schritten in
 <<fremdformate-mit-alien-hinzufuegen-durchfuehrung>> und
