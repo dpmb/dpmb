@@ -30,6 +30,8 @@ Veröffentlichung durch die Paketmaintainer ist eingestellt.
 
 // Stichworte für den Index
 (((apt-get, Acquire::Check-Valid-Until)))
+(((Veröffentlichung, ELTS)))
+(((Veröffentlichung, Extended LTS)))
 
 Können Sie die bislang verwendete Veröffentlichung nicht wechseln,
 stellt sich die Frage, ob -- und wenn ja wie -- Sie die bestehende
@@ -41,8 +43,8 @@ Bedarf auch vollständig abschalten können (siehe
 <<longterm-check-temporaer-abschalten>> und 
 <<longterm-check-permanent-abschalten>>). Variante 2 ist die
 Zuhilfenahme eines spezialisierten Dienstleisters, der sich um die
-Betreuung überfälliger LTS-Installationen kümmert (siehe
-<<externer-lts-support>>).
+Betreuung überfälliger LTS-Installationen im Rahmen des Projekts
+'Extended LTS' kümmert (siehe <<externer-lts-support>>).
 
 [[longterm-check-temporaer-abschalten]]
 === Kurzzeitiges Abschalten der Gültigkeitsüberprüfung des Release Files ===
@@ -86,6 +88,14 @@ dauerhaft <<Stackexchange-LTS>>:
 [[externer-lts-support]]
 === Dienstleister zur Pflege veralteter LTS-Installationen ===
 
-* ToDo
+// Stichworte für den Index
+(((Veröffentlichung, ELTS)))
+(((Veröffentlichung, Extended LTS)))
+
+*ToDo*
+
+* Extended LTS (ELTS) <<Debian-ELTS>>
+* Laufzeitpflege für 10 Jahre
+* Freexian <<Freexian>> und <<Freexian-ELTS>>
 
 // Datei (Ende): ./praxis/umgang-mit-lts/umgang-mit-lts.adoc
