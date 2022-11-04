@@ -33,11 +33,15 @@ Veröffentlichung durch die Paketmaintainer ist eingestellt.
 
 Können Sie die bislang verwendete Veröffentlichung nicht wechseln,
 stellt sich die Frage, ob -- und wenn ja wie -- Sie die bestehende
-Installation trotzdem noch weiter betreiben können. APT liefert dazu den
-Schalter `Acquire::Check-Valid-Until`, mit dem Sie die Überprüfung auf
-das Ende der Langzeitunterstützung überspringen und bei Bedarf auch
-vollständig abschalten können.
+Installation trotzdem noch weiter betreiben können. Variante 1 ist die
+Abschaltung der Gültigkeitsüberprüfung des Release Files. APT liefert 
+dazu den Schalter `Acquire::Check-Valid-Until`, mit dem Sie die 
+Überprüfung auf das Ende der Langzeitunterstützung überspringen und bei 
+Bedarf auch vollständig abschalten können (siehe
+<<longterm-check-temporaer-abschalten>> und 
+<<longterm-check-permanent-abschalten>>).
 
+[[longterm-check-temporaer-abschalten]]
 === Kurzzeitiges Abschalten der Gültigkeitsüberprüfung des Release Files ===
 
 // Stichworte für den Index
@@ -59,6 +63,7 @@ ihre Paketdatenbank anstandslos.
 Da Aptitude und `apt` den Schalter ebenfalls verstehen, können Sie den 
 Aufruf somit auch mit diesen beide Werkzeugen durchführen.
 
+[[longterm-check-permanent-abschalten]]
 === Dauerhaftes Abschalten der Gültigkeitsüberprüfung des Release Files ===
 
 // Stichworte für den Index
