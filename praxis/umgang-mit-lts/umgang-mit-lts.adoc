@@ -50,9 +50,13 @@ ignorieren, rufen Sie `apt-get` mit dem Schalter `-o
 Acquire::Check-Valid-Until=false` auf. In Folge aktualisiert `apt-get`
 ihre Paketdatenbank anstandslos.
 
+.Deaktivieren der Gültigkeitsüberprüfung des Release Files bei `apt-get`
 ----
 # apt-get -o Acquire::Check-Valid-Until=false update
 ----
+
+Da Aptitude und `apt` den Schalter ebenfalls verstehen, können Sie den 
+Aufruf somit auch mit diesen beiden Werkzeugen durchführen.
 
 === Dauerhaftes Abschalten ===
 
