@@ -154,8 +154,10 @@ drwxr-xr-x root/root         0 2019-11-16 12:11 ./etc/mc/
 #
 ----
 
-Mit einer Kombination aus `dpkg --info ` 'Paketname' und `grep Depends`
-sehen Sie, welche Paketabhängigkeiten bestehen und erfüllt sein müssen.
+Mit einer Kombination aus den beiden Kommandos `dpkg --info` 'Paketname'
+und `grep Depends` sehen Sie, welche Paketabhängigkeiten für das
+umgewandelte Paket bestehen und erfüllt sein müssen, damit dieses
+korrekt in ihr System eingespielt werden kann.
 
 .Abhängigkeiten von einem umgewandelten Paket
 ----
@@ -164,8 +166,8 @@ sehen Sie, welche Paketabhängigkeiten bestehen und erfüllt sein müssen.
 #
 ----
 
-Aus der obigen Ausgabe ersehen Sie, dass das Paket von den Bibliotheken
-'Libc', 'Glib2', 'Gpm2', 'Slang2' und 'Ssh2' abhängt.
+Aus der obigen Ausgabe ersehen Sie, dass das Paket 'mc' von den fünf
+Bibliotheken 'Libc', 'Glib2', 'Gpm2', 'Slang2' und 'Ssh2' abhängt.
 
 ===== Fallstricke und Besonderheiten bei der Umwandlung =====
 
