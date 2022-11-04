@@ -636,19 +636,30 @@ ein.
 // Stichworte für den Index
 (((Paket, Transaktionshistorie anzeigen)))
 (((dnf, history)))
-(((dnf, history list)))
+(((dnf, history list all)))
+(((yum, history)))
+(((yum, history info)))
+(((yum, history package-list)))
+(((yum, history packages-list)))
+(((yum, history summary)))
 `dpkg`, `apt` und `aptitude` besitzen keine expliziten Schalter dafür.
 Im Abschnitt ``Liste der zuletzt installierten Pakete anzeigen'' in
 <<liste-der-zuletzt-installierten-pakete-anzeigen>> zeigen wir Ihnen,
-wie Sie das über die Logdateien lösen. DNF erlaubt es hingegen , die
-Transaktionshistorie darzustellen. Dabei helfen Ihnen diese Kommandos:
+wie Sie das über die Logdateien lösen. DNF und YUM erlauben es hingegen, 
+die Transaktionshistorie darzustellen. Dabei helfen Ihnen diese Kommandos:
 
 .Transaktionshistorie anzeigen 
 [frame="topbot",options="header",cols="2,4,4",id="tab.transaktionshistorie"]
 |====
-| Werkzeug   | Aufruf | Anmerkungen
+| Werkzeug | Aufruf | Anmerkungen
 | DNF      | `dnf history`| die gesamte Historie aller Transaktionen anzeigen
-|          | `dnf history list`| die gesamte Historie aller Transaktionen anzeigen
+|          | `dnf history list `| die gesamte Historie aller Transaktionen anzeigen
+| YUM      | `yum history`| die gesamte Historie aller Transaktionen anzeigen
+|          | `yum history info` 'Paketname' | detailliertere Transaktionen zu 'Paketname' anzeigen
+|          | `yum history list all`| die gesamte Historie aller Transaktionen anzeigen
+|          | `yum history package-list` 'Paketname' | die gesamte Historie der Transaktionen für das Paket 'Paketname' anzeigen
+|          | `yum history packages-list` 'Paketname1' 'Paketname2' | die gesamte Historie der Transaktionen für die beiden Pakete 'Paketname1' und 'Paketname2' anzeigen
+|          | `yum history summary` 'Paketname' | Zusammenfassung der Transaktionen zu 'Paketname'
 |====
 
 // Datei (Ende): ./anhang/anhang.paketkommando/rpm-yum-dpkg.adoc
