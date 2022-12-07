@@ -19,12 +19,13 @@ im aktuellen Verzeichnis (Modus 1) und im Paketcache (Modus 2). Für
 beides existieren verschiedene Unterkommandos und Aufrufmöglichkeiten.
 
 // Stichworte für den Index
+(((apt, download)))
 (((aptitude, download)))
 (((apt-get, download)))
 (((debget)))
 (((dget)))
 (((Paket, nur herunterladen)))
-Für den Modus 1 akzeptieren `apt-get` und `aptitude` das Unterkommando
+Für den Modus 1 akzeptieren `apt `apt-get` und `aptitude` das Unterkommando
 `download`. Das Paket 'bash-doc' beinhaltet die Dokumentation zur Bash
 – ein Bezug des Pakets via `apt-get` liefert Ihnen das folgende
 Ergebnis:
@@ -66,13 +67,17 @@ Downloading nano from http://ftp.de.debian.org/debian/pool/main/n/nano/nano_2.2.
 `dget` aus dem Paket 'devscripts' <<Debian-Paket-devscripts>> zur Verfügung.
 
 // Stichworte für den Index
+(((apt, -d install)))
+(((apt, --download-only install)))
 (((apt-get, -d install)))
 (((apt-get, --download-only install)))
+(((aptitude, -d install)))
+(((aptitude, --download-only install)))
 (((Paketcache, /var/cache/apt/archives/)))
 (((Paketcache, /var/cache/apt/archives/partial/)))
 Der Modus 2 kommt zum Zug, wenn Sie das Paket hingegen im lokalen
 Paketcache (siehe <<paketcache>>) abspeichern möchten. Dazu verstehen
-`apt-get` und `aptitude` zum Unterkommando `install` die Option `-d`
+`apt`, `apt-get` und `aptitude` zum Unterkommando `install` die Option `-d`
 (Langform `--download-only`). Nachfolgende Ausgabe zeigt, wie sich
 `aptitude` dabei verhält. Das Paket wird nicht installiert, sondern im
 Paketcache unter `/var/cache/apt/archives/` abgespeichert, sofern es
