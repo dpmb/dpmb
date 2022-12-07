@@ -7,15 +7,19 @@
 === Installation zwischengespeicherter Pakete aus dem Paketcache ===
 
 // Stichworte für den Index
+(((apt, install --no-download)))
 (((apt-get, install --no-download)))
 (((Paket, Installation aus dem Paketcache)))
 (((Paketcache)))
 Liegt das Paket bereits oder noch im Paketcache, kann APT dieses von
 dort entnehmen und sofort installieren. Ein Bezug vom Paketmirror ist in
 diesem Fall nicht mehr erforderlich und spart sowohl Zeit, als auch
-Bandbreite. Dazu benötigt `apt-get` die Option `--no-download` zum
-Unterkommando `install`. Nachfolgende Ausgabe zeigt das anhand des
-Pakets 'bash-doc', welches bereits im Paketcache liegt.
+Bandbreite. Dazu benötigen `apt` bzw. `apt-get` die Option
+`--no-download` zum Unterkommando `install`. `aptitude` kennt den
+Schalter bislang leider nicht.
+
+Nachfolgende Ausgabe zeigt das für `apt-get` anhand des Pakets 'bash-doc', 
+welches bereits im Paketcache liegt.
 
 .Installation des Pakets 'bash-doc' via `apt-get` aus dem Paketcache
 ----
@@ -35,6 +39,18 @@ Vormals nicht ausgewähltes Paket bash-doc wird gewählt.
 Entpacken von bash-doc (aus .../bash-doc_4.2+dfsg-0.1_all.deb) ...
 bash-doc (4.2+dfsg-0.1) wird eingerichtet ...
 #
+----
+
+Bei obigem Aufruf kümmern sich `apt` und `apt-get` darum, dass alle
+Paketabhängigkeiten erfüllt sind. Geht es Ihnen hingegen nur um ein
+einziges Paket, was keine Abhängigkeitskonflikte besitzt, kann auch
+`dpkg` die Aufgabe übernehmen. Dazu braucht `dpkg` dann den Dateinamen
+des Pakets im Aufruf, bspw. so:
+
+.Installation des Pakets 'bash-doc' via `dpkg` aus dem Paketcache
+----
+# dpkg -i /var/cache/apt/archives/bash-doc.deb
+...
 ----
 
 [NOTE]
