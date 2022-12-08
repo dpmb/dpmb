@@ -25,10 +25,10 @@ beides existieren verschiedene Unterkommandos und Aufrufmöglichkeiten.
 (((debget)))
 (((dget)))
 (((Paket, nur herunterladen)))
-Für den Modus 1 akzeptieren `apt `apt-get` und `aptitude` das Unterkommando
-`download`. Das Paket 'bash-doc' beinhaltet die Dokumentation zur Bash
-– ein Bezug des Pakets via `apt-get` liefert Ihnen das folgende
-Ergebnis:
+Für den Modus 1 akzeptieren `apt`, `apt-get` und `aptitude` das
+Unterkommando `download`. Das Paket 'bash-doc' beinhaltet die
+Dokumentation zur Bash – ein Bezug des Pakets via `apt-get` liefert
+Ihnen das folgende Ergebnis:
 
 .Bezug des Pakets 'bash-doc' via `apt-get` und Speicherung im lokalen Verzeichnis
 ----
