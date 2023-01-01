@@ -29,15 +29,13 @@ Benutzerschnittstelle.
 Kommandozeile::
 `apt` (siehe <<apt>>). Es ist einfach und intuitiv, schnell getippt, hat
 angenehme farbliche Hervorhebungen in der Ausgabe und kann praktisch
-alles, womit Sie im Alltag zu tun haben. 
-
-Steht ihnen auf einer älteren Installation `apt` als Befehl nicht zur
-Verfügung, weichen Sie auf die beiden Werkzeuge `apt-get` und
-`apt-cache` aus. Die Nachteile sind dabei nur geringfügig, da `apt`
-mittlerweile mit nahezu allen Unterkommandos von `apt-get` und
-`apt-cache` umgehen kann. Im wesentlichen umfaßt das mehr Tippen, je
-nach Aufgabe die Auswahl des passenden Programms und den Verzicht auf
-farbliche Hervorhebung in der Ausgabe.
+alles, womit Sie im Alltag zu tun haben. Steht ihnen auf einer älteren
+Installation `apt` als Befehl nicht zur Verfügung, weichen Sie auf die
+beiden Werkzeuge `apt-get` und `apt-cache` aus. Die Nachteile sind dabei
+nur geringfügig, da `apt` mittlerweile mit nahezu allen Unterkommandos
+von `apt-get` und `apt-cache` umgehen kann. Im wesentlichen umfaßt das
+mehr Tippen, je nach Aufgabe die Auswahl des passenden Programms und den
+Verzicht auf farbliche Hervorhebung in der Ausgabe.
 
 Interaktiver Textmodus::
 `aptitude` (siehe <<aptitude>>). Nicht nur, weil es auch das einzige
@@ -75,7 +73,7 @@ späteren Installation oder Entfernung von Paketen bereitliegen, um den
 Bestand der installierten Pakete konsistent zu halten. Der Rechner muss
 zudem über eine Möglichkeit verfügen, die Medien oder
 Installationsabbilder auch einbinden und benutzen zu können. Infrage
-kommen bspw. ein CD/DVD-Laufwerk, ein USB-Port oder ein Slot für eine
+kommen bspw. ein CD/DVD-Laufwerk, ein USB-Port oder ein Einschub für eine
 Speicherkarte, auf dem sich ein Installationsabbild befindet.
 
 // Datei (Ende): ./ausblick/empfehlungen-fuer-einsteiger/empfehlungen-fuer-einsteiger.adoc
