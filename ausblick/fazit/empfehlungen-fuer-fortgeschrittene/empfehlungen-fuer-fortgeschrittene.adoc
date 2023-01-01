@@ -5,6 +5,16 @@
 [[ausblick-empfehlungen-fuer-fortgeschrittene-und-profis]]
 === Empfehlungen für Fortgeschrittene und Profis ===
 
-ToDo
+Für den Ablauf schlagen wir Ihnen vor:
+
+* zunächst sich mit den Werkzeugen und entsprechenden Unterkommandos zur
+Paketverwaltung vertraut machen. Das besprechen wir ausführlich in
+<<paketoperationen>>. Kommen Sie von einer `rpm`-basierten Distribution
+wie bspw. Fedora oder CentOS, hilft Ihnen die Tabelle im Anhang weiter 
+(siehe <<kommandos-zur-paketverwaltung-im-vergleich>>) -- diese stellt
+die Kommandos der einzelnen Paketverwaltungen gegenüber.
+
+* klären, welche Aktionen zur Paketverwaltung überhaupt anstehen (was
+konkret zu tun ist) und danach das passende Kommando auswählen
 
 // Datei (Ende): ./ausblick/fazit/empfehlungen-fuer-fortgeschrittene/empfehlungen-fuer-fortgeschrittene.adoc
