@@ -1,10 +1,31 @@
 // Datei: ./ausblick/fazit/was-koennen-sie-jetzt/was-koennen-sie-jetzt.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[ausblick-was-koennen-sie-jetzt]]
 === Was können Sie jetzt? ===
 
-ToDo
+In diesem Buch vermittelten wir ihnen ein umfangreiches Wissen. Das
+umfaßt insbesondere:
+
+* das Verständnis, wie Softwarepakete unter Debian GNU/Linux organisiert
+sind und welche Infrastruktur bereitsteht, um diese zu benutzen
+
+* die Fähigkeit, Softwarepakete zu finden, auszuwählen, zu installieren,
+zu konfigurieren, zu aktualisieren und wieder zu entfernen
+
+* das Ermitteln der Abhängigkeiten zwischen Softwarepaketen und das
+manuelle Beheben fehlender oder auch fehlerhafter Abhängigkeiten
+zwischen diesen, so dass ein stabiler Zustand bzgl. der Installation des
+Betriebssystems erreicht wird
+
+* das Aktuellhalten einer Debian GNU/Linux-Installation
+
+* den Umgang mit Problemsituationen, die im Alltag bei der
+Paketverwaltung auftreten
+
+Mit diesem Wissen betreiben Sie eine Linux-Installation panikfrei, d.h.
+ohne Schnappatmung, und legen damit den Grundstein für eine saubere
+und stabile Arbeitsumgebung.
 
 // Datei (Ende): ./ausblick/fazit/was-koennen-sie-jetzt/was-koennen-sie-jetzt.adoc
