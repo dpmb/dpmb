@@ -5,32 +5,39 @@
 [[ausblick-empfehlungen-fuer-einsteiger]]
 === Empfehlungen für Einsteiger ===
 
+==== Mit welchem Programm zur Paketverwaltung gelingt der Einstieg am
+leichtesten? ====
+
 // Stichworte für den Index
+(((appnr)))
 (((apt)))
 (((apt-cache)))
 (((apt-get)))
 (((aptitude)))
 (((Synaptic)))
-Häufig erreicht uns die Frage, mit welchem Programm zur Paketverwaltung
-der Einstieg am leichtesten gelingt. Eine richtige Antwort darauf fällt
-schwer, weil das einserseits von ihren Vorkenntnissen abhängt,
-andererseits darauf basiert, welcher Art Benutzerschnittstelle Sie
-bevorzugen und drittens in welcher Situation Sie sich gerade befinden.
-Es macht einen großen Unterschied, ob Sie einen Desktop mit graphischer
-Oberfläche vor sich haben oder bspw. über 'ssh' auf einem Server
-eingeloggt sind. Von daher geben wir Ihnen drei Empfehlungen -- eine für
-die Kommandozeile, eine für den interaktiven Textmodus und eine für die
-graphische Benutzerschnittstelle.
+Eine richtige Antwort darauf fällt schwer, weil das a) von ihrem
+Wissensstand abhängt, b) darauf basiert, welche Art von
+Benutzerschnittstelle Sie bevorzugen und c) in welcher Situation Sie
+sich gerade befinden, sprich: ob Sie lokal arbeiten oder auf einem
+entfernten Rechner eingeloggt sind. Es macht dabei einen großen
+Unterschied, ob Sie einen Desktop mit graphischer Oberfläche vor sich
+haben oder bspw. über 'ssh' mit einem Server verbunden sind. Von daher
+geben wir Ihnen drei Empfehlungen -- eine für die Kommandozeile, eine
+für den interaktiven Textmodus und eine für die graphische
+Benutzerschnittstelle.
 
 Kommandozeile::
 `apt` (siehe <<apt>>). Es ist einfach und intuitiv, schnell getippt, hat
 angenehme farbliche Hervorhebungen in der Ausgabe und kann praktisch
-alles, womit Sie im Alltag zu tun haben. Bei älteren Veröffentlichungen
-ohne `apt` als Befehl weichen Sie auf die Befehle `apt-get` und
-`apt-cache` aus, aber die Nachteile sind nur geringfügig. Im
-wesentlichen umfaßt das mehr Tippen, je nach Aufgabe die Auswahl des
-passenden Programms und den Verzicht auf farbliche Hervorhebung in der
-Ausgabe.
+alles, womit Sie im Alltag zu tun haben. 
+
+Steht ihnen auf einer älteren Installation `apt` als Befehl nicht zur
+Verfügung, weichen Sie auf die beiden Werkzeuge `apt-get` und
+`apt-cache` aus. Die Nachteile sind dabei nur geringfügig, da `apt`
+mittlerweile mit nahezu allen Unterkommandos von `apt-get` und
+`apt-cache` umgehen kann. Im wesentlichen umfaßt das mehr Tippen, je
+nach Aufgabe die Auswahl des passenden Programms und den Verzicht auf
+farbliche Hervorhebung in der Ausgabe.
 
 Interaktiver Textmodus::
 `aptitude` (siehe <<aptitude>>). Nicht nur, weil es auch das einzige
@@ -40,9 +47,11 @@ Paketen und deren Status bietet. Diese Darstellung in der Gesamtheit auf
 der Kommandozeile zu erreichen, gelingt nur mit einem Dutzend parallel
 geöffneter Terminalfenster.
 
-Graphische Benutzerschnittstelle:: 
+Graphische Benutzerschnittstelle und webbasierte Lösungen:: 
 Synaptic (siehe <<gui-synaptic>>). Es bildet unserer Meinung nach das
 Debian-Paketsystem am besten ab und reduziert es nicht auf einen
-``App-Store''.
+``App-Store''. Von webbasierten Lösungen wie Appnr (siehe
+<<webbasierte-programme-appnr>>) sind wir bislang nicht überzeugt und
+raten Ihnen daher nicht zu diesen.
 
 // Datei (Ende): ./ausblick/empfehlungen-fuer-einsteiger/empfehlungen-fuer-einsteiger.adoc
