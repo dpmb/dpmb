@@ -5,8 +5,8 @@
 [[ausblick-empfehlungen-fuer-einsteiger]]
 === Empfehlungen für Einsteiger ===
 
-==== Mit welchem Programm zur Paketverwaltung gelingt der Einstieg am
-leichtesten? ====
+[[ausblick-einstieg-zur-paketverwaltung]]
+==== Mit welchem Programm zur Paketverwaltung gelingt der Einstieg am leichtesten? ====
 
 // Stichworte für den Index
 (((appnr)))
@@ -53,5 +53,8 @@ Debian-Paketsystem am besten ab und reduziert es nicht auf einen
 ``App-Store''. Von webbasierten Lösungen wie Appnr (siehe
 <<webbasierte-programme-appnr>>) sind wir bislang nicht überzeugt und
 raten Ihnen daher nicht zu diesen.
+
+[[ausblick-auswahl-des-installationsmediums]]
+==== Installations-CD/DVD oder Netzwerkinstallation? ====
 
 // Datei (Ende): ./ausblick/empfehlungen-fuer-einsteiger/empfehlungen-fuer-einsteiger.adoc
