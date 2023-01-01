@@ -57,4 +57,21 @@ raten Ihnen daher nicht zu diesen.
 [[ausblick-auswahl-des-installationsmediums]]
 ==== Installations-CD/DVD oder Netzwerkinstallation? ====
 
+Die Ausgangsposition ist hier, ob der Rechner, auf dem Debian GNU/Linux
+installiert und zukünftig gepflegt werden soll, überwiegend über eine
+verläßliche Internetverbindung verfügt oder nicht. Daraus leitet sich
+ab:
+
+* falls ja, dann ist eine Netzwerkinstallation die richtige Auswahl
+(Erfahrungswert). Erleichtert insbesondere die spätere Aktualisierung.
+Physische Medien oder Installationsabbilder sind nicht vorzuhalten.
+
+* falls nein, bleibt nur die Benutzung einer oder mehrerer
+Installations-CDs/DVDs oder Installationsabbilder. Diese müssen zur
+späteren Installation oder Entfernung von Paketen bereitliegen. Der
+Rechner muss zudem über eine Möglichkeit verfügen, die Medien oder
+Installationsabbilder auch einbinden und benutzen zu können. Infrage
+kommen bspw. ein CD/DVD-Laufwerk, ein USB-Port oder ein Slot für eine
+Speicherkarte, auf dem sich ein Installationsabbild befindet.
+
 // Datei (Ende): ./ausblick/empfehlungen-fuer-einsteiger/empfehlungen-fuer-einsteiger.adoc
