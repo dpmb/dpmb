@@ -63,13 +63,17 @@ verläßliche Internetverbindung verfügt oder nicht. Daraus leitet sich
 ab:
 
 * falls ja, dann ist eine Netzwerkinstallation die richtige Auswahl
-(Erfahrungswert). Erleichtert insbesondere die spätere Aktualisierung.
-Physische Medien oder Installationsabbilder sind nicht vorzuhalten.
+(Erfahrungswert). Das erleichtert insbesondere die spätere Aktualisierung.
+Physische Medien oder Installationsabbilder sind hierbei nicht
+vorzuhalten. Bitte beachten Sie, daß bei einer Unterbrechung der
+Internetanbindung des Rechners eine Aktualisierung oder Änderung des
+Paketbestands nur mit größerem Aufwand möglich ist.
 
 * falls nein, bleibt nur die Benutzung einer oder mehrerer
 Installations-CDs/DVDs oder Installationsabbilder. Diese müssen zur
-späteren Installation oder Entfernung von Paketen bereitliegen. Der
-Rechner muss zudem über eine Möglichkeit verfügen, die Medien oder
+späteren Installation oder Entfernung von Paketen bereitliegen, um den
+Bestand der installierten Pakete konsistent zu halten. Der Rechner muss
+zudem über eine Möglichkeit verfügen, die Medien oder
 Installationsabbilder auch einbinden und benutzen zu können. Infrage
 kommen bspw. ein CD/DVD-Laufwerk, ein USB-Port oder ein Slot für eine
 Speicherkarte, auf dem sich ein Installationsabbild befindet.
