@@ -31,9 +31,9 @@ liegen, wird mit dem Auspacken und Installieren der Pakete begonnen. So
 ist garantiert, dass alle durch Abhängigkeiten notwendigen Pakete auch
 lokal verfügbar sind und nichts mehr fehlt. Die Pakete werden daraufhin
 von `dpkg` unter Verwendung der Bibliotheken (siehe <<apt-und-bibliotheken>>)
-ausgepackt, die Dateien an die angegebene Stelle im Verzeichnisbaum
-kopiert und abschließend ggf. noch automatisch konfiguriert (siehe dazu
-<<pakete-konfigurieren>>).
+ausgepackt, die ausgepackten Dateien an die im Paket benannte Stelle im
+Verzeichnisbaum kopiert und abschließend ggf. noch automatisch
+konfiguriert (siehe dazu <<pakete-konfigurieren>>).
 
 ==== Was passiert, wenn nicht alle Pakete heruntergeladen werden konnten? ====
 
