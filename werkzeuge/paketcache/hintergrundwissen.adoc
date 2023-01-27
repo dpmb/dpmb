@@ -18,9 +18,12 @@ Puffer. In der Manpage von `apt-get` wird dafür auch der Begriff
 Laden Sie mittels der APT-Infrastruktur Debian-Pakete vom Spiegelserver
 herunter, werden diese nicht sofort entpackt, sondern zunächst lokal
 zwischengespeichert (``gecacht''). Vollständig heruntergeladene Pakete
-liegen im Verzeichnis `/var/cache/apt/archives/`, hingegen nur
-teilweise heruntergeladene Pakete unter
-`/var/cache/apt/archives/partial/`.
+liegen im Verzeichnis `/var/cache/apt/archives/` (siehe
+<<fig.inhalt-paketcache>>), hingegen nur teilweise heruntergeladene
+Pakete unter `/var/cache/apt/archives/partial/`.
+
+.Heruntergeladene Pakete im Paketcache
+image::werkzeuge/paketcache/inhalt-paketcache.png[id="fig.inhalt-paketcache", width="50%"]
 
 Erst wenn alle zur Installation oder Aktualisierung benötigten Pakete
 von APT oder `aptitude` heruntergeladen wurden und auch im Paketcache
