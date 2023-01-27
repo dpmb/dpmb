@@ -1,0 +1,23 @@
+// Datei: ./werkzeuge/paketcache/dateien-im-paketcache.adoc
+
+// Baustelle: Rohtext
+
+[[dateien-im-paketcache]]
+
+=== Dateien im Paketcache ===
+
+// Stichworte für den Index
+(((Paketcache, Dateien im Paketcache)))
+Der Paketcache hat keine komplexe Struktur. Darin befinden sich die
+folgenden Einträge:
+
+Debianpakete :: die Pakete in Form von `deb`-Dateien, die Sie zuvor 
+mittels `apt-get` oder `aptitude` heruntergeladen haben
+
+`lock`-Datei :: ToDo
+
+das Verzeichnis `partial` :: Debianpakete, die noch nicht vollständig
+heruntergeladen wurden. Wie Pakete darin landen, erklären wir Ihnen
+unter <<hintergrundwissen-paket-teilweise-heruntergeladen>>.
+
+// Datei (Ende): ./werkzeuge/paketcache/dateien-im-paketcache.adoc
