@@ -9,6 +9,9 @@
 // Hintergrundwissen
 include::hintergrundwissen.adoc[]
 
+// Dateien im Paketcache
+include::dateien-im-paketcache.adoc[]
+
 // Status des Paketcache
 include::paketcache-status.adoc[]
 

@@ -35,6 +35,7 @@ ausgepackt, die ausgepackten Dateien an die im Paket benannte Stelle im
 Verzeichnisbaum kopiert und abschließend ggf. noch automatisch
 konfiguriert (siehe dazu <<pakete-konfigurieren>>).
 
+[[hintergrundwissen-paket-teilweise-heruntergeladen]]
 ==== Was passiert, wenn nicht alle Pakete heruntergeladen werden konnten? ====
 
 // TODO: Gehört evtl. woanders hin. Wenn, dann gehört aber im
