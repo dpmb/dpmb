@@ -43,6 +43,19 @@ ist.
 
 ==== Größe des Paketcaches festlegen ====
 
-* ToDo
+// Stichworte für den Index
+(((apt-config, dump)))
+(((APT::Cache-Grow)))
+(((APT::Cache-Limit)))
+(((APT::Cache-Start)))
+(((Paketcache, Größe festlegen)))
+
+Der Defaultwert ist mit 0 festgelegt, d.h. es besteht keine
+Größenbegrenzung seitens APT. In diesem Fall ergeben sich die Limits aus
+der physikalischen Größe der Partition, der das Verzeichnis für den 
+Paketcache zugeordnet ist sowie dem Dateisystem auf der Partition
+selbst. Im Dateisystem sind wiederum die Anzahl der Inodes (Einträge)
+und die Blockgröße festgelegt, die letzendlich regeln, wieviele Pakete
+als Datei gespeichert werden können.
 
 // Datei (Ende): ./werkzeuge/paketcache/groesse-des-paketcaches.adoc
