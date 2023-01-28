@@ -15,6 +15,9 @@ include::dateien-im-paketcache.adoc[]
 // Status des Paketcache
 include::paketcache-status.adoc[]
 
+// Größe des Paketcache
+include::groesse-des-paketcache.adoc[]
+
 // Paketcache aufräumen
 include::paketcache-aufraeumen.adoc[]
 // Datei (Ende): ./werkzeuge/paketcache/paketcache.adoc
