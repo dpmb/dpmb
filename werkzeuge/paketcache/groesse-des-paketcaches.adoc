@@ -1,0 +1,15 @@
+// Datei: ./werkzeuge/paketcache/groesse-des-paketcaches.adoc
+
+// Baustelle: Notizen
+
+[[groesse-des-paketcaches]]
+
+=== Größe des Paketcaches ===
+
+// Stichworte für den Index
+(((Paketcache, /var/cache/apt/archives/)))
+(((Paketcache, belegter Speicherplatz)))
+
+* wieviel Platz belegt der Paketcache?
+
+// Datei (Ende): ./werkzeuge/paketcache/groesse-des-paketcaches.adoc
