@@ -10,6 +10,29 @@
 (((Paketcache, /var/cache/apt/archives/)))
 (((Paketcache, belegter Speicherplatz)))
 
-* wieviel Platz belegt der Paketcache?
+==== Wieviel Platz belegt der Paketcache? ====
+
+* mittels `apt-cache stats`
+
+----
+$ apt-cache stats | grep "Gesamtmenge an Speicher"
+Gesamtmenge an Speicher: 31,1 M
+$
+----
+
+* mittels `du`
+
+----
+$ du -sh /var/cache/apt/archives/
+1,4M	/var/cache/apt/archives/
+$
+----
+
+* warum liefern beide Kommandos unterschiedliche Werte auf dem gleichen
+System?
+
+==== Größe des Paketcaches festlegen ====
+
+* ToDo
 
 // Datei (Ende): ./werkzeuge/paketcache/groesse-des-paketcaches.adoc
