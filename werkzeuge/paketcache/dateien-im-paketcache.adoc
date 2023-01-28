@@ -14,7 +14,9 @@ folgenden Einträge:
 Debianpakete :: die Pakete in Form von `deb`-Dateien, die Sie zuvor 
 mittels `apt-get` oder `aptitude` heruntergeladen haben
 
-`lock`-Datei :: ToDo
+`lock`-Datei :: ein Marker in Form einer leeren Datei. Dieser
+verhindert, dass zwei Frontends nicht gleichzeitig einen Download 
+eines Paketes versuchen.
 
 das Verzeichnis `partial` :: Debianpakete, die noch nicht vollständig
 heruntergeladen wurden. Wie Pakete darin landen, erklären wir Ihnen
