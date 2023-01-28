@@ -52,6 +52,8 @@ Partition'' in <<cache-verzeichnis-auf-separater-partition>>.
 
 ==== Paketverwaltung passend konfigurieren ====
 
+// Stichworte für den Index
+(((Paketcache, aptitude::AutoClean-After-Update)))
 Die Programme `dpkg`, `apt-get`, `aptitude` und Synaptic räumen den
 Paketcache in der Standardeinstellung nicht eigenständig auf und
 belassen die Pakete nach der Installation oder Aktualisierung im
