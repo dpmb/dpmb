@@ -12,22 +12,31 @@
 
 ==== Wieviel Platz belegt der Paketcache? ====
 
-Diese Information erhalten Sie auf zwei Wegen. *Möglichkeit 1* ist der
-Aufruf von `apt-cache stats` in Kombination mit `grep`, wobei Sie die
-Zeile "Gesamtmenge an Speicher" aus der Ausgabe von `apt-cache stats`
+APT benutzt zwei Caches -- einen im RAM, und einen auf einem (lokalen)
+Speichermedium. Die Informationen dazu bedurften aufwendiger Recherche.
+
+Die Größe des APT-Caches im RAM erhalten Sie über den Aufruf von
+`apt-cache stats` in Kombination mit `grep`, wobei Sie die Zeile
+"Gesamtmenge an Speicher" aus der Ausgabe von `apt-cache stats`
 herausfiltern.
 
-.`apt-cache stats` liefert die Größe des APT-Caches
+.`apt-cache stats` liefert die Größe des APT-Caches im RAM
 ----
 $ apt-cache stats | grep "Gesamtmenge an Speicher"
 Gesamtmenge an Speicher: 31,1 M
 $
 ----
 
-Für *Möglichkeit 2* wenden Sie `du` mit den beiden Schaltern `-s`
-(Langform: `--summarize`) und `-h` (Langform: `--human-readable`) auf
-das Verzeichnis des Paketcaches an. Sofern nicht anders von Ihnen
-konfiguriert, ist der Pfad `/var/cache/apt/archives`.
+NOTE: Verwenden Sie ein Debian GNU/Linux mit englischer
+Spracheinstellung, lautet die betreffende Zeile "Total space accounted
+for:".
+
+`apt-cache` liefert hingegen keine Information darüber, wieviel Platz es
+auf einem physischen Datenträger belegt. Dazu greifen Sie auf ein 
+klassisches UNIX/Linux-Werkzeug zurück -- `du` mit den beiden Schaltern 
+`-s`(Langform: `--summarize`) und `-h` (Langform: `--human-readable`)
+angewendet auf das Verzeichnis des Paketcaches. Sofern nicht anders von 
+Ihnen zuvor konfiguriert, ist der Pfad `/var/cache/apt/archives`.
 
 .`du` ermittelt die Größe des Verzeichnisses des Paketcaches
 ----
@@ -35,11 +44,6 @@ $ du -sh /var/cache/apt/archives/
 1,4M	/var/cache/apt/archives/
 $
 ----
-
-In unseren Tests liefern beide Kommandos erheblich voneinander
-abweichende Werte auf dem gleichen System. Wir können derzeit noch nicht
-erklären, warum das so ist und warum bei `apt-cache` der Wert so hoch
-ist.
 
 ==== Größe des Paketcaches festlegen ====
 
@@ -55,7 +59,7 @@ Größenbegrenzung seitens APT. In diesem Fall ergeben sich die Limits aus
 der physikalischen Größe der Partition, der das Verzeichnis für den 
 Paketcache zugeordnet ist sowie dem Dateisystem auf der Partition
 selbst. Im Dateisystem sind wiederum die Anzahl der Inodes (Einträge)
-und die Blockgröße festgelegt, die letzendlich regeln, wieviele Pakete
+und die Blockgröße festgelegt, die letztendlich regeln, wieviele Pakete
 als Datei gespeichert werden können.
 
 // Datei (Ende): ./werkzeuge/paketcache/groesse-des-paketcaches.adoc
