@@ -1,6 +1,6 @@
 // Datei: ./werkzeuge/paketcache/groesse-des-paketcaches.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[groesse-des-paketcaches]]
 
@@ -12,24 +12,34 @@
 
 ==== Wieviel Platz belegt der Paketcache? ====
 
-* mittels `apt-cache stats`
+Diese Information erhalten Sie auf zwei Wegen. *Möglichkeit 1* ist der
+Aufruf von `apt-cache stats` in Kombination mit `grep`, wobei Sie die
+Zeile "Gesamtmenge an Speicher" aus der Ausgabe von `apt-cache stats`
+herausfiltern.
 
+.`apt-cache stats` liefert die Größe des APT-Caches
 ----
 $ apt-cache stats | grep "Gesamtmenge an Speicher"
 Gesamtmenge an Speicher: 31,1 M
 $
 ----
 
-* mittels `du`
+Für *Möglichkeit 2* wenden Sie `du` mit den beiden Schaltern `-s`
+(Langform: `--summarize`) und `-h` (Langform: `--human-readable`) auf
+das Verzeichnis des Paketcaches an. Sofern nicht anders von Ihnen
+konfiguriert, ist der Pfad `/var/cache/apt/archives`.
 
+.`du` ermittelt die Größe des Verzeichnisses des Paketcaches
 ----
 $ du -sh /var/cache/apt/archives/
 1,4M	/var/cache/apt/archives/
 $
 ----
 
-* warum liefern beide Kommandos unterschiedliche Werte auf dem gleichen
-System?
+In unseren Tests liefern beide Kommandos erheblich voneinander
+abweichende Werte auf dem gleichen System. Wir können derzeit noch nicht
+erklären, warum das so ist und warum bei `apt-cache` der Wert so hoch
+ist.
 
 ==== Größe des Paketcaches festlegen ====
 
