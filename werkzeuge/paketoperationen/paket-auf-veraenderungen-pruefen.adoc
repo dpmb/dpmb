@@ -246,7 +246,7 @@ auch die o.g. Dateien mit den MD5-Summen angepasst haben könnten.
 Möchten Sie sich jedoch stärker gegen Datei-Ersetzungen oder Änderungen
 durch professionelle Angreifer schützen, so reichen die hier genannten
 Techniken nicht aus. Dazu gibt es spezialisierte Pakete wie z. B.
-'tripwire', 'samhain', 'aide', 'intergrit', 'fcheck', 'stealth' und
+'tripwire', 'samhain', 'aide', 'integrit', 'fcheck', 'stealth' und
 'tiger'.
 
 ===== MD5-Summen von Dateien mit `dlocate` anzeigen ===== 
