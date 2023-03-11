@@ -16,9 +16,7 @@ Das Programm `how-can-i-help` aus dem gleichnamigen Paket
 Ihnen auf, welche konkrete Art der Unterstützung ein Paket benötigt. Es
 ergänzt den Eintrag von `how-can-i-help` im Debian Wiki
 <<Debian-Wiki-how-can-i-help>> um die dazu passende Funktionalität auf
-der Kommandozeile. Obwohl es erst offiziell ab Debian 8 'Jessie'
-verfügbar ist, gibt es ebenso ein Paket aus 'Debian Backports' für
-Debian 7 'Wheezy' (für 'Debian Backports' siehe <<debian-backports>>).
+der Kommandozeile. Es ist seit Debian 8 'Jessie' verfügbar.
 
 Als Datenquelle für seine Aussagen nutzt es die Ultimate Debian Database
 (UDD) <<Ultimate-Debian-Database>>. Dabei handelt es sich um eine
