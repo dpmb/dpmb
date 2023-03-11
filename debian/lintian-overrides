@@ -1,2 +1,2 @@
 # Feature request against doc-base, see https://bugs.debian.org/730240
-debian-paketmanagement-buch: doc-base-file-unknown-format debian-paketmanagement-buch:14 epub
+debian-paketmanagement-buch: doc-base-file-unknown-format epub [usr/share/doc-base/debian-paketmanagement-buch.debian-paketmanagement-buch:14]

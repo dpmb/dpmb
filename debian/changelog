@@ -3,6 +3,7 @@ dpmb (0~2023.03.11) UNRELEASED; urgency=medium
   * The Debian 12 Bookworm Edition.
     + Covers non-free-firmware archive section.
     + Debian 9 Stretch is now ELTS.
+  * Bracketize sole lintian override.
 
  -- Axel Beckert <abe@debian.org>  Sat, 11 Mar 2023 21:55:47 +0100
 
