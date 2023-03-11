@@ -133,7 +133,7 @@ und Lokalisierungen. Zum Beispiel hängt die Aufgabe
 Hilfedateien und Wörterbüchern von LibreOffice ab. Ähnliches existiert
 für Serverfunktionen, bspw. 'task-dns-server' und
 'task-database-server'. Diese Funktionalität stammt vom Paket 'tasksel'
-und wird ab Debian 7 _Wheezy_ intensiv verwendet. Auf das angesprochene
+und wird ab Debian 7 _Wheezy_ vermehrt verwendet. Auf das angesprochene
 Programm `tasksel` gehen wir in <<tasksel>> ausführlicher ein.
 
 [TIP]
