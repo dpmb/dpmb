@@ -41,7 +41,7 @@ Pakete.
 `Pin`::
 Nach dem Schlüsselwort `release` spezifizieren Sie die Veröffentlichung
 (siehe <<veroeffentlichungen>>). Dabei ist hier die Angabe eines
-Aliasnamens wie _Wheezy_ oder _Sid_ nicht erlaubt. Zulässig sind aber
+Aliasnamens wie _Bookworm_ oder _Sid_ nicht erlaubt. Zulässig sind aber
 bspw. die Versionsnummer, der Distributionsbereich und die Herkunft.
 Eine genaue Auflistung enthält <<tab.apt-pinning-parameter>>.
 

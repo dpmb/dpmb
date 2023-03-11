@@ -24,10 +24,11 @@ Paketverwaltung entwickeln.
 
 Diese Bibliothek aus dem Paket 'libapt-pkgX.Y' (`X.Y` ist in Debian 9
 _Stretch_ und Debian 10 _Buster_ `5.0`, siehe
-<<Debian-Paket-libapt-pkg5.0>>, und bei Debian 11 _Bullseye_ ist es
-`6.0`) enthält die Basiskomponenten zum Zugriff auf die einzelnen
-Softwarepakete. Das umfasst Funktionen zur Suche nach Paketen, deren
-Verwaltung sowie die Ausgabe der Paketinformationen. Dazu gehören:
+<<Debian-Paket-libapt-pkg5.0>>, und bei Debian 11 _Bullseye_ und
+Debian 12 _Bookworm_ ist es `6.0`) enthält die Basiskomponenten zum
+Zugriff auf die einzelnen Softwarepakete. Das umfasst Funktionen zur
+Suche nach Paketen, deren Verwaltung sowie die Ausgabe der
+Paketinformationen. Dazu gehören:
 
 * der Abruf von Informationen zu einem Paket aus den verschiedenen Paketquellen
 * der Abruf eines Pakets und der vollständigen Auflösung der

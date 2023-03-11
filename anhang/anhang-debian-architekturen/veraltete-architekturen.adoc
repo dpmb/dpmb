@@ -4,7 +4,7 @@
 [[anhang-veraltete-debian-architekturen]]
 === Veraltete Architekturen ===
 
-Folgende Architekturen werden von Debian 11 _Bullseye_ (und ggf. auch
+Folgende Architekturen werden von Debian 12 _Bookworm_ (und ggf. auch
 schon älteren stabilen Debian-Veröffentlichungen) nicht mehr
 unterstützt:
 

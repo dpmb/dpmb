@@ -27,7 +27,8 @@ Die Idee hinter von `lintian` war auch Vorbild für `rpmlint`
 <<Debian-Paket-rpmlint>> auch . Es leistet das gleiche für RPM-Pakete,
 ist aber in Python anstatt Perl geschrieben. Es war auch eine Weile in
 Debian nicht gepflegt und war deswegen weder Bestandteil von Debian 10
-_Buster_ noch von Debian 11 _Bullseye_.
+_Buster_ noch von Debian 11 _Bullseye_. In Debian 12 'Bookworm' ist es
+wieder mit dabei.
 
 Als Systemadministrator hilft Ihnen `lintian` primär dabei, sowohl
 eigene als auch die Pakete von Drittparteien aus nicht-Debian-eigenen

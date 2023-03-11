@@ -43,8 +43,44 @@ flashplugin-nonfree                 Adobe Flash Player - browser plugin
 $
 ----
 
+.Ausgabe von `check-dfsg-status` auf einem Desktop-System (Debian 12 _Bookworm_)
+----
+$  check-dfsg-status
+                 Non-free packages installed on c6
+
+cpp-12-doc                          documentation for the GNU C preprocessor (cpp)
+gcc-12-doc                          documentation for the GNU compilers (gcc, gobjc, g++)
+gdb-doc                             The GNU Debugger Documentation
+intel-media-va-driver-non-free      VAAPI driver for the Intel GEN8+ Graphics family
+intel-microcode                     Processor microcode firmware for Intel CPUs
+libretro-snes9x                     Libretro wrapper for Snes9x
+  Reason: No commercial distribution
+manpages-posix                      Manual pages about using POSIX system
+manpages-posix-dev                  Manual pages about using a POSIX system for developmen
+tar-doc                             documentation for the tar package
+tegrarcm                            Tool to upload payloads in Tegra SoC recovery mode
+unrar                               Unarchiver for .rar files (non-free version)
+  Reason: Modifications problematic
+wap-wml-tools                       Wireless Markup Language development and test tools
+
+                 Contrib packages installed on c6
+
+anbox                               Android in a box
+cpp-doc                             documentation for the GNU C preprocessor (cpp)
+gcc-doc                             documentation for the GNU compilers (gcc, gobjc, g++)
+gcc-doc-base                        several GNU manual pages
+libdvd-pkg                          DVD-Video playing library - installer
+torbrowser-launcher                 helps download and run the Tor Browser Bundle
+
+  12 non-free packages, 0.2% of 6022 installed packages.
+  6 contrib packages, 0.1% of 6022 installed packages.
+
+$
+----
+
 // Stichworte für den Index
 (((Debianpaket, vrms)))
+(((Debianpaket, check-dfsg-status)))
 (((vrms, -s)))
 (((vrms, --sparse)))
 Benötigen Sie hingegen lediglich eine Paketliste ohne zusätzliche

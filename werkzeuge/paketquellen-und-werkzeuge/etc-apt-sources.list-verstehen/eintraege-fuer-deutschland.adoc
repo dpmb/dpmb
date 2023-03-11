@@ -16,18 +16,23 @@ enthält die Datei typischerweise die folgenden Einträge:
 
 //.Inhalt der `/etc/apt/sources.list` für den deutschen Sprachraum
 ----
-deb http://ftp.de.debian.org/debian/ bullseye main contrib non-free
-deb-src http://ftp.de.debian.org/debian/ bullseye main contrib non-free
+deb http://ftp.de.debian.org/debian/ bookworm main contrib non-free non-free-firmware
+deb-src http://ftp.de.debian.org/debian/ bookworm main contrib non-free non-free-firmware
 
-deb http://security.debian.org/ bullseye-security main contrib non-free
+deb http://security.debian.org/ bookworm-security main contrib non-free non-free-firmware
 ----
 
 Mit den ersten beiden Zeilen beziehen Sie alle Binär- und Sourcepakete
 für die Distributionsbereiche _main_, _contrib_ und _non-free_ für die
-Veröffentlichung Debian 11 _Bullseye_ vom primären deutschen
+Veröffentlichung Debian 12 _Bookworm_ vom primären deutschen
 Debian-Spiegelserver. Mit den Zeilen drei und vier beziehen Sie
 zusätzlich die dazugehörigen Sicherheitsaktualisierungen für alle
 Distributionsbereiche der gleichen Veröffentlichung von der zentralen
 Stelle `security.debian.org`.
+
+Für Veröffentlichungen vor Debian 12 _Bookworm_ müssen Sie allerdings
+den Distributionsbereich `non-free-firmware` weglassen. Dieser kam
+erst mit Debian 12 _Bookworm_ hinzu. Paket aus diesem Bereich waren
+bei vorherigen Veröffentlichungen im Bereich `non-free` mit dabei.
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/eintraege-fuer-deutschland.adoc

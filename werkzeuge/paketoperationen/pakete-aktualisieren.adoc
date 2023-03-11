@@ -210,10 +210,9 @@ Pakete anzeigen'' in <<aktualisierbare-pakete-anzeigen>> ein.
 Sichtbar wird die Änderung auch im Paketnamen. Debian handhabt es so,
 dass bei Sicherheitsaktualisierungen (genannt 'security updates') dem
 Paketnamen eine spezielle Zeichenkette angefügt wird. Die erste 
-Fehlerbereinigung für Debian 7 _Wheezy_ ist `~deb7u1`, die zweite
-`~deb7u2` (siehe dazu auch ``Bennenung eines Debian-Paketes'' unter
-<<benennung-eines-debian-pakets>>). Bei neuen Versionen mit
-Funktionserweiterungen wird die Versionsnummer des Pakets erhöht.
+Fehlerbereinigung für Debian 12 _Bookwork_ ist `+deb12u1`, die zweite
+`+deb12u2` (siehe dazu auch ``Bennenung eines Debian-Paketes'' unter
+<<benennung-eines-debian-pakets>>).
 
 [[pakete-aktualisieren-dist-upgrade]]
 ==== `dist-upgrade` und `full-upgrade` ====

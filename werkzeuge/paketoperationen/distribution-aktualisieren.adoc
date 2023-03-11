@@ -18,14 +18,19 @@ Aufwand soll schließlich nicht umsonst gewesen sein.
 Eine Aktualisierung bedeutet stets größere Umbauarbeiten, bei dem sich
 vergleichsweise viel ändert und durchaus auch etliches schief gehen
 kann, womit Sie nicht unbedingt rechnen. An der Stelle sei jedoch zu
-Ihrer Beruhigung angemerkt, dass der Wechsel von Debian 6 _Squeeze_
+Ihrer Beruhigung angemerkt, dass z.B. der Wechsel von Debian 6 _Squeeze_
 auf Debian 7 _Wheezy_ recht unspektakulär verlief und vielfach
-problemlos über die Bühne ging. Beim Wechsel von Debian 7 _Wheezy_ auf
-Debian 8 _Jessie_ war vor allem der Wechsel von Apache 2.2 auf Apache
-2.4 mit manuellen Anpassungen an der Apache-Konfiguration verbunden.
-Beim Wechsel von Debian 8 _Jessie_ nach Debian 9 _Stretch_ muss darauf
-geachtet werden, dass lokal installierte PHP-Anwendungen auch mit PHP
-7.0 kompatibel sind.
+problemlos über die Bühne ging. Beim Wechsel von Debian 8 _Jessie_
+nach Debian 9 _Stretch_ muss darauf geachtet werden, dass lokal
+installierte PHP-Anwendungen auch mit PHP 7.0 kompatibel sind. Beim
+Wechsel von Debian 10 _Buster_ auf Debian 11 _Bullseye_ ist zu
+beachten, dass sich der Verzeichnis- bzw. Codename der
+Sicherheitsaktualisierungen von `buster/updates` zu
+`bullseye-security` geändert hat. Und beim Wechsel von Debian 11
+_Bullseye_ auf Debian 12 _Bookworm_ ist zu beachten, dass unfreie
+Firmware nicht mehr mit anderer unfreier Software im Bereich
+`non-free` ist sondern in den Bereich `non-free-firmware` abgetrennt
+wurde.
 
 Trotzdem halten wir es für ganz praktisch, wenn wir Ihnen eine
 Schritt-für-Schritt-Abfolge zur Verfügung stellen, der Sie folgen

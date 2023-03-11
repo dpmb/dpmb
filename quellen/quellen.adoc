@@ -675,6 +675,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[GObject-Introspection]]] GObject Introspection Middleware, https://wiki.gnome.org/Projects/GObjectIntrospection
 
+- [[[gr-non-free-firmware]]] General Resolution: non-free firmware, https://www.debian.org/vote/2022/vote_003
+
 - [[[Graphviz]]] Graphviz -- Graph Visualization Software, http://www.graphviz.org/
 
 - [[[Grml]]] Grml, https://grml.org/

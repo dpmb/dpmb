@@ -25,6 +25,7 @@ Paketen aus bestimmten Distributionsbereichen legen Sie somit den
 (((Distributionsbereiche, main)))
 (((Distributionsbereiche, contrib)))
 (((Distributionsbereiche, non-free)))
+(((Distributionsbereiche, non-free-firmware)))
 (((DFSG)))
 (((Software, frei)))
 (((Software, unfrei)))
@@ -40,6 +41,14 @@ Freie Software, die von unfreier Software abhängt.
 non-free::
 Software, die _nicht_ den Debian-Richtlinien für freie Software (DFSG)
 entspricht, aber frei verteilbar ist.
+
+non-free-firmware::
+Firmware, die _nicht_ den Debian-Richtlinien für freie Software (DFSG)
+entspricht, aber frei verteilbar ist. (Diesen Bereich gibt es erst ab
+Debian 12 _Bookworm_. Er wurde nach einer Abstimmung innerhalb von
+Debian im Jahre 2022 von _non-free_ abgetrennt
+<<gr-non-free-firmware>>. In vorherigen Veröffentlichungen waren
+unfreie Firmware-Pakete im Bereich _non-free_ untergebracht.)
 
 ==== Einordnung der Distributionsbereiche in Debian ====
 

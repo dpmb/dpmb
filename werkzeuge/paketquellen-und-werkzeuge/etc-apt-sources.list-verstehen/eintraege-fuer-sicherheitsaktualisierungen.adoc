@@ -38,8 +38,8 @@ deb http://security.debian.org/ <veröffentlichungsname>/updates <archivbereiche
 deb http://security.debian.org/ <veröffentlichungsname>-security <archivbereiche>
 ----
 
-Entsprechend hier Beispiele für Debian 10 _Buster_ und Debian 11
-_Bullseye_:
+Entsprechend hier Beispiele für Debian 10 _Buster_, Debian 11
+_Bullseye_ und Debian 12 _Bookworm_:
 
 .`sources.list`-Eintrag für Sicherheitsaktualisierungen in Debian 10 _Buster_
 ----
@@ -51,11 +51,17 @@ deb http://security.debian.org/ buster/updates main contrib non-free
 deb http://security.debian.org/ bullseye-security main contrib non-free
 ----
 
+.`sources.list`-Eintrag für Sicherheitsaktualisierungen in Debian 12 _Bookworm_
+----
+deb http://security.debian.org/ bookworm-security main contrib non-free non-free-firmware
+----
+
 Obige Angaben beinhalten wiederum die empfohlene explizite Verwendung
 des Aliasnamens der Veröffentlichung anstatt des Suite-Namens. Dieser
 Name wird gefolgt vom Unterverzeichnis `updates` und den daraus
-gewünschten Distributionsbereichen _main_, _contrib_ und
-_non-free_. Je nach System nicht benötigte Archiv-Bereiche
-(z.B. _non-free_) können Sie einfach weglassen.
+gewünschten Distributionsbereichen _main_, _contrib_ und _non-free_
+sowie ab Debian 12 _Bookworm_ auch _non-free-firmware_. Je nach System
+nicht benötigte Archiv-Bereiche (z.B. _non-free_ oder
+_non-free-firmware_) können Sie einfach weglassen.
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/eintraege-fuer-sicherheitsaktualisierungen.adoc

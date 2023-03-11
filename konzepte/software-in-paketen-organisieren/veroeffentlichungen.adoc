@@ -146,6 +146,7 @@ Im Detail gehen wir darauf unter ``Debian Backports'' in
 (((Veröffentlichung, Buzz)))
 (((Veröffentlichung, Bo)))
 (((Veröffentlichung, Etch)))
+(((Veröffentlichung, Forky)))
 (((Veröffentlichung, Hamm)))
 (((Veröffentlichung, Jessie)))
 (((Veröffentlichung, Lenny)))
@@ -205,12 +206,14 @@ veröffentlichte die Version 1.1 ein halbes Jahr später.
 
 * Debian 11 _Bullseye_ (14. August 2021; benannt nach dem Pferd von _Woody Pride_)
 
+* Debian 12 _Bookworm_ (Sommer 2023; benannt nach dem intelligenten Bücherwurm, einem Spielzeug mit eingebauter Leuchte aus 'Toy Story 3')
+
 Es stehen bereits ebenfalls die Namen von zwei zukünftigen Veröffentlichungen fest:
 
-* Debian 12 _Bookworm_ -- benannt nach dem intelligenten Bücherwurm,
-einem Spielzeug mit eingebauter Leuchte aus 'Toy Story 3'
-
 * Debian 13 _Trixie_ -- benannt nach dem blauen Dinosaurier
+
+* Debian 14 _Forky_ -- benannt nach dem aus Müll zusammengebauten
+  Hauptcharakter aus 'Toy Story 4'.
 
 Mehr Details zu den einzelnen Veröffentlichungen finden sich in der
 Debian-Geschichte <<Debian-History>>. Die Figuren aus den verschiedenen

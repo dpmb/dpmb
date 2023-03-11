@@ -44,11 +44,11 @@ verwendet wird und in den administrativen Bereich fällt.
 set nthreads     5
 set _tilde 0
 
-deb http://ftp.de.debian.org/debian/ bullseye main contrib non-free
-deb http://security.debian.org/ bullseye-security main contrib non-free
+deb http://ftp.de.debian.org/debian/ bookworm main contrib non-free non-free-firmware
+deb http://security.debian.org/ bookworm-security main contrib non-free non-free-firmware
 
 # backports
-deb http://ftp.de.debian.org/debian bullseye-backports main contrib non-free
+deb http://ftp.de.debian.org/debian bookworm-backports main contrib non-free non-free-firmware
 
 # cleaning section
 clean http://ftp.de.debian.org/debian/

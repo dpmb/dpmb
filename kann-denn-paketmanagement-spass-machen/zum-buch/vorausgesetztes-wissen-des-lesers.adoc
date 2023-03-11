@@ -86,8 +86,8 @@ verwenden. Begonnen haben wir das Buch zu dem Zeitpunkt, als Debian 7
 'Wheezy' die stabile Debian-Veröffentlichung war. Daher stammen 
 viele Beispiele im Buch aus diesem Zeitraum. Spätere Inhalte setzen 
 auf den Nachfolgern Debian 8 'Jessie', Debian 9 'Stretch', Debian 10
-'Buster' und Debian 11 'Bullseye' auf. Alle Ausnahmen sind
-entsprechend gekennzeichnet, bspw.  wenn wir zur Illustration auf ein
-Derivat wie Ubuntu zurückgegriffen haben.
+'Buster', Debian 11 'Bullseye' und Debian 12 'Bookworm' auf. Alle
+Ausnahmen sind entsprechend gekennzeichnet, bspw. wenn wir zur
+Illustration auf ein Derivat wie Ubuntu zurückgegriffen haben.
 
 // Datei (Ende): ./kann-denn-paketmanagement-spass-machen/zum-buch/vorausgesetztes-wissen-des-lesers.adoc

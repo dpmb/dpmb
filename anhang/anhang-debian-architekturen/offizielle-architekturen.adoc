@@ -4,7 +4,7 @@
 [[anhang-offizielle-debian-architekturen]]
 === Offizielle Architekturen ===
 
-Debian 11 _Bullseye_  unterstützt die folgenden Architekturen und Plattformen:
+Debian 12 _Bookworm_  unterstützt die folgenden Architekturen und Plattformen:
 
 i386 (i486/i586/i686)::
 x86 (PC) 32-Bit. Trotz des Namens ab Debian 8 _Jessie_ nur
@@ -42,5 +42,7 @@ nutzt die neue OpenPower-ELFv2-ABI.
 
 s390x (s390x-linux-gnu)::
 IBM S/390 und zSeries, 64-Bit-Userland.
+
+Gegenüber Debian 11 _Bullseye_ ist diese Liste unverändert.
 
 // Datei (Ende): ./anhang/anhang-debian-architekturen/offizielle-architekturen.adoc

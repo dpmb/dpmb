@@ -136,6 +136,6 @@ $
 ----
 
 Nach unseren Tests funktioniert obige Lösung ebenfalls für Debian 11
-'Bullseye'.
+'Bullseye' und 12 'Bookworm'.
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfiguration-von-apt-anzeigen.adoc
