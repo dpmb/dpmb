@@ -22,8 +22,8 @@ Dennoch wurde die von nun an 'Debian Backports' genannten Pakete noch
 eine Weile getrennt von den offiziellen Paketen der Distribution
 verteilt. Erst seit Debian 7 'Wheezy' sind die Backports ebenfalls im
 selben Paketpool enthalten, jedoch nach wie vor in einem eigenen Zweig,
-der auf die Zeichenkette `-backports` endet. Aus diesem Grunde sind
-Backports für Debian 6 'Squeeze' leicht anders einzurichten, als für
+der auf die Zeichenkette `-backports` endet. Aus diesem Grunde waren
+Backports für Debian 6 'Squeeze' noch leicht anders einzurichten, als für
 darauf folgende Veröffentlichungen.
 
 // Datei (Ende): ./praxis/debian-backports/backports-intro.adoc
