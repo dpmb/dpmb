@@ -518,6 +518,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Paket-zutils]]] Debian-Paket 'zutils', https://packages.debian.org/de/stable/zutils
 
+- [[[debian-partners-fastly]] Eintrag von Fastly auf der Debian-Partner-Liste, https://www.debian.org/partners/#Fastly
+
 - [[[Debian-Policy-Manual]]] Debian Policy Manual, https://www.debian.org/doc/debian-policy/
 
 - [[[Debian-Policy-Subsections]]] Debian Policy Manual, Bereich Subsections, https://www.debian.org/doc/debian-policy/ch-archive.html#s-subsections

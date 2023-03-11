@@ -1,9 +1,6 @@
 // Datei: ./werkzeuge/paketquellen-und-werkzeuge/automatisiertes-auswaehlen-von-paketquellen.adoc
 
 // Baustelle: Rohtext
-// TODO: cdn.debian.net ist tot, zeigt auf http.debian.net
-// TODO: http.debian.net wurde zu httpredir.debian.org
-// TODO: httpredir.debian.org wurde ersetzt durch statisches deb.debian.org
 
 [[automatisiertes-auswaehlen-von-paketquellen]]
 === Automatisiertes Auswählen von Paketquellen ===
@@ -64,194 +61,45 @@ Diese Funktionalitat lässt sich nutzen, um anhand der anfragenden
 IP-Adresse automatisiert einen geographisch nahen Paketmirror zu
 finden. Bei Debian ist dies an mehreren Stellen im Einsatz.
 
-==== GeoIP per DNS ====
+==== Per CDN ====
 
-// TODO: cdn.debian.net ist tot, zeigt auf http.debian.net
+'CDN' steht für "Content Distribution Network" und beschreibt einen
+Service, der über die Welt verteilt viele Server stehen hat und je
+nach Qrt der Anfrage ein anderer Server kontaktiert wird. Die
+Verteilung auf verschiedene Server passiert dabei auf unterschiedliche
+Weisen. Mal antwortet unter der selben IP-Adresse ein anderer Server
+und die Verteilung wird per Routing gelöst. Mal kommt je nach Ort der
+DNS-Anfrage eine andere IP-Adresse als DNS-Antwort zurück.
 
-Mit dem Hostnamen `cdn.debian.net`{empty}footnote:['CDN' steht für Content
-Distribution Network] erreichen Sie seit vielen Jahren (fast) immer
-einen offiziellen Debian-Spiegelserver in ihrer Nähe. `cdn.debian.net`
-war daher für einige Jahre die Voreinstellung im Debian-Installer, wenn
-Sie nicht explizit einen anderen Paketmirror ausgewählt haben.
+Die Sicherheitsaktualisierungen von Debian kommen nicht über das
+normale Spiegelnetzwerk, welches regulär nur alle sechs Stunden
+aktualisiert wird. Stattdessen besteht ein separates Spiegelnetzwerk
+unter dem Hostnamen `security.debian.org`, das nur nach Bedarf
+aktualisiert wird.  Dieses Spiegelnetzwerk verwendet schon seit
+längerem ein CDN.
 
-Die Nähe wird bei diesem System über die Quell-IP der DNS-Anfrage
-bestimmt und hängt somit auch davon ab, wo der zwischenspeichernde
-DNS-Server steht, an den die DNS-Anfrage gesendet wurde.
-Netzwerktechnisch betrachtet stehen diese DNS-Server im Normalfall
-immer unweit des anfragenden Rechners.
+Seit einigen Jahren ist aber auch die Standard-Einstellung in der
+`sources.list`-Datei von Debian der Hostname `deb.debian.org`, der
+auch wiederum auf ein CDN zeigt, zur Zeit auf das CDN von Fastly
+<<debian-partners-fastly>>.
 
-Da hier die Auswahl des Paketmirrors bereits auf DNS-Ebene passiert,
-funktioniert diese Methode nicht nur mit HTTP, sondern auch mit FTP
-und theoretisch sogar auch mit `rsync`. Allerdings bieten nicht alle
-Paketmirror den Inhalt auch per `rsync` an. Somit funktioniert
-`cdn.debian.net` stets zuverlässig mit HTTP als auch mit FTP in der
-`/etc/apt/sources.list`. Nachfolgendes Beispiel zeigt
-Eintragungen für Debian 'Wheezy' mit HTTP wie auch FTP:
-
-----
-deb http://cdn.debian.net/debian/ wheezy main contrib non-free
-deb ftp://cdn.debian.net/debian/ wheezy main contrib non-free
-----
-
-Eine tatsächliche Nähe zum zurückgegebenen Paketmirror ist jedoch nicht
-immer gegeben. Zeitweise funktioniert dieser Dienst in manchen Ländern
-auch weniger gut. Nachfolgend sehen Sie einige Beispiele für ausgewählte
-Regionen. Das erste Beispiel stammt aus Deutschland:
-
-.Erreichbarkeit des Paketmirrors `cdn.debian.net` von Deutschland aus
-----
-$ host cdn.debian.net
-cdn.debian.net is an alias for deb.cdn.araki.net.
-deb.cdn.araki.net has address 137.226.34.42
-deb.cdn.araki.net has address 129.143.116.10
-deb.cdn.araki.net has address 195.71.68.86
-$
-----
-
-In Frankreich bekommen Sie ggf. die folgende Ausgabe:
-
-.Erreichbarkeit des Paketmirrors `cdn.debian.net` von Frankreich aus
-----
-$ host cdn.debian.net
-cdn.debian.net is an alias for deb.cdn.araki.net.
-deb.cdn.araki.net has address 91.121.124.139
-$
-----
-
-Ein Beispiel aus Schweden:
-
-.Erreichbarkeit des Paketmirrors `cdn.debian.net` von Schweden aus
-----
-$ host cdn.debian.net
-cdn.debian.net is an alias for deb.cdn.araki.net.
-deb.cdn.araki.net has address 213.129.232.18
-$
-----
-
-Machen Sie die Anfrage hingegen aus Großbritannien, kann es so aussehen:
-
-// Interne Notiz: Getestet von abel.debian.org
-
-.Erreichbarkeit des Paketmirrors `cdn.debian.net` von Großbritannien aus
-----
-$ host cdn.debian.net
-cdn.debian.net is an alias for deb.cdn.araki.net.
-deb.cdn.araki.net has address 83.142.228.128
-$
-----
-
-Für die Schweiz sah es zum Zeitpunkt unserer Recherche leider etwas
-enttäuschend aus. Der Dienst war nicht verfügbar -- wie man sieht,
-funktionert der Dienst eben nicht überall perfekt.
-
-.Erreichbarkeit des Paketmirrors `cdn.debian.net` von der Schweiz aus
-----
-$ host cdn.debian.net
-Host cdn.debian.net not found: 3(NXDOMAIN)
-$
-----
-
-==== Immer per CDN: Security-Updates ====
-
-Security-Updates kommen bei Debian nicht über das normale
-Spiegelnetzwerk, welches regulär nur alle sechs Stunden aktualisiert
-wird. Stattdessen besteht ein separates Spiegelnetzwerk unter dem
-Hostnamen `security.debian.org`, das nur nach Bedarf aktualisiert
-wird.  Dieses Spiegelnetzwerk verwendet schon seit längerem ein CDN.
-
-==== GeoIP per HTTP-Redirect ====
-
-Raphael Geissert hat den Debian
-Redirector <<Debian-Redirector>> entwickelt, der eine Alternative zu
-`cdn.debian.net` darstellt. Ursprünglich lief dieser Dienst
-unter der URL `http://http.debian.net/` außerhalb der Debian-internen
-Infrastruktur. Seit Mai 2015 ist der Dienst auf Debian-eigene
-Server umgezogen und dort unter `http://httpredir.debian.org/`
-zu erreichen. Die ursprüngliche Adresse `http://http.debian.net/`
-leitet seitdem automatisch auf `http://httpredir.debian.org/` um.
-Tragen Sie als Paketquelle
-`http://httpredir.debian.org/debian/` ein, sendet APT zuerst eine
-HTTP-Anfrage an `httpredir.debian.org` und bekommt als Antwort eine
-Weiterleitung an den eigentlichen Paketmirror. Die nachfolgende
-Ausschnitt zeigt den Eintrag für Debian 7 'Wheezy' in der Datei
-`/etc/apt/sources.list`:
+Eine DNS-Anfrage auf diesen Hostnamen aus der Schweiz sieht so aus:
 
 ----
-deb http://httpredir.debian.org/debian/ wheezy main contrib non-free
+$ host deb.debian.org
+deb.debian.org is an alias for debian.map.fastlydns.net.
+debian.map.fastlydns.net has address 146.75.122.132
+debian.map.fastlydns.net has IPv6 address 2a04:4e42:8e::644
 ----
 
-Interessant ist auch die Netzwerkkommunikation, die (unbemerkt) im
-Hintergrund abläuft. Wir zeigen das anhand eines Beispiels aus der
-Schweiz genauer. Zur Analyse kommt das Kommando `GET` aus dem Paket
-'libwww-perl' zum Einsatz. Zu sehen ist, dass die Anfrage an
-`httpredir.debian.org` aufgelöst wird und eine Weiterleitung (Redirect) zum
-Debian-Paketmirror an der ETH Zürich erfolgt.
+Eine DNS-Anfrage aus Schweden dagegen anders:
 
-.Auswertung der Netzwerkkommunikation bei der Auflösung der IP
 ----
-$ GET -SUsed http://httpredir.debian.org/debian/
-GET http://httpredir.debian.org/debian/
-User-Agent: lwp-request/6.03 libwww-perl/6.04
-
-302 Found
-Connection: close
-Date: Thu, 10 Jul 2014 00:32:59 GMT
-Location: http://debian.ethz.ch/debian/
-Vary: Accept-Encoding
-Content-Length: 0
-Content-Type: text/plain
-Client-Date: Thu, 10 Jul 2014 00:32:59 GMT
-Client-Peer: 46.4.205.44:80
-Client-Response-Num: 1
-
-GET http://debian.ethz.ch/debian/
-User-Agent: lwp-request/6.03 libwww-perl/6.04
-
-200 OK
-Connection: close
-Date: Thu, 10 Jul 2014 00:32:59 GMT
-Server: Apache/2.2.22 (Debian)
-Vary: Accept-Encoding
-Content-Type: text/html;charset=UTF-8
-Client-Date: Thu, 10 Jul 2014 00:32:59 GMT
-Client-Peer: 129.132.53.171:80
-Client-Response-Num: 1
-Client-Transfer-Encoding: chunked
-Title: Index of /debian
-$
+$ host deb.debian.org
+deb.debian.org is an alias for debian.map.fastlydns.net.
+debian.map.fastlydns.net has address 199.232.18.132
+debian.map.fastlydns.net has IPv6 address 2a04:4e42:41::644
 ----
-
-Von *Vorteil* ist hier die höhere Genauigkeit. Die GeoIP kann nicht nur
-auf den zwischenspeichernden DNS-Servern, sondern auch auf den
-anfragenden Rechner selbst angewendet werden. Dabei wird auch das
-genutzte Netzwerkprotokoll berücksichtigt. Nutzen Sie IPv6, erhalten Sie
-dann eine Empfehlung für einen passenden, IPv6-fähigen Paketmirror in
-ihrer Nähe <<Debian-Mirror-Doku>>.
-
-Desweiteren kann der Redirect auch in Abhängigkeit der angefragten Datei
-passieren. So werden z.B. Anfragen nach Paketen aus dem Bereich
-'Backports' nur an Paketmirrors weitergeleitet, die auch die Paketquellen
-für 'Backports' spiegeln{empty}footnote:[Dies ist nur noch für Debian 6
-'Squeeze' relevant. Ab Debian 7 'Wheezy' sind die Backports in den
-normalen Debian-Paketquellen enthalten.]. Darüber hinaus muss die
-Paketquelle nicht auf jeden Paketspiegel unter dem gleichen Pfad liegen.
-Möglich sind z.B. statt der Empfehlung `/debian/` auch
-`/pub/debian/` oder `/mirror/debian/`.
-
-// TODO: Doppelt! Der Inhalt der Fußnote ist mehr oder weniger auch in praxis/debian-backports/backports-intro.adoc und praxis/debian-backports/einbindung-in-den-paketbestand.adoc
-
-Das Verfahren mit HTTP-Weiterleitungen hat jedoch auch *Nachteile*.
-Einerseits funktioniert es ausschließlich per HTTP (oder HTTPS), da FTP
-keine Weiterleitungen kennt. Aus dieser Einschränkung leitet sich auch
-der Hostname `httpredir.debian.org` ab. Andererseits werden pro Paketliste
-sowie pro heruntergeladenem Paket stets zwei HTTP-Anfragen gesendet.
-
-Da sich dieses Verfahren trotz der o.g. Einschränkung in der Praxis als
-zuverlässiger, flexibler, genauer und leichter wartbar erwies{empty}footnote:[Es
-ist wesentlich leichter installierbar als ein autoritativer
-DNS-Server für eine bestimmte Zone und der Quellcode ist per Git
-verfügbar.], setzt es sich gegenüber dem Dienst `cdn.debian.net` und
-somit innerhalb von Debian immer mehr als Voreinstellung durch.
 
 ==== Automatische Paketmirror-Auswahl per Mirror-Liste ====
 
