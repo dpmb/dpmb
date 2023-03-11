@@ -293,7 +293,7 @@
 
 - [[[Debian-Paket-autopkgtest]]] Debian-Paket 'autopkgtest', https://packages.debian.org/de/stable/autopkgtest
 
-- [[[Debian-Paket-checkinstall]]] Debian-Paket 'checkinstall', https://packages.debian.org/de/stretch/checkinstall
+- [[[Debian-Paket-checkinstall]]] Debian-Paket 'checkinstall', https://packages.debian.org/de/bookworm/checkinstall
 
 - [[[Debian-Paket-command-not-found]]] Debian-Paket 'command-not-found', https://packages.debian.org/de/stable/command-not-found
 
