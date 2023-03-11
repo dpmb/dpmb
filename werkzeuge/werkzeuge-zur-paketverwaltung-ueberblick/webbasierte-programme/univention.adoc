@@ -31,9 +31,10 @@ vorhanden sind. Durch regionale Kooperationspartner vor Ort und den
 Hersteller Univention GmbH werden die Kunden technisch betreut und der
 Support sichergestellt. 
 
-Den Ausgangspunkt bildet stets ein aktuelles Debian -- derzeit die
-Version 7 'Wheezy'. Für diese Softwarebasis pflegt Univention eine Reihe
-von Eigenentwicklungen und Anpassungen.
+Den Ausgangspunkt bildet stets eine stabile Debian-Veröffentlichung --
+UCS 5.0 basieert z.B. auf Debian 10 _Buster_, UCS 4.4 auf Debian 9
+_Stretch_. Für diese Softwarebasis pflegt Univention eine Reihe von
+Eigenentwicklungen und Anpassungen.
 
 Konkret zeigt sich das bereits im Paketnamen. Alle von Univention
 modifizierten Pakete tragen das Präfix 'univention', so bspw.
