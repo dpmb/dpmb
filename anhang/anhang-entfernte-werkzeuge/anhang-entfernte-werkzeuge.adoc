@@ -64,8 +64,8 @@ Es war das letzte Paket, dass noch die Bibliothek 'pykde4' benötigte.
 Das Werkzeug `apt-key` wurde abgekündigt. In Folge werden auch dessen
 alternative Bedienschnittstellen `gui-apt-key`
 <<Debian-Paket-gui-apt-key>> und `curses-apt-key` <<curses-apt-key>>
-nicht mehr weiterentwickelt. Beide waren zuletzt in Debian 9 _Stretch_
-enthalten.
+nicht mehr weiterentwickelt. `gui-apt-key` waren zuletzt in Debian 9
+_Stretch_ enthalten.
 
 `software-center`::
 Eine von Ubuntu entwickelte, grafische Benutzerschnittstelle zur
