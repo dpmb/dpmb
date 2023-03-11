@@ -15,7 +15,6 @@ Art_der_Quelle URI Distribution [Komponente 1] [Komponente 2] [...]
 ----
 
 // Stichworte für den Index
-(((debtorrent)))
 (((Paketvarianten, Binärpaket)))
 (((Paketvarianten, Sourcepaket)))
 (((/var/cache/apt/archives/)))
@@ -44,11 +43,6 @@ werden zusätzlich im lokalen Verzeichnis `/var/cache/apt/archives/`
 abgelegt
 * `mirror`: Auswahl einer Installationsquelle anhand der GeoIP des
 Servers (siehe <<paketquellen-ueber-geoip-auswaehlen>>)
-* `debtorrent`: die Pakete werden über DebTorrent auf der Basis des
-BitTorrent-Protokolls bezogen <<Debian-Wiki-DebTorrent>>. Die Grundlage
-dafür bildet das Debianpaket 'apt-transport-debtorrent'
-<<Debian-Paket-apt-transport-debtorrent>>, welches installiert sein
-muss.
 
 Distribution:: 
 benennt die Veröffentlichung (siehe <<veroeffentlichungen>>), aus der

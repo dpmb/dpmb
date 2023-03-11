@@ -39,8 +39,7 @@ Daten (Validierung)
 * der Zugriff auf den Paketcache (siehe <<paketcache>>)
 * die Bereitstellung von Schnittstellen zu Netzwerkprotokollen, um Daten
 und Pakete über diese beziehen zu können. Dazu gehören bspw. CD-ROM,
-FTP, HTTP/S, rsh und DebTorrent (APT über BitTorent)
-(<<Debian-Paket-apt-transport-debtorrent>> und <<Debian-Wiki-DebTorrent>>).
+FTP, HTTP/S und rsh.
 
 === Bibliothek `libapt-pkg-perl` ===
 

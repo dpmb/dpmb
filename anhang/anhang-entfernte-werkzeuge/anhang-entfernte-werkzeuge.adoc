@@ -16,12 +16,6 @@ vorschlägt. Dieses wurde 2016 in Debian 'unstable' aufgenommen, aber
 bereits 2017 wieder entfernt. `apprecommender` war nie Bestandteil einer
 stabilen Debian-Veröffentlichung.
 
-`apt-transport-debtorrent`::
-Ein P2P-Plugin zum Abgleichen und Kopieren von bereits heruntergeladenen
-Paketen zwischen verschiedenen Maschinen mit einer Debian-Installation
-im LAN. `apt-transport-debtorrent` war zuletzt in Debian 7 _Wheezy_
-enthalten und wurde 2013 aus Debian 'unstable' entfernt.
-
 `aptoncd`::
 Werkzeug, um Aktualisierungen auf Systemen ohne Netzwerkanschluss
 einzuspielen. `aptoncd` war zuletzt in Debian 8 _Jessie_ enthalten und
