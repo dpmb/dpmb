@@ -7,6 +7,7 @@ dpmb (0~2023.03.11) UNRELEASED; urgency=medium
   * Add lintian override for very-long-line-length-in-source-file on
     binary file and handwritten Markdown files with a few long semantic
     HTML oneliners.
+  * Declare compliance with Debian Policy 4.6.2. (No changes needed.)
 
  -- Axel Beckert <abe@debian.org>  Sat, 11 Mar 2023 21:55:47 +0100
 
