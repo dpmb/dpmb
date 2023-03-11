@@ -5,7 +5,8 @@ dpmb (0~2023.03.11) UNRELEASED; urgency=medium
     + Debian 9 Stretch is now ELTS.
   * Bracketize sole lintian override.
   * Add lintian override for very-long-line-length-in-source-file on
-    binary file.
+    binary file and handwritten Markdown files with a few long semantic
+    HTML oneliners.
 
  -- Axel Beckert <abe@debian.org>  Sat, 11 Mar 2023 21:55:47 +0100
 

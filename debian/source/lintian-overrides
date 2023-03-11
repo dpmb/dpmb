@@ -1,2 +1,6 @@
 # Binary file
 dpmb source: very-long-line-length-in-source-file 1296 > 512 [praxis/apt-cache/apt-cache.dia:2]
+
+# Handwritten Markdown with a few long semantic HTML oneliners
+dpmb source: very-long-line-length-in-source-file * > 512 [README.mdwn:64]
+very-long-line-length-in-source-file * > 512 [LICENSE.md:3]
