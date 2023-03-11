@@ -7,6 +7,10 @@ What we needed to do if a Debian Release happened
 * `git grep <previous-release-name>` (e.g. `jessie` when `stretch` was
   released) and check if anything needs to be updated.
 
+  Maybe even something like all release names from the oldesst ELTS to
+  the most recent known release name including common typos, e.g.
+  `git grep -liE 'bullseye|jessie|wheezy|buster|bookwor[km]|trixie?'`
+
 * Check all URLs refering to `testing`, e.g. by calling `git grep -E
   'https?://[^ ]*testing[^ ]*'`
 
