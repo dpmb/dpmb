@@ -450,7 +450,7 @@ Desweiteren gibt es im Vergleich zu LTS weitere Einschränkungen:
 * Es werden ggf. noch weniger Architekturen unterstützt. Im Falle von
   Debian 8 _Jessie_ sind dies nur noch 'i386', 'amd64' und 'armel'.
 
-* Der Linux-Kernel wird nicht unterstützt. Es wird jedoch ein Backport
+* Der Linux-Kernel wird ggf. nicht unterstützt. Es wird jedoch ein Backport
   des Kernels von der darauffolgenden stabilen Debian-Veröffentlichung
   (die dann typischerweise zu diesem Zeitpunkt bereits unter Debian
   LTS gepflegt wird) angeboten. Im Falle von Debian 8 _Jessie_ ist
@@ -473,7 +473,7 @@ Debian LTS zwei Dinge tun -- 1.) ein weiteres APT-Repository zu Ihrer
 `/etc/apt/sources.list` (oder einer Datei im Verzeichnis
 `/etc/apt/sources.list.d/`) hinzufügen, und 2.) den PGP-Schlüssel des
 Extended-LTS-Projektes importieren. Wie das erfolgt, ist im 'Debian
-ELTS- HowTo <<Debian-ELTS-HowTo>> beschrieben. Im Folgenden dazu eine
+ELTS-HowTo <<Debian-ELTS-HowTo>> beschrieben. Im Folgenden dazu eine
 kurze Zusammenfassung:
 
 Der erste Schritt ist das Herunterladen des aktuellen Schlüsselrings des
@@ -493,6 +493,9 @@ deb http://deb.freexian.com/extended-lts veröffentlichung-lts sektionen
 
 # Beispiel für Debian 8 Jessie mit allen Archiv-Bereichen
 deb http://deb.freexian.com/extended-lts jessie-lts main contrib non-free
+
+# Beispiel für Debian 9 Stretch mit allen Archiv-Bereichen
+deb http://deb.freexian.com/extended-lts stretch-lts main contrib non-free
 ----
 
 Abschließend ist noch `apt update` oder ein Äquivalent aufzurufen, um
