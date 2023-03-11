@@ -7,13 +7,19 @@
 
 // Stichworte für den Index
 (((Debianpaket, vrms)))
+(((Debianpaket, check-dfsg-status)))
 (((vrms, -e)))
 (((vrms, --explain)))
-Mit dem Kommando `vrms` aus dem gleichnamigen Paket 'vrms'
-<<Debian-Paket-vrms>> erhalten Sie eine Übersicht, welche nicht-freien
-Pakete auf Ihrem System installiert sind. 'vrms' steht dabei als
-Abkürzung für ``Virtual Richard M. Stallman'' und erinnert an den
-Initiator der GNU-Lizenzen. 
+Mit dem Kommando `check-dfsg-status` (ab Debian 12 _Bookworm_)
+bzw. `vrms` (bis Debian 11 _Bullseye_) aus dem jeweils gleichnamigen
+Paket 'check-dfsg-status' <<Debian-Paket-check-dfsg-status>>
+bzw. 'vrms' <<Debian-Paket-vrms>> erhalten Sie eine Übersicht, welche
+nicht-freien Pakete auf Ihrem System installiert sind. 'vrms' steht
+dabei als Abkürzung für ``Virtual Richard M. Stallman'' und erinnert
+an den Initiator der GNU-Projektes. Da dieser in den letzten Jahren zu
+einer eher umstrittenen Person wurde, wurde das Paket 2022 umbenannt
+in 'check-dfsg-status', einem deutlich neutraleren und auch
+debian-spezifischeren Namen.
 
 Das nachfolgende Beispiel listet die einzelnen Pakete auf, die aus den
 beiden Bereichen _non-free_ und _contrib_ ausgewählt wurden, Neben jedem

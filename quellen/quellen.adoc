@@ -295,6 +295,8 @@
 
 - [[[Debian-Paket-checkinstall]]] Debian-Paket 'checkinstall', https://packages.debian.org/de/bookworm/checkinstall
 
+- [[[Debian-Paket-check-dfsg-status]]] Debian-Paket 'check-dfsg-status', https://packages.debian.org/de/bookworm/check-dfsg-status
+
 - [[[Debian-Paket-command-not-found]]] Debian-Paket 'command-not-found', https://packages.debian.org/de/stable/command-not-found
 
 - [[[Debian-Paket-cupt]]] Debian-Paket 'cupt', https://packages.debian.org/de/stable/cupt
@@ -502,7 +504,7 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Paket-util-linux]]] Debian-Paket 'util-linux', https://packages.debian.org/de/stable/util-linux
 
-- [[[Debian-Paket-vrms]]] Debian-Paket 'vrms', https://packages.debian.org/de/stable/vrms
+- [[[Debian-Paket-vrms]]] Debian-Paket 'vrms', https://packages.debian.org/de/bullseye/vrms
 
 - [[[Debian-Paket-wajig]]] Debian-Paket 'wajig', https://packages.debian.org/de/stable/wajig
 
