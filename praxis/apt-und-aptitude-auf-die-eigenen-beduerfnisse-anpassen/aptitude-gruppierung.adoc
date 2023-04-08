@@ -45,4 +45,34 @@ ToDo:
 * welche Spalten sind überhaupt darstellbar
 * wie stelle ich das ein
 
+Die Darstellung entnimmt Aptitude der Konfigurationsgruppe
+`Aptitude::UI::Default-Package-View`. Diese beinhaltet eine Liste der
+darzustellenden Spalten. Jeder Listeneintrag enthält mindestens die
+nachfolgenden vier Angaben:
+
+----
+Komponentenname Typ {
+  Row Zeile;
+  Column Spalte;
+  Width Breite;
+  Height Höhe;
+};
+----
+
+Typ kann sein:
+
+* Description
+* MainWidget
+* Static
+
+Zeile, Spalte, Breite und Höhe arrangieren Sie in einer Tabelle, wobei
+die obere, linke Ecke die Position 0,0 hat.
+
+Zusatzoptionen für eine Spalte (Auswahl):
+
+* `ColAlign` Ausrichtung
+* `ColExpand`
+* `Color`
+* `ColShrink`
+
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-gruppierung.adoc
