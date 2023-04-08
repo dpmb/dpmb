@@ -18,6 +18,54 @@
 * für die einzelnen Strukturelemente eigene Farben festlegen
 * siehe `aptitude`-Handbuch: Customizing text colors and styles
 <<aptitude-dokumentation-text-colors-and-styles>>
+* anpassbare Elemente:
+** Bullet
+** ChangelogNewerVersion
+** Default
+** DepBroken
+** DisabledMenuEntry
+** DownloadHit
+** DownloadProgress
+** EditLine
+** Error
+** Header
+** HighlightedMenuBar
+** HighlightedMenuEntry
+** MediaChange
+** MenuBar
+** MenuBorder
+** MenuEntry
+** MineBomb
+** MineBorder
+** MineFlag
+** MineNumberN
+** MultiplexTab
+** MultiplexTabHighlighted
+** PkgBroken
+** PkgBrokenHighlighted
+** PkgNotInstalled
+** PkgNotInstalledHighlighted
+** PkgIsInstalled
+** PkgIsInstalledHighlighted
+** PkgToDowngrade
+** PkgToDowngradeHighlighted
+** PkgToHold
+** PkgToHoldHighlighted
+** PkgToInstall
+** PkgToInstallHighlighted
+** PkgToRemove
+** PkgToRemoveHighlighted
+** PkgToUpgrade
+** PkgToUpgradeHighlighted
+** Progress
+** SolutionActionApproved
+** SolutionActionRejected
+** Status
+** TreeBackground
+** TrustWarning
+
+* gibt es vorgefertigte Themes zum Download?
+
 * Frage:
 ** ist das empfehlenswert, oder stiftet das nicht eher Verwirrung?
 ** Vorlieben und Gewohnheiten
