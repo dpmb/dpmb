@@ -40,6 +40,10 @@ Diese Werte korrespondieren mit der Einstellung
 
 ToDo:
 
+* konfigurierbar ist
+** die Anordnung der Spalten zu den Paketen
+** die Aufteilung auf dem Bildschirm -- horizontal oder vertikal geteilt
+
 * Anordnung der Spalten in der Text-Modus-Oberfläche
 * Breite der Spalten
 * welche Spalten sind überhaupt darstellbar
@@ -74,5 +78,13 @@ Zusatzoptionen für eine Spalte (Auswahl):
 * `ColExpand`
 * `Color`
 * `ColShrink`
+
+Aufteilung auf dem Bildschirm:
+
+* zwei Themes werden mitgeliefert
+** `Dselect` (wie `dselect`) -- ist das Standard-Theme
+** `Vertical-Split` -- teilt die Darstellung senkrecht in Paketliste
+(links) und Beschreibung (rechts)
+** Konfigurationsdirektive: `Aptitude::Theme Vertical-Split;`
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-gruppierung.adoc
