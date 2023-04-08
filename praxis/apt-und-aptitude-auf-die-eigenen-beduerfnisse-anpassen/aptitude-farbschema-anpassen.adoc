@@ -64,6 +64,13 @@
 ** TreeBackground
 ** TrustWarning
 
+* benutzbare Farben:
+** `black`, `blue`, `cyan`, `green`, `magenta`, `red`, `white` und
+`yellow`
+
+* zusätzliche Hervorhebungen:
+** `blink`, `bold`, `dim`, `reverse`, `standout` und `underline`
+
 * gibt es vorgefertigte Themes zum Download?
 
 * Frage:
