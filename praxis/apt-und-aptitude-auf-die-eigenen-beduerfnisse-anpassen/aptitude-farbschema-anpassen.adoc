@@ -7,12 +7,12 @@
 
 ==== Zwischen `aptitude`-Themes wechseln ====
 // Stichworte für den Index
-(((aptitude,Aptitude::Theme)))
+(((aptitude,aptitude::Theme)))
 
 Das Aussehen von der `aptitude`-Bedienoberfläche hängt von drei
 Einstellungen ab -- den gewählten Farben, der Anordnung der
 Ausgabeelemente für die TUI und dem Wert der Konfigurationsoption
-`Aptitude::Theme`.
+`aptitude::Theme`.
 
 Die Farben für die Ausgabeelemente sind einerseits vollständig im
 `aptitude`-Handbuch <<aptitude-dokumentation-themes>> dokumentiert, wir
@@ -21,7 +21,7 @@ widmen dem Thema den Abschnitt
 die TUI verfügt und wie Sie diese im Ausgabefenster anordnen, besprechen 
 wir im Abschnitt <<aptitude-gruppierung>> genauer. 
 
-Bleibt noch obige Konfigurationsoption `Aptitude::Theme`, deren
+Bleibt noch obige Konfigurationsoption `aptitude::Theme`, deren
 Bedeutung es zu klären gilt. Für diese wählen Sie den Namen des von
 Ihnen gewünschten Themes aus. `aptitude` liefert die folgenden zwei
 Themes mit:
@@ -44,10 +44,13 @@ Tabelle <<tab.aptitude-farben>> in Abschnitt <<aptitude>> benannt.
 
 [[aptitude-farbschema-anpassen-strukturelemente]]
 ==== Eigene Farben vergeben ====
-* für die einzelnen Strukturelemente eigene Farben festlegen
-* siehe `aptitude`-Handbuch: Customizing text colors and styles
-<<aptitude-dokumentation-text-colors-and-styles>>
-* anpassbare Elemente:
+
+Gefällt Ihnen die mitgelieferte Farbauswahl nicht, bauen Sie sich am
+besten ihr eigenes Theme. Dazu legen Sie für die einzelnen
+Strukturelemente eigene Farben fest (siehe
+<<aptitude-dokumentation-text-colors-and-styles>>). Anpassbare Elemente
+sind:
+
 ** Bullet
 ** ChangelogNewerVersion
 ** Default
@@ -93,12 +96,38 @@ Tabelle <<tab.aptitude-farben>> in Abschnitt <<aptitude>> benannt.
 ** TreeBackground
 ** TrustWarning
 
-* benutzbare Farben:
-** `black`, `blue`, `cyan`, `green`, `magenta`, `red`, `white` und
-`yellow`
+Als Farben steht Ihnen eine Grundauswahl aus 8 Farben zur Verfügung.
+Tabelle <<tab.aptitude-farben-auswahl>> stellt diese zusammen.
 
-* zusätzliche Hervorhebungen:
-** `blink`, `bold`, `dim`, `reverse`, `standout` und `underline`
+.Farbauswahl bei `aptitude`
+[options="header", id="tab.aptitude-farben-auswahl"]
+|=============================
+| Farbname  | Beschreibung
+| `black`   | schwarz
+| `blue`    | blau
+| `cyan`    | hellblau
+| `green`   | grün
+| `magenta` | dunkelrosa
+| `red`     | rot
+| `white`   | weiss
+| `yellow`  | gelb
+|=============================
+
+Ergänzend zur Farbauswahl erlaubt `aptitude` zusätzliche Hervorhebungen.
+Tabelle <<tab.aptitude-farben-hervorhebungen>> fasst die Einstellungen
+dafür zusammen
+
+.Hervorhebungen und deren Bedeutung bei `aptitude`
+[options="header", id="tab.aptitude-farben-hervorhebungen"]
+|=============================
+| Hervorhebung | Beschreibung
+| `blink`      | Enables blinking text.
+| `bold`       | Makes the foreground color of the text (or the background if reverse video is enabled) brighter.
+| `dim`        | May cause text to be extra-dim on some terminals. No effect has been observed on common Linux terminals.
+| `reverse`    | Swaps the foreground and background colors. Many visual elements flip this attribute to perform common highlighting tasks.
+| `standout`   | This enables “the best highlighting mode of the terminal”. In xterms it is similar, but not idential to, reverse video; behavior on other terminals may vary.
+| `underline`  | Enables underlined text.
+|=============================
 
 * gibt es vorgefertigte Themes zum Download?
 
