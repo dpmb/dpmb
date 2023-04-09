@@ -5,15 +5,44 @@
 [[aptitude-farbschema-anpassen]]
 === `aptitude`-Farbschema anpassen ===
 
-==== Standardvorgaben ====
-* Standardfarben: siehe Beschreibung unter <<aptitude>>
-
 ==== Zwischen `aptitude`-Themes wechseln ====
+// Stichworte für den Index
+(((aptitude,Aptitude::Theme)))
 
-* Theme: Farben und Anordnung
-* siehe `aptitude`-Handbuch <<aptitude-dokumentation-themes>>
-* Anordnung: siehe <<aptitude-gruppierung>>
+Das Aussehen von der `aptitude`-Bedienoberfläche hängt von drei
+Einstellungen ab -- den gewählten Farben, der Anordnung der
+Ausgabeelemente für die TUI und dem Wert der Konfigurationsoption
+`Aptitude::Theme`.
 
+Die Farben für die Ausgabeelemente sind einerseits vollständig im
+`aptitude`-Handbuch <<aptitude-dokumentation-themes>> dokumentiert, wir
+widmen dem Thema den Abschnitt
+<<aptitude-farbschema-anpassen-strukturelemente>>. Über welche Elemente
+die TUI verfügt und wie Sie diese im Ausgabefenster anordnen, besprechen 
+wir im Abschnitt <<aptitude-gruppierung>> genauer. 
+
+Bleibt noch obige Konfigurationsoption `Aptitude::Theme`, deren
+Bedeutung es zu klären gilt. Für diese wählen Sie den Namen des von
+Ihnen gewünschten Themes aus. `aptitude` liefert die folgenden zwei
+Themes mit:
+
+`Dselect`:: das `aptitude`-Standardtheme, welches an die
+Bedienoberfläche des Werkzeugs `dselect` angelehnt ist. Oben befindet
+sich der Paketbaum aus Kategorien und den sich darin befindlichen
+Softwarepaketen, darunter die Paketbeschreibung zum jeweils ausgewählten
+Paket
+
+`Vertical-Split`:: Anordnung, in der die Ausgabe vertikal geteilt ist.
+In der linken Spalte befindet der Paketbaum aus Kategorien und den sich
+darin befindlichen Softwarepaketen, in der rechten Spalte die
+Paketbeschreibung zum jeweils ausgewählten Paket
+
+==== Standardvorgaben ====
+
+`aptitude` kommt mit einer Auswahl an Standardfarben. Diese sind in
+Tabelle <<tab.aptitude-farben>> in Abschnitt <<aptitude>> benannt.
+
+[[aptitude-farbschema-anpassen-strukturelemente]]
 ==== Eigene Farben vergeben ====
 * für die einzelnen Strukturelemente eigene Farben festlegen
 * siehe `aptitude`-Handbuch: Customizing text colors and styles
