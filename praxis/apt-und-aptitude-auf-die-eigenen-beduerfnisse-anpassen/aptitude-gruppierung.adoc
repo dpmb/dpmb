@@ -79,12 +79,6 @@ Zusatzoptionen für eine Spalte (Auswahl):
 * `Color`
 * `ColShrink`
 
-Aufteilung auf dem Bildschirm:
-
-* zwei Themes werden mitgeliefert
-** `Dselect` (wie `dselect`) -- ist das Standard-Theme
-** `Vertical-Split` -- teilt die Darstellung senkrecht in Paketliste
-(links) und Beschreibung (rechts)
-** Konfigurationsdirektive: `Aptitude::Theme Vertical-Split;`
+Aufteilung auf dem Bildschirm: siehe <<aptitude-farbschema-anpassen>>
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-gruppierung.adoc
