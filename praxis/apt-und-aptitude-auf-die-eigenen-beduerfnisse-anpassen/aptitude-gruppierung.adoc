@@ -51,6 +51,8 @@ lässt sich anpassen. Dazu gehören die Anordnung und Breite der Spalten
 zu den Paketen und deren Informationen sowie die Aufteilung auf dem
 Bildschirm -- horizontal oder vertikal geteilt.
 
+===== Anordnung und Breite der Spalten =====
+
 Die Darstellung entnimmt Aptitude der Konfigurationsgruppe
 `Aptitude::UI::Default-Package-View`. Diese beinhaltet eine Liste der
 Spalten, die in der TUI auftauchen. Jeder Listeneintrag enthält
@@ -81,6 +83,9 @@ Zusatzoptionen für eine Spalte (Auswahl):
 * `Color`
 * `ColShrink`
 
-Aufteilung auf dem Bildschirm: siehe <<aptitude-farbschema-anpassen>>
+===== Aufteilung auf dem Bildschirm ===== 
+
+Dieses Thema besprechen wir im Abschnitt
+<<aptitude-farbschema-anpassen>> genauer.
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-gruppierung.adoc
