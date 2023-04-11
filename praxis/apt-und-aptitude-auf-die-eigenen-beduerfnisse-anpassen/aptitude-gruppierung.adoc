@@ -83,12 +83,29 @@ vorkommen
 Die Angaben für `Zeile`, `Spalte`, `Breite` und `Höhe` entsprechen denen
 einer Tabelle, wobei die obere, linke Ecke die Position 0,0 hat. Mit den
 nachfolgenden Zusatzoptionen gestalten Sie die Drastellung einer Spalte
-und deren jeweiligen Inhalt noch genauer (Auswahl):
+und deren jeweiligen Inhalt noch genauer:
 
 * `ColAlign` Ausrichtung
 * `ColExpand`
 * `Color`
 * `ColShrink`
+* `Column`
+* `Columns`
+* `ColumnsCfg`
+* `Height`
+* `PopUpDownKey`
+* `PopUpDownLinked`
+* `Row`
+* `RowAlign`
+* `RowExpand`
+* `RowShrink`
+* `Visible`
+* `Width`
+
+.Beispiel für eine Komponente
+----
+Todo
+----
 
 ===== Aufteilung auf dem Bildschirm ===== 
 
