@@ -39,7 +39,7 @@ Paketbeschreibung zum jeweils ausgewählten Paket
 ==== Standardvorgaben ====
 
 `aptitude` kommt mit einer Auswahl an Standardfarben. Diese sind in
-Tabelle <<tab.aptitude-farben>> in <<aptitude>> benannt.
+<<tab.aptitude-farben>> in <<aptitude>> benannt.
 
 [[aptitude-farbschema-anpassen-strukturelemente]]
 ==== Eigene Farben vergeben ====
@@ -96,7 +96,7 @@ sind:
 ** TrustWarning
 
 Als Farben steht Ihnen eine Grundauswahl aus 8 Farben zur Verfügung.
-Tabelle <<tab.aptitude-farben-auswahl>> stellt diese zusammen.
+<<tab.aptitude-farben-auswahl>> stellt diese zusammen.
 
 .Farbauswahl bei `aptitude`
 [options="header", id="tab.aptitude-farben-auswahl"]
@@ -113,7 +113,7 @@ Tabelle <<tab.aptitude-farben-auswahl>> stellt diese zusammen.
 |=============================
 
 Ergänzend zur Farbauswahl erlaubt `aptitude` zusätzliche Hervorhebungen.
-Tabelle <<tab.aptitude-farben-hervorhebungen>> fasst die Einstellungen
+<<tab.aptitude-farben-hervorhebungen>> fasst die Einstellungen
 dafür zusammen
 
 .Hervorhebungen und deren Bedeutung bei `aptitude`
