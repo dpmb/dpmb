@@ -6,6 +6,7 @@
 
 === `aptitude`-Gruppierung ===
 
+[[aptitude-gruppierung-kommandozeile]]
 ==== Kommandozeile ====
 
 // Stichworte für den Index
@@ -39,6 +40,7 @@ Diese Werte korrespondieren mit der Einstellung
 `Aptitude::CmdLine::Versions-Group-By` in der Konfigurationsdatei zu
 `aptitude`.
 
+[[aptitude-gruppierung-tui]]
 ==== Textoberfläche ====
 
 ToDo:
