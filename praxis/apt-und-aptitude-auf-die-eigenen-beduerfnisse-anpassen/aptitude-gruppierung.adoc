@@ -8,6 +8,9 @@
 
 ==== Kommandozeile ====
 
+// Stichworte für den Index
+(((aptitude, --group-by)))
+(((Aptitude, Auflistung der Pakete umsortieren)))
 Zur Gruppierung kennt `aptitude` den Schalter `--group-by`. Eine kurze Version des
 Schalters existiert u.E. bislang nicht. Als Wert sind die folgenden
 Möglichkeiten zulässig:
