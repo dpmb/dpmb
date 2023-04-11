@@ -55,9 +55,10 @@ Bildschirm -- horizontal oder vertikal geteilt.
 
 Die Darstellung entnimmt Aptitude der Konfigurationsgruppe
 `Aptitude::UI::Default-Package-View`. Diese beinhaltet eine Liste der
-Spalten, die in der TUI auftauchen. Jeder Listeneintrag enthält
-mindestens die nachfolgenden vier Angaben:
+Komponenten, die in der TUI auftauchen. Jede Komponente bennenen Sie und
+konfigurieren Sie über mindestens die nachfolgenden vier Angaben genauer:
 
+.Beschreibung für eine Komponente der Aptitude-TUI
 ----
 Komponentenname Typ {
   Row Zeile;
@@ -67,16 +68,22 @@ Komponentenname Typ {
 };
 ----
 
-Typ kann sein:
+Der 'Komponentenname' ist frei wählbar, darf aber nur aus einem einzigen
+Wort ohne Trennzeichen bestehen. Der 'Typ' bestimmt, was in der
+Komponente dargestellt wird. Zur Auswahl stehen:
 
-* Description
-* MainWidget
-* Static
+`Description` :: Informationsfeld, bspw. für die Beschreibung des
+aktuell ausgewählten Debianpaketes
 
-Zeile, Spalte, Breite und Höhe arrangieren Sie in einer Tabelle, wobei
-die obere, linke Ecke die Position 0,0 hat.
+`MainWidget` :: Feld mit der Liste der Pakete; dieses muss genau einmal
+vorkommen
 
-Zusatzoptionen für eine Spalte (Auswahl):
+`Static` :: Feld mit statischem Text
+
+Die Angaben für `Zeile`, `Spalte`, `Breite` und `Höhe` entsprechen denen
+einer Tabelle, wobei die obere, linke Ecke die Position 0,0 hat. Mit den
+nachfolgenden Zusatzoptionen gestalten Sie die Drastellung einer Spalte
+und deren jeweiligen Inhalt noch genauer (Auswahl):
 
 * `ColAlign` Ausrichtung
 * `ColExpand`
@@ -85,7 +92,6 @@ Zusatzoptionen für eine Spalte (Auswahl):
 
 ===== Aufteilung auf dem Bildschirm ===== 
 
-Dieses Thema besprechen wir im Abschnitt
-<<aptitude-farbschema-anpassen>> genauer.
+Dieses Thema besprechen wir im <<aptitude-farbschema-anpassen>> genauer.
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-gruppierung.adoc
