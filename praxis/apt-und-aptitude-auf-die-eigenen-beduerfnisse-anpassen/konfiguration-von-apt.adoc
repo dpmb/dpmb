@@ -97,7 +97,7 @@ $
 ----
 
 Der Aufbau eines Eintrags entspricht der Datei `/etc/apt/sources.list`
-(siehe dazu Abschnitt <<etc-apt-sources.list-verstehen>>).
+(siehe dazu <<etc-apt-sources.list-verstehen>>).
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfiguration-von-apt.adoc
 
