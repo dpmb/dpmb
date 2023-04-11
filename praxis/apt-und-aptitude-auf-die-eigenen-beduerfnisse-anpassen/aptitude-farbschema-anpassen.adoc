@@ -16,10 +16,9 @@ Ausgabeelemente für die TUI und dem Wert der Konfigurationsoption
 
 Die Farben für die Ausgabeelemente sind einerseits vollständig im
 `aptitude`-Handbuch <<aptitude-dokumentation-themes>> dokumentiert, wir
-widmen dem Thema den Abschnitt
-<<aptitude-farbschema-anpassen-strukturelemente>>. Über welche Elemente
+widmen dem Thema den <<aptitude-farbschema-anpassen-strukturelemente>>. Über welche Elemente
 die TUI verfügt und wie Sie diese im Ausgabefenster anordnen, besprechen 
-wir im Abschnitt <<aptitude-gruppierung>> genauer. 
+wir im <<aptitude-gruppierung>> genauer. 
 
 Bleibt noch obige Konfigurationsoption `aptitude::Theme`, deren
 Bedeutung es zu klären gilt. Für diese wählen Sie den Namen des von
@@ -40,7 +39,7 @@ Paketbeschreibung zum jeweils ausgewählten Paket
 ==== Standardvorgaben ====
 
 `aptitude` kommt mit einer Auswahl an Standardfarben. Diese sind in
-Tabelle <<tab.aptitude-farben>> in Abschnitt <<aptitude>> benannt.
+Tabelle <<tab.aptitude-farben>> in <<aptitude>> benannt.
 
 [[aptitude-farbschema-anpassen-strukturelemente]]
 ==== Eigene Farben vergeben ====
