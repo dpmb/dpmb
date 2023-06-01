@@ -69,20 +69,21 @@ näher.
 =========================
 
 Führen Sie eines der o.g. Aufrufe aus, wird zunächst die Liste der
-Paketquellen in `/etc/apt/sources.list` (siehe
-<<etc-apt-sources.list-verstehen>>) gelesen. Jeder Eintrag darin
-bezeichnet eine Paketquelle. Von diesen Paketquellen wird nacheinander
-jeweils eine aktuelle Liste der Pakete bezogen, die von dieser
-angegebenen Paketquelle verfügbar sind. 
+Paketquellen in der Datei `/etc/apt/sources.list` und dem Verzeichnis 
+`/etc/apt/sources.list.d` (siehe <<etc-apt-sources.list-verstehen>>) 
+gelesen. Jeder Eintrag darin bezeichnet eine Paketquelle. Von diesen 
+Paketquellen wird nacheinander jeweils eine aktuelle Liste der Pakete 
+bezogen, die von dieser angegebenen Paketquelle verfügbar sind. 
 
 Jede bezogene Liste wird danach auf deren Echtheit geprüft. Dazu ist
 diese digital signiert (siehe <<paketquelle-auf-echtheit-ueberpruefen>>). 
-Mit Hilfe des GPG-Schlüssels für die Paketquelle prüfen `apt-get` bzw.
-`aptitude` automatisch deren Authentizität und falls ohne Beanstandung,
-vereinigen sie die bezogene Liste mit der bereits bestehenden, lokalen
-Paketliste (siehe <<lokale-paketliste-und-paketcache>>). Dabei geben
-insbesondere `apt-get` und `aptitude` eine Reihe von Mitteilungen auf
-dem Terminal aus. Diese bedeuten:
+Mit Hilfe des GPG-Schlüssels für die Paketquelle prüfen `apt', `apt-get` 
+bzw. `aptitude` automatisch deren Authentizität und falls ohne
+Beanstandung, vereinigen sie die bezogene Liste mit der bereits
+bestehenden, lokalen Paketliste (siehe
+<<lokale-paketliste-und-paketcache>>). Dabei geben insbesondere
+`apt-get` und `aptitude` eine Reihe von Mitteilungen auf dem Terminal
+aus. Diese bedeuten:
 
 * `Holen:1 Bezugsquelle Release.gpg`: beziehe den GPG-Schlüssel zur
 Veröffentlichung (siehe <<veroeffentlichungen>>) von der als URL
@@ -132,6 +133,18 @@ Es wurden 421 kB in 0 s geholt (428 kB/s).
 Paketlisten werden gelesen... Fertig
 #
 ----
+
+// Stichworte für den Index
+(((apt, list --upgradable)))
+Neuere Versionen ergänzen die Ausgabe um zusätzliche Zeilen und teilen
+Ihnen darüber mit, ob und wieviele aktualisierbare Pakete vorliegen.
+Nachfolgend sehen Sie in <<fig.apt-update-aktualisierbare-pakete>>),
+dass für zwölf Pakete neue Varianten bereitstehen. Um welche Pakete es
+sich handelt, listen Sie mit Hilfe des Kommandos `apt list --upgradable` 
+auf.
+
+.Auflistung der aktualisierbaren Pakete
+image::werkzeuge/paketquellen-und-werkzeuge/apt-update-aktualisierbare-pakete.png[id="fig.apt-update-aktualisierbare-pakete", width="50%"]
 
 // Stichworte für den Index
 (((Debianpaket, daptup)))
