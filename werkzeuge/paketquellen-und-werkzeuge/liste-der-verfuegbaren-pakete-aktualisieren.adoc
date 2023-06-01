@@ -140,7 +140,8 @@ Neuere Versionen ergänzen die Ausgabe um zusätzliche Zeilen und teilen
 Ihnen darüber mit, ob und wieviele aktualisierbare Pakete vorliegen.
 Nachfolgend sehen Sie in <<fig.apt-update-aktualisierbare-pakete>>, dass
 für zwölf Pakete neue Varianten bereitstehen. Um welche Pakete es sich
-handelt, listen Sie mit Hilfe des Kommandos `apt list --upgradable` auf.
+konkret handelt, listen Sie mit Hilfe des Kommandos `apt list
+--upgradable` auf (siehe <<aktualisierbare-pakete-anzeigen>>).
 
 .Auflistung der aktualisierbaren Pakete
 image::werkzeuge/paketquellen-und-werkzeuge/apt-update-aktualisierbare-pakete.png[id="fig.apt-update-aktualisierbare-pakete", width="50%"]
