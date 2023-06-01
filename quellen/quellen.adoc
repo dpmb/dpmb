@@ -864,6 +864,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[rpmdrake]]] `rpmdrake`, https://en.wikipedia.org/wiki/Rpmdrake
 
+- [[[rpmorphan-rpm]]] `rpmorphan`, https://rpmorphan.sourceforge.net/
+
 - [[[RPM-Gite]]] Vivek Gite: CentOS / RHEL: See Detailed History Of yum Commands, http://www.cyberciti.biz/faq/yum-history-command/
 
 - [[[RPM-Salve]]] Ravi Salve: 20 Practical Examples of RPM Commands in Linux, http://www.tecmint.com/20-practical-examples-of-rpm-commands-in-linux/

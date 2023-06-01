@@ -36,6 +36,7 @@ Lasten.
 (((editkeep)))
 (((gtkorphan)))
 (((orphaner)))
+(((rpmorphan)))
 (((wajig)))
 Neben den Mechanismen von APT und `aptitude` existieren eine ganze Reihe
 von weiteren Programmen, um Waisen aufzuspüren und auch zu entfernen.
@@ -43,8 +44,8 @@ Für die Kommandozeile sind das `debfoster` (siehe <<debfoster>>) und
 `deborphan` (siehe <<deborphan>>). Auf Ncurses basieren Orphaner und
 Editkeep (siehe <<orphaner-und-editkeep>>) und auf GTK+ das Pendant
 Gtkorphan (siehe <<Gtkorphan>>). Darüber hinaus bietet `wajig`
-(<<wajig>>) entsprechende Möglichkeiten zur Suche, die wir Ihnen nicht
-ebenfalls vorenthalten möchten.
+(<<wajig>>) entsprechende Möglichkeiten zur Suche, die wir Ihnen
+ebenfalls nicht vorenthalten möchten.
 
 ==== APT und `aptitude` ====
 
@@ -572,5 +573,14 @@ Suche nach Waisen in der `wajig`-Shell.
 
 .`wajig` mit der Ausgabe des Kommandos `orphans`
 image::werkzeuge/paketoperationen/wajig-orphans.png[id="fig.wajig-orphans", width="50%"]
+
+[[rpmorphan]]
+
+==== `rpmorphan` ====
+
+Für rpm-Pakete gibt es ein Gegenstück zu `deborphan` namens `rpmorphan`
+<<rpmorphan-rpm>>. Dieses ist nicht Bestandteil des Debianpakets `rpm`
+<<Debian-Paket-rpm>> und steht bislang nicht als eigenes Debianpaket zur
+Verfügung.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/umgang-mit-waisen.adoc
