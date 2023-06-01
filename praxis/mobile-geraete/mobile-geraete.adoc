@@ -16,16 +16,26 @@ erforderlich sind. Wir betrachten das daher nachfolgend anhand der
 Richtgrößen Batterielaufzeit, belegter Speicherplatz, Bildschirmgröße
 und die Erfordernisse an die CPU.
 
-// Batterielaufzeit
+=== Batterielaufzeit ===
 
-// Speicherplatz: localepurge, gehört hier erwähnt, aber eher nach
+Todo
+
+=== Speicherplatz === 
+
+Todo
+
+//localepurge, gehört hier erwähnt, aber eher nach
 // plattenplatz-sparen-mit-der-paketverwaltung.adoc
 include::localepurge.adoc[]
 // Ggf. Paradebeispiel N900 mit dem unsäglichen docpurge erwähnen: https://maemo.gitorious.org/maemo-af/docpurge/source/0bd88357713d7f554f119ab0c2ebaa676c433ec7:
 
-// Bildschirmgröße
+=== Bildschirmgröße ===
 
-// Erfordernisse an die CPU
+Todo
+
+=== Erfordernisse an die CPU ===
+
+Todo
 
 // Debdelta gehört hier erwähnt, bzw. systeme-mit-schlechter-anbindung-warten.adoc
 // Datei (Ende): ./praxis/mobile-geraete/mobile-geraete.adoc
