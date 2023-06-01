@@ -625,6 +625,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Docker]]] Docker, https://www.docker.com/
 
+- [[[docpurge]]] docpurge, https://github.com/maemo-foss/maemo-af-docpurge
+
 - [[[dpkg-Kumar]]] Avishek Kumar: 15 Practical Examples of "dpkg commands" for Debian Based Distros, http://www.tecmint.com/dpkg-command-examples/
 
 - [[[dpmb-github]]] Debian Package Management Book, GitHub-Repository, https://github.com/dpmb

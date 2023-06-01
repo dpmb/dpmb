@@ -22,12 +22,16 @@ Todo
 
 === Speicherplatz === 
 
-Todo
+Pakete:
+* localepurge // eher nach plattenplatz-sparen-mit-der-paketverwaltung.adoc
+// Ggf. Paradebeispiel N900 mit dem unsäglichen docpurge erwähnen: 
+// https://maemo.gitorious.org/maemo-af/docpurge/source/0bd88357713d7f554f119ab0c2ebaa676c433ec7:
+* docpurge <<docpurge>>
 
-//localepurge, gehört hier erwähnt, aber eher nach
-// plattenplatz-sparen-mit-der-paketverwaltung.adoc
+* eatmydata (verringert die Menge der Synchronisationen und somit die
+Schreibzugriffe)
+
 include::localepurge.adoc[]
-// Ggf. Paradebeispiel N900 mit dem unsäglichen docpurge erwähnen: https://maemo.gitorious.org/maemo-af/docpurge/source/0bd88357713d7f554f119ab0c2ebaa676c433ec7:
 
 === Bildschirmgröße ===
 
