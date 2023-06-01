@@ -77,10 +77,13 @@ Das Unterkommando `update` steht in identischer Form und Bedeutung bei
 den drei Kommandos `apt-get`, `apt` und `aptitude` zur Verfügung. Es
 dient dabei nur zur Aktualisierung der Paketlisten, die Sie in der 
 Datei `/etc/apt/sources.list` bzw. dem Verzeichnis in 
-`/etc/apt/sources.list.d` hinterlegt haben. Es beinhaltet jedoch nicht
-die Aktualisierung der Pakete selbst -- dazu gehen wir ausführlich 
+`/etc/apt/sources.list.d` hinterlegt haben. Ausführlich gehen wir darauf
 unter ``Liste der verfügbaren Pakete aktualisieren'' in
 <<liste-der-verfuegbaren-pakete-aktualisieren>> ein.
+
+Mit diesem Unterkommando lösen Sie jedoch nicht die Aktualisierung der
+Pakete selbst aus -- hierbei helfen Ihnen `install`, `upgrade`,
+`dist-upgrade`, `safe-upgrade` und `full-upgrade`.
 
 [[pakete-aktualisieren-install]]
 ==== `install` ====
