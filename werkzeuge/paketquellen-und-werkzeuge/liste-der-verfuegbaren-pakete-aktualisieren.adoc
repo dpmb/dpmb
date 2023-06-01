@@ -183,7 +183,9 @@ für die Paketliste der Veröffentlichung nach.
 
 ==== Platz für den Paketcache ====
 
-Aktua
+Bitte planen Sie freien Platz für den Paketcache ein. Die aktualisierten
+Paketlisten und Pakete benötigen Speicherplatz, bevor diese ausgepackt
+und eingerichtet werden können.
 
 ==== Die Veröffentlichung wechseln ====
 
