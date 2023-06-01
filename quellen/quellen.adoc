@@ -348,6 +348,8 @@
 
 - [[[Debian-Paket-dh-make-perl]]] Debian-paket 'dh-make-perl', https://packages.debian.org/de/stable/dh-make-perl
 
+- [[[Debian-Paket-dietlibc-dev]]] Debian-Paket 'dietlibc-dev', https://packages.debian.org/buster/dietlibc-dev
+
 - [[[Debian-Paket-diffoscope]]] Debian-Paket 'diffoscope', https://packages.debian.org/stable/diffoscope
 
 - [[[Debian-Paket-dkms]]] Debian-Paket 'dkms' (Dynamic Kernel Modules Support), https://packages.debian.org/de/stable/dkms
