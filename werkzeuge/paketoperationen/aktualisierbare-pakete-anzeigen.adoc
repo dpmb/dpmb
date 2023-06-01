@@ -54,9 +54,9 @@ Conf libc-bin (2.13-38+deb7u4 Debian-Security:7.0/stable [i386]) [libc6:i386 ]
 // Stichworte für den Index
 (((apt, aktualisierbare Pakete anzeigen)))
 (((apt, list --upgradable)))
-Das Werkzeug `apt` kennt für diesen Fall die beiden Schalter `list` und 
-`--upgradable`. In der Praxis sieht das wie folgt aus (die nachfolgende Ausgabe 
-stammt von einem Ubuntu 18 'Bionic'):
+Das Werkzeug `apt` kennt für diesen Fall das Unterkommando `list` und
+den Schalter `--upgradable`. In der Praxis sieht das wie folgt aus 
+(die nachfolgende Ausgabe stammt von einem Ubuntu 18 'Bionic'):
 
 .Aktualisierbare Pakete mit `apt` anzeigen
 ----
