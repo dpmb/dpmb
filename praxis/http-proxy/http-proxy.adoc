@@ -11,10 +11,14 @@
 // Stichworte für den Index
 (((Proxy, Anwendungsfall)))
 (((Proxy, Überblick)))
+(((Proxy Server, Anwendungsfall)))
+(((Proxy Server, Überblick)))
 Oftmals wird in größeren Netzen der Zugang zum Internet über einen Proxy
-Server -- häufig nur Proxy abgekürzt -- geregelt. Ein solcher Proxy ist
-vergleichbar mit einem Pförtner, der den Datenfluss zwischen dem inneren
-und äußeren Netzsegment steuert. 
+Server -- häufig nur mit _Proxy_ abgekürzt -- geregelt. Ein solcher
+Proxy Server ist vergleichbar mit einem Pförtner, der den Datenfluss
+zwischen zwei Netzsegmenten steuert und somit entscheidet, welche
+Netzwerkpakete zwischen den beiden Netzsegmenten ausgetauscht werden
+können.
 
 // ToDo: Bild ergänzen
 
