@@ -301,6 +301,8 @@
 
 - [[[Debian-Paket-cupt]]] Debian-Paket 'cupt', https://packages.debian.org/de/stable/cupt
 
+- [[[Debian-Paket-curl]]] Debian-Paket 'curl', https://packages.debian.org/de/stable/curl
+
 - [[[Debian-Paket-daptup]]] Debian-Paket 'daptup', https://packages.debian.org/de/stable/daptup
 
 - [[[Debian-Paket-debarchiver]]] Debian-Paket 'debarchiver', https://packages.debian.org/de/stable/debarchiver
