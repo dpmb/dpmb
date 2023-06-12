@@ -1,0 +1,33 @@
+// Datei: ./praxis/http-proxy/varianten.adoc
+
+// Baustelle: Rohtext
+
+=== Varianten ===
+
+// Stichworte für den Index
+(((Proxy, Caching Proxy)))
+(((Proxy, SOCKS)))
+(((Proxy, Varianten)))
+(((Proxy Server, Caching Proxy)))
+(((Proxy Server, SOCKS)))
+(((Proxy Server, Varianten)))
+Proxy Server existieren in verschiedenen Lebensformen. Neben
+_transparenten Proxy Servern_ , von denen Sie als Benutzer in der Regel
+nichts mitbekommen sollten, gibt es _protokollunabhängige_ und
+_protokollabhängige_ Proxies. Ersteres sind bspw. SOCKS4- und
+SOCKS5-Proxies <<SOCKS>>, das zweite hingegen HTTP-Proxies oder
+FTP-Proxies. Diese werden dann nur für das jeweilige Transportprotokoll
+eingesetzt.
+
+Bezogen auf die Paketverwaltung ist der Spezialfall ``Caching Proxy
+ausschließlich für Debianpakete'' interessant. Dieser behält die bereits
+angefragten Debianpakete in seinem Cache, um sie später schneller an
+weitere Clients im Netzwerk weitergeben zu können, sobald sie diese im
+Rahmen einer Softwareaktualisierung oder -installation anfragen. Damit
+beschleunigen Sie die Aktualisierung des Paketbestands ganzer Netze, die
+ähnlich aufgesetzt sind, bspw. in einem Schulungsraum. Passender Kandidat 
+dafür ist `apt-cacher-ng` (siehe <<apt-cacher-ng>>). Ausführlicher gehen
+wir auf die unterschiedlichen Entwicklungen unter ``Einen APT-Cache
+einrichten'' in <<apt-cache>> ein.
+
+// Datei (Ende): ./praxis/http-proxy/varianten.adoc

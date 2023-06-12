@@ -1,0 +1,36 @@
+// Datei: ./praxis/http-proxy/hintergrund.adoc
+
+// Baustelle: Rohtext
+
+=== Hintergrund ===
+
+// Stichworte für den Index
+(((Proxy, Hintergrund)))
+(((Proxy Server, Hintergrund)))
+Es gibt unterschiedliche Gründe, warum Proxy Server überhaupt betrieben
+werden. Einerseits möchten Sie bspw. Traffic oder Übertragungszeit
+sparen. Dabei werden Dateien nach der ersten Anfrage zwischengespeichert
+(_gecached_ oder _gepuffert_) und somit nicht erneut langwierig oder 
+kostenverursachend aus dem externen Netzsegment geladen, bspw. dem
+Internet. Werden diese Daten von einem Rechner im internen Netzsegment
+erneut angefordert, geht es aus dem Cache des Proxy Servers deutlich
+schneller.
+
+Andererseits möchten Sie sicherstellen, dass nur bestimmte
+Internetseiten besucht werden können oder gar nur von berechtigen
+Nutzern abgerufen werden dürfen. Benötigt werden hier dann in der Regel
+auch zusätzliche Authentifizierungsdaten, um über den Proxy Server
+darauf zuzugreifen.
+
+Konkrete Anwendungsfälle im Alltag sind bspw. Schulungsräume, Test- und
+Labornetze sowie Bibliotheken und Internetcafès, die für eine bestimmte
+Benutzergruppe oder Anwendungsfälle gedacht und somit auch passend
+konfiguriert sind. Schulungsräume, Test- und Labornetze schotten Sie
+netztechnisch ab, um Software auszuprobieren, ohne dabei das restliche
+Netzwerk in Mitleidenschaft zu ziehen. In Internetcafès für Jugendliche 
+werden häufig bestimmte Internetinhalte oder auch komplette
+Netzwerkprotokolle und -dienste über die Kombination mit einem
+entsprechend eingerichteten Jugendschutzfilter reglementiert, bspw. mit
+Hilfe von IPCop <<ipcop>>, IPFire <<ipfire>> oder pfSense <<pfsense>>.
+
+// Datei (Ende): ./praxis/http-proxy/hintergrund.adoc
