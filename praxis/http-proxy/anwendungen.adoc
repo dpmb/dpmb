@@ -13,9 +13,15 @@
 ** Recherche zu Paketen über den Webbrowser
 ** Herunterladen von `deb`-Paketen
 
+==== Mittels wget ====
+
+* ToDo
+
 ==== Webbrowser Firefox ==== 
 
-* Dialogfenster
+* nur über Dialogfenster
+* frühe Versionen ignorieren Umgebungsvariablen
+* keine Kommandozeilenoptionen
 
 ==== Webbrowser Chromium ====
 
