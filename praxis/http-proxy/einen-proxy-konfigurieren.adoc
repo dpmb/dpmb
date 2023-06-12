@@ -20,9 +20,10 @@ Benutzung eines Proxy Servers hinterlegen. Dazu zählen zunächst die
 allgemeinen Umgebungsvariablen (siehe ``Einen Proxy mittels
 Umgebungsvariablen konfigurieren'' in
 <<http-proxy-umgebungsvariablen>>), danach folgen die Einstellungen des 
-Desktop-Environments und der Anwendungen, wie bspw. im Webbrowser Firefox. 
-Für die Paketverwaltung kommem die Einträge in der Datei
-`/etc/apt/apt.conf` bzw. der modularisierten Variante unter
+Desktop-Environments und der Anwendungen, wie bspw. im Webbrowser
+Firefox (siehe ``Einen Proxy in Anwendungen konfigurieren'' in
+<<http-proxy-anwendungen>>). Für die Paketverwaltung kommem die Einträge
+in der Datei `/etc/apt/apt.conf` bzw. der modularisierten Variante unter
 `/etc/apt/apt.conf.d/70debconf` ins Visier (siehe dazu ``APT über
 HTTP-Proxy'' in <<http-proxy-ueber-apt>>).
 
