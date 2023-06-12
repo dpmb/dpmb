@@ -77,6 +77,8 @@ gesetzt, wertet `curl` diese aus. Dann vereinfacht sich der Aufruf zu:
 curl "http://webseite.org/datei"
 ----
 
+Weitere Schalter zum Thema Proxy Server entnehmen Sie bitte der
+umfangreichen Manpage zu `curl`.
 
 ==== Webbrowser Firefox ==== 
 
