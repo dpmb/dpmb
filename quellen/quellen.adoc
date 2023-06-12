@@ -715,6 +715,10 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[ipbrick]]] IPBRICK, http://www.ipbrick.de/
 
+- [[[ipcop]]] IPCop, http://www.ipcop.org/
+
+- [[[ipfire]]] IPFire, https://www.ipfire.org/
+
 - [[[ipkg]]] Itsy Package Management System (IPKG) bei Wikipedia, https://de.wikipedia.org/wiki/IPKG
 
 - [[[Isenkram-Reinholdtsen]]] Isenkram im Blog von Petter Reinholdtsen, http://people.skolelinux.org/pere/blog/tags/isenkram/
@@ -827,6 +831,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[Pacman-Rosetta]]] Pacman Rosetta -- Vergleich der Kommandozeilenparameter von `pacman`, `yum`, `apt-get`, `rug`, `zypper` und `emerge`, ArchLinux-Wiki, https://wiki.archlinux.org/index.php/Pacman_Rosetta
 
 - [[[PCLinuxOS]]] PCLinuxOS, https://www.pclinuxos.com/
+
+- [[[pfsense]]] pfSense, https://www.pfsense.org/
 
 - [[[Piuparts]]] Piuparts (Package Installation, UPgrading And Removal Testing Suite), https://piuparts.debian.org/
 
