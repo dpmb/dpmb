@@ -19,8 +19,40 @@ Sie es leichter haben, aus der Situation herauszukommen.
 
 ==== Mittels wget ====
 
-* benutzt die Umgebungsvariablen `http_proxy`, `https_proxy`,
-`ftp_proxy` und `no_proxy`, falls vorhanden
+Das Werkzeug `wget` <<Debian-Paket-wget>> agiert wie ein fensterloser
+Webbrowser und bezieht die Daten von im Aufruf angegebenen URL. `wget`
+respektiert Proxy Server und wertet dazu die Umgebungsvariablen
+`http_proxy`, `https_proxy`, `ftp_proxy` und `no_proxy` aus, falls diese
+vorhanden sind. 
+
+Der nachfolgende Aufruf demonstriert, wie Sie das Paket 'mc' via `wget`
+vom Paketmirror `ftp.de.debian.org` beziehen. Das Paket finden Sie dann
+als Datei `mc_4.8.26-1.1_amd64.deb` im lokalen Verzeichnis.
+
+.Bezug des Paketes 'mc' vom Paketmirror `ftp.de.debian.org` via `wget`
+----
+$ wget http://ftp.de.debian.org/debian/pool/main/m/mc/mc_4.8.26-1.1_amd64.deb
+--2023-06-12 22:07:02--  http://ftp.de.debian.org/debian/pool/main/m/mc/mc_4.8.26-1.1_amd64.deb
+Auflösen des Hostnamen »ftp.de.debian.org (ftp.de.debian.org)«... 141.76.2.4
+Verbindungsaufbau zu ftp.de.debian.org (ftp.de.debian.org)|141.76.2.4|:80... verbunden.
+HTTP-Anforderung gesendet, warte auf Antwort... 200 OK
+Länge: 534020 (522K) [application/vnd.debian.binary-package]
+In »»mc_4.8.26-1.1_amd64.deb«« speichern.
+
+mc_4.8.26-1.1_amd64.deb     100%[==========================================>] 521,50K   488KB/s   in 1,1s   
+
+2023-06-12 22:07:04 (488 KB/s) - »»mc_4.8.26-1.1_amd64.deb«« gespeichert [534020/534020]
+$
+----
+
+In Bezug auf Proxy Server verfügt `wget` über einige nützliche Kommandozeilenoptionen:
+
+`--no-proxy-server`:: keinen Proxy Server verwenden, auch wenn dieser
+systemweit konfiguriert ist
+
+`--proxy_user` :: sich beim Proxy Server mit dem angegebenen Benutzer authentifizieren
+
+`--proxy_password` :: sich beim Proxy Server mit dem angegebenen Passwort authentifizieren
 
 ==== Mittels curl ====
 
