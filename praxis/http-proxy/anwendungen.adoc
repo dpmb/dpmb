@@ -56,7 +56,27 @@ systemweit konfiguriert ist
 
 ==== Mittels curl ====
 
-* Kommandozeilenschalter `-x` und `--proxy`
+Was mit `wget` gelingt, geht auch mit `curl` (Debianpaket 'curl'
+<<Debian-Paket-curl>>) -- `curl` kann nur deutlich mehr. Nützlich ist
+hier zunächst der Schalter `-x` (Langversion: `--proxy`), mit dem Sie
+zunächst den Proxy Server benennen. Der darauffolgende Wert repräsentiert
+das Login `benutzer` mit dem Passwort `passwort` und dem Proxyserver mit
+der IP-Adresse 127.0.0.1 und dem Port 1234.
+
+.Bezug der Datei über einen Proxy mittels `curl`
+----
+curl --proxy "http://benutzer:passwort@127.0.0.1:1234" "http://webseite.org/datei"
+curl --proxy "benutzer:passwort@127.0.0.1:1234" "http://webseite.org/datei"
+----
+
+Sind die beiden Umgebungsvariablen `http_proxy` und `https_proxy`
+gesetzt, wertet `curl` diese aus. Dann vereinfacht sich der Aufruf zu:
+
+.Bezug der Datei über einen Proxy mittels `curl` (vereinfachter Aufruf)
+----
+curl "http://webseite.org/datei"
+----
+
 
 ==== Webbrowser Firefox ==== 
 
