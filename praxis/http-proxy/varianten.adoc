@@ -16,9 +16,9 @@ Proxy Server existieren in verschiedenen Lebensformen. Neben
 _transparenten Proxy Servern_ , von denen Sie als Benutzer in der Regel
 nichts mitbekommen sollten, gibt es _protokollunabhängige_ und
 _protokollabhängige_ Proxies. Ersteres sind bspw. SOCKS4- und
-SOCKS5-Proxies <<SOCKS>>, das zweite hingegen HTTP-Proxies oder
-FTP-Proxies. Diese werden dann nur für das jeweilige Transportprotokoll
-eingesetzt.
+SOCKS5-Proxies <<SOCKS>> gemäß RFC 1928 <<RFC1928>>, das zweite hingegen
+HTTP-Proxies oder FTP-Proxies. Diese werden dann nur für das jeweilige
+Transportprotokoll eingesetzt.
 
 Bezogen auf die Paketverwaltung ist der Spezialfall ``Caching Proxy
 ausschließlich für Debianpakete'' interessant. Dieser behält die bereits

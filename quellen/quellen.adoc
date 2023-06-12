@@ -856,6 +856,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[ReproducibleBuilds]]] Reproducible Builds, https://reproducible-builds.org/
 
+- [[[RFC1928]]] RFC 1928: Standard For The Format Of Text Messages, IETF, https://tools.ietf.org/html/rfc1928
+
 - [[[RFC822]]] RFC 822: Standard For The Format Of Text Messages, IETF, https://www.ietf.org/rfc/rfc0822.txt
 
 - [[[Ritesh-apt-offline]]] Ritesh Sarraf: Offline Package Management for
