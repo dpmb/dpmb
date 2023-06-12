@@ -84,8 +84,8 @@ umfangreichen Manpage zu `curl`.
 
 Firefox kann mit Proxy Servern umgehen. Eine Konfiguration dazu erlaubt
 Firefox nicht über Kommandozeilenoptionen, sondern nur über den 
-Menüpunkt Einstellungen und darin im Abschnitt Netzwerkeinstellungen 
-(siehe <<fig.firefox-proxy>> für das entsprechende Dialogfenster).
+Menüpunkt Einstellungen -> Allgemein -> Netzwerkeinstellungen (siehe 
+<<fig.firefox-proxy>> für das entsprechende Dialogfenster).
 
 .Proxy-Einstellungen bei Firefox
 image::praxis/http-proxy/firefox-proxy.png[id="fig.firefox-proxy", width="50%"]
