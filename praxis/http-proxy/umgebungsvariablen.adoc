@@ -1,0 +1,14 @@
+// Datei: ./praxis/http-proxy/umgebungsvariablen.adoc
+
+// Baustelle: Notizen
+
+[[http-proxy-umgebungsvariablen]]
+=== Einen Proxy mittels Umgebungsvariablen konfigurieren ===
+
+// Stichworte für den Index
+(((Proxy, Umgebungsvariablen)))
+(((Proxy Server, Umgebungsvariablen)))
+
+* Beschreibung zu Umgebungsvariablen <<proxyArch>> 
+
+// Datei (Ende): ./praxis/http-proxy/umgebungsvariablen.adoc
