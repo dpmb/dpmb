@@ -9,6 +9,16 @@
 (((Proxy, in Anwendungen konfigurieren)))
 (((Proxy Server, in Anwendungen konfigurieren)))
 
-* ToDo
+* warum schauen wir uns das hier an:
+** Recherche zu Paketen über den Webbrowser
+** Herunterladen von `deb`-Paketen
+
+* ToDo:
+** Webbrowser Firefox: Dialogfenster
+** Webbrowser Chromium: Systemeinstellungen
+
+----
+Bei der Ausführung von Google Chrome in einer unterstützten Desktop-Umgebung werden die Proxy-Einstellungen des Systems verwendet.
+----
 
 // Datei (Ende): ./praxis/http-proxy/anwendungen.adoc
