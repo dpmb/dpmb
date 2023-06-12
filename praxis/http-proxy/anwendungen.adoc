@@ -82,9 +82,19 @@ umfangreichen Manpage zu `curl`.
 
 ==== Webbrowser Firefox ==== 
 
-* nur über Dialogfenster
-* frühe Versionen ignorieren Umgebungsvariablen
-* keine Kommandozeilenoptionen
+Firefox kann mit Proxy Servern umgehen. Eine Konfiguration dazu erlaubt
+Firefox nicht über Kommandozeilenoptionen, sondern nur über den 
+Menüpunkt Einstellungen und darin im Abschnitt Netzwerkeinstellungen 
+(siehe <<fig.firefox-proxy>> für das entsprechende Dialogfenster).
+
+.Proxy-Einstellungen bei Firefox
+image::praxis/http-proxy/firefox-proxy.png[id="fig.firefox-proxy", width="50%"]
+
+Während frühe Versionen von Firefox Umgebungsvariablen noch ignorierten,
+haben Sie mittlerweile die freie Auswahl zwischen ``kein Proxy Server'',
+``automatische Erkennung'', ``Verwendung der Umgebungsvariablen'' , 
+``manueller Konfiguration'' und der Verwendung einer automatischen URL
+zur Konfiguration.
 
 ==== Webbrowser Chromium ====
 
