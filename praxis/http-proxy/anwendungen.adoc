@@ -9,9 +9,13 @@
 (((Proxy, in Anwendungen konfigurieren)))
 (((Proxy Server, in Anwendungen konfigurieren)))
 
-* warum schauen wir uns das hier an:
-** Recherche zu Paketen über den Webbrowser
-** Herunterladen von `deb`-Paketen, wenn man hinter einem Proxy sitzt
+Sie werden sich sicher fragen, was dieser Aspekt in diesem Buch zu
+suchen hat. Wichtig wird das genau dann, wenn Sie hinter einem Proxy
+Server sitzen und dieser ihnen den direkten Weg zum Paketmirror und 
+zu dringend benötigten Informationsseiten versperrt. Dann wird die
+Recherche und der Bezug passender `deb`-Pakete nämlich etwas hakelig. 
+Mehrfach waren wir in der Situation. Wir fügen das hier ein, damit 
+Sie es leichter haben, aus der Situation herauszukommen.
 
 ==== Mittels wget ====
 
