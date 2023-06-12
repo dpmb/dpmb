@@ -34,6 +34,9 @@ include::einen-proxy-konfigurieren.adoc[]
 // - Umgebungsvariablen
 include::umgebungsvariablen.adoc[]
 
+// - Proxy in Anwendungen
+include::anwendungen.adoc[]
+
 // - APT über HTTP-Proxy
 include::apt-ueber-http-proxy.adoc[]
 
