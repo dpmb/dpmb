@@ -10,17 +10,20 @@
 // Stichworte für den Index
 (((Proxy, unter Debian konfigurieren)))
 (((Proxy Server, unter Debian konfigurieren)))
-Im Debian-Ökosystem gibt es unterschiedliche Stellen, wo Sie hinterlegen
-können, dass ein Proxy Server überhaupt benutzt werden soll. Dazu zählen
-zunächst die allgemeinen Umgebungsvariablen wie `export` und `profile`,
-danach folgen die Einstellungen des Desktop-Environments <<proxyArch>>
-und die der Anwendungen, wie z.B. im Webbrowser Firefox. Für die 
-Paketverwaltung kommem die Einträge in der Datei `/etc/apt/apt.conf`
-bzw. der modularisierten Variante unter `/etc/apt/apt.conf.d/70debconf`
-ins Visier.
+Üblicherweise kommt eine frische Debian-Installation ohne einen
+konfigurierten Proxy Server daher. Ihr System kommuniziert direkt mit
+den Diensten in der Netzwerkumgebung. Einen Proxy Server ergänzen Sie
+nachträglich selbst.
 
-* Links:
-** [1b] https://tools.ietf.org/html/rfc1928
-** [4] man apt.conf  (da einfach mal nach proxy suchen)
+Im Debian-Ökosystem gibt es unterschiedliche Stellen, an denen Sie die
+Benutzung eines Proxy Servers hinterlegen. Dazu zählen zunächst die
+allgemeinen Umgebungsvariablen (siehe ``Einen Proxy mittels
+Umgebungsvariablen konfigurieren'' in
+<<http-proxy-umgebungsvariablen>>), danach folgen die Einstellungen des 
+Desktop-Environments und der Anwendungen, wie bspw. im Webbrowser Firefox. 
+Für die Paketverwaltung kommem die Einträge in der Datei
+`/etc/apt/apt.conf` bzw. der modularisierten Variante unter
+`/etc/apt/apt.conf.d/70debconf` ins Visier (siehe dazu ``APT über
+HTTP-Proxy'' in <<http-proxy-ueber-apt>>).
 
 // Datei (Ende): ./praxis/http-proxy/einen-proxy-konfigurieren.adoc

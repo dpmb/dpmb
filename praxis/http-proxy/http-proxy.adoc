@@ -31,7 +31,12 @@ include::varianten.adoc[]
 // Einen Proxy konfigurieren
 include::einen-proxy-konfigurieren.adoc[]
 
-// weiteres Material
+// - Umgebungsvariablen
+include::umgebungsvariablen.adoc[]
+
+// - APT über HTTP-Proxy
+
+[[http-proxy-ueber-apt]]
 
 === APT über HTTP-Proxy ===
 
