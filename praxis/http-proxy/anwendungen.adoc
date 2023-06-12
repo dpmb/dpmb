@@ -11,7 +11,7 @@
 
 * warum schauen wir uns das hier an:
 ** Recherche zu Paketen über den Webbrowser
-** Herunterladen von `deb`-Paketen
+** Herunterladen von `deb`-Paketen, wenn man hinter einem Proxy sitzt
 
 ==== Mittels wget ====
 
