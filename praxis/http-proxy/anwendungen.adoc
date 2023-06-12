@@ -15,7 +15,12 @@
 
 ==== Mittels wget ====
 
-* ToDo
+* benutzt die Umgebungsvariablen `http_proxy`, `https_proxy`,
+`ftp_proxy` und `no_proxy`, falls vorhanden
+
+==== Mittels curl ====
+
+* Kommandozeilenschalter `-x` und `--proxy`
 
 ==== Webbrowser Firefox ==== 
 
