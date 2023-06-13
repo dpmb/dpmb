@@ -984,6 +984,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Ubuntu-Sources-List-Generator]]] Ubuntu Sources List Generator, https://repogen.simplylinux.ch/
 
+- [[[Ubuntu-Wiki-Proxy]]] Ubuntu Wiki: Proxy Server, https://wiki.ubuntuusers.de/Proxyserver/
+
 - [[[Ultimate-Debian-Database]]] Ultimate Debian Database, https://udd.debian.org/
 
 - [[[UCS]]] Univention Corporate Server (UCS), https://www.univention.de/produkte/ucs/
