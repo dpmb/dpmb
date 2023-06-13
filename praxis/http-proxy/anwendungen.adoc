@@ -131,21 +131,24 @@ von `curl` ist identisch zu Variante 1.
 Weitere Schalter zum Thema Proxy Server entnehmen Sie bitte der
 umfangreichen Manpage zu `curl`.
 
+[[http-proxy-anwendungen-firefox]]
 ==== Webbrowser Firefox ==== 
 
-Firefox kann mit Proxy Servern umgehen. Eine Konfiguration dazu erlaubt
-Firefox nicht über Kommandozeilenoptionen, sondern nur über den 
-Menüpunkt Einstellungen -> Allgemein -> Netzwerkeinstellungen (siehe 
-<<fig.firefox-proxy>> für das entsprechende Dialogfenster).
+Firefox kann ebenfalls mit Proxy Servern umgehen. Eine Konfiguration dazu 
+erlaubt Firefox jedoch nicht über Kommandozeilenschalter, sondern
+ausschließlich über den Menüpunkt Einstellungen -> Allgemein -> Netzwerkeinstellungen 
+(siehe <<fig.firefox-proxy>> für das entsprechende Dialogfenster).
 
 .Proxy-Einstellungen bei Firefox
 image::praxis/http-proxy/firefox-proxy.png[id="fig.firefox-proxy", width="50%"]
 
-Während frühe Versionen von Firefox Umgebungsvariablen noch ignorierten,
-haben Sie mittlerweile die freie Auswahl zwischen ``kein Proxy Server'',
-``automatische Erkennung'', ``Verwendung der Umgebungsvariablen'' , 
-``manueller Konfiguration'' und der Verwendung einer automatischen URL
-zur Konfiguration.
+Während frühe Versionen von Firefox Umgebungsvariablen mitunter noch 
+ignorierten, haben Sie mittlerweile die freie Auswahl zwischen den
+varianten ``keinen Proxy Server verwenden'', ``automatische Erkennung'', 
+``Verwendung der Umgebungsvariablen'' , ``manueller Konfiguration'' und 
+Verwendung einer automatischen URL zur Konfiguration. Sobald Sie die
+passenden Eintragungen im Dialogfenster durchgeführt haben, werden diese
+aktiv und Firefox kommuniziert mit dem angegebenen Proxy Server.
 
 ==== Webbrowser Chromium ====
 
