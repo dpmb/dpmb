@@ -1,6 +1,6 @@
 // Datei: ./praxis/http-proxy/umgebungsvariablen.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[http-proxy-umgebungsvariablen]]
 === Einen Proxy mittels Umgebungsvariablen konfigurieren ===
@@ -9,6 +9,31 @@
 (((Proxy, Umgebungsvariablen)))
 (((Proxy Server, Umgebungsvariablen)))
 
-* Beschreibung zu Umgebungsvariablen <<proxyArch>> 
+Viele Programme orientieren sich am Systemzustand und greifen dazu auf
+Umgebungsvariablen und lokale Konfigurationsdateien zurück. Zur
+Verwendung eines Proxy Servers sind diese Variablen üblich:
+
+`http_proxy` :: HTTP Proxy Server
+
+`https_proxy` :: HTTPS Proxy Server
+
+`ftp_proxy` :: FTP Proxy Server
+
+`rsync_proxy` :: Proxy Server für `rsync` <<Debian-Paket-rsync>>
+
+`no_proxy` :: keinen Proxy Server verwenden
+
+Nachfolgend sehen Sie beispielhaft, wie Sie auf der Kommandozeile 
+eine solche Umgebungsvariable setzen und gleich systemweit zugänglich 
+machen. Benutzt wird hier als Proxy Server die IP-Adresse 1.2.3.4 und
+als Port 8080.
+
+.Setzen einer Umgebungsvariable in der Shell
+----
+$ export http_proxy="http://1.2.3.4:8080/"
+----
+
+Ausführlichere Informationen zum Umgang mit Umgebungsvariablen finden 
+Sie im Wiki von Arch Linux <<proxyArch>>.
 
 // Datei (Ende): ./praxis/http-proxy/umgebungsvariablen.adoc

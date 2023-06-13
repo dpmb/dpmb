@@ -491,6 +491,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Paket-rpmlint]]] Debian-Paket 'rpmlint', https://packages.debian.org/de/stretch/rpmlint
 
+- [[[Debian-Paket-rsync]]] Debian-Paket 'rsync', https://packages.debian.org/de/stable/rsync
+
 - [[[Debian-Paket-sensible-utils]]] Debian-Paket 'sensible-utils', https://packages.debian.org/de/stable/sensible-utils
 
 // ACHTUNG: Absichtlich "buster" und nicht "stable", weil nach Buster aus Debian entfernt!
