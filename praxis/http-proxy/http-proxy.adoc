@@ -40,4 +40,7 @@ include::anwendungen.adoc[]
 // - APT über HTTP-Proxy
 include::apt-ueber-http-proxy.adoc[]
 
+// - Aptitude über HTTP-Proxy
+include::aptitude-ueber-http-proxy.adoc[]
+
 // Datei (Ende): ./praxis/http-proxy/http-proxy.adoc

@@ -1,0 +1,19 @@
+// Datei: ./praxis/http-proxy/apttude-ueber-http-proxy.adoc
+
+// Baustelle: Rohtext
+
+[[http-proxy-ueber-aptitude]]
+
+=== Aptitude über HTTP-Proxy ===
+
+// Stichworte für den Index
+(((/etc/apt/apt.conf)))
+(((/etc/apt/apt.conf.d/70debconf)))
+(((Proxy, Konfiguration bei Aptitude)))
+(((Proxy Server, Konfiguration bei Aptitude)))
+Für Aptitude gilt das Gleiche wie bei APT. Hintergrund ist, dass sowohl
+APT, als auch Aptitude die gleiche Bibliothek namens `libapt` benutzen.
+Somit sind das Featureset und die Konfiguration beider Werkzeuge
+an dieser Stelle identisch (siehe <<http-proxy-ueber-apt>>).
+
+// Datei (Ende): ./praxis/http-proxy/aptitude-ueber-http-proxy.adoc
