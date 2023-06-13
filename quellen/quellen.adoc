@@ -158,6 +158,8 @@
 
 - [[[Cupt-Tutorial]]] Cupt Tutorial, https://people.debian.org/~jackyf/cupt2/tutorial.html
 
+- [[[curl-developer]]] Curl Developer Guide, https://everything.curl.dev/
+
 - [[[curses-apt-key]]] curses-apt-key, https://github.com/xtaran/curses-apt-key
 
 - [[[curses-apt-key-braucht-gui-apt-key-aufsplittung]]] Aufsplittung von gui-apt-key in Bibliothek und Frontend gewünscht, https://bugs.debian.org/675199

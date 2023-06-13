@@ -129,7 +129,8 @@ liest die voreingestellten Authentifizierungsdaten von dort. Der Aufruf
 von `curl` ist identisch zu Variante 1.
 
 Weitere Schalter zum Thema Proxy Server entnehmen Sie bitte der
-umfangreichen Manpage zu `curl`.
+umfangreichen Manpage zu `curl` oder dem Curl Developer Guide
+<<curl-developer>>.
 
 [[http-proxy-anwendungen-firefox]]
 ==== Webbrowser Firefox ==== 
