@@ -88,10 +88,13 @@ verwenden
 [[http-proxy-ueber-apt-umgebungsvariablen]]
 ==== Umgebungsvariablen ====
 
-* welche Umgebungsvariablen brauche ich
-** `ftp_proxy`
-** `http_proxy`
-** `https_proxy`
+// Stichworte für den Index
+(((Proxy, Umgebungsvariablen für APT)))
+(((Proxy Server, Umgebungsvariablen für APT)))
+APT greift auf Umgebungsvariablen zurück, sofern Sie diese auf ihrem
+System definiert haben. Es benutzt `ftp_proxy`, `http_proxy` und
+`https_proxy`. Wie Sie diese festlegen, lesen Sie in
+<<http-proxy-umgebungsvariablen>> nach.
 
 [[http-proxy-ueber-apt-schalter]]
 ==== Schalter für apt-get ====
