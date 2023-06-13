@@ -150,13 +150,16 @@ Verwendung einer automatischen URL zur Konfiguration. Sobald Sie die
 passenden Eintragungen im Dialogfenster durchgeführt haben, werden diese
 aktiv und Firefox kommuniziert mit dem angegebenen Proxy Server.
 
+[[http-proxy-anwendungen-firefox]]
 ==== Webbrowser Chromium ====
 
 Chromium verhält sich in Bezug auf die Konfiguration für Proxy Server
-entgegengesetzt zu Firefox. In den Systemeinstellungen findet sich kein
-Eintrag, dafür geschieht alles über Schalter der Kommandozeile. Zudem
-respektiert Chromium die lokalen Einstellungen, wie es freudig mitteilt:
+entgegengesetzt zu Firefox. In den Systemeinstellungen finden Sie keinen
+Eintrag, dafür geschieht alles über passende Schalter auf der 
+Kommandozeile. Zudem respektiert Chromium die lokalen Einstellungen, wie 
+es freudig mitteilt:
 
+.Mitteilung von Chromium zu den Einstellungen für Proxy Server
 ----
 Bei der Ausführung von Google Chrome in einer unterstützten Desktop-Umgebung werden die 
 Proxy-Einstellungen des Systems verwendet.
@@ -166,7 +169,6 @@ Als Kommandozeilenparameter stehen Ihnen zur Verfügung:
 
 `--proxy-server` :: den angegebenen Proxy Server benutzen. Für einen
 SOCKS Proxy v4 sieht der Aufruf wie folgt aus:
-~
 ----
 $ chromium --proxy-server="socks4://webserver:1234"
 ----
