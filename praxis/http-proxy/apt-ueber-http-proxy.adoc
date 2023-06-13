@@ -75,7 +75,7 @@ ausreichen. Der Defaultwert ist 1048576 (ca. 1 MB). Die maximale Größe
 ist der Wert, der mittels `Cache-Limit` festgelegt ist. Falls als Wert 0
 hinterlegt ist, ist die automatische Anpassung deaktiviert.
 
-`Cache-Limit :: verfügbar ab Version 0.7.26. Legt die maximale Größe des
+`Cache-Limit` :: verfügbar ab Version 0.7.26. Legt die maximale Größe des
 Caches fest. Der Defaultwert ist 0 für keine Größenbeschränkung.
 
 `Max-Age` :: Alter der Indexdatei in Sekunden
