@@ -21,17 +21,22 @@ ausgebremst hat. Wir fügen die Informationen dazu hier ein, damit Sie es
 leichter haben, aus einer solchen Situation herauszukommen, falls Sie
 unverhofft darin landen.
 
+[[http-proxy-anwendungen-wget]]
 ==== Mittels wget ====
 
+// Stichworte für den Index
+(((Proxy, mit wget benutzen)))
+(((Proxy Server, mit wget benutzen)))
 Das Werkzeug `wget` <<Debian-Paket-wget>> agiert wie ein fensterloser
 Webbrowser und bezieht die Daten von im Aufruf angegebenen URL. `wget`
-respektiert Proxy Server und wertet dazu die Umgebungsvariablen
-`http_proxy`, `https_proxy`, `ftp_proxy` und `no_proxy` aus, falls diese
-vorhanden sind. 
+respektiert bereits konfigurierte Proxy Server und wertet dazu die
+Umgebungsvariablen `http_proxy`, `https_proxy`, `ftp_proxy` und
+`no_proxy` aus, falls diese auf ihrem Linux-System vorhanden sind. 
 
-Der nachfolgende Aufruf demonstriert, wie Sie das Paket 'mc' via `wget`
-vom Paketmirror `ftp.de.debian.org` beziehen. Das Paket finden Sie dann
-als Datei `mc_4.8.26-1.1_amd64.deb` im lokalen Verzeichnis.
+Der nachfolgende Aufruf demonstriert, wie Sie das Paket 'mc'
+<<Debian-Paket-mc>> via `wget` vom Paketmirror `ftp.de.debian.org`
+beziehen. Das heruntergeladene Paket finden Sie dann als Datei
+`mc_4.8.26-1.1_amd64.deb` in ihrem aktuellen Verzeichnis.
 
 .Bezug des Paketes 'mc' vom Paketmirror `ftp.de.debian.org` via `wget`
 ----
@@ -49,14 +54,25 @@ mc_4.8.26-1.1_amd64.deb     100%[==========================================>] 52
 $
 ----
 
-In Bezug auf Proxy Server verfügt `wget` über einige nützliche Kommandozeilenoptionen:
+In Bezug auf Proxy Server verfügt `wget` über weitere Schalter für die
+Kommandozeile, die sich im Alltag als recht nützlich erweisen:
 
 `--no-proxy-server`:: keinen Proxy Server verwenden, auch wenn dieser
-systemweit konfiguriert ist
+systemweit konfiguriert ist. Ignoriert die Umgebungsvariablen
+`http_proxy`, `https_proxy`, `ftp_proxy` und `no_proxy`.
 
-`--proxy_user` :: sich beim Proxy Server mit dem angegebenen Benutzer authentifizieren
+`--proxy_user` :: Authentifizierung beim Proxy Server mit dem
+angegebenen Benutzername.
 
-`--proxy_password` :: sich beim Proxy Server mit dem angegebenen Passwort authentifizieren
+`--proxy_password` :: Authentifizierung beim Proxy Server mit dem
+angegebenen Passwort.
+
+Bitte beachten Sie bei der Verwendung der beiden Schalter `--proxy_user`
+und `--proxy_password` im direkten Aufruf über die Kommandozeile, dass
+die darüber angegebenen Authentifizierungsdaten in der Historie ihres
+Kommandointerpreters landen. Abhilfe schaffen Sie, indem Sie die
+Authentifizierungsdaten entweder in der lokalen Datei `~/.wgetrc` oder
+systemweit in der Datei `/etc/wgetrc` hinterlegen.
 
 ==== Mittels curl ====
 
