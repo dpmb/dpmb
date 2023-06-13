@@ -74,6 +74,7 @@ Kommandointerpreters landen. Abhilfe schaffen Sie, indem Sie die
 Authentifizierungsdaten entweder in der lokalen Datei `~/.wgetrc` oder
 systemweit in der Datei `/etc/wgetrc` hinterlegen.
 
+[[http-proxy-anwendungen-curl]]
 ==== Mittels curl ====
 
 Was mit `wget` gelingt, geht auch mit `curl` (Debianpaket 'curl'
@@ -89,13 +90,43 @@ curl --proxy "http://benutzer:passwort@127.0.0.1:1234" "http://webseite.org/date
 curl --proxy "benutzer:passwort@127.0.0.1:1234" "http://webseite.org/datei"
 ----
 
-Sind die beiden Umgebungsvariablen `http_proxy` und `https_proxy`
-gesetzt, wertet `curl` diese aus. Dann vereinfacht sich der Aufruf zu:
+Bitte beachten Sie beim direkten Aufruf über die Kommandozeile, dass die
+darüber angegebenen Authentifizierungsdaten in der Historie ihres
+Kommandointerpreters landen. Abhilfe schaffen Sie auf drei möglichen
+Wegen. In *Variante 1* speichern Sie die benötigten
+Authentifizierungsdaten in den Umgebungsvariablen. `curl` wertet dazu
+`http_proxy` und `https_proxy` aus. Dann vereinfacht sich obiger Aufruf
+zu:
 
 .Bezug der Datei über einen Proxy mittels `curl` (vereinfachter Aufruf)
 ----
 curl "http://webseite.org/datei"
 ----
+
+In *Variante 2* speichern Sie die benötigten Authentifizierungsdaten
+in einer lokalen Datei und geben diese `curl` beim Aufruf als
+zusätzlichen Parameter mit. Das gelingt über den Schalter `-K`
+(Langform: `--config`), gefolgt vom Namen der Konfiguriationsdatei. Der
+nachfolgende Aufruf benutzt die Datei `proxy-config` mit diesem Inhalt:
+
+.Konfigurationsdatei für `curl` zur Verwendung eines Proxy Servers
+----
+--proxy "http://benutzer:passwort@127.0.0.1:1234"
+----
+
+Der Aufruf vereinfacht sich dann wie folgt:
+
+.Bezug der Datei über einen Proxy mittels Konfigurationsdatei für `curl`
+----
+$ curl -K proxy-config "http://webseite.org/datei"
+----
+
+Auch *Variante 3* möchten wir Ihnen nicht vorenthalten. Dieser Weg führt
+über die lokale Konfigurationsdatei `~/.curlrc`. Dort hinterlegen Sie
+die Defaultparameter für `curl` analog zu Variante 2. Rufen Sie nun
+`curl` auf, prüft es, ob diese Konfigurationsdatei vorhanden ist und
+liest die voreingestellten Authentifizierungsdaten von dort. Der Aufruf
+von `curl` ist identisch zu Variante 1.
 
 Weitere Schalter zum Thema Proxy Server entnehmen Sie bitte der
 umfangreichen Manpage zu `curl`.
