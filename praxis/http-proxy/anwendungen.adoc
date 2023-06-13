@@ -7,15 +7,19 @@
 
 // Stichworte für den Index
 (((Proxy, in Anwendungen konfigurieren)))
+(((Proxy, vor Paketmirror)))
 (((Proxy Server, in Anwendungen konfigurieren)))
+(((Proxy Server, vor Paketmirror)))
 
-Sie werden sich sicher fragen, was dieser Aspekt in diesem Buch zu
+Sie werden sich sicher fragen, was dieser Aspekt hier im Buch zu
 suchen hat. Wichtig wird das genau dann, wenn Sie hinter einem Proxy
-Server sitzen und dieser ihnen den direkten Weg zum Paketmirror und 
-zu dringend benötigten Informationsseiten versperrt. Dann wird die
-Recherche und der Bezug passender `deb`-Pakete nämlich etwas hakelig. 
-Mehrfach waren wir in der Situation. Wir fügen das hier ein, damit 
-Sie es leichter haben, aus der Situation herauszukommen.
+Server sitzen und dieser ihnen den direkten Weg zum Paketmirror oder
+auch zu dringend benötigten Informationsseiten versperrt. Dann wird die
+Recherche und auch der nachfolgende Bezug passender `deb`-Pakete nämlich
+etwas hakelig. Mehrfach waren wir in dieser Lage, was uns erstmal etwas
+ausgebremst hat. Wir fügen die Informationen dazu hier ein, damit Sie es
+leichter haben, aus einer solchen Situation herauszukommen, falls Sie
+unverhofft darin landen.
 
 ==== Mittels wget ====
 
