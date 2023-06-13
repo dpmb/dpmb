@@ -15,7 +15,7 @@ Für `apt` tragen Sie den Proxy in der Datei
 `/etc/apt/apt.conf.d/70debconf` ein. Bei älteren
 Debian-Veröffentlichungen ist es die Datei `/etc/apt/apt.conf`.
 Nachfolgend sehen Sie den Eintrag für einen HTTP-Proxy namens
-`proxyserver`, der auf den Port 8080 lauscht.
+`proxyserver`, der auf dem Port 8080 lauscht.
 
 .Beispiel für einen Rechner `proxyserver` auf Port 8080
 ----
