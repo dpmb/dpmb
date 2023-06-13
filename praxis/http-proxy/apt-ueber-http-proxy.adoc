@@ -56,10 +56,34 @@ image::praxis/http-proxy/synaptic-proxy.png[id="fig.synaptic-proxy", width="50%"
 [[http-proxy-ueber-apt-cache-verhalten]]
 ==== Schalter zur Steuerung des Cache-Verhaltens ====
 
-* `No-Cache`: unter keinen Umständen die zwischengespeicherten Inhalte
+// Stichworte für den Index
+(((Proxy, Cache-Start)))
+(((Proxy, Cache-Grow)))
+(((Proxy, Cache-Limit)))
+(((Proxy, Max-Age)))
+(((Proxy, No-Cache)))
+(((Proxy, No-Store)))
+Wie APT mit den zwischengespeicherten Daten umgeht, legen Sie über
+mehrere Schalter fest.
+
+`Cache-Start` :: verfügbar ab Version 0.7.26. Legt die initiale Größe
+des Caches fest, die APT beim Start benutzt.
+
+`Cache-Grow` :: verfügbar ab Version 0.7.26. Legt die Schrittweite in
+Bytes fest, mit der der Cache vergrößert wird, sollte er nicht mehr
+ausreichen. Der Defaultwert ist 1048576 (ca. 1 MB). Die maximale Größe
+ist der Wert, der mittels `Cache-Limit` festgelegt ist. Falls als Wert 0
+hinterlegt ist, ist die automatische Anpassung deaktiviert.
+
+`Cache-Limit :: verfügbar ab Version 0.7.26. Legt die maximale Größe des
+Caches fest. Der Defaultwert ist 0 für keine Größenbeschränkung.
+
+`Max-Age` :: Alter der Indexdatei in Sekunden
+
+`No-Cache` :: unter keinen Umständen die zwischengespeicherten Inhalte
 verwenden
-* `Max-Age`: Alter der Indexdatei in Sekunden
-* `No-Store`: angefragte Daten nicht im Cache zwischenspeichern
+
+`No-Store` :: angefragte Daten nicht im Cache zwischenspeichern
 
 [[http-proxy-ueber-apt-umgebungsvariablen]]
 ==== Umgebungsvariablen ====
