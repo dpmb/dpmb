@@ -99,7 +99,13 @@ System definiert haben. Es benutzt `ftp_proxy`, `http_proxy` und
 [[http-proxy-ueber-apt-schalter]]
 ==== Schalter für apt-get ====
 
-* Parameter / Schalter im direkten Aufruf für apt-get
+APT ist so flexibel, dass Sie ihm auch beim direkten Aufruf noch
+Schalter mitgeben können. Hierbei kommt der Schalter `-o` zum Einsatz,
+über den Sie mit der Angabe `http::Proxy` den Namen des Proxy Servers
+samt Port spezifizieren. Das nachfolgende Beispiel installiert das Paket
+'mc' <<Debian-Paket-mc>> für den 'Midnight Commander' mittels `apt-get` 
+unter Berücksichtigung des Proxy Servers namens `proxyserver`, der auf 
+Port 8080 ihre Anfragen entgegennimmt.
 
 // Aufruf noch überprüfen, ob das so geht
 .Beispielaufruf zur Installation von `mc` via Proxy
@@ -107,17 +113,15 @@ System definiert haben. Es benutzt `ftp_proxy`, `http_proxy` und
 # apt-get -o http::Proxy="http://proxyserver:8080" install mc 
 ----
 
-* aus der Manpage zu `apt.conf` (Ausschnitt):
+Die vollständige Angabe für Proxy Server folgt dieser Form:
 
 ----
-http::Proxy ist der zu benutzende Standard-HTTP-Proxy. Er wird
-standardmäßig in der Form http://[[Anwender][:Passwort]@]Rechner[:Port]/
-angegeben. Durch Rechner-Proxies kann außerdem in der Form
-http::Proxy::<host> mit dem speziellen Schlüsselwort DIRECT angegeben
-werden, dass keine Proxies benutzt werden. Falls keine der obigen
-Einstellungen angegeben wurde, wird die Umgebungsvariable http_proxy
-benutzt.
+http://[[Benutzername][:Passwort]@]Rechner[:Port]/
 ----
+
+Bitte beachten Sie, dass bei obigem Aufruf die verwendeten Zugangsdaten
+aus Benutzername und Passwort im Klartext in der Historie ihres 
+Kommandozeileninterpreters abgelegt werden.
 
 * Material:
 ** Setting up apt-get to use a http-proxy (https://help.ubuntu.com/community/AptGet/Howto#Setting_up_apt-get_to_use_a_http-proxy)
