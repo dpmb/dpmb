@@ -6,11 +6,16 @@
 
 === APT über HTTP-Proxy ===
 
+[[http-proxy-ueber-apt-konfiguration]]
 ==== Konfigurationsdateien und Einstellungen ====
 
 // Stichworte für den Index
 (((/etc/apt/apt.conf)))
 (((/etc/apt/apt.conf.d/70debconf)))
+(((Proxy, Konfiguration bei APT)))
+(((Proxy, Konfiguration bei Synaptic)))
+(((Proxy Server, Konfiguration bei APT)))
+(((Proxy Server, Konfiguration bei Synaptic)))
 Für `apt` tragen Sie den Proxy in der Datei
 `/etc/apt/apt.conf.d/70debconf` ein. Bei älteren
 Debian-Veröffentlichungen ist es die Datei `/etc/apt/apt.conf`.
@@ -23,27 +28,27 @@ Acquire::http::Proxy "http://proxyserver:8080";
 ----
 
 Obiges Beispiel beinhaltet lediglich die beiden essentiellen
-Bestandteile -- den Namen des Proxyservers (`proxyserver`) und dem Port
-(8080), auf dem der Dienst lauscht. Für eine Authentifizierung sind
-zusätzlich ein Nutzername samt Passwort notwendig. Bitte beachten Sie,
-dass dabei die Zugangsdaten im Klartext in der Konfigurationsdatei
-hinterlegt sind. Nachfolgend sehen Sie das für den Nutzer `pakete` mit
-dem Passwort `geheim`.
+Bestandteile zur Kommunikation -- den Namen des Proxy Servers
+(`proxyserver`) und dem Port (8080), auf dem der Dienst lauscht. Für
+eine Authentifizierung sind zusätzlich ein Nutzername samt Passwort
+notwendig. Bitte beachten Sie, dass dabei die Zugangsdaten im Klartext
+in der Konfigurationsdatei hinterlegt sind. Nachfolgend sehen Sie das
+für den Nutzer `pakete` mit dem Passwort `geheim`.
 
 .Beispiel mit Zugangsdaten für Nutzer `pakete`
 ----
 Acquire::http::Proxy "http://pakete:geheim@proxyserver:8080";
 ----
 
-Nutzen Sie statt APT hingegen Synaptic, geben Sie den HTTP-Proxy in
-einem separaten Konfigurationsdialog an. Diesen finden Sie unter dem
-Menüpunkt Einstellungen -> Netzwerk -> Proxy-Server. Selektieren Sie
-zuerst den Punkt ``Manuelle Proxy-Konfiguration'' und tragen danach den
-Servernamen ohne Protokoll im oberen Eingabefeld ein. Neben dem
-Eingabefeld befinden sich das Auswahlfeld für den Port sowie der Knopf
-``Legitimierung''. Mit einem Mausklick auf den Knopf erhalten Sie ein
-weiteres Dialogfenster, in dem Sie ihre Zugangsdaten für den Proxy
-hinterlegen.
+Nutzen Sie statt APT hingegen Synaptic (siehe <<gui-synaptic>>), geben 
+Sie den HTTP-Proxy in einem separaten Konfigurationsdialog an. Diesen 
+finden Sie unter dem Menüpunkt Einstellungen -> Netzwerk -> Proxy-Server. 
+Wählen Sie dazu zuerst den Punkt ``Manuelle Proxy-Konfiguration'' aus 
+und tragen danach den Servernamen ohne Protokoll im oberen Eingabefeld 
+ein. Neben dem Eingabefeld befinden sich das Auswahlfeld für den Port 
+sowie der Knopf ``Legitimierung''. Mit einem Mausklick auf diesen Knopf 
+erhalten Sie ein weiteres Dialogfenster, in dem Sie ihre Zugangsdaten 
+für den Proxy Server hinterlegen.
 
 .Proxy-Einstellungen bei Synaptic
 image::praxis/http-proxy/synaptic-proxy.png[id="fig.synaptic-proxy", width="50%"]
