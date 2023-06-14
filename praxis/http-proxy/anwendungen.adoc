@@ -158,13 +158,10 @@ Chromium verhält sich in Bezug auf die Konfiguration für Proxy Server
 entgegengesetzt zu Firefox. In den Systemeinstellungen finden Sie keinen
 Eintrag, dafür geschieht alles über passende Schalter auf der 
 Kommandozeile. Zudem respektiert Chromium die lokalen Einstellungen, wie 
-es freudig mitteilt:
+es Ihnen freudig mitteilt (siehe <<fig.chromium-infomeldung>>).
 
 .Mitteilung von Chromium zu den Einstellungen für Proxy Server
-----
-Bei der Ausführung von Google Chrome in einer unterstützten Desktop-Umgebung werden die 
-Proxy-Einstellungen des Systems verwendet.
-----
+image::praxis/http-proxy/chromium-infomeldung.png[id="fig.chromium-infomeldung", width="50%"]
 
 Als Kommandozeilenparameter stehen Ihnen zur Verfügung:
 
