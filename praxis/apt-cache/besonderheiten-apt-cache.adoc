@@ -23,23 +23,31 @@ image::praxis/apt-cache/apt-cache.png[id="fig.apt-cache", width="50%"]
 
 ==== Vor- und Nachteile ====
 
+// Stichworte für den Index
+(((Paketcache, Vor- und Nachteile)))
 Als vorteilhaft sehen wir zunächst den geringeren Bedarf an
-Speicherplatz an -- die Softwarepakete werden nur ein einziges Mal
-vorgehalten und nicht auf jedem Knoten im Netzwerk. In Folge verringert
-sich die Anzahl der Lese- und Schreibzugriffe auf den Speichermedien der
-einzelnen Knoten und verlängert somit auch deren Lebensdauer.
+Speicherplatz an -- die Softwarepakete werden nur ein einziges Mal im
+gesamten Rechnerverbund vorgehalten und nicht mehr auf jedem einzelnen
+Knoten im Netzwerk. In Folge verringert sich die Anzahl der lokalen 
+Lese- und Schreibzugriffe auf den Speichermedien der einzelnen Knoten 
+und trägt somit dazu bei, deren Lebensdauer zu verlängern.
 
 Weiteres Potential zur Einsparung ergibt sich bzgl. des Datenvolumens
 des Netzwerks: die Netzwerklast 'nach außen' verringert sich. Erfolgt
 die Abrechnung ihrer Internetanbindung entsprechend des transportierten
 Datenvolumens -- sogenannte 'trafficbasierte Abrechnung' -- wird das
-Datenvolumen geringer und spart Ihnen auf Dauer somit bares Geld.
+Datenvolumen geringer und spart Ihnen auf Dauer somit bares Geld. Die
+konkrete Ersparnis hängt von der Größe des Netzwerks und der Art und
+Intensität der Nutzung ab und wird sich erst über eine längere Zeit
+mit genauen Zahlen belegen lassen.
 
 Der APT-Cache läßt sich auch als Element zur Erhöhung der
 Ausfallsicherheit des Netzwerks ansehen: fällt der externe Paketmirror
 oder gar der Internetzugang aus, stehen ihnen immer noch die bislang
 bezogenen Softwarepakete zur Verfügung, die sich bereits im APT-Cache
-befinden.
+befinden. Bereits begonnene Aktualisierungen des Paketbestands auf
+anderen Knoten im Netzwerk lassen sich fortsetzen und auch vollenden,
+sofern sich alle Pakete bereits im APT-Cache befinden.
 
 Nachteilig am APT-Cache ist, dass die Softwarepakete darin nicht
 automatisch aufgeräumt werden, wenn diese veralten oder auf keinem
