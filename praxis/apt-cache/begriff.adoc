@@ -2,7 +2,7 @@
 
 // Baustelle: Rohtext
 
-[[begriff]]
+[[apt-cache-begriff]]
 
 === Begriff ===
 
@@ -14,10 +14,11 @@
 Im Allgemeinen bezeichnet ein 'Cache' einen Datenpuffer oder
 Zwischenspeicher, der Daten weiter vorhält und auf den im Bedarfsfall
 zurückgegriffen wird, wenn die gleichen Daten erneut angefordert oder
-ausgetauscht werden. Hier beinhaltet der Cache wiederholt benötigte
-Softwarepakete. Diese werden darin gespeichert, sobald sie das erste Mal
-vom Paketmirror bezogen wurden, beispielsweise bei der Installation oder
-Aktualisierung eines Softwarepakets. 
+ausgetauscht werden. In unserem speziellen Fall beinhaltet der Cache
+keine beliebigen Daten, sondern Softwarepakete. Diese werden darin von
+der Paketverwaltung gespeichert, sobald sie das erste Mal vom 
+Paketmirror bezogen wurden. Das passiert beispielsweise bei der 
+Installation oder Aktualisierung eines Softwarepakets. 
 
 Der Cache macht sich insbesondere dann deutlich bemerkbar, wenn mehrere
 Rechner diesen Cache verwenden und daraus die gleichen Softwarepakete
