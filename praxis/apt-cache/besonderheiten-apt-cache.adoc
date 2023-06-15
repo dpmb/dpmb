@@ -41,6 +41,14 @@ konkrete Ersparnis hängt von der Größe des Netzwerks und der Art und
 Intensität der Nutzung ab und wird sich erst über eine längere Zeit
 mit genauen Zahlen belegen lassen.
 
+Nicht zu verschweigen ist der Fakt, dass sich die Netzwerklast 'nach
+innen' erhöhen wird. Alle Knoten des Rechnerverbunds greifen jetzt 
+auf eine zentrale, lokale Quelle zu. Stellen Sie daher sicher, dass
+dieser Knoten mit dem APT-Cache möglichst performant angebunden ist 
+und auch mit der zusätzlichen Menge der Anfragen umgehen kann. Das 
+stellt sicher, dass sich die Anfragezeit nach Softwarepaketen 
+längerfristig deutlich verringert.
+
 Der APT-Cache läßt sich auch als Element zur Erhöhung der
 Ausfallsicherheit des Netzwerks ansehen: fällt der externe Paketmirror
 oder gar der Internetzugang aus, stehen ihnen immer noch die bislang
