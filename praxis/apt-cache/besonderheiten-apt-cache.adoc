@@ -57,11 +57,15 @@ befinden. Bereits begonnene Aktualisierungen des Paketbestands auf
 anderen Knoten im Netzwerk lassen sich fortsetzen und auch vollenden,
 sofern sich alle Pakete bereits im APT-Cache befinden.
 
-Nachteilig am APT-Cache ist, dass die Softwarepakete darin nicht
-automatisch aufgeräumt werden, wenn diese veralten oder auf keinem
-Knoten im Netzwerk mehr benötigt werden. Dieser Schritt fällt dann in 
-ihren Aufgabenbereich als Verwalter des APT-Caches und liesse sich 
-bspw. mit Hilfe eines Cronjobs automatisieren.
+Nachteilig am APT-Cache ist, dass die Softwarepakete darin nicht von
+jeder Softwarelösung für den Paketcache automatisch aufgeräumt werden, 
+wenn diese veralten oder auf keinem Knoten im Netzwerk mehr benötigt 
+werden. Dieser Schritt fällt dann in ihren Aufgabenbereich als Verwalter
+des APT-Caches und läßt sich bspw. mit Hilfe eines Cronjobs
+automatisieren. Sowohl Approx (siehe <<approx>>) als auch apt-cacher
+(siehe <<apt-cacher>>) und apt-cacher-ng (siehe <<apt-cacher-ng>>) kommen 
+Ihnen hier entgegen und bringen Mechanismen mit, mit denen Sie die 
+Vorhaltezeit eines bezogenen Softwarepakets im APT-Cache regeln.
 
 ==== Abgrenzung zum Betreiben eines eigenen Paketmirrors ====
 
