@@ -1,6 +1,6 @@
 // Datei: ./praxis/apt-cache/apt-cacher.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[apt-cacher]]
 
