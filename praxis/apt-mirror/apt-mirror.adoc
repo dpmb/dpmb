@@ -30,6 +30,8 @@ verwendet wird und in den administrativen Bereich fällt.
 ** Es funktioniert auf allen POSIX-konformen Systemen mit `perl` und
 `wget` <<Debian-Paket-wget>>
 
+* Einrichtung anhand eines Beispiels für Ubuntu mit `apt-mirror` <<apt-mirror-ubuntu2>>
+
 ==== Wichtige Dateien aus dem Paket ====
 * `/etc/apt/mirror.list`
 * `/etc/cron.d/apt-mirror` oder `crontab`
