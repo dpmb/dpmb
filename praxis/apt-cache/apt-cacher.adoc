@@ -26,9 +26,6 @@ es merkt sich, welche Pakete bereits angefragt wurden und liefert diese
 an den Anfragenden aus dem Paketcache, sofern sich das Paket bereits
 darin befindet, ansonsten holt es das Paket zuvor vom Paketmirror.
 
-* Beispiel:
-** 'apt-mirror' und 'apt-cacher': <<apt-mirror-ubuntu2>>
-
 ==== Einrichtung und Benutzung ====
 
 Die Einrichtung unterteilt sich in zwei Schritte -- die Konfiguration
@@ -37,12 +34,15 @@ den Paketcache später bereitstellt.
 
 ==== Serverkonfiguration ====
 
+// Stichworte für den Index
+(((apt-cacher, Konfiguration des Servers)))
 Zunächst installieren Sie das Paket 'apt-cacher' auf dem Server, 
 idealerweise in Kombination mit einem APT-Proxy wie 'apt-proxy' 
-<<apt-proxy>> oder 'approx' <<approx>>. Danach aktivieren Sie den Dienst
-zum automatischen Start von `apt-cacher`, indem Sie eine kleine Änderung
-in der Konfigurationssatei `/etc/default/apt-cacher` vornehmen. Ändern
-Sie darin diese Zeile wie folgt von
+<<apt-proxy>> oder 'approx' (siehe <<approx>>). Danach aktivieren Sie 
+den Dienst zum automatischen Start von `apt-cacher`, indem Sie noch 
+eine kleine Änderung in der Konfigurationssatei
+`/etc/default/apt-cacher` vornehmen. Ändern Sie darin diese Zeile wie
+folgt von
 
 ----
 `AUTOSTART`: `AUTOSTART=0` 
@@ -59,6 +59,8 @@ Nachdem Sie die Konfigurationsdatei gespeichert haben, starten Sie
 
 ==== Client anpassen ====
 
+// Stichworte für den Index
+(((apt-cacher, Konfiguration des Clients)))
 Auf einem Clients ändern Sie nun die Bezugsadresse für Softwarepakete.
 Dazu legen Sie einen neuen Service an -- die Datei namens
 `/etc/apt/apt.conf.d/90-apt-proxy.conf`. Diese Datei ergänzen Sie um den
@@ -68,8 +70,9 @@ folgenden Eintrag, indem Sie damit auf ihren APT-Cache verweisen:
 Acquire::http::Proxy "http://repository-cache:3142";
 ----
 
-Hier bezeichnet `repository-cache` den Rechnernamen, der den Paketcache
-bereitstellt. Die Angabe `3142` bezeichnet den Port, auf dem der
-Paketcache auf die Anfragen des Clients lauscht.
+Hier bezeichnet `repository-cache` den von uns beispielhaft 
+ausgewählten Rechnernamen, der den Paketcache bereitstellt. Die Angabe 
+`3142` bezeichnet den Port, auf dem der Paketcache auf die Anfragen 
+des Clients lauscht.
 
 // Datei (Ende): ./praxis/apt-cache/apt-cacher.adoc
