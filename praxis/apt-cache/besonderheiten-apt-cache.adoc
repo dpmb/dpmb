@@ -55,7 +55,7 @@ oder gar der Internetzugang aus, stehen ihnen immer noch die bislang
 bezogenen Softwarepakete zur Verfügung, die sich bereits im APT-Cache
 befinden. Bereits begonnene Aktualisierungen des Paketbestands auf
 anderen Knoten im Netzwerk lassen sich fortsetzen und auch vollenden,
-sofern sich alle Pakete bereits im APT-Cache befinden.
+sofern sich alle dazu benötigten Pakete bereits im APT-Cache befinden.
 
 Nachteilig am APT-Cache ist, dass die Softwarepakete darin nicht von
 jeder Softwarelösung für den Paketcache automatisch aufgeräumt werden, 
