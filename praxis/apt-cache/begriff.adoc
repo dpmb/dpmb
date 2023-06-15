@@ -21,9 +21,13 @@ Paketmirror bezogen wurden. Das passiert beispielsweise bei der
 Installation oder Aktualisierung eines Softwarepakets. 
 
 Der Cache macht sich insbesondere dann deutlich bemerkbar, wenn mehrere
-Rechner diesen Cache verwenden und daraus die gleichen Softwarepakete
-beziehen. Bei nachfolgenden Anfragen nach den Softwarepaketen verringert
-sich die Bezugszeit der Pakete und somit auch der gesamte Vorgang.
+Rechner -- bspw. aus dem gleichen Netzwerk oder Rechnerverbund -- die 
+gleichen Softwarepakete beziehen und dazu diesen Cache verwenden. 
+Anwendungsfälle aus der Praxis sind Schulungsräume und Cluster, die aus 
+identischen Knoten bestehen. Bei Anfragen nach den Softwarepaketen durch 
+die Paketverwaltung verringert sich ab der zweiten Anfrage die Bezugszeit 
+der Pakete zum jeweiligen Rechner und somit auch der gesamte Vorgang der
+Pflege des Softwarebestands im Netzwerk oder Rechnerverbund.
 
 Nachfolgend bezeichnen wir diesen Cache schlicht als 'APT-Cache', da wir
 ihn in Zusammenhang mit APT als Bestandteil der Debian-Paketverwaltung
