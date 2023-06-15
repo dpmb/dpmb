@@ -76,20 +76,20 @@ Vor der Einrichtung wägen Sie bitte zwischen einem APT-Cache und einem
 eigenen Paketmirror ab (siehe <<eigenen-apt-mirror-aufsetzen>>). Während
 letzterer stets alle Softwarepakete der Veröffentlichung vorhält -- also
 auch die, die Sie nicht benötigen -- landen im APT-Cache hingegen nur
-die Pakete, die bisher tatsächlich von mindestens einem der Netzwerkknoten
-angefragt wurden. Ein APT-Cache ist daher auch schlanker als ein eigener 
-Paketmirror.
+die Pakete, die bisher tatsächlich von mindestens einem der Knoten im
+Netzwerk angefragt wurden. Ein APT-Cache ist daher auch schlanker als 
+ein eigener Paketmirror.
 
 Zusätzliche Zeit ist hingegen einmalig einzuplanen, wenn Softwarepakete
-von einem externen Paketmirror bezogen werden, weil diese sich noch
-nicht im APT-Cache befinden. Betreiben Sie hingegen einen eigenen
-Paketmirror, entsteht regelmäßiger, zusätzlicher Traffic, da der
-Paketmirror seinen eigenen Paketbestand mit dem seines Referenzmirrors
-abgleicht und seinen Bestand entsprechend aktualisiert.
+von einem externen Paketmirror bezogen werden, weil diese sich dann ja 
+noch nicht im APT-Cache befinden. Das trifft insbesondere dann zu, wenn
+neue Paketversionen auf dem Paketmirror bereitstehen und Sie als
+Systemverwalter oder ein Knoten im Netzwerk diese neue Version
+anfordert. 
 
-Vom Betreiben eines eigenen Paketmirrors mit vorgeschaltetem APT-Cache 
-'im gleichen Netzwerk' raten wir Ihnen ab. Wir sehen in dieser Kombination
-von Diensten keinen wesentlichen Leistungsgewinn.
+Vom Betreiben eines eigenen Paketmirrors mit vorgeschaltetem APT-Cache
+'im gleichen Netzwerk' raten wir Ihnen ab. Wir sehen in dieser
+Kombination von Diensten keinen wesentlichen Leistungsgewinn.
 
 ==== Softwareauswahl für einen APT-Cache ====
 
