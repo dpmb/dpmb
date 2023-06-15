@@ -32,7 +32,7 @@ Die Einrichtung unterteilt sich in zwei Schritte -- die Konfiguration
 des Servers und der Clients. Der Server ist hierbei der Rechner, der 
 den Paketcache später bereitstellt.
 
-==== Serverkonfiguration ====
+===== Serverkonfiguration =====
 
 // Stichworte für den Index
 (((apt-cacher, Konfiguration des Servers)))
@@ -57,7 +57,7 @@ in
 Nachdem Sie die Konfigurationsdatei gespeichert haben, starten Sie
 `apt-cacher` neu, bspw. mittels `/etc/init.d/apt-cacher restart`.
 
-==== Client anpassen ====
+===== Client anpassen =====
 
 // Stichworte für den Index
 (((apt-cacher, Konfiguration des Clients)))
