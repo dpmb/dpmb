@@ -24,6 +24,10 @@ image::praxis/apt-cache/apt-cache.png[id="fig.apt-cache", width="50%"]
 ==== Vor- und Nachteile ====
 
 // Stichworte für den Index
+(((Paketcache, Ausfallsicherheit im Netzwerk)))
+(((Paketcache, Bedarf an Speicherplatz)))
+(((Paketcache, Netzwerklast)))
+(((Paketcache, Verfallsdatum gecachter Pakete)))
 (((Paketcache, Vor- und Nachteile)))
 Als vorteilhaft sehen wir zunächst den geringeren Bedarf an
 Speicherplatz an -- die Softwarepakete werden nur ein einziges Mal im
@@ -83,9 +87,8 @@ ein eigener Paketmirror.
 Zusätzliche Zeit ist hingegen einmalig einzuplanen, wenn Softwarepakete
 von einem externen Paketmirror bezogen werden, weil diese sich dann ja 
 noch nicht im APT-Cache befinden. Das trifft insbesondere dann zu, wenn
-neue Paketversionen auf dem Paketmirror bereitstehen und Sie als
-Systemverwalter oder ein Knoten im Netzwerk diese neue Version
-anfordert. 
+neue Paketversionen auf dem Paketmirror bereitstehen und ein Knoten im 
+Netzwerk diese neue Version anfordert. 
 
 Vom Betreiben eines eigenen Paketmirrors mit vorgeschaltetem APT-Cache
 'im gleichen Netzwerk' raten wir Ihnen ab. Wir sehen in dieser
