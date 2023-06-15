@@ -10,13 +10,13 @@
 
 // Stichworte für den Index
 (((Paketcache, Optimierungspotential)))
-Der APT-Cache funktioniert ähnlich wie der Puffer aus <<paketcache>>,
-ist allerdings nicht rechnerspezifisch, sondern separat und als
-Ergänzung für ein ganzes Netzwerk mit mehreren, möglichst identischen
-Knoten gedacht. Daher liegt er einmalig vor, bspw. auf einer eigenen
-Hardware, als Virtuelle Maschine oder auch in einer Docker-Instanz.
-<<fig.apt-cache>> stellt die Integration des APT-Cache in der
-Netzwerkinfrastruktur schematisch dar.
+Ein APT-Cache funktioniert ähnlich wie der lokale Paketcache, den wir
+bereits in <<paketcache>> beschrieben haben. Im jetzt betrachteten Fall
+ist dieser separat angelegt und dient als Ergänzung für ein ganzes 
+Netzwerk mit mehreren, möglichst identischen Knoten. Daher liegt er 
+einmalig vor, bspw. auf einer eigenen Hardware, als Virtuelle Maschine 
+oder auch in einer Docker-Instanz. <<fig.apt-cache>> stellt die 
+Integration des APT-Cache in der Netzwerkinfrastruktur schematisch dar.
 
 .Schematische Darstellung mit APT-Cache in der Netzwerkinfrastruktur
 image::praxis/apt-cache/apt-cache.png[id="fig.apt-cache", width="50%"]
