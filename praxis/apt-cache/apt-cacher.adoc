@@ -12,6 +12,8 @@
 (((Paketcache, apt-cacher)))
 (((Paketproxy, apt-cacher)))
 
+==== Werkzeugbeschreibung ====
+
 Das Werkzeug `apt-cacher` steht über das gleichnamige Paket 
 'apt-cacher' <<Debian-Paket-apt-cacher>> bereit. Es ist fester 
 Bestandteil der Debian-Paketliste.
@@ -27,20 +29,47 @@ darin befindet, ansonsten holt es das Paket zuvor vom Paketmirror.
 * Beispiel:
 ** 'apt-mirror' und 'apt-cacher': <<apt-mirror-ubuntu2>>
 
-* empfohlene Schritte, um das zu nutzen:
-** Server konfigurieren, sprich: der Rechner, der den Paketcache
-bereitstellt
-*** Installation der Pakete 'apt-cacher', idealerweise in Kombination mit
-einem APT-Proxy wie 'apt-proxy' <<apt-proxy>> oder 'approx' <<approx>>
-*** Service aktivieren durch Anpassung der Datei
-`/etc/default/apt-cacher` und Änderung des Wertes für
-`AUTOSTART`: `AUTOSTART=0` in `AUTOSTART=1`
-*** `apt-cacher` neu starten mittels `/etc/init.d/apt-cacher restart`
-** Clients konfigurieren, d.h. Bezugsadresse für Pakete ändern
-*** neuen Service erzeugen und dazu die Datei `/etc/apt/apt.conf.d/90-apt-proxy.conf` anlegen
-*** die Datei um den Eintrag ergänzen: `Acquire::http::Proxy
-"http://repository-cache:3142";`
-*** `repository-cache` bezeichnet den Rechnernamen, der den Paketcache
-bereitstellt
+==== Einrichtung und Benutzung ====
+
+Die Einrichtung unterteilt sich in zwei Schritte -- die Konfiguration
+des Servers und der Clients. Der Server ist hierbei der Rechner, der 
+den Paketcache später bereitstellt.
+
+==== Serverkonfiguration ====
+
+Zunächst installieren Sie das Paket 'apt-cacher' auf dem Server, 
+idealerweise in Kombination mit einem APT-Proxy wie 'apt-proxy' 
+<<apt-proxy>> oder 'approx' <<approx>>. Danach aktivieren Sie den Dienst
+zum automatischen Start von `apt-cacher`, indem Sie eine kleine Änderung
+in der Konfigurationssatei `/etc/default/apt-cacher` vornehmen. Ändern
+Sie darin diese Zeile wie folgt von
+
+----
+`AUTOSTART`: `AUTOSTART=0` 
+----
+
+in
+
+----
+`AUTOSTART`: `AUTOSTART=1`
+----
+
+Nachdem Sie die Konfigurationsdatei gespeichert haben, starten Sie
+`apt-cacher` neu, bspw. mittels `/etc/init.d/apt-cacher restart`.
+
+==== Client anpassen ====
+
+Auf einem Clients ändern Sie nun die Bezugsadresse für Softwarepakete.
+Dazu legen Sie einen neuen Service an -- die Datei namens
+`/etc/apt/apt.conf.d/90-apt-proxy.conf`. Diese Datei ergänzen Sie um den
+folgenden Eintrag, indem Sie damit auf ihren APT-Cache verweisen:
+
+----
+Acquire::http::Proxy "http://repository-cache:3142";
+----
+
+Hier bezeichnet `repository-cache` den Rechnernamen, der den Paketcache
+bereitstellt. Die Angabe `3142` bezeichnet den Port, auf dem der
+Paketcache auf die Anfragen des Clients lauscht.
 
 // Datei (Ende): ./praxis/apt-cache/apt-cacher.adoc
