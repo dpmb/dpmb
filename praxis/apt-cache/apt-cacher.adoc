@@ -9,22 +9,23 @@
 // Stichworte für den Index
 (((apt-cacher, /etc/default/apt-cacher)))
 (((Debianpaket, apt-cacher)))
-(((Paketproxy)))
+(((Paketcache, apt-cacher)))
+(((Paketproxy, apt-cacher)))
 
-* Paket 'apt-cacher' <<Debian-Paket-apt-cacher>>
+Das Werkzeug `apt-cacher` steht über das gleichnamige Paket 
+'apt-cacher' <<Debian-Paket-apt-cacher>> bereit. Es ist fester 
+Bestandteil der Debian-Paketliste.
+
+Netztechnisch klemmt sich die Software zwischen dem (öffentlichen)
+Paketmirror und den anfragenden Clients. Es ist interessant für kleine
+und auch größere Netzwerke, die einen weitestgehend identischen
+Softwarebestand besitzen. `apt-cacher` ermöglicht einen Paketcache, d.h.
+es merkt sich, welche Pakete bereits angefragt wurden und liefert diese
+an den Anfragenden aus dem Paketcache, sofern sich das Paket bereits
+darin befindet, ansonsten holt es das Paket zuvor vom Paketmirror.
 
 * Beispiel:
 ** 'apt-mirror' und 'apt-cacher': <<apt-mirror-ubuntu2>>
-
-* was 'apt-cacher' tut:
-** klemmt netztechnisch zwischen dem (öffentlichen) Spiegelserver und
-den anfragenden Clients (bspw. auch einem Paketmirror)
-** interessant für kleine und größere Netzwerke, die (identisch)
-aufgesetzt wurden
-** `apt-cacher` ermöglicht einen Paketcache, d.h. es merkt sich, welche
-Pakete bereits angefragt wurden und liefert diese an den Anfragenden aus
-dem Cache, sofern sich das Paket bereits im Cache befindet, ansonsten
-holt es das Paket zuvor vom Paketmirror
 
 * empfohlene Schritte, um das zu nutzen:
 ** Server konfigurieren, sprich: der Rechner, der den Paketcache
