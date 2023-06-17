@@ -1,6 +1,6 @@
 // Datei: ./werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/nala.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[nala]]
 
