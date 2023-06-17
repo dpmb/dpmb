@@ -10,7 +10,7 @@
 
 // Stichworte für den Index
 (((Paketcache, aufräumen)))
-(((Paketcache, /var/cache/apt/archives)))
+(((Paketcache, /var/cache/apt/archives/)))
 (((Paketcache, /var/cache/apt/archives/partial)))
 Während APT Softwarepakete von der hinterlegten Paketquelle bezieht --
 in der Regel von einem Paketmirror -- behält APT die Pakete im
