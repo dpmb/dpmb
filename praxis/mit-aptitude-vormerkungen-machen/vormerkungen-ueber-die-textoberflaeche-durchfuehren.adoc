@@ -8,6 +8,7 @@
 
 // Stichworte für den Index
 (((aptitude, Paketaktionen vormerken)))
+(((Paketaktionen, vormerken)))
 
 Um eine Paketoperation für eine spätere Verarbeitung vorzumerken, wählen
 Sie zunächst das gewünschte Paket aus der Paketliste aus.

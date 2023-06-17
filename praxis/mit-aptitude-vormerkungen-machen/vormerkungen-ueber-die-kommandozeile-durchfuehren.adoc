@@ -9,6 +9,7 @@
 // Stichworte für den Index
 (((aptitude, Paketaktionen vormerken)))
 (((aptitude, --schedule-only)))
+(((Paketaktionen, vormerken)))
 Dafür bietet Ihnen `aptitude` den Schalter `--schedule-only` an. Dieser
 Schalter ist gleichwertig zur Auswahl über die Textoberfläche und
 beliebig mit Vormerkungen daraus mischbar.
