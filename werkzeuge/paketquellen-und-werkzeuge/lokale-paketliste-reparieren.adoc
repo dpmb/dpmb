@@ -9,7 +9,7 @@
 // Stichworte für den Index
 (((apt-get, update)))
 (((Paketliste, reparieren)))
-(((Paketliste, /var/lib/apt/lists)))
+(((Paketliste, /var/lib/apt/lists/)))
 
 Es kann vorkommen, dass eine lokale Paketliste, die im Verzeichnis
 `/var/lib/apt/lists` liegt, bei deren Aktualisierung (siehe
