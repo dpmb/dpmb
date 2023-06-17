@@ -40,6 +40,7 @@ LernStick:: Live-Distribution auf einem USB-Stick <<LernStick>>
 
 // Stichworte für den Index
 (((Deepin)))
+(((Emmabuntüs)))
 (((Kubuntu)))
 (((LiMux)))
 (((Linux Mint)))
@@ -50,7 +51,12 @@ LernStick:: Live-Distribution auf einem USB-Stick <<LernStick>>
 
 Deepin:: Angeblich die meistgenutzte Linux-Distribution Chinas <<Deepin>>
 
-LiMux:: Linux-Distribution, die im Rahmen der Migration der Stadtverwaltung München zum Einsatz kommt <<LiMux>>
+Emmabuntüs :: Wurde entwickelt, um Computer neu aufzusetzen, die an
+Hilfsorganisationen gespendet wurden. Wird gepflegt von der
+Emmaus-Stiftung aus Frankeich. Emmabuntüs basiert auf Debian 'stable'.
+
+LiMux:: Linux-Distribution, die im Rahmen der Migration der
+Stadtverwaltung München zum Einsatz kam (2009-2020) <<LiMux>>
 
 Linux Mint, Linux Mint Debian Edition (LMDE):: basiert auf Ubuntu bzw. Debian 'testing' <<LinuxMint>>
 
