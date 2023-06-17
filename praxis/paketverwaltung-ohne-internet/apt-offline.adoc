@@ -13,13 +13,15 @@
 * Debian-Paket 'apt-offline' <<Debian-Paket-apt-offline>>
 * GUI-Version zum Paket: 'apt-offline-gui' <<Debian-Paket-apt-offline-gui>>
 * setzt auf der Programmiersprache Python auf
-* Nicht Bestandteil von Debian 10 _Buster_ wegen zum Zeitpunkt des
-  Freezes offenem Bug bei der Paketvalidierung
-  <<Debian-Bug-apt-offline-871656>>. (Der Bug betrifft auch Debian 9
-  Stretch.) Es ist aber in buster-backports mit der Version aus Debian 11
-  _Bullseye_.
+* fester Bestandteil von Debian ab der Version 11 _Bullseye_ 
 
-* Beschreibungen: Offline Package Management for APT (<<Ritesh-apt-offline>>, <<xubuntu-apt-offline>>, <<Damienoh-apt-offline>>)
+* Beschreibungen und Idee: 
+** Offline Package Management for APT (<<Ritesh-apt-offline>>, <<xubuntu-apt-offline>>, <<Damienoh-apt-offline>>)
+** Beschreibungsdatei zusammenstellen und herunterladen, ohne ein
+Debian-an-Internet bzw. -Netzwerk haben zu müssen
+** Beschreibungsdatei enthält alle Informationen, die ein Paketmirror
+braucht, um die relevanten Debianpakete bereitzustellen (inkl. Auflösung
+der Paketabhängigkeiten)
 
 // Stichworte für den Index
 (((apt-offline, get)))
