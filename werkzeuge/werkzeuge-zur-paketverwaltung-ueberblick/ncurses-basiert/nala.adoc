@@ -34,9 +34,9 @@ Sie sehen daraus, welche Paketaktionen bereits vorher durchgeführt
 wurden.
 
 Nala benutzt dabei nicht die APT-Bibliotheken, sondern stattdessen die
-Python-apt-API zur Verwaltung der Pakete. Derzeit -- das heißt im Herbst
-2022 -- befindet es sich noch im Test und ist daher noch nicht in der
-stabilen Veröffentlichung von Debian GNU/Linux enthalten.
+Python-apt-API zur Verwaltung der Pakete. Seit dem Frühsommer 2023 mit
+der Veröffentlichung von Debian 12 'bookworm' ist Nala in der stabilen 
+Veröffentlichung von Debian GNU/Linux enthalten.
 
 // Stichworte für den Index
 //(((nala, history)))
