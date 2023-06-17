@@ -27,10 +27,9 @@ der Paketmirror, welche Pakete er bereitstellen muß. Diese bezogenen
 Pakete übertragen Sie auf das eigentliche System -- bspw. mit einem
 USB-Stick oder einer externen Festplatte -- und spielen diese wie
 gewohnt über die Paketverwaltung ein. Wie das genau funktioniert,
-erklären wir Ihnen gleich.
-
-* Beschreibungen und Idee: 
-** Offline Package Management for APT (<<Ritesh-apt-offline>>, <<xubuntu-apt-offline>>, <<Damienoh-apt-offline>>)
+erklären wir Ihnen gleich. Als Basis dafür benutzten wir eine Reihe von
+Anleitungen zum Thema 'Offline Package Management for APT' (siehe
+<<Ritesh-apt-offline>>, <<xubuntu-apt-offline>> und <<Damienoh-apt-offline>>)
 
 ===== Benutzung im Detail =====
 
