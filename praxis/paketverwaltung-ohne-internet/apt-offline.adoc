@@ -5,6 +5,8 @@
 [[paketverwaltung-offline-apt-offline]]
 ==== Das Projekt 'apt-offline' ====
 
+===== Projektidee =====
+
 // Stichworte für den Index
 (((Debianpaket, apt-offline)))
 (((Debianpaket, apt-offline-gui)))
@@ -17,15 +19,20 @@ in Form der beiden Pakete 'apt-offline' <<Debian-Paket-apt-offline>> für
 die Kommandozeile und 'apt-offline-gui' <<Debian-Paket-apt-offline-gui>>
 mit graphischer Bedienoberfläche zur Verfügung. Beide Pakete setzen auf 
 der Programmiersprache Python auf. Seit der Version 11 _Bullseye_ sind
-die beiden Pakete fester Bestandteile der stabilen Veröffentlichung.
+die beiden Pakete fester Bestandteil der stabilen Veröffentlichung.
+
+Die Idee hinter 'apt-offline' ist das Erzeugen einer Beschreibungsdatei
+mit allen Informationen für die Abfrage der Paketdatenbank. Damit weiß 
+der Paketmirror, welche Pakete er bereitstellen muß. Diese bezogenen
+Pakete übertragen Sie auf das eigentliche System -- bspw. mit einem
+USB-Stick oder einer externen Festplatte -- und spielen diese wie
+gewohnt über die Paketverwaltung ein. Wie das genau funktioniert,
+erklären wir Ihnen gleich.
 
 * Beschreibungen und Idee: 
 ** Offline Package Management for APT (<<Ritesh-apt-offline>>, <<xubuntu-apt-offline>>, <<Damienoh-apt-offline>>)
-** Beschreibungsdatei zusammenstellen und herunterladen, ohne ein
-Debian-an-Internet bzw. -Netzwerk haben zu müssen
-** Beschreibungsdatei enthält alle Informationen, die ein Paketmirror
-braucht, um die relevanten Debianpakete bereitzustellen (inkl. Auflösung
-der Paketabhängigkeiten)
+
+===== Benutzung im Detail =====
 
 // Stichworte für den Index
 (((apt-offline, get)))
