@@ -41,25 +41,30 @@ erklären wir Ihnen gleich.
 (((apt-offline, --update)))
 (((apt-offline, --upgrade)))
 
-* Ablauf:
-** Signatur für die Maschine erzeugen, die aktualisierte
-Paketinformationen und Pakete bekommen soll (auf der Maschine, die
-offline ist)
+In *Schritt 1* erzeugen Sie eine Signatur für die Maschine, die
+aktualisierte Paketinformationen und die Pakete bekommen soll. Das
+erfolgt auf der Maschine, die offline ist. Dazu benutzen Sie das
+nachfolgende Kommando mittelt `apt-offline`. Der verwendete Schalter
+`set` erzeugt die Signaturdatei, welchen Sie im Aufruf nach dem Schalter
+benennen. Bezüglich des Dateinamens gibt keine Vorgabe -- hier haben wir
+beispielhaft die Datei `/tmp/apt-offline.sig` gewählt.
 
 ----
 # apt-offline set /tmp/apt-offline.sig
 ----
 
-*** Option `--update`: nur Updates (Einspielen aktualisierter,
-fehlerbereinigter Pakete mit der gleichen Versionsnummer)
-*** Option `--upgrade`: nur Upgrades (Einspielen aktualisierter,
-fehlerbereinigter Pakete mit einer neueren Version)
-*** ohne Optionen: alles auf den allerneuesten Stand bringen (entspricht
-einem `dist-upgrade`)
+Alternativ kennt `apt-offline`noch die folgenden Schalter für andere
+Aktionen:
 
-** Paketinfo für die offline-Maschine holen, inkl. Bug-Reports und
-Ausführung als parallele 5 Threads (auf einer Maschine, die über eine
-Netzanbindung verfügt)
+`get` :: beziehe die Paketinformationen 
+`--update` :: nur Updates (Einspielen aktualisierter, fehlerbereinigter Pakete mit der gleichen Versionsnummer)
+`--upgrade` :: nur Upgrades (Einspielen aktualisierter, fehlerbereinigter Pakete mit einer neueren Version)
+ohne Optionen :: alles auf den allerneuesten Stand bringen (entspricht einem `dist-upgrade`)
+
+Das folgende Beispiel zeigt, wie Sie die Paketinformationen für die
+offline-Maschine holen, die auch Bugreports enthält. Die Ausführung
+erfolgt über 5 parallele Threads. Diese Kommando führen Sie als *Schritt
+2* auf der Maschine aus, die über eine Netzanbindung verfügt.
 
 ----
 # apt-offline get apt-offline.sig --bug-reports --threads 5
