@@ -5,10 +5,10 @@
 === debdelta ===
 
 // Stichworte für den Index
-indexterm:[Debianpaket, debdelta]
-indexterm:[debdelta-upgrade]
-indexterm:[debdeltas]
-indexterm:[debpatch]
+(((Debianpaket, debdelta)))
+(((debdelta-upgrade)))
+(((debdelta)))
+(((debpatch)))
 
 Interessant für Sie ist das Werkzeug `debdelta-upgrade` aus dem
 Debdelta-Projekt (<<Debdelta>>). Es steht im Paket 'debdelta'
