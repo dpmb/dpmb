@@ -36,8 +36,10 @@ erklären wir Ihnen gleich.
 
 // Stichworte für den Index
 (((apt-offline, --bug-reports)))
+(((apt-offline, --bundle)))
 (((apt-offline, get)))
 (((apt-offline, install)))
+(((apt-offline, --install-packages)))
 (((apt-offline, set)))
 (((apt-offline, --threads)))
 (((apt-offline, --update)))
@@ -60,7 +62,11 @@ Aktionen:
 
 `--bug-reports` :: hole auch die Bugreports für die Pakete
 
+`--bundle` :: erzeuge ein Archiv mit allen benötigten Paketen
+
 `get` :: beziehe die Paketinformationen 
+
+`--install-packages` :: installiere das Paket
 
 `--threads` :: Anzahl paralleler Threads, die bei der Ausführung benutzt
 werden sollen
@@ -74,23 +80,38 @@ ohne Optionen :: alles auf den allerneuesten Stand bringen (entspricht einem `di
 Das folgende Beispiel zeigt, wie Sie die Paketinformationen für die
 offline-Maschine holen, die auch Bugreports enthält. Die Ausführung
 erfolgt über 5 parallele Threads. Diese Kommando führen Sie als *Schritt
-2* auf der Maschine aus, die über eine Netzanbindung verfügt.
+2* noch auf der Maschine aus, die nicht über eine Netzanbindung verfügt.
 
 ----
 # apt-offline get apt-offline.sig --bug-reports --threads 5
 ----
 
-Ergebnis obigen Aufrufs sind eine Reihe von `deb`-Paketen und
-Zusatzinformationen, die Sie nun auf einen Datenträger kopieren.
+Ergebnis obigen Aufrufs sind Zusatzinformationen in der Datei 
+`apt-offline.sig`, die Sie nun auf einen Datenträger kopieren. 
 
-In *Schritt 3* spielen Sie die bezogenen Paketinformationen auf der
-offline-Maschine ein. Hier sehen Sie das beispielhaft als Datei von
-einem Speichermedium, welches über USB unter dem Pfad
-`/media/USB/apt-offline.zip` eingehängt ist (USB-Stick oder
-USB-Festplatte).
+Für ein einzelnes Paket sieht der Aufruf etwas anders aus. Um die
+Installation des Pakets 'approx' <<Debian-Paket-approx>> vorzubereiten,
+benutzen Sie diesen Aufruf: 
 
 ----
-# apt-offline install /media/USB/apt-offline.zip
+# apt-offline set --install-packages approx apt-offline.sig
+----
+
+Nun beziehen Sie die gewünschten Pakete. Als *Schritt 3* führen Sie den
+nachfolgenden Aufruf auf dem Rechner mit Netzanbindung aus:
+
+----
+# apt-offline get --bundle bundle.zip apt-offline.sig
+----
+
+Die notwendigen Pakete befinden sich in dem ZIP-Archiv `bundle.zip`. 
+In *Schritt 4* spielen Sie dieses Archiv auf der Offline-Maschine ein. 
+Hier sehen Sie das beispielhaft als Datei von einem Speichermedium, 
+welches über USB unter dem Pfad `/media/USB/bundle.zip` eingehängt 
+ist (USB-Stick oder USB-Festplatte).
+
+----
+# apt-offline install /media/USB/bundle.zip
 ----
 
 Die Pakete landen im lokalen Paketcache und wirken für APT jetzt so, als
