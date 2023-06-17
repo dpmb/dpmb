@@ -70,13 +70,19 @@ erfolgt über 5 parallele Threads. Diese Kommando führen Sie als *Schritt
 # apt-offline get apt-offline.sig --bug-reports --threads 5
 ----
 
-** bezogene Paketinformationen auf der offline-Maschine einspielen, hier
-beispielhaft als Datei von einem Speichermedium, welches über USB
-eingehängt ist (USB-Stick oder USB-Festplatte)
+Ergebnis obigen Aufrufs sind eine Reihe von `deb`-Paketen und
+Zusatzinformationen, die Sie nun auf einen Datenträger kopieren.
+
+In *Schritt 3* spielen Sie die bezogenen Paketinformationen auf der
+offline-Maschine ein. Hier sehen Sie das beispielhaft als Datei von
+einem Speichermedium, welches über USB unter dem Pfad
+`/media/USB/apt-offline.zip` eingehängt ist (USB-Stick oder
+USB-Festplatte).
 
 ----
 # apt-offline install /media/USB/apt-offline.zip
 ----
+
 
 *** aktualisiert den APT-Cache, sodaß alles daher kommt und nichts von
 extern bezogen werden muß
