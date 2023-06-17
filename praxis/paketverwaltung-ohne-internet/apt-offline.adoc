@@ -35,9 +35,11 @@ erklären wir Ihnen gleich.
 ===== Benutzung im Detail =====
 
 // Stichworte für den Index
+(((apt-offline, --bug-reports)))
 (((apt-offline, get)))
 (((apt-offline, install)))
 (((apt-offline, set)))
+(((apt-offline, --threads)))
 (((apt-offline, --update)))
 (((apt-offline, --upgrade)))
 
@@ -53,12 +55,20 @@ beispielhaft die Datei `/tmp/apt-offline.sig` gewählt.
 # apt-offline set /tmp/apt-offline.sig
 ----
 
-Alternativ kennt `apt-offline`noch die folgenden Schalter für andere
+Alternativ kennt `apt-offline` noch die folgenden Schalter für andere
 Aktionen:
 
+`--bug-reports` :: hole auch die Bugreports für die Pakete
+
 `get` :: beziehe die Paketinformationen 
+
+`--threads` :: Anzahl paralleler Threads, die bei der Ausführung benutzt
+werden sollen
+
 `--update` :: nur Updates (Einspielen aktualisierter, fehlerbereinigter Pakete mit der gleichen Versionsnummer)
+
 `--upgrade` :: nur Upgrades (Einspielen aktualisierter, fehlerbereinigter Pakete mit einer neueren Version)
+
 ohne Optionen :: alles auf den allerneuesten Stand bringen (entspricht einem `dist-upgrade`)
 
 Das folgende Beispiel zeigt, wie Sie die Paketinformationen für die
@@ -83,8 +93,8 @@ USB-Festplatte).
 # apt-offline install /media/USB/apt-offline.zip
 ----
 
-
-*** aktualisiert den APT-Cache, sodaß alles daher kommt und nichts von
-extern bezogen werden muß
+Die Pakete landen im lokalen Paketcache und wirken für APT jetzt so, als
+wenn sie vorher schonmal bezogen wurden. Mittels `apt-get install`
+'Paketname' spielen Sie jetzt das gewünsche Paket ein.
 
 // Datei (Ende): ./praxis/paketverwaltung-ohne-internet/apt-offline.adoc
