@@ -76,7 +76,7 @@ Authentifizierungsdaten entweder in der lokalen Datei `~/.wgetrc` oder
 systemweit in der Datei `/etc/wgetrc` hinterlegen.
 
 [[http-proxy-anwendungen-curl]]
-==== Mittels curl ====
+==== Mittels `curl` ====
 
 Was mit `wget` gelingt, geht auch mit `curl` (Debianpaket 'curl'
 <<Debian-Paket-curl>>) -- `curl` kann nur deutlich mehr. Nützlich ist
