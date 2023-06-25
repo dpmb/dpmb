@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by diasvg.py -->
+<svg width="29.586cm" height="18.803cm" viewBox="2.479 0.197 32.065 19.000"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="2.529" y="0.247" width="29.486" height="18.703" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="2.529" y="0.247" width="29.486" height="18.703" fill="none" stroke="#000000" stroke-width="0.100" />
+<image x="4.487" y="1.135"  width="4.879" height="4.879" xlink:href="file:///home/frank/test/vortraege/vortraege/beuth/computer.png"/>
+<image x="3.639" y="7.379"  width="4.879" height="4.879" xlink:href="file:///home/frank/test/vortraege/vortraege/beuth/computer.png"/>
+<path stroke="#000000" fill="none" stroke-width="0.100"  d ="M 10.812,10.928 A 1.298,1.298 0 0,0 12.899,12.353 "/>
+<path stroke="#000000" fill="none" stroke-width="0.100"  d ="M 12.937,12.329 A 3.469,3.469 0 0,0 18.289,12.203 "/>
+<path stroke="#000000" fill="none" stroke-width="0.100"  d ="M 18.219,12.238 A 3.831,3.831 0 0,0 22.108,8.844 "/>
+<path stroke="#000000" fill="none" stroke-width="0.100"  d ="M 22.072,8.915 A 1.571,1.571 0 0,0 20.941,6.122 "/>
+<path stroke="#000000" fill="none" stroke-width="0.100"  d ="M 11.961,7.571 A 1.878,1.878 0 0,0 10.829,10.966 "/>
+<path stroke="#000000" fill="none" stroke-width="0.100"  d ="M 15.390,5.662 A 2.121,2.121 0 0,0 11.996,7.607 "/>
+<path stroke="#000000" fill="none" stroke-width="0.100"  d ="M 18.749,4.637 A 1.760,1.760 0 1,0 15.426,5.680 "/>
+<path stroke="#000000" fill="none" stroke-width="0.100"  d ="M 20.976,6.086 A 1.326,1.326 0 0,0 18.714,4.708 "/>
+<image x="5.725" y="13.365"  width="4.879" height="4.879" xlink:href="file:///home/frank/test/vortraege/vortraege/beuth/computer.png"/>
+<line x1="8.517" y1="9.818" x2="10.115" y2="9.820" stroke="#000000" stroke-width="0.100" />
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="9.140,2.757 9.140,2.762 13.269,2.762 13.269,5.413 "/>
+<line x1="8.164" y1="15.804" x2="8.164" y2="15.804" stroke="#000000" stroke-width="0.100" />
+<line x1="10.703" y1="15.806" x2="13.516" y2="15.807" stroke="#000000" stroke-width="0.100" />
+<line x1="13.516" y1="15.772" x2="13.490" y2="12.794" stroke="#000000" stroke-width="0.100" />
+<image x="5.909" y="1.732"  width="1.423" height="1.873" xlink:href="file:///home/frank/projekte/opensourcepress/onyx-neon/dpmb/praxis/apt-cache/debian_logo.png"/>
+<image x="5.025" y="7.990"  width="1.423" height="1.873" xlink:href="file:///home/frank/projekte/opensourcepress/onyx-neon/dpmb/praxis/apt-cache/debian_logo.png"/>
+<image x="7.154" y="13.916"  width="1.423" height="1.873" xlink:href="file:///home/frank/projekte/opensourcepress/onyx-neon/dpmb/praxis/apt-cache/debian_logo.png"/>
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="22.858,3.323 22.858,3.151 21.882,3.151 21.882,5.802 "/>
+<line x1="23.494" y1="7.530" x2="25.828" y2="7.530" stroke="#000000" stroke-width="0.100" />
+<image x="27.087" y="1.379"  width="1.584" height="2.085" xlink:href="file:///home/frank/projekte/opensourcepress/onyx-neon/dpmb/praxis/apt-cache/debian_logo.png"/>
+<text x="26.676" y="7.707"  fill="#000000" text-anchor="start" font-size="0.88" font-family="Fira Code" font-style="normal" font-weight="700">
+Internet</text>
+<rect x="22.908" y="1.343" width="2.243" height="3.365" fill="#D9D9CD" stroke="none" stroke-width="0"/>
+<rect x="22.908" y="1.343" width="2.243" height="3.365" fill="none" stroke="#000000" stroke-width="0.100" />
+<rect x="22.908" y="1.343" width="2.243" height="3.365" fill="none" stroke="#000000" stroke-width="0.010" />
+<rect x="23.021" y="1.455" width="1.795" height="1.346" fill="#D9D9CD" stroke="none" stroke-width="0"/>
+<rect x="23.021" y="1.455" width="1.795" height="1.346" fill="none" stroke="#000000" stroke-width="0.100" />
+<rect x="23.021" y="1.455" width="1.795" height="1.346" fill="none" stroke="#000000" stroke-width="0.010" />
+<line x1="23.021" y1="1.904" x2="24.815" y2="1.904" stroke="#000000" stroke-width="0.010" />
+<line x1="24.815" y1="2.352" x2="23.021" y2="2.352" stroke="#000000" stroke-width="0.010" />
+<rect x="23.245" y="2.913" width="1.234" height="0.673" fill="#D9D9CD" stroke="none" stroke-width="0"/>
+<rect x="23.245" y="2.913" width="1.234" height="0.673" fill="none" stroke="#000000" stroke-width="0.100" />
+<rect x="23.245" y="2.913" width="1.234" height="0.673" fill="none" stroke="#000000" stroke-width="0.010" />
+<line x1="22.908" y1="3.923" x2="25.152" y2="3.923" stroke="#000000" stroke-width="0.010" />
+<rect x="24.479" y="3.698" width="0.112" height="0.112" fill="#00CD00" stroke="none" stroke-width="0"/>
+<rect x="24.479" y="3.698" width="0.112" height="0.112" fill="none" stroke="#000000" stroke-width="0.100" />
+<rect x="24.479" y="3.698" width="0.112" height="0.112" fill="none" stroke="#000000" stroke-width="0.010" />
+<rect x="24.703" y="3.698" width="0.112" height="0.112" fill="#CDCD00" stroke="none" stroke-width="0"/>
+<rect x="24.703" y="3.698" width="0.112" height="0.112" fill="none" stroke="#000000" stroke-width="0.100" />
+<rect x="24.703" y="3.698" width="0.112" height="0.112" fill="none" stroke="#000000" stroke-width="0.010" />
+<rect x="24.928" y="3.698" width="0.112" height="0.112" fill="#CD0000" stroke="none" stroke-width="0"/>
+<rect x="24.928" y="3.698" width="0.112" height="0.112" fill="none" stroke="#000000" stroke-width="0.100" />
+<rect x="24.928" y="3.698" width="0.112" height="0.112" fill="none" stroke="#000000" stroke-width="0.010" />
+<rect x="24.815" y="3.362" width="0.224" height="0.224" fill="#CDCDBD" stroke="none" stroke-width="0"/>
+<rect x="24.815" y="3.362" width="0.224" height="0.224" fill="none" stroke="#000000" stroke-width="0.100" />
+<rect x="24.815" y="3.362" width="0.224" height="0.224" fill="none" stroke="#000000" stroke-width="0.010" />
+<line x1="23.245" y1="3.250" x2="24.479" y2="3.250" stroke="#000000" stroke-width="0.010" />
+<rect x="24.703" y="2.913" width="0.337" height="0.337" fill="#CDCDBD" stroke="none" stroke-width="0"/>
+<rect x="24.703" y="2.913" width="0.337" height="0.337" fill="none" stroke="#000000" stroke-width="0.100" />
+<rect x="24.703" y="2.913" width="0.337" height="0.337" fill="none" stroke="#000000" stroke-width="0.010" />
+<rect x="23.133" y="2.464" width="1.570" height="0.112" fill="#CDCDC1" stroke="none" stroke-width="0"/>
+<rect x="23.133" y="2.464" width="1.570" height="0.112" fill="none" stroke="#000000" stroke-width="0.100" />
+<rect x="23.133" y="2.464" width="1.570" height="0.112" fill="none" stroke="#000000" stroke-width="0.010" />
+<line x1="23.357" y1="3.025" x2="24.367" y2="3.025" stroke="#000000" stroke-width="0.010" />
+<rect x="23.581" y="3.025" width="0.561" height="0.112" fill="#CDCDC1" stroke="none" stroke-width="0"/>
+<rect x="23.581" y="3.025" width="0.561" height="0.112" fill="none" stroke="#000000" stroke-width="0.100" />
+<rect x="23.581" y="3.025" width="0.561" height="0.112" fill="none" stroke="#000000" stroke-width="0.010" />
+<line x1="24.479" y1="2.689" x2="24.703" y2="2.689" stroke="#000000" stroke-width="0.010" />
+<line x1="23.021" y1="4.035" x2="25.040" y2="4.035" stroke="#000000" stroke-width="0.010" />
+<line x1="25.040" y1="4.147" x2="23.021" y2="4.147" stroke="#000000" stroke-width="0.010" />
+<line x1="23.021" y1="4.259" x2="25.040" y2="4.259" stroke="#000000" stroke-width="0.010" />
+<line x1="25.040" y1="4.596" x2="23.021" y2="4.596" stroke="#000000" stroke-width="0.010" />
+<line x1="23.021" y1="4.484" x2="25.040" y2="4.484" stroke="#000000" stroke-width="0.010" />
+<line x1="25.040" y1="4.371" x2="23.021" y2="4.371" stroke="#000000" stroke-width="0.010" />
+<line x1="23.133" y1="2.689" x2="23.245" y2="2.689" stroke="#000000" stroke-width="0.010" />
+<line x1="23.357" y1="2.689" x2="23.469" y2="2.689" stroke="#000000" stroke-width="0.010" />
+<line x1="23.357" y1="3.138" x2="23.469" y2="3.138" stroke="#000000" stroke-width="0.010" />
+<line x1="24.255" y1="3.138" x2="24.367" y2="3.138" stroke="#000000" stroke-width="0.010" />
+<text x="26.259" y="4.607"  fill="#000000" text-anchor="start" font-size="0.88" font-family="Fira Code" font-style="normal" font-weight="700">
+APT Cache</text>
+</svg>
