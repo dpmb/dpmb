@@ -44,11 +44,11 @@ Pakete umfasst zunächst die nachfolgenden Schritte und beginnt auf
 'rechner-online':
 
 . Aktualisieren der lokalen Paketdatenbank mittels `apt-get update` oder `apt update`
-. Erzeugen der URLs zum Bezug der aktualisierten Pakete mittels `apt-get`. Umleitung der Ausgabe von `apt-get`in die lokale Datei `uris`
+. Erzeugen der URLs zum Bezug der aktualisierten Pakete mittels `apt-get`. Umleitung der Ausgabe von `apt-get` in die lokale Datei `uris`
 . Generieren der passenden `wget`-Aufrufe aus den zuvor gespeicherten
 URLs mittels `awk`. Die Ausgabe von `awk` leiten Sie in die Datei
 `/usbplatte/wget-script` um.
-. Ausführung der Skriptdatei zum Bezug der bezeichneten Pakete vom
+. Ausführung der Skriptdatei `wget-script` zum Bezug der bezeichneten Pakete vom
 Paketmirror. Damit speichern Sie die bezogenen Pakete auf dem
 eingebundenen, mobilen Datenträger.
 
@@ -76,8 +76,8 @@ ein.
 
 Nun spielen Sie die zuvor bezogenen Pakete ein. Dabei hilft Ihnen der
 Aufruf `apt-get upgrade` mit dem Paketcache auf dem mobilen Datenträger.
-Damit `apt-get` diesen Paketcache verwendet, benötigt es einen Hinweis 
-von Ihnen. Ins Spiel kommt der Schalter `-o` mit der APT-Direktive
+Damit `apt-get` diesen Paketcache auch verwendet, benötigt es noch einen 
+Hinweis von Ihnen. Ins Spiel kommt der Schalter `-o` mit der APT-Direktive
 `dir::cache::archives` und dem passenden Pfad zum Paketcache. Hier heißt
 dieser beispielhaft `/usbplatte`.
 
