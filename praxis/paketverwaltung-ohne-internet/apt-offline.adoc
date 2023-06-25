@@ -1,6 +1,6 @@
 // Datei: ./praxis/paketverwaltung-ohne-internet/apt-offline.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[paketverwaltung-offline-apt-offline]]
 ==== Das Projekt 'apt-offline' ====
