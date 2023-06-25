@@ -82,7 +82,7 @@ Was mit `wget` gelingt, geht auch mit `curl` (Debianpaket 'curl'
 <<Debian-Paket-curl>>) -- `curl` kann nur deutlich mehr. Nützlich ist
 hier zunächst der Schalter `-x` (Langversion: `--proxy`), mit dem Sie
 zunächst den Proxy Server benennen. Der darauffolgende Wert repräsentiert
-das Login `benutzer` mit dem Passwort `passwort` und dem Proxyserver mit
+das Login `benutzer` mit dem Passwort `passwort` und dem Proxy Server mit
 der IP-Adresse 127.0.0.1 und dem Port 1234.
 
 .Bezug der Datei über einen Proxy mittels `curl`
@@ -107,7 +107,7 @@ curl "http://webseite.org/datei"
 In *Variante 2* speichern Sie die benötigten Authentifizierungsdaten
 in einer lokalen Datei und geben diese `curl` beim Aufruf als
 zusätzlichen Parameter mit. Das gelingt über den Schalter `-K`
-(Langform: `--config`), gefolgt vom Namen der Konfiguriationsdatei. Der
+(Langform: `--config`), gefolgt vom Namen der Konfigurationsdatei. Der
 nachfolgende Aufruf benutzt die Datei `proxy-config` mit diesem Inhalt:
 
 .Konfigurationsdatei für `curl` zur Verwendung eines Proxy Servers
@@ -115,9 +115,9 @@ nachfolgende Aufruf benutzt die Datei `proxy-config` mit diesem Inhalt:
 --proxy "http://benutzer:passwort@127.0.0.1:1234"
 ----
 
-Der Aufruf vereinfacht sich dann wie folgt:
+Der Aufruf von `curl` vereinfacht sich dann wie folgt:
 
-.Bezug der Datei über einen Proxy mittels Konfigurationsdatei für `curl`
+.Bezug der Datei über einen Proxy Server mittels Konfigurationsdatei für `curl`
 ----
 $ curl -K proxy-config "http://webseite.org/datei"
 ----
