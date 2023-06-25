@@ -146,11 +146,11 @@ image::praxis/http-proxy/firefox-proxy.png[id="fig.firefox-proxy", width="50%"]
 
 Während frühe Versionen von Firefox Umgebungsvariablen mitunter noch 
 ignorierten, haben Sie mittlerweile die freie Auswahl zwischen den
-varianten ``keinen Proxy Server verwenden'', ``automatische Erkennung'', 
+Varianten ``keinen Proxy Server verwenden'', ``automatische Erkennung'', 
 ``Verwendung der Umgebungsvariablen'' , ``manueller Konfiguration'' und 
-Verwendung einer automatischen URL zur Konfiguration. Sobald Sie die
+``Verwendung einer automatischen URL zur Konfiguration``. Sobald Sie die
 passenden Eintragungen im Dialogfenster durchgeführt haben, werden diese
-aktiv und Firefox kommuniziert mit dem angegebenen Proxy Server.
+aktiv und Firefox kommuniziert mit dem von Ihnen angegebenen Proxy Server.
 
 [[http-proxy-anwendungen-firefox]]
 ==== Webbrowser Chromium ====
