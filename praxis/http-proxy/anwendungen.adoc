@@ -1,6 +1,6 @@
 // Datei: ./praxis/http-proxy/anwendungen.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[http-proxy-anwendungen]]
 === Einen Proxy in Anwendungen konfigurieren ===
