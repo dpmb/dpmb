@@ -7,6 +7,8 @@
 
 // Stichworte für den Index
 (((Debianpaket, dpkg)))
+(((Debianpaket, zerlegen)))
+(((Debianpaket, zerlegtes Paket wieder zusammenfügen)))
 (((dpkg-split)))
 (((dpkg-split, -?)))
 (((dpkg-split, --help)))
@@ -35,7 +37,7 @@
 Möchten Sie nicht mit den Schaltern von `tar`, `rar`, `zip` oder `hoz`
 hantieren, bietet sich hier das Werkzeug `dpkg-split` aus dem Paket
 'dpkg' <<Debian-Paket-dpkg>> an. Es zerlegt eine `deb`-Datei in kleinere
-Stücke und kann diese Stücke dann auch wieder zusammensetzen. Dieses
+Stücke und setzt diese Stücke dann auch wieder zusammen. Dieses
 Werkzeug ist nützlich, um Binärpakete auf mehrere Medien mit geringer
 Kapazität zu verteilen, bspw. wenn Sie gerade nichts anderes zur Hand
 haben.
@@ -61,9 +63,7 @@ auf dem Paketnamen, der Version und der Architektur
 `-l` (Langform: `--listq`) :: Listet den Inhalt der Warteschlange der wieder zusammenzubauenden Pakete auf.
 
 `-o` (Langform: `--output`) :: Gibt den Ausgabedateinamen für ein
-Wiederzusammenbauen an. Ohne diesen Schalter erzeugt `dpkg-split` eine
-Ausgabedatei mit dem Namen basierend auf dem Paketnamen, der Version und
-der Architektur ('Paket-Version_Architektur.deb').
+Paket an, welches zusammengebaut werden soll. Ohne diesen Schalter erzeugt `dpkg-split` eine Ausgabedatei mit dem Namen basierend auf dem Paketnamen, der Version und der Architektur ('Paket-Version_Architektur.deb').
 
 `-Q` (Langform: `--npquiet`) :: Führen Sie ein automatisches Einreihen
 oder Wiederzusammensetzen durch, gibt `dpkg-split` normalerweise eine
