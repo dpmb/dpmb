@@ -1,6 +1,6 @@
 // Datei: ./praxis/paketverwaltung-ohne-internet/werkzeuge.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[paketverwaltung-offline-werkzeuge]]
 === Werkzeuge ===
