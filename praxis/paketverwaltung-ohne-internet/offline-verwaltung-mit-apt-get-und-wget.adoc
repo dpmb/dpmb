@@ -69,14 +69,14 @@ Pakete herunterladen kann.
 # sh -x ./wget-script
 ----
 
-Die Datei `uris` enthält Einträge in folgender Form, hier für
-ImageMagick und GCC 4.9. In der ersten Spalte befindet sich die URL,
+Die Datei `uris` enthält Einträge in folgender Form, hier beispielhaft
+für ImageMagick und GCC 4.9, die von einem Freexian-Mirror für eine
+LTS-Version bezogen werden. In der ersten Spalte befindet sich die URL,
 danach folgt der Name der Paketdatei und die MD5-Summe zum Paket.
 
 .URLs von bezogenen Paketen
 ----
 'http://deb.freexian.com/extended-lts/pool/main/i/imagemagick/libmagickcore-6.q16-2-extra_6.8.9.9-5+deb8u26_amd64.deb' libmagickcore-6.q16-2-extra_8%3a6.8.9.9-5+deb8u26_amd64.deb 177540 MD5Sum:8757d67ecdb5da92129e13e9b46fdc1f
-'http://deb.freexian.com/extended-lts/pool/main/libx/libxml2/libxml2-utils_2.9.1+dfsg1-5+deb8u15_amd64.deb' libxml2-utils_2.9.1+dfsg1-5+deb8u15_amd64.deb 93438 MD5Sum:f78f2d7cd57652c4e4da7782f7c85dc4
 'http://deb.freexian.com/extended-lts/pool/main/l/linux/linux-compiler-gcc-4.9-x86_3.16.84-1_amd64.deb' linux-compiler-gcc-4.9-x86_3.16.84-1_amd64.deb 463996 MD5Sum:21bd9aea54e20e0bfefa0cf993c270a2
 ----
 
