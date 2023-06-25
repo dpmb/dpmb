@@ -22,16 +22,17 @@ leichter haben, aus einer solchen Situation herauszukommen, falls Sie
 unverhofft darin landen.
 
 [[http-proxy-anwendungen-wget]]
-==== Mittels wget ====
+==== Mittels `wget` ====
 
 // Stichworte für den Index
 (((Proxy, mit wget benutzen)))
 (((Proxy Server, mit wget benutzen)))
-Das Werkzeug `wget` <<Debian-Paket-wget>> agiert wie ein fensterloser
-Webbrowser und bezieht die Daten von im Aufruf angegebenen URL. `wget`
-respektiert bereits konfigurierte Proxy Server und wertet dazu die
-Umgebungsvariablen `http_proxy`, `https_proxy`, `ftp_proxy` und
-`no_proxy` aus, falls diese auf ihrem Linux-System vorhanden sind. 
+Das Werkzeug `wget` aus dem gleichnamigen Debianpaket
+<<Debian-Paket-wget>> agiert wie ein fensterloser Webbrowser und bezieht
+die Daten von der im Aufruf angegebenen URL. `wget` respektiert bereits
+konfigurierte Proxy Server und wertet dazu die vier Umgebungsvariablen
+`http_proxy`, `https_proxy`, `ftp_proxy` und `no_proxy` aus, falls diese
+auf ihrem Linux-System vorhanden sind.
 
 Der nachfolgende Aufruf demonstriert, wie Sie das Paket 'mc'
 <<Debian-Paket-mc>> via `wget` vom Paketmirror `ftp.de.debian.org`
