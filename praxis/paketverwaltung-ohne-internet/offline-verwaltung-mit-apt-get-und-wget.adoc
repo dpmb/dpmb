@@ -1,64 +1,92 @@
 // Datei: ./praxis/paketverwaltung-ohne-internet/offline-verwaltung-mit-apt-get-und-wget.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[paketverwaltung-offline-apt-get-und-wget]]
 
 ==== Offline-Verwaltung mit 'apt-get' und 'wget' ====
 
 // Stichworte für den Index
-(((apt-get, dist-upgrade)))
+(((apt, update)))
+(((apt, upgrade)
+(((apt-get, --print-uris)))
+(((apt-get, -q)))
+(((apt-get, -qq)))
+(((apt-get, --quiet)))
 (((apt-get, update)))
+(((apt-get, upgrade)))
 (((awk)))
 (((wget)))
 
-In diesem Szenario kombinieren wir aus APT das Werkzeug `apt-get` mit
-`awk` und `wget`. Diese wunderbare Idee und Beschreibung ist entlehnt
-aus Frank Ronneburgs Debian-Anwenderhandbuch
-<<Debian-Anwenderhandbuch-apt-offline>> sowie dem Beitrag von Samuel
-Suter <<Suter-apt-offline>>, hier jedoch nur für ausgewählte Pakete.
+In diesem Szenario kombinieren wir die Werkzeuge `apt-get`, `awk` und
+`wget` miteinander. Diese wunderbare Idee und Beschreibung ist entlehnt 
+aus Frank Ronneburgs Debian-Anwenderhandbuch <<Debian-Anwenderhandbuch-apt-offline>> 
+sowie dem Beitrag von Samuel Suter <<Suter-apt-offline>>, hier jedoch 
+nur für ausgewählte Pakete.
 
 `awk` ist ein Analyse- und Filterprogramm für Textdaten
-<<Debian-Paket-gawk>>. `wget` ist hingegen ein Kommandozeilenprogramm,
-um Dateien über das Netzwerk zu beziehen <<Debian-Paket-wget>>. Während
-'gawk' zu den essentiellen Paketen zählt, ist 'wget' optional und daher
-ihrerseits vor dessen Verwendung gegebenenfalls noch zu installieren.
+<<Debian-Paket-gawk>>. Mit `wget` beziehen Sie hingegen Dateien über das
+Netzwerk <<Debian-Paket-wget>> auf der Basis von HTTP, HTTPS und FTP. 
+Während `awk` zu den essentiellen Programmen zählt, ist `wget` optional 
+und daher ihrerseits vor dessen Verwendung noch zu installieren, falls 
+es noch nicht auf ihrem System vorhanden ist.
 
-Der Ablauf ist wie folgt:
+Benötigt wird ein Rechner ohne Internetzugang (genannt
+'rechner-offline') und ein Rechner mit Internetzugang (nachfolgend
+'rechner-online' genannt). Beide Rechner verfügen über den gleichen
+Paketbestand.
 
-. Einhängen (``mounten'') eines externen, mobilen Datenträgers im
-Verzeichnis `/medium`
-. Aktualisieren der lokalen Paketdatenbank mittels `apt-get update`
-. Erzeugen der URLs mittels `apt-get` für die Pakete, die zu aktualisieren sind, und Umleitung der Ausgabe in die lokale Datei `uris`
+Auf 'rechner-online' ist im Verzeichnis `/usbplatte` ein externer,
+mobiler Datenträger eingebunden, um darauf die Anweisungen zum 
+nachfolgenden Bezug der Pakete und die Pakete selbst zu speichern. Diese
+spielen Sie dann auf 'rechner-offline' ein. Der Ablauf zum Bezug der
+Pakete umfasst zunächst die nachfolgenden Schritte und beginnt auf
+'rechner-online':
+
+. Aktualisieren der lokalen Paketdatenbank mittels `apt-get update` oder `apt update`
+. Erzeugen der URLs zum Bezug der aktualisierten Pakete mittels `apt-get`. Umleitung der Ausgabe von `apt-get`in die lokale Datei `uris`
 . Generieren der passenden `wget`-Aufrufe aus den zuvor gespeicherten
-URLs mittels `awk`. Ausgabe auf `stdout` und Umleitung der Ausgabe in
-die lokale Skriptdatei `/medium/wget-script`.
-. Ausführung der der Skriptdatei zum Bezug der bezeichneten Pakete vom
-Spiegelserver und der Speicherung der bezogenen Pakete im lokalen
-Verzeichnis.
+URLs mittels `awk`. Die Ausgabe von `awk` leiten Sie in die Datei
+`/usbplatte/wget-script` um.
+. Ausführung der Skriptdatei zum Bezug der bezeichneten Pakete vom
+Paketmirror. Damit speichern Sie die bezogenen Pakete auf dem
+eingebundenen, mobilen Datenträger.
+
+Hier sehen Sie alle Anweisungen auf der Basis von `apt-get`. Der
+Schalter `-qq` von `apt-get` ist die verschärfte Form von `-q`
+(Langform: `--quiet`) und sorgt dafür, dass `apt-get` eine ``stille''
+Ausgabe erzeugt, die für unsere Automatisierung geeignet ist. Der
+Schalter `--print-uris` gibt die URLs aus, mit deren Hilfe `wget` die
+Pakete herunterladen kann.
 
 .Aufrufreihenfolge mittels `apt-get`, `awk` und `wget`
 ----
 # apt-get update
-# apt-get -qq --print-uris dist-upgrade > uris
-# awk '{print "wget -O " $2 " " $1}' < uris > /medium/wget-script
-# cd /medium
+# apt-get -qq --print-uris upgrade > uris
+# awk '{print "wget -O " $2 " " $1}' < uris > /usbplatte/wget-script
+# cd /usbplatte
 # sh -x ./wget-script
 ----
 
 Als Ergebnis dieser Aufrufe finden Sie auf dem mobilen Datenträger alle
-`deb`-Pakete, die zur Aktualisierung mittels `apt-get dist-upgrade`
-erforderlich sind. Unmounten Sie den mobilen Datenträger auf dem ersten
-System und mounten Sie diesen auf dem Zielsystem. Als finalen Schritt
-erfolgt auf dem Zielsystem ein Aufruf von `apt-get dist-upgrade` mit dem
-Paketcache auf dem mobilen Medium. Dazu verwenden Sie den Schalter `-o`
-mit der APT-Direktive `dir::cache::archives` und dem passenden Pfad zum
-Paketcache. Der Einfachheit halber heißt dieser hier ebenfalls
-`/medium`.
+`deb`-Pakete, die zur Aktualisierung mittels `apt-get upgrade`
+erforderlich sind. Hängen Sie den mobilen Datenträger auf
+'rechner-online' aus und binden Sie diesen nun auf 'rechner-offline'
+ein.
 
-.Eine Distributionsaktualisierung mit einem externen Paketcache
+Nun spielen Sie die zuvor bezogenen Pakete ein. Dabei hilft Ihnen der
+Aufruf `apt-get upgrade` mit dem Paketcache auf dem mobilen Datenträger.
+Damit `apt-get` diesen Paketcache verwendet, benötigt es einen Hinweis 
+von Ihnen. Ins Spiel kommt der Schalter `-o` mit der APT-Direktive
+`dir::cache::archives` und dem passenden Pfad zum Paketcache. Hier heißt
+dieser beispielhaft `/usbplatte`.
+
+.Eine Aktualisierung mit einem externen Paketcache
 ----
-# apt-get -o dir::cache::archives="/medium/" dist-upgrade
+# apt-get -o dir::cache::archives="/usbplatte/" upgrade
 ----
+
+Nun verfügt der Rechner ohne Internetzugang wieder über einen aktuellen
+Paketbestand.
 
 // Datei (Ende): ./praxis/paketverwaltung-ohne-internet/offline-verwaltung-mit-apt-get-und-wget.adoc
