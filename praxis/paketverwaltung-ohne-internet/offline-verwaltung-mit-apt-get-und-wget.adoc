@@ -55,10 +55,10 @@ eingebundenen, mobilen Datenträger.
 
 Hier sehen Sie alle Anweisungen auf der Basis von `apt-get`. Der
 Schalter `-qq` von `apt-get` ist die verschärfte Form von `-q`
-(Langform: `--quiet`) und sorgt dafür, dass `apt-get` eine ``stille''
-Ausgabe erzeugt, die für unsere Automatisierung geeignet ist. Der
-Schalter `--print-uris` gibt die URLs aus, mit deren Hilfe `wget` die
-Pakete herunterladen kann.
+(Langform: `--quiet`) und sorgt dafür, dass `apt-get` eine ``vollkommen
+stille'' Ausgabe erzeugt, die für unsere Automatisierung geeignet ist.
+Der Schalter `--print-uris` gibt die URLs aus, mit deren Hilfe `wget`
+die Pakete herunterladen kann.
 
 .Aufrufreihenfolge mittels `apt-get`, `awk` und `wget`
 ----
@@ -107,7 +107,7 @@ dieser beispielhaft `/usbplatte`.
 # apt-get -o dir::cache::archives="/usbplatte/" upgrade
 ----
 
-Nun verfügt der Rechner ohne Internetzugang wieder über einen aktuellen
-Paketbestand.
+Ab jetzt verfügt der Rechner ohne Internetzugang wieder über einen
+aktuellen Paketbestand.
 
 // Datei (Ende): ./praxis/paketverwaltung-ohne-internet/offline-verwaltung-mit-apt-get-und-wget.adoc
