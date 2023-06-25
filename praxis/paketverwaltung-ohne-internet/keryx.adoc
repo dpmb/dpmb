@@ -1,6 +1,6 @@
 // Datei: ./praxis/paketverwaltung-ohne-internet/keryx.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[paketverwaltung-offline-keryx]]
 
@@ -20,9 +20,10 @@ Ursprünglich nur für Ubuntu entwickelt, erlaubt es mittlerweile das
 Auswählen und Herunterladen von Paketen auf Debian-basierten Systemen
 und auch anderen Betriebssystemen wie bspw. Microsoft Windows. Die
 bezogenen Pakete werden auf einem mobilen Speichermedium abgelegt und
-können von da aus auf dem eigentlichen System eingespielt werden.
-Geschieht das in einem größeren Rahmen, ist für das Vorgehen der Begriff
-``Turnschuhnetzwerk'' <<Turnschuhnetzwerk>> gebräuchlich.
+können von da aus auf dem eigentlichen System eingespielt werden. Es ist
+für die Anwendung an einzelnen Systemen gedacht, geschieht das in einem 
+größeren Rahmen, ist für das Vorgehen der Begriff ``Turnschuhnetzwerk'' 
+<<Turnschuhnetzwerk>> gebräuchlich.
 
 Keryx basiert auf dem Gimp Tool Kit. Die letzte Veröffentlichung als
 Ubuntu-PPA erfolgte 2011 (Version 1), 2017 wurde die Version 0.92.5
