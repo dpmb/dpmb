@@ -1,0 +1,25 @@
+// Datei: ./werkzeuge/paketoperationen/paket-nach-lizenz-finden.adoc
+
+// Baustelle: Fertig
+
+[[paket-nach-lizenz-finden]]
+=== Paket nach Lizenz finden ===
+
+// Stichworte für den Index
+(((Paketsuche, anhand der Lizenz)))
+
+Entwickeln Sie Software und stellen diese der Aussenwelt zur Verfügung
+-- bspw. als Freie Software -- gehört eine Softwarelizenz einfach dazu.
+Mit der Lizenz legen Sie fest, was jemand anderes mit ihrem Werk tun
+darf. Das betrifft sowohl die private Nutzung, als auch den
+kommerziellen Einsatz. Eine Mehrfachlizenzierung liegt vor, wenn Sie für
+beide Nutzungsarten jeweils eine unterschiedliche Lizenz angeben.
+
+`dpkg`, Apt, Aptitude und Synaptic beherrschen bislang keine Recherche
+oder Paketauswahl anhand der Lizenz. Die Werkzeuge können die vergebene 
+Lizenz nicht zweifelsfrei aus den Metadaten zum Paket auslesen. Ursache 
+ist, dass nicht alle deb-Pakete über eine standardisierte, maschinell 
+auslesbare Lizenzdatei verfügen. Seit 2012 wird bereits daran gearbeitet, 
+diesen Umstand zu beheben.
+
+// Datei (Ende): ./werkzeuge/paketoperationen/paket-nach-lizenz-finden.adoc

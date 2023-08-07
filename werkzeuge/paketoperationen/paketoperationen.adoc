@@ -56,6 +56,8 @@ include::pakete-ueber-die-paketbeschreibung-finden.adoc[]
 
 include::paket-nach-maintainer-finden.adoc[]
 
+include::paket-nach-lizenz-finden.adoc[]
+
 // include::multiarch-pakete-finden.adoc[]
 
 include::paket-zu-datei-finden.adoc[]
