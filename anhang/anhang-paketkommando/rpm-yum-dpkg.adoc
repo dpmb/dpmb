@@ -509,7 +509,7 @@ beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
 (((yum, list updates)))
 Viele Pakete werden regelmäßig aktualisiert. Welches Kommando Ihnen die
 Pakete anzeigt, die in einer neuen Version bereitstehen, zeigt Ihnen die
-nachfolgende Tabelle. In Abschnitt ``Aktualisierbare Pakete anzeigen``
+nachfolgende Tabelle. In Abschnitt ``Aktualisierbare Pakete anzeigen''
 <<aktualisierbare-pakete-anzeigen>> erfahren Sie dazu mehr Details.
 
 .Aktualisierbare Pakete anzeigen
