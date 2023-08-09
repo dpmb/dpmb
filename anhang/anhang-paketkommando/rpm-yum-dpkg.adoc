@@ -183,6 +183,7 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 // Stichworte für den Index
 (((apt, list --installed)))
 (((apt-cache, search)))
+(((apt-cache, search -n)))
 (((apt-cache, search --names-only)))
 (((aptitude, search ~i)))
 (((aptitude, search ?installed)))
