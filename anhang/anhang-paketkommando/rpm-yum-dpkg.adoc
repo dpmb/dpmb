@@ -544,7 +544,7 @@ nachfolgende Tabelle. In Abschnitt ``Aktualisierbare Pakete anzeigen''
 (((dnf, repository-list)))
 (((yum, list available)))
 Welche Pakete verfügbar sind, erfahren Sie mit den nachfolgend genannten
-Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten``
+Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten''
 <<bekannte-paketnamen-auflisten>> stellen wir Ihnen das genauer vor.
 
 .Verfügbare Pakete anzeigen
