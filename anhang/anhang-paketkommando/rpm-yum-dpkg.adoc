@@ -183,6 +183,7 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 // Stichworte für den Index
 (((apt, list --installed)))
 (((apt-cache, search)))
+(((apt-cache, search --names-only)))
 (((aptitude, search ~i)))
 (((aptitude, search ?installed)))
 (((aptitude, versions)))
@@ -214,7 +215,8 @@ sowie unter ``Aktualisierbare Pakete anzeigen'' in
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | `apt`      | `apt list --installed` | alle installierten Pakete auflisten
-| `apt-cache`| `apt-cache search` 'Paketname' |
+| `apt-cache`| `apt-cache search` 'Paketname' | alle verfügbaren Pakete für 'Paketname' auflisten, durchsucht dabei Paketname und Beschreibung
+| `apt-cache`| `apt-cache search` --names-only 'Paketname' | alle verfügbaren Pakete für 'Paketname' auflisten, berücksichtigt dabei nur den Paketname
 | `aptitude` | `aptitude search '~i'`| alle installierten Pakete auflisten
 |            | `aptitude versions` 'Paketname'| alle verfügbaren Pakete
 für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
