@@ -493,6 +493,7 @@ beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
 // Stichworte für den Index
 (((apt, list --upgradable)))
 (((apt-get, upgrade -u)))
+(((apt-get, upgrade -u -s)))
 (((apt-get, upgrade --show-upgraded)))
 (((apt-get, upgrade --simulate)))
 (((aptitude, search ~U)))
@@ -516,7 +517,7 @@ nachfolgende Tabelle. In Abschnitt ``Aktualisierbare Pakete anzeigen``
 |            | `apt list --upgradable` 'Paketname' | anzeigen, ob für das Paket eine neue Version bereitsteht
 | `apt-get`  | `apt-get upgrade -u` | alle Pakete auflisten, für die eine neue Version bereitsteht
 |            | `apt-get upgrade --show-upgraded` | analog zu `-u` (Langform)
-|            | `apt-get upgrade -u -s ` | Simulation, analog zu `-u`
+|            | `apt-get upgrade -u -s` | Simulation, analog zu `-u`
 |            | `apt-get upgrade --show-upgraded --simulate` | Simulation, analog zu `-u -s` (Langform)
 | `aptitude` | `aptitude search '~U'` | alle aktualisierbaren Pakete anzeigen
 |            | `aptitude search ?upgradable` | alle aktualisierbaren Pakete anzeigen
