@@ -507,6 +507,7 @@ beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
 (((Pakete aktualisieren, Simulation)))
 (((yum, check-update)))
 (((yum, list updates)))
+(((zypper, list updates --all)))
 Viele Pakete werden regelmäßig aktualisiert. Welches Kommando Ihnen die
 Pakete anzeigt, die in einer neuen Version bereitstehen, zeigt Ihnen die
 nachfolgende Tabelle. In Abschnitt ``Aktualisierbare Pakete anzeigen''
@@ -528,6 +529,7 @@ nachfolgende Tabelle. In Abschnitt ``Aktualisierbare Pakete anzeigen''
 | `RPM`      | |
 | `YUM`      | `yum check-updates`| Auflistung der Aktualisierungen für die bereits installierten Pakete
 |            | `yum list updates`| alle aktualisierbaren Pakete anzeigen
+| `zypper`      | `zypper list updates --all`| alle aktualisierbaren Pakete anzeigen
 |====
 
 === Verfügbare Pakete anzeigen ===
