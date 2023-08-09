@@ -561,7 +561,7 @@ Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten``
 (((dpkg, -V)))
 (((dpkg, --verify)))
 (((dpkg-sig, --verify)))
-(((gpg, --verifiy)))
+(((gpg, --verify)))
 (((Paket, auf Veränderungen prüfen)))
 (((Paket, auf Vertrauenswürdigkeit prüfen)))
 (((Paket, Signatur überprüfen)))
