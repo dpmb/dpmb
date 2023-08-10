@@ -398,6 +398,10 @@ widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 
 // Stichworte für den Index
 (((Conffiles)))
+(((dpkg, -s)))
+(((dpkg, --status)))
+(((dpkg-query, -s)))
+(((dpkg-query, --status)))
 (((Paket, Konfigurationsdateien anzeigen)))
 (((Paket, Konfigurationsdateien auflisten)))
 (((rpm, -qc)))
