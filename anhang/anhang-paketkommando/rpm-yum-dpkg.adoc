@@ -342,15 +342,21 @@ lokal auf dem System installiert sein
 === Alle Dateien eines Pakets anzeigen, bevor es installiert wird ===
 
 // Stichworte für den Index
+(((dpkg, -c)))
+(((dpkg, --contents)))
 (((dpkg-deb, -c)))
 (((dpkg-deb, --contents)))
 Mit den nachfolgenden Aufrufen zeigen Sie an, welche Dateien und
-Verzeichnisse zu einem Paket gehören, bevor dieses installiert wird. 
+Verzeichnisse zu einem Paket gehören, bevor dieses installiert wird. Für
+Debianpakete widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
+<<paketinhalte-anzeigen-apt-file>>.
 
 .Paketinhalte vor der Installation anzeigen
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketinhalte-vor-der-installation"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
+| `dpkg`     | `dpkg -c` 'Paketname' |
+|            | `dpkg --contents` 'Paketname' |
 | `dpkg-deb` | `dpkg-deb -c` 'Paketname' |
 |            | `dpkg-deb --contents` 'Paketname' |
 |====
