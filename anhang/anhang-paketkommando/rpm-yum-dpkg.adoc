@@ -409,9 +409,9 @@ widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 
 `dpkg`, `dpkg-query` und `rpm` listen nur die Einträge auf, die sich
 bereits im Paket befinden und nicht diese, die erst zur Laufzeit
-angelegt werden. Für `dpkg` gehen wir darauf ``Konfigurationsdateien
-eines Pakets anzeigen'' <<konfigurationsdateien-eines-pakets-anzeigen>>
-genauer ein.
+angelegt werden. Für `dpkg` gehen wir darauf in ``Konfigurationsdateien
+eines Pakets anzeigen'' (siehe
+<<konfigurationsdateien-eines-pakets-anzeigen>>) genauer ein.
 
 .Konfigurationsdateien eines Pakets anzeigen
 [frame="topbot",options="header",cols="2,4,4",id="tab.konfigurationsdateien-eines-pakets-anzeigen"]
@@ -422,9 +422,14 @@ genauer ein.
 | `dpkg-query` | `dpkg-query -s` 'Paketname' |
 |            | `dpkg-query --status` 'Paketname' |
 | `RPM`      | `rpm -qc` 'Paketname' | listet alle Dateien auf, die im rpm-Paket als Konfiguration geflaggt sind
-|            | rpm -ql | grep "/etc" | listet alle Dateien auf, die sich im
-  Verzeichnis `/etc` befinden
 |====
+
+Alternativ listen Sie nur die Dateien auf, die sich im Verzeichnis
+`/etc` befinden, hier anhand des Beispielpakets 'paket.rpm':
+
+----
+rpm -qc paket.rpm | grep "/etc"
+----
 
 === Alle Dokumentationsdateien eines Pakets anzeigen ===
 
@@ -442,9 +447,14 @@ genauer ein.
 | Werkzeug   | Aufruf | Anmerkungen
 | `RPM`      | `rpm -qd` 'Paketname' | listet alle Dateien auf, die im
 rpm-Paket als Dokumentation geflaggt sind
-|            | rpm -ql | grep "/usr/share/doc" | listet alle Dateien auf, die sich im
-  Verzeichnis `/usr/share/doc` befinden
 |====
+
+Alternativ listen Sie nur die Dateien auf, die sich im Verzeichnis
+`/usr/share/doc` befinden, hier anhand des Beispielpakets 'paket.rpm':
+
+----
+rpm -qd paket.rpm | grep "/usr/share/doc"
+----
 
 === Paket identifizieren, aus dem eine Datei stammt ===
 
