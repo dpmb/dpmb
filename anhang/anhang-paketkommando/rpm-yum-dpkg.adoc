@@ -429,24 +429,22 @@ genauer ein.
 === Alle Dokumentationsdateien eines Pakets anzeigen ===
 
 // Stichworte für den Index
+(((Paket, Dokumentationsdateien anzeigen)))
+(((Paket, Dokumentationsdateien auflisten)))
 (((rpm, -qd)))
 
-- `dpkg` und `apt` können das nicht
-- listet alle Dateien auf, die im rpm-Paket als Dokumentation geflaggt
-  sind
-- Hinweis: listet nur die Einträge auf, die sich bereits im Paket
-  befinden und nicht diese, die erst zur Laufzeit angelegt werden
+`dpkg` und `apt` können das nicht. Daher geben wir nur den Aufruf von
+`rpm` an.
 
-----
-rpm -qd Paketname
-----
-
-- Alternative: alle Dateien und Verzeichnisse auflisten, die sich im
+.Dokumentationsdateien eines Pakets anzeigen
+[frame="topbot",options="header",cols="2,4,4",id="tab.dokumentationsdateien-eines-pakets-anzeigen"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| `RPM`      | `rpm -qd` 'Paketname' | listet alle Dateien auf, die im
+rpm-Paket als Dokumentation geflaggt sind
+|            | rpm -ql | grep "/usr/share/doc" | listet alle Dateien auf, die sich im
   Verzeichnis `/usr/share/doc` befinden
-
-----
-rpm -ql | grep "/usr/share/doc"
-----
+|====
 
 === Paket identifizieren, aus dem eine Datei stammt ===
 
