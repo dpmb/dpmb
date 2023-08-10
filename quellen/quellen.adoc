@@ -649,6 +649,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Edubuntu]]] Edubuntu, https://www.edubuntu.org/
 
+- [[[Emmabuntüs]]] Emmabuntüs, https://emmabuntus.org/
+
 - [[[FAI-Bornemann-Karg]]] Steffen Bornemann, Christoph Karg: Blitzstart. Automatisches System-Deployment mit FAI, Linux-Magazin 01/09, S. 58ff, http://www.linux-magazin.de/Ausgaben/2009/01/Blitzstart
 
 - [[[FAI-Cloud-Support]]] Ulrich Bantle: FAI 5.2 bringt Cloud-Support, Linux-Magazin, http://www.linux-magazin.de/NEWS/FAI-5.2-bringt-Cloud-Support

@@ -53,7 +53,7 @@ Deepin:: Angeblich die meistgenutzte Linux-Distribution Chinas <<Deepin>>
 
 Emmabuntüs :: Wurde entwickelt, um Computer neu aufzusetzen, die an
 Hilfsorganisationen gespendet wurden. Wird gepflegt von der
-Emmaus-Stiftung aus Frankeich. Emmabuntüs basiert auf Debian 'stable'.
+Emmaus-Stiftung aus Frankreich. Emmabuntüs <<Emmabuntüs>> basiert auf Debian 'stable'.
 
 LiMux:: Linux-Distribution, die im Rahmen der Migration der
 Stadtverwaltung München zum Einsatz kam (2009-2020) <<LiMux>>
