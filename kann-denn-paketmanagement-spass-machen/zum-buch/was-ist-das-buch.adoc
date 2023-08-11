@@ -39,7 +39,7 @@ wie Sie `deb`-Pakete bauen und diese in Debian einbringen. Dieses Thema
 würde den Rahmen des vorliegenden Werkes um ein Mehrfaches sprengen und 
 bleibt daher außen vor. Für den Bau von Debianpaketen empfehlen wir
 Ihnen den Blick in das Debian-Paketierbuch (kurz: dpb) von Michael und
-Mechthilde Stehmann <<Debian-Paketierbuch>>.
+Mechtilde Stehmann <<Debian-Paketierbuch>>.
 
 Was Sie allerdings im vorliegenden Buch finden, ist die Zusammenstellung 
 eines `deb`-Pakets -- sprich: aus welchen Einzelteilen es besteht (siehe
