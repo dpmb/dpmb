@@ -189,15 +189,19 @@ QKAxD31KZHIDdExeifRhQrLwBU3YVyuj1kSFIULO5kAD6v+i6dd341IUBNip2B7z
 
 ==== Die Inhalte eines bereits installierten Paketes überprüfen ====
 
+// Stichworte für den Index
+(((Paket, auf Veränderungen prüfen)))
+(((Paket, verifizieren)))
+
 Installieren Sie ein Debianpaket, landen die darin enthaltenen Dateien 
 üblicherweise eins-zu-eins auf dem Speichermedium. Als Administrator gehört 
 zu Ihren Aufgaben, das System und die Dateien auf Integrität zu prüfen. Das 
-umfasst auch das Nachschauen, ob die lokalen Dateien aus einem gerade 
-installierten Paket später verändert wurden, d.h. ob zwischen der Version 
-vom Paketmirror und der lokalen Version Unterschiede bestehen. Falls ja, ist 
-von Ihnen zu klären, welche Dateien verändert wurden. Es gibt mehrere 
-Situationen, in denen das wichtig ist, gewollte oder unerwünschte Änderungen 
-von Daten festzustellen.
+umfasst auch das Nachschauen, ob die lokalen Dateien eines bereits
+installierten Paket später verändert wurden, d.h. ob zwischen der
+Version vom Paketmirror und der lokalen Version Unterschiede bestehen.
+Falls ja, ist von Ihnen zu klären, welche Dateien verändert wurden. Es
+gibt mehrere Situationen, in denen das wichtig ist, gewollte oder
+unerwünschte Änderungen von Daten festzustellen.
 
 * Welche Unterschiede bestehen zwischen der offiziell verfügbaren Version 
 (und dessen Konfiguration) und den lokalen Einstellungen, sprich: welche 
@@ -252,6 +256,7 @@ Techniken nicht aus. Dazu gibt es spezialisierte Pakete wie z. B.
 ===== MD5-Summen von Dateien mit `dlocate` anzeigen ===== 
 
 // Stichworte für den Index
+(((Paket, MD5-Summen aller Dateien anzeigen)))
 (((Debianpaket, dlocate)))
 (((dlocate, -md5sum)))
 Mit dem Schalter `-md5sum` des Werkzeugs `dlocate` zeigen Sie die
