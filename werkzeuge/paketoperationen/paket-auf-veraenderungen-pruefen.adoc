@@ -50,7 +50,7 @@ auf ihrem System Unterschiede, und wenn ja, welche sind das.
 Die offiziellen Paketquellen von Debian, als auch die darüber referenzierten 
 Quellpakete sind kryptographisch signiert (siehe dazu 
 <<paketquelle-auf-echtheit-ueberpruefen>>). Die Signaturen werden mit Hilfe 
-der Public-Key-Kryptographie erststellt. Mit dem entsprechenden öffentlichen 
+der Public-Key-Kryptographie erstellt. Mit dem entsprechenden öffentlichen 
 Schlüssel (engl. 'Public Key') können Sie (und jeder andere Benutzer ebenso) 
 überprüfen, ob das Paket vertrauenswürdig ist.
 
