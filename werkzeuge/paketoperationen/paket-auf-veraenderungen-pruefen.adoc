@@ -135,7 +135,7 @@ $
 ----
 
 Nun überprüfen Sie, ob ein Debianpaket selbst noch eine kryptographische 
-Signatur enthält. Sie packen dieses aus und schauen, nach ob darin eine 
+Signatur enthält. Sie packen dieses aus und schauen nach, ob darin eine 
 Datei namens `_gpgbuilder` enthalten ist:
 
 .Dateiliste eines Pakets mit kryptographischer Signatur
