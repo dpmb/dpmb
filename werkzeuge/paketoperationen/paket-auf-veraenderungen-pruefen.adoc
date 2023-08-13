@@ -288,6 +288,7 @@ $
 // Stichworte für den Index
 (((Debianpaket, dlocate)))
 (((dlocate, -md5check)))
+(((Paket, MD5-Summen aller Dateien überprüfen)))
 `dlocate` kann nicht nur die MD5-Summe für eine Datei ausgeben, sondern
 diese auch überprüfen. Dazu benutzen Sie den Schalter `-md5check`. Falls
 die ermittelte MD5-Summe mit dem Original aus dem Paket übereinstimmt,
@@ -319,6 +320,7 @@ $
 (((Debianpaket, debsums)))
 (((debsums)))
 (((Paket, Dateien auf Integrität prüfen)))
+(((Paket, MD5-Summen aller Dateien überprüfen)))
 Genauso wie `dlocate` kann auch `debsums` die Dateien eines Pakets auf
 Integrität überprüfen. Dazu braucht es jedoch keine weitere Option, da
 das Überprüfen von Dateien die einzige Aufgabe von `debsums` ist:
