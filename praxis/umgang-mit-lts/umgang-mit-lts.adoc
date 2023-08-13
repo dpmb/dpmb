@@ -89,13 +89,16 @@ dauerhaft <<Stackexchange-LTS>>:
 === Dienstleister zur Pflege veralteter LTS-Installationen ===
 
 // Stichworte für den Index
+(((Freexian)))
 (((Veröffentlichung, ELTS)))
 (((Veröffentlichung, Extended LTS)))
+(((Veröffentlichung, Freexian ELTS)))
 
-*ToDo*
-
-* Extended LTS (ELTS) <<Debian-ELTS>>
-* Laufzeitpflege für 10 Jahre
-* Freexian <<Freexian>> und <<Freexian-ELTS>>
+Nicht jede bestehende LTS-Installation kann ein Upgrade bekommen,
+beständige Pflege ist trotzdem notwendig. Debian bietet mit dem Zweig
+Extended LTS (ELTS) <<Debian-ELTS>> eine Laufzeitpflege für 10 Jahre an.
+Ein Dienstleister, der Sie unterstützt, ist Freexian <<Freexian>>. Er
+bietet länger gepflegte, ältere Pakete über den Zweig Freexian ELTS
+<<Freexian-ELTS>> an.
 
 // Datei (Ende): ./praxis/umgang-mit-lts/umgang-mit-lts.adoc
