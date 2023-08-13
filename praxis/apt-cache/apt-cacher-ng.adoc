@@ -20,14 +20,14 @@ Projekt finden Sie auf der Projektwebseite
 <<apt-cacher-ng-Projektseite>>.
 
 `apt-cacher-ng` sieht sich selbst als Proxyserver zum Zwischenspeichern
-von Softwaredepots und lädt Pakete von Softwaredepots im Debian-Stil (
-oder möglicherweise von anderen Typen) herunter. Es wurde von Grund auf 
+von Softwaredepots und lädt Pakete von Softwaredepots im Debian-Stil 
+(oder möglicherweise von anderen Typen) herunter. Es wurde von Grund auf 
 neu als Ersatz für `apt-cacher` entwickelt (siehe <<apt-cacher>>) und
 soll gleichzeitig `apt-proxy` <<apt-proxy>> und `approx` (siehe 
 <<approx>>) ersetzen, ohne die Datei `/etc/apt/sources.list` der Clients
 ändern zu müssen.
 
-Im laufenden betrieb speichert `apt-cacher-ng` eine Kopie aller Nutzdaten, 
+Im laufenden Betrieb speichert `apt-cacher-ng` eine Kopie aller Nutzdaten, 
 die über ihn laufen.
 
 ==== Einrichtung und Betrieb ====
