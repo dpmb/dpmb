@@ -23,13 +23,14 @@ Todo
 === Speicherplatz === 
 
 Pakete:
-* localepurge // eher nach plattenplatz-sparen-mit-der-paketverwaltung.adoc
-// Ggf. Paradebeispiel N900 mit dem unsäglichen docpurge erwähnen: 
-// https://maemo.gitorious.org/maemo-af/docpurge/source/0bd88357713d7f554f119ab0c2ebaa676c433ec7:
+* localepurge
+  // eher nach plattenplatz-sparen-mit-der-paketverwaltung.adoc
+  // Ggf. Paradebeispiel N900 mit dem unsäglichen docpurge erwähnen: 
+  // https://maemo.gitorious.org/maemo-af/docpurge/source/0bd88357713d7f554f119ab0c2ebaa676c433ec7:
+
 * docpurge <<docpurge>>
 
-* eatmydata (verringert die Menge der Synchronisationen und somit die
-Schreibzugriffe)
+* eatmydata <<Debian-Paket-eatmydata>>: verringert die Menge der Synchronisationen und somit die Schreibzugriffe
 
 include::localepurge.adoc[]
 

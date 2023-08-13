@@ -384,6 +384,8 @@
 
 - [[[Debian-Paket-dwm]]] Debian-Paket 'dwm', https://packages.debian.org/de/stable/dwm
 
+- [[[Debian-Paket-eatmydata]]] Debian-Paket 'eatmydata', https://packages.debian.org/de/stable/eatmydata
+
 - [[[Debian-Paket-equivs]]] Debian-Paket 'equivs', https://packages.debian.org/de/stable/equivs
 
 - [[[Debian-Paket-etckeeper]]] Debian-Paket 'etckeeper', https://packages.debian.org/de/stable/etckeeper
