@@ -185,7 +185,22 @@ QKAxD31KZHIDdExeifRhQrLwBU3YVyuj1kSFIULO5kAD6v+i6dd341IUBNip2B7z
 
 ===== Mehrere Pakete prüfen =====
 
-* Todo
+// Stichworte für den Index
+(((Debianpaket, dpkg-sig)))
+(((Paket, Signatur mehrerer Pakete überprüfen)))
+(((Paketsignatur, mehrere Pakete überprüfen)))
+
+Hier bietet sich ein Aufruf in einer `for`-Schleife an, bspw. wie 
+folgt:
+
+.Mehrere Pakete prüfen
+----
+$ for paket in *.deb; do dpkg-sig --verify $paket; done
+...
+$
+----
+
+Als Ausgabe erhalten das Prüfergebnis paketweise untereinander.
 
 ==== Die Inhalte eines bereits installierten Paketes überprüfen ====
 
