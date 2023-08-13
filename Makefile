@@ -2,7 +2,7 @@ BASE=debian-paketmanagement
 DEFAULTDEPENDENCIES=*.adoc */*.adoc */*/*.adoc Makefile version.adoc *-docinfo.xml
 DEFAULTOPTIONS=-L
 DOCTORDEFAULTOPTIONS=-a experimental -a toc -a toclevels=4
-FORMATS=online.html allinone.html chunked epub pdf mobi
+FORMATS=online.html allinone.html chunked epub pdf mobi tex
 
 all: $(FORMATS)
 html: online.html allinone.html doctor.html chunked
@@ -30,6 +30,10 @@ epub: $(BASE).epub
 pdf: $(BASE).pdf
 %.pdf: %.adoc $(DEFAULTDEPENDENCIES)
 	a2x $(VERBOSE) -f pdf $(DEFAULTOPTIONS) $<
+
+tex: $(BASE).tex
+%.tex: %.adoc $(DEFAULTDEPENDENCIES)
+	a2x $(VERBOSE) -d book -f tex $(DEFAULTOPTIONS) $<
 
 mobi: $(BASE).mobi
 %.mobi: %.epub
