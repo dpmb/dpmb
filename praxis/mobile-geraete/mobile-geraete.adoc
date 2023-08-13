@@ -22,8 +22,9 @@ Todo
 
 === Speicherplatz === 
 
-Pakete:
-* localepurge
+Bekannte Pakete:
+
+* localepurge <<Debian-Paket-localepurge>>
   // eher nach plattenplatz-sparen-mit-der-paketverwaltung.adoc
   // Ggf. Paradebeispiel N900 mit dem unsäglichen docpurge erwähnen: 
   // https://maemo.gitorious.org/maemo-af/docpurge/source/0bd88357713d7f554f119ab0c2ebaa676c433ec7:
