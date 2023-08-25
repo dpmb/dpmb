@@ -144,7 +144,7 @@ ein.
 |            | `yum upgrade` 'Paketname' | nur 'Paketname' aktualisieren und dabei auch die Pakete berücksichtigen, die veraltet sind
 |====
 
-|=== Ein Softwarepaket erneut installieren ===
+=== Ein Softwarepaket erneut installieren ===
 
 // Stichworte für den Index
 (((apt, reinstall)))
