@@ -165,6 +165,23 @@ die Kommandozeile erneut.
 | `aptitude` | `aptitude reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen
 |====
 
+=== Ein Softwarepaket nur herunterladen ===
+
+// Stichworte für den Index
+(((apt, download)))
+(((aptitude, download)))
+(((Paket, nur herunterladen)))
+Mit den nachfolgenden Aufrufen laden Sie ein Softwarepaket in das
+aktuelle Verzeichnis herunter.
+
+.Erneute Installation eines Pakets
+[frame="topbot",options="header",cols="2,4,4",id="tab.deb-paket-herunterladen"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| APT        | `apt download` 'Paketname' | Paket wird dem Paketrepository entnommen
+| `aptitude` | `aptitude download` 'Paketname' | Paket wird dem Paketrepository entnommen
+|====
+
 === Paket löschen / entfernen ===
 
 // Stichworte für den Index
