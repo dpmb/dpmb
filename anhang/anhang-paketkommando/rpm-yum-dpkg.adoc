@@ -178,6 +178,25 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 |            | `yum erase` 'Paketname' | entfernt nur das angegebene Paket
 |====
 
+=== Paket als `deb`-Datei herunterladen ===
+
+// Stichworte für den Index
+(((Paket, als deb-Datei herunterladen)))
+(((apt, download)))
+(((aptitude, download)))
+Hiermit laden Sie ein Softwarepaket von der hinterlegten Paketquelle als
+Datei herunter. Dieses Paket wird nicht automatisch installiert.
+
+.Paket als `deb`-Datei herunterladen
+[frame="topbot",options="header",cols="2,4,4",id="tab.paket-nur-herunterladen"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| `apt`      | `apt download` 'Paketname' | Beziehe 'Paketname' von der
+Paketquelle und speichere es als Datei im aktuellen Verzeichnis
+| `aptitude` | `aptitude download` 'Paketname' | Beziehe 'Paketname' von der
+Paketquelle und speichere es als Datei im aktuellen Verzeichnis
+|====
+
 === Alle installierten Pakete auflisten ===
 
 // Stichworte für den Index
