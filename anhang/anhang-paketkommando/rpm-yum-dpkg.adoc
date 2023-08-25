@@ -35,7 +35,24 @@ Verfügbarkeit der genannten Werkzeuge und deren einzelne Schalter
 variiert recht stark <<RPM-Salve>> <<RPM-Gite>> <<RPM-Canepa>>
 <<YUM-Salve>> <<dpkg-Kumar>> <<apt-Salve>> <<DNF-Dokumentation>>.
 
-=== Paket installieren ===
+=== Die lokale Paketliste aktualisieren ===
+
+// Stichworte für den Index
+(((apt, update)))
+(((apt-get, update)))
+(((apttude, update)))
+(((Paketliste, aktualisieren)))
+
+.Lokale Paketliste aktualisieren
+[frame="topbot",options="header",cols="2,4,4",id="tab.lokale-paketliste-aktualisieren"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| APT        | `apt update` | 
+| `apt-get`  | `apt-get update' | 
+| Aptitude   | `aptitude update` | 
+|====
+
+|=== Paket installieren ===
 
 // Stichworte für den Index
 (((apt, install)))
