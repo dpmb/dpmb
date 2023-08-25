@@ -101,7 +101,7 @@ Paketcache vorliegen.
 |            | `yum reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen und erneut installiert
 |====
 
-=== Paket aktualisieren ===
+=== Bereits bestehende Softwarepakete erneuern ===
 
 // Stichworte für den Index
 
@@ -127,8 +127,8 @@ ein.
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketaktualisierung"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| `apt`      | `apt safe-upgrade` 'Paketname' | aktualisierte Version des Pakets einspielen
-|            | `apt install` 'Paketname' | aktualisierte Version des Pakets einspielen, sofern das Paket bereits in einer früheren Version installiert ist
+| `apt`      | `apt install` 'Paketname' | aktualisierte Version des Pakets einspielen, sofern das Paket bereits in einer früheren Version installiert ist
+|            | `apt safe-upgrade` 'Paketname' | aktualisierte Version des Pakets einspielen
 | `apt-get`  | `apt-get install` 'Paketname' | aktualisierte Version des Pakets einspielen, sofern das Paket bereits in einer früheren Version installiert ist
 |            | `apt-get upgrade` 'Paketname' | aktualisierte Version des Pakets einspielen
 | `aptitude` | `aptitude safe-upgrade` 'Paketname' | aktualisierte Version des Pakets einspielen
@@ -142,6 +142,27 @@ ein.
 |            | `yum update` 'Paketname' | nur 'Paketname' aktualisieren
 |            | `yum upgrade` | die gesamte Veröffentlichung aktualisieren und dabei auch die Pakete berücksichtigen, die veraltet sind
 |            | `yum upgrade` 'Paketname' | nur 'Paketname' aktualisieren und dabei auch die Pakete berücksichtigen, die veraltet sind
+|====
+
+|=== Ein Softwarepaket erneut installieren ===
+
+// Stichworte für den Index
+(((apt, reinstall)))
+(((apt-get, install --reinstall)))
+(((apt-get, reinstall)))
+(((aptitude, reinstall)))
+(((Paket, erneut installieren)))
+Mit den nachfolgenden Aufrufen installieren Sie ein Softwarepaket über
+die Kommandozeile erneut. 
+
+.Erneute Installation eines Pakets
+[frame="topbot",options="header",cols="2,4,4",id="tab.erneute-paketinstallation"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| APT        | `apt reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen
+| `apt-get`  | `apt-get install --reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen
+|            | `apt-get reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen
+| `aptitude` | `aptitude reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen
 |====
 
 === Paket löschen / entfernen ===
