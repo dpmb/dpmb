@@ -42,6 +42,9 @@ variiert recht stark <<RPM-Salve>> <<RPM-Gite>> <<RPM-Canepa>>
 (((apt-get, update)))
 (((apttude, update)))
 (((Paketliste, aktualisieren)))
+Mit den nachfolgenden Aufrufen aktualisieren Sie die lokale Paketliste.
+Genauer gehen wir darauf in <<liste-der-verfuegbaren-pakete-aktualisieren>> 
+ein.
 
 .Lokale Paketliste aktualisieren
 [frame="topbot",options="header",cols="2,4,4",id="tab.lokale-paketliste-aktualisieren"]
@@ -52,7 +55,7 @@ variiert recht stark <<RPM-Salve>> <<RPM-Gite>> <<RPM-Canepa>>
 | Aptitude   | `aptitude update` | 
 |====
 
-|=== Paket installieren ===
+|=== Neue Softwarepakete installieren ===
 
 // Stichworte für den Index
 (((apt, install)))
