@@ -15,9 +15,10 @@
 (((Dokumentation, offline)))
 Matthew Danish hat zu den beiden Programmen `dpkg` und APT eine
 Referenzliste zusammengestellt. Diese ist als offizielles Debianpaket
-mit dem Namen 'apt-dpkg-ref' <<Debian-Paket-apt-dpkg-ref>> verfügbar.
-Derzeit existiert diese Übersicht nur in englischer Sprache,
-Übersetzungen in andere Sprachen liegen bislang nicht vor.
+mit dem Namen 'apt-dpkg-ref' <<Debian-Paket-apt-dpkg-ref>> bis
+einschließlich Debian 11 'Bullseye' verfügbar. Es existiert nur in
+englischer Sprache, Übersetzungen in andere Sprachen liegen bislang
+nicht vor.
 
 Installieren Sie dieses Paket über die Paketverwaltung, finden Sie diese
 Dokumentation danach im Verzeichnis `/usr/share/doc/apt-dpkg-ref/`
