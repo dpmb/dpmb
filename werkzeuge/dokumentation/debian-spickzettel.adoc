@@ -11,7 +11,7 @@
 (((dpkg)))
 (((Debian-Spickzettel)))
 (((Dokumentation, offline)))
-Frank pflegt einen Debian-Spickzettel, in der die wichtigsten Kommandos
+Frank pflegt einen Debian-Spickzettel, in dem die wichtigsten Kommandos
 zur Paketverwaltung zusammengestellt sind. Dieser steht als PDF auf
 GitHub bereit <<Debian-Spickzettel-Github>>. Der Spickzettel liegt in
 deutscher und englischer Sprache vor, Übersetzungen in andere Sprachen
