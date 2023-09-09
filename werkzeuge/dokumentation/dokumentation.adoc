@@ -57,6 +57,8 @@ include::apt-dpkg-referenzliste.adoc[]
 
 include::apt-doc.adoc[]
 
+include::debian-spickzettel.adoc[]
+
 // apt-get
 
 include::nixcraft-apt-cheatsheet.adoc[]

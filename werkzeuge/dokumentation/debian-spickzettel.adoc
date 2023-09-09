@@ -1,0 +1,22 @@
+// Datei: ./werkzeuge/dokumentation/debian-spickzettel.adoc
+
+// Baustelle: Fertig 
+
+[[debian-spickzettel]]
+
+=== Der Debian-Spickzettel ===
+
+// Stichworte für den Index
+(((APT)))
+(((dpkg)))
+(((Debian-Spickzettel)))
+(((Dokumentation, offline)))
+Frank pflegt einen Debian-Spickzettel, in der die wichtigsten Kommandos
+zur Paketverwaltung zusammengestellt sind. Dieser steht als PDF auf
+GitHub bereit <<Debian-Spickzettel-Github>>. Der Spickzettel liegt in
+deutscher und englischer Sprache vor, Übersetzungen in andere Sprachen
+wie Französisch und Russisch stehen an. 
+
+.Der Debian-Spickzettel (Ausschnitt)
+image::werkzeuge/dokumentation/debian-spickzettel.png[id="fig.debian-spickzettel", width="50%"]
+// Datei (Ende): ./werkzeuge/dokumentation/debian-spickzettel.adoc

@@ -556,6 +556,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Sources-List-Generator]]] Debian Sources List Generator, https://debgen.simplylinux.ch/
 
+- [[[Debian-Spickzettel-Github]]] Debian-Spickzettel, https://github.com/hofmannedv/cheatsheets/tree/master/debian-package-management
+
 - [[[Debian-Spiegel-Informationen]]] Spiegel-Informationen einreichen, https://www.debian.org/mirror/submit
 
 - [[[Debian-Spiegel-Liste]]] Liste der Debian-Mirror, https://www.debian.org/mirror/list
