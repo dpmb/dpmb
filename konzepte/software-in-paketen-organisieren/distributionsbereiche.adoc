@@ -123,11 +123,13 @@ dem System eingepflegt.
 image::konzepte/software-in-paketen-organisieren/aptitude-unfreie-pakete.png[id="fig.aptitude-unfreie-pakete", width="50%"]
 
 // Stichworte für den Index
+(((Debianpaket, check-dfsg-status)))
 (((Debianpaket, vrms)))
 (((Software, unfrei)))
 Eine vollständige Übersicht zu allen nicht-freien Paketen, die auf ihrem
-System installiert sind, gibt Ihnen das Programm `vrms` aus dem
-gleichnamigen Debianpaket <<Debian-Paket-vrms>>. Darauf gehen wir unter
+System installiert sind, gibt Ihnen das Programm `check-dfsg-status` 
+(vormals `vrms`) aus dem gleichnamigen Debianpaket 
+<<Debian-Paket-check-dfsg-status>>. Darauf gehen wir unter
 ``Liste der installierten, nicht-freien Pakete anzeigen'' in
 <<unfreie-pakete-anzeigen>>) ausführlicher ein.
 
