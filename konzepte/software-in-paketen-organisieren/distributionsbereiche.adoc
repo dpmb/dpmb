@@ -62,12 +62,12 @@ unfreie Firmware-Pakete im Bereich _non-free_ untergebracht.)
 (((Distributionsbereiche, Einordnung anhand der Lizenzen)))
 (((Free Software Foundation (FSF))))
 Obwohl vielfach von außen anders wahrgenommen, zählt zur
-Debian-Distribution nur der Bereich _main_. Die anderen beiden Bereiche
+Debian-Distribution nur der Bereich _main_. Die anderen drei Bereiche
 sind lediglich Ergänzungen, die zusätzlich bereitgestellt werden. Wir
 empfehlen Ihnen daher, soweit möglich nur Pakete aus _main_ zu
 verwenden, und nur wenn dies nicht ausreicht (z.B. wegen nicht-freier
-Firmware für bestimmte Hardwarekomponenten), die beiden anderen Bereiche
-_contrib_ und/oder _non-free_ dazuzunehmen.
+Firmware für bestimmte Hardwarekomponenten), die drei anderen Bereiche
+_contrib_,  _non-free_ und/oder _non-free-firmware_ dazuzunehmen.
 
 Pakete, die in _main_ eingeordnet sind, unterliegen einer Lizenz, die
 den Debian-Richtlinien für Freie Software – kurz _Debian Free Software
@@ -89,10 +89,10 @@ warum ein Paket im Bereich _contrib_ einsortiert wurde, sind:
   und/oder paketieren) von nicht-freier Software da.
 * Die Software muss mit einem nicht-freien Compiler übersetzt werden.
 
-Im Bereich _non-free_ finden sich Pakete, die nicht den
-Debian-Richtlinien für Freie Software (DFSG) entsprechen, aber trotzdem
-immer noch frei verteilbar sind. Typische Gründe für die Nichterfüllung
-der DFSG im Bereich _non-free_ sind:
+In den beiden Bereichen _non-free_ und _non-free-firmware_ finden sich 
+Pakete, die nicht den Debian-Richtlinien für Freie Software (DFSG) 
+entsprechen, aber trotzdem immer noch frei verteilbar sind. Typische 
+Gründe für die Nichterfüllung der DFSG sind:
 
 * Der Quellcode liegt nicht (komplett) vor.
 * Die Software oder einzelne Teile davon – z.B. Teile der Dokumentation – dürfen nicht modifiziert werden.
@@ -100,17 +100,18 @@ der DFSG im Bereich _non-free_ sind:
 * Die Software darf nur für ``Gutes'' verwendet werden.
 * Die Software darf nicht in kompilierter Form verteilt werden.
 
-Vor der Nutzung von Software aus diesem Bereich ist es ratsam, immer
+Vor der Nutzung von Software aus diesen Bereichen ist es ratsam, immer
 erst anhand der Lizenz zu überprüfen, ob Sie diese Software überhaupt
 für Ihre gewünschten Zwecke einsetzen dürfen.
 
 // Stichworte für den Index
 (((Debianpaket, skype)))
 (((Software, unfrei)))
-Für Software aus dem Bereich _non-free_ gilt außerdem, dass keine
-Unterstützung seitens Debian für diese Pakete möglich ist. Das trifft
-insbesondere dann zu, wenn der Quellcode nicht veröffentlicht wurde, wie
-das bspw. bei der Firmware zu bestimmten WLAN-Chipsätzen der Fall ist.
+Für Software aus den beiden Bereichen _non-free_ und _non-free-firmware_ 
+gilt außerdem, dass keine Unterstützung seitens Debian für diese Pakete 
+möglich ist. Das trifft insbesondere dann zu, wenn der Quellcode nicht 
+veröffentlicht wurde, wie das bspw. bei der Firmware zu bestimmten 
+WLAN-Chipsätzen der Fall ist.
 
 <<fig.aptitude-unfreie-pakete>> zeigt die Paketliste in Aptitude mit
 einem unfreien Paket aus dem Bereich Netzwerk – `skype`. Im abgebildeten
