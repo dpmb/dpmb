@@ -24,5 +24,6 @@ bekommen:
 . Pakete aus den Entwicklungszweigen 'testing' oder 'unstable' auf 'stable' installieren,
 . Pakete aus den Entwicklungszweigen 'testing' oder 'unstable' auf 'stable' neu bauen, oder
 . Pakete aus dem Backports-Repository verwenden, falls diese darin verfügbar sind.
+. Pakete aus dem Fasttrack-Repository verwenden, falls diese darin verfügbar sind.
 
 // Datei (Ende): ./praxis/debian-backports/ausgangssituation.adoc
