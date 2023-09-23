@@ -34,9 +34,9 @@ aktualisieren zu können oder es weiter benutzen zu können.
 Um nicht auf die Stabilität und die Sicherheitsupdates von Debians
 'stable'-Zweig zu verzichten und gleichzeitig einzelne Anwendungen in
 neueren Versionen nutzen zu können, ist der sauberste Weg die
-Rückportierung (engl. 'to backport'). Die Grundlage stellen die
-Versionszweige 'testing', 'unstable' und auch 'experimental' dar. Damit
-erreichen Sie, dass sich das ausgewählte Paket auch auf dem
+Rückportierung (engl. 'to backport') <<Debian-Backports>>. Die Grundlage 
+stellen die Versionszweige 'testing', 'unstable' und auch 'experimental' 
+dar. Damit erreichen Sie, dass sich das ausgewählte Paket auch auf dem
 'stable'-Zweig bauen und installieren lässt. Es gehört meistens eine
 kleine Portion Glück dazu, das Paket ohne Murren zu portieren. Solche
 Backports sind nicht immer trivial in der Entwicklung und können auch
@@ -44,5 +44,11 @@ vergleichsweise aufwendig in der Pflege sein, z.B. wenn neuere Versionen
 weitere Backports benötigen, weil in der nachfolgenden Entwicklung
 weitere Abhängigkeiten hinzukamen oder neuere Versionen der
 referenzierten Abhängigkeiten benötigt werden.
+
+Debian FastTrack <<Debian-Fasttrack>> ist ein Repository, welches es 
+erlaubt, Rückportierungen von Paketen für Benutzer der stabilen 
+Distribution zur Verfügung zu stellen, wenn diese Pakete nicht in dem 
+Versionszweig 'testing' gepflegt und auf dem üblichen Weg zurückportiert 
+werden können.
 
 // Datei (Ende): ./praxis/debian-backports/loesungsansaetze.adoc

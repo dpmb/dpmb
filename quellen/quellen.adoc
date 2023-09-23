@@ -225,6 +225,8 @@
 
 - [[[Debian-ELTS-Packages]]] Extended LTS Paketliste, https://deb.freexian.com/extended-lts/docs/supported-packages/
 
+- [[[Debian-Fasttrack]]] Debian Fasttrack, https://fasttrack.debian.net/
+
 - [[[Debian-History]]] Debian Documentation Team: A Brief History of Debian, Chapter 3, Debian Releases, https://www.debian.org/doc/manuals/project-history/ch-releases.de.html
 
 - [[[Debian-LTS]]] Debian Long Term Support (LTS), https://wiki.debian.org/LTS
