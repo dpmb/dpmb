@@ -22,4 +22,13 @@ ist, dass nicht alle deb-Pakete über eine standardisierte, maschinell
 auslesbare Lizenzdatei verfügen. Seit 2012 wird bereits daran gearbeitet, 
 diesen Umstand zu beheben.
 
+Behelfen können Sie sich bislang nur insofern, dass Sie die 
+Paketverwaltung so einstellen, nur Pakete aus ausgewählten 
+Distributionsbereichen zuzulassen. Möchten Sie beispielsweise 
+ausschließlich Pakete auf ihrem System zulassen, die unter freien 
+Lizenzen stehen und auch nicht von unfreien Paketen abhängig sind (siehe
+``Distributionsbereiche'' in <<distributionsbereiche>>), begrenzen Sie 
+diese auf den Bereich 'main' (siehe ``Die Datei `/etc/apt/sources.list` 
+verstehen'' in <<etc-apt-sources.list-verstehen>>).
+
 // Datei (Ende): ./werkzeuge/paketoperationen/paket-nach-lizenz-finden.adoc
