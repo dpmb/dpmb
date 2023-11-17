@@ -48,32 +48,7 @@ Darstellung in den graphischen Programme klären wir weiter unten genauer.
 `dpkg` wird für diese Aufgabe sehr häufig genutzt. Intern leitet `dpkg` den
 Aufruf an das Abfragewerkzeug `dpkg-query` weiter.
 
-Ohne die Angabe des Paketnamens zeigen Sie alle Pakete und Paketreste an, die 
-auf Ihrem System derzeit installiert sind. Geben Sie ein oder mehrere Pakete 
-als Parameter durch Leerzeichen getrennt an, erhalten Sie nur Informationen
-zu diesen benannten Paketen. In nachfolgender Paketliste zeigen die einzelnen 
-Spalten nacheinander den Paketzustand, den Namen des Pakets (siehe 
-<<benennung-eines-debian-pakets>>), dessen Version und die dazugehörige
-Kurzbeschreibung dazu.
-
-.Vollständige Paketliste mit `dpkg`
-----
-$ dpkg -l
-Gewünscht=Unbekannt/Installieren/R=Entfernen/P=Vollständig Löschen/Halten
-| Status=Nicht/Installiert/Config/U=Entpackt/halb konFiguriert/
-         Halb installiert/Trigger erWartet/Trigger anhängig
-|/ Fehler?=(kein)/R=Neuinstallation notwendig (Status, Fehler: GROSS=schlecht)
-||/ Name                                      Version                              Beschreibung
-+++-=========================================-====================================-==========================
-====================================================
-ii  a2ps                                      1:4.14-1.1                           GNU a2ps - 'Anything to Po
-stScript' converter and pretty-printer
-rc  bsh                                       2.0b4-12                             Java scripting environment
- (BeanShell) Version 2
-...
-un  xfce4-icon-theme                          <keine>                              (keine Beschreibung vorhanden)
-$
-----
+===== Ausgabe von `dpkg` interpretieren =====
 
 // Stichworte für den Index
 (((Paket, Status anzeigen)))
@@ -149,6 +124,109 @@ Softwareaktualisierungen wird das Paket nicht berücksichtigt und in
 seinem derzeitigen Zustand belassen (siehe Paketflags in
 <<lokale-paketmarkierungen>>).
 |====
+
+===== Vollständige Paketliste anzeigen =====
+
+// Stichworte für den Index
+(((dpkg, -l)))
+(((dpkg, vollständige Paketliste anzeigen)))
+(((Paketliste, vollständige Paketliste anzeigen)))
+
+Ohne die Angabe des Paketnamens zeigen Sie alle Pakete und Paketreste an, die 
+auf Ihrem System derzeit installiert sind. In nachfolgender Paketliste zeigen 
+die einzelnen Spalten nacheinander den Paketzustand, den Namen des Pakets 
+(siehe <<benennung-eines-debian-pakets>>), dessen Version und die dazugehörige
+Kurzbeschreibung dazu.
+
+.Vollständige Paketliste mit `dpkg`
+----
+$ dpkg -l
+Gewünscht=Unbekannt/Installieren/R=Entfernen/P=Vollständig Löschen/Halten
+| Status=Nicht/Installiert/Config/U=Entpackt/halb konFiguriert/
+         Halb installiert/Trigger erWartet/Trigger anhängig
+|/ Fehler?=(kein)/R=Neuinstallation notwendig (Status, Fehler: GROSS=schlecht)
+||/ Name                                      Version                              Beschreibung
++++-=========================================-====================================-==========================
+====================================================
+ii  a2ps                                      1:4.14-1.1                           GNU a2ps - 'Anything to Po
+stScript' converter and pretty-printer
+rc  bsh                                       2.0b4-12                             Java scripting environment
+ (BeanShell) Version 2
+...
+un  xfce4-icon-theme                          <keine>                              (keine Beschreibung vorhanden)
+$
+----
+
+===== Liste anhand von Filtern einschränken =====
+
+// Stichworte für den Index
+(((dpkg, -l)))
+(((dpkg, Paketliste anhand von Filtern einschränken)))
+(((Paketliste, Ausgabe anhand von Filtern einschränken)))
+
+`dpkg` akzeptiert Paketnamen als Filter. Geben Sie ein oder mehrere Pakete 
+als Parameter durch Leerzeichen getrennt an, erhalten Sie nur Informationen
+zu diesen benannten Paketen. Das nachfolgende Beispiel listet ausschließlich 
+die Informationen zum Paket 'nmap' auf.
+
+.Informationen zu einem ausgewählten Paket anzeigen
+----
+$ dpkg -l nmap
+Gewünscht=Unbekannt/Installieren/R=Entfernen/P=Vollständig Löschen/Halten
+| Status=Nicht/Installiert/Config/U=Entpackt/halb konFiguriert/
+         Halb installiert/Trigger erWartet/Trigger anhängig
+|/ Fehler?=(kein)/R=Neuinstallation notwendig (Status, Fehler: GROSS=schlecht)
+||/ Name           Version      Architektur  Beschreibung
++++-==============-============-============-=================================
+ii  nmap           7.93+dfsg1-1 amd64        The Network Mapper
+$
+----
+
+Weiterhin versteht `dpkg` als Parameter auch Paketmuster. Die Angabe des 
+Paketmusters lehnt sich an Reguläre Ausdrücke an, entspricht diesem jedoch nur 
+teilweise. Das nachfolgende Beispiel zeigt, wie Sie alle Pakete auflisten, die
+die Zeichenkette `map` im Paketnamen besitzen und dabei über ein Präfix aus 
+beliebigen Zeichen verfügen. Als Suchmuster kommt `*map` zum Einsatz, wobei der 
+`*` für alle Zeichen in beliebiger Menge steht.
+
+.Suche nach Paketen anhand eines Musters
+----
+ dpkg -l '*map'
+Gewünscht=Unbekannt/Installieren/R=Entfernen/P=Vollständig Löschen/Halten
+| Status=Nicht/Installiert/Config/U=Entpackt/halb konFiguriert/
+         Halb installiert/Trigger erWartet/Trigger anhängig
+|/ Fehler?=(kein)/R=Neuinstallation notwendig (Status, Fehler: GROSS=schlecht)
+||/ Name           Version      Architektur  Beschreibung
++++-==============-============-============-=================================
+un  bitmap         <keine>      <keine>      (keine Beschreibung vorhanden)
+ii  nmap           7.93+dfsg1-1 amd64        The Network Mapper
+un  ruby-net-imap  <keine>      <keine>      (keine Beschreibung vorhanden)
+un  xmodmap        <keine>      <keine>      (keine Beschreibung vorhanden)
+un  xstdcmap       <keine>      <keine>      (keine Beschreibung vorhanden)
+un  zenmap         <keine>      <keine>      (keine Beschreibung vorhanden)
+----
+
+Eine Einschränkung auf bestimmte Zeichen erreichen Sie über eckige Klammern im 
+Muster. Die Angabe `*[nt]map` passt auf alle Namen bestehend aus beliebigen 
+Zeichen (`*`) gefolgt von einem `n` oder `t` (`[nt]`) und der Zeichenkette 
+`map`. Gefunden werden die drei Pakete 'bitmap', 'nmap' und 'zenmap', wobei
+nur das Paket 'nmap' installiert ist und die anderen beiden Pakete nicht.
+
+.Suche nach Paketen anhand eines ausgefeilten Musters
+----
+$ dpkg -l '*[nt]map'
+Gewünscht=Unbekannt/Installieren/R=Entfernen/P=Vollständig Löschen/Halten
+| Status=Nicht/Installiert/Config/U=Entpackt/halb konFiguriert/
+         Halb installiert/Trigger erWartet/Trigger anhängig
+|/ Fehler?=(kein)/R=Neuinstallation notwendig (Status, Fehler: GROSS=schlecht)
+||/ Name           Version      Architektur  Beschreibung
++++-==============-============-============-=================================
+un  bitmap         <keine>      <keine>      (keine Beschreibung vorhanden)
+ii  nmap           7.93+dfsg1-1 amd64        The Network Mapper
+un  zenmap         <keine>      <keine>      (keine Beschreibung vorhanden)
+----
+
+===== Ausgabe minimieren =====
 
 // Stichworte für den Index
 (((dpkg-query, -f)))
