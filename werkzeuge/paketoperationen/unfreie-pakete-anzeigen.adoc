@@ -5,6 +5,49 @@
 
 === Liste der installierten, nicht-freien Pakete anzeigen ===
 
+==== Recherche mit `aptitude` ====
+
+// Stichworte für den Index
+(((aptitude, search)))
+
+Mit Hilfe einer spezialisierten Suchanfrage ermöglicht `aptitude` das Aufspüren
+nicht-freier Pakete. Es erwartet die Angabe eines Bereichs mit Hilfe des 
+Schlüsselwortes `section` gefolgt vom Namen des Bereichs. Hier listen wir 
+beispielhaft alle installierten Pakete aus dem Bereich `non-free-firmware` auf.
+
+.Suche nach installierten Paketen aus dem Bereich non-free-firmware
+----
+$ aptitude search '~i ?section(non-free-firmware)'
+i   amd64-microcode         - Processor microcode firmware for AMD CPUs                              
+i   firmware-amd-graphics   - Binary firmware for AMD/ATI graphics chips                             
+i   firmware-iwlwifi        - Binary firmware for Intel Wireless cards                               
+i   firmware-realtek        - Binary firmware for Realtek wired/wifi/BT adapters
+----
+
+Zudem können mehrere Bereiche in einer Anfrage miteinander kombiniert werden.
+Hier sind es die zwei Bereiche `non-free` und `non-free-firmware`.
+
+.Suche nach installierten Paketen aus den beiden Bereichen non-free und non-free-firmware
+----
+$ aptitude search '~i ?section(non-free) |~i ?section(non-free-firmware)'
+i   amd64-microcode         - Processor microcode firmware for AMD CPUs                              
+i   firmware-amd-graphics   - Binary firmware for AMD/ATI graphics chips                             
+i   firmware-iwlwifi        - Binary firmware for Intel Wireless cards                               
+i   firmware-realtek        - Binary firmware for Realtek wired/wifi/BT adapters                     
+i   icc-profiles            - ICC color profiles for use with color profile aware software
+----
+
+`aptitude` unterstützt auch Wildcards. Damit vereinfacht sich obiger Aufruf wie folgt:
+
+.Vereinfachter Aufruf zur Suche mit Wildcards
+----
+$ $ aptitude search '~i ?section(non-free*)'
+...
+$
+----
+
+==== Recherche mit `check-dfsg-status` (vormals `vrms`) ====
+
 // Stichworte für den Index
 (((Debianpaket, vrms)))
 (((Debianpaket, check-dfsg-status)))
