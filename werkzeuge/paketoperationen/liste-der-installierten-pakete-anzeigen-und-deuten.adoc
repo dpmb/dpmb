@@ -310,15 +310,20 @@ $
 Obige Ausgabe bearbeiten Sie mit UNIX/Linux-Tools weiter, bspw. mit `cut` oder 
 `sort`, um die Ausgabe ihren Wünschen anzupassen.
 
-
-==== `aptitude search '~i'` ====
+==== Suche mit `aptitude` ====
 
 // Stichworte für den Index
 (((aptitude, search ~i)))
 (((aptitude, search ?installed)))
-`aptitude` kennt dazu das Unterkommando `search` und erwartet danach
-entweder einen Paketnamen oder ein Flag. In diesem Fall ist es das Flag
-`~i` für ``installierte Pakete'' (Langform `?installed`).
+
+Das Werkzeug `aptitude` kennt dafür das Unterkommando `search`. Nach diesem 
+erwartet `aptitude` entweder einen Paketnamen oder das Flag `~i` für 
+``installierte Pakete'' (Langform `?installed`). Geben Sie beides an, ignoriert
+`aptitude` den Paketnamen.
+
+Ergebnis ist eine Liste aller installierten Pakete. Daraus filtern wir im 
+nachfolgenden Beispiel mittels `grep` nur die Zeilen heraus, in denen das 
+Wort `texlive` enthalten ist.
 
 Wie bereits oben genannt, verwendet `aptitude` in der Ausgabe die
 gleichen Buchstaben wie `dpkg` (siehe <<tab.paketzustand>>). Der
