@@ -369,9 +369,16 @@ weiteren Informationen, die `aptitude` bereitgestellt hatte, entfallen.
 // Stichworte für den Index
 (((apt, list --installed)))
 
-`apt` seit der Version 1.0 liefert ebenfalls einen Schalter `list`. Genauer
-spezifizieren die installierten Pakete mit Hilfe der zusätzlichen Angabe 
-`--installed`. Die Ausgabe sieht dann so aus:
+Seit der Version 1.0 verfügt `apt` ebenfalls über einen Schalter `list`. In
+Verbindung mit dem Schalter `--installed` erhalten Sie eine Ausgabe aller 
+derzeit installierten Pakete. Jede Zeile der Ausgabe beinhaltet den Paketnamen, 
+den Status der Veröffentlichung, die Versionsnummer, die Architektur und den 
+Status der Installation.
+
+===== Vollständige Paketliste anzeigen =====
+
+Ohne weitere Angaben erhalten Sie eine vollständige Paketliste. Die Ausgabe 
+sieht dann so aus:
 
 .`apt` listet die installierten Pakete auf
 ----
@@ -389,13 +396,29 @@ adwaita-icon-theme/oldstable,now 3.22.0-1+deb9u1 all  [Installiert,automatisch]
 $
 ----
 
-Jede Zeile der obigen Ausgabe beinhaltet den Paketnamen, den Status der 
-Veröffentlichung, die Versionsnummer, die Architektur und den Status der 
-Installation. Um das weiter auf die Paketnamen einzugrenzen, helfen Ihnen 
-wiederum die beiden Werkzeuge `awk` und `tail` weiter. `awk` filtert den
-Paketnamen aus jeder Zeile heraus und `tail` entsorgt die ersten vier Zeilen
-inklusive der Warnung. Die Angabe `2>1` hinter `apt` lenkt zuvor noch den 
-Fehlerkanal `stderr` auf die Standardausgabe `stdout` um.
+===== Liste anhand von Filtern einschränken =====
+
+Analog zu `dpkg` kann auch `apt` mit Filtern umgehen, um darüber die Ausgabe
+einzuschränken. `apt` akzeptiert dazu als Parameter sowohl eine Liste von 
+Paketnamen, als auch Muster. Das nachfolgende Beispiel schränkt die Ausgabe
+auf die beiden Pakete 'nmap' und 'nmap-common' ein.
+
+.Liste auf bestimmte Pakete eingrenzen
+----
+$ apt list --installed nmap nmap-common
+Auflistung… Fertig
+nmap-common/stable,stable,now 7.93+dfsg1-1 all  [Installiert,automatisch]
+nmap/stable,now 7.93+dfsg1-1 amd64  [installiert]
+$
+----
+
+===== Ausgabe minimieren =====
+
+Um die Ausgabe auf die Paketnamen einzugrenzen, helfen Ihnen wiederum die 
+beiden Werkzeuge `awk` und `tail` weiter. `awk` filtert den Paketnamen aus 
+jeder Zeile heraus und `tail` entsorgt die ersten vier Zeilen inklusive der 
+Warnung. Die Angabe `2>1` hinter `apt` lenkt zuvor noch den Fehlerkanal 
+`stderr` auf die Standardausgabe `stdout` um.
 
 .`apt` listet die installierten Pakete auf (Paketliste)
 ----
