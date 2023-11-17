@@ -9,21 +9,32 @@
 
 ==== dpkg ====
 
-* Baustelle
+// Stichworte für den Index
+(((Debianpaket, dpkg)))
+(((dpkg-query, -Wf)))
 
+`dpkg` bzw. `dpkg-query` ist in der Lage, die Größe eines installierten Paketes
+anzuzeigen. Es benötigt dafür eine spezielle Suchanfrage bestehend aus dem
+Parameter `-Wf` gefolgt von den beiden Spalten 'Installed-size' (Installationsgröße) 
+und 'Package' (Paketname) für das Ausgabeformat. Ergebnis ist eine alphabetisch
+sortierte Liste anhand der Paketnamen. Mit Hilfe der drei UNIX-Kommandos `column`,
+`sort` und `head` erhalten wir die zehn Softwarepakete, die den meisten Speicherplatz
+belegen, ausgegeben in absteigender Reihenfolge. In der linken Spalte sehen Sie die
+Paketgröße und in der rechten Spalte den Paketnamen.
+
+.Aufspüren der zehn größten installierten Softwarepakete
 ----
-$ dpkg-query -Wf '${Installed-size}\t${Package}\n' | column -t | sort
--nr | head
-447204  texlive-latex-extra-doc
-230940  google-chrome-stable
-221350  skypeforlinux
-183555  signal-desktop
-178041  firefox-esr
-174484  discord
-163796  linux-image-3.16.0-7-amd64
-130914  python-matplotlib-doc
-114557  upwork
-110348  texlive-publishers-doc
+$ dpkg-query -Wf '${Installed-size}\t${Package}\n' | column -t | sort -nr | head
+1414534  texlive-fonts-extra
+398647   linux-image-6.1.0-12-amd64
+398283   linux-image-6.1.0-10-amd64
+334238   fonts-noto-extra
+271679   llvm-14-dev
+217530   firefox-esr
+206065   texlive-lang-english
+187651   openjdk-17-jre-headless
+168399   pandoc
+138224   libboost1.74-dev
 $
 ----
 
