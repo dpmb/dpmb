@@ -412,6 +412,26 @@ nmap/stable,now 7.93+dfsg1-1 amd64  [installiert]
 $
 ----
 
+Für den Umgang mit Mustern folgt `apt` dem gleichen Prinzip wie `dpkg`. Das
+nachfolgende Beispiel zeigt die Recherche nach allen installierten Paketen, 
+die die Zeichenkette `map` im Namen beinhalten. Die Angabe eines Sterns (`*`)
+vor und nach der Zeichenkette interpretiert `apt` als alle Zeichen in beliebiger
+Menge. 
+
+.Liste mit der Angabe eines Musters eingrenzen
+----
+$ apt list --installed '*map*'
+Auflistung… Fertig
+libchromaprint1/stable,now 1.5.1-2+b1 amd64  [Installiert,automatisch]
+libdevmapper-event1.02.1/stable,now 2:1.02.185-2 amd64  [Installiert,automatisch]
+libdevmapper1.02.1/stable,now 2:1.02.185-2 amd64  [installiert]
+libunicode-map-perl/stable,now 0.112-13+b1 amd64  [Installiert,automatisch]
+nmap-common/stable,stable,now 7.93+dfsg1-1 all  [Installiert,automatisch]
+nmap/stable,now 7.93+dfsg1-1 amd64  [installiert]
+xbitmaps/stable,stable,now 1.1.1-2.2 all  [Installiert,automatisch]
+$
+----
+
 ===== Ausgabe minimieren =====
 
 Um die Ausgabe auf die Paketnamen einzugrenzen, helfen Ihnen wiederum die 
