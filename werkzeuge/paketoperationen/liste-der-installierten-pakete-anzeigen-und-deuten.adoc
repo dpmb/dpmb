@@ -356,7 +356,7 @@ alsa-base
 $
 ----
 
-Die Angabe `-E 's/i [A ]? //' bei `sed` aktiviert zunächst erweiterte Reguläre 
+Die Angabe `-E 's/i [A ]? //'` bei `sed` aktiviert zunächst erweiterte Reguläre 
 Ausdrücke (Schalter `-E`) und ersetzt danach alle Vorkommen der Zeichenkette 
 aus einem kleinen `i` gefolgt von einem Leerzeichen, einem möglichen `A` oder 
 Leerzeichen sowie einem abschließenden Leerzeichen durch nichts (es löscht die
