@@ -156,7 +156,7 @@ ein.
 | `YUM`      | `yum update` | die gesamte Veröffentlichung aktualisieren
 |            | `yum update` 'Paketname' | nur 'Paketname' aktualisieren
 |            | `yum update --security` | nur die Sicherheitsaktualisierungen einspielen
-|            | `yum update-to` | eines oder alle Pakete bis zu einer bestimmten Version aktualisieren
+|            | `yum update-to` 'Paketname-Paketversion'| eines oder alle Pakete bis zu einer bestimmten Version aktualisieren
 |            | `yum upgrade` | die gesamte Veröffentlichung aktualisieren und dabei auch die Pakete berücksichtigen, die veraltet sind
 |            | `yum upgrade` 'Paketname' | nur 'Paketname' aktualisieren und dabei auch die Pakete berücksichtigen, die veraltet sind
 |====
@@ -169,6 +169,8 @@ ein.
 (((apt-get, reinstall)))
 (((aptitude, reinstall)))
 (((Paket, erneut installieren)))
+(((rpm, --reinstall)))
+(((yum, reinstall)))
 Mit den nachfolgenden Aufrufen installieren Sie ein Softwarepaket über
 die Kommandozeile erneut. 
 
@@ -180,6 +182,8 @@ die Kommandozeile erneut.
 | `apt-get`  | `apt-get install --reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen
 |            | `apt-get reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen
 | `aptitude` | `aptitude reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen
+| RPM | `rpm --reinstall` 'Paketdatei' | installiere das Paket erneut, dieses liegt als lokale Datei vor
+| YUM | `yum reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen
 |====
 
 === Ein Softwarepaket nur herunterladen ===
