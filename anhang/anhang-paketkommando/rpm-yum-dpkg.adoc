@@ -122,9 +122,12 @@ Paketcache vorliegen.
 (((dnf, update)))
 (((dnf, upgrade)))
 (((Paket, aktualisieren)))
+(((rpm, -F)))
 (((rpm, -U)))
+(((rpm, --freshen)))
 (((rpm, --upgrade)))
 (((yum, update)))
+(((yum, update --security)))
 (((yum, upgrade)))
 Mit den nachfolgenden Aufrufen aktualisieren Sie ein Softwarepaket über
 die Kommandozeile. Unter ``Pakete aktualisieren'' in
@@ -145,10 +148,13 @@ ein.
 |            | `dnf update` 'Paketname' | nur 'Paketname' aktualisieren (veraltet)
 |            | `dnf upgrade` | alle installierten Pakete aktualisieren
 |            | `dnf upgrade` 'Paketname' | nur 'Paketname' aktualisieren
-| `RPM`      | `rpm -U` 'Paketname' | Paket liegt lokal als Datei vor
-|            | `rpm --upgrade` 'Paketname' | Paket liegt lokal als Datei vor
+| `RPM`      | `rpm -F` 'Paketdatei' | aktualisiere ein bereits installiertes Paket; das Paket liegt lokal als Datei vor
+|            | `rpm --freshen` 'Paketdatei' | aktualisiere ein bereits installiertes Paket; das Paket liegt lokal als Datei vor
+|            | `rpm -U` 'Paketdatei' | aktualisiere ein bereits installiertes Paket oder installiere es, falls es noch nicht vorhanden ist; das Paket liegt lokal als Datei vor
+|            | `rpm --upgrade` 'Paketdatei' | aktualisiere ein bereits installiertes Paket oder installiere es, falls es noch nicht vorhanden ist; das Paket liegt lokal als Datei vor
 | `YUM`      | `yum update` | die gesamte Veröffentlichung aktualisieren
 |            | `yum update` 'Paketname' | nur 'Paketname' aktualisieren
+|            | `yum update --security` | nur die Sicherheitsaktualisierungen einspielen
 |            | `yum upgrade` | die gesamte Veröffentlichung aktualisieren und dabei auch die Pakete berücksichtigen, die veraltet sind
 |            | `yum upgrade` 'Paketname' | nur 'Paketname' aktualisieren und dabei auch die Pakete berücksichtigen, die veraltet sind
 |====
