@@ -128,6 +128,7 @@ Paketcache vorliegen.
 (((rpm, --upgrade)))
 (((yum, update)))
 (((yum, update --security)))
+(((yum, update-to)))
 (((yum, upgrade)))
 Mit den nachfolgenden Aufrufen aktualisieren Sie ein Softwarepaket über
 die Kommandozeile. Unter ``Pakete aktualisieren'' in
@@ -155,6 +156,7 @@ ein.
 | `YUM`      | `yum update` | die gesamte Veröffentlichung aktualisieren
 |            | `yum update` 'Paketname' | nur 'Paketname' aktualisieren
 |            | `yum update --security` | nur die Sicherheitsaktualisierungen einspielen
+|            | `yum update-to` | eines oder alle Pakete bis zu einer bestimmten Version aktualisieren
 |            | `yum upgrade` | die gesamte Veröffentlichung aktualisieren und dabei auch die Pakete berücksichtigen, die veraltet sind
 |            | `yum upgrade` 'Paketname' | nur 'Paketname' aktualisieren und dabei auch die Pakete berücksichtigen, die veraltet sind
 |====
