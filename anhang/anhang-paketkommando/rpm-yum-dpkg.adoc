@@ -51,7 +51,7 @@ ein.
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | APT        | `apt update` | 
-| `apt-get`  | `apt-get update' | 
+| `apt-get`  | `apt-get update` | 
 | Aptitude   | `aptitude update` | 
 |====
 
