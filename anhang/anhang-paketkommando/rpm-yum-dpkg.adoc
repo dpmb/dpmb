@@ -55,7 +55,7 @@ ein.
 | Aptitude   | `aptitude update` | 
 |====
 
-|=== Neue Softwarepakete installieren ===
+=== Neue Softwarepakete installieren ===
 
 // Stichworte für den Index
 (((apt, install)))
