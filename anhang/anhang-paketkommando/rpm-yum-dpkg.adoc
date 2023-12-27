@@ -29,10 +29,10 @@ Entfernung von Paketen, das Auflisten der installierten und verfügbaren
 Pakete sowie das Anzeigen von Paketabhängigkeiten.
 
 Diese Zusammenstellung basiert auf umfangreichen Tests und Recherchen,
-bspw. mit Fedora 23, CentOS 6 und 7 sowie Ubuntu 15.10 _Wily Werewolf_,
-Debian 8 _Jessie_, Debian 9 _Stretch_ und Debian 10 _Buster_. Die
-Verfügbarkeit der genannten Werkzeuge und deren einzelne Schalter
-variiert recht stark <<RPM-Salve>> <<RPM-Gite>> <<RPM-Canepa>>
+beispielsweise mit Fedora 23, CentOS 6 und 7 sowie Ubuntu 15.10 
+_Wily Werewolf_ sowie Debian 8 _Jessie_ bis einschließlich Debian 12 
+_Bookworm_. Die Verfügbarkeit der genannten Werkzeuge und deren 
+Möglichkeiten variiert recht stark <<RPM-Salve>> <<RPM-Gite>> <<RPM-Canepa>>
 <<YUM-Salve>> <<dpkg-Kumar>> <<apt-Salve>> <<DNF-Dokumentation>>.
 
 === Die lokale Paketliste aktualisieren ===
@@ -40,7 +40,7 @@ variiert recht stark <<RPM-Salve>> <<RPM-Gite>> <<RPM-Canepa>>
 // Stichworte für den Index
 (((apt, update)))
 (((apt-get, update)))
-(((apttude, update)))
+(((aptitude, update)))
 (((Paketliste, aktualisieren)))
 Mit den nachfolgenden Aufrufen aktualisieren Sie die lokale Paketliste.
 Genauer gehen wir darauf in <<liste-der-verfuegbaren-pakete-aktualisieren>> 
