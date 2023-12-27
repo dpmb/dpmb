@@ -72,6 +72,7 @@ daher bestehen keine äquivalenten Kommandoaufrufe.
 (((rpm, --install)))
 (((rpm, --install --nodeps)))
 (((rpm, -ihv)))
+(((yum, groupinstall)))
 (((yum, install)))
 (((yum, localinstall)))
 (((yum, reinstall)))
@@ -102,9 +103,10 @@ Paketcache vorliegen.
 |            | `rpm --install` 'Paketdatei' | Paket liegt lokal als Datei vor
 |            | `rpm -i --nodeps` 'Paketdatei' | Paket liegt lokal als Datei vor, Installation ohne Berücksichtigung der Paketabhängigkeiten
 |            | `rpm --install --nodeps` 'Paketdatei' | Paket liegt lokal als Datei vor, Installation ohne Berücksichtigung der Paketabhängigkeiten
-|            | `rpm -ihv` 'Paketdatei' | Paket liegt lokal als Datei vor, Installation mit Kommentaren
-| `YUM`      | `yum localinstall` 'Paketname' | Paket liegt lokal als Datei vor
+|            | `rpm -ihv` 'Paketdatei' | Paket liegt lokal als Datei vor, Installation mit Kommentaren und Verlaufsbalken
+| `YUM`      | `yum groupinstall` 'Paketgruppe' | Alle Pakete aus der Paketgruppe werden dem Paketrepository entnommen und installiert
 |            | `yum install` 'Paketname' | Paket wird dem Paketrepository entnommen
+|       | `yum localinstall` 'Paketname' | Paket liegt lokal als Datei vor oder wird von einem HTTP- oder FTP-Server bezogen
 |            | `yum reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen und erneut installiert
 |====
 
