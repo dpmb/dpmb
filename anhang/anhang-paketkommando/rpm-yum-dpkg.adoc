@@ -44,7 +44,8 @@ Möglichkeiten variiert recht stark <<RPM-Salve>> <<RPM-Gite>> <<RPM-Canepa>>
 (((Paketliste, aktualisieren)))
 Mit den nachfolgenden Aufrufen aktualisieren Sie die lokale Paketliste.
 Genauer gehen wir darauf in <<liste-der-verfuegbaren-pakete-aktualisieren>> 
-ein.
+ein. RPM, YUM, FPM und DNF kennen das Konzept der lokalen Paketliste nicht, 
+daher bestehen keine äquivalenten Kommandoaufrufe.
 
 .Lokale Paketliste aktualisieren
 [frame="topbot",options="header",cols="2,4,4",id="tab.lokale-paketliste-aktualisieren"]
