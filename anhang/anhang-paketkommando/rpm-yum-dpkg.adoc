@@ -93,7 +93,8 @@ Paketcache vorliegen.
 | `DNF`      | `dnf install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |            | `dnf install` 'Paketdatei' | Paketdatei liegt also lokale Datei vor
 |            | `dnf group install` 'Paketgruppe' | alle Pakete aus der Paketgruppe installieren
-| `dpkg`     | `dpkg -i` 'Paketname' | Paket liegt lokal als Datei vor
+| `dpkg`     | `dpkg -i` 'Paketdatei' | Paket liegt lokal als Datei vor
+|            | `dpkg --install` 'Paketdatei' | Paket liegt lokal als Datei vor
 | `RPM`      | `rpm -i` 'Paketname' | Paket liegt lokal als Datei vor
 |            | `rpm -i --nodeps` 'Paketname' | Paket liegt lokal als Datei vor, Installation ohne Berücksichtigung der Paketabhängigkeiten
 |            | `rpm -ihv` 'Paketname' | Paket liegt lokal als Datei vor, Installation mit Kommentaren
