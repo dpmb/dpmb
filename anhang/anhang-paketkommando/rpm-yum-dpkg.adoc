@@ -757,6 +757,7 @@ Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten''
 (((Paketsignatur, überprüfen)))
 (((rpm, -K)))
 (((rpm, --checksig)))
+(((yum, verify)))
 Mit den nachfolgenden Aufrufen überprüfen Sie die Signatur eines Pakets. Sie 
 stellen damit sicher, dass das Paket unverändert vom Paketmirror zu Ihnen 
 übertragen wurde und auf dem Transportweg keine inhaltlichen Veränderungen 
@@ -774,10 +775,9 @@ stattgefunden haben. Für Debianpakete widmen wir uns dem Thema in
 |            | `dpkg --verify` 'Paketname' | alle Dateien des angegebenen Paketes überprüfen
 | `dpkg-sig` | `dpkg-sig --verify` 'Paketname' | GnuPG-Signatur des Pakets prüfen
 | `gpg`      | `gpg --verify` 'Paketname' | GnuPG-Signatur des Pakets prüfen
-| DNF        | |
-| RPM        | `rpm -K` 'Paketname' |
-|            | `rpm --checksig` 'Paketname' |
-| YUM        | |
+| RPM        | `rpm -K` 'Paketname' | GnuPG-Signatur des Pakets prüfen
+|            | `rpm --checksig` 'Paketname' | GnuPG-Signatur des Pakets prüfen
+| YUM        | `yum verify` 'Paketname' | GnuPG-Signatur des Pakets prüfen; erfordert YUM-Plugin 'yum-verify'
 |====
 
 === Paket auf Veränderungen prüfen ===
