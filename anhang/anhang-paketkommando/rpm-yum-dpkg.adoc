@@ -165,6 +165,8 @@ ein.
 
 // Stichworte für den Index
 (((Paket, downgraden)))
+(((dnf, dg)))
+(((dnf, downgrade)))
 (((yum, downgrade)))
 Mit den nachfolgenden Aufrufen spielen Sie eine frühere Version eines 
 Softwarepakets ein (Downgrade). Für `dpkg`, APT, `apt` und `aptitude`
@@ -176,9 +178,10 @@ dazu ein.
 [frame="topbot",options="header",cols="2,4,4",id="tab.paket-downgraden"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| `YUM`      | `yum downgrade` 'Paketname' | 'Paketname' auf die frühere Version zurücksetzen
+| DNF        | `dnf dg` 'Paketname' | 'Paketname' auf die frühere Version zurücksetzen
+|            | `dnf downgrade` 'Paketname' | 'Paketname' auf die frühere Version zurücksetzen
+| YUM        | `yum downgrade` 'Paketname' | 'Paketname' auf die frühere Version zurücksetzen
 |====
-
 
 === Ein Softwarepaket erneut installieren ===
 
