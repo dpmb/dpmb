@@ -94,17 +94,17 @@ Paketcache vorliegen.
 | `apt-get`  | `apt-get install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |            | `apt-get --no-download install` 'Paketname' | Paket wird dem Paketcache entnommen und nicht vom Paketmirror bezogen
 | `aptitude` | `aptitude install` 'Paketname' | Paket wird dem Paketrepository entnommen
-| `DNF`      | `dnf install` 'Paketname' | Paket wird dem Paketrepository entnommen
+| DNF        | `dnf install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |            | `dnf install` 'Paketdatei' | Paketdatei liegt also lokale Datei vor
 |            | `dnf group install` 'Paketgruppe' | alle Pakete aus der Paketgruppe installieren
 | `dpkg`     | `dpkg -i` 'Paketdatei' | Paket liegt lokal als Datei vor
 |            | `dpkg --install` 'Paketdatei' | Paket liegt lokal als Datei vor
-| `RPM`      | `rpm -i` 'Paketdatei' | Paket liegt lokal als Datei vor
+| RPM        | `rpm -i` 'Paketdatei' | Paket liegt lokal als Datei vor
 |            | `rpm --install` 'Paketdatei' | Paket liegt lokal als Datei vor
 |            | `rpm -i --nodeps` 'Paketdatei' | Paket liegt lokal als Datei vor, Installation ohne Berücksichtigung der Paketabhängigkeiten
 |            | `rpm --install --nodeps` 'Paketdatei' | Paket liegt lokal als Datei vor, Installation ohne Berücksichtigung der Paketabhängigkeiten
 |            | `rpm -ihv` 'Paketdatei' | Paket liegt lokal als Datei vor, Installation mit Kommentaren und Verlaufsbalken
-| `YUM`      | `yum groupinstall` 'Paketgruppe' | Alle Pakete aus der Paketgruppe werden dem Paketrepository entnommen und installiert
+| YUM        | `yum groupinstall` 'Paketgruppe' | Alle Pakete aus der Paketgruppe werden dem Paketrepository entnommen und installiert
 |            | `yum install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |       | `yum localinstall` 'Paketname' | Paket liegt lokal als Datei vor oder wird von einem HTTP- oder FTP-Server bezogen
 |            | `yum reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen und erneut installiert
@@ -145,15 +145,15 @@ ein.
 | `apt-get`  | `apt-get install` 'Paketname' | aktualisierte Version des Pakets einspielen, sofern das Paket bereits in einer früheren Version installiert ist
 |            | `apt-get upgrade` 'Paketname' | aktualisierte Version des Pakets einspielen
 | `aptitude` | `aptitude safe-upgrade` 'Paketname' | aktualisierte Version des Pakets einspielen
-| `DNF`      | `dnf update` | alle installierten Pakete aktualisieren (veraltet)
+| DNF        | `dnf update` | alle installierten Pakete aktualisieren (veraltet)
 |            | `dnf update` 'Paketname' | nur 'Paketname' aktualisieren (veraltet)
 |            | `dnf upgrade` | alle installierten Pakete aktualisieren
 |            | `dnf upgrade` 'Paketname' | nur 'Paketname' aktualisieren
-| `RPM`      | `rpm -F` 'Paketdatei' | aktualisiere ein bereits installiertes Paket; das Paket liegt lokal als Datei vor
+| RPM        | `rpm -F` 'Paketdatei' | aktualisiere ein bereits installiertes Paket; das Paket liegt lokal als Datei vor
 |            | `rpm --freshen` 'Paketdatei' | aktualisiere ein bereits installiertes Paket; das Paket liegt lokal als Datei vor
 |            | `rpm -U` 'Paketdatei' | aktualisiere ein bereits installiertes Paket oder installiere es, falls es noch nicht vorhanden ist; das Paket liegt lokal als Datei vor
 |            | `rpm --upgrade` 'Paketdatei' | aktualisiere ein bereits installiertes Paket oder installiere es, falls es noch nicht vorhanden ist; das Paket liegt lokal als Datei vor
-| `YUM`      | `yum update` | die gesamte Veröffentlichung aktualisieren
+| YUM        | `yum update` | die gesamte Veröffentlichung aktualisieren
 |            | `yum update` 'Paketname' | nur 'Paketname' aktualisieren
 |            | `yum update --security` | nur die Sicherheitsaktualisierungen einspielen
 |            | `yum update-to` 'Paketname-Paketversion'| eines oder alle Pakete bis zu einer bestimmten Version aktualisieren
@@ -273,17 +273,17 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 |            | `apt-get --purge remove` 'Paketname' | entfernt das Paket inklusive der Konfigurationsdateien des Pakets
 | `aptitude` | `aptitude remove` 'Paketname' | entfernt das Paket, die Konfigurationsdateien des Pakets bleiben erhalten
 |            | `aptitude purge` 'Paketname' | entfernt das Paket inklusive der Konfigurationsdateien des Pakets
-| `DNF`      | `dnf erase` 'Paketname' | Paket wird deinstalliert (veraltet)
+| DNF        | `dnf erase` 'Paketname' | Paket wird deinstalliert (veraltet)
 |            | `dnf group remove` 'Paketgruppe' | alle Pakete aus der Paketgruppe werden deinstalliert
 |            | `dnf remove` 'Paketname' | Paket wird deinstalliert
 | `dpkg`     | `dpkg -r` 'Paketname' | entfernt nur das Paket
 |            | `dpkg --remove` 'Paketname' | entfernt nur das Paket
 |            | `dpkg -P` 'Paketname' | entfernt das Paket und die Konfigurationsdateien des Pakets
 |            | `dpkg --purge` 'Paketname' | entfernt das Paket und die Konfigurationsdateien des Pakets
-| `RPM`      | `rpm -e` 'Paketname' | entfernt das angegebene Paket
+| RPM        | `rpm -e` 'Paketname' | entfernt das angegebene Paket
 |            | `rpm --erase` 'Paketname' | entfernt das angegebene Paket
 |            | `rpm -e --nodeps` 'Paketname' | Entfernung des Pakets ohne Berücksichtigung der Paketabhängigkeiten
-| `YUM`      | `yum remove` 'Paketname' | entfernt das angegebene Paket samt seiner Abhängigkeiten
+| YUM        | `yum remove` 'Paketname' | entfernt das angegebene Paket samt seiner Abhängigkeiten
 |            | `yum erase` 'Paketname' | entfernt das angegebene Paket samt seiner Abhängigkeiten
 |====
 
@@ -330,12 +330,12 @@ sowie unter ``Aktualisierbare Pakete anzeigen'' in
 | `aptitude` | `aptitude search '~i'`| alle installierten Pakete auflisten
 |            | `aptitude versions` 'Paketname'| alle verfügbaren Pakete
 für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
-| `DNF`      | `dnf list installed` | alle installierten Pakete anzeigen
+| DNF        | `dnf list installed` | alle installierten Pakete anzeigen
 | `dpkg`     | `dpkg -l` | alle installierten Pakete auflisten
 |            | `dpkg --list` | alle installierten Pakete auflisten
-| `RPM`      | `rpm -qa` | alle installierten Pakete auflisten
+| RPM        | `rpm -qa` | alle installierten Pakete auflisten
 |            | `rpm -qa --last` | alle zuletzt installierten Pakete auflisten, auch die (noch) nicht installierten Pakete
-| `YUM`      | `yum list` 'Paketname' | anzeigen, welche Versionen des Pakets installiert sind
+| YUM        | `yum list` 'Paketname' | anzeigen, welche Versionen des Pakets installiert sind
 |            | `yum list all` | alle installierten Pakete auflisten
 |            | `yum list available` | alle verfügbaren Pakete auflisten
 |            | `yum list installed` | alle installierten Pakete auflisten
@@ -378,17 +378,17 @@ das zu `dpkg` und `aptitude` genauer.
 | `apt`      | `apt list` 'Paketname' | Informationen und den Installationsstatus zu Paketname anzeigen
 |            | `apt show` 'Paketname' | Detaillierte Informationen und den Installationsstatus zu Paketname anzeigen
 | `aptitude` | `aptitude show` 'Paketname'|
-| `DNF`      | `dnf info` 'Paketname' | Informationen zu Paketname anzeigen
+| DNF        | `dnf info` 'Paketname' | Informationen zu Paketname anzeigen
 |            | `dnf list installed` | alle installierten Pakete anzeigen
 |            | `dnf list installed` 'Paketname' | Installationsstatus zu Paketname anzeigen
 | `dpkg`     | `dpkg -l` 'Paketname' | Ausgabe des Installationsstatus
 |            | `dpkg --list` 'Paketname' | Ausgabe des Installationsstatus
 |            | `dpkg -s` 'Paketname' | Ausgabe der Paketinformationen
 |            | `dpkg --status` 'Paketname' | Ausgabe der Paketinformationen
-| `RPM`      | `rpm -q` 'Paketname' | Ausgabe des Installationsstatus für 'Paketname'
+| RPM        | `rpm -q` 'Paketname' | Ausgabe des Installationsstatus für 'Paketname'
 |            | `rpm --query` 'Paketname' | Ausgabe des Installationsstatus für 'Paketname'
 |            | `rpm -qp` 'Paketname' | analog zu `-q`
-| `YUM`      | `yum list` 'Paketname' | anzeigen, welche Versionen des Pakets installiert sind
+| YUM        | `yum list` 'Paketname' | anzeigen, welche Versionen des Pakets installiert sind
 |====
 
 === Abhängigkeiten anzeigen ===
@@ -437,12 +437,12 @@ ein.
 |            | `aptitude search '~D'` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 | `grep-status` | `grep-status -F Package -s Depends` 'Paketname' | Abhängigkeiten anzeigen
 |            | `grep-status -P -s Depends` 'Paketname' | Abhängigkeiten anzeigen
-| `RPM`      | `rpm -qR` 'Paketname' | das Paket muß lokal auf dem
+| RPM        | `rpm -qR` 'Paketname' | das Paket muß lokal auf dem
 System installiert sein
 |            | `rpm --query --requires` 'Paketname' | das Paket muß
 lokal auf dem System installiert sein
 |            | `rpm -qpR` 'Paketdatei' | das Paket muß dazu lokal als Datei vorliegen
-| `YUM`      | `yum deplist` 'Paketname' |
+| YUM        | `yum deplist` 'Paketname' |
 |            | `yum info` 'Paketname' |
 |            | `repoquery --requires` 'Paketname' |
 |            | `yumdownloader --resolve` 'Paketname' |
@@ -498,8 +498,8 @@ widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 |            | `dpkg --listfiles` 'Paketname' |
 | `dpkg-query` | `dpkg-query -L` 'Paketname' |
 |            | `dpkg-query --listfiles` 'Paketname' |
-| `RPM`      | `rpm -ql` 'Paketname' |
-| `YUM`      | `repoquery -l` 'Paketname' | aus Paket `yum-utils`
+| RPM        | `rpm -ql` 'Paketname' |
+| YUM        | `repoquery -l` 'Paketname' | aus Paket `yum-utils`
 |            | `repoquery --list` 'Paketname' |
 |====
 
@@ -530,7 +530,7 @@ eines Pakets anzeigen'' (siehe
 |            | `dpkg --status` 'Paketname' |
 | `dpkg-query` | `dpkg-query -s` 'Paketname' |
 |            | `dpkg-query --status` 'Paketname' |
-| `RPM`      | `rpm -qc` 'Paketname' | listet alle Dateien auf, die im rpm-Paket als Konfiguration geflaggt sind
+| RPM        | `rpm -qc` 'Paketname' | listet alle Dateien auf, die im rpm-Paket als Konfiguration geflaggt sind
 |====
 
 Alternativ listen Sie nur die Dateien auf, die sich im Verzeichnis
@@ -554,7 +554,7 @@ rpm -qc paket.rpm | grep "/etc"
 [frame="topbot",options="header",cols="2,4,4",id="tab.dokumentationsdateien-eines-pakets-anzeigen"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| `RPM`      | `rpm -qd` 'Paketname' | listet alle Dateien auf, die im
+| RPM        | `rpm -qd` 'Paketname' | listet alle Dateien auf, die im
 rpm-Paket als Dokumentation geflaggt sind
 |====
 
@@ -589,13 +589,13 @@ es `apt-file`, welches wir genauer in ``Paket zu Datei finden'' in
 | Werkzeug   | Aufruf | Anmerkungen
 | `apt-file` | `apt-file find` 'Dateiname' | Suche in allen verfügbaren Paketen
 |            | `apt-file search` 'Dateiname' | Suche in allen verfügbaren Paketen
-| `DNF`      | `dnf provides` 'Dateiname'| 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
+| DNF        | `dnf provides` 'Dateiname'| 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
 | `dpkg`     | `dpkg -S` 'Dateiname' | Suche nach dem Dateiname in den installierten Paketen
 |            | `dpkg --search` 'Dateiname' | Suche nach dem Dateiname in den installierten Paketen
 | `dpkg-query` | `dpkg-query -S` 'Dateiname' | Suche nach dem Dateiname in den installierten Paketen
 |            | `dpkg-query --search` 'Dateiname' | Suche nach dem Dateiname in den installierten Paketen
-| `RPM`      | `rpm -qf` 'Dateiname' | 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
-| `YUM`      | `yum provides` 'Dateiname'| 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
+| RPM        | `rpm -qf` 'Dateiname' | 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
+| YUM        | `yum provides` 'Dateiname'| 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
 |====
 
 === Paketstatus anzeigen ===
@@ -632,9 +632,9 @@ beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
 |            | `dpkg --info` 'Dateiname' | 'Dateiname' bezeichnet eine lokale Datei
 | `dpkg-query` | `dpkg-query -s` 'Paketname' | 'Paketname' muß lokal installiert sein
 |            | `dpkg-query --status` 'Paketname' | 'Paketname' muß lokal installiert sein
-| `RPM`      | `rpm -qi` 'Paketname' | 'Paketname' muß lokal installiert sein
+| RPM        | `rpm -qi` 'Paketname' | 'Paketname' muß lokal installiert sein
 |            | `rpm -qip` 'Dateiname' | 'Dateiname' muß lokal vorliegen
-| `YUM`      | `yum info` 'Paketname' | 'Paketname' muß lokal installiert sein
+| YUM        | `yum info` 'Paketname' | 'Paketname' muß lokal installiert sein
 |====
 
 === Aktualisierbare Pakete anzeigen ===
@@ -672,10 +672,10 @@ nachfolgende Tabelle. In Abschnitt ``Aktualisierbare Pakete anzeigen''
 | `aptitude` | `aptitude search '~U'` | alle aktualisierbaren Pakete anzeigen
 |            | `aptitude search ?upgradable` | alle aktualisierbaren Pakete anzeigen
 | DNF        | `dnf list upgrades` | alle aktualisierbaren Pakete anzeigen
-| `RPM`      | |
-| `YUM`      | `yum check-updates`| Auflistung der Aktualisierungen für die bereits installierten Pakete
+| RPM        | |
+| YUM        | `yum check-updates`| Auflistung der Aktualisierungen für die bereits installierten Pakete
 |            | `yum list updates`| alle aktualisierbaren Pakete anzeigen
-| `zypper`      | `zypper list updates --all`| alle aktualisierbaren Pakete anzeigen
+| Zypper     | `zypper list updates --all`| alle aktualisierbaren Pakete anzeigen
 |====
 
 === Verfügbare Pakete anzeigen ===
@@ -702,8 +702,8 @@ Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten''
 | DNF        | `dnf group list` | alle Paketgruppen auflisten
 |            | `dnf list available` | alle verfügbaren Pakete anzeigen
 |            | `dnf repository-list repo list` | alle Pakete aus dem Repository 'repo' anzeigen
-| `RPM`      | |
-| `YUM`      | `yum list available`| alle verfügbaren Pakete anzeigen
+| RPM        | |
+| YUM        | `yum list available`| alle verfügbaren Pakete anzeigen
 |====
 
 === Paketsignatur überprüfen ===
@@ -739,9 +739,9 @@ stattgefunden haben. Für Debianpakete widmen wir uns dem Thema in
 | `dpkg-sig` | `dpkg-sig --verify` 'Paketname' | GnuPG-Signatur des Pakets prüfen
 | `gpg`      | `gpg --verify` 'Paketname' | GnuPG-Signatur des Pakets prüfen
 | DNF        | |
-| `RPM`      | `rpm -K` 'Paketname' |
+| RPM        | `rpm -K` 'Paketname' |
 |            | `rpm --checksig` 'Paketname' |
-| `YUM`      | |
+| YUM        | |
 |====
 
 === Paket auf Veränderungen prüfen ===
@@ -762,10 +762,10 @@ Dateien aus dem installierten Paket sind, helfen Ihnen diese Kommandos:
 | Werkzeug   | Aufruf | Anmerkungen
 | `dpkg`     | `dpkg -V` | prüft alle installierten Pakete
 |            | `dpkg --verify` 'Paketname' | prüft nur das angegebene Paket
-| `RPM`      | `rpm -Va` | prüft alle installierten Pakete
+| RPM        | `rpm -Va` | prüft alle installierten Pakete
 |            | `rpm -qV` 'Paketname' | prüft nur das angegebene Paket
 |            | `rpm -Vp` 'Paketname' | prüft nur das angegebene Paket
-| `YUM`      | |
+| YUM        | |
 |====
 
 // Stichworte für den Index
