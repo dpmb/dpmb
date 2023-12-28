@@ -646,6 +646,8 @@ es `apt-file`, welches wir genauer in ``Paket zu Datei finden'' in
 (((Paketstatus anzeigen)))
 (((rpm, -qi)))
 (((rpm, -qip)))
+(((rpm, --query --info)))
+(((rpm, --query --info --package)))
 (((yum, info)))
 Diese Information zeigen Ihnen `dpkg` und `apt-cache` an. Ausführlicher
 beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
@@ -665,6 +667,8 @@ beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
 |            | `dpkg-query --status` 'Paketname' | 'Paketname' muß lokal installiert sein
 | RPM        | `rpm -qi` 'Paketname' | 'Paketname' muß lokal installiert sein
 |            | `rpm -qip` 'Dateiname' | 'Dateiname' muß lokal vorliegen
+|            | `rpm --query --info` 'Paketname' | 'Paketname' muß lokal installiert sein
+|            | `rpm --query --info --package` 'Dateiname' | 'Dateiname' muß lokal vorliegen
 | YUM        | `yum info` 'Paketname' | 'Paketname' muß lokal installiert sein
 |====
 
@@ -683,7 +687,9 @@ beschäftigt sich damit der Abschnitt ``Paketstatus erfragen'' in
 (((Pakete aktualisieren, aktualisierbare Pakete anzeigen)))
 (((Pakete aktualisieren, Simulation)))
 (((yum, check-update)))
-(((yum, list updates)))
+(((yum, updateinfo list available)))
+(((yum, updateinfo list sec)))
+(((yum, updateinfo list --security)))
 (((zypper, list updates --all)))
 Viele Pakete werden regelmäßig aktualisiert. Welches Kommando Ihnen die
 Pakete anzeigt, die in einer neuen Version bereitstehen, zeigt Ihnen die
@@ -703,9 +709,9 @@ nachfolgende Tabelle. In Abschnitt ``Aktualisierbare Pakete anzeigen''
 | `aptitude` | `aptitude search '~U'` | alle aktualisierbaren Pakete anzeigen
 |            | `aptitude search ?upgradable` | alle aktualisierbaren Pakete anzeigen
 | DNF        | `dnf list upgrades` | alle aktualisierbaren Pakete anzeigen
-| RPM        | |
-| YUM        | `yum check-updates`| Auflistung der Aktualisierungen für die bereits installierten Pakete
-|            | `yum list updates`| alle aktualisierbaren Pakete anzeigen
+| YUM        | `yum updateinfo list available`| Auflistung der Aktualisierungen für die bereits installierten Pakete
+|            | `yum updateinfo list sec`| alle Sicherheitsaktualisierungen für die bereits installierten Pakete anzeigen
+|            | `yum updateinfo list --security`| alle Sicherheitsaktualisierungen für die bereits installierten Pakete anzeigen
 | Zypper     | `zypper list updates --all`| alle aktualisierbaren Pakete anzeigen
 |====
 
