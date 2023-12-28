@@ -464,7 +464,9 @@ lokal auf dem System installiert sein
 (((dpkg-deb, --contents)))
 (((repoquery, -l)))
 (((repoquery, --list)))
+(((rpm, -ql)))
 (((rpm, -qpl)))
+(((rpm, --query --list)))
 (((rpm, --query --package --list)))
 Mit den nachfolgenden Aufrufen zeigen Sie an, welche Dateien und
 Verzeichnisse zu einem Paket gehören, bevor dieses installiert wird. Für
@@ -481,8 +483,10 @@ Debianpakete widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 |            | `dpkg --contents` 'Paketname' |
 | `dpkg-deb` | `dpkg-deb -c` 'Paketname' |
 |            | `dpkg-deb --contents` 'Paketname' |
-| RPM        | `rpm -qpl` 'Paketdatei' | Dateiliste der lokalen Paketdatei anzeigen
-|            | `rpm --query --package --list` 'Paketdatei' | Dateiliste der lokalen Paketdatei anzeigen
+| RPM        | `rpm -ql` 'Paketname' | Dateiliste der lokalen Paketdatei anzeigen
+|            | `rpm -qpl` 'Paketdatei' | Dateiliste der lokalen oder entfernten Paketdatei anzeigen
+|            | `rpm --query --list` 'Paketname' | Dateiliste der lokalen Paketdatei anzeigen
+|            | `rpm --query --package --list` 'Paketdatei' | Dateiliste der lokalen oder entfernten Paketdatei anzeigen
 | YUM        | `repoquery -l` 'Paketname' | Dateiliste zu dem Paket anzeigen
 |            | `repoquery --list` 'Paketname' | Dateiliste zu dem Paket anzeigen
 |====
@@ -492,6 +496,7 @@ Debianpakete widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 // Stichworte für den Index
 (((apt-file, list)))
 (((apt-file, show)))
+(((dnf, repoquery -l)))
 (((dpkg, -L)))
 (((dpkg, --listfiles)))
 (((dpkg-query, -L)))
@@ -500,6 +505,7 @@ Debianpakete widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 (((repoquery, -l)))
 (((repoquery, --list)))
 (((rpm, -ql)))
+(((rpm, --query --list)))
 Mit den nachfolgenden Aufrufen zeigen Sie an, welche Dateien und
 Verzeichnisse zu dem installierten Paket gehören. Für Debianpakete
 widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
@@ -511,13 +517,15 @@ widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 | Werkzeug   | Aufruf | Anmerkungen
 | `apt-file` | `apt-file list` 'Paketname' |
 |            | `apt-file show` 'Paketname' |
+| DNF        | `dnf repoquery -l` 'Paketname' | Dateiliste zu dem Paket anzeigen
 | `dpkg`     | `dpkg -L` 'Paketname' |
 |            | `dpkg --listfiles` 'Paketname' |
 | `dpkg-query` | `dpkg-query -L` 'Paketname' |
 |            | `dpkg-query --listfiles` 'Paketname' |
-| RPM        | `rpm -ql` 'Paketname' |
-| YUM        | `repoquery -l` 'Paketname' | aus Paket `yum-utils`
-|            | `repoquery --list` 'Paketname' |
+| RPM        | `rpm -ql` 'Paketname' | Dateiliste der lokalen Paketdatei anzeigen
+|            | `rpm --query --list` 'Paketname' | Dateiliste der lokalen Paketdatei anzeigen
+| YUM        | `repoquery -l` 'Paketname' | Dateiliste zu dem Paket anzeigen
+|            | `repoquery --list` 'Paketname' | Dateiliste zu dem Paket anzeigen
 |====
 
 === Alle Konfigurationsdateien eines Pakets anzeigen ===
