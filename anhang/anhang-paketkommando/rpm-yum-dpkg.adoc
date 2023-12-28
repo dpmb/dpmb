@@ -460,6 +460,8 @@ lokal auf dem System installiert sein
 (((dpkg, --contents)))
 (((dpkg-deb, -c)))
 (((dpkg-deb, --contents)))
+(((repoquery, -l)))
+(((repoquery, --list)))
 (((rpm, -qpl)))
 Mit den nachfolgenden Aufrufen zeigen Sie an, welche Dateien und
 Verzeichnisse zu einem Paket gehören, bevor dieses installiert wird. Für
@@ -475,6 +477,8 @@ Debianpakete widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 | `dpkg-deb` | `dpkg-deb -c` 'Paketname' |
 |            | `dpkg-deb --contents` 'Paketname' |
 | RPM        | `rpm -qpl` 'Paketdatei' | Dateiliste der lokalen Paketdatei anzeigen
+| YUM        | `repoquery -l` 'Paketname' | Dateiliste zu dem Paket anzeigen
+|            | `repoquery --list` 'Paketname' | Dateiliste zu dem Paket anzeigen
 |====
 
 === Alle Dateien eines installierten Pakets anzeigen ===
