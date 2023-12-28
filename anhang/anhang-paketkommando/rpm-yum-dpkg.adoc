@@ -161,6 +161,25 @@ ein.
 |            | `yum upgrade` 'Paketname' | nur 'Paketname' aktualisieren und dabei auch die Pakete berücksichtigen, die veraltet sind
 |====
 
+=== Eine frühere Version eines Softwarepakets einspielen (Downgrade) ===
+
+// Stichworte für den Index
+(((Paket, downgraden)))
+(((yum, downgrade)))
+Mit den nachfolgenden Aufrufen spielen Sie eine frühere Version eines 
+Softwarepakets ein (Downgrade). Für `dpkg`, APT, `apt` und `aptitude`
+besteht kein passendes Unterkommando. Unter ``Pakete downgraden'' in
+<<pakete-downgraden>> gehen wir detaillierter auf die Vorgehensweise
+dazu ein.
+
+.Downgraden eines Pakets
+[frame="topbot",options="header",cols="2,4,4",id="tab.paket-downgraden"]
+|====
+| Werkzeug   | Aufruf | Anmerkungen
+| `YUM`      | `yum downgrade` 'Paketname' | 'Paketname' auf die frühere Version zurücksetzen
+|====
+
+
 === Ein Softwarepaket erneut installieren ===
 
 // Stichworte für den Index
@@ -193,6 +212,9 @@ die Kommandozeile erneut.
 (((aptitude, download)))
 (((Paket, nur herunterladen)))
 (((yum, install --downloadonly)))
+(((yumdownloader)))
+(((yumdownloader, --resolve)))
+(((yumdownloader, --destdir)))
 Mit den nachfolgenden Aufrufen laden Sie ein Softwarepaket in das
 aktuelle Verzeichnis herunter.
 
@@ -203,6 +225,9 @@ aktuelle Verzeichnis herunter.
 | APT        | `apt download` 'Paketname' | Paket wird dem Paketrepository entnommen
 | `aptitude` | `aptitude download` 'Paketname' | Paket wird dem Paketrepository entnommen
 | YUM        | `yum install --downloadonly` 'Paketname' | Paket wird dem Paketrepository entnommen und im Paketcache gespeichert, üblicherweise im Verzeichnis `/var/cache/yum/architektur/prod/repo/`
+|            | `yumdownloader` 'Paketname' | Paket wird dem Paketrepository entnommen und im aktuellen Verzeichnis gespeichert
+|            | `yumdownloader --resolve` 'Paketname' | Paket samt dessen Paketabhängigkeiten wird dem Paketrepository entnommen und im aktuellen Verzeichnis gespeichert
+|            | `yumdownloader --destdir` 'Verzeichnis Paketname'  | Paket wird dem Paketrepository entnommen und im angegebenen Verzeichnis gespeichert
 |====
 
 === Paket löschen / entfernen ===
@@ -256,7 +281,7 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 |            | `rpm --erase` 'Paketname' | entfernt das angegebene Paket
 |            | `rpm -e --nodeps` 'Paketname' | Entfernung des Pakets ohne Berücksichtigung der Paketabhängigkeiten
 | `YUM`      | `yum remove` 'Paketname' | entfernt das angegebene Paket samt seiner Abhängigkeiten
-|            | `yum erase` 'Paketname' | entfernt nur das angegebene Paket
+|            | `yum erase` 'Paketname' | entfernt das angegebene Paket samt seiner Abhängigkeiten
 |====
 
 === Alle installierten Pakete auflisten ===
