@@ -192,15 +192,17 @@ die Kommandozeile erneut.
 (((apt, download)))
 (((aptitude, download)))
 (((Paket, nur herunterladen)))
+(((yum, install --downloadonly)))
 Mit den nachfolgenden Aufrufen laden Sie ein Softwarepaket in das
 aktuelle Verzeichnis herunter.
 
-.Erneute Installation eines Pakets
+.Ein Softwarepaket nur herunterladen
 [frame="topbot",options="header",cols="2,4,4",id="tab.deb-paket-herunterladen"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | APT        | `apt download` 'Paketname' | Paket wird dem Paketrepository entnommen
 | `aptitude` | `aptitude download` 'Paketname' | Paket wird dem Paketrepository entnommen
+| YUM        | `yum install --downloadonly` 'Paketname' | Paket wird dem Paketrepository entnommen und im Paketcache gespeichert, üblicherweise im Verzeichnis `/var/cache/yum/architektur/prod/repo/`
 |====
 
 === Paket löschen / entfernen ===
