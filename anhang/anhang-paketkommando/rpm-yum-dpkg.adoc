@@ -572,6 +572,7 @@ rpm -qc paket.rpm | grep "/etc"
 (((Paket, Dokumentationsdateien anzeigen)))
 (((Paket, Dokumentationsdateien auflisten)))
 (((rpm, -qd)))
+(((rpm, --query --docfiles)))
 
 `dpkg` und `apt` können das nicht. Daher geben wir nur den Aufruf von
 `rpm` an.
@@ -581,7 +582,9 @@ rpm -qc paket.rpm | grep "/etc"
 |====
 | Werkzeug   | Aufruf | Anmerkungen
 | RPM        | `rpm -qd` 'Paketname' | listet alle Dateien auf, die im
-rpm-Paket als Dokumentation geflaggt sind
+rpm-Paket explizit als Dokumentation gekennzeichnet sind
+|            | `rpm --query --docfiles` 'Paketname' | listet alle Dateien auf, die im
+rpm-Paket explizit als Dokumentation gekennzeichnet sind
 |====
 
 Alternativ listen Sie nur die Dateien auf, die sich im Verzeichnis
@@ -603,6 +606,7 @@ rpm -qd paket.rpm | grep "/usr/share/doc"
 (((dpkg-query, --search)))
 (((Paket, zu Datei finden)))
 (((rpm, -qf)))
+(((rpm, --query --file)))
 (((yum, provides)))
 Um herauszufinden, aus welchem Paket eine Datei stammt, bieten sowohl
 `rpm` als auch `dpkg` entsprechende Schalter an. Für Debianpakete gibt
@@ -613,15 +617,16 @@ es `apt-file`, welches wir genauer in ``Paket zu Datei finden'' in
 [frame="topbot",options="header",cols="2,4,4",id="tab.paket-zu-datei-finden"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
-| `apt-file` | `apt-file find` 'Dateiname' | Suche in allen verfügbaren Paketen
-|            | `apt-file search` 'Dateiname' | Suche in allen verfügbaren Paketen
-| DNF        | `dnf provides` 'Dateiname'| 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
-| `dpkg`     | `dpkg -S` 'Dateiname' | Suche nach dem Dateiname in den installierten Paketen
-|            | `dpkg --search` 'Dateiname' | Suche nach dem Dateiname in den installierten Paketen
-| `dpkg-query` | `dpkg-query -S` 'Dateiname' | Suche nach dem Dateiname in den installierten Paketen
-|            | `dpkg-query --search` 'Dateiname' | Suche nach dem Dateiname in den installierten Paketen
-| RPM        | `rpm -qf` 'Dateiname' | 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
-| YUM        | `yum provides` 'Dateiname'| 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
+| `apt-file` | `apt-file find` 'Dateiname' | Suche nach dem Dateinamen in allen verfügbaren Paketen
+|            | `apt-file search` 'Dateiname' | Suche nach dem Dateinamen in allen verfügbaren Paketen
+| DNF        | `dnf provides` 'Dateiname'| Suche nach dem Dateinamen in allen verfügbaren Paketen. 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
+| `dpkg`     | `dpkg -S` 'Dateiname' | Suche nach dem Dateinamen in den installierten Paketen
+|            | `dpkg --search` 'Dateiname' | Suche nach dem Dateinamen in den installierten Paketen
+| `dpkg-query` | `dpkg-query -S` 'Dateiname' | Suche nach dem Dateinamen in den installierten Paketen
+|            | `dpkg-query --search` 'Dateiname' | Suche nach dem Dateinamen in den installierten Paketen
+| RPM        | `rpm -qf` 'Dateiname' | Suche nach dem Dateinamen in den installierten Paketen. 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
+|            | `rpm --query --file` 'Dateiname' | Suche nach dem Dateinamen in den installierten Paketen. 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
+| YUM        | `yum provides` 'Dateiname'| Suche nach dem Dateinamen in allen verfügbaren Paketen. 'Dateiname' umfaßt hier den vollständigen Namen inklusive Pfad
 |====
 
 === Paketstatus anzeigen ===
