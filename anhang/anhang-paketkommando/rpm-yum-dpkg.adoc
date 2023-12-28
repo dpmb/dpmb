@@ -539,7 +539,7 @@ widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 (((Paket, Konfigurationsdateien anzeigen)))
 (((Paket, Konfigurationsdateien auflisten)))
 (((rpm, -qc)))
-(((rpm, -ql)))
+(((rpm, --query --configfiles)))
 
 `dpkg`, `dpkg-query` und `rpm` listen nur die Einträge auf, die sich
 bereits im Paket befinden und nicht diese, die erst zur Laufzeit
@@ -555,7 +555,8 @@ eines Pakets anzeigen'' (siehe
 |            | `dpkg --status` 'Paketname' |
 | `dpkg-query` | `dpkg-query -s` 'Paketname' |
 |            | `dpkg-query --status` 'Paketname' |
-| RPM        | `rpm -qc` 'Paketname' | listet alle Dateien auf, die im rpm-Paket als Konfiguration geflaggt sind
+| RPM        | `rpm -qc` 'Paketname' | listet alle Dateien auf, die im rpm-Paket als Konfiguration gekennzeichnet sind
+|            | `rpm --query --configfiles` 'Paketname' | listet alle Dateien auf, die im rpm-Paket als Konfiguration gekennzeichnet sind
 |====
 
 Alternativ listen Sie nur die Dateien auf, die sich im Verzeichnis
