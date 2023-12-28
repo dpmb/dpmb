@@ -456,6 +456,7 @@ lokal auf dem System installiert sein
 === Alle Dateien eines Pakets anzeigen, bevor es installiert wird ===
 
 // Stichworte für den Index
+(((dnf, repoquery -l)))
 (((dpkg, -c)))
 (((dpkg, --contents)))
 (((dpkg-deb, -c)))
@@ -472,6 +473,7 @@ Debianpakete widmen wir uns dem Thema in ``Paketinhalte anzeigen'' in
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketinhalte-vor-der-installation"]
 |====
 | Werkzeug   | Aufruf | Anmerkungen
+| DNF        | `dnf repoquery -l` 'Paketname' | Dateiliste zu dem Paket anzeigen
 | `dpkg`     | `dpkg -c` 'Paketname' |
 |            | `dpkg --contents` 'Paketname' |
 | `dpkg-deb` | `dpkg-deb -c` 'Paketname' |
