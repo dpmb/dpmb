@@ -757,7 +757,6 @@ Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten''
 (((Paketsignatur, überprüfen)))
 (((rpm, -K)))
 (((rpm, --checksig)))
-(((yum, verify)))
 Mit den nachfolgenden Aufrufen überprüfen Sie die Signatur eines Pakets. Sie 
 stellen damit sicher, dass das Paket unverändert vom Paketmirror zu Ihnen 
 übertragen wurde und auf dem Transportweg keine inhaltlichen Veränderungen 
@@ -777,7 +776,6 @@ stattgefunden haben. Für Debianpakete widmen wir uns dem Thema in
 | `gpg`      | `gpg --verify` 'Paketname' | GnuPG-Signatur des Pakets prüfen
 | RPM        | `rpm -K` 'Paketname' | GnuPG-Signatur des Pakets prüfen
 |            | `rpm --checksig` 'Paketname' | GnuPG-Signatur des Pakets prüfen
-| YUM        | `yum verify` 'Paketname' | GnuPG-Signatur des Pakets prüfen; erfordert YUM-Plugin 'yum-verify'
 |====
 
 === Paket auf Veränderungen prüfen ===
@@ -786,9 +784,11 @@ stattgefunden haben. Für Debianpakete widmen wir uns dem Thema in
 (((Paket, auf Veränderungen prüfen)))
 (((dpkg, --verify)))
 (((dpkg, -V)))
-(((rpm, -qV)))
 (((rpm, -Va)))
 (((rpm, -Vp)))
+(((rpm, --verify --package)))
+(((rpm, --verify --all)))
+(((yum, verify)))
 Um festzustellen, ob die vorliegenden Dateien noch identisch mit den
 Dateien aus dem installierten Paket sind, helfen Ihnen diese Kommandos:
 
@@ -799,9 +799,10 @@ Dateien aus dem installierten Paket sind, helfen Ihnen diese Kommandos:
 | `dpkg`     | `dpkg -V` | prüft alle installierten Pakete
 |            | `dpkg --verify` 'Paketname' | prüft nur das angegebene Paket
 | RPM        | `rpm -Va` | prüft alle installierten Pakete
-|            | `rpm -qV` 'Paketname' | prüft nur das angegebene Paket
 |            | `rpm -Vp` 'Paketname' | prüft nur das angegebene Paket
-| YUM        | |
+|            | `rpm --verify --all` | prüft alle installierten Pakete
+|            | `rpm --verify --package` 'Paketname' | prüft nur das angegebene Paket
+| YUM        | `yum verify` 'Paketname' | Paketname prüfen; erfordert YUM-Plugin 'yum-verify'
 |====
 
 // Stichworte für den Index
