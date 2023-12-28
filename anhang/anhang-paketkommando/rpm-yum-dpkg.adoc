@@ -724,8 +724,8 @@ nachfolgende Tabelle. In Abschnitt ``Aktualisierbare Pakete anzeigen''
 (((apt-cache, pkgnames)))
 (((dnf, group list)))
 (((dnf, list available)))
-(((dnf, repository-list)))
-(((yum, list available)))
+(((dnf, repository-packages list --available)))
+(((yum, list --available)))
 Welche Pakete verfügbar sind, erfahren Sie mit den nachfolgend genannten
 Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten''
 <<bekannte-paketnamen-auflisten>> stellen wir Ihnen das genauer vor.
@@ -737,9 +737,8 @@ Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten''
 | `apt`      | `apt list` | alle verfügbaren (bekannten) Pakete samt Status auflisten
 | `apt-cache`| `apt-cache pkgnames` | alle verfügbaren (bekannten) Pakete auflisten
 | DNF        | `dnf group list` | alle Paketgruppen auflisten
-|            | `dnf list available` | alle verfügbaren Pakete anzeigen
-|            | `dnf repository-list repo list` | alle Pakete aus dem Repository 'repo' anzeigen
-| RPM        | |
+|            | `dnf list --available` | alle verfügbaren Pakete anzeigen
+|            | `dnf repository-packages repo list --available` | alle verfügbaren Pakete aus dem Repository 'repo' anzeigen
 | YUM        | `yum list available`| alle verfügbaren Pakete anzeigen
 |====
 
