@@ -11,11 +11,13 @@
 (((dpkg)))
 (((Debian-Spickzettel)))
 (((Dokumentation, offline)))
-Frank pflegt einen Debian-Spickzettel, in dem die wichtigsten Kommandos
-zur Paketverwaltung zusammengestellt sind. Dieser steht als PDF auf
-GitHub bereit <<Debian-Spickzettel-Github>>. Der Spickzettel liegt in
-deutscher und englischer Sprache vor, Übersetzungen in andere Sprachen
-wie Französisch und Russisch stehen an. 
+Frank pflegt einen Debian-Spickzettel genannt 'Cheatsheet für das 
+Debian-Paketmanagement', in dem die wichtigsten Kommandos zur 
+Paketverwaltung zusammengestellt sind. Dieser steht als PDF auf 
+GitHub bereit <<Debian-Spickzettel-Github>>. Der Spickzettel liegt 
+derzeit in deutscher, englischer und französischer Sprache vor. 
+Übersetzungen in weitere Sprachen wie bspw. Russisch oder Spanisch
+stehen an. 
 
 .Der Debian-Spickzettel (Ausschnitt)
 image::werkzeuge/dokumentation/debian-spickzettel.png[id="fig.debian-spickzettel", width="50%"]
