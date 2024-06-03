@@ -16,14 +16,14 @@ Debian für ARM-basierte Geräte, bspw. ein Cubieboard oder Cubietruck
 <<Armbian>>
 
 Raspbian:: 
-Debian GNU/Linux so rekompiliert, dass er mit bestöglicher Optimierung auch auf
-den schwächsten Raspberry Pis läuft. <<Raspbian>>
+Debian GNU/Linux so rekompiliert, dass er mit bestmöglicher Optimierung auch 
+auf den schwächsten Raspberry Pis läuft. <<Raspbian>>
 
 Raspberry Pi OS::
-Eine auf Raspbian aufsetzende Distribution <<RaspberryPiOS>> der
-Raspberry Pi Foundation <<RaspberryPi>>, die auch
-nicht-freie, "empfohlene" Closed-Source-Software und
-Dritthersteller-APT-Repositories in der Standard-Installation enthält.
+Eine auf Raspbian aufsetzende Distribution <<RaspberryPiOS>> der Raspberry Pi 
+Foundation <<RaspberryPi>>, die auch nicht-freie, "empfohlene" 
+Closed-Source-Software und Dritthersteller-APT-Repositories in der 
+Standard-Installation enthält.
 
 === Bildung ===
 
