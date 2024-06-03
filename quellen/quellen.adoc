@@ -856,6 +856,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 // 
 // - [[[Plenz-Haenel-Git]]] Julius Plenz und Valentin Haenel: Git. Verteilte Versionsverwaltung für Code und Dokumente, Open Source Press, München, 1. Auflage Juni 2011, ISBN 978-3-941841-42-0
 
+- [[[pkgs]]] Pkgs, https://pkgs.org/
+
 - [[[Plura-lts]]] Michael Plura: Am Leben halten, ix 12/2014, https://www.heise.de/ix/heft/Am-Leben-halten-2458886.html
 
 - [[[proxyArch]]] Proxy-Einstellungen im Wiki zu Arch Linux, https://wiki.archlinux.org/index.php/Proxy_settings
@@ -870,6 +872,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Raspbian]]] Debian für das Raspberry Pi, https://www.raspbian.org/
 
+- [[[repology]]] Repology, https://repology.org/
+
 - [[[ReproducibleBuilds]]] Reproducible Builds, https://reproducible-builds.org/
 
 - [[[RFC1928]]] RFC 1928: Standard For The Format Of Text Messages, IETF, https://tools.ietf.org/html/rfc1928
@@ -882,6 +886,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[RM-software-center]]] Entfernung von Ubuntu Software Center aus Debian, https://bugs.debian.org/755452
 
 - [[[RMLL]]] Rencontres Mondiales du Logiciel Libre, http://rmll.info/
+
+- [[[rpmfind]]] Rpmfind, http://rpmfind.net/
 
 - [[[rpmdrake]]] `rpmdrake`, https://en.wikipedia.org/wiki/Rpmdrake
 
