@@ -883,18 +883,17 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[RMLL]]] Rencontres Mondiales du Logiciel Libre, http://rmll.info/
 
-- [[[RPM-Canepa]]] Gabriel Cánepa: Linux Package Management with Yum, RPM, Apt, Dpkg, Aptitude and Zypper – Part 9, http://www.tecmint.com/linux-package-management/
-
-
 - [[[rpmdrake]]] `rpmdrake`, https://en.wikipedia.org/wiki/Rpmdrake
 
 - [[[rpmorphan-rpm]]] `rpmorphan`, https://rpmorphan.sourceforge.net/
 
+- [[[rpmseek]]] Rpmseek, http://www.rpmseek.com/
+
+- [[[RPM-Canepa]]] Gabriel Cánepa: Linux Package Management with Yum, RPM, Apt, Dpkg, Aptitude and Zypper – Part 9, http://www.tecmint.com/linux-package-management/
+
 - [[[RPM-Gite]]] Vivek Gite: CentOS / RHEL: See Detailed History Of yum Commands, http://www.cyberciti.biz/faq/yum-history-command/
 
 - [[[RPM-Salve]]] Ravi Salve: 20 Practical Examples of RPM Commands in Linux, http://www.tecmint.com/20-practical-examples-of-rpm-commands-in-linux/
-
-- [[[rpmseek]]] Rpmseek, http://www.rpmseek.com/
 
 - [[[RPM-Webseite]]] Dokumentation auf rpm.org, http://www.rpm.org/wiki/Docs
 
