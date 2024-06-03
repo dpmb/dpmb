@@ -52,8 +52,9 @@ LernStick:: Live-Distribution auf einem USB-Stick <<LernStick>>
 Deepin:: Angeblich die meistgenutzte Linux-Distribution Chinas <<Deepin>>
 
 Emmabuntüs :: Wurde entwickelt, um Computer neu aufzusetzen, die an
-Hilfsorganisationen gespendet wurden. Wird gepflegt von der
-Emmaus-Stiftung aus Frankreich. Emmabuntüs <<Emmabuntus>> basiert auf Debian 'stable'.
+Hilfsorganisationen gespendet wurden und technologisch älter sind. Wird 
+gepflegt von der Emmaus-Stiftung aus Frankreich. Emmabuntüs <<Emmabuntus>> 
+basiert auf Debian 'stable'.
 
 LiMux:: Linux-Distribution, die im Rahmen der Migration der
 Stadtverwaltung München zum Einsatz kam (2009-2020) <<LiMux>>
