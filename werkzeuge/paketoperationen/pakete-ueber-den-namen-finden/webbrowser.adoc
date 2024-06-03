@@ -19,7 +19,7 @@ include::apt-browse.adoc[]
 // - apt-get.org
 include::apt-get.adoc[]
 
-// - rpmseek.com
-include::rpmseek.adoc[]
+// - Paketsuchmaschinen
+include::paketsuchmaschinen.adoc[]
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/webbrowser.adoc
