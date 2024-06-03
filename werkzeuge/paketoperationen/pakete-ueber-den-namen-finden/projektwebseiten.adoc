@@ -149,7 +149,7 @@ Sprache sieht wie folgt aus:
 http://packages.ubuntu.com/de/xenial/mail/
 ----
 
-Tanglu (http://packages.tanglu.org/):: 
+Tanglu (http://packages.tanglu.org/) (eingestellt im Februar 2024):: 
 unterstützt z.Zt. kein HTTPS. Daher erfolgt der Aufruf für die
 Kategorie 'mail' aus der stabilen Veröffentlichung in deutscher
 Sprache wie folgt:
