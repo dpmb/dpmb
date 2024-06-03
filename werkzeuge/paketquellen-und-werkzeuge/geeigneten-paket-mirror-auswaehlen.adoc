@@ -156,6 +156,24 @@ Zusammenstellung für die Distribution Linux Mint.
 .Auswahl der Paketmirror für Linux Mint
 image::werkzeuge/paketquellen-und-werkzeuge/linuxmint-mirrors.png[id="fig.linuxmint-mirrors", width="50%"]
 
+==== Paketsuchmaschinen ====
+
+// Indexeinträge
+(((Paketmirror, Paketsuchmaschinen)))
+(((Paketsuchmaschinen, pkgs)))
+(((Paketsuchmaschinen, repology)))
+(((Paketsuchmaschinen, rpmfind)))
+
+* mittlerweile bestehen eine Reihe von Paketsuchmaschinen
+* aggregieren diverse Paketquellen und machen die darüber bereitstehenden Pakete über eine einheitliche Schnittstelle zugänglich
+
+* Auswahl uns bekannter Quellen:
+  - https://pkgs.org/
+  - https://repology.org/
+  - http://rpmfind.net/ (Fokus auf `rpm`-Pakete)
+
+* Download einzelner Pakete (Bezug über Weboberfläche) ohne Prüfung auf Paketabhängigkeiten
+
 ==== Pakete ohne Paketmirror beziehen ====
 
 // Indexeinträge
