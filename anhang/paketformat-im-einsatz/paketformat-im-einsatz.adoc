@@ -8,12 +8,16 @@
 
 // Stichworte für den Index
 (((Armbian)))
+(((DebWRT)))
 (((Raspberry Pi OS)))
 (((Raspbian)))
 
 Armbian:: 
-Debian für ARM-basierte Geräte, bspw. ein Cubieboard oder Cubietruck
+Debian GNU/Linux für ARM-basierte Geräte, bspw. ein Cubieboard oder Cubietruck
 <<Armbian>>
+
+DebWRT::
+Debian GNU/Linux auf der Basis von OpenWRT für WLAN-Router. Eingestellt 2010.
 
 Raspbian:: 
 Debian GNU/Linux so rekompiliert, dass er mit bestmöglicher Optimierung auch 

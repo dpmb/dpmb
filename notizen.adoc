@@ -138,7 +138,5 @@ dem Paket nuvola-icon-theme, Version 4:15.04.3-1.
 * Ergänzungen als Paketquellen
   - https://pkgs.org/
   - https://repology.org/
-* Ergänzung als Flavour
-  - https://en.wikipedia.org/wiki/DebWRT
 
 // Datei (Ende): ./notizen.adoc
