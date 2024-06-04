@@ -11,13 +11,14 @@
 
 `aptitude` verwendet alle Konfigurationsdateien von APT plus seine eigenen. 
 Diese finden Sie in der Datei `.aptitude/config` in ihrem Home-Verzeichnis. 
-Hier werden auch die interaktiven Änderungen der Konfiguration in der 
-Textoberfläche von `aptitude` gespeichert. `aptitude` benutzt dabei die 
-gleiche Syntax wie APT. 
+Hier werden auch die interaktiven Änderungen der Konfiguration gespeichert, 
+die Sie zuvor über die Textoberfläche von `aptitude` vorgenommen haben. 
+`aptitude` benutzt dabei die gleiche Syntax wie APT. 
 
-Um diese Einstellungen auf dem gesamten System anzuwenden, speichern Sie 
-diese bspw. `/etc/apt/apt.conf.d/lokale-aptitude-einstellungen`. Diese 
-Einträge stören APT nicht, da sie alle mit dem Präfix `Aptitude::` beginnen.
+Um diese Einstellungen auf dem gesamten System anzuwenden, speichern Sie diese 
+bspw. als zusätzliche Datei in der globalen Konfiguration von APT unter
+`/etc/apt/apt.conf.d/lokale-aptitude-einstellungen`. Diese Einträge stören APT 
+nicht, da sie alle mit dem Präfix `Aptitude::` beginnen.
 
 .Beispiel einer lokalen Konfigurationsdatei von `aptitude`
 ----
