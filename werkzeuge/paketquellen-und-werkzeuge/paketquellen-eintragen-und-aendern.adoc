@@ -1,0 +1,19 @@
+// Datei: ./werkzeuge/paketquellen-eintragen-und-aendern.adoc
+
+// Baustelle: Notizen
+
+[[paketquellen-eintragen-und-aendern]]
+=== Paketquellen eintragen und ändern ===
+
+// Stichworte für den Index
+(((apt, edit-sources)))
+(((Paketquelle ändern)))
+(((Paketquelle eintragen)))
+
+* Datei `/etc/apt/sources.list` und Dateien unter `/etc/apt/sources.list.d/*`
+* Editieren mit Hilfe eines Texteditors, bspw. Vim oder Emacs
+* Aufruf von `apt edit-sources`
+  - ruft wiederum einen Texteditor auf
+  - Ergänzung um Prüfung der Inhalte auf syntaktische Korrektheit
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/paketquellen.adoc

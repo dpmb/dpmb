@@ -37,6 +37,9 @@ include::paketquellen.adoc[]
 include::empfehlung-zum-ablauf-fuer-das-hinzufuegen-und-aendern-von-paketquellen.adoc[]
 
 // Paketquellen eintragen und ändern
+include::paketquellen-eintragen-und-aendern.adoc[]
+
+// /etc/apt/sources.list verstehen
 include::etc-apt-sources.list-verstehen/etc-apt-sources.list-verstehen.adoc[]
 
 // Paketmirror festlegen
