@@ -18,6 +18,21 @@ Für das herunterladen und speichern bestehen zwei Modi – das Speichern
 im aktuellen Verzeichnis (Modus 1) und im Paketcache (Modus 2). Für
 beides existieren verschiedene Unterkommandos und Aufrufmöglichkeiten.
 
+Die Verwendung beider Modi ist sinnvoll, wenn Sie beispielsweise eine
+Installation vorbereiten und dabei im Vorfeld überprüfen möchten, ob
+alles reibungslos funktioniert. Ebenso zählt das Ausprobieren dazu –
+das Schauen, was passiert, ohne eine tatsächliche Veränderung des
+Paketbestands auf dem System vorzunehmen. 
+
+Ein weiterer Fall ist die Aktualisierung von Paketen ohne Internetzugang
+(siehe auch ``Paketverwaltung ohne Internet'' in
+<<paketverwaltung-ohne-internet>>). Damit stellen Sie vorab bereits alle
+Pakete zusammen, die Sie im Bedarfsfall benötigen und installieren diese
+dann aus dem Paketcache oder aus einem lokalen Verzeichnis, ohne auf
+eine bestehende Netzverbindung angewiesen zu sein.
+
+==== Paketdatei im aktuellen Verzeichnis speichern ====
+
 // Stichworte für den Index
 (((apt, download)))
 (((aptitude, download)))
@@ -25,10 +40,9 @@ beides existieren verschiedene Unterkommandos und Aufrufmöglichkeiten.
 (((debget)))
 (((dget)))
 (((Paket, nur herunterladen)))
-Für den Modus 1 akzeptieren `apt`, `apt-get` und `aptitude` das
-Unterkommando `download`. Das Paket 'bash-doc' beinhaltet die
-Dokumentation zur Bash – ein Bezug des Pakets via `apt-get` liefert
-Ihnen das folgende Ergebnis:
+Hier akzeptieren `apt`, `apt-get` und `aptitude` das Unterkommando 
+`download`. Das Paket 'bash-doc' beinhaltet die Dokumentation zur Bash – 
+ein Bezug des Pakets via `apt-get` liefert Ihnen das folgende Ergebnis:
 
 .Bezug des Pakets 'bash-doc' via `apt-get` und Speicherung im lokalen Verzeichnis
 ----
@@ -66,6 +80,7 @@ Downloading nano from http://ftp.de.debian.org/debian/pool/main/n/nano/nano_2.2.
 `debget` kann jedoch keine Quellpakete beziehen, dafür steht Ihnen dann
 `dget` aus dem Paket 'devscripts' <<Debian-Paket-devscripts>> zur Verfügung.
 
+==== Paketdatei im lokalen Paketcache speichern ====
 // Stichworte für den Index
 (((apt, -d install)))
 (((apt, --download-only install)))
@@ -75,14 +90,16 @@ Downloading nano from http://ftp.de.debian.org/debian/pool/main/n/nano/nano_2.2.
 (((aptitude, --download-only install)))
 (((Paketcache, /var/cache/apt/archives/)))
 (((Paketcache, /var/cache/apt/archives/partial/)))
-Der Modus 2 kommt zum Zug, wenn Sie das Paket hingegen im lokalen
-Paketcache (siehe <<paketcache>>) abspeichern möchten. Dazu verstehen
-`apt`, `apt-get` und `aptitude` zum Unterkommando `install` die Option `-d`
-(Langform `--download-only`). Nachfolgende Ausgabe zeigt, wie sich
-`aptitude` dabei verhält. Das Paket wird nicht installiert, sondern im
-Paketcache unter `/var/cache/apt/archives/` abgespeichert, sofern es
-vollständig bezogen wurde. Nur teilweise heruntergeladene Pakete liegen
-hingegen unter `/var/cache/apt/archives/partial/`.
+Dieser Modus kommt zum Zug, wenn Sie das Paket hingegen im lokalen 
+Paketcache (siehe <<paketcache>>) abspeichern möchten. Dazu verstehen 
+`apt`, `apt-get` und `aptitude` zum Unterkommando `install` die Option 
+`-d` (Langform `--download-only`). 
+
+Nachfolgende Ausgabe zeigt, wie sich `aptitude` dabei verhält. Das Paket 
+'bash-doc' wird hierbei nicht installiert, sondern im Paketcache unter 
+`/var/cache/apt/archives/` abgespeichert, sofern es vollständig bezogen 
+wurde. Nur teilweise heruntergeladene Pakete liegen hingegen unter 
+`/var/cache/apt/archives/partial/`.
 
 .Bezug des Pakets 'bash-doc' via `aptitude` und Speicherung im Paketcache
 ----
@@ -95,18 +112,5 @@ Holen: 1 http://ftp.de.debian.org/debian/ wheezy/main bash-doc all 4.2+dfsg-0.1 
 696 kB wurden in 0 s heruntergeladen (1.761 kB/s)
 #
 ----
-
-Die Verwendung beider Modi ist sinnvoll, wenn Sie beispielsweise eine
-Installation vorbereiten und dabei im Vorfeld überprüfen möchten, ob
-alles reibungslos funktioniert. Ebenso zählt das Ausprobieren dazu –
-das Schauen, was passiert, ohne eine tatsächliche Veränderung des
-Paketbestands auf dem System vorzunehmen. 
-
-Ein weiterer Fall ist die Aktualisierung von Paketen ohne Internetzugang
-(siehe auch ``Paketverwaltung ohne Internet'' in
-<<paketverwaltung-ohne-internet>>). Damit stellen Sie vorab bereits alle
-Pakete zusammen, die Sie im Bedarfsfall benötigen und installieren diese
-dann aus dem Paketcache oder aus einem lokalen Verzeichnis, ohne auf
-eine bestehende Netzverbindung angewiesen zu sein.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/paketdatei-nur-herunterladen.adoc
