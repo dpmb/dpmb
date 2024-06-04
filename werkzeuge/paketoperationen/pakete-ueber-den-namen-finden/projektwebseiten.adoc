@@ -132,36 +132,18 @@ Anstelle des Namens einer Veröffentlichung -- 'bullseye', 'bookworm',
 ===== Suche über die Webseite von Debian-Derivaten =====
 
 // Stichworte für den Index
-(((Paketsuche, bei Tanglu)))
 (((Paketsuche, bei Ubuntu)))
-(((Paketsuche, über packages.tanglu.org)))
 (((Paketsuche, über packages.ubuntu.com)))
 
-Einige Derivate von Debian nutzen dieselbe Webanwendung zur Auflistung
-ihrer Pakete im Web. Den Autoren des Buches sind bisher bekannt:
+Einige Derivate von Debian nutzen dieselbe Webanwendung zur Auflistung ihrer 
+Pakete im Web. Das Derivat Ubuntu unterstützt bisher keine Suite-Namen, denn 
+es gibt auch nur genau einen Suite-Namen namens 'devel'. Der Aufruf für die 
+Kategorie 'mail' aus der Veröffentlichung 'Xenial Xerus' in deutscher Sprache 
+sieht wie folgt aus:
 
-Ubuntu (https://packages.ubuntu.com/)::
-unterstützt bisher keine Suite-Namen, denn es gibt bei Ubuntu bisher
-aber auch nur genau einen Suite-Namen namens 'devel'. Der Aufruf für die
-Kategorie 'mail' aus der Veröffentlichung 'Xenial Xerus' in deutscher
-Sprache sieht wie folgt aus:
 ----
 http://packages.ubuntu.com/de/xenial/mail/
 ----
-
-Tanglu (http://packages.tanglu.org/) (eingestellt im Februar 2024):: 
-unterstützt z.Zt. kein HTTPS. Daher erfolgt der Aufruf für die
-Kategorie 'mail' aus der stabilen Veröffentlichung in deutscher
-Sprache wie folgt:
-----
-http://packages.tanglu.org/de/staging/mail/
-----
-
-Die für die Webseite des Debian-Projekts genannten Kurzformen sollten
-ebenfalls mit diesen Hostnamen funktionieren. Jedoch ist dabei zu
-beachten, dass andere Distributionen aufgrund anderer Release-Politiken
-ggf. keine Namen für Entwicklungsstände nutzen und damit auch diese
-Kurzformen nicht ermöglichen.
 
 // Abbildung von packages.ubuntu.com
 .Ergebnis der Paketsuche nach 'aptsh' über http://packages.ubuntu.com/
