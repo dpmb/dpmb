@@ -291,9 +291,11 @@ nur Paketnamen verarbeiten, sondern auch Pfade zu lokal vorliegenden
 `deb`-Paketen als Parameter benutzen. Im Gegensatz zu `gdebi` (siehe
 <<gui-gdebi>>) besteht hier keine Beschränkung auf nur ein einziges
 Paket, sondern es gelten die weiter oben benannten Möglichkeiten zur
-Spezifikation von Paketen. Ein Beispielaufruf sieht wie folgt aus:
+Spezifikation von Paketen. Ein Beispielaufruf zur Installation der 
+beiden lokalen Pakete namens '/tmp/foo.deb' und 'bar.deb' sieht wie 
+folgt aus:
 
-.Installation eines zweier `deb`-Pakete ab APT 1.1
+.Installation zweier `deb`-Pakete mittels APT
 ----
 # apt install /tmp/foo.deb ./bar.deb
 ...
