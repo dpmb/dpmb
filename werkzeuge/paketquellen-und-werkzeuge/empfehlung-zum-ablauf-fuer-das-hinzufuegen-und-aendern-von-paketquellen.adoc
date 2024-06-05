@@ -28,13 +28,13 @@ Paketquellen (<<paketquellen>>).
 Wir empfehlen Ihnen zur Aktualisierung den folgenden Ablauf:
 
 . Erstellen Sie zuerst eine Sicherheitskopie der entsprechenden Datei,
-  z.B. `cp -pv /etc/apt/sources.list /etc/apt/sources.list.backup`.
+  z.B. mit `cp -pv /etc/apt/sources.list /etc/apt/sources.list.backup`.
   Gegebenenfalls macht das auch Ihr Texteditor automatisch.
 
-. Tragen Sie die neuen oder veränderten Paketquellen in die Datei 
-  `/etc/apt/sources.list` nach und speichern diese ab. Wenn Sie
-  lediglich eine neue Paketquelle hinzufügen wollen, können Sie alternativ 
-  auch eine neue Datei mit dieser Paketquelle im Verzeichnis
+. Tragen Sie die neuen oder veränderten Paketquellen nach (siehe
+  <<paketquellen-eintragen-und-aendern>>) und speichern diese Änderungen 
+  ab. Wenn Sie lediglich eine neue Paketquelle hinzufügen, können Sie 
+  alternativ auch eine neue Datei mit dieser Paketquelle im Verzeichnis
   `/etc/apt/sources.list.d/` anlegen. Der Name dieser Datei muss dann
   auf `.list` enden, bspw. `skype.list` für die Paketquelle zum
   Kommunikationsprogramm 'Skype'.
