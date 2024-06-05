@@ -21,19 +21,6 @@ vollständig in einer separaten Zeile.
 image::werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/sources-list-nano.png[id="fig.sources-list-nano", width="50%"]
 
 // Indexeinträge
-(((apt, edit-sources)))
-(((/etc/apt/sources.list, Änderungen vornehmen)))
-(((Paketquelle, ändern)))
-Änderungen nehmen Sie mit Hilfe eines beliebigen Texteditors als
-Benutzer `root` vor, bspw. mittels 'vim', 'emacs' oder 'nano' (siehe
-<<fig.sources-list-nano>>). Das Kommando `apt` verfügt zudem über ein
-Unterkommando namens `edit-sources`, welches Sie ebenfalls dahin bringt.
-Es nutzt den von Ihnen konfigurierten Texteditor. Haben Sie darin die
-Syntaxhervorhebung aktiviert, erfassen Sie die Struktur der einzelnen
-Einträge leichter und bemerken sofort fehlerhafte Änderungen durch eine
-entsprechende Einfärbung des Textes.
-
-// Indexeinträge
 (((Paketquelle,auskommentieren)))
 (((Paketquelle,entfernen)))
 (((Paketquelle,hinzufügen)))

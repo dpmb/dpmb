@@ -12,10 +12,11 @@
 
 Die Paketquellen sind in der Datei `/etc/apt/sources.list` sowie den Dateien 
 unter dem Verzeichnis `/etc/apt/sources.list.d/*` hinterlegt. Alle diese 
-Dateien sind Textdateien, die Sie mit Hilfe eines Texteditors direkt bearbeiten 
-können, bspw. mit Nano, Vim oder Emacs (siehe <<fig.vim-sources-list>> für Vim).
+Dateien sind Textdateien, die Sie als Benutzer `root` mit Hilfe eines 
+Texteditors direkt bearbeiten können, bspw. mit Nano, Vim oder Emacs (siehe 
+<<fig.vim-sources-list>> für Vim).
 
-.Editieren der Datei /etc/apt/sources.list im Texteditor Vim
+.Editieren der Datei `/etc/apt/sources.list` im Texteditor Vim
 image::werkzeuge/paketquellen-und-werkzeuge/vim-sources-list.png[id="fig.vim-sources-list",width="80%"]
 
 Das Werkzeug APT kennt ein Unterkommando `edit-sources`, welches die Datei
