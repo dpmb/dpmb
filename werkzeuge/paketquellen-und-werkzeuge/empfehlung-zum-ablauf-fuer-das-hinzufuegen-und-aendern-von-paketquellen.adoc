@@ -13,17 +13,16 @@
 (((aptitude, update)))
 (((/etc/apt/sources.list, Paketquelle nachtragen)))
 (((/etc/apt/sources.list.d/, Paketquelle nachtragen)))
-Wie bereits in <<paketquellen>> ausgeführt, sind die Datei
-`/etc/apt/sources.list` und das Verzeichnis `/etc/apt/sources.list.d/`
-Dreh- und Angelpunkte für alle verwendeten Paketquellen. Erfolgen von
-Ihnen oder einem Programm Änderungen darin, muss die Paketverwaltung
-anschließend noch über diese Modifikation informiert werden, damit sie
-den Paketcache anhand der aktualisierten Liste von Repositories auf den
-neuesten Stand bringt. Die Paketverwaltung erkennt die Änderungen nicht
-von sich aus und wartet auf ihren ``Anstoß''. Danach synchronisiert sie
-die lokal vorliegenden Informationen über die verfügbaren Pakete und
-deren Abhängigkeiten (siehe <<paketcache>>) mit den konfigurierten
-Paketquellen (<<paketquellen>>).
+Wie bereits in <<paketquellen-benutzte-paketquellen>> ausgeführt, sind die 
+darin benannten Einträge Dreh- und Angelpunkt für alle verwendeten 
+Paketquellen. Erfolgen von Ihnen oder einem Programm Änderungen darin, muss 
+die Paketverwaltung anschließend noch über diese Modifikation informiert 
+werden, damit sie den Paketcache anhand der aktualisierten Liste von 
+Repositories auf den neuesten Stand bringt. Die Paketverwaltung erkennt die 
+vorgenommenen Änderungen nicht von sich aus und wartet auf ihren ``Anstoß''. 
+Danach synchronisiert sie die lokal vorliegenden Informationen über die 
+verfügbaren Pakete und deren Abhängigkeiten (siehe <<paketcache>>) mit den 
+konfigurierten Paketquellen.
 
 Wir empfehlen Ihnen zur Aktualisierung den folgenden Ablauf:
 
@@ -33,10 +32,9 @@ Wir empfehlen Ihnen zur Aktualisierung den folgenden Ablauf:
 
 . Tragen Sie die neuen oder veränderten Paketquellen nach (siehe
   <<paketquellen-eintragen-und-aendern>>) und speichern diese Änderungen 
-  ab. Wenn Sie lediglich eine neue Paketquelle hinzufügen, können Sie 
-  alternativ auch eine neue Datei mit dieser Paketquelle im Verzeichnis
-  `/etc/apt/sources.list.d/` anlegen. Der Name dieser Datei muss dann
-  auf `.list` enden, bspw. `skype.list` für die Paketquelle zum
+  ab. Wenn Sie lediglich eine neue Paketquelle hinzufügen, bietet sich dazu 
+  das Verzeichnis `/etc/apt/sources.list.d/` an. Der Name dieser Datei muss 
+  dann auf `.list` enden, bspw. `skype.list` für die Paketquelle zum
   Kommunikationsprogramm 'Skype'.
 
 . Sofern dies _keine_ offiziellen Debian-Repositories sind, verifizieren
@@ -47,9 +45,9 @@ Wir empfehlen Ihnen zur Aktualisierung den folgenden Ablauf:
   mitgelieferten Schlüsseln ihrer Debian-Installation. 
 
 . Aktualisieren Sie die lokalen Paketlisten mit einem der Kommandos
-  namens `apt-get update`, `aptitude update` oder seit Debian 8 'Jessie'
-  auch mit `apt update`. Bitte beachten Sie dazu auch unsere Anmerkungen
-  unter ``Liste der verfügbaren Pakete aktualisieren'' in
+  namens `apt-get update`, `apt update` oder `aptitude update`. Bitte 
+  beachten Sie dazu auch unsere Anmerkungen unter 
+  ``Liste der verfügbaren Pakete aktualisieren'' in 
   <<liste-der-verfuegbaren-pakete-aktualisieren>>. Handelt es sich um ein
   Upgrade auf eine neue Version Ihrer Distribution, lesen Sie bitte dazu
   zusätzlich unter ``Distribution aktualisieren'' in
@@ -70,11 +68,11 @@ wir genauer in <<eintraege-mit-add-apt-repository-im-griff-behalten>>.
 
 Im Bedarfsfall können Sie auch auf den Stand vor Ihren Veränderungen
 zurückgreifen. Sollte dies erforderlich sein, restaurieren Sie die im
-ersten Schritt angelegte Sicherheitskopie oder -- falls Sie nur eine
-neue Datei im Verzeichnis `/etc/apt/sources.list.d/` angelegt haben,
-löschen Sie diese -- und führen das Kommando `apt-get update` respektive
-`aptitude update` erneut aus. Seit Debian 8 'Jessie' ist auch der Aufruf
-`apt update` zulässig.
+ersten Schritt angelegte Sicherheitskopie oder löschen die zusätzliche, 
+zuvor angelegte Datei im Verzeichnis `/etc/apt/sources.list.d/`. 
+Anschließend führen Sie das Kommando `apt-get update`, `apt update` 
+oder `aptitude update` erneut aus und gelangen somit auf den vorherigen 
+Stand zurück.
 
 [TIP]
 .Versionierung statt manuellem Backup
