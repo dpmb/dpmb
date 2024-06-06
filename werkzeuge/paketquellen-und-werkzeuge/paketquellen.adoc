@@ -6,6 +6,7 @@
 [[paketquellen]]
 === Paketquellen ===
 
+[[paketquellen-begriff-und-hintergrund]]
 ==== Begriff und Hintergrund ====
 
 // Stichworte für den Index
@@ -43,6 +44,7 @@ weitestgehend flächendeckenden Verfügbarkeit des Internets stattdessen
 FTP- und HTTP-Server bevorzugt. Damit sind die von Ihnen genutzten 
 Paketquellen stets aktuell.
 
+[[paketquellen-benutzte-paketquellen]]
 ==== Benutzte Paketquellen ====
 
 // Stichworte für den Index
@@ -76,6 +78,7 @@ kommt genau dann zum Tragen, wenn Ihre primäre Paketquelle nicht in der
 gewohnten Art und Weise zur Verfügung steht, bspw. bei einem Ausfall des
 Internetzugangs oder der Wartung des von Ihnen bevorzugten Paketspiegels.
 
+[[paketquellen-aufbau-und-struktur]]
 ==== Aufbau und Struktur einer Paketquelle ====
 
 // Stichworte für den Index
