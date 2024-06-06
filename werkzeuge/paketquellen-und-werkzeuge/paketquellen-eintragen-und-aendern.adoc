@@ -30,6 +30,6 @@ syntaktische Korrektheit hin überprüft. Damit vermeiden Sie fehlerhafte
 Einträge für Paketquellen.
 
 Wie Sie die Liste der Paketquellen selbst auf Korrektheit prüfen, erklären
-wir in Abschnitt <<eintrag-pruefen>> genauer.
+wir in <<eintrag-pruefen>> genauer.
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/paketquellen-eintragen-und-aendern.adoc
