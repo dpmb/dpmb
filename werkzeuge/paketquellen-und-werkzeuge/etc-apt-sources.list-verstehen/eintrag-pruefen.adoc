@@ -1,0 +1,18 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/eintrag-pruefen.adoc
+
+// Baustelle: Notizen
+
+[[eintrag-pruefen]]
+==== Einen Eintrag auf syntaktische Korrektheit prüfen ====
+
+// Indexeinträge
+(((/etc/apt/sources.list, Eintrag auf syntaktische Korrektheit prüfen)))
+
+* ToDo:
+** wie überprüfe ich, ob ein Eintrag für eine Paketquelle syntaktisch korrekt ist?
+* Hintergrund:
+** fehlerhafte Einträge sind die Ursache dafür, dass die Paketverwaltung die Paketliste nicht beziehen kann
+** wie prüfe ich automatisiert, ob darin Fehler sind
+** `apt edit-sources` macht das nach dem Ändern, aber womit?
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/eintrag-pruefen.adoc
