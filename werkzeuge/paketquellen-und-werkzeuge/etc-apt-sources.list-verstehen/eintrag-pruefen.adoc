@@ -1,18 +1,116 @@
 // Datei: ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/eintrag-pruefen.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[eintrag-pruefen]]
 ==== Einen Eintrag auf syntaktische Korrektheit prüfen ====
 
 // Indexeinträge
 (((/etc/apt/sources.list, Eintrag auf syntaktische Korrektheit prüfen)))
+(((apt, update)))
+(((apt-get, indextargets)))
+(((apt-get, update)))
+(((apt-get, --no-download update)))
 
-* ToDo:
-** wie überprüfe ich, ob ein Eintrag für eine Paketquelle syntaktisch korrekt ist?
-* Hintergrund:
-** fehlerhafte Einträge sind die Ursache dafür, dass die Paketverwaltung die Paketliste nicht beziehen kann
-** wie prüfe ich automatisiert, ob darin Fehler sind
-** `apt edit-sources` macht das nach dem Ändern, aber womit?
+Beim Ergänzen oder Ändern von Einträgen von Paketquellen können uns Fehler 
+unterlaufen, die dazu führen, dass die lokalen Paketlisten nicht mehr sauber 
+mit den Listen vom Paketmirror abgeglichen und aktualisiert werden. 
+Üblicherweise sind das simple Schreibfehler -- fehlende Leerzeichen oder auch 
+falsche Namen der genutzten Veröffentlichung. Um diesen Fehlern auf die Spur 
+zu kommen, verfügen bislang weder APT, noch `apt-get` und `aptitude` über ein 
+spezifisches Unterkommando, mit dem sich die einzelnen Einträge auf korrekte 
+Schreibweise prüfen lassen.
+
+Daher bleiben nur die folgenden Workarounds:
+
+`apt update` und `apt-get update`:: 
+Führe die Aktualisierung der lokalen Paketlisten durch. Geben `apt` und 
+`apt-get` dabei keine Fehler aus, sind die Einträge fehlerfrei.
+
+`apt-get --no-download update`::
+Führe die Aktualisierung der lokalen Paketlisten durch, lade aber keine 
+Paketlisten herunter. Gibt `apt-get` dabei keine Fehler aus, sind die 
+Einträge fehlerfrei. Einen fehlerhaften Eintrag in Form eines fehlenden 
+Leerzeichens bemängelt `apt-get` wie folgt:
++
+.Fehler in der Datei `/etc/apt/sources.list` aufspüren
+----
+# apt-get --no-download update
+E: Typ »debhttp://deb.debian.org/debian/« in Zeile 1 der Quellliste /etc/apt/sources.list ist unbekannt.
+E: Die Liste der Quellen konnte nicht gelesen werden.
+#
+----
+
+`apt-get indextargets`:: 
+Gedacht ist das Unterkommando als Schnittstelle für externe Werkzeuge, die 
+mit APT arbeiten. Gemäß Manpage zu `apt-get` zeigt es damit "eine Liste im 
+Deb822-Format mit Informationen über alle Datendateien (auch als Indexziele 
+bekannt) an, die `apt-get` update herunterladen würde." Das gelingt nur, 
+wenn die Datei keine groben Fehler beinhaltet, bspw. fehlende Leerzeichen 
+zwischen dem Pakettyp und dem Paketmirror. Fehlerhafte Angaben in 
+Distributionsbereichen kann es nicht aufspüren, ignoriert dann aber den
+gesamten Eintrag.
++
+Zusätzlich "unterstützt [`apt-get`] eine `--format`-Option, um das 
+Ausgabeformat zu ändern und auch um Zeilen der Standardausgabe zum Filtern 
+der Datensätze zu akzeptieren." 
++
+.Informationen zu den Paketquellen anzeigen (Auszug)
+----
+# apt-get indextargets
+
+MetaKey: contrib/binary-amd64/Packages
+ShortDesc: Packages
+Description: http://deb.debian.org/debian bookworm-updates/contrib amd64 Packages
+URI: http://deb.debian.org/debian/dists/bookworm-updates/contrib/binary-amd64/Packages
+Filename: /var/lib/apt/lists/deb.debian.org_debian_dists_bookworm-updates_contrib_binary-amd64_Packages
+Optional: no
+KeepCompressed: no
+Codename: bookworm-updates
+Label: Debian
+Origin: Debian
+Suite: stable-updates
+Trusted: yes
+Version: 12-updates
+Architecture: amd64
+Base-URI: http://deb.debian.org/debian/dists/bookworm-updates/
+By-Hash: yes
+Component: contrib
+CompressionTypes: xz bz2 lzma gz lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bookworm-updates
+Repo-URI: http://deb.debian.org/debian/
+Site: http://deb.debian.org/debian
+Sourcesentry: /etc/apt/sources.list:9
+Target-Of: deb
+
+...
+#
+----
++
+Um aus der Ausgabe die berücksichtigten Ressourcen herauszufiltern, bietet 
+sich eine Kombination aus `apt-get` und `grep` wie folgt an:
++
+.Genutzte Paketquellen herausfiltern
+----
+# apt-get indextargets | grep Description
+Description: http://deb.debian.org/debian bookworm/main Sources
+Description: http://deb.debian.org/debian bookworm/contrib Sources
+Description: http://deb.debian.org/debian bookworm/non-free-firmware Sources
+Description: http://deb.debian.org/debian bookworm/main amd64 Packages
+Description: http://deb.debian.org/debian bookworm/main i386 Packages
+Description: http://deb.debian.org/debian bookworm/main Translation-de_DE
+Description: http://deb.debian.org/debian bookworm/main Translation-de
+Description: http://deb.debian.org/debian bookworm/main Translation-en
+Description: http://deb.debian.org/debian bookworm/main amd64 Contents (deb)
+Description: http://deb.debian.org/debian bookworm/main i386 Contents (deb)
+...
+#
+----
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/eintrag-pruefen.adoc
