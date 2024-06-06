@@ -30,4 +30,7 @@ include::eintraege-fuer-quellpakete.adoc[]
 // Einträge für Deutschland
 include::eintraege-fuer-deutschland.adoc[]
 
+// Einen Eintrag auf syntaktische Korrektheit prüfen
+include::eintrag-pruefen.adoc[]
+
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/etc-apt-sources.list-verstehen.adoc
