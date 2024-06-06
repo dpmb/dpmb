@@ -30,8 +30,9 @@ die lokale Paketdatenbank (siehe ``Distribution aktualisieren'' in
 <<distribution-aktualisieren>>).
 
 Um hingegen zusätzlich die Pakete aus weiteren Paketbereichen wie bspw.
-_contrib_ und _non-free_ zu verwenden, ändern Sie den Eintrag auf das
-Folgende, hier wiederum mit expliziter Angabe des Aliasnamens _bookworm_:
+_contrib_, _non-free_ und _non-free-firmware_ zu verwenden, ändern Sie 
+den Eintrag auf das Folgende, hier wiederum mit expliziter Angabe des 
+Aliasnamens _bookworm_:
 
 ----
 deb http://ftp.de.debian.org/debian/ bookworm main contrib non-free non-free-firmware
@@ -40,7 +41,7 @@ deb http://ftp.de.debian.org/debian/ bookworm main contrib non-free non-free-fir
 In welcher Reihenfolge Sie die einzelnen, gewünschten Paketbereiche
 angeben, spielt keine Rolle. Üblich ist jedoch die Abfolge anhand des
 Freiheitsgrades der Softwarelizenz in der Form von _main contrib
-non-free_.
+non-free non-free-firmware_.
 
 [TIP]
 .Auswahl eines Paketmirrors
