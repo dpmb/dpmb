@@ -9,24 +9,27 @@
 (((apt, edit-sources)))
 (((Paketquelle ändern)))
 (((Paketquelle eintragen)))
-
-Die Paketquellen sind in der Datei `/etc/apt/sources.list` sowie den Dateien 
-unter dem Verzeichnis `/etc/apt/sources.list.d/*` hinterlegt. Alle diese 
-Dateien sind Textdateien, die Sie als Benutzer `root` mit Hilfe eines 
-Texteditors direkt bearbeiten können, bspw. mit Nano, Vim oder Emacs (siehe 
+Alle in <<paketquellen-benutzte-paketquellen>> benannten Dateien sind 
+Textdateien, die Sie als Benutzer `root` mit Hilfe eines Texteditors 
+direkt bearbeiten, bspw. mit Nano, Vim oder Emacs (siehe 
 <<fig.vim-sources-list>> für Vim).
 
 .Editieren der Datei `/etc/apt/sources.list` im Texteditor Vim
 image::werkzeuge/paketquellen-und-werkzeuge/vim-sources-list.png[id="fig.vim-sources-list",width="80%"]
 
-Das Werkzeug APT kennt ein Unterkommando `edit-sources`, welches die Datei
-`/etc/apt/sources.list` wiederum in einem Texteditor ihrer Wahl zur weiteren 
-Bearbeitung aufruft. Speichern Sie ihre Änderungen, erfolgt noch ein 
-zusätzlicher Schritt: die Inhalte der Datei werden auf syntaktische Korrektheit 
-hin überprüft. Damit vermeiden Sie fehlerhafte Einträge für Paketquellen.
+Das Werkzeug *APT* kennt ein Unterkommando `edit-sources`:
 
 ----
 # apt edit-sources
 ----
+
+Es öffnet die Datei `/etc/apt/sources.list` wiederum in einem Texteditor 
+ihrer Wahl zur weiteren Bearbeitung. Speichern Sie ihre Änderungen, 
+erfolgt noch ein zusätzlicher Schritt: die Inhalte der Datei werden auf 
+syntaktische Korrektheit hin überprüft. Damit vermeiden Sie fehlerhafte 
+Einträge für Paketquellen.
+
+Wie Sie die Liste der Paketquellen selbst auf Korrektheit prüfen, erklären
+wir in Abschnitt <<eintrag-pruefen>> genauer.
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/paketquellen-eintragen-und-aendern.adoc
