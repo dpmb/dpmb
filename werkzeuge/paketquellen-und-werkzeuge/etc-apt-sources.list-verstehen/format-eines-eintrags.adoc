@@ -39,8 +39,7 @@ ein Netzwerkdateisystem wie AFS, NFS oder SMB
 * `https`: die Installationsquelle ist ein HTTPS-Server
 * `ftp`: die Installationsquelle ist ein FTP-Server
 * `copy`: identisch zum Eintrag `file`, aber die bezogenen Debianpakete
-werden zusätzlich im lokalen Verzeichnis `/var/cache/apt/archives/`
-abgelegt
+werden zusätzlich im Paketcache abgelegt, der sich unter `/var/cache/apt/archives/` befindet
 * `mirror`: Auswahl einer Installationsquelle anhand der GeoIP des
 Servers (siehe <<paketquellen-ueber-geoip-auswaehlen>>)
 
@@ -60,7 +59,7 @@ verlangen.
 
 Komponente:: 
 bestimmt den Distributionsbereich, d.h. bspw. bei Debian _main_,
-_contrib_ oder _non-free_. Ausführlicher gehen wir darauf in
-<<distributionsbereiche>> ein.
+_contrib_, _non-free_ oder _non-free-firmware_. Ausführlicher gehen 
+wir darauf in <<distributionsbereiche>> ein.
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/format-eines-eintrags.adoc
