@@ -28,5 +28,7 @@ Paketabhängigkeiten möglichst problemlos aufgelöst werden können.
 #
 ----
 
+Dass, was oben mit dem Unterkommando `install` gezeigt wurde, geht auch
+mit den anderen Unterkommandos wie bspw. `remove`, `purge` und `upgrade`.
 
 // Datei (Ende): ./praxis/mehrere-pakete-in-einem-schritt-aendern/mit-apt-get.adoc
