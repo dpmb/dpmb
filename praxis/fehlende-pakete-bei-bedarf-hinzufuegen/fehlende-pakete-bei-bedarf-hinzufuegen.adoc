@@ -5,6 +5,8 @@
 [[fehlende-pakete-bei-bedarf-hinzufuegen]]
 == Fehlende Pakete bei Bedarf hinzufügen ==
 
+// Schlagworte für den Index
+(((Softwarepakete, bei Bedarf hinzfügen)))
 Bisher haben wir reguläre Debian-Installationen betrachtet. Hierbei 
 ist der Bestand installierter Software statisch in dem Sinne, dass 
 nur Sie als Systemadministrator entscheiden, wenn Pakete erneuert,
@@ -13,11 +15,11 @@ können Programme daraus nicht benutzt werden und ihre Shell macht
 Sie darauf mit einem passenden Hinweis aufmerksam.
 
 Ändert sich der Bedarf, bspw. indem neue Hardware hinzukommt, wäre es
-cool, wenn das Debian-System diesen Bedarf erkennen würde und passend
-darauf reagieren könnte. Gleiches gilt für Software, deren Fehlen im
-laufenden Betrieb bemerkt wird, bspw. indem das entsprechende Paket
-vorgeschlagen wird, in welchem sich die Software befindet. Womit 
-beide Szenarien umsetzbar sind, lesen Sie nachfolgend.
+cool, wenn das Debian-System diesen Bedarf erkennen würde und 
+zumindest passend darauf reagieren könnte. Gleiches gilt für Software, 
+deren Fehlen im laufenden Betrieb bemerkt wird, bspw. indem ihnen das 
+entsprechende Paket vorgeschlagen wird, in welchem sich die Software 
+befindet. Womit beide Szenarien umsetzbar sind, lesen Sie nachfolgend.
 
 // - bei neuer Hardware
 include::neue-hardware.adoc[]
