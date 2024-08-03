@@ -12,15 +12,12 @@ hinzugefügt oder entfernt werden. Ist ein Paket nicht installiert,
 können Programme daraus nicht benutzt werden und ihre Shell macht 
 Sie darauf mit einem passenden Hinweis aufmerksam.
 
-** Liste der installierte Pakete ist statisch, d.h. ändert sich nicht im
-   laufenden Betrieb
-
-* Bedarf ändert sich:
-** neue Hardware kommt hinzu
-** Software fehlt bzw. wird benötigt
-
-* nachfolgend vorgestellte Pakete zeigen, in welchem Rahmen eine
-Reaktion auf diese Bedarfsänderung möglich ist
+Ändert sich der Bedarf, bspw. indem neue Hardware hinzukommt, wäre es
+cool, wenn das Debian-System diesen Bedarf erkennen würde und passend
+darauf reagieren könnte. Gleiches gilt für Software, deren Fehlen im
+laufenden Betrieb bemerkt wird, bspw. indem das entsprechende Paket
+vorgeschlagen wird, in welchem sich die Software befindet. Womit 
+beide Szenarien umsetzbar sind, lesen Sie nachfolgend.
 
 // - bei neuer Hardware
 include::neue-hardware.adoc[]
