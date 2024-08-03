@@ -21,11 +21,11 @@ Textoberfläche bei den Vormerkungen anwenden (siehe dazu
 [frame="topbot",options="header",cols="1,9",id="tab.aptitude-optionen"]
 |====
 | Taste | Bedeutung
-| `+paket` | Paket installieren ('install')
-| `-paket` | Paket entfernen ('remove')
-| `_paket` | Paket vollständig inklusive Konfigurationsdateien entfernen ('purge')
-| `:paket` | Paketversion behalten ('keep')
-| `=paket` | Paketversion dauerhaft beibehalten ('hold')
+| `+`'paketname' | Paket installieren ('install')
+| `-`'paketname' | Paket entfernen ('remove')
+| `_`'paketname' | Paket vollständig inklusive Konfigurationsdateien entfernen ('purge')
+| `:`'paketname' | Paketversion behalten ('keep')
+| `=`'paketname' | Paketversion dauerhaft beibehalten ('hold')
 |====
 
 Jeder der nachfolgend genannten Aufrufe sorgt dafür, dass Sie das Paket
