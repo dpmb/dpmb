@@ -5,8 +5,13 @@
 [[fehlende-pakete-bei-bedarf-hinzufuegen]]
 == Fehlende Pakete bei Bedarf hinzufügen ==
 
-* bisher: 
-** Softwareauswahl/Pakete ist fest
+Bisher haben wir reguläre Debian-Installationen betrachtet. Hierbei 
+ist der Bestand installierter Software statisch in dem Sinne, dass 
+nur Sie als Systemadministrator entscheiden, wenn Pakete erneuert,
+hinzugefügt oder entfernt werden. Ist ein Paket nicht installiert,
+können Programme daraus nicht benutzt werden und ihre Shell macht 
+Sie darauf mit einem passenden Hinweis aufmerksam.
+
 ** Liste der installierte Pakete ist statisch, d.h. ändert sich nicht im
    laufenden Betrieb
 
