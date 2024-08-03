@@ -6,6 +6,13 @@
 
 === Neue Software ===
 
+==== Fehlendes sofort installieren ====
+
+// Stichworte für den Index
+(((Debianpaket, packagekit-command-not-found)))
+
+* Installation bei Benennung: 'packagekit-command-not-found' <<Debian-Paket-packagekit-command-not-found>>
+
 ==== Empfehlungen mittels `command-not-found` ====
 
 // Stichworte für den Index
@@ -15,5 +22,8 @@
   Aufruf auf der Kommandozeile den Hinweis bekommen, welches Paket
   installiert werden müsste, für den ist vermutlich das Paket
   'command-not-found' <<Debian-Paket-command-not-found>> das richtige.
+
+* was macht das genau?
+* was braucht das?
 
 // Datei (Ende): ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/neue-software.adoc
