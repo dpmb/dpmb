@@ -2,16 +2,20 @@
 
 // Baustelle: Notizen
 
-=== `aptitude` ===
+[[mehrere-pakete-in-einem-schritt-aendern-mit-aptitude]]
+=== Mit `aptitude` ===
 
 // Stichworte für den Index
 (((Paketaktionen, Paketliste)))
 (((Paketaktionen, Muster)))
 
 Im Vergleich zu APT hat `aptitude` deutlich mehr auf dem Kasten. Es
-versteht bspw. verschiedene, zusätzliche *Optionen beim Aufruf*. Diese
-Optionen sind identisch zu den Tasten, die Sie in der Textoberfläche bei
-den Vormerkungen anwenden (siehe <<mit-aptitude-vormerkungen-machen>>).
+versteht hierbei nicht nur die Angabe mehrerer Pakete im Aufruf 
+(analog zu APT wie in <<mehrere-pakete-in-einem-schritt-aendern-mit-apt>> 
+beschrieben), sondern auch verschiedene, zusätzliche *Optionen beim 
+Aufruf*. Diese Optionen sind identisch zu den Tasten, die Sie in der 
+Textoberfläche bei den Vormerkungen anwenden (siehe dazu 
+<<mit-aptitude-vormerkungen-machen>>).
 
 .Zusätzliche Optionen für den Aufruf bei `aptitude`
 [frame="topbot",options="header",cols="1,9",id="tab.aptitude-optionen"]
