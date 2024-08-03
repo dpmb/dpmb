@@ -10,6 +10,7 @@
 (((Debianpaket, isenkram)))
 (((Debianpaket, isenkram-cli)))
 (((isenkram, Integration in tasksel)))
+(((isenkram-lookup)))
 
 Die Auswahl der installierten Pakete auf Ihrem System orientiert sich an
 den Hardwarekomponenten, die im System verbaut wurden und in Benutzung
@@ -38,6 +39,23 @@ ToDo:
 ** wie klinkt es sich in 'tasksel' ein
 * was macht das alles
 * wie benutzt man das
-** Benutzerschnittstelle: Paket 'isenkram-cli' <<Debian-Paket-isenkram-cli>>
+** Benutzerschnittstelle `isenkram-lookup` aus Paket 'isenkram-cli' <<Debian-Paket-isenkram-cli>>
+
+.Module mit `isenkram-lookup` finden
+----
+$ isenkram-lookup
+bluez
+cheese
+ethtool
+gkrellm-thinkbat
+hdapsd
+media-player-info
+pidgin-blinklight
+thinkfan
+tlp
+tp-smapi-dkms
+tpb
+$
+----
 
 // Datei (Ende): ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/neue-hardware.adoc
