@@ -14,8 +14,8 @@
 Die Auswahl der installierten Pakete auf Ihrem System orientiert sich an
 den Hardwarekomponenten, die im System verbaut wurden und in Benutzung
 sind. Ändert sich daran etwas -- bspw. Hardware wird ausgetauscht oder
-hinzugefügt -- werden auch andere Module zur Unterstützung dieser
-Komponente benötigt. 
+hinzugefügt -- werden mitunter auch andere Module zur Unterstützung 
+dieser neuen Komponenten benötigt. 
 
 Etwas mühselig ist es, durch eigene Experimente Gewissheit zu bekommen,
 welche Pakete aufgrund des Komponentenwechsels entfernt und ergänzt
@@ -23,7 +23,8 @@ werden müssen. In diesem Fall kommen die beiden Pakete 'isenkram'
 <<Debian-Paket-isenkram>> und 'isenkram-cli'
 <<Debian-Paket-isenkram-cli>> des norwegischen Entwicklers Petter
 Reinholdtsen ins Spiel. Dieses hat zwar bereits den Status 'stable',
-steht aber unter sehr aktiver Entwicklung <<Isenkram-Reinholdtsen>>. 
+steht aber unter sehr aktiver Entwicklung.
+// <<Isenkram-Reinholdtsen>>. 
 
 Hinter Isenkram verbirgt sich eine Art Benachrichtigungsdienst, der
 überprüft, ob die benötigten Pakete für die neue Hardware bereits auf

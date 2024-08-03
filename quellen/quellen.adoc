@@ -737,7 +737,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[ipkg]]] Itsy Package Management System (IPKG) bei Wikipedia, https://de.wikipedia.org/wiki/IPKG
 
-- [[[Isenkram-Reinholdtsen]]] Isenkram im Blog von Petter Reinholdtsen, http://people.skolelinux.org/pere/blog/tags/isenkram/
+// Blog nicht länger zugreifbar
+// - [[[Isenkram-Reinholdtsen]]] Isenkram im Blog von Petter Reinholdtsen, http://people.skolelinux.org/pere/blog/tags/isenkram/
 
 - [[[Java-Apt]]] Java Annotation Processing Tool, https://metro.java.net/1.5/docs/apt.html
 
