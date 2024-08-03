@@ -69,6 +69,8 @@ $
 ** Werkzeug `isenkram-pkginstall`
 *** aus der Manpage: "locate and install hardware specific packages suitable for the current machine"
 
-* unter Linux laufende Hardware herausfinden: http://linux-hardware.org/
+* unter Linux laufende ... 
+** Hardware herausfinden: http://linux-hardware.org/
+** Drucker identifizieren: https://openprinting.github.io/
 
 // Datei (Ende): ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/neue-hardware.adoc
