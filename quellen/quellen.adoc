@@ -392,6 +392,8 @@
 
 - [[[Debian-Paket-etckeeper]]] Debian-Paket 'etckeeper', https://packages.debian.org/de/stable/etckeeper
 
+- [[[Debian-Paket-firmware-misc-nonfree]]] Debian-Paket 'firmware-misc-nonfree', https://packages.debian.org/de/stable/
+
 - [[[Debian-Paket-flatpak]]] Debian-Paket 'flatpak', https://packages.debian.org/de/stable/flatpak
 
 - [[[Debian-Paket-galternatives]]] Debian-Paket 'galternatives', https://packages.debian.org/de/stable/galternatives
