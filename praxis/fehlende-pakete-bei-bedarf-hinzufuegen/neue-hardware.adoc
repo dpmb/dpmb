@@ -73,7 +73,12 @@ $
 
 * Umgang mit dem Ergebnis:
 ** wie kommt die Auswahl der Pakete zustande?
+*** `isenkram-lookup` liest zuerst alle Werte von `modalias` aus dem 
+Verzeichnis `/proc` und versucht danach, passende Pakete zu diesen 
+`modalias`-Werten zu finden <<modalias>>
 ** wie ist diese Liste zu lesen?
+*** ist alphabetisch anhand der Pakete sortiert
+*** keine Angabe, was das jeweilige Paket macht
 
 ==== Hardware-spezifische Pakete mit `isenkram-pkginstall` lokalisieren ====
 
@@ -117,7 +122,7 @@ Nicht immer ist es einfach, herauszufinden, ob eine gewünschte
 Hardware auf einem Linux-System unterstützt wird. Die folgenden 
 beiden Projekte helfen Ihnen bei der Vorauswahl:
 
-* passende Hardware herausfinden: 'http://linux-hardware.org/' <<LinuxHardware>>
-* passende Drucker identifizieren: 'https://openprinting.github.io/' <<Openprinting>>
+* passende Hardware herausfinden: Linux-Hardware <<LinuxHardware>>
+* passende Drucker identifizieren: OpenPrinting <<Openprinting>>
 
 // Datei (Ende): ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/neue-hardware.adoc
