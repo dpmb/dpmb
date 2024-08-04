@@ -87,10 +87,12 @@ Verzeichnis `/proc` und versucht danach, passende Pakete zu diesen
 
 ==== Fehlende Firmware mit `isenkram-autoinstall-firmware` nachziehen ====
 
-* Werkzeug `isenkram-autoinstall-firmware`
-** aus der Manpage: "user desktop background process to handle new hardware dongles"
-** zuerst mit `isenkram-lookup` passende Kernelmodule/Software identifizieren
-** danach mit `isenkram-autoinstall-firmware` diese Module nachinstallieren
+Mit dem Werkzeug `isenkram-autoinstall-firmware` gleichen Sie den 
+laufenden Linuxkernel mit der Hardware ihres Systems ab und 
+installieren fehlende Pakete für die Komponenten nach. Im folgenden 
+Beispiel ist es das Paket 'firmware-misc-nonfree' 
+<<Debian-Paket-firmware-misc-nonfree>> und daraus das Modul 
+'firmware-realtek-rtl8723cs-bt' für den Realtek-Chipsatz.
 
 .Nachinstallation von Paketen nach Ausführung von `isenkram-autoinstall-firmware`
 ----
