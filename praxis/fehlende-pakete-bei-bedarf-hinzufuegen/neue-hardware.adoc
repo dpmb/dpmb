@@ -14,16 +14,16 @@
 (((isenkram-lookup)))
 (((isenkram-pkginstall)))
 
-Die Auswahl der installierten Pakete auf Ihrem System orientiert sich an
-den Hardwarekomponenten, die im System verbaut wurden und in Benutzung
-sind. Ändert sich daran etwas -- bspw. Hardware wird ausgetauscht oder
-hinzugefügt -- werden mitunter auch andere Module zur Unterstützung 
-dieser neuen Komponenten benötigt. 
+Die Auswahl der installierten Pakete auf Ihrem System orientiert sich 
+an den Hardwarekomponenten, die im System verbaut wurden und in 
+Benutzung sind. Ändert sich daran etwas -- bspw. Hardware wird 
+ausgetauscht oder hinzugefügt -- werden mitunter auch andere 
+Kernelmodule zur Unterstützung dieser neuen Komponenten benötigt. 
 
-Etwas mühselig ist es, durch eigene Experimente Gewissheit zu bekommen,
-welche Pakete aufgrund des Komponentenwechsels entfernt und ergänzt
-werden müssen. In diesem Fall kommen die beiden Pakete 'isenkram'
-<<Debian-Paket-isenkram>> und 'isenkram-cli'
+Etwas mühselig ist es, durch eigene Experimente Gewissheit zu 
+bekommen, welche Pakete aufgrund des Komponentenwechsels entfernt und 
+ergänzt werden müssen. In diesem Fall kommen die beiden Pakete 
+'isenkram' <<Debian-Paket-isenkram>> und 'isenkram-cli'
 <<Debian-Paket-isenkram-cli>> des norwegischen Entwicklers Petter
 Reinholdtsen ins Spiel. Dieses hat zwar bereits den Status 'stable',
 steht aber unter sehr aktiver Entwicklung.
@@ -41,9 +41,17 @@ ToDo:
 ** wie klinkt es sich in 'tasksel' ein
 * was macht das alles
 * wie benutzt man das
-** Benutzerschnittstelle `isenkram-lookup` 
-*** aus Paket 'isenkram-cli' <<Debian-Paket-isenkram-cli>>
-*** aus der Manpage: "look up hardware related packages relevant for this machine"
+
+Das Werkzeug `isenkram-lookup` aus dem Paket 'isenkram-cli' 
+<<Debian-Paket-isenkram-cli>> gleicht die Hardware ihres Systems mit 
+den Einträgen in den Paketlisten ab und sucht daraus die Pakete 
+heraus, die für ihre Maschine relevant sind. Ein Durchlauf auf einem
+Lenovo ThinkPad unter Debian 12.6 'Bookworm' brachte nachfolgende 
+Liste hervor.
+
+* Umgang mit dem Ergebnis:
+** wie kommt die Auswahl der Pakete zustande?
+** wie ist diese Liste zu lesen?
 
 .Module mit `isenkram-lookup` finden
 ----
