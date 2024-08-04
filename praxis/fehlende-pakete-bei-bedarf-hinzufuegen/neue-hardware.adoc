@@ -42,6 +42,8 @@ ToDo:
 * was macht das alles
 * wie benutzt man das
 
+==== Passende Pakete mit `isenkram-lookup` finden ====
+
 Das Werkzeug `isenkram-lookup` aus dem Paket 'isenkram-cli' 
 <<Debian-Paket-isenkram-cli>> gleicht die Hardware ihres Systems mit 
 den Einträgen in den Paketlisten ab und sucht daraus die Pakete 
@@ -73,15 +75,49 @@ $
 ** wie kommt die Auswahl der Pakete zustande?
 ** wie ist diese Liste zu lesen?
 
-** Werkzeug `isenkram-autoinstall-firmware`
-*** aus der Manpage: "user desktop background process to handle new hardware dongles"
-*** zuerst mit `isenkram-lookup` passende Kernelmodule/Software identifizieren
-*** danach mit `isenkram-autoinstall-firmware` diese Module nachinstallieren
-** Werkzeug `isenkram-pkginstall`
-*** aus der Manpage: "locate and install hardware specific packages suitable for the current machine"
+==== Hardware-spezifische Pakete mit `isenkram-pkginstall` lokalisieren ====
 
-* unter Linux laufende ... 
-** Hardware herausfinden: http://linux-hardware.org/
-** Drucker identifizieren: https://openprinting.github.io/
+* Werkzeug `isenkram-pkginstall`
+** aus der Manpage: "locate and install hardware specific packages suitable for the current machine"
+
+==== Fehlende Firmware mit `isenkram-autoinstall-firmware` nachziehen ====
+
+* Werkzeug `isenkram-autoinstall-firmware`
+** aus der Manpage: "user desktop background process to handle new hardware dongles"
+** zuerst mit `isenkram-lookup` passende Kernelmodule/Software identifizieren
+** danach mit `isenkram-autoinstall-firmware` diese Module nachinstallieren
+
+.Nachinstallation von Paketen nach Ausführung von `isenkram-autoinstall-firmware`
+----
+# isenkram-autoinstall-firmware 
+info: looking for firmware file iwl-debug-yoyo.bin requested by kernel
+info: looking for firmware file iwl-debug-yoyo.bin requested by kernel
+...
+info: locating packages with the requested firmware files
+info: determining whether enabling other components is required
+info: trying to install firmware-misc-nonfree
+firmware-realtek-rtl8723cs-bt
+Vormals nicht ausgewähltes Paket firmware-misc-nonfree wird gewählt.
+(Lese Datenbank ... 419694 Dateien und Verzeichnisse sind derzeit installiert.)
+Vorbereitung zum Entpacken von .../firmware-misc-nonfree_20230210-5_all.deb ...
+Entpacken von firmware-misc-nonfree (20230210-5) ...
+Vormals nicht ausgewähltes Paket firmware-realtek-rtl8723cs-bt wird gewählt.
+Vorbereitung zum Entpacken von .../firmware-realtek-rtl8723cs-bt_20181104-2_all.deb ...
+Entpacken von firmware-realtek-rtl8723cs-bt (20181104-2) ...
+firmware-misc-nonfree (20230210-5) wird eingerichtet ...
+firmware-realtek-rtl8723cs-bt (20181104-2) wird eingerichtet ...
+Trigger für initramfs-tools (0.142) werden verarbeitet ...
+update-initramfs: Generating /boot/initrd.img-6.1.0-23-amd64
+#
+----
+
+==== Passende Hardware identifizieren ====
+
+Nicht immer ist es einfach, herauszufinden, ob eine gewünschte 
+Hardware auf einem Linux-System unterstützt wird. Die folgenden 
+beiden Projekte helfen Ihnen bei der Vorauswahl:
+
+* passende Hardware herausfinden: 'http://linux-hardware.org/' <<LinuxHardware>> http://linux-hardware.org/
+* passende Drucker identifizieren: 'https://openprinting.github.io/' <<Openprinting>> https://openprinting.github.io/
 
 // Datei (Ende): ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/neue-hardware.adoc

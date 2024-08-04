@@ -410,6 +410,8 @@
 
 - [[[Debian-Paket-git-dpm]]] Debian-Paket 'git-dpm', https://packages.debian.org/de/stable/git-dpm
 
+- [[[Debian-Paket-gkrellm-thinkbat]]] Debian-Paket 'gkrellm-thinkbat', https://packages.debian.org/de/stable/gkrellm-thinkbat
+
 - [[[Debian-Paket-gnome-packagekit]]] Debian-Paket 'gnome-packagekit', https://packages.debian.org/de/stable/gnome-packagekit
 
 - [[[Debian-Paket-goplay]]] Debian-Paket 'goplay', https://packages.debian.org/de/stable/goplay
@@ -509,6 +511,10 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[Debian-Paket-tasksel]]] Debian-Paket 'tasksel', https://packages.debian.org/de/stable/tasksel
 
 - [[[Debian-Paket-tasksel-data]]] Debian-Paket 'tasksel-data', https://packages.debian.org/de/stable/tasksel-data
+
+- [[[Debian-Paket-tbp]]] Debian-Paket 'tpb', https://packages.debian.org/de/stable/tbp
+
+- [[[Debian-Paket-thinkfan]]] Debian-Paket 'thinkfan', https://packages.debian.org/de/stable/thinkfan
 
 - [[[Debian-Paket-tzdata]]] Debian-Paket 'tzdat', https://packages.debian.org/de/stable/tzdata
 
@@ -781,6 +787,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Lintian]]] Lintian-Projekt, https://lintian.debian.org/
 
+- [[[LinuxHardware]]] LinuxHardware, http://linux-hardware.org/
+
 - [[[LinuxMint]]] Linux Mint, https://www.linuxmint.com/
 
 - [[[LinuxMint-apt]]], LinuxMint: APT for Newbies, https://community.linuxmint.com/tutorial/view/588
@@ -834,6 +842,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[nixcraft-dpkg]]] `dpkg`-Spickzettel im Nixcraft-Blog, http://www.cyberciti.biz/howto/question/linux/dpkg-cheat-sheet.php
 
 - [[[OpenContainer]]] Open Container Format (OCF), https://www.opencontainers.org/
+
+- [[[Openprinting]]] OpenPrinting, https://openprinting.github.io/
 
 - [[[OpenMoko]]] OpenMoko-Projekt, http://www.openmoko.org/
 
