@@ -117,7 +117,7 @@ Nicht immer ist es einfach, herauszufinden, ob eine gewünschte
 Hardware auf einem Linux-System unterstützt wird. Die folgenden 
 beiden Projekte helfen Ihnen bei der Vorauswahl:
 
-* passende Hardware herausfinden: 'http://linux-hardware.org/' <<LinuxHardware>> http://linux-hardware.org/
-* passende Drucker identifizieren: 'https://openprinting.github.io/' <<Openprinting>> https://openprinting.github.io/
+* passende Hardware herausfinden: 'http://linux-hardware.org/' <<LinuxHardware>>
+* passende Drucker identifizieren: 'https://openprinting.github.io/' <<Openprinting>>
 
 // Datei (Ende): ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/neue-hardware.adoc
