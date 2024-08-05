@@ -15,15 +15,20 @@ Ressourcen auf, die wir kennen.
 === Man- und Infopages ===
 
 // Stichworte für den Index
+(((Debianpaket, debian-goodies)))
+(((debman)))
+(((debmany)))
 (((Dokumentation, Manpages)))
 (((Dokumentation, Infopages)))
 (((Dokumentation, offline)))
 Um flink ein Kommando oder eine Option nachzuschlagen, geht daher der
 erste Griff zu den `man`- und `info`-pages der Werkzeuge `dpkg`, APT
-und `aptitude`. Diese Hilfeseiten sind zwar meist nur eine Kurzfassung
-der komplexen Werkzeuge, helfen aber im Bedarfsfall trotzdem weiter. Der
-nicht zu unterschätzende Vorteil besteht darin, dass Ihnen diese
-Informationen stets auf jedem Debian-System zur Verfügung stehen. Diese
+und `aptitude`. Diese Hilfeseiten bieten zwar meist nur eine 
+Kurzfassung der komplexen Werkzeuge an, helfen aber im Bedarfsfall 
+trotzdem weiter. 
+
+Der nicht zu unterschätzende Vorteil besteht darin, dass Ihnen diese
+Informationen stets auf jedem Debian-System zur Verfügung stehen. Die
 Hilfedokumente sind Bestandteil der Pakete und werden mitgeliefert.
 Ausgegliederte Pakete mit Dokumentation installieren Sie bei Bedarf
 einfach nach.
