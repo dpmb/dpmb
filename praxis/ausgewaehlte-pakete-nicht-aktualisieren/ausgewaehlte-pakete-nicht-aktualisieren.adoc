@@ -34,6 +34,44 @@ aufwendiger werden. Bedenken Sie diesen Schritt daher gut.
 
 === Auf der Kommandozeile ===
 
+==== Mit `dpkg` ====
+
+// Stichworte für den Index
+(((dpkg, --get-selections)))
+(((dpkg, --set-selections)))
+
+Das Werkzeug `dpkg` kennt dazu die beiden Optionen `--set-selections`
+zum Setzen einer Markierung und `--get-selections` zum Auslesen einer
+Markierung. Um das Paket 'vrms' <<Debian-Paket-vrms>> zurückzuhalten,
+benutzen Sie den folgenden Aufruf:
+
+.Das Paket 'vrms' zurückhalten
+----
+# echo "vrms hold" | dpkg --set-selections
+#
+----
+
+Den geänderten Status des Pakets zeigen Sie mit einem kombinierten
+Aufruf aus `dpkg` und `grep` wie folgt an:
+
+.Zustand des Pakets 'vrms' anzeigen
+----
+# dpkg --get-selections | grep -E '^vrms'
+vrms						hold
+#
+----
+
+Um die Zurückbehaltung wieder aufzuheben, setzen Sie den hinterlegten
+Wert von 'hold' wieder auf 'install' wie folgt:
+
+.Die Zurückbehaltung des Pakets 'vrms' aufheben
+----
+# echo "vrms install" | dpkg --set-selections
+#
+----
+
+==== Mit `apt-mark` ====
+
 // Stichworte für den Index
 (((apt-mark, hold)))
 (((apt-mark, unhold)))
