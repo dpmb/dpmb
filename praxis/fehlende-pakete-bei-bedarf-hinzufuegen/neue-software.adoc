@@ -6,13 +6,20 @@
 
 === Neue Software ===
 
-==== Fehlendes sofort installieren ====
+==== Ausgangssituation ====
 
-// Stichworte für den Index
-(((Automatische Installation fehlender Software)))
-(((Debianpaket, packagekit-command-not-found)))
+Das Setup auf ihrem Linux-System umfasst stets nur eine Auswahl an 
+Paketen. Wie Sie wissen, installieren Sie fehlende Pakete bei Bedarf
+einfach über die Werkzeuge zur Paketverwaltung nach.
 
-* Installation bei Benennung: 'packagekit-command-not-found' <<Debian-Paket-packagekit-command-not-found>>
+Geht es hingegen um unbekannte oder fehlende Werkzeuge, ist nicht 
+immer sofort klar, über welches Debianpaket diese bereitgestellt 
+werden. Wie Sie eine manuelle Suche anstoßen, erklären wir Ihnen 
+ausführlich unter 'Paket zu Datei finden' in <<paket-zu-datei-finden>>.
+
+Diesen Schritt zu automatisieren, kann den Prozess der Verwaltung von
+Software vereinfachen und Zeit sparen. Wir klären nachstehend, wie Sie 
+fehlende Pakete identifizieren und diese einspielen lassen.
 
 ==== Empfehlungen mittels `command-not-found` ====
 
@@ -33,7 +40,7 @@
 
 * was braucht das?
 ** `apt-file`, Python 3
-** nach der Installation, hier am Beispiel der Suche nach `yum`:
+** Aktualisierung der internen Werkzeugdatenbank nach der Installation, hier am Beispiel der Suche nach `yum`:
 
 .Erster Aufruf nach der Installation des Paketes 'command-not-found'
 ----
@@ -63,5 +70,13 @@ $
    der Datenbank von `command-not-found` einen kurzen Moment benötigt. 
    Gerade bei langsameren Systemen erfolgt dadurch eine spürbare 
    Verzögerung. 
+
+==== Fehlendes sofort installieren ====
+
+// Stichworte für den Index
+(((Automatische Installation fehlender Software)))
+(((Debianpaket, packagekit-command-not-found)))
+
+* Installation bei Benennung: 'packagekit-command-not-found' <<Debian-Paket-packagekit-command-not-found>>
 
 // Datei (Ende): ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/neue-software.adoc
