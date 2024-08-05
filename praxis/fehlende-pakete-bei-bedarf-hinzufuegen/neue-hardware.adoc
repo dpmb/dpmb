@@ -91,6 +91,7 @@ Hardware-spezifische Pakete, die zur aktuellen Maschine passen.
 
 ToDo:
 
+* kommt beim Debian-Installer zum Einsatz, um zu erkennen, welche Pakete beim Setup benötigt werden
 * wie unterscheiden sich `isenkram-pkginstall` und `isenkram-autoinstall-firmware` voneinander?
 
 ==== Fehlende Firmware mit `isenkram-autoinstall-firmware` nachziehen ====
