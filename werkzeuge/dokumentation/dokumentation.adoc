@@ -29,7 +29,8 @@ Ausgegliederte Pakete mit Dokumentation installieren Sie bei Bedarf
 einfach nach.
 
 Benötigen Sie Hilfe für ein Paket, welches noch nicht installiert ist,
-helfen Ihnen die beiden Werkzeuge `debman` und `debmany` weiter. Diese
+helfen Ihnen die beiden Werkzeuge `debman` und `debmany` aus dem Paket 
+'debian-goodies' <<Debian-Paket-debian-goodies>> weiter. Diese 
 besprechen wir ausführlich in Abschnitt <<manpages-anzeigen-nicht-installiert>>.
 
 === Dokumentation in `/usr/share/doc/` ===
