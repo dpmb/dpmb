@@ -6,5 +6,8 @@
 === Konfigurationsoptionen von APT ===
 
 * Dazu verwenden Sie als Schalter `-o`, gefolgt von der Form `<Schlüssel>=<Wert>`.
+* ToDo:
+** welche Schalter gibt es denn überhaupt
+** Beispielaufruf für die Kommandozeile
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfigurationsoptionen-von-apt.adoc
