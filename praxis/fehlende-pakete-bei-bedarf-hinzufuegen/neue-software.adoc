@@ -24,6 +24,7 @@ fehlende Pakete identifizieren und diese einspielen lassen.
 ==== Empfehlungen mittels `command-not-found` ====
 
 // Stichworte für den Index
+(((command-not-found, apt-file)))
 (((Debianpaket, command-not-found)))
 (((Hinweis zu fehlender Software)))
 
@@ -31,7 +32,8 @@ Für einen Hinweis auf der Kommandozeile, welches Paket noch zusätzlich
 installiert werden müsste, ist das Paket 'command-not-found' 
 <<Debian-Paket-command-not-found>> die passende Lösung. Es sucht nach 
 aktuell nicht installierten, aber in den Repositories verfügbaren 
-Programmen. Dafür benutzt es eine eigene Datenbank. 
+Programmen. Dafür benutzt es eine eigene Datenbank, die im Verzeichnis
+`/var/cache/apt/apt-file` liegt.
 
 Für die Bash und die Zsh funktioniert es automatisch. Diese stellen 
 eine Funktion `command_not_found_handle` bereit, an die das Werkzeug
@@ -74,6 +76,26 @@ Befehl eingetippt haben. Dies beruht darauf, daß das Durchsuchen der
 Paketdatenbank von `command-not-found` einen kurzen Moment benötigt. 
 Bei langsameren Systemen ist daher mit einer spürbaren Verzögerung zu 
 rechnen.
+
+// Stichworte für den Index
+(((Debianpaket, command-not-found)))
+(((update-command-not-found)))
+(((update-command-not-found, -h)))
+(((update-command-not-found, --help)))
+(((update-command-not-found, -n)))
+(((update-command-not-found, --no-apt-file)))
+
+Von Zeit zu Zeit ist die Aktualisierung der Datenbank erforderlich, 
+die 'command-not-found' benutzt. Mit Hilfe des Werkzeugs 
+`update-command-not-found` erfolgt dieser Schritt. Dabei werden die
+Einträge auf den neuesten Stand gebracht, auf die `apt-file` zur
+Recherche zurückgreift.
+
+Derzeit verfügt `update-command-not-found` über die folgenden 
+Schalter:
+
+`-h` (Kurzform für `--help`) :: zeige die Hilfe zu `update-command-not-found` an
+`-n` (Kurzform für `--no-apt-file` :: führe das Kommando `apt-file update` nicht aus, bevor die Datenbank aktualisiert wird.
 
 ==== Fehlendes sofort installieren ====
 
