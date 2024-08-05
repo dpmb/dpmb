@@ -1,6 +1,6 @@
 // Datei: ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/neue-software.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[neue-software]]
 
