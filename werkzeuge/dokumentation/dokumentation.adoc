@@ -8,8 +8,9 @@
 
 Ein einzelnes Werk, welches die Debian-Paketverwaltung in allen seinen
 Facetten behandelt, gibt es unseres Wissens bisher nicht. Das Know-How
-dazu ist über diverse Quellen in unterschiedlichen Qualitätsstufen
-verstreut.
+dazu ist über diverse Quellen in unterschiedlichen Qualitätsstufen und
+Übersetzungen verstreut. Wir listen nachfolgend die verlässlichen 
+Ressourcen auf, die wir kennen.
 
 === Man- und Infopages ===
 
