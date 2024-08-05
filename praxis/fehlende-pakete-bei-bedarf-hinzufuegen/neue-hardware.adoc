@@ -41,7 +41,9 @@ ToDo:
 * wie funktioniert das
 ** wie klinkt es sich in 'tasksel' ein
 * was macht das alles
-* wie benutzt man das
+
+Nachfolgend stellen wir die einzelnen Werkzeuge genauer vor, die sich
+in den Paketen befinden.
 
 ==== Passende Pakete mit `isenkram-lookup` finden ====
 
@@ -83,12 +85,18 @@ Verzeichnis `/proc` und versucht danach, passende Pakete zu diesen
 
 ==== Hardware-spezifische Pakete mit `isenkram-pkginstall` lokalisieren ====
 
-* Werkzeug `isenkram-pkginstall`
-** aus der Manpage: "locate and install hardware specific packages suitable for the current machine"
+Das Werkzeug `isenkram-pkginstall` aus dem Paket 'isenkram-cli' 
+<<Debian-Paket-isenkram-cli>> lokalisiert und installiert 
+Hardware-spezifische Pakete, die zur aktuellen Maschine passen.
+
+ToDo:
+
+* wie unterscheiden sich `isenkram-pkginstall` und `isenkram-autoinstall-firmware` voneinander?
 
 ==== Fehlende Firmware mit `isenkram-autoinstall-firmware` nachziehen ====
 
-Mit dem Werkzeug `isenkram-autoinstall-firmware` gleichen Sie den 
+Mit dem Werkzeug `isenkram-autoinstall-firmware` aus dem Paket 
+'isenkram-cli' <<Debian-Paket-isenkram-cli>> gleichen Sie den 
 laufenden Linuxkernel mit der Hardware ihres Systems ab und 
 installieren fehlende Pakete für die Komponenten nach. Im folgenden 
 Beispiel ist es das Paket 'firmware-misc-nonfree' 
@@ -122,7 +130,7 @@ update-initramfs: Generating /boot/initrd.img-6.1.0-23-amd64
 ==== Passende Hardware identifizieren ====
 
 Nicht immer ist es einfach, herauszufinden, ob eine gewünschte 
-Hardware auf einem Linux-System unterstützt wird. Die folgenden 
+Hardware auf ihrem Linux-System unterstützt wird. Die folgenden 
 beiden Projekte helfen Ihnen bei der Vorauswahl:
 
 * passende Hardware herausfinden: Linux-Hardware <<LinuxHardware>>
