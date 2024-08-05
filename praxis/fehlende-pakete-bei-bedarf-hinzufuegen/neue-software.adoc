@@ -9,6 +9,7 @@
 ==== Fehlendes sofort installieren ====
 
 // Stichworte für den Index
+(((Automatische Installation fehlender Software)))
 (((Debianpaket, packagekit-command-not-found)))
 
 * Installation bei Benennung: 'packagekit-command-not-found' <<Debian-Paket-packagekit-command-not-found>>
@@ -17,6 +18,7 @@
 
 // Stichworte für den Index
 (((Debianpaket, command-not-found)))
+(((Hinweis zu fehlender Software)))
 
 * Wer nicht gleich das Paket installiert haben will, sondern nur beim
   Aufruf auf der Kommandozeile den Hinweis bekommen, welches Paket
@@ -24,6 +26,20 @@
   'command-not-found' <<Debian-Paket-command-not-found>> das richtige.
 
 * was macht das genau?
+** sucht nach aktuell nicht installierten, aber in den Repositories verfügbaren Programmen
+** funktioniert automatisch für die Bash, für Zsh bedarf es manueller Nacharbeit
+** benutzt Bash-Funktion `command_not_found_handle`
+
 * was braucht das?
+** `apt-file`, Python 3
+** nach der Installation, hier am Beispiel der Suche nach `yum`:
+
+.Erster Aufruf nach der Installation des Paketes 'command-not-found'
+----
+$ yum
+command-not-found Datenbank konnte nicht gefunden werden. Führen Sie »sudo apt update« aus, um sie zu füllen.
+yum: Befehl nicht gefunden.
+$
+----
 
 // Datei (Ende): ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/neue-software.adoc
