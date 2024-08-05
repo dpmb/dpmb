@@ -27,20 +27,21 @@ fehlende Pakete identifizieren und diese einspielen lassen.
 (((Debianpaket, command-not-found)))
 (((Hinweis zu fehlender Software)))
 
-* Wer nicht gleich das Paket installiert haben will, sondern nur beim
-  Aufruf auf der Kommandozeile den Hinweis bekommen, welches Paket 
-  noch zusätzlich installiert werden müsste, für den ist das Paket
-  'command-not-found' <<Debian-Paket-command-not-found>> das richtige.
+Für einen Hinweis auf der Kommandozeile, welches Paket noch zusätzlich 
+installiert werden müsste, ist das Paket 'command-not-found' 
+<<Debian-Paket-command-not-found>> die passende Lösung. Es sucht nach 
+aktuell nicht installierten, aber in den Repositories verfügbaren 
+Programmen. Dafür benutzt es eine eigene Datenbank. 
 
-* was macht das genau?
-** sucht nach aktuell nicht installierten, aber in den Repositories verfügbaren Programmen
-** benutzt dafür eine eigene Datenbank 
-** funktioniert automatisch für die Bash und die Zsh 
-** benutzt die Funktion `command_not_found_handle`
+Für die Bash und die Zsh funktioniert es automatisch. Diese stellen 
+eine Funktion `command_not_found_handle` bereit, an die das Werkzeug
+`command-not-found` andockt. Zur Recherche selbst greift es auf Python3
+und das Werkzeug `apt-file` zurück. 
 
-* was braucht das?
-** `apt-file`, Python 3
-** Aktualisierung der internen Werkzeugdatenbank nach der Installation, hier am Beispiel der Suche nach `yum`:
+Nach der Installation von 'command-not-found' ist noch ein initialer 
+Schritt erforderlich: die interne Werkzeugdatenbank muß auf den 
+neuesten Stand gebracht werden. Dazu genügt ein Aufruf von `apt update`.
+Ohne diesen Schritt meldet die Shell bei Ihnen Handlungsbedarf an.
 
 .Erster Aufruf nach der Installation des Paketes 'command-not-found'
 ----
@@ -50,7 +51,10 @@ yum: Befehl nicht gefunden.
 $
 ----
 
-** nach der Aktualisierung der Paketliste mittels `apt update`
+Nach der Aktualisierung der Paketliste mittels `apt update` zeigt sich
+die Shell bereits versöhnlicher und liefert ihnen Vorschläge für 
+passende Pakete mit Werkzeugen mit gleichem oder ähnlich klingendem 
+Namen.
 
 .Ausgabe von 'command-not-found' nach der Aktualisierung
 ----
@@ -64,12 +68,12 @@ Versuche: apt install <deb name>
 $
 ----
 
-* Nachteile
-** es entsteht eine kurze Verzögerung, nachdem Sie einen unbekannten 
-   Befehl eingegeben haben. Dies beruht darauf, dass das Durchsuchen 
-   der Datenbank von `command-not-found` einen kurzen Moment benötigt. 
-   Gerade bei langsameren Systemen erfolgt dadurch eine spürbare 
-   Verzögerung. 
+Diese zusätzliche Recherche ist schick, kommt aber mit einem kleinen
+Nachteil. Es entsteht eine Verzögerung, nachdem Sie einen unbekannten 
+Befehl eingetippt haben. Dies beruht darauf, daß das Durchsuchen der 
+Paketdatenbank von `command-not-found` einen kurzen Moment benötigt. 
+Bei langsameren Systemen ist daher mit einer spürbaren Verzögerung zu 
+rechnen.
 
 ==== Fehlendes sofort installieren ====
 
