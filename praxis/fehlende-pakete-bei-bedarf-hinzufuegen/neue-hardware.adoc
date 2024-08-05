@@ -29,11 +29,12 @@ Reinholdtsen ins Spiel. Dieses hat zwar bereits den Status 'stable',
 steht aber unter sehr aktiver Entwicklung.
 // <<Isenkram-Reinholdtsen>>. 
 
-Hinter Isenkram verbirgt sich eine Art Benachrichtigungsdienst, der
-überprüft, ob die benötigten Pakete für die neue Hardware bereits auf
-ihrem System installiert sind. Falls nicht, wird dieses (automatisch)
-nachgezogen. Dazu klinkt es sich als zusätzliches Modul in die
-Konfiguration von 'tasksel' ein (siehe <<tasksel>>).
+Hinter Isenkram -- dänisch und norwegisch für Eisenwaren ('Hardware') 
+-- verbirgt sich eine Art Benachrichtigungsdienst, der überprüft, ob 
+die benötigten Pakete für die neue Hardware bereits auf ihrem System 
+installiert sind. Falls nicht, wird dieses (automatisch) nachgezogen. 
+Dazu klinkt es sich als zusätzliches Modul in die Konfiguration von 
+'tasksel' ein (siehe <<tasksel>>).
 
 ToDo:
 
