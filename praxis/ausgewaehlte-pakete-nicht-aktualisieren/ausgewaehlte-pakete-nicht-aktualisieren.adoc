@@ -74,13 +74,17 @@ Wert von 'hold' wieder auf 'install' wie folgt:
 
 // Stichworte für den Index
 (((apt-mark, hold)))
+(((apt-mark, showhold)))
 (((apt-mark, unhold)))
-Um ein Paket auf einem bestimmten Versionsstand zu halten, nutzen Sie
-das Werkzeug `apt-mark`. Es kennt das Unterkommando `hold`, um damit das
-dazugehörige Paketflag zu setzen, und `unhold`, um diese Festlegung zu
-widerrufen. Beide Aufrufe akzeptieren als Parameter eine Liste der
-Paketnamen. Die nachfolgenden Ausgaben zeigen das Vorgehen für das Paket
-'wireshark'.
+Zu APT gehört das Werkzeug `apt-mark` aus dem Paket 'apt' 
+<<Debian-Paket-apt>>. Hier kommen die drei Unterkommandos `hold`, 
+`unhold` und `showhold` in Betracht. `apt-mark` akzeptiert als 
+Parameter eine Liste der Paketnamen und kann somit die Aktion für
+mehrere Pakete durchführen. Die nachfolgenden Ausgaben zeigen das 
+Vorgehen für das Paket 'wireshark'.
+
+Das Zurückbehalten eines Pakets gelingt mit dem Unterkommando `hold`
+wie folgt:
 
 .Aufruf von `apt-mark` zum Setzen der Markierung `hold` für das Paket 'wireshark'
 ----
@@ -89,25 +93,23 @@ wireshark auf Halten gesetzt.
 #
 ----
 
+Den Status des Pakets `wireshark` zeigen Sie mit dem Unterkommando 
+`showhold` an:
+
+.Information zum Paket `wireshark`, welches zurückgehalten wird
+----
+# apt-mark showhold wireshark
+wireshark
+#
+----
+
+Um die Zurückbehaltung wieder aufzuheben, rufen Sie `apt-mark` mit 
+dem Unterkommando `unhold` auf:
+
 .Entfernen der Markierung `hold` für das Paket 'wireshark' mittels `apt-mark`
 ----
 # apt-mark unhold wireshark
 Halten-Markierung für wireshark entfernt.
-#
-----
-
-// Stichworte für den Index
-(((apt-mark, showhold)))
-`apt-mark` kennt zudem das Unterkommando `showhold`. Damit lassen Sie
-sich auflisten, welche Pakete auf Ihrem System derzeit auf 'hold'
-gesetzt sind. Geben Sie keine Pakete als Parameter an, werden alle
-Pakete untersucht. Ansonsten berücksichtigt `apt-mark` nur die von Ihnen
-spezifizierten Pakete.
-
-.Auflistung aller Pakete, die gehalten werden
-----
-# apt-mark showhold
-wireshark
 #
 ----
 
