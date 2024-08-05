@@ -21,14 +21,15 @@
 (((Hinweis zu fehlender Software)))
 
 * Wer nicht gleich das Paket installiert haben will, sondern nur beim
-  Aufruf auf der Kommandozeile den Hinweis bekommen, welches Paket
-  installiert werden müsste, für den ist vermutlich das Paket
+  Aufruf auf der Kommandozeile den Hinweis bekommen, welches Paket 
+  noch zusätzlich installiert werden müsste, für den ist das Paket
   'command-not-found' <<Debian-Paket-command-not-found>> das richtige.
 
 * was macht das genau?
 ** sucht nach aktuell nicht installierten, aber in den Repositories verfügbaren Programmen
-** funktioniert automatisch für die Bash, für Zsh bedarf es manueller Nacharbeit
-** benutzt Bash-Funktion `command_not_found_handle`
+** benutzt dafür eine eigene Datenbank 
+** funktioniert automatisch für die Bash und die Zsh 
+** benutzt die Funktion `command_not_found_handle`
 
 * was braucht das?
 ** `apt-file`, Python 3
@@ -41,5 +42,26 @@ command-not-found Datenbank konnte nicht gefunden werden. Führen Sie »sudo apt
 yum: Befehl nicht gefunden.
 $
 ----
+
+** nach der Aktualisierung der Paketliste mittels `apt update`
+
+.Ausgabe von 'command-not-found' nach der Aktualisierung
+----
+$ yum
+Der Befehl 'yum' wurde nicht gefunden, meinten Sie:
+  Befehl 'uum' aus dem deb freewnn-jserver
+  Befehl 'num' aus dem deb quickcal
+  Befehl 'zum' aus dem deb perforate
+  Befehl 'sum' aus dem deb coreutils
+Versuche: apt install <deb name>
+$
+----
+
+* Nachteile
+** es entsteht eine kurze Verzögerung, nachdem Sie einen unbekannten 
+   Befehl eingegeben haben. Dies beruht darauf, dass das Durchsuchen 
+   der Datenbank von `command-not-found` einen kurzen Moment benötigt. 
+   Gerade bei langsameren Systemen erfolgt dadurch eine spürbare 
+   Verzögerung. 
 
 // Datei (Ende): ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/neue-software.adoc
