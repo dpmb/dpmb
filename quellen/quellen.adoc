@@ -707,6 +707,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[GObject-Introspection]]] GObject Introspection Middleware, https://wiki.gnome.org/Projects/GObjectIntrospection
 
+- [[[GoedlDebian]]] Robert Gödl: Debian GNU/Linux 12: Der umfassende Praxiseinstieg, mitp Professional, ISBN-13: 978-3747507698
+
 - [[[gr-non-free-firmware]]] General Resolution: non-free firmware, https://www.debian.org/vote/2022/vote_003
 
 - [[[Graphviz]]] Graphviz -- Graph Visualization Software, http://www.graphviz.org/
