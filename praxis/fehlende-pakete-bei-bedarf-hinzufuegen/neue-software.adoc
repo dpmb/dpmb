@@ -102,7 +102,15 @@ Schalter:
 // Stichworte für den Index
 (((Automatische Installation fehlender Software)))
 (((Debianpaket, packagekit-command-not-found)))
+(((PackageKit)))
+(((pkcon)))
+(((pkmon)))
 
-* Installation bei Benennung: 'packagekit-command-not-found' <<Debian-Paket-packagekit-command-not-found>>
+Für PackageKit <<PackageKit>> gibt es ein zusätzliches Paket namens 
+'packagekit-command-not-found' <<Debian-Paket-packagekit-command-not-found>>.
+Dieses sorgt dafür, dass fehlende Software bei Aufruf auf der 
+Kommandozeile automatisch nachinstalliert wird. Es enthält zudem die
+beiden Werkzeuge `pkcon` und `pkmon` zur Installation und zum 
+Monitoring des Paketbestands über die Kommandozeile.
 
 // Datei (Ende): ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/neue-software.adoc
