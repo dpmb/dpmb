@@ -95,7 +95,7 @@ Derzeit verfügt `update-command-not-found` über die folgenden
 Schalter:
 
 `-h` (Kurzform für `--help`) :: zeige die Hilfe zu `update-command-not-found` an
-`-n` (Kurzform für `--no-apt-file` :: führe das Kommando `apt-file update` nicht aus, bevor die Datenbank aktualisiert wird.
+`-n` (Kurzform für `--no-apt-file`) :: führe das Kommando `apt-file update` nicht aus, bevor die Datenbank aktualisiert wird.
 
 ==== Fehlendes sofort installieren ====
 
