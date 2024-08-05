@@ -156,7 +156,12 @@ bspw. in <<pinning-paketweise-festlegen>>.
 
 ==== cron.daily/apt ====
 
-* Begriff und Nutzen
+// Stichworte für den Index
+(((/etc/cron.daily/apt)))
 
+In dieser Datei sind alle APT-bezogenen Aktionen zusammengestellt, die 
+täglich ausgeführt werden, bspw. eine Aktualisierung der lokalen Liste
+der Pakete mittels `apt update`. Es erfordert einen zusätzlichen 
+Eintrag für Cron in der Datei `/etc/crontab`.
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfigurationsdateien-von-apt.adoc
