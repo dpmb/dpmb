@@ -39,20 +39,30 @@ einbezogen, die es betrifft.
 ==== Auf der Kommandozeile ====
 
 // Stichworte für den Index
+(((apt, upgrade)))
 (((apt-get, upgrade)))
 (((aptitude, dist-upgrade)))
 (((aptitude, install)))
 (((aptitude, upgrade)))
 (((Paket, aktualisieren)))
 (((Paket, Einzelpaket aktualisieren)))
-Hier verstehen `apt-get` und `aptitude` die beiden Unterkommandos
+Hier verstehen `apt-get`, APT und `aptitude` die beiden Unterkommandos
 `upgrade` und `dist-upgrade`, jeweils gefolgt von einer Liste von
-Paketnamen. Ältere Versionen von APT bis Version XYZ können noch nicht
-damit umgehen und ignorieren diese Liste.
+Paketnamen. Ältere Versionen von APT können nicht damit umgehen und 
+ignorieren diese Liste.
 
-.Beispiel für Einzelaktualisierung mit `apt-get upgrade`
+.Beispiel für Einzelaktualisierung von LibreOffice Calc und 'python3-uno' mit `aptitude upgrade`
 ----
-ToDo: Beispiel
+# aptitude upgrade libreoffice-calc python3-uno
+Auflösen der Abhängigkeiten ...                     
+Die folgenden Pakete werden aktualisiert:
+  libreoffice libreoffice-base libreoffice-base-core libreoffice-base-drivers libreoffice-calc 
+  libreoffice-core libreoffice-draw libreoffice-impress libreoffice-math libreoffice-writer python3-uno 
+11 Pakete aktualisiert, 0 zusätzlich installiert, 0 werden entfernt und 29 nicht aktualisiert.
+56,6 MB an Archiven müssen heruntergeladen werden. Nach dem Entpacken werden 0 B zusätzlich belegt sein.
+Möchten Sie fortsetzen? [Y/n/?]
+...
+# 
 ----
 
 [NOTE]
