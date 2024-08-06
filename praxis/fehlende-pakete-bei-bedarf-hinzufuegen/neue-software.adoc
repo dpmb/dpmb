@@ -91,6 +91,12 @@ die 'command-not-found' benutzt. Mit Hilfe des Werkzeugs
 Einträge auf den neuesten Stand gebracht, auf die `apt-file` zur
 Recherche zurückgreift.
 
+.Aufruf von `update-command-not-found`
+----
+# update-command-not-found
+#
+----
+
 Derzeit verfügt `update-command-not-found` über die folgenden 
 Schalter:
 
