@@ -15,7 +15,8 @@ versteht hierbei nicht nur die Angabe mehrerer Pakete im Aufruf
 beschrieben), sondern auch verschiedene, zusätzliche *Optionen beim 
 Aufruf*. Diese Optionen sind identisch zu den Tasten, die Sie in der 
 Textoberfläche bei den Vormerkungen anwenden (siehe dazu 
-<<mit-aptitude-vormerkungen-machen>>).
+<<mit-aptitude-vormerkungen-machen>> und 
+<<ausgewaehlte-pakete-nicht-aktualisieren-mit-aptitude>>).
 
 .Zusätzliche Optionen für den Aufruf bei `aptitude`
 [frame="topbot",options="header",cols="1,9",id="tab.aptitude-optionen"]
