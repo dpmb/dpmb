@@ -192,6 +192,11 @@ Den gesetzten Zustand setzen Sie bspw. über den Menüpunkt ``Aktionen'' ->
 ``Noch ausstehende Aktionen abbrechen'' zurück. Das entspricht dem
 Unterkommando `keep-all`.
 
+==== Mit Nala ====
+
+Nala (siehe <<nala>> kann derzeit keine Zustandsveränderungen auslesen 
+und setzen.
+
 === Graphische Programme ===
 
 ==== Synaptic ====
@@ -206,5 +211,10 @@ gelingt nur bei bereits installierten Paketen.
 
 .Setzen des Paketflags 'hold' in Synaptic
 image::praxis/ausgewaehlte-pakete-nicht-aktualisieren/synaptic-hold.png[id="fig.synaptic-hold", width="50%"]
+
+==== Mit Apper ====
+
+Apper (siehe <<gui-packagekit>> kann derzeit keine Zustandsveränderungen 
+auslesen und setzen.
 
 // Datei (Ende): ./praxis/ausgewaehlte-pakete-nicht-aktualisieren/ausgewaehlte-pakete-nicht-aktualisieren.adoc
