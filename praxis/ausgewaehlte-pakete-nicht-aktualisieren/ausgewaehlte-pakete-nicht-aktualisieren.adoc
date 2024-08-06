@@ -78,7 +78,7 @@ Wert von 'hold' wieder auf 'install' wie folgt:
 (((apt-mark, unhold)))
 Zu APT gehört das Werkzeug `apt-mark` aus dem Paket 'apt' 
 <<Debian-Paket-apt>>. Hier kommen die drei Unterkommandos `hold`, 
-`unhold` und `showhold` in Betracht. `apt-mark` akzeptiert als 
+`unhold` und `showhold` ins Spiel. `apt-mark` akzeptiert als 
 Parameter eine Liste der Paketnamen und kann somit die Aktion für
 mehrere Pakete durchführen. Die nachfolgenden Ausgaben zeigen das 
 Vorgehen für das Paket 'wireshark'.
@@ -113,9 +113,67 @@ Halten-Markierung für wireshark entfernt.
 #
 ----
 
+==== Mit Aptitude ====
+
+// Stichworte für den Index
+(((aptitude, hold)))
+(((aptitude, keep)))
+(((aptitude, keep-all)))
+(((aptitude, show)))
+(((aptitude, unhold)))
+
+Was `dpkg` und APT können, kann Aptitude auch, aber noch etwas 
+detaillierter. Es kennt dazu die fünf Unterkommandos `hold`, `unhold`,
+`keep`, `keep-all` und `show`.
+
+`hold` steht dafür, daß eine aktive Installation, ein Upgrade oder 
+eine Entfernung abgebrochen und verhindert wird, ebenso dass dieses 
+Paket in Zukunft automatisch aktualisiert wird. Es führt zudem dazu, 
+dass dieses Paket von zukünftigen Aufrufen mit `aptitude safe-upgrade` 
+oder `aptitude full-upgrade` ignoriert wird. Das Unterkommando 
+`unhold` hebt diesen Zustand wieder auf.
+
+`keep` bedeutet, daß jede Installation, Entfernung oder Aktualisierung 
+des Pakets abgebrochen und unterbunden wird. Im Gegensatz zu `hold` 
+verhindert dies keine automatischen Upgrades in der Zukunft. Das 
+Unterkommando `keep-all` weitet diese Aktion auf alle Pakete aus.
+
+Die nachfolgenden Ausgaben zeigen das Vorgehen für das Paket 
+'wireshark'. Das Zurückbehalten gelingt mit dem Unterkommando `hold` 
+wie folgt:
+
+.Aufruf von `aptitude` zum Setzen der Markierung `hold` für das Paket 'wireshark'
+----
+# aptitude hold wireshark
+#
+----
+
+Den Status des Pakets `wireshark` zeigen Sie mit dem Unterkommando 
+`show` in Kombination mit `grep` an:
+
+.Information zum Paket `wireshark`, welches zurückgehalten wird
+----
+# aptitude show wireshark | grep Zustand
+Zustand: Installiert [zurückgehalten]
+#
+----
+
+Um die Zurückbehaltung wieder aufzuheben, rufen Sie `aptitude` mit 
+dem Unterkommando `unhold` auf:
+
+.Entfernen der Markierung `hold` für das Paket 'wireshark' mittels `aptitude`
+----
+# aptitude unhold wireshark
+#
+----
+
 === Textoberflächen ===
 
-* `aptitude`
+==== Mit Aptitude ====
+
+`=` :: halten (hold)
+
+`:` :: halten (keep version)
 
 === Graphische Programme ===
 
