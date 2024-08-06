@@ -201,7 +201,7 @@ und setzen.
 
 ==== Synaptic ====
 
-Synaptic bietet dazu den Menüpunkt ``Paket''->``Version sperren'' 
+Synaptic bietet dazu den Menüpunkt ``Paket'' -> ``Version sperren'' 
 (siehe <<fig.synaptic-hold>>). Ein so markiertes Paket wird farbig in 
 der Auswahlliste der Pakete hervorgehoben (default: rot). Zusätzlich 
 erscheint ein Symbol eines Hängeschlosses über dem Auswahlkästchen und 
