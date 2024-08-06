@@ -194,13 +194,15 @@ Unterkommando `keep-all`.
 
 === Graphische Programme ===
 
-* Synaptic
-** Menüpunkt Paket:Version sperren (siehe <<fig.synaptic-hold>>)
-*** farbige Hervorhebung (default: rot) in der Auswahlliste der Pakete
-*** Symbol eines Hängeschloß über dem Auswahlkästchen
-*** Kontextmenü mit den Paketaktionen (erreichbar über die rechte
-    Maustaste) nicht mehr aufrufbar, Aktionen nur noch über das Menü
-** geht nur bei bereits installierten Paketen
+==== Synaptic ====
+
+Synaptic bietet dazu den Menüpunkt ``Paket''->``Version sperren'' 
+(siehe <<fig.synaptic-hold>>). Ein so markiertes Paket wird farbig in 
+der Auswahlliste der Pakete hervorgehoben (default: rot). Zusätzlich 
+erscheint ein Symbol eines Hängeschlosses über dem Auswahlkästchen und 
+es ist im Kontextmenü mit den Paketaktionen (erreichbar über die 
+rechte Maustaste) nicht mehr aufrufbar -- nur noch über das Menü. Das 
+gelingt nur bei bereits installierten Paketen.
 
 .Setzen des Paketflags 'hold' in Synaptic
 image::praxis/ausgewaehlte-pakete-nicht-aktualisieren/synaptic-hold.png[id="fig.synaptic-hold", width="50%"]
