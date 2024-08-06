@@ -97,8 +97,8 @@ ToDo:
 Mit dem Werkzeug `isenkram-autoinstall-firmware` aus dem Paket 
 'isenkram-cli' <<Debian-Paket-isenkram-cli>> gleichen Sie den 
 laufenden Linuxkernel mit der Hardware ihres Systems ab und 
-installieren fehlende Pakete für die Komponenten nach. Im folgenden 
-Beispiel ist es das Paket 'firmware-misc-nonfree' 
+installieren fehlende Firmware-Pakete. Im folgenden Beispiel ist es 
+das Paket 'firmware-misc-nonfree' 
 <<Debian-Paket-firmware-misc-nonfree>> und daraus das Modul 
 'firmware-realtek-rtl8723cs-bt' für den Realtek-Chipsatz.
 
