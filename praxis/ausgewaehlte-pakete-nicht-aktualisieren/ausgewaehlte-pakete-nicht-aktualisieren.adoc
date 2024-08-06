@@ -34,6 +34,7 @@ aufwendiger werden. Bedenken Sie diesen Schritt daher gut.
 
 === Auf der Kommandozeile ===
 
+[[ausgewaehlte-pakete-nicht-aktualisieren-mit-dpkg]]
 ==== Mit `dpkg` ====
 
 // Stichworte für den Index
@@ -70,6 +71,7 @@ Wert von 'hold' wieder auf 'install' wie folgt:
 #
 ----
 
+[[ausgewaehlte-pakete-nicht-aktualisieren-mit-apt-mark]]
 ==== Mit `apt-mark` ====
 
 // Stichworte für den Index
@@ -113,6 +115,7 @@ Halten-Markierung für wireshark entfernt.
 #
 ----
 
+[[ausgewaehlte-pakete-nicht-aktualisieren-mit-aptitude]]
 ==== Mit Aptitude ====
 
 // Stichworte für den Index
@@ -171,9 +174,17 @@ dem Unterkommando `unhold` auf:
 
 ==== Mit Aptitude ====
 
-`=` :: halten (hold)
+Hier gelten die gleichen Erklärungen zu den Zustandsveränderungen, wie
+bereits in <<mehrere-pakete-in-einem-schritt-aendern-mit-aptitude>> und
+in <<ausgewaehlte-pakete-nicht-aktualisieren-mit-aptitude>> beschrieben. 
+Über die Textoberfläche steuern Sie die Aktionen wie folgt:
 
-`:` :: halten (keep version)
+`=` :: halten ('hold') über den Menüpunkt "Paket" -> "Zurückhalten"
+
+`:` :: halten ('keep version') über den Menüpunkt "Paket" -> "Beibehalten"
+
+Den gesetzten Zustand setzen Sie bspw. über den Menüpunkt "Aktionen" -> 
+"Noch ausstehende Aktionen abbrechen"  zurück.
 
 === Graphische Programme ===
 
