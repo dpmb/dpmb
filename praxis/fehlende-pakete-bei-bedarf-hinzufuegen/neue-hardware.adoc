@@ -1,6 +1,6 @@
 // Datei: ./praxis/fehlende-pakete-bei-bedarf-hinzufuegen/neue-hardware.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[neue-hardware]]
 
@@ -74,14 +74,12 @@ tpb
 $
 ----
 
-* Umgang mit dem Ergebnis:
-** wie kommt die Auswahl der Pakete zustande?
-*** `isenkram-lookup` liest zuerst alle Werte von `modalias` aus dem 
-Verzeichnis `/proc` und versucht danach, passende Pakete zu diesen 
-`modalias`-Werten zu finden <<modalias>>
-** wie ist diese Liste zu lesen?
-*** ist alphabetisch anhand der Pakete sortiert
-*** keine Angabe, was das jeweilige Paket macht
+Obige Liste kommt zustande, nachdem `isenkram-lookup` zuerst alle 
+Werte von `modalias` <<modalias>> aus dem Verzeichnis `/proc` 
+ausgelesen hat. Es versucht im Anschluss daran, passende Pakete zu 
+diesen `modalias`-Werten zu finden. Die ausgegebene Liste ist 
+alphabetisch anhand des Paketnames sortiert und umfasst keine 
+weiteren Angaben zum identifizierten Paket.
 
 ==== Hardware-spezifische Pakete mit `isenkram-pkginstall` lokalisieren ====
 
