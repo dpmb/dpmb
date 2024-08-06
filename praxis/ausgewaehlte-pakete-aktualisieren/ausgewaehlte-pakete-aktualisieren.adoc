@@ -87,7 +87,15 @@ Pakete aus der Kategorie 'libs' (Bibliotheken).
 
 .Beispiel für Einzelaktualisierung mit `aptitude safe-upgrade`
 ----
-ToDo: Beispiel
+# aptitude safe-upgrade ure
+Auflösen der Abhängigkeiten ...                     
+Die folgenden Pakete werden aktualisiert:
+  libuno-cppuhelpergcc3-3 uno-libs-private ure ure-java 
+4 Pakete aktualisiert, 0 zusätzlich installiert, 0 werden entfernt und 25 nicht aktualisiert.
+1.848 kB an Archiven müssen heruntergeladen werden. Nach dem Entpacken werden 0 B zusätzlich belegt sein.
+Möchten Sie fortsetzen? [Y/n/?]
+...
+#
 ----
 
 ==== Über die Textoberfläche von `aptitude` ====
