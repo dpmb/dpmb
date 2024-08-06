@@ -11,20 +11,21 @@
 (((Paket, Einzelpaket aktualisieren)))
 Bereits in ``Pakete aktualisieren'' in <<pakete-aktualisieren>>
 beleuchteten wir, wie Sie alle bereits bestehenden Pakete auf ihrem
-Linuxsystem aktualisieren. Das hilft Ihnen dabei, dass alle Pakete aus
-einem in etwa ähnlichen Veröffentlichungszeitraum stammen. Die
-Abstimmung der Pakete aufeinander bleibt weitestgehend konfliktfrei und
-es verringert die Wahrscheinlichkeit, dass bei einem Wechsel der
-Veröffentlichung Probleme auftreten.
+Linuxsystem aktualisieren. Das hilft Ihnen dabei, dass alle Pakete 
+aus einem in etwa ähnlichen Veröffentlichungszeitraum stammen. Die
+Abstimmung der Pakete aufeinander bleibt somit weitestgehend 
+konfliktfrei und es verringert die Wahrscheinlichkeit, dass bei 
+einem Wechsel der Veröffentlichung Probleme auftreten.
 
-Nun zeigen wir Ihnen, wie Sie nur einzelne, ausgewählte Pakete auf einen
-bestimmten Stand bringen. Dieses Vorgehen bringt es mit sich, dass die
-Anzahl der Softwarepakete zunimmt, die explizit auf einem ausgewählten
-Stand gehalten werden bzw. werden müssen, um die Paketabhängigkeiten zu
-erfüllen. Für die Paketverwaltung heißt das, dass bei einer Veränderung
-des Paketbestands mehr und insbesondere komplexere Bedingungen zu
+Nachfolgend zeigen wir Ihnen, wie Sie nur einzelne, ausgewählte 
+Pakete auf einen bestimmten, aktuelleren Stand bringen. Dieses 
+Vorgehen bringt es mit sich, dass die Anzahl der Softwarepakete 
+zunimmt, die explizit auf einem ausgewählten Stand gehalten werden 
+bzw. werden müssen, um die Paketabhängigkeiten zu erfüllen. Für die 
+Paketverwaltung heißt das, dass bei einer Veränderung des 
+Paketbestands mehr und insbesondere komplexere Bedingungen zu
 berücksichtigen sind. Sie als Betreuer planen daher sicherheitshalber
-für diesen Schritt und die Wartung etwas mehr Zeit ein.
+für diesen Schritt und die Wartung ihres Systems etwas mehr Zeit ein.
 
 [[nur-ein-einzelnes-paket-aktualisieren]]
 === Nur ein einzelnes Paket aktualisieren ===
