@@ -194,7 +194,7 @@ Unterkommando `keep-all`.
 
 ==== Mit Nala ====
 
-Nala (siehe <<nala>> kann derzeit keine Zustandsveränderungen auslesen 
+Nala (siehe <<nala>>) kann derzeit keine Zustandsveränderungen auslesen 
 und setzen.
 
 === Graphische Programme ===
@@ -214,7 +214,7 @@ image::praxis/ausgewaehlte-pakete-nicht-aktualisieren/synaptic-hold.png[id="fig.
 
 ==== Mit Apper ====
 
-Apper (siehe <<gui-packagekit>> kann derzeit keine Zustandsveränderungen 
+Apper (siehe <<gui-packagekit>>) kann derzeit keine Zustandsveränderungen 
 auslesen und setzen.
 
 // Datei (Ende): ./praxis/ausgewaehlte-pakete-nicht-aktualisieren/ausgewaehlte-pakete-nicht-aktualisieren.adoc
