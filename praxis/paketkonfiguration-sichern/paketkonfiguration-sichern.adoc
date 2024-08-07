@@ -99,7 +99,7 @@ der Aufruf auf einem Multiarch-System erfolgt, fügt `dpkg` in bestimmten Fälle
 noch die Architektur hinzu, zu der das Paket gehört. Sämtliche Konfiguration 
 bleibt hingegen unbeachtet. 
 
-.Ermittelte Liste der installierten Pakete (Ausschnitt)
+.Mit `dpkg` ermittelte Liste der installierten Pakete (Ausschnitt)
 ----
 $ cat paketliste
 aapt
@@ -137,6 +137,27 @@ von `tail` gibt alle Zeilen ab der zweiten Zeile aus, `sort` sortiert abschließ
 .`apt` zur Erstellung der Paketliste benutzen
 ----
 $ apt list --installed | awk -F '[/ ]' '{ print $1":"$4 }' | sed -e 's/:all$//' | tail -n +2 | sort > paketliste
+$
+----
+
+.Mit `apt` ermittelte Liste der installierten Pakete (Ausschnitt)
+----
+$ cat paketliste
+acl:amd64
+adduser
+adwaita-icon-theme
+aglfn
+alsa-oss:amd64
+alsa-topology-conf
+alsa-ucm-conf
+alsa-utils:amd64
+alsamixergui:amd64
+alsaplayer-alsa:amd64
+alsaplayer-common:amd64
+binutils-common:amd64
+binutils-x86-64-linux-gnu:amd64
+binutils:amd64
+...
 $
 ----
 
