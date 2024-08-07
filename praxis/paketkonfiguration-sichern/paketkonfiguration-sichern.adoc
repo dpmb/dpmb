@@ -375,6 +375,16 @@ bspw. mit diesem Aufruf:
 #
 ----
 
+Alternativ bietet sich eine Kombination aus `apt-get` und `xargs` beim 
+Wiedereinspielen der Pakete an:
+
+.Einspielen der gespeicherten Paketliste mit Hilfe von `xargs` und `apt-get`
+----
+# xargs -a "paketliste" apt-get install -y
+...
+#
+----
+
 Bitte beachten Sie, dass in der Paketliste keine Konfigurationsdateien enthalten
 sind. Beim Einspielen bzw. Installieren des jeweiligen Pakets werden die Dateien 
 daraus extrahiert oder neu erzeugt.
@@ -408,16 +418,6 @@ Benutzer mit administrativen Rechten wieder ein:
 .Einspielen der gespeicherten Konfiguration mit Hilfe von `debconf-set-selections`
 ----
 # debconf-set-selections paketliste
-...
-#
-----
-
-Verwenden Sie eine Datei, die lediglich aus den Namen der Pakete besteht,
-hilft Ihnen dieses Kommando beim Wiedereinspielen:
-
-.Einspielen der gespeicherten Paketliste mit Hilfe von `xargs` und `apt-get`
-----
-# xargs -a "paketliste" apt-get install -y
 ...
 #
 ----
