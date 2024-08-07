@@ -1,0 +1,11 @@
+// Datei: ./praxis/automatisierte-installation/chef.adoc
+
+// Baustelle: Notizen
+
+[[chef]]
+==== Chef ====
+
+* https://www.chef.io/
+
+// Datei (Ende): ./praxis/automatisierte-installation/chef.adoc
+

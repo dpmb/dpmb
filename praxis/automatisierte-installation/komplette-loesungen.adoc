@@ -11,6 +11,7 @@ include::ansible.adoc[]
 include::autoinstall.adoc[]
 
 // - Chef
+include::chef.adoc[]
 
 // - Cloud-init
 
