@@ -1,0 +1,11 @@
+// Datei: ./praxis/automatisierte-installation/cloud-init.adoc
+
+// Baustelle: Notizen
+
+[[cloud-init]]
+==== Cloud-init ====
+
+* https://cloudinit.readthedocs.io/en/latest/index.html
+
+// Datei (Ende): ./praxis/automatisierte-installation/cloud-init.adoc
+

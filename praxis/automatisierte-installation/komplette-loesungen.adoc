@@ -14,6 +14,7 @@ include::autoinstall.adoc[]
 include::chef.adoc[]
 
 // - Cloud-init
+include::cloud-init.adoc[]
 
 // - Cobbler
 include::cobbler.adoc[]
