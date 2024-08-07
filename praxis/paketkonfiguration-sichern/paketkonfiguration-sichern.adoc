@@ -208,13 +208,26 @@ Kombination aus den fünf Werkzeugen `debconf-get-selection`, `grep`, `awk`,
 
 .Auslesen der bestehenden Paketkonfiguration aus der Debconf-Datenbank
 ----
-$ debconf-get-selections | grep -v "^#" | awk ' { print $1 } ' | sort | uniq > paketliste
-$
+# debconf-get-selections | grep -v "^#" | awk ' { print $1 } ' | sort | uniq > paketliste
+# 
+----
+
+Die ermittelte Liste sieht dann wie folgt aus:
+
+.Mit `debconf-get-selections` ermittelte Liste der installierten Pakete (Ausschnitt)
+----
+# cat paketliste
+apparmor
+base-passwd
+ca-certificates
+console-setup
+...
+#
 ----
 
 In <<paketkonfiguration-wieder-einspielen-mit-debconf-set-selections>> lesen 
-Sie, wie Sie die erzeugte Liste benutzen, um die darin genannten Pakete auf 
-einem anderen System wieder einzuspielen.
+Sie nach, wie Sie die erzeugte Liste benutzen, um die darin genannten Pakete 
+auf einem anderen System wieder einzuspielen.
 
 [[paketkonfiguration-sichern-mit-apt-clone]]
 ==== Mit `apt-clone` ====
