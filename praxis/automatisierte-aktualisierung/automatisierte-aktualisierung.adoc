@@ -6,9 +6,20 @@
 
 == Automatisierte Aktualisierung ==
 
-* Ziel:
-** eine ganze Menge von identisch aufgesetzten Rechnern aktualisieren,
+=== Ziel ===
+
+* eine ganze Menge von identisch aufgesetzten Rechnern aktualisieren,
 bspw. einen Schulungsraum oder Cluster
+* Basis: Rechner mit identischer Hardware
+* Unterschied zur Grundinstallation:
+** Grundinstallation ist bereits erfolgt
+** nur bestehende Software auf den aktuellen Stand bringen ("aktualisieren")
+** Durchführung: 
+*** Login auf allen Rechnern und Ausführung eines Kommandos gleichzeitig
+* Werkzeuge
+** apt-dater
+** multi-ssh (https://multissh.dev/)
+** Parallel-SSH (https://parallel-ssh.org/)
 
 === `apt-dater` ===
 
