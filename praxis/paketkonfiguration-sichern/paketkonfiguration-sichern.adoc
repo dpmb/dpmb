@@ -201,8 +201,8 @@ Sie auch stets mit Hilfe von `dpkg-reconfigure cups` erreichen können.
 image::praxis/paketkonfiguration-sichern/dpkg-reconfigure-cups.png[id="fig.dpkg-reconfigure-cups", width="50%"]
 
 Die Ausgabe von `debconf-get-selections` erfolgt auf der Standardausgabe 
-(`stdout`). Eine Liste in einer Datei `paketliste`, die lediglich die 
-Paketnamen in sortierter Reihenfolge enthält, erzeugen Sie mit Hilfe der 
+(`stdout`). Eine Liste in einer Ausgabedatei namens `paketliste` mit den 
+Paketnamen in sortierter Reihenfolge erzeugen Sie mit Hilfe der 
 Kombination aus den fünf Werkzeugen `debconf-get-selection`, `grep`, `awk`, 
 `sort` und `uniq` wie folgt:
 
@@ -241,10 +241,10 @@ auf einem anderen System wieder einzuspielen.
 (((dpkg-repack)))
 (((Ubuntupaket, apt-clone)))
 
-Dieses Werkzeug steht über die gleichnamigen Pakete bei Debian und Ubuntu 
-bereit (siehe <<Debian-Paket-apt-clone>> und <<Ubuntu-Paket-apt-clone>>).
-Es sieht sich selbst als 'helper script', welches das Klonen einer bestehenden
-Linuxinstallation vereinfacht. 
+Dieses Werkzeug steht über die gleichnamigen Pakete bis Debian 11 _Bullseye_ 
+und Ubuntu bereit (siehe <<Debian-Paket-apt-clone>> und 
+<<Ubuntu-Paket-apt-clone>>). Es sieht sich selbst als 'helper script', welches 
+das Klonen einer bestehenden Linuxinstallation vereinfacht. 
 
 Das Debian- bzw. Ubuntupaket beinhaltet das Python-Skript `apt-clone` sowie 
 eine passende, gleichnamige Python-Klasse für Python 3. Intern ruft es das 
