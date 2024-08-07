@@ -8,6 +8,7 @@
 include::ansible.adoc[]
 
 // - autoinstall
+include::autoinstall.adoc[]
 
 // - Chef
 

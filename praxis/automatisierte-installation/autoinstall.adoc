@@ -1,0 +1,11 @@
+// Datei: ./praxis/automatisierte-installation/autoinstall.adoc
+
+// Baustelle: Notizen
+
+[[autoinstall]]
+==== Autoinstall ====
+
+* https://canonical-subiquity.readthedocs-hosted.com/en/latest/intro-to-autoinstall.html
+
+// Datei (Ende): ./praxis/automatisierte-installation/autoinstall.adoc
+
