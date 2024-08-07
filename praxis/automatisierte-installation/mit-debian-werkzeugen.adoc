@@ -6,11 +6,15 @@
 === Mit Debian-Werkzeugen ===
 
 * Rückgriff auf Beschreibung aus 'Paketkonfiguration sichern' in <<paketkonfiguration-sichern>>
-* Preseeding (siehe https://fak3r.com/2011/08/18/howto-automate-debian-installs-with-preseed/)
+* Preseeding, siehe 
+** https://preseed.debian.net/debian-preseed/
+** https://fak3r.com/2011/08/18/howto-automate-debian-installs-with-preseed/
+** https://wiki.debian.org/DebianInstaller/Preseed
+** https://u-labs.de/portal/debian-automatisiert-installieren-einrichten-so-funktioniert-preseed-voreinstellung-einstieg-fuer-anfaenger/
 
-* `dpkg`
-* `debconf-get-selections`
-* `debconf-get-selections`
-* `apt-clone`
+* Werkzeuge
+** `dpkg`
+** `debconf-get-selections`
+** `apt-clone`
 
 // Datei (Ende): ./praxis/automatisierte-installation/mit-debian-werkzeugen.adoc[]
