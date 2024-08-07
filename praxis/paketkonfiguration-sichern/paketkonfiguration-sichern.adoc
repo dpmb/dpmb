@@ -45,12 +45,12 @@ eine Auswahl graphischer Werkzeuge kurz an (siehe
 
 // Stichworte für den Index
 (((Paketkonfiguration, auslesen)))
-Zunächst gehen wir der Frage nach, wie Sie die bestehende Konfiguration
-ihrer installierten Pakete auslesen und sichern. Das nutzen Sie in einem 
-späteren Schritt, um diese Pakete wieder einspielen zu können -- sei es auf 
-dem gleichen System oder einem neuen Rechner, welcher identisch zum 
-erstgenannten werden muss. Alle benötigten Informationen dazu stehen in der 
-Debconf-Datenbank.
+(((Paketkonfiguration, Liste der installieren Pakete ermitteln)))
+Zunächst betrachten wir, wie Sie die Liste der installierten Pakete auslesen 
+und sichern. Das ist Voraussetzung dafür, um später alle diese Pakete wieder 
+einspielen zu können -- sei es auf dem gleichen System oder einem neuen 
+Rechner, welcher identisch zum erstgenannten werden muss. Alle benötigten 
+Informationen dazu stehen in der Debconf-Datenbank.
 
 [[paketkonfiguration-sichern-mit-dpkg]]
 ==== Mit `dpkg` ====
@@ -60,19 +60,12 @@ Debconf-Datenbank.
 (((dpkg, -l)))
 (((dpkg, --get-selections)))
 (((dpkg, --list)))
-Wie bereits in <<liste-der-installierten-pakete-anzeigen-und-deuten>> erklärt,
-ist `dpkg` das zentrale Werkzeug, um die Paketdatenbank auszulesen und Ihnen 
-die derzeit installierten und vollständig konfigurierten Pakete auf der 
-Standardausgabe (`stdout`) aufzulisten. Über das nachfolgend gezeigte Kommando 
-erhalten Sie eine entsprechende Liste mit den Namen der Pakete. 
-
-`egrep` filtert zunächst nur die Zeilen aus der Ausgabe von `dpkg` heraus, die 
-mit `ii` beginnen -- sprich: die installierten und konfigurierten Pakete. Die 
-zusätzlichen informationen wie Installationsstatus, Kurzbeschreibung und die 
-Version des jeweiligen Pakets werden dann mit Hilfe von `awk` aus jeder 
-verbliebenen Zeile herausgefiltert. Anschließend wird die Liste der Paketnamen 
-mit Hilfe von `sort` noch alphabetisch aufsteigend sortiert. Die Ausgabe des 
-Kommandos landet in der Datei `paketliste` im aktuellen Verzeichnis:
+Wie wir bereits in <<liste-der-installierten-pakete-anzeigen-und-deuten>> 
+erklärt haben, ist `dpkg` das zentrale Werkzeug, um die Paketdatenbank 
+auszulesen und Ihnen die derzeit installierten und vollständig konfigurierten 
+Pakete auf der Standardausgabe (`stdout`) aufzulisten. Über das nachfolgend 
+gezeigte Kommando erhalten Sie eine entsprechende Liste mit den Namen der 
+Pakete. 
 
 .Liste der installierten Pakete namentlich sortiert in einer Datei ablegen (Version 1)
 ----
@@ -80,10 +73,19 @@ $ dpkg -l | egrep "^ii" | awk ' { print $2 } ' | sort > paketliste
 $
 ---- 
 
-Um den Aufwand zu verringern, ist der Schalter `--get-selections` spannend. 
-Dieser sorgt dafür, daß `dpkg` nur den Paketnamen samt Installationsstatus
-ausgibt. Kombiniert mit `grep` und `awk` bauen Sie sich daraus eine sortierte
-Liste wie folgt:
+Das Werkzeug `egrep` filtert zunächst nur die Zeilen aus der Ausgabe von 
+`dpkg` heraus, die mit `ii` beginnen -- sprich: die installierten und 
+vollständig konfigurierten Pakete. Die zusätzlichen informationen wie 
+Installationsstatus, Kurzbeschreibung und die Version des jeweiligen Pakets 
+werden dann mit Hilfe von `awk` aus jeder verbliebenen Zeile herausgefiltert. 
+Anschließend wird die Liste der Paketnamen mit Hilfe von `sort` noch 
+alphabetisch aufsteigend sortiert. Die Ausgabe des Kommandos landet in der 
+Datei `paketliste` im aktuellen Verzeichnis:
+
+Um den Aufwand etwas zu verringern, ist der Schalter `--get-selections` von 
+`dpkg` nützlich. Dieser sorgt dafür, daß `dpkg` nur den Namen und den
+Installationsstatus eines Pakets ausgibt. Kombiniert mit `grep` und `awk` 
+bauen Sie sich daraus eine sortierte Liste wie folgt:
 
 .Liste der installierten Pakete namentlich sortiert in einer Datei ablegen (Version 2)
 ----
