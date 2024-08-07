@@ -1,0 +1,12 @@
+// Datei: ./praxis/automatisierte-installation/ansible.adoc
+
+// Baustelle: Notizen
+
+[[ansible]]
+==== Ansible ====
+
+* https://www.ansible.com/
+* Debian-Paket: https://packages.debian.org/bookworm/ansible
+
+// Datei (Ende): ./praxis/automatisierte-installation/ansible.adoc
+

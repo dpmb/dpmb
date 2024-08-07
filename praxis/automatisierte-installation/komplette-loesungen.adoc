@@ -5,8 +5,13 @@
 === Komplette Lösungen ===
 
 // - Ansible
+include::ansible.adoc[]
+
+// - autoinstall
 
 // - Chef
+
+// - Cloud-init
 
 // - Cobbler
 include::cobbler.adoc[]
