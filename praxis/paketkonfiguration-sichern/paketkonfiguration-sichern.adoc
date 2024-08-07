@@ -78,18 +78,40 @@ Das Werkzeug `egrep` filtert zunächst nur die Zeilen aus der Ausgabe von
 vollständig konfigurierten Pakete. Die zusätzlichen informationen wie 
 Installationsstatus, Kurzbeschreibung und die Version des jeweiligen Pakets 
 werden dann mit Hilfe von `awk` aus jeder verbliebenen Zeile herausgefiltert. 
-Anschließend wird die Liste der Paketnamen mit Hilfe von `sort` noch 
-alphabetisch aufsteigend sortiert. Die Ausgabe des Kommandos landet in der 
-Datei `paketliste` im aktuellen Verzeichnis:
+Anschließend sortieren wir die Liste der Paketnamen mit Hilfe von `sort` noch 
+alphabetisch aufsteigend. Die Ausgabe des Kommandos landet in der Datei 
+`paketliste` im aktuellen Verzeichnis:
 
 Um den Aufwand etwas zu verringern, ist der Schalter `--get-selections` von 
 `dpkg` nützlich. Dieser sorgt dafür, daß `dpkg` nur den Namen und den
-Installationsstatus eines Pakets ausgibt. Kombiniert mit `grep` und `awk` 
-bauen Sie sich daraus eine sortierte Liste wie folgt:
+Installationsstatus eines Pakets ausgibt. Kombiniert mit `grep`, `awk` und
+einem abschließenden `sort` bauen Sie sich daraus eine sortierte Liste wie 
+folgt:
 
 .Liste der installierten Pakete namentlich sortiert in einer Datei ablegen (Version 2)
 ----
-$ dpkg --get-selections | grep -v deinstall | awk ' { print $1 } ' > paketliste
+$ dpkg --get-selections | grep -v deinstall | awk ' { print $1 } ' | sort > paketliste
+$
+----
+
+Bitte beachten Sie, daß `dpkg` lediglich die Namen der Pakete ermittelt. Sofern 
+der Aufruf auf einem Multiarch-System erfolgt, fügt `dpkg` in bestimmten Fällen 
+noch die Architektur hinzu, zu der das Paket gehört. Sämtliche Konfiguration 
+bleibt hingegen unbeachtet. 
+
+.Ermittelte Liste der installierten Pakete (Ausschnitt)
+----
+$ cat paketliste
+aapt
+acl
+acpi
+adduser
+adwaita-icon-theme
+alsa-base
+alsa-utils
+binutils
+binutils-common:amd64
+...
 $
 ----
 
@@ -103,24 +125,20 @@ identisch aufzusetzen. Wie das geht, lesen Sie in
 // Stichworte für den Index
 (((Debianpaket, apt)))
 (((apt, list --installed)))
-Die Kombination aus `apt`, `awk` und `tail` liefert Ihnen ebenfalls eine Liste 
-der installierten Pakete in alphabetisch aufsteigender Sortierung:
+Die nachfolgende Kombination aus `apt`, `awk`, `sed`, `tail` und `sort` liefert 
+Ihnen ebenfalls eine Liste der installierten Pakete in alphabetisch aufsteigender 
+Sortierung ähnlich zur Liste aus <<paketkonfiguration-sichern-mit-dpkg>>. Jedoch
+sind hier zwei kleine Hindernisse zu umschiffen. 
+
+Erstens sortiert `apt` intern anders als `dpkg`, zweitens ist das Ausgabeformat 
+von `apt` anders -- die Architektur eines Paketes wird in einer zusätzlichen 
+Spalte benannt. Daher werden zunächst die erste und vierte Spalte zusammengezogen
+und danach die Angabe der Architektur `all` mittels `sed` entfernt.
 
 .`apt` zur Erstellung der Paketliste benutzen
 ----
-# apt list --installed | awk -F "/" ' { print $1 } ' | tail -n +2 > paketliste
-# cat paketliste
-aapt
-acl
-acpi
-adduser
-adwaita-icon-theme
-alsa-base
-alsa-utils
-anacron
-android-framework-res
-...
-#
+$ apt list --installed | awk -F '[/ ]' '{ print $1":"$4 }' | sed -e 's/:all$//' | tail -n +2 | sort > paketliste
+$
 ----
 
 Bitte beachten Sie, daß `apt` nur die Namen der Pakete ermittelt. Sämtliche 
