@@ -32,12 +32,15 @@ steht aber unter sehr aktiver Entwicklung.
 Hinter Isenkram -- dänisch und norwegisch für Eisenwaren ('Hardware') 
 -- verbirgt sich eine Art Benachrichtigungsdienst, der überprüft, ob 
 die benötigten Pakete für die neue Hardware bereits auf ihrem System 
-installiert sind. Falls nicht, wird dieses (automatisch) nachgezogen. 
+installiert sind. Falls nicht, werden diese (automatisch) nachgezogen. 
 Dazu klinkt es sich als zusätzliches Modul in die Konfiguration von 
-Tasksel ein (siehe <<tasksel>>). Dieses Modul liegt unter 
-`/usr/share/tasksel/descs/isenkram.desc` und beinhaltet die notwendige
-Beschreibung für den Menüeintrag, den Tasksel dann anzeigt, nachfolgend
-beispielhaft für den Eintrag 'isenkram-firmware' dargestellt.
+Tasksel ein (siehe <<tasksel>>). 
+
+Das Modul wird vom Paket 'isenkram-cli' <<Debian-Paket-isenkram-cli>>
+bereitgestellt und nach dessen Installation unter unter 
+`/usr/share/tasksel/descs/isenkram.desc` abgelegt. Es beinhaltet die 
+notwendige Beschreibung für den Menüeintrag, den Tasksel dann anzeigt, 
+nachfolgend beispielhaft für den Eintrag 'isenkram-firmware' zu sehen.
 
 .Menüeintrag zu Isenkram für Tasksel (Ausschnitt)
 ----
