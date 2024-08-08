@@ -73,7 +73,8 @@ Lenovo ThinkPad unter Debian 12.6 'Bookworm' brachte nachfolgende
 Liste hervor, die bspw. Pakete wie 'tpb' <<Debian-Paket-tbp>>, 
 'thinkfan' <<Debian-Paket-thinkfan>> und 'gkrellm-thinkbat' 
 <<Debian-Paket-gkrellm-thinkbat>> zur Steuerung ThinkPad-spezifischer
-Komponenten beinhaltet.
+Komponenten beinhaltet. Das Paket 'cheese' ist enthalten, da das Gerät
+über eine Kamera verfügt, die über USB angeschlossen ist.
 
 .Module mit `isenkram-lookup` finden
 ----
@@ -102,13 +103,16 @@ weiteren Angaben zum identifizierten Paket.
 ==== Hardware-spezifische Pakete mit `isenkram-pkginstall` lokalisieren ====
 
 Das Werkzeug `isenkram-pkginstall` aus dem Paket 'isenkram-cli' 
-<<Debian-Paket-isenkram-cli>> lokalisiert und installiert 
-Hardware-spezifische Pakete, die zur aktuellen Maschine passen.
+<<Debian-Paket-isenkram-cli>> bietet alle zuvor von `isenkram-lookup`
+gefundenen Hardware-spezifischen Pakete zur Installation an, die zur 
+aktuellen Maschine passen.
 
 ToDo:
 
 * kommt beim Debian-Installer zum Einsatz, um zu erkennen, welche Pakete beim Setup benötigt werden
 * wie unterscheiden sich `isenkram-pkginstall` und `isenkram-autoinstall-firmware` voneinander?
+** `isenkram-autoinstall-firmware` wertet `dmesg` aus und sucht darin nach Ausgaben zu fehlenden Treibern
+** aktiviert dazu die Distributionsbereiche 'contrib', 'non-free' und 'non-free-firmware' in den Paketquellen, um an alle Pakete zu den Treibern zu kommen
 
 ==== Fehlende Firmware mit `isenkram-autoinstall-firmware` nachziehen ====
 
