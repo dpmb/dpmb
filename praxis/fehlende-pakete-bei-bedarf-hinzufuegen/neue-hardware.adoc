@@ -34,16 +34,31 @@ Hinter Isenkram -- dänisch und norwegisch für Eisenwaren ('Hardware')
 die benötigten Pakete für die neue Hardware bereits auf ihrem System 
 installiert sind. Falls nicht, wird dieses (automatisch) nachgezogen. 
 Dazu klinkt es sich als zusätzliches Modul in die Konfiguration von 
-'tasksel' ein (siehe <<tasksel>>).
+Tasksel ein (siehe <<tasksel>>). Dieses Modul liegt unter 
+`/usr/share/tasksel/descs/isenkram.desc` und beinhaltet die notwendige
+Beschreibung für den Menüeintrag, den Tasksel dann anzeigt, nachfolgend
+beispielhaft für den Eintrag 'isenkram-firmware' dargestellt.
 
-ToDo:
+.Menüeintrag zu Isenkram für Tasksel (Ausschnitt)
+----
+$ cat /usr/share/tasksel/descs/isenkram.desc 
+...
+Task: isenkram-firmware
+Section: hardware
+Description: Hardware specific firmware packages (autodetected by isenkram)
+ Based on the detected hardware various hardware specific firmware
+ packages are proposed.
+Test-new-install: mark show
+Relevance: 8
+Packages: for-current-hardware-firmware
+$
+----
 
-* wie funktioniert das
-** wie klinkt es sich in 'tasksel' ein
-* was macht das alles
+.Zusätzliche Menüeinträge in Tasksel
+image::praxis/fehlende-pakete-bei-bedarf-hinzufuegen/tasksel-isenkram.png[id="fig.tasksel-isenkram", width="50%"]
 
-Nachfolgend stellen wir die einzelnen Werkzeuge genauer vor, die sich
-in den Paketen befinden.
+Als nächstes stellen wir Ihnen die einzelnen Werkzeuge und deren Funktionen 
+genauer vor, die sich in den Paketen befinden.
 
 ==== Passende Pakete mit `isenkram-lookup` finden ====
 
