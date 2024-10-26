@@ -1,6 +1,6 @@
 // Datei: ./praxis/plattenplatz-sparen-mit-der-paketverwaltung.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[plattenplatz-sparen-mit-der-paketverwaltung]]
 
@@ -22,29 +22,56 @@ Reihe von Lösungsmöglichkeiten mit Hilfe der Paketverwaltung, um den
 belegten Platz zu verringern. Welche davon passend sind, kann nicht
 verallgemeinert werden und hängt vom konkreten Einzelfall ab.
 
+=== Duplikate finden ===
 
+* Werkzeug `hardlink` aus dem Debianpaket 'util-linux'
+* Dateien in `/usr/share/doc/` prüfen 
+* siehe <<Beckert-Blog-Hardlinking-Duplicate-Files>>
 
-* Lösungsmöglichkeiten
-** Hardlink über `/usr/share/doc/` laufen lassen <<Beckert-Blog-Hardlinking-Duplicate-Files>>
-** `dpkg --path-exclude=…`
-** Paket 'localepurge', momentan noch unter <<paketverwaltung-mit-eingeschraenkten-ressourcen-fuer-embedded-und-mobile-devices>>
-** Ungenutzte Bibliotheken, denen aber das ``Automatisch installiert''-Flag fehlt <<Beckert-Blog-Finding-Libraries>>
-** den Paketcache aufräumen (siehe <<paketcache-aufraeumen>>)
-** Auch `/var/cache/apt` auf tmpfs gehört hier erwähnt, momentan unter <<cache-verzeichnis-auf-separater-partition>>
-** `logrotate` (sollte eigentlich installiert sein, sorgt aber für nicht
-  permanent wachsende Logfiles. Seine Konfiguration sollte angepasst
-  werden, wenn man manuell weitere Logfiles in Anwendungen (VHosts im
-  Apache z.B.) konfiguriert.
-** Keinen Syslogd (Default-Paket ist 'rsyslog', dieses entfernen)
-  verwenden und das Syslog nur in einen Ringbuffer laufen lassen.
-*** Hat man systemd, kann man mit `journalctl` das Log im Ringbuffer
-   anschauen.
-*** Hat man sysvinit, so kann man das Paket 'busybox-syslogd'
-   installieren und mit `logread` den Inhalt des Ringbuffers
-   anschauen.
-*** Gehört eigentlich nicht zur Paketverwaltung... Kann man
-   entsprechend zum Kürzen wieder rauskippen.
-** siehe ReduceDebian -- Reducing the size of the Debian Installation
+=== Pfade ausschließen ===
+
+* `dpkg --path-exclude=…`
+
+=== Ungenutzte Lokalisierungen entfernen ===
+
+* Paket 'localepurge' 
+* momentan noch beschrieben unter <<paketverwaltung-mit-eingeschraenkten-ressourcen-fuer-embedded-und-mobile-devices>>
+
+=== Ungenutzte Bibliotheken prüfen ===
+
+* ungenutzte Bibliotheken prüfen, denen aber das ``Automatisch installiert''-Flag fehlt 
+* siehe <<Beckert-Blog-Finding-Libraries>>
+
+=== Paketcache aufräumen ===
+
+* siehe dazu <<paketcache-aufraeumen>>
+
+=== Paketcache auf separater Paratition ===
+
+* Verzeichnis `/var/cache/apt` auf tmpfs 
+* siehe <<cache-verzeichnis-auf-separater-partition>>
+
+=== Logfiles begrenzen ===
+
+* Werkzeug `logrotate` (sollte eigentlich installiert sein)
+* sorgt aber für nicht permanent wachsende Logfiles. Seine 
+  Konfiguration sollte angepasst werden, wenn man manuell weitere 
+  Logfiles in Anwendungen (VHosts im Apache z.B.) konfiguriert.
+
+=== Syslog deaktivieren ===
+
+* keinen Syslogd verwenden und Syslog nur in einen Ringbuffer 
+  laufen lassen
+* Default-Paket ist 'rsyslog', dieses entfernen
+** bei systemd: mit `journalctl` das Log im Ringbuffer anschauen
+** bei sysvinit: Paket 'busybox-syslogd' installieren und mit 
+   `logread` den Inhalt des Ringbuffers anschauen.
+* gehört eigentlich nicht zur Paketverwaltung... Kann man 
+  entsprechend zum Kürzen wieder rauskippen
+
+=== Die Größe der Debian-Installation verringern ===
+
+* siehe ReduceDebian -- Reducing the size of the Debian Installation
 unter Footprint unter https://wiki.debian.org/ReduceDebian
 *** nicht-kritische Pakete entfernen
 *** apt umkonfigurieren, so dass es nicht automatisch zusätzliche Pakete installiert
@@ -52,6 +79,9 @@ unter Footprint unter https://wiki.debian.org/ReduceDebian
 *** unnötige Pakete entfernen
 *** unnötige Locales entfernen, bspw. mittels localepurge
 *** unnötige Kernelmodule entfernen
-** bleachbit benutzen (https://www.bleachbit.org/)
+
+=== Mittels Bleachbit aufräumen ===
+
+* bleachbit (https://www.bleachbit.org/)
 
 // Datei (Ende): ./praxis/plattenplatz-sparen-mit-der-paketverwaltung.adoc
