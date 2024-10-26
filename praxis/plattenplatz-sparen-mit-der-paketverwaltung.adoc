@@ -73,12 +73,12 @@ verallgemeinert werden und hängt vom konkreten Einzelfall ab.
 
 * siehe ReduceDebian -- Reducing the size of the Debian Installation
 unter Footprint unter https://wiki.debian.org/ReduceDebian
-*** nicht-kritische Pakete entfernen
-*** apt umkonfigurieren, so dass es nicht automatisch zusätzliche Pakete installiert
-*** Pakete durch kleinere Äquivalente ersetzen
-*** unnötige Pakete entfernen
-*** unnötige Locales entfernen, bspw. mittels localepurge
-*** unnötige Kernelmodule entfernen
+** nicht-kritische Pakete entfernen
+** apt umkonfigurieren, so dass es nicht automatisch zusätzliche Pakete installiert
+** Pakete durch kleinere Äquivalente ersetzen
+** unnötige Pakete entfernen
+** unnötige Locales entfernen, bspw. mittels localepurge
+** unnötige Kernelmodule entfernen
 
 === Mittels Bleachbit aufräumen ===
 
