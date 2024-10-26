@@ -18,9 +18,11 @@ Durchgeführte Experimente -- d.h. das Ausprobieren von neuer Software
 -- hinterlassen ihre Spuren in Form von ``Paketresten'', die hinterher
 übriggeblieben sind und trotz aller Vorkehrungen vielleicht doch nicht 
 automatisch aufgeräumt wurden. Daher besprechen wir nachfolgend eine
-Reihe von Lösungsmöglichkeiten mit Hilfer der Paketverwaltung, um den 
+Reihe von Lösungsmöglichkeiten mit Hilfe der Paketverwaltung, um den 
 belegten Platz zu verringern. Welche davon passend sind, kann nicht
 verallgemeinert werden und hängt vom konkreten Einzelfall ab.
+
+
 
 * Lösungsmöglichkeiten
 ** Hardlink über `/usr/share/doc/` laufen lassen <<Beckert-Blog-Hardlinking-Duplicate-Files>>
