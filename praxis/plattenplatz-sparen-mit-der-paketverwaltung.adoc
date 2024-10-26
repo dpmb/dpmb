@@ -6,15 +6,21 @@
 
 == Plattenplatz sparen mit der Paketverwaltung ==
 
-* Hintergrund:
-** Software besteht aus vielen einzelnen Paketen
-** Speicherplatz reicht nicht immer aus, d.h. ist immer in irgendeiner 
-   Form begrenzt
-*** Filesystem hat Begrenzungen (Anzahl der Inodes) 
-*** Partition hat eine physische Grenze
-** je mehr Platz belegt ist, um so langsamer werden die Plattenzugriffe
-** Experimente hinterlassen ihre Spuren in Form von "Paketresten", die
-   übriggeblieben sind (aufräumen ist immer nützlich)
+Eine Installation eines Betriebssystems besteht aus vielen einzelnen 
+Paketen. Um jegliche Software vorzuhalten, reicht der Speicherplatz 
+nicht immer aus, d.h. ist stets in irgendeiner Form begrenzt. 
+Einerseits hat das Filesystem Begrenzungen durch die Anzahl der Inodes,
+andererseits hat jede Partition eine physische Grenze. Je mehr Platz 
+belegt ist, um so langsamer werden die Plattenzugriffe, auch wenn
+heutzutage SSDs im Alltagseinsatz dominieren. 
+
+Durchgeführte Experimente -- d.h. das Ausprobieren von neuer Software 
+-- hinterlassen ihre Spuren in Form von ``Paketresten'', die hinterher
+übriggeblieben sind und trotz aller Vorkehrungen vielleicht doch nicht 
+automatisch aufgeräumt wurden. Daher besprechen wir nachfolgend eine
+Reihe von Lösungsmöglichkeiten mit Hilfer der Paketverwaltung, um den 
+belegten Platz zu verringern. Welche davon passend sind, kann nicht
+verallgemeinert werden und hängt vom konkreten Einzelfall ab.
 
 * Lösungsmöglichkeiten
 ** Hardlink über `/usr/share/doc/` laufen lassen <<Beckert-Blog-Hardlinking-Duplicate-Files>>
