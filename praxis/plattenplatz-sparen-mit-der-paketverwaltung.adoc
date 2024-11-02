@@ -29,9 +29,12 @@ verallgemeinert werden und hängt vom konkreten Einzelfall ab.
 * Duplikate sind Dateien mit gleichem Namen und Inhalt
 ** welche Pakete legen diese an?
 ** wie kommen diese durch die Paketverwaltung zustande?
+
 * Werkzeug `hardlink` aus dem Debianpaket 'util-linux' <<Debian-Paket-util-linux>>
 ** warum ist das besser als manuelles Suchen?
+
 * Dateien in `/usr/share/doc/` prüfen 
+
 * siehe <<Beckert-Blog-Hardlinking-Duplicate-Files>>
 
 === Pfade ausschließen ===
@@ -43,11 +46,13 @@ verallgemeinert werden und hängt vom konkreten Einzelfall ab.
 // Stichworte für den Index
 (((Debianpaket, localepurge)))
 * Paket 'localepurge' <<localepurge>>
+
 * momentan noch beschrieben unter <<paketverwaltung-mit-eingeschraenkten-ressourcen-fuer-embedded-und-mobile-devices>>
 
 === Ungenutzte Bibliotheken prüfen ===
 
 * ungenutzte Bibliotheken prüfen, denen aber das ``Automatisch installiert''-Flag fehlt 
+
 * siehe <<Beckert-Blog-Finding-Libraries>>
 
 === Paketcache aufräumen ===
@@ -57,11 +62,13 @@ verallgemeinert werden und hängt vom konkreten Einzelfall ab.
 === Paketcache auf separater Paratition ===
 
 * Verzeichnis `/var/cache/apt` auf tmpfs 
+
 * siehe <<cache-verzeichnis-auf-separater-partition>>
 
 === Logfiles begrenzen ===
 
 * Werkzeug `logrotate` (sollte eigentlich installiert sein)
+
 * sorgt aber für nicht permanent wachsende Logfiles. Seine 
   Konfiguration sollte angepasst werden, wenn man manuell weitere 
   Logfiles in Anwendungen (VHosts im Apache z.B.) konfiguriert.
@@ -70,38 +77,46 @@ verallgemeinert werden und hängt vom konkreten Einzelfall ab.
 
 * keinen Syslogd verwenden und Syslog nur in einen Ringbuffer 
   laufen lassen
+
 * Default-Paket ist 'rsyslog', dieses entfernen
 ** bei systemd: mit `journalctl` das Log im Ringbuffer anschauen
 ** bei sysvinit: Paket 'busybox-syslogd' installieren und mit 
    `logread` den Inhalt des Ringbuffers anschauen.
+
 * gehört eigentlich nicht zur Paketverwaltung... Kann man 
   entsprechend zum Kürzen wieder rauskippen
 
 === Die Größe der Debian-Installation verringern ===
 
-* konsequent von Anfang an sein:
-** nur die Pakete installieren, die tatsächlich benötigt und auch benutzt werden
-** unnötige Pakete identifizieren und entfernen, sofern möglich
-** `tasksel` vermeiden
+Eine übliche Installation von Debian GNU/Linux für den Desktop kann 
+durchaus mehr als 2000 Pakete umfassen. Um den "Fußabdruck" kleiner
+zu machen, bleibt nur, von Anfang an konsequent zu sein:
 
-* siehe ReduceDebian -- Reducing the size of the Debian Installation
-unter Footprint unter <<ReduceDebian>>
-** nicht-kritische Pakete entfernen
-** apt umkonfigurieren, so dass es nicht automatisch zusätzliche Pakete installiert
-** Pakete durch kleinere Äquivalente ersetzen
-** unnötige Pakete entfernen
-** unnötige Locales entfernen, bspw. mittels localepurge
-** unnötige Kernelmodule entfernen
-** einen kleineren, spezifischeren Kernel bauen
+* installieren Sie nur die Pakete, die Sie tatsächlich benötigen und auch benutzen
+* identifizieren Sie unnötige Pakete und entfernen Sie diese, sofern das möglich ist
+* vermeiden Sie `tasksel`, auch wenn das Werkzeug noch so toll ist und wählen stattdessen die Pakete aus, die Sie wirklich benötigen
 
-* Softwaretests in Virtuelle Maschinen oder Container auslagern
-** damit verringert sich der Ballast, der später vielleicht wieder aufgeräumt werden muss
+Eine vollständigere Liste beinhaltet der Abschnitt ReduceDebian im Debian Wiki <<ReduceDebian>>. Diese Liste rät u. a. zu den folgenden Schritten:
+
+* nicht-kritische Pakete entfernen
+* Apt umkonfigurieren, so dass es nicht automatisch zusätzliche Pakete installiert
+* Pakete durch kleinere Äquivalente ersetzen
+* unnötige Pakete entfernen
+* unnötige Locales entfernen, bspw. mittels `localepurge`
+* unnötige Kernelmodule entfernen
+* einen kleineren, spezifischeren Kernel bauen
+
+Stehen Softwaretests an, hilft es, diese in Virtuelle Maschinen oder 
+Container auszulagern. Damit verringert sich der Ballast, der später 
+vielleicht wieder aufgeräumt werden muss, sollte die gerade ausprobierte
+Software doch nicht ihren Erwartungen entsprechen.
 
 === Mittels Bleachbit aufräumen ===
 
 // Stichworte für den Index
 (((Bleachbit)))
 * bleachbit <<bleachbit>>
-* "ith BleachBit you can free cache, delete cookies, clear Internet history, shred temporary files, delete logs, and discard junk you didn't know was there. Designed for Linux and Windows systems, it wipes clean thousands of applications including Firefox, Adobe Flash, Google Chrome, Opera, and more."
+
+* "with BleachBit you can free cache, delete cookies, clear Internet history, shred temporary files, delete logs, and discard junk you didn't know was there. Designed for Linux and Windows systems, it wipes clean thousands of applications including Firefox, Adobe Flash, Google Chrome, Opera, and more."
 
 // Datei (Ende): ./praxis/plattenplatz-sparen-mit-der-paketverwaltung.adoc
