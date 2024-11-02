@@ -53,12 +53,12 @@ Vorlagen zu installieren und automatisch konfigurieren zu können.
 
 Die Basis bildet der 'Univention Installer', welcher im Prinzip ein
 modifizierter Debian-Installer ist. Bei der Grundinstallation wählen Sie
-danach ihre gewünschten Softwarekomponenten über ein modifiziertes
-Tasksel <<tasksel>> aus. Installieren Sie zu einem späteren Zeitpunkt
-Software nach, stehen Ihnen auf der *Kommandozeile* die beiden Werkzeuge
-`univention-install` und `univention-remove` zur Verfügung. Diese
-akzeptieren Paketnamen als Parameter und versorgen `dpkg` und APT mit
-den zusätzlichen Daten aus den dazugehörigen, von Univention
+danach ihre gewünschten Softwarekomponenten über ein modifiziertes 
+Tasksel (siehe <<tasksel>>) aus. Installieren Sie zu einem späteren 
+Zeitpunkt Software nach, stehen Ihnen auf der *Kommandozeile* die beiden 
+Werkzeuge `univention-install` und `univention-remove` zur Verfügung. 
+Diese akzeptieren Paketnamen als Parameter und versorgen `dpkg` und APT 
+mit den zusätzlichen Daten aus den dazugehörigen, von Univention
 bereitgestellten Vorlagen.
 
 // Stichworte für den Index
