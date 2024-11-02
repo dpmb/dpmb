@@ -24,7 +24,13 @@ verallgemeinert werden und hängt vom konkreten Einzelfall ab.
 
 === Duplikate finden ===
 
+// Stichworte für den Index
+(((Debianpaket, util-linux)))
+* Duplikate sind Dateien mit gleichem Namen und Inhalt
+** welche Pakete legen diese an?
+** wie kommen diese durch die Paketverwaltung zustande?
 * Werkzeug `hardlink` aus dem Debianpaket 'util-linux'
+** warum ist das besser als manuelles Suchen?
 * Dateien in `/usr/share/doc/` prüfen 
 * siehe <<Beckert-Blog-Hardlinking-Duplicate-Files>>
 
