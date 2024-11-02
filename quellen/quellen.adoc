@@ -126,6 +126,8 @@
 
 - [[[biarch]]] Fedora Project: Biarch Spin, https://fedoraproject.org/wiki/Biarch_Spin
 
+- [[[bleachbit]]] Bleachbit, https://www.bleachbit.org/
+
 - [[[Buero2.0]]] Büro 2.0, Berlin, https://www.buero20.org/
 
 - [[[bugs-found-during-book-writing]]] Bugs, die während dem

@@ -90,6 +90,8 @@ unter Footprint unter https://wiki.debian.org/ReduceDebian
 
 === Mittels Bleachbit aufräumen ===
 
-* bleachbit (https://www.bleachbit.org/)
+// Stichworte für den Index
+(((Bleachbit)))
+* bleachbit <<bleachbit>>
 
 // Datei (Ende): ./praxis/plattenplatz-sparen-mit-der-paketverwaltung.adoc
