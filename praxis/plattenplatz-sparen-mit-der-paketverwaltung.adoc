@@ -37,6 +37,7 @@ verallgemeinert werden und hängt vom konkreten Einzelfall ab.
 
 * siehe <<Beckert-Blog-Hardlinking-Duplicate-Files>>
 
+[[plattenplatz-sparen-mit-der-paketverwaltung-pfade-ausschliessen]]
 === Pfade ausschließen ===
 
 * `dpkg --path-exclude=…`
@@ -50,22 +51,26 @@ verallgemeinert werden und hängt vom konkreten Einzelfall ab.
 
 * momentan noch beschrieben unter <<paketverwaltung-mit-eingeschraenkten-ressourcen-fuer-embedded-und-mobile-devices>>
 
+[[plattenplatz-sparen-mit-der-paketverwaltung-ungenutzte-bibliotheken]]
 === Ungenutzte Bibliotheken prüfen ===
 
 * ungenutzte Bibliotheken prüfen, denen aber das ``Automatisch installiert''-Flag fehlt 
 
 * siehe <<Beckert-Blog-Finding-Libraries>>
 
+[[plattenplatz-sparen-mit-der-paketverwaltung-paketcache-aufraeumen]]
 === Paketcache aufräumen ===
 
 * siehe dazu <<paketcache-aufraeumen>>
 
+[[plattenplatz-sparen-mit-der-paketverwaltung-paketcache-separat]]
 === Paketcache auf separater Paratition ===
 
 * Verzeichnis `/var/cache/apt` auf tmpfs 
 
 * siehe <<cache-verzeichnis-auf-separater-partition>>
 
+[[plattenplatz-sparen-mit-der-paketverwaltung-logfiles-begrenzen]]
 === Logfiles begrenzen ===
 
 * Werkzeug `logrotate` (sollte eigentlich installiert sein)
@@ -74,6 +79,7 @@ verallgemeinert werden und hängt vom konkreten Einzelfall ab.
   Konfiguration sollte angepasst werden, wenn man manuell weitere 
   Logfiles in Anwendungen (VHosts im Apache z.B.) konfiguriert.
 
+[[plattenplatz-sparen-mit-der-paketverwaltung-syslog-deaktivieren]]
 === Syslog deaktivieren ===
 
 * keinen Syslogd verwenden und Syslog nur in einen Ringbuffer 
@@ -87,6 +93,7 @@ verallgemeinert werden und hängt vom konkreten Einzelfall ab.
 * gehört eigentlich nicht zur Paketverwaltung... Kann man 
   entsprechend zum Kürzen wieder rauskippen
 
+[[plattenplatz-sparen-mit-der-paketverwaltung-debian-installation]]
 === Die Größe der Debian-Installation verringern ===
 
 Eine übliche Installation von Debian GNU/Linux für den Desktop kann 
@@ -97,13 +104,15 @@ zu machen, bleibt nur, von Anfang an konsequent zu sein:
 * identifizieren Sie unnötige Pakete und entfernen Sie diese, sofern das möglich ist
 * vermeiden Sie `tasksel` (siehe <<tasksel>>), auch wenn das Werkzeug noch so toll ist und wählen stattdessen die Pakete aus, die Sie wirklich benötigen
 
-Eine vollständigere Liste beinhaltet der Abschnitt ReduceDebian im Debian Wiki <<ReduceDebian>>. Diese Liste rät u. a. zu den folgenden Schritten:
+Eine vollständigere Liste beinhaltet der Abschnitt ReduceDebian im 
+Debian Wiki <<ReduceDebian>>. Diese Liste rät u. a. zu den folgenden 
+Schritten:
 
 * nicht-kritische Pakete entfernen
 * Apt umkonfigurieren, so dass es nicht automatisch zusätzliche Pakete installiert
 * Pakete durch kleinere Äquivalente ersetzen
 * unnötige Pakete entfernen
-* unnötige Locales entfernen, bspw. mittels `localepurge` (siehe <<plattenplatz-sparen-mit-der-paketverwaltung-lokalisierungen>>)
+* unnötige Spracheinstellungen (Locales) entfernen, bspw. mittels `localepurge` (siehe <<plattenplatz-sparen-mit-der-paketverwaltung-lokalisierungen>>)
 * unnötige Kernelmodule entfernen
 * einen kleineren, spezifischeren Kernel bauen
 
@@ -112,6 +121,7 @@ Container auszulagern. Damit verringert sich der Ballast, der später
 vielleicht wieder aufgeräumt werden muss, sollte die gerade ausprobierte
 Software doch nicht ihren Erwartungen entsprechen.
 
+[[plattenplatz-sparen-mit-der-paketverwaltung-bleachbit]]
 === Mittels Bleachbit aufräumen ===
 
 // Stichworte für den Index
