@@ -40,7 +40,9 @@ verallgemeinert werden und hängt vom konkreten Einzelfall ab.
 
 === Ungenutzte Lokalisierungen entfernen ===
 
-* Paket 'localepurge' 
+// Stichworte für den Index
+(((Debianpaket, localepurge)))
+* Paket 'localepurge' <<localepurge>>
 * momentan noch beschrieben unter <<paketverwaltung-mit-eingeschraenkten-ressourcen-fuer-embedded-und-mobile-devices>>
 
 === Ungenutzte Bibliotheken prüfen ===
