@@ -95,7 +95,7 @@ zu machen, bleibt nur, von Anfang an konsequent zu sein:
 
 * installieren Sie nur die Pakete, die Sie tatsächlich benötigen und auch benutzen
 * identifizieren Sie unnötige Pakete und entfernen Sie diese, sofern das möglich ist
-* vermeiden Sie `tasksel`, auch wenn das Werkzeug noch so toll ist und wählen stattdessen die Pakete aus, die Sie wirklich benötigen
+* vermeiden Sie `tasksel` (siehe <<tasksel>>), auch wenn das Werkzeug noch so toll ist und wählen stattdessen die Pakete aus, die Sie wirklich benötigen
 
 Eine vollständigere Liste beinhaltet der Abschnitt ReduceDebian im Debian Wiki <<ReduceDebian>>. Diese Liste rät u. a. zu den folgenden Schritten:
 
