@@ -79,14 +79,23 @@ verallgemeinert werden und hängt vom konkreten Einzelfall ab.
 
 === Die Größe der Debian-Installation verringern ===
 
+* konsequent von Anfang an sein:
+** nur die Pakete installieren, die tatsächlich benötigt und auch benutzt werden
+** unnötige Pakete identifizieren und entfernen, sofern möglich
+** `tasksel` vermeiden
+
 * siehe ReduceDebian -- Reducing the size of the Debian Installation
-unter Footprint unter https://wiki.debian.org/ReduceDebian
+unter Footprint unter <<ReduceDebian>>
 ** nicht-kritische Pakete entfernen
 ** apt umkonfigurieren, so dass es nicht automatisch zusätzliche Pakete installiert
 ** Pakete durch kleinere Äquivalente ersetzen
 ** unnötige Pakete entfernen
 ** unnötige Locales entfernen, bspw. mittels localepurge
 ** unnötige Kernelmodule entfernen
+** einen kleineren, spezifischeren Kernel bauen
+
+* Softwaretests in Virtuelle Maschinen oder Container auslagern
+** damit verringert sich der Ballast, der später vielleicht wieder aufgeräumt werden muss
 
 === Mittels Bleachbit aufräumen ===
 

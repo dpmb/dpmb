@@ -891,6 +891,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Raspbian]]] Debian für das Raspberry Pi, https://www.raspbian.org/
 
+- [[[ReduceDebian]]] ReduceDebian im Debian Wiki, https://wiki.debian.org/ReduceDebian
+
 - [[[repology]]] Repology, https://repology.org/
 
 - [[[ReproducibleBuilds]]] Reproducible Builds, https://reproducible-builds.org/
