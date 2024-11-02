@@ -299,6 +299,8 @@
 
 - [[[Debian-Paket-autopkgtest]]] Debian-Paket 'autopkgtest', https://packages.debian.org/de/stable/autopkgtest
 
+- [[[Debian-Paket-bleachbit]]] Debian-Paket 'bleachbit', https://packages.debian.org/de/stable/bleachbit
+
 - [[[Debian-Paket-checkinstall]]] Debian-Paket 'checkinstall', https://packages.debian.org/de/bookworm/checkinstall
 
 - [[[Debian-Paket-check-dfsg-status]]] Debian-Paket 'check-dfsg-status', https://packages.debian.org/de/bookworm/check-dfsg-status

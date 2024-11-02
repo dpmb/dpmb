@@ -115,6 +115,7 @@ Software doch nicht ihren Erwartungen entsprechen.
 
 // Stichworte für den Index
 (((Bleachbit)))
+(((Debianpaket, bleachbit)))
 * bleachbit <<bleachbit>>
 
 * "with BleachBit you can free cache, delete cookies, clear Internet history, shred temporary files, delete logs, and discard junk you didn't know was there. Designed for Linux and Windows systems, it wipes clean thousands of applications including Firefox, Adobe Flash, Google Chrome, Opera, and more."
