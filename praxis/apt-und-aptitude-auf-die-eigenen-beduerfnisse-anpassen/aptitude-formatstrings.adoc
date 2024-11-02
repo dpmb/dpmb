@@ -69,7 +69,7 @@ Möchten Sie eine andere Ausgabe erhalten, benutzen Sie im Aufruf den
 Schalter `-F` (Langform `--display-format`) gefolgt von einem String mit
 den entsprechenden Platzhaltern. Das nachfolgende Beispiel listet alle
 verfügbaren Pakete samt deren Installationsstatus (`%c`) auf, in dessen
-Paketname die Zeichenkette `asciidoc' enthalten ist (`%p`). Zwischen dem
+Paketname die Zeichenkette `asciidoc` enthalten ist (`%p`). Zwischen dem
 Paketstatus und dem Paketnamen wird lediglich ein Leerzeichen eingefügt.
 
 .Individuelle Gestaltung des Ausgabeformats von `aptitude` bei der Suche nach den verfügbaren Paketen mit 'asciidoc' im Namen
