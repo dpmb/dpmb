@@ -41,6 +41,7 @@ verallgemeinert werden und hängt vom konkreten Einzelfall ab.
 
 * `dpkg --path-exclude=…`
 
+[[plattenplatz-sparen-mit-der-paketverwaltung-lokalisierungen]]
 === Ungenutzte Lokalisierungen entfernen ===
 
 // Stichworte für den Index
@@ -102,7 +103,7 @@ Eine vollständigere Liste beinhaltet der Abschnitt ReduceDebian im Debian Wiki 
 * Apt umkonfigurieren, so dass es nicht automatisch zusätzliche Pakete installiert
 * Pakete durch kleinere Äquivalente ersetzen
 * unnötige Pakete entfernen
-* unnötige Locales entfernen, bspw. mittels `localepurge`
+* unnötige Locales entfernen, bspw. mittels `localepurge` (siehe <<plattenplatz-sparen-mit-der-paketverwaltung-lokalisierungen>>)
 * unnötige Kernelmodule entfernen
 * einen kleineren, spezifischeren Kernel bauen
 
