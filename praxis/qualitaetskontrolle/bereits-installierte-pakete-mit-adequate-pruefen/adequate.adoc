@@ -7,12 +7,15 @@
 
 // Stichworte für den Index
 (((adequate)))
+(((adequate, Debian Policy Manual)))
 (((Debianpaket, adequate)))
 (((lintian)))
 
 Im Gegensatz zu `lintian` (siehe <<bugreports-lintian>>) validieren Sie mit
 `adequate` <<Debian-Paket-adequate>> die Pakete, die bereits auf ihrem
-System installiert sind. `adequate` steht Ihnen ab Debian 8 'Jessie' bereit.
+System installiert sind. `adequate` steht Ihnen ab Debian 8 'Jessie' bereit
+und führt einen rigorosen Qualitätstest gemäß des Debian Policy Manuals 
+<<Debian-Policy-Manual>> durch.
 
 // Stichworte für den Index
 (((adequate, --all)))
@@ -24,20 +27,22 @@ System installiert sind. `adequate` steht Ihnen ab Debian 8 'Jessie' bereit.
 Zur Paketanalyse versteht es die folgenden Schalter (Auswahl):
 
 'Paketname'::
-Überprüfung des von Ihnen angegebenen Debianpakets.
+Überprüfung des von Ihnen angegebenen Debianpakets. Dieses muss dazu
+bereits installiert sein.
 
 `--all`::
-Überprüfung aller Pakete, die auf ihrem Debian-System derzeit
-installiert sind.
+Überprüfung aller Pakete, die auf ihrem Debian-System derzeit installiert 
+sind.
 
 `--tags` 'Tag1','Tag2'::
-Beschränkung der Ausgabe auf die angegebenen Fehlerwerte zu 'Tag1' und
-'Tag2'. Alle angegebenen Tags trennen Sie durch Komma in einer Liste.
+Beschränkung der Ausgabe auf die angegebenen Fehlerwerte ('Tags') zu 
+'Tag1' und 'Tag2'. Alle angegebenen Fehlerwerte trennen Sie durch ein 
+Komma in einer Liste.
 
 `--tags` '-Tag1','Tag2'::
-Beschränkung der Ausgabe auf die angegebenen Fehlerwerte *ohne* 'Tag1'
-und 'Tag2'. Alle angegebenen Tags trennen Sie durch Komma in einer
-Liste. 
+Beschränkung der Ausgabe auf die angegebenen Fehlerwerte ('Tags') *ohne* 
+'Tag1' und 'Tag2'. Alle angegebenen Fehlerwerte trennen Sie durch ein
+Komma in einer Liste. 
 
 Als Tags sind zulässig:
 
