@@ -8,6 +8,8 @@
 
 // [bibliography]
 
+- [[[adequateByfeld]]] Bruce Byfeld: Command Line – adequate. Quality-testing for Debian packages, Linux Magazine 275/2023, https://www.linux-magazine.com/Issues/2023/275/More-Than-Adequate
+
 - [[[ArchLinux]]] Arch Linux, https://archlinux.org/
 
 - [[[alien]]] Joey Hess: Projektseite zu 'alien', https://joeyh.name/code/alien/

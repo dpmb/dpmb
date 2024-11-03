@@ -44,7 +44,7 @@ Beschränkung der Ausgabe auf die angegebenen Fehlerwerte ('Tags') *ohne*
 'Tag1' und 'Tag2'. Alle angegebenen Fehlerwerte trennen Sie durch ein
 Komma in einer Liste. 
 
-Als Tags sind zulässig:
+Als Tags sind zulässig <<adequateByfeld>>:
 
 * 'bin-or-sbin-binary-requires-usr-lib-library'
 * 'broken-binfmt-detector'
