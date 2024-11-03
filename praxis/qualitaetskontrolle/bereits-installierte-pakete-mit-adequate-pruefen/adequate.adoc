@@ -21,6 +21,8 @@ Praktiken zur Paketstruktur bemängelt es nicht.
 
 // Stichworte für den Index
 (((adequate, --all)))
+(((adequate, --debconf)))
+(((adequate, --fail)))
 (((adequate, Paketname)))
 (((adequate, --tags broken-symlink)))
 (((adequate, --tags missing-copyright-file)))
@@ -30,21 +32,27 @@ Zur Paketanalyse versteht es die folgenden Schalter (Auswahl):
 
 'Paketname'::
 Überprüfung des von Ihnen angegebenen Debianpakets. Dieses muss dazu
-bereits installiert sein.
+bereits auf ihrem System installiert sein.
 
 `--all`::
 Überprüfung aller Pakete, die auf ihrem Debian-System derzeit installiert 
 sind.
 
+`--debconf`::
+Melde Auffälligkeiten via `debconf`.
+
+`--fail`::
+Beende die Validierung mit dem Rückgabewert 2, falls mindestens ein Tag ausgelöst hat.
+
 `--tags` 'Tag1','Tag2'::
 Beschränkung der Ausgabe auf die angegebenen Fehlerwerte ('Tags') zu 
-'Tag1' und 'Tag2'. Alle angegebenen Fehlerwerte trennen Sie durch ein 
-Komma in einer Liste.
+'Tag1' und 'Tag2'. Alle angegebenen Fehlerwerte trennen Sie jeweils durch 
+ein Komma in der Liste.
 
 `--tags` '-Tag1','Tag2'::
 Beschränkung der Ausgabe auf die angegebenen Fehlerwerte ('Tags') *ohne* 
-'Tag1' und 'Tag2'. Alle angegebenen Fehlerwerte trennen Sie durch ein
-Komma in einer Liste. 
+'Tag1' und 'Tag2'. Alle angegebenen Fehlerwerte trennen Sie jeweils durch 
+ein Komma in der Liste. 
 
 Als Tags sind zulässig <<adequateByfeld>>:
 
