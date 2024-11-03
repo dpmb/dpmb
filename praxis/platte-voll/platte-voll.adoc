@@ -10,32 +10,32 @@
 (((Platte läuft voll, Paket installieren)))
 Ja, diese Situation gibt es heute immer noch. Auch, wenn Festplatten 
 heutzutage vergleichsweise riesig sind, ist mit diesem Zustand zu rechnen.
-Behalten Sie bitte in Erinnerung, dass ältere Systeme bestehen, die soweit
-klaglos ihren Dienst leisten und trotzdem nicht unbedingt auf heutige 
-Datenmengen ausgelegt sind. Sie sehen, es gibt genügend Anlässe, sich mit 
-dem Thema auseinanderzusetzen.
+Behalten Sie bitte in Erinnerung, dass ältere Systeme bestehen und 
+weiterlaufen, soweit klaglos ihren Dienst leisten und trotzdem nicht 
+unbedingt auf heutige Datenmengen ausgelegt sind. Sie sehen, es gibt 
+genügend Anlässe, sich mit dem Thema auseinanderzusetzen.
 
 === Hintergrund ===
 
-* Pakete werden heruntergeladen, bspw. durch aptitude
-* Speicherplatz reicht nicht aus, 
-** um alle herunterzuladenden Pakete zu speichern (cachen)
-** um alle benötigten Pakete zu installieren
-* wann passiert das
-** ist nicht ungewöhnlich, ...
-*** wenn System kleiner ausgelegt ist, als gedacht
-*** wenn sich das Ziel/der Einsatzzweck der Maschine ändert
-    (Testsystem, Testsystem wird "plötzlich" doch Produktivsystem)
-*** neue Paketabhängigkeiten hinzugekommen sind, bspw. für Features, die
-    man vorher nicht brauchte
-** bei der Aktualisierung des Systems (update, upgrade und dist-upgrade)
-*** irgendwo müssen die Pakete ja erstmal hin -- sprich: also landen die
-    im Paketcache
-*** Reihenfolge des Downloads steht nicht wirklich fest
-*** Auswahl der Installation .... zufällig?
+Eintreten kann dieser Zustand zum Beispiel, wenn mittels `aptitude` Pakete 
+heruntergeladen werden. Dabei reicht der Speicherplatz nicht aus, um alle 
+herunterzuladenden Pakete zu speichern (zu cachen), auszupacken und um 
+alle benötigten Pakete dann auch zu installieren. Obwohl die Werkzeuge zur
+Paketverwaltung Mechanismen beinhalten, die das vorab prüfen, sind diese
+nicht perfekt (siehe <<fig.platte-voll>>).
 
 .Kein Platz mehr
 image::praxis/platte-voll/platte-voll.png[id="fig.platte-voll", width="50%"]
+
+Das passiert durchaus, wenn ein System kleiner ausgelegt ist, als gedacht, 
+wenn sich das Ziel/der Einsatzzweck der Maschine ändert und aus einem 
+Testsystem "plötzlich" doch ein Produktivsystem wird und auch neue 
+Paketabhängigkeiten hinzugekommen sind, bspw. für Features, die man vorher 
+nicht brauchte. Bei der Aktualisierung des Systems mittels `update`, 
+`upgrade` oder `dist-upgrade` müssen die Pakete ja erstmal irgendwo hin -- 
+sprich: also landen die Dateien im Paketcache. Weder die Reihenfolge des
+Downloads, noch deren Vorbereitung ist detailliert festgelegt und bestimmt
+das Werkzeug zur Paketverwaltung.
 
 .Download-Fehler
 image::praxis/platte-voll/download-fehler.png[id="fig.download-fehler", width="50%"]
