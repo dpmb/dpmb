@@ -54,7 +54,8 @@ Beschränkung der Ausgabe auf die angegebenen Fehlerwerte ('Tags') *ohne*
 'Tag1' und 'Tag2'. Alle angegebenen Fehlerwerte trennen Sie jeweils durch 
 ein Komma in der Liste. 
 
-Als Tags sind zulässig <<adequateByfeld>>:
+Weitere Schalter entnehmen Sie bitte der Manpage zum Programm. Als Tags 
+sind zulässig <<adequateByfeld>>:
 
 'bin-or-sbin-binary-requires-usr-lib-library' :: The binary in `/bin` or `/sbin` that requires a library in `/usr/lib`. It is impossible to use this binary before `/usr` is mounted.
 
@@ -89,8 +90,6 @@ Als Tags sind zulässig <<adequateByfeld>>:
 'symbol-size-mismatch' :: The symbol has changed size since the package was built.
 
 'undefined-symbol' :: The symbol has not been found in the libraries linked with the binary.
-
-Weitere Schalter entnehmen Sie bitte der Manpage zum Programm.
 
 Im ersten Beispiel sehen Sie das Ergebnis der Validierung des Pakets
 'pdfstudio', welches aus einer nicht-Debian-eigenen Paketquelle stammt.
