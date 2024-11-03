@@ -8,10 +8,12 @@
 // Stichworte für den Index
 (((Platte läuft voll, Paketcache)))
 (((Platte läuft voll, Paket installieren)))
-* ja, das gibt es heute immer noch
-* auch, wenn Festplatten vergleichsweise riesig sind
-* Hinweis: es gibt ältere Systeme, die klaglos ihren Dienst leisten
-* also: genügend Anlässe, sich damit auseinanderzusetzen
+Ja, diese Situation gibt es heute immer noch. Auch, wenn Festplatten 
+heutzutage vergleichsweise riesig sind, ist mit diesem Zustand zu rechnen.
+Behalten Sie bitte in Erinnerung, dass ältere Systeme bestehen, die soweit
+klaglos ihren Dienst leisten und trotzdem nicht unbedingt auf heutige 
+Datenmengen ausgelegt sind. Sie sehen, es gibt genügend Anlässe, sich mit 
+dem Thema auseinanderzusetzen.
 
 === Hintergrund ===
 
