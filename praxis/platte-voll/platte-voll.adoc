@@ -34,8 +34,10 @@ Paketabhängigkeiten hinzugekommen sind, bspw. für Features, die man vorher
 nicht brauchte. Bei der Aktualisierung des Systems mittels `update`, 
 `upgrade` oder `dist-upgrade` müssen die Pakete ja erstmal irgendwo hin -- 
 sprich: also landen die Dateien im Paketcache. Weder die Reihenfolge des
-Downloads, noch deren Vorbereitung ist detailliert festgelegt und bestimmt
-das Werkzeug zur Paketverwaltung.
+Downloads, noch deren Vorbereitung können wir als Nutzer festgelegen -- 
+das bestimmt das jeweils verwendete Werkzeug zur Paketverwaltung und 
+berücksichtigt dabei bspw. Paketrelationen mit 'pre-depends' und 
+'conflicts'.
 
 .Download-Fehler
 image::praxis/platte-voll/download-fehler.png[id="fig.download-fehler", width="50%"]
@@ -46,18 +48,18 @@ image::praxis/platte-voll/download-fehler.png[id="fig.download-fehler", width="5
 ** produktives, stabiles System
 ** alle gewünschten Pakete werden heruntergeladen und installiert
 
-=== Varianten ===
+==== Varianten ====
 
 * aptitude verlassen
-* mit df -h schauen, wieviel Platz noch verfügbar ist
-* mit aptitude clean den Paketcache aufräumen
-* mit aptitude autoremove Pakete entfernen, die nicht mehr benötigt
-  werden, aber noch installiert sind
+* mit dem Kommando `df -h` schauen, wieviel Platz noch verfügbar ist
+* den Paketcache aufräumen, bspw. mit `aptitude clean`
+* mit `aptitude autoremove` diejenigen Pakete entfernen, die nicht 
+  mehr benötigt werden, aber noch installiert sind
 * Paketabhängigkeiten begutachten
 ** schauen, ob wir Pakete einzeln (nacheinander) installieren können
 ** nach jeder Installation wieder den Paketcache aufräumen
 
-=== Fehler beheben ===
+==== Fehler beheben ====
 
 * kurz: 
 ** geht
