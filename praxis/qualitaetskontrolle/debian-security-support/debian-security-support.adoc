@@ -19,12 +19,15 @@ schon bekannt ist, dass deren Security-Support in zukünftigen
 Veröffentlichungen nicht fortgesetzt wird.
 
 Als Basis nutzt `check-support-status` zwei textbasierte Datenbanken,
-die sich unter
-`/usr/share/debian-security-support/security-support-ended` und
-`/usr/share/debian-security-support/security-support-limited` befinden.
+die sich im Verzeichnis `/usr/share` befinden:
+
+* `/usr/share/debian-security-support/security-support-ended`
+
+* `/usr/share/debian-security-support/security-support-limited` 
+
 Erstere enthält die Pakete, deren Sicherheitsaktualisierungen enden,
-während die zweite Datei die Pakete auflistet, deren
-Sicherheitaktualisierungen lediglich eingeschränkt wird.
+während die zweite Datei die Pakete auflistet, deren 
+Sicherheitaktualisierungen lediglich eingeschränkt werden.
 
 .Auflistung der Paket ohne zukünftige Sicherheitsaktualisierungen nach der Analyse von `debian-security-support`
 image::praxis/qualitaetskontrolle/debian-security-support/pakete-ohne-security-support.png[id="fig.pakete-ohne-security-support", width="50%"]
