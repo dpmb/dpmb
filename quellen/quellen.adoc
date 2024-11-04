@@ -524,6 +524,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Paket-thinkfan]]] Debian-Paket 'thinkfan', https://packages.debian.org/de/stable/thinkfan
 
+- [[[Debian-Paket-tlp]]] Debian-Paket 'tlb', https://packages.debian.org/de/stable/tlp
+
 - [[[Debian-Paket-tzdata]]] Debian-Paket 'tzdat', https://packages.debian.org/de/stable/tzdata
 
 - [[[Debian-Paket-ucf]]] Debian-Paket 'ucf', https://packages.debian.org/de/stable/ucf

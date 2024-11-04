@@ -16,10 +16,12 @@ erforderlich sind. Wir betrachten das daher nachfolgend anhand der
 Richtgrößen Batterielaufzeit, belegter Speicherplatz, Bildschirmgröße
 und die Erfordernisse an die CPU.
 
+[[mobile-geraete-batterie]]
 === Batterielaufzeit ===
 
-Todo
+* 'tlp' <<Debian-Paket-tlp>>
 
+[[mobile-geraete-speicherplatz]]
 === Speicherplatz === 
 
 Bekannte Pakete:
@@ -35,10 +37,12 @@ Bekannte Pakete:
 
 include::localepurge.adoc[]
 
+[[mobile-geraete-bildschirmgroesse]]
 === Bildschirmgröße ===
 
 Todo
 
+[[mobile-geraete-cpu]]
 === Erfordernisse an die CPU ===
 
 * Debdelta // gehört hier erwähnt, bzw. systeme-mit-schlechter-anbindung-warten.adoc
