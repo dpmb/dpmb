@@ -30,11 +30,18 @@ Sicherheitaktualisierungen lediglich eingeschränkt wird.
 image::praxis/qualitaetskontrolle/debian-security-support/pakete-ohne-security-support.png[id="fig.pakete-ohne-security-support", width="50%"]
 
 // Stichworte für den Index
+(((check-support-status, --except)))
 (((check-support-status, --list)))
 (((check-support-status, --type)))
 (((Paketvarianten, Sourcepaket)))
 
 `check-support-status` bietet die folgenden Schalter an (Auswahl):
+
+`--except` 'Paketliste'::
+Schließe die in 'Paketliste' genannten Pakete von der 
+Sicherheitsüberprüfung aus. 'Paketliste' ist eine durch Komma 
+voneinander getrennte Auflistung von Paketnamen. Im Standardfall werden 
+alle Pakete von  berücksichtigt.
 
 `--list` 'Dateiname'::
 'Dateiname' bezeichnet eine Textdatei, in der die einzelnen Pakete
