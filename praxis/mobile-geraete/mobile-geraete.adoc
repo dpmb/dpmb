@@ -19,7 +19,16 @@ und die Erfordernisse an die CPU.
 [[mobile-geraete-batterie]]
 === Batterielaufzeit ===
 
-* 'tlp' <<Debian-Paket-tlp>>
+// Stichworte für den Index
+(((Debianpaket, acpitool)))
+(((Debianpaket, tlp)))
+Die Batterielaufzeit gehört neben dem Netzwerk zu den kritischsten 
+Aspekten bei der Nutzung mobiler Geräte. Während andere Kriterien 
+häufig eher nachrangig sind, geht ohne die beiden gar nichts. In unser
+Blickfeld sind diese Werkzeuge geraten:
+
+* acpitool <<Debian-Paket-acpitool>>
+* tlp <<Debian-Paket-tlp>>
 
 [[mobile-geraete-speicherplatz]]
 === Speicherplatz === 
