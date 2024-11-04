@@ -247,6 +247,8 @@
 
 - [[[Debian-Paketsuche]]] Debian-Webseite, Paketsuche, https://www.debian.org/distrib/packages#search_contents
 
+- [[[Debian-Paket-acpitool]]] Debian-Paket 'acpitool', https://packages.debian.org/de/stable/acpitool
+
 - [[[Debian-Paket-adept]]] Historisches Debian-Paket 'adept', https://packages.qa.debian.org/adept
 
 - [[[Debian-Paket-adequate]]] Debian-Paket 'adequate', https://packages.debian.org/de/stable/adequate
