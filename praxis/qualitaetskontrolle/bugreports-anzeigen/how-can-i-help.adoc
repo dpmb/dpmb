@@ -110,12 +110,12 @@ vorstellen können, z.B. wenn bei einer Bibliothek wegen einer
 `libfoo7` zu `libfoo8`.
 
 Über die letzten beiden Markierungen hat `how-can-i-help` eine Art
-Glaskugel-Funktion bzgl. zukünftiger Debian-Veröffentlichungen. Daraus
-ersehen Sie Tendenzen dahingehend, welche Pakete im Bestand bleiben. Das
-hat direkte Auswirkungen, welche Software zukünftig als Debian-Paket
-verfügbar bleibt und gepflegt wird. Haben Sie gerade ein Paket aus
-Debian 'stable' installiert und `how-can-i-help` zeigt Ihnen im Anschluss
-zu ihrer Installation an, dass das Paket aus Debian 'testing'
+Glaskugel-Funktion bzgl. zukünftiger Veröffentlichungen von Debian. 
+Daraus ersehen Sie Tendenzen dahingehend, welche Pakete im Bestand 
+bleiben. Das hat direkte Auswirkungen, welche Software zukünftig als 
+Debian-Paket verfügbar bleibt und gepflegt wird. Haben Sie gerade ein 
+Paket aus Debian 'stable' installiert und `how-can-i-help` zeigt Ihnen 
+im Anschluss zu ihrer Installation an, dass das Paket aus Debian 'testing'
 herausgeflogen ist, klären Sie für sich, ob Sie längerfristig auf dieses
 Paket setzen wollen. Bei einer solchen Meldung ist die Chance groß, dass
 dieses Paket in der nächsten Veröffentlichung von Debian 'stable' nicht
