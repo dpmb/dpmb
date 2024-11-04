@@ -57,39 +57,39 @@ ein Komma in der Liste.
 Weitere Schalter entnehmen Sie bitte der Manpage zum Programm. Als Tags 
 sind zulässig <<adequateByfeld>>:
 
-`bin-or-sbin-binary-requires-usr-lib-library` :: The binary in `/bin` or `/sbin` that requires a library in `/usr/lib`. It is impossible to use this binary before `/usr` is mounted.
+`bin-or-sbin-binary-requires-usr-lib-library` :: Die Binärdatei im Verzeichnis `/bin` oder `/sbin`, die eine Bibliothek in `/usr/lib` erfordert. Es ist nicht möglich, diese Binärdatei zu benutzen, bevor das Verzeichnis `/usr` gemounted ist.
 
-`broken-binfmt-detector` :: The detector registered with `update-binfmts`(8) does not exist.
+`broken-binfmt-detector` :: Der Detector, der zuvor mit `update-binfmts` registriert wurde, existiert nicht.
 
-`broken-binfmt-interpreter` :: The interpreter registered with `update-binfmts`(8) does not exist.
+`broken-binfmt-interpreter` :: Der Interpreter, der zuvor mit `update-binfmts` registriert wurde, existiert nicht.
 
-`broken-symlink` :: Ein symbolischer Link zeigt auf einen Datei, die nicht existiert
+`broken-symlink` :: Ein symbolischer Link zeigt auf einen Datei, die nicht existiert.
 
-`incompatible-licenses` :: The licenses of the libraries the binary is linked to are incompatible.
+`incompatible-licenses` :: Die Lizenzen der Bibliotheken, zu dem die Binärdatei verlinkt wurde, sind inkompatibel zueinander.
 
 `ldd-failure` :: Der Aufruf von `ldd -r` auf die Datei ging unerwartet schief.
 
 `library-not-found` :: Eine Bibliothek fehlt, vermutlich aufgrund eines defekten symbolischen Links.
 
-`missing-alternative` :: This package manager provides a terminal emulator, but it is not registered as an alternative or a virtual package.
+`missing-alternative` :: Dieser Paketmanager bietet einen Terminalemulator an, aber dieser ist nicht als alternatives oder virtuelles Paket registriert.
 
 `missing-copyright-file` :: Es wurde keine Copyright-Datei bereitgestellt.
 
-`missing-pkgconfig-dependency` :: Dependency of a `pkg-config` (`.pc`) file not provided.
+`missing-pkgconfig-dependency` :: Die Abhängigkeit von einer Datei `pkg-config` (`.pc`) ist nicht gegeben.
 
-`missing-symbol-version-information` :: The binary's library provides only unversioned symbols.
+`missing-symbol-version-information` :: Die Bibliothek der Binärdatei bietet nur unversionierte Symbole.
 
-`obsolete-conffile` :: The conffile that previously shipped with the package is no longer included in the current version, but the conffile has not been removed or updated.
+`obsolete-conffile` :: Die Konfigurationsdatei, die früher mit dem Paket geliefert wurde, ist in der aktuellen Version nicht mehr enthalten, aber die Konfigurationsdatei wurde nicht entfernt oder aktualisiert.
 
 `program-name-collision` :: Das Paket hat den gleichen Namen Namen wie ein anderes Programm. 
 
-`py-file-not-bytecompiled` :: This package ships Python modules that are not byte-compiled.
+`py-file-not-bytecompiled` :: Das Paket liefert Pythonmodule, die nicht byte-compiliert sind.
 
-`pyshared-file-not-bytecompiled` :: This package ships Python modules in `/usr/share/pyshared` that are not byte compiled.
+`pyshared-file-not-bytecompiled` :: Das Paket liefert Pythonmodule im Verzeichnis `/usr/share/pyshared` die nicht byte-compiliert sind.
 
-`symbol-size-mismatch` :: The symbol has changed size since the package was built.
+`symbol-size-mismatch` :: Das Symbol hat die Größe geändert, seitdem das Paket gebaut wurde.
 
-`undefined-symbol` :: The symbol has not been found in the libraries linked with the binary.
+`undefined-symbol` :: Das Symbol konnte nicht in den Bibliotheken gefunden werden, gegen die die Binärdatei gelinkt wurde.
 
 Im ersten Beispiel sehen Sie das Ergebnis der Validierung des Pakets
 'pdfstudio', welches aus einer nicht-Debian-eigenen Paketquelle stammt.
