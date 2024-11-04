@@ -21,7 +21,7 @@ zu prüfen, kommen dafür eine ganze Reihe von Programmen zum Einsatz.
 (((Debianpaket, lintian)))
 (((Debianpaket, popbugs)))
 (((Debianpaket, rc-alert)))
-(((debian-security-support)))
+(((Debianpaket, debian-security-support)))
 Nachfolgend stellen wir Ihnen mehrere dieser Werkzeuge vor, mit denen
 Sie eine solche Inspektion selbst vornehmen und nachvollziehen können.
 Für noch nicht installierte, einzelne Pakete besprechen wir `lintian`,
@@ -30,7 +30,7 @@ bereits installierte Pakete verifizieren wir stattdessen mittels
 reports_) zeigen wir Ihnen den Umgang mit `apt-listbugs`,
 `apt-listchanges`, `popbugs`, `rc-alert` und `how-can-i-help`. Im Rahmen 
 der Betreuung älterer Installationen ist das Programm
-`debian-security-support` von großem Nutzen.
+`debian-security-support` aus dem gleichnamigen Paket von großem Nutzen.
 
 // Stichworte für den Index
 (((Debianpaket, piuparts)))
