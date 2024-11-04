@@ -63,17 +63,17 @@ sind zulässig <<adequateByfeld>>:
 
 `broken-binfmt-interpreter` :: The interpreter registered with `update-binfmts`(8) does not exist.
 
-`broken-symlink` :: A symlink points to a nonexistent file.
+`broken-symlink` :: Ein symbolischer Link zeigt auf einen Datei, die nicht existiert
 
 `incompatible-licenses` :: The licenses of the libraries the binary is linked to are incompatible.
 
-`ldd-failure` :: Running `ldd -r` on the file failed unexpectedly.
+`ldd-failure` :: Der Aufruf von `ldd -r` auf die Datei ging unerwartet schief.
 
-`library-not-found` :: Library missing, possibly because of a broken symlink.
+`library-not-found` :: Eine Bibliothek fehlt, vermutlich aufgrund eines defekten symbolischen Links.
 
 `missing-alternative` :: This package manager provides a terminal emulator, but it is not registered as an alternative or a virtual package.
 
-`missing-copyright-file` :: No copyright file provided.
+`missing-copyright-file` :: Es wurde keine Copyright-Datei bereitgestellt.
 
 `missing-pkgconfig-dependency` :: Dependency of a `pkg-config` (`.pc`) file not provided.
 
@@ -81,7 +81,7 @@ sind zulässig <<adequateByfeld>>:
 
 `obsolete-conffile` :: The conffile that previously shipped with the package is no longer included in the current version, but the conffile has not been removed or updated.
 
-`program-name-collision` :: This package has the same name as another program.
+`program-name-collision` :: Das Paket hat den gleichen Namen Namen wie ein anderes Programm. 
 
 `py-file-not-bytecompiled` :: This package ships Python modules that are not byte-compiled.
 
