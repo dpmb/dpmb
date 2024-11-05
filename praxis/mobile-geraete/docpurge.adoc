@@ -1,0 +1,15 @@
+// Datei: ./praxis/mobile-geraete/docpurge.adoc
+
+// Baustelle: Notizen
+
+[[mobile-geraete-docpurge]]
+
+==== docpurge ====
+
+* 'docpurge' <<docpurge>>
+
+// Ggf. Paradebeispiel N900 mit dem unsäglichen docpurge erwähnen: 
+// https://maemo.gitorious.org/maemo-af/docpurge/source/0bd88357713d7f554f119ab0c2ebaa676c433ec7:
+
+// Datei (Ende): ./praxis/mobile-geraete/docpurge.adoc
+

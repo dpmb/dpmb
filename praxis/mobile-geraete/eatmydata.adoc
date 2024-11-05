@@ -1,0 +1,13 @@
+// Datei: ./praxis/mobile-geraete/eatmydata.adoc
+
+// Baustelle: Notizen
+
+[[mobile-geraete-eatmydata]]
+
+==== eatmydata ====
+
+* 'eatmydata' <<Debian-Paket-eatmydata>>
+** verringert die Menge der Synchronisationen und somit die Schreibzugriffe
+
+// Datei (Ende): ./praxis/mobile-geraete/eatmydata.adoc
+

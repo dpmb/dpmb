@@ -4,7 +4,7 @@
 
 [[mobile-geraete-localepurge]]
 
-=== localepurge ===
+==== localepurge ====
 
 // Stichworte für den Index
 (((Debianpaket, localepurge)))
@@ -58,9 +58,9 @@ Paket nicht mehr vollständig installiert ist. Die Überprüfung mittels
 Veränderungen in <<paket-auf-veraenderungen-pruefen>>).
 
 * Das Programm bietet keine Möglichkeit an, die gelöschten Dateien
-wieder herzustellen. Daher bleibt Ihnen nur eine Neuinstallation aller
+wiederherzustellen. Daher bleibt Ihnen nur eine Neuinstallation aller
 bereinigten Pakete, für die Sie die entsprechenden Sprachdateien doch
-wieder benötigen (siehe dazu Pakete erneut installieren in
+wieder benötigen (siehe dazu ``Pakete erneut installieren'' in
 <<pakete-erneut-installieren>>).
 
 // Datei (Ende): ./praxis/mobile-geraete/localepurge.adoc
