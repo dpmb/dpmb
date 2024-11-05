@@ -54,8 +54,8 @@ werden, auch wenn es etwas in Konflikt mit der Paketverwaltung steht:
 * Bei der Aktualisierung und Deinstallation von Paketen verursacht die
 Benutzung von `localepurge` Fehlermeldungen, da in diesem Moment das
 Paket nicht mehr vollständig installiert ist. Die Überprüfung mittels
-`debsum` schlägt fehl (siehe dazu die Prüfung eines Pakets auf
-Veränderungen in <<paket-auf-veraenderungen-pruefen>>).
+`debsum` schlägt fehl (siehe dazu die ``Prüfung eines Pakets auf
+Veränderungen'' in <<paket-auf-veraenderungen-pruefen>>).
 
 * Das Programm bietet keine Möglichkeit an, die gelöschten Dateien
 wiederherzustellen. Daher bleibt Ihnen nur eine Neuinstallation aller
