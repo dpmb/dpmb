@@ -7,6 +7,12 @@
 ==== docpurge ====
 
 * 'docpurge' <<docpurge>>
+** "This is docpurge.  Installing this package will add a hook to apt so
+that all of `{/,/opt/maemo/}usr/share/{doc,man,info}` will be removed
+after every invocation of dpkg (by apt).  It also includes the command
+`/usr/sbin/docpurge` that can be called manually to perform the
+cleaning.  In addition, `/usr/sbin/docpurge` is executed automatically
+when the docpurge package is installed."
 
 // Ggf. Paradebeispiel N900 mit dem unsäglichen docpurge erwähnen: 
 // https://maemo.gitorious.org/maemo-af/docpurge/source/0bd88357713d7f554f119ab0c2ebaa676c433ec7:
