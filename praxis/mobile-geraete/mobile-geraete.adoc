@@ -27,22 +27,22 @@ Aspekten bei der Nutzung mobiler Geräte. Während andere Kriterien
 häufig eher nachrangig sind, geht ohne die beiden gar nichts. In unser
 Blickfeld sind diese Werkzeuge geraten:
 
-* acpitool <<Debian-Paket-acpitool>>
-* tlp <<Debian-Paket-tlp>>
+* 'acpitool' <<Debian-Paket-acpitool>>
+* 'tlp' <<Debian-Paket-tlp>>
 
 [[mobile-geraete-speicherplatz]]
 === Speicherplatz === 
 
-Bekannte Pakete:
+Der Kampf um Speicherplatz wird wohl nie zu Ende gehen, egal, wie groß 
+die Speichermedien auch werden. Eine ganze Reihe unterschiedlicher 
+Pakete tritt an, ihnen in der Situation zu helfen. Dazu gehören bspw. 
+'docpurge' <<docpurge>>, 'eatmydata' <<Debian-Paket-eatmydata>> und 
+'localepurge' <<localpurge>>, die wir ihnen nachfolgend genauer 
+vorstellen.
 
-* localepurge <<Debian-Paket-localepurge>>
-  // eher nach plattenplatz-sparen-mit-der-paketverwaltung.adoc
-  // Ggf. Paradebeispiel N900 mit dem unsäglichen docpurge erwähnen: 
-  // https://maemo.gitorious.org/maemo-af/docpurge/source/0bd88357713d7f554f119ab0c2ebaa676c433ec7:
+include::docpurge.adoc[]
 
-* docpurge <<docpurge>>
-
-* eatmydata <<Debian-Paket-eatmydata>>: verringert die Menge der Synchronisationen und somit die Schreibzugriffe
+include::eatmydata.adoc[]
 
 include::localepurge.adoc[]
 
