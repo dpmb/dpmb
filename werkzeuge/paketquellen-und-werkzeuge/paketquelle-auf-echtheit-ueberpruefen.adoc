@@ -8,8 +8,10 @@
 ==== Basiswissen ====
 
 // Stichworte für den Index
+(((Paketquellen, digitale Signatur)))
 (((Paketquellen, Struktur)))
 (((Paketquellen, Validierung)))
+(((Veröffentlichungen, digitale Signatur)))
 Paketquellen und Repositories sind im Prinzip Fileserver mit einer vorab
 festgelegten, spezifischen Struktur, deren Inhalt öffentlich zugänglich
 ist <<Debian-Wiki-Debian-Repository-Format>>. Vereinfacht betrachtet
