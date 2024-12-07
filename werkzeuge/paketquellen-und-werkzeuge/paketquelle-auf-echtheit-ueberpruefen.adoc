@@ -138,8 +138,8 @@ image::werkzeuge/paketquellen-und-werkzeuge/apt-key-list.png[id="fig.apt-key-lis
 (((Schlüsselring, Schlüssel exportieren)))
 
 Mit dem Aufruf `apt-key finger` zeigen Sie zusätzlich deren Fingerabdruck 
-an{empty}footnote:[Da die Datei `/etc/apt/trusted.gpg` teilweise für normale 
-User nicht lesbar ist, kann es sein, dass Sie dieses Kommando mit 
+an{empty}footnote:[Da die Datei `/etc/apt/trusted.gpg` teilweise für 
+normale User nicht lesbar ist, kann es sein, dass Sie dieses Kommando mit 
 Root-Rechten ausführen müssen.]. Nachfolgend sehen Sie beispielhaft die 
 Signaturen zum Opera Software Archive, dem Mendeley Desktop Team und dem 
 Debian Archive für die beiden Veröffentlichungen _Wheezy_ und _Jessie_.
