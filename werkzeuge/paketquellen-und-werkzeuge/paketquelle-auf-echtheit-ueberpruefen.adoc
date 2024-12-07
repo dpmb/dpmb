@@ -7,6 +7,9 @@
 === Paketquelle auf Echtheit überprüfen ===
 ==== Basiswissen ====
 
+// Stichworte für den Index
+(((Paketquellen, Struktur)))
+(((Paketquellen, Validierung)))
 Paketquellen und Repositories sind im Prinzip Fileserver mit einer vorab
 festgelegten, spezifischen Struktur, deren Inhalt öffentlich zugänglich
 ist <<Debian-Wiki-Debian-Repository-Format>>. Vereinfacht betrachtet
@@ -57,10 +60,13 @@ eine deutliche Warnung.
 (((Schlüsselring, Debian-Ports-Projekt)))
 (((Schlüsselring, Ubuntu)))
 (((Ubuntupaket, ubuntu-keyring)))
-Die Verwaltung der Schlüssel erfolgt mit dem Programm `apt-key`. Dazu
-gehört ein Schlüsselring mit allen GPG-Schlüsseln der Paketquellen, aus
-denen Pakete bezogen wurden. Bei Debian sind diese Schlüssel Bestandteil des
-Pakets 'debian-archive-keyring'
+Die Verwaltung der Schlüssel erfolgt mit dem Programm `apt-key`. Dieses 
+ist verfügbar bis Debian 11 'Bullseye' und Ubuntu 22.04 und wird danach 
+nicht weiter gepflegt.
+
+Zu `apt-key` gehört ein Schlüsselring mit allen GPG-Schlüsseln der 
+Paketquellen, aus denen Pakete bezogen wurden. Bei Debian sind diese 
+Schlüssel Bestandteil des Pakets 'debian-archive-keyring'
 <<Debian-Paket-debian-archive-keyring>>, bei Ubuntu heißt das Paket
 hingegen 'ubuntu-keyring' <<Ubuntu-Paket-ubuntu-keyring>>.
 
