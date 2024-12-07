@@ -108,15 +108,16 @@ Debian-Veröffentlichungen verfügbar.
 (((apt-key, exportall)))
 (((apt-key, finger)))
 (((apt-key, list)))
+(((apt-key, Unterkommandos)))
 (((Schlüsselring, Informationen anzeigen)))
 (((Schlüsselring, Schlüssel anzeigen)))
 Mit `apt-key` greifen Sie auf ihren gespeicherten Schlüsselring zu.
-Damit lassen Sie sich bspw. die gemerkten Schlüssel anzeigen, fügen neue
-Schlüssel zum Schlüsselring hinzu oder entfernen diese daraus wieder.
-Diese Vorgänge kommen meist dann zum tragen, wenn Sie Ihr Debian-System
-von Ballast befreien und nicht mehr benötigte Schlüssel austragen oder
+Damit zeigen Sie bspw. die gemerkten Schlüssel an, fügen neue Schlüssel 
+zum Schlüsselring hinzu oder entfernen diese daraus wieder. Diese 
+Vorgänge kommen meist dann zum tragen, wenn Sie Ihr Debian-System von 
+Ballast befreien und nicht mehr benötigte Schlüssel austragen oder
 weitere Paketquellen einbinden möchten, deren Schlüssel (noch) nicht
-offiziell hinterlegt ist.
+offiziell hinterlegt ist bzw. sind.
 
 Die vier Unterkommandos `list`, `finger`, `export` und `exportall` haben
 rein informativen Charakter. Mit den ersten beiden zeigen sie zu den
