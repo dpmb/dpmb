@@ -4,6 +4,18 @@
 [[anhang-veraltete-debian-architekturen]]
 === Veraltete Architekturen ===
 
+==== Nicht mehr unterstützte Architekturen ab Debian 13 ==== 
+
+Das Debian-Projekt hat im Herbst 2024 angekündigt, mit der 
+Veröffentlichung von Debian 13 'Trixie' die Unterstützung für die 
+folgenden Architekturen schrittweise einzustellen:
+
+i386 (i486/i586/i686)::
+x86 (PC) 32-Bit (siehe <<anhang-offizielle-debian-architekturen>> für 
+weitere Details zur Architektur)
+
+==== Nicht mehr unterstützte Architekturen ab Debian 12 ==== 
+
 Folgende Architekturen werden von Debian 12 _Bookworm_ (und ggf. auch
 schon älteren stabilen Debian-Veröffentlichungen) nicht mehr
 unterstützt:
@@ -31,6 +43,8 @@ stabilen Veröffentlichungen.
 mips (mips-linux-gnu)::
 MIPS (Big Endian). War zuletzt in Debian 10 _Buster_ Bestandteil einer
 stabilen Veröffentlichung.
+
+==== Nicht mehr unterstützte Architekturen ==== 
 
 Diese Architekturen sind gar nicht mehr verfügbar:
 
