@@ -226,8 +226,8 @@ Pakete auf eine neue Version aktualisieren (siehe <<pakete-aktualisieren>>)
 Das Werkzeug `apt-key` wurde dazu konzipiert, die Schlüssel zu verwalten,
 mit denen APT die Pakete auf deren Echtheit und Unverändertheit überprüft.
 Es ist verfügbar bis Debian 11 'Bullseye' und Ubuntu 22.04 und wird
-danach nicht weiter gepflegt. Seit der Version 2.9.15 von APT ist die 
-Überprüfung der Schlüssel mittels `apt-key` deaktiviert.
+danach nicht weiter gepflegt. Seit der Version 2.9.15 von APT ist das
+direkte Management der Schlüssel mittels `apt-key` deaktiviert.
 
 Für `apt-key` sind die Unterkommandos `add`, `adv`, `del`, `export`,
 `exportall`, `finger`, `list`, `net-update` und `update` zulässig. Diese
