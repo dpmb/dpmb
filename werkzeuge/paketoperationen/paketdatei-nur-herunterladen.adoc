@@ -40,9 +40,10 @@ eine bestehende Netzverbindung angewiesen zu sein.
 (((debget)))
 (((dget)))
 (((Paket, nur herunterladen)))
-Hier akzeptieren `apt`, `apt-get` und `aptitude` das Unterkommando 
-`download`. Das Paket 'bash-doc' beinhaltet die Dokumentation zur Bash – 
-ein Bezug des Pakets via `apt-get` liefert Ihnen das folgende Ergebnis:
+Dieser Schritt läßt sich mit mehreren, unterschiedlichen Werkzeugen 
+umsetzen. *Variante 1* nutzt dazu `apt`, `apt-get` oder `aptitude`. Diese
+akzeptieren dazu das Unterkommando `download`. Für das Paket 'bash-doc' 
+sieht ein Bezug des Pakets via `apt-get` folgendermaßen aus:
 
 .Bezug des Pakets 'bash-doc' via `apt-get` und Speicherung im lokalen Verzeichnis
 ----
@@ -54,18 +55,21 @@ Es wurden 696 kB in 0 s geholt (1.549 kB/s).
 #
 ----
 
-Dieser Aufruf ist identisch mit der Benutzung eines Webbrowsers. Dazu
-wählen Sie beispielsweise im Debian-Paketarchiv das gewünschte Paket aus
-und legen es über menu:Datei speichern unter[] in einem lokalen
+Obige Aufrufe sind identisch mit *Variante 2* -- der Benutzung eines 
+Webbrowsers. Dazu wählen Sie beispielsweise im Debian-Paketarchiv das 
+gewünschte Paket aus und legen es über das Kontextmenü in einem lokalen
 Verzeichnis ab (siehe <<fig.webbrowser-paket-download>>).
 
 .Bezug des Pakets 'bash-doc' über den Webbrowser
 image::werkzeuge/paketoperationen/webbrowser-paket-download.png[id="fig.webbrowser-paket-download", width="50%"]
 
-Im Paket 'debian-goodies' <<Debian-Paket-debian-goodies>> befindet sich
-noch das Werkzeug `debget`, welches intern wieder `apt-get` aufruft. Im
-Gegensatz zum Webbrowser benötigt es administrative Rechte, um ein Paket
-zu beziehen.
+Nachfolgend nutzen wir Werkzeuge, die nicht zur Standardinstallation 
+gehören, sich aber häufig auf Maschinen von Entwicklern finden. 
+*Variante 3* nutzt das Werkzeug `debget` aus dem Paket 'debian-goodies' 
+<<Debian-Paket-debian-goodies>>. Dieses ruft intern wieder `apt-get` auf
+und benötigt daher administrative Rechte, um ein Paket zu beziehen. Im
+Folgenden ist der Bezug des Pakets 'nano' zu sehen, wobei im Aufruf keine
+Versionsangabe erforderlich ist und der Paketname ausreicht.
 
 .Download des Pakets 'nano' mittels `debget`
 ----
@@ -77,8 +81,24 @@ Downloading nano from http://ftp.de.debian.org/debian/pool/main/n/nano/nano_2.2.
 100  360k  100  360k    0     0  1124k      0 --:--:-- --:--:-- --:--:-- 1121k
 ----
 
-`debget` kann jedoch keine Quellpakete beziehen, dafür steht Ihnen dann
-`dget` aus dem Paket 'devscripts' <<Debian-Paket-devscripts>> zur Verfügung.
+Zu beachten ist, dass `debget` jedoch keine Quellpakete beziehen kann. 
+
+*Variante 4* benutzt `dget` aus dem Paket 'devscripts' 
+<<Debian-Paket-devscripts>>. Dieses kann sowohl Binär- als auch 
+Quellpakete beziehen. Es werden dafür keine administrativen Rechte 
+benötigt und Sie können die Aktion somit als regulärer Benutzer ausführen. 
+Nachfolgend sehen Sie den Bezug des Binärpakets 'bash-doc' mittels `dget`. 
+
+.Download des Binärpakets 'bash-doc' mittels `dget`
+----
+$ dget bash-doc
+dget: retrieving http://deb.debian.org/debian/pool/main/b/bash/bash-doc_5.2.15-2_all.deb
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1916k  100 1916k    0     0  2283k      0 --:--:-- --:--:-- --:--:-- 2286k
+$
+----
+
 
 ==== Paketdatei im lokalen Paketcache speichern ====
 // Stichworte für den Index
