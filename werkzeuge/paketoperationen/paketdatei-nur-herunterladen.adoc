@@ -69,7 +69,8 @@ gehören, sich aber häufig auf Maschinen von Entwicklern finden.
 <<Debian-Paket-debian-goodies>>. Dieses ruft intern wieder `apt-get` auf
 und benötigt daher administrative Rechte, um ein Paket zu beziehen. Im
 Folgenden ist der Bezug des Pakets 'nano' zu sehen, wobei im Aufruf keine
-Versionsangabe erforderlich ist und der Paketname ausreicht.
+Versionsangabe erforderlich ist und der Paketname ausreicht. In diesem 
+Fall wird die aktuellste Version des Paketes ausgewählt.
 
 .Download des Pakets 'nano' mittels `debget`
 ----
@@ -79,6 +80,7 @@ Downloading nano from http://ftp.de.debian.org/debian/pool/main/n/nano/nano_2.2.
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100  360k  100  360k    0     0  1124k      0 --:--:-- --:--:-- --:--:-- 1121k
+# 
 ----
 
 Zu beachten ist, dass `debget` jedoch keine Quellpakete beziehen kann. 
