@@ -190,17 +190,18 @@ QKAxD31KZHIDdExeifRhQrLwBU3YVyuj1kSFIULO5kAD6v+i6dd341IUBNip2B7z
 (((Paket, Signatur mehrerer Pakete überprüfen)))
 (((Paketsignatur, mehrere Pakete überprüfen)))
 
-Hier bietet sich ein Aufruf in einer `for`-Schleife an, bspw. wie 
-folgt:
+Liegen mehrere Debianpakete in einem Verzeichnis vor, die zu prüfen sind,
+hilft ein wenig Skripting in ihrer Shell. Nachfolgender Aufruf nutzt eine 
+`for`-Schleife in der Bash wie folgt:
 
-.Mehrere Pakete prüfen
+.Mehrere Pakete auf Unveränderlichkeit prüfen
 ----
-$ for paket in *.deb; do dpkg-sig --verify $paket; done
+$ for paket in *.deb; do dpkg-sig --verify "$paket"; done
 ...
 $
 ----
 
-Als Ausgabe erhalten das Prüfergebnis paketweise untereinander.
+Als Ausgabe erhalten Sie das Prüfergebnis paketweise untereinander.
 
 ==== Die Inhalte eines bereits installierten Paketes überprüfen ====
 
