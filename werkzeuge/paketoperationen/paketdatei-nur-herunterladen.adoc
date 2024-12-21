@@ -111,8 +111,9 @@ Quellpakete bestehen häufig aus mehreren Komponenten, ebenso müssen Quell-
 und Binärpaket nicht namentlich übereinstimmen. Nachfolgend sehen Sie nun 
 den Bezug des Quellpakets von 'bash-doc' mittels `dget`, welches hier aus
 'bash' abgeleitet wird. Benutzt wird ebenfalls der Parameter 
-`--download-only` (Langform für `-d`), welcher veranlasst, dass das Paket
-nur heruntergeladen wird und so belässt.
+`--download-only` (Langform für `-d`), welcher `dget` veranlasst, dass das 
+Paket nur heruntergeladen wird und so belassen wird, sprich: bspw. nicht
+weiter ausgepackt wird.
 
 .Download des Quellpakets von 'bash' mittels `dget`
 ----
