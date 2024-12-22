@@ -13,7 +13,7 @@ unserer Sicht zu den Aktionen bei der Paketverwaltung, welche am
 häufigsten genutzt werden. Nachfolgend beschreiben wir, mit welchen
 Aufrufen Sie Pakete vom Paketmirror beziehen und danach sofort auf Ihrem
 System installieren. Wie Sie die Paketdateien nur herunterladen, ohne
-diese zu installieren, lesen Sie in <<paketdatei-nur-herunterladen>>.
+diese zu installieren, lesen Sie in <<paketdatei-nur-herunterladen>> nach.
 
 Für APT und `aptitude` lässt sich der Vorgang mit ``Aufruf von `dpkg -i
 Paketname` in der richtigen Reihenfolge'' umschreiben. Dabei erfolgt
