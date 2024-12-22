@@ -92,9 +92,18 @@ image::werkzeuge/paketoperationen/dpkg-force-depends.png[id="fig.dpkg-force-depe
 
 // Stichworte für den Index
 (((apt, -f)))
+(((apt, --fix-broken)))
+(((apt, --fix-missing)))
+(((apt, --ignore-hold)))
+(((apt, --ignore-missing)))
+(((apt, -m)))
 
 * `apt`
-** Option `-f`
+** Option `-f` (Langform `--fix-broken`): Fehlende Abhängigkeiten werden nachinstalliert, kaputte Pakete werden eventuell deinstalliert. Es erlaubt die Nutzung von `install` oder `remove` ohne Angabe von Paketnamen.
+
+** Option `-m` (Langform `--fix-missing` und `--ignore-missing`): Nicht downloadbare Pakete werden auf den Status 'hold' gesetzt. In Verbindung mit `--no-download` werden nur Pakete im Paket-Cache benutzt. 
+
+** Option `--ignore-hold`: Ein Paket wird trotz gesetztem Status 'hold' auf die neueste Version gebracht. 
 
 ==== Aktionen an der Paketverwaltung vorbei ====
 
