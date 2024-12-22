@@ -89,8 +89,13 @@ Zu beachten ist, dass `debget` jedoch keine Quellpakete beziehen kann.
 <<Debian-Paket-devscripts>>. Dieses kann sowohl Binär- als auch 
 Quellpakete beziehen und agiert als eine Variante von `wget`. Es werden 
 dafür keine administrativen Rechte benötigt und Sie können die Aktion 
-somit als regulärer Benutzer ausführen. Nachfolgend sehen Sie zunächst 
-den Bezug des Binärpakets 'bash-doc' mittels `dget`. 
+somit als regulärer Benutzer ausführen. Liegt das Paket bereits im 
+Paketcache vor, entnimmt `dget` das Paket von dort und lädt es nicht 
+noch einmal herunter <<Kemp-dget>>.
+
+Nachfolgend sehen Sie hier nur den Bezug des Binärpakets 'bash-doc' 
+mittels `dget`. Wie Sie Quellpakete beziehen, lesen Sie unter 
+<<sourcepakete-beziehen>> nach.
 
 .Download des Binärpakets 'bash-doc' mittels `dget`
 ----
@@ -99,29 +104,6 @@ dget: retrieving http://deb.debian.org/debian/pool/main/b/bash/bash-doc_5.2.15-2
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100 1916k  100 1916k    0     0  2283k      0 --:--:-- --:--:-- --:--:-- 2286k
-$
-----
-
-// Stichworte für den Index
-(((dget)))
-(((dget, -d)))
-(((dget, --download-only)))
-(((Paket, Quellpaket nur herunterladen)))
-Quellpakete bestehen häufig aus mehreren Komponenten, ebenso müssen Quell-
-und Binärpaket nicht namentlich übereinstimmen. Nachfolgend sehen Sie nun 
-den Bezug des Quellpakets von 'bash-doc' mittels `dget`, welches hier aus
-'bash' abgeleitet wird. Benutzt wird ebenfalls der Parameter 
-`--download-only` (Langform für `-d`), welcher `dget` veranlasst, dass das 
-Paket nur heruntergeladen wird und so belassen wird, sprich: bspw. nicht
-weiter ausgepackt wird.
-
-.Download des Quellpakets von 'bash' mittels `dget`
-----
-$ dget --download-only http://deb.debian.org/debian/pool/main/b/bash/bash_5.2.15.orig.tar.gz
-dget: retrieving http://deb.debian.org/debian/pool/main/b/bash/bash_5.2.15.orig.tar.gz
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100 9762k  100 9762k    0     0  3424k      0  0:00:02  0:00:02 --:--:-- 3424k
 $
 ----
 
