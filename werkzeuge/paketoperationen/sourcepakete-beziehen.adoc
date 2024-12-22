@@ -31,22 +31,22 @@ Software steuern und beeinflussen können.
 
 // Stichworte für den Index
 (((apt-get, source)))
-Das Programm `apt-get` bringt hier den Schalter `source` mit und
-erwartet danach die Angabe eines oder mehrerer Paketnamen. Damit
-`apt-get` nach dem Aufruf die Quellpakete auch beziehen kann, benötigt
-es einen entsprechenden Eintrag in der Liste der Paketquellen
-(siehe <<etc-apt-sources.list-verstehen>>). Für die Veröffentlichung
-Debian 9 _Stretch_ sieht der Eintrag wie folgt aus:
+*Variante 1* ist das Programm `apt-get`. Es bringt hier den Schalter 
+`source` mit und erwartet danach die Angabe eines oder mehrerer 
+Paketnamen. Damit `apt-get` nach dem Aufruf die Quellpakete auch 
+beziehen kann, benötigt es zudem einen entsprechenden Eintrag in der 
+Liste der Paketquellen (siehe <<etc-apt-sources.list-verstehen>>). Für 
+die Veröffentlichung Debian 9 _Stretch_ sieht ein gültiger Eintrag bspw. 
+wie folgt aus:
 
-// TODO: contrib und non-free raus, evtl. auch noch das ".de."
-
+.Eintrag für Sourcepakete in der Liste der Paketquellen
 ----
-deb-src http://ftp.de.debian.org/debian/ stretch main contrib non-free
+deb-src http://ftp.debian.org/debian/ stretch main 
 ----
 
 APT wertet die Paketbeschreibung aus, bezieht danach alle Quellpakete
-von dem angegebenen Paketmirror – den Debian Source Code (`dsc`) plus
-Paketierung (siehe <<aufbau-und-format-source>>) – , aus denen das
+von dem angegebenen Paketmirror -- den Debian Source Code (`dsc`) plus
+Paketierung (siehe <<aufbau-und-format-source>>) -- , aus denen das
 Binärpaket zusammengebaut wurde und überprüft diese Komponenten (siehe
 <<bezogenes-paket-verifizieren>>) anhand deren öffentlichem Schlüssel.
 Am Schluss werden die drei Archive `dsc`, `tar` und `diff` im aktuellen
@@ -83,24 +83,27 @@ $
 // Stichworte für den Index
 (((Debianpaket, devscripts)))
 (((dget)))
-Desweiteren existiert auch eine Alternative namens `dget` aus dem Paket
-'devscripts' <<Debian-Paket-devscripts>>. Darüber kombinieren Sie den
-Bezug der Paketinhalte. `dget` akzeptiert als Parameter eine Liste von
-Paketnamen, die es nacheinander vom Paketmirror bezieht und im lokalen
-Verzeichnis speichert. Liegt das betreffende Paket bereits im
-Paketcache, entnimmt `dget` dieses von dort <<Kemp-dget>>.
+(((dget, -d)))
+(((dget, --download-only)))
+(((Paket, Quellpaket nur herunterladen)))
+*Variante 2* erfolgt mit Hilfe des Werkzeugs `dget` aus dem Paket
+'devscripts' <<Debian-Paket-devscripts>>. Zu beachten ist hierbei, dass 
+Quellpakete häufig aus mehreren Komponenten bestehen, ebenso müssen Quell-
+und Binärpaket nicht namentlich übereinstimmen. Nachfolgend sehen Sie nun 
+den Bezug des Quellpakets von 'bash-doc' mittels `dget`, welches hier aus
+'bash' abgeleitet wird. Benutzt wird ebenfalls der Parameter 
+`--download-only` (Langform für `-d`), welcher `dget` veranlasst, dass das 
+Paket nur heruntergeladen wird und so belassen wird, sprich: bspw. nicht
+weiter ausgepackt wird.
 
-.Bezug der beiden Pakete `bash-doc` und `libbash-doc` via `dget`
+.Download des Quellpakets von 'bash' mittels `dget`
 ----
-# dget bash-doc
-dget: using /var/cache/apt/archives/bash-doc_4.2+dfsg-0.1_all.deb (copy)
-#
-# dget libbash-doc
-dget: retrieving http://ftp.de.debian.org/debian/pool/main/libb/libbash/libbash-doc_0.9.11-1_all.deb
+$ dget --download-only http://deb.debian.org/debian/pool/main/b/bash/bash_5.2.15.orig.tar.gz
+dget: retrieving http://deb.debian.org/debian/pool/main/b/bash/bash_5.2.15.orig.tar.gz
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100 20468  100 20468    0     0   166k      0 --:--:-- --:--:-- --:--:--  243k
-#
+100 9762k  100 9762k    0     0  3424k      0  0:00:02  0:00:02 --:--:-- 3424k
+$
 ----
 
 // Datei (Ende): ./werkzeuge/paketoperationen/sourcepakete-beziehen.adoc
