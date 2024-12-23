@@ -21,12 +21,13 @@ englischer Sprache, Übersetzungen in andere Sprachen liegen bislang
 nicht vor.
 
 Installieren Sie dieses Paket über die Paketverwaltung, finden Sie diese
-Dokumentation danach im Verzeichnis `/usr/share/doc/apt-dpkg-ref/`
-wieder. Neben den Lisp- und LaTeX-Quellen ist die Dokumentation in Form
-einer HTML-, PDF- und PostScript-Datei verfügbar. 
+Dokumentation danach im Verzeichnis für Dokumentation unter 
+`/usr/share/doc/apt-dpkg-ref/` wieder. Neben den Lisp- und LaTeX-Quellen 
+ist die Dokumentation in Form einer HTML-, PDF- und PostScript-Datei 
+enthalten. 
 
-Alle Formate beinhalten eine Übersicht zu den grundlegenden `dpkg`- und
-APT-Kommandos samt griffiger Beschreibung der einzelnen Optionen.
+Die Referenzliste beinhaltet eine Übersicht zu den grundlegenden `dpkg`- 
+und APT-Kommandos samt griffiger Beschreibung der einzelnen Optionen.
 Zudem werden kurz und knapp die Beziehungen zwischen `dpkg` und APT
 hergestellt. Eine kurze Einführung zum Bauen von `deb`-Paketen aus den
 Paketquellen rundet die Beschreibung ab. <<fig.apt-dpkg-reference>>
