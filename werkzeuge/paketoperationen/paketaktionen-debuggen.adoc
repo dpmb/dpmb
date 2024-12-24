@@ -5,8 +5,12 @@
 [[paketaktionen-debuggen]]
 === Paketaktionen debuggen ===
 
-* herausfinden, was alles während der Ausführung eines Kommandos zur
-Paketverwaltung passiert ist
+In der Regel bearbeiten `dpkg`, APT und `aptitude` unsere Wünsche zur
+Änderung des Paketbestandes anstandslos ab. Sei es aus reiner Neugierde 
+oder einer Panne heraus, ist es hilfreich, herauszufinden, was alles 
+während der Ausführung eines Kommandos zur Paketverwaltung passiert ist.
+Die Werkzeuge bringen dazu unterschiedliche Schalter mit, mit denen Sie
+hinter die Kulissen schauen können.
 
 ==== `dpkg` ====
 
