@@ -5,14 +5,14 @@
 [[paketaktionen-debuggen]]
 === Paketaktionen debuggen ===
 
+* herausfinden, was alles während der Ausführung eines Kommandos zur
+Paketverwaltung passiert ist
+
 ==== `dpkg` ====
 
 // Stichworte für den Index
 (((dpkg, --debug=help)))
 (((Paket, Aktionen debuggen)))
-
-* herausfinden, was alles während der Ausführung eines Kommandos zur
-Paketverwaltung passiert ist
 
 * unterschiedliche Debuglevel, die Zahlenwerte können auch miteinander 
 kombiniert werden
@@ -49,7 +49,7 @@ $
 
 * Aufruf mit der Option `-o` und dem APT-Schalter
 
-* Optionen (entnommen aus der Manpage)
+* Schalter (entnommen aus der Manpage)
 
 `Debug::Acquire::cdrom` :: Print information related to accessing cdrom:// sources.
 
@@ -103,6 +103,33 @@ $
 
 `Debug::RunScripts` :: Display the external commands that are called by apt hooks. This includes e.g. the config options `DPkg::Pre-Invoke`, `DPkg::Post-Invoke`, `APT::Update::Pre-Invoke`, or `APT::Update::Post-Invoke`.
 
+==== Aptitude ====
 
+* Optionen `-v` bis `-vvvvvv`
+
+* Testen der Einstellungen mit Hilfe des Unterkommandos `moo`
+
+----
+$ aptitude -v moo
+In diesem Programm gibt es wirklich keine Easter Eggs.
+$ aptitude -vv moo
+Habe ich nicht bereits erklärt, dass es in diesem Programm keine Easter Eggs gibt?
+$ aptitude -vvv moo
+Hör auf!
+$ aptitude -vvvv moo
+Okay, wenn ich Dir ein Easter Egg gebe, wirst Du dann aufhören?
+$ aptitude -vvvvv moo
+Gut, Du hast gewonnen.
+
+                               /----\
+                       -------/      \
+                      /               \
+                     /                |
+   -----------------/                  --------\
+   ----------------------------------------------
+$ aptitude -vvvvvv moo
+Was das ist? Natürlich ein Elefant, der von einer Schlange gefressen wurde.
+$
+----
 
 // Datei (Ende): ./werkzeuge/paketoperationen/paketaktionen-debuggen.adoc
