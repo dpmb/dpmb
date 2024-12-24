@@ -92,17 +92,41 @@ globalen Bezugswarteschlange hinzugefügt oder davon entfernt werden
 die in Bezug zur Überprüfung von Checksummen und kryptographischen 
 Signaturen bezogener Dateien stehen
 
-`Debug::pkgAcquire::Diffs` :: Output information about downloading and applying package index list diffs, and errors relating to package index list diffs.
+`Debug::pkgAcquire::Diffs` :: gib Informationen zum Bezug und der 
+Anwendung von Diffs von Paketlisten aus sowie Fehler dazu
 
-`Debug::pkgAcquire::RRed` :: Output information related to patching apt package lists when downloading index diffs instead of full indices.
+`Debug::pkgAcquire::RRed` :: gib Informationen aus, die sich auf das
+Patchen von APT-Paketlisten beziehen, wenn Index-Diffs anstatt von
+Vollindizes bezogen werden
 
-`Debug::pkgAcquire::Worker` :: Log all interactions with the sub-processes that actually perform downloads.
+`Debug::pkgAcquire::Worker` :: Logge alle Interaktionen zu
+Unterprozessen mit, die tatsächlich Downloads ausführen
 
-`Debug::pkgAutoRemove` :: Log events related to the automatically-installed status of packages and to the removal of unused packages.
+`Debug::pkgAutoRemove` :: Logge alle Ereignisse mit, die im Bezug zum 
+Status 'automatisch installiert' von Paketen sowie dem Entfernen nicht
+genutzter Pakete stehen
 
-`Debug::pkgDepCache::AutoInstall` :: Generate debug messages describing which packages are being automatically installed to resolve dependencies. This corresponds to the initial auto-install pass performed in, e.g., apt-get install, and not to the full apt dependency resolver; see Debug::pkgProblemResolver for that.
+`Debug::pkgDepCache::AutoInstall` :: erzeuge Debugmeldungen, die 
+beschreiben, welche Pakete automatisch installiert werden, um 
+Abhängigkeiten aufzulösen. Dies entspricht dem anfänglichen 
+automatischen Installationsdurchlauf, der z.B. mit `apt-get install` 
+durchgeführt wird und nicht dem vollständigen APT-Abhängigkeitsauflöser;
+siehe dazu die Option `Debug::pkgProblemResolver`
 
-`Debug::pkgDepCache::Marker` :: Generate debug messages describing which packages are marked as keep/install/remove while the ProblemResolver does his work. Each addition or deletion may trigger additional actions; they are shown indented two additional spaces under the original entry. The format for each line is MarkKeep, MarkDelete or MarkInstall followed by package-name <a.b.c -> d.e.f | x.y.z> (section) where a.b.c is the current version of the package, d.e.f is the version considered for installation and x.y.z is a newer version, but not considered for installation (because of a low pin score). The later two can be omitted if there is none or if it is the same as the installed version. section is the name of the section the package appears in.
+`Debug::pkgDepCache::Marker` :: Erzeugt Debug-Meldungen, die 
+beschreiben, welche Pakete als behalten/installieren/entfernen markiert 
+sind, während der ProblemResolver seine Arbeit erledigt. Jede Ergänzung 
+oder Entfernung kann zusätzliche Aktionen auslösen; sie werden um zwei 
+zusätzliche Leerzeichen unter dem ursprünglichen Eintrag eingerückt. Das 
+Format für jede Zeile ist MarkKeep, MarkDelete oder MarkInstall, gefolgt 
+von Paketname in der Form 'a.b.c' -> 'd.e.f | x.y.z' (Abschnitt), wobei 
+'a.b.c' die aktuelle Version des Pakets darstellt, 'd.e.f' die Version, 
+die für die Installation in Frage kommt, und 'x.y.z' eine neuere Version 
+ist, die aber nicht für die Installation in Frage kommt (wegen eines 
+niedrigen Pin-Wertes). Die letzten beiden Angaben können Sie weglassen,
+wenn es keine Werte gibt oder wenn sie mit der installierten Version 
+übereinstimmen. 'section' ist der Name des Abschnitts, in dem das Paket 
+erscheint.
 
 `Debug::pkgDPkgPM` :: When invoking dpkg(1), output the precise command line with which it is being invoked, with arguments separated by a single space character.
 
