@@ -12,6 +12,60 @@ dazu ist über diverse Quellen in unterschiedlichen Qualitätsstufen und
 Übersetzungen verstreut. Wir listen nachfolgend die verlässlichen 
 Ressourcen auf, die wir kennen.
 
+=== Integrierte Hilfe der Kommandos ===
+
+// Stichworte für den Index
+(((apt, -h)))
+(((apt, --help)))
+(((apt-get, -h)))
+(((apt-get, --help)))
+(((aptitude, -h)))
+(((aptitude, --help)))
+(((dpkg, --help)))
+(((Dokumentation, im Kommando integriert)))
+
+Die Kommandos `dpkg`, APT und `aptitude` verfügen über eine eingebaute
+Übersicht zu ihren Unterkommandos und Optionen. Mit Ausnahme von `dpkg`
+bieten alle die kurze Option `-h` sowie das Pendant als Langform von 
+`--help`.
+
+.Kurzübersicht zu den Unterkommandos und Optionen von APT
+----
+$ apt --help
+apt 2.6.1 (amd64)
+Aufruf: apt [Optionen] befehl
+
+apt ist ein Paketmanager für die Befehlszeile und bietet Befehle für die
+Suche und Verwaltung von Paketen sowie für die Abfrage von Informationen
+zu diesen Paketen.
+Es stellt die gleiche Funktionalität zur Verfügung wie die spezialisierten
+APT-Werkzeuge apt-get und apt-cache, aber seine Optionen sind eher passend
+für die interaktive Nutzung.
+
+Meist verwendete Befehle:
+  list - Pakete basierend auf dem Paketnamen auflisten
+  search - Paketbeschreibungen durchsuchen
+  show - Paketdetails anzeigen
+  install - Pakete installieren
+  reinstall - Pakete erneut installieren
+  remove - Pakete entfernen
+  autoremove - alle nicht mehr verwendeten Pakete automatisch entfernen
+  update - Liste verfügbarer Pakete aktualisieren
+  upgrade - das System durch Installation/Aktualisierung der Pakete hochrüsten
+  full-upgrade - das System durch Entfernung/Installation/Aktualisierung der Pakete vollständig hochrüsten
+  edit-sources - die Datei für die Paketquellen bearbeiten
+  satisfy - Abhängigkeitszeichenketten erfüllen
+
+Lesen Sie apt(8) bezüglich weiterer Informationen über die verfügbaren Befehle.
+Konfigurationsoptionen und Syntax sind in apt.conf(5) detailliert beschrieben.
+Informationen dazu, wie Quellen konfiguriert werden, finden Sie in sources.
+list(5).
+Paket- und Versionsauswahlen können über apt_preferences(5) festgelegt werden.
+Details zu Sicherheitsbelangen sind in apt-secure(8) zu finden.
+                                     Dieses APT hat Super-Kuh-Kräfte.
+$
+----
+
 === Man- und Infopages ===
 
 // Stichworte für den Index
@@ -22,7 +76,7 @@ Ressourcen auf, die wir kennen.
 (((Dokumentation, Infopages)))
 (((Dokumentation, offline)))
 Um flink ein Kommando oder eine Option nachzuschlagen, geht daher der
-erste Griff zu den `man`- und `info`-pages der Werkzeuge `dpkg`, APT
+erste Griff zu den `man`- und `info`-Pages der Werkzeuge `dpkg`, APT
 und `aptitude` (siehe <<fig.manpage-zu-apt>>). Diese Hilfeseiten 
 bieten zwar meist nur eine Kurzfassung der komplexen Werkzeuge an, 
 helfen aber im Bedarfsfall trotzdem weiter. 
