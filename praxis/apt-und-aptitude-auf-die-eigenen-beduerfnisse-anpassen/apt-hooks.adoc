@@ -27,5 +27,10 @@ einem Aufruf von `apt-get`
 ** was ist erlaubt, was nicht
 ** was sind Gepflogenheiten
 
+* wie bekomme ich heraus, welche Hooks von der Paketverwaltung
+aufgerufen werden:
+** in der Paketdatei nachschauen
+** `apt-get -oDebug::RunScripts` 'Aktion Paketname'
+
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/apt-hooks.adoc
 
