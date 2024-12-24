@@ -9,45 +9,42 @@ In der Regel bearbeiten `dpkg`, APT und `aptitude` unsere Wünsche zur
 Änderung des Paketbestandes anstandslos ab. Sei es aus reiner Neugierde 
 oder einer Panne heraus, ist es hilfreich, herauszufinden, was alles 
 während der Ausführung eines Kommandos zur Paketverwaltung passiert ist.
-Die Werkzeuge bringen dazu unterschiedliche Schalter mit, mit denen Sie
-hinter die Kulissen schauen können.
+Das ist bspw. nützlich bei der Installation, Aktualisierung oder 
+Entfernung von Softwarepaketen. Die Werkzeuge bringen dazu recht 
+unterschiedliche Schalter mit, mit denen Sie hinter die Kulissen schauen 
+können.
 
 ==== `dpkg` ====
 
 // Stichworte für den Index
-(((dpkg, --debug=help)))
+(((dpkg, -D)))
+(((dpkg, --debug)))
 (((Paket, Aktionen debuggen)))
 
-* unterschiedliche Debuglevel, die Zahlenwerte können auch miteinander 
-kombiniert werden
+Zur Analyse seiner Arbeitsweise verfügt `dpkg` über den Schalter `-D` 
+(Langform `--debug`). Zum Schalter gehört ein Zahlenwert in oktaler
+Schreibweise, der ein bestimmtes Debuglevel repräsentiert. Diese 
+Zahlenwerte können Sie auch mit Hilfe von bitweisem Oder miteinander 
+kombinieren, um ausgewählte, komplexere Zustände zu überprüfen. 
+Nachfolgende Auflistung erhalten Sie, indem Sie `dpkg` mit der Option 
+`--Dh` (Langform `--debug=help`) aufrufen.
 
-* nützlich bei der Installation, Aktualisierung und der Entfernung von
-Softwarepaketen
+1 ('general') :: allgemein hilfreiche Fortschrittsinformationen
+2 ('scripts') :: Aufruf und Status von Betreuer-Skripten
+10 ('eachfile') :: Ausgaben zu jeder verarbeiteten Datei
+100 ('eachfiledetail') :: viele Ausgaben zu jeder verarbeiteten Datei
+20 ('conff') :: Ausgaben zu jeder Konfigurationsdatei
+200 ('conffdetail') :: viele Ausgaben zu jeder Konfigurationsdatei
+40 ('depcon') :: Abhängigkeiten und Kollisionen
+400 ('depcondetail') :: viele Ausgaben zu Abhängigkeiten und Kollisionen
+10000 ('triggers') :: Triggeraktivierung und -verarbeitung
+20000 ('triggersdetail') :: viele Ausgaben bezüglich Trigger
+40000 ('triggersstupid') :: alberne Mengen an Ausgaben bezüglich Trigger
+1000 ('veryverbose') :: viel Gefasel, z.B. zum `dpkg`/`info`-Verzeichnis
+2000 ('stupidlyverbose') :: irrsinnige Mengen von Gefasel
 
-.Debuglevel von `dpkg`
-----
-$ dpkg --debug=help
-dpkg Debug-Option, --debug=<oktal> oder -D<oktal>:
-
- Nummer  Ref. in Quelle   Beschreibung
-      1  general          Allgemein hilfreiche Fortschrittsinformationen
-      2  scripts          Aufruf und Status von Betreuer-Skripten
-     10  eachfile         Ausgaben zu jeder verarbeiteten Datei
-    100  eachfiledetail   Viele Ausgaben zu jeder verarbeiteten Datei
-     20  conff            Ausgaben zu jeder Konfigurationsdatei
-    200  conffdetail      Viele Ausgaben zu jeder Konfigurationsdatei
-     40  depcon           Abhängigkeiten und Kollisionen
-    400  depcondetail     Viele Ausgaben zu Abhängigkeiten und Kollisionen
-  10000  triggers         Triggeraktivierung und -verarbeitung
-  20000  triggersdetail   Viele Ausgaben bezüglich Trigger
-  40000  triggersstupid   Alberne Mengen an Ausgaben bezüglich Trigger
-   1000  veryverbose      Viel Gefasel z.B. zum dpkg/info-Verzeichnis
-   2000  stupidlyverbose  Irrsinnige Mengen von Gefasel
-
-Debug-Optionen können durch bitweises Oder gemischt werden.
-Beachten Sie, dass sich die Werte und Bedeutungen ändern können.
-$
-----
+Möchten Sie alle Optionen miteinander kombinieren, rufen sie `dpkg` mit
+der Option `-D77777` auf.
 
 ==== APT ====
 
