@@ -165,10 +165,21 @@ aufgerufen werden. Dazu gehören z.B. die Konfigurationsoptionen
 
 ==== Aptitude ====
 
-* Optionen `-v` bis `-vvvvvv`
+// Stichworte für den Index
+(((aptitude, moo)))
+(((aptitude, -v)))
+(((aptitude, -vv)))
+(((aptitude, -vvv)))
+(((aptitude, -vvvv)))
+(((aptitude, -vvvvv)))
+(((aptitude, -vvvvvv)))
 
-* Testen der Einstellungen mit Hilfe des Unterkommandos `moo`
+Aptitude verfügt über die Optionen von `-v` bis `-vvvvvv`. Damit legen
+Sie die unterschiedlichen Debuglevel fest. Sie testen die Einstellungen 
+mit Hilfe des Unterkommandos `moo`. Nachfolgend sehen Sie die sechs
+verschiedenen Debuglevel in Aktion.
 
+.Aptitude-Debuglevel in Aktion
 ----
 $ aptitude -v moo
 In diesem Programm gibt es wirklich keine Easter Eggs.
