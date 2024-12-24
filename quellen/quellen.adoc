@@ -922,6 +922,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[rpmorphan-rpm]]] `rpmorphan`, https://rpmorphan.sourceforge.net/
 
+- [[[rpm-scriptlets]]] Scriptlets, https://docs.fedoraproject.org/en-US/packaging-guidelines/Scriptlets/
+
 - [[[rpmseek]]] Rpmseek, http://www.rpmseek.com/
 
 - [[[RPM-Canepa]]] Gabriel Cánepa: Linux Package Management with Yum, RPM, Apt, Dpkg, Aptitude and Zypper – Part 9, http://www.tecmint.com/linux-package-management/

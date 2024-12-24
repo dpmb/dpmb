@@ -12,6 +12,8 @@
 ** Ergänzungen, kleine Erweiterungen, Eingriffe
 ** standardisierte Abläufe um eigene, paketbezogene Schritte ergänzen
 
+* gleiches Konzept bei RPM: Scriptlets <<rpm-scriptlets>>
+
 * Schlüsselworte (aus https://www.cyberciti.biz/faq/debian-ubuntu-linux-hook-a-script-command-to-apt-get-upgrade-command/):
 
 `DPkg::Post-Invoke` :: Ausführung eines Kommandos oder Scripts nach 
