@@ -114,6 +114,9 @@ include::paketoperationen-erzwingen.adoc[]
 
 include::paketstatusdatenbank-reparieren.adoc[]
 
+// Paketaktionen debuggen
+include::paketaktionen-debuggen.adoc[]
+
 // ganze Distribution anpassen
 include::distribution-aktualisieren.adoc[]
 

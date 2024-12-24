@@ -1,0 +1,46 @@
+// Datei: ./werkzeuge/paketoperationen/paketaktionen-debuggen.adoc
+
+// Baustelle: Notizen
+
+[[paketaktionen-debuggen]]
+=== Paketaktionen debuggen ===
+
+// Stichworte für den Index
+(((dpkg, --debug=help)))
+(((Paket, Aktionen debuggen)))
+
+* herausfinden, was alles während der Ausführung eines Kommandos zur
+Paketverwaltung passiert ist
+
+* unterschiedliche Debuglevel, die Zahlenwerte können auch miteinander 
+kombiniert werden
+
+* nützlich bei der Installation, Aktualisierung und der Entfernung von
+Softwarepaketen
+
+.Debuglevel von `dpkg`
+----
+$ dpkg --debug=help
+dpkg Debug-Option, --debug=<oktal> oder -D<oktal>:
+
+ Nummer  Ref. in Quelle   Beschreibung
+      1  general          Allgemein hilfreiche Fortschrittsinformationen
+      2  scripts          Aufruf und Status von Betreuer-Skripten
+     10  eachfile         Ausgaben zu jeder verarbeiteten Datei
+    100  eachfiledetail   Viele Ausgaben zu jeder verarbeiteten Datei
+     20  conff            Ausgaben zu jeder Konfigurationsdatei
+    200  conffdetail      Viele Ausgaben zu jeder Konfigurationsdatei
+     40  depcon           Abhängigkeiten und Kollisionen
+    400  depcondetail     Viele Ausgaben zu Abhängigkeiten und Kollisionen
+  10000  triggers         Triggeraktivierung und -verarbeitung
+  20000  triggersdetail   Viele Ausgaben bezüglich Trigger
+  40000  triggersstupid   Alberne Mengen an Ausgaben bezüglich Trigger
+   1000  veryverbose      Viel Gefasel z.B. zum dpkg/info-Verzeichnis
+   2000  stupidlyverbose  Irrsinnige Mengen von Gefasel
+
+Debug-Optionen können durch bitweises Oder gemischt werden.
+Beachten Sie, dass sich die Werte und Bedeutungen ändern können.
+$
+----
+
+// Datei (Ende): ./werkzeuge/paketoperationen/paketaktionen-debuggen.adoc
