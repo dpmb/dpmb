@@ -12,6 +12,14 @@
 ** Ergänzungen, kleine Erweiterungen, Eingriffe
 ** standardisierte Abläufe um eigene, paketbezogene Schritte ergänzen
 
+* Schlüsselworte (aus https://www.cyberciti.biz/faq/debian-ubuntu-linux-hook-a-script-command-to-apt-get-upgrade-command/):
+
+`DPkg::Post-Invoke` :: Ausführung eines Kommandos oder Scripts nach 
+einem Aufruf von `apt-get`
+
+`DPkg::Pre-Invoke` :: Ausführung eines Kommandos oder Scripts vor 
+einem Aufruf von `apt-get`
+
 * Festlegung in der APT-Konfiguration
 ** wo speichert man das
 ** was ist erlaubt, was nicht
