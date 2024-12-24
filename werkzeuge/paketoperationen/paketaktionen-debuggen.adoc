@@ -128,11 +128,16 @@ wenn es keine Werte gibt oder wenn sie mit der installierten Version
 übereinstimmen. 'section' ist der Name des Abschnitts, in dem das Paket 
 erscheint.
 
-`Debug::pkgDPkgPM` :: When invoking dpkg(1), output the precise command line with which it is being invoked, with arguments separated by a single space character.
+`Debug::pkgDPkgPM` :: wenn Sie `dpkg` aufrufen, wird die genaue 
+Befehlszeile ausgegeben, mit der es aufgerufen wird. Dabei werden die 
+Argumente durch ein einzelnes Leerzeichen voneinander getrennt
 
-`Debug::pkgDPkgProgressReporting` :: Output all the data received from dpkg(1) on the status file descriptor and any errors encountered while parsing it.
+`Debug::pkgDPkgProgressReporting` :: gib alle von `dpkg` empfangenen 
+Daten über den Status-Dateideskriptor und alle beim Parsen aufgetretenen 
+Fehler aus
 
-`Debug::pkgOrderList` :: Generate a trace of the algorithm that decides the order in which apt should pass packages to dpkg(1).
+`Debug::pkgOrderList` :: Erzeuge einen Ablauf des Algorithmus, welcher 
+die Reihenfolge festlegt, in der APT die Pakete an `dpkg` weiterreicht
 
 `Debug::pkgPackageManager` :: Output status messages tracing the steps performed when invoking dpkg(1).
 
