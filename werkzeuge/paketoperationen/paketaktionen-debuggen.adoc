@@ -56,8 +56,8 @@ APT agiert ähnlich zu `dpkg`. Sie steuern den Aufruf über die Option
 der Manpage zu APT entnommen:
 
 `Debug::Acquire::cdrom` :: gib Informationen aus, die zu Paketquellen 
-gehören, die sich auf CDs/DVDs beziehen (Einträge in der Datei 
-`/etc/apt/sources.list/` beginnend mit `cdrom://`)
+gehören, die sich auf CDs/DVDs beziehen (Einträge beginnend mit 
+`cdrom://`)
 
 `Debug::Acquire::ftp` :: gib Informationen aus, die zu Paketquellen 
 gehören, von denen Pakete mittels FTP bezogen werden
@@ -72,8 +72,8 @@ gehören, von denen Pakete mittels HTTPS bezogen werden
 Überprüfung kryptographischer Signaturen mittels GPG stehen
 
 `Debug::aptcdrom` :: gib Informationen aus, die zu Paketquellen 
-gehören, die sich auf CDs/DVDs beziehen (Einträge in der Datei 
-`/etc/apt/sources.list/` beginnend mit `aptcdrom://`)
+gehören, die sich auf CDs/DVDs beziehen (Einträge beginnend mit 
+`aptcdrom://`)
 
 `Debug::Hashes` :: gib jeden kryptographischen Hashwert aus, der 
 von den APT-Bibliotheken generiert wird
@@ -136,20 +136,32 @@ Argumente durch ein einzelnes Leerzeichen voneinander getrennt
 Daten über den Status-Dateideskriptor und alle beim Parsen aufgetretenen 
 Fehler aus
 
-`Debug::pkgOrderList` :: Erzeuge einen Ablauf des Algorithmus, welcher 
+`Debug::pkgOrderList` :: erzeuge eine Ausgabe des Algorithmus, welcher 
 die Reihenfolge festlegt, in der APT die Pakete an `dpkg` weiterreicht
 
-`Debug::pkgPackageManager` :: Output status messages tracing the steps performed when invoking dpkg(1).
+`Debug::pkgPackageManager` :: gib die Statusmeldungen aus, die Sie die 
+einzelnen Schritte nachvollziehen lassen, die `dpkg` bei seinem Aufruf
+ausführt
 
-`Debug::pkgPolicy` :: Output the priority of each package list on startup.
+`Debug::pkgPolicy` :: gib die Priorität jeder einzelnen Paketliste 
+beim Start aus
 
-`Debug::pkgProblemResolver` :: Trace the execution of the dependency resolver (this applies only to what happens when a complex dependency problem is encountered).
+`Debug::pkgProblemResolver` :: verfolgen Sie die Ausführung des 
+Abhängigkeitsauflösers. Dies gilt nur für den Fall, dass ein komplexes 
+Abhängigkeitsproblem auftritt.
 
-`Debug::pkgProblemResolver::ShowScores` :: Display a list of all installed packages with their calculated score used by the pkgProblemResolver. The description of the package is the same as described in `Debug::pkgDepCache::Marker`
+`Debug::pkgProblemResolver::ShowScores` :: zeige eine Liste aller 
+installierten Pakete mit ihrer berechneten Punktzahl an, die vom 
+Abhängigkeitsauflöser verwendet wird. Die Beschreibung des Pakets ist die 
+gleiche, wie in `Debug::pkgDepCache::Marker` beschrieben.
 
-`Debug::sourceList` :: Print information about the vendors read from /etc/apt/vendors.list.
+`Debug::sourceList` :: drucke Informationen über die aus der Datei 
+`/etc/apt/vendors.list` gelesenen Anbieter aus
 
-`Debug::RunScripts` :: Display the external commands that are called by apt hooks. This includes e.g. the config options `DPkg::Pre-Invoke`, `DPkg::Post-Invoke`, `APT::Update::Pre-Invoke`, or `APT::Update::Post-Invoke`.
+`Debug::RunScripts` :: Anzeige der externen Befehle, die von APT-Hooks 
+aufgerufen werden. Dazu gehören z.B. die Konfigurationsoptionen 
+`DPkg::Pre-Invoke`, `DPkg::Post-Invoke`, `APT::Update::Pre-Invoke` und 
+`APT::Update::Post-Invoke` (siehe <<apt-hooks>>).
 
 ==== Aptitude ====
 
