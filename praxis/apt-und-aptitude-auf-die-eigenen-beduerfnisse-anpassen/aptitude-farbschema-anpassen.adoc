@@ -115,18 +115,18 @@ Als Farben steht Ihnen eine Grundauswahl aus 8 Farben zur Verfügung.
 
 Ergänzend zur Farbauswahl erlaubt `aptitude` zusätzliche Hervorhebungen.
 <<tab.aptitude-farben-hervorhebungen>> fasst die Einstellungen
-dafür zusammen
+dafür zusammen.
 
 .Hervorhebungen und deren Bedeutung bei `aptitude`
 [options="header", id="tab.aptitude-farben-hervorhebungen"]
 |=============================
 | Hervorhebung | Beschreibung
-| `blink`      | Enables blinking text.
-| `bold`       | Makes the foreground color of the text (or the background if reverse video is enabled) brighter.
-| `dim`        | May cause text to be extra-dim on some terminals. No effect has been observed on common Linux terminals.
-| `reverse`    | Swaps the foreground and background colors. Many visual elements flip this attribute to perform common highlighting tasks.
-| `standout`   | This enables “the best highlighting mode of the terminal”. In xterms it is similar, but not idential to, reverse video; behavior on other terminals may vary.
-| `underline`  | Enables underlined text.
+| `blink`      | aktiviert blinkenden Text
+| `bold`       | stellt den Vordergrundtext heller dar (oder den Hinergrund, falls die Option 'reverse video' aktiviert ist)
+| `dim`        | zielt darauf ab, den Text in Terminals stärker zu dimmen. Bislang wurde in üblichen Linux-Terminals kein Effekt beobachtet
+| `reverse`    | vertauscht die Vordergrund- und Hintergrundfarben. Viele visuellen Elemente nutzen dieses Attribut, um gebräuchliche Hervorhebungen zu erreichen
+| `standout`   | diese Option aktiviert den Modus der besten Hervorhebung im Terminal. In Xterms ist es ähnlich aber nicht identisch zum 'reverse video'-Modus. Andere Terminals zeigen ein abweichendes Verhalten
+| `underline`  | aktiviert unterstrichenen Text
 |=============================
 
 * gibt es vorgefertigte Themes zum Download?
