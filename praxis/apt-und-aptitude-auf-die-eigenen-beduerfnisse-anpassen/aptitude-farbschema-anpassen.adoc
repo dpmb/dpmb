@@ -123,7 +123,7 @@ dafür zusammen.
 | Hervorhebung | Beschreibung
 | `blink`      | aktiviert blinkenden Text
 | `bold`       | stellt den Vordergrundtext heller dar (oder den Hinergrund, falls die Option 'reverse video' aktiviert ist)
-| `dim`        | zielt darauf ab, den Text in Terminals stärker zu dimmen. Bislang wurde in üblichen Linux-Terminals kein Effekt beobachtet
+| `dim`        | zielt darauf ab, den Text in Terminals stärker zu dimmen. Bislang wurde dieser Effekt in üblichen Linux-Terminals nicht beobachtet
 | `reverse`    | vertauscht die Vordergrund- und Hintergrundfarben. Viele visuellen Elemente nutzen dieses Attribut, um gebräuchliche Hervorhebungen zu erreichen
 | `standout`   | diese Option aktiviert den Modus der besten Hervorhebung im Terminal. In Xterms ist es ähnlich aber nicht identisch zum 'reverse video'-Modus. Andere Terminals zeigen ein abweichendes Verhalten
 | `underline`  | aktiviert unterstrichenen Text
