@@ -7,18 +7,19 @@
 
 ==== Zwischen `aptitude`-Themes wechseln ====
 // Stichworte für den Index
-(((aptitude,aptitude::Theme)))
+(((aptitude, aptitude::Theme)))
+(((aptitude, Aussehen der Bedienoberfläche anpassen
 
 Das Aussehen von der `aptitude`-Bedienoberfläche hängt von drei
-Einstellungen ab -- den gewählten Farben, der Anordnung der
-Ausgabeelemente für die TUI und dem Wert der Konfigurationsoption
-`aptitude::Theme`.
+Einstellungen ab -- den gewählten Farben für Vorder- und Hintergrund, 
+der Anordnung der einzelnen Ausgabeelemente für die Bedienoberfläche
+(TUI) und dem Wert der Konfigurationsoption `aptitude::Theme`.
 
-Die Farben für die Ausgabeelemente sind einerseits vollständig im
-`aptitude`-Handbuch <<aptitude-dokumentation-themes>> dokumentiert, wir
-widmen dem Thema den <<aptitude-farbschema-anpassen-strukturelemente>>. Über welche Elemente
-die TUI verfügt und wie Sie diese im Ausgabefenster anordnen, besprechen 
-wir im <<aptitude-gruppierung>> genauer. 
+Die Farben für die einzelnen Ausgabeelemente sind vollständig im 
+`aptitude`-Handbuch <<aptitude-dokumentation-themes>> dokumentiert; wir
+widmen dem Thema den <<aptitude-farbschema-anpassen-strukturelemente>>. 
+Über welche Elemente die TUI verfügt und wie Sie diese im Ausgabefenster 
+anordnen, besprechen wir im <<aptitude-gruppierung>> genauer. 
 
 Bleibt noch obige Konfigurationsoption `aptitude::Theme`, deren
 Bedeutung es zu klären gilt. Für diese wählen Sie den Namen des von
