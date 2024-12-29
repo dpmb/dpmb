@@ -6,6 +6,8 @@
 
 == Paketverwaltung ohne Internet ==
 
+// Stichworte für den Index
+(((Paketverwaltung, ohne Internet)))
 Bisher haben wir bei nahezu allen im Buch besprochenen Szenarien zumeist
 stillschweigend vorausgesetzt, dass die von Ihnen betreuten
 Rechnersysteme Zugriff auf das Internet haben. Die Informationen zu
