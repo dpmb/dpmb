@@ -51,15 +51,19 @@ ist.
 
 ==== Varianten ====
 
-* aptitude verlassen
-* mit dem Kommando `df -h` schauen, wieviel Platz noch verfügbar ist
-* den Paketcache aufräumen, bspw. mit `aptitude clean`
-* mit `aptitude autoremove` diejenigen Pakete entfernen, die nicht 
-  mehr benötigt werden, aber noch installiert sind
-* Paketabhängigkeiten begutachten
-** schauen, ob wir Pakete einzeln (nacheinander) installieren können
-** dabei stets die Paketabhängigkeiten prüfen
-** nach jeder Installation wieder den Paketcache aufräumen
+Um die Situation zu beheben, verlassen Sie Aptitude zunächst. Nun 
+bestehen zwei Varianten:
+
+Variante 1 :: mit dem Kommando `df -h` prüfen Sie, wieviel Speicherplatz 
+noch verfügbar ist. Nun räumen Sie den Paketcache auf, bspw. mit Hilfe 
+von `aptitude clean`. Danach entfernen Sie mit `aptitude autoremove` 
+diejenigen Pakete, die nicht mehr benötigt werden, aber noch installiert 
+sind. Nun sollte genügend Platz vorhanden sein, um alle gewünschten Pakete
+zu installieren.
+
+Variante 2 :: Sie begutachten die Paketabhängigkeiten und prüfen, ob Sie 
+Pakete einzeln (nacheinander) installieren können. Nach jeder Installation 
+räumen Sie den Paketcache wieder auf.
 
 ==== Fehler beheben ====
 
