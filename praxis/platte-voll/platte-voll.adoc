@@ -42,11 +42,12 @@ berücksichtigt dabei bspw. Paketrelationen mit 'pre-depends' und
 .Download-Fehler
 image::praxis/platte-voll/download-fehler.png[id="fig.download-fehler", width="50%"]
 
-=== wie löst man diesen Zustand (Empfehlung zum Vorgehen) ===
+=== Wie löst man diesen Zustand (Empfehlung zum Vorgehen) ===
 
-* Ziele:
-** produktives, stabiles System
-** alle gewünschten Pakete werden heruntergeladen und installiert
+Ziel ist, stets ein produktives, stabiles System vorliegen zu haben. 
+Ebenso wurden am Ende alle gewünschten Pakete heruntergeladen und 
+installiert, so dass die Basis für die gewünschte Funktionalität gegeben
+ist.
 
 ==== Varianten ====
 
@@ -57,6 +58,7 @@ image::praxis/platte-voll/download-fehler.png[id="fig.download-fehler", width="5
   mehr benötigt werden, aber noch installiert sind
 * Paketabhängigkeiten begutachten
 ** schauen, ob wir Pakete einzeln (nacheinander) installieren können
+** dabei stets die Paketabhängigkeiten prüfen
 ** nach jeder Installation wieder den Paketcache aufräumen
 
 ==== Fehler beheben ====
