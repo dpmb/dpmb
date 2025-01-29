@@ -8,19 +8,17 @@
 
 === Ziel ===
 
-* eine ganze Menge von identisch aufgesetzten Rechnern aktualisieren,
-bspw. einen Schulungsraum oder Cluster
-* Basis: Rechner mit identischer Hardware
-* Unterschied zur Grundinstallation:
-** Grundinstallation ist bereits erfolgt
-** nur bestehende Software auf den aktuellen Stand bringen ("aktualisieren")
-** Durchführung: 
-*** Login auf allen Rechnern und Ausführung eines Kommandos gleichzeitig
-* Werkzeuge
-** apt-dater
-** multi-ssh (https://multissh.dev/)
-** Parallel-SSH (https://parallel-ssh.org/)
-** Überwachung mit Zabbix (https://www.zabbix.com/)
+Hier besprechen wir, wie Sie eine ganze Menge von identisch aufgesetzten 
+Rechnern aktualisieren, bspw. für einen Schulungsraum oder Cluster. Vereinfacht
+wird es, wenn alle Rechner über eine identische Hardware verfügen. 
+
+Der Unterschied zur regulären Installation ist, dass die Grundinstallation 
+bereits erfolgt ist und nur bestehende Software auf den aktuellen Stand zu 
+bringen ("zu aktualisieren") ist. Wichtig kann sein, daß ein Login auf allen 
+Rechnern und zur Ausführung eines Kommandos notwendig ist. Als Werkzeuge
+rücken 'apt-dater', 'multi-ssh' (https://multissh.dev/), Parallel-SSH 
+(https://parallel-ssh.org/) und Zabbix (https://www.zabbix.com/) in das 
+Blickfeld.
 
 === `apt-dater` ===
 
