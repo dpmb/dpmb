@@ -20,6 +20,7 @@ bspw. einen Schulungsraum oder Cluster
 ** apt-dater
 ** multi-ssh (https://multissh.dev/)
 ** Parallel-SSH (https://parallel-ssh.org/)
+** Überwachung mit Zabbix (https://www.zabbix.com/)
 
 === `apt-dater` ===
 
@@ -36,5 +37,13 @@ supports Debian-based managed hosts as well as rug (e.g. openSUSE) and
 yum (e.g. CentOS) based systems."
 
 * benötigt SSH und Screen
+
+=== Mit Zabbix ===
+
+// Stichworte für den Index
+(((Debianpaket, zabbix-agent)))
+
+* Monitoring eines Systems mit Zabbix
+* zusätzlicher Service, der prüft, ob Aktualisierungen vorliegen
 
 // Datei (Ende): ./praxis/automatisierte-aktualisierung/automatisierte-aktualisierung.adoc
