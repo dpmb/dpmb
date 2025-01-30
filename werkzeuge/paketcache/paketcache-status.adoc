@@ -72,11 +72,12 @@ andere Pakete für ihre Abhängigkeiten benutzen. Die Mehrzahl der Pakete
 fällt in diese Kategorie.
 
 Rein virtuelle Pakete ('pure virtual packages') :: gibt die Anzahl der
-Pakete an, für die nur ein virtueller Paketname existiert. Das kommt vor, 
-wenn Pakete nur den virtuellen Paketnamen 'bereitstellen' und aktuell 
-kein Paket diesen Namen benutzt. Zum Beispiel ist 'mail-transport-agent' 
-ein rein virtuelles Paket. Mehrere Pakete stellen dieses bereit, aber es 
-gibt kein tatsächliches Paket mit dem Namen.
+Pakete an, für die nur ein virtueller Paketname existiert (siehe 
+<<virtuelle-pakete>>). Das kommt vor, wenn Pakete nur den virtuellen 
+Paketnamen 'bereitstellen' und aktuell kein Paket diesen Namen benutzt. 
+Zum Beispiel ist 'mail-transport-agent' ein rein virtuelles Paket. 
+Mehrere Pakete stellen dieses bereit, aber es gibt kein reguläres
+Paket mit dem Namen.
 
 Einzelne virtuelle Pakete ('single virtual packagess') :: gibt die Anzahl 
 der Pakete mit nur einem Paket an, das ein bestimmtes virtuelles Paket 
