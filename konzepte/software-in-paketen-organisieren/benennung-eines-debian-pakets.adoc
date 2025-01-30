@@ -198,13 +198,13 @@ Ubuntu-Revision des Debian-Pakets mit der Versionsnummer `121-3`.
 // Stichworte für den Index
 (((Paketname, Architektur)))
 (((Paketname, Plattform)))
-_Feld 3_ in der Versionsangabe gibt an, für welche Architektur das
-vorliegende Paket übersetzt wurde. Die Benennung entspricht den
-Bezeichnungen, wie sie unter Debian-Architekturen in
-<<debian-architekturen>> aufgelistet sind. Die Angabe
-`asterisk_1.8.13.1~dfsg-3+deb7u1_armhf.deb` beschreibt die Paketierung
-der Telefoniesoftware Asterisk für die ARM-Plattform mit
-Hardware-Floating-Point-Unterstützung. Im Gegensatz dazu ist das Paket
-`asciidoc_8.5.2-1_all.deb` plattformunabhängig einsetzbar.
+_Feld 3_ im Dateinamen gibt an, für welche Architektur das vorliegende 
+Paket übersetzt wurde. Die Benennung entspricht den Bezeichnungen, wie 
+sie unter Debian-Architekturen in <<debian-architekturen>> aufgelistet 
+sind. Die Angabe `asterisk_1.8.13.1~dfsg-3+deb7u1_armhf.deb` beschreibt 
+die Paketierung der Telefoniesoftware Asterisk für die ARM-Plattform 
+mit Hardware-Floating-Point-Unterstützung. Im Gegensatz dazu ist das 
+Paket `asciidoc_8.5.2-1_all.deb` plattformunabhängig einsetzbar, da als
+Angabe `_all` angegeben ist.
 
 // Datei (Ende): ./konzepte/software-in-paketen-organisieren/benennung-eines-debian-pakets.adoc
