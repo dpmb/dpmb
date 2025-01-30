@@ -112,17 +112,19 @@ Gesamtzahl an Abhängigkeiten ('total dependencies') :: benennt die Anzahl
 der Abhängigkeitsbeziehungen, den alle Pakete im Paketcache beanspruchen.
 
 Gesamtzahl an Version/Datei-Beziehungen ('total ver/file relations') ::
-ToDo
+Gesamtanzahl von Version/Datei-Beziehungen
 
-Gesamtzahl an Beschreibung/Datei-Beziehungen ('total desc/file relations') :: ToDo
+Gesamtzahl an Beschreibung/Datei-Beziehungen ('total desc/file relations') :: 
+Gesamtanzahl von Beschreibung/Datei-Beziehungen
 
-Gesamtzahl an Bereitstellungen ('total provides mappings') :: ToDo
+Gesamtzahl an Bereitstellungen ('total provides mappings') :: Gesamtanzahl 
+an Bereitstellungen von Mappings
 
-Gesamtzahl an Mustern ('total globbed strings') :: ToDo
+Gesamtzahl an Mustern ('total globbed strings') :: Gesamtanzahl von Mustern
 
 Gesamtmenge des Abhängigkeits-/Versionsspeichers :: ToDo
 
-Gesamtmenge an Slack ('total slack space') :: ToDo
+Gesamtmenge an Slack ('total slack space') :: Gesamtgröße an Slack-Speicher
 
 Gesamtmenge an Speicher ('total space accounted for') :: Angabe zur
 Gesamtgröße des Paketcaches.
