@@ -59,13 +59,17 @@ Schema fallen allerdings die Komponenten zu LibreOffice wie
 (((Debianpaket, aptitude-doc-es)))
 (((Debianpaket, libxslt1-dev)))
 (((Debianpaket, wireshark-common)))
-(((Paketname, Suffix)))
+(((Paketname, Suffix -common)))
+(((Paketname, Suffix -data)))
+(((Paketname, Suffix -dev)))
+(((Paketname, Suffix -doc)))
 Endet der Paketname mit dem Suffix `-dev` wie bspw. in 'libxslt1-dev',
 beinhaltet das Paket Kopfdateien (engl. _header files_), die nur
 notwendig sind, wenn Sie Programme unter Nutzung der dazugehörigen
 Bibliothek entwickeln. _dev_ ist die gebräuchliche englische Abkürzung
-für _development_. Im Paket 'libxslt1-dev' befinden sich beispielsweise
-die Kopfdateien zur XSLT-1-Bibliothek.
+für _development_ (auf deutsch für 'in Entwicklung'. Im Paket 
+'libxslt1-dev' befinden sich beispielsweise die Kopfdateien zur 
+XSLT-1-Bibliothek.
 
 Das Suffix `-doc` weist auf Dokumentation hin, welches häufig noch von
 einer Abkürzung für die jeweilige Sprache gefolgt wird. Der Paketname
@@ -130,8 +134,16 @@ Open-Source-Projekten übernommen.
 (((Paketname, Backport)))
 (((Paketname, BinNMU)))
 (((Paketname, NMU)))
-(((Paketname, Suffix)))
-Zudem sind eine Reihe von _Suffixen_ gebräuchlich. Diese gelten zwar nur
+(((Paketname, Suffix -bpo)))
+(((Paketname, Suffix -common)))
+(((Paketname, Suffix -data)))
+(((Paketname, Suffix -deb)))
+(((Paketname, Suffix -dev)))
+(((Paketname, Suffix -doc)))
+(((Paketname, Suffix -ubuntu)))
+(((Paketname, Suffix +nmu)))
+Wie oben schon angerissen, kann ein Paketname ein Suffix beinhalten. Es
+sind eine ganze Reihe von _Suffixen_ gebräuchlich. Diese gelten zwar nur
 als Konvention, werden aber auch an einigen Stellen erwartet.
 
 `+nmu<n>` ::
@@ -185,6 +197,7 @@ Ubuntu-Revision des Debian-Pakets mit der Versionsnummer `121-3`.
 
 // Stichworte für den Index
 (((Paketname, Architektur)))
+(((Paketname, Plattform)))
 _Feld 3_ in der Versionsangabe gibt an, für welche Architektur das
 vorliegende Paket übersetzt wurde. Die Benennung entspricht den
 Bezeichnungen, wie sie unter Debian-Architekturen in
