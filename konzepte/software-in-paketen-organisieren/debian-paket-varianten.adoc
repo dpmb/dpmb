@@ -48,11 +48,11 @@ Format von Binärpaketen'' (siehe <<aufbau-und-format-binaer>>).
 // Stichworte für den Index
 (((file, UNIX-Kommando)))
 (((Debianpaket, vnstat)))
-Wie bereits oben benannt, hat ein Binärpaket üblicherweise die
-Dateiendung `deb` und wird auch durch das UNIX-Kommando
-`file` entsprechend als solches erkannt. Nachfolgende Ausgabe zeigt
-dieses Verhalten am Beispiel des Pakets 'vnstat', eines Programms zur
-Analyse des Netzwerktraffics.
+Wie bereits oben benannt, hat ein Binärpaket üblicherweise die 
+Dateiendung `deb` und wird auch durch das UNIX-Kommando `file` 
+entsprechend als solches erkannt. Nachfolgende Ausgabe zeigt dieses 
+Verhalten am Beispiel des Pakets 'vnstat', eines Programms zur Analyse 
+des Netzwerktraffics.
 
 .Das UNIX-Kommando `file` identifiziert die `deb`-Datei als Debianpaket
 ----
@@ -70,7 +70,7 @@ $
 (((Paketvarianten, Mikro-Binärpaket)))
 (((Paketvarianten, Tasks)))
 (((Paketvarianten, Übergangspaket)))
-Es gibt ein paar besondere Varianten von Binärpaketen – _Übergangspakete_ 
+Es gibt ein paar besondere Varianten von Binärpaketen -- _Übergangspakete_ 
 und _Metapakete_. Vom Aufbau her unterscheiden sich diese nicht von normalen 
 Binärpaketen, aber vom Inhalt. Übergangspakete und Metapakete sind reguläre 
 Binärpakete, die jedoch im Normalfall keine eigenen Programme, Daten oder 
@@ -80,14 +80,13 @@ Pakete.
 // Stichworte für den Index
 (((Paketvarianten, Übergangspaket)))
 (((Umbenennung eines Pakets)))
-_Übergangspakete_ werden bei Paketumbenennungen verwendet und dienen nur
-dazu, Ihnen den Wechsel bei geänderten (Binär-)Paketnamen zu
-erleichtern. Damit wird bei einer Aktualisierung eines bestehenden
-Pakets das Paket mit dem neuen Namen nachgezogen. In den meisten Fällen
-können Sie nach der Aktualisierung das Paket mit dem bisher verwendeten
-Namen gefahrlos von ihrem System entfernen. Nicht selten passiert dies
-bereits automatisch über die Paketverwaltung durch weitere, ggf.
-negative Abhängigkeiten.
+_Übergangspakete_ kommen bei Paketumbenennungen zum Einsatz und dienen nur
+dazu, Ihnen den Wechsel bei geänderten (Binär-)Paketnamen zu erleichtern. 
+Damit wird bei einer Aktualisierung eines bestehenden Pakets das Paket mit 
+dem neuen Namen nachgezogen. In den meisten Fällen können Sie nach der 
+Aktualisierung das Paket mit dem bisher verwendeten Namen gefahrlos von 
+ihrem System entfernen. Nicht selten passiert dies bereits automatisch 
+über die Paketverwaltung durch weitere, ggf. negative Abhängigkeiten.
 
 Übergangspakete hängen meist nur von einem einzigen anderen Paket ab.
 Beispiele dafür sind:
@@ -178,9 +177,10 @@ Dateisystemen.
 
 // Stichworte für den Index
 (((Debian Source Control)))
+(((Paketvarianten, Quellpaket)))
 (((Paketvarianten, Sourcepaket)))
 (((Sourcepaket, dsc)))
-Diese Pakete beinhalten den Quellcode von Programmen und tragen das
+Diese Pakete beinhalten den Quellcode von Programmen und tragen das 
 Suffix `dsc` als Abkürzung für _Debian Source Control_. Die Bestandteile
 eines solchen Paketes sind:
 
@@ -238,24 +238,15 @@ diese Abhängigkeit zu erfüllen, genügt es, wenn ein Paket installiert
 ist, welches dieses virtuelle Paket bereitstellt.
 
 In Debian gibt es bspw. die virtuellen Pakete 'xserver',
-'x-display-manager' und 'x-window-manager', die typische
-Komponenten des X-Window-Systems zusammenfassen.
-<<fig.aptitude-virtuelle-pakete>> zeigt beispielhaft die Auswahl für das
-virtuelle Paket 'x-display-manager' in `aptitude`. In der ersten Spalte
-der Darstellung kennzeichnet dazu der Buchstabe `v` neben dem Namen des
-virtuellen Pakets diese spezielle Variante.
+'x-display-manager' und 'x-window-manager', die typische Komponenten des 
+X-Window-Systems zusammenfassen. <<fig.aptitude-virtuelle-pakete>> zeigt 
+beispielhaft die Auswahl für das virtuelle Paket 'xserver' in `aptitude`. 
+In der ersten Spalte der Ausgabe von `aptitude` kennzeichnet dazu der 
+Buchstabe `v` neben dem Namen des virtuellen Pakets diese spezielle 
+Variante. Im unteren Teil des Fensters sehen Sie, von welchen anderen 
+Paketen das virtuelle Paket 'xserver' noch bereitgestellt wird.
 
-Zur Auswahl aus dem Paket stehen u.a. der Displaymanager Slim (Paket
-'slim'), der Gnome Display Manager in Versionen 2 und 3 (Pakete 'gdm'
-und 'gdm3'), der KDE Display Manager (Paket 'kdm'), der WINGs Display
-Manager und der ursprüngliche X Display-Manager (Paket 'xdm'). Der
-Screenshot in <<fig.aptitude-virtuelle-pakete>> stammt von einem
-Debian-System, auf welchem GDM3 installiert ist. Das erkennen Sie an der
-Hervorhebung durch fettgedruckten Text und der Markierung `i` für
-``Paket ist installiert'' in der ersten Spalte der Darstellung (siehe
-auch <<dpkg>> für weitere Darstellungsvarianten).
-
-.Inhalt des Pakets x-display-manager in Aptitude
+.Inhalt des Pakets xserver in Aptitude
 image::konzepte/software-in-paketen-organisieren/aptitude-virtuelle-pakete.png[id="fig.aptitude-virtuelle-pakete",width="50%"]
 
 Eine Liste aller offiziell verwendeten virtuellen Pakete in Debian gibt
