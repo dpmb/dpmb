@@ -63,43 +63,43 @@ auch nicht in der Manpage zu `apt-cache`.
 Gesamtzahl an Paketnamen ('total package names') :: gibt die Gesamtzahl
 der im Paketcache gefundenen Pakete an.
 
-Gesamtzahl an Paketstrukturen ('total package structures') ::
+Gesamtzahl an Paketstrukturen ('total package structures') :: ToDo
 
-Gewöhnliche Pakete ('normal packages') ::: gibt die Anzahl der
-regulären, gewöhnlichen Paketnamen an. Dieses sind Pakete, die eine
-Eins-zu-Eins-Entsprechung zwischen ihren Namen und den Namen, die andere
-Pakete für ihre Abhängigkeiten benutzen, tragen. Die Mehrzahl der Pakete
+Gewöhnliche Pakete ('normal packages') :: gibt die Anzahl der regulären, 
+gewöhnlichen Paketnamen an. Dieses sind Pakete, für die eine 
+Eins-zu-Eins-Entsprechung zwischen ihrem Namen und dem Namen besteht, die 
+andere Pakete für ihre Abhängigkeiten benutzen. Die Mehrzahl der Pakete
 fällt in diese Kategorie.
 
-Rein virtuelle Pakete ('pure virtual packages') ::: gibt die Anzahl der
-Pakete an, die nur als ein virtueller Paketname existieren. Das kommt
-vor, wenn Pakete nur den virtuellen Paketnamen 'bereitstellen' und
-aktuell kein Paket den Namen benutzt. Zum Beispiel ist
-'mail-transport-agent' ein rein virtuelles Paket. Mehrere Pakete stellen
-dieses bereit, aber es gibt kein tatsächliches Paket mit dem Namen.
+Rein virtuelle Pakete ('pure virtual packages') :: gibt die Anzahl der
+Pakete an, für die nur ein virtueller Paketname existiert. Das kommt vor, 
+wenn Pakete nur den virtuellen Paketnamen 'bereitstellen' und aktuell 
+kein Paket diesen Namen benutzt. Zum Beispiel ist 'mail-transport-agent' 
+ein rein virtuelles Paket. Mehrere Pakete stellen dieses bereit, aber es 
+gibt kein tatsächliches Paket mit dem Namen.
 
-Einzelne virtuelle Pakete ('single virtual packagess') ::: gibt die
-Anzahl der Pakete mit nur einem Paket an, das ein bestimmtes virtuelles
-Paket bereitstellt. Beispielsweise ist 'X11-text-viewer' ein solches
-Paket, aber nur das Paket 'xless' stellt dieses bereit.
+Einzelne virtuelle Pakete ('single virtual packagess') :: gibt die Anzahl 
+der Pakete mit nur einem Paket an, das ein bestimmtes virtuelles Paket 
+bereitstellt. Beispielsweise ist 'X11-text-viewer' ein solches Paket, 
+aber nur das Paket 'xless' stellt dieses bereit.
 
-Gemischte virtuelle Pakete ('mixed virtual packages') ::: gibt die
-Anzahl der Pakete an, die entweder ein bestimmtes virtuelles Paket
-bereitstellen oder den virtuellen Paketnamen als Paketnamen haben.
-Beispielsweise ist 'debconf' solches Paket, dieses wird aber auch vom
-Paket 'debconf-tiny' bereitgestellt.
+Gemischte virtuelle Pakete ('mixed virtual packages') :: gibt die Anzahl 
+der Pakete an, die entweder ein bestimmtes virtuelles Paket bereitstellen 
+oder den virtuellen Paketnamen als Paketnamen haben. Beispielsweise ist 
+'debconf' solches Paket, dieses wird aber auch vom Paket 'debconf-tiny' 
+bereitgestellt.
 
-Fehlende Pakete ('missing') ::: das benennt die Anzahl der Paketnamen,
-auf die eine Abhängigkeit verweist, die aber von keinem Paket
-bereitgestellt werden. Fehlende Pakete könnten auftauchen, wenn nicht
-auf eine vollständige Veröffentlichung zugegriffen oder ein (echtes oder
-virtuelles) Paket aus einer Veröffentlichung gestrichen wurde.
-Normalerweise erfolgt der Bezug in der Paketbeschreibung über die
+Fehlende Pakete ('missing') :: das benennt die Anzahl der Paketnamen, auf 
+die eine Abhängigkeit verweist, die aber von keinem Paket bereitgestellt 
+werden. Fehlende Pakete könnten auftauchen, wenn nicht auf eine 
+vollständige Veröffentlichung zugegriffen oder ein (echtes oder 
+virtuelles) Paket aus einer Veröffentlichung gestrichen wurde. 
+Normalerweise erfolgt der Bezug in der Paketbeschreibung über die beiden
 Schlüsselworte `Conflicts` oder `Breaks` (siehe dazu
 <<konzepte-und-ideen-dahinter-binaerpakete>>).
 
 Gesamtzahl an unterschiedlichen Versionen ('total distinct versions') ::
-diese Angabe benennt die Anzahl der im Paketcache gefundenen
+diese Angabe benennt die Anzahl der im Paketcache gefundenen 
 Paketversionen. Dieser Wert ist meistens identisch mit der Anzahl der
 gesamten Paketnamen. Wenn auf mehr als eine Veröffentlichung zugegriffen
 wird -- zum Beispiel 'stable' und 'unstable' zusammen -- , kann dieser
@@ -107,9 +107,8 @@ Wert deutlich größer als die gesamte Anzahl der Paketnamen sein.
 
 Gesamtzahl an unterschiedlichen Beschreibungen ('total distinct descriptions') :: Angabe zur Anzahl unterschiedlicher Beschreibungen.
 
-Gesamtzahl an Abhängigkeiten ('total dependencies') :: beschreibt die
-Anzahl der Abhängigkeitsbeziehungen, den alle Pakete im Paketcache
-beanspruchen.
+Gesamtzahl an Abhängigkeiten ('total dependencies') :: benennt die Anzahl 
+der Abhängigkeitsbeziehungen, den alle Pakete im Paketcache beanspruchen.
 
 Gesamtzahl an Version/Datei-Beziehungen ('total ver/file relations') ::
 ToDo
