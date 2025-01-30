@@ -8,6 +8,7 @@
 === Benennung einer Paketdatei ===
 
 // Stichworte für den Index
+(((Benennung eines Debianpakets)))
 (((Benennung einer Paketdatei)))
 (((Paketname, Namensschema)))
 Während der Benutzung von `dpkg`, APT oder `aptitude` sind Sie sicher
@@ -17,7 +18,7 @@ einer Paketdatei folgt einem ausgeklügelten Schema
 <<Krafft-Debian-System144>>. Dieses Schema ist eine Konvention, die
 leider bei Paketen aus Drittquellen oft nicht eingehalten wird.
 
-Der Dateinamen besteht aus den drei Feldern _Paketname_, _Version_ und
+Der Dateiname besteht aus den drei Feldern _Paketname_, _Version_ und
 _Architektur_, welche durch einen Unterstrich '_' voneinander
 abgegrenzt werden, plus einem Punkt und der Dateiendung '.deb'. Gemäß
 den Debian-Richtlinien <<Debian-Policy-Manual>> sind in o.g. Feldern nur
