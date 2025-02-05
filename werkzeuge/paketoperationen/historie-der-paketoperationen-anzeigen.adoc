@@ -10,22 +10,30 @@
 (((Historie der Paketaktionen anzeigen)))
 (((Nala, Historie der Paketaktionen anzeigen)))
 (((Nala, history)))
-* welche Werkzeuge können das direkt:
 
-** ja: Nala <<nala>>
-** nein: `dpkg`, `apt-get`, APT, `aptitude`, Synaptic, `ara`, `muon`
+Nachzuvollziehen, welche Paketaktionen stattfanden, ist sehr nützlich.
+Meist entsteht der Bedarf erst, wenn etwas schiefgegangen ist und Sie
+verstehen müssen, was zur aktuellen Situation geführt hat. 
 
-* wie geht das bei Nala:
+Nach unserem Wissensstand gibt es nur ein Werkzeug, welches einen direkten
+Zugriff auf die vorangegangen Paketoperationen erlaubt -- Nala <<nala>>.
+Weder `dpkg`, noch `apt-get`, APT, `aptitude`, Synaptic, `ara` und `muon`
+können in diesem speziellen Fall mithalten.
 
-** es merkt sich nur die Aktionen, die mittels Nala erfolgt sind
-** Aktionen anderer Werkzeuge zur Paketverwaltung "kennt" es nicht
-** `nala history`
+Nala merkt sich nur die Aktionen, die es selbst ausgeführt hat. Aktionen 
+anderer Werkzeuge zur Paketverwaltung "kennt" es nicht. Seine eigene
+Historie rufen Sie mittels `nala history` auf. Haben Sie es nie zuvor
+benutzt, meldet es sich, wie nachfolgend zu sehen.
 
+.Nala ohne Vergangenheit befragen
 ----
 $ nala history
 Fehler: Es existiert kein Verlauf.
 $
 ----
+
+* Ausführung mehrerer Aktionen
+** erneuter Aufruf
 
 * wie geht das bei den anderen Werkzeugen:
 
