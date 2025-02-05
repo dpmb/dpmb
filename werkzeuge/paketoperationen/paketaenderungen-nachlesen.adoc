@@ -24,32 +24,26 @@ Originalquellcode zusätzlich vorgenommen hat.
 
 Die nachfolgenden Ausgaben zeigen den Vorgang für die beiden Werkzeuge 
 `apt-get` und `aptitude` mit einem Ausschnitt des Changelogs zum Paket 
-'smartpm'. Beide Programme kennen für den Aufruf das Unterkommando 
+'xpdf'. Beide Programme kennen für den Aufruf das Unterkommando 
 `changelog` und benötigen zusätzlich den Namen des Debianpakets. Das 
 angefragte Paket muss dazu nicht auf Ihrem Debiansystem installiert sein.
 
-.Beziehen der Changelog-Informationen zum Paket 'smartpm' mittels `apt-get`
+.Beziehen der Changelog-Informationen zum Paket 'xpdf' mittels `apt-get`
 ----
-$ apt-get changelog smartpm
-Holen:1 http://metadata.ftp-master.debian.org smart 1.4-2 Changelog [8.573 B]
-Es wurden 8.573 B in 1 s geholt (4.754 B/s).
+$ apt-get changelog xpdf 
+xpdf (3.04+git20220601-1) unstable; urgency=medium
 
-...
+  * Import new upstream version 3.04+git20220601 (closes: #1012806)
+  * Update copyright years
+  * Declare compliance with Debian Policy 4.6.1
 
-smart (1.4-2) unstable; urgency=low
+ -- Florian Schlichting <fsfs@debian.org>  Fri, 17 Jun 2022 22:37:02 +0800
 
-  * Switch to dh_python2 (Thanks to Barry Warsaw)
+xpdf (3.04+git20220201-1) unstable; urgency=medium
 
- -- Free Ekanayaka <freee@debian.org>  Fri, 12 Aug 2011 17:27:20 +0100
+  * Import new upstream version 3.04+git20220201
 
-smart (1.4-1) unstable; urgency=low
-
-  * New upstream release
-  * Drop several patches (02_fix_fetcher_test, 03_setup,
-    06_CVE-2009-3560.patch and 06_CVE-2009-3720.patch) as they were
-    all merged upstream
-
- -- Free Ekanayaka <freee@debian.org>  Tue, 31 May 2011 16:04:52 +0200
+ -- Florian Schlichting <fsfs@debian.org>  Tue, 08 Feb 2022 22:04:11 +0800
 
 ...
 $
@@ -59,29 +53,37 @@ $
 (((aptitude, changelog)))
 Bei `aptitude` sieht das wie folgt aus:
 
-.Die Paketänderungen zum Paket 'smartpm' mit Hilfe von `aptitude` ausgeben
+.Die Paketänderungen zum Paket 'xpdf' mit Hilfe von `aptitude` ausgeben
 ----
-$ aptitude changelog smartpm
+$ aptitude changelog xpdf
 
-smart (1.4-2) unstable; urgency=low
+xpdf (3.04+git20220601-1) unstable; urgency=medium
 
-  * Switch to dh_python2 (Thanks to Barry Warsaw)
+  * Import new upstream version 3.04+git20220601 (closes: #1012806)
+  * Update copyright years
+  * Declare compliance with Debian Policy 4.6.1
 
- -- Free Ekanayaka <freee@debian.org>  Fri, 12 Aug 2011 17:27:20 +0100
+ -- Florian Schlichting <fsfs@debian.org>  Fri, 17 Jun 2022 22:37:02 +0800
 
-smart (1.4-1) unstable; urgency=low
+xpdf (3.04+git20220201-1) unstable; urgency=medium
 
-  * New upstream release
-  * Drop several patches (02_fix_fetcher_test, 03_setup,
-    06_CVE-2009-3560.patch and 06_CVE-2009-3720.patch) as they were
-    all merged upstream
+  * Import new upstream version 3.04+git20220201
 
- -- Free Ekanayaka <freee@debian.org>  Tue, 31 May 2011 16:04:52 +0200
+ -- Florian Schlichting <fsfs@debian.org>  Tue, 08 Feb 2022 22:04:11 +0800
 
 ...
 
 $
 ----
+
+Auch über die Textoberfläche von `aptitude` erhalten Sie diese 
+Informationen. Hinterlegt ist einerseits die Taste kbd:[C], andererseits
+erreichen Sie die Darstellung auch über den Menüpunkt ``Paket'' -> 
+``Änderungsprotokoll'' (siehe <<fig.aptitude-changelog-xpdf>>). Diese
+Darstellung schließen Sie wieder über die Taste kbd:[q].
+
+.Die Änderungen im Paket mittels `aptitude` anzeigen
+image::werkzeuge/paketoperationen/aptitude-changelog-xpdf.png[id="fig.aptitude-changelog-xpdf", width="30%"]
 
 Die Beschreibung der vorgenommenen Änderungen folgt dabei einem festgelegten 
 Schema. Dieses Schema ist im 'Debian Policy Manual' <<Debian-Policy-Manual>> 
