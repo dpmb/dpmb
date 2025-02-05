@@ -35,6 +35,13 @@ $
 * Ausführung mehrerer Aktionen
 ** erneuter Aufruf
 
+.Nala buddelt in seiner Vergangenheit
+----
+$ nala history
+TODO
+$
+----
+
 * wie geht das bei den anderen Werkzeugen:
 
 ** `history | grep apt`
