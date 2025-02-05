@@ -75,7 +75,10 @@ Wert von 'hold' wieder auf 'install' wie folgt:
 ==== Mit `apt-mark` ====
 
 // Stichworte für den Index
+(((apt-mark, Aktualisierungsstatus eines Pakets anzeigen)))
 (((apt-mark, hold)))
+(((apt-mark, Paket wieder zur Aktualisierung freigeben)))
+(((apt-mark, Paket nicht aktualisieren)))
 (((apt-mark, showhold)))
 (((apt-mark, unhold)))
 Zu APT gehört das Werkzeug `apt-mark` aus dem Paket 'apt' 
@@ -206,6 +209,9 @@ und setzen.
 
 ==== Synaptic ====
 
+// Stichworte für den Index
+(((Synaptic, Version nicht aktualisieren)))
+(((Synaptic, Version sperren))
 Synaptic bietet dazu den Menüpunkt ``Paket'' -> ``Version sperren'' 
 (siehe <<fig.synaptic-hold>>). Ein so markiertes Paket wird farbig in 
 der Auswahlliste der Pakete hervorgehoben (default: rot). Zusätzlich 
