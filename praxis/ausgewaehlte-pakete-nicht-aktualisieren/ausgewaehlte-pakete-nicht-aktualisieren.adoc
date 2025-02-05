@@ -188,6 +188,8 @@ dem Unterkommando `unhold` auf:
 (((aptitude, hold)))
 (((aptitude, keep)))
 (((aptitude, keep-all)))
+(((aptitude, Paket nicht aktualisieren)))
+(((aptitude, Paket wieder zur Aktualisierung freigeben)))
 
 Hier gelten die gleichen Erklärungen zu den Zustandsveränderungen, wie
 bereits in <<mehrere-pakete-in-einem-schritt-aendern-mit-aptitude>> und
