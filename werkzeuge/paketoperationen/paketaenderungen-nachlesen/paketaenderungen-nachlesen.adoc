@@ -80,10 +80,11 @@ Auch über die Textoberfläche von `aptitude` erhalten Sie diese
 Informationen. Hinterlegt ist einerseits die Taste kbd:[C], andererseits
 erreichen Sie die Darstellung auch über den Menüpunkt ``Paket'' -> 
 ``Änderungsprotokoll'' (siehe <<fig.aptitude-changelog-xpdf>>). Diese
-Darstellung schließen Sie wieder über die Taste kbd:[q].
+Darstellung schließen Sie wieder über die Taste kbd:[q] und kehren zur
+Listenansicht zurück.
 
 .Die Änderungen im Paket mittels `aptitude` anzeigen
-image::werkzeuge/paketoperationen/paketaenderungen-nachlesen/aptitude-changelog-xpdf.png[id="fig.aptitude-changelog-xpdf", width="30%"]
+image::werkzeuge/paketoperationen/paketaenderungen-nachlesen/aptitude-changelog-xpdf.png[id="fig.aptitude-changelog-xpdf", width="50%"]
 
 Die Beschreibung der vorgenommenen Änderungen folgt dabei einem festgelegten 
 Schema. Dieses Schema ist im 'Debian Policy Manual' <<Debian-Policy-Manual>> 
