@@ -175,6 +175,7 @@ dem Unterkommando `unhold` auf:
 ==== Mit Aptitude ====
 
 // Stichworte für den Index
+(((aptitude, ausstehende Aktionen abbrechen)))
 (((aptitude, hold)))
 (((aptitude, keep)))
 (((aptitude, keep-all)))
@@ -182,15 +183,16 @@ dem Unterkommando `unhold` auf:
 Hier gelten die gleichen Erklärungen zu den Zustandsveränderungen, wie
 bereits in <<mehrere-pakete-in-einem-schritt-aendern-mit-aptitude>> und
 in <<ausgewaehlte-pakete-nicht-aktualisieren-mit-aptitude>> beschrieben. 
-Über die Textoberfläche steuern Sie die Aktionen wie folgt:
+Über die Textoberfläche von Aptitude steuern Sie die Aktionen wie folgt:
 
 `=` :: halten ('hold') über den Menüpunkt ``Paket'' -> ``Zurückhalten''
 
 `:` :: halten ('keep version') über den Menüpunkt ``Paket'' -> ``Beibehalten''
 
-Den gesetzten Zustand setzen Sie bspw. über den Menüpunkt ``Aktionen'' -> 
-``Noch ausstehende Aktionen abbrechen'' zurück. Das entspricht dem
-Unterkommando `keep-all`.
+Sie können jederzeit den gemerkten Zustand vollständig zurücksetzen. 
+Dazu dient der Menüpunkt ``Aktionen'' -> ``Noch ausstehende Aktionen 
+abbrechen''. Das Pendant dazu auf der Kommandozeile ist das Unterkommando 
+`keep-all`.
 
 ==== Mit Nala ====
 
