@@ -6,6 +6,10 @@
 
 === Historie der Paketoperationen anzeigen ==
 
+// Stichworte für den Index
+(((Historie der Paketaktionen anzeigen)))
+(((Nala, Historie der Paketaktionen anzeigen)))
+(((Nala, history)))
 * welche Werkzeuge können das direkt:
 
 ** ja: Nala <<nala>>
@@ -13,11 +17,20 @@
 
 * wie geht das bei Nala:
 
+** es merkt sich nur die Aktionen, die mittels Nala erfolgt sind
+** Aktionen anderer Werkzeuge zur Paketverwaltung "kennt" es nicht
 ** `nala history`
+
+----
+$ nala history
+Fehler: Es existiert kein Verlauf.
+$
+----
 
 * wie geht das bei den anderen Werkzeugen:
 
 ** `history | grep apt`
+** Logfile von `dpkg`, APT oder `aptitude` auswerten
 
 // Datei (Ende): ./werkzeuge/paketoperationen/historie-der-paketoperationen-anzeigen.adoc
 
