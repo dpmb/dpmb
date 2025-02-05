@@ -4,7 +4,7 @@
 
 [[historie-der-paketoperationen-anzeigen]]
 
-=== Historie der Paketoperationen anzeigen ==
+=== Historie der Paketoperationen anzeigen ===
 
 // Stichworte für den Index
 (((Historie der Paketaktionen anzeigen)))
