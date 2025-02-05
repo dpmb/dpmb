@@ -235,6 +235,9 @@ image::praxis/ausgewaehlte-pakete-nicht-aktualisieren/synaptic-hold.png[id="fig.
 
 ==== Mit Apper ====
 
+// Stichworte für den Index
+(((Apper, Zustandsveränderungen anzeigen)))
+(((Apper, Zustandsveränderungen setzen)))
 Apper (siehe <<gui-packagekit>>) kann derzeit keine Zustandsveränderungen 
 auslesen und setzen.
 
