@@ -1,0 +1,23 @@
+// Datei: ./werkzeuge/paketoperationen/historie-der-paketoperationen-anzeigen.adoc
+
+// Baustelle: Notizen
+
+[[historie-der-paketoperationen-anzeigen]]
+
+=== Historie der Paketoperationen anzeigen ==
+
+* welche Werkzeuge können das direkt:
+
+** ja: Nala <<nala>>
+** nein: `dpkg`, `apt-get`, APT, `aptitude`, Synaptic, `ara`, `muon`
+
+* wie geht das bei Nala:
+
+** `nala history`
+
+* wie geht das bei den anderen Werkzeugen:
+
+** `history | grep apt`
+
+// Datei (Ende): ./werkzeuge/paketoperationen/historie-der-paketoperationen-anzeigen.adoc
+
