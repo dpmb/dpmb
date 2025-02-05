@@ -201,8 +201,9 @@ mit Hilfe der folgenden Tastenkombinationen:
 
 `:` :: halten ('keep version') über den Menüpunkt ``Paket'' -> ``Beibehalten''
 
-Sie können jederzeit den gemerkten Zustand vollständig zurücksetzen. 
-Dazu dient der Menüpunkt ``Aktionen'' -> ``Noch ausstehende Aktionen 
+Sie können jederzeit den gemerkten Zustand vollständig zurücksetzen. Eine
+Tastenkombination ist dazu bislang nicht hinterlegt. Zum Zurücksetzen 
+dient daher der Menüpunkt ``Aktionen'' -> ``Noch ausstehende Aktionen 
 abbrechen''. Das Pendant dazu auf der Kommandozeile ist das Unterkommando 
 `keep-all`.
 
