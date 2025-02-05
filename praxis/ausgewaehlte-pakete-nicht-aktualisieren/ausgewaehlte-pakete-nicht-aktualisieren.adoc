@@ -124,9 +124,13 @@ Halten-Markierung für wireshark entfernt.
 ==== Mit Aptitude ====
 
 // Stichworte für den Index
+(((aptitude, Aktualisierungsstatus eines Pakets anzeigen)))
+(((aptitude, ausstehende Aktionen abbrechen)))
 (((aptitude, hold)))
 (((aptitude, keep)))
 (((aptitude, keep-all)))
+(((aptitude, Paket nicht aktualisieren)))
+(((aptitude, Paket wieder zur Aktualisierung freigeben)))
 (((aptitude, show)))
 (((aptitude, unhold)))
 
