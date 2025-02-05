@@ -40,6 +40,8 @@ aufwendiger werden. Bedenken Sie diesen Schritt daher gut.
 // Stichworte für den Index
 (((dpkg, --get-selections)))
 (((dpkg, --set-selections)))
+(((dpkg, Aktualisierungsstatus von Paketen anzeigen)))
+(((dpkg, Aktualisierungsstatus eines Pakets ändern)))
 
 Das Werkzeug `dpkg` kennt dazu die beiden Optionen `--set-selections`
 zum Setzen einer Markierung und `--get-selections` zum Auslesen einer
