@@ -196,6 +196,9 @@ abbrechen''. Das Pendant dazu auf der Kommandozeile ist das Unterkommando
 
 ==== Mit Nala ====
 
+// Stichworte für den Index
+(((Nala, Zustandsveränderungen anzeigen)))
+(((Nala, Zustandsveränderungen setzen)))
 Nala (siehe <<nala>>) kann derzeit keine Zustandsveränderungen auslesen 
 und setzen.
 
