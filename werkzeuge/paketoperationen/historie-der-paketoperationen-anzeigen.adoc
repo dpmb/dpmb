@@ -16,9 +16,9 @@ Meist entsteht der Bedarf erst, wenn etwas schiefgegangen ist und Sie
 verstehen müssen, was zur aktuellen Situation geführt hat. 
 
 Nach unserem Wissensstand gibt es nur ein Werkzeug, welches einen direkten
-Zugriff auf die vorangegangen Paketoperationen erlaubt -- Nala <<nala>>.
-Weder `dpkg`, noch `apt-get`, APT, `aptitude`, Synaptic, `ara` und `muon`
-können in diesem speziellen Fall mithalten.
+Zugriff auf die vorangegangen Paketoperationen erlaubt -- Nala (siehe 
+<<nala>>). Weder `dpkg`, noch `apt-get`, APT, `aptitude`, Synaptic, `ara` 
+und `muon` können in diesem speziellen Fall mithalten.
 
 Nala merkt sich nur die Aktionen, die es selbst ausgeführt hat. Aktionen 
 anderer Werkzeuge zur Paketverwaltung "kennt" es nicht. Seine eigene
