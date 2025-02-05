@@ -1,6 +1,6 @@
 // Datei: ./werkzeuge/paketoperationen/paketaktionen-debuggen.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[paketaktionen-debuggen]]
 === Paketaktionen debuggen ===
