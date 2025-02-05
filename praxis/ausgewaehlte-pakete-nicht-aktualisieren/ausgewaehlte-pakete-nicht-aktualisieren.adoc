@@ -220,6 +220,8 @@ und setzen.
 // Stichworte für den Index
 (((Synaptic, Version nicht aktualisieren)))
 (((Synaptic, Version sperren))
+(((Synaptic, Zustandsveränderungen anzeigen)))
+(((Synaptic, Zustandsveränderungen setzen)))
 Synaptic bietet dazu den Menüpunkt ``Paket'' -> ``Version sperren'' 
 (siehe <<fig.synaptic-hold>>). Ein so markiertes Paket wird farbig in 
 der Auswahlliste der Pakete hervorgehoben (default: rot). Zusätzlich 
