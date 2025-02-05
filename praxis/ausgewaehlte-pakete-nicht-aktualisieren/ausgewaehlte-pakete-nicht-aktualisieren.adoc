@@ -194,7 +194,8 @@ dem Unterkommando `unhold` auf:
 Hier gelten die gleichen Erklärungen zu den Zustandsveränderungen, wie
 bereits in <<mehrere-pakete-in-einem-schritt-aendern-mit-aptitude>> und
 in <<ausgewaehlte-pakete-nicht-aktualisieren-mit-aptitude>> beschrieben. 
-Über die Textoberfläche von Aptitude steuern Sie die Aktionen wie folgt:
+Über die Textoberfläche von Aptitude steuern Sie die einzelnen Aktionen 
+mit Hilfe der folgenden Tastenkombinationen:
 
 `=` :: halten ('hold') über den Menüpunkt ``Paket'' -> ``Zurückhalten''
 
