@@ -83,7 +83,7 @@ erreichen Sie die Darstellung auch über den Menüpunkt ``Paket'' ->
 Darstellung schließen Sie wieder über die Taste kbd:[q].
 
 .Die Änderungen im Paket mittels `aptitude` anzeigen
-image::werkzeuge/paketoperationen/aptitude-changelog-xpdf.png[id="fig.aptitude-changelog-xpdf", width="30%"]
+image::werkzeuge/paketoperationen/paketaenderungen-nachlesen/aptitude-changelog-xpdf.png[id="fig.aptitude-changelog-xpdf", width="30%"]
 
 Die Beschreibung der vorgenommenen Änderungen folgt dabei einem festgelegten 
 Schema. Dieses Schema ist im 'Debian Policy Manual' <<Debian-Policy-Manual>> 
