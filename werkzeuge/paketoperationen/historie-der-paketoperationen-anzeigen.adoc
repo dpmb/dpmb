@@ -18,28 +18,31 @@ verstehen müssen, was zur aktuellen Situation geführt hat.
 Nach unserem Wissensstand gibt es nur ein Werkzeug, welches einen direkten
 Zugriff auf die vorangegangen Paketoperationen erlaubt -- Nala (siehe 
 <<nala>>). Weder `dpkg`, noch `apt-get`, APT, `aptitude`, Synaptic und 
-`muon` (siehe <<gui-muon>>) können in diesem speziellen Fall mithalten.
+`muon` (siehe <<gui-muon>>) können in diesem speziellen Fall mithalten. 
 
 Nala merkt sich nur die Aktionen, die es selbst ausgeführt hat. Aktionen 
 anderer Werkzeuge zur Paketverwaltung "kennt" es nicht. Seine eigene
 Historie rufen Sie mittels `nala history` auf. Haben Sie es nie zuvor
-benutzt, meldet es sich, wie nachfolgend zu sehen.
+benutzt, meldet es sich zunächst so, wie nachfolgend zu sehen.
 
-.Nala ohne Vergangenheit befragen
+.Nala ohne bestehende Vergangenheit befragen
 ----
 $ nala history
 Fehler: Es existiert kein Verlauf.
 $
 ----
 
-* Ausführung mehrerer Aktionen
-** erneuter Aufruf
+Nala merkt sich alle Installationen, Aktualisierungen und Entfernungen von
+Paketen. Diesen Schritten entsprechen die drei Unterkommandos `install`, 
+`upgrade` und `remove`. Nachfolgend ersehen Sie aus der Ausgabe, dass das
+Paket 'chromium' installiert wurde.
 
 .Nala buddelt in seiner Vergangenheit
 ----
-$ nala history
-TODO
-$
+# nala history 
+  ID    Command             Date and Time              Altered    Requested-By  
+  1     install chromium    2025-02-06 08:36:15 CET          5    root (0)
+#
 ----
 
 * wie geht das bei den anderen Werkzeugen:
