@@ -45,10 +45,16 @@ Paket 'chromium' installiert wurde.
 #
 ----
 
-* wie geht das bei den anderen Werkzeugen:
+Bei den anderen Werkzeugen bleibt nur, entweder die passenden Logfiles
+auszuwerten, oder in der Historie ihrer Shell zu graben, bspw. wie folgt:
 
-** `history | grep apt`
-** Logfile von `dpkg`, APT oder `aptitude` auswerten
+.In der Historie der Shell stöbern
+----
+$ history | grep apt
+ 1944  apt-get changelog xpdf
+ 1945  aptitude changelog xpdf
+$
+----
 
 // Datei (Ende): ./werkzeuge/paketoperationen/historie-der-paketoperationen-anzeigen.adoc
 
