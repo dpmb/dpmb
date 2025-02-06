@@ -36,7 +36,7 @@ include::automatisch-installierte-pakete-anzeigen.adoc[]
 
 include::obsolete-pakete-anzeigen.adoc[]
 
-include::aktualisierbare-pakete-anzeigen.adoc[]
+include::aktualisierbare-pakete-anzeigen/aktualisierbare-pakete-anzeigen.adoc[]
 
 include::paketversionen-anzeigen.adoc[]
 
