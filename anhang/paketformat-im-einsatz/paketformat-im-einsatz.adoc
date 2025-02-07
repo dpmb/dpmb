@@ -149,6 +149,7 @@ _Jessie_. Ab Version 3.0 benutzt Steam OS <<SteamOS>> hingegen Arch Linux
 === Mobile Architekturen ===
 
 // Stichworte für den Index
+(((Droidian)))
 (((Maemo)))
 (((Meego)))
 (((OpenMoko)))
@@ -159,6 +160,11 @@ Mobiltelefone Nokia N900 mit Maemo <<Maemo>>, Nokia N9 mit Meego
 Auch der community-getragene, inoffizielle N900-Nachfolger Neo900
 <<Neo900>> soll u.a. mit Maemo und damit ebenfalls mit dem
 `deb`-Paketformat laufen.
+
+Ebenso existiert das Projekt Droidian <<Droidian>>. Hierbei handelt es
+sich um Debian GNU/Linux für mobile Geräte auf der Basis von Android. 
+Es setzt bspw. der Hersteller FuriLabs mit seinem Modell FuriPhone FLX1 
+ein <<FuriLabs>>.
 
 === Anstatt Linux ===
 

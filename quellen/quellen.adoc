@@ -550,7 +550,7 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Paketierbuch]]] Debian-Paketierbuch (dbp), https://salsa.debian.org/ddp-team/dpb
 
-- [[[debian-partners-fastly]] Eintrag von Fastly auf der Debian-Partner-Liste, https://www.debian.org/partners/#Fastly
+- [[[debian-partners-fastly]]] Eintrag von Fastly auf der Debian-Partner-Liste, https://www.debian.org/partners/#Fastly
 
 - [[[Debian-Policy-Manual]]] Debian Policy Manual, https://www.debian.org/doc/debian-policy/
 
@@ -669,6 +669,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Drilling-Checkinstall-LinuxUser]]] Thomas Drilling: Gut geschnürt. Paketbau in Eigenregie mit Checkinstall, LinuxUser 06/2012, LinuxNewMedia AG, München, 2012, S. 38ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2012/06/Paketbau-in-Eigenregie-mit-Checkinstall
 
+- [[[Droidian]]] Droidian, https://droidian.org/
+
 - [[[DysonOS]]] Dyson OS, https://www.osdyson.org/
 
 - [[[Edubuntu]]] Edubuntu, https://www.edubuntu.org/
@@ -688,6 +690,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[Finnix]]] Finnix, https://www.finnix.org/
 
 - [[[Flatpak]]] Flatpak, https://flatpak.org/
+
+- [[[FuriLabs]]] FuriLabs, https://furilabs.com/
 
 - [[[foreman]]] Foreman, https://www.theforeman.org/
 
