@@ -42,6 +42,9 @@ include::paketquellen-eintragen-und-aendern.adoc[]
 // /etc/apt/sources.list verstehen
 include::etc-apt-sources.list-verstehen/etc-apt-sources.list-verstehen.adoc[]
 
+// das Format deb822 verstehen
+include::das-format-deb822-verstehen.adoc[]
+
 // Paketmirror festlegen
 // - allgemein
 include::geeigneten-paket-mirror-auswaehlen.adoc[]

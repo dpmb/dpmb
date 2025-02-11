@@ -1,0 +1,14 @@
+// Datei: ./werkzeuge/paketquellen-und-werkzeuge/das-format-deb822-verstehen.adoc
+
+// Baustelle: Notizen
+
+[[deb822-verstehen]]
+
+=== Das Format deb822 verstehen ===
+
+* Notizen
+** neues Format der Paketliste, welches das bisherige ablösen wird
+** vorraussichtliche Einführung bei ab Debian 13 'Trixie'
+** Formatname: deb822
+
+// Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/das-format-deb822-verstehen.adoc
