@@ -6,10 +6,81 @@
 
 === Das Format deb822 verstehen ===
 
-* Notizen
-** neues Format der Paketliste, welches das bisherige ablösen wird
-** vorraussichtliche Einführung bei ab Debian 13 'Trixie'
-** Formatname: deb822
-*** abgeleitet von RFC 822 <<RFC822>>: legt Erweiterungen von Email/MIME fest <<MIME>>
+==== Überblick ====
+
+* neues Format der Paketliste, welches das bisherige ablösen wird
+* vorraussichtliche Einführung bei ab Debian 13 'Trixie'
+* Formatname: deb822
+** abgeleitet von RFC 822 <<RFC822>>: legt Erweiterungen von Email/MIME fest <<MIME>>
+* Seit 2015 wird dieses Format bereits von APT 1.1 unterstützt, wurde aber bislang 
+   bei Debian GNU/Linux 11 und 12 nicht primär verwendet. 
+* Prioritätenwechsel betrifft nun auch andere, abgeleitete Linux-Distributionen
+   wie Linux Mint oder Raspberry Pi OS. Ubuntu benutzt das Format bereits seit der 
+   Version 24.04
+* Bedingung für die Umstellung auf deb822:
+** Veröffentlichung der kommenden APT-Version 3.0
+
+==== Deb822 im Detail ====
+
+* bisher genutztes, einzeiliges Format wird ersetzt durch ein mehrzeiliges Format
+* Schreibweise für eine Paketquelle: 
+** mehrere Schlüssel:Wert-Paare (Feldbezeichner: Wert)
+** Trennung mehrerer Paketquellen durch eine Leerzeile
+
+.Angabe der Paketquelle im Format Deb822
+----
+Types:      deb
+URIs:       https://deb.debian.org/debian/
+Suites:     stable
+Components: main contrib
+Enabled:    yes
+Signed-By:  /usr/share/keyrings/debian-archive-keyring.gpg
+----
+
+.Einträge bei Deb822
+----
+Schlüssel     | Erforderlich | Beschreibung
+Types         | ja           | Pakettyp -- deb oder deb-src
+URIs          | ja           | Paketquelle als URL oder auch Datei
+Suites        | ja           | Name oder Zustand der Veröffentlichung, bspw. Trixie oder stable
+Components    | nein         | Paketbereich(e), bspw. main oder nonfree-firmware
+Signed-By     | nein         | Pfad zum öffentlichen GPG-Schlüssel
+Architectures | nein         | Genutzte CPU-Architektur, bspw. amd64
+Enabled       | nein         | Aktiviert oder nicht, default: yes
+----
+
+Mit dem neuen Format werden bislang bestehende Probleme in Bezug auf die 
+Dateilänge, Mehrfachangaben von Paketquellen und die Zuordnung der Felder
+gelöst. Da zudem das Werkzeig `apt-key` nicht weiter besteht, löst die 
+direkte Einbindung der Schlüssel in das neue Quelllistenformat die 
+Zuordnung zur Paketquelle sehr elegant und vorallem eindeutig.
+
+Ebenfalls ist die direkte Hinterlegung des Schlüssels in der Quellenangabe 
+zulässig. Dabei rücken Sie bitte den gesamten Block nach dem Schlüsselwort 
+`Signed-By` mit einem Leerzeichen ein. Vorhandene Leerzeilen müssen ein 
+Zeichen enthalten; es reicht dazu bspw. ein Punkt.
+
+.Format Deb822 mit direkter Schlüsselangabe
+----
+Types:      deb
+URIs:       https://deb.debian.org/debian/
+Suites:     stable
+Components: main contrib
+Enabled:    yes
+Signed-By:  
+ -----BEGIN PGP PUBLIC KEY BLOCK-----
+     .
+ mDMEYCQjIxYJKwYBBAHaRw8BAQdAD/P5Nvvnvk66SxBBHDbhRml9ORg1WV5CvzKY
+ CuMfoIS0BmFiY2RlZoiQBBMWCgA4FiEErCIG1VhKWMWo2yfAREZd5NfO31cFAmAk
+ IyMCGyMFCwkIBwMFFQoJCAsFFgIDAQACHgECF4AACgkQREZd5NfO31fbOwD6ArzS
+ dM0Dkd5h2Ujy1b6KcAaVW9FOa5UNfJ9FFBtjLQEBAJ7UyWD3dZzhvlaAwunsk7DG
+ 3bHcln8DMpIJVXht78sL
+ =IE0r
+ -----END PGP PUBLIC KEY BLOCK-----
+----
+
+==== Automatisierte Umstellung ====
+
+* `apt modernize-sources`
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/das-format-deb822-verstehen.adoc
