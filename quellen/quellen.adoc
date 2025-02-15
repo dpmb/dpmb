@@ -913,6 +913,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[RFC822]]] RFC 822: Standard For The Format Of Text Messages, IETF, https://www.ietf.org/rfc/rfc0822.txt
 
+- [[[MIME]]] Multipurpose Internet Mail Extensions (MIME), Wikipedia, https://de.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions
+
 - [[[Ritesh-apt-offline]]] Ritesh Sarraf: Offline Package Management for
   APT, https://www.debian-administration.org/article/648/Offline_Package_Management_for_APT
 

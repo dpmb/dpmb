@@ -10,5 +10,6 @@
 ** neues Format der Paketliste, welches das bisherige ablösen wird
 ** vorraussichtliche Einführung bei ab Debian 13 'Trixie'
 ** Formatname: deb822
+*** abgeleitet von RFC 822 <<RFC822>>: legt Erweiterungen von Email/MIME fest <<MIME>>
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/das-format-deb822-verstehen.adoc
