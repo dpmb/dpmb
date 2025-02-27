@@ -115,6 +115,6 @@ Paketliste, welche nur noch die Pakete enthält, die erneuerbar sind
 (siehe <<fig.synaptic-aktualisierbare-pakete-anzeigen>>).
 
 .Ansicht der aktualisierbaren Pakete in Synaptic
-image::werkzeuge/paketoperationen/synaptic-aktualisierbare-pakete-anzeigen.png[id="fig.synaptic-aktualisierbare-pakete-anzeigen", width="50%"]
+image::werkzeuge/paketoperationen/aktualisierbare-pakete-anzeigen/synaptic-aktualisierbare-pakete-anzeigen.png[id="fig.synaptic-aktualisierbare-pakete-anzeigen", width="50%"]
 
 // Datei (Ende): ./werkzeuge/paketoperationen/aktualisierbare-pakete-anzeigen.adoc
