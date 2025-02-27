@@ -99,10 +99,10 @@ Nala kennt zur Anzeige der aktualisierbaren Pakete das Unterkommando
 `list` gefolgt von der Option `--upgradable`. Neben dem Paketnamen gibt
 es aus, ob das Paket bereits installiert ist samt der genutzten Version, 
 darunter die Versionsnummer, auf die Sie das Paket aktualisieren können 
-sowie die Kurzbeschreibung zum Paket selbst (siehe <<).
+sowie die Kurzbeschreibung zum Paket selbst (siehe <<fig.nala-aktualisierbare-pakete-anzeigen>>).
 
 .Ansicht der aktualisierbaren Pakete in Nala
-image::werkzeuge/paketoperationen/muon-aktualisierbare-pakete-anzeigen.png[id="fig.muon-aktualisierbare-pakete-anzeigen", width="50%"]
+image::werkzeuge/paketoperationen/nala-aktualisierbare-pakete-anzeigen.png[id="fig.nala-aktualisierbare-pakete-anzeigen", width="50%"]
 
 ==== Synaptic verwenden ====
 
