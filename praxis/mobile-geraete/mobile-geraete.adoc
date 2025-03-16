@@ -23,6 +23,7 @@ und die Erfordernisse an die CPU.
 === Batterielaufzeit ===
 
 // Stichworte für den Index
+(((Mobile Geräte, Batterielaufzeit)))
 (((Debianpaket, acpitool)))
 (((Debianpaket, tlp)))
 Die Batterielaufzeit gehört neben dem Netzwerk zu den kritischsten 
@@ -31,6 +32,9 @@ häufig eher nachrangig sind, geht ohne die beiden gar nichts. In unser
 Blickfeld sind diese Werkzeuge geraten:
 
 * 'acpitool' <<Debian-Paket-acpitool>>
+** Anzeige von Batterie- und Temperaturstatus, Ruhe-/Schlafstatus
+** Erweiterungen für Notebooks von Toshiba, ASUS und IBM/Lenovo ThinkPads
+
 * 'tlp' <<Debian-Paket-tlp>>
 ** optimierte Ansteuerung der Batterie(n)
 ** Abstimmung für Aufladung und Performance separat für Batterie- 
@@ -41,6 +45,8 @@ Blickfeld sind diese Werkzeuge geraten:
 [[mobile-geraete-speicherplatz]]
 === Speicherplatz === 
 
+// Stichworte für den Index
+(((Mobile Geräte, Speicherplatz)))
 Der Kampf um Speicherplatz wird wohl nie zu Ende gehen, egal, wie groß 
 die Speichermedien auch werden. Eine ganze Reihe unterschiedlicher 
 Pakete tritt an, ihnen in der Situation zu helfen. Dazu gehören bspw. 
@@ -57,6 +63,8 @@ include::localepurge.adoc[]
 [[mobile-geraete-bildschirmgroesse]]
 === Bildschirmgröße ===
 
+// Stichworte für den Index
+(((Mobile Geräte, Bildschirmgröße)))
 * weniger Bildschirmgröße resultiert ... 
 ** in einem geringeren Stromverbrauch des Gerätes
 ** kleinere Darstellung der Bedienoberflächen der Werkzeuge
@@ -64,6 +72,10 @@ include::localepurge.adoc[]
 [[mobile-geraete-cpu]]
 === Erfordernisse an die CPU ===
 
+// Stichworte für den Index
+(((Debianpaket, debdelta)))
+(((Debianpaket, dietlibc-dev)))
+(((Mobile Geräte, CPU)))
 * Debdelta:
 ** siehe <<systeme-mit-schlechter-internet-anbindung-warten>>
 ** siehe <<systeme-mit-schlechter-anbindung-warten-debdelta>>
