@@ -99,8 +99,17 @@ $
 
 [[plattenplatz-sparen-mit-der-paketverwaltung-pfade-ausschliessen]]
 === Pfade ausschließen ===
+// Stichworte für den Index
+(((dpkg, --path-exclude)))
 
 * `dpkg --path-exclude=…`
+* schließt bei der Installation eines Paketes Dateien aus, die 
+  sonst mit in dieses Verzeichnis kopiert werden würden
+
+.Alle Copyright-Dateien ausschließen
+----
+$ dpkg -i paket.deb --path-exclude=/usr/share/doc/*/copyright
+----
 
 [[plattenplatz-sparen-mit-der-paketverwaltung-lokalisierungen]]
 === Ungenutzte Lokalisierungen entfernen ===
