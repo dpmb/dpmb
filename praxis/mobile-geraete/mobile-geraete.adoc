@@ -32,6 +32,11 @@ Blickfeld sind diese Werkzeuge geraten:
 
 * 'acpitool' <<Debian-Paket-acpitool>>
 * 'tlp' <<Debian-Paket-tlp>>
+** optimierte Ansteuerung der Batterie(n)
+** Abstimmung für Aufladung und Performance separat für Batterie- 
+   und Netzbetrieb
+** vorbereitete Profile für IBM/Lenovo ThinkPads
+** Ein-/Ausschalten von Bluetooth, NFC, Wlan und Radio
 
 [[mobile-geraete-speicherplatz]]
 === Speicherplatz === 
