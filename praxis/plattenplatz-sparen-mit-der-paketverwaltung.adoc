@@ -29,7 +29,9 @@ verallgemeinert werden und hängt vom konkreten Einzelfall ab.
 (((Identische Dateien finden)))
 Als Duplikate gelten Dateien mit gleichem Namen und Inhalt. Wenn auch
 eher selten, aber doch vorkommend, bringen unterschiedliche Pakete 
-gleiche Dateien mit.
+gleiche Dateien mit. Kandidaten dafür finden sich bspw. im Verzeichnis
+`usr/share/doc/` (siehe <<Beckert-Blog-Hardlinking-Duplicate-Files>>)
+und umfassen Dokumentation und Logfiles.
 
 ** welche Pakete legen diese an?
 ** wie kommen diese durch die Paketverwaltung zustande?
@@ -50,9 +52,21 @@ Spiel kommt hier das Werkzeug `hardlink` aus dem Debianpaket
     sie miteinander
 *** Checksummen (wie SHA256)
 
-* Dateien in `/usr/share/doc/` prüfen 
+// Stichworte für den Index
+(((hardlink, --dry-run)))
+(((hardlink, --method)))
+(((hardlink, --verbose)))
+(((hardlink, -n)))
+(((hardlink, -v)))
+(((hardlink, -y)))
+* hardlink-Optionen (Auswahl)
 
-* siehe <<Beckert-Blog-Hardlinking-Duplicate-Files>>
+`-n` (Langform `--dry-run`) :: nur so tun als ob
+
+`-v` (Langform `--verbose`) :: ausführlich
+
+`-y` (Langform `--method`) :: Methode zum Dateivergleich auswählen,
+bspw. 'sha1', 'sha256', 'crc32c' und 'memcmp'
 
 [[plattenplatz-sparen-mit-der-paketverwaltung-pfade-ausschliessen]]
 === Pfade ausschließen ===
