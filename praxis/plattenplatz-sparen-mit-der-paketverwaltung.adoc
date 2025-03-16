@@ -33,14 +33,11 @@ gleiche Dateien mit. Kandidaten dafür finden sich bspw. im Verzeichnis
 `/usr/share/doc/` (siehe <<Beckert-Blog-Hardlinking-Duplicate-Files>>)
 und umfassen Dokumentation und Logfiles.
 
-** welche Pakete legen diese an?
-** wie kommen diese durch die Paketverwaltung zustande?
-
 Es spricht prinzipiell nichts gegen das manuelle Suchen -- es nimmt
-nur mehr Zeit in Anspruch, als Hilfsmittel zur Automatisierung. Ins
-Spiel kommt hier das Werkzeug `hardlink` aus dem Debianpaket 
-'util-linux' <<Debian-Paket-util-linux>>, welches genau diese Aufgabe
-übernimmt.
+nur mehr Zeit in Anspruch, als wenn Sie ein geeignetes Hilfsmittel 
+zur Automatisierung einzusetzen. Ins Spiel kommt hier das Werkzeug 
+`hardlink` aus dem Debianpaket 'util-linux' <<Debian-Paket-util-linux>>, 
+welches genau diese Aufgabe übernimmt.
 
 Es ersetzt Kopien einer Datei entweder durch harte Links oder durch 
 Kopieren-beim-Schreiben-Clones ('copy-on-write clones'). Die Basis 
@@ -102,14 +99,23 @@ $
 // Stichworte für den Index
 (((dpkg, --path-exclude)))
 
-* `dpkg --path-exclude=…`
-* schließt bei der Installation eines Paketes Dateien aus, die 
-  sonst mit in dieses Verzeichnis kopiert werden würden
+Wissen Sie bereits vorab, welche Komponenten oder Bereiche eines
+Pakets Sie nicht benötigen, schließen Sie Pfade oder Verzeichnisse
+bei der Installation eines Paketes aus. Dafür bringt `dpkg` den 
+Schalter `--path-exclude` mit. Die Dateien, die sich im Paket in
+diesem Verzeichnis befinden, werden nicht mit extrahiert. Der
+nachfolgende Aufruf schließt alle Dateien namens `copyright` aus, 
+die sich in einem Verzeichnis von `/usr/share/doc/` befinden.
 
 .Alle Copyright-Dateien ausschließen
 ----
 $ dpkg -i paket.deb --path-exclude=/usr/share/doc/*/copyright
 ----
+
+WARNING: Geben Sie mit diesem Aufruf das falsche Verzeichnis mit,
+können Sie damit ihr System schwer schädigen. Installierte Programme
+oder Bibliotheken sind unvollständig und funktionieren dann nicht
+wie vorgesehen.
 
 [[plattenplatz-sparen-mit-der-paketverwaltung-lokalisierungen]]
 === Ungenutzte Lokalisierungen entfernen ===

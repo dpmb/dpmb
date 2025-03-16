@@ -299,6 +299,8 @@
 
 - [[[Debian-Paket-ara]]] Debian-Paket 'ara', https://packages.debian.org/de/stable/ara
 
+- [[[Debian-Paket-arandr]]] Debian-Paket 'arandr', https://packages.debian.org/de/stable/arandr
+
 - [[[Debian-Paket-aria2]]] Debian-Paket 'aria2', https://packages.debian.org/de/stable/aria2
 
 - [[[Debian-Paket-autopkgtest]]] Debian-Paket 'autopkgtest', https://packages.debian.org/de/stable/autopkgtest
@@ -458,6 +460,8 @@
 
 - [[[Debian-Paket-lxc]]] Debian-Paket 'lxc', https://packages.debian.org/de/stable/lxc
 
+- [[[Debian-Paket-lxrandr]]] Debian-Paket 'lxrandr', https://packages.debian.org/de/stable/lxrandr
+
 - [[[Debian-Paket-make]]] Debian-Paket 'make', https://packages.debian.org/de/stable/make
 
 - [[[Debian-Paket-mc]]] Debian-Paket 'mc', https://packages.debian.org/de/stable/mc
@@ -541,6 +545,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[Debian-Paket-wget]]] Debian-Paket 'wget', https://packages.debian.org/de/stable/wget
 
 - [[[Debian-Paket-whatmaps]]] Debian-Paket 'whatmaps', https://packages.debian.org/de/stable/whatmaps
+
+- [[[Debian-Paket-x11-server-utils]]] Debian-Paket 'x11-server-utils', https://packages.debian.org/de/stable/x11-server-utils
 
 - [[[Debian-Paket-xsnow]]] Debian-Paket 'xsnow', https://packages.debian.org/de/stable/xsnow
 
