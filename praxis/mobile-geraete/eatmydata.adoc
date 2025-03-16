@@ -6,8 +6,13 @@
 
 ==== eatmydata ====
 
+// Stichworte für den Index
+(((Debianpaket, eatmydata)))
+
 * 'eatmydata' <<Debian-Paket-eatmydata>>
-** verringert die Menge der Synchronisationen und somit die Schreibzugriffe
+* deaktiviert `fsync()` und `sync()`
+* verringert die Menge der Synchronisationen und der Schreibzugriffe
+* trägt zur Verlängerung der Lebensdauer von Speichermedien bei
 
 // Datei (Ende): ./praxis/mobile-geraete/eatmydata.adoc
 
