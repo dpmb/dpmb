@@ -26,12 +26,29 @@ verallgemeinert werden und hängt vom konkreten Einzelfall ab.
 
 // Stichworte für den Index
 (((Debianpaket, util-linux)))
-* Duplikate sind Dateien mit gleichem Namen und Inhalt
+(((Identische Dateien finden)))
+Als Duplikate gelten Dateien mit gleichem Namen und Inhalt. Wenn auch
+eher selten, aber doch vorkommend, bringen unterschiedliche Pakete 
+gleiche Dateien mit.
+
 ** welche Pakete legen diese an?
 ** wie kommen diese durch die Paketverwaltung zustande?
 
-* Werkzeug `hardlink` aus dem Debianpaket 'util-linux' <<Debian-Paket-util-linux>>
-** warum ist das besser als manuelles Suchen?
+Es spricht prinzipiell nichts gegen das manuelle Suchen -- es nimmt
+nur mehr Zeit in Anspruch, als Hilfsmittel zur Automatisierung. Ins
+Spiel kommt hier das Werkzeug `hardlink` aus dem Debianpaket 
+'util-linux' <<Debian-Paket-util-linux>>, welches genau diese Aufgabe
+übernimmt.
+
+* was macht das
+** es ersetzt Kopien einer Datei entweder durch harte Links oder 
+   durch Kopieren-beim-Schreiben-Clones (copy-on-write clones)
+** Basis: Binärbaum aus Dateigrößen
+** vergleicht anschließend den Inhalt von Dateien gleicher Größe
+** verwendete Methoden: 
+*** memcmp: liest Datenblöcke direkt aus den Dateien und vergleicht
+    sie miteinander
+*** Checksummen (wie SHA256)
 
 * Dateien in `/usr/share/doc/` prüfen 
 
