@@ -74,11 +74,12 @@ Nutzbarkeit ihres Akkus wiederspiegelt.
 
 Hinzukommt eine kleinere Darstellung der Bedienoberflächen der 
 Werkzeuge, was je nach Situation und Nutzer als Vor- oder Nachteil 
-eingeschätzt wird. Mit Hilfe der beiden Werkzeuge `xrandr` und 
-`arandr` stellen Sie die gewünschte bzw. für Sie passende Auflösung 
-und Helligkeit ein. Ersteres ist ein Kommandozeilenwerkzeug, das 
-Zweite beglückt Sie hingegen mit einer graphischen 
-Bedienoberfläche.
+eingeschätzt wird. Mit Hilfe der Werkzeuge `xrandr` 
+<<Debian-Paket-x11-server-utils>>, `arandr` <<Debian-Paket-arandr>>
+und `lxrandr` <<Debian-Paket-lxrandr>> stellen Sie die gewünschte 
+bzw. für Sie passende Auflösung und Helligkeit ein. Während 
+ersteres ein Kommandozeilenwerkzeug ist, beglücken Sie die beiden 
+Letztgenannten mit einer graphischen Bedienoberfläche.
 
 [[mobile-geraete-cpu]]
 === Erfordernisse an die CPU ===
