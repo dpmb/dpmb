@@ -73,6 +73,11 @@ angegeben werden, um mehr Details zu erhalten
 `-y` (Langform `--method`) :: Methode zum Dateivergleich auswählen,
 bspw. 'sha1', 'sha256', 'crc32c' und 'memcmp'. Default ist 'sha256'
 
+Im nachfolgenden Beispiel durchforstet `hardlink` das Verzeichnis 
+`/usr/share/doc` und würde rund 100 MB Speicherplatz durch das 
+Verlinken inhaltlich identischer Dateien einsparen. Das ist schon
+ein vielversprechendes Ergebnis.
+
 .Aufruf von `hardlink` (Auszug)
 ----
 $ hardlink -tnv /usr/share/doc
