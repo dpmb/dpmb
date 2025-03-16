@@ -6,6 +6,9 @@
 
 == Paketverwaltung mit eingeschränkten Ressourcen für Embedded und Mobile Devices ==
 
+// Stichworte für den Index
+(((Paketverwaltung, für Embedded und mobile Geräte)))
+
 Die Idee und Anregung für diese Thematik kommt dankenswerter Weise von
 Werner Heuser <<Sentinel4Mobile>>, einem langjährigen Berliner
 Spezialisten für Linux auf mobilen Geräten. Den Hintergrund bildet die
@@ -55,6 +58,6 @@ Todo
 === Erfordernisse an die CPU ===
 
 * Debdelta // gehört hier erwähnt, bzw. systeme-mit-schlechter-anbindung-warten.adoc
-* dietlibc über das Paket `dietlibc-dev` <<Debian-Paket-dietlibc-dev>>
+* dietlibc über das Paket 'dietlibc-dev' <<Debian-Paket-dietlibc-dev>>
 
 // Datei (Ende): ./praxis/mobile-geraete/mobile-geraete.adoc
