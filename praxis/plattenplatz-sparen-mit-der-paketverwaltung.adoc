@@ -42,15 +42,13 @@ Spiel kommt hier das Werkzeug `hardlink` aus dem Debianpaket
 'util-linux' <<Debian-Paket-util-linux>>, welches genau diese Aufgabe
 übernimmt.
 
-* was macht das
-** es ersetzt Kopien einer Datei entweder durch harte Links oder 
-   durch Kopieren-beim-Schreiben-Clones (copy-on-write clones)
-** Basis: Binärbaum aus Dateigrößen
-** vergleicht anschließend den Inhalt von Dateien gleicher Größe
-** verwendete Methoden: 
-*** memcmp: liest Datenblöcke direkt aus den Dateien und vergleicht
-    sie miteinander
-*** Checksummen (wie SHA256)
+Es ersetzt Kopien einer Datei entweder durch harte Links oder durch 
+Kopieren-beim-Schreiben-Clones ('copy-on-write clones'). Die Basis 
+bildet ein Binärbaum aus Dateigrößen. Anschließend vergleicht es den 
+Inhalt von den Dateien mit gleicher Größe. Dabei berechnet es 
+entweder Checksummen (wie SHA256) oder verwendet die Methode 'memcmp'.
+Hierbei liest es Datenblöcke direkt aus den Dateien und vergleicht 
+sie miteinander.
 
 // Stichworte für den Index
 (((hardlink, --dry-run)))
@@ -61,18 +59,19 @@ Spiel kommt hier das Werkzeug `hardlink` aus dem Debianpaket
 (((hardlink, -t)))
 (((hardlink, -v)))
 (((hardlink, -y)))
-* hardlink-Optionen (Auswahl)
 
-`-n` (Langform `--dry-run`) :: nur so tun als ob
+Als Schalter kennt `hardlink` bspw. diese hier:
+
+`-n` (Langform `--dry-run`) :: Trockendurchlauf, d.h. nur so tun als ob
 
 `-t` (Langform `--ignore-time`) :: verlinkt und vergleicht Dateien 
 selbst dann, wenn deren Änderungszeiten, unterschiedlich sind
 
-`-v` (Langform `--verbose`) :: ausführliche Ausgabe, kann mehrfach
+`-v` (Langform `--verbose`) :: ausführliche Ausgabe; kann mehrfach
 angegeben werden, um mehr Details zu erhalten
 
 `-y` (Langform `--method`) :: Methode zum Dateivergleich auswählen,
-bspw. 'sha1', 'sha256', 'crc32c' und 'memcmp'
+bspw. 'sha1', 'sha256', 'crc32c' und 'memcmp'. Default ist 'sha256'
 
 .Aufruf von `hardlink` (Auszug)
 ----
