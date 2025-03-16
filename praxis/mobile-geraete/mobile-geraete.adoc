@@ -66,8 +66,11 @@ include::localepurge.adoc[]
 // Stichworte für den Index
 (((Mobile Geräte, Bildschirmgröße)))
 * weniger Bildschirmgröße resultiert ... 
+** in weniger Gewicht
 ** in einem geringeren Stromverbrauch des Gerätes
 ** kleinere Darstellung der Bedienoberflächen der Werkzeuge
+* xrandr und arandr 
+** für Auflösung und Helligkeit
 
 [[mobile-geraete-cpu]]
 === Erfordernisse an die CPU ===
