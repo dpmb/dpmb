@@ -116,9 +116,9 @@ $ dpkg -i paket.deb --path-exclude=/usr/share/doc/*/copyright
 
 // Stichworte für den Index
 (((Debianpaket, localepurge)))
-* Paket 'localepurge' <<localepurge>>
 
-* momentan noch beschrieben unter <<paketverwaltung-mit-eingeschraenkten-ressourcen-fuer-embedded-und-mobile-devices>>
+Hierbei nützt Ihnen das Paket 'localepurge' <<localepurge>>. Dieses
+beschreiben wir ausführlicher unter <<mobile-geraete-localepurge>>.
 
 [[plattenplatz-sparen-mit-der-paketverwaltung-ungenutzte-bibliotheken]]
 === Ungenutzte Bibliotheken prüfen ===
