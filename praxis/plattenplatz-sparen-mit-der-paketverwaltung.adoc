@@ -54,19 +54,44 @@ Spiel kommt hier das Werkzeug `hardlink` aus dem Debianpaket
 
 // Stichworte für den Index
 (((hardlink, --dry-run)))
+(((hardlink, --ignore-time)))
 (((hardlink, --method)))
 (((hardlink, --verbose)))
 (((hardlink, -n)))
+(((hardlink, -t)))
 (((hardlink, -v)))
 (((hardlink, -y)))
 * hardlink-Optionen (Auswahl)
 
 `-n` (Langform `--dry-run`) :: nur so tun als ob
 
-`-v` (Langform `--verbose`) :: ausführlich
+`-t` (Langform `--ignore-time`) :: verlinkt und vergleicht Dateien 
+selbst dann, wenn deren Änderungszeiten, unterschiedlich sind
+
+`-v` (Langform `--verbose`) :: ausführliche Ausgabe, kann mehrfach
+angegeben werden, um mehr Details zu erhalten
 
 `-y` (Langform `--method`) :: Methode zum Dateivergleich auswählen,
 bspw. 'sha1', 'sha256', 'crc32c' und 'memcmp'
+
+.Aufruf von `hardlink` (Auszug)
+----
+$ hardlink -tnv /usr/share/doc
+[DryRun] Linking /usr/share/doc/libboost-iostreams1.74.0/copyright to /usr/share/doc/libboost-thread1.74.0/copyright (-1,96 MiB)
+[DryRun] Linking /usr/share/doc/libboost-iostreams1.74.0/copyright to /usr/share/doc/libboost1.74-dev/copyright (-1,96 MiB)
+[DryRun] Linking /usr/share/doc/libgnutls-dane0/changelog.gz to /usr/share/doc/libgnutls30/changelog.gz (-352,26 KiB)
+[DryRun] Linking /usr/share/doc/libpcre2-8-0/changelog.gz to /usr/share/doc/libpcre2-16-0/changelog.gz (-45,9 KiB)
+[DryRun] Linking /usr/share/doc/libpcre2-8-0/changelog.gz to /usr/share/doc/libpcre2-32-0/changelog.gz (-45,9 KiB)
+Mode:                     dry-run
+Method:                   sha256
+Files:                    30138
+Linked:                   2616 files
+Compared:                 0 xattrs
+Compared:                 62622 files
+Saved:                    97,43 MiB
+Duration:                 0.388422 seconds
+$
+----
 
 [[plattenplatz-sparen-mit-der-paketverwaltung-pfade-ausschliessen]]
 === Pfade ausschließen ===
