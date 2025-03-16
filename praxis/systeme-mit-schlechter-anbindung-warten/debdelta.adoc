@@ -2,6 +2,8 @@
 
 // Baustelle: Fertig
 
+[[systeme-mit-schlechter-anbindung-warten-debdelta]]
+
 === debdelta ===
 
 // Stichworte für den Index
