@@ -3,9 +3,10 @@
 // Baustelle: Rohtext
 
 [[plattenplatz-sparen-mit-der-paketverwaltung]]
-
 == Plattenplatz sparen mit der Paketverwaltung ==
 
+// Stichworte für den Index
+(((Belegten Festplattenplatz minimieren)))
 Eine Installation eines Betriebssystems besteht aus vielen einzelnen 
 Paketen. Um jegliche Software vorzuhalten, reicht der Speicherplatz 
 nicht immer aus, d.h. ist stets in irgendeiner Form begrenzt. 
@@ -19,8 +20,9 @@ Durchgeführte Experimente -- d.h. das Ausprobieren von neuer Software
 übriggeblieben sind und trotz aller Vorkehrungen vielleicht doch nicht 
 automatisch aufgeräumt wurden. Daher besprechen wir nachfolgend eine
 Reihe von Lösungsmöglichkeiten mit Hilfe der Paketverwaltung, um den 
-belegten Platz zu verringern. Welche davon passend sind, kann nicht
-verallgemeinert werden und hängt vom konkreten Einzelfall ab.
+belegten Speicherplatz zu verringern. Welche davon passend sind, kann 
+nicht verallgemeinert werden und hängt von ihrem konkreten Einzelfall 
+ab.
 
 === Duplikate finden ===
 
@@ -29,13 +31,14 @@ verallgemeinert werden und hängt vom konkreten Einzelfall ab.
 (((Identische Dateien finden)))
 Als Duplikate gelten Dateien mit gleichem Namen und Inhalt. Wenn auch
 eher selten, aber doch vorkommend, bringen unterschiedliche Pakete 
-gleiche Dateien mit. Kandidaten dafür finden sich bspw. im Verzeichnis
-`/usr/share/doc/` (siehe <<Beckert-Blog-Hardlinking-Duplicate-Files>>)
-und umfassen Dokumentation und Logfiles.
+inhaltlich gleiche Dateien mit. Kandidaten dafür finden sich bspw. im 
+Verzeichnis `/usr/share/doc/` (siehe 
+<<Beckert-Blog-Hardlinking-Duplicate-Files>>) und umfassen Lizenzen, 
+Dokumentation und Logfiles.
 
-Es spricht prinzipiell nichts gegen das manuelle Suchen -- es nimmt
-nur mehr Zeit in Anspruch, als wenn Sie ein geeignetes Hilfsmittel 
-zur Automatisierung einzusetzen. Ins Spiel kommt hier das Werkzeug 
+Es spricht prinzipiell nichts gegen das manuelle Suchen -- es nimmt nur 
+mehr Zeit in Anspruch, als wenn Sie ein geeignetes Hilfsmittel zur 
+Automatisierung einzusetzen. Ins Spiel kommt hier das Werkzeug 
 `hardlink` aus dem Debianpaket 'util-linux' <<Debian-Paket-util-linux>>, 
 welches genau diese Aufgabe übernimmt.
 
@@ -44,8 +47,8 @@ Kopieren-beim-Schreiben-Clones ('copy-on-write clones'). Die Basis
 bildet ein Binärbaum aus Dateigrößen. Anschließend vergleicht es den 
 Inhalt von den Dateien mit gleicher Größe. Dabei berechnet es 
 entweder Checksummen (wie SHA256) oder verwendet die Methode 'memcmp'.
-Hierbei liest es Datenblöcke direkt aus den Dateien und vergleicht 
-sie miteinander.
+Hierbei liest es Datenblöcke direkt aus den Dateien, vergleicht sie 
+miteinander.
 
 // Stichworte für den Index
 (((hardlink, --dry-run)))
@@ -98,8 +101,8 @@ $
 === Pfade ausschließen ===
 // Stichworte für den Index
 (((dpkg, --path-exclude)))
-
-Wissen Sie bereits vorab, welche Komponenten oder Bereiche eines
+(((Paket installieren, Dateien und Verzeichnisse ausschließen)))
+Wissen Sie bereits vorab, welche Komponenten oder Bereiche eines 
 Pakets Sie nicht benötigen, schließen Sie Pfade oder Verzeichnisse
 bei der Installation eines Paketes aus. Dafür bringt `dpkg` den 
 Schalter `--path-exclude` mit. Die Dateien, die sich im Paket in
@@ -125,10 +128,9 @@ vorgesehen.
 (((Debianpaket, localepurge)))
 (((localepurge)))
 (((Ungenutzte Lokalisierungen entfernen)))
-
 Hierbei nützt Ihnen das Werkzeug `localepurge` aus dem gleichnamigen
 Paket <<Debian-Paket-localepurge>>. Auf dieses gehen wir ausführlicher 
-unter <<mobile-geraete-localepurge>> ein.
+in <<mobile-geraete-localepurge>> ein.
 
 [[plattenplatz-sparen-mit-der-paketverwaltung-ungenutzte-bibliotheken]]
 === Ungenutzte Bibliotheken prüfen ===
