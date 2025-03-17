@@ -135,9 +135,20 @@ in <<mobile-geraete-localepurge>> ein.
 [[plattenplatz-sparen-mit-der-paketverwaltung-ungenutzte-bibliotheken]]
 === Ungenutzte Bibliotheken prüfen ===
 
-* ungenutzte Bibliotheken prüfen, denen aber das ``Automatisch installiert''-Flag fehlt 
+// Stichworte für den Index
+(((apt-mark, showauto)))
+(((aptitude, show)))
+(((Paketmarkierungen, automatic)))
+(((Ungenutzte Bibliotheken entfernen)))
 
-* siehe <<Beckert-Blog-Finding-Libraries>>
+Möchten Sie alle Pakete anzeigen, die das Flag ``Automatisch installiert'' 
+tragen, helfen Ihnen die beiden Aufrufe `aptitude show` 'Paketname' (siehe 
+<<lokale-paketmarkierungen-aptitude>>) und `apt-mark showauto` (siehe 
+<<lokale-paketmarkierungen-mit-apt-mark>>). Geht es hingegen um ungenutzte 
+Bibliotheken, denen das Flag fehlt, ist der Aufruf trickreicher (siehe
+<<Beckert-Blog-Finding-Libraries>>).
+
+* wie macht man das
 
 [[plattenplatz-sparen-mit-der-paketverwaltung-paketcache-aufraeumen]]
 === Paketcache aufräumen ===
