@@ -125,8 +125,8 @@ vorgesehen.
 (((Debianpaket, localepurge)))
 
 Hierbei nützt Ihnen das Werkzeug `localepurge` aus dem gleichnamigen
-Paket <<localepurge>>. Dieses beschreiben wir ausführlicher unter 
-<<mobile-geraete-localepurge>>.
+Paket <<Debian-Paket-localepurge>>. Auf dieses gehen wir ausführlicher 
+unter <<mobile-geraete-localepurge>> ein.
 
 [[plattenplatz-sparen-mit-der-paketverwaltung-ungenutzte-bibliotheken]]
 === Ungenutzte Bibliotheken prüfen ===
