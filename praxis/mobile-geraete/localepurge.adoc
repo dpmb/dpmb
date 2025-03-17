@@ -10,6 +10,7 @@
 (((Debianpaket, localepurge)))
 (((Konfigurationsdatei, /etc/locale.nopurge)))
 (((localepurge)))
+(((Ungenutzte Lokalisierungen entfernen)))
 
 Ist Speicherplatz auf dem Datenträger knapp, kann das Werkzeug
 `localepurge` <<localepurge>> weiterhelfen. Es steht Ihnen über die

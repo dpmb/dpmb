@@ -123,6 +123,8 @@ vorgesehen.
 
 // Stichworte für den Index
 (((Debianpaket, localepurge)))
+(((localepurge)))
+(((Ungenutzte Lokalisierungen entfernen)))
 
 Hierbei nützt Ihnen das Werkzeug `localepurge` aus dem gleichnamigen
 Paket <<Debian-Paket-localepurge>>. Auf dieses gehen wir ausführlicher 
