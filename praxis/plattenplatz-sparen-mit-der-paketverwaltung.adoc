@@ -72,8 +72,8 @@ bspw. 'sha1', 'sha256', 'crc32c' und 'memcmp'. Default ist 'sha256'
 
 Im nachfolgenden Beispiel durchforstet `hardlink` das Verzeichnis 
 `/usr/share/doc` und würde rund 100 MB Speicherplatz durch das 
-Verlinken inhaltlich identischer Dateien einsparen. Das ist schon
-ein vielversprechendes Ergebnis.
+Verlinken inhaltlich identischer Dateien einsparen. Das ist schon ein 
+vielversprechendes Ergebnis.
 
 .Aufruf von `hardlink` (Auszug)
 ----
@@ -105,17 +105,17 @@ bei der Installation eines Paketes aus. Dafür bringt `dpkg` den
 Schalter `--path-exclude` mit. Die Dateien, die sich im Paket in
 diesem Verzeichnis befinden, werden nicht mit extrahiert. Der
 nachfolgende Aufruf schließt alle Dateien namens `copyright` aus, 
-die sich in einem Verzeichnis von `/usr/share/doc/` befinden.
+die sich in einem Unterverzeichnis von `/usr/share/doc/` befinden.
 
 .Alle Copyright-Dateien ausschließen
 ----
 $ dpkg -i paket.deb --path-exclude=/usr/share/doc/*/copyright
 ----
 
-WARNING: Geben Sie mit diesem Aufruf das falsche Verzeichnis mit,
-können Sie damit ihr System schwer schädigen. Installierte Programme
-oder Bibliotheken sind unvollständig und funktionieren dann nicht
-wie vorgesehen.
+WARNING: Geben Sie diesem Aufruf das falsche Verzeichnis mit, können 
+Sie damit ihr System schwer schädigen. Installierte Programme oder 
+Bibliotheken sind dann unvollständig und funktionieren nicht wie 
+vorgesehen.
 
 [[plattenplatz-sparen-mit-der-paketverwaltung-lokalisierungen]]
 === Ungenutzte Lokalisierungen entfernen ===
