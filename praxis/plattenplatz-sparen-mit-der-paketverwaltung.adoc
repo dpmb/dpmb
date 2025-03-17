@@ -104,8 +104,9 @@ Pakets Sie nicht benötigen, schließen Sie Pfade oder Verzeichnisse
 bei der Installation eines Paketes aus. Dafür bringt `dpkg` den 
 Schalter `--path-exclude` mit. Die Dateien, die sich im Paket in
 diesem Verzeichnis befinden, werden nicht mit extrahiert. Der
-nachfolgende Aufruf schließt alle Dateien namens `copyright` aus, 
-die sich in einem Unterverzeichnis von `/usr/share/doc/` befinden.
+nachfolgende Aufruf demonstriert das beispielhaft und schließt alle 
+Dateien namens `copyright` aus, die sich in den Unterverzeichnissen 
+von `/usr/share/doc/` befinden.
 
 .Alle Copyright-Dateien ausschließen
 ----
