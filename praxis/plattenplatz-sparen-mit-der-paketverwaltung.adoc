@@ -124,8 +124,9 @@ vorgesehen.
 // Stichworte für den Index
 (((Debianpaket, localepurge)))
 
-Hierbei nützt Ihnen das Paket 'localepurge' <<localepurge>>. Dieses
-beschreiben wir ausführlicher unter <<mobile-geraete-localepurge>>.
+Hierbei nützt Ihnen das Werkzeug `localepurge` aus dem gleichnamigen
+Paket <<localepurge>>. Dieses beschreiben wir ausführlicher unter 
+<<mobile-geraete-localepurge>>.
 
 [[plattenplatz-sparen-mit-der-paketverwaltung-ungenutzte-bibliotheken]]
 === Ungenutzte Bibliotheken prüfen ===
