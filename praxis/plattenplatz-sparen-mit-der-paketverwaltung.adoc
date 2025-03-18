@@ -145,7 +145,7 @@ in <<mobile-geraete-localepurge>> ein.
 Möchten Sie alle Pakete anzeigen, die das Flag ``Automatisch installiert'' 
 tragen, helfen Ihnen die beiden Aufrufe `aptitude show` 'Paketname' (siehe 
 <<lokale-paketmarkierungen-aptitude>>) und `apt-mark showauto` (siehe 
-<<lokale-paketmarkierungen-mit-apt-mark>>). Geht es hingegen um ungenutzte 
+<<lokale-paketmarkierungen-apt-mark>>). Geht es hingegen um ungenutzte 
 Bibliotheken, die installiert sind, aber denen das Flag fehlt, ist der 
 Aufruf etwas trickreicher (siehe <<Beckert-Blog-Finding-Libraries>>). 
 
