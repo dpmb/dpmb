@@ -214,16 +214,15 @@ ergänzen (bspw. VHosts im Apache).
 [[plattenplatz-sparen-mit-der-paketverwaltung-syslog-deaktivieren]]
 === Syslog deaktivieren ===
 
-* keinen Syslogd verwenden und Syslog nur in einen Ringbuffer 
-  laufen lassen
-
-* Default-Paket ist 'rsyslog', dieses entfernen
-** bei systemd: mit `journalctl` das Log im Ringbuffer anschauen
-** bei sysvinit: Paket 'busybox-syslogd' installieren und mit 
-   `logread` den Inhalt des Ringbuffers anschauen.
-
-* gehört eigentlich nicht zur Paketverwaltung... Kann man 
-  entsprechend zum Kürzen wieder rauskippen
+// Stichworte für den Index
+(((Syslog deaktivieren)))
+Um die Menge der Logdateien zu verringern, verwenden Sie keinen 
+`syslogd` und lassen den Syslog stattdessen nur in einem Ringbuffer 
+laufen. Das Default-Paket ist 'rsyslog' -- dieses entfernen Sie 
+zunächst. Nutzen Sie Systemd, schauen Sie sich das Logfile danach 
+im Ringpuffer mit `journalctl` an, bei SysVInit installieren Sie 
+stattdessen das Paket 'busybox-syslogd' und lesen mit Hilfe des
+Werkzeugs `logread` den Inhalt des Ringpuffers.
 
 [[plattenplatz-sparen-mit-der-paketverwaltung-debian-installation]]
 === Die Größe der Debian-Installation verringern ===
