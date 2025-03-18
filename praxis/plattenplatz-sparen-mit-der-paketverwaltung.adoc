@@ -179,6 +179,8 @@ $
 [[plattenplatz-sparen-mit-der-paketverwaltung-paketcache-aufraeumen]]
 === Paketcache aufräumen ===
 
+// Stichworte für den Index
+(((Paketcache, aufräumen)))
 Der Paketcache von `dpkg` und APT ist ein Kandidat, bei dem sich viele
 Altlasten sammeln können, insbesondere bei Systemen, die länger in Betrieb
 sind. Wie Sie diesen Paketcache aufräumen, besprechen wir ausführlich in
@@ -187,18 +189,27 @@ sind. Wie Sie diesen Paketcache aufräumen, besprechen wir ausführlich in
 [[plattenplatz-sparen-mit-der-paketverwaltung-paketcache-separat]]
 === Paketcache auf separater Paratition ===
 
-* Verzeichnis `/var/cache/apt` auf tmpfs 
-
-* siehe <<cache-verzeichnis-auf-separater-partition>>
+// Stichworte für den Index
+(((Paketcache, auf separater Partition)))
+Ist der Zugriff auf den Paketcache zu langsam, ist die Nutzung von tmpfs
+als Dateisystem eine Option. Dabei liegt dieses Dateisystem im RAM. Mit 
+Hilfe eines entsprechenden Eintrags in der Datei `/etc/fstab` binden Sie 
+das Verzeichnis `/var/cache/apt` ein. Weitere Informationen lesen Sie 
+dazu in <<cache-verzeichnis-auf-separater-partition>>.
 
 [[plattenplatz-sparen-mit-der-paketverwaltung-logfiles-begrenzen]]
 === Logfiles begrenzen ===
 
-* Werkzeug `logrotate` (sollte eigentlich installiert sein)
+// Stichworte für den Index
+(((Logfiles begrenzen)))
+Hierbei hilft Ihnen das Werkzeug `logrotate` aus dem gleichnamigen 
+Debianpaket <<Debian-Paket-logrotate>>. Es gehört zur 
+Standardinstallation von Debian und es wäre daher ungewöhnlich, wenn
+es nicht installiert ist.
 
-* sorgt aber für nicht permanent wachsende Logfiles. Seine 
-  Konfiguration sollte angepasst werden, wenn man manuell weitere 
-  Logfiles in Anwendungen (VHosts im Apache z.B.) konfiguriert.
+`logrotate` sorgt für nicht permanent wachsende Logfiles. Passen Sie
+die Konfiguration an, wenn Sie manuell weitere Logfiles in Anwendungen 
+ergänzen (bspw. VHosts im Apache).
 
 [[plattenplatz-sparen-mit-der-paketverwaltung-syslog-deaktivieren]]
 === Syslog deaktivieren ===
