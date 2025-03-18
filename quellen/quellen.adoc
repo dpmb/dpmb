@@ -456,6 +456,8 @@
 
 - [[[Debian-Paket-localepurge]]] Debian-Paket 'localepurge', https://packages.debian.org/de/stable/localepurge
 
+- [[[Debian-Paket-logrotate]]] Debian-Paket 'logrotate', https://packages.debian.org/de/stable/logrotate
+
 - [[[Debian-Paket-lsb-release]]] Debian-Paket 'lsb-release', https://packages.debian.org/de/stable/lsb-release
 
 - [[[Debian-Paket-lxc]]] Debian-Paket 'lxc', https://packages.debian.org/de/stable/lxc
