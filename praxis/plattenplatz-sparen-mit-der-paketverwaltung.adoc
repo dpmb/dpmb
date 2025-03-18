@@ -177,7 +177,10 @@ $
 [[plattenplatz-sparen-mit-der-paketverwaltung-paketcache-aufraeumen]]
 === Paketcache aufräumen ===
 
-* siehe dazu <<paketcache-aufraeumen>>
+Der Paketcache von `dpkg` und APT ist ein Kandidat, bei dem sich viele
+Altlasten sammeln können, insbesondere bei Systemen, die länger in Betrieb
+sind. Wie Sie diesen Paketcache aufräumen, besprechen wir ausführlich in
+<<paketcache-aufraeumen>>.
 
 [[plattenplatz-sparen-mit-der-paketverwaltung-paketcache-separat]]
 === Paketcache auf separater Paratition ===
