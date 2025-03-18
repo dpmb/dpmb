@@ -154,8 +154,10 @@ Für die bloße Auflistung aus Installationsstatus, Paketname und
 Kurzbeschreibung nutzen Sie den nachfolgenden Aufruf. Die Angaben in 
 Klammern interpretiert `aptitude` hierbei als Muster und schließt damit 
 sowohl Debug- als auch Entwicklungspakete aus, ebenso Pakete, die aus 
-LibreOffice stammen. Der Parameter `~i` beläßt nur die Pakete in der 
-Ausgabe, die auch tatsächlich installiert sind.
+LibreOffice stammen. Zusätzlich passt das Muster auch auf alle Pakete,
+deren Name auf `-data`, `-common` oder `-base` endet, dabei aber Pakete
+namens `r-base` ausklammert. Der Parameter `~i` beläßt nur die Pakete in 
+der Ausgabe, die auch tatsächlich installiert sind.
 
 .Ungenutzte Bibliotheken ausgeben
 ----
