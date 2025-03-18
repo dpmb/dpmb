@@ -147,10 +147,15 @@ tragen, helfen Ihnen die beiden Aufrufe `aptitude show` 'Paketname' (siehe
 <<lokale-paketmarkierungen-aptitude>>) und `apt-mark showauto` (siehe 
 <<lokale-paketmarkierungen-apt-mark>>). Geht es hingegen um ungenutzte 
 Bibliotheken, die installiert sind, aber denen das Flag fehlt, ist der 
-Aufruf etwas trickreicher (siehe <<Beckert-Blog-Finding-Libraries>>). 
+Aufruf etwas trickreicher (siehe <<Beckert-Blog-Finding-Libraries>> für
+die interaktive Version für `aptitude`). 
 
 Für die bloße Auflistung aus Installationsstatus, Paketname und 
-Kurzbeschreibung nutzen Sie diesen Aufruf:
+Kurzbeschreibung nutzen Sie den nachfolgenden Aufruf. Die Angaben in 
+Klammern interpretiert `aptitude` hierbei als Muster und schließt damit 
+sowohl Debug- als auch Entwicklungspakete aus, ebenso Pakete, die aus 
+LibreOffice stammen. Der Parameter `~i` beläßt nur die Pakete in der 
+Ausgabe, die auch tatsächlich installiert sind.
 
 .Ungenutzte Bibliotheken ausgeben
 ----
