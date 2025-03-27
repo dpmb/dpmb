@@ -265,6 +265,7 @@ Dateien und Logdateien. Unabhängig von deren Inhalten belegen diese
 Daten Speicherplatz. Um diese zu bereinigen, bietet sich das Werkzeug
 bleachbit <<bleachbit>> an. Für Debian steht es als gleichnamiges Paket
 'bleachbit' <<Debian-Paket-bleachbit>> bereit (siehe <<fig.bleachbit>>).
+Dazu greift es auf die Original-Debian-Werkzeuge zurück.
 
 .Auswahl bei Bleachbit
 image::praxis/bleachbit.png[id="fig.bleachbit"]
