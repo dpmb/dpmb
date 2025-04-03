@@ -37,15 +37,7 @@ include::ungenutzte-lokalisierungen-entfernen.adoc[]
 include::ungenutzte-bibliotheken-pruefen.adoc[]
 
 // Paketcache aufräumen
-[[plattenplatz-sparen-mit-der-paketverwaltung-paketcache-aufraeumen]]
-=== Paketcache aufräumen ===
-
-// Stichworte für den Index
-(((Paketcache, aufräumen)))
-Der Paketcache von `dpkg` und APT ist ein Kandidat, bei dem sich viele
-Altlasten sammeln können, insbesondere bei Systemen, die länger in Betrieb
-sind. Wie Sie diesen Paketcache aufräumen, besprechen wir ausführlich in
-<<paketcache-aufraeumen>>.
+include::paketcache-aufraeumen.adoc[]
 
 // Paketcache auf separater Paratition
 [[plattenplatz-sparen-mit-der-paketverwaltung-paketcache-separat]]

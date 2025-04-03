@@ -1,0 +1,14 @@
+// Datei: ./praxis/plattenplatz-sparen-mit-der-paketverwaltung/paketcache-aufraeumen.adoc
+
+// Baustelle: Rohtext
+[[plattenplatz-sparen-mit-der-paketverwaltung-paketcache-aufraeumen]]
+=== Paketcache aufräumen ===
+
+// Stichworte für den Index
+(((Paketcache, aufräumen)))
+Der Paketcache von `dpkg` und APT ist ein Kandidat, bei dem sich viele
+Altlasten sammeln können, insbesondere bei Systemen, die länger in Betrieb
+sind. Wie Sie diesen Paketcache aufräumen, besprechen wir ausführlich in
+<<paketcache-aufraeumen>>.
+
+// Datei (Ende): ./praxis/plattenplatz-sparen-mit-der-paketverwaltung/paketcache-aufraeumen.adoc
