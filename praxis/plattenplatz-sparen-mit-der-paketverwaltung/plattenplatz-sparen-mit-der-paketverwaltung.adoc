@@ -27,29 +27,8 @@ ab.
 // Duplikate finden
 include::duplikate-finden.adoc[]
 
-[[plattenplatz-sparen-mit-der-paketverwaltung-pfade-ausschliessen]]
-=== Pfade ausschließen ===
-// Stichworte für den Index
-(((dpkg, --path-exclude)))
-(((Paket installieren, Dateien und Verzeichnisse ausschließen)))
-Wissen Sie bereits vorab, welche Komponenten oder Bereiche eines 
-Pakets Sie nicht benötigen, schließen Sie Pfade oder Verzeichnisse
-bei der Installation eines Paketes aus. Dafür bringt `dpkg` den 
-Schalter `--path-exclude` mit. Die Dateien, die sich im Paket in
-diesem Verzeichnis befinden, werden nicht mit extrahiert. Der
-nachfolgende Aufruf demonstriert das beispielhaft und schließt alle 
-Dateien namens `copyright` aus, die sich in den Unterverzeichnissen 
-von `/usr/share/doc/` befinden.
-
-.Alle Copyright-Dateien ausschließen
-----
-$ dpkg -i paket.deb --path-exclude=/usr/share/doc/*/copyright
-----
-
-WARNING: Geben Sie diesem Aufruf das falsche Verzeichnis mit, können 
-Sie damit ihr System schwer schädigen. Installierte Programme oder 
-Bibliotheken sind dann unvollständig und funktionieren nicht wie 
-vorgesehen.
+// Pfade ausschließen
+include::pfade-ausschliessen.adoc[]
 
 [[plattenplatz-sparen-mit-der-paketverwaltung-lokalisierungen]]
 === Ungenutzte Lokalisierungen entfernen ===
