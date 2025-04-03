@@ -1,0 +1,77 @@
+// Datei: ./praxis/plattenplatz-sparen-mit-der-paketverwaltung/duplikate-finden.adoc
+
+// Baustelle: Rohtext
+=== Duplikate finden ===
+
+// Stichworte für den Index
+(((Debianpaket, util-linux)))
+(((Identische Dateien finden)))
+Als Duplikate gelten Dateien mit gleichem Namen und Inhalt. Wenn auch
+eher selten, aber doch vorkommend, bringen unterschiedliche Pakete 
+inhaltlich gleiche Dateien mit. Kandidaten dafür finden sich bspw. im 
+Verzeichnis `/usr/share/doc/` (siehe 
+<<Beckert-Blog-Hardlinking-Duplicate-Files>>) und umfassen Lizenzen, 
+Dokumentation und Logfiles.
+
+Es spricht prinzipiell nichts gegen das manuelle Suchen -- es nimmt nur 
+mehr Zeit in Anspruch, als wenn Sie ein geeignetes Hilfsmittel zur 
+Automatisierung einzusetzen. Ins Spiel kommt hier das Werkzeug 
+`hardlink` aus dem Debianpaket 'util-linux' <<Debian-Paket-util-linux>>, 
+welches genau diese Aufgabe übernimmt.
+
+Es ersetzt Kopien einer Datei entweder durch harte Links oder durch 
+Kopieren-beim-Schreiben-Clones ('copy-on-write clones'). Die Basis 
+bildet ein Binärbaum aus Dateigrößen. Anschließend vergleicht es den 
+Inhalt von den Dateien mit gleicher Größe. Dabei berechnet es 
+entweder Checksummen (wie SHA256) oder verwendet die Methode 'memcmp'.
+Hierbei liest es Datenblöcke direkt aus den Dateien, vergleicht sie 
+miteinander.
+
+// Stichworte für den Index
+(((hardlink, --dry-run)))
+(((hardlink, --ignore-time)))
+(((hardlink, --method)))
+(((hardlink, --verbose)))
+(((hardlink, -n)))
+(((hardlink, -t)))
+(((hardlink, -v)))
+(((hardlink, -y)))
+
+Als Schalter kennt `hardlink` bspw. diese hier:
+
+`-n` (Langform `--dry-run`) :: Trockendurchlauf, d.h. nur so tun als ob
+
+`-t` (Langform `--ignore-time`) :: verlinkt und vergleicht Dateien 
+selbst dann, wenn deren Änderungszeiten, unterschiedlich sind
+
+`-v` (Langform `--verbose`) :: ausführliche Ausgabe; kann mehrfach
+angegeben werden, um mehr Details zu erhalten
+
+`-y` (Langform `--method`) :: Methode zum Dateivergleich auswählen,
+bspw. 'sha1', 'sha256', 'crc32c' und 'memcmp'. Default ist 'sha256'
+
+Im nachfolgenden Beispiel durchforstet `hardlink` das Verzeichnis 
+`/usr/share/doc` und würde rund 100 MB Speicherplatz durch das 
+Verlinken inhaltlich identischer Dateien einsparen. Das ist schon ein 
+vielversprechendes Ergebnis.
+
+.Aufruf von `hardlink` (Auszug)
+----
+$ hardlink -tnv /usr/share/doc
+[DryRun] Linking /usr/share/doc/libboost-iostreams1.74.0/copyright to /usr/share/doc/libboost-thread1.74.0/copyright (-1,96 MiB)
+[DryRun] Linking /usr/share/doc/libboost-iostreams1.74.0/copyright to /usr/share/doc/libboost1.74-dev/copyright (-1,96 MiB)
+[DryRun] Linking /usr/share/doc/libgnutls-dane0/changelog.gz to /usr/share/doc/libgnutls30/changelog.gz (-352,26 KiB)
+[DryRun] Linking /usr/share/doc/libpcre2-8-0/changelog.gz to /usr/share/doc/libpcre2-16-0/changelog.gz (-45,9 KiB)
+[DryRun] Linking /usr/share/doc/libpcre2-8-0/changelog.gz to /usr/share/doc/libpcre2-32-0/changelog.gz (-45,9 KiB)
+Mode:                     dry-run
+Method:                   sha256
+Files:                    30138
+Linked:                   2616 files
+Compared:                 0 xattrs
+Compared:                 62622 files
+Saved:                    97,43 MiB
+Duration:                 0.388422 seconds
+$
+----
+
+// Datei (Ende): ./praxis/plattenplatz-sparen-mit-der-paketverwaltung/duplikate-finden.adoc
