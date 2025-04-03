@@ -46,18 +46,7 @@ include::paketcache-auf-separater-partition.adoc[]
 include::logfiles-begrenzen.adoc[]
 
 // Syslog deaktivieren
-[[plattenplatz-sparen-mit-der-paketverwaltung-syslog-deaktivieren]]
-=== Syslog deaktivieren ===
-
-// Stichworte für den Index
-(((Syslog deaktivieren)))
-Um die Menge der Logdateien zu verringern, verwenden Sie keinen 
-`syslogd` und lassen den Syslog stattdessen nur in einem Ringbuffer 
-laufen. Das Default-Paket ist 'rsyslog' -- dieses entfernen Sie 
-zunächst. Nutzen Sie Systemd, schauen Sie sich das Logfile danach 
-im Ringpuffer mit `journalctl` an, bei SysVInit installieren Sie 
-stattdessen das Paket 'busybox-syslogd' und lesen mit Hilfe des
-Werkzeugs `logread` den Inhalt des Ringpuffers.
+include::syslog-deaktivieren.adoc[]
 
 // Die Größe der Debian-Installation verringern
 [[plattenplatz-sparen-mit-der-paketverwaltung-debian-installation]]
