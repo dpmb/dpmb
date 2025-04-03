@@ -36,6 +36,7 @@ include::ungenutzte-lokalisierungen-entfernen.adoc[]
 // Ungenutzte Bibliotheken prüfen
 include::ungenutzte-bibliotheken-pruefen.adoc[]
 
+// Paketcache aufräumen
 [[plattenplatz-sparen-mit-der-paketverwaltung-paketcache-aufraeumen]]
 === Paketcache aufräumen ===
 
@@ -46,6 +47,7 @@ Altlasten sammeln können, insbesondere bei Systemen, die länger in Betrieb
 sind. Wie Sie diesen Paketcache aufräumen, besprechen wir ausführlich in
 <<paketcache-aufraeumen>>.
 
+// Paketcache auf separater Paratition
 [[plattenplatz-sparen-mit-der-paketverwaltung-paketcache-separat]]
 === Paketcache auf separater Paratition ===
 
@@ -57,6 +59,7 @@ Hilfe eines entsprechenden Eintrags in der Datei `/etc/fstab` binden Sie
 das Verzeichnis `/var/cache/apt` ein. Weitere Informationen lesen Sie 
 dazu in <<cache-verzeichnis-auf-separater-partition>>.
 
+// Logfiles begrenzen
 [[plattenplatz-sparen-mit-der-paketverwaltung-logfiles-begrenzen]]
 === Logfiles begrenzen ===
 
@@ -71,6 +74,7 @@ es nicht installiert ist.
 die Konfiguration an, wenn Sie manuell weitere Logfiles in Anwendungen 
 ergänzen (bspw. VHosts im Apache).
 
+// Syslog deaktivieren
 [[plattenplatz-sparen-mit-der-paketverwaltung-syslog-deaktivieren]]
 === Syslog deaktivieren ===
 
@@ -84,6 +88,7 @@ im Ringpuffer mit `journalctl` an, bei SysVInit installieren Sie
 stattdessen das Paket 'busybox-syslogd' und lesen mit Hilfe des
 Werkzeugs `logread` den Inhalt des Ringpuffers.
 
+// Die Größe der Debian-Installation verringern
 [[plattenplatz-sparen-mit-der-paketverwaltung-debian-installation]]
 === Die Größe der Debian-Installation verringern ===
 
@@ -113,21 +118,7 @@ Container auszulagern. Damit verringert sich der Ballast, der später
 vielleicht wieder aufgeräumt werden muss, sollte die gerade ausprobierte
 Software doch nicht ihren Erwartungen entsprechen.
 
-[[plattenplatz-sparen-mit-der-paketverwaltung-bleachbit]]
-=== Mittels Bleachbit aufräumen ===
-
-// Stichworte für den Index
-(((Bleachbit)))
-(((Debianpaket, bleachbit)))
-Die von Ihnen genutzten Programme hinterlassen durch ihre Nutzung jede
-Menge Daten und Datenspuren -- Cookies, die Browserhistorie, temporäre
-Dateien und Logdateien. Unabhängig von deren Inhalten belegen diese
-Daten Speicherplatz. Um diese zu bereinigen, bietet sich das Werkzeug
-bleachbit <<bleachbit>> an. Für Debian steht es als gleichnamiges Paket
-'bleachbit' <<Debian-Paket-bleachbit>> bereit (siehe <<fig.bleachbit>>).
-Dazu greift es auf die Original-Debian-Werkzeuge zurück.
-
-.Auswahl bei Bleachbit
-image::praxis/plattenplatz-sparen-mit-der-paketverwaltung/bleachbit.png[id="fig.bleachbit"]
+// Mittels Bleachbit aufräumen
+include::mittels-bleachbit-aufraeumen.adoc[]
 
 // Datei (Ende): ./praxis/plattenplatz-sparen-mit-der-paketverwaltung/plattenplatz-sparen-mit-der-paketverwaltung.adoc
