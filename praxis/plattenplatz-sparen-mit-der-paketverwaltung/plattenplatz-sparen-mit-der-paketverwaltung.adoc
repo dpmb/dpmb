@@ -49,34 +49,7 @@ include::logfiles-begrenzen.adoc[]
 include::syslog-deaktivieren.adoc[]
 
 // Die Größe der Debian-Installation verringern
-[[plattenplatz-sparen-mit-der-paketverwaltung-debian-installation]]
-=== Die Größe der Debian-Installation verringern ===
-
-// Stichworte für den Index
-(((Größe der Debian-Installation verringern)))
-Eine übliche Installation von Debian GNU/Linux für den Desktop kann 
-durchaus mehr als 2000 Pakete umfassen. Um den "Fußabdruck" kleiner
-zu machen, bleibt nur, von Anfang an konsequent zu sein:
-
-* installieren Sie nur die Pakete, die Sie tatsächlich benötigen und auch benutzen
-* identifizieren Sie unnötige Pakete und entfernen Sie diese, sofern das möglich ist
-* vermeiden Sie `tasksel` (siehe <<tasksel>>), auch wenn das Werkzeug noch so toll ist und wählen stattdessen lediglich die Pakete aus, die Sie wirklich benötigen
-
-Eine vollständigere Liste beinhaltet der Abschnitt 'ReduceDebian' im 
-Debian Wiki <<ReduceDebian>>. Diese Liste rät u. a. zu den folgenden 
-Schritten:
-
-* entfernen Sie nicht-kritische und unnötige Pakete
-* konfigurieren Sie Apt so um, dass es nicht automatisch zusätzliche Pakete installiert
-* ersetzen Sie Pakete durch kleinere Äquivalente
-* entfernen Sie unnötige Spracheinstellungen (Locales), bspw. mittels `localepurge` (siehe <<plattenplatz-sparen-mit-der-paketverwaltung-lokalisierungen>>)
-* entfernen Sie unnötige Kernelmodule
-* bauen Sie einen kleineren, spezifischeren Linuxkernel
-
-Stehen Softwaretests an, hilft es, diese in Virtuelle Maschinen oder 
-Container auszulagern. Damit verringert sich der Ballast, der später 
-vielleicht wieder aufgeräumt werden muss, sollte die gerade ausprobierte
-Software doch nicht ihren Erwartungen entsprechen.
+include::die-groesse-der-debian-installation-verringern.adoc[]
 
 // Mittels Bleachbit aufräumen
 include::mittels-bleachbit-aufraeumen.adoc[]
