@@ -268,6 +268,6 @@ bleachbit <<bleachbit>> an. Für Debian steht es als gleichnamiges Paket
 Dazu greift es auf die Original-Debian-Werkzeuge zurück.
 
 .Auswahl bei Bleachbit
-image::praxis/bleachbit.png[id="fig.bleachbit"]
+image::praxis/plattenplatz-sparen-mit-der-paketverwaltung/bleachbit.png[id="fig.bleachbit"]
 
 // Datei (Ende): ./praxis/plattenplatz-sparen-mit-der-paketverwaltung.adoc
