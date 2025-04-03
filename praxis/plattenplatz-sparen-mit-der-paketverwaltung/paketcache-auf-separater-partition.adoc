@@ -1,0 +1,15 @@
+// Datei: ./praxis/plattenplatz-sparen-mit-der-paketverwaltung/paketcache-auf-separater-partition.adoc
+
+// Baustelle: Rohtext
+[[plattenplatz-sparen-mit-der-paketverwaltung-paketcache-separat]]
+=== Paketcache auf separater Paratition ===
+
+// Stichworte für den Index
+(((Paketcache, auf separater Partition)))
+Ist der Zugriff auf den Paketcache zu langsam, ist die Nutzung von tmpfs
+als Dateisystem eine Option. Dabei liegt dieses Dateisystem im RAM. Mit 
+Hilfe eines entsprechenden Eintrags in der Datei `/etc/fstab` binden Sie 
+das Verzeichnis `/var/cache/apt` ein. Weitere Informationen lesen Sie 
+dazu in <<cache-verzeichnis-auf-separater-partition>>.
+
+// Datei (Ende): ./praxis/plattenplatz-sparen-mit-der-paketverwaltung/paketcache-auf-separater-partition.adoc
