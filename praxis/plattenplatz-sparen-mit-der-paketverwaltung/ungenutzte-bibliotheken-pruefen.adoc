@@ -1,0 +1,50 @@
+// Datei: ./praxis/plattenplatz-sparen-mit-der-paketverwaltung/ungenutzte-bibliotheken-pruefen.adoc
+
+// Baustelle: Rohtext
+[[plattenplatz-sparen-mit-der-paketverwaltung-ungenutzte-bibliotheken]]
+=== Ungenutzte Bibliotheken prüfen ===
+
+// Stichworte für den Index
+(((apt-mark, showauto)))
+(((aptitude, search)))
+(((aptitude, show)))
+(((Paketmarkierungen, automatic)))
+(((Ungenutzte Bibliotheken entfernen)))
+
+Möchten Sie alle Pakete anzeigen, die das Flag ``Automatisch installiert'' 
+tragen, helfen Ihnen die beiden Aufrufe `aptitude show` 'Paketname' (siehe 
+<<lokale-paketmarkierungen-aptitude>>) und `apt-mark showauto` (siehe 
+<<lokale-paketmarkierungen-apt-mark>>). Geht es hingegen um ungenutzte 
+Bibliotheken, die installiert sind, aber denen das Flag fehlt, ist der 
+Aufruf etwas trickreicher (siehe <<Beckert-Blog-Finding-Libraries>> für
+die interaktive Version für `aptitude`). 
+
+Für die bloße Auflistung aus Installationsstatus, Paketname und 
+Kurzbeschreibung nutzen Sie den nachfolgenden Aufruf. Die Angaben in 
+Klammern interpretiert `aptitude` hierbei als Muster und schließt damit 
+sowohl Debug- als auch Entwicklungspakete aus, ebenso Pakete, die aus 
+LibreOffice stammen. Zusätzlich passt das Muster auch auf alle Pakete,
+deren Name auf `-data`, `-common` oder `-base` endet, dabei aber Pakete
+namens `r-base` ausklammert. Der Parameter `~i` beläßt nur die Pakete in 
+der Ausgabe, die auch tatsächlich installiert sind.
+
+.Ungenutzte Bibliotheken ausgeben
+----
+$ aptitude search '( ^lib !-dev$ !-dbg$ !-utils$ !-tools$ !-bin$ !-doc$ !^libreoffice | -data$ | -common$ | -base$ !^r-base ) !~M ~i'
+i   cron-daemon-common       - Daemon für die Zeitplanung von Prozessen - Konfigurationsdateien 
+i   exim4-base               - Support-Dateien für alle Exim-MTA-(v4)-Pakete                    
+i   filezilla-common         - Architekturunabhängige Dateien für FileZilla                     
+i   gcc-12-base              - GCC, die GNU Compiler Collection (Basis-Paket)                   
+i   grub-common              - GRand Unified Bootloader 2 (gemeinsame Dateien)                  
+i   isc-dhcp-common          - Handbuchseiten mit Bedeutung für alle »ISC DHCP«-Pakete          
+i   libacl1                  - access control lists - Laufzeitbibliothek                        
+i   libapparmor1             - AppArmor - »Change Hat«-Bibliothek                               
+i   libapt-pkg6.0            - Laufzeitbibliothek zur Paketverwaltung                           
+i   libargon2-1              - Speicherfeste Hash-Funktion - Laufzeitbibliothek
+...
+$
+----
+
+// Datei (Ende): ./praxis/plattenplatz-sparen-mit-der-paketverwaltung/ungenutzte-bibliotheken-pruefen.adoc
+
+
