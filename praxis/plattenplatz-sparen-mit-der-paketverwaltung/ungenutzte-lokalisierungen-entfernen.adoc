@@ -1,0 +1,16 @@
+// Datei: ./praxis/plattenplatz-sparen-mit-der-paketverwaltung/ungenutzte-lokalisierungen-entfernen.adoc
+
+// Baustelle: Rohtext
+
+[[plattenplatz-sparen-mit-der-paketverwaltung-lokalisierungen]]
+=== Ungenutzte Lokalisierungen entfernen ===
+
+// Stichworte für den Index
+(((Debianpaket, localepurge)))
+(((localepurge)))
+(((Ungenutzte Lokalisierungen entfernen)))
+Hierbei nützt Ihnen das Werkzeug `localepurge` aus dem gleichnamigen
+Paket <<Debian-Paket-localepurge>>. Auf dieses gehen wir ausführlicher 
+in <<mobile-geraete-localepurge>> ein.
+
+// Datei (Ende): ./praxis/plattenplatz-sparen-mit-der-paketverwaltung/ungenutzte-lokalisierungen-entfernen.adoc

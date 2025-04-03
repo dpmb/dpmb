@@ -30,16 +30,8 @@ include::duplikate-finden.adoc[]
 // Pfade ausschließen
 include::pfade-ausschliessen.adoc[]
 
-[[plattenplatz-sparen-mit-der-paketverwaltung-lokalisierungen]]
-=== Ungenutzte Lokalisierungen entfernen ===
-
-// Stichworte für den Index
-(((Debianpaket, localepurge)))
-(((localepurge)))
-(((Ungenutzte Lokalisierungen entfernen)))
-Hierbei nützt Ihnen das Werkzeug `localepurge` aus dem gleichnamigen
-Paket <<Debian-Paket-localepurge>>. Auf dieses gehen wir ausführlicher 
-in <<mobile-geraete-localepurge>> ein.
+// Ungenutzte Lokalisierungen entfernen
+include::ungenutzte-lokalisierungen-entfernen.adoc[]
 
 [[plattenplatz-sparen-mit-der-paketverwaltung-ungenutzte-bibliotheken]]
 === Ungenutzte Bibliotheken prüfen ===
