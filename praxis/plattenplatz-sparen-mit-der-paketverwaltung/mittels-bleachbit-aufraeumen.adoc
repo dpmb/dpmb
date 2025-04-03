@@ -1,0 +1,23 @@
+// Datei: ./praxis/plattenplatz-sparen-mit-der-paketverwaltung/mittels-bleachbit-aufraumen.adoc
+
+// Baustelle: Rohtext
+[[plattenplatz-sparen-mit-der-paketverwaltung-bleachbit]]
+=== Mittels Bleachbit aufräumen ===
+
+// Stichworte für den Index
+(((Bleachbit)))
+(((Datenspuren beseitigen)))
+(((Debianpaket, bleachbit)))
+Die von Ihnen genutzten Programme hinterlassen durch ihre Nutzung jede
+Menge Daten und Datenspuren -- Cookies, die Browserhistorie, temporäre
+Dateien und Logdateien. Unabhängig von deren Inhalten belegen diese
+Daten Speicherplatz. Um diese zu bereinigen, bietet sich das Werkzeug
+bleachbit <<bleachbit>> an. Für Debian steht es als gleichnamiges Paket
+'bleachbit' <<Debian-Paket-bleachbit>> bereit (siehe <<fig.bleachbit>>).
+Dazu greift es unter der Haube auf die Original-Debian-Werkzeuge zurück.
+
+.Auswahl bei Bleachbit
+image::praxis/plattenplatz-sparen-mit-der-paketverwaltung/bleachbit.png[id="fig.bleachbit"]
+
+// Datei (Ende): ./praxis/plattenplatz-sparen-mit-der-paketverwaltung/mittels-bleachbit-aufraumen.adoc
+
