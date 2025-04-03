@@ -43,19 +43,7 @@ include::paketcache-aufraeumen.adoc[]
 include::paketcache-auf-separater-partition.adoc[]
 
 // Logfiles begrenzen
-[[plattenplatz-sparen-mit-der-paketverwaltung-logfiles-begrenzen]]
-=== Logfiles begrenzen ===
-
-// Stichworte für den Index
-(((Logfiles begrenzen)))
-Hierbei hilft Ihnen das Werkzeug `logrotate` aus dem gleichnamigen 
-Debianpaket <<Debian-Paket-logrotate>>. Es gehört zur 
-Standardinstallation von Debian und es wäre daher ungewöhnlich, wenn
-es nicht installiert ist.
-
-`logrotate` sorgt für nicht permanent wachsende Logfiles. Passen Sie
-die Konfiguration an, wenn Sie manuell weitere Logfiles in Anwendungen 
-ergänzen (bspw. VHosts im Apache).
+include::logfiles-begrenzen.adoc[]
 
 // Syslog deaktivieren
 [[plattenplatz-sparen-mit-der-paketverwaltung-syslog-deaktivieren]]

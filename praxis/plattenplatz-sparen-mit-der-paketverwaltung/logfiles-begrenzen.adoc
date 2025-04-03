@@ -1,0 +1,20 @@
+// Datei: ./praxis/plattenplatz-sparen-mit-der-paketverwaltung/logfiles-begrenzen.adoc
+
+// Baustelle: Rohtext
+[[plattenplatz-sparen-mit-der-paketverwaltung-logfiles-begrenzen]]
+=== Logfiles begrenzen ===
+
+// Stichworte für den Index
+(((Debianpaket, logrotate)))
+(((Logfiles begrenzen)))
+(((Logfiles, logrotate)))
+Hierbei hilft Ihnen das Werkzeug `logrotate` aus dem gleichnamigen 
+Debianpaket <<Debian-Paket-logrotate>>. Es gehört zur 
+Standardinstallation von Debian und es wäre daher ungewöhnlich, wenn
+es nicht installiert ist.
+
+`logrotate` sorgt für nicht permanent wachsende Logfiles. Passen Sie
+die Konfiguration an, wenn Sie manuell weitere Logfiles in Anwendungen 
+ergänzen (bspw. VHosts im Apache Webserver).
+
+// Datei (Ende): ./praxis/plattenplatz-sparen-mit-der-paketverwaltung/logfiles-begrenzen.adoc
