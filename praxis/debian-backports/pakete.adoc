@@ -9,9 +9,8 @@
 
 === Welche Pakete gibt es als offiziellen Backport? ===
 
-Welche Pakete es auch als offiziellen Backport gibt, können Sie
-mittlerweile recht einfach in der Debian Paketsuche
-<<Debian-Paketsuche>> herausfinden. Ob es ein solches Paket auch als
+Das finden Sie mittlerweile recht einfach in der Debian Paketsuche
+<<Debian-Paketsuche>> heraus. Ob es ein solches Paket auch als
 offiziellen Backport gibt, hängt von zwei Dingen ab -- dem Bedarf
 (wesentliche Änderungen gegenüber der Version im 'stable'-Zweig) und
 jemanden, der die Rückportierung initial macht und dann auch weiterhin
