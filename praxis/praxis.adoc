@@ -39,7 +39,7 @@ include::alternatives/alternatives.adoc[]
 
 // == Auf andere Paketversionen zugreifen ==
 
-// - Zurückportierungen
+// - Zurückportierungen (Backports)
 include::debian-backports/debian-backports.adoc[]
 
 // - Pakete unterschiedlicher Veröffentlichungen mischen
