@@ -41,7 +41,11 @@ deb http://httpredir.debian.org/debian-backports squeeze-backports main contrib 
 ----
 
 // Stichworte für den Index
+(((apt, -t)))
+(((aptitude, -t)))
+(((aptitude, --target-release)))
 (((apt-get, -t)))
+(((apt-get, --target-release)))
 (((Debian Backports, Paketbezug)))
 (((Debian Backports, Pinning)))
 
@@ -49,8 +53,9 @@ Nach der Aktualisierung der Paketquellen -- bspw. mittels `apt-get
 update` -- stehen Ihnen die zusätzlichen Pakete bereits zur Verfügung.
 Diese werden jedoch nicht automatisch berücksichtigt und installiert,
 sondern dazu bedarf es noch eines expliziten Aufrufs mit zusätzlichen
-Schaltern. `apt-get` und `aptitude` benutzen dazu den Schalter `-t`
-gefolgt vom Namen des Backports-Archivs.
+Schaltern. APT, `apt-get` und `aptitude` benutzen dazu den Schalter 
+`-t` (Langform `--target-release`) gefolgt vom Namen des 
+Backports-Archivs.
 
 Das Paket 'asciidoc' steht bspw. nicht für Debian 7 _Wheezy_ bereit,
 existiert jedoch in den Backports. Um dieses aus den Backports
