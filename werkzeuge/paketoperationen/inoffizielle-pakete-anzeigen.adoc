@@ -43,6 +43,8 @@ opendataeditor (1.0.0)
 $
 ----
 
+// Stichworte für den Index
+(((apt-forktracer, -v)))
 Der ausführliche Aufruf erfolgt mit dem Schalter `-v` als Abkürzung für
 'verbose' (ausführlich). In jeder Zeile sehen Sie zusätzlich das 
 Repository, aus dem das Paket stammt und welche Version von dort 
@@ -50,8 +52,6 @@ verfügbar ist. Ist kein Repository angegeben, handelt es sich um ein
 inoffizielles Paket. Im nachfolgenden Listing sind das die beiden Pakete
 'hl2250dnlpr' und 'opendataeditor'.
 
-// Stichworte für den Index
-(((apt-forktracer, -v)))
 .Ausführlicher Aufruf von `apt-forktracer`
 ----
 $ apt-forktracer -v
