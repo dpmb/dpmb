@@ -24,5 +24,36 @@
   installiert sind
 * leistet ähnliches wie `apt-show-versions` und `grep-aptavail` (siehe 
   <<paketversionen-anzeigen>>)
+* zwei Betriebsmodi:
+** einfacher Aufruf zu installierten (Fremd-)Paketen
+
+.Einfacher Aufruf von `apt-forktracer`
+----
+$ apt-forktracer
+hl2250dnlpr (2.1.0-1)
+linux-headers-6.1.0-18-amd64 (6.1.76-1)
+linux-headers-6.1.0-18-common (6.1.76-1)
+linux-headers-6.1.0-23-amd64 (6.1.99-1)
+opendataeditor (1.0.0)
+$
+----
+
+** Ausführlicher Aufruf mit dem Schalter `-v`
+*** prüft alle Pakete -- auch reguläre Pakete
+*** zeigt das Repo an, aus dem das Paket stammt und welche Version 
+    von dort verfügbar ist
+
+// Stichworte für den Index
+(((apt-forktracer, -v)))
+.Ausführlicher Aufruf von `apt-forktracer`
+----
+$ apt-forktracer -v
+hl2250dnlpr (2.1.0-1)
+virtualbox (7.0.12-dfsg-1~fto12+1->7.0.20-dfsg-1~fto12+1) [Debian: 7.0.20-dfsg-1~fto12+1]
+xserver-xorg-core (2:21.1.7-3+deb12u7->2:21.1.7-3+deb12u9) [Debian: 2:21.1.7-3+deb12u9 2:21.1.7-3+deb12u9]
+linux-headers-6.1.0-18-amd64 (6.1.76-1)
+...
+$
+----
 
 // Datei (Ende): ./werkzeuge/paketoperationen/inoffizielle-pakete-anzeigen.adoc
