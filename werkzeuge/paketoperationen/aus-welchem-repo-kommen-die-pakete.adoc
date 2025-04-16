@@ -135,6 +135,26 @@ kteatime:
 $
 ----
 
+*Beispiel 4* zeigt den Fall, dass ein installiertes Paket überhaupt 
+nicht aus einem Repository stammt. Das Paket kann selbst erstellt 
+worden sein oder auch von einer externen Quelle, bspw. einer Webseite
+eines Herstellers, heruntergeladen worden sein. In diesem Fall fehlt 
+in der Ausgabe die Angabe des Repositorys, von der das Paket stammt. 
+Nachfolgend geschieht das für das Paket namens 'hl2250dnlpr', über 
+welches die Ansteuerung eines bestimmten Druckers gelingt.
+
+.Herkunft eines externen Pakets feststellen
+----
+$ apt-cache policy hl2250dnlpr
+hl2250dnlpr:i386:
+  Installiert:           2.1.0-1
+  Installationskandidat: 2.1.0-1
+  Versionstabelle:
+ *** 2.1.0-1 100
+        100 /var/lib/dpkg/status-old
+$
+----
+
 [[verfuegbare-paketversionen-ermitteln]]
 ==== Verfügbare Paketversionen ermitteln ====
 
