@@ -14,6 +14,7 @@ Aktualisierung entnehmen würde. Bei der Beantwortung dieser Frage helfen
 Ihnen die Programme `apt-cache`, `apt-show-versions`, `apt` und
 `aptitude` weiter – aber jedes auf seine Art.
 
+[[aus-welchem-repo-kommen-die-pakete-paketquellen]]
 ==== Paketquellen untersuchen mit `apt-cache policy` ====
 
 // Stichworte für den Index
@@ -67,6 +68,7 @@ Mit Pinning verwaltete Pakete:
 $
 ----
 
+[[aus-welchem-repo-kommen-die-pakete-einzelpaket]]
 ==== Informationen für ein bestimmtes Paket erhalten ====
 
 // Stichworte für den Index
