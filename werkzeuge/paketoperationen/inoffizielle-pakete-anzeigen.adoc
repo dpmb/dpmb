@@ -1,16 +1,20 @@
 // Datei: ./werkzeuge/paketoperationen/inoffizielle-pakete-anzeigen.adoc
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[inoffizielle-pakete-anzeigen]]
 
 === Liste der installierten, inoffiziellen Pakete anzeigen ===
 
-* installierte Pakete auflisten, die nicht aus einem (offiziellen) Repository stammen
-* bspw. selbst übersetzt oder gebaut oder "irgendwoher" heruntergeladen 
-* das sind Pakete, zu denen kein Repository als Quelle ermittelt werden kann
-* Werkzeuge:
-** `apt-cache policy` 'Paketname' (siehe <<aus-welchem-repo-kommen-die-pakete-einzelpaket>>)
-** `apt-forktracer` 'Paketname'
+Nicht alle Installationen kommen mit den offiziellen Paketen aus. Mitunter
+sind Fremdpakete notwendig, die nicht aus einem (offiziellen) Repository 
+stammen. Entweder wurden diese von einer Webseite bezogen oder auch selbst 
+übersetzt. Zu diesen Paketen kann die Paketverwaltung kein Repository als 
+Quelle ermitteln. 
+
+Um diesen Paketen auf die Spur zu kommen, stehen zwei Werkzeuge bereit. 
+Dazu gehören das bekannte Programm `apt-cache` (siehe dazu 
+<<aus-welchem-repo-kommen-die-pakete-einzelpaket>>) sowie `apt-forktracer`
+aus dem gleichnamigen Debianpaket <<Debian-Paket-apt-forktracer>>.
 
 ==== Recherche mit `apt-forktracer` ====
 
@@ -18,14 +22,15 @@
 (((apt-forktracer)))
 (((Debianpaket, apt-forktracer)))
 
-* Debianpaket 'apt-forktracer' <<Debian-Paket-apt-forktracer>>
-* ist dazu gedacht, Pakete zu finden, die sich in einem inkonsistenten 
-  Zustand befinden oder in einer anderen Version als der offiziell neuesten 
-  installiert sind
-* leistet ähnliches wie `apt-show-versions` und `grep-aptavail` (siehe 
-  <<paketversionen-anzeigen>>)
-* zwei Betriebsmodi:
-** einfacher Aufruf zu installierten (Fremd-)Paketen
+`apt-forktracer` ist dazu gedacht, Pakete zu finden, die sich in einem 
+inkonsistenten Zustand befinden oder in einer anderen Version als der 
+offiziell neuesten installiert sind. Es leistet ähnliches wie 
+`apt-show-versions` und `grep-aptavail` (siehe <<paketversionen-anzeigen>>).
+
+Das Programm kennt zwei Betriebsmodi -- einen einfachen und einen 
+ausführlichen Aufruf. Der einfache Aufruf zu installierten (Fremd-)Paketen
+erfolgt ohne weitere Parameter. Ergebnis ist eine Liste mit den Namen der
+Pakete samt Versionsnummer. 
 
 .Einfacher Aufruf von `apt-forktracer`
 ----
@@ -38,10 +43,12 @@ opendataeditor (1.0.0)
 $
 ----
 
-** Ausführlicher Aufruf mit dem Schalter `-v`
-*** prüft alle Pakete -- auch reguläre Pakete
-*** zeigt das Repo an, aus dem das Paket stammt und welche Version 
-    von dort verfügbar ist
+Der ausführliche Aufruf erfolgt mit dem Schalter `-v` als Abkürzung für
+'verbose' (ausführlich). In jeder Zeile sehen Sie zusätzlich das 
+Repository, aus dem das Paket stammt und welche Version von dort 
+verfügbar ist. Ist kein Repository angegeben, handelt es sich um ein
+inoffizielles Paket. Im nachfolgenden Listing sind das die beiden Pakete
+'hl2250dnlpr' und 'opendataeditor'.
 
 // Stichworte für den Index
 (((apt-forktracer, -v)))
@@ -50,8 +57,7 @@ $
 $ apt-forktracer -v
 hl2250dnlpr (2.1.0-1)
 virtualbox (7.0.12-dfsg-1~fto12+1->7.0.20-dfsg-1~fto12+1) [Debian: 7.0.20-dfsg-1~fto12+1]
-xserver-xorg-core (2:21.1.7-3+deb12u7->2:21.1.7-3+deb12u9) [Debian: 2:21.1.7-3+deb12u9 2:21.1.7-3+deb12u9]
-linux-headers-6.1.0-18-amd64 (6.1.76-1)
+opendataeditor (1.0.0)
 ...
 $
 ----
