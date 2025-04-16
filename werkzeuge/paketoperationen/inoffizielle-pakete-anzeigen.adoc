@@ -16,7 +16,7 @@ Quelle ermitteln.
 Um diesen Paketen auf die Spur zu kommen, stehen drei Werkzeuge bereit. 
 Dazu gehören die bekannten Programme `apt-cache` (siehe dazu 
 <<aus-welchem-repo-kommen-die-pakete-einzelpaket>>) und `aptitude` sowie 
-`apt-forktracer `aus dem gleichnamigen Debianpaket 
+`apt-forktracer` aus dem gleichnamigen Debianpaket 
 <<Debian-Paket-apt-forktracer>>.
 
 ==== Auflistung mit `aptitude` ====
