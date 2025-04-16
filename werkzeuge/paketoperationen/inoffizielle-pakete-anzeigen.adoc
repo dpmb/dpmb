@@ -5,22 +5,39 @@
 
 === Liste der installierten, inoffiziellen Pakete anzeigen ===
 
+// Stichworte für den Index
+(((installierte Fremdpakete auflisten)))
 Nicht alle Installationen kommen mit den offiziellen Paketen aus. Mitunter
 sind Fremdpakete notwendig, die nicht aus einem (offiziellen) Repository 
 stammen. Entweder wurden diese von einer Webseite bezogen oder auch selbst 
 übersetzt. Zu diesen Paketen kann die Paketverwaltung kein Repository als 
 Quelle ermitteln. 
 
-Um diesen Paketen auf die Spur zu kommen, stehen zwei Werkzeuge bereit. 
-Dazu gehören das bekannte Programm `apt-cache` (siehe dazu 
-<<aus-welchem-repo-kommen-die-pakete-einzelpaket>>) sowie `apt-forktracer`
-aus dem gleichnamigen Debianpaket <<Debian-Paket-apt-forktracer>>.
+Um diesen Paketen auf die Spur zu kommen, stehen drei Werkzeuge bereit. 
+Dazu gehören die bekannten Programme `apt-cache` (siehe dazu 
+<<aus-welchem-repo-kommen-die-pakete-einzelpaket>>) und `aptitude` sowie 
+`apt-forktracer `aus dem gleichnamigen Debianpaket 
+<<Debian-Paket-apt-forktracer>>.
+
+==== Auflistung mit `aptitude` ====
+
+// Stichworte für den Index
+(((installierte Fremdpakete auflisten, Aptitude)))
+Aptitude ordnet die Pakete in der Bedienoberfläche in einzelnen 
+Kategorien an. Inoffizielle Pakete tauchen in der Kategorie "veraltete 
+und selbst erstellte Pakete" auf. In <<fig.aptitude-fremdpakete>> sind 
+das die drei Pakete 'opendataeditor', 'hl2250dnlpr' und 
+'cupswrapperhl2250dn'.
+
+.Inoffizielle Pakete in Aptitude anzeigen
+image::werkzeuge/paketoperationen/aptitude-fremdpakete.png[id="fig.aptitude-fremdpakete", width="50%"]
 
 ==== Recherche mit `apt-forktracer` ====
 
 // Stichworte für den Index
 (((apt-forktracer)))
 (((Debianpaket, apt-forktracer)))
+(((installierte Fremdpakete auflisten, apt-forktracer)))
 
 `apt-forktracer` ist dazu gedacht, Pakete zu finden, die sich in einem 
 inkonsistenten Zustand befinden oder in einer anderen Version als der 
