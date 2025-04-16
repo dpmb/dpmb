@@ -1,14 +1,18 @@
-
+// Datei: ./werkzeuge/paketoperationen/unfreie-pakete-anzeigen.adoc
 // Baustelle: Fertig
 
 [[unfreie-pakete-anzeigen]]
 
 === Liste der installierten, nicht-freien Pakete anzeigen ===
 
+// Stichworte für den Index
+(((nicht-freie Pakete anzeigen)))
+
 ==== Recherche mit `aptitude` ====
 
 // Stichworte für den Index
 (((aptitude, search)))
+(((nicht-freie Pakete anzeigen, aptitude)))
 
 Mit Hilfe einer spezialisierten Suchanfrage ermöglicht `aptitude` das Aufspüren
 nicht-freier Pakete. Es erwartet die Angabe eines Bereichs mit Hilfe des 
@@ -49,8 +53,10 @@ $
 ==== Recherche mit `check-dfsg-status` (vormals `vrms`) ====
 
 // Stichworte für den Index
-(((Debianpaket, vrms)))
 (((Debianpaket, check-dfsg-status)))
+(((Debianpaket, vrms)))
+(((nicht-freie Pakete anzeigen, check-dfsg-status)))
+(((nicht-freie Pakete anzeigen, vrms)))
 (((vrms, -e)))
 (((vrms, --explain)))
 Mit dem Kommando `check-dfsg-status` (ab Debian 12 _Bookworm_)
@@ -157,3 +163,5 @@ virtualbox-guest-x11
 virtualbox-qt
 $
 ----
+
+// Datei (Ende): ./werkzeuge/paketoperationen/unfreie-pakete-anzeigen.adoc
