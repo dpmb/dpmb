@@ -18,7 +18,7 @@
 (((apt-forktracer)))
 (((Debianpaket, apt-forktracer)))
 
-* Debianpaket 'apt-forktracer'
+* Debianpaket 'apt-forktracer' <<Debian-Paket-apt-forktracer>>
 * ist dazu gedacht, Pakete zu finden, die sich in einem inkonsistenten 
   Zustand befinden oder in einer anderen Version als der offiziell neuesten 
   installiert sind

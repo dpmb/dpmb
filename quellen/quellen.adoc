@@ -287,6 +287,8 @@
 
 - [[[Debian-Paket-apt-offline-gui]]] Debian-Paket 'apt-offline-gui', https://packages.debian.org/de/stretch/apt-offline-gui
 
+- [[[Debian-Paket-apt-forktracer]]] Debian-Paket 'apt-forktracer', https://packages.debian.org/de/stable/apt-forktracer
+
 - [[[Debian-Paket-apt-rdepends]]] Debian-Paket 'apt-rdepends', https://packages.debian.org/de/stable/apt-rdepends
 
 - [[[Debian-Paket-apt-setup]]] 'apt-setup', https://packages.debian.org/de/stable/apt-setup-udeb
