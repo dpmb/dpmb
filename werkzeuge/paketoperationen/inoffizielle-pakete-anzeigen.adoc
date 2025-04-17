@@ -22,6 +22,8 @@ Dazu gehören die bekannten Programme `apt-cache` (siehe dazu
 ==== Auflistung mit `aptitude` ====
 
 // Stichworte für den Index
+(((aptitude, search '?obsolete')))
+(((aptitude, search '~o')))
 (((installierte Fremdpakete auflisten, Aptitude)))
 Aptitude ordnet die Pakete in der Bedienoberfläche in einzelnen 
 Kategorien an. Inoffizielle Pakete tauchen in der Kategorie "veraltete 
@@ -29,8 +31,24 @@ und selbst erstellte Pakete" auf. In <<fig.aptitude-fremdpakete>> sind
 das die drei Pakete 'opendataeditor', 'hl2250dnlpr' und 
 'cupswrapperhl2250dn'.
 
-.Inoffizielle Pakete in Aptitude anzeigen
+.Inoffizielle Pakete in der Textoberfläche von Aptitude anzeigen
 image::werkzeuge/paketoperationen/aptitude-fremdpakete.png[id="fig.aptitude-fremdpakete", width="50%"]
+
+Um die gleiche Darstellung über die Kommandozeile zu erhalten, kennt 
+Aptitude das spezielle Suchmuster `~o` (Langform `'?obsolete'`). Der
+vollständige Aufruf ist wie folgt:
+
+.Inoffizielle Pakete über die Kommandozeile von Aptitude anzeigen
+----
+$ aptitude search '?obsolete'
+i   cupswrapperhl2250dn:i386        - Brother HL2250DN CUPS wrapper driver      
+i   hl2250dnlpr:i386                - Brother HL-2250DN LPR driver              
+i A linux-headers-6.1.0-18-amd64    - Header files for Linux 6.1.0-18-amd64     
+i A linux-headers-6.1.0-18-common   - Common header files for Linux 6.1.0-18    
+i A linux-image-6.1.0-18-amd64      - Linux 6.1 for 64-bit PCs (signed)         
+i   opendataeditor                  - Data management for humans
+$
+----
 
 ==== Recherche mit `apt-forktracer` ====
 
