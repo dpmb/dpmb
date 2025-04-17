@@ -13,9 +13,9 @@ stammen. Entweder wurden diese von einer Webseite bezogen oder auch selbst
 übersetzt. Zu diesen Paketen kann die Paketverwaltung kein Repository als 
 Quelle ermitteln. 
 
-Um diesen Paketen auf die Spur zu kommen, stehen drei Werkzeuge bereit. 
+Um diesen Paketen auf die Spur zu kommen, stehen vier Werkzeuge bereit. 
 Dazu gehören die bekannten Programme `apt-cache` (siehe dazu 
-<<aus-welchem-repo-kommen-die-pakete-einzelpaket>>) und `aptitude` sowie 
+<<aus-welchem-repo-kommen-die-pakete-einzelpaket>>), `aptitude`, APT sowie 
 `apt-forktracer` aus dem gleichnamigen Debianpaket 
 <<Debian-Paket-apt-forktracer>>.
 
@@ -77,6 +77,27 @@ i A linux-headers-6.1.0-18-amd64    - Header files for Linux 6.1.0-18-amd64
 i A linux-headers-6.1.0-18-common   - Common header files for Linux 6.1.0-18    
 i A linux-image-6.1.0-18-amd64      - Linux 6.1 for 64-bit PCs (signed)         
 i   opendataeditor                  - Data management for humans
+$
+----
+
+==== Auflistung mit `apt` ====
+
+// Stichworte für den Index
+(((apt, list '~o')))
+
+Seit Debian 11 'Bullseye' unterstützt auch APT die Recherche nach
+veralteten Paketen. Es akzeptiert dazu das spezielle Suchmuster `~o`
+nach dem Unterkommando `list` wie folgt:
+
+.Veraltete Pakete über die Kommandozeile von APT anzeigen
+----
+$ apt list '~o'
+Auflistung… Fertig
+cupswrapperhl2250dn/now 2.0.4-2 i386  [Installiert,lokal]
+hl2250dnlpr/now 2.1.0-1 i386  [Installiert,lokal]
+linux-headers-6.1.0-18-amd64/now 6.1.76-1 amd64  [Installiert,lokal]
+linux-headers-6.1.0-18-common/now 6.1.76-1 all  [Installiert,lokal]
+opendataeditor/now 1.0.0 amd64  [Installiert,lokal]
 $
 ----
 
