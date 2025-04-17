@@ -22,13 +22,13 @@ Dazu gehören die bekannten Programme `apt-cache` (siehe dazu
 ==== Auflistung mit `aptitude` ====
 
 // Stichworte für den Index
-(((aptitude, search '?and')))
-(((aptitude, search '?installed')))
-(((aptitude, search '~i')))
-(((aptitude, search '?obsolete')))
-(((aptitude, search '~o')))
-(((aptitude, search '?origin')))
-(((aptitude, search '~O')))
+(((aptitude, search ?and)))
+(((aptitude, search ?installed)))
+(((aptitude, search ~i)))
+(((aptitude, search ?obsolete)))
+// (((aptitude, search ~o)))
+(((aptitude, search ?origin)))
+// (((aptitude, search ~O)))
 (((installierte Fremdpakete auflisten, Aptitude)))
 Aptitude ordnet die Pakete in der Bedienoberfläche in einzelnen 
 Kategorien an. Inoffizielle Pakete tauchen in der Kategorie "veraltete 
@@ -80,10 +80,10 @@ i   opendataeditor                  - Data management for humans
 $
 ----
 
-==== Auflistung mit `apt` ====
+==== Auflistung mit APT ====
 
 // Stichworte für den Index
-(((apt, list '~o')))
+(((apt, list ~o)))
 
 Seit Debian 11 'Bullseye' unterstützt auch APT die Recherche nach
 veralteten Paketen. Es akzeptiert dazu das spezielle Suchmuster `~o`
@@ -92,7 +92,7 @@ nach dem Unterkommando `list` wie folgt:
 .Veraltete Pakete über die Kommandozeile von APT anzeigen
 ----
 $ apt list '~o'
-Auflistung… Fertig
+Auflistung ... Fertig
 cupswrapperhl2250dn/now 2.0.4-2 i386  [Installiert,lokal]
 hl2250dnlpr/now 2.1.0-1 i386  [Installiert,lokal]
 linux-headers-6.1.0-18-amd64/now 6.1.76-1 amd64  [Installiert,lokal]
