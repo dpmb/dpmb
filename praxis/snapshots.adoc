@@ -36,16 +36,27 @@ heißt http://snapshot.debian.org/ <<Debian-Snapshots>>. In der
 `/etc/apt/sources.list` stehen dann Einträge der Form:
 
 ----
-deb http://snapshot.debian.org/archive/debian/20091004T111800Z/ lenny main
-deb-src http://snapshot.debian.org/archive/debian/20091004T111800Z/ lenny main
-deb http://snapshot.debian.org/archive/debian-security/20091004T121501Z/ lenny/updates main
-deb-src http://snapshot.debian.org/archive/debian-security/20091004T121501Z/ lenny/updates main
+deb http://snapshot.debian.org/archive/20091004T111800Z/debian lenny main
 ----
 
-Der Zeitstring `20091004T121501Z` folgt der Form `yyyymmddThhmmssZ` oder
-vereinfacht `yyyymmdd`. Steht für ein angegebenes Datum kein Snapshot bereit,
-wird der zeitlich entsprechend vorherige ausgewählt.
+zwei mögliche Zeitangaben:
+
+exakter Zeitstempel :: Der Zeitstring `20091004T121501Z` folgt der Form 
+`yyyymmddThhmmssZ` oder vereinfacht `yyyymmdd`. Steht für ein angegebenes 
+Datum kein Snapshot bereit, wird der zeitlich entsprechend vorherige 
+ausgewählt.
 
 // wofür steht das `Z` in `yyyymmddThhmmssZ` ? Für Zeitzone? Falls ja, welche
 // anderen Buchstaben gehen noch?
+
+relativer Zeitstempel:: Angabe des Zeitstempels als ein Wert, den das 
+`date`-Kommando verarbeiten kann, bspw `yesterday` (für gestern), `2-days-ago`
+(für: zwei Tage alt) oder `last-week` (für letzte Woche)
+
+----
+deb http://snapshot.debian.org/archive/date/yesterday/debian bookworm main
+deb http://snapshot.debian.org/archive/date/2-days-ago/debian bookworm main
+deb http://snapshot.debian.org/archive/date/last-week/debian bookworm main
+----
+
 // Datei (Ende): ./praxis/snapshots.adoc
