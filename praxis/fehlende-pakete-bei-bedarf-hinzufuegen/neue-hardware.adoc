@@ -105,14 +105,13 @@ weiteren Angaben zum identifizierten Paket.
 Das Werkzeug `isenkram-pkginstall` aus dem Paket 'isenkram-cli' 
 <<Debian-Paket-isenkram-cli>> bietet alle zuvor von `isenkram-lookup`
 gefundenen Hardware-spezifischen Pakete zur Installation an, die zur 
-aktuellen Maschine passen.
-
-ToDo:
-
-* kommt beim Debian-Installer zum Einsatz, um zu erkennen, welche Pakete beim Setup benötigt werden
-* wie unterscheiden sich `isenkram-pkginstall` und `isenkram-autoinstall-firmware` voneinander?
-** `isenkram-autoinstall-firmware` wertet `dmesg` aus und sucht darin nach Ausgaben zu fehlenden Treibern
-** aktiviert dazu die Distributionsbereiche 'contrib', 'non-free' und 'non-free-firmware' in den Paketquellen, um an alle Pakete zu den Treibern zu kommen
+aktuellen Maschine passen. Genutzt wird das Werkzeug im Rahmen der
+Hardwareerkennung des Debian-Installers, um diejenigen Pakete zu 
+identifizieren, welche beim Setup benötigt werden. Im Gegensatz dazu
+wertet `isenkram-autoinstall-firmware` die Ausgaben von `dmesg` aus und 
+sucht darin nach Ausgaben zu fehlenden Treibern. Es aktiviert dazu die 
+Distributionsbereiche 'contrib', 'non-free' und 'non-free-firmware' in 
+den Paketquellen, um an alle Pakete zu den Treibern zu kommen.
 
 ==== Fehlende Firmware mit `isenkram-autoinstall-firmware` nachziehen ====
 
