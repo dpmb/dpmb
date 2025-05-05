@@ -13,8 +13,8 @@ Situationen auf, die die Einbindung weiterer Software erfordern, die in
 einem anderen Paketformat vorliegt, bspw. `tar.gz` oder `rpm`. Die 
 Gründe dafür sind vielfältig:
 
-* Die Software wurde nur zusammengestellt und liegt bislang nur als
-`tar.gz`-Archiv vor.
+* Die Software wurde lediglich zusammengestellt und liegt bislang nur 
+als `tar.gz`-Archiv vor.
 * Die Software ist bislang nicht anders paketiert, weil sich bspw. der
 Entwickler nur mit genau diesem Paketformat und dem Mechanismus zur
 Paketierung auskennt.
