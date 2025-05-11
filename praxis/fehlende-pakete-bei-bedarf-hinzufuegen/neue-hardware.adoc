@@ -63,6 +63,7 @@ image::praxis/fehlende-pakete-bei-bedarf-hinzufuegen/tasksel-isenkram.png[id="fi
 Als nächstes stellen wir Ihnen die einzelnen Werkzeuge und deren Funktionen 
 genauer vor, die sich in den Paketen befinden.
 
+[[neue-hardware-isenkram-lookup]]
 ==== Passende Pakete mit `isenkram-lookup` finden ====
 
 Das Werkzeug `isenkram-lookup` aus dem Paket 'isenkram-cli' 
@@ -100,6 +101,7 @@ diesen `modalias`-Werten zu finden. Die ausgegebene Liste ist
 alphabetisch anhand des Paketnames sortiert und umfasst keine 
 weiteren Angaben zum identifizierten Paket.
 
+[[neue-hardware-isenkram-pkginstall]]
 ==== Hardware-spezifische Pakete mit `isenkram-pkginstall` lokalisieren ====
 
 Das Werkzeug `isenkram-pkginstall` aus dem Paket 'isenkram-cli' 
@@ -113,6 +115,7 @@ sucht darin nach Ausgaben zu fehlenden Treibern. Es aktiviert dazu die
 Distributionsbereiche 'contrib', 'non-free' und 'non-free-firmware' in 
 den Paketquellen, um an alle Pakete zu den Treibern zu kommen.
 
+[[neue-hardware-isenkram-isenkram-autoinstall-firmware]]
 ==== Fehlende Firmware mit `isenkram-autoinstall-firmware` nachziehen ====
 
 Mit dem Werkzeug `isenkram-autoinstall-firmware` aus dem Paket 
@@ -147,6 +150,7 @@ update-initramfs: Generating /boot/initrd.img-6.1.0-23-amd64
 #
 ----
 
+[[neue-hardware-identifizieren]]
 ==== Passende Hardware identifizieren ====
 
 Nicht immer ist es einfach, herauszufinden, ob eine gewünschte 
