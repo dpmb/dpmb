@@ -36,10 +36,11 @@ Dazu klinkt es sich als zusätzliches Modul in die Konfiguration von
 Tasksel ein (siehe <<tasksel>>). 
 
 Das Modul wird vom Paket 'isenkram-cli' <<Debian-Paket-isenkram-cli>>
-bereitgestellt und nach dessen Installation unter unter 
+bereitgestellt und nach dessen Installation im Verzeichnisbaum unter  
 `/usr/share/tasksel/descs/isenkram.desc` abgelegt. Es beinhaltet die 
-notwendige Beschreibung für den Menüeintrag, den Tasksel dann anzeigt, 
-nachfolgend beispielhaft für den Eintrag 'isenkram-firmware' zu sehen.
+notwendige Beschreibung für den Menüeintrag, den Tasksel dann anzeigt.
+Nachfolgend ist das beispielhaft für den Eintrag zu 'isenkram-firmware' 
+zu sehen.
 
 .Menüeintrag zu Isenkram für Tasksel (Ausschnitt)
 ----
