@@ -773,6 +773,7 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 // Blog nicht länger zugreifbar
 // - [[[Isenkram-Reinholdtsen]]] Isenkram im Blog von Petter Reinholdtsen, http://people.skolelinux.org/pere/blog/tags/isenkram/
+- [[[Isenkram-Reinholdtsen]]] Ankündigung zu Isenkram von Petter Reinholdtsen (2016), http://www.hungry.com/~pere/blog/Isenkram_with_PackageKit_support___new_version_0_23_available_in_Debian_unstable.html
 
 - [[[Java-Apt]]] Java Annotation Processing Tool, https://metro.java.net/1.5/docs/apt.html
 

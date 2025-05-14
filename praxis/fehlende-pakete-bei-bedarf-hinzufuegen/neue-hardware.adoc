@@ -26,8 +26,7 @@ ergänzt werden müssen. In diesem Fall kommen die beiden Pakete
 'isenkram' <<Debian-Paket-isenkram>> und 'isenkram-cli'
 <<Debian-Paket-isenkram-cli>> des norwegischen Entwicklers Petter
 Reinholdtsen ins Spiel. Dieses hat zwar bereits den Status 'stable',
-steht aber unter sehr aktiver Entwicklung.
-// <<Isenkram-Reinholdtsen>>. 
+steht aber unter sehr aktiver Entwicklung <<Isenkram-Reinholdtsen>>. 
 
 Hinter Isenkram -- dänisch und norwegisch für Eisenwaren ('Hardware') 
 -- verbirgt sich eine Art Benachrichtigungsdienst, der überprüft, ob 
