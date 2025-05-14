@@ -231,6 +231,8 @@
 
 - [[[Debian-Fasttrack]]] Debian Fasttrack, https://fasttrack.debian.net/
 
+- [[[Debian-Hardware]]] Unterstützte Hardware von Debian GNU/Linux, https://www.debian.org/releases/stable/i386/ch02s01.de.html
+
 - [[[Debian-History]]] Debian Documentation Team: A Brief History of Debian, Chapter 3, Debian Releases, https://www.debian.org/doc/manuals/project-history/ch-releases.de.html
 
 - [[[Debian-LTS]]] Debian Long Term Support (LTS), https://wiki.debian.org/LTS

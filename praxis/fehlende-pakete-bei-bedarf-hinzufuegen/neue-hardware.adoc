@@ -66,6 +66,9 @@ genauer vor, die sich in den Paketen befinden.
 [[neue-hardware-isenkram-lookup]]
 ==== Passende Pakete mit `isenkram-lookup` finden ====
 
+// Stichworte für den Index
+(((Debianpaket, isenkram-cli)))
+(((isenkram-lookup)))
 Das Werkzeug `isenkram-lookup` aus dem Paket 'isenkram-cli' 
 <<Debian-Paket-isenkram-cli>> gleicht die Hardware ihres Systems mit 
 den Einträgen in den Paketlisten ab und sucht daraus die Pakete 
@@ -104,6 +107,11 @@ weiteren Angaben zum identifizierten Paket.
 [[neue-hardware-isenkram-pkginstall]]
 ==== Hardware-spezifische Pakete mit `isenkram-pkginstall` lokalisieren ====
 
+// Stichworte für den Index
+(((Debianinstallation, Hardwareerkennung)))
+(((Debianpaket, isenkram-cli)))
+(((isenkram-autoinstall-firmware)))
+(((isenkram-pkginstall)))
 Das Werkzeug `isenkram-pkginstall` aus dem Paket 'isenkram-cli' 
 <<Debian-Paket-isenkram-cli>> bietet alle zuvor von `isenkram-lookup`
 gefundenen Hardware-spezifischen Pakete zur Installation an, die zur 
@@ -119,6 +127,11 @@ den Paketquellen, um an alle Pakete zu den Treibern zu kommen.
 [[neue-hardware-isenkram-isenkram-autoinstall-firmware]]
 ==== Fehlende Firmware mit `isenkram-autoinstall-firmware` nachziehen ====
 
+// Stichworte für den Index
+(((Debianinstallation, Hardwareabgleich)))
+(((Debianpaket, firmware-misc-nonfree)))
+(((Debianpaket, isenkram-cli)))
+(((isenkram-autoinstall-firmware)))
 Mit dem Werkzeug `isenkram-autoinstall-firmware` aus dem Paket 
 'isenkram-cli' <<Debian-Paket-isenkram-cli>> gleichen Sie den 
 laufenden Linuxkernel mit der Hardware ihres Systems ab und 
@@ -154,10 +167,15 @@ update-initramfs: Generating /boot/initrd.img-6.1.0-23-amd64
 [[neue-hardware-identifizieren]]
 ==== Passende Hardware identifizieren ====
 
+// Stichworte für den Index
+(((Debian, unterstützte Hardware)))
+(((Debian, passende Drucker finden)))
+(((Debian, passende Linux-Hardware finden)))
 Nicht immer ist es einfach, herauszufinden, ob eine gewünschte 
 Hardware auf ihrem Linux-System unterstützt wird. Die folgenden 
 beiden Projekte helfen Ihnen bei der Vorauswahl:
 
+* von Debian GNU/Linux unterstützte Hardware <<Debian-Hardware>>
 * passende Hardware herausfinden: Linux-Hardware <<LinuxHardware>>
 * passende Drucker identifizieren: OpenPrinting <<Openprinting>>
 
