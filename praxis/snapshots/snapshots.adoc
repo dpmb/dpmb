@@ -72,16 +72,18 @@ deb http://snapshot.debian.org/archive/20250515T120000Z/debian bookworm main
 
 Debian Snapshots gestattet zwei mögliche Zeitangaben:
 
-* exakter Zeitstempel :: Der Zeitstring `20250525` folgt der Zeitangabe 
-aus Jahr, Monat und Tag und in erweiterter Form noch mit Stunde, Minute 
-und Sekunde als `20250525T1200Z`. `Z` ordnen wir einer Zeitzone bzw. dem 
+exakter Zeitstempel :: Der Zeitstring `20250525` folgt der Zeitangabe aus 
+Jahr, Monat und Tag und in erweiterter Form noch mit Stunde, Minute und 
+Sekunde als `20250525T1200Z`. `Z` ordnen wir einer Zeitzone bzw. dem 
 jeweiligen Versatz zu GMT zu. Steht für den angegebenen Zeitpunkt kein 
 Snapshot bereit, wird der zeitlich entsprechend vorherige ausgewählt.
 
-** relativer Zeitstempel:: Angabe des Zeitstempels als ein Wert, den das 
-`date`-Kommando verarbeiten kann, bspw `yesterday` (für gestern), `2-days-ago`
-(für: zwei Tage alt) oder `last-week` (für letzte Woche)
-
+relativer Zeitstempel :: Angabe des Zeitstempels als ein Wert, den das 
+`date`-Kommando verarbeiten kann, bspw `yesterday` (für 'gestern'), 
+`2-days-ago` (für 'vor zwei Tagen') oder `last-week` (für 'letzte Woche'). 
+Das ist hilfreich, wenn Sie den relativen Zeitraum angeben können, nachdem 
+eine Synchonisation stattfinden soll.
+~
 ----
 deb http://snapshot.debian.org/archive/date/yesterday/debian bookworm main
 deb http://snapshot.debian.org/archive/date/2-days-ago/debian bookworm main
