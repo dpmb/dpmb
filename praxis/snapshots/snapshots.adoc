@@ -5,10 +5,13 @@
 [[pakete-und-patche-datumsbezogen-auswaehlen]]
 == Pakete und Patche datumsbezogen auswählen ==
 
-'Frage:' Ist es möglich, die Patche bis zu einem ganz speziellen Datum
-einzuspielen?
-
-'Problem:' Wir haben hier Entwicklungs-, Test- und Produktivumgebungen.
+* bisher im Buch besprochen: 
+** Pakete mit `apt install` 'Paketname' oder `apt upgrade` 'Paketname' 
+   aktualisieren: spielt neue Version des Pakets ein, unabhängig, seit 
+   wann diese Version bereitsteht
+** 'Frage:' Ist es möglich, eine Aktualisierung bis zu einem bestimmten 
+   Datum einzuspielen?
+** 'Problem:' Wir haben hier Entwicklungs-, Test- und Produktivumgebungen.
 Auf den Entwicklungsumgebungen werden immer die neuesten Patche
 eingespielt, das ist so gewünscht und wird gemacht. :) Das Problem ist
 auf den Test- und Produktivumgebungen. Es gibt bei uns die Anforderung,
