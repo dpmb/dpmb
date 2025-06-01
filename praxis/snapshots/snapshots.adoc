@@ -53,13 +53,21 @@ sich hierür bspw. die Werkzeuge `rsync` oder Puppet <<Puppet>>.
 
 ==== Variante 2: Package Freeze mit Debian Snapshots ====
 
-* Variante 2: eine Art 'Package Freeze'. Das Datum, bis zu dem noch
-Aktualisierungen von Paketen einfließen können, wird festgelegt. Das Zauberwort
-heißt http://snapshot.debian.org/ <<Debian-Snapshots>>. In der
-`/etc/apt/sources.list` stehen dann Einträge der Form:
+// Stichworte für den Index
+(((Paket, datumsbezogen aktualisieren)))
+(((Paket, datumsbezogen einspielen)))
+(((Paket, datumsbezogen installieren)))
+(((Debian Snapshots)))
+Dieser Weg entspricht einer Art 'Package Freeze', sprich: einem Einfrieren
+des Paketstatus. Debian GNU/Linux nennt dieses Konzept 'Debian Snapshots' 
+<<Debian-Snapshots>>. Sie spezifizieren hier einen Zeitpunkt als 
+Obergrenze, bis zu dem Sie noch Aktualisierungen von Paketen akzepktieren. 
+Über spezielle Einträge legen Sie das in der Datei `/etc/apt/sources.list` 
+fest. Nachfolgendes Beispiel legt die Grenze auf den 25. Mai 2025, 12h00 für
+die Veröffentlichung 'bookworm/main'.
 
 ----
-deb http://snapshot.debian.org/archive/20091004T111800Z/debian lenny main
+deb http://snapshot.debian.org/archive/20250515T120000Z/debian bookworm main
 ----
 
 ** zwei mögliche Zeitangaben:
