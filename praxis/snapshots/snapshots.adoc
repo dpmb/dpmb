@@ -37,17 +37,17 @@ Paketaktualisierungen bis zum Freigabezeitpunkt erfolgen. Nachfolgende
 Aktualisierungen durchlaufen den gleichen Kreislauf, so dass stets 
 sichergestellt ist, dass das Produktivsystem getestet ist.
 
-Gedanken zur Antwort:
+* Gedanken zur Antwort:
 
-* Problem tritt sehr häufig auf, bspw. in der Entwicklung. Ein Softwarestand
+** Problem tritt sehr häufig auf, bspw. in der Entwicklung. Ein Softwarestand
 wird zusammengestellt, ausführlich getestet und -- falls alles gutgeht und
 freigegeben wurde -- auf dem Produktivsystem ausgerollt.
 
-* Variante 1 zur Lösung: Zustand des Testsystems mit allen Paketen und den
+** Variante 1 zur Lösung: Zustand des Testsystems mit allen Paketen und den
 Konfigurationsdateien wird gesichert/gemerkt, bspw. über eine Paketliste oder
 über Puppet, `rsync` o.ä.
 
-* Variante 2: eine Art 'Package Freeze'. Das Datum, bis zu dem noch
+** Variante 2: eine Art 'Package Freeze'. Das Datum, bis zu dem noch
 Aktualisierungen von Paketen einfließen können, wird festgelegt. Das Zauberwort
 heißt http://snapshot.debian.org/ <<Debian-Snapshots>>. In der
 `/etc/apt/sources.list` stehen dann Einträge der Form:
@@ -56,17 +56,17 @@ heißt http://snapshot.debian.org/ <<Debian-Snapshots>>. In der
 deb http://snapshot.debian.org/archive/20091004T111800Z/debian lenny main
 ----
 
-zwei mögliche Zeitangaben:
+** zwei mögliche Zeitangaben:
 
-exakter Zeitstempel :: Der Zeitstring `20091004T121501Z` folgt der Form 
+** exakter Zeitstempel :: Der Zeitstring `20091004T121501Z` folgt der Form 
 `yyyymmddThhmmssZ` oder vereinfacht `yyyymmdd`. Steht für ein angegebenes 
 Datum kein Snapshot bereit, wird der zeitlich entsprechend vorherige 
 ausgewählt.
 
-// wofür steht das `Z` in `yyyymmddThhmmssZ` ? Für Zeitzone? Falls ja, welche
-// anderen Buchstaben gehen noch?
+*** wofür steht das `Z` in `yyyymmddThhmmssZ` ? Für Zeitzone? Falls ja, 
+welche anderen Buchstaben gehen noch?
 
-relativer Zeitstempel:: Angabe des Zeitstempels als ein Wert, den das 
+** relativer Zeitstempel:: Angabe des Zeitstempels als ein Wert, den das 
 `date`-Kommando verarbeiten kann, bspw `yesterday` (für gestern), `2-days-ago`
 (für: zwei Tage alt) oder `last-week` (für letzte Woche)
 
