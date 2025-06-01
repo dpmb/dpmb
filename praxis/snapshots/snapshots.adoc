@@ -5,10 +5,14 @@
 [[pakete-und-patche-datumsbezogen-auswaehlen]]
 == Pakete und Patche datumsbezogen auswählen ==
 
-* bisher im Buch besprochen: 
-** Pakete mit `apt install` 'Paketname' oder `apt upgrade` 'Paketname' 
-   aktualisieren: spielt neue Version des Pakets ein, unabhängig, seit 
-   wann diese Version bereitsteht
+Bisher haben wir im Buch nur besprochen, wie Sie bereits installierte 
+Pakete bspw. mit `apt-get install` 'Paketname' oder `apt-get upgrade` 
+'Paketname' auf den neuesten Stand bringen (siehe 'Pakete aktualisieren' 
+unter <<pakete-aktualisieren>> auch mit den Angaben zu Apt und Aptitude). 
+Diese Schritte spielen stets die zuletzt vom Paketmirror verfügbare 
+Version des Pakets ein, unabhängig davon, seit wann diese Version oder 
+Aktualisierung bereitsteht.
+
 ** 'Frage:' Ist es möglich, eine Aktualisierung bis zu einem bestimmten 
    Datum einzuspielen?
 ** 'Problem:' Wir haben hier Entwicklungs-, Test- und Produktivumgebungen.
