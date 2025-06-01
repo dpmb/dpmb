@@ -1,4 +1,4 @@
-// Datei: ./praxis/snapshots.adoc
+// Datei: ./praxis/snapshots/snapshots.adoc
 
 // Baustelle: Rohtext
 
@@ -59,4 +59,4 @@ deb http://snapshot.debian.org/archive/date/2-days-ago/debian bookworm main
 deb http://snapshot.debian.org/archive/date/last-week/debian bookworm main
 ----
 
-// Datei (Ende): ./praxis/snapshots.adoc
+// Datei (Ende): ./praxis/snapshots/snapshots.adoc

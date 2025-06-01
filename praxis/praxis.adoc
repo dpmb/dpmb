@@ -106,7 +106,7 @@ include::qualitaetskontrolle/qualitaetskontrolle.adoc[]
 include::versionierte-paketverwaltung.adoc[]
 
 // - Schnappschüsse einer Installation
-include::snapshots.adoc[]
+include::snapshots/snapshots.adoc[]
 
 // == Paketverwaltung mit eingeschränkten Ressourcen für Embedded und Mobile Devices ==
 
