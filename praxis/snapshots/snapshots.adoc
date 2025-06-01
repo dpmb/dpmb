@@ -5,6 +5,11 @@
 [[pakete-und-patche-datumsbezogen-auswaehlen]]
 == Pakete und Patche datumsbezogen auswählen ==
 
+// Stichworte für den Index
+(((Paket, ausgewählte Version installieren)))
+(((Paket, datumsbezogen aktualisieren)))
+(((Paket, datumsbezogen einspielen)))
+(((Paket, datumsbezogen installieren)))
 Bisher haben wir im Buch nur besprochen, wie Sie bereits installierte 
 Pakete bspw. mit `apt-get install` 'Paketname' oder `apt-get upgrade` 
 'Paketname' auf den neuesten Stand bringen (siehe 'Pakete aktualisieren' 
@@ -13,19 +18,24 @@ Diese Schritte spielen stets die zuletzt vom Paketmirror verfügbare
 Version des Pakets ein, unabhängig davon, seit wann diese Version oder 
 Aktualisierung bereitsteht.
 
-** 'Frage:' Ist es möglich, eine Aktualisierung bis zu einem bestimmten 
-   Datum einzuspielen?
-** 'Problem:' Wir haben hier Entwicklungs-, Test- und Produktivumgebungen.
-Auf den Entwicklungsumgebungen werden immer die neuesten Patche
-eingespielt, das ist so gewünscht und wird gemacht. :) Das Problem ist
-auf den Test- und Produktivumgebungen. Es gibt bei uns die Anforderung,
-das wir Patche erst auf der Testumgebung installieren und testen und
-erst nach Freigabe der Patche auf der Produktivumgebung einspielen
-dürfen. Hier vergehen häufig 2-3 Wochen. Ich müsste also quasi heute auf
-der Testumgebung sagen, Patche einspielen und in 3 Wochen dann auf der
-Produktivumgebung, Patche bis zum 25.03.2013 15:36 einspielen. Alle
-neueren Patche müssten jetzt erst wieder auf die Testumgebung gespielt
-werden und neu freigegeben werden.
+Ebenfalls erlauben Apt und Aptitude, eine gewünschte Version zum Paket 
+mittels `apt-get install` 'paketname=version' anzugeben -- dann wird nur 
+die genannte Version installiert. 
+
+Offen ist die Frage, ob es möglich ist, eine Aktualisierung eines oder
+mehrerer Pakete bis zu einem bestimmten Bereitstellungsdatum einzuspielen.
+Selten ist diese Situation nicht, da für ein Projekt oder einen Server 
+üblicherweise Entwicklungs-, Test- und Produktivumgebungen bestehen. 
+Während die Entwicklungsumgebungen stets auf dem aktuellsten Stand sind, 
+trifft das eher nicht auf Test- und Produktivumgebungen zu. Diese werden 
+erst auf der Testumgebung installiert und dort getestet und erst nach 
+einer Freigabe auf der Produktivumgebung eingespielt. Nicht unüblich ist, 
+dass zwischen dem Vorbereiten der Testumgebung und deren Freigabe 
+(Übertragung in das Produktivsystem) mehrere Tage oder Wochen vergehen. 
+Um die Produktivumgebung auf den Freigabestand zu heben, müssten 
+Paketaktualisierungen bis zum Freigabezeitpunkt erfolgen. Nachfolgende
+Aktualisierungen durchlaufen den gleichen Kreislauf, so dass stets 
+sichergestellt ist, dass das Produktivsystem getestet ist.
 
 Gedanken zur Antwort:
 
