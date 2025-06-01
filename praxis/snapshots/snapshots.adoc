@@ -90,4 +90,8 @@ deb http://snapshot.debian.org/archive/date/2-days-ago/debian bookworm main
 deb http://snapshot.debian.org/archive/date/last-week/debian bookworm main
 ----
 
+Nach aktuellem Informationsstand wird alle 6 Stunden ein Snapshot erzeugt.
+Der Snapshot-Server selbst hält momentan beeindruckende 172 TB an Daten 
+vor.
+
 // Datei (Ende): ./praxis/snapshots/snapshots.adoc
