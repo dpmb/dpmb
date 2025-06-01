@@ -57,7 +57,8 @@ sich hierür bspw. die Werkzeuge `rsync` oder Puppet <<Puppet>>.
 (((Paket, datumsbezogen aktualisieren)))
 (((Paket, datumsbezogen einspielen)))
 (((Paket, datumsbezogen installieren)))
-(((Debian Snapshots)))
+(((Debian Snapshots, Projektinfo)))
+(((Debian Snapshots, Zeitangaben)))
 Dieser Weg entspricht einer Art 'Package Freeze', sprich: einem Einfrieren
 des Paketstatus. Debian GNU/Linux nennt dieses Konzept 'Debian Snapshots' 
 <<Debian-Snapshots>>. Sie spezifizieren hier einen Zeitpunkt als 
@@ -70,7 +71,7 @@ die Veröffentlichung 'bookworm/main'.
 deb http://snapshot.debian.org/archive/20250515T120000Z/debian bookworm main
 ----
 
-Debian Snapshots gestattet zwei mögliche Zeitangaben:
+Debian Snapshots gestattet zwei Formate für mögliche Zeitangaben:
 
 exakter Zeitstempel :: Der Zeitstring `20250525` folgt der Zeitangabe aus 
 Jahr, Monat und Tag und in erweiterter Form noch mit Stunde, Minute und 
@@ -83,7 +84,7 @@ relativer Zeitstempel :: Angabe des Zeitstempels als ein Wert, den das
 `2-days-ago` (für 'vor zwei Tagen') oder `last-week` (für 'letzte Woche'). 
 Das ist hilfreich, wenn Sie den relativen Zeitraum angeben können, nachdem 
 eine Synchonisation stattfinden soll.
-~
+
 ----
 deb http://snapshot.debian.org/archive/date/yesterday/debian bookworm main
 deb http://snapshot.debian.org/archive/date/2-days-ago/debian bookworm main
