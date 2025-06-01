@@ -5,6 +5,8 @@
 [[pakete-und-patche-datumsbezogen-auswaehlen]]
 == Pakete und Patche datumsbezogen auswählen ==
 
+=== Ausgangssituation ===
+
 // Stichworte für den Index
 (((Paket, datumsbezogen aktualisieren)))
 (((Paket, datumsbezogen einspielen)))
@@ -40,13 +42,17 @@ Aktualisierungen durchlaufen den gleichen Kreislauf, so dass stets
 sichergestellt ist, dass sich das Produktivsystem nicht in einem 
 ungetesteten Zustand befindet.
 
-* Gedanken zur Antwort:
+=== Lösungswege ===
 
-** Variante 1 zur Lösung: Zustand des Testsystems mit allen Paketen und den
+==== Variante 1: Systemkopie oder Wiederherstellpunkt ====
+
+* Variante 1 zur Lösung: Zustand des Testsystems mit allen Paketen und den
 Konfigurationsdateien wird gesichert/gemerkt, bspw. über eine Paketliste oder
 über Puppet, `rsync` o.ä.
 
-** Variante 2: eine Art 'Package Freeze'. Das Datum, bis zu dem noch
+==== Variante 2: Package Freeze mit Debian Snapshots ====
+
+* Variante 2: eine Art 'Package Freeze'. Das Datum, bis zu dem noch
 Aktualisierungen von Paketen einfließen können, wird festgelegt. Das Zauberwort
 heißt http://snapshot.debian.org/ <<Debian-Snapshots>>. In der
 `/etc/apt/sources.list` stehen dann Einträge der Form:
