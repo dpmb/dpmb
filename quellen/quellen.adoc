@@ -906,6 +906,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[proxyArch]]] Proxy-Einstellungen im Wiki zu Arch Linux, https://wiki.archlinux.org/index.php/Proxy_settings
 
+- [[[Puppet]]] Puppet, https://www.puppet.com/
+
 - [[[PureOS]]] PureOS, https://www.pureos.net/
 
 - [[[Purism]]] Purism, https://puri.sm/

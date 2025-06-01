@@ -46,9 +46,10 @@ ungetesteten Zustand befindet.
 
 ==== Variante 1: Systemkopie oder Wiederherstellpunkt ====
 
-* Variante 1 zur Lösung: Zustand des Testsystems mit allen Paketen und den
-Konfigurationsdateien wird gesichert/gemerkt, bspw. über eine Paketliste oder
-über Puppet, `rsync` o.ä.
+Bei dieser Variante merken Sie sich den Zustand des Testsystems mit allen 
+Paketen und den dazugehörigen Konfigurationsdateien. Sie erstellen eine Art
+Sicherungspunkt mit den Beschreibungsdateien dazu. Als Werkzeuge eignen 
+sich hierür bspw. die Werkzeuge `rsync` oder Puppet <<Puppet>>.
 
 ==== Variante 2: Package Freeze mit Debian Snapshots ====
 
