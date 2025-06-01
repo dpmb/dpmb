@@ -6,7 +6,6 @@
 == Pakete und Patche datumsbezogen auswählen ==
 
 // Stichworte für den Index
-(((Paket, ausgewählte Version installieren)))
 (((Paket, datumsbezogen aktualisieren)))
 (((Paket, datumsbezogen einspielen)))
 (((Paket, datumsbezogen installieren)))
@@ -18,9 +17,12 @@ Aptitude). Diese Schritte spielen stets die zuletzt vom Paketmirror
 verfügbare Version des Pakets ein, unabhängig davon, seit wann diese 
 Version oder Aktualisierung tatsächlich bereitsteht.
 
+// Stichworte für den Index
+(((Paket, ausgewählte Version installieren)))
 Ebenfalls erlauben Apt und Aptitude, eine gewünschte Version zum Paket 
 mittels `apt-get install` 'paketname=version' anzugeben -- dann wird nur 
-die genannte Version installiert. 
+die genannte Version installiert. Die Versionsangabe sagt selten etwas
+darüber aus, wann die Version verfügbar war.
 
 Offen ist die Frage, ob es möglich ist, eine Aktualisierung eines oder
 mehrerer Pakete bis zu einem bestimmten Bereitstellungsdatum einzuspielen.
@@ -33,15 +35,12 @@ einer Freigabe auf der Produktivumgebung eingespielt. Nicht unüblich ist,
 dass zwischen dem Vorbereiten der Testumgebung und deren Freigabe 
 (Übertragung in das Produktivsystem) mehrere Tage oder Wochen vergehen. 
 Um die Produktivumgebung auf den Freigabestand zu heben, müssten 
-Paketaktualisierungen bis zum Freigabezeitpunkt erfolgen. Nachfolgende
+Paketaktualisierungen bis zum Freigabezeitpunkt erfolgen. Darausfolgende
 Aktualisierungen durchlaufen den gleichen Kreislauf, so dass stets 
-sichergestellt ist, dass das Produktivsystem getestet ist.
+sichergestellt ist, dass sich das Produktivsystem nicht in einem 
+ungetesteten Zustand befindet.
 
 * Gedanken zur Antwort:
-
-** Problem tritt sehr häufig auf, bspw. in der Entwicklung. Ein Softwarestand
-wird zusammengestellt, ausführlich getestet und -- falls alles gutgeht und
-freigegeben wurde -- auf dem Produktivsystem ausgerollt.
 
 ** Variante 1 zur Lösung: Zustand des Testsystems mit allen Paketen und den
 Konfigurationsdateien wird gesichert/gemerkt, bspw. über eine Paketliste oder
