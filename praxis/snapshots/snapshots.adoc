@@ -13,10 +13,10 @@
 Bisher haben wir im Buch nur besprochen, wie Sie bereits installierte 
 Pakete bspw. mit `apt-get install` 'Paketname' oder `apt-get upgrade` 
 'Paketname' auf den neuesten Stand bringen (siehe 'Pakete aktualisieren' 
-unter <<pakete-aktualisieren>> auch mit den Angaben zu Apt und Aptitude). 
-Diese Schritte spielen stets die zuletzt vom Paketmirror verfügbare 
-Version des Pakets ein, unabhängig davon, seit wann diese Version oder 
-Aktualisierung bereitsteht.
+unter <<pakete-aktualisieren>> -- auch mit den Angaben zu Apt und 
+Aptitude). Diese Schritte spielen stets die zuletzt vom Paketmirror 
+verfügbare Version des Pakets ein, unabhängig davon, seit wann diese 
+Version oder Aktualisierung tatsächlich bereitsteht.
 
 Ebenfalls erlauben Apt und Aptitude, eine gewünschte Version zum Paket 
 mittels `apt-get install` 'paketname=version' anzugeben -- dann wird nur 
