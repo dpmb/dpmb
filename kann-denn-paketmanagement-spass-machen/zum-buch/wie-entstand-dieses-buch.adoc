@@ -256,6 +256,7 @@ Savines-le-Lac (Hautes Alpes, Frankreich),
 Insel Sokn (bei Stavanger, Norwegen),
 Tübingen,
 Tvinnefossen (Norwegen),
+Wuppertal,
 Zernez (Engadin, Schweiz) und
 Zürich
 (siehe <<fig.buchkarte>>). Orange Kreise mit rotem Rand markieren Axels 
