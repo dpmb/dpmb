@@ -33,8 +33,8 @@ für diesen Schritt und die Wartung ihres Systems etwas mehr Zeit ein.
 Im Alltag sind häufig für mehrere Pakete gleichzeitig Aktualisierungen
 verfügbar. Sowohl APT, als auch `aptitude` gestatten es Ihnen daher, nur
 die Pakete zu erneuern, die Sie wünschen. Stets werden dabei die
-Paketabhängigkeiten berücksichtigt und nur die Softwarepakete mit
-einbezogen, die es betrifft.
+Paketabhängigkeiten berücksichtigt und nur diejenigen Softwarepakete mit
+einbezogen, die es tatsächlich betrifft. 
 
 ==== Auf der Kommandozeile ====
 
@@ -47,9 +47,10 @@ einbezogen, die es betrifft.
 (((Paket, aktualisieren)))
 (((Paket, Einzelpaket aktualisieren)))
 Hier verstehen `apt-get`, APT und `aptitude` die beiden Unterkommandos
-`upgrade` und `dist-upgrade`, jeweils gefolgt von einer Liste von
-Paketnamen. Ältere Versionen von APT können nicht damit umgehen und 
-ignorieren diese Liste.
+`upgrade` und `dist-upgrade`, jeweils entweder gefolgt vom Namen eines 
+einzelnen Paketes oder einer Liste von Paketnamen. Hierbei fungiert ein 
+Leerzeichen als Trennung zwischen den Paketnamen. Ältere Versionen von APT 
+können nicht damit umgehen und ignorieren in diesem Fall diese Liste.
 
 .Beispiel für Einzelaktualisierung von LibreOffice Calc und 'python3-uno' mit `aptitude upgrade`
 ----
