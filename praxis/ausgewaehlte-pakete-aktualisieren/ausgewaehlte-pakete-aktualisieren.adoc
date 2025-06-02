@@ -91,11 +91,11 @@ Möchten Sie fortsetzen? [Y/n/?]
 // Stichworte für den Index
 (((aptitude, full-upgrade)))
 (((aptitude, safe-upgrade)))
-`aptitude` mit seinen Unterkommandos `safe-upgrade` und `full-upgrade`
-nimmt hingegen schon länger Parameter entgegen. Dabei sind nicht nur
-Paketnamen, sondern auch Suchausdrücke möglich. Bspw. erneuert der
-Aufruf `aptitude full-upgrade '?section(libs)'` alle aktualisierbaren
-Pakete aus der Kategorie 'libs' (Bibliotheken).
+`aptitude` mit seinen beiden Unterkommandos `safe-upgrade` und 
+`full-upgrade` nimmt hingegen schon länger Parameter entgegen. Dabei sind 
+nicht nur Paketnamen, sondern auch spezielle Suchausdrücke möglich. Bspw. 
+erneuert der Aufruf `aptitude full-upgrade '?section(libs)'` alle 
+aktualisierbaren Pakete aus der Kategorie 'libs' (Bibliotheken).
 
 .Beispiel für Einzelaktualisierung mit `aptitude safe-upgrade`
 ----
