@@ -112,11 +112,24 @@ Möchten Sie fortsetzen? [Y/n/?]
 
 ==== Über die Textoberfläche von `aptitude` ====
 
-* Zweig/Kategorie menu:Sicherheitsaktualisierungen[]
-** Paket markieren mit kbd:[+]
-** Paketvorschau mit kbd:[g]
-** Paketaktualisierung mit kbd:[g]
-* ToDo: da muss aber noch mehr sein ....
+Was über die Kommandozeile geht, gelingt natürlich auch über die 
+Textoberfläche von Aptitude mit erstaunlich wenigen Tastendrücken-- es ist 
+nur nicht so offensichtlich. Nachfolgend zeigen wir die einzelnen Schritte 
+anhand des Pakets 'yelp-xsl' aus dem Zweig bzw. der Kategorie 
+menu:Sicherheitsaktualisierungen[], Ebene 'Gnome/main'. 
+
+Zunächst markieren Sie das gewünschte Paket über die Taste kbd:[+] -- das 
+Paket wird nun mit hellblauer Schrift eingefärbt. In Schritt 2 erhalten Sie 
+über die Taste kbd:[g] eine Paketvorschau mit dem markierten Paket und 
+allen weiteren Paketen, die zu diesem als Abhängigkeiten bestehen (siehe 
+<<fig.aptitude-paketauswahl>>). Der abschließende Schritt ist das 
+wiederholte Drücken der Taste kbd:[g], um die Paketaktualisierung nun 
+endgültig auszulösen.
+
+// ToDo: da muss aber noch mehr sein ....
+
+.Einzelne Pakete über die Textoberfläche von Aptitude aktualisieren
+image::praxis/ausgewaehlte-pakete-aktualisieren/aptitude-paketauswahl.png[id="fig.aptitude-paketauswahl", width="50%"]
 
 ==== Durchführung bei *Synaptic* ====
 * siehe <<gui-synaptic>>
