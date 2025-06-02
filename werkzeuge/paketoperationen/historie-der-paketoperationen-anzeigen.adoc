@@ -51,10 +51,10 @@ auszuwerten, oder in der Historie ihrer Shell zu graben, bspw. wie folgt:
 
 .In der Historie der Shell stöbern
 ----
-$ history | grep apt
+# history | grep apt
  1944  apt-get changelog xpdf
  1945  aptitude changelog xpdf
-$
+#
 ----
 
 // Datei (Ende): ./werkzeuge/paketoperationen/historie-der-paketoperationen-anzeigen.adoc
