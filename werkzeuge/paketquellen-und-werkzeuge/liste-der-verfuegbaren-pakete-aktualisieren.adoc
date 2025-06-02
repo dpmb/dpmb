@@ -136,15 +136,25 @@ Paketlisten werden gelesen... Fertig
 
 // Stichworte für den Index
 (((apt, list --upgradable)))
+(((nala, list --upgradable)))
 Neuere Versionen ergänzen die Ausgabe um zusätzliche Zeilen und teilen
-Ihnen darüber mit, ob und wieviele aktualisierbare Pakete vorliegen.
-Nachfolgend sehen Sie in <<fig.apt-update-aktualisierbare-pakete>>, dass
-für zwölf Pakete neue Varianten bereitstehen. Um welche Pakete es sich
-konkret handelt, listen Sie mit Hilfe des Kommandos `apt list
+Ihnen darüber hinaus mit, ob und wieviele aktualisierbare Pakete vorliegen.
+Nachfolgend sehen Sie in <<fig.apt-update-aktualisierbare-pakete>> mit 
+Hilfe von Apt, dass für zwölf Pakete neue Varianten bereitstehen. Um welche 
+Pakete es sich konkret handelt, listen Sie mit Hilfe des Kommandos `apt list
 --upgradable` auf (siehe <<aktualisierbare-pakete-anzeigen>>).
 
-.Auflistung der aktualisierbaren Pakete
+Eine kompaktere Ausgabe des Aktualisierungsvorgangs liefert Ihnen Nala. In
+<<fig.nala-update-aktualisierbare-pakete>> sehen Sie, dass keine Änderungen
+für die Hauptquelle besteht, jedoch Sicherheitsaktualisierungen verfügbar 
+sind. Abschließend teilt Ihnen Nala mit, dass 51 Pakete zur Aktualisierung
+des Paketbestands bereitstehen.
+
+.Auflistung der aktualisierbaren Pakete mit Apt
 image::werkzeuge/paketquellen-und-werkzeuge/apt-update-aktualisierbare-pakete.png[id="fig.apt-update-aktualisierbare-pakete", width="50%"]
+
+.Auflistung der aktualisierbaren Pakete mit Nala
+image::werkzeuge/paketquellen-und-werkzeuge/paketliste-aktualisieren-nala.png[id="fig.nala-update-aktualisierbare-pakete", width="50%"]
 
 // Stichworte für den Index
 (((Debianpaket, daptup)))
