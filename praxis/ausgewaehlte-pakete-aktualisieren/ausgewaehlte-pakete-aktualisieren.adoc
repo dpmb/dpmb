@@ -71,9 +71,20 @@ Möchten Sie fortsetzen? [Y/n/?]
 Ist ein Paket bereits installiert und Sie führen erneut das Kommando
 `aptitude install` 'Paketname' aus, wird es nach Möglichkeit durch eine
 neuere Version ersetzt. Es entspricht in diesem Fall dem Aufruf
-`aptitude upgrade` 'Paketname'.
+`aptitude upgrade` 'Paketname'. Nachfolgend sehen Sie das anhand des
+Pakets 'yelp' für den Hilfebrowser aus dem GNOME-Projekt:
 
-//ToDo: Beispiel
+----
+# aptitude install yelp
+Die folgenden Pakete werden aktualisiert:           
+  libyelp0 yelp 
+2 Pakete aktualisiert, 0 zusätzlich installiert, 0 werden entfernt und 59 nicht aktualisiert.
+938 kB an Archiven müssen heruntergeladen werden. Nach dem Entpacken werden 18,4 kB frei werden.
+Möchten Sie fortsetzen? [Y/n/?]
+...
+#
+----
+
 ====
 
 // Stichworte für den Index
