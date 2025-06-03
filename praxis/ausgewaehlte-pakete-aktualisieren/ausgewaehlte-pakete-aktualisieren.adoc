@@ -150,8 +150,8 @@ Mit einem Rechtsklick auf einen Eintrag des Pakets in der Paketliste
 öffnet sich ein Untermenü. Daraus wählen Sie den Menüpunkt 
 menu:Zum Aktualisieren vormerken[] (siehe auch <<fig.synaptic-paketauswahl>>)
 aus. Abschließend wenden Sie die Vormerkungen an, entweder über den Knopf 
-menu:Anwenden[] oder den Menüpunkt menu:Bearbeiten[Vorgemerkte Änderungen 
-anwenden][].
+menu:Anwenden[] oder den Menüpunkt 
+menu:Bearbeiten[Vorgemerkte Änderungen anwenden][].
 
 .Einzelne Pakete über die Bedienoberfläche von Synaptic aktualisieren
 image::praxis/ausgewaehlte-pakete-aktualisieren/synaptic-paketauswahl.png[id="fig.synaptic-paketauswahl", width="50%"]
@@ -161,6 +161,7 @@ image::praxis/ausgewaehlte-pakete-aktualisieren/synaptic-paketauswahl.png[id="fi
 // Stichworte für den Index
 (((apt-cache, depends)))
 (((apt-get, install -t)))
+(((Paket, Aktualisierung mit Wechsel der Veröffentlichung)))
 
 'Frage/Problem:' Ich möchte alle Abhängigkeiten von 'kdegames' von
 'unstable' auf 'experimental' heben (da es noch kein neues
