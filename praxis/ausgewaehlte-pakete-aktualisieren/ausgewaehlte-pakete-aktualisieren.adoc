@@ -137,7 +137,7 @@ image::praxis/ausgewaehlte-pakete-aktualisieren/aptitude-paketauswahl.png[id="fi
 (((Paket, aktualisieren)))
 (((Paket, Einzelpaket aktualisieren (Synaptic))))
 
-Das graphische Werkzeug Synaptic (siehe <<gui-synaptic>>) erlaubt ebenfall
+Das graphische Werkzeug Synaptic (siehe <<gui-synaptic>>) erlaubt ebenfalls
 die paketspezifische Aktualisierung. Die Vormerkung eines Paketes erfolgt
 in diesen Schritten:
 
