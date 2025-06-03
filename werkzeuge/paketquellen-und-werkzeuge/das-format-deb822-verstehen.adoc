@@ -1,6 +1,6 @@
 // Datei: ./werkzeuge/paketquellen-und-werkzeuge/das-format-deb822-verstehen.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[deb822-verstehen]]
 
@@ -8,17 +8,24 @@
 
 ==== Überblick ====
 
-* neues Format der Paketliste, welches das bisherige ablösen wird
-* vorraussichtliche Einführung bei ab Debian 13 'Trixie'
-* Formatname: deb822
-** abgeleitet von RFC 822 <<RFC822>>: legt Erweiterungen von Email/MIME fest <<MIME>>
-* Seit 2015 wird dieses Format bereits von APT 1.1 unterstützt, wurde aber bislang 
-   bei Debian GNU/Linux 11 und 12 nicht primär verwendet. 
-* Prioritätenwechsel betrifft nun auch andere, abgeleitete Linux-Distributionen
-   wie Linux Mint oder Raspberry Pi OS. Ubuntu benutzt das Format bereits seit der 
-   Version 24.04
-* Bedingung für die Umstellung auf deb822:
-** Veröffentlichung der kommenden APT-Version 3.0
+Mit der Veröffentlichung von Debian 13 'Trixie' im Sommer 2025 zeichnet 
+sich die Anwendung des neuen Paketformats für die Paketquellen als 
+Standard ab. Es trägt die Bezeichnung Deb822 und leitet sich vom RFC 822 
+<<RFC822>> ab, der initial das Format von Emails, inbesondere der 
+Email-Kopfzeilen festgelegte <<MIME>>. Seit 2015 wird dieses Format 
+bereits von APT 1.1 unterstützt, wurde aber bislang bei Debian 11 und 12 
+nicht primär verwendet.
+
+Mit dem Prioritätenwechsel beim Original bewegt sich das Thema auch mehr 
+in den Blickwinkel von Betreuern von Debian-basierten Systemen, wird also 
+ebenso bei Nutzern von Linux Mint und Raspberry Pi OS wichtig. Ubuntu 
+Linux benutzt das Format bereits seit der Version 24.04 
+<<Deb822UbuntuWiki>>, die im April 2024 freigegeben wurde.
+
+Als Bedingung für die Umstellung auf das neue Format haben die Entwickler 
+die Veröffentlichung der kommenden APT-Version 3.0 genannt, die derzeit 
+noch nicht ganz fertig ist. Wir besprechen hier, wie Sie bestehende 
+Systeme automatisiert auf das neue Format umstellen.
 
 ==== Deb822 im Detail ====
 
