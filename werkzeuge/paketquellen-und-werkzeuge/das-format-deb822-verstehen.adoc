@@ -29,10 +29,11 @@ Systeme automatisiert auf das neue Format umstellen.
 
 ==== Deb822 im Detail ====
 
-* bisher genutztes, einzeiliges Format wird ersetzt durch ein mehrzeiliges Format
-* Schreibweise für eine Paketquelle: 
-** mehrere Schlüssel:Wert-Paare (Feldbezeichner: Wert)
-** Trennung mehrerer Paketquellen durch eine Leerzeile
+Das bestehende, kompakte, über mehrere Dateien verteilte Format wird nun 
+zugunsten eines einzelnen Blocks aus mehreren Zeilen ersetzt. Das Ziel ist 
+hierbei, alle Informationen zu einer Paketquelle an einem einzigen Ort 
+zusammenzuführen. Eingeführt werden Schlüssel-Wert-Paare, wie nachfolgend
+für den Bezug von Paketen aus der stabilen Veröffentlichung zu sehen ist.
 
 .Angabe der Paketquelle im Format Deb822
 ----
