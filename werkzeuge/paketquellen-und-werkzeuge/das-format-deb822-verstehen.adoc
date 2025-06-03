@@ -138,5 +138,18 @@ umgewandelt werden kann.
 .Die Paketliste umstellen (Hinweis)
 image::werkzeuge/paketquellen-und-werkzeuge/modernize-sources.png[id="fig.modernize-sources", width="50%"]
 
+<<fig.modernize-sources-test>> zeigt einen Testlauf dazu, nachdem Sie 
+`apt modernize-sources` aufgerufen haben. Hier sehen Sie, wie APT die 
+einzelnen Einträge in der Datei `/etc/apt/sources.list` verarbeitet und 
+diese danach Schritt für Schritt in das neue Format umwandeln würde. Am 
+Ende liegen alle neuen Einträge in der Datei 
+`/etc/apt/sources.list.d/debian.sources` vor. 
+
+.Testlauf zur Umstellung der Paketquellen auf Deb822
+image::werkzeuge/paketquellen-und-werkzeuge/modernize-sources-test.png[id="fig.modernize-sources-test", width="50%"]
+
+Die Umstellung läuft sauber durch, wenn APT alle Einträge erkennt und dazu 
+die passenden GPG-Schlüssel findet. Falls das APT nicht gelingt, müssen Sie 
+an dieser Stelle nacharbeiten und die GPG-Schlüssel händisch nachtragen.
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/das-format-deb822-verstehen.adoc
