@@ -45,17 +45,30 @@ Enabled:    yes
 Signed-By:  /usr/share/keyrings/debian-archive-keyring.gpg
 ----
 
+Genutzt wird hierbei ein Feld pro Zeile und jede Zeile beginnt mit einem 
+eindeutigen Feldbezeichner. Ein Doppelpunkt trennt den Feldbezeichner vom 
+eigentlichen Wert. Im Vergleich zum einzeiligen Format sind die beiden 
+Zeilen Enabled und Signed-By hinzugekommen, über die Sie a) die jeweilige 
+Paketquelle aktivieren bzw. deaktivieren und b) den entsprechenden 
+GPG-Schlüssel hinterlegen. Alle zulässigen Schlüsselworte samt deren 
+Bedeutung stellt <<tab.eintraege-bei-deb822>> zusammen.
+
 .Einträge bei Deb822
-----
-Schlüssel     | Erforderlich | Beschreibung
-Types         | ja           | Pakettyp -- deb oder deb-src
-URIs          | ja           | Paketquelle als URL oder auch Datei
-Suites        | ja           | Name oder Zustand der Veröffentlichung, bspw. Trixie oder stable
-Components    | nein         | Paketbereich(e), bspw. main oder nonfree-firmware
-Signed-By     | nein         | Pfad zum öffentlichen GPG-Schlüssel
-Architectures | nein         | Genutzte CPU-Architektur, bspw. amd64
-Enabled       | nein         | Aktiviert oder nicht, default: yes
-----
+[frame="topbot",options="header",cols="2,2,4",id="tab.eintraege-bei-deb822"]
+|====
+| Schlüssel     | Erforderlich | Beschreibung
+| Types         | ja           | Pakettyp -- 'deb' oder 'deb-src'
+| URIs          | ja           | Paketquelle als URL oder auch Datei
+| Suites        | ja           | Name oder Zustand der Veröffentlichung, bspw. 'Trixie' oder 'stable'
+| Components    | nein         | Paketbereich(e), bspw. 'main' oder 'nonfree-firmware'
+| Signed-By     | nein         | Pfad zum öffentlichen GPG-Schlüssel
+| Architectures | nein         | Genutzte CPU-Architektur, bspw. 'amd64'
+| Enabled       | nein         | Aktiviert oder nicht, default: 'yes'
+|====
+
+Wie bisher auch, sind Sie nicht auf eine einzige Paketquelle beschränkt. 
+Nutzen Sie unterschiedliche Paketquellen, grenzen Sie diese mit einer 
+Leerzeile voneinander ab.
 
 Mit dem neuen Format werden bislang bestehende Probleme in Bezug auf die 
 Dateilänge, Mehrfachangaben von Paketquellen und die Zuordnung der Felder
@@ -86,6 +99,13 @@ Signed-By:
  =IE0r
  -----END PGP PUBLIC KEY BLOCK-----
 ----
+
+Neben dem Format ändert sich auch der Name der Datei, in der die 
+Paketquellen hinterlegt sind. Diese nutzt nicht die mehr Endung `.list` 
+wie bisher, sondern nutzt nun die Endung `.sources`. Die bisher im Einsatz 
+befindliche, zentrale Datei `/etc/apt/sources.list` entfällt zugunsten der 
+Einträge im Verzeichnis `/etc/apt/sources.list.d/`. Ein passender 
+Dateiname für obiges Listing ist `/etc/apt/sources.list.d/debian.sources`.
 
 ==== Automatisierte Umstellung ====
 
