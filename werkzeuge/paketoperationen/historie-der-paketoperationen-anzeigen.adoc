@@ -1,6 +1,6 @@
 // Datei: ./werkzeuge/paketoperationen/historie-der-paketoperationen-anzeigen.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[historie-der-paketoperationen-anzeigen]]
 
