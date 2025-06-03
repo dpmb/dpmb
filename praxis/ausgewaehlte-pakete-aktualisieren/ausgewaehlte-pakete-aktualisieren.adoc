@@ -151,7 +151,7 @@ Mit einem Rechtsklick auf einen Eintrag des Pakets in der Paketliste
 menu:Zum Aktualisieren vormerken[] (siehe auch <<fig.synaptic-paketauswahl>>)
 aus. Abschließend wenden Sie die Vormerkungen an, entweder über den Knopf 
 menu:Anwenden[] oder den Menüpunkt 
-menu:Bearbeiten[Vorgemerkte Änderungen anwenden][].
+menu:Bearbeiten[Vorgemerkte Änderungen anwenden].
 
 .Einzelne Pakete über die Bedienoberfläche von Synaptic aktualisieren
 image::praxis/ausgewaehlte-pakete-aktualisieren/synaptic-paketauswahl.png[id="fig.synaptic-paketauswahl", width="50%"]
@@ -163,20 +163,22 @@ image::praxis/ausgewaehlte-pakete-aktualisieren/synaptic-paketauswahl.png[id="fi
 (((apt-get, install -t)))
 (((Paket, Aktualisierung mit Wechsel der Veröffentlichung)))
 
-'Frage/Problem:' Ich möchte alle Abhängigkeiten von 'kdegames' von
-'unstable' auf 'experimental' heben (da es noch kein neues
-kdegames-Metapaket gibt, das von diesen Versionen abhängt und daher
-`apt-get -t experimental kdegames` gar nix macht).
-
-Bisherige Lösung: 
+Mitunter tritt die Situation auf, alle Abhängigkeiten eines Pakets von
+einer Veröffentlichung auf eine andere anzupassen. Der erhöhte 
+Schwierigkeitsgrad besteht darin, dass noch kein neues Paket existiert,
+welches von diesen Versionen abhängt und daher der sonst übliche Aufruf
+`apt-get -t experimental` 'Paketname' nichts bewirkt. Als Zwischenlösung
+kennen wir nur eine Kombination aus `apt-get`, `apt-cache` und `awk`.
+Nachfolgend zeigen wir das anhand des Paketes 'kdegames', welches von der
+Veröffentlichung 'unstable' auf 'experimental' wechseln soll. 
 
 .Aufruf zur Auswahl
 ----
-apt-get install -t experimental $( apt-cache depends kdegames | awk '{ print$4 }' )
+# apt-get install -t experimental $( apt-cache depends kdegames | awk '{ print$4 }' )
 ----
 
-Status: 
+Diese Lösung funktioniert, erscheint uns aber recht umständlich zu sein. 
+Daher sind wir für Verbesserungsvorschläge dazu offen und freuen uns über
+ihre Kommentare dazu.
 
-* geht, ist aber umständlich
-* kann man das einfacher machen? (ist eine Art pinning für ein einzelnes Paket)
 // Datei (Ende): ./praxis/ausgewaehlte-pakete-aktualisieren/ausgewaehlte-pakete-aktualisieren.adoc
