@@ -6,6 +6,9 @@
 
 === Das Format deb822 verstehen ===
 
+// Stichworte für den Index
+(((deb822)))
+
 ==== Überblick ====
 
 Mit der Veröffentlichung von Debian 13 'Trixie' im Sommer 2025 zeichnet 
@@ -109,6 +112,31 @@ ist `/etc/apt/sources.list.d/debian.sources`.
 
 ==== Automatisierte Umstellung ====
 
-* `apt modernize-sources`
+// Stichworte für den Index
+(((apt, modernize-sources)))
+(((apt, update)))
+Nach typischer Adminmanier erfolgen Änderungen erst, wenn Sie diese auch
+verstanden haben. Sollten Sie das händisch umstellen, sind mehrere Dinge
+dabei zu beachten. Die Reihenfolge der einzelnen Felder in einer Datei 
+`.sources` ist unerheblich, aber alle erforderlichen Felder sind mit den 
+korrekten Werten anzugeben. Der <<tab.eintraege-bei-deb822>> entnehmen 
+Sie, welche davon relevant sind. 
+
+Für den Eintrag 'Signed-By' ermitteln Sie zunächst die richtigen 
+GPG-Schlüssel zum Repository, dann klappt auch alles. Wie oben genannt, 
+grenzen Sie mehrere Blöcke mit einer Leerzeile voneinander ab.
+  
+Sind Ihnen das zu viele Schritte, greifen Sie auf ein Werkzeug zur 
+Automatisierung zurück. Seit Ende Januar verfügt APT über ein praktisches 
+Unterkommando namens `modernize-sources`. Damit automatisieren Sie diesen 
+Schritt. Ob ihr APT das bereits kann, erfahren Sie nach einem beherzten 
+Aufruf von `apt update`. Wie in <<fig.modernize-sources>> zu sehen ist, 
+ergänzt APT die Ausgabe um eine zusätzliche Zeile, in dem es Sie darauf 
+hinweist, dass die Datei `/etc/apt/sources.list` in das neue Format Deb822 
+umgewandelt werden kann. 
+
+.Die Paketliste umstellen (Hinweis)
+image::werkzeuge/paketquellen-und-werkzeuge/modernize-sources.png[id="fig.modernize-sources", width="50%"]
+
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/das-format-deb822-verstehen.adoc
