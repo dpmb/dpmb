@@ -132,10 +132,25 @@ endgültig auszulösen.
 image::praxis/ausgewaehlte-pakete-aktualisieren/aptitude-paketauswahl.png[id="fig.aptitude-paketauswahl", width="50%"]
 
 ==== Durchführung bei *Synaptic* ====
-* siehe <<gui-synaptic>>
-** Auswahl der Kategorie menu:Aktualisierbar (Upstream)[]
-** Rechtsklick auf Eintrag in der Paketliste
-** Auswahl menu:Zum Aktualisieren vormerken[]
+
+// Stichworte für den Index
+(((Paket, aktualisieren)))
+(((Paket, Einzelpaket aktualisieren (Synaptic))))
+
+Das graphische Werkzeug Synaptic (siehe <<gui-synaptic>>) erlaubt ebenfall
+die paketspezifische Aktualisierung. Die Vormerkung eines Paketes erfolgt
+in diesen Schritten:
+
+* Auswahl der Kategorie menu:Status[] 
+* Auswahl der Unterkategorie menu:Installiert(aktualisierbar)[]
+* Rechtsklick auf Eintrag des Pakets in der Paketliste
+* Auswahl im Untermenü menu:Zum Aktualisieren vormerken[] (siehe auch
+  <<fig.synaptic-paketauswahl>>)
+* die Vormerkungen anwenden, entweder über den Knopf menu:Anwenden[] oder 
+  den Menüpunkt Bearbeiten - Vorgemerkte Änderungen anwenden 
+
+.Einzelne Pakete über die Bedienoberfläche von Synaptic aktualisieren
+image::praxis/ausgewaehlte-pakete-aktualisieren/synaptic-paketauswahl.png[id="fig.synaptic-paketauswahl", width="50%"]
 
 === Aktualisierung mit Wechsel der Veröffentlichung ===
 
