@@ -101,11 +101,11 @@ Signed-By:
 ----
 
 Neben dem Format ändert sich auch der Name der Datei, in der die 
-Paketquellen hinterlegt sind. Diese nutzt nicht die mehr Endung `.list` 
-wie bisher, sondern nutzt nun die Endung `.sources`. Die bisher im Einsatz 
-befindliche, zentrale Datei `/etc/apt/sources.list` entfällt zugunsten der 
-Einträge im Verzeichnis `/etc/apt/sources.list.d/`. Ein passender 
-Dateiname für obiges Listing ist `/etc/apt/sources.list.d/debian.sources`.
+Paketquellen hinterlegt sind. Wurde bis dato die Endung `.list` genutzt,
+kommt nun die Endung `.sources` in Anwendung. Die zentrale Datei 
+`/etc/apt/sources.list` entfällt zugunsten der Einträge im Verzeichnis 
+`/etc/apt/sources.list.d/`. Ein passender Dateiname für obiges Listing 
+ist `/etc/apt/sources.list.d/debian.sources`.
 
 ==== Automatisierte Umstellung ====
 
