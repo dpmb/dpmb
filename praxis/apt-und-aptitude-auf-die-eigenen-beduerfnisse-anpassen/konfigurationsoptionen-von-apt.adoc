@@ -1,13 +1,64 @@
 // Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfigurationsoptionen-von-apt.adoc
 
-// Baustelle: Rohtext
+// Baustelle: Notizen
 
 [[konfigurationsoptionen-von-apt]]
 === Konfigurationsoptionen von APT ===
 
 * Dazu verwenden Sie als Schalter `-o`, gefolgt von der Form `<Schlüssel>=<Wert>`.
-* ToDo:
-** welche Schalter gibt es denn überhaupt
-** Beispielaufruf für die Kommandozeile
+
+==== Bekannte Schalter ====
+
+* `APT::AutoRemove::RecommendsImportant`
+
+* `APT::AutoRemove::SuggestsImportant`
+
+* `APT::Get::List-Cleanup`
+
+* `APT::List-Cleanup`
+
+* `APT::Install-Recommends`
+
+* `Aptitude::Allow-Null-Upgrade`
+
+* `Aptitude::Always-Use-Safe-Resolver`
+
+* `Aptitude::Autoclean-After-Update`
+
+* `Aptitude::Auto-Fix-Broken`
+
+* `Aptitude::Auto-Install`
+
+* `Aptitude::Auto-Install-Remove-Ok`
+
+* `Aptitude::Auto-Upgrade`
+
+* `Aptitude::Clean-After-Install`
+
+* `Aptitude::CmdLine::Always-Prompt`
+
+* `Aptitude::CmdLine::Assume-Yes`
+
+* `Aptitude::CmdLine::Disable-Columns`
+
+* `Aptitude::CmdLine::Download-Only`
+
+* `Aptitude::CmdLine::Fix-Broken`
+
+* `Aptitude::CmdLine::Versions-Group-By`
+
+* `Aptitude::CmdLine::Ignore-Trust-Violations`
+
+* `Aptitude::CmdLine::Package-Display-Format`
+
+* `Aptitude::CmdLine::Package-Display-Width`
+
+* `Aptitude::CmdLine::Progress::Percent-On-Right`
+
+* `Aptitude::CmdLine::Progress::Retain-Completed`
+
+==== Beispielaufrufe für die Kommandozeile ====
+
+* Todo
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfigurationsoptionen-von-apt.adoc
