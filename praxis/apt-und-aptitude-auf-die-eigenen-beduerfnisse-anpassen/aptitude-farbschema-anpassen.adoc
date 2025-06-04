@@ -8,7 +8,7 @@
 ==== Zwischen `aptitude`-Themes wechseln ====
 // Stichworte für den Index
 (((aptitude, aptitude::Theme)))
-(((aptitude, Aussehen der Bedienoberfläche anpassen
+(((aptitude, Aussehen der Bedienoberfläche anpassen)))
 
 Das Aussehen von der `aptitude`-Bedienoberfläche hängt von drei
 Einstellungen ab -- den gewählten Farben für Vorder- und Hintergrund, 
