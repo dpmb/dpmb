@@ -103,39 +103,39 @@
 
 * `Aptitude::Get-Root-Command`
 
-* Aptitude::Ignore-Old-Tmp
+* `Aptitude::Ignore-Old-Tmp`
 
-* Aptitude::Ignore-Recommends-Important
+* `Aptitude::Ignore-Recommends-Important`
 
-* Aptitude::Keep-Recommends
+* `Aptitude::Keep-Recommends`
 
-* Aptitude::Keep-Suggests
+* `Aptitude::Keep-Suggests`
 
-* Aptitude::Keep-Unused-Pattern
+* `Aptitude::Keep-Unused-Pattern`
 
-* Aptitude::LockFile
+* `Aptitude::LockFile`
 
-* Aptitude::Localize-Log
+* `Aptitude::Localize-Log`
 
-* Aptitude::Log
+* `Aptitude::Log`
 
-* Aptitude::Logging::File
+* `Aptitude::Logging::File`
 
-* Aptitude::Logging::Levels
+* `Aptitude::Logging::Levels`
 
-* Aptitude::Parse-Description-Bullets
+* `Aptitude::Parse-Description-Bullets`
 
-* Aptitude::Pkg-Display-Limit
+* `Aptitude::Pkg-Display-Limit`
 
-* Aptitude::ProblemResolver::Allow-Break-Holds
+* `Aptitude::ProblemResolver::Allow-Break-Holds`
 
-* Aptitude::ProblemResolver::BreakHoldScore
+* `Aptitude::ProblemResolver::BreakHoldScore`
 
-* Aptitude::ProblemResolver::Break-Hold-Level
+* `Aptitude::ProblemResolver::Break-Hold-Level`
 
-* Aptitude::ProblemResolver::BrokenScore
+* `Aptitude::ProblemResolver::BrokenScore`
 
-* Aptitude::ProblemResolver::CancelRemovalScore
+* `Aptitude::ProblemResolver::CancelRemovalScore`
 
 * Aptitude::ProblemResolver::DefaultResolutionScore
 
