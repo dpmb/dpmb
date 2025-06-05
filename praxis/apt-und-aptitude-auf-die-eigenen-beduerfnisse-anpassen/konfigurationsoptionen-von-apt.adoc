@@ -57,6 +57,236 @@
 
 * `Aptitude::CmdLine::Progress::Retain-Completed`
 
+* `Aptitude::CmdLine::Request-Strictness`
+
+* `Aptitude::CmdLine::Resolver-Debug`
+
+* `Aptitude::CmdLine::Resolver-Dump`
+
+* `Aptitude::CmdLine::Resolver-Show-Steps`
+
+* `Aptitude::CmdLine::Show-Deps`
+
+* `Aptitude::CmdLine::Show-Size-Changes`
+
+* `Aptitude::CmdLine::Show-Summary`
+
+* `Aptitude::CmdLine::Show-Versions`
+
+* `Aptitude::CmdLine::Show-Why`
+
+* `Aptitude::CmdLine::Version-Display-Format`
+
+* `Aptitude::CmdLine::Versions-Show-Package-Names`
+
+* `Aptitude::Safe-Resolver::Show-Resolver-Actions`
+
+* `Aptitude::Screenshot::IncrementalLoadLimit`
+
+* `Aptitude::Screenshot::Cache-Max` 
+
+* `Aptitude::CmdLine::Simulate`
+
+* `Aptitude::CmdLine::Verbose`
+
+* `Aptitude::CmdLine::Visual-Preview`
+
+* `Aptitude::Delete-Unused`
+
+* `Aptitude::Delete-Unused-Pattern`
+
+* `Aptitude::Display-Planned-Action`
+
+* `Aptitude::Forget-New-On-Install`
+
+* `Aptitude::Forget-New-On-Update`
+
+* `Aptitude::Get-Root-Command`
+
+* Aptitude::Ignore-Old-Tmp
+
+* Aptitude::Ignore-Recommends-Important
+
+* Aptitude::Keep-Recommends
+
+* Aptitude::Keep-Suggests
+
+* Aptitude::Keep-Unused-Pattern
+
+* Aptitude::LockFile
+
+* Aptitude::Localize-Log
+
+* Aptitude::Log
+
+* Aptitude::Logging::File
+
+* Aptitude::Logging::Levels
+
+* Aptitude::Parse-Description-Bullets
+
+* Aptitude::Pkg-Display-Limit
+
+* Aptitude::ProblemResolver::Allow-Break-Holds
+
+* Aptitude::ProblemResolver::BreakHoldScore
+
+* Aptitude::ProblemResolver::Break-Hold-Level
+
+* Aptitude::ProblemResolver::BrokenScore
+
+* Aptitude::ProblemResolver::CancelRemovalScore
+
+* Aptitude::ProblemResolver::DefaultResolutionScore
+
+* Aptitude::ProblemResolver::Discard-Null-Solution
+
+* Aptitude::ProblemResolver::EssentialRemoveScore
+
+* Aptitude::ProblemResolver::Remove-Essential-Level
+
+* Aptitude::ProblemResolver::ExtraScore
+
+* Aptitude::ProblemResolver::FullReplacementScore
+
+* Aptitude::ProblemResolver::FutureHorizon
+
+* Aptitude::ProblemResolver::Hints
+
+* Aptitude::ProblemResolver::ImportantScore
+
+* Aptitude::ProblemResolver::Infinity
+
+* Aptitude::ProblemResolver::InstallScore
+
+* Aptitude::ProblemResolver::Keep-All-Level
+
+* Aptitude::ProblemResolver::KeepScore
+
+* Aptitude::ProblemResolver::NonDefaultScore
+
+* Aptitude::ProblemResolver::Non-Default-Level
+
+* Aptitude::ProblemResolver::OptionalScore
+
+* Aptitude::ProblemResolver::PreserveAutoScore
+
+* Aptitude::ProblemResolver::PreserveManualScore
+
+* Aptitude::ProblemResolver::RemoveObsoleteScore
+
+* Aptitude::ProblemResolver::RemoveScore
+
+* Aptitude::ProblemResolver::Remove-Level
+
+* Aptitude::ProblemResolver::RequiredScore
+
+* Aptitude::ProblemResolver::ResolutionScore
+
+* Aptitude::ProblemResolver::Safe-Level
+
+* Aptitude::ProblemResolver::SolutionCost
+
+* Aptitude::ProblemResolver::StandardScore
+
+* Aptitude::ProblemResolver::StepLimit
+
+* Aptitude::ProblemResolver::StepScore
+
+* Aptitude::ProblemResolver::Trace-Directory
+
+* Aptitude::ProblemResolver::Trace-File
+
+* Aptitude::ProblemResolver::UndoFullReplacementScore
+
+* Aptitude::ProblemResolver::UnfixedSoftScore
+
+* Aptitude::ProblemResolver::UpgradeScore
+
+* Aptitude::Purge-Unused
+
+* Aptitude::Recommends-Important
+
+* Aptitude::Safe-Resolver::No-New-Installs
+
+* Aptitude::Safe-Resolver::No-New-Upgrades
+
+* Aptitude::Sections::Descriptions
+
+* Aptitude::Sections::Top-Sections
+
+* Aptitude::Simulate
+
+* Aptitude::Spin-Interval
+
+* Aptitude::Suggests-Important
+
+* Aptitude::Suppress-Read-Only-Warning
+
+* Aptitude::Theme
+
+* Aptitude::Track-Dselect-State
+
+* Aptitude::UI::Advance-On-Action
+
+* Aptitude::UI::Auto-Show-Reasons
+
+* Aptitude::UI::Default-Grouping
+
+* Aptitude::UI::Default-Package-View
+
+* Aptitude::UI::Default-Preview-Grouping
+
+* Aptitude::UI::Default-Sorting
+
+* Aptitude::UI::Description-Visible-By-Default
+
+* Aptitude::UI::Exit-On-Last-Close
+
+* Aptitude::UI::Fill-Text
+
+* Aptitude::UI::Flat-View-As-First-View
+
+* Aptitude::UI::HelpBar
+
+* Aptitude::UI::Incremental-Search
+
+* Aptitude::UI::InfoAreaTabs
+
+* Aptitude::UI::Keybindings
+
+* Aptitude::UI::Menubar-Autohide
+
+* Aptitude::UI::Minibuf-Download-Bar
+
+* Aptitude::UI::Minibuf-Prompts
+
+* Aptitude::UI::New-Package-Commands
+
+* Aptitude::UI::Package-Display-Format
+
+* Aptitude::UI::Package-Header-Format
+
+* Aptitude::UI::Package-Status-Format
+
+* Aptitude::UI::Pause-After-Download
+
+* Aptitude::UI::Preview-Limit
+
+* Aptitude::UI::Prompt-On-Exit
+
+* Aptitude::UI::Styles
+
+* Aptitude::UI::ViewTabs
+
+* Aptitude::Warn-Not-Root
+
+* DebTags::Vocabulary
+
+* Dir::Aptitude::state
+
+* Quiet
+
 ==== Beispielaufrufe für die Kommandozeile ====
 
 * Todo
