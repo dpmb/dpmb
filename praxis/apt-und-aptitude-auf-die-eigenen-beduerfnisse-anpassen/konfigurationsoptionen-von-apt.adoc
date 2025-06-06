@@ -37,15 +37,17 @@ einzelnen Schalter genauer.
 
 * `Aptitude::Always-Use-Safe-Resolver`
 
-* `Aptitude::Autoclean-After-Update` :: Wenn diese Option auf `True` 
-gesetzt ist, bereinigt Aptitude alle Dateien im Paketcache nach 
-erfolgreicher Aktualisierung von Paketen (oder ähnlichen Operationen). 
-Diese Option ist ähnlich zu `Aptitude::Clean-After-Install`. Default ist 
-`False`.
+`Aptitude::Autoclean-After-Update` :: Wenn diese Option auf `True` gesetzt 
+ist, bereinigt Aptitude alle Dateien im Paketcache nach erfolgreicher 
+Aktualisierung von Paketen (oder ähnlichen Operationen). Diese Option ist 
+ähnlich zu `Aptitude::Clean-After-Install`. Default ist `False`.
 
 * `Aptitude::Auto-Fix-Broken`
 
-* `Aptitude::Auto-Install`
+`Aptitude::Auto-Install` :: Wenn diese Option auf `True` gesetzt ist, 
+versucht Aptitude, stets die Abhängigkeiten eines Pakets zu erfüllen, 
+sobald ein Paket zur Installation oder Aktualisierung markiert wurde. 
+Default ist `True`.
 
 * `Aptitude::Auto-Install-Remove-Ok`
 
