@@ -148,41 +148,41 @@ einzelnen Schalter genauer.
 
 * `Aptitude::ProblemResolver::CancelRemovalScore`
 
-* Aptitude::ProblemResolver::DefaultResolutionScore
+* `Aptitude::ProblemResolver::DefaultResolutionScore`
 
-* Aptitude::ProblemResolver::Discard-Null-Solution
+* `Aptitude::ProblemResolver::Discard-Null-Solution`
 
-* Aptitude::ProblemResolver::EssentialRemoveScore
+* `Aptitude::ProblemResolver::EssentialRemoveScore`
 
-* Aptitude::ProblemResolver::Remove-Essential-Level
+* `Aptitude::ProblemResolver::Remove-Essential-Level`
 
-* Aptitude::ProblemResolver::ExtraScore
+* `Aptitude::ProblemResolver::ExtraScore`
 
-* Aptitude::ProblemResolver::FullReplacementScore
+* `Aptitude::ProblemResolver::FullReplacementScore`
 
-* Aptitude::ProblemResolver::FutureHorizon
+* `Aptitude::ProblemResolver::FutureHorizon`
 
-* Aptitude::ProblemResolver::Hints
+* `Aptitude::ProblemResolver::Hints`
 
-* Aptitude::ProblemResolver::ImportantScore
+* `Aptitude::ProblemResolver::ImportantScore`
 
-* Aptitude::ProblemResolver::Infinity
+* `Aptitude::ProblemResolver::Infinity`
 
-* Aptitude::ProblemResolver::InstallScore
+* `Aptitude::ProblemResolver::InstallScore`
 
-* Aptitude::ProblemResolver::Keep-All-Level
+* `Aptitude::ProblemResolver::Keep-All-Level`
 
-* Aptitude::ProblemResolver::KeepScore
+* `Aptitude::ProblemResolver::KeepScore`
 
-* Aptitude::ProblemResolver::NonDefaultScore
+* `Aptitude::ProblemResolver::NonDefaultScore`
 
-* Aptitude::ProblemResolver::Non-Default-Level
+* `Aptitude::ProblemResolver::Non-Default-Level`
 
-* Aptitude::ProblemResolver::OptionalScore
+* `Aptitude::ProblemResolver::OptionalScore`
 
-* Aptitude::ProblemResolver::PreserveAutoScore
+* `Aptitude::ProblemResolver::PreserveAutoScore`
 
-* Aptitude::ProblemResolver::PreserveManualScore
+* `Aptitude::ProblemResolver::PreserveManualScore`
 
 * Aptitude::ProblemResolver::RemoveObsoleteScore
 
