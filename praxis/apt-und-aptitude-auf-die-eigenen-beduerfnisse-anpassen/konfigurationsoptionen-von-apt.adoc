@@ -5,8 +5,19 @@
 [[konfigurationsoptionen-von-apt]]
 === Konfigurationsoptionen von APT ===
 
-* Dazu verwenden Sie als Schalter `-o`, gefolgt von der Form `<Schlüssel>=<Wert>`.
+// Stichworte für den Index
+(((APT, Konfigurationsoptionen)))
+(((apt, -o)))
+(((aptitude, -o)))
+(((Aptitude, Konfigurationsoptionen)))
+Neben den festen Einstellungen über die Konfigurationsdateien für APT und 
+Aptitude (siehe <<konfigurationsdateien-von-apt>>) haben Sie jederzeit die
+Möglichkeit, Fähigkeiten der Werkzeuge über Optionen ein- und auszuschalten.
+Dazu ergänzen Sie im Aufruf den Schalter `-o`, gefolgt von einem oder 
+mehreren Paaren aus Schlüssel und Wert. Nachfolgend besprechen wir die 
+einzelnen Schalter genauer.
 
+[[konfigurationsoptionen-von-apt-schalter]]
 ==== Bekannte Schalter ====
 
 * `APT::AutoRemove::RecommendsImportant`
