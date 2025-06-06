@@ -18,7 +18,7 @@ mehreren Paaren aus Schlüssel und Wert. Nachfolgend besprechen wir die
 einzelnen Schalter genauer.
 
 [[konfigurationsoptionen-von-apt-schalter]]
-==== Bekannte Schalter ====
+==== Schalter von Apt ====
 
 * `APT::AutoRemove::RecommendsImportant`
 
@@ -29,6 +29,9 @@ einzelnen Schalter genauer.
 * `APT::List-Cleanup`
 
 * `APT::Install-Recommends`
+
+[[konfigurationsoptionen-von-aptitude-schalter]]
+==== Schalter von Aptitude ====
 
 * `Aptitude::Allow-Null-Upgrade`
 
