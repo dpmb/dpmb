@@ -84,9 +84,24 @@ gehen wir darauf in <<fremdformate-mit-alien-hinzufuegen>> ein.
 [[fremdpakete-nutzen-aufnahme-als-offizielles-paket]]
 === Aufnahme des Pakets in die Liste der offiziellen Debianpakete ===
 
-* was soll ich tun, dass das endlich in Debian als offizielles Paket
-  verfügbar wird?
-** einen Request for Package (RFP) <<Debian-RFP>> stellen, bspw. via 
-   `reportbug`
+// Stichworte für den Index
+(((Paket in den offiziellen Paketbestand aufnehmen)))
+(((Debian, Request for Package)))
+(((Debianpaket, reportbug)))
+(((RFP)))
+(((reportbug)))
+Was soll ich tun, dass das von mir genutzte Paket endlich in Debian als 
+offizielles Paket verfügbar wird? Wir sehen zwei Möglichkeiten zur 
+Lösung:
+
+* das Debian-Projekt lebt von der Mitwirkung vieler Menschen. Paketieren
+  Sie das Paket selbst, sofern Sie diese Schritte beherrschen. 
+
+* stellen Sie einen Request for Package (RFP) <<Debian-RFP>>, bspw. mit
+  Hilfe des Werkzeugs `reportbug` <<Debian-Paket-reportbug>>.
+
+Ein Paket geht mitunter einen recht langen Weg, bevor es den oben 
+genannten Status erreicht. Der Status ist somit als Auszeichnung und 
+Qualitätsmerkmal einzustufen. 
 
 // Datei (Ende): ./praxis/fremdpakete-nutzen/fremdpakete-nutzen.adoc
