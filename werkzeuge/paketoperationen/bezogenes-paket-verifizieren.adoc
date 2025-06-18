@@ -90,6 +90,8 @@ von Veröffentlichungssignaturen.
 ==== Nur ein Einzelpaket prüfen ====
 
 * `apt-key` (siehe <<Debian-Wiki-SecureApt>>)
+* `gpgv`
+* `sqv` (ab Debian 13 'Trixie')
 * empfohlene Vorgehensweise zur Validierung
 ** ToDo
 * was passiert, wenn das Paket keinen gültigen GPG-Key hat
