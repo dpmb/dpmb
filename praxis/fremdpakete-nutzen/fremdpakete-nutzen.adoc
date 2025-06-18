@@ -66,17 +66,22 @@ des Pakets in die Liste der offiziellen Pakete (siehe
 (((Paketverwaltung, deb-get)))
 
 `deb-get` <<deb-get>> ist ein Werkzeug, welches dafür gedacht ist, Pakete 
-von nicht-offiziellen Repositories und Webseiten zu beziehen. Dabei findet
-keine Authentizitätsprüfung der Pakete statt, was in der heutigen Zeit als
-grob fahrlässig einzustufen ist. Keiner weiß, was Ihnen da als Software
-untergejubelt wird. 
+von nicht-offiziellen Repositories und Webseiten zu beziehen, bspw. direkt
+von GitHub. Es liegt selbst nicht als offizielles Debianpaket vor -- 
+empfohlen wird der Download via `curl` bzw. `wget` von der Projektseite.
+
+Bei der Anwendung von `deb-get install` 'Paketname' findet keine 
+Authentizitätsprüfung der bezogenen Pakete statt, was in der heutigen Zeit 
+als grob fahrlässig einzustufen ist. Keiner weiß, was Ihnen da als 
+Software untergejubelt wird. 
 
 Ebenso erfolgt eine Installation an der Paketverwaltung vorbei. Das halst 
 Ihnen in Zukunft möglicherweise viel zusätzliche Betreuung des Pakets auf, 
 insbesondere bei der Installation und Aktualisierung dieses oder anderer 
 Pakete. 
 
-Von daher raten wir Ihnen von der Benutzung von `deb-get` ab.
+Von daher raten wir Ihnen von der Benutzung von `deb-get` ab, sofern Ihnen
+die Sicherheit ihrer Linuxinstallation wichtig ist.
 
 [[fremdpakete-nutzen-werkzeuge-alien]]
 ==== Mit `alien` ====
