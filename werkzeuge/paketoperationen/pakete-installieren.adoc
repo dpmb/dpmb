@@ -6,6 +6,7 @@
 === Pakete installieren ===
 
 // Stichworte für den Index
+(((dpkg, -i)))
 (((Paket, installieren)))
 
 Die Installation von Paketen und die dazugehörigen Aufrufe gehören aus
@@ -15,8 +16,8 @@ Aufrufen Sie Pakete vom Paketmirror beziehen und danach sofort auf Ihrem
 System installieren. Wie Sie die Paketdateien nur herunterladen, ohne
 diese zu installieren, lesen Sie in <<paketdatei-nur-herunterladen>> nach.
 
-Für APT und `aptitude` lässt sich der Vorgang mit ``Aufruf von `dpkg -i
-Paketname` in der richtigen Reihenfolge'' umschreiben. Dabei erfolgt
+Für APT und `aptitude` lässt sich der Vorgang mit ``Aufruf von `dpkg -i`
+'Paketname' in der richtigen Reihenfolge'' umschreiben. Dabei erfolgt
 zudem die Beachtung der jeweiligen Paketabhängigkeiten – noch fehlende
 und zusätzlich benötigte Pakete werden erkannt und vom Paketmirror
 mitbezogen. Die Voraussetzung, dass das angegebene Paket bereits im
