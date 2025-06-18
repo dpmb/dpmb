@@ -24,9 +24,8 @@ hindert Sie daran, Software in Form von Debianpaketen einzuspielen, wenn
 Sie das möchten.
 
 Sollten Sie das tun? Nein. Aber es geht doch. Ja klar, trotzdem sollten 
-Sie das nicht machen!
-
-Hier nur ein paar Gründe, warum Fremdpakete mit Risiken daherkommen:
+Sie das nicht machen! Hier nur ein paar Gründe, warum Fremdpakete mit 
+Risiken daherkommen:
 
 * nicht alles, was (technisch) geht, sollten Sie durchführen
 * Fremdpakete unterliegen keiner vorherigen Qualitätskontrolle, da kein 
@@ -48,7 +47,17 @@ des Pakets in die Liste der offiziellen Pakete (siehe
 [[fremdpakete-nutzen-werkzeuge]]
 === Werkzeuge ===
 
-* `dpkg -i` 'Paketname'
+[[fremdpakete-nutzen-werkzeuge-dpkg]]
+==== Mit `dpkg` ====
+
+* Paket zuvor herunterladen, bspw. über den Webbrowser, mittels `curl` 
+  oder `wget`
+* Paket überprüfen
+* Datei/Paket mittels `dpkg -i` 'Dateiname' einzuspielen
+
+[[fremdpakete-nutzen-werkzeuge-deb-get]]
+==== Mit `deb-get` ====
+
 * `deb-get` <<deb-get>>
 
 [[fremdpakete-nutzen-aufnahme-als-offizielles-paket]]
