@@ -2,7 +2,6 @@
 // Baustelle: Notizen
 
 [[fremdpakete-nutzen]]
-
 == Fremdpakete nutzen ==
 
 Vielfach stehen `deb`-Pakete über unterschiedlichste Quellen bereit, auch 
@@ -13,27 +12,49 @@ Pakete überhaupt? Bei eigenen Paketen wissen Sie es vorab, aber können Sie
 auch bei fremden Quellcode so sicher sein? Nachfolgend versuchen wir eine 
 Antwort darauf zu geben, wie Sie am besten mit der Situation umgehen.
 
-* Fremdpakete einbinden
-** ist das erlaubt? ja, klar
-** soll ich das tun? nein!
-** aber es geht doch. Trotzdem nicht machen!
-** warum denn nicht?
-*** nicht alles, was (technisch) geht, soll man auch durchführen
-*** keine vorherige Qualitätskontrolle, da kein Maintainer zugeordnet
-*** keine Prüfung auf die Einhaltung der DFSG-Richtlinien 
-*** keine vorherige Prüfung auf Paketabhängigkeiten
-*** keine Eintragung in die interne Paketverwaltung, d.h. zukünftig mehr
-    Arbeit notwendig, da manuelle Aktualisierung
+[[fremdpakete-nutzen-und-einbinden]]
+=== Fremdpakete einbinden ===
 
-* Werkzeuge
-** `dpkg -i` 'Paketname'
-** `deb-get` <<deb-get>>
+// Stichworte für den Index
+(((Debian Debian Free Software Guidelines (DFSG))))
+(((Debian, Debian Free Software Guidelines (DFSG))))
+(((DFSG)))
+Ist das erlaubt? Ja, klar -- hier bestehen keine Einschränkungen. Niemand
+hindert Sie daran, Software in Form von Debianpaketen einzuspielen, wenn 
+Sie das möchten.
 
-* aber ich brauche das eine Paket unbedingt!
-** vorher ... 
-*** ... nach Alternativen schauen
-*** ... prüfen, ob es vllt schon in 'testing' liegt
-** was soll ich tun, dass das endlich in Debian als offizielles Paket
-   verfügbar wird?
+Sollten Sie das tun? Nein. Aber es geht doch. Ja klar, trotzdem sollten 
+Sie das nicht machen!
+
+Hier nur ein paar Gründe, warum Fremdpakete mit Risiken daherkommen:
+
+* nicht alles, was (technisch) geht, sollten Sie durchführen
+* Fremdpakete unterliegen keiner vorherigen Qualitätskontrolle, da kein 
+  Maintainer zugeordnet ist und prüft, ob das Paket den Qualitätsvorgaben
+  von Debian entspricht, bspw. den DFSG-Richtlinien (siehe dazu 
+  <<was-ist-debian>> und <<distributionsbereiche>>)
+* keine vorherige Prüfung auf Paketabhängigkeiten
+* keine Eintragung in die interne Paketverwaltung, d.h. zukünftig ist mehr
+  Arbeit für Sie als Systembetreuer notwendig -- es steht jeweils eine 
+  manuelle Aktualisierung an (alles das, was ein Maintainer machen würde)
+
+Aber ich brauche dieses Paket unbedingt! Falls das der Fall ist, schauen
+Sie bitte vorher noch nach Alternativen. Prüfen Sie ebenfalls, ob ihre 
+Software vielleicht schon in im Distributionsbereich 'unstable' oder 
+'testing' liegt. Falls noch nicht, beherzigen Sie die Schritte zur Aufnahme
+des Pakets in die Liste der offiziellen Pakete (siehe 
+<<fremdpakete-nutzen-aufnahme-als-offizielles-paket>>).
+
+[[fremdpakete-nutzen-werkzeuge]]
+=== Werkzeuge ===
+
+* `dpkg -i` 'Paketname'
+* `deb-get` <<deb-get>>
+
+[[fremdpakete-nutzen-aufnahme-als-offizielles-paket]]
+=== Aufnahme des Pakets in die Liste der offiziellen Debianpakete ===
+
+* was soll ich tun, dass das endlich in Debian als offizielles Paket
+  verfügbar wird?
 
 // Datei (Ende): ./praxis/fremdpakete-nutzen/fremdpakete-nutzen.adoc
