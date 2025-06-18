@@ -65,11 +65,18 @@ des Pakets in die Liste der offiziellen Pakete (siehe
 // Stichworte für den Index
 (((Paketverwaltung, deb-get)))
 
-* `deb-get` <<deb-get>>
-* Werkzeug, welches dafür gedacht ist, Pakete von nicht-offiziellen
-  Repositories und Webseiten zu beziehen
-** dabei keine Authentizitätsprüfung der Pakete
-** Installation an der Paketverwaltung vorbei
+`deb-get` <<deb-get>> ist ein Werkzeug, welches dafür gedacht ist, Pakete 
+von nicht-offiziellen Repositories und Webseiten zu beziehen. Dabei findet
+keine Authentizitätsprüfung der Pakete statt, was in der heutigen Zeit als
+grob fahrlässig einzustufen ist. Keiner weiß, was Ihnen da als Software
+untergejubelt wird. 
+
+Ebenso erfolgt eine Installation an der Paketverwaltung vorbei. Das halst 
+Ihnen in Zukunft möglicherweise viel zusätzliche Betreuung des Pakets auf, 
+insbesondere bei der Installation und Aktualisierung dieses oder anderer 
+Pakete. 
+
+Von daher raten wir Ihnen von der Benutzung von `deb-get` ab.
 
 [[fremdpakete-nutzen-werkzeuge-alien]]
 ==== Mit `alien` ====
@@ -85,11 +92,11 @@ gehen wir darauf in <<fremdformate-mit-alien-hinzufuegen>> ein.
 === Aufnahme des Pakets in die Liste der offiziellen Debianpakete ===
 
 // Stichworte für den Index
-(((Paket in den offiziellen Paketbestand aufnehmen)))
 (((Debian, Request for Package)))
 (((Debianpaket, reportbug)))
-(((RFP)))
+(((Paket in den offiziellen Paketbestand aufnehmen)))
 (((reportbug)))
+(((RFP)))
 Was soll ich tun, dass das von mir genutzte Paket endlich in Debian als 
 offizielles Paket verfügbar wird? Wir sehen zwei Möglichkeiten zur 
 Lösung:
