@@ -1,5 +1,5 @@
 // Datei: ./praxis/fremdpakete-nutzen/fremdpakete-nutzen.adoc
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[fremdpakete-nutzen]]
 == Fremdpakete nutzen ==
