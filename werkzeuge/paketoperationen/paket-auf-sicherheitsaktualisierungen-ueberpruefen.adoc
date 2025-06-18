@@ -1,0 +1,19 @@
+// Datei: ./werkzeuge/paketoperationen/paket-auf-sicherheitsaktualisierungen-ueberprufen.adoc
+// Baustelle: Notizen
+
+[[paket-auf-sicherheitsaktualisierungen-ueberprufen]]
+
+=== Ein Paket auf Sicherheitsaktualisierungen überprüfen ===
+
+// Stichworte für den Index
+(((Paket, auf Sicherheitsaktualisierungen überprüfen)))
+(((Paketsignatur, überprüfen)))
+
+* bestehen überhaupt Sicherheitsaktualisierungen für ein Paket?
+* wie überprüfe ich das?
+* `check-support-status`
+* Debianpaket `debian-security-support`
+* für welche Pakete bestehen überhaupt Sicherheitsaktualisierungen, 
+  und für welche nicht?
+
+// Datei (Ende): ./werkzeuge/paketoperationen/paket-auf-sicherheitsaktualisierungen-ueberprufen.adoc
