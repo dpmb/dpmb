@@ -90,6 +90,7 @@ von Veröffentlichungssignaturen.
 ==== Nur ein Einzelpaket prüfen ====
 
 * `apt-key` (siehe <<Debian-Wiki-SecureApt>>)
+* `dpkg-sig` (siehe "Paket auf unerwünschte Veränderungen prüfen" in <<paket-auf-veraenderungen-pruefen>>)
 * `gpgv`
 * `sqv` (ab Debian 13 'Trixie')
 * empfohlene Vorgehensweise zur Validierung
