@@ -50,15 +50,26 @@ des Pakets in die Liste der offiziellen Pakete (siehe
 [[fremdpakete-nutzen-werkzeuge-dpkg]]
 ==== Mit `dpkg` ====
 
+// Stichworte für den Index
+(((dpkg, -i)))
+(((dpkg, --install)))
 * Paket zuvor herunterladen, bspw. über den Webbrowser, mittels `curl` 
   oder `wget`
 * Paket überprüfen
-* Datei/Paket mittels `dpkg -i` 'Dateiname' einzuspielen
+* falls sauber, dann das Datei/Paket mittels `dpkg -i` 'Dateiname' 
+  einzuspielen
 
 [[fremdpakete-nutzen-werkzeuge-deb-get]]
 ==== Mit `deb-get` ====
 
+// Stichworte für den Index
+(((Paketverwaltung, deb-get)))
+
 * `deb-get` <<deb-get>>
+* Werkzeug, welches dafür gedacht ist, Pakete von nicht-offiziellen
+  Repositories und Webseiten zu beziehen
+** dabei keine Authentizitätsprüfung der Pakete
+** Installation an der Paketverwaltung vorbei
 
 [[fremdpakete-nutzen-aufnahme-als-offizielles-paket]]
 === Aufnahme des Pakets in die Liste der offiziellen Debianpakete ===
