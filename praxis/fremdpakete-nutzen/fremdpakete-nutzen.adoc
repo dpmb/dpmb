@@ -77,10 +77,9 @@ des Pakets in die Liste der offiziellen Pakete (siehe
 // Stichworte für den Index
 (((Debianpaket, alien)))
 (((Paketverwaltung, alien)))
-
-* Paket liegt in einem anderen Paketformat vor, bspw. RPM
-* `alien` wandelt das in ein `deb`-Paket um
-* siehe <<fremdformate-mit-alien-hinzufuegen>>
+Mitunter liegt das Paket in einem anderen Paketformat vor, bspw. RPM. Das
+Werkzeug `alien` wandelt diese Datei in ein `deb`-Paket um. Ausführlicher
+gehen wir darauf in <<fremdformate-mit-alien-hinzufuegen>> ein.
 
 [[fremdpakete-nutzen-aufnahme-als-offizielles-paket]]
 === Aufnahme des Pakets in die Liste der offiziellen Debianpakete ===
