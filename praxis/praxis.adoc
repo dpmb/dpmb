@@ -54,6 +54,9 @@ include::metapakete-bauen/metapakete-bauen.adoc[]
 // - unterschiedliche Paketformate mischen (deb, rpm)
 include::paketformate-mischen/paketformate-mischen.adoc[]
 
+// - Fremdpakete nutzen
+include::fremdpakete-nutzen/fremdpakete-nutzen.adoc[]
+
 // - mit LTS-Versionen umgehen
 include::umgang-mit-lts/umgang-mit-lts.adoc[]
 
