@@ -182,6 +182,8 @@
 
 - [[[Debdelta]]] Debdelta, Pakete als Differenzen zur vorherigen Paket-Version, http://debdelta.debian.net/
 
+- [[[deb-get]]] Projektseite zu `deb-get`, https://github.com/wimpysworld/deb-get
+
 - [[[DebianArchiveKit]]] Debian Archive Kit (dak), https://salsa.debian.org/ftp-team/dak
 
 - [[[DebianDerivativeCensus]]] Debian-Derivate-Zensus, https://wiki.debian.org/Derivatives/Census
