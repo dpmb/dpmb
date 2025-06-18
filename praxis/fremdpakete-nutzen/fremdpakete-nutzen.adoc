@@ -5,9 +5,14 @@
 
 == Fremdpakete nutzen ==
 
-* `deb`-Pakete stehen über verschiedene Quellen bereit, auch von privaten
-  Webseiten und GitHub-Repositories
-* cool ... noch mehr Pakete!
+Vielfach stehen `deb`-Pakete über unterschiedlichste Quellen bereit, auch 
+von privaten Webseiten und Repositories auf GitHub. Auch Sie dürfen das
+selbstverständlich tun. Das ist toll und vergrößert die Menge verfügbarer 
+Software nochmals. Nur, wie zuverlässig sind die darüber bereitgestellten 
+Pakete überhaupt? Bei eigenen Paketen wissen Sie es vorab, aber können Sie
+auch bei fremden Quellcode so sicher sein? Nachfolgend versuchen wir eine 
+Antwort darauf zu geben, wie Sie am besten mit der Situation umgehen.
+
 * Fremdpakete einbinden
 ** ist das erlaubt? ja, klar
 ** soll ich das tun? nein!
@@ -16,6 +21,7 @@
 *** nicht alles, was (technisch) geht, soll man auch durchführen
 *** keine vorherige Qualitätskontrolle, da kein Maintainer zugeordnet
 *** keine Prüfung auf die Einhaltung der DFSG-Richtlinien 
+*** keine vorherige Prüfung auf Paketabhängigkeiten
 *** keine Eintragung in die interne Paketverwaltung, d.h. zukünftig mehr
     Arbeit notwendig, da manuelle Aktualisierung
 
