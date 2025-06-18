@@ -55,12 +55,14 @@ image::werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/rpmseek.png[id="
 [TIP]
 .Integration distributionsfremder `deb`-Pakete
 ====
-Wie die Einbindung und Verifizierung von `deb`-Paketen aus den
+Wie die Einbindung und Verifizierung von `deb`-Paketen aus den 
 Paketquellen erfolgt, erklären wir Ihnen unter ``Paketquellen und
-Werkzeuge'' in <<paketquellen-und-werkzeuge>> genauer. Möchten sie auch
-`rpm`-Pakete einpflegen, sorgt ``Fremdformate mit `alien` hinzufügen''
-in <<fremdformate-mit-alien-hinzufuegen>> für Erleuchtung. Andere
-Paketformate betrachten wir im Buch nicht weiter.
+Werkzeuge'' in <<paketquellen-und-werkzeuge>> genauer. Wie Sie mit 
+fremden, nicht-offiziellen Paketen umgehen, lesen Sie unter ``Fremdpakete 
+nutzen'' in <<fremdpakete-nutzen>> nach. Möchten sie auch `rpm`-Pakete 
+einpflegen, sorgt ``Fremdformate mit `alien` hinzufügen'' in 
+<<fremdformate-mit-alien-hinzufuegen>> für Erleuchtung. Andere 
+Paketformate betrachten wir im vorliegenden Buch nicht weiter.
 ====
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-den-namen-finden/paketsuchmaschinen.adoc
