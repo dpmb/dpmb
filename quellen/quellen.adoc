@@ -582,6 +582,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Debian-Pure-Blends]]] Andreas Tille, Ben Armstrong, Emmanouil Kiagias: Debian Pure Blends, http://blends.debian.org/blends/
 
+- [[[Debian-RFP]]] Debian Request for Package (RFP), https://wiki.debian.org/RFP
+
 - [[[DebianQA]]] Debian Quality Assurance (QA) Team, https://qa.debian.org/
 
 - [[[Debian-Redirector]]] The Debian Redirector, http://httpredir.debian.org/

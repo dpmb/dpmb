@@ -86,5 +86,7 @@ gehen wir darauf in <<fremdformate-mit-alien-hinzufuegen>> ein.
 
 * was soll ich tun, dass das endlich in Debian als offizielles Paket
   verfügbar wird?
+** einen Request for Package (RFP) <<Debian-RFP>> stellen, bspw. via 
+   `reportbug`
 
 // Datei (Ende): ./praxis/fremdpakete-nutzen/fremdpakete-nutzen.adoc
