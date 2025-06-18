@@ -53,11 +53,19 @@ des Pakets in die Liste der offiziellen Pakete (siehe
 // Stichworte für den Index
 (((dpkg, -i)))
 (((dpkg, --install)))
-* Paket zuvor herunterladen, bspw. über den Webbrowser, mittels `curl` 
-  oder `wget`
-* Paket überprüfen
-* falls sauber, dann das Datei/Paket mittels `dpkg -i` 'Dateiname' 
-  einzuspielen
+(((Paket, installieren)))
+
+Um mit Hilfe von `dpkg` Pakete lokal zu installieren, laden Sie dieses
+Paket samt der dazugehörigen Prüfsumme zuvor herunter, bspw. über ihren 
+Webbrowser, mittels `curl` oder auch `wget`. Nachdem Sie dieses Paket 
+geprüft haben und für sauber befinden, spielen Sie dieses mittels 
+`dpkg -i` 'Dateiname' ein. 
+
+Bei einfachen Paketen ohne weitere Abhängigkeiten mag das problemlos 
+gehen, praktisch und zeitgemäß ist es jedoch nicht. Je stärker das Paket 
+von weiteren Paketen abhängt, umso aufwendiger wird das ganze Prozedere.
+Hier greifen Ihnen `apt` und Aptitude unter die Arme und nehmen Ihnen 
+potentielle Stolperfallen ab (siehe <<pakete-installieren>>).
 
 [[fremdpakete-nutzen-werkzeuge-deb-get]]
 ==== Mit `deb-get` ====
