@@ -1,0 +1,26 @@
+// Datei: ./praxis/fremdpakete-nutzen/fremdpakete-nutzen.adoc
+// Baustelle: Notizen
+
+[[fremdpakete-nutzen]]
+
+== Fremdpakete nutzen ==
+
+* `deb`-Pakete stehen über verschiedene Quellen bereit, auch von privaten
+  Webseiten und GitHub-Repositories
+* cool ... noch mehr Pakete!
+* Fremdpakete einbinden
+** ist das erlaubt? ja, klar
+** soll ich das tun? nein!
+** aber es geht doch. Trotzdem nicht machen!
+** warum denn nicht?
+*** nicht alles, was (technisch) geht, soll man auch durchführen
+*** keine vorherige Qualitätskontrolle, da kein Maintainer zugeordnet
+*** keine Prüfung auf die Einhaltung der DFSG-Richtlinien 
+*** keine Eintragung in die interne Paketverwaltung, d.h. zukünftig mehr
+    Arbeit notwendig, da manuelle Aktualisierung
+
+* Werkzeuge
+** `dpkg -i` 'Paketname'
+** `deb-get` <<deb-get>>
+
+// Datei (Ende): ./praxis/fremdpakete-nutzen/fremdpakete-nutzen.adoc
