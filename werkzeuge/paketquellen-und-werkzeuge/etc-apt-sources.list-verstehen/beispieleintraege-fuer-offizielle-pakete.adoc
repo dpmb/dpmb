@@ -2,6 +2,7 @@
 
 // Baustelle: Fertig
 
+[[etc-apt-sources.list-verstehen-offizielle-pakete]]
 ==== Beispieleinträge für offizielle Pakete ====
 
 // Indexeinträge

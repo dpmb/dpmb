@@ -2,6 +2,7 @@
 
 // Baustelle: Fertig
 
+[[etc-apt-sources.list-verstehen-eintraege-fuer-deutschland]]
 ==== Einträge für Deutschland ====
 
 // Indexeinträge
