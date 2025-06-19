@@ -20,31 +20,49 @@ mit der Situation umgehen.
 (((Debian Debian Free Software Guidelines (DFSG))))
 (((Debian, Debian Free Software Guidelines (DFSG))))
 (((DFSG)))
+(((Fremdpakete einbinden)))
 Ist das erlaubt? Ja, klar -- hier bestehen keine Einschränkungen. Niemand
 hindert Sie daran, Software in Form von Debianpaketen einzuspielen, wenn 
 Sie das möchten.
 
 Sollten Sie das tun? Nein. Aber es geht doch. Ja klar, trotzdem sollten 
-Sie das nicht machen! Hier nur ein paar Gründe, warum Fremdpakete mit 
-Risiken daherkommen:
+Sie das nicht einfach so machen! Falls doch, sind ein paar Regeln 
+hilfreich, die die damit verbundenen Risiken minimieren. Hier folgen nun
+zunächst ein paar Gründe, welche Risiken bei Fremdpaketen überhaupt 
+bestehen, die ``einfach so von irgendwoher'' heruntergeladen werden:
 
-* nicht alles, was (technisch) geht, sollten Sie durchführen
-* Fremdpakete unterliegen keiner vorherigen Qualitätskontrolle, da kein 
-  Maintainer zugeordnet ist und prüft, ob das Paket den Qualitätsvorgaben
-  von Debian entspricht, bspw. den DFSG-Richtlinien (siehe dazu 
-  <<was-ist-debian>> und <<distributionsbereiche>>)
-* keine vorherige Prüfung auf Paketabhängigkeiten
-* keine Eintragung in die interne Paketverwaltung, d.h. zukünftig ist mehr
-  Arbeit für Sie als Systembetreuer notwendig. Es steht jeweils eine 
-  manuelle Aktualisierung des Pakets an, sprich: alles das, was ein 
+* nicht alles, was (technisch) geht, ist auch sinnvoll und sollten Sie 
+  durchführen
+* Fremdpakete unterliegen kaum einer vorherigen Qualitätskontrolle, da 
+  kein offizieller Debian-Maintainer zugeordnet ist und prüft, ob das 
+  Paket den Qualitätsvorgaben der Debian-Distribution entspricht, bspw. 
+  den DFSG-Richtlinien (siehe dazu <<was-ist-debian>> und 
+  <<distributionsbereiche>>)
+* keine vorherige Prüfung auf Paketabhängigkeiten. Das Paket mag auf dem
+  Buildsystem des Entwicklers funktionieren, es besteht jedoch keine
+  Garantie für das Funktionieren bei regulären Veröffentlichungen
+* keine Eintragung in die Liste bereitgestellter Pakete, d.h. zukünftig 
+  ist mehr Arbeit für Sie als Systembetreuer notwendig. Es steht jeweils 
+  eine manuelle Aktualisierung des Pakets an, sprich: alles das, was ein 
   Maintainer machen würde
 
-Aber ich brauche dieses Paket unbedingt! Falls das der Fall ist, schauen
-Sie bitte vorher noch nach Alternativen. Prüfen Sie ebenfalls, ob ihre 
-Software vielleicht schon in im Distributionsbereich 'unstable' oder 
-'testing' liegt. Falls noch nicht, beherzigen Sie die Schritte zur Aufnahme
-des Pakets in die Liste der offiziellen Pakete (siehe 
-<<fremdpakete-nutzen-aufnahme-als-offizielles-paket>>).
+Aber ich brauche dieses Paket unbedingt! Falls das der Fall ist, prüfen
+Sie bitte vorab noch diese Punkte:
+
+alternative Pakete :: schauen Sie bitte vorher noch nach Alternativen mit
+den gleichen Eigenschaften oder Funktionsumfang
+
+Bezug aus vertrauenswürdiger Quelle :: steht das Paket auf einem 
+Paketmirror bereit und ist dieser vertrauenswürdig (siehe ``Paketquelle
+auf Echtheit überprüfen'' in <<paketquelle-auf-echtheit-ueberpruefen>>), 
+ergänzen Sie dessen Angaben zur Liste ihrer Paketquellen (siehe 
+<<empfehlung-zum-ablauf-fuer-das-hinzufuegen-und-aendern-von-paketquellen>>)
+
+Verfügbarkeit des Pakets aus einem anderen Veröffentlichungszweig :: prüfen 
+Sie ebenfalls, ob ihre Software vielleicht schon in im Distributionsbereich 
+'unstable' oder 'testing' liegt. Falls das nicht der Fall ist, beherzigen 
+Sie die Schritte zur Aufnahme des Pakets in die Liste der offiziellen 
+Pakete (siehe <<fremdpakete-nutzen-aufnahme-als-offizielles-paket>>).
 
 [[fremdpakete-nutzen-werkzeuge]]
 === Werkzeuge ===
