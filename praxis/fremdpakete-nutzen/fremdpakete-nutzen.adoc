@@ -35,8 +35,9 @@ Risiken daherkommen:
   <<was-ist-debian>> und <<distributionsbereiche>>)
 * keine vorherige Prüfung auf Paketabhängigkeiten
 * keine Eintragung in die interne Paketverwaltung, d.h. zukünftig ist mehr
-  Arbeit für Sie als Systembetreuer notwendig -- es steht jeweils eine 
-  manuelle Aktualisierung an (alles das, was ein Maintainer machen würde)
+  Arbeit für Sie als Systembetreuer notwendig. Es steht jeweils eine 
+  manuelle Aktualisierung des Pakets an, sprich: alles das, was ein 
+  Maintainer machen würde
 
 Aber ich brauche dieses Paket unbedingt! Falls das der Fall ist, schauen
 Sie bitte vorher noch nach Alternativen. Prüfen Sie ebenfalls, ob ihre 
