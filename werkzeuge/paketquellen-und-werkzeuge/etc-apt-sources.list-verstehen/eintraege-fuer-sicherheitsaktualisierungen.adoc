@@ -2,6 +2,7 @@
 
 // Baustelle: Fertig
 
+[[etc-apt-sources.list-verstehen-sicherheitsaktualisierungen]]
 ==== Einträge für Sicherheitsaktualisierungen ====
 
 // Indexeinträge
@@ -10,23 +11,22 @@
 (((Paketquelle, Security Updates)))
 (((Paketquelle, Sicherheitsaktualisierungen)))
 (((Security Updates)))
-Häufig, aber in unregelmäßigen Abständen – d.h. wenn es erforderlich
-ist – kündigt das Debian Security-Team <<Debian-Security>>
+(((Sicherheitsaktualisierungen)))
+Häufig, aber in unregelmäßigen Abständen – d.h. wenn es erforderlich ist – 
+kündigt das Debian Security-Team <<Debian-Security>> diese 
 Sicherheitsaktualisierungen an und stellt diese bereit. Um von diesen
-Aktualisierungen zu profitieren, braucht es einen entsprechenden
-Eintrag in der Datei `/etc/apt/sources.list`.
+Aktualisierungen zu profitieren, braucht es einen entsprechenden Eintrag 
+in der Datei `/etc/apt/sources.list`.
 
-Typischerweise wird dieser bereits zum Installationzeitpunkt vom
-Debian Installer angelegt, falls die entsprechende Frage mit "Ja"
-beantwortet haben.
+Typischerweise wird dieser bereits zum Installationzeitpunkt vom Debian 
+Installer angelegt, falls Sie die entsprechende Frage während der
+Einrichtung mit ``Ja'' beantwortet haben. Hatten Sie während der 
+Installation bei der Frage nach Sicherheitsaktualisierungen hingegen 
+``Nein'' ausgewählt, oder fehlt der Eintrag aus sonstigen Gründen, so 
+können Sie diesen jederzeit manuell nachtragen.
 
-Hatten Sie während der Installation bei der Frage nach
-Sicherheitsaktualisierungen "Nein" ausgewählt, oder fehlt der Eintrag
-aus sonstigen Gründen, so können Sie diesen manuell nachtragen.
-
-Allerdings ist an dieser Stelle darauf zu achten, dass sich das Format
-des Eintrages zwischen Debian 10 _Buster_ und Debian 11 _Bullseye_
-leicht geändert hat.
+An dieser Stelle ist darauf zu achten, dass sich das Format des Eintrages 
+zwischen Debian 10 _Buster_ und Debian 11 _Bullseye_ leicht geändert hat.
 
 .`sources.list`-Eintrag für Sicherheitsaktualisierungen bis Debian 10
 ----
@@ -38,7 +38,7 @@ deb http://security.debian.org/ <veröffentlichungsname>/updates <archivbereiche
 deb http://security.debian.org/ <veröffentlichungsname>-security <archivbereiche>
 ----
 
-Entsprechend hier Beispiele für Debian 10 _Buster_, Debian 11
+Entsprechend folgen nun Beispiele für Debian 10 _Buster_, Debian 11
 _Bullseye_ und Debian 12 _Bookworm_:
 
 .`sources.list`-Eintrag für Sicherheitsaktualisierungen in Debian 10 _Buster_
@@ -56,12 +56,12 @@ deb http://security.debian.org/ bullseye-security main contrib non-free
 deb http://security.debian.org/ bookworm-security main contrib non-free non-free-firmware
 ----
 
-Obige Angaben beinhalten wiederum die empfohlene explizite Verwendung
-des Aliasnamens der Veröffentlichung anstatt des Suite-Namens. Dieser
-Name wird gefolgt vom Unterverzeichnis `updates` und den daraus
-gewünschten Distributionsbereichen _main_, _contrib_ und _non-free_
-sowie ab Debian 12 _Bookworm_ auch _non-free-firmware_. Je nach System
-nicht benötigte Archiv-Bereiche (z.B. _non-free_ oder
-_non-free-firmware_) können Sie einfach weglassen.
+Obige Angaben beinhalten wiederum die empfohlene explizite Verwendung des 
+Aliasnamens der Veröffentlichung anstatt des Suite-Namens. Dieser Name 
+wird gefolgt vom Unterverzeichnis `updates` und den daraus gewünschten 
+Distributionsbereichen _main_, _contrib_ und _non-free_ sowie ab Debian 12 
+_Bookworm_ auch _non-free-firmware_. Je nach System nicht benötigte 
+Archiv-Bereiche (z.B. _non-free_ oder _non-free-firmware_) können Sie 
+einfach weglassen.
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/eintraege-fuer-sicherheitsaktualisierungen.adoc
