@@ -7,8 +7,8 @@
 
 // Indexeinträge
 (((/etc/apt/sources.list, Felder eines Eintrags)))
-Jeder Eintrag in der Datei `/etc/apt/sources.list` folgt einem
-festen Muster mit einer genauen Abfolge von definierten Feldern:
+Jeder Eintrag in der Datei `/etc/apt/sources.list` folgt einem festen 
+Muster mit einer genauen Abfolge von definierten Feldern:
 
 ----
 Art_der_Quelle URI Distribution [Komponente 1] [Komponente 2] [...]
@@ -18,14 +18,14 @@ Art_der_Quelle URI Distribution [Komponente 1] [Komponente 2] [...]
 (((Paketvarianten, Binärpaket)))
 (((Paketvarianten, Sourcepaket)))
 (((/var/cache/apt/archives/)))
-Jedes dieser Felder hat eine bestimmte Funktion und erlaubt nur
+Jedes dieser Felder hat eine bestimmte Funktion und erlaubt nur 
 ausgewählte Inhalte:
 
 Art der Quelle:: 
 bezeichnet den verwendeten Pakettyp. Zulässig sind entweder `deb` für
 Debian-Binärpakete und `deb-src` für Debian-Quellpakete. Genauer gehen
 wir dazu unter ``Debians Paketvarianten'' in <<debian-pakete-varianten>>
-und ``Debian-Paketformat'' im Detail in <<debian-paketformat-im-detail>>
+und ``Debian-Paketformat im Detail'' in <<debian-paketformat-im-detail>>
 ein.
 
 URI:: 
@@ -33,7 +33,7 @@ legt die Art der Installationsquelle fest. Hierbei sind diese Angaben
 zulässig:
 * `file`: die Installationsquelle ist ein Verzeichnis. Dieses kann
 sowohl lokal vorliegen, als auch von extern eingebunden sein, bspw. über
-ein Netzwerkdateisystem wie AFS, NFS oder SMB
+ein Netzwerkdateisystem wie AFS, NFS oder CIFS/SMB
 * `cdrom`: genutzt wird eine CD, eine DVD oder eine Blu-ray als Installationsmedium
 * `http`: die Installationsquelle ist ein HTTP-Server
 * `https`: die Installationsquelle ist ein HTTPS-Server
@@ -46,20 +46,19 @@ Servers (siehe <<paketquellen-ueber-geoip-auswaehlen>>)
 Distribution:: 
 benennt die Veröffentlichung (siehe <<veroeffentlichungen>>), aus der
 Pakete installiert werden sollen. Typisch ist hier die Angabe des
-Entwicklungsstands (siehe
+Entwicklungsstands (siehe 
 <<bedeutung-der-verschiedenen-entwicklungsstaende>>) wie bspw. _stable_,
 _unstable_ oder _testing_ sowie die Nennung des alternativen
 Distributionsnamens wie bspw. _Bullseye_, _Bookworm_ oder _Sid_ (siehe
 <<alias-namen>>).
 +
-Bitte beachten Sie bei Debian und Ubuntu die vollständige
-Kleinschreibung des Namens. Nicht-offizielle Paketquellen können an
-dieser Stelle jedoch auch sonstige Zeichenketten bis hin zu einem _._
-verlangen.
+Bitte beachten Sie bei Debian und Ubuntu die vollständige Kleinschreibung 
+des Namens. Nicht-offizielle Paketquellen können an dieser Stelle jedoch 
+auch sonstige Zeichenketten bis hin zu einem _._ verlangen.
 
 Komponente:: 
-bestimmt den Distributionsbereich, d.h. bspw. bei Debian _main_,
-_contrib_, _non-free_ oder _non-free-firmware_. Ausführlicher gehen 
-wir darauf in <<distributionsbereiche>> ein.
+bestimmt den Distributionsbereich, d.h. bspw. bei Debian _main_, _contrib_, 
+_non-free_ oder _non-free-firmware_. Ausführlicher gehen wir darauf in 
+<<distributionsbereiche>> ein.
 
 // Datei (Ende): ./werkzeuge/paketquellen-und-werkzeuge/etc-apt-sources.list-verstehen/format-eines-eintrags.adoc
