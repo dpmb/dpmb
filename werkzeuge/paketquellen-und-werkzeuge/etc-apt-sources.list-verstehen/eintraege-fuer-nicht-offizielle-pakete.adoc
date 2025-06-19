@@ -2,15 +2,19 @@
 
 // Baustelle: Fertig
 
+[[etc-apt-sources.list-verstehen-nicht-offizielle-pakete]]
 ==== Einträge für zusätzliche, nicht-offizielle Pakete ====
 
 // Indexeinträge
-(((/etc/apt/sources.list,Einträge für nicht-offizielle Pakete)))
+(((/etc/apt/sources.list, Einträge für nicht-offizielle Pakete)))
+(((Fremdpakete einbinden)))
 (((Paketquelle, nicht-offiziell)))
-Nicht alle verfügbaren Softwareveröffentlichungen werden in die
+Nicht alle verfügbaren Softwareveröffentlichungen werden in die 
 offiziellen Paketquellen von Debian aufgenommen. Viele Projekte stellen
-Programmversionen als `deb`-Pakete bereit, die sich von der Version her
-von der stabilen Veröffentlichung von Debian unterscheiden.
+Programmversionen als `deb`-Pakete bereit, die sich von der Version her 
+von der stabilen Veröffentlichung von Debian unterscheiden und dieser 
+bspw. bereits ein Stück voraus sind. Wie Sie mit solchen Paketen umgehen, 
+besprechen wir genauer in ``Fremdpakete nutzen'' in <<fremdpakete-nutzen>>.
 
 Im folgenden Beispiel sehen Sie die Einbindung der Paketquellen des
 PostgreSQL-Projekts <<APT-Repo-PostgreSQL>> und des X2Go-Projekts
