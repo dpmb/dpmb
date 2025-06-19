@@ -4,13 +4,14 @@
 [[fremdpakete-nutzen]]
 == Fremdpakete nutzen ==
 
-Vielfach stehen `deb`-Pakete über unterschiedlichste Quellen bereit, auch 
-von privaten Webseiten und Repositories auf GitHub. Auch Sie dürfen das
-selbstverständlich tun. Das ist toll und vergrößert die Menge verfügbarer 
-Software nochmals. Nur, wie zuverlässig sind die darüber bereitgestellten 
-Pakete überhaupt? Bei eigenen Paketen wissen Sie es vorab, aber können Sie
-auch bei fremden Quellcode so sicher sein? Nachfolgend versuchen wir eine 
-Antwort darauf zu geben, wie Sie am besten mit der Situation umgehen.
+Vielfach stehen Pakete im `deb`-Format über unterschiedlichste Quellen 
+bereit, auch von privaten Webseiten und Repositories auf GitHub. Sie 
+selbst dürfen das selbstverständlich auch tun. Das ist toll und vergrößert 
+die Menge verfügbarer Software nochmals. Nur, wie zuverlässig sind die 
+darüber bereitgestellten Pakete überhaupt? Bei eigenen Paketen wissen Sie 
+es vorab, aber können Sie auch bei fremden Quellcode so sicher sein? 
+Nachfolgend versuchen wir eine Antwort darauf zu geben, wie Sie am besten 
+mit der Situation umgehen.
 
 [[fremdpakete-nutzen-und-einbinden]]
 === Fremdpakete einbinden ===
