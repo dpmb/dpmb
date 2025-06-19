@@ -33,11 +33,13 @@ bestehen, die ``einfach so von irgendwoher'' heruntergeladen werden:
 
 * nicht alles, was (technisch) geht, ist auch sinnvoll und sollten Sie 
   durchführen
-* Fremdpakete unterliegen kaum einer vorherigen Qualitätskontrolle, da 
-  kein offizieller Debian-Maintainer zugeordnet ist und prüft, ob das 
-  Paket den Qualitätsvorgaben der Debian-Distribution entspricht, bspw. 
-  den DFSG-Richtlinien (siehe dazu <<was-ist-debian>> und 
-  <<distributionsbereiche>>)
+* Fremdpakete unterliegen keiner vorherigen Qualitätsprüfung, da kein 
+  offizieller Debian-Maintainer zugeordnet ist und prüft, ob das Paket den 
+  Qualitätsvorgaben der Debian-Distribution entspricht, bspw. den 
+  DFSG-Richtlinien (siehe dazu <<was-ist-debian>> und 
+  <<distributionsbereiche>>). Das heißt nicht, daß ein solches Paket per 
+  se von minderer Qualität ist, sondern nur, daß es die Qualitätskontrolle
+  von Debian nicht durchlaufen hat
 * keine vorherige Prüfung auf Paketabhängigkeiten. Das Paket mag auf dem
   Buildsystem des Entwicklers funktionieren, es besteht jedoch keine
   Garantie für das Funktionieren bei regulären Veröffentlichungen
