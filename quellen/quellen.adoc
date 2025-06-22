@@ -993,6 +993,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[spacewalk]]] Spacewalk, https://spacewalkproject.github.io/
 
+- [[[SpiralLinux]]] SpiralLinux, https://spirallinux.github.io/
+
 - [[[Stackexchange-LTS]]] How to work around ``Release file expired''
   problem on a local mirror, https://unix.stackexchange.com/questions/2544/how-to-work-around-release-file-expired-problem-on-a-local-mirror
 

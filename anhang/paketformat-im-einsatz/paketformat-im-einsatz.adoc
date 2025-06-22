@@ -50,6 +50,7 @@ LernStick:: Live-Distribution auf einem USB-Stick <<LernStick>>
 (((Linux Mint)))
 (((Linux Mint Debian Edition (LMDE))))
 (((PureOS)))
+(((SpiralLinux)))
 (((Ubuntu)))
 (((Univention Corporate Server (UCS))))
 
@@ -66,6 +67,8 @@ Stadtverwaltung München zum Einsatz kam (2009-2020) <<LiMux>>
 Linux Mint, Linux Mint Debian Edition (LMDE):: basiert auf Ubuntu bzw. Debian 'testing' <<LinuxMint>>
 
 PureOS:: Linux-Distribution für Smartphones und Notebooks der Firma Purism. <<PureOS>>, <<Purism>>
+
+SpiralLinux :: Debian-Derivat mit Fokus auf Einfachheit und sofortige Benutzung <<<SpiralLinux>>
 
 Ubuntu (und dessen Ableger):: Linux für Einsteiger und den Desktop <<Ubuntu>>
 
