@@ -6,15 +6,8 @@
 === Ein Paket auf Sicherheitsaktualisierungen überprüfen ===
 
 // Stichworte für den Index
+(((apt-get, --just-print upgrade)))
 (((check-support-status)))
-(((check-support-status, --except)))
-(((check-support-status, --list)))
-(((check-support-status, --no-heading)))
-(((check-support-status, --status-db)))
-(((check-support-status, --type)))
-(((check-support-status, --version)))
-(((check-support-status, --Version)))
-(((check-support-status, --V)))
 (((Debianpaket, debian-security-support)))
 (((Debian Security Team)))
 (((Paket, auf Sicherheitsaktualisierungen überprüfen)))
@@ -22,8 +15,19 @@
 Prinzipiell bestehen für jedes Paket Sicherheitsaktualisierungen, bei 
 denen entdeckte Softwarefehler durch das Debian Security Team 
 <<Debian-Security>> erfaßt und korrigiert werden. Sie überprüfen das 
-mit Hilfe des Werkzeugs `check-support-status` aus dem Debianpaket 
-`debian-security-support` <<Debian-Paket-debian-security-support>>.
+mit Hilfe von `apt-get` und den beiden Parametern `--just-print upgrade`.
+Nachfolgende Ausgabe stammt von einem Debian 12 'Bookworm' und überprüft,
+ob Sicherheitsaktualisierungen für den Webbrowser Chromium vorliegen:
+
+.Den Webbrowser Chromium auf Sicherheitsaktualisierungen überprüfen
+----
+$ apt-get --just-print upgrade | grep -i security | grep -i chromium
+Inst chromium [138.0.7204.183-1~deb12u1] (139.0.7258.127-1~deb12u1 Debian-Security:12/oldstable-security [amd64]) []
+Inst chromium-sandbox [138.0.7204.183-1~deb12u1] (139.0.7258.127-1~deb12u1 Debian-Security:12/oldstable-security [amd64]) []
+Inst chromium-common [138.0.7204.183-1~deb12u1] (139.0.7258.127-1~deb12u1 Debian-Security:12/oldstable-security [amd64])
+...
+$
+----
 
 Unmöglich sind Sicherheitsaktualisierungen für nicht-freie Pakete, da dort 
 kein Quellcode bereitsteht, der auf Fehler hin überprüft werden kann. In 
@@ -38,8 +42,11 @@ Sicherheitsaktualisierung einer Bibliothek alle Rust-Reverse-Dependencies
 zu übersetzen, um Fehlern und möglichen Hintertüren auf die Schliche zu 
 kommen.
 
-Unter "Auslaufende Sicherheitsaktualisierungen mit `check-support-status` 
-anzeigen" <<debian-security-support>> besprechen wir ausführlich den 
-Umgang mit diesem Werkzeug.
+Welche Sicherheitsaktualisierungen zukünftig bestehen, erfahren Sie mit 
+dem Werkzeug `check-support-status` aus dem Paket 'debian-security-support' 
+<<Debian-Paket-debian-security-support>>. Unter "Auslaufende 
+Sicherheitsaktualisierungen mit `check-support-status` anzeigen" in 
+<<debian-security-support>> besprechen wir ausführlich den Umgang mit 
+diesem Werkzeug.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/paket-auf-sicherheitsaktualisierungen-ueberprufen/paket-auf-sicherheitsaktualisierungen-ueberprufen.adoc
