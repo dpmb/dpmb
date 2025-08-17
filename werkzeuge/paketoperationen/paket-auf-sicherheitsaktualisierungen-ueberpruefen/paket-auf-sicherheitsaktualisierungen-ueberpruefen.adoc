@@ -44,9 +44,7 @@ kommen.
 
 Welche Sicherheitsaktualisierungen zukünftig bestehen, erfahren Sie mit 
 dem Werkzeug `check-support-status` aus dem Paket 'debian-security-support' 
-<<Debian-Paket-debian-security-support>>. Unter "Auslaufende 
-Sicherheitsaktualisierungen mit `check-support-status` anzeigen" in 
-<<debian-security-support>> besprechen wir ausführlich den Umgang mit 
-diesem Werkzeug.
+<<Debian-Paket-debian-security-support>>. Wie Sie mit diesem Werkzeug
+umgehen, besprechen wir ausführlich in <<debian-security-support>>.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/paket-auf-sicherheitsaktualisierungen-ueberprufen/paket-auf-sicherheitsaktualisierungen-ueberprufen.adoc
