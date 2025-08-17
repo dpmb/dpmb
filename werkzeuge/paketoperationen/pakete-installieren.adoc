@@ -7,6 +7,7 @@
 
 // Stichworte für den Index
 (((dpkg, -i)))
+(((dpkg, --install)))
 (((Paket, installieren)))
 
 Die Installation von Paketen und die dazugehörigen Aufrufe gehören aus
