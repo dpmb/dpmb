@@ -15,7 +15,7 @@ Mit Hilfes des Werkzeugs `check-support-status` aus dem Paket
 Sie die Informationen des Debian Security Teams <<Debian-Security>> im
 Terminal. Hilfreich ist es vor allem bei Installationen von Debian
 'oldstable', da es Ihnen nicht nur berichtet, für welche Pakete es 
-zukünftig keinen Security-Support in zukünftigen Veröffentlichungen geben 
+zukünftig keinen Security-Support in späteren Veröffentlichungen geben 
 wird, sondern auch warum das so ist. Nichtsdestotrotz ist es auch für eine
 Prüfung des aktuellen Bestands nützlich (siehe 
 <<paket-auf-sicherheitsaktualisierungen-ueberprufen>>).
