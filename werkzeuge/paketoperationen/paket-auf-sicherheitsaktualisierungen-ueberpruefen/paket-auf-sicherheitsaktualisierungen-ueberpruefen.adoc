@@ -29,6 +29,14 @@ Inst chromium-common [138.0.7204.183-1~deb12u1] (139.0.7258.127-1~deb12u1 Debian
 $
 ----
 
+Eine Alternative dazu stellt die Webseite des Debian-Projekts dar. 
+Recherchieren Sie nach einem Paket, wird ein Hinweis zu 
+Sicherheitsaktualisierungen in roter Schrift neben der Paketversion 
+ergänzt (siehe <<fig.paket-mit-security-hinweis>>).
+
+.Das Paket 'chromium' mit Hinweis zu einer Sicherheitsaktualisierung 
+image::werkzeuge/paketoperationen/paket-auf-sicherheitsaktualisierungen-ueberpruefen/securityupgrades-webbrowser.png[id="fig.paket-mit-security-hinweis", width="50%"]
+
 Unmöglich sind Sicherheitsaktualisierungen für nicht-freie Pakete, da dort 
 kein Quellcode bereitsteht, der auf Fehler hin überprüft werden kann. In 
 die gleiche Kategorie fallen Pakete, die auf den Programmiersprachen Go 
