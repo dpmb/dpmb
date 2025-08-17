@@ -120,6 +120,9 @@ Interpretierte Programmiersprachen wie bspw. Tcl/Tk ('luajit', 'm4', 'tcl')
 Java (_java_)::
 alles rund um die Programmiersprache Java ('ant', 'tomcat8', 'openjdk-7-jre')
 
+Javascript (_javascript_)::
+alles rund um die Programmiersprache Javascript ('javascript-common', 'node-jquery')
+
 KDE (_kde_)::
 Programme zum KDE-Desktop ('apper', 'kdm', 'knotes')
 
@@ -164,6 +167,9 @@ alles zur Programmiersprache Python ('python3', 'idle')
 
 Ruby (_ruby_)::
 alles zur Programmiersprache Ruby ('ruby', 'ruby-xmmsclient')
+
+Rust (_rust_)::
+alles zur Programmiersprache Rust ('cargo', 'rustc')
 
 Schriften (_fonts_)::
 Schriften und Programme zum Verarbeiten von Schriften ('fontforge', 'fontconfig', 'xfonts-cyrillic')
