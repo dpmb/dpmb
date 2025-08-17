@@ -107,6 +107,8 @@ image::werkzeuge/paketoperationen/aktualisierbare-pakete-anzeigen/nala-aktualisi
 
 ==== Synaptic verwenden ====
 
+// Stichworte für den Index
+(((Synaptic, aktualisierbare Pakete anzeigen)))
 Bei den graphischen Programmen zur Paketverwaltung kann lediglich
 Synaptic (siehe <<gui-synaptic>>) die aktualisierbaren Pakete anzeigen.
 Dazu wählen Sie zunächst den Knopf `Benutzerdefinierte Filter` aus der
