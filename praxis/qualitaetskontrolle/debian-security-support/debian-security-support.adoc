@@ -10,7 +10,7 @@
 (((Debianpaket, debian-security-support)))
 (((Debian Security Team)))
 (((Veröffentlichung, oldstable)))
-Mit Hilfes des Werkzeugs `check-support-status` aus dem Paket
+Mit Hilfe des Werkzeugs `check-support-status` aus dem Paket 
 'debian-security-support' <<Debian-Paket-debian-security-support>> lesen
 Sie die Informationen des Debian Security Teams <<Debian-Security>> im
 Terminal. Hilfreich ist es vor allem bei Installationen von Debian
