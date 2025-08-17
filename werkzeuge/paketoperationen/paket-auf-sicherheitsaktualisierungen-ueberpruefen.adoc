@@ -6,14 +6,25 @@
 === Ein Paket auf Sicherheitsaktualisierungen überprüfen ===
 
 // Stichworte für den Index
+(((check-support-status)))
+(((check-support-status, --except)))
+(((check-support-status, --list)))
+(((check-support-status, --no-heading)))
+(((check-support-status, --status-db)))
+(((check-support-status, --type)))
+(((check-support-status, --version)))
+(((check-support-status, --Version)))
+(((check-support-status, --V)))
+(((Debianpaket, debian-security-support)))
 (((Paket, auf Sicherheitsaktualisierungen überprüfen)))
-(((Paketsignatur, überprüfen)))
 
 * bestehen überhaupt Sicherheitsaktualisierungen für ein Paket?
 * wie überprüfe ich das?
 * `check-support-status`
-* Debianpaket `debian-security-support`
+* Debianpaket `debian-security-support` <<Debian-Paket-debian-security-support>>
 * für welche Pakete bestehen überhaupt Sicherheitsaktualisierungen, 
   und für welche nicht?
+** Pakete, die auf den Programmiersprachen Go und Rust aufsetzen
+** ältere Pakete, siehe "Auslaufende Sicherheitsaktualisierungen mit `check-support-status` anzeigen" <<debian-security-support>>
 
 // Datei (Ende): ./werkzeuge/paketoperationen/paket-auf-sicherheitsaktualisierungen-ueberprufen.adoc
