@@ -1,0 +1,45 @@
+// Datei: ./werkzeuge/paketoperationen/paket-auf-sicherheitsaktualisierungen-ueberprufen/paket-auf-sicherheitsaktualisierungen-ueberprufen.adoc
+// Baustelle: Notizen
+
+[[paket-auf-sicherheitsaktualisierungen-ueberprufen]]
+
+=== Ein Paket auf Sicherheitsaktualisierungen überprüfen ===
+
+// Stichworte für den Index
+(((check-support-status)))
+(((check-support-status, --except)))
+(((check-support-status, --list)))
+(((check-support-status, --no-heading)))
+(((check-support-status, --status-db)))
+(((check-support-status, --type)))
+(((check-support-status, --version)))
+(((check-support-status, --Version)))
+(((check-support-status, --V)))
+(((Debianpaket, debian-security-support)))
+(((Debian Security Team)))
+(((Paket, auf Sicherheitsaktualisierungen überprüfen)))
+
+Prinzipiell bestehen für jedes Paket Sicherheitsaktualisierungen, bei 
+denen entdeckte Softwarefehler durch das Debian Security Team 
+<<Debian-Security>> erfaßt und korrigiert werden. Sie überprüfen das 
+mit Hilfe des Werkzeugs `check-support-status` aus dem Debianpaket 
+`debian-security-support` <<Debian-Paket-debian-security-support>>.
+
+Unmöglich sind Sicherheitsaktualisierungen für nicht-freie Pakete, da dort 
+kein Quellcode bereitsteht, der auf Fehler hin überprüft werden kann. In 
+die gleiche Kategorie fallen Pakete, die auf den Programmiersprachen Go 
+und Rust aufsetzen. 
+
+Bei Letzterem hat der fehlende Security-Support einen wesentlichen Grund: 
+Rust erzeugt nur statisch gelinkten Programmcode. Daher ist das 
+Debian-Security-Team nicht in der Lage, bei jeder 
+Sicherheitsaktualisierung einer Bibliothek alle Rust-Reverse-Dependencies 
+(inklusive deren Paketabhängigkeiten) zu prüfen und den Programmcode neu 
+zu übersetzen, um Fehlern und möglichen Hintertüren auf die Schliche zu 
+kommen.
+
+Unter "Auslaufende Sicherheitsaktualisierungen mit `check-support-status` 
+anzeigen" <<debian-security-support>> besprechen wir ausführlich den 
+Umgang mit diesem Werkzeug.
+
+// Datei (Ende): ./werkzeuge/paketoperationen/paket-auf-sicherheitsaktualisierungen-ueberprufen/paket-auf-sicherheitsaktualisierungen-ueberprufen.adoc
