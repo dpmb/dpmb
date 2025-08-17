@@ -40,7 +40,7 @@ include::obsolete-pakete-anzeigen.adoc[]
 
 include::aktualisierbare-pakete-anzeigen/aktualisierbare-pakete-anzeigen.adoc[]
 
-include::paket-auf-sicherheitsaktualisierungen-ueberpruefen.adoc[]
+include::paket-auf-sicherheitsaktualisierungen-ueberpruefen/paket-auf-sicherheitsaktualisierungen-ueberpruefen.adoc[]
 
 include::paketversionen-anzeigen.adoc[]
 
