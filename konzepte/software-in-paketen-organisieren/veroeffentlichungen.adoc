@@ -209,9 +209,9 @@ veröffentlichte die Version 1.1 ein halbes Jahr später.
 
 * Debian 12 _Bookworm_ (10. Juni 2023; benannt nach dem intelligenten Bücherwurm, einem Spielzeug mit eingebauter Leuchte aus 'Toy Story 3')
 
-Es stehen bereits ebenfalls die Namen von drei zukünftigen Veröffentlichungen fest:
+* Debian 13 _Trixie_ (9. August 2025; benannt nach dem blauen Dinosaurier aus 'Toy Story 3')
 
-* Debian 13 _Trixie_ -- benannt nach dem blauen Dinosaurier. Mit einer Veröffentlichung ist im Sommer 2025 zu rechnen.
+Es stehen bereits ebenfalls die Namen von zwei zukünftigen Veröffentlichungen fest:
 
 * Debian 14 _Forky_ -- benannt nach dem aus Müll zusammengebauten
   Hauptcharakter aus 'Toy Story 4'.
