@@ -45,8 +45,8 @@ image::praxis/qualitaetskontrolle/debian-security-support/pakete-ohne-security-s
 `--except` 'Paketliste'::
 Schließe die in 'Paketliste' genannten Pakete von der 
 Sicherheitsüberprüfung aus. 'Paketliste' ist eine durch Komma 
-voneinander getrennte Auflistung von Paketnamen. Im Standardfall werden 
-alle Pakete von  berücksichtigt.
+voneinander getrennte Auflistung von Paketnamen. Ohne diese Angabe 
+werden alle Pakete berücksichtigt.
 
 `--list` 'Dateiname'::
 'Dateiname' bezeichnet eine Textdatei, in der die einzelnen Pakete
