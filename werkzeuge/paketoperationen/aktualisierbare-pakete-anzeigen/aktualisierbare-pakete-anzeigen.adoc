@@ -95,11 +95,12 @@ $
 // Stichworte für den Index
 (((Nala, aktualisierbare Pakete anzeigen)))
 (((nala, list --upgradable)))
-Nala kennt zur Anzeige der aktualisierbaren Pakete das Unterkommando 
-`list` gefolgt von der Option `--upgradable`. Neben dem Paketnamen gibt
-es aus, ob das Paket bereits installiert ist samt der genutzten Version, 
-darunter die Versionsnummer, auf die Sie das Paket aktualisieren können 
-sowie die Kurzbeschreibung zum Paket selbst (siehe <<fig.nala-aktualisierbare-pakete-anzeigen>>).
+Analog zu `apt` kennt Nala zur Anzeige der aktualisierbaren Pakete 
+ebenfalls das Unterkommando `list` gefolgt von der Option `--upgradable`. 
+Neben dem Paketnamen gibt es aus, ob das Paket bereits installiert ist 
+samt der genutzten Version, darunter die Versionsnummer, auf die Sie das 
+Paket aktualisieren können sowie die jeweilige Kurzbeschreibung zum Paket 
+selbst (siehe <<fig.nala-aktualisierbare-pakete-anzeigen>>).
 
 .Ansicht der aktualisierbaren Pakete in Nala
 image::werkzeuge/paketoperationen/aktualisierbare-pakete-anzeigen/nala-aktualisierbare-pakete-anzeigen.png[id="fig.nala-aktualisierbare-pakete-anzeigen", width="50%"]
