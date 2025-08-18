@@ -1,23 +1,47 @@
 // Datei: ./werkzeuge/paketoperationen/paket-auf-sicherheitsaktualisierungen-ueberprufen/paket-auf-sicherheitsaktualisierungen-ueberprufen.adoc
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[paket-auf-sicherheitsaktualisierungen-ueberprufen]]
 
 === Ein Paket auf Sicherheitsaktualisierungen überprüfen ===
 
+==== Allgemeines ====
+
 // Stichworte für den Index
-(((apt-get, --just-print upgrade)))
-(((check-support-status)))
-(((Debianpaket, debian-security-support)))
 (((Debian Security Team)))
 (((Paket, auf Sicherheitsaktualisierungen überprüfen)))
 
-Prinzipiell bestehen für jedes Paket Sicherheitsaktualisierungen, bei 
-denen entdeckte Softwarefehler durch das Debian Security Team 
-<<Debian-Security>> erfaßt und korrigiert werden. Sie überprüfen das 
-mit Hilfe von `apt-get` und den beiden Parametern `--just-print upgrade`.
-Nachfolgende Ausgabe stammt von einem Debian 12 'Bookworm' und überprüft,
-ob Sicherheitsaktualisierungen für den Webbrowser Chromium vorliegen:
+Prinzipiell bestehen für jedes Paket Sicherheitsaktualisierungen, bei denen 
+entdeckte Softwarefehler durch das Debian Security Team <<Debian-Security>> 
+erfaßt und korrigiert werden. Unmöglich sind Sicherheitsaktualisierungen 
+für nicht-freie Pakete, da dort kein Quellcode bereitsteht, der auf Fehler 
+hin überprüft werden kann. In die gleiche Kategorie fallen Pakete, die auf 
+den Programmiersprachen Go und Rust aufsetzen. 
+
+Bei Letzterem hat der fehlende Security-Support einen wesentlichen Grund: 
+Rust erzeugt nur statisch gelinkten Programmcode. Daher ist das 
+Debian-Security-Team nicht in der Lage, bei jeder Sicherheitsaktualisierung 
+einer Bibliothek alle Rust-Reverse-Dependencies (inklusive deren 
+Paketabhängigkeiten) zu prüfen und den Programmcode neu zu übersetzen, um 
+möglichen Fehlern und Hintertüren auf die Schliche zu kommen.
+
+==== Mit `apt-get` nachforschen ====
+
+// Stichworte für den Index
+(((apt-get, --just-print upgrade)))
+(((check-support-status)))
+(((Debianpaket, chromium)))
+(((Debianpaket, debian-security-support)))
+(((Sicherheitsaktualisierungen zu einem Paket anzeigen, apt-get)))
+
+`apt-get` verfügt über den Schalter `--just-print`, den Sie hier mit dem 
+Parameter `upgrade` kombinieren. Nun erzählt Ihnen `apt-get`, was es tun 
+würde, ohne die Pakete tatsächlich zu aktualisieren. Aus der Ausgabe
+filtern Sie danach mit Hilfe von `grep` lediglich die Textpassagen heraus, 
+die die Sicherheitsaktualisierungen betreffen. Die nachfolgende Ausgabe 
+stammt von einem Debian 12 'Bookworm' und zeigt, daß 
+Sicherheitsaktualisierungen für das Paket 'chromium' zum Webbrowser 
+Chromium vorliegen:
 
 .Den Webbrowser Chromium auf Sicherheitsaktualisierungen überprüfen
 ----
@@ -29,27 +53,81 @@ Inst chromium-common [138.0.7204.183-1~deb12u1] (139.0.7258.127-1~deb12u1 Debian
 $
 ----
 
-Eine Alternative dazu stellt die Webseite des Debian-Projekts dar. 
-Recherchieren Sie nach einem Paket, wird ein Hinweis zu 
-Sicherheitsaktualisierungen in roter Schrift neben der Paketversion 
-ergänzt (siehe <<fig.paket-mit-security-hinweis>>).
+==== `apt` verwenden ====
+
+// Stichworte für den Index
+(((Sicherheitsaktualisierungen zu einem Paket anzeigen, apt)))
+
+`apt` verfügt nicht über eine Möglichkeit, die bestehenden
+Sicherheitsaktualisierungen zu einem Paket anzuzeigen.
+
+==== `apt-show-version` befragen ====
+
+// Stichworte für den Index
+(((Sicherheitsaktualisierungen zu einem Paket anzeigen, apt-show-versions)))
+
+Das Werkzeug `apt-show-versions` zeigt an, welche Paketversionen 
+existieren und aus welchem Repository es die Aktualisierungen entnehmen 
+würde. Um die Sicherheitsaktualisierungen zu einem Paket zu ermitteln, 
+filtern Sie die Ausgabe von `apt-show-versions` mit Hilfe von `grep` nach 
+dem Begriff 'security'. Zu Nutze machen Sie sich hier den Fakt, daß die 
+offiziellen Repositories für Sicherheitaktualisierungen stets den 
+Namensbestandteil 'security' tragen. Nachfolgend sehen Sie das Vorgehen 
+für das Paket 'chromium' zum Webbrowser Chromium:
+
+.Die gefilterte Ausgabe des Kommandos `apt-show-versions`
+----
+$ apt-show-versions chromium | grep -i security
+chromium:amd64/bookworm-security 138.0.7204.183-1~deb12u1 upgradeable to 139.0.7258.127-1~deb12u1
+$
+----
+
+==== `aptitude` einsetzen ====
+
+// Stichworte für den Index
+(((aptitude, --simulate upgrade)))
+(((Sicherheitsaktualisierungen zu einem Paket anzeigen, aptitude)))
+
+`aptitude` verfügt nicht über eine Möglichkeit, die bestehenden
+Sicherheitsaktualisierungen zu einem Paket anzuzeigen. Es kennt zwar den
+Schalter `--simulate`, mit dem `aptitude` Ihnen die anstehenden Aktionen
+mitteilt, das Detaillevel reicht jedoch nicht bis zur Ebene der
+Sicherheitaktualisierungen.
+
+.`aptitude` bei der simulierten Aktualisierung des Pakets 'chromium'
+----
+$ aptitude --simulate upgrade chromium
+Auflösen der Abhängigkeiten ...                 
+Die folgenden Pakete werden ENTFERNT:
+  system-config-printer-udev{u} 
+Die folgenden Pakete werden aktualisiert:
+  chromium chromium-common 
+2 Pakete aktualisiert, 0 zusätzlich installiert, 1 werden entfernt und 10 nicht aktualisiert.
+92,5 MB an Archiven müssen heruntergeladen werden. Nach dem Entpacken werden 124 kB frei werden.
+
+Note: Using 'Simulate' mode.
+Möchten Sie fortsetzen? [Y/n/?] y
+Pakete würden heruntergeladen/installiert/entfernt werden.
+$
+----
+
+==== Über die Webseite des Debian-Projekts ====
+
+// Stichworte für den Index
+(((Sicherheitsaktualisierungen zu einem Paket anzeigen, Webbrowser)))
+Eine Alternative zur Kommandozeile stellt die Webseite des Debian-Projekts 
+dar. Recherchieren Sie nach einem Paket, wird ein Hinweis zu den 
+bestehenden Sicherheitsaktualisierungen in roter Schrift neben der 
+Paketversion ergänzt (siehe <<fig.paket-mit-security-hinweis>>).
 
 .Das Paket 'chromium' mit Hinweis zu einer Sicherheitsaktualisierung 
 image::werkzeuge/paketoperationen/paket-auf-sicherheitsaktualisierungen-ueberpruefen/securityupgrades-webbrowser.png[id="fig.paket-mit-security-hinweis", width="50%"]
 
-Unmöglich sind Sicherheitsaktualisierungen für nicht-freie Pakete, da dort 
-kein Quellcode bereitsteht, der auf Fehler hin überprüft werden kann. In 
-die gleiche Kategorie fallen Pakete, die auf den Programmiersprachen Go 
-und Rust aufsetzen. 
+==== Zukünftige Sicherheitsaktualisierungen ====
 
-Bei Letzterem hat der fehlende Security-Support einen wesentlichen Grund: 
-Rust erzeugt nur statisch gelinkten Programmcode. Daher ist das 
-Debian-Security-Team nicht in der Lage, bei jeder 
-Sicherheitsaktualisierung einer Bibliothek alle Rust-Reverse-Dependencies 
-(inklusive deren Paketabhängigkeiten) zu prüfen und den Programmcode neu 
-zu übersetzen, um Fehlern und möglichen Hintertüren auf die Schliche zu 
-kommen.
-
+// Stichworte für den Index
+(((check-support-status)))
+(((Debianpaket, debian-security-support)))
 Welche Sicherheitsaktualisierungen zukünftig bestehen, erfahren Sie mit 
 dem Werkzeug `check-support-status` aus dem Paket 'debian-security-support' 
 <<Debian-Paket-debian-security-support>>. Wie Sie mit diesem Werkzeug
