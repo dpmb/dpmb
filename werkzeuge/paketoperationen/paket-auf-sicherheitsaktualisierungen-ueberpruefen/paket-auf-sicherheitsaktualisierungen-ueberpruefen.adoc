@@ -25,34 +25,6 @@ einer Bibliothek alle Rust-Reverse-Dependencies (inklusive deren
 Paketabhängigkeiten) zu prüfen und den Programmcode neu zu übersetzen, um 
 möglichen Fehlern und Hintertüren auf die Schliche zu kommen.
 
-==== Mit `apt-get` nachforschen ====
-
-// Stichworte für den Index
-(((apt-get, --just-print upgrade)))
-(((check-support-status)))
-(((Debianpaket, chromium)))
-(((Debianpaket, debian-security-support)))
-(((Sicherheitsaktualisierungen zu einem Paket anzeigen, apt-get)))
-
-`apt-get` verfügt über den Schalter `--just-print`, den Sie hier mit dem 
-Parameter `upgrade` kombinieren. Nun erzählt Ihnen `apt-get`, was es tun 
-würde, ohne die Pakete tatsächlich zu aktualisieren. Aus der Ausgabe
-filtern Sie danach mit Hilfe von `grep` lediglich die Textpassagen heraus, 
-die die Sicherheitsaktualisierungen betreffen. Die nachfolgende Ausgabe 
-stammt von einem Debian 12 'Bookworm' und zeigt, daß 
-Sicherheitsaktualisierungen für das Paket 'chromium' zum Webbrowser 
-Chromium vorliegen:
-
-.Den Webbrowser Chromium auf Sicherheitsaktualisierungen überprüfen
-----
-$ apt-get --just-print upgrade | grep -i security | grep -i chromium
-Inst chromium [138.0.7204.183-1~deb12u1] (139.0.7258.127-1~deb12u1 Debian-Security:12/oldstable-security [amd64]) []
-Inst chromium-sandbox [138.0.7204.183-1~deb12u1] (139.0.7258.127-1~deb12u1 Debian-Security:12/oldstable-security [amd64]) []
-Inst chromium-common [138.0.7204.183-1~deb12u1] (139.0.7258.127-1~deb12u1 Debian-Security:12/oldstable-security [amd64])
-...
-$
-----
-
 ==== `apt` verwenden ====
 
 // Stichworte für den Index
@@ -79,6 +51,54 @@ chromium/oldstable-security 139.0.7258.127-1~deb12u1 i386
 $
 ----
 
+==== `apt-cache` befragen ====
+
+// Stichworte für den Index
+(((apt-cache, madison)))
+(((Sicherheitsaktualisierungen zu einem Paket anzeigen, apt-cache)))
+
+Das Zusammenspiel aus dem Werkzeug `apt-cache`, dessen Unterkommando 
+`madison` und einem Aufruf von `grep` liefert Ihnen Informationen zu 
+den Sicherheitsaktualisierungen. Die nachfolgende Ausgabe stammt von 
+einem Debian 12 'Bookworm' und zeigt, daß Sicherheitsaktualisierungen 
+für das Paket 'chromium' zum Webbrowser Chromium vorliegen:
+
+.Die gefilterte Ausgabe des Kommandos `apt-cache`
+----
+$ apt-cache madison chromium | grep -i security
+  chromium | 139.0.7258.127-1~deb12u1 | http://security.debian.org/debian-security bookworm-security/main amd64 Packages
+  chromium | 138.0.7204.183-1~deb12u1 | http://security.debian.org/debian-security bookworm-security/main Sources
+$
+----
+
+==== Mit `apt-get` nachforschen ====
+
+// Stichworte für den Index
+(((apt-get, --just-print upgrade)))
+(((check-support-status)))
+(((Debianpaket, chromium)))
+(((Debianpaket, debian-security-support)))
+(((Sicherheitsaktualisierungen zu einem Paket anzeigen, apt-get)))
+
+`apt-get` verfügt über den Schalter `--just-print`, den Sie hier mit dem 
+Parameter `upgrade` kombinieren. Nun erzählt Ihnen `apt-get`, was es tun 
+würde, ohne die Pakete tatsächlich zu aktualisieren. Aus der Ausgabe
+filtern Sie danach mit Hilfe von `grep` lediglich die Textpassagen heraus, 
+die die Sicherheitsaktualisierungen betreffen. Die nachfolgende Ausgabe 
+stammt von einem Debian 12 'Bookworm' und zeigt, daß 
+Sicherheitsaktualisierungen für das Paket 'chromium' zum Webbrowser 
+Chromium vorliegen:
+
+.Den Webbrowser Chromium auf Sicherheitsaktualisierungen mittels `apt-get` überprüfen
+----
+$ apt-get --just-print upgrade | grep -i security | grep -i chromium
+Inst chromium [138.0.7204.183-1~deb12u1] (139.0.7258.127-1~deb12u1 Debian-Security:12/oldstable-security [amd64]) []
+Inst chromium-sandbox [138.0.7204.183-1~deb12u1] (139.0.7258.127-1~deb12u1 Debian-Security:12/oldstable-security [amd64]) []
+Inst chromium-common [138.0.7204.183-1~deb12u1] (139.0.7258.127-1~deb12u1 Debian-Security:12/oldstable-security [amd64])
+...
+$
+----
+
 ==== `apt-show-version` befragen ====
 
 // Stichworte für den Index
@@ -88,9 +108,9 @@ Das Werkzeug `apt-show-versions` zeigt an, welche Paketversionen
 existieren und aus welchem Repository es die Aktualisierungen entnehmen 
 würde. Um die Sicherheitsaktualisierungen zu einem Paket zu ermitteln, 
 filtern Sie die Ausgabe von `apt-show-versions` mit Hilfe von `grep` nach 
-dem Begriff 'security' (wie auch bereits bei `apt` beschrieben). 
-Nachfolgend sehen Sie das Vorgehen für das Paket 'chromium' zum Webbrowser 
-Chromium:
+dem Begriff 'security' (wie auch bereits zuvor bei `apt` und `apt-cache` 
+beschrieben). Nachfolgend sehen Sie das Vorgehen für das Paket 'chromium' 
+zum Webbrowser Chromium:
 
 .Die gefilterte Ausgabe des Kommandos `apt-show-versions`
 ----
