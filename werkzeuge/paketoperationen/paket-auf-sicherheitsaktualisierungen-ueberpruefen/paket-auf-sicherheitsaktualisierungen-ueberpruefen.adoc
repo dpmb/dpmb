@@ -103,9 +103,10 @@ $
 
 // Stichworte für den Index
 (((aptitude, --simulate upgrade)))
+(((aptitude, versions)))
 (((Sicherheitsaktualisierungen zu einem Paket anzeigen, aptitude)))
 
-`aptitude` verfügt nicht über eine Möglichkeit, die bestehenden
+`aptitude` verfügt nicht über eine direkte Möglichkeit, die bestehenden
 Sicherheitsaktualisierungen zu einem Paket anzuzeigen. Es kennt zwar den
 Schalter `--simulate`, mit dem `aptitude` Ihnen die anstehenden Aktionen
 mitteilt, das Detaillevel reicht jedoch nicht bis zur Ebene der
@@ -125,6 +126,21 @@ Die folgenden Pakete werden aktualisiert:
 Note: Using 'Simulate' mode.
 Möchten Sie fortsetzen? [Y/n/?] y
 Pakete würden heruntergeladen/installiert/entfernt werden.
+$
+----
+
+Mehr passend ist jedoch das Unterkommando `versions`, mit dem Sie alle
+Paketversionen samt deren Bezugspunkt (Repository) ermitteln. 
+Anschließend filtern Sie die Ausgabe wieder mittels `grep` nach dem 
+Schlüsselwort 'security'. Für das Paket 'chromium' sieht der Aufruf wie 
+folgt aus:
+
+----
+$ aptitude versions chromium
+Paket chromium:                                  
+p   135.0.7049.95-1~deb12u1                          oldstable                    500 
+i   138.0.7204.183-1~deb12u1                                                      100 
+p   139.0.7258.127-1~deb12u1                         oldstable-security           500 
 $
 ----
 
