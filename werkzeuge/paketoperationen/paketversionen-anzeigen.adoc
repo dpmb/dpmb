@@ -172,8 +172,7 @@ finden Sie heraus, welche Pakete derzeit von den Spiegelservern in einer
 neueren Version verfügbar sind. Nachfolgender Ausdruck zeigt das für das
 Paket 'apt-doc' <<Debian-Paket-apt-doc>>.
 
-.Ausgabe von `apt-cache` mit dem Unterkommando `madison` für 'apt-doc'
-unter Debian 9 _Stretch_ auf einem System mit der Architektur `i386`
+.Ausgabe von `apt-cache` mit dem Unterkommando `madison` für 'apt-doc' unter Debian 9 _Stretch_ auf einem System mit der Architektur `i386`
 ----
 $ apt-cache madison apt-doc
    apt-doc |      1.4.6 | http://ftp.ch.debian.org/debian stretch/main i386 Packages
