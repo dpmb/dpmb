@@ -56,10 +56,28 @@ $
 ==== `apt` verwenden ====
 
 // Stichworte für den Index
+(((apt, list --all-versions)))
 (((Sicherheitsaktualisierungen zu einem Paket anzeigen, apt)))
 
-`apt` verfügt nicht über eine Möglichkeit, die bestehenden
-Sicherheitsaktualisierungen zu einem Paket anzuzeigen.
+`apt` verfügt nicht über eine direkte Möglichkeit, die bestehenden
+Sicherheitsaktualisierungen zu einem Paket anzuzeigen. Es bleibt nur ein
+Umweg über das Unterkommando `list` in Kombination mit dem Schalter
+`--all-versions` und der nachfolgenden Filterung der Ausgabe mittels `grep` 
+nach dem Begriff 'security'. Zu Nutze machen Sie sich hier den Fakt, daß 
+die offiziellen Repositories für Sicherheitaktualisierungen stets den 
+Namensbestandteil 'security' tragen. Nachfolgend sehen Sie das Vorgehen 
+für das Paket 'chromium' zum Webbrowser Chromium:
+
+.Die gefilterte Ausgabe des Kommandos `apt`
+----
+$ apt list --all-versions chromium | grep -i security
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+chromium/oldstable-security 139.0.7258.127-1~deb12u1 amd64 [aktualisierbar von: 138.0.7204.183-1~deb12u1]
+chromium/oldstable-security 139.0.7258.127-1~deb12u1 i386
+$
+----
 
 ==== `apt-show-version` befragen ====
 
@@ -70,10 +88,9 @@ Das Werkzeug `apt-show-versions` zeigt an, welche Paketversionen
 existieren und aus welchem Repository es die Aktualisierungen entnehmen 
 würde. Um die Sicherheitsaktualisierungen zu einem Paket zu ermitteln, 
 filtern Sie die Ausgabe von `apt-show-versions` mit Hilfe von `grep` nach 
-dem Begriff 'security'. Zu Nutze machen Sie sich hier den Fakt, daß die 
-offiziellen Repositories für Sicherheitaktualisierungen stets den 
-Namensbestandteil 'security' tragen. Nachfolgend sehen Sie das Vorgehen 
-für das Paket 'chromium' zum Webbrowser Chromium:
+dem Begriff 'security' (wie auch bereits bei `apt` beschrieben). 
+Nachfolgend sehen Sie das Vorgehen für das Paket 'chromium' zum Webbrowser 
+Chromium:
 
 .Die gefilterte Ausgabe des Kommandos `apt-show-versions`
 ----
