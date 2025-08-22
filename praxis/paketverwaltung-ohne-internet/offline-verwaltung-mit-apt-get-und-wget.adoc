@@ -8,7 +8,7 @@
 
 // Stichworte für den Index
 (((apt, update)))
-(((apt, upgrade)
+(((apt, upgrade)))
 (((apt-get, -o dir::cache::archives)))
 (((apt-get, --print-uris)))
 (((apt-get, -q)))
