@@ -50,10 +50,11 @@ image::werkzeuge/werkzeuge-zur-paketverwaltung-ueberblick/ncurses-basiert/taskse
 
 Bei Debian und Ubuntu existieren viele Aufgaben als separate,
 vorgefertigte Pakete, die Ihnen die Einrichtung gemäß eines spezifischen
-Zwecks erleichtern, indem benötigte Pakete gruppiert werden. Diese
-Pakete tragen die Bezeichnung 'task-' am Anfang des Paketnamens (siehe
-<<debian-pakete-varianten>>). Dazu zählen bspw. die Aufgaben Mailserver,
-Webserver, Desktopumgebung und Laptop (siehe <<fig.tasksel>>).
+Zwecks oder Anwendungsfalls erleichtern. Dazu werden alle benötigten Pakete 
+gruppiert. Diese Pakete tragen dann die Bezeichnung 'task-' am Anfang des 
+Paketnamens (siehe <<debian-pakete-varianten>>). Hierzu zählen bspw. die 
+Aufgaben Mailserver, Webserver, Desktopumgebung und Laptop (siehe 
+<<fig.tasksel>>).
 
 [NOTE]
 .`tasksel` und andere Programme
