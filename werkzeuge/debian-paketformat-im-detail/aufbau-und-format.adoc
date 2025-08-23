@@ -54,12 +54,13 @@ image::werkzeuge/debian-paketformat-im-detail/postinst.png[id="fig.postinst", wi
 ==== Source-Pakete ====
 
 // Stichworte für den Index
+(((Paketvarianten, Quellpaket)))
 (((Paketvarianten, Sourcepaket)))
 
-Ein Source-Paket beinhaltet einerseits den Quellcode der Software und
-andererseits die Anweisungen, nach denen aus dem Quellcode der Software
-eines oder mehrere Binärpakete entstehen <<Krafft-Debian-System>>. Dazu
-besteht es aus mindestens 2, meistens jedoch 3 und ggf. auch noch
+Ein Quell- oder Source-Paket beinhaltet einerseits den Quellcode der 
+Software und andererseits die Anweisungen, nach denen aus dem Quellcode der 
+Software eines oder mehrere Binärpakete entstehen <<Krafft-Debian-System>>. 
+Dazu besteht es aus mindestens 2, meistens jedoch 3 und ggf. auch noch
 weiteren Dateien:
 
 `.dsc`::
@@ -107,12 +108,12 @@ alphanumerische Zeichen und Bindestriche beinhalten darf.
 //    page. (The program apt-get can get used a frontend for dpkg-source.)''
 
 Als *Paketformate* existieren die Versionen 1.0, 2.0 (wurde offiziell
-nie unterstützt) und 3.0 <<Debian-DebSrc3.0>>. Letzteres existiert in
-den zwei Varianten 'quilt' (benannt als ``3.0 (quilt)'') und 'native'
-(benannt als ``3.0 (native)'') und hat sich seit dessen Einführung mit
-Debian 6 'Squeeze' im Jahr 2011 mittlerweile etabliert. Dabei umfassen
-die Namen der Varianten für Version 3.0 jeweils auch die Leerzeichen und
-die beiden Klammern.
+nie unterstützt) und 3.0 <<Debian-DebSrc3.0>>. Letzteres existiert 
+wiederum in den zwei Varianten 'quilt' (benannt als ``3.0 (quilt)'') und 
+'native' (benannt als ``3.0 (native)'') und hat sich seit dessen 
+Einführung mit Debian 6 'Squeeze' im Jahr 2011 mittlerweile etabliert. 
+Dabei umfassen die Namen der Varianten für Version 3.0 jeweils auch die 
+Leerzeichen und die beiden Klammern.
 
 [[aufbau-und-format-binaer]]
 
