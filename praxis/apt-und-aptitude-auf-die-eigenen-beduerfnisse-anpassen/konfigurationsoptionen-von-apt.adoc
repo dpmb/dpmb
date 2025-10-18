@@ -331,7 +331,10 @@ benutzen soll (siehe dazu <<aptitude-farbschema-anpassen>>).
 
 * Dir::Aptitude::state
 
-* Quiet
+`Quiet` :: Diese Variable legt fest, wie 'gesprächig' Aptitude beim Aufruf 
+über die Kommandozeile ist. Der Wert der Voreinstellung ist 0. Je höher 
+der Wert ist, umso mehr Informationen zum Fortschritt der Bearbeitung zeigt
+Aptitude an.
 
 ==== Beispielaufrufe für die Kommandozeile ====
 
