@@ -262,7 +262,9 @@ Installation von Paketen (oder ähnlichen Operationen). Diese Option ist
 
 * `Aptitude::Suppress-Read-Only-Warning`
 
-* Aptitude::Theme
+`Aptitude::Theme` :: Legt das Farbschema fest, welches Aptitude zur 
+Darstellung der einzelnen Elemente in seiner Bedienoberfläche (TUI) 
+benutzen soll (siehe dazu <<aptitude-farbschema-anpassen>>).
 
 * Aptitude::Track-Dselect-State
 
