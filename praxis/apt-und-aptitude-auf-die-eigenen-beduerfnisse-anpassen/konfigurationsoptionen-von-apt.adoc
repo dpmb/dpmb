@@ -40,16 +40,23 @@ einzelnen Schalter genauer.
 `Aptitude::Autoclean-After-Update` :: Wenn diese Option auf `True` gesetzt 
 ist, bereinigt Aptitude alle Dateien im Paketcache nach erfolgreicher 
 Aktualisierung von Paketen (oder ähnlichen Operationen). Diese Option ist 
-ähnlich zu `Aptitude::Clean-After-Install`. Default ist `False`.
+ähnlich zu `Aptitude::Clean-After-Install`. Default ist `False`, d.h. es
+findet kein Aufräumen statt.
 
-* `Aptitude::Auto-Fix-Broken`
+`Aptitude::Auto-Fix-Broken` :: Mit dieser Option fragt Aptitude nach einer
+Bestätigung, bevor es versucht, beschädigte Pakete zu reparieren. Default 
+ist `True`, d.h. keine Rückfrage vor der Reparatur.
 
-`Aptitude::Auto-Install` :: Wenn diese Option auf `True` gesetzt ist, 
-versucht Aptitude, stets die Abhängigkeiten eines Pakets zu erfüllen, 
-sobald ein Paket zur Installation oder Aktualisierung markiert wurde. 
-Default ist `True`.
+`Aptitude::Auto-Install` :: Darüber versucht Aptitude, stets die 
+Abhängigkeiten eines Pakets zu erfüllen, sobald Sie ein Paket zur 
+Installation oder Aktualisierung markiert haben. Default ist `True`, d.h. 
+die Recherche zu den Paketabhängigkeiten ist aktiviert.
 
-* `Aptitude::Auto-Install-Remove-Ok`
+`Aptitude::Auto-Install-Remove-Ok` :: Hiermit entfernt Aptitude 
+automatisch in Konflikt stehende Pakete, wenn Sie ein Paket zur 
+Installation oder Aktualisierung markieren. Normalerweise werden diese 
+Konflikte zunächst markiert und sind von Ihnen manuell zubeheben. Default
+ist `False`, d.h. Aptitude nimmt keine automatische Entfernung vor.
 
 `Aptitude::Auto-Upgrade` :: Wenn diese Option auf `True` gesetzt ist, 
 markiert Aptitude automatisch alle aktualisierbaren Pakete für ein 
