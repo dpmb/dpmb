@@ -35,6 +35,8 @@ einzelnen Schalter genauer.
 
 // Stichworte für den Index
 (((aptitude, --safe-resolver)))
+(((aptitude, -s)))
+(((aptitude, --simulate)))
 
 * `Aptitude::Allow-Null-Upgrade`
 
@@ -254,7 +256,10 @@ Installation von Paketen (oder ähnlichen Operationen). Diese Option ist
 
 * `Aptitude::Sections::Top-Sections`
 
-* `Aptitude::Simulate`
+`Aptitude::Simulate` :: Hierüber simuliert Aptitude die Änderungen im 
+Paketbestand, die stattfinden würden, ohne diese tatsächlich anzuwenden. 
+Diese Konfigurationsoption entspricht der Aufrufoption `-s` (Langform 
+`--simulate`). Die Voreinstellung ist `False` für 'keine Simulation'.
 
 * `Aptitude::Spin-Interval`
 
