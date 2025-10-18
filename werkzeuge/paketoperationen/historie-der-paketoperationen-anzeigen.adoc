@@ -27,7 +27,7 @@ können in diesem speziellen Fall mithalten.
 (((apt, history-info)))
 (((apt, history-list)))
 
-Der Entwickler von `apt` hat im Oktober 2025 angekündigt, dass zukünftige 
+Der Entwickler von `apt` hat im September 2025 angekündigt, dass zukünftige 
 Versionen von `apt` zwei neue Unterkommandos enthalten werden:
 
 `apt history-info`:: die gesamte Historie der Pakettransaktionen auflisten
