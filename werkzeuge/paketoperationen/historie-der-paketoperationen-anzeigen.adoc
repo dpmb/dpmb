@@ -26,13 +26,22 @@ können in diesem speziellen Fall mithalten.
 (((apt, Historie der Paketaktionen anzeigen)))
 (((apt, history-info)))
 (((apt, history-list)))
+(((apt, history-redo)))
+(((apt, history-rollback)))
+(((apt, history-undo)))
 
 Der Entwickler von `apt` hat im September 2025 angekündigt, dass zukünftige 
 Versionen von `apt` zwei neue Unterkommandos enthalten werden:
 
-`apt history-info`:: die gesamte Historie der Pakettransaktionen auflisten
+`history-info`:: die gesamte Historie der Pakettransaktionen auflisten
 
-`apt history-list`:: detaillierte Informationen über eine bestimmte Pakettransaktion anzeigen
+`history-list`:: detaillierte Informationen über eine bestimmte Pakettransaktion anzeigen
+
+`history-redo`:: Transaktionen wiederholen
+
+`history-rollback`:: Transaktionen wieder rückgängig machen (vorherigen Zustand wiederherstellen
+
+`history-undo`:: Transaktionen rückgängig machen
 
 Ein genauer Zeitpunkt, wann diese Erweiterungen Teil einer stabilen 
 Veröffentlichung sein werden, steht derzeit noch nicht fest.
