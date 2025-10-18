@@ -168,10 +168,10 @@ mitsamt Patch <<github-pull-request>> ein.
 // Stichworte für den Index
 (((Buch, Wie das Buch gepflegt wird)))
 Beide Autoren leben und arbeiten in recht unterschiedlichen Regionen --
-Axel Beckert in Zürich und Frank Hofmann in Kirchzarten bei Freiburg.
-Aufgrund der mitunter recht großen Distanz sind regelmäßige
-Arbeitstreffen nur begrenzt möglich und wurden daher mit Hilfe von
-Buchsprints sowie elektronischer Kommunikation überbrückt.
+Axel Beckert in Zürich und Frank Hofmann in Mulhouse. Aufgrund der 
+mitunter recht großen Distanz sind regelmäßige Arbeitstreffen nur 
+begrenzt möglich und wurden daher mit Hilfe von Buchsprints sowie 
+elektronischer Kommunikation überbrückt.
 
 Das Buch entsteht seit dem Frühjahr 2013 und häufig auch im Rahmen von 
 Linux-Events. Besonders hervorzuheben sind hierbei die Chemnitzer 
