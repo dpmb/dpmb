@@ -321,7 +321,9 @@ benutzen soll (siehe dazu <<aptitude-farbschema-anpassen>>).
 
 * Aptitude::UI::Prompt-On-Exit
 
-* Aptitude::UI::Styles
+`Aptitude::UI::Styles` :: Mit diesen Angaben legen Sie fest, welchen Stil 
+die Textoberfläche von Aptitude benutzt, um die einzelnen Informationsblöcke 
+darzustellen (siehe <<aptitude-farbschema-anpassen-strukturelemente>>).
 
 * Aptitude::UI::ViewTabs
 
