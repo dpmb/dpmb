@@ -33,9 +33,15 @@ einzelnen Schalter genauer.
 [[konfigurationsoptionen-von-aptitude-schalter]]
 ==== Schalter von Aptitude ====
 
+// Stichworte für den Index
+(((aptitude, --safe-resolver)))
+
 * `Aptitude::Allow-Null-Upgrade`
 
-* `Aptitude::Always-Use-Safe-Resolver`
+`Aptitude::Always-Use-Safe-Resolver` :: Hierüber verwendet Aptitude immer 
+das sichere Verfahren zur Auflösung von Paketabhängigkeiten. Das ist analog
+zur Kommandozeilenoption `--safe-resolver`. Die Voreinstellung ist `False`, 
+d.h. Aptitude wendet das Standardverfahren an.
 
 `Aptitude::Autoclean-After-Update` :: Wenn diese Option auf `True` gesetzt 
 ist, bereinigt Aptitude alle Dateien im Paketcache nach erfolgreicher 
@@ -206,55 +212,55 @@ Installation von Paketen (oder ähnlichen Operationen). Diese Option ist
 
 * `Aptitude::ProblemResolver::PreserveManualScore`
 
-* Aptitude::ProblemResolver::RemoveObsoleteScore
+* `Aptitude::ProblemResolver::RemoveObsoleteScore`
 
-* Aptitude::ProblemResolver::RemoveScore
+* `Aptitude::ProblemResolver::RemoveScore`
 
-* Aptitude::ProblemResolver::Remove-Level
+* `Aptitude::ProblemResolver::Remove-Level`
 
-* Aptitude::ProblemResolver::RequiredScore
+* `Aptitude::ProblemResolver::RequiredScore`
 
-* Aptitude::ProblemResolver::ResolutionScore
+* `Aptitude::ProblemResolver::ResolutionScore`
 
-* Aptitude::ProblemResolver::Safe-Level
+* `Aptitude::ProblemResolver::Safe-Level`
 
-* Aptitude::ProblemResolver::SolutionCost
+* `Aptitude::ProblemResolver::SolutionCost`
 
-* Aptitude::ProblemResolver::StandardScore
+* `Aptitude::ProblemResolver::StandardScore`
 
-* Aptitude::ProblemResolver::StepLimit
+* `Aptitude::ProblemResolver::StepLimit`
 
-* Aptitude::ProblemResolver::StepScore
+* `Aptitude::ProblemResolver::StepScore`
 
-* Aptitude::ProblemResolver::Trace-Directory
+* `Aptitude::ProblemResolver::Trace-Directory`
 
-* Aptitude::ProblemResolver::Trace-File
+* `Aptitude::ProblemResolver::Trace-File`
 
-* Aptitude::ProblemResolver::UndoFullReplacementScore
+* `Aptitude::ProblemResolver::UndoFullReplacementScore`
 
-* Aptitude::ProblemResolver::UnfixedSoftScore
+* `Aptitude::ProblemResolver::UnfixedSoftScore`
 
-* Aptitude::ProblemResolver::UpgradeScore
+* `Aptitude::ProblemResolver::UpgradeScore`
 
-* Aptitude::Purge-Unused
+* `Aptitude::Purge-Unused`
 
-* Aptitude::Recommends-Important
+* `Aptitude::Recommends-Important`
 
-* Aptitude::Safe-Resolver::No-New-Installs
+* `Aptitude::Safe-Resolver::No-New-Installs`
 
-* Aptitude::Safe-Resolver::No-New-Upgrades
+* `Aptitude::Safe-Resolver::No-New-Upgrades`
 
-* Aptitude::Sections::Descriptions
+* `Aptitude::Sections::Descriptions`
 
-* Aptitude::Sections::Top-Sections
+* `Aptitude::Sections::Top-Sections`
 
-* Aptitude::Simulate
+* `Aptitude::Simulate`
 
-* Aptitude::Spin-Interval
+* `Aptitude::Spin-Interval`
 
-* Aptitude::Suggests-Important
+* `Aptitude::Suggests-Important`
 
-* Aptitude::Suppress-Read-Only-Warning
+* `Aptitude::Suppress-Read-Only-Warning`
 
 * Aptitude::Theme
 
