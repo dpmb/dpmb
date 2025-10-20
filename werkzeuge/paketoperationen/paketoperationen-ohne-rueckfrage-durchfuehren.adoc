@@ -16,6 +16,10 @@ die Antwort im Aufruf bereits fest. Dieses Vorgehen ist bei der
 Automatisierung von Vorgängen sinnvoll. Bitte setzen Sie diese Optionen 
 nur ein, wenn Sie wissen, was Sie tun.
 
+==== `apt` ====
+
+Das Werkzeug `apt` bietet derzeit keine solche Option an.
+
 [[paketoperationen-ohne-rueckfrage-durchfuehren-apt]]
 
 ==== `apt-get` ====
