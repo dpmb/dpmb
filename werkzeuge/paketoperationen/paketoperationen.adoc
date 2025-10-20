@@ -121,6 +121,9 @@ include::paketoperationen-erzwingen.adoc[]
 
 include::paketstatusdatenbank-reparieren.adoc[]
 
+// Paketaktionen ohne Rückfragen durchführen
+include::paketoperationen-ohne-rueckfrage-durchfuehren.adoc[]
+
 // Paketaktionen debuggen
 include::paketaktionen-debuggen.adoc[]
 
