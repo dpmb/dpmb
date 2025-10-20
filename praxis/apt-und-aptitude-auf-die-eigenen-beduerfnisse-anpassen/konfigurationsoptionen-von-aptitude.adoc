@@ -3,19 +3,19 @@
 // Baustelle: Notizen
 
 [[konfigurationsoptionen-von-aptitude]]
-=== Konfigurationsoptionen von Aptitude ===
+=== Konfigurationsoptionen von `aptitude` ===
 
 // Stichworte für den Index
 (((aptitude, -o)))
 (((Aptitude, Konfigurationsoptionen)))
-Neben den festen Einstellungen über die Konfigurationsdateien für Aptitude 
-haben Sie jederzeit die Möglichkeit, Fähigkeiten der Werkzeuge über 
-einzelne Optionen ein- und auszuschalten. Dazu ergänzen Sie im Aufruf den 
-Schalter `-o`, gefolgt von einem oder mehreren Paaren aus Schlüssel und 
-Wert. Nachfolgend besprechen wir die einzelnen Schalter genauer.
+Neben den festen Einstellungen über die Konfigurationsdateien für 
+`aptitude` haben Sie jederzeit die Möglichkeit, Fähigkeiten der Werkzeuge 
+über einzelne Optionen ein- und auszuschalten. Dazu ergänzen Sie im Aufruf 
+den Schalter `-o`, gefolgt von einem oder mehreren Paaren aus Schlüssel 
+und Wert. Nachfolgend besprechen wir die einzelnen Schalter genauer.
 
 [[konfigurationsoptionen-von-aptitude-schalter]]
-==== Schalter von Aptitude ====
+==== Schalter von `aptitude` ====
 
 // Stichworte für den Index
 (((aptitude, --safe-resolver)))
@@ -24,38 +24,39 @@ Wert. Nachfolgend besprechen wir die einzelnen Schalter genauer.
 
 `Aptitude::Allow-Null-Upgrade` :: Todo
 
-`Aptitude::Always-Use-Safe-Resolver` :: Hierüber verwendet Aptitude immer 
+`Aptitude::Always-Use-Safe-Resolver` :: Hierüber verwendet `aptitude` immer 
 das sichere Verfahren zur Auflösung von Paketabhängigkeiten. Das ist analog
 zur Kommandozeilenoption `--safe-resolver`. Die Voreinstellung ist `False`, 
-d.h. Aptitude wendet das Standardverfahren an.
+d.h. `aptitude` wendet das Standardverfahren an.
 
 `Aptitude::Autoclean-After-Update` :: Wenn diese Option auf `True` gesetzt 
-ist, bereinigt Aptitude alle Dateien im Paketcache nach erfolgreicher 
+ist, bereinigt `aptitude` alle Dateien im Paketcache nach erfolgreicher 
 Aktualisierung von Paketen (oder ähnlichen Operationen). Diese Option ist 
 ähnlich zu `Aptitude::Clean-After-Install`. Die Voreinstellung ist `False`, 
 d.h. es findet kein Aufräumen statt.
 
-`Aptitude::Auto-Fix-Broken` :: Mit dieser Option fragt Aptitude nach einer
-Bestätigung, bevor es versucht, beschädigte Pakete zu reparieren. Die 
-Voreinstellung ist `True`, d.h. es erfolgt keine Rückfrage vor der Reparatur.
+`Aptitude::Auto-Fix-Broken` :: Mit dieser Option fragt `aptitude` nach 
+einer Bestätigung, bevor es versucht, beschädigte Pakete zu reparieren. 
+Die Voreinstellung ist `True`, d.h. es erfolgt keine Rückfrage vor der 
+Reparatur.
 
-`Aptitude::Auto-Install` :: Darüber versucht Aptitude, stets die 
+`Aptitude::Auto-Install` :: Darüber versucht `aptitude`, stets die 
 Abhängigkeiten eines Pakets zu erfüllen, sobald Sie ein Paket zur 
 Installation oder Aktualisierung markiert haben. Die Voreinstellung ist 
 `True`, d.h. die Recherche zu den Paketabhängigkeiten ist aktiviert.
 
-`Aptitude::Auto-Install-Remove-Ok` :: Hiermit entfernt Aptitude 
+`Aptitude::Auto-Install-Remove-Ok` :: Hiermit entfernt `aptitude` 
 automatisch in Konflikt stehende Pakete, wenn Sie ein Paket zur 
 Installation oder Aktualisierung markieren. Normalerweise sind diese
 Konflikte von Ihnen manuell zubeheben. Daher ist die Voreinstellung auf 
-`False` gesetzt, d.h. Aptitude nimmt keine automatische Entfernung vor.
+`False` gesetzt, d.h. `aptitude` nimmt keine automatische Entfernung vor.
 
-`Aptitude::Auto-Upgrade` :: Damit markiert Aptitude automatisch alle 
+`Aptitude::Auto-Upgrade` :: Damit markiert `aptitude` automatisch alle 
 erneuerbaren Pakete für eine Aktualisierung (Upgrade), wenn das Programm 
 startet. Die Voreinstellung ist `False`.
 
 `Aptitude::Clean-After-Install` :: Wenn diese Option auf `True` gesetzt
-ist, bereinigt Aptitude alle Dateien im Paketcache nach erfolgreicher 
+ist, bereinigt `aptitude` alle Dateien im Paketcache nach erfolgreicher 
 Installation von Paketen (oder ähnlichen Operationen). Diese Option ist 
 ähnlich zu `Aptitude::Autoclean-After-Update`. Die Voreinstellung ist 
 `False`.
@@ -67,7 +68,7 @@ Installation von Paketen (oder ähnlichen Operationen). Diese Option ist
 (((aptitude, --assume-yes)))
 
 `Aptitude::CmdLine::Assume-Yes` :: Damit bestätigen Sie jegliche Rückfrage
- seitens Aptitude mit 'ja'. Die Voreinstellung ist `False`, d.h. die 
+ seitens `aptitude` mit 'ja'. Die Voreinstellung ist `False`, d.h. die 
  Rückfragen erfolgen stets. Dieser Schalter entspricht der 
  Kommandozeilenoption `-y` (Langform `--assume-yes`) (siehe 
  <<paketoperationen-ohne-rueckfrage-durchfuehren-aptitude>>).
@@ -248,7 +249,7 @@ Installation von Paketen (oder ähnlichen Operationen). Diese Option ist
 
 * `Aptitude::Sections::Top-Sections`
 
-`Aptitude::Simulate` :: Hierüber simuliert Aptitude die Änderungen im 
+`Aptitude::Simulate` :: Hierüber simuliert `aptitude` die Änderungen im 
 Paketbestand, die stattfinden würden, ohne diese tatsächlich anzuwenden. 
 Diese Konfigurationsoption entspricht der Aufrufoption `-s` (Langform 
 `--simulate`). Die Voreinstellung ist `False` für 'keine Simulation'.
@@ -259,31 +260,31 @@ Diese Konfigurationsoption entspricht der Aufrufoption `-s` (Langform
 
 * `Aptitude::Suppress-Read-Only-Warning`
 
-`Aptitude::Theme` :: Legt das Farbschema fest, welches Aptitude zur 
+`Aptitude::Theme` :: Legt das Farbschema fest, welches `aptitude` zur 
 Darstellung der einzelnen Elemente in seiner Bedienoberfläche (TUI) 
 benutzen soll (siehe dazu <<aptitude-farbschema-anpassen>>).
 
-* Aptitude::Track-Dselect-State
+* `Aptitude::Track-Dselect-State`
 
-* Aptitude::UI::Advance-On-Action
+* `Aptitude::UI::Advance-On-Action`
 
-* Aptitude::UI::Auto-Show-Reasons
+* `Aptitude::UI::Auto-Show-Reasons`
 
-* Aptitude::UI::Default-Grouping
+* `Aptitude::UI::Default-Grouping`
 
-* Aptitude::UI::Default-Package-View
+* `Aptitude::UI::Default-Package-View`
 
-* Aptitude::UI::Default-Preview-Grouping
+* `Aptitude::UI::Default-Preview-Grouping`
 
-* Aptitude::UI::Default-Sorting
+* `Aptitude::UI::Default-Sorting`
 
-* Aptitude::UI::Description-Visible-By-Default
+* `Aptitude::UI::Description-Visible-By-Default`
 
-* Aptitude::UI::Exit-On-Last-Close
+* `Aptitude::UI::Exit-On-Last-Close`
 
-* Aptitude::UI::Fill-Text
+* `Aptitude::UI::Fill-Text`
 
-* Aptitude::UI::Flat-View-As-First-View
+* `Aptitude::UI::Flat-View-As-First-View`
 
 * Aptitude::UI::HelpBar
 
@@ -314,21 +315,22 @@ benutzen soll (siehe dazu <<aptitude-farbschema-anpassen>>).
 * Aptitude::UI::Prompt-On-Exit
 
 `Aptitude::UI::Styles` :: Mit diesen Angaben legen Sie fest, welchen Stil 
-die Textoberfläche von Aptitude benutzt, um die einzelnen Informationsblöcke 
-darzustellen (siehe <<aptitude-farbschema-anpassen-strukturelemente>>).
+die Textoberfläche von `aptitude` benutzt, um die einzelnen 
+Informationsblöcke darzustellen (siehe 
+<<aptitude-farbschema-anpassen-strukturelemente>>).
 
-* Aptitude::UI::ViewTabs
+* `Aptitude::UI::ViewTabs`
 
-* Aptitude::Warn-Not-Root
+* `Aptitude::Warn-Not-Root`
 
-* DebTags::Vocabulary
+* `DebTags::Vocabulary`
 
-* Dir::Aptitude::state
+* `Dir::Aptitude::state`
 
-`Quiet` :: Diese Variable legt fest, wie 'gesprächig' Aptitude beim Aufruf 
-über die Kommandozeile ist. Der Wert der Voreinstellung ist 0. Je höher 
-der Wert ist, umso mehr Informationen zum Fortschritt der Bearbeitung zeigt
-Aptitude an.
+`Quiet` :: Diese Variable legt fest, wie 'gesprächig' `aptitude` beim 
+Aufruf über die Kommandozeile ist. Der Wert der Voreinstellung ist 0. Je 
+höher der Wert ist, umso mehr Informationen zum Fortschritt der 
+Bearbeitung zeigt `aptitude` an.
 
 [[konfigurationsoptionen-von-aptitude-beispiele]]
 ==== Beispielaufrufe für die Kommandozeile ====
