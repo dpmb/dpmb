@@ -1,0 +1,57 @@
+// Datei: ./werkzeuge/paketoperationen/paketoperationen-ohne-rueckfrage-durchfuehren.adoc
+
+// Baustelle: Rohtext
+
+[[paketoperationen-ohne-rueckfrage-durchfuehren]]
+
+=== Paketoperationen ohne Rückfrage durchführen ===
+
+// Stichworte für den Index
+(((Paketoperationen, ohne Rückfrage durchführen)))
+(((Paketoperationen, automatisieren)))
+
+Sowohl `apt-get` als auch Aptitude bieten Optionen an, mit denen 
+auftretende Rückfragen von vornherein beantwortet werden. Sie legen damit 
+die Antwort im Aufruf bereits fest. Dieses Vorgehen ist bei der 
+Automatisierung von Vorgängen sinnvoll. Bitte setzen Sie diese Optionen 
+nur ein, wenn Sie wissen, was Sie tun.
+
+[[paketoperationen-ohne-rueckfrage-durchfuehren-apt]]
+
+==== `apt-get` ====
+
+// Stichworte für den Index
+(((apt-get, -y)))
+(((apt-get, --assume-yes)))
+(((apt-get, --yes)))
+(((aptitude, -y)))
+(((aptitude, --assume-yes)))
+
+`apt-get` bietet Ihnen diese Optionen an:
+
+`-y` (Langformen `--assume-yes` und `--yes`) :: alle Rückfragen vor der 
+Durchführung von Paketoperationen werden mit 'ja' beantwortet und es
+erfolgt keine Benutzerinteraktion. Tritt eine unerwünschte Situation ein, 
+wie bspw. eine Änderung an einem gehaltenen Paket, die Installation eines 
+nicht authentifizierten Pakets oder das Entfernen eines essentiellen 
+Pakets, dann bricht `apt-get` die Ausführung der Aktionen ab.
+
+[[paketoperationen-ohne-rueckfrage-durchfuehren-aptitude]]
+
+==== Aptitude ====
+
+// Stichworte für den Index
+(((aptitude, -y)))
+(((aptitude, --assume-yes)))
+
+Aptitude bietet Ihnen diese Optionen für den Aufruf von der Kommandozeile 
+an:
+
+`-y` (Langform `--yes`) :: alle Rückfragen vor der Durchführung von 
+Paketoperationen werden mit 'ja' beantwortet und es erfolgt keine 
+Benutzerinteraktion. Tritt eine unerwünschte Situation ein, wie bspw. 
+eine Änderung an einem gehaltenen Paket, die Installation eines 
+nicht authentifizierten Pakets oder das Entfernen eines essentiellen 
+Pakets, dann bricht Aptitude die Ausführung der Aktionen ab.
+
+// Datei (Ende): ./werkzeuge/paketoperationen/paketoperationen-ohne-rueckfrage-durchfuehren.adoc
