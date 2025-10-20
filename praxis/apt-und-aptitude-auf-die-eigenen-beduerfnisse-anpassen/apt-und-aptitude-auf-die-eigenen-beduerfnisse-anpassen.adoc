@@ -40,6 +40,9 @@ include::konfigurationsoptionen-von-apt.adoc[]
 // APT-Hooks
 include::apt-hooks.adoc[]
 
+// APT-Resolver einstellen
+include::apt-resolver-einstellen.adoc[]
+
 // Konfiguration von aptitude
 include::konfiguration-von-aptitude.adoc[]
 
