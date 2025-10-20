@@ -24,18 +24,17 @@ einzelnen Schalter genauer.
 
 * `APT::AutoRemove::SuggestsImportant`
 
-`APT::Get::List-Cleanup` :: Hierüber steuern Sie, ob Aptitude alte 
- Paketlisten nach dem Bezug einer neuen Paketliste löscht, bspw. nach 
- dem Aufruf von `apt update` (siehe 
- <<liste-der-verfuegbaren-pakete-aktualisieren>>). Die Voreinstellung ist 
- `True`, sprich: ältere Paketlisten werden entfernt. Dieser Schalter ist 
- ein Synonym für `APT::List-Cleanup` und bei der Entscheidung, ob ältere 
- Paketlisten entfernt werden sollen oder nicht, werden beide Schalter 
- ausgewertet. Ist einer von beiden Schaltern auf `False` gesetzt, werden 
- ältere Paketlisten aufgehoben.
+`APT::Get::List-Cleanup` :: Hierüber steuern Sie, ob APT alte Paketlisten 
+ nach dem Bezug einer neuen Paketliste löscht, bspw. nach dem Aufruf von 
+ `apt update` (siehe <<liste-der-verfuegbaren-pakete-aktualisieren>>). Die 
+ Voreinstellung ist `True`, sprich: ältere Paketlisten werden entfernt. 
+ Dieser Schalter ist ein Synonym für `APT::List-Cleanup` und bei der 
+ Entscheidung, ob ältere Paketlisten entfernt werden sollen oder nicht, 
+ werden beide Schalter ausgewertet. Ist einer von beiden Schaltern auf 
+ `False` gesetzt, werden ältere Paketlisten aufgehoben.
 
-`APT::List-Cleanup` :: Hierüber steuern Sie, ob Aptitude alte Paketlisten 
- nach dem Bezug einer neuen Paketliste löscht, bspw. nach dem Aufruf von
+`APT::List-Cleanup` :: Hierüber steuern Sie, ob APT alte Paketlisten nach 
+ dem Bezug einer neuen Paketliste löscht, bspw. nach dem Aufruf von
  `apt update` (siehe <<liste-der-verfuegbaren-pakete-aktualisieren>>). Die 
  Voreinstellung ist `True`, sprich: ältere Paketlisten werden entfernt. 
  Dieser Schalter ist ein Synonym für `APT::Get::List-Cleanup` und bei der 
@@ -44,8 +43,8 @@ einzelnen Schalter genauer.
  `False` gesetzt, werden ältere Paketlisten aufgehoben.
 
 `APT::Install-Recommends` :: Ist der Schalter `Aptitude::Auto-Install` auf 
- `True` gesetzt, markiert Aptitude hiermit alle Pakete zur Installation, 
- die in den Metadaten zum Paket als 'empfohlen' hinterlegt sind (siehe 
+ `True` gesetzt, markiert APT hiermit alle Pakete zur Installation, die in 
+ den Metadaten zum Paket als 'empfohlen' hinterlegt sind (siehe 
  <<debian-paketformat-im-detail>>). Gleichzeitig stuft Aptitude diese 
  Pakete als 'in Benutzung' ein, sofern ein anderes installiertes Paket 
  noch darauf verweist -- damit werden diese nicht mehr automatisch 
