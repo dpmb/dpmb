@@ -1,62 +1,18 @@
-// Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfigurationsoptionen-von-apt.adoc
+// Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfigurationsoptionen-von-aptitude.adoc
 
 // Baustelle: Notizen
 
-[[konfigurationsoptionen-von-apt]]
-=== Konfigurationsoptionen von APT ===
+[[konfigurationsoptionen-von-aptitude]]
+=== Konfigurationsoptionen von Aptitude ===
 
 // Stichworte für den Index
-(((APT, Konfigurationsoptionen)))
-(((apt, -o)))
 (((aptitude, -o)))
 (((Aptitude, Konfigurationsoptionen)))
-Neben den festen Einstellungen über die Konfigurationsdateien für APT und 
-Aptitude (siehe <<konfigurationsdateien-von-apt>>) haben Sie jederzeit die
-Möglichkeit, Fähigkeiten der Werkzeuge über Optionen ein- und auszuschalten.
-Dazu ergänzen Sie im Aufruf den Schalter `-o`, gefolgt von einem oder 
-mehreren Paaren aus Schlüssel und Wert. Nachfolgend besprechen wir die 
-einzelnen Schalter genauer.
-
-[[konfigurationsoptionen-von-apt-schalter]]
-==== Schalter von Apt ====
-
-`APT::AutoRemove::RecommendsImportant` :: Hierüber betrachtet APT Pakete 
- als 'verwendet', solange sie von einem installierten Paket empfohlen 
- werden (siehe <<debian-paketformat-im-detail>>). Die Voreinstellung ist 
- `True`, sprich: diese werden daher auch nicht automatisch entfernt (siehe 
- <<umgang-mit-waisen>>).
-
-`APT::AutoRemove::SuggestsImportant` :: Hierüber betrachtet APT Pakete 
- als 'verwendet', solange sie von einem installierten Paket vorgeschlagen 
- werden (siehe <<debian-paketformat-im-detail>>). Die Voreinstellung ist 
- `True`, sprich: diese werden daher auch nicht automatisch entfernt (siehe 
- <<umgang-mit-waisen>>).
-
-`APT::Get::List-Cleanup` :: Hierüber steuern Sie, ob APT alte Paketlisten 
- nach dem Bezug einer neuen Paketliste löscht, bspw. nach dem Aufruf von 
- `apt update` (siehe <<liste-der-verfuegbaren-pakete-aktualisieren>>). Die 
- Voreinstellung ist `True`, sprich: ältere Paketlisten werden entfernt. 
- Dieser Schalter ist ein Synonym für `APT::List-Cleanup` und bei der 
- Entscheidung, ob ältere Paketlisten entfernt werden sollen oder nicht, 
- werden beide Schalter ausgewertet. Ist einer von beiden Schaltern auf 
- `False` gesetzt, werden ältere Paketlisten aufgehoben.
-
-`APT::List-Cleanup` :: Hierüber steuern Sie, ob APT alte Paketlisten nach 
- dem Bezug einer neuen Paketliste löscht, bspw. nach dem Aufruf von
- `apt update` (siehe <<liste-der-verfuegbaren-pakete-aktualisieren>>). Die 
- Voreinstellung ist `True`, sprich: ältere Paketlisten werden entfernt. 
- Dieser Schalter ist ein Synonym für `APT::Get::List-Cleanup` und bei der 
- Entscheidung, ob ältere Paketlisten entfernt werden sollen oder nicht, 
- werden beide Schalter ausgewertet. Ist einer von beiden Schaltern auf 
- `False` gesetzt, werden ältere Paketlisten aufgehoben.
-
-`APT::Install-Recommends` :: Ist der Schalter `Aptitude::Auto-Install` auf 
- `True` gesetzt, markiert APT hiermit alle Pakete zur Installation, die in 
- den Metadaten zum Paket als 'empfohlen' hinterlegt sind (siehe 
- <<debian-paketformat-im-detail>>). Gleichzeitig stuft APT diese Pakete 
- als 'in Benutzung' ein, sofern ein anderes installiertes Paket noch 
- darauf verweist -- damit werden diese nicht mehr automatisch entfernt 
- (siehe <<umgang-mit-waisen>>).
+Neben den festen Einstellungen über die Konfigurationsdateien für Aptitude 
+haben Sie jederzeit die Möglichkeit, Fähigkeiten der Werkzeuge über 
+einzelne Optionen ein- und auszuschalten. Dazu ergänzen Sie im Aufruf den 
+Schalter `-o`, gefolgt von einem oder mehreren Paaren aus Schlüssel und 
+Wert. Nachfolgend besprechen wir die einzelnen Schalter genauer.
 
 [[konfigurationsoptionen-von-aptitude-schalter]]
 ==== Schalter von Aptitude ====
@@ -374,8 +330,9 @@ darzustellen (siehe <<aptitude-farbschema-anpassen-strukturelemente>>).
 der Wert ist, umso mehr Informationen zum Fortschritt der Bearbeitung zeigt
 Aptitude an.
 
+[[konfigurationsoptionen-von-aptitude-beispiele]]
 ==== Beispielaufrufe für die Kommandozeile ====
 
 * Todo
 
-// Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfigurationsoptionen-von-apt.adoc
+// Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/konfigurationsoptionen-von-aptitude.adoc
