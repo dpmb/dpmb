@@ -66,7 +66,7 @@ einzelnen Schalter genauer.
 (((aptitude, -s)))
 (((aptitude, --simulate)))
 
-* `Aptitude::Allow-Null-Upgrade`
+`Aptitude::Allow-Null-Upgrade` :: Todo
 
 `Aptitude::Always-Use-Safe-Resolver` :: Hierüber verwendet Aptitude immer 
 das sichere Verfahren zur Auflösung von Paketabhängigkeiten. Das ist analog
@@ -104,9 +104,17 @@ Installation von Paketen (oder ähnlichen Operationen). Diese Option ist
 ähnlich zu `Aptitude::Autoclean-After-Update`. Die Voreinstellung ist 
 `False`.
 
-* `Aptitude::CmdLine::Always-Prompt`
+`Aptitude::CmdLine::Always-Prompt` :: Todo
 
-* `Aptitude::CmdLine::Assume-Yes`
+// Stichworte für den Index
+(((aptitude, -y)))
+(((aptitude, --assume-yes)))
+
+`Aptitude::CmdLine::Assume-Yes` :: Damit bestätigen Sie jegliche Rückfrage
+ seitens Aptitude mit 'ja'. Die Voreinstellung ist `False`, d.h. die 
+ Rückfragen erfolgen stets. Dieser Schalter entspricht der 
+ Kommandozeilenoption `-y` (Langform `--assume-yes`) (siehe 
+ <<paketoperationen-ohne-rueckfrage-durchfuehren-aptitude>>).
 
 * `Aptitude::CmdLine::Disable-Columns`
 
