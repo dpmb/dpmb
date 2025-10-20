@@ -1,0 +1,13 @@
+// Datei: ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-resolver-einstellen.adoc
+
+// Baustelle: Notizen
+
+[[aptitude-resolver-einstellen]]
+=== `aptitude`-Resolver einstellen ====
+
+// Stichworte für den Index
+
+* Todo
+
+// Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-resolver-einstellen.adoc
+
