@@ -7,7 +7,20 @@
 
 // Stichworte für den Index
 
-* Todo
+* was macht ein Resolver
+** Mechanismus zum Bestimmen der Paketabhängigkeiten
+** wertet die Schlüsselworte aus, die in der Beschreibung zu einem Paket 
+   stehen (siehe <<debian-paketformat-im-detail>>)
+** Ergebnis ist eine Liste von Paketen, die bspw. bei der Installation, 
+   der Aktualisierung oder der Entfernung eines Pakets mit zu 
+   berücksichtigen sind
+
+* verfügbare Resolver für die Kommandozeile
+** Standard-Resolver (default)
+** Safe-Resolver
+* verfügbare Resolver für die Textoberfläche (TUI)
+** Standard-Resolver (default)
+** interaktiver Resolver
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/aptitude-resolver-einstellen.adoc
 

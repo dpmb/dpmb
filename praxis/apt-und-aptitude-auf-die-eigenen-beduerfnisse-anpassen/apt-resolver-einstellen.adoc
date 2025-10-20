@@ -7,7 +7,17 @@
 
 // Stichworte für den Index
 
-* Todo
+* was macht ein Resolver
+** Mechanismus zum Bestimmen der Paketabhängigkeiten
+** wertet die Schlüsselworte aus, die in der Beschreibung zu einem Paket 
+   stehen (siehe <<debian-paketformat-im-detail>>)
+** Ergebnis ist eine Liste von Paketen, die bspw. bei der Installation, 
+   der Aktualisierung oder der Entfernung eines Pakets mit zu 
+   berücksichtigen sind
+
+* verfügbare Resolver
+** Standard-Resolver (default)
+** `apt-cudf`
 
 // Datei (Ende): ./praxis/apt-und-aptitude-auf-die-eigenen-beduerfnisse-anpassen/apt-resolver-einstellen.adoc
 
