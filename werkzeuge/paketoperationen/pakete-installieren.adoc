@@ -235,8 +235,9 @@ vor.
 
 `-y` (Langform `-assume-yes` und `--yes`) :: 
 die interaktiven Fragen zur Installation werden automatisch mit ``YES''
-bzw. ``JA'' beantwortet. Die Option ist das Gegenstück zu
-`--trivial-only`.
+bzw. ``JA'' beantwortet (siehe 
+<<paketoperationen-ohne-rueckfrage-durchfuehren>>). Die Option ist das 
+Gegenstück zu `--trivial-only`.
 
 `-d` (Langform `--download-only`) :: 
 die Pakete werden nur heruntergeladen, jedoch nicht installiert (siehe
