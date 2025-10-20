@@ -3,7 +3,7 @@
 // Baustelle: Notizen
 
 [[aptitude-resolver-einstellen]]
-=== `aptitude`-Resolver einstellen ====
+=== `aptitude`-Resolver einstellen ===
 
 // Stichworte für den Index
 
