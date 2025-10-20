@@ -22,10 +22,15 @@ einzelnen Schalter genauer.
 
 `APT::AutoRemove::RecommendsImportant` :: Hierüber betrachtet APT Pakete 
  als 'verwendet', solange sie von einem installierten Paket empfohlen 
- werden. Die Voreinstellung ist `True`, sprich: diese werden daher auch 
- nicht automatisch entfernt (siehe <<umgang-mit-waisen>>).
+ werden (siehe <<debian-paketformat-im-detail>>). Die Voreinstellung ist 
+ `True`, sprich: diese werden daher auch nicht automatisch entfernt (siehe 
+ <<umgang-mit-waisen>>).
 
-* `APT::AutoRemove::SuggestsImportant`
+`APT::AutoRemove::SuggestsImportant` :: Hierüber betrachtet APT Pakete 
+ als 'verwendet', solange sie von einem installierten Paket vorgeschlagen 
+ werden (siehe <<debian-paketformat-im-detail>>). Die Voreinstellung ist 
+ `True`, sprich: diese werden daher auch nicht automatisch entfernt (siehe 
+ <<umgang-mit-waisen>>).
 
 `APT::Get::List-Cleanup` :: Hierüber steuern Sie, ob APT alte Paketlisten 
  nach dem Bezug einer neuen Paketliste löscht, bspw. nach dem Aufruf von 
