@@ -20,7 +20,10 @@ einzelnen Schalter genauer.
 [[konfigurationsoptionen-von-apt-schalter]]
 ==== Schalter von Apt ====
 
-* `APT::AutoRemove::RecommendsImportant`
+`APT::AutoRemove::RecommendsImportant` :: Hierüber betrachtet APT Pakete 
+ als 'verwendet', solange sie von einem installierten Paket empfohlen 
+ werden. Die Voreinstellung ist `True`, sprich: diese werden daher auch 
+ nicht automatisch entfernt (siehe <<umgang-mit-waisen>>).
 
 * `APT::AutoRemove::SuggestsImportant`
 
