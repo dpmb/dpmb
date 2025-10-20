@@ -156,12 +156,6 @@ Installation von Paketen (oder ähnlichen Operationen). Diese Option ist
 
 * `Aptitude::CmdLine::Versions-Show-Package-Names`
 
-* `Aptitude::Safe-Resolver::Show-Resolver-Actions`
-
-* `Aptitude::Screenshot::IncrementalLoadLimit`
-
-* `Aptitude::Screenshot::Cache-Max` 
-
 * `Aptitude::CmdLine::Simulate`
 
 * `Aptitude::CmdLine::Verbose`
@@ -287,6 +281,12 @@ Installation von Paketen (oder ähnlichen Operationen). Diese Option ist
 * `Aptitude::Safe-Resolver::No-New-Installs`
 
 * `Aptitude::Safe-Resolver::No-New-Upgrades`
+
+* `Aptitude::Safe-Resolver::Show-Resolver-Actions`
+
+* `Aptitude::Screenshot::IncrementalLoadLimit`
+
+* `Aptitude::Screenshot::Cache-Max` 
 
 * `Aptitude::Sections::Descriptions`
 
