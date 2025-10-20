@@ -43,6 +43,9 @@ include::apt-hooks.adoc[]
 // Konfiguration von aptitude
 include::konfiguration-von-aptitude.adoc[]
 
+// Konfigurationsoptionen von Aptitude
+include::konfigurationsoptionen-von-aptitude.adoc[]
+
 // aptitude: Interaktives Ändern von Optionen
 include::interaktives-aendern-von-optionen.adoc[]
 
