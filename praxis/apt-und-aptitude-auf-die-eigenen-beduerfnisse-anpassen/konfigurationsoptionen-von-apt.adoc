@@ -43,7 +43,13 @@ einzelnen Schalter genauer.
  werden beide Schalter ausgewertet. Ist einer von beiden Schaltern auf 
  `False` gesetzt, werden ältere Paketlisten aufgehoben.
 
-* `APT::Install-Recommends`
+`APT::Install-Recommends` :: Ist der Schalter `Aptitude::Auto-Install` auf 
+ `True` gesetzt, markiert Aptitude hiermit alle Pakete zur Installation, 
+ die in den Metadaten zum Paket als 'empfohlen' hinterlegt sind (siehe 
+ <<debian-paketformat-im-detail>>). Gleichzeitig stuft Aptitude diese 
+ Pakete als 'in Benutzung' ein, sofern ein anderes installiertes Paket 
+ noch darauf verweist -- damit werden diese nicht mehr automatisch 
+ entfernt (siehe <<umgang-mit-waisen>>).
 
 [[konfigurationsoptionen-von-aptitude-schalter]]
 ==== Schalter von Aptitude ====
