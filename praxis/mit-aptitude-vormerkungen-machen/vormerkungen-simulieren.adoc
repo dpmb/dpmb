@@ -46,7 +46,8 @@ Pakete würden heruntergeladen/installiert/entfernt werden.
 Kombinieren Sie obigen `aptitude`-Aufruf zur Simulation mit dem
 Parameter `-y` (Langform `--assume-yes`), entfällt die manuelle
 Beantwortung der Frage ``Möchten Sie fortsetzen?''. In diesem Fall
-werden alle Fragen automatisch mit ``Ja'' beantwortet.
+werden alle Fragen automatisch mit ``Ja'' beantwortet (siehe 
+<<paketoperationen-ohne-rueckfrage-durchfuehren-aptitude>>).
 ====
 
 // Datei (Ende): ./praxis/mit-aptitude-vormerkungen-machen/vormerkungen-simulieren.adoc
