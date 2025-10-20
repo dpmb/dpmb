@@ -3,7 +3,7 @@
 // Baustelle: Notizen
 
 [[apt-resolver-einstellen]]
-=== APT-Resolver einstellen ====
+=== APT-Resolver einstellen ===
 
 // Stichworte für den Index
 
