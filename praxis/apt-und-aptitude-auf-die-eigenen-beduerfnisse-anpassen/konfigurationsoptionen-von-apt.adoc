@@ -8,8 +8,6 @@
 // Stichworte für den Index
 (((APT, Konfigurationsoptionen)))
 (((apt, -o)))
-(((aptitude, -o)))
-(((Aptitude, Konfigurationsoptionen)))
 Neben den festen Einstellungen über die Konfigurationsdateien für APT 
 haben Sie jederzeit die Möglichkeit, Fähigkeiten des Werkzeugs über 
 Optionen ein- und auszuschalten. Dazu ergänzen Sie im Aufruf den 
