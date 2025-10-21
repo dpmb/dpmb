@@ -329,18 +329,17 @@ Möchten Sie fortfahren? [J/n]
 (((apt-get, remove --purge)))
 (((dpkg, -P)))
 (((dpkg, --purge)))
-APT und `aptitude` ermöglichen auch das Deinstallieren eines oder
-mehrerer Pakete samt zugehöriger Konfigurationsdateien in einem einzigen
-Schritt. Die Aufrufe entsprechen dem Kommando `dpkg -P` 'Paketname' für
-eine Menge von Paketen in der richtigen Reihenfolge der
-Paketabhängigkeiten. 
+APT und `aptitude` ermöglichen auch das Deinstallieren eines oder mehrerer 
+Pakete samt zugehöriger Konfigurationsdateien in einem einzigen Schritt. 
+Die Aufrufe entsprechen dem Kommando `dpkg -P` 'Paketname' für eine Menge 
+von Paketen in der richtigen Reihenfolge der Paketabhängigkeiten. 
 
-Für diese Aktion gilt das gleiche wie in Fall3. Sie kombinieren entweder
-`apt-get` mit dem Schalter `remove`, der Option `--purge` und dem
-Paketnamen oder nur dem Schalter `purge` und dem Paketnamen. `aptitude`
+Für diese Aktion gilt das gleiche wie in Fall 3. Sie kombinieren entweder
+`apt-get` mit dem Schalter `remove`, der Option `--purge` und dem 
+Paketnamen oder nur dem Schalter `purge` und dem Paketnamen. `aptitude` 
 und `apt` kennen hingegen auschließlich den Schalter `purge` für diese
 Aktion. Das nachfolgende Beispiel zeigt den entsprechenden Aufruf von
-`aptitude` und das Paket 'cssed'.
+`aptitude` für das Paket 'cssed'.
 
 .Löschen des Pakets 'cssed' samt Konfigurationsdateien in einem Schritt
 ----
