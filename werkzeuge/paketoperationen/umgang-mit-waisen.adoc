@@ -8,27 +8,28 @@
 
 // Stichworte für den Index
 (((Paketwaise)))
-Während der Verwendung von APT und `aptitude` werden die
-Abhängigkeiten der Pakete automatisch aufgelöst und daher auch
-zusätzlich benötigte Pakete eingespielt. Deinstallieren Sie zu einem
-späteren Zeitpunkt Pakete, werden bei Aptitude alle nicht mehr
-benötigten Pakete ebenfalls wieder entfernt. APT (`apt`, `apt-get`)
-weißt im Gegensatz dazu in der Standard-Einstellung nur auf nicht mehr
-benötigte Pakete hin, entfernt sie aber nicht automatisch.
+Während der Verwendung von APT und `aptitude` werden die Abhängigkeiten 
+der Pakete automatisch aufgelöst (siehe <<apt-resolver-einstellen>> und 
+<<aptitude-resolver-einstellen>>) und daher auch zusätzlich benötigte 
+Pakete eingespielt. Deinstallieren Sie zu einem späteren Zeitpunkt Pakete, 
+entfernt Aptitude nicht in jedem Fall alle ursprünglich installierten 
+Pakete. APT mit `apt` und `apt-get` weist in der Standard-Einstellung nur 
+auf die nicht mehr benötigten Pakete hin, entfernt sie aber nicht 
+automatisch.
 
 So verbleiben mitunter ``Reste'' auf dem System zurück, die ohne Bezug zu
 anderen Paketen sind. Hängt ein Paket von keinem weiteren mehr ab und
-bildet kein eigenständiges Programm, wird es daher zu einem Waisen –
+bildet kein eigenständiges Programm, wird es daher zu einem Waisen -- 
 engl. _orphan_. Häufig betrifft dies Pakete aus den Kategorien für
 Bibliotheken (_libs_), veraltete Bibliotheken (_oldlibs_) und
-Entwicklungsbibliotheken (_libdevel_).
+Entwicklungsbibliotheken (_libdevel_) (siehe 
+<<sortierung-der-pakete-nach-verwendungszweck>>).
 
 Der Umgang mit Waisen ist im Allgemeinen recht unproblematisch. Waisen
-können Sie bedenkenlos entfernen, um unnötigerweise belegten Speicherplatz
-auf Ihrem System wieder freizugeben. Wir empfehlen Ihnen, diesen
-Aufräumvorgang bei der Systempflege als weiteren Schritt mit
-durchzuführen. Das hält Ihr System sauber und befreit es von unnützen
-Lasten.
+entfernen Sie bedenkenlos, um unnötigerweise belegten Speicherplatz auf 
+Ihrem System wieder freizugeben. Wir empfehlen Ihnen, diesen 
+Aufräumvorgang bei der Systempflege als weiteren Schritt mit durchzuführen. 
+Das hält Ihr System sauber und befreit es von unnützen Lasten.
 
 // Stichworte für den Index
 (((debfoster)))
