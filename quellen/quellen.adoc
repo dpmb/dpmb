@@ -275,6 +275,8 @@
 
 - [[[Debian-Paket-apt-cdrom-setup]]] Debian-Paket 'apt-cdrom-setup', https://packages.debian.org/de/stable/apt-cdrom-setup
 
+- [[[Debian-Paket-apt-cudf]]] Debian-Paket 'apt-cudf', https://packages.debian.org/trixie/apt-cudf
+
 - [[[Debian-Paket-apt-dater]]] Debian-Paket 'apt-dater', https://packages.debian.org/de/stable/apt-dater
 
 - [[[Debian-Paket-apt-dpkg-ref]]] Debian-Paket 'apt-dpkg-ref', https://packages.debian.org/de/stable/apt-dpkg-ref

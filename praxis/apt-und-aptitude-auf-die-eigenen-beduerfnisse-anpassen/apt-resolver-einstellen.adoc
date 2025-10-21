@@ -6,6 +6,8 @@
 === APT-Resolver einstellen ===
 
 // Stichworte für den Index
+(((apt-cudf)))
+(((Debianpaket, apt-cudf)))
 
 * was macht ein Resolver
 ** Mechanismus zum Bestimmen der Paketabhängigkeiten
