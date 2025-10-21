@@ -72,10 +72,11 @@ nur Pakete, die als ``automatisch installiert'' markiert sind und von
 denen wiederum kein manuell installiertes Paket abhängt (keine 'reverse 
 dependencies' bestehen).
 
-Über die `aptitude`-Option `aptitude::Delete-Unused` schalten Sie dieses 
-Verhalten zu oder ab – entweder über die Benutzeroberfläche unter
-menu:Optionen[Einstellungen], oder direkt in der Konfigurationsdatei
-von `aptitude` (siehe <<konfigurationsoptionen-von-aptitude>>).
+`aptitude` steuert das über die Option `aptitude::Delete-Unused`. Dazu 
+schalten Sie dieses Verhalten entweder über die Benutzeroberfläche unter
+menu:Optionen[Einstellungen] ein bzw. aus, oder ändern den Wert direkt in 
+der Konfigurationsdatei von `aptitude` (siehe 
+<<konfigurationsoptionen-von-aptitude>>).
 
 .Nicht verwendete Pakete automatisch entfernen in `aptitude`
 image::werkzeuge/paketoperationen/aptitude-delete-unused.png[id="fig.aptitude-delete-unused", width="50%"]
@@ -86,7 +87,7 @@ image::werkzeuge/paketoperationen/aptitude-delete-unused.png[id="fig.aptitude-de
 (((apt, autoremove)))
 Um ungenutzte Pakete mit APT explizit zu entfernen, verfügen `apt` und 
 `apt-get` über das Unterkommando `autoremove`. `apt-get` kennt zusätzlich 
-noch über die alternative Schreibweise `auto-remove`. 
+noch die alternative Schreibweise `auto-remove`. 
 
 .Pakete automatisch entfernen mit dem Unterkommando `autoremove`
 ----
