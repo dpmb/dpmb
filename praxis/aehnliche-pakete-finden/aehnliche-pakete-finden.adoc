@@ -4,9 +4,34 @@
 [[aehnliche-pakete-finden]]
 == Ähnliche Pakete finden ==
 
-* Pakete finden, die ähnlich zu anderen sind, sprich: das gleiche machen
+// Stichworte für den Index
+(((ähnliche Pakete finden)))
+
+* Pakete finden, die ähnlich zu anderen sind, sprich: das gleiche oder 
+  was ziemlich ähnliches machen
+
+* Möglichkeiten zur Suche
+** Suche anhand der Paketkategorien
+** Suche über die Paketbeschreibung
 ** Suche über Debtags
-** Suche über die Paketkategorien
-** Suche über die Paketverwaltung
+** Suche über Manpages
+
+=== Suche anhand der Paketkategorien ===
+
+* Paketverwaltung hat Kategorien, in denen die Pakete einsortiert sind
+* siehe <<sortierung-der-pakete-nach-verwendungszweck>>
+
+=== Suche über die Paketbeschreibung ===
+
+* Suche anhand von Begriffen bzw. Worten, die in der Paketbeschreibung 
+  vorkommen
+
+=== Suche über Debtags ===
+
+* Debtags, siehe <<erweiterte-paketklassifikation-mit-debtags>>
+
+=== Suche über Manpages ===
+
+* Todo
 
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/aehnliche-pakete-finden.adoc
