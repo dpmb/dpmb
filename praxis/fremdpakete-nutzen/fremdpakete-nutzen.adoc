@@ -99,6 +99,7 @@ potentielle Stolperfallen ab (siehe <<pakete-installieren>>).
 ==== Mit `deb-get` ====
 
 // Stichworte für den Index
+(((deb-get, install)))
 (((Paketverwaltung, deb-get)))
 
 `deb-get` <<deb-get>> ist ein Werkzeug, welches dafür gedacht ist, Pakete 
