@@ -86,8 +86,8 @@ Pakete (siehe <<fremdpakete-nutzen-aufnahme-als-offizielles-paket>>).
 Um mit Hilfe von `dpkg` Pakete lokal zu installieren, laden Sie dieses
 Paket samt der dazugehörigen Prüfsumme zuvor herunter, bspw. über ihren 
 Webbrowser, mittels `curl` oder auch `wget`. Nachdem Sie dieses Paket 
-geprüft haben und für sauber befinden, spielen Sie dieses mittels 
-`dpkg -i` 'Dateiname' ein. 
+geprüft haben und für unbedenklich befinden, spielen Sie dieses mittels 
+`dpkg -i` 'Dateiname' ein (siehe auch <<pakete-installieren>>).
 
 Bei einfachen Paketen ohne weitere Abhängigkeiten mag das problemlos 
 gehen, praktisch und zeitgemäß ist es jedoch nicht. Je stärker das Paket 
