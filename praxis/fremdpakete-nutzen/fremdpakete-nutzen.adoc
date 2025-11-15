@@ -4,6 +4,9 @@
 [[fremdpakete-nutzen]]
 == Fremdpakete nutzen ==
 
+// Stichworte für den Index
+(((Debianpakete von GitHub)))
+(((Fremdpakete nutzen)))
 Vielfach stehen Pakete im `deb`-Format über unterschiedlichste Quellen 
 bereit, auch von privaten Webseiten und Repositories auf GitHub. Sie 
 selbst dürfen das selbstverständlich auch tun. Das ist toll und vergrößert 
@@ -81,6 +84,7 @@ Pakete (siehe <<fremdpakete-nutzen-aufnahme-als-offizielles-paket>>).
 // Stichworte für den Index
 (((dpkg, -i)))
 (((dpkg, --install)))
+(((Fremdpakete einbinden, dpkg)))
 (((Paket, installieren)))
 
 Um mit Hilfe von `dpkg` Pakete lokal zu installieren, laden Sie dieses
@@ -100,6 +104,7 @@ potentielle Stolperfallen ab (siehe <<pakete-installieren>>).
 
 // Stichworte für den Index
 (((deb-get, install)))
+(((Fremdpakete einbinden, deb-get)))
 (((Paketverwaltung, deb-get)))
 
 `deb-get` <<deb-get>> ist ein Werkzeug, welches dafür gedacht ist, Pakete 
@@ -125,6 +130,7 @@ die Sicherheit ihrer Linuxinstallation wichtig ist.
 
 // Stichworte für den Index
 (((Debianpaket, alien)))
+(((Paketformat ändern)))
 (((Paketverwaltung, alien)))
 Mitunter liegt das Paket in einem anderen Paketformat vor, bspw. RPM. Das
 Werkzeug `alien` wandelt diese Datei in ein `deb`-Paket um. Ausführlicher
@@ -139,6 +145,7 @@ gehen wir darauf in <<fremdformate-mit-alien-hinzufuegen>> ein.
 (((Paket in den offiziellen Paketbestand aufnehmen)))
 (((reportbug)))
 (((RFP)))
+(((Software für Debian paketieren)))
 Was soll ich tun, dass das von mir genutzte Paket endlich in Debian als 
 offizielles Paket verfügbar wird? Wir sehen diese Möglichkeiten zur 
 Lösung:
@@ -147,7 +154,7 @@ Lösung:
   Sie das Paket selbst, sofern Sie diese Schritte beherrschen. 
 
 * kontaktieren Sie einen Paketmaintainer für Debian und fragen Sie ihn, ob
-  er Interesse hat, die von ihnen Vorgeschlagene Software zu paketieren
+  er Interesse hat, die von ihnen vorgeschlagene Software zu paketieren
 
 * stellen Sie einen Request for Package (RFP) <<Debian-RFP>>, bspw. mit
   Hilfe des Werkzeugs `reportbug` <<Debian-Paket-reportbug>>.
