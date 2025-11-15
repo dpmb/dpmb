@@ -1,0 +1,12 @@
+// Datei: ./praxis/aehnliche-pakete-finden/aehnliche-pakete-finden.adoc
+// Baustelle: Notizen
+
+[[aehnliche-pakete-finden]]
+== Ähnliche Pakete finden ==
+
+* Pakete finden, die ähnlich zu anderen sind, sprich: das gleiche machen
+** Suche über Debtags
+** Suche über die Paketkategorien
+** Suche über die Paketverwaltung
+
+// Datei (Ende): ./praxis/aehnliche-pakete-finden/aehnliche-pakete-finden.adoc
