@@ -22,15 +22,16 @@ mit der Situation umgehen.
 (((DFSG)))
 (((Fremdpakete einbinden)))
 (((Paketquelle, nicht-offiziell)))
-Ist das erlaubt? Ja, klar -- hier bestehen keine Einschränkungen. Niemand
-hindert Sie daran, Software in Form von Debianpaketen einzuspielen, wenn 
-Sie das möchten.
+Ist das erlaubt? Ja, klar -- hier bestehen prinzipiell keinerlei 
+Einschränkungen. Niemand hindert Sie daran, Software aus diesen Quellen in 
+Form von Debianpaketen einzuspielen, wenn Sie das möchten.
 
-Sollten Sie das tun? Nein. Aber es geht doch. Ja klar, trotzdem sollten 
-Sie das nicht einfach so machen! Falls doch, sind ein paar Regeln 
-hilfreich, die die damit verbundenen Risiken minimieren. Hier folgen nun
-zunächst ein paar Gründe, welche Risiken bei Fremdpaketen überhaupt 
-bestehen, die ``einfach so von irgendwoher'' heruntergeladen werden:
+Sollten Sie das tun? Nein, nicht unbedingt. Aber es geht doch. Ja klar, 
+trotzdem sollten Sie das nicht einfach so machen! Falls doch, sind ein 
+paar Tips hilfreich, die die damit verbundenen Risiken minimieren. Hier 
+folgen nun zunächst ein paar Gründe, welche Risiken bei Fremdpaketen 
+überhaupt bestehen, die ``einfach so von irgendwoher'' heruntergeladen und
+eingespielt werden:
 
 * nicht alles, was (technisch) geht, ist auch sinnvoll und sollten Sie 
   durchführen
@@ -43,17 +44,20 @@ bestehen, die ``einfach so von irgendwoher'' heruntergeladen werden:
   von Debian nicht durchlaufen hat
 * keine vorherige Prüfung auf Paketabhängigkeiten. Das Paket mag auf dem
   Buildsystem des Entwicklers funktionieren, es besteht jedoch keine
-  Garantie für das Funktionieren bei regulären Veröffentlichungen
+  Garantie für das Funktionieren auf Systemen, die reguläre 
+  Veröffentlichungen nutzen 
 * keine Eintragung in die Liste bereitgestellter Pakete, d.h. zukünftig 
-  ist mehr Arbeit für Sie als Systembetreuer notwendig. Es steht jeweils 
-  eine manuelle Aktualisierung des Pakets an, sprich: alles das, was ein 
-  Maintainer machen würde
+  ist mehr Arbeit für Sie als Systembetreuer notwendig. Es steht 
+  einerseits eine manuelle Aktualisierung des Pakets an, sprich: alles 
+  das, was ein Maintainer machen würde. Außerdem müssen Sie prüfen, ob 
+  alle Abhängigkeiten erfüllt sind, um das Paket weiter benutzen zu können
 
 Aber ich brauche dieses Paket unbedingt! Falls das der Fall ist, prüfen
 Sie bitte vorab noch diese Punkte:
 
 alternative Pakete :: schauen Sie bitte vorher noch nach Alternativen mit
-den gleichen Eigenschaften oder Funktionsumfang
+den gleichen Eigenschaften oder Funktionsumfang (siehe 
+<<aehnliche-pakete-finden>>)
 
 Bezug aus vertrauenswürdiger Quelle :: steht das Paket auf einem 
 Paketmirror bereit und ist dieser vertrauenswürdig (siehe ``Paketquelle
