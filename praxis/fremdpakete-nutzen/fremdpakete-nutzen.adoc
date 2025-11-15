@@ -140,11 +140,14 @@ gehen wir darauf in <<fremdformate-mit-alien-hinzufuegen>> ein.
 (((reportbug)))
 (((RFP)))
 Was soll ich tun, dass das von mir genutzte Paket endlich in Debian als 
-offizielles Paket verfügbar wird? Wir sehen zwei Möglichkeiten zur 
+offizielles Paket verfügbar wird? Wir sehen diese Möglichkeiten zur 
 Lösung:
 
 * das Debian-Projekt lebt von der Mitwirkung vieler Menschen. Paketieren
   Sie das Paket selbst, sofern Sie diese Schritte beherrschen. 
+
+* kontaktieren Sie einen Paketmaintainer für Debian und fragen Sie ihn, ob
+  er Interesse hat, die von ihnen Vorgeschlagene Software zu paketieren
 
 * stellen Sie einen Request for Package (RFP) <<Debian-RFP>>, bspw. mit
   Hilfe des Werkzeugs `reportbug` <<Debian-Paket-reportbug>>.
