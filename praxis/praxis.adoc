@@ -37,7 +37,7 @@ include::fehlende-pakete-bei-bedarf-hinzufuegen/fehlende-pakete-bei-bedarf-hinzu
 include::alternatives/alternatives.adoc[]
 
 // - ähnliche Pakete finden
-include::aehnlche-pakete-finden/aehnliche-pakete-finden.adoc[]
+include::aehnliche-pakete-finden/aehnliche-pakete-finden.adoc[]
 
 // == Auf andere Paketversionen zugreifen ==
 
