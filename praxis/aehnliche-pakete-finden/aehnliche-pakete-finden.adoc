@@ -4,11 +4,24 @@
 [[aehnliche-pakete-finden]]
 == Ähnliche Pakete finden ==
 
+=== Allgemeines ===
 // Stichworte für den Index
 (((ähnliche Pakete finden)))
 
-* Pakete finden, die ähnlich zu anderen sind, sprich: das gleiche oder 
-  was ziemlich ähnliches machen
+* Debian stellt über seine offziellen Paketquellen mehr als 60.000
+  Pakete bereit
+
+* darunter sind Pakete, die Werkzeuge mit ähnlicher Funktionalität 
+  bereitstellen, sprich: die das gleiche oder was ziemlich ähnliches 
+  machen
+
+* hier besprechen wir, wie Sie diese Pakete finden
+
+* dahinter steht die Vorgehensweise zur Lösung dieser Situation:
+** Werkzeug A wird benutzt, löst aber Problem nicht vollständig, passt 
+   nicht mehr zum Arbeitsablauf, kann zu wenig oder oder oder ...
+** wie identifiziere ich mögliche Alternativen B, C und D, die über 
+   die offiziellen Paketquellen bereitstehen?
 
 * Möglichkeiten zur Suche
 ** Suche anhand der Paketkategorien
