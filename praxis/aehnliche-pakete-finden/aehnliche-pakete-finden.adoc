@@ -27,13 +27,18 @@ ist die Lösung dieser Situation:
   sich Werkzeug A möglicherweise ersetzen
 
 Zur Recherche stehen Ihnen mehrere Möglichkeiten zur Verfügung -- eine 
-Suche anhand der Paketkategorien, über die Paketbeschreibung, über die
-Paketklassifikation mittels Debtags sowie über die Manpages.
+Suche anhand der Paketkategorien, der Paketabhängigkeiten, über die 
+Paketbeschreibung selbst sowie über die Paketklassifikation mittels 
+Debtags und über die Manpages.
 
 === Suche anhand der Paketkategorien ===
 
 * Paketverwaltung hat Kategorien, in denen die Pakete einsortiert sind
 * siehe <<sortierung-der-pakete-nach-verwendungszweck>>
+
+=== Suche anhand der Paketabhängigkeiten ===
+
+* allgemein gehaltene Abhängigkeiten, bspw. 'pdf-viewer'
 
 === Suche über die Paketbeschreibung ===
 
