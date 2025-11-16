@@ -1,5 +1,5 @@
 // Datei: ./praxis/aehnliche-pakete-finden/aehnliche-pakete-finden.adoc
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[aehnliche-pakete-finden]]
 == Ähnliche Pakete finden ==
@@ -8,26 +8,27 @@
 // Stichworte für den Index
 (((ähnliche Pakete finden)))
 
-* Debian stellt über seine offziellen Paketquellen mehr als 60.000
-  Pakete bereit
+Debian stellt über seine offziellen Paketquellen mehr als 60.000 Pakete 
+bereit. Darunter befinden sich Pakete, die Werkzeuge mit ähnlicher 
+Funktionalität bereitstellen, sprich: die das gleiche oder etwas ziemlich 
+ähnliches machen. Diese Vielfalt an geprüfter und gepflegter Software ist
+bemerkenswert.
 
-* darunter sind Pakete, die Werkzeuge mit ähnlicher Funktionalität 
-  bereitstellen, sprich: die das gleiche oder was ziemlich ähnliches 
-  machen
+Wir besprechen hier, wie Sie diese Pakete finden, da die Namen der Pakete 
+doch recht Unterschiedlich sein können. Motivation für die Vorgehensweise 
+ist die Lösung dieser Situation:
 
-* hier besprechen wir, wie Sie diese Pakete finden
+* Werkzeug A wird benutzt, löst aber ein Problem nicht vollständig, passt 
+  nicht mehr zum Arbeitsablauf, kann zu wenig oder gefällt einfach nicht 
+  mehr
 
-* dahinter steht die Vorgehensweise zur Lösung dieser Situation:
-** Werkzeug A wird benutzt, löst aber Problem nicht vollständig, passt 
-   nicht mehr zum Arbeitsablauf, kann zu wenig oder oder oder ...
-** wie identifiziere ich mögliche Alternativen B, C und D, die über 
-   die offiziellen Paketquellen bereitstehen?
+* wie identifiziere ich im Paketbestand mögliche Alternativen B, C und D, 
+  die ebenfalls über die offiziellen Paketquellen bereitstehen? Damit läßt
+  sich Werkzeug A möglicherweise ersetzen
 
-* Möglichkeiten zur Suche
-** Suche anhand der Paketkategorien
-** Suche über die Paketbeschreibung
-** Suche über Debtags
-** Suche über Manpages
+Zur Recherche stehen Ihnen mehrere Möglichkeiten zur Verfügung -- eine 
+Suche anhand der Paketkategorien, über die Paketbeschreibung, über die
+Paketklassifikation mittels Debtags sowie über die Manpages.
 
 === Suche anhand der Paketkategorien ===
 
@@ -45,6 +46,8 @@
 
 === Suche über Manpages ===
 
-* Todo
-
+* in vielen Manpages ist ein Abschnitt enthalten, in dem auf ähnliche
+  Werkzeuge verwiesen wird
+* wie verläßlich ist das?
+  
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/aehnliche-pakete-finden.adoc
