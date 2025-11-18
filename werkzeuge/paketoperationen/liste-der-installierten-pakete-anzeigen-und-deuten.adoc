@@ -366,7 +366,7 @@ Ausdrücke (Schalter `-E`) und ersetzt danach alle Vorkommen der Zeichenkette
 aus einem kleinen `i` gefolgt von einem Leerzeichen, einem möglichen `A` oder 
 Leerzeichen sowie einem abschließenden Leerzeichen durch nichts (es löscht die
 Zeichen aus der Zeile). Die Angabe von `' { print $1 } '` bei `awk` gibt danach
-lediglich erste Spalte jeder Zeile aus, die den Paketnamen enthält. Alle 
+lediglich die erste Spalte jeder Zeile aus, die den Paketnamen enthält. Alle 
 weiteren Informationen, die `aptitude` bereitgestellt hatte, entfallen.
 
 ==== `apt list --installed` ====
