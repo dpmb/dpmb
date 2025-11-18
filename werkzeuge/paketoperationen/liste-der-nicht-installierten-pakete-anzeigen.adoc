@@ -138,7 +138,7 @@ Darüber erhalten Sie eine Auflistung aller Pakete. Jede Zeile der Ausgabe
 beinhaltet den Paketnamen, den Status der Veröffentlichung, die 
 Versionsnummer, die Architektur und den Status der Installation. 
 
-==== Alle Pakete auflisten ====
+===== Alle Pakete auflisten =====
 
 // Stichworte für den Index
 (((apt, list)))
@@ -211,29 +211,39 @@ $
 
 ===== Ausgabe minimieren =====
 
-* Todo
-
-// Um die Ausgabe auf die Paketnamen einzugrenzen, helfen Ihnen wiederum die 
-// beiden Werkzeuge `awk` und `tail` weiter. `awk` filtert den Paketnamen aus 
-// jeder Zeile heraus und `tail` entsorgt die ersten vier Zeilen inklusive der 
-// Warnung. Die Angabe `2>1` hinter `apt` lenkt zuvor noch den Fehlerkanal 
-// `stderr` auf die Standardausgabe `stdout` um.
+Um die Ausgabe auf die Paketnamen einzugrenzen, helfen Ihnen wiederum die 
+Werkzeuge `awk`, `fgrep`, `awk` und `uniq` weiter. `awk` filtert den 
+Paketnamen aus jeder Zeile heraus. 
 
 .`apt` listet nur die nicht installierten Pakete auf (Paketliste)
 ----
+$ apt list '*ash' | fgrep -v '[installiert]' | awk -F "/" ' { print $1 } ' | uniq
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Auflistung…
+ap51-flash
+ash
+bash
+caja-gtkhash
+crash
+csmash
+dash
+datamash
+dracut-squash
 ...
+$
 ----
 
 ==== Weitere Möglichkeiten ====
 
-Graphische Programme wie beispielsweise Synaptic (siehe
-<<gui-synaptic>>) und SmartPM (siehe <<gui-smartpm>>) verwenden
-keine Buchstaben zur Kennzeichnung des Paketstatus, sondern nutzen
-stattdessen verschiedenfarbige Kästchen (``Icons''). In
-<<fig.smartpm-icons2>> sehen Sie alle Möglichkeiten in der vollständigen
-Übersicht. Installierte Pakete erkennen Sie an der grünen Farbe,
-weiß/hellgrau kennzeichnet nicht installierte Pakete und rot steht hier
-für defekte Pakete (Status ``broken'').
+Graphische Programme wie beispielsweise Synaptic (siehe <<gui-synaptic>>) 
+und SmartPM (siehe <<gui-smartpm>>) verwenden keine Buchstaben zur 
+Kennzeichnung des Paketstatus, sondern nutzen stattdessen 
+verschiedenfarbige Kästchen (``Icons''). In <<fig.smartpm-icons2>> sehen 
+Sie alle Möglichkeiten in der vollständigen Übersicht. Installierte Pakete 
+erkennen Sie an der grünen Farbe, weiß/hellgrau kennzeichnet nicht 
+installierte Pakete und rot steht hier für defekte Pakete (Status ``broken'').
 
 .Icons zur Darstellung des Paketstatus
 image::werkzeuge/paketoperationen/smartpm-icons.png[id="fig.smartpm-icons2", width="50%"]
