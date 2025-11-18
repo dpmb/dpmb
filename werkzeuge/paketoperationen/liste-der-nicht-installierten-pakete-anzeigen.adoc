@@ -1,6 +1,6 @@
 // Datei: ./werkzeuge/paketoperationen/liste-der-nicht-installierten-pakete-anzeigen.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[liste-der-nicht-installierten-pakete-anzeigen]]
 
@@ -9,15 +9,13 @@
 // Stichworte für den Index
 (((Paket, nicht installiertes anzeigen)))
 
-* Todo
-** herausfinden, ob eines oder mehrere Pakete nicht installiert sind
-** Gegenstück zu "installiertes Paket finden" (siehe
-<<liste-der-installierten-pakete-anzeigen-und-deuten>>)
+Hier besprechen wir, wie Sie herausfinden, ob eines oder mehrere Pakete 
+nicht installiert sind. Das ist das Gegenstück zu "installiertes Paket 
+finden" (siehe <<liste-der-installierten-pakete-anzeigen-und-deuten>>).
 
-Für die Kommandozeile existieren mittlerweile drei grundlegende 
-Möglichkeiten. Einerseits ist das `dpkg -l`, andererseits 
-`aptitude search '!~i'` und drittens `apt list`. Die Darstellung in den 
-graphischen Programme klären wir weiter unten genauer.
+Für die Kommandozeile existieren drei grundlegende Möglichkeiten. Ins 
+Spiel kommen `dpkg-query`, `aptitude` und `apt`. Die Darstellung in den 
+graphischen Programme beleuchten wir weiter unten genauer.
 
 ==== dpkg mit minimaler Ausgabe ====
 
