@@ -133,36 +133,19 @@ Zeile aus, die den Paketnamen enthält. Alle weiteren Informationen, die
 
 // Stichworte für den Index
 (((apt, list)))
+Seit der Version 1.0 verfügt `apt` ebenfalls über einen Schalter `list`. 
+Darüber erhalten Sie eine Auflistung aller Pakete. Jede Zeile der Ausgabe 
+beinhaltet den Paketnamen, den Status der Veröffentlichung, die 
+Versionsnummer, die Architektur und den Status der Installation. 
 
-* Todo
+==== Alle Pakete auflisten ====
 
-// Seit der Version 1.0 verfügt `apt` ebenfalls über einen Schalter `list`. In
-// Verbindung mit dem Schalter `--installed` erhalten Sie eine Ausgabe aller 
-// derzeit installierten Pakete. Jede Zeile der Ausgabe beinhaltet den Paketnamen, 
-// den Status der Veröffentlichung, die Versionsnummer, die Architektur und den 
-// Status der Installation.
+// Stichworte für den Index
+(((apt, list)))
+In Kombination mit `fgrep` und dem Parameter `-v` filtern Sie alle Zeilen 
+aus der Ausgabe heraus, die die gesuchten Pakete beinhalten.
 
-===== Vollständige Paketliste anzeigen =====
-
-// Ohne weitere Angaben erhalten Sie eine vollständige Paketliste. Die Ausgabe 
-// sieht dann so aus:
-
-// .`apt` listet die installierten Pakete auf
-// ----
-// $ apt list --installed
-//
-// WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-//
-// Auflistung...
-// aapt/oldstable,now 1:7.0.0+r33-1 amd64  [Installiert,automatisch]
-// acl/oldstable,now 2.2.52-3+b1 amd64  [installiert]
-// acpi/oldstable,now 1.7-1+b1 amd64  [installiert]
-// adduser/oldstable,now 3.115 all  [installiert]
-// adwaita-icon-theme/oldstable,now 3.22.0-1+deb9u1 all  [Installiert,automatisch]
-// ...
-// $
-// ----
-
+.Recherche nach nicht installierten Paketen mittels `apt`
 ----
 $ apt list | fgrep -v '[installiert]'
 
@@ -184,10 +167,10 @@ $
 
 ===== Liste anhand von Filtern einschränken =====
 
-// Analog zu `dpkg` kann auch `apt` mit Filtern umgehen, um darüber die Ausgabe
-// einzuschränken. `apt` akzeptiert dazu als Parameter sowohl eine Liste von 
-// Paketnamen, als auch Muster. Das nachfolgende Beispiel schränkt die Ausgabe
-// auf die beiden Pakete 'nmap' und 'nmap-common' ein.
+Analog zu `dpkg` kann auch `apt` mit Filtern umgehen, um darüber die Ausgabe
+einzuschränken. `apt` akzeptiert dazu als Parameter sowohl eine Liste von 
+Paketnamen, als auch Muster. Das nachfolgende Beispiel schränkt die Ausgabe
+auf das Paket 'bash' ein.
 
 .Liste auf bestimmte Pakete eingrenzen
 ----
@@ -200,12 +183,12 @@ bash/oldstable 5.2.15-2+b9 i386
 $
 ----
 
-// Für den Umgang mit Mustern folgt `apt` dem gleichen Prinzip wie `dpkg`. Das
-// nachfolgende Beispiel zeigt die Recherche nach allen installierten Paketen, 
-// die die Zeichenkette `map` im Namen beinhalten. Die Angabe eines Sterns (`*`)
-// vor und nach der Zeichenkette interpretiert `apt` als alle Zeichen in beliebiger
-// Menge. 
-// 
+Für den Umgang mit Mustern folgt `apt` dem gleichen Prinzip wie `dpkg`. 
+Das nachfolgende Beispiel zeigt die Recherche nach allen installierten 
+Paketen, die die Zeichenkette `ash` im Namen beinhalten. Die Angabe eines 
+Sterns (`*`) vor und nach der Zeichenkette interpretiert `apt` als alle 
+Zeichen in beliebiger Menge. 
+
 .Liste mit der Angabe eines Musters eingrenzen
 ----
 $ apt list '*ash' | fgrep -v '[installiert]'
@@ -227,6 +210,8 @@ $
 ----
 
 ===== Ausgabe minimieren =====
+
+* Todo
 
 // Um die Ausgabe auf die Paketnamen einzugrenzen, helfen Ihnen wiederum die 
 // beiden Werkzeuge `awk` und `tail` weiter. `awk` filtert den Paketnamen aus 
