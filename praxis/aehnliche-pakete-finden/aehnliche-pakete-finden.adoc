@@ -7,6 +7,7 @@
 === Allgemeines ===
 // Stichworte für den Index
 (((ähnliche Pakete finden)))
+(((Suche im Paketbestand)))
 
 Debian stellt über seine offziellen Paketquellen mehr als 60.000 Pakete 
 bereit. Darunter befinden sich Pakete, die Werkzeuge mit ähnlicher 
@@ -15,7 +16,7 @@ Funktionalität bereitstellen, sprich: die das gleiche oder etwas ziemlich
 bemerkenswert.
 
 Wir besprechen hier, wie Sie diese Pakete finden, da die Namen der Pakete 
-doch recht Unterschiedlich sein können. Motivation für die Vorgehensweise 
+doch recht unterschiedlich sein können. Motivation für die Vorgehensweise 
 ist die Lösung dieser Situation:
 
 * Werkzeug A wird benutzt, löst aber ein Problem nicht vollständig, passt 
@@ -23,8 +24,8 @@ ist die Lösung dieser Situation:
   mehr
 
 * wie identifiziere ich im Paketbestand mögliche Alternativen B, C und D, 
-  die ebenfalls über die offiziellen Paketquellen bereitstehen? Damit läßt
-  sich Werkzeug A möglicherweise ersetzen
+  die ebenfalls über die hinterlegten Paketquellen bereitstehen? Damit 
+  läßt sich Werkzeug A möglicherweise ersetzen
 
 Zur Recherche stehen Ihnen mehrere Möglichkeiten zur Verfügung -- eine 
 Suche anhand der Paketkategorien, der Paketabhängigkeiten, über die 
