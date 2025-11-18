@@ -27,7 +27,7 @@ in den graphischen Programme beleuchten wir weiter unten genauer.
 (((Paketliste, nur die Paketnamen ausgeben)))
 Hier konzentrieren wir uns lediglich auf die Namen der derzeit nicht 
 installierten Pakete ohne deren Versionsnummer und Beschreibung. Zwei 
-Möglichkeiten zur Lösung sind uns bekannt:
+Varianten liefern erste Lösungen:
 
 * a) `dpkg-query` mit einem speziellen Formatstring für die Ausgabe 
   in Kombination mit `egrep`, `awk` und `sort` 
@@ -89,28 +89,16 @@ $
 
 ==== Suche mit `aptitude` ====
 
-* Todo
-
 // Stichworte für den Index
 (((aptitude, search '!~i')))
-// (((aptitude, search ?installed)))
+(((aptitude, search '!?installed')))
 
-// Das Werkzeug `aptitude` kennt dafür das Unterkommando `search`. Nach diesem 
-// erwartet `aptitude` entweder einen Paketnamen oder das Flag `~i` für 
-// ``installierte Pakete'' (Langform `?installed`). Geben Sie beides an, ignoriert
-// `aptitude` den Paketnamen.
-
-// Ergebnis ist eine Liste aller installierten Pakete. Daraus filtern wir im 
-// nachfolgenden Beispiel mittels `grep` nur die Zeilen heraus, in denen das 
-// Wort `texlive` enthalten ist.
-
-// Wie bereits oben genannt, verwendet `aptitude` in der Ausgabe die
-// gleichen Buchstaben wie `dpkg` (siehe <<tab.paketzustand>>). Der
-// Buchstabe `i` bezeichnet ein installiertes Paket, `A` in der dritten
-// Spalte markiert ``automatisch installiert'' und deutet auf eine
-// automatisch erfüllte Paketabhängigkeit hin (siehe dazu
-// <<automatisch-installierte-pakete-anzeigen>>). Daneben sehen Sie in der
-// Ausgabe noch den Namen und die Kurzbeschreibung zum jeweiligen Paket.
+Zur Recherche im Paketbestand kannt das Werkzeug `aptitude` das 
+Unterkommando `search`. Nach diesem erwartet es das Flag `'!~i'` für 
+``nicht installierte Pakete'' (Langform `'!?installed'`). Ergebnis ist 
+eine Liste aller nicht installierten Pakete. Daraus filtern wir im 
+nachfolgenden Beispiel mittels `grep` nur die Zeilen heraus, in denen 
+die Wortkombination `texlive-games` enthalten ist.
 
 .`aptitude` listet die nicht installierten LaTeX-Games-Pakete auf
 ----
@@ -120,29 +108,26 @@ v  texlive-games:i386 -
 $
 ----
 
-// Geht es Ihnen nur um die Namen der installierten Pakete auf ihrem System, hilft 
-// folgende Kombination aus `aptitude`, `sed` und `awk` weiter:
+Obiges Ergebnis umfaßt eine Zeile pro Paket mit Paketstatus, Paketname und
+Beschreibung. Geht es Ihnen jedoch nur um die Namen der Pakete, hilft die
+folgende Kombination aus `aptitude`, `grep`, `sed` und `awk` weiter und 
+minimiert die Ausgabe erheblich:
 
-// .Paketliste mittels `aptitude` ausgeben
-// ----
-// $ aptitude search '~i' | sed -E 's/i [A ]? //'| awk ' { print $1 } '
-// aapt
-// acl
-// acpi
-// adduser
-// adwaita-icon-theme
-// alsa-base
-// ...
-// $
-// ----
+.Paketliste mittels `aptitude` ausgeben
+----
+$ aptitude search '!~i' | grep texlive-games | sed -E 's/[pv] //'| awk ' { print $1 } '
+texlive-games
+texlive-games:i386
+$
+----
 
-// Die Angabe `-E 's/i [A ]? //'` bei `sed` aktiviert zunächst erweiterte Reguläre 
-// Ausdrücke (Schalter `-E`) und ersetzt danach alle Vorkommen der Zeichenkette 
-// aus einem kleinen `i` gefolgt von einem Leerzeichen, einem möglichen `A` oder 
-// Leerzeichen sowie einem abschließenden Leerzeichen durch nichts (es löscht die
-// Zeichen aus der Zeile). Die Angabe von `' { print $1 } '` bei `awk` gibt danach
-// lediglich erste Spalte jeder Zeile aus, die den Paketnamen enthält. Alle 
-// weiteren Informationen, die `aptitude` bereitgestellt hatte, entfallen.
+Die Angabe `-E 's/[pv] //'` bei `sed` aktiviert zunächst erweiterte 
+Reguläre Ausdrücke (Schalter `-E`) und ersetzt danach alle Vorkommen der 
+Zeichenkette aus einem kleinen `p` oder `v` gefolgt von einem Leerzeichen 
+durch nichts (es löscht die Zeichen aus der Zeile). Die Angabe von 
+`' { print $1 } '` bei `awk` gibt danach lediglich die erste Spalte jeder 
+Zeile aus, die den Paketnamen enthält. Alle weiteren Informationen, die 
+`aptitude` bereitgestellt hatte, entfallen.
 
 ==== `apt list` ====
 
