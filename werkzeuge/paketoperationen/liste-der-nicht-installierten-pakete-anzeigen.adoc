@@ -53,9 +53,11 @@ alacritty
 $
 ----
 
-Ergebnis ist eine alphabetisch sortierte Liste der Paketnamen ohne weitere
-Angaben. *Fall b)* nutzt einen kompakteren Aufruf und kombiniert hierbei 
-die Werkzeuge `dpkg`, `egrep`, `awk` und `sort` miteinander:
+Ergebnis ist eine alphabetisch sortierte Liste der Paketnamen aller nicht 
+installierten Debianpakete ohne weitere Angaben. *Fall b)* nutzt einen 
+kompakteren Aufruf und kombiniert hierbei die Werkzeuge `dpkg`, `egrep`, 
+`awk` und `sort` miteinander (das Ergebnis ist identisch zum Aufruf von
+`dpkg-query`):
  
 .Nur die Paketnamen ausgeben (`dpkg`, `egrep`, `awk` und `sort` kombiniert)
 ----
@@ -67,6 +69,21 @@ adwaita-icon-theme-full
 aide
 alacritty
 ...
+$
+----
+
+Möchten Sie die Auflistung auf Pakete mit einem bestimmten Namensmuster
+beschränken, ersetzen Sie im Aufruf den ersten `'*'` durch das gewünschte
+Textfragment. Nachfolgendes Beispiel zeigt das für das Muster `'*ash*'`,
+welches u.a. Erweiterungen für die Bash zutagefördern:
+
+.Nicht installierte Pakete mit Muster finden
+----
+$ dpkg -l '*ash*' | egrep "^un" | awk ' {print $2} ' | sort
+bash-doc
+bash-static
+dh-sequence-bash-completion
+usplash
 $
 ----
 
