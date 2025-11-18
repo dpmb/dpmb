@@ -34,8 +34,30 @@ Debtags und über die Manpages.
 
 === Suche anhand der Paketkategorien ===
 
-* Paketverwaltung hat Kategorien, in denen die Pakete einsortiert sind
-* siehe <<sortierung-der-pakete-nach-verwendungszweck>>
+Die Paketverwaltung hat die Debianpakete in verschiedene Kategorien 
+einsortiert (siehe <<sortierung-der-pakete-nach-verwendungszweck>>). Für
+ähnliche Pakete hilft ein Blick in die jeweilige Kategorie.
+
+==== Über die Kommandozeile ====
+
+* jedes Paket hat in den Metadaten einen Eintrag zur Kategorie
+* Schlüsselwort `Section`
+
+* Recherche für das installierte Paket 'bash':
+
+----
+$ apt-cache show bash | sed -ne '/^Section: /{s/Section: //p;}'
+shells
+$
+----
+
+==== Über eine GUI ====
+
+Todo
+
+==== Über einen Webbrowser ====
+
+* Paketsuche über packages.debian.org
 
 === Suche anhand der Paketabhängigkeiten ===
 
