@@ -1,0 +1,240 @@
+// Datei: ./werkzeuge/paketoperationen/liste-der-nicht-installierten-pakete-anzeigen.adoc
+
+// Baustelle: Notizen
+
+[[liste-der-nicht-installierten-pakete-anzeigen]]
+
+=== Liste der nicht installierten Pakete anzeigen ===
+
+// Stichworte für den Index
+(((Paket, nicht installiertes anzeigen)))
+
+* Todo
+** herausfinden, ob eines oder mehrere Pakete nicht installiert sind
+** Gegenstück zu "installiertes Paket finden" (siehe
+<<liste-der-installierten-pakete-anzeigen-und-deuten>>)
+
+Für die Kommandozeile existieren mittlerweile drei grundlegende 
+Möglichkeiten. Einerseits ist das `dpkg -l`, andererseits 
+`aptitude search '~i'` und drittens `apt list`. Die Darstellung in den 
+graphischen Programme klären wir weiter unten genauer.
+
+==== dpkg mit minimaler Ausgabe ====
+
+// Stichworte für den Index
+(((dpkg-query, -f)))
+(((dpkg-query, --show)))
+(((dpkg-query, --showformat)))
+(((dpkg-query, -W)))
+(((Paketliste, nur die Paketnamen ausgeben)))
+Geht es Ihnen lediglich um die Namen der derzeit nicht installierten Pakete ohne 
+deren Versionsnummer und Beschreibung, haben Sie zwei Möglichkeiten zur Lösung 
+-- a) `dpkg-query` mit einem speziellen Formatstring für die Ausgabe in 
+Kombination mit `egrep`, `awk` und `sort` und b) die Kombination aus `dpkg`, 
+`egrep`, `awk` und `sort`.
+
+Für den *Fall a)* nutzen Sie den Schalter `-W` (Langform `--show`) und den 
+Formatstring `-f='${db:Status-Abbrev} ${binary:Package}\n'`. Dabei kürzt `-f` 
+die Langform `--showformat` ab. Die Angabe `'${db:Status-Abbrev}'` liefert 
+Ihnen den Installationsstatus des Pakets und `$'{binary:Package}\n'` den 
+Paketnamen aus der Paketbeschreibung samt Zeilenumbruch am Ende der Zeile. 
+Der vollständige Aufruf ist dann wie folgt:
+
+.Nur die Paketnamen ausgeben (`dpkg-query`)
+----
+$ dpkg-query -W -f='${db:Status-Abbrev} ${binary:Package}\n' '*' | egrep "^un" | awk '{ print $2 }' | sort
+aalib1
+accountsservice
+adequate
+adwaita-icon-theme-full
+aide
+alacritty
+...
+$
+----
+
+*Fall b)* ist kürzer und kombiniert die Werkzeuge `dpkg`, `egrep`, `awk` und 
+`sort` miteinander:
+ 
+.Nur die Paketnamen ausgeben (`dpkg`, `egrep`, `awk` und `sort` kombiniert)
+----
+$ dpkg -l '*' | egrep "^un" | awk ' {print $2} ' | sort
+aalib1
+accountsservice
+adequate
+adwaita-icon-theme-full
+aide
+alacritty
+...
+$
+----
+
+Obige Ausgabe bearbeiten Sie mit UNIX/Linux-Tools weiter, bspw. mit `cut` oder 
+`sort`, um die Ausgabe ihren Wünschen anzupassen.
+
+==== Suche mit `aptitude` ====
+
+* Todo
+
+// Stichworte für den Index
+// (((aptitude, search ~i)))
+// (((aptitude, search ?installed)))
+
+// Das Werkzeug `aptitude` kennt dafür das Unterkommando `search`. Nach diesem 
+// erwartet `aptitude` entweder einen Paketnamen oder das Flag `~i` für 
+// ``installierte Pakete'' (Langform `?installed`). Geben Sie beides an, ignoriert
+// `aptitude` den Paketnamen.
+
+// Ergebnis ist eine Liste aller installierten Pakete. Daraus filtern wir im 
+// nachfolgenden Beispiel mittels `grep` nur die Zeilen heraus, in denen das 
+// Wort `texlive` enthalten ist.
+
+// Wie bereits oben genannt, verwendet `aptitude` in der Ausgabe die
+// gleichen Buchstaben wie `dpkg` (siehe <<tab.paketzustand>>). Der
+// Buchstabe `i` bezeichnet ein installiertes Paket, `A` in der dritten
+// Spalte markiert ``automatisch installiert'' und deutet auf eine
+// automatisch erfüllte Paketabhängigkeit hin (siehe dazu
+// <<automatisch-installierte-pakete-anzeigen>>). Daneben sehen Sie in der
+// Ausgabe noch den Namen und die Kurzbeschreibung zum jeweiligen Paket.
+
+// .`aptitude` listet die installierten LaTeX-Pakete auf
+// ----
+// $ aptitude search '~i' | grep texlive
+// i   texlive                         - TeX Live: Eine anständige Auswahl der TeX-
+// i A texlive-base                    - TeX Live: Grundlegende Programme und Datei
+// i A texlive-bibtex-extra            - TeX Live: Extra BibTeX styles
+// i A texlive-binaries                - Binärdateien für TeX Live
+// i A texlive-common                  - TeX Live: Basiskomponenten
+// i A texlive-doc-base                - TeX Live: Dokumentation für TeX Live
+// $
+// ----
+
+// Geht es Ihnen nur um die Namen der installierten Pakete auf ihrem System, hilft 
+// folgende Kombination aus `aptitude`, `sed` und `awk` weiter:
+
+// .Paketliste mittels `aptitude` ausgeben
+// ----
+// $ aptitude search '~i' | sed -E 's/i [A ]? //'| awk ' { print $1 } '
+// aapt
+// acl
+// acpi
+// adduser
+// adwaita-icon-theme
+// alsa-base
+// ...
+// $
+// ----
+
+// Die Angabe `-E 's/i [A ]? //'` bei `sed` aktiviert zunächst erweiterte Reguläre 
+// Ausdrücke (Schalter `-E`) und ersetzt danach alle Vorkommen der Zeichenkette 
+// aus einem kleinen `i` gefolgt von einem Leerzeichen, einem möglichen `A` oder 
+// Leerzeichen sowie einem abschließenden Leerzeichen durch nichts (es löscht die
+// Zeichen aus der Zeile). Die Angabe von `' { print $1 } '` bei `awk` gibt danach
+// lediglich erste Spalte jeder Zeile aus, die den Paketnamen enthält. Alle 
+// weiteren Informationen, die `aptitude` bereitgestellt hatte, entfallen.
+
+==== `apt list` ====
+
+// Stichworte für den Index
+(((apt, list)))
+
+* Todo
+
+// Seit der Version 1.0 verfügt `apt` ebenfalls über einen Schalter `list`. In
+// Verbindung mit dem Schalter `--installed` erhalten Sie eine Ausgabe aller 
+// derzeit installierten Pakete. Jede Zeile der Ausgabe beinhaltet den Paketnamen, 
+// den Status der Veröffentlichung, die Versionsnummer, die Architektur und den 
+// Status der Installation.
+
+===== Vollständige Paketliste anzeigen =====
+
+// Ohne weitere Angaben erhalten Sie eine vollständige Paketliste. Die Ausgabe 
+// sieht dann so aus:
+
+// .`apt` listet die installierten Pakete auf
+// ----
+// $ apt list --installed
+//
+// WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+//
+// Auflistung...
+// aapt/oldstable,now 1:7.0.0+r33-1 amd64  [Installiert,automatisch]
+// acl/oldstable,now 2.2.52-3+b1 amd64  [installiert]
+// acpi/oldstable,now 1.7-1+b1 amd64  [installiert]
+// adduser/oldstable,now 3.115 all  [installiert]
+// adwaita-icon-theme/oldstable,now 3.22.0-1+deb9u1 all  [Installiert,automatisch]
+// ...
+// $
+// ----
+
+===== Liste anhand von Filtern einschränken =====
+
+// Analog zu `dpkg` kann auch `apt` mit Filtern umgehen, um darüber die Ausgabe
+// einzuschränken. `apt` akzeptiert dazu als Parameter sowohl eine Liste von 
+// Paketnamen, als auch Muster. Das nachfolgende Beispiel schränkt die Ausgabe
+// auf die beiden Pakete 'nmap' und 'nmap-common' ein.
+
+// .Liste auf bestimmte Pakete eingrenzen
+// ----
+// $ apt list --installed nmap nmap-common
+// Auflistung… Fertig
+// nmap-common/stable,stable,now 7.93+dfsg1-1 all  [Installiert,automatisch]
+// nmap/stable,now 7.93+dfsg1-1 amd64  [installiert]
+// $
+// ----
+
+// Für den Umgang mit Mustern folgt `apt` dem gleichen Prinzip wie `dpkg`. Das
+// nachfolgende Beispiel zeigt die Recherche nach allen installierten Paketen, 
+// die die Zeichenkette `map` im Namen beinhalten. Die Angabe eines Sterns (`*`)
+// vor und nach der Zeichenkette interpretiert `apt` als alle Zeichen in beliebiger
+// Menge. 
+// 
+// .Liste mit der Angabe eines Musters eingrenzen
+// ----
+// $ apt list --installed '*map*'
+// Auflistung… Fertig
+// libchromaprint1/stable,now 1.5.1-2+b1 amd64  [Installiert,automatisch]
+// libdevmapper-event1.02.1/stable,now 2:1.02.185-2 amd64  [Installiert,automatisch]
+// libdevmapper1.02.1/stable,now 2:1.02.185-2 amd64  [installiert]
+// libunicode-map-perl/stable,now 0.112-13+b1 amd64  [Installiert,automatisch]
+// nmap-common/stable,stable,now 7.93+dfsg1-1 all  [Installiert,automatisch]
+// nmap/stable,now 7.93+dfsg1-1 amd64  [installiert]
+// xbitmaps/stable,stable,now 1.1.1-2.2 all  [Installiert,automatisch]
+// $
+//----
+
+===== Ausgabe minimieren =====
+
+// Um die Ausgabe auf die Paketnamen einzugrenzen, helfen Ihnen wiederum die 
+// beiden Werkzeuge `awk` und `tail` weiter. `awk` filtert den Paketnamen aus 
+// jeder Zeile heraus und `tail` entsorgt die ersten vier Zeilen inklusive der 
+// Warnung. Die Angabe `2>1` hinter `apt` lenkt zuvor noch den Fehlerkanal 
+// `stderr` auf die Standardausgabe `stdout` um.
+
+// .`apt` listet die installierten Pakete auf (Paketliste)
+// ----
+// $ apt list --installed 2>1 | awk -F '/' ' { print $1 } ' | tail +4 
+// aapt
+// acl
+// acpi
+// adduser
+// adwaita-icon-theme
+// ...
+// $
+//----
+
+==== Weitere Möglichkeiten ====
+
+Graphische Programme wie beispielsweise Synaptic (siehe
+<<gui-synaptic>>) und SmartPM (siehe <<gui-smartpm>>) verwenden
+keine Buchstaben zur Kennzeichnung des Paketstatus, sondern nutzen
+stattdessen verschiedenfarbige Kästchen (``Icons''). In
+<<fig.smartpm-icons2>> sehen Sie alle Möglichkeiten in der vollständigen
+Übersicht. Installierte Pakete erkennen Sie an der grünen Farbe,
+weiß/hellgrau kennzeichnet nicht installierte Pakete und rot steht hier
+für defekte Pakete (Status ``broken'').
+
+.Icons zur Darstellung des Paketstatus
+image::werkzeuge/paketoperationen/smartpm-icons.png[id="fig.smartpm-icons2", width="50%"]
+
+// Datei (Ende): ./werkzeuge/paketoperationen/liste-der-nicht-installierten-pakete-anzeigen.adoc
