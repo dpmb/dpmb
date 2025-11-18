@@ -16,7 +16,7 @@
 
 Für die Kommandozeile existieren mittlerweile drei grundlegende 
 Möglichkeiten. Einerseits ist das `dpkg -l`, andererseits 
-`aptitude search '~i'` und drittens `apt list`. Die Darstellung in den 
+`aptitude search '!~i'` und drittens `apt list`. Die Darstellung in den 
 graphischen Programme klären wir weiter unten genauer.
 
 ==== dpkg mit minimaler Ausgabe ====
@@ -77,7 +77,7 @@ Obige Ausgabe bearbeiten Sie mit UNIX/Linux-Tools weiter, bspw. mit `cut` oder
 * Todo
 
 // Stichworte für den Index
-// (((aptitude, search ~i)))
+(((aptitude, search '!~i')))
 // (((aptitude, search ?installed)))
 
 // Das Werkzeug `aptitude` kennt dafür das Unterkommando `search`. Nach diesem 
@@ -97,17 +97,13 @@ Obige Ausgabe bearbeiten Sie mit UNIX/Linux-Tools weiter, bspw. mit `cut` oder
 // <<automatisch-installierte-pakete-anzeigen>>). Daneben sehen Sie in der
 // Ausgabe noch den Namen und die Kurzbeschreibung zum jeweiligen Paket.
 
-// .`aptitude` listet die installierten LaTeX-Pakete auf
-// ----
-// $ aptitude search '~i' | grep texlive
-// i   texlive                         - TeX Live: Eine anständige Auswahl der TeX-
-// i A texlive-base                    - TeX Live: Grundlegende Programme und Datei
-// i A texlive-bibtex-extra            - TeX Live: Extra BibTeX styles
-// i A texlive-binaries                - Binärdateien für TeX Live
-// i A texlive-common                  - TeX Live: Basiskomponenten
-// i A texlive-doc-base                - TeX Live: Dokumentation für TeX Live
-// $
-// ----
+.`aptitude` listet die nicht installierten LaTeX-Games-Pakete auf
+----
+$ aptitude search '!~i' | grep texlive-games
+p  texlive-games - TeX Live: Games typesetting
+v  texlive-games:i386 -
+$
+----
 
 // Geht es Ihnen nur um die Namen der installierten Pakete auf ihrem System, hilft 
 // folgende Kombination aus `aptitude`, `sed` und `awk` weiter:
@@ -167,6 +163,25 @@ Obige Ausgabe bearbeiten Sie mit UNIX/Linux-Tools weiter, bspw. mit `cut` oder
 // $
 // ----
 
+----
+$ apt list | fgrep -v '[installiert]'
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Auflistung…
+0ad-data-common/oldstable,oldstable 0.0.26-1 all
+0ad-data/oldstable,oldstable 0.0.26-1 all
+0ad/oldstable 0.0.26-3 amd64
+0ad/oldstable 0.0.26-3 i386
+0install-core/oldstable 2.18-2 amd64
+0install-core/oldstable 2.18-2 i386
+0install/oldstable 2.18-2 amd64
+0install/oldstable 2.18-2 i386
+0xffff/oldstable 0.9-1 amd64
+...
+$
+----
+
 ===== Liste anhand von Filtern einschränken =====
 
 // Analog zu `dpkg` kann auch `apt` mit Filtern umgehen, um darüber die Ausgabe
@@ -174,14 +189,16 @@ Obige Ausgabe bearbeiten Sie mit UNIX/Linux-Tools weiter, bspw. mit `cut` oder
 // Paketnamen, als auch Muster. Das nachfolgende Beispiel schränkt die Ausgabe
 // auf die beiden Pakete 'nmap' und 'nmap-common' ein.
 
-// .Liste auf bestimmte Pakete eingrenzen
-// ----
-// $ apt list --installed nmap nmap-common
-// Auflistung… Fertig
-// nmap-common/stable,stable,now 7.93+dfsg1-1 all  [Installiert,automatisch]
-// nmap/stable,now 7.93+dfsg1-1 amd64  [installiert]
-// $
-// ----
+.Liste auf bestimmte Pakete eingrenzen
+----
+$ apt list bash | fgrep -v '[installiert]'
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Auflistung…
+bash/oldstable 5.2.15-2+b9 i386
+$
+----
 
 // Für den Umgang mit Mustern folgt `apt` dem gleichen Prinzip wie `dpkg`. Das
 // nachfolgende Beispiel zeigt die Recherche nach allen installierten Paketen, 
@@ -189,19 +206,25 @@ Obige Ausgabe bearbeiten Sie mit UNIX/Linux-Tools weiter, bspw. mit `cut` oder
 // vor und nach der Zeichenkette interpretiert `apt` als alle Zeichen in beliebiger
 // Menge. 
 // 
-// .Liste mit der Angabe eines Musters eingrenzen
-// ----
-// $ apt list --installed '*map*'
-// Auflistung… Fertig
-// libchromaprint1/stable,now 1.5.1-2+b1 amd64  [Installiert,automatisch]
-// libdevmapper-event1.02.1/stable,now 2:1.02.185-2 amd64  [Installiert,automatisch]
-// libdevmapper1.02.1/stable,now 2:1.02.185-2 amd64  [installiert]
-// libunicode-map-perl/stable,now 0.112-13+b1 amd64  [Installiert,automatisch]
-// nmap-common/stable,stable,now 7.93+dfsg1-1 all  [Installiert,automatisch]
-// nmap/stable,now 7.93+dfsg1-1 amd64  [installiert]
-// xbitmaps/stable,stable,now 1.1.1-2.2 all  [Installiert,automatisch]
-// $
-//----
+.Liste mit der Angabe eines Musters eingrenzen
+----
+$ apt list '*ash' | fgrep -v '[installiert]'
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Auflistung…
+ap51-flash/oldstable 2022.1-1 amd64
+ap51-flash/oldstable 2022.1-1 i386
+ash/oldstable,oldstable 0.5.12-2 all
+bash/oldstable 5.2.15-2+b9 i386
+caja-gtkhash/oldstable 1.4+git20220617-3 amd64
+caja-gtkhash/oldstable 1.4+git20220617-3 i386
+crash/oldstable 8.0.2-1 amd64
+crash/oldstable 8.0.2-1 i386
+csmash/oldstable 0.6.6-6.9 amd64
+...
+$
+----
 
 ===== Ausgabe minimieren =====
 
@@ -211,17 +234,10 @@ Obige Ausgabe bearbeiten Sie mit UNIX/Linux-Tools weiter, bspw. mit `cut` oder
 // Warnung. Die Angabe `2>1` hinter `apt` lenkt zuvor noch den Fehlerkanal 
 // `stderr` auf die Standardausgabe `stdout` um.
 
-// .`apt` listet die installierten Pakete auf (Paketliste)
-// ----
-// $ apt list --installed 2>1 | awk -F '/' ' { print $1 } ' | tail +4 
-// aapt
-// acl
-// acpi
-// adduser
-// adwaita-icon-theme
-// ...
-// $
-//----
+.`apt` listet nur die nicht installierten Pakete auf (Paketliste)
+----
+...
+----
 
 ==== Weitere Möglichkeiten ====
 
