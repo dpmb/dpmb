@@ -251,7 +251,7 @@ Der vollständige Aufruf ist dann wie folgt:
 
 .Nur die Paketnamen ausgeben (`dpkg-query`)
 ----
-$ dpkg-query -W -f='${db:Status-Abbrev} ${binary:Package}\n' * | egrep "^ii" | awk '{ print $2 }' | sort
+$ dpkg-query -W -f='${db:Status-Abbrev} ${binary:Package}\n' '*' | egrep "^ii" | awk '{ print $2 }' | sort
 aapt
 acl
 acpi
