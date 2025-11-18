@@ -13,9 +13,9 @@ Hier besprechen wir, wie Sie herausfinden, ob eines oder mehrere Pakete
 nicht installiert sind. Das ist das Gegenstück zu "installiertes Paket 
 finden" (siehe <<liste-der-installierten-pakete-anzeigen-und-deuten>>).
 
-Für die Kommandozeile existieren drei grundlegende Möglichkeiten. Ins 
-Spiel kommen `dpkg-query`, `aptitude` und `apt`. Die Darstellung in den 
-graphischen Programme beleuchten wir weiter unten genauer.
+Für die Kommandozeile existieren vier grundlegende Möglichkeiten. Ins 
+Spiel kommen `dpkg`, `dpkg-query`, `aptitude` und `apt`. Die Darstellung 
+in den graphischen Programme beleuchten wir weiter unten genauer.
 
 ==== dpkg mit minimaler Ausgabe ====
 
@@ -25,18 +25,20 @@ graphischen Programme beleuchten wir weiter unten genauer.
 (((dpkg-query, --showformat)))
 (((dpkg-query, -W)))
 (((Paketliste, nur die Paketnamen ausgeben)))
-Geht es Ihnen lediglich um die Namen der derzeit nicht installierten Pakete ohne 
-deren Versionsnummer und Beschreibung, haben Sie zwei Möglichkeiten zur Lösung 
--- a) `dpkg-query` mit einem speziellen Formatstring für die Ausgabe in 
-Kombination mit `egrep`, `awk` und `sort` und b) die Kombination aus `dpkg`, 
-`egrep`, `awk` und `sort`.
+Hier konzentrieren wir uns lediglich auf die Namen der derzeit nicht 
+installierten Pakete ohne deren Versionsnummer und Beschreibung. Zwei 
+Möglichkeiten zur Lösung sind uns bekannt:
+
+* a) `dpkg-query` mit einem speziellen Formatstring für die Ausgabe 
+  in Kombination mit `egrep`, `awk` und `sort` 
+* b) die Kombination aus `dpkg`, `egrep`, `awk` und `sort`.
 
 Für den *Fall a)* nutzen Sie den Schalter `-W` (Langform `--show`) und den 
-Formatstring `-f='${db:Status-Abbrev} ${binary:Package}\n'`. Dabei kürzt `-f` 
-die Langform `--showformat` ab. Die Angabe `'${db:Status-Abbrev}'` liefert 
-Ihnen den Installationsstatus des Pakets und `$'{binary:Package}\n'` den 
-Paketnamen aus der Paketbeschreibung samt Zeilenumbruch am Ende der Zeile. 
-Der vollständige Aufruf ist dann wie folgt:
+Formatstring `-f='${db:Status-Abbrev} ${binary:Package}\n'`. Dabei kürzt 
+`-f` die Langform `--showformat` ab. Die Angabe `'${db:Status-Abbrev}'` 
+liefert Ihnen den Installationsstatus des Pakets und `$'{binary:Package}\n'` 
+den Paketnamen aus der Paketbeschreibung samt Zeilenumbruch am Ende der 
+Zeile. Der vollständige Aufruf ist dann wie folgt:
 
 .Nur die Paketnamen ausgeben (`dpkg-query`)
 ----
@@ -51,8 +53,9 @@ alacritty
 $
 ----
 
-*Fall b)* ist kürzer und kombiniert die Werkzeuge `dpkg`, `egrep`, `awk` und 
-`sort` miteinander:
+Ergebnis ist eine alphabetisch sortierte Liste der Paketnamen ohne weitere
+Angaben. *Fall b)* nutzt einen kompakteren Aufruf und kombiniert hierbei 
+die Werkzeuge `dpkg`, `egrep`, `awk` und `sort` miteinander:
  
 .Nur die Paketnamen ausgeben (`dpkg`, `egrep`, `awk` und `sort` kombiniert)
 ----
@@ -66,9 +69,6 @@ alacritty
 ...
 $
 ----
-
-Obige Ausgabe bearbeiten Sie mit UNIX/Linux-Tools weiter, bspw. mit `cut` oder 
-`sort`, um die Ausgabe ihren Wünschen anzupassen.
 
 ==== Suche mit `aptitude` ====
 
