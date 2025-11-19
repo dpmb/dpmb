@@ -286,11 +286,11 @@ Der dritte *Fall c)* benutzt das Werkzeug `dpkg-awk` aus dem gleichnamigen Paket
 ist daher von ihnen vor der Benutzung nachzuinstallieren. `dpkg-awk` wertet die 
 beiden Dateien `/var/lib/dpkg/status` und `/var/lib/dpkg/available` aus.
 
-Mit dem nachfolgenden Aufruf erhalten Sie eine Liste aller Pakete, die
-auf ihrem System gerade installiert sind. `dpkg-awk` filtert alle Zeilen
-heraus, auf die der regulräre Ausdruck `Status: .* installed$` passt. Mit der 
-Angabe `Package` weisen Sie `dpkg-awk` an, nur in die Felder mit den Paketnamen 
-zu durchsuchen.
+Mit dem nachfolgenden Aufruf erhalten Sie eine Liste aller Pakete, die auf 
+ihrem System gerade installiert sind. `dpkg-awk` gibt nur die Zeilen aus, auf 
+die der reguläre Ausdruck `Status: .* installed$` passt. Mit der Angabe 
+`Package` weisen Sie `dpkg-awk` an, die Ausgabe nur auf das Feld Paketname zu
+beschränken.
 
 .Die Liste der installierten Pakete mit `dpkg-awk` ermitteln
 ----
