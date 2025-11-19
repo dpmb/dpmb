@@ -79,12 +79,22 @@ shells
 $
 ----
 
-* Schritt 2: Ermittlung der Pakete aus der Kategorie
+* Schritt 2: Ermittlung der Pakete aus der Kategorie, hier am Beispiel 
+der Kategorie 'shell'
 
 ** Variante 1: mittels `apt` (ohne Leerzeichen zwischen `~s` und der 
-Kategorie)
+Kategorie), Kombination mit `tail`, `awk` und `sort`
 ----
-$ apt list '~sshell'
+$ apt list '~sshell' 2>1 | tail -n+2 | awk -F '/' '{ print $1 }' | sort -u
+ash
+autojump
+bash
+bash-completion
+bash-static
+bats
+busybox-static
+...
+$
 ----
 
 ** Variante 2: mittels `aptitude`
