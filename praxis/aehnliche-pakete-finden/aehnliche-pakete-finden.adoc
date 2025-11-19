@@ -136,8 +136,10 @@ busybox-static
 $
 ----
 
-* *Schritt 3*: Kombination von Schritt 1 und 2 als Shellskript, hier nur 
-mittels `apt`
+Zur Automatisierung bietet sich *Schritt 3* an -- die Kombination von 
+Schritt 1 und 2 als Shellskript, nachfolgend für die Variante mittels 
+`apt`. Das Debianpaket, zu dem die Recherche erfolgen soll, geben Sie 
+dem Shellskript als Aufrufparameter mit.
 
 .Alle ähnlichen Pakete mit einem Shellskript aufstöbern
 ----
@@ -146,6 +148,14 @@ mittels `apt`
 paketname="$1"
 kategorie=$(apt show ${paketname} 2>1 | tail -n+4 | sed -ne '/^Section: /{s/Section: //p;}')
 apt list "~s${kategorie}" 2>1 | tail -n+2 | awk -F '/' '{ print $1 }' | sort -u
+----
+
+Haben Sie das Shellskript unter dem Namen 'finde-aehnliche-pakete.sh' 
+gespeichert und diesem mittels `chmod u+x` ausführbare Berechtigungen 
+erteilt, ist der Aufruf für das Paket 'bash' wie folgt:
+
+----
+$ ./finde-aehnliche-pakete.sh bash
 ----
 
 ==== Über eine GUI ====
