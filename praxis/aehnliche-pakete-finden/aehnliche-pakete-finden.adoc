@@ -146,8 +146,15 @@ dem Shellskript als Aufrufparameter mit.
 #!/bin/bash
 
 paketname="$1"
-kategorie=$(apt show ${paketname} 2>1 | tail -n+4 | sed -ne '/^Section: /{s/Section: //p;}')
-apt list "~s${kategorie}" 2>1 | tail -n+2 | awk -F '/' '{ print $1 }' | sort -u
+kategorie=$(
+  apt show ${paketname} 2>1 | \ 
+  tail -n+4 | \ 
+  sed -ne '/^Section: /{s/Section: //p;}' \
+  )
+apt list "~s${kategorie}" 2>1 | \ 
+  tail -n+2 | \ 
+  awk -F '/' '{ print $1 }' | \ 
+  sort -u
 ----
 
 Haben Sie das Shellskript unter dem Namen 'finde-aehnliche-pakete.sh' 
