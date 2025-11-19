@@ -176,7 +176,7 @@ $
 Analog zu `dpkg` kann auch `apt` mit Filtern umgehen, um darüber die Ausgabe
 einzuschränken. `apt` akzeptiert dazu als Filter sowohl eine Liste von 
 Paketnamen, als auch Muster. Das nachfolgende Beispiel schränkt die Ausgabe
-auf das Paket 'bash' ein. Ergebnis ist ein einziges Paket.
+von `apt` auf das Paket 'bash' ein. Ergebnis ist ein einziges Paket.
 
 .Liste auf bestimmte Pakete eingrenzen
 ----
@@ -190,12 +190,12 @@ $
 ----
 
 Muster interpretiert `apt` nach dem gleichen Prinzip wie `dpkg`. Das 
-nachfolgende Beispiel zeigt die Recherche nach allen installierten Paketen, 
-die die Zeichenkette `ash` im Namen beinhalten, auf die keine weiteren 
-Zeichen folgen. Die Angabe eines Sterns (`*`) vor bzw. nach der Zeichenkette 
-interpretiert `apt` als alle Zeichen in beliebiger Menge. Daher umfaßt die
-Ausgabe bspw. sowohl die Pakete 'ash' und 'bash', als auch 'crash' und 
-'csmash'.
+nachfolgende Beispiel zeigt die Recherche nach allen Paketen, die die 
+Zeichenkette `ash` im Namen beinhalten, auf die keine weiteren Zeichen 
+folgen, die aber ein beliebiges Präfix besitzen dürfen. Die Angabe eines 
+Sterns (`*`) vor bzw. nach der Zeichenkette interpretiert `apt` als alle 
+Zeichen in beliebiger Menge. Daher umfaßt die Ausgabe von `apt` bspw. 
+sowohl die Pakete 'ash' und 'bash', als auch 'crash' und 'csmash'.
 
 .Liste mit der Angabe eines Musters eingrenzen
 ----
@@ -220,16 +220,21 @@ $
 ===== Ausgabe minimieren =====
 
 Um die Ausgabe auf die Paketnamen einzugrenzen, helfen Ihnen wiederum die 
-Werkzeuge `awk`, `fgrep`, `awk` und `uniq` weiter. `awk` filtert den 
+Werkzeuge `tail`, `fgrep`, `awk` und `uniq` weiter. Zunächst leiten Sie die
+Ausgabe des Fehlerkanals nach `/dev/null` um -- somit entfällt die bislang
+sichtbare Warnung. Mittels `tail` reduzieren Sie nun die Ausgabe auf alle 
+Zeilen ab Zeile 2. Anschließend filtert `fgrep` alle Zeilen aus der Ausgabe, 
+in denen die Zeichenkette `installiert` vorkommt. Mittels `awk` und dem `/` 
+als Trennzeichen verkürzen Sie alle Zeilen auf die erste Spalte mit dem
+Paketnamen. Zum Schluß benutzen Sie `uniq`, um mehrfach vorkommende Einträge
+aufzuräumen.
+
+`awk` filtert den 
 Paketnamen aus jeder Zeile heraus. 
 
 .`apt` listet nur die nicht installierten Pakete auf (Paketliste)
 ----
-$ apt list '*ash' | fgrep -v '[installiert]' | awk -F "/" ' { print $1 } ' | uniq
-
-WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-
-Auflistung…
+$ apt list '*ash' 2>/dev/null | tail -n+2 | fgrep -v 'installiert' | awk -F "/" ' { print $1 } ' | uniq
 ap51-flash
 ash
 bash
