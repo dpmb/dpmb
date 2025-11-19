@@ -289,8 +289,8 @@ beiden Dateien `/var/lib/dpkg/status` und `/var/lib/dpkg/available` aus.
 Mit dem nachfolgenden Aufruf erhalten Sie eine Liste aller Pakete, die auf 
 ihrem System gerade installiert sind. `dpkg-awk` gibt nur die Zeilen aus, auf 
 die der reguläre Ausdruck `Status: .* installed$` passt. Mit der Angabe 
-`Package` weisen Sie `dpkg-awk` an, die Ausgabe nur auf das Feld Paketname zu
-beschränken.
+`Package` weisen Sie `dpkg-awk` an, die Ausgabe des Ergebnisses nur auf das 
+Feld Paketname zu beschränken.
 
 .Die Liste der installierten Pakete mit `dpkg-awk` ermitteln
 ----
@@ -403,6 +403,8 @@ $
 
 ===== Liste anhand von Filtern einschränken =====
 
+// Stichworte für den Index
+(((apt, Umgang mit Filtern)))
 Analog zu `dpkg` kann auch `apt` mit Filtern umgehen, um darüber die Ausgabe
 einzuschränken. `apt` akzeptiert dazu als Parameter sowohl eine Liste von 
 Paketnamen, als auch Muster. Das nachfolgende Beispiel schränkt die Ausgabe
