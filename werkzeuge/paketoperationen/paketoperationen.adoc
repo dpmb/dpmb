@@ -26,17 +26,13 @@ include::liste-der-installierten-pakete-anzeigen-und-deuten.adoc[]
 
 include::liste-der-installierten-kernelpakete-anzeigen.adoc[]
 
-include::liste-der-nicht-installierten-pakete-anzeigen.adoc[]
+include::automatisch-installierte-pakete-anzeigen.adoc[]
 
 include::unfreie-pakete-anzeigen.adoc[]
 
 include::inoffizielle-pakete-anzeigen.adoc[]
 
-include::neue-pakete-anzeigen.adoc[]
-
 include::pakete-nach-prioritaeten-finden.adoc[]
-
-include::automatisch-installierte-pakete-anzeigen.adoc[]
 
 include::obsolete-pakete-anzeigen.adoc[]
 
@@ -57,6 +53,10 @@ include::warum-ist-ein-paket-installiert.adoc[]
 include::liste-der-zuletzt-installierten-pakete-anzeigen.adoc[]
 
 include::paketabhaengigkeiten-anzeigen.adoc[]
+
+include::neue-pakete-anzeigen.adoc[]
+
+include::liste-der-nicht-installierten-pakete-anzeigen.adoc[]
 
 // in Pakete hineinschauen
 include::pakete-ueber-den-namen-finden/pakete-ueber-den-namen-finden.adoc[]
