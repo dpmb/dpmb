@@ -41,7 +41,8 @@ einsortiert (siehe <<sortierung-der-pakete-nach-verwendungszweck>>). Für
 
 ==== Über die Kommandozeile ====
 
-* jedes Paket hat in den Metadaten einen Eintrag zur Kategorie
+* zunächst: Paketkategorie ermitteln, in der das Paket einsortiert wurde
+* jedes Paket hat in der Paketbeschreibung einen Eintrag zur Kategorie
 * Schlüsselwort `Section`
 
 * Recherche mittels `apt-cache` für das Paket 'bash' -- egal ob 
@@ -57,10 +58,7 @@ $
   installiert, oder nicht:
 
 ----
-$ apt show cleo | sed -ne '/^Section: /{s/Section: //p;}'
-
-WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-
+$ apt show cleo 2>1 | tail -n+4 | sed -ne '/^Section: /{s/Section: //p;}'
 shells
 $
 ----
