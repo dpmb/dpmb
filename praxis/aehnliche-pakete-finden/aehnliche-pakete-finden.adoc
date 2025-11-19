@@ -43,7 +43,7 @@ einsortiert (siehe <<sortierung-der-pakete-nach-verwendungszweck>>). Für
 
 // Stichworte für den Index
 (((apt-cache, show)))
-Schritt 1 beinhaltet, die Paketkategorie zu ermitteln, in der das Paket 
+*Schritt 1* beinhaltet, die Paketkategorie zu ermitteln, in der das Paket 
 einsortiert wurde. Dazu verfügt jedes Paket in der Paketbeschreibung über
 einen Eintrag zur Kategorie, das Schlüsselwort heißt `Section`. Von 
 Nutzen sind hier die beiden Werkzeuge `apt-cache` und `apt` in Kombination
@@ -79,7 +79,7 @@ shells
 $
 ----
 
-* Schritt 2: Ermittlung der Pakete aus der Kategorie, hier am Beispiel 
+* *Schritt 2*: Ermittlung der Pakete aus der Kategorie, hier am Beispiel 
 der Kategorie 'shell'
 
 ** Variante 1: mittels `apt` (ohne Leerzeichen zwischen `~s` und der 
@@ -105,9 +105,29 @@ ohne Leerzeichen zwischen `~s` und der Kategorie) und den Werkzeugen `awk`,
 
 .Alle Pakete der Kategorie 'shell' mittels `aptitude` ausgeben
 ----
-$ aptitude search '~sshell' | awk '{ print $2 }' | sed -e 's/:.*//p' | sort -u
+$ aptitude search '~s shell' | awk '{ print $2 }' | sed -e 's/:.*//p' | sort -u
+ash
+autojump
+bash
+bash-completion
+bash-static
+bats
+busybox-static
+...
+$
 ----
 
+* *Schritt 3*: Kombination von Schritt 1 und 2 als Shellskript, hier nur 
+mittels `apt`
+
+.Alle ähnlichen Pakete mit einem Shellskript aufstöbern
+----
+#!/bin/bash
+
+paketname="$1"
+kategorie=$(apt show ${paketname} 2>1 | tail -n+4 | sed -ne '/^Section: /{s/Section: //p;}')
+apt list "~s${kategorie}" 2>1 | tail -n+2 | awk -F '/' '{ print $1 }' | sort -u
+----
 
 ==== Über eine GUI ====
 
