@@ -9,11 +9,11 @@
 (((ähnliche Pakete finden)))
 (((Suche im Paketbestand)))
 
-Debian stellt über seine offziellen Paketquellen mehr als 60.000 Pakete 
-bereit. Darunter befinden sich Pakete, die Werkzeuge mit ähnlicher 
+Debian stellt über seine offziellen Paketquellen derzeit mehr als 60.000 
+Pakete bereit. Darunter befinden sich Pakete, die Werkzeuge mit ähnlicher 
 Funktionalität bereitstellen, sprich: die das gleiche oder etwas ziemlich 
-ähnliches machen. Diese Vielfalt an geprüfter und gepflegter Software ist
-bemerkenswert.
+ähnliches machen, aber nur auf eine andere Art und Weise. Diese Vielfalt 
+an geprüfter und gepflegter Software ist bemerkenswert.
 
 Wir besprechen hier, wie Sie diese Pakete finden, da die Namen der Pakete 
 doch recht unterschiedlich sein können. Motivation für die Vorgehensweise 
@@ -25,7 +25,8 @@ ist die Lösung dieser Situation:
 
 * wie identifiziere ich im Paketbestand mögliche Alternativen B, C und D, 
   die ebenfalls über die hinterlegten Paketquellen bereitstehen? Damit 
-  läßt sich Werkzeug A möglicherweise ersetzen
+  läßt sich Werkzeug A möglicherweise vollständig durch Werkzeug B, C oder
+  D ersetzen
 
 Zur Recherche stehen Ihnen mehrere Möglichkeiten zur Verfügung -- eine 
 Suche anhand der Paketkategorien, der Paketabhängigkeiten, über die 
