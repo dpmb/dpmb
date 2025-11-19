@@ -226,11 +226,8 @@ sichtbare Warnung. Mittels `tail` reduzieren Sie nun die Ausgabe auf alle
 Zeilen ab Zeile 2. Anschließend filtert `fgrep` alle Zeilen aus der Ausgabe, 
 in denen die Zeichenkette `installiert` vorkommt. Mittels `awk` und dem `/` 
 als Trennzeichen verkürzen Sie alle Zeilen auf die erste Spalte mit dem
-Paketnamen. Zum Schluß benutzen Sie `uniq`, um mehrfach vorkommende Einträge
-aufzuräumen.
-
-`awk` filtert den 
-Paketnamen aus jeder Zeile heraus. 
+Paketnamen. Zum Schluß benutzen Sie noch `uniq`, um mehrfach vorkommende 
+Einträge aufzuräumen.
 
 .`apt` listet nur die nicht installierten Pakete auf (Paketliste)
 ----
