@@ -84,6 +84,8 @@ der Kategorie 'shell'
 
 ** Variante 1: mittels `apt` (ohne Leerzeichen zwischen `~s` und der 
 Kategorie), Kombination mit `tail`, `awk` und `sort`
+
+.Alle Pakete der Kategorie 'shell' mittels `apt` ausgeben
 ----
 $ apt list '~sshell' 2>1 | tail -n+2 | awk -F '/' '{ print $1 }' | sort -u
 ash
@@ -97,10 +99,13 @@ busybox-static
 $
 ----
 
-** Variante 2: mittels `aptitude`
+** Variante 2: mittels `aptitude` (zulässig ist die Schreibweise mit und 
+ohne Leerzeichen zwischen `~s` und der Kategorie) und den Werkzeugen `awk`,
+`sed` und `sort`
 
+.Alle Pakete der Kategorie 'shell' mittels `aptitude` ausgeben
 ----
-$ aptitude search '~s shell'
+$ aptitude search '~sshell' | awk '{ print $2 }' | sed -e 's/:.*//p' | sort -u
 ----
 
 
