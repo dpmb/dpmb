@@ -254,7 +254,7 @@ verschiedenfarbige Kästchen (``Icons''). In
 <<fig.synaptic-nicht-installierte-pakete>> sehen Sie passend gefilterte 
 Paketliste.
 
-.Icons zur Darstellung des Paketstatus
+.Auflistung der nichtinstallierten Pakete in Synaptic
 image::werkzeuge/paketoperationen/synaptic-nicht-installierte-pakete.png[id="fig.synaptic-nicht-installierte-pakete", width="50%"]
 
 // Datei (Ende): ./werkzeuge/paketoperationen/liste-der-nicht-installierten-pakete-anzeigen.adoc
