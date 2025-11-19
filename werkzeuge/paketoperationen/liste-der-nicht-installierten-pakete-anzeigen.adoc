@@ -250,12 +250,11 @@ $
 Graphische Programme wie beispielsweise Synaptic (siehe <<gui-synaptic>>) 
 und SmartPM (siehe <<gui-smartpm>>) verwenden keine Buchstaben zur 
 Kennzeichnung des Paketstatus, sondern nutzen stattdessen 
-verschiedenfarbige Kästchen (``Icons''). In <<fig.smartpm-icons2>> sehen 
-Sie alle Möglichkeiten in der vollständigen Übersicht. Installierte Pakete 
-erkennen Sie an der grünen Farbe, weiß/hellgrau kennzeichnet nicht 
-installierte Pakete und rot steht hier für defekte Pakete (Status ``broken'').
+verschiedenfarbige Kästchen (``Icons''). In 
+<<fig.synaptic-nicht-installierte-pakete>> sehen Sie passend gefilterte 
+Paketliste.
 
 .Icons zur Darstellung des Paketstatus
-image::werkzeuge/paketoperationen/smartpm-icons.png[id="fig.smartpm-icons2", width="50%"]
+image::werkzeuge/paketoperationen/synaptic-nicht-installierte-pakete.png[id="fig.synaptic-nicht-installierte-pakete", width="50%"]
 
 // Datei (Ende): ./werkzeuge/paketoperationen/liste-der-nicht-installierten-pakete-anzeigen.adoc
