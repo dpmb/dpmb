@@ -41,22 +41,38 @@ einsortiert (siehe <<sortierung-der-pakete-nach-verwendungszweck>>). Für
 
 ==== Über die Kommandozeile ====
 
-* zunächst: Paketkategorie ermitteln, in der das Paket einsortiert wurde
-* jedes Paket hat in der Paketbeschreibung einen Eintrag zur Kategorie
-* Schlüsselwort `Section`
+// Stichworte für den Index
+(((apt-cache, show)))
+Schritt 1 beinhaltet, die Paketkategorie zu ermitteln, in der das Paket 
+einsortiert wurde. Dazu verfügt jedes Paket in der Paketbeschreibung über
+einen Eintrag zur Kategorie, das Schlüsselwort heißt `Section`. Von 
+Nutzen sind hier die beiden Werkzeuge `apt-cache` und `apt` in Kombination
+mit `sed`. Unerheblich ist, ob das Paket bereits installiert ist, oder 
+nicht.
 
-* Recherche mittels `apt-cache` für das Paket 'bash' -- egal ob 
-  installiert, oder nicht:
+Nach dem Paket 'bash' suchen Sie mittels `apt-cache` und `sed` wie folgt
+(*Variante 1*):
 
+.Ermittlung der Paketkategorie mittels `apt-cache`
 ----
 $ apt-cache show bash | sed -ne '/^Section: /{s/Section: //p;}'
 shells
 $
 ----
 
-* Recherche mittels `apt show` für das Paket 'bash' -- egal ob
-  installiert, oder nicht:
+`sed` berücksichtigt in der Ausgabe von `apt-cache` nur die Zeilen, die mit 
+der Zeichenkette `Section:` beginnen und ersetzt darin `Section:` durch 
+nichts -- löscht also die Zeichenkette. Übrig bleibt die Bezeichnung der 
+Paketkategorie.
 
+// Stichworte für den Index
+(((apt, show)))
+*Variante 2* verwendet `apt` mit dem Unterkommando `show` in Kombination 
+mit `tail` und `sed`. Der Zwischenschritt über `tail` ist hier notwendig,
+da die Ausgabe von `apt` mit zusätzlichen Zeilen beginnt, die wir nicht 
+benötigen. Für das Paket `cleo` sieht der Aufruf wie folgt aus:
+
+.Ermittlung der Paketkategorie mittels `apt`
 ----
 $ apt show cleo 2>1 | tail -n+4 | sed -ne '/^Section: /{s/Section: //p;}'
 shells
