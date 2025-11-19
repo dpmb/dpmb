@@ -10,12 +10,14 @@
 (((Paket, nicht installiertes anzeigen)))
 
 Hier besprechen wir, wie Sie herausfinden, ob eines oder mehrere Pakete 
-nicht installiert sind. Das ist das Gegenstück zu "installiertes Paket 
-finden" (siehe <<liste-der-installierten-pakete-anzeigen-und-deuten>>).
+nicht installiert sind. Das ist das Gegenstück zu "Liste der installierten 
+Pakete anzeigen und deuten" (siehe 
+<<liste-der-installierten-pakete-anzeigen-und-deuten>>).
 
-Für die Kommandozeile existieren vier grundlegende Möglichkeiten. Ins 
-Spiel kommen `dpkg`, `dpkg-query`, `aptitude` und `apt`. Die Darstellung 
-in den graphischen Programme beleuchten wir weiter unten genauer.
+Nach unserer Kenntnis existieren für die Kommandozeile vier grundlegende 
+Möglichkeiten. Ins Spiel kommen `dpkg`, `dpkg-query`, `aptitude` und 
+`apt`. Die Darstellung in den graphischen Programme beleuchten wir weiter 
+unten genauer.
 
 ==== dpkg mit minimaler Ausgabe ====
 
@@ -75,7 +77,7 @@ $
 Möchten Sie die Auflistung auf Pakete mit einem bestimmten Namensmuster
 beschränken, ersetzen Sie im Aufruf den ersten `'*'` durch das gewünschte
 Textfragment. Nachfolgendes Beispiel zeigt das für das Muster `'*ash*'`,
-welches u.a. Erweiterungen für die Bash zutagefördern:
+welches u.a. Erweiterungen für die Bash zutagefördert:
 
 .Nicht installierte Pakete mit Muster finden
 ----
@@ -93,7 +95,7 @@ $
 (((aptitude, search '!~i')))
 (((aptitude, search '!?installed')))
 
-Zur Recherche im Paketbestand kannt das Werkzeug `aptitude` das 
+Zur Recherche im Paketbestand kennt das Werkzeug `aptitude` das 
 Unterkommando `search`. Nach diesem erwartet es das Flag `'!~i'` für 
 ``nicht installierte Pakete'' (Langform `'!?installed'`). Ergebnis ist 
 eine Liste aller nicht installierten Pakete. Daraus filtern wir im 
@@ -109,9 +111,9 @@ $
 ----
 
 Obiges Ergebnis umfaßt eine Zeile pro Paket mit Paketstatus, Paketname und
-Beschreibung. Geht es Ihnen jedoch nur um die Namen der Pakete, hilft die
-folgende Kombination aus `aptitude`, `grep`, `sed` und `awk` weiter und 
-minimiert die Ausgabe erheblich:
+Beschreibung. Geht es Ihnen jedoch nur um die Namen der Pakete, ist etwas 
+mehr Arbeit notwendig. Hier hilft die folgende Kombination aus `aptitude`, 
+`grep`, `sed` und `awk` weiter und minimiert die Ausgabe erheblich:
 
 .Paketliste mittels `aptitude` ausgeben
 ----
@@ -127,7 +129,7 @@ Zeichenkette aus einem kleinen `p` oder `v` gefolgt von einem Leerzeichen
 durch nichts (es löscht die Zeichen aus der Zeile). Die Angabe von 
 `' { print $1 } '` bei `awk` gibt danach lediglich die erste Spalte jeder 
 Zeile aus, die den Paketnamen enthält. Alle weiteren Informationen, die 
-`aptitude` bereitgestellt hatte, entfallen.
+`aptitude` in seiner Ausgabe noch bereitgestellt hatte, entfallen.
 
 ==== `apt list` ====
 
@@ -143,7 +145,9 @@ Versionsnummer, die Architektur und den Status der Installation.
 // Stichworte für den Index
 (((apt, list)))
 In Kombination mit `fgrep` und dem Parameter `-v` filtern Sie alle Zeilen 
-aus der Ausgabe heraus, die die gesuchten Pakete beinhalten.
+aus der Ausgabe heraus, die die gesuchten Pakete beinhalten. Der Parameter
+`-v '[installiert]'` sorgt dafür, dass `fgrep` die Ausgabe von `apt` auf 
+die Zeilen reduziert, die das Suchmuster nicht enthalten.
 
 .Recherche nach nicht installierten Paketen mittels `apt`
 ----
@@ -167,10 +171,12 @@ $
 
 ===== Liste anhand von Filtern einschränken =====
 
+// Stichworte für den Index
+(((apt, Umgang mit Filtern)))
 Analog zu `dpkg` kann auch `apt` mit Filtern umgehen, um darüber die Ausgabe
-einzuschränken. `apt` akzeptiert dazu als Parameter sowohl eine Liste von 
+einzuschränken. `apt` akzeptiert dazu als Filter sowohl eine Liste von 
 Paketnamen, als auch Muster. Das nachfolgende Beispiel schränkt die Ausgabe
-auf das Paket 'bash' ein.
+auf das Paket 'bash' ein. Ergebnis ist ein einziges Paket.
 
 .Liste auf bestimmte Pakete eingrenzen
 ----
@@ -183,11 +189,13 @@ bash/oldstable 5.2.15-2+b9 i386
 $
 ----
 
-Für den Umgang mit Mustern folgt `apt` dem gleichen Prinzip wie `dpkg`. 
-Das nachfolgende Beispiel zeigt die Recherche nach allen installierten 
-Paketen, die die Zeichenkette `ash` im Namen beinhalten. Die Angabe eines 
-Sterns (`*`) vor und nach der Zeichenkette interpretiert `apt` als alle 
-Zeichen in beliebiger Menge. 
+Muster interpretiert `apt` nach dem gleichen Prinzip wie `dpkg`. Das 
+nachfolgende Beispiel zeigt die Recherche nach allen installierten Paketen, 
+die die Zeichenkette `ash` im Namen beinhalten, auf die keine weiteren 
+Zeichen folgen. Die Angabe eines Sterns (`*`) vor bzw. nach der Zeichenkette 
+interpretiert `apt` als alle Zeichen in beliebiger Menge. Daher umfaßt die
+Ausgabe bspw. sowohl die Pakete 'ash' und 'bash', als auch 'crash' und 
+'csmash'.
 
 .Liste mit der Angabe eines Musters eingrenzen
 ----
