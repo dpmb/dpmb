@@ -79,6 +79,21 @@ shells
 $
 ----
 
+* Schritt 2: Ermittlung der Pakete aus der Kategorie
+
+** Variante 1: mittels `apt` (ohne Leerzeichen zwischen `~s` und der 
+Kategorie)
+----
+$ apt list '~sshell'
+----
+
+** Variante 2: mittels `aptitude`
+
+----
+$ aptitude search '~s shell'
+----
+
+
 ==== Über eine GUI ====
 
 Todo
