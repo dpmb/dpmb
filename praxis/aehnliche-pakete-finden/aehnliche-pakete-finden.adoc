@@ -84,6 +84,8 @@ der Kategorie, hier am Beispiel der Kategorie 'shell'. Zur Umsetzung stehen
 wieder zwei Varianten bereit -- Variante 1 nutzt `apt` und Variante 2
 `aptitude`. Das Ergebnis ist jeweils identisch.
 
+// Stichworte für den Index
+(((apt, list)))
 *Variante 1* ist eine Kombination aus `apt` mit `tail`, `awk` und `sort`,
 die Sie über eine Pipe miteinander verbinden. `apt` rufen Sie mit dem 
 Unterkommando `list` und einem Filter auf. Der Filter ist `~sshell` (ohne 
@@ -108,6 +110,8 @@ busybox-static
 $
 ----
 
+// Stichworte für den Index
+(((aptitude, search)))
 *Variante 2* nutzt initial `aptitude` und flanscht danach `awk`, `sed` und
 `sort` an. `aptitude` rufen Sie mit dem Unterkommando `search` und einem 
 Filter auf. Der Filter ist ähnlich zu obigem Beispiel von `apt` mit einem
@@ -117,10 +121,6 @@ Kategorie). Alle Ausgaben leiten Sie an `awk` weiter, welches jede Zeile
 auf die zweite Spalte reduziert. Danach ersetzt `sed` alle Zeichen ab dem
 Doppelpunkt durch nichts (löscht die Zeichen). Zuletzt faßt `sort` gleiche 
 Zeilen zusammen und sortiert die Zeilen aufsteigend.
-
-(zulässig ist die Schreibweise mit und 
-ohne Leerzeichen zwischen `~s` und der Kategorie) und den Werkzeugen `awk`,
-`sed` und `sort`
 
 .Alle Pakete der Kategorie 'shell' mittels `aptitude` ausgeben
 ----
