@@ -167,7 +167,20 @@ $ ./finde-aehnliche-pakete.sh bash
 
 ==== Über eine GUI ====
 
-Todo
+* TUI von `aptitude`
+** Kategorie 'Installierte Pakete' und 'Nicht installierte Pakete'
+** Auswahl der Section, hier genannt Bereich
+** Debtags-Browser
+
+* GUI von Synaptic
+** Suche -> Ansicht nach Bereichen
+** Farbe des Icons neben dem Namen des Softwarepakets zeigt an, ob 
+   bereits installiert, oder nicht
+** weitere Angabe von Vergleichskriterien nicht möglich
+
+* GUI von apper und Gnome Packagekit
+** Auswahl der jewiligen Section, hier genannt Gruppe
+** Darstellung aller Pakete, die zur Gruppe gehören
 
 ==== Über einen Webbrowser ====
 
