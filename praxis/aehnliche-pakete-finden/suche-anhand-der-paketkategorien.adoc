@@ -149,15 +149,16 @@ Die Pakete darin sind jeweils wieder den einzelnen Paketkategorien -- hier
 genannt Bereiche -- zugordnet. Zusätzlich liefert `aptitude` einen 'Debtags
 Browser' mit (siehe <<aehnliche-pakete-finden-debtags>>).
 
-* GUI von Synaptic
-** Suche -> Ansicht nach Bereichen
-** Farbe des Icons neben dem Namen des Softwarepakets zeigt an, ob 
-   bereits installiert, oder nicht
-** weitere Angabe von Vergleichskriterien nicht möglich
+GUI von Synaptic :: über die unten angeordneten Knöpfe im linken Panel 
+wählen Sie zunächst die Ansicht nach Bereichen aus, wobei daraufhin in der 
+Mitte die dazugehörigen Softwarepakete aufgelistet werden. Die Farbe des 
+Icons neben dem Namen des Softwarepakets zeigt lediglich an, ob dieses Paket 
+bereits installiert ist, oder nicht. Eine weitere Angabe von 
+Vergleichskriterien zwischen den Paketen ist nicht integriert.
 
-* GUI von apper und Gnome Packagekit
-** Auswahl der jewiligen Section, hier genannt Gruppe
-** Darstellung aller Pakete, die zur Gruppe gehören
+GUI von apper und Gnome Packagekit :: in der zweiteiligen Ansicht wählen Sie
+zuerst die jeweilige Paketkategorie aus, hier genannt Gruppe. Im rechten
+Fenster werden nun alle Pakete dargestellt, die zu der Gruppe gehören.
 
 ==== Über einen Webbrowser ====
 
