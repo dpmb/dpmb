@@ -32,11 +32,18 @@ die Vorgehensweise ist die Lösung dieser Situation:
 
 Um eine solche Entscheidung treffen zu können, setzt es eine Recherche und
 sinnvolle Vergleichskriterien voraus. Für ersteres stehen Ihnen mehrere 
-Möglichkeiten zur Verfügung -- eine Suche anhand der Paketkategorien, der 
-Paketabhängigkeiten, über die Paketbeschreibung selbst sowie über die 
-Paketklassifikation mittels Debtags. In manchen Fällen hilft auch das 
-Studium der Manpages weiter.
+Möglichkeiten zur Verfügung -- eine Suche anhand der Paketkategorien 
+(siehe <<aehnliche-pakete-finden-paketkategorien>>), der 
+Paketabhängigkeiten (siehe <<aehnliche-pakete-finden-paketabhaengigkeiten>>), 
+über die Paketbeschreibung selbst (siehe 
+<<aehnliche-pakete-finden-paketbeschreibung>>) sowie mit Hilfe der
+Paketklassifikation auf der Basis von Debtags (siehe 
+<<aehnliche-pakete-finden-debtags>>). In manchen Fällen hilft auch das 
+Studium der Manpages (siehe <<aehnliche-pakete-finden-manpages>>) und 
+spezialisierter Webseiten (siehe <<aehnliche-pakete-finden-webseiten>>) 
+weiter.
 
+[[aehnliche-pakete-finden-paketkategorien]]
 === Suche anhand der Paketkategorien ===
 
 // Stichworte für den Index
@@ -174,6 +181,9 @@ $ ./finde-aehnliche-pakete.sh bash
 
 ==== Über eine GUI ====
 
+Textbasierte und graphische Bedienoberflächen integrieren die Anzeige
+der 
+
 * TUI von `aptitude`
 ** Kategorie 'Installierte Pakete' und 'Nicht installierte Pakete'
 ** Auswahl der Section, hier genannt Bereich
@@ -193,12 +203,14 @@ $ ./finde-aehnliche-pakete.sh bash
 
 * Paketsuche über packages.debian.org
 
+[[aehnliche-pakete-finden-paketabhaengigkeiten]]
 === Suche anhand der Paketabhängigkeiten ===
 
 // Stichworte für den Index
 (((ähnliche Pakete finden, Suche anhand der Paketabhängigkeiten)))
 * allgemein gehaltene Abhängigkeiten, bspw. 'pdf-viewer'
 
+[[aehnliche-pakete-finden-paketbeschreibung]]
 === Suche über die Paketbeschreibung ===
 
 // Stichworte für den Index
@@ -206,12 +218,15 @@ $ ./finde-aehnliche-pakete.sh bash
 * Suche anhand von Begriffen bzw. Worten, die in der Paketbeschreibung 
   vorkommen
 
+[[aehnliche-pakete-finden-debtags]]
 === Suche über Debtags ===
 
 // Stichworte für den Index
 (((ähnliche Pakete finden, Suche mit Hilfe von Debtags)))
 * Debtags, siehe <<erweiterte-paketklassifikation-mit-debtags>>
+* Nutzung über die TUI von `aptitude`
 
+[[aehnliche-pakete-finden-manpages]]
 === Suche über Manpages ===
 
 // Stichworte für den Index
@@ -219,5 +234,14 @@ $ ./finde-aehnliche-pakete.sh bash
 * in vielen Manpages ist ein Abschnitt enthalten, in dem auf ähnliche
   Werkzeuge verwiesen wird
 * wie verläßlich ist das?
+* können Infopages das nicht vielleicht besser?
   
+[[aehnliche-pakete-finden-webseiten]]
+=== Suche über Webseiten ===
+
+// Stichworte für den Index
+(((ähnliche Pakete finden, Suche über Webseiten)))
+
+* spezielle Webseiten, bspw. das Wiki der Ubuntuusers
+
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/aehnliche-pakete-finden.adoc
