@@ -8,166 +8,9 @@
 include::allgemeines.adoc[]
 
 // Suche anhand der Paketkategorien
+include::suche-anhand-der-paketkategorien.adoc[]
 
-[[aehnliche-pakete-finden-paketkategorien]]
-=== Suche anhand der Paketkategorien ===
-
-// Stichworte für den Index
-(((ähnliche Pakete finden, Suche anhand der Paketkategorien)))
-Die Paketverwaltung hat die Debianpakete in verschiedene Kategorien 
-einsortiert (siehe <<sortierung-der-pakete-nach-verwendungszweck>>). Für
-ähnliche Pakete hilft ein Blick in die jeweilige Kategorie.
-
-==== Über die Kommandozeile ====
-
-// Stichworte für den Index
-(((apt-cache, show)))
-*Schritt 1* beinhaltet, die Paketkategorie zu ermitteln, in der das Paket 
-einsortiert wurde. Dazu verfügt jedes Paket in der Paketbeschreibung über
-einen Eintrag zur Kategorie, das Schlüsselwort heißt `Section`. Von 
-Nutzen sind hier die beiden Werkzeuge `apt-cache` und `apt` in Kombination
-mit `sed`. Unerheblich ist, ob das Paket bereits installiert ist, oder 
-nicht.
-
-Nach dem Paket 'bash' suchen Sie mittels `apt-cache` und `sed` wie folgt
-(*Variante 1*):
-
-.Ermittlung der Paketkategorie mittels `apt-cache`
-----
-$ apt-cache show bash | sed -ne '/^Section: /{s/Section: //p;}'
-shells
-$
-----
-
-`sed` berücksichtigt in der Ausgabe von `apt-cache` nur die Zeilen, die mit 
-der Zeichenkette `Section:` beginnen und ersetzt darin `Section:` durch 
-nichts -- löscht also die Zeichenkette. Übrig bleibt die Bezeichnung der 
-Paketkategorie.
-
-// Stichworte für den Index
-(((apt, show)))
-*Variante 2* verwendet `apt` mit dem Unterkommando `show` in Kombination 
-mit `tail` und `sed`. Der Zwischenschritt über `tail` ist hier notwendig,
-da die Ausgabe von `apt` mit zusätzlichen Zeilen beginnt, die wir nicht 
-benötigen. Für das Paket `cleo` sieht der Aufruf wie folgt aus:
-
-.Ermittlung der Paketkategorie mittels `apt`
-----
-$ apt show cleo 2>1 | tail -n+4 | sed -ne '/^Section: /{s/Section: //p;}'
-shells
-$
-----
-
-Nun kommen wir zu *Schritt 2*. In diesem ermitteln wir weitere Pakete aus 
-der Kategorie, hier am Beispiel der Kategorie 'shell'. Zur Umsetzung stehen
-wieder zwei Varianten bereit -- Variante 1 nutzt `apt` und Variante 2
-`aptitude`. Das Ergebnis ist jeweils identisch.
-
-// Stichworte für den Index
-(((apt, list)))
-*Variante 1* ist eine Kombination aus `apt` mit `tail`, `awk` und `sort`,
-die Sie über eine Pipe miteinander verbinden. `apt` rufen Sie mit dem 
-Unterkommando `list` und einem Filter auf. Der Filter ist `~sshell` (ohne 
-Leerzeichen zwischen `~s` und der angegebenen Kategorie) und weist `apt` 
-an, lediglich in der Kategorie 'shell' zu suchen. Alle Ausgaben leiten Sie
-mittels `2>1` in die Standardausgabe um, woraus `tail` die erste Zeile 
-abschneidet. Mittels `awk` reduzieren Sie jede Zeile auf die erste Spalte.
-Zuletzt faßt `sort` gleiche Zeilen zusammen und sortiert die Zeilen 
-aufsteigend.
-
-.Alle Pakete der Kategorie 'shell' mittels `apt` ausgeben
-----
-$ apt list '~sshell' 2>1 | tail -n+2 | awk -F '/' '{ print $1 }' | sort -u
-ash
-autojump
-bash
-bash-completion
-bash-static
-bats
-busybox-static
-...
-$
-----
-
-// Stichworte für den Index
-(((aptitude, search)))
-*Variante 2* nutzt initial `aptitude` und flanscht daran `awk`, `sed` und 
-`sort` an. `aptitude` rufen Sie mit dem Unterkommando `search` und einem 
-Filter auf. Der Filter ist ähnlich zu obigem Beispiel von `apt` mit einem
-Unterschied: es sind beide Schreibweisen zulässig -- `~sshell` und 
-`~s shell` (ohne und mit Leerzeichen zwischen `~s` und der angegebenen 
-Kategorie). Alle Ausgaben leiten Sie an `awk` weiter, welches jede Zeile 
-auf die zweite Spalte reduziert. Danach ersetzt `sed` alle Zeichen ab dem
-Doppelpunkt durch nichts (löscht die Zeichen). Zuletzt sortiert `sort` die
-Zeilen aufsteigend und faßt zudem mit Hilfe des Schalters `-u` auch noch 
-gleiche Zeilen zusammen.
-
-.Alle Pakete der Kategorie 'shell' mittels `aptitude` ausgeben
-----
-$ aptitude search '~s shell' | awk '{ print $2 }' | sed -e 's/:.*//p' | sort -u
-ash
-autojump
-bash
-bash-completion
-bash-static
-bats
-busybox-static
-...
-$
-----
-
-Zur Automatisierung bietet sich *Schritt 3* an -- die Kombination von 
-Schritt 1 und 2 als Shellskript, nachfolgend für die Variante mittels 
-`apt`. Das Debianpaket, zu dem die Recherche erfolgen soll, geben Sie 
-dem Shellskript als Aufrufparameter mit.
-
-.Alle ähnlichen Pakete mit einem Shellskript aufstöbern
-----
-#!/bin/bash
-
-paketname="$1"
-kategorie=$(
-  apt show ${paketname} 2>1 | \ 
-  tail -n+4 | \ 
-  sed -ne '/^Section: /{s/Section: //p;}' \
-  )
-apt list "~s${kategorie}" 2>1 | \ 
-  tail -n+2 | \ 
-  awk -F '/' '{ print $1 }' | \ 
-  sort -u
-----
-
-Haben Sie das Shellskript unter dem Namen 'finde-aehnliche-pakete.sh' 
-gespeichert und diesem mittels `chmod u+x` ausführbare Berechtigungen 
-erteilt, ist der Aufruf für das Paket 'bash' wie folgt:
-
-----
-$ ./finde-aehnliche-pakete.sh bash
-----
-
-==== Über eine GUI ====
-
-Textbasierte und graphische Bedienoberflächen integrieren die Anzeige
-der 
-
-* TUI von `aptitude`
-** Kategorie 'Installierte Pakete' und 'Nicht installierte Pakete'
-** Auswahl der Section, hier genannt Bereich
-** Debtags-Browser
-
-* GUI von Synaptic
-** Suche -> Ansicht nach Bereichen
-** Farbe des Icons neben dem Namen des Softwarepakets zeigt an, ob 
-   bereits installiert, oder nicht
-** weitere Angabe von Vergleichskriterien nicht möglich
-
-* GUI von apper und Gnome Packagekit
-** Auswahl der jewiligen Section, hier genannt Gruppe
-** Darstellung aller Pakete, die zur Gruppe gehören
-
-==== Über einen Webbrowser ====
-
-* Paketsuche über packages.debian.org
+// Suche anhand der Paketabhängigkeiten
 
 [[aehnliche-pakete-finden-paketabhaengigkeiten]]
 === Suche anhand der Paketabhängigkeiten ===
@@ -175,6 +18,8 @@ der
 // Stichworte für den Index
 (((ähnliche Pakete finden, Suche anhand der Paketabhängigkeiten)))
 * allgemein gehaltene Abhängigkeiten, bspw. 'pdf-viewer'
+
+// Suche über die Paketbeschreibung
 
 [[aehnliche-pakete-finden-paketbeschreibung]]
 === Suche über die Paketbeschreibung ===
@@ -184,6 +29,8 @@ der
 * Suche anhand von Begriffen bzw. Worten, die in der Paketbeschreibung 
   vorkommen
 
+// Suche über Debtags
+
 [[aehnliche-pakete-finden-debtags]]
 === Suche über Debtags ===
 
@@ -191,6 +38,8 @@ der
 (((ähnliche Pakete finden, Suche mit Hilfe von Debtags)))
 * Debtags, siehe <<erweiterte-paketklassifikation-mit-debtags>>
 * Nutzung über die TUI von `aptitude`
+
+// Suche über Manpages
 
 [[aehnliche-pakete-finden-manpages]]
 === Suche über Manpages ===
@@ -201,6 +50,8 @@ der
   Werkzeuge verwiesen wird
 * wie verläßlich ist das?
 * können Infopages das nicht vielleicht besser?
+
+// Suche über Webseiten
   
 [[aehnliche-pakete-finden-webseiten]]
 === Suche über Webseiten ===
