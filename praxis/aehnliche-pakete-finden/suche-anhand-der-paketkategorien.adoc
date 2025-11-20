@@ -158,7 +158,11 @@ Vergleichskriterien zwischen den Paketen ist nicht integriert.
 
 GUI von apper und Gnome Packagekit :: in der zweiteiligen Ansicht wählen Sie
 zuerst die jeweilige Paketkategorie aus, hier genannt Gruppe. Im rechten
-Fenster werden nun alle Pakete dargestellt, die zu der Gruppe gehören.
+Fenster werden nun alle Pakete dargestellt, die zu der Gruppe gehören (siehe
+<<fig.gnome-packagekit-netzwerk>>).
+
+.Recherche in der Kategorie Netzwerk über das Gnome Packagekit (Pakete)
+image::praxis/aehnliche-pakete-finden/gnome-packagekit-netzwerk.png[id="fig.gnome-packagekit-netzwerk", width="60%"]
 
 ==== Über einen Webbrowser ====
 
