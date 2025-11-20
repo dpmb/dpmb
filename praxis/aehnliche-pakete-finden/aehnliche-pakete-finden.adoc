@@ -12,8 +12,10 @@
 Debian stellt über seine offziellen Paketquellen derzeit mehr als 60.000 
 Pakete bereit. Darunter befinden sich Pakete, die Werkzeuge mit ähnlicher 
 Funktionalität bereitstellen, sprich: die das gleiche oder etwas ziemlich 
-ähnliches machen, aber nur auf eine andere Art und Weise. Diese Vielfalt 
-an geprüfter und gepflegter Software ist bemerkenswert.
+ähnliches machen, aber nur auf eine andere Art und Weise. Bestes Beispiel 
+hierzu sind Betrachter für Dokumente im PDF-Format mit den Vertretern 
+Okular, MuPDF und xpdf. Diese Vielfalt an geprüfter und gepflegter 
+Software ist wirklich bemerkenswert.
 
 Wir besprechen hier, wie Sie diese Pakete finden, da die Namen der Pakete 
 doch recht unterschiedlich sein können. Motivation für die Vorgehensweise 
