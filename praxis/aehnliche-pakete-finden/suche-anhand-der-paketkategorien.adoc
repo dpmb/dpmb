@@ -139,13 +139,15 @@ $ ./finde-aehnliche-pakete.sh bash
 
 ==== Über eine GUI ====
 
-Textbasierte und graphische Bedienoberflächen integrieren die Anzeige
-der 
+Textbasierte und graphische Bedienoberflächen integrieren die Anzeige und 
+Recherche innerhalb der Paketkategorien auf unterschiedliche Art und Weise. 
+Nach unserem aktuellen Wissensstand wird das wie folgt umgesetzt:
 
-* TUI von `aptitude`
-** Kategorie 'Installierte Pakete' und 'Nicht installierte Pakete'
-** Auswahl der Section, hier genannt Bereich
-** Debtags-Browser
+TUI von `aptitude` :: die Auflistung der Pakete enthält in der Baumstruktur
+die beiden Bereiche 'Installierte Pakete' und 'Nicht installierte Pakete'. 
+Die Pakete darin sind jeweils wieder den einzelnen Paketkategorien -- hier
+genannt Bereiche -- zugordnet. Zusätzlich liefert `aptitude` einen 'Debtags
+Browser' mit (siehe <<aehnliche-pakete-finden-debtags>>).
 
 * GUI von Synaptic
 ** Suche -> Ansicht nach Bereichen
