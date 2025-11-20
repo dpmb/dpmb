@@ -17,26 +17,30 @@ hierzu sind Betrachter für Dokumente im PDF-Format mit den Vertretern
 Okular, MuPDF und xpdf. Diese Vielfalt an geprüfter und gepflegter 
 Software ist wirklich bemerkenswert.
 
-Wir besprechen hier, wie Sie diese Pakete finden, da die Namen der Pakete 
-doch recht unterschiedlich sein können. Motivation für die Vorgehensweise 
-ist die Lösung dieser Situation:
+Wir besprechen hier, wie Sie diese sich ähnelnden Pakete finden, da die 
+Namen der Pakete doch recht unterschiedlich sein können. Motivation für 
+die Vorgehensweise ist die Lösung dieser Situation:
 
 * Werkzeug A wird benutzt, löst aber ein Problem nicht vollständig, passt 
-  nicht mehr zum Arbeitsablauf, kann zu wenig oder gefällt einfach nicht 
-  mehr
+  nicht mehr zum Arbeitsablauf, hat einen zu geringen Funktionsumfang oder 
+  gefällt einfach nicht mehr
 
-* wie identifiziere ich im Paketbestand mögliche Alternativen B, C und D, 
-  die ebenfalls über die hinterlegten Paketquellen bereitstehen? Damit 
-  läßt sich Werkzeug A möglicherweise vollständig durch Werkzeug B, C oder
-  D ersetzen
+* wie identifiziere ich mögliche Alternativen B, C und D, die ebenfalls 
+  über die hinterlegten Paketquellen bereitstehen? Damit liesse sich 
+  Werkzeug A möglicherweise vollständig durch Werkzeug B, C oder D 
+  ersetzen
 
-Zur Recherche stehen Ihnen mehrere Möglichkeiten zur Verfügung -- eine 
-Suche anhand der Paketkategorien, der Paketabhängigkeiten, über die 
-Paketbeschreibung selbst sowie über die Paketklassifikation mittels 
-Debtags und über die Manpages.
+Um eine solche Entscheidung treffen zu können, setzt es eine Recherche und
+sinnvolle Vergleichskriterien voraus. Für ersteres stehen Ihnen mehrere 
+Möglichkeiten zur Verfügung -- eine Suche anhand der Paketkategorien, der 
+Paketabhängigkeiten, über die Paketbeschreibung selbst sowie über die 
+Paketklassifikation mittels Debtags. In manchen Fällen hilft auch das 
+Studium der Manpages weiter.
 
 === Suche anhand der Paketkategorien ===
 
+// Stichworte für den Index
+(((ähnliche Pakete finden, Suche anhand der Paketkategorien)))
 Die Paketverwaltung hat die Debianpakete in verschiedene Kategorien 
 einsortiert (siehe <<sortierung-der-pakete-nach-verwendungszweck>>). Für
 ähnliche Pakete hilft ein Blick in die jeweilige Kategorie.
@@ -190,19 +194,27 @@ $ ./finde-aehnliche-pakete.sh bash
 
 === Suche anhand der Paketabhängigkeiten ===
 
+// Stichworte für den Index
+(((ähnliche Pakete finden, Suche anhand der Paketabhängigkeiten)))
 * allgemein gehaltene Abhängigkeiten, bspw. 'pdf-viewer'
 
 === Suche über die Paketbeschreibung ===
 
+// Stichworte für den Index
+(((ähnliche Pakete finden, Suche über die Paketbeschreibung)))
 * Suche anhand von Begriffen bzw. Worten, die in der Paketbeschreibung 
   vorkommen
 
 === Suche über Debtags ===
 
+// Stichworte für den Index
+(((ähnliche Pakete finden, Suche mit Hilfe von Debtags)))
 * Debtags, siehe <<erweiterte-paketklassifikation-mit-debtags>>
 
 === Suche über Manpages ===
 
+// Stichworte für den Index
+(((ähnliche Pakete finden, Suche über die Manpages)))
 * in vielen Manpages ist ein Abschnitt enthalten, in dem auf ähnliche
   Werkzeuge verwiesen wird
 * wie verläßlich ist das?
