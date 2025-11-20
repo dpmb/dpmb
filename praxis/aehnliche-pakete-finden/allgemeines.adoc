@@ -1,0 +1,43 @@
+// Datei: ./praxis/aehnliche-pakete-finden/allgemeines.adoc
+// Baustelle: Rohtext
+
+=== Allgemeines ===
+// Stichworte für den Index
+(((ähnliche Pakete finden)))
+(((Suche im Paketbestand)))
+
+Debian stellt über seine offziellen Paketquellen derzeit mehr als 60.000 
+Pakete bereit. Darunter befinden sich Pakete, die Werkzeuge mit ähnlicher 
+Funktionalität bereitstellen, sprich: die das gleiche oder etwas ziemlich 
+ähnliches machen, aber nur auf eine andere Art und Weise. Bestes Beispiel 
+hierzu sind Betrachter für Dokumente im PDF-Format mit den Vertretern 
+Okular, MuPDF und xpdf. Diese Vielfalt an geprüfter und gepflegter 
+Software ist wirklich bemerkenswert.
+
+Wir besprechen hier, wie Sie diese sich ähnelnden Pakete finden, da die 
+Namen der Pakete doch recht unterschiedlich sein können. Motivation für 
+die Vorgehensweise ist die Lösung dieser Situation:
+
+* Werkzeug A wird benutzt, löst aber ein Problem nicht vollständig, passt 
+  nicht mehr zum Arbeitsablauf, hat einen zu geringen Funktionsumfang oder 
+  gefällt einfach nicht mehr
+
+* wie identifiziere ich mögliche Alternativen B, C und D, die ebenfalls 
+  über die hinterlegten Paketquellen bereitstehen? Damit liesse sich 
+  Werkzeug A möglicherweise vollständig durch Werkzeug B, C oder D 
+  ersetzen
+
+Um eine solche Entscheidung treffen zu können, setzt es eine Recherche und
+sinnvolle Vergleichskriterien voraus. Für ersteres stehen Ihnen mehrere 
+Möglichkeiten zur Verfügung -- eine Suche anhand der Paketkategorien 
+(siehe <<aehnliche-pakete-finden-paketkategorien>>), der 
+Paketabhängigkeiten (siehe <<aehnliche-pakete-finden-paketabhaengigkeiten>>), 
+über die Paketbeschreibung selbst (siehe 
+<<aehnliche-pakete-finden-paketbeschreibung>>) sowie mit Hilfe der
+Paketklassifikation auf der Basis von Debtags (siehe 
+<<aehnliche-pakete-finden-debtags>>). In manchen Fällen hilft auch das 
+Studium der Manpages (siehe <<aehnliche-pakete-finden-manpages>>) und 
+spezialisierter Webseiten (siehe <<aehnliche-pakete-finden-webseiten>>) 
+weiter.
+
+// Datei (Ende): ./praxis/aehnliche-pakete-finden/allgemeines.adoc
