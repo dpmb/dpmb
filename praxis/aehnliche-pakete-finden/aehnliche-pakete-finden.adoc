@@ -118,15 +118,16 @@ $
 
 // Stichworte für den Index
 (((aptitude, search)))
-*Variante 2* nutzt initial `aptitude` und flanscht danach `awk`, `sed` und
+*Variante 2* nutzt initial `aptitude` und flanscht daran `awk`, `sed` und 
 `sort` an. `aptitude` rufen Sie mit dem Unterkommando `search` und einem 
 Filter auf. Der Filter ist ähnlich zu obigem Beispiel von `apt` mit einem
 Unterschied: es sind beide Schreibweisen zulässig -- `~sshell` und 
 `~s shell` (ohne und mit Leerzeichen zwischen `~s` und der angegebenen 
 Kategorie). Alle Ausgaben leiten Sie an `awk` weiter, welches jede Zeile 
 auf die zweite Spalte reduziert. Danach ersetzt `sed` alle Zeichen ab dem
-Doppelpunkt durch nichts (löscht die Zeichen). Zuletzt faßt `sort` gleiche 
-Zeilen zusammen und sortiert die Zeilen aufsteigend.
+Doppelpunkt durch nichts (löscht die Zeichen). Zuletzt sortiert `sort` die
+Zeilen aufsteigend und faßt zudem mit Hilfe des Schalters `-u` auch noch 
+gleiche Zeilen zusammen.
 
 .Alle Pakete der Kategorie 'shell' mittels `aptitude` ausgeben
 ----
