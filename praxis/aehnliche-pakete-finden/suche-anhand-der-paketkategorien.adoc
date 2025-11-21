@@ -6,15 +6,22 @@
 
 // Stichworte für den Index
 (((ähnliche Pakete finden, Suche anhand der Paketkategorien)))
-Die Paketverwaltung hat die Debianpakete in verschiedene Kategorien 
-einsortiert (siehe <<sortierung-der-pakete-nach-verwendungszweck>>). Für
-ähnliche Pakete hilft ein Blick in die jeweilige Kategorie.
+Die Paketverwaltung stellt die Debianpakete in verschiedenen Kategorien
+bereit (siehe <<sortierung-der-pakete-nach-verwendungszweck>>). Hier 
+haben die Paketmaintainer gute Vorarbeit geleistet. Für ähnliche Pakete 
+hilft ein Blick in die jeweilige Kategorie.
 
 ==== Über die Kommandozeile ====
 
 // Stichworte für den Index
 (((apt-cache, show)))
-*Schritt 1* beinhaltet, die Paketkategorie zu ermitteln, in der das Paket 
+`dpkg`, `apt` und `apt-get` verfügen nicht über ein passendes 
+Unterkommando, um nach Paketen zu suchen, die sich in einer bestimmten 
+Paketkategorie befinden oder zueinander ähnlich sind. Hier hilft nur ein 
+zweistufiges Verfahren basierend auf dem Auslesen der Daten in der 
+Paketbeschreibung.
+
+*Schritt 1* beinhaltet die Ermittlung der Paketkategorie, in der das Paket 
 einsortiert wurde. Dazu verfügt jedes Paket in der Paketbeschreibung über
 einen Eintrag zur Kategorie, das Schlüsselwort heißt `Section`. Von 
 Nutzen sind hier die beiden Werkzeuge `apt-cache` und `apt` in Kombination
@@ -144,7 +151,8 @@ $ ./finde-aehnliche-pakete.sh bash
 
 Textbasierte und graphische Bedienoberflächen integrieren die Anzeige und 
 Recherche innerhalb der Paketkategorien auf unterschiedliche Art und Weise. 
-Nach unserem aktuellen Wissensstand wird das wie folgt umgesetzt:
+Nach unserem aktuellen Wissensstand und Gegenprüfung mit den Werkzeugen aus
+<<gui-zur-paketverwaltung>> wird das derzeit wie folgt umgesetzt:
 
 TUI von `aptitude` :: die Auflistung der Pakete enthält in der Baumstruktur
 die beiden Bereiche 'Installierte Pakete' und 'Nicht installierte Pakete'. 
@@ -168,6 +176,10 @@ Fenster werden nun alle Pakete dargestellt, die zu der Gruppe gehören (siehe
 image::praxis/aehnliche-pakete-finden/gnome-packagekit-netzwerk.png[id="fig.gnome-packagekit-netzwerk", width="60%"]
 
 ==== Über einen Webbrowser ====
+
+Die in <<webbasierte-programme>> genannten Werkzeuge erlauben keine
+Recherche anhand der hinterlegten Paketkategorien, was wir als betrüblich
+ansehen. Somit bleibt nur der Rückgriff auf andere Ressourcen.
 
 * Paketsuche über die Kategorien-Übersicht auf debian.org
 * Paketsuche über packages.debian.org
