@@ -193,11 +193,14 @@ image::praxis/aehnliche-pakete-finden/debian-webseite-pakete-datenbanken.png[id=
 Suche über die Paketübersicht auf der Debian-Webseite :: Einblendung von 
   ähnlichen Paketen zu einem bereits ausgewählten Paket in der rechten 
   Randleiste, ausgehend von https://packages.debian.org , hier für das 
-  Paket 'iftop' (siehe <<fig.debian-webseite-pakete-iftop>>)
+  Paket 'iftop' (siehe grüne Einrahmung in <<fig.debian-webseite-pakete-iftop>>)
 
 .Recherche nach ähnlichen Paketen über die Detailansicht zu dem Paket iftop
 image::praxis/aehnliche-pakete-finden/debian-webseite-pakete-iftop.png[id="fig.debian-webseite-pakete-iftop", width="50%"]
 
-Softwareübersicht im Wiki der Ubuntuusers :: Todo
+Softwareübersicht im Wiki der Ubuntuusers :: über die URL https://wiki.ubuntuusers.de/Software/ listet das Wiki alle Pakete auf, die zu dieser Paketkategorie gehören
+
+.Recherche nach ähnlichen Paketen über die Detailansicht im Wiki der Ubuntuusers
+image::praxis/aehnliche-pakete-finden/ubuntuusers-kategorien.png[id="fig.ubuntuusers-kategorien", width="50%"]
 
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-anhand-der-paketkategorien.adoc
