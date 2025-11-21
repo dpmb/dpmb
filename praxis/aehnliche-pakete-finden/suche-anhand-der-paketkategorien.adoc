@@ -109,9 +109,12 @@ $
 ----
 
 Zur Automatisierung bietet sich *Schritt 3* an -- die Kombination von 
-Schritt 1 und 2 als Shellskript, nachfolgend für die Variante mittels 
-`apt`. Das Debianpaket, zu dem die Recherche erfolgen soll, geben Sie 
-dem Shellskript als Aufrufparameter mit.
+Schritt 1 und 2 als Shellskript. Nachfolgend ist das beispielhaft mittels 
+`apt` realisiert. Hierbei haben wir jede Anweisung in eine einzelne Zeile
+verlegt, um das Shellskript lesbar zu halten.
+
+Das Shellskript erwartet einen Aufrufparameter. Das ist das Debianpaket, 
+zu dem die Recherche erfolgen soll.
 
 .Alle ähnlichen Pakete mit einem Shellskript aufstöbern
 ----
@@ -166,6 +169,7 @@ image::praxis/aehnliche-pakete-finden/gnome-packagekit-netzwerk.png[id="fig.gnom
 
 ==== Über einen Webbrowser ====
 
+* Paketsuche über die Kategorien-Übersicht auf debian.org
 * Paketsuche über packages.debian.org
 
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-anhand-der-paketkategorien.adoc
