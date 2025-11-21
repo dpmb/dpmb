@@ -172,7 +172,7 @@ Fenster werden nun alle Pakete dargestellt, die zu der Gruppe gehören (siehe
 <<fig.gnome-packagekit-netzwerk>>).
 
 .Recherche in der Kategorie Netzwerk über das Gnome Packagekit (Pakete)
-image::praxis/aehnliche-pakete-finden/gnome-packagekit-netzwerk.png[id="fig.gnome-packagekit-netzwerk", width="60%"]
+image::praxis/aehnliche-pakete-finden/gnome-packagekit-netzwerk.png[id="fig.gnome-packagekit-netzwerk", width="50%"]
 
 ==== Über einen Webbrowser ====
 
@@ -181,16 +181,23 @@ erlauben keine Recherche anhand der hinterlegten Paketkategorien, was wir
 als betrüblich ansehen. Somit bleibt nur der Rückgriff auf andere 
 Ressourcen. Folgende drei Quellen empfehlen wir Ihnen:
 
-* Paketsuche über die Kategorien-Übersicht auf der Debian-Webseite, jeweils
+Paketsuche über die Kategorien-Übersicht auf der Debian-Webseite :: jeweils
   separiert für stabile Pakete und zukünftige Debian-Veröffentlichungen. Für
   ersteres ist das die URL https://packages.debian.org/stable/ . 
   <<fig.debian-webseite-pakete-datenbanken>> zeigt die Auflistung der Pakete 
   für die Paketkategorie 'Datenbanken' im Webbrowser Firefox.
-
+  
 .Recherche in der Kategorie Datenbanken über den Webbrowser
-image::praxis/aehnliche-pakete-finden/debian-webseite-pakete-datenbanken.png[id="fig.debian-webseite-pakete-datenbanken", width="60%"]
-** 
-* Suche über die webbasierte Paketübersicht (packages.debian.org)
-* Softwareübersicht im Wiki der Ubuntuusers
+image::praxis/aehnliche-pakete-finden/debian-webseite-pakete-datenbanken.png[id="fig.debian-webseite-pakete-datenbanken", width="50%"]
+
+Suche über die Paketübersicht auf der Debian-Webseite :: Einblendung von 
+  ähnlichen Paketen zu einem bereits ausgewählten Paket in der rechten 
+  Randleiste, ausgehend von https://packages.debian.org , hier für das 
+  Paket 'iftop' (siehe <<fig.debian-webseite-pakete-iftop>>)
+
+.Recherche nach ähnlichen Paketen über die Detailansicht zu dem Paket iftop
+image::praxis/aehnliche-pakete-finden/debian-webseite-pakete-iftop.png[id="fig.debian-webseite-pakete-iftop", width="50%"]
+
+Softwareübersicht im Wiki der Ubuntuusers :: Todo
 
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-anhand-der-paketkategorien.adoc
