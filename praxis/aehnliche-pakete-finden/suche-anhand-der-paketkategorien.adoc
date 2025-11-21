@@ -21,14 +21,13 @@ Paketkategorie befinden oder zueinander ähnlich sind. Hier hilft nur ein
 zweistufiges Verfahren basierend auf dem Auslesen der Daten in der 
 Paketbeschreibung.
 
-*Schritt 1* beinhaltet die Ermittlung der Paketkategorie, in der das Paket 
-einsortiert wurde. Dazu verfügt jedes Paket in der Paketbeschreibung über
-einen das Schlüsselwort `Section`. Von Nutzen sind hier die beiden 
-Werkzeuge `apt-cache` und `apt` in Kombination mit `sed`. Unerheblich ist, 
-ob das Paket bereits installiert ist, oder nicht.
+===== Schritt 1: Ermittlung der Paketkategorie, in der das Paket einsortiert wurde =====
 
-Nach dem Paket 'bash' suchen Sie mittels `apt-cache` und `sed` wie folgt
-(*Variante 1*):
+Dazu verfügt jedes Paket in der Paketbeschreibung über das Schlüsselwort 
+`Section`. Zum Auslesen der Daten sind hier die beiden Werkzeuge 
+`apt-cache` und `apt` in Kombination mit `sed` von Nutzen. Unerheblich ist, 
+ob das Paket bereits installiert ist, oder nicht. Nach dem Paket 'bash' 
+suchen Sie mittels `apt-cache` und `sed` wie folgt (*Variante 1*):
 
 .Ermittlung der Paketkategorie mittels `apt-cache`
 ----
@@ -56,10 +55,11 @@ shells
 $
 ----
 
-Nun kommen wir zu *Schritt 2*. In diesem ermitteln wir weitere Pakete aus 
-der Kategorie, hier am Beispiel der Kategorie 'shell'. Zur Umsetzung stehen
-wieder zwei Varianten bereit -- Variante 1 nutzt `apt` und Variante 2
-`aptitude`. Das Ergebnis ist jeweils identisch.
+===== Schritt 2: weitere Pakete aus der Kategorie ermitteln ===== 
+
+Hier zeigen wir das Vorgehen am Beispiel der Kategorie 'shell'. Zur 
+Umsetzung stehen wieder zwei Varianten bereit -- Variante 1 nutzt `apt` 
+und Variante 2 `aptitude`. Das Ergebnis ist jeweils identisch.
 
 // Stichworte für den Index
 (((apt, list)))
