@@ -176,11 +176,21 @@ image::praxis/aehnliche-pakete-finden/gnome-packagekit-netzwerk.png[id="fig.gnom
 
 ==== Über einen Webbrowser ====
 
-Die in <<webbasierte-programme>> genannten Werkzeuge erlauben keine
-Recherche anhand der hinterlegten Paketkategorien, was wir als betrüblich
-ansehen. Somit bleibt nur der Rückgriff auf andere Ressourcen.
+Die in <<webbasierte-programme>> genannten Werkzeuge zur Paketverwaltung 
+erlauben keine Recherche anhand der hinterlegten Paketkategorien, was wir 
+als betrüblich ansehen. Somit bleibt nur der Rückgriff auf andere 
+Ressourcen. Folgende drei Quellen empfehlen wir Ihnen:
 
-* Paketsuche über die Kategorien-Übersicht auf debian.org
-* Paketsuche über packages.debian.org
+* Paketsuche über die Kategorien-Übersicht auf der Debian-Webseite, jeweils
+  separiert für stabile Pakete und zukünftige Debian-Veröffentlichungen. Für
+  ersteres ist das die URL https://packages.debian.org/stable/ . 
+  <<fig.debian-webseite-pakete-datenbanken>> zeigt die Auflistung der Pakete 
+  für die Paketkategorie 'Datenbanken' im Webbrowser Firefox.
+
+.Recherche in der Kategorie Datenbanken über den Webbrowser
+image::praxis/aehnliche-pakete-finden/debian-webseite-pakete-datenbanken.png[id="fig.debian-webseite-pakete-datenbanken", width="60%"]
+** 
+* Suche über die webbasierte Paketübersicht (packages.debian.org)
+* Softwareübersicht im Wiki der Ubuntuusers
 
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-anhand-der-paketkategorien.adoc
