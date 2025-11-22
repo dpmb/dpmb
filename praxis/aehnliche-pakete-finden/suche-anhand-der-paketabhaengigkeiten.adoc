@@ -7,5 +7,13 @@
 // Stichworte für den Index
 (((ähnliche Pakete finden, Suche anhand der Paketabhängigkeiten)))
 * allgemein gehaltene Abhängigkeiten, bspw. 'pdf-viewer'
+* welches Programm/Werkzeug erlaubt eine Suche anhand der 
+  Abhängigkeiten?
+** Abhängigkeiten anzeigen: geht u.a. mit `dpkg-deb`, `apt-rdepends`, 
+   `apt-cache` und `aptitude` (siehe <<paketabhaengigkeiten-anzeigen>>)
+** Idee: zeige alle Pakete, die von Paket 'xyz' abhängen
+** zu prüfen: ist eine Suche über die 'reverse dependencies' erfolgreich?
+** prinzipiell bzw. unbewiesene Theorie: Pakete, die auf den gleichen 
+   Paketen aufbauen bzw. davon abhängen, besitzen eine hohe Ähnlichkeit
 
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-anhand-der-paketabhaengigkeiten.adoc
