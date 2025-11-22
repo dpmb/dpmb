@@ -70,16 +70,16 @@ include::paketabhaengigkeiten-warnung.adoc[]
 (((Debianpaket, dpkg)))
 
 Das Kommando `dpkg-deb` ist Bestandteil des essentiellen Pakets 'dpkg'
-<<Debian-Paket-dpkg>>. Über den Schalter `-f` (Langform `--field`) und
-der Angabe des Feldnamens liest es die Paketinformationen und gibt
+<<Debian-Paket-dpkg>>. Über den Schalter `-f` (Langform `--field`) und der 
+Angabe des Feldnamens liest es die Paketinformationen und gibt 
 anschließend den Inhalt des spezifizierten Feldes aus. Das ist identisch
 zum Aufruf von `dpkg -f` (Langform `dpkg --field`). 
 
-Beachten Sie bitte beim Aufruf die etwas unintuitiven Abfolge der
-Parameter -- erst den Schalter, danach den Dateinamen der `deb`-Datei
-und am Ende der Feldname. Für diese Information muss das entsprechende
-Paket nicht auf ihrem System installiert sein, sondern nur als Datei in
-einem Verzeichnis liegen und erreichbar sein.
+Beachten Sie bitte beim Aufruf die etwas unintuitive Abfolge der Parameter 
+-- erst den Schalter, danach den Dateinamen der `deb`-Datei und am Ende 
+der Feldname. Für diese Information muss das entsprechende Paket nicht auf 
+ihrem System installiert sein, sondern nur als Datei in einem Verzeichnis 
+liegen und erreichbar sein.
 
 .Ausgabe der Abhängigkeiten mittels `dpkg-deb`
 ----
