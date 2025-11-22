@@ -11,13 +11,7 @@ include::allgemeines.adoc[]
 include::suche-anhand-der-paketkategorien.adoc[]
 
 // Suche anhand der Paketabhängigkeiten
-
-[[aehnliche-pakete-finden-paketabhaengigkeiten]]
-=== Suche anhand der Paketabhängigkeiten ===
-
-// Stichworte für den Index
-(((ähnliche Pakete finden, Suche anhand der Paketabhängigkeiten)))
-* allgemein gehaltene Abhängigkeiten, bspw. 'pdf-viewer'
+include::suche-anhand-der-paketabhaengigkeiten.adoc[]
 
 // Suche über die Paketbeschreibung
 
