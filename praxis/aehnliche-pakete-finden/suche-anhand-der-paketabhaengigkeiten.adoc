@@ -13,6 +13,7 @@
    `apt-cache` und `aptitude` (siehe <<paketabhaengigkeiten-anzeigen>>)
 ** Idee: zeige alle Pakete, die von Paket 'xyz' abhängen
 ** zu prüfen: ist eine Suche über die 'reverse dependencies' erfolgreich?
+   (siehe <<paketabhaengigkeiten-anzeigen-rueckwartsabhaengigkeiten>>)
 ** prinzipiell bzw. unbewiesene Theorie: Pakete, die auf den gleichen 
    Paketen aufbauen bzw. davon abhängen, besitzen eine hohe Ähnlichkeit
 
