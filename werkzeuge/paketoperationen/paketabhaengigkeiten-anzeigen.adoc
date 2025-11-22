@@ -400,6 +400,7 @@ Architecture: i386
 $
 ----
 
+[[paketabhaengigkeiten-anzeigen-rueckwartsabhaengigkeiten]]
 ==== Anzeige der umgekehrten Paketabhängigkeiten ====
 
 // Stichworte für den Index
