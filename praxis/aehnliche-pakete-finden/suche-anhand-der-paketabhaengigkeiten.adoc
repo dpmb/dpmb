@@ -1,0 +1,11 @@
+// Datei: ./praxis/aehnliche-pakete-finden/suche-anhand-der-paketabhaengigkeiten.adoc
+// Baustelle: Notizen
+
+[[aehnliche-pakete-finden-paketabhaengigkeiten]]
+=== Suche anhand der Paketabhängigkeiten ===
+
+// Stichworte für den Index
+(((ähnliche Pakete finden, Suche anhand der Paketabhängigkeiten)))
+* allgemein gehaltene Abhängigkeiten, bspw. 'pdf-viewer'
+
+// Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-anhand-der-paketabhaengigkeiten.adoc
