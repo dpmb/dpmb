@@ -23,7 +23,33 @@ Werkzeugen `dpkg-deb`, `apt-cache`, `aptitude` und `apt-rdepends` an
 (siehe <<paketabhaengigkeiten-anzeigen>>). Unser Ziel ist, alle Pakete 
 aufzulisten, die vom virtuellen Paket 'pdf-viewer' abhängen. Dieses 
 Vorgehen ist unter dem Begriff 'Auflösen der umgekehrten Abhängigkeiten' 
-bekannt (siehe <<paketabhaengigkeiten-anzeigen-rueckwartsabhaengigkeiten>>)
-und gelingt ihnen mit Hilfe von `apt-cache` und `apt-rdepends`.
+bekannt (siehe <<paketabhaengigkeiten-anzeigen-rueckwartsabhaengigkeiten>>).
+Angedacht ist hierfür der Einsatz der beiden Werkzeuge `apt-cache` und 
+`apt-rdepends`.
+
+.Ausgabe von `apt-cache` zum Paket 'pdf-viewer'
+----
+$ apt-cache rdepends pdf-viewer
+<pdf-viewer>
+$
+----
+
+.Ausgabe von `apt-rdepends` zum Paket 'pdf-viewer'
+----
+$ apt-rdepends -r pdf-viewer
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+pdf-viewer
+  Reverse Depends: cinnamon-desktop-environment (5.6.0)
+  Reverse Depends: muttprint-manual (0.73-11)
+cinnamon-desktop-environment
+  Reverse Depends: task-cinnamon-desktop (3.73)
+task-cinnamon-desktop
+  Reverse Depends: live-task-cinnamon (12.0.2)
+live-task-cinnamon
+muttprint-manual
+$
+----
 
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-anhand-der-paketabhaengigkeiten.adoc
