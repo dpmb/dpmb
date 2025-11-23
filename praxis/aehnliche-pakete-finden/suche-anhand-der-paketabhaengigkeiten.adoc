@@ -6,8 +6,13 @@
 
 // Stichworte für den Index
 (((ähnliche Pakete finden, Suche anhand der Paketabhängigkeiten)))
-* allgemein gehaltene Abhängigkeiten, bspw. zu einem virtuellen Paket 
-  (siehe <<virtuelle-pakete>>) wie 'pdf-viewer'
+Für jedes Debianpaket ist in der Paketbeschreibung angegeben, ob und zu 
+welchen anderen Debianpaketen Abhängigkeiten bestehen, damit die volle 
+Funktionstüchtigkeit gewährleistet ist. Das können konkrete Pakete sein, 
+aber auch virtuelle Pakete (siehe <<virtuelle-pakete>>). Beispiele für
+Letztere sind 'adventure' für Spiele, 'base' für die Basiskomponenten von
+Debian GNU/Linux sowie 'pdf-viewer', welches auf eine Auswahl von 
+Programmen für das Anzeigen von PDF-Dokumenten verweist.
 
 * welches Programm/Werkzeug erlaubt eine Suche anhand der Abhängigkeiten?
 
