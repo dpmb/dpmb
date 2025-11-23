@@ -404,6 +404,8 @@ das zu `dpkg` und `aptitude` genauer.
 (((apt-rdepends, -r)))
 // (((aptitude, search ~D)))
 // (((aptitude, search ~R)))
+(((dnf, repoquery -q --requires)))
+(((dnf, repoquery -q --whatrequires)))
 (((dpkg, -f)))
 (((dpkg, --field)))
 (((dpkg-deb, -f)))
@@ -453,6 +455,8 @@ lokal auf dem System installiert sein
 |            | `repoquery --requires` 'Paketname' | Abhängigkeiten anzeigen
 |            | `repoquery -q --whatrequires` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 |            | `yumdownloader --resolve` 'Paketname' |
+| DNF        | `dnf repoquery -q --requires` 'Paketname' | Abhängigkeiten anzeigen
+|            | `dnf repoquery -q --whatrequires` 'Paketname' umgekehrte Abhängigkeiten anzeigen
 |====
 
 === Alle Dateien eines Pakets anzeigen, bevor es installiert wird ===
