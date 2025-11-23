@@ -416,6 +416,7 @@ das zu `dpkg` und `aptitude` genauer.
 (((Paketabhängigkeiten, auflisten)))
 (((Paketabhängigkeiten, Rückwärtsabhängigkeiten auflisten)))
 (((repoquery, --requires)))
+(((repoquery, -q --whatrequires)))
 (((rpm, -qpR)))
 (((rpm, -qR)))
 (((rpm, --requires)))
@@ -449,7 +450,8 @@ lokal auf dem System installiert sein
 |            | `rpm --query --package --requires` 'Paketdatei' | das Paket muß dazu lokal als Datei vorliegen
 | YUM        | `yum deplist` 'Paketname' |
 |            | `yum info` 'Paketname' |
-|            | `repoquery --requires` 'Paketname' |
+|            | `repoquery --requires` 'Paketname' | Abhängigkeiten anzeigen
+|            | `repoquery -q --whatrequires` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 |            | `yumdownloader --resolve` 'Paketname' |
 |====
 
