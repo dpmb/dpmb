@@ -14,7 +14,9 @@ Letztere sind 'adventure' für Spiele, 'base' für die Basiskomponenten von
 Debian GNU/Linux sowie 'pdf-viewer', welches auf eine Auswahl von 
 Programmen für das Anzeigen von PDF-Dokumenten verweist. Nachfolgend 
 nutzen wir das Paket 'pdf-viewer' als Grundlage für die weiteren 
-Betrachtungen.
+Betrachtungen. Nach unserer Erfahrung besitzen Pakete, die auf den 
+gleichen virtuellem Paketen aufbauen bzw. davon abhängen, eine hohe 
+Ähnlichkeit zueinander.
 
 Die Abhängigkeiten zwischen den Debianpaketen zeigen Sie u.a. mit den 
 Werkzeugen `dpkg-deb`, `apt-cache`, `aptitude` und `apt-rdepends` an 
@@ -22,9 +24,6 @@ Werkzeugen `dpkg-deb`, `apt-cache`, `aptitude` und `apt-rdepends` an
 aufzulisten, die vom virtuellen Paket 'pdf-viewer' abhängen. Dieses 
 Vorgehen ist unter dem Begriff 'Auflösen der umgekehrten Abhängigkeiten' 
 bekannt (siehe <<paketabhaengigkeiten-anzeigen-rueckwartsabhaengigkeiten>>)
-und gelingt mit Hilfe von `apt-cache` und `apt-rdepends`.
-
-* prinzipiell bzw. unbewiesene Theorie: Pakete, die auf den gleichen 
-   Paketen aufbauen bzw. davon abhängen, besitzen eine hohe Ähnlichkeit
+und gelingt ihnen mit Hilfe von `apt-cache` und `apt-rdepends`.
 
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-anhand-der-paketabhaengigkeiten.adoc
