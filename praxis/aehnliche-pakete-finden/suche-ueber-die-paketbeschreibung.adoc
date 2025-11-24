@@ -9,4 +9,10 @@
 * Suche anhand von Begriffen bzw. Worten, die in der Paketbeschreibung 
   vorkommen
 
+* gelingt mit Hilfe von `apt cache search`, `aptitude search` und 
+  `grep-available`
+
+* bereits in <<pakete-ueber-die-paketbeschreibung-finden>> ausführlich 
+  beschrieben
+
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-ueber-die-paketbeschreibung.adoc
