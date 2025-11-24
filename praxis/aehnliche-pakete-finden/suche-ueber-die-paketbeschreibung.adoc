@@ -1,18 +1,18 @@
 // Datei: ./praxis/aehnliche-pakete-finden/suche-ueber-die-paketbeschreibung.adoc
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[aehnliche-pakete-finden-paketbeschreibung]]
 === Suche über die Paketbeschreibung ===
 
 // Stichworte für den Index
 (((ähnliche Pakete finden, Suche über die Paketbeschreibung)))
-* Suche anhand von Begriffen bzw. Worten, die in der Paketbeschreibung 
-  vorkommen
-
-* gelingt mit Hilfe von `apt cache search`, `aptitude search` und 
-  `grep-available`
-
-* bereits in <<pakete-ueber-die-paketbeschreibung-finden>> ausführlich 
-  beschrieben
+(((apt-cache, search)))
+(((aptitude, search)))
+(((grep-available)))
+Eine Suche anhand von Begriffen bzw. Worten, die in der Paketbeschreibung 
+vorkommen, gelingt Ihnen mit Hilfe von `apt-cache search`, 
+`aptitude search` und `grep-available`. Unter 
+<<pakete-ueber-die-paketbeschreibung-finden>> beleuchten wir das Vorgehen
+ausführlich.
 
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-ueber-die-paketbeschreibung.adoc
