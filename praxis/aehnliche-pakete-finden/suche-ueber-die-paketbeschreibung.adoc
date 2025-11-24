@@ -15,11 +15,59 @@ vorkommen, gelingt Ihnen mit Hilfe von `apt-cache search`,
 <<pakete-ueber-die-paketbeschreibung-finden>> beleuchten wir das Vorgehen
 ausführlich.
 
-* mas macht eine erfolgreiche Recherche aus:
-** Suche ist ähnlich zur Benutzung einer Suchmaschine, jedoch in vereinfachter 
-   Form (keine komplexe Auswertung im Hintergrund)
-** Suchbegriffe sind als reguläre Ausdrücke zu formulieren
-** Verfeinerung der Suche: a) nur über die Kurzbeschreibung, b) sowohl Kurz-
-   als auch Langbeschreibung
+Eine erfolgreiche Recherche folgt den gleichen Prinzipien, die der 
+Benutzung einer Suchmaschine zugrundeliegen, jedoch in vereinfachter Form. 
+Hier findet keine komplexe Vorverarbeitung ihrer Anfrage und Auswertung der
+Ergebnisse im Hintergrund statt. Die Suchbegriffe formulieren Sie in der
+Anfrage als reguläre Ausdrücke. Mit Hilfe von Parametern legen Sie eine
+Verfeinerung der Suche fest -- entweder nur über die Kurzbeschreibung oder
+sowohl Kurz-, als auch Langbeschreibung. Das nachfolgende Beispiel zeigt 
+eine Suche nach dem Begriff 'pdf-viewer' mittels `apt-cache search` und 
+findet auch Bibliotheken.
+
+.Suche nach dem Begriff `pdf-viewer` mit Hilfe von `apt-cache`
+----
+$ apt-cache search 'pdf-viewer'
+atril - MATE-Dokumentenbetrachter
+evince - Dokumentenbetrachter für PostScript und PDF
+gv - PostScript- und PDF-Betrachter für X
+libpodofo-dev - PoDoFo - Bibliothek zum Arbeiten mit dem Dateiformat PDF - Entwicklungsdateien
+libpodofo-utils - PoDoFo - Bibliothek zum Arbeiten mit dem Dateiformat PDF - Dienstprogramme
+libpodofo0.9.8 - PoDoFo - Bibliothek zum Arbeiten mit dem Dateiformat PDF
+mupdf - Genügsamer PDF-Betrachter
+okular - Universal-Dokumentenbetrachter
+prerex - LaTeX/TikZ-Editor für die grafische Darstellung von Kursvoraussetzungen
+qpdfview - Dokumentbetrachter mit Reitern
+xpdf - Motif-basierter PDF-Reader mit der Poppler-Bibliothek
+zathura-pdf-poppler - PDF-Unterstützung für zathura
+apvlv - PDF viewer with Vim-like behaviour
+claws-mail-pdf-viewer - PDF and PostScript attachment viewer for Claws Mail
+viewpdf.app - Portable Document Format (PDF) viewer for GNUstep
+$
+----
+
+// Stichworte für den Index
+(((ähnliche Pakete finden, Suche über die Paketbeschreibung)))
+(((apt-cache, search --names-only)))
+(((apt-cache, search -n)))
+Mit Hilfe der Option `-n` (Langform `--names-only`) werden nur der Paketname
+und die bereitgestellten Pakete durchsucht.
+
+.Spezifische Suche nach dem Begriff `pdf-viewer` mit Hilfe von `apt-cache`
+----
+$ apt-cache -n search 'pdf-viewer'
+atril - MATE-Dokumentenbetrachter
+evince - Dokumentenbetrachter für PostScript und PDF
+gv - PostScript- und PDF-Betrachter für X
+mupdf - Genügsamer PDF-Betrachter
+okular - Universal-Dokumentenbetrachter
+qpdfview - Dokumentbetrachter mit Reitern
+xpdf - Motif-basierter PDF-Reader mit der Poppler-Bibliothek
+zathura-pdf-poppler - PDF-Unterstützung für zathura
+apvlv - PDF viewer with Vim-like behaviour
+claws-mail-pdf-viewer - PDF and PostScript attachment viewer for Claws Mail
+viewpdf.app - Portable Document Format (PDF) viewer for GNUstep
+$
+----
 
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-ueber-die-paketbeschreibung.adoc
