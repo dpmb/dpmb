@@ -14,14 +14,7 @@ include::suche-anhand-der-paketkategorien.adoc[]
 include::suche-anhand-der-paketabhaengigkeiten.adoc[]
 
 // Suche über die Paketbeschreibung
-
-[[aehnliche-pakete-finden-paketbeschreibung]]
-=== Suche über die Paketbeschreibung ===
-
-// Stichworte für den Index
-(((ähnliche Pakete finden, Suche über die Paketbeschreibung)))
-* Suche anhand von Begriffen bzw. Worten, die in der Paketbeschreibung 
-  vorkommen
+include::suche-ueber-die-paketbeschreibung.adoc[]
 
 // Suche über Debtags
 
