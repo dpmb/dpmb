@@ -50,23 +50,24 @@ $
 (((ähnliche Pakete finden, Suche über die Paketbeschreibung)))
 (((apt-cache, search --names-only)))
 (((apt-cache, search -n)))
-Mit Hilfe der Option `-n` (Langform `--names-only`) werden nur der Paketname
-und die bereitgestellten Pakete durchsucht.
+Mit Hilfe der Option `-n` (Langform `--names-only`) durchsucht `apt-cache` 
+nur den Paketnamen und die bereitgestellten Pakete. Zusätzlich wurde die 
+Ausgabe mittels `sort` alphabetisch aufsteigend sortiert.
 
 .Spezifische Suche nach dem Begriff `pdf-viewer` mit Hilfe von `apt-cache`
 ----
-$ apt-cache -n search 'pdf-viewer'
+$ apt-cache -n search 'pdf-viewer' | sort
+apvlv - PDF viewer with Vim-like behaviour
 atril - MATE-Dokumentenbetrachter
+claws-mail-pdf-viewer - PDF and PostScript attachment viewer for Claws Mail
 evince - Dokumentenbetrachter für PostScript und PDF
 gv - PostScript- und PDF-Betrachter für X
 mupdf - Genügsamer PDF-Betrachter
 okular - Universal-Dokumentenbetrachter
 qpdfview - Dokumentbetrachter mit Reitern
+viewpdf.app - Portable Document Format (PDF) viewer for GNUstep
 xpdf - Motif-basierter PDF-Reader mit der Poppler-Bibliothek
 zathura-pdf-poppler - PDF-Unterstützung für zathura
-apvlv - PDF viewer with Vim-like behaviour
-claws-mail-pdf-viewer - PDF and PostScript attachment viewer for Claws Mail
-viewpdf.app - Portable Document Format (PDF) viewer for GNUstep
 $
 ----
 
