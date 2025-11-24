@@ -11,8 +11,15 @@
 (((grep-available)))
 Eine Suche anhand von Begriffen bzw. Worten, die in der Paketbeschreibung 
 vorkommen, gelingt Ihnen mit Hilfe von `apt-cache search`, 
-`aptitude search` und `grep-available`. Unter 
+`aptitude search` und `grep-available`. In 
 <<pakete-ueber-die-paketbeschreibung-finden>> beleuchten wir das Vorgehen
 ausführlich.
+
+* mas macht eine erfolgreiche Recherche aus:
+** Suche ist ähnlich zur Benutzung einer Suchmaschine, jedoch in vereinfachter 
+   Form (keine komplexe Auswertung im Hintergrund)
+** Suchbegriffe sind als reguläre Ausdrücke zu formulieren
+** Verfeinerung der Suche: a) nur über die Kurzbeschreibung, b) sowohl Kurz-
+   als auch Langbeschreibung
 
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-ueber-die-paketbeschreibung.adoc
