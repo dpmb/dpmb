@@ -1,0 +1,12 @@
+// Datei: ./praxis/aehnliche-pakete-finden/suche-ueber-die-paketbeschreibung.adoc
+// Baustelle: Notizen
+
+[[aehnliche-pakete-finden-paketbeschreibung]]
+=== Suche über die Paketbeschreibung ===
+
+// Stichworte für den Index
+(((ähnliche Pakete finden, Suche über die Paketbeschreibung)))
+* Suche anhand von Begriffen bzw. Worten, die in der Paketbeschreibung 
+  vorkommen
+
+// Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-ueber-die-paketbeschreibung.adoc
