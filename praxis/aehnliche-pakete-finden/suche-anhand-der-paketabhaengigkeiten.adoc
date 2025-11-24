@@ -6,6 +6,8 @@
 
 // Stichworte für den Index
 (((ähnliche Pakete finden, Suche anhand der Paketabhängigkeiten)))
+(((apt-cache)))
+(((apt-rdepends, -r)))
 Für jedes Debianpaket ist in der Paketbeschreibung angegeben, ob und zu 
 welchen anderen Debianpaketen Abhängigkeiten bestehen, damit die volle 
 Funktionstüchtigkeit gewährleistet ist. Das können konkrete Pakete sein, 
@@ -24,8 +26,10 @@ Werkzeugen `dpkg-deb`, `apt-cache`, `aptitude` und `apt-rdepends` an
 aufzulisten, die vom virtuellen Paket 'pdf-viewer' abhängen. Dieses 
 Vorgehen ist unter dem Begriff 'Auflösen der umgekehrten Abhängigkeiten' 
 bekannt (siehe <<paketabhaengigkeiten-anzeigen-rueckwartsabhaengigkeiten>>).
+
 Angedacht ist hierfür der Einsatz der beiden Werkzeuge `apt-cache` und 
-`apt-rdepends`.
+`apt-rdepends`. Bislang liefern `apt-cache` und `apt-rdepends` nur recht
+unbefriedigende Ergebnisse.
 
 .Ausgabe von `apt-cache` zum Paket 'pdf-viewer'
 ----
