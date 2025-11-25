@@ -83,7 +83,7 @@ Schalter an, um die Ausgabe noch stärker zu begrenzen. Das nächste Beispiel
 zeigt die Einbeziehung von `awk`, wie es zunächst als Trennzeichen ` -` 
 festlegt und danach lediglich die erste Spalte jeder Zeile ausgibt.
 
-. ... und Begrenzung der Ausgabe auf den Paketnamen mit Hilfe von `awk`
+.Suche mit Begrenzung der Ausgabe auf den Paketnamen mit Hilfe von `awk`
 ----
 $ apt-cache search -n pdf-viewer | awk -F ' -' '{ print $1 }' | sort
 apvlv
@@ -104,7 +104,7 @@ Sagt Ihnen `sed` mehr zu, hilft der nachfolgend gezeigte Aufruf. In
 jeder Zeile der Ausgabe von `apt-cache` ersetzt `sed` alle Zeichenketten,
 die mit einem Leerzeichen und einem Bindestrich beginnen, durch Nichts.
 
-. ... und Begrenzung der Ausgabe auf den Paketnamen mit Hilfe von `sed`
+.Suche mit Begrenzung der Ausgabe auf den Paketnamen mit Hilfe von `sed`
 ----
 $ apt-cache search -n pdf-viewer | sed -ne 's/ - .*$//p' | sort
 apvlv
@@ -119,6 +119,5 @@ viewpdf.app
 xpdf
 zathura-pdf-poppler
 $
-----
 ----
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-ueber-die-paketbeschreibung.adoc
