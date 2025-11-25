@@ -198,7 +198,7 @@ Suche über die Paketübersicht auf der Debian-Webseite :: Einblendung von
 .Recherche nach ähnlichen Paketen über die Detailansicht zu dem Paket iftop
 image::praxis/aehnliche-pakete-finden/debian-webseite-pakete-iftop.png[id="fig.debian-webseite-pakete-iftop", width="50%"]
 
-Softwareübersicht im Wiki der Ubuntuusers :: über die URL https://wiki.ubuntuusers.de/Software/ listet das Wiki alle Pakete auf, die zu dieser Paketkategorie gehören
+Softwareübersicht im Wiki der Ubuntuusers :: Zusammenstellung im Wiki <<Ubuntu-Wiki-Softwareuebersicht>>. Es listet alle Pakete auf, die zu dieser Paketkategorie gehören
 
 .Recherche nach ähnlichen Paketen über die Detailansicht im Wiki der Ubuntuusers
 image::praxis/aehnliche-pakete-finden/ubuntuusers-kategorien.png[id="fig.ubuntuusers-kategorien", width="50%"]
