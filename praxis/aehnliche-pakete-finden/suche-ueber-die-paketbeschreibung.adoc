@@ -19,11 +19,15 @@ Eine erfolgreiche Recherche folgt den gleichen Prinzipien, die der
 Benutzung einer Suchmaschine zugrundeliegen, jedoch in vereinfachter Form. 
 Hier findet keine komplexe Vorverarbeitung ihrer Anfrage und Auswertung der
 Ergebnisse im Hintergrund statt. Die Suchbegriffe formulieren Sie in der
-Anfrage als reguläre Ausdrücke. Mit Hilfe von Parametern legen Sie eine
-Verfeinerung der Suche fest -- entweder nur über die Kurzbeschreibung oder
-sowohl Kurz-, als auch Langbeschreibung. Das nachfolgende Beispiel zeigt 
-eine Suche nach dem Begriff 'pdf-viewer' mittels `apt-cache search` und 
-findet auch Bibliotheken.
+Anfrage als reguläre Ausdrücke. 
+
+Mit Hilfe von Parametern legen Sie eine Verfeinerung der Suche fest -- 
+entweder erfolgt die Suche nur über die Kurzbeschreibung oder bezieht 
+sowohl die Kurz-, als auch Langbeschreibung mit ein. Das nachfolgende 
+Beispiel zeigt eine Recherche nach dem Begriff 'pdf-viewer' mittels 
+`apt-cache search` und findet auch Bibliotheken. Die gesamte Ausgabe 
+enthält in jeder Zeile den Paketnamen gefolgt von der Kurzbeschreibung des
+Pakets. Die Ausgabe ist nicht alphabetisch sortiert.
 
 .Suche nach dem Begriff `pdf-viewer` mit Hilfe von `apt-cache`
 ----
@@ -50,9 +54,10 @@ $
 (((ähnliche Pakete finden, Suche über die Paketbeschreibung)))
 (((apt-cache, search --names-only)))
 (((apt-cache, search -n)))
-Mit Hilfe der Option `-n` (Langform `--names-only`) durchsucht `apt-cache` 
-nur den Paketnamen und die bereitgestellten Pakete. Zusätzlich wurde die 
-Ausgabe mittels `sort` alphabetisch aufsteigend sortiert.
+Mit Hilfe der Option `-n` (Langform `--names-only`) berücksichtigt 
+`apt-cache` bei der Recherche lediglich den Paketnamen. Die Basis bilden 
+alle Pakete, die über die Paketlisten zugänglich sind. Zudem sorgt `sort` 
+dafür, daß die Ausgabe alphabetisch aufsteigend sortiert wird.
 
 .Spezifische Suche nach dem Begriff `pdf-viewer` mit Hilfe von `apt-cache`
 ----
