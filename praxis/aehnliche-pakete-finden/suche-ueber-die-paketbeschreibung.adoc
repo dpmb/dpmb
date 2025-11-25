@@ -76,4 +76,28 @@ zathura-pdf-poppler - PDF-Unterstützung für zathura
 $
 ----
 
+Geht es Ihnen lediglich um eine Auflistung der Paketnamen ohne zusätzliche 
+Angaben, kommen Ihnen `awk` und `sed` zu Hilfe, die die Ausgabe von 
+`apt-cache` passend aufbereiten. `apt-cache` selbst bietet bislang keinen 
+Schalter an, um die Ausgabe noch stärker zu begrenzen. Das nächste Beispiel 
+zeigt die Einbeziehung von `awk`, wie es zunächst als Trennzeichen ` -` 
+festlegt und danach lediglich die erste Spalte jeder Zeile ausgibt.
+
+. ... und Begrenzung der Ausgabe auf den Paketnamen
+----
+$ apt-cache search -n pdf-viewer | awk -F ' -' '{ print $1 }' | sort
+apvlv
+atril
+claws-mail-pdf-viewer
+evince
+gv
+mupdf
+okular
+qpdfview
+viewpdf.app
+xpdf
+zathura-pdf-poppler
+$
+----
+
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-ueber-die-paketbeschreibung.adoc
