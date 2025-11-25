@@ -183,7 +183,7 @@ Ressourcen. Folgende drei Quellen empfehlen wir Ihnen:
 
 Paketsuche über die Kategorien-Übersicht auf der Debian-Webseite :: jeweils
   separiert für stabile Pakete und zukünftige Debian-Veröffentlichungen. Für
-  ersteres ist das die URL https://packages.debian.org/stable/ . 
+  ersteres ist das die Übersicht zu den stabilen Paketen <<Debian-Paketliste>>.
   <<fig.debian-webseite-pakete-datenbanken>> zeigt die Auflistung der Pakete 
   für die Paketkategorie 'Datenbanken' im Webbrowser Firefox.
   
