@@ -5,12 +5,17 @@
 === Suche über Debtags ===
 
 // Stichworte für den Index
+(((Aptitude, Debtags-Browser)))
 (((ähnliche Pakete finden, Suche mit Hilfe von Debtags)))
+(((ähnliche Pakete finden, debtags)))
+(((ähnliche Pakete finden, Debtags-Browser von Aptitude)))
 Debtags (siehe <<erweiterte-paketklassifikation-mit-debtags>>) sind 
-Paketmarkierungen analog zu Stichworten, über die die Debianpakete 
-klassifiziert sind. Je mehr übereinstimmende Stichworte zwischen zwei 
+Paketmarkierungen analog zu Schlagworten, über die die Debianpakete 
+klassifiziert sind. Je mehr übereinstimmende Schlagworte zwischen zwei 
 Paketen bestehen, umso ähnlicher sind sie sich.
 
-* Nutzung über die TUI von `aptitude`
+* Recherche über die Kommandozeile: `debtags search` 'Schlagwort'
+
+* Nutzung über die TUI von `aptitude`: Debtags-Browser
 
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-ueber-debtags.adoc
