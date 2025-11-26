@@ -1,0 +1,13 @@
+// Datei: ./praxis/aehnliche-pakete-finden/suche-ueber-debtags.adoc
+// Baustelle: Rohtext
+
+[[aehnliche-pakete-finden-debtags]]
+=== Suche über Debtags ===
+
+// Stichworte für den Index
+(((ähnliche Pakete finden, Suche mit Hilfe von Debtags)))
+* Debtags, siehe <<erweiterte-paketklassifikation-mit-debtags>>
+
+* Nutzung über die TUI von `aptitude`
+
+// Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-ueber-debtags.adoc
