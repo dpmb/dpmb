@@ -9,13 +9,21 @@
 (((ähnliche Pakete finden, Suche mit Hilfe von Debtags)))
 (((ähnliche Pakete finden, debtags)))
 (((ähnliche Pakete finden, Debtags-Browser von Aptitude)))
+(((debtags, search)))
 Debtags (siehe <<erweiterte-paketklassifikation-mit-debtags>>) sind 
 Paketmarkierungen analog zu Schlagworten, über die die Debianpakete 
 klassifiziert sind. Je mehr übereinstimmende Schlagworte zwischen zwei 
 Paketen bestehen, umso ähnlicher sind sie sich.
 
-* Recherche über die Kommandozeile: `debtags search` 'Schlagwort'
+Eine Recherche über die Kommandozeile gelingt über das Werkzeug `debtags` 
+mit dem Unterkommando `search` und dem gewünschten 'Schlagwort'. Innerhalb 
+der textbasierten Bedienoberfläche von `aptitude` steht ein sogenannter 
+'Debtags-Browser' bereit, mit dem Sie in den passend klassifizierten 
+Paketen stöbern können. <<fig.aptitude-debtags-browser>> zeigt die 
+Kategorie 'Games' mit der Unterkategorie 'Puzzle' und daraus die 
+Detailansicht zum Paket 'ace-of-penguins'.
 
-* Nutzung über die TUI von `aptitude`: Debtags-Browser
+.Recherche nach ähnlichen Paketen über den Debtags-Browser von Aptitude
+image::praxis/aehnliche-pakete-finden/aptitude-debtags-browser.png[id="fig.aptitude-debtags-browser", width="50%"]
 
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/suche-ueber-debtags.adoc
