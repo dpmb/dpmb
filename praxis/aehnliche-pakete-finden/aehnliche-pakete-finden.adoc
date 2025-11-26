@@ -17,14 +17,7 @@ include::suche-anhand-der-paketabhaengigkeiten.adoc[]
 include::suche-ueber-die-paketbeschreibung.adoc[]
 
 // Suche über Debtags
-
-[[aehnliche-pakete-finden-debtags]]
-=== Suche über Debtags ===
-
-// Stichworte für den Index
-(((ähnliche Pakete finden, Suche mit Hilfe von Debtags)))
-* Debtags, siehe <<erweiterte-paketklassifikation-mit-debtags>>
-* Nutzung über die TUI von `aptitude`
+include::suche-ueber-debtags.adoc[]
 
 // Suche über Manpages
 
