@@ -6,7 +6,10 @@
 
 // Stichworte für den Index
 (((ähnliche Pakete finden, Suche mit Hilfe von Debtags)))
-* Debtags, siehe <<erweiterte-paketklassifikation-mit-debtags>>
+Debtags (siehe <<erweiterte-paketklassifikation-mit-debtags>>) sind 
+Paketmarkierungen analog zu Stichworten, über die die Debianpakete 
+klassifiziert sind. Je mehr übereinstimmende Stichworte zwischen zwei 
+Paketen bestehen, umso ähnlicher sind sie sich.
 
 * Nutzung über die TUI von `aptitude`
 
