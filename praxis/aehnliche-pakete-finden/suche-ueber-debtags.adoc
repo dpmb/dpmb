@@ -19,9 +19,10 @@ Eine Recherche über die Kommandozeile gelingt über das Werkzeug `debtags`
 mit dem Unterkommando `search` und dem gewünschten 'Schlagwort'. Innerhalb 
 der textbasierten Bedienoberfläche von `aptitude` steht ein sogenannter 
 'Debtags-Browser' bereit, mit dem Sie in den passend klassifizierten 
-Paketen stöbern können. <<fig.aptitude-debtags-browser>> zeigt die 
-Kategorie 'Games' mit der Unterkategorie 'Puzzle' und daraus die 
-Detailansicht zum Paket 'ace-of-penguins'.
+Paketen anhand der in den Paketen hinterlegten Debtags stöbern können. 
+<<fig.aptitude-debtags-browser>> zeigt die Kategorie 'Games' mit der 
+Unterkategorie 'Puzzle' und daraus die Detailansicht zum Paket 
+'ace-of-penguins'.
 
 .Recherche nach ähnlichen Paketen über den Debtags-Browser von Aptitude
 image::praxis/aehnliche-pakete-finden/aptitude-debtags-browser.png[id="fig.aptitude-debtags-browser", width="50%"]
