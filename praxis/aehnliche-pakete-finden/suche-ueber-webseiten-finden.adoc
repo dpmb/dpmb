@@ -10,4 +10,12 @@
 
 * spezielle Webseiten, bspw. das Wiki der Ubuntuusers
 
+* Wikiseite mit Wortwolke:
+  - sprich: die Stichworte zur Seite bzw. dem besprochenen Softwarepaket
+  - <<fig.ubuntuusers-wortwolke>> mit den Tags zum Stichwort 'Freeware-Spiel'
+  - separate Begriffe ohne Übereinstimmung oder Rückgriff mit den Debtags
+
+.Übersicht zu den Einträgen im Wiki der Ubuntuusers zu dem Stichwort 'Freeware-Spiel'
+image::praxis/aehnliche-pakete-finden/ubuntuusers-kategorien-wortwolke.png[id="fig.ubuntuusers-wortwolke",width="50%"]
+
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-webseiten-finden.adoc
