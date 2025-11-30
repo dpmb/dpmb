@@ -1,0 +1,13 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-ueber-webseiten-finden.adoc
+
+// Baustelle: Notizen
+
+[[aehnliche-pakete-finden-webseiten]]
+=== Suche über Webseiten ===
+
+// Stichworte für den Index
+(((ähnliche Pakete finden, Suche über Webseiten)))
+
+* spezielle Webseiten, bspw. das Wiki der Ubuntuusers
+
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-webseiten-finden.adoc

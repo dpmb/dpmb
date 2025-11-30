@@ -20,16 +20,9 @@ include::suche-ueber-die-paketbeschreibung.adoc[]
 include::suche-ueber-debtags.adoc[]
 
 // Suche über Manpages
-include::suche-ueber-manpages.adoc[]
+include::suche-ueber-manpages-finden.adoc[]
 
 // Suche über Webseiten
+include::suche-ueber-webseiten-finden.adoc[]
   
-[[aehnliche-pakete-finden-webseiten]]
-=== Suche über Webseiten ===
-
-// Stichworte für den Index
-(((ähnliche Pakete finden, Suche über Webseiten)))
-
-* spezielle Webseiten, bspw. das Wiki der Ubuntuusers
-
 // Datei (Ende): ./praxis/aehnliche-pakete-finden/aehnliche-pakete-finden.adoc
