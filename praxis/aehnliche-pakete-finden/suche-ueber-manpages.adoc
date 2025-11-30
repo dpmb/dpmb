@@ -1,0 +1,17 @@
+// Datei: ./werkzeuge/paketoperationen/pakete-ueber-manpages-finden.adoc
+
+// Baustelle: Notizen
+
+[[aehnliche-pakete-finden-manpages]]
+=== Suche über Manpages ===
+
+// Stichworte für den Index
+(((ähnliche Pakete finden, Suche über die Manpages)))
+* in vielen Manpages ist ein Abschnitt enthalten, in dem auf ähnliche
+  Werkzeuge verwiesen wird
+
+* wie verläßlich ist das?
+
+* können Infopages das nicht vielleicht besser?
+
+// Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-manpages-finden.adoc
