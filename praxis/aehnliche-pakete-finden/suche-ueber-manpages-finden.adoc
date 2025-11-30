@@ -1,17 +1,17 @@
 // Datei: ./werkzeuge/paketoperationen/pakete-ueber-manpages-finden.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[aehnliche-pakete-finden-manpages]]
 === Suche über Manpages ===
 
 // Stichworte für den Index
 (((ähnliche Pakete finden, Suche über die Manpages)))
-* in vielen Manpages ist ein Abschnitt enthalten, in dem auf ähnliche
-  Werkzeuge verwiesen wird
-
-* wie verläßlich ist das?
-
-* können Infopages das nicht vielleicht besser?
+In einigen Manpages ist ein Abschnitt enthalten, in dem die Autoren des 
+Hilfetextes auf weitere Werkzeuge verweisen. Die hierbei getroffene 
+Auswahl an Werkzeugen folgt nicht in jedem Fall dem Gedanken der 
+Ähnlichkeit bzgl. der Funktionalität, sondern eher der Kategorie, in der 
+das Werkzeug einsortiert wurde. Damit ist es vergleichbar mit den 
+Infopages, die ähnlich vorgehen.
 
 // Datei (Ende): ./werkzeuge/paketoperationen/pakete-ueber-manpages-finden.adoc
