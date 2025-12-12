@@ -1,6 +1,6 @@
 // Datei: ./werkzeuge/paketoperationen/pakete-ueber-webseiten-finden.adoc
 
-// Baustelle: Notizen
+// Baustelle: Rohtext
 
 [[aehnliche-pakete-finden-webseiten]]
 === Suche über Webseiten ===
