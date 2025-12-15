@@ -8,12 +8,13 @@
 // Stichworte für den Index
 (((ähnliche Pakete finden, Suche über Webseiten)))
 Einige Webseiten widmen sich den Softwarepaketen genauer und bereiten die 
-Informationen dazu ausführlich auf. Besonders hervor sticht das Wiki der 
-Ubuntuusers <<Ubuntu-Wiki-Softwareuebersicht>>. Neben einer Beschreibung
-finden Sie alle Parameter samt Beispielaufrufen für die Praxis.
+Informationen zu den darin enthaltenen Werkzeugen ausführlich auf. 
+Besonders hervor sticht das Wiki der Ubuntuusers 
+<<Ubuntu-Wiki-Softwareuebersicht>>. Neben einer Beschreibung finden Sie 
+alle Parameter samt Beispielaufrufen für die Praxis.
 
-Zusätzlich wurde eine Wortwolke ergänzt. Diese beinhaltet die Stichworte 
-zur Wikiseite bzw. dem besprochenen Softwarepaket. 
+Zusätzlich wird jeweils eine Wortwolke ergänzt. Diese beinhaltet die 
+Stichworte zur Wikiseite bzw. dem besprochenen Softwarepaket. 
 <<fig.ubuntuusers-wortwolke>> zeigt das zu den Tags zum Stichwort 
 'Freeware-Spiel'. Es sind separate Begriffe ohne Übereinstimmung oder 
 Rückgriff auf die Debtags.
