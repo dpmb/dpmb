@@ -43,7 +43,7 @@ ppc64el (powerpc64le-linux-gnu)::
 PowerPC 64-Bit (POWER7+, POWER8). Little-Endian-Portierung von ppc64,
 nutzt die neue OpenPower-ELFv2-ABI.
 
-riscv64::
+riscv64 (riscv64-linux-gnu)::
 Portierung für 64-Bit Little Endian RISC-V, eine freie, offene 
 RISC-V-Prozessorarchitektur.
 
