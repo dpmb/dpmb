@@ -153,8 +153,10 @@ _Jessie_. Ab Version 3.0 benutzt Steam OS <<SteamOS>> hingegen Arch Linux
 
 // Stichworte für den Index
 (((Droidian)))
+(((Liberux)))
 (((Maemo)))
 (((Meego)))
+(((Mobian)))
 (((OpenMoko)))
 Neben der x86-Architektur kommt das `deb`-Paketformat auf mobilen
 Architekturen und Plattformen zum Einsatz. Dazu zählen etwa die
@@ -164,10 +166,18 @@ Auch der community-getragene, inoffizielle N900-Nachfolger Neo900
 <<Neo900>> soll u.a. mit Maemo und damit ebenfalls mit dem
 `deb`-Paketformat laufen.
 
-Ebenso existiert das Projekt Droidian <<Droidian>>. Hierbei handelt es
-sich um Debian GNU/Linux für mobile Geräte auf der Basis von Android. 
-Es setzt bspw. der Hersteller FuriLabs mit seinem Modell FuriPhone FLX1 
-ein <<FuriLabs>>.
+Ebenso existieren die drei Projekte Droidian <<Droidian>>, Mobian 
+<<Mobian>> und Liberux <<Liberux>>. Bei ersterem handelt es sich um 
+Debian GNU/Linux für mobile Geräte auf der Basis von Android. Es 
+setzt bspw. der Hersteller FuriLabs mit seinem Modell FuriPhone FLX1 
+ein <<FuriLabs>>. Mobian ist auf ARM64-Hardware schon fast 
+vollständig funktionstüchtig, lediglich die Kameras für Vorder- und 
+Rückseite der Geräte werden noch nicht unterstützt. Liberux hingegen 
+ist zu Ende 2025 noch großtenteils Wunschdenken eines spanischen 
+Entwicklerteams und hat via Crowdfunding bereits etwa 10% der 
+anvisierten Summe für das Projekt eingespielt. Inwieweit die 
+Entwicklung tatsächlich in geplanter Form stattfinden wird, ist 
+aktuell unklar.
 
 === Anstatt Linux ===
 

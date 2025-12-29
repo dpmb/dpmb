@@ -822,6 +822,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[libelektra]]] Libelektra, http://community.libelektra.org/wp/?p=145
 
+- [[[Liberux]]] Liberux, https://liberux.net/
+
 - [[[LiMux]]] LiMux -- Linux in der Stadtverwaltung München, http://www.muenchen.de/rathaus/Stadtverwaltung/Direktorium/LiMux.html
 
 - [[[Lintian]]] Lintian-Projekt, https://lintian.debian.org/
@@ -861,6 +863,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[minidak]]] `minidak`, https://www.hadrons.org/~guillem/debian/mini-dak/
 
 - [[[mintbackup]]] mintbackup, https://community.linuxmint.com/software/view/mintbackup
+
+- [[[Mobian]]] Mobian, https://mobian-project.org/
 
 - [[[modalias]]] modalias im ArchWiki, https://wiki.archlinux.org/title/Modalias
 
