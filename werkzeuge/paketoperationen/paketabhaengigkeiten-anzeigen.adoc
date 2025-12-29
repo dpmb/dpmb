@@ -46,7 +46,7 @@ dazu erfahren Sie in ``Paketoperationen erzwingen'' in
 (((Debianpaket, dpkg)))
 (((grep-aptavail)))
 (((grep-status)))
-(((Paketabhängigkeiten, auflisten)))
+(((Paketabhängigkeiten, Auflistung)))
 Hier sehen Sie, von welchen weiteren Paketen ein Paket abhängt. Zu
 dieser Information gelangen Sie mit mehreren Werkzeugen. Dazu zählen
 `dpkg-deb`, `apt-cache` mit den beiden Unterkommandos `show` und
@@ -68,6 +68,8 @@ include::paketabhaengigkeiten-warnung.adoc[]
 (((dpkg-deb, -f)))
 (((dpkg-deb, --field)))
 (((Debianpaket, dpkg)))
+(((Paketabhängigkeiten, Auflistung mit dpkg)))
+(((Paketabhängigkeiten, Auflistung mit dpkg-deb)))
 
 Das Kommando `dpkg-deb` ist Bestandteil des essentiellen Pakets 'dpkg'
 <<Debian-Paket-dpkg>>. Über den Schalter `-f` (Langform `--field`) und der 
@@ -92,6 +94,7 @@ $
 
 // Stichworte für den Index
 (((apt-cache, show)))
+(((Paketabhängigkeiten, Auflistung mit apt-cache)))
 
 *Variante 1* verfolgt einen typischen UNIX-Ansatz -- es kombiniert die
 beiden Werkzeuge `apt-cache` und `grep` miteinander. Dazu filtert es die
@@ -250,6 +253,7 @@ $
 // Stichworte für den Index
 (((apt-rdepends)))
 (((Debianpaket, apt-rdepends)))
+(((Paketabhängigkeiten, Auflistung mit apt-rdepends)))
 Deutlicher wird `apt-rdepends` aus dem gleichnamigen Paket. Es löst die
 Abhängigkeiten noch weitaus stärker auf. Nachfolgende Darstellung zeigt
 daher nur einen Ausschnitt. Für diese Information muss das entsprechende
@@ -313,6 +317,7 @@ image::werkzeuge/paketoperationen/tcpdump-apt-rdepends.png[id="fig.tcpdump-apt-r
 // Stichworte für den Index
 (((aptitude, search ~R)))
 (((aptitude, search ?reverse-depends)))
+(((Paketabhängigkeiten, Auflistung mit aptitude)))
 `aptitude` versteht eine Reihe von speziellen Suchmustern. Eines davon
 ist `~Rmuster` als Abkürzung für die Langform
 `?reverse-depends(`'Paketname'`)`, welches Sie mit dem Unterkommando
@@ -353,6 +358,8 @@ $
 (((grep-status, -P)))
 (((grep-status, -s)))
 (((Debianpaket, dctrl-tools)))
+(((Paketabhängigkeiten, Auflistung mit grep-aptavail)))
+(((Paketabhängigkeiten, Auflistung mit grep-status)))
 
 Die beiden Werkzeuge `grep-aptavail` und `grep-status` aus dem Paket
 'dctrl-tools' <<Debian-Paket-dctrl-tools>> filtern die gewünschten
@@ -424,6 +431,7 @@ include::paketabhaengigkeiten-warnung.adoc[]
 
 // Stichworte für den Index
 (((apt-cache, rdepends)))
+(((Paketabhängigkeiten, Rückwärtsabhängigkeiten mit apt-cache auflisten)))
 
 Über das Unterkommando `rdepends` zeigt `apt-cache` alle Pakete an.
 Pakete, die von weiteren Paketen abhängen, sind in der Ausgabe von
@@ -465,6 +473,7 @@ $
 // Stichworte für den Index
 (((apt-rdepends, -r)))
 (((Debianpaket, apt-rdepends)))
+(((Paketabhängigkeiten, Rückwärtsabhängigkeiten mit apt-rdepends auflisten)))
 `apt-rdepends` löst die Abhängigkeiten der Pakete zueinander noch
 weitaus stärker auf. Für diese Information muss das entsprechende Paket
 nicht auf ihrem System installiert sein, aber in der Paketdatenbank
@@ -491,6 +500,7 @@ $
 // Stichworte für den Index
 (((aptitude, search ~D)))
 (((aptitude, search ?depends)))
+(((Paketabhängigkeiten, Rückwärtsabhängigkeiten mit aptitude auflisten)))
 Mit einer Reihe von speziellen Suchmustern zum Unterkommando `search`
 unterstützt Sie `aptitude` bei der Recherche in der
 Paketdatenbank. Eines davon ist `~D`'muster' und dessen Langform
