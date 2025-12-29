@@ -12,7 +12,9 @@ Folgende Architekturen werden vom Debian-Ports-Projekt bereits
 unterstützt und auf eine Aufnahme in Debian vorbereitet:
 
 loong64 ::
-von Loongson entwickelte RISC-Architektur und hiervon die 64-Bit-Variante
+von Loongson entwickelte RISC-Architektur und hiervon die 64-Bit-Variante.
+Angekündigt zur Aufnahme in die offiziell unterstützten Arcitekturen im
+Dezember 2025.
 
 powerpcspe (powerpc-linux-gnuspe)::
 PowerPC-Prozessoren mit Signal Processing Engine.
