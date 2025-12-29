@@ -415,7 +415,7 @@ $
 (((apt-rdepends)))
 (((Debianpaket, apt-rdepends)))
 (((Paket, Rückwärtsabhängigkeiten auflisten)))
-(((Paketabhängigkeiten, Rückwärtsabhängigkeiten auflisten)))
+(((Paketabhängigkeiten, Auflistung der Rückwärtsabhängigkeiten)))
 
 Diese Aktivität übersetzen Sie mit der Frage ``Welche anderen Pakete
 benötigen Paket 'x'?'', auch genannt 'Rückwärtsabhängigkeit'. Zur
@@ -431,7 +431,7 @@ include::paketabhaengigkeiten-warnung.adoc[]
 
 // Stichworte für den Index
 (((apt-cache, rdepends)))
-(((Paketabhängigkeiten, Rückwärtsabhängigkeiten mit apt-cache auflisten)))
+(((Paketabhängigkeiten, Auflistung der Rückwärtsabhängigkeiten mit apt-cache)))
 
 Über das Unterkommando `rdepends` zeigt `apt-cache` alle Pakete an.
 Pakete, die von weiteren Paketen abhängen, sind in der Ausgabe von
@@ -473,7 +473,7 @@ $
 // Stichworte für den Index
 (((apt-rdepends, -r)))
 (((Debianpaket, apt-rdepends)))
-(((Paketabhängigkeiten, Rückwärtsabhängigkeiten mit apt-rdepends auflisten)))
+(((Paketabhängigkeiten, Auflistung der Rückwärtsabhängigkeiten mit apt-rdepends)))
 `apt-rdepends` löst die Abhängigkeiten der Pakete zueinander noch
 weitaus stärker auf. Für diese Information muss das entsprechende Paket
 nicht auf ihrem System installiert sein, aber in der Paketdatenbank
@@ -500,7 +500,7 @@ $
 // Stichworte für den Index
 (((aptitude, search ~D)))
 (((aptitude, search ?depends)))
-(((Paketabhängigkeiten, Rückwärtsabhängigkeiten mit aptitude auflisten)))
+(((Paketabhängigkeiten, Auflistung der Rückwärtsabhängigkeiten mit aptitude)))
 Mit einer Reihe von speziellen Suchmustern zum Unterkommando `search`
 unterstützt Sie `aptitude` bei der Recherche in der
 Paketdatenbank. Eines davon ist `~D`'muster' und dessen Langform
@@ -571,7 +571,7 @@ Statusinformationen werden eingelesen.... Fertig
 
 // Stichworte für den Index
 (((apt-cache, unmet)))
-(((Paketabhängigkeiten, unerfüllte Abhängigkeiten auflisten)))
+(((Paketabhängigkeiten, Auflistung der unerfüllten Abhängigkeiten)))
 Das Werkzeug `apt-cache` zeigt Ihnen eine Zusammenfassung aller
 unerfüllten Abhängigkeiten im Paketzwischenspeicher (siehe
 <<paketcache>>). Dazu bietet es das Unterkommando `unmet`, welches Sie
