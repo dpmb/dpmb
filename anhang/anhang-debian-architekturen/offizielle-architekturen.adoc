@@ -5,6 +5,7 @@
 === Offizielle Architekturen ===
 
 // Stichworte für den Index
+(((Debian, Architekturen)))
 (((Prozessorarchitekturen, von Debian offiziell unterstützte)))
 
 Debian 13 _Trixie_ unterstützt die folgenden Architekturen und Plattformen:
@@ -44,8 +45,10 @@ PowerPC 64-Bit (POWER7+, POWER8). Little-Endian-Portierung von ppc64,
 nutzt die neue OpenPower-ELFv2-ABI.
 
 riscv64 (riscv64-linux-gnu)::
-Portierung für 64-Bit Little Endian RISC-V, eine freie, offene 
-RISC-V-Prozessorarchitektur.
+RISC-V ist eine offene 64-Bit-Befehlssatzarchitektur, die auf dem 
+bewährten Design von RISC (Reduced Instruction Set Computer) aufbaut 
+und unter einer BSD-Lizenz für jedermann verfügbar ist.
+
 
 s390x (s390x-linux-gnu)::
 IBM S/390 und zSeries, 64-Bit-Userland.
