@@ -4,7 +4,10 @@
 [[anhang-offizielle-debian-architekturen]]
 === Offizielle Architekturen ===
 
-Debian 12 _Bookworm_  unterstützt die folgenden Architekturen und Plattformen:
+// Stichworte für den Index
+(((Prozessorarchitekturen, von Debian offiziell unterstützte)))
+
+Debian 13 _Trixie_ unterstützt die folgenden Architekturen und Plattformen:
 
 i386 (i486/i586/i686)::
 x86 (PC) 32-Bit. Trotz des Namens ab Debian 8 _Jessie_ nur
@@ -40,9 +43,13 @@ ppc64el (powerpc64le-linux-gnu)::
 PowerPC 64-Bit (POWER7+, POWER8). Little-Endian-Portierung von ppc64,
 nutzt die neue OpenPower-ELFv2-ABI.
 
+riscv64::
+Portierung für 64-Bit Little Endian RISC-V, eine freie, offene 
+RISC-V-Prozessorarchitektur.
+
 s390x (s390x-linux-gnu)::
 IBM S/390 und zSeries, 64-Bit-Userland.
 
-Gegenüber Debian 11 _Bullseye_ ist diese Liste unverändert.
+Gegenüber Debian 12 _Bookworm_ kam 'riscv64' zu dieser Liste hinzu.
 
 // Datei (Ende): ./anhang/anhang-debian-architekturen/offizielle-architekturen.adoc
