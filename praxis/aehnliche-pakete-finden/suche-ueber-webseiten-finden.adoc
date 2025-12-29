@@ -19,8 +19,8 @@ besprochenen Softwarepaket. Umso mehr Stichworte vorhanden sind, umso
 umfangreicher ist die Wortwolke. <<fig.ubuntuusers-wortwolke>> zeigt das 
 zu den Tags zum Stichwort 'Freeware-Spiel'. Genutzt werden separate 
 Begriffe ohne Übereinstimmung oder Rückgriff auf die Debtags (siehe 
-<<erweiterte-paketklassifikation-mit-debtags>>), die in den jeweiligen
-Paketmetadaten enthalten sind.
+<<erweiterte-paketklassifikation-mit-debtags>>), die bereits in den 
+jeweiligen Paketmetadaten enthalten sind.
 
 .Übersicht zu den Einträgen im Wiki der Ubuntuusers zu dem Stichwort 'Freeware-Spiel'
 image::praxis/aehnliche-pakete-finden/ubuntuusers-kategorien-wortwolke.png[id="fig.ubuntuusers-wortwolke",width="50%"]
