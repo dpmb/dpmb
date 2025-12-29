@@ -15,8 +15,8 @@ Das Nutzen von Debians 'testing'- oder 'unstable'-Zweigen anstatt
 'stable' bedingt, dass nicht nur die benötigte Software, sondern das
 komplette Betriebssystem mit allen Anwendungen in einer neueren
 Version verwendet wird. Dabei nehmen Sie das Risiko in Kauf, dass die
-Pakete noch nicht die Stabilitätskriterien von Debian erfüllen und
-daher durchaus Fehler, bei 'unstable' sogar Inkonsistenzen und
+Pakete noch nicht die gewohnten Stabilitätskriterien von Debian erfüllen 
+und daher durchaus Fehler, bei 'unstable' sogar Inkonsistenzen und die
 Uninstallierbarkeit einzelner Pakete auftreten können. Dazu kommt, dass
 sich Pakete aus 'testing' und 'unstable' im dauernden Fluß befinden und
 sich daher relativ oft bezüglich der Konfigurationsformate oder ihrer
@@ -29,7 +29,7 @@ dieses -- z.B. mit dem Aufruf `dpkg -i` -- einfach so auch auf einem
 'stable'-System installieren. Das bedeutet aber nicht zwangsläufig, dass
 die nächste Version dieses Pakets aus Debians Entwicklungszweigen dies
 immer noch tut. Sie gehen damit das Risiko ein, das Paket nicht
-aktualisieren zu können oder es weiter benutzen zu können.
+aktualisieren zu können oder es nicht weiter benutzen zu können.
 
 Um nicht auf die Stabilität und die Sicherheitsupdates von Debians
 'stable'-Zweig zu verzichten und gleichzeitig einzelne Anwendungen in
