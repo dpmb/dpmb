@@ -11,7 +11,7 @@
 (((Paket, datumsbezogen aktualisieren)))
 (((Paket, datumsbezogen einspielen)))
 (((Paket, datumsbezogen installieren)))
-Bisher haben wir im Buch nur besprochen, wie Sie bereits installierte 
+Bisher haben wir hier nur besprochen, wie Sie bereits installierte 
 Pakete bspw. mit `apt-get install` 'Paketname' oder `apt-get upgrade` 
 'Paketname' auf den neuesten Stand bringen (siehe 'Pakete aktualisieren' 
 unter <<pakete-aktualisieren>> -- auch mit den Angaben zu Apt und 
@@ -20,11 +20,12 @@ verfügbare Version des Pakets ein, unabhängig davon, seit wann diese
 Version oder Aktualisierung tatsächlich bereitsteht.
 
 // Stichworte für den Index
-(((Paket, ausgewählte Version installieren)))
+(((Paket, bestimmte Version installieren)))
 Ebenfalls erlauben Apt und Aptitude, eine gewünschte Version zum Paket 
 mittels `apt-get install` 'paketname=version' anzugeben -- dann wird nur 
-die genannte Version installiert. Die Versionsangabe sagt selten etwas
-darüber aus, wann die Version verfügbar war.
+die genannte Version installiert, sofern diese verfügbar ist. Die 
+Versionsangabe sagt selten etwas darüber aus, ab wann die Version 
+verfügbar war.
 
 Offen ist die Frage, ob es möglich ist, eine Aktualisierung eines oder
 mehrerer Pakete bis zu einem bestimmten Bereitstellungsdatum einzuspielen.
