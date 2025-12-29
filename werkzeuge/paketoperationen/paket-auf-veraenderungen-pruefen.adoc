@@ -82,23 +82,24 @@ Veröffentlichung.
 (((apt-key)))
 (((apt-key, add)))
 (((/etc/apt/trusted.gpg)))
-(((/etc/apt/trusted.gpg.d)))
+(((/etc/apt/trusted.gpg.d/)))
 (((Debian, Debian-Archive-Keyring)))
 (((Debianpaket, apt)))
 (((Debianpaket, debian-archive-keyring)))
 Eine lokale Kopie der vertrauenswürdigen Schlüssel passend zur Veröffentlichung 
-verwalten Sie mit dem Programm `apt-key` aus dem Paket 'apt' <<Debian-Paket-apt>>. 
-Auf dessen Bedienung gehen wir unter <<apt-key-unterkommandos>> ein. 
+verwalten Sie mit dem Programm `apt-key` aus dem Paket 'apt' 
+<<Debian-Paket-apt>>. Auf dessen Bedienung gehen wir unter 
+<<apt-key-unterkommandos>> ein. 
 
 Zu dem Programm gehört ein Schlüsselring von öffentlichen GnuPG-Schlüsseln, 
-sog. ``Public Keys'', mit denen die Signaturen in der Datei `Release.gpg` 
-auf den Debian-Spiegelservern überprüft werden können. Dieser 
-Schlüsselring ist im Paket 'debian-archive-keyring' enthalten und lokal 
-in Dateien im Verzeichnis `/etc/apt/trusted.gpg.d` gespeichert. Dazu 
-kommt noch die Datei `/etc/apt/trusted.gpg`, welche heutzutage nur noch 
-manuell per `apt-key add` hinzugefügte Schlüssel enthält. Bei früheren 
-Veröffentlichungen war diese Datei die alleinige Quelle zur Überprüfung 
-von Veröffentlichungssignaturen.
+sogenannten ``Public Keys'', mit denen die Signaturen in der Datei 
+`Release.gpg` auf den Debian-Spiegelservern überprüft werden können. Dieser 
+Schlüsselring ist im Paket 'debian-archive-keyring' enthalten und lokal in den
+Dateien im Verzeichnis `/etc/apt/trusted.gpg.d/` gespeichert. Dazu kommt noch 
+die Datei `/etc/apt/trusted.gpg`, welche heutzutage nur noch manuell per 
+`apt-key add` hinzugefügte Schlüssel enthält. Bei früheren Veröffentlichungen 
+war diese Datei die alleinige Quelle zur Überprüfung von 
+Veröffentlichungssignaturen.
 
 Debian signiert seine einzelnen Pakete nicht kryptographisch mittels 
 `dpkg-sig`, sondern vertraut auf die signierte `RELEASE`-Datei und die darin
