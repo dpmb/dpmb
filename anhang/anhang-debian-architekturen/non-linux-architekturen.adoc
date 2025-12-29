@@ -4,6 +4,10 @@
 [[anhang-non-linux-architekturen]]
 === Architekturen, die nicht den Linux-Kernel verwenden ===
 
+// Stichworte für den Index
+(((Debian, Architekturen)))
+(((Prozessorarchitekturen, nicht den Linux-Kernel verwendend)))
+
 Keine dieser Architekturen ist momentan für stabile Veröffentlichungen
 von Debian relevant ("release architecture").
 
