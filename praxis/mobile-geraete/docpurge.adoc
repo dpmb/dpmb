@@ -7,13 +7,14 @@
 ==== docpurge ====
 
 // Stichworte für den Index
-(((/usr/share/doc, Verzeichnis aufräumen)))
-(((/usr/share/info, Verzeichnis aufräumen)))
-(((/usr/share/man, Verzeichnis aufräumen)))
+(((/usr/share/doc/, Verzeichnis aufräumen)))
+(((/usr/share/info/, Verzeichnis aufräumen)))
+(((/usr/share/man/, Verzeichnis aufräumen)))
 (((Debianpaket, docpurge)))
 (((docpurge)))
 * Funktionalität vefügbar über das Paket 'docpurge' <<docpurge>>
 ** kein offizielles Debianpaket
+** nur über das Repository auf GitHub verfügbar
 ** "This is docpurge.  Installing this package will add a hook to apt so
 that all of `{/,/opt/maemo/}usr/share/{doc,man,info}` will be removed
 after every invocation of dpkg (by apt).  It also includes the command
