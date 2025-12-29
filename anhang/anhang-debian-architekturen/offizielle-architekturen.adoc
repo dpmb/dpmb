@@ -43,7 +43,6 @@ RISC-V ist eine offene 64-Bit-Befehlssatzarchitektur, die auf dem
 bewährten Design von RISC (Reduced Instruction Set Computer) aufbaut 
 und unter einer BSD-Lizenz für jedermann verfügbar ist.
 
-
 s390x (s390x-linux-gnu)::
 IBM S/390 und zSeries, 64-Bit-Userland.
 
