@@ -11,13 +11,16 @@ Einige Webseiten widmen sich den Softwarepaketen genauer und bereiten die
 Informationen zu den darin enthaltenen Werkzeugen ausführlich auf. 
 Besonders hervor sticht das Wiki der Ubuntuusers 
 <<Ubuntu-Wiki-Softwareuebersicht>>. Neben einer Beschreibung finden Sie 
-alle Parameter samt Beispielaufrufen für die Praxis.
+alle Parameter samt Beispielaufrufen für den Alltag.
 
-Zusätzlich wird jeweils eine Wortwolke ergänzt. Diese beinhaltet die 
-Stichworte zur Wikiseite bzw. dem besprochenen Softwarepaket. 
-<<fig.ubuntuusers-wortwolke>> zeigt das zu den Tags zum Stichwort 
-'Freeware-Spiel'. Es sind separate Begriffe ohne Übereinstimmung oder 
-Rückgriff auf die Debtags.
+Zusätzlich wird jeweils eine Wortwolke ergänzt, die automatisch vom Wiki
+generiert wird. Diese beinhaltet die Stichworte zur Wikiseite bzw. dem 
+besprochenen Softwarepaket. Umso mehr Stichworte vorhanden sind, umso 
+umfangreicher ist die Wortwolke. <<fig.ubuntuusers-wortwolke>> zeigt das 
+zu den Tags zum Stichwort 'Freeware-Spiel'. Genutzt werden separate 
+Begriffe ohne Übereinstimmung oder Rückgriff auf die Debtags (siehe 
+<<erweiterte-paketklassifikation-mit-debtags>>), die in den jeweiligen
+Paketmetadaten enthalten sind.
 
 .Übersicht zu den Einträgen im Wiki der Ubuntuusers zu dem Stichwort 'Freeware-Spiel'
 image::praxis/aehnliche-pakete-finden/ubuntuusers-kategorien-wortwolke.png[id="fig.ubuntuusers-wortwolke",width="50%"]
