@@ -7,19 +7,18 @@
 // Stichworte für den Index
 (((Debian, Architekturen)))
 (((Debian, Ports)))
+(((Prozessorarchitekturen, Unterstützung von Debian vorgesehen)))
 Folgende Architekturen werden vom Debian-Ports-Projekt bereits
 unterstützt und auf eine Aufnahme in Debian vorbereitet:
+
+loong64 ::
+von Loongson entwickelte RISC-Architektur und hiervon die 64-Bit-Variante
 
 powerpcspe (powerpc-linux-gnuspe)::
 PowerPC-Prozessoren mit Signal Processing Engine.
 
 ppc64 (powerpc64-linux-gnu)::
 64-Bit-PowerPC-Prozessoren mit VMX-Einheit.
-
-riscv64 (riscv64-linux-gnu)::
-RISC-V ist eine offene Befehlssatzarchitektur, die auf dem bewährten
-Design von RISC (Reduced Instruction Set Computer) aufbaut und unter
-einer BSD-Lizenz für jedermann verfügbar ist.
 
 sh4::
 SuperH, eine Portierung auf Hitachis SuperH-Prozessoren.
