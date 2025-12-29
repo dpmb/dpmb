@@ -39,7 +39,7 @@ $
 
 Geht es Ihnen nur um die Paketnamen, vereinfacht sich der Aufruf wie
 folgt -- Sie filtern mittels `awk` und einem Regulären Ausdruck und
-geben danach nur noch die zweite Spalte jeder Zeile aus:
+erhalten danach nur noch die zweite Spalte jeder Zeile:
 
 .Auflisten der installierten Pakete aus Debian Backports
 ----
