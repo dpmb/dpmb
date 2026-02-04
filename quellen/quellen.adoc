@@ -30,9 +30,11 @@
 
 - [[[apt2]]] APT 2.0, https://wiki.debian.org/Apt2
 
-- [[[apt4rpm]]] `apt4rpm`: http://apt4rpm.sourceforge.net/
+- [[[apt4rpm]]] `apt4rpm`, http://apt4rpm.sourceforge.net/
 
 - [[[apt-browse]]] Apt-browse, https://apt-browse.org/
+
+- [[[apt-btrfs-snapshot]]] `apt-btrfs-snapshot`, https://github.com/skorokithakis/apt-btrfs-snapshot/
 
 - [[[aptik]]] Aptik, https://github.com/teejee2008/aptik/
 

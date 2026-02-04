@@ -17,5 +17,7 @@
 // andere Ebene: <<Debian-Paket-git-dpm>>, <<Debian-Salsa-git-dpm>>,
 // <<Debian-Wiki-git-dpm-packaging>>
 
+* erzeuge BTRFS-Snapshots mit jeder `apt-get`-Transaktion
+** Werkzeug `apt-btrfs-snapshot` <<apt-btrfs-snapshot>>
 
 // Datei (Ende): ./praxis/versionierte-paketverwaltung.adoc
