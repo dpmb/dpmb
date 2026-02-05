@@ -35,9 +35,9 @@ Auflisten der installierten und verfügbaren Pakete sowie das Anzeigen
 von Paketabhängigkeiten.
 
 Diese Zusammenstellung basiert auf umfangreichen Tests und Recherchen,
-beispielsweise mit Fedora 23, CentOS 6 und 7 sowie Ubuntu 15.10 
-_Wily Werewolf_ sowie Debian 8 _Jessie_ bis einschließlich Debian 13 
-_Trixie_. Die Verfügbarkeit der genannten Werkzeuge und deren 
+beispielsweise mit Fedora 23, CentOS 6 und 7, Ubuntu 15.10 _Wily Werewolf_ 
+sowie Debian 8 _Jessie_ bis einschließlich Debian 13 _Trixie_ und GNU Guix
+System 1.5. Die Verfügbarkeit der genannten Werkzeuge und deren 
 Möglichkeiten variiert recht stark <<RPM-Salve>> <<RPM-Gite>> <<RPM-Canepa>>
 <<YUM-Salve>> <<dpkg-Kumar>> <<apt-Salve>> <<DNF-Dokumentation>>.
 
