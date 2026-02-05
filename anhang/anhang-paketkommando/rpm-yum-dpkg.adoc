@@ -12,8 +12,12 @@
 (((dpkg)))
 (((Dandified YUM (DNF))))
 (((DNF)))
-(((Effing Package Management (FPM)))
+(((Effing Package Management (FPM))))
 (((FPM)))
+(((GNU Guix)))
+(((GNU Guix System)))
+(((Guix)))
+(((Red Hat Package Management (RPM))))
 (((RPM)))
 (((Yellowdog Updater Modified (YUM))))
 (((Werkzeuge zur Paketverwaltung,Hierarchie)))
@@ -21,17 +25,19 @@
 (((Werkzeuge zur Paketverwaltung,Vergleich mit RPM)))
 (((Werkzeuge zur Paketverwaltung,Vergleich mit YUM)))
 Hier stellen wir Ihnen die jeweiligen Kommandos zur Paketverwaltung
-gegenüber, soweit dieser Schritt möglich ist. Im Rampenlicht stehen RPM,
-Yellowdog Updater Modified (YUM), seine Nachfolger Effing Package
-Management (FPM) und Dandified YUM (DNF), Debian's `dpkg`, APT sowie
-`aptitude`. Wir betrachten dabei bspw. die Installation und die
-Entfernung von Paketen, das Auflisten der installierten und verfügbaren
-Pakete sowie das Anzeigen von Paketabhängigkeiten.
+gegenüber, soweit dieser Schritt möglich ist. Im Rampenlicht stehen Red 
+Hat Package Management (RPM), Yellowdog Updater Modified (YUM), seine 
+Nachfolger Effing Package Management (FPM) und Dandified YUM (DNF), 
+Debian's `dpkg`, APT sowie auch `aptitude`. Nicht fehlen darf Guix, der 
+Paketmanager des GNU Guix Systems <<GNU-Guix-System>>. Wir betrachten 
+dabei bspw. die Installation und die Entfernung von Paketen, das 
+Auflisten der installierten und verfügbaren Pakete sowie das Anzeigen 
+von Paketabhängigkeiten.
 
 Diese Zusammenstellung basiert auf umfangreichen Tests und Recherchen,
 beispielsweise mit Fedora 23, CentOS 6 und 7 sowie Ubuntu 15.10 
-_Wily Werewolf_ sowie Debian 8 _Jessie_ bis einschließlich Debian 12 
-_Bookworm_. Die Verfügbarkeit der genannten Werkzeuge und deren 
+_Wily Werewolf_ sowie Debian 8 _Jessie_ bis einschließlich Debian 13 
+_Trixie_. Die Verfügbarkeit der genannten Werkzeuge und deren 
 Möglichkeiten variiert recht stark <<RPM-Salve>> <<RPM-Gite>> <<RPM-Canepa>>
 <<YUM-Salve>> <<dpkg-Kumar>> <<apt-Salve>> <<DNF-Dokumentation>>.
 

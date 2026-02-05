@@ -739,6 +739,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[github-pull-request]]] Pull-Request mitsamt Patch auf GitHub, https://github.com/dpmb/dpmb/compare
 
+- [[[GNU-Guix-System]]] GNU Guix System, https://guix.gnu.org/
+
 - [[[GNU-Linux-Distribution-Timeline]]] GNU Linux Distribution Timeline, http://futurist.se/gldt
 
 - [[[GObject-Introspection]]] GObject Introspection Middleware, https://wiki.gnome.org/Projects/GObjectIntrospection
