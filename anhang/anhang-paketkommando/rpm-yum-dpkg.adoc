@@ -328,6 +328,8 @@ Kommandozeile. Unter ``Pakete deinstallieren'' in
 (((dnf, list installed)))
 (((dpkg, -l)))
 (((dpkg, --list)))
+(((guix, -I)))
+(((guix, -p -I)))
 (((Paket, installiertes anzeigen)))
 (((Paket, Status anzeigen)))
 (((Paket, Zustand anzeigen)))
@@ -360,6 +362,8 @@ für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
 | DNF        | `dnf list installed` | alle installierten Pakete anzeigen
 | `dpkg`     | `dpkg -l` | alle installierten Pakete auflisten
 |            | `dpkg --list` | alle installierten Pakete auflisten
+| Guix       | `guix -I` | alle installierten Pakete auflisten
+|            | `guix -p` 'Profilname' `-I` | alle installierten Pakete des benannten Profils auflisten
 | RPM        | `rpm -qa` | alle installierten Pakete auflisten
 |            | `rpm -qa --last` | alle installierten Pakete auflisten, dabei die zuletzt installierte Pakete zuerst
 |            | `rpm --query --all` | alle installierten Pakete auflisten
