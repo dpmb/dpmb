@@ -77,6 +77,7 @@ daher bestehen keine äquivalenten Kommandoaufrufe.
 (((dpkg, -i)))
 (((dpkg, --install)))
 (((guix, install)))
+(((guix, install -p)))
 (((Paket, installieren)))
 (((rpm, -i)))
 (((rpm, -i --nodeps)))
@@ -110,6 +111,7 @@ vorliegen.
 | `dpkg`     | `dpkg -i` 'Paketdatei' | Paket liegt lokal als Datei vor
 |            | `dpkg --install` 'Paketdatei' | Paket liegt lokal als Datei vor
 | Guix       | `guix install` 'Paketname' | Paket wird dem Paketrepository entnommen
+|            | `guix install -p` 'Profilname Paketname' | Paket 'Paketname' wird dem Paketrepository entnommen und für das angegebene Profil 'Profilname' (lokal) installiert
 | RPM        | `rpm -i` 'Paketdatei' | Paket liegt lokal als Datei vor
 |            | `rpm --install` 'Paketdatei' | Paket liegt lokal als Datei vor
 |            | `rpm -i --nodeps` 'Paketdatei' | Paket liegt lokal als Datei vor, Installation ohne Berücksichtigung der Paketabhängigkeiten
@@ -141,11 +143,10 @@ vorliegen.
 (((yum, update --security)))
 (((yum, update-to)))
 (((yum, upgrade)))
-Mit den nachfolgenden Aufrufen aktualisieren Sie ein Softwarepaket über
-die Kommandozeile. Unter ``Pakete aktualisieren'' in
-<<pakete-aktualisieren>> gehen wir detaillierter auf die Vorgehensweise
-und die begrifflichen Unterschiede bei `dpkg`, APT, `apt` und `aptitude`
-ein.
+Mit den nachfolgenden Aufrufen aktualisieren Sie ein Softwarepaket über die 
+Kommandozeile. Unter ``Pakete aktualisieren'' in <<pakete-aktualisieren>> 
+gehen wir detaillierter auf die Vorgehensweise und die begrifflichen 
+Unterschiede bei `dpkg`, APT, `apt` und `aptitude` ein.
 
 .Aktualisieren eines Pakets
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketaktualisierung"]
