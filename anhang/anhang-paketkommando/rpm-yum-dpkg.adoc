@@ -53,8 +53,10 @@ Möglichkeiten variiert recht stark <<RPM-Salve>> <<RPM-Gite>> <<RPM-Canepa>>
 (((Paketliste, aktualisieren)))
 Mit den nachfolgenden Aufrufen aktualisieren Sie die lokale Paketliste.
 Genauer gehen wir darauf in <<liste-der-verfuegbaren-pakete-aktualisieren>> 
-ein. RPM, YUM, FPM und DNF kennen das Konzept der lokalen Paketliste nicht, 
-daher bestehen keine äquivalenten Kommandoaufrufe. 
+ein. RPM, YUM, FPM und DNF verfügen zwar über einen lokalen Paketcache, 
+der jedoch zuvor manuell zu aktivieren ist. Es bestehen keine äquivalenten 
+Kommandoaufrufe zu `apt`, `apt-get` und Aptitude, die diesen Cache auf den
+neuesten Stand bringen.
 
 .Lokale Paketliste aktualisieren
 [frame="topbot",options="header",cols="2,4,4",id="tab.lokale-paketliste-aktualisieren"]
