@@ -449,6 +449,8 @@ das zu `dpkg` und `aptitude` genauer.
 (((grep-status, -F)))
 (((grep-status, -P)))
 (((grep-status, -s)))
+(((guix, graph)))
+(((guix, graph --type=reverse-package)))
 (((Paket, Auflistung der Abhängigkeiten)))
 (((Paket, Auflistung der Rückwärtsabhängigkeiten)))
 (((Paketabhängigkeiten, Auflistung)))
@@ -480,6 +482,8 @@ ein.
 |            | `aptitude search '~D'` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 | `grep-status` | `grep-status -F Package -s Depends` 'Paketname' | Abhängigkeiten anzeigen
 |            | `grep-status -P -s Depends` 'Paketname' | Abhängigkeiten anzeigen
+| Guix       | `guix graph` 'Paketname' | Abhängigkeiten anzeigen
+|            | `guix graph --type=reverse-package` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 | RPM        | `rpm -qR` 'Paketname' | das Paket muß lokal auf dem
 System installiert sein
 |            | `rpm --query --requires` 'Paketname' | das Paket muß
