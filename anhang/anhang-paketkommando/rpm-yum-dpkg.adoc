@@ -275,6 +275,7 @@ verfügt bislang nicht über ein solches Unterkommando.
 (((dpkg, --purge)))
 (((dpkg, -r)))
 (((dpkg, --remove)))
+(((guix, remove)))
 (((Paket, deinstallieren)))
 (((Paket, entfernen)))
 (((Paket, Konfigurationsdateien löschen)))
@@ -284,8 +285,8 @@ verfügt bislang nicht über ein solches Unterkommando.
 (((rpm, --erase)))
 (((yum, erase)))
 (((yum, remove)))
-Mit den nachfolgenden Aufrufen entfernen Sie ein Softwarepaket über
-die Kommandozeile. Unter ``Pakete deinstallieren'' in
+Mit den nachfolgenden Aufrufen entfernen Sie ein Softwarepaket über die 
+Kommandozeile. Unter ``Pakete deinstallieren'' in 
 <<pakete-deinstallieren>> gehen wir detaillierter auf `dpkg`, APT und
 `aptitude` ein.
 
@@ -302,10 +303,11 @@ die Kommandozeile. Unter ``Pakete deinstallieren'' in
 | DNF        | `dnf erase` 'Paketname' | Paket wird deinstalliert (veraltet)
 |            | `dnf group remove` 'Paketgruppe' | alle Pakete aus der Paketgruppe werden deinstalliert
 |            | `dnf remove` 'Paketname' | Paket wird deinstalliert
-| `dpkg`     | `dpkg -r` 'Paketname' | entfernt nur das Paket
-|            | `dpkg --remove` 'Paketname' | entfernt nur das Paket
+| `dpkg`     | `dpkg -r` 'Paketname' | entfernt nur das angegebene Paket
+|            | `dpkg --remove` 'Paketname' | entfernt nur das angegebene Paket
 |            | `dpkg -P` 'Paketname' | entfernt das Paket und die Konfigurationsdateien des Pakets
 |            | `dpkg --purge` 'Paketname' | entfernt das Paket und die Konfigurationsdateien des Pakets
+| Guix       | `guix remove` 'Paketname' | entfernt das angegebene Paket
 | RPM        | `rpm -e` 'Paketname' | entfernt das angegebene Paket
 |            | `rpm --erase` 'Paketname' | entfernt das angegebene Paket
 |            | `rpm -e --nodeps` 'Paketname' | Entfernung des Pakets ohne Berücksichtigung der Paketabhängigkeiten
