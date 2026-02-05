@@ -138,6 +138,7 @@ vorliegen.
 (((aptitude, safe-upgrade)))
 (((dnf, update)))
 (((dnf, upgrade)))
+(((guix, upgrade)))
 (((Paket, aktualisieren)))
 (((rpm, -F)))
 (((rpm, -U)))
@@ -162,15 +163,16 @@ Unterschiede bei `dpkg`, APT, `apt` und `aptitude` ein.
 |            | `apt-get upgrade` 'Paketname' | aktualisierte Version des Pakets einspielen
 | `aptitude` | `aptitude safe-upgrade` 'Paketname' | aktualisierte Version des Pakets einspielen
 | DNF        | `dnf update` | alle installierten Pakete aktualisieren (veraltet)
-|            | `dnf update` 'Paketname' | nur 'Paketname' aktualisieren (veraltet)
+|            | `dnf update` 'Paketname' | nur aktualisierte Version des Pakets einspielen (veraltet)
 |            | `dnf upgrade` | alle installierten Pakete aktualisieren
-|            | `dnf upgrade` 'Paketname' | nur 'Paketname' aktualisieren
+|            | `dnf upgrade` 'Paketname' | nur aktualisierte Version des Pakets einspielen
+| Guix       | `guix upgrade` 'Paketname' | aktualisierte Version des Pakets einspielen, sofern das Paket bereits in einer früheren Version installiert ist
 | RPM        | `rpm -F` 'Paketdatei' | aktualisiere ein bereits installiertes Paket; das Paket liegt lokal als Datei vor
 |            | `rpm --freshen` 'Paketdatei' | aktualisiere ein bereits installiertes Paket; das Paket liegt lokal als Datei vor
 |            | `rpm -U` 'Paketdatei' | aktualisiere ein bereits installiertes Paket oder installiere es, falls es noch nicht vorhanden ist; das Paket liegt lokal als Datei vor
 |            | `rpm --upgrade` 'Paketdatei' | aktualisiere ein bereits installiertes Paket oder installiere es, falls es noch nicht vorhanden ist; das Paket liegt lokal als Datei vor
 | YUM        | `yum update` | die gesamte Veröffentlichung aktualisieren
-|            | `yum update` 'Paketname' | nur 'Paketname' aktualisieren
+|            | `yum update` 'Paketname' | nur aktualisierte Version des Pakets einspielen
 |            | `yum update --security` | nur die Sicherheitsaktualisierungen einspielen
 |            | `yum update-to` 'Paketname-Paketversion'| eines oder alle Pakete bis zu einer bestimmten Version aktualisieren
 |            | `yum upgrade` | die gesamte Veröffentlichung aktualisieren und dabei auch die Pakete berücksichtigen, die veraltet sind
