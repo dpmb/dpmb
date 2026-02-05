@@ -780,6 +780,7 @@ nachfolgende Tabelle. In Abschnitt ``Aktualisierbare Pakete anzeigen''
 (((dnf, group list)))
 (((dnf, list available)))
 (((dnf, repository-packages list --available)))
+(((guix, search)))
 (((yum, list --available)))
 Welche Pakete verfügbar sind, erfahren Sie mit den nachfolgend genannten
 Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten''
@@ -794,6 +795,7 @@ Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten''
 | DNF        | `dnf group list` | alle Paketgruppen auflisten
 |            | `dnf list --available` | alle verfügbaren Pakete anzeigen
 |            | `dnf repository-packages repo list --available` | alle verfügbaren Pakete aus dem Repository 'repo' anzeigen
+| Guix       | `guix search` 'Muster' | alle verfügbaren Pakete anzeigen, die dieses Muster enthalten
 | YUM        | `yum list available`| alle verfügbaren Pakete anzeigen
 |====
 
