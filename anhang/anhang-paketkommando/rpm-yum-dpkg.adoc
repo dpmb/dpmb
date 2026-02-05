@@ -210,11 +210,13 @@ Paketinstallation.
 (((apt-get, install --reinstall)))
 (((apt-get, reinstall)))
 (((aptitude, reinstall)))
+(((DNF, reinstall)))
 (((Paket, erneut installieren)))
 (((rpm, --reinstall)))
 (((yum, reinstall)))
-Mit den nachfolgenden Aufrufen installieren Sie ein Softwarepaket über
-die Kommandozeile erneut. 
+Mit den nachfolgenden Aufrufen installieren Sie ein Softwarepaket über die 
+Kommandozeile erneut. Guix verfügt bislang nicht über ein entsprechendes 
+Unterkommando.
 
 .Erneute Installation eines Pakets
 [frame="topbot",options="header",cols="2,4,4",id="tab.erneute-paketinstallation"]
@@ -224,8 +226,9 @@ die Kommandozeile erneut.
 | `apt-get`  | `apt-get install --reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen
 |            | `apt-get reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen
 | `aptitude` | `aptitude reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen
-| RPM | `rpm --reinstall` 'Paketdatei' | installiere das Paket erneut, dieses liegt als lokale Datei vor
-| YUM | `yum reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen
+| DNF        | `dnf reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen
+| RPM        | `rpm --reinstall` 'Paketdatei' | installiere das Paket erneut, dieses liegt als lokale Datei vor
+| YUM        | `yum reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen
 |====
 
 === Ein Softwarepaket nur herunterladen ===
