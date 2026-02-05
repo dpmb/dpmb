@@ -76,6 +76,7 @@ daher bestehen keine äquivalenten Kommandoaufrufe.
 (((dnf, install)))
 (((dpkg, -i)))
 (((dpkg, --install)))
+(((guix, install)))
 (((Paket, installieren)))
 (((rpm, -i)))
 (((rpm, -i --nodeps)))
@@ -86,14 +87,13 @@ daher bestehen keine äquivalenten Kommandoaufrufe.
 (((yum, install)))
 (((yum, localinstall)))
 (((yum, reinstall)))
-Mit den nachfolgenden Aufrufen installieren Sie ein Softwarepaket über
-die Kommandozeile. Unter ``Pakete installieren'' in
-<<pakete-installieren>> gehen wir detaillierter auf `dpkg`, APT und
-`aptitude` ein. Unter ``Installation zwischengespeicherter Pakete aus
-dem Paketcache'' in
-<<installation-zwischengespeicherter-pakete-aus-dem-paketcache>>
-erfahren Sie mehr darüber, wie Sie Pakete installieren, die bereits im
-Paketcache vorliegen.
+Mit den nachfolgenden Aufrufen installieren Sie ein Softwarepaket über die 
+Kommandozeile. Unter ``Pakete installieren'' in <<pakete-installieren>> 
+gehen wir detaillierter auf `dpkg`, APT und `aptitude` ein. Unter 
+``Installation zwischengespeicherter Pakete aus dem Paketcache'' in
+<<installation-zwischengespeicherter-pakete-aus-dem-paketcache>> erfahren 
+Sie mehr darüber, wie Sie Pakete installieren, die bereits im Paketcache 
+vorliegen.
 
 .Installation eines Pakets
 [frame="topbot",options="header",cols="2,4,4",id="tab.paketinstallation"]
@@ -109,6 +109,7 @@ Paketcache vorliegen.
 |            | `dnf group install` 'Paketgruppe' | alle Pakete aus der Paketgruppe installieren
 | `dpkg`     | `dpkg -i` 'Paketdatei' | Paket liegt lokal als Datei vor
 |            | `dpkg --install` 'Paketdatei' | Paket liegt lokal als Datei vor
+| Guix       | `guix install` 'Paketname' | Paket wird dem Paketrepository entnommen
 | RPM        | `rpm -i` 'Paketdatei' | Paket liegt lokal als Datei vor
 |            | `rpm --install` 'Paketdatei' | Paket liegt lokal als Datei vor
 |            | `rpm -i --nodeps` 'Paketdatei' | Paket liegt lokal als Datei vor, Installation ohne Berücksichtigung der Paketabhängigkeiten
