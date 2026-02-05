@@ -47,11 +47,12 @@ Möglichkeiten variiert recht stark <<RPM-Salve>> <<RPM-Gite>> <<RPM-Canepa>>
 (((apt, update)))
 (((apt-get, update)))
 (((aptitude, update)))
+(((guix, pull)))
 (((Paketliste, aktualisieren)))
 Mit den nachfolgenden Aufrufen aktualisieren Sie die lokale Paketliste.
 Genauer gehen wir darauf in <<liste-der-verfuegbaren-pakete-aktualisieren>> 
 ein. RPM, YUM, FPM und DNF kennen das Konzept der lokalen Paketliste nicht, 
-daher bestehen keine äquivalenten Kommandoaufrufe.
+daher bestehen keine äquivalenten Kommandoaufrufe. 
 
 .Lokale Paketliste aktualisieren
 [frame="topbot",options="header",cols="2,4,4",id="tab.lokale-paketliste-aktualisieren"]
@@ -60,6 +61,7 @@ daher bestehen keine äquivalenten Kommandoaufrufe.
 | APT        | `apt update` | 
 | `apt-get`  | `apt-get update` | 
 | Aptitude   | `aptitude update` | 
+| Guix       | `guix pull` | 
 |====
 
 === Neue Softwarepakete installieren ===
@@ -72,6 +74,8 @@ daher bestehen keine äquivalenten Kommandoaufrufe.
 (((aptitude, install)))
 (((dnf, group install)))
 (((dnf, install)))
+(((dpkg, -i)))
+(((dpkg, --install)))
 (((Paket, installieren)))
 (((rpm, -i)))
 (((rpm, -i --nodeps)))
