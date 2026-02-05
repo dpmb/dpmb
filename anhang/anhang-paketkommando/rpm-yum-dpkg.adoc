@@ -388,6 +388,8 @@ für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
 (((dpkg, --list)))
 (((dpkg, -s)))
 (((dpkg, --status)))
+(((guix, -I)))
+(((guix, -p -I)))
 (((Paket, Status anzeigen)))
 (((Paket, Zustand anzeigen)))
 (((Paketstatus)))
@@ -418,6 +420,8 @@ das zu `dpkg` und `aptitude` genauer.
 |            | `dpkg --list` 'Paketname' | Ausgabe des Installationsstatus
 |            | `dpkg -s` 'Paketname' | Ausgabe der Paketinformationen
 |            | `dpkg --status` 'Paketname' | Ausgabe der Paketinformationen
+| Guix       | `guix -I` 'Paketname' | alle installierten Pakete mit dem Paketnamen auflisten
+|            | `guix -p` 'Profilname' `-I` 'Paketname' | alle installierten Pakete mit dem Paketnamen des benannten Profils auflisten
 | RPM        | `rpm -q` 'Paketname' | Ausgabe des Installationsstatus für 'Paketname'
 |            | `rpm -qi` 'Paketname' | Informationen zu einem installierten Paket anzeigen
 |            | `rpm -qp` 'Paketdatei' | Informationen zu einer Paketdatei anzeigen
