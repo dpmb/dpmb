@@ -6,7 +6,7 @@
 ==== Univention Corporate Server (UCS) ====
 
 // Stichworte für den Index
-(((Univention Corporate Server)))
+(((Univention Corporate Server (UCS))))
 Der Univention Corporate Server (UCS) <<UCS>> ist ein auf kommerzieller
 Basis vertriebenes OpenSource-Produkt für Infrastrukturlösungen in
 Unternehmen und Behörden. Neben dem Univention (Linux) Client werden
@@ -32,7 +32,7 @@ Hersteller Univention GmbH werden die Kunden technisch betreut und der
 Support sichergestellt. 
 
 Den Ausgangspunkt bildet stets eine stabile Debian-Veröffentlichung --
-UCS 5.0 basieert z.B. auf Debian 10 _Buster_, UCS 4.4 auf Debian 9
+UCS 5.0 basiert z.B. auf Debian 10 _Buster_, UCS 4.4 auf Debian 9
 _Stretch_. Für diese Softwarebasis pflegt Univention eine Reihe von
 Eigenentwicklungen und Anpassungen.
 
