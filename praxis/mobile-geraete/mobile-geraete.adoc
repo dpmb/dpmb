@@ -51,7 +51,7 @@ Der Kampf um Speicherplatz wird wohl nie zu Ende gehen, egal, wie groß
 die Speichermedien auch werden. Eine ganze Reihe unterschiedlicher 
 Pakete tritt an, ihnen in der Situation zu helfen. Dazu gehören bspw. 
 'docpurge' <<docpurge>>, 'eatmydata' <<Debian-Paket-eatmydata>> und 
-'localepurge' <<localpurge>>, die wir ihnen nachfolgend genauer 
+'localepurge' <<localepurge>>, die wir ihnen nachfolgend genauer 
 vorstellen.
 
 include::docpurge.adoc[]
