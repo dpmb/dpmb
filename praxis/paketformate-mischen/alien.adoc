@@ -176,7 +176,7 @@ Bibliotheken 'Libc', 'Glib2', 'Gpm2', 'Slang2' und 'Ssh2' abhängt.
 // Stichworte für den Index
 (((alien, -c)))
 (((alien, Fallstricke)))
-(((alien, FHS)))
+(((alien, Filesystem Hierarchy Standard (FHS))))
 (((alien, -g)))
 (((alien, -h)))
 (((alien, -k)))
@@ -241,8 +241,8 @@ da diese normalerweise noch keine Paketbeschreibung beinhalten.
 Eigentümern in Ordnung
 
 `--patch=`'Dateiname', `--anypatch` und `--nopatch` :: automatisches
-Anpassen von Startup-Skripten und Pfaden gemäß dem File Hierarchy
-Standard (FHS)
+Anpassen von Startup-Skripten und Pfaden gemäß dem Filesystem 
+Hierarchy Standard (FHS)
 
 `--target=`'Architektur' :: setze die Plattform für das Paket auf den
 angegebenen Wert. Siehe <<debian-architekturen>> zu weiteren Angaben zur
