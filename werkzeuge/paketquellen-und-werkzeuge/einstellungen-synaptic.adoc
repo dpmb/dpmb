@@ -7,17 +7,15 @@
 
 // Stichworte für den Index
 (((Synaptic)))
-Auch mittels Synaptic (siehe <<gui-synaptic>>) können Sie die Datei
+Auch mittels Synaptic (siehe <<gui-synaptic>>) können Sie die Datei 
 `/etc/apt/sources.list` anpassen. Dazu öffnen Sie den entsprechenden
 Dialog unter dem Menüpunkt menu:Einstellungen[Paketquellen]. Unter
-Gnome/GTK erfolgt daraufhin ein Aufruf des Programms
+Gnome/GTK erfolgt daraufhin ein Aufruf des Programms 
 `software-properties-gtk` aus dem bereits weiter oben genannten Projekt
-Software Properties <<software-properties>>.
-Das Pendant unter KDE heißt `software-properties-kde` und kommt aus
-dem selben Projekt.
+Software Properties <<Software-Properties>>. Das Pendant unter KDE heißt 
+`software-properties-kde` und kommt aus dem selben Projekt.
 
-
-Über die verschiedenen Reiter stellen Sie die gewünschten Paketquellen
+Über die verschiedenen Reiter stellen Sie die gewünschten Paketquellen 
 ein. <<fig.synaptic-paketquellen>> zeigt die Einstellungen zu den 
 Standard-Debian-Repositories.
 
