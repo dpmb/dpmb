@@ -17,7 +17,7 @@
 (((Debianpaket, dlocate)))
 (((Debianpaket, util-linux)))
 (((Dokumentation, Infopages)))
-(((Dokumentation, manpages)))
+(((Dokumentation, Manpages)))
 Für die meisten UNIX/Linux-Werkzeuge bestehen Informations- und
 Hilfeseiten, auch genannt 'Info und Man(ual) Pages'. Um in Erfahrung zu
 bringen, ob diese überhaupt vorhanden und installiert sind, bieten sich
