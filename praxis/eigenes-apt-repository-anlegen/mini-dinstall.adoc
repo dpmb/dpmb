@@ -11,15 +11,18 @@
 (((Debianpaket, dput)))
 (((Debianpaket, dput-ng)))
 (((Debianpaket, mini-dinstall)))
+(((minidak)))
 (((Paket, bereitstellen)))
 (((Paketquelle, APT-Repository)))
 (((Paketquelle, lokal)))
 
-Das Projekt _mini-dinstall_ verfolgt den gleichen Zweck wie _minidak_: eine
-kleinere Version von _dak_ und zielt auf das Betreiben eigener APT-Repositories
-ab. Daher ist es mit weniger Automatismen und Komfort als die größeren 
-Varianten ausgelegt. Es steht als gleichnamiges Debianpaket für die aktuelle, 
-stabile Veröffentlichung von Debian bereit <<Debian-Paket-mini-dinstall>>. 
+Das Projekt _mini-dinstall_ verfolgt den gleichen Zweck wie _minidak_
+<<minidak>>: eine kleinere Version von _dak_ für die Infrastruktur des 
+Debian Archive Kit <<DebianArchiveKit>> und zielt auf das Betreiben 
+eigener APT-Repositories ab. Daher ist es mit weniger Automatismen und 
+Komfort als die größeren Varianten ausgelegt. Es steht als gleichnamiges 
+Debianpaket für die aktuelle, stabile Veröffentlichung von Debian bereit 
+<<Debian-Paket-mini-dinstall>>. 
 
 Hinzukommen entweder das Paket _dput_ <<Debian-Paket-dput>> oder dessen 
 Neufassung _dput-ng_ <<Debian-Paket-dput-ng>>. Beide Werkzeuge dienen dazu,
