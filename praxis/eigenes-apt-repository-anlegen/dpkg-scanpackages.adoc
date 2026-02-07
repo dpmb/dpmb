@@ -48,7 +48,10 @@ die Ausgabe mittels Umleitungsoperator `>` gleich in eine passende Datei
 namens `Packages` umzulenken (Schreibweise des Dateinamens mit großem
 `P`). Der nachfolgende Aufruf geht noch einen Schritt weiter und
 komprimiert die Ausgabe zusätzlich mittels `gzip`, so dass als Ergebnis
-die Datei `Packages.gz` entsteht:
+die Datei `Packages.gz` entsteht. Der Parameter `-c` von `gzip` sorgt 
+dafür, dass `gzip` seine Ausgabe auf die Standardausgabe schreibt. 
+Abschließend vermeldet `dpkg-scanpackages`, wieviele Pakete es gefunden
+hat und in die Ausgabedatei geschrieben hat:
 
 .Schritt 3: Metadaten zum Paketarchiv erzeugen (`Packages.gz`)
 ----
