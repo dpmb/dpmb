@@ -67,7 +67,7 @@ die empfangenen Daten zunächst und speichert diese dann als Datei
 
 .Paketinformationen zum beispielhaft verwendeten Paket 'meta-mc'
 ----
-# cat local/Packages 
+# zcat local/Packages.gz 
 Package: meta-mc
 Version: 1.0
 Architecture: all
