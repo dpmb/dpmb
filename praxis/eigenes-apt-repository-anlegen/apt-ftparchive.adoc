@@ -15,17 +15,15 @@
 * Ziele: Obermenge der beiden Werkzeuge `dpkg-scanpackages` und 
   `dpkg-scansources` aus dem Paket 'dpkg-dev' <<Debian-Paket-dpkg-dev>>
 
-* Pros:
-** Does not rely on any external programs aside from gzip.
-** Creates Release and Contents files without providing `*.changes` 
+* Vorteile:
+** bedingt keinerlei externen Programme außer `gzip`
+** erzeugt die Dateien `Release` und `Contents` ohne `*.changes` 
+   bereitzustellen
 
-* Cons:
-** Can be slow on large repositories, unless the input file (?FileList) is sorted first (the sort command works).
+* Nachteile:
+** kann bei großen Repositorys langsam sein, es sei denn die Eingabedabei
+   liegt alphabetisch sortiert vor
 
-* Package: apt
-* Distributions: oldstable, stable, testing, unstable, experimental
-
-* Dependencies: unstable/admin/apt-utils
 * Automatic repositories: No (Yes with dupload)
 * Incoming mechanism: No (Yes with custom move cron script with dupload)
 * Pools: Yes
