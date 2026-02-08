@@ -265,7 +265,7 @@ unterstützt `mini-dinstall` die folgenden:
 `-c` (Langform `--config=file`) :: benutze `file` als Konfigurationsdatei. Der
 Standardwert ist `~/.mini-dinstall.conf`
 
-`-d` (Langform `--debug`) :: Gib zusätzliche Debuginformationen im Terminal 
+`-d` (Langform `--debug`) :: gib zusätzliche Debuginformationen im Terminal 
 und dem Logfile aus
 
 `-k` (Langform `--kill`) :: beende den laufenden Daemon sofort
@@ -291,13 +291,25 @@ läuft ohne den Schalter `--db`.
 
 In der **Konfigurationsdatei** sind die folgenden Einträge zulässig:
 
-`archivedir` :: The root of the mini-dinstall archive. Must be set, either here or on the command line.
+`archivedir` :: legt das Wurzelverzeichnis des `mini-dinstall`-Archivs 
+fest. Diese Angabe ist verpflichtend -- entweder hier, oder beim Aufruf
+über die Kommandozeile
 
-`extra_keyrings` :: Additional GnuPG keyrings to use for signature verification.
+`extra_keyrings` :: zusätzliche GnuPG-Schlüsselringe zur Verwendung für 
+die Überprüfung der Paketsignaturen
 
-`incoming_permissions` :: The permissions for the incoming directory. mini-dinstall will attempt to set the directory's permissions at startup. A value of zero (´'0´' or ´'0000´') will disable permission setting. Doing this, you MUST set permission for incoming by hand! Defaults to 0750.
+`incoming_permissions` :: die Berechtigungen für das Verzeichnis, aus dem
+die Pakete übernommen werden. `mini-dinstall` versucht beim Start, diese 
+Berechtigungen für das Verzeichnis festzulegen. Der Wert Null (``0'' oder 
+``0000'') deaktiviert die Festlegung von Berechtigungen. In diesem Fall 
+'müssen' Sie die Berechtigungen für das Verzeichnis manuell festlegen! 
+Der Standardwert für die Berechtigungen ist 0750.
 
-`keyrings` :: GnuPG keyrings to use for signature verification of changes files. Setting this  parameter will modify the default list; it is generally better to modify `extra_keyrings` instead. Defaults to the keyrings from the debian-keyring package.
+`keyrings` :: GnuPG-Schlüsselbunde, die zur Signaturprüfung von 
+Änderungsdateien verwendet werden sollen. Durch Setzen dieses Parameters 
+wird die Standardliste geändert. Im Allgemeinen ist es besser, stattdessen 
+`extra_keyrings` zu ändern. Standardmäßig werden die Schlüsselbunde aus 
+dem Paket 'debian-keyring' verwendet.
 
 ==== Lesematerial ====
 
