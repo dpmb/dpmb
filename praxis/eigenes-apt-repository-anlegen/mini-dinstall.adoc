@@ -94,11 +94,15 @@ mail_on_success = false
 ----
 
 Damit liegt das APT-Repository unter `/var/www/debian` mit einer flachen 
-Struktur (alle Binärpakete landen im gleichen Unterverzeichnis) und
-Unterverzeichnisse werden nur für die beiden Architekturen 'amd64' und 'all'
-angelegt. Es erfolgt keine Benachrichtigung bei einem erfolgreichen Upload. 
-Die Einstellungen gelten für alle Archive (Abschnitt `[DEFAULT]`), spezifische
-Einstellungen pro Veröffentlichungsstatus bestehen nicht.
+Struktur vor (Schlüsselworte `archivedir` und `archive_style`). Somit 
+landen alle Binärpakete im gleichen Unterverzeichnis. Mit Hilfe des 
+Schlüsselwortes `architectures` legen Sie fest, dass darin für die beiden 
+Prozessorarchitekturen 'amd64' und 'all' separate Unterverzeichnisse 
+angelegt werden. Die Angabe `mail_on_success = false` bestimmt, dass
+keine Benachrichtigung bei einem erfolgreichen Upload erfolgt. Die 
+Einstellungen gelten für alle Archive -- daher auch die Benennung des 
+Abschnitts mit `[DEFAULT]`. Spezifische Einstellungen pro 
+Veröffentlichungsstatus bestehen ebenfalls nicht.
 
 Mit obigen Angaben ist ihr APT-Repository bereits benutzbar. APT und `aptitude`
 erwarten jedoch noch zusätzliche Informationen, um die Pakete in ihrem eigenen 
@@ -198,6 +202,7 @@ gelandet sind.
 // Stichworte für den Index
 (((dput, -u)))
 (((dput, --unchecked)))
+(((dput, Hochladen von Paketen in ein eigenes Repository)))
 Jetzt laden Sie ihr Paket hoch. Das nachfolgende Beispiel nutzt das in 
 <<metapakete-bauen>> erzeugte Metapaket 'meta-mc'. 
 
