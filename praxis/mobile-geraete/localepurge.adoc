@@ -46,6 +46,7 @@ localepurge: Disk space freed in /usr/share/locale: 23528K
 ----
 
 // Stichworte für den Index
+(((Debianpaket, debsums)))
 (((debsums)))
 
 Nach unserer Beobachtung werkelt `localepurge` anstandsfrei. Wir
