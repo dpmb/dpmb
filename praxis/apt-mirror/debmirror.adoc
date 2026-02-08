@@ -9,18 +9,27 @@
 // Stichworte für den Index
 (((Debianpaket, debmirror)))
 
+==== Allgemeines ====
+
 * Paket: <<Debian-Paket-debmirror>>
 * Beschreibung von 'debmirror' unter http://debiananwenderhandbuch.de/debianmirror.html
 * keine Konfigurationsdatei
 ** stattdessen: alles als Parameter für den Aufruf über die Kommandozeile
 
-* Parameter/Optionen (Auswahl):
+// Stichworte für den Index
+(((debmirror, -a)))
+(((debmirror, -d)))
+(((debmirror, -h)))
+(((debmirror, -s)))
+(((debmirror, -v)))
+(((debmirror, --method)))
+(((debmirror, --nosource)))
+(((debmirror, --progress)))
+
+==== Parameter/Optionen (Auswahl) ====
 
 `-a`::
 Architektur
-
-`-s`::
-Section
 
 `-d`::
 Distribution bzw. Veröffentlichung
@@ -28,17 +37,29 @@ Distribution bzw. Veröffentlichung
 `-h`::
 Host oder Server, von dem bezogen werden soll
 
-`--nosource`::
-keine Source-Pakete
-
-`--progress`::
-Verlauf anzeigen
+`-s`::
+Section
 
 `-v`::
 ausführliche Ausgabe (verbose)
 
 `--method`::
 Methode, die zum Bezug verwendet werden soll
+
+`--nosource`::
+keine Quellpakete, sondern nur Binärpakete
+
+`--progress`::
+Verlauf anzeigen
+
+==== Beispielkonfiguration ====
+
+* Kriterien:
+** Architektur i386
+** Distributionsbereiche 'main', 'contrib' und 'nonfree'
+** Veröffentlichung 'Wheezy'
+** nur Binärpakete
+** Darstellung des Verlaufs
 
 .Beispielaufruf für `debmirror` in `/home/ftp/debian`
 ----
