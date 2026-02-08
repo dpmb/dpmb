@@ -20,9 +20,6 @@
 ** Webseite <<aptly>>
 ** Veröffentlichung: stable, testing, unstable als Paket <<Debian-Paket-aptly>>
 
-* Source: GitHub
-* Automatic repositories: Yes (?)
-
 * Incoming mechanism: Yes (inoticoming -> aptly repo include)
 * Pools: Yes
 * GPG signing: Yes
