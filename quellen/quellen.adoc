@@ -354,6 +354,8 @@
 
 - [[[Debian-Paket-debian-handbook]]] Debian-Paket 'debian-handbook', https://packages.debian.org/de/stable/debian-handbook
 
+- [[[Debian-Paket-debian-keyring]]] Debian-Paket 'debian-keyring', https://packages.debian.org/de/stable/debian-keyring
+
 - [[[Debian-Paket-debian-security-support]]] Debian-Paket 'debian-security-support', https://packages.debian.org/wheezy-backports/debian-security-support
 
 - [[[Debian-Paket-debmirror]]] Debian-Paket 'debmirror', https://packages.debian.org/de/stable/debmirror

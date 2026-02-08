@@ -314,8 +314,8 @@ läuft ohne den Schalter `--db`.
 In der **Konfigurationsdatei** sind die folgenden Einträge zulässig:
 
 `archivedir` :: legt das Wurzelverzeichnis des `mini-dinstall`-Archivs 
-fest. Diese Angabe ist verpflichtend -- entweder hier, oder beim Aufruf
-über die Kommandozeile
+fest. Diese Angabe ist verpflichtend und entweder hier, oder beim Aufruf
+über die Kommandozeile anzugeben
 
 `extra_keyrings` :: zusätzliche GnuPG-Schlüsselringe zur Verwendung für 
 die Überprüfung der Paketsignaturen
@@ -325,13 +325,13 @@ die Pakete übernommen werden. `mini-dinstall` versucht beim Start, diese
 Berechtigungen für das Verzeichnis festzulegen. Der Wert Null (``0'' oder 
 ``0000'') deaktiviert die Festlegung von Berechtigungen. In diesem Fall 
 'müssen' Sie die Berechtigungen für das Verzeichnis manuell festlegen! 
-Der Standardwert für die Berechtigungen ist 0750.
+Der Standardwert für die Berechtigungen ist ``0750''.
 
 `keyrings` :: GnuPG-Schlüsselbunde, die zur Signaturprüfung von 
 Änderungsdateien verwendet werden sollen. Durch Setzen dieses Parameters 
 wird die Standardliste geändert. Im Allgemeinen ist es besser, stattdessen 
 `extra_keyrings` zu ändern. Standardmäßig werden die Schlüsselbunde aus 
-dem Paket 'debian-keyring' verwendet.
+dem Paket 'debian-keyring' <<Debian-Paket-debian-keyring>> verwendet.
 
 ==== Lesematerial ====
 
