@@ -759,6 +759,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Hertzog-Mas-Debian-Administrators-Handbook]]] Raphael Hertzog, Roland Mas: The Debian Administrator's Handbook, 2012, ISBN 979-10-91414-00-5, https://debian-handbook.info/
 
+- [[[Hertzog-Mas-Debian-Administrators-Handbook-Repo]]] Creating a Package Repository for APT in Raphael Hertzog, Roland Mas: The Debian Administrator's Handbook, 2012, ISBN 979-10-91414-00-5, https://debian-handbook.info/browse/stable/sect.setup-apt-package-repository.html
+
 - [[[Hertzog-Obsolete-Packages]]] Raphael Hertzog: Debian Cleanup Tip #2: Get rid of obsolete packages, https://raphaelhertzog.com/2011/02/07/debian-cleanup-tip-2-get-rid-of-obsolete-packages/
 
 - [[[Hofmann-Debtags-LinuxUser]]] Frank Hofmann: Dschungelführer. Pakete zielgenau finden mit Debtags, LinuxUser 06/2012, LinuxNewMedia AG, München, 2012, S. 22ff., http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2012/06/Pakete-zielgenau-finden-mit-Debtags

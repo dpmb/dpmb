@@ -335,6 +335,9 @@ dem Paket 'debian-keyring' verwendet.
 
 ==== Lesematerial ====
 
-* Creating a Package Repository for APT (see https://debian-handbook.info/browse/stable/sect.setup-apt-package-repository.html)
+Im Debian Handbook <<Hertzog-Mas-Debian-Administrators-Handbook>> findet 
+sich das folgende Kapitel für weitergehende Informationen:
+
+* Creating a Package Repository for APT <<Hertzog-Mas-Debian-Administrators-Handbook-Repo>>
 
 // Datei (Ende): ./praxis/eigenes-apt-repository-anlegen/mini-dinstall.adoc
