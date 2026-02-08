@@ -217,9 +217,9 @@ Successfully uploaded packages.
 #
 ----
 
-Benutzen Sie kein `dput` oder `dput-ng`, laden Sie alle Dateien, die in der
-`.changes`-Datei zum Paket benannt sind, in das Unterverzeichnis, indem neue 
-Pakete landen (`dput` macht nichts anderes).
+Benutzen Sie kein `dput` oder `dput-ng`, kopieren Sie alle Dateien, die in 
+der `.changes`-Datei zum Paket benannt sind, manuell in das 
+Unterverzeichnis, indem neue Pakete landen (`dput` macht nichts anderes).
 
 * Einrichtung (was noch schön wäre)
 ** gpg-Schlüssel zum Signieren der bereitgestellten Pakete
@@ -227,18 +227,31 @@ Pakete landen (`dput` macht nichts anderes).
 [[mini-dinstall-laufender-betrieb]]
 ==== Laufender Betrieb ====
 
-* APT-Repository zu ihren Paketquellen hinzufügen
-** neuer Eintrag in der `/etc/apt/sources.list`
+// Stichworte für den Index
+(((dput, /etc/apt/sources.list)))
+(((dput, Repository zu den Paketquellen hinzufügen)))
+
+Um ihr eigenes Repository wie eine übliche Paketquelle zu benutzen, fügen
+Sie nun noch einen passenden Eintrag in der `/etc/apt/sources.list` hinzu.
+Nachfolgend sehen Sie zwei Zeilen -- die erste für ihre Binärpakete, die 
+zweite für ihre Quellpakete. Alle Pakete daraus sind dem 
+Distributionsbereich 'unstable' zugeordnet.
+
+.Ergänzung des eigenen Repositorys als zusätzliche Paketquelle
 ----
-# local repo
+# lokales Repository
 deb file:/var/www/debian/ unstable/
 deb-src file:/var/www/debian/ unstable/
 ----
 
-* `apt-get update`
+Nach der Ergänzung der Paketquellen muss die Paketverwaltung noch darüber
+informiert werden. Das erfolgt mittels `apt update`, `apt-get update` oder
+`aptitude update`. Nun erscheinen ihre eigenen Pakete auch in der Liste
+der verfügbaren Pakete.
 
-* Ergänzungen
-** cron oder daemon
+Laden Sie regelmäßig Pakete in ihr Repository hoch, bietet es sich an, die
+Aktualisierung zu wiederkehrenden Zeitpunkten automatisch durchzuführen.
+Mittels Cron oder einem eigenen Daemon setzen Sie das in die Praxis um.
 
 [[mini-dinstall-schalter-und-konfiguration]]
 ==== Schalter und Konfiguration ====
