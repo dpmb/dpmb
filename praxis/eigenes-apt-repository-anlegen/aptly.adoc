@@ -2,16 +2,23 @@
 
 // Baustellenstatus: Notizen
 
+[[eigenes-apt-repository-anlegen-aptly]]
+
 === aptly ===
+
+// Stichworte für den Index
+(((APT-Repository, eigenes erstellen)))
+(((APT-Repository, mit aptly erstellen)))
+(((Debianpaket, aptly)))
 
 * Goals: manage local repositories, snapshot them and publish
 * Pros:
 ** supports multiple versions of package in one repo
 ** has supported for mirroring in the same tool 
 
-* Download & Documentation: http://www.aptly.info/
-
-* Distributions: stable, testing, unstable
+* Download und Dokumentation 
+** Webseite <<aptly>>
+** Veröffentlichung: stable, testing, unstable als Paket <<Debian-Paket-aptly>>
 
 * Source: GitHub
 * Automatic repositories: Yes (?)

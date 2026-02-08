@@ -52,6 +52,8 @@
 
 - [[[aptitude-dokumentation-veraltet]]] veraltete Dokumentation zu `aptitude`, http://www.algebraicthunk.net/~dburrows/projects/aptitude/doc/
 
+- [[[aptly]]] Aptly, http://www.aptly.info/
+
 - [[[apt-proxy]]] `apt-proxy`-Projektseite, http://apt-proxy.sourceforge.net/
 
 - [[[apt-Salve]]] Ravi Salve: 25 Useful Basic Commands of APT-GET and APT-CACHE for Package Management, http://www.tecmint.com/useful-basic-commands-of-apt-get-and-apt-cache-for-package-management/
@@ -310,6 +312,8 @@
 - [[[Debian-Paket-apt-utils]]] Debian-Paket 'apt-utils', https://packages.debian.org/stable/apt-utils
 
 - [[[Debian-Paket-apt-xapian-index]]] Debian-Paket 'apt-xapian-index', https://packages.debian.org/stable/apt-xapian-index
+
+- [[[Debian-Paket-aptly]]] Debian-Paket 'aptly', https://packages.debian.org/de/stable/aptly
 
 - [[[Debian-Paket-ara]]] Debian-Paket 'ara', https://packages.debian.org/de/stable/ara
 
@@ -666,6 +670,10 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 - [[[Debian-Wiki-WNPP]]] Debian Wiki: Work-Needing and Prospective Packages (WNPP), https://wiki.debian.org/WNPP
 
 - [[[Debian-WNPP-RFP-apt-fast]]] Debian Request for Package: apt-fast, https://bugs.debian.org/690183
+
+- [[[debify-docker]]] debify, Docker-Image, https://hub.docker.com/r/spotify/debify/
+
+- [[[debify-github]]] debify, GitHub-Repository, https://github.com/windicted/debify
 
 - [[[debtree-Projektseite]]] Webseite zum debtree-Projekt, https://salsa.debian.org/debian/debtree
 
