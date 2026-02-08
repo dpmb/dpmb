@@ -256,6 +256,28 @@ Mittels Cron oder einem eigenen Daemon setzen Sie das in die Praxis um.
 [[mini-dinstall-schalter-und-konfiguration]]
 ==== Schalter und Konfiguration ====
 
+// Stichworte für den Index
+(((dput, -b)))
+(((dput, -c)))
+(((dput, -d)))
+(((dput, -k)))
+(((dput, -n)))
+(((dput, -q)))
+(((dput, -r)))
+(((dput, -v)))
+(((dput, --batch)))
+(((dput, --config)))
+(((dput, --debug)))
+(((dput, --help)))
+(((dput, --kill)))
+(((dput, --no-act)))
+(((dput, --no-db)))
+(((dput, --no-log)))
+(((dput, --quiet))
+(((dput, --run))
+(((dput, --verbose))
+(((dput, --version))
+
 `mini-dinstall` kommt mit einer ganzen Reihe von Schaltern daher. Auch die 
 Einträge für die Konfigurationsdatei sind etwas länger. Als **Schalter** 
 unterstützt `mini-dinstall` die folgenden:
