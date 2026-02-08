@@ -12,11 +12,13 @@
 (((debify)))
 
 * Ziel: 
-** nimmt ein Verzeichnis voller Debian-Pakete und erstellt ein signiertes 
-   und ordnungsgemäß strukturiertes Debian-Repository 
+** nimmt ein Verzeichnis voller Debian-Pakete und erstellt daraus ein 
+   signiertes und ordnungsgemäß strukturiertes Debian-Repository 
 ** Wrapper um `aptly` (siehe <<eigenes-apt-repository-anlegen-aptly>>)
 
-* Download als Docker-Image <<debify-docker>>
+* geschrieben in JavaScript
+
+* Download als fertiges Docker-Image <<debify-docker>>
 
 * Quelle auf GitHub <<debify-github>>
 
