@@ -8,6 +8,7 @@
 
 // Stichworte für den Index
 (((Debianpaket, debmirror)))
+(((Paketmirror einrichten, debmirror)))
 
 ==== Allgemeines ====
 

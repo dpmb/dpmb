@@ -6,6 +6,10 @@
 
 === debpartial-mirror ===
 
+// Stichworte für den Index
+(((Debianpaket, debpartial-mirror)))
+(((Paketmirror einrichten, debpartial-mirror)))
+
 * Paket: <<Debian-Paket-debpartial-mirror>>
 * geeignet zum Spiegeln eines partiellen Debian-Mirrors
 ** wenn man nur einen Ausschnitt des Paketbestands benötigt
