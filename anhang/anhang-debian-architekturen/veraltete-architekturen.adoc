@@ -4,15 +4,21 @@
 [[anhang-veraltete-debian-architekturen]]
 === Veraltete Architekturen ===
 
+// Stichworte für den Index
+(((Debian, Architekturen)))
+(((Prozessorarchitekturen, veraltete Architekturen)))
+
 ==== Nicht mehr unterstützte Architekturen ab Debian 13 ==== 
 
-Das Debian-Projekt hat im Herbst 2024 angekündigt, mit der 
+Das Debian-Projekt kündigte im Herbst 2024 an, mit der 
 Veröffentlichung von Debian 13 'Trixie' die Unterstützung für die 
 folgenden Architekturen schrittweise einzustellen:
 
 i386 (i486/i586/i686)::
-x86 (PC) 32-Bit (siehe <<anhang-offizielle-debian-architekturen>> für 
-weitere Details zur Architektur)
+x86 (PC) 32-Bit. Trotz des Namens ab Debian 8 _Jessie_ nur
+Pentium-kompatible und ab Debian 9 _Stretch_ nur noch
+Pentium-II-kompatible Hardware. In Debian 6 _Squeeze_ und 7 _Wheezy_
+umfasst das noch i486, jedoch bereits keine i486 SX mehr.
 
 ==== Nicht mehr unterstützte Architekturen ab Debian 12 ==== 
 
@@ -58,7 +64,8 @@ Technology.
 
 s390 (s390-linux-gnu)::
 IBM S/390 und zSeries. Wird auch in 'unstable' nicht mehr unterstützt
-und wurde durch s390x ersetzt.
+und wurde durch die Architektur 's390x' ersetzt (siehe 
+<<anhang-offizielle-debian-architekturen>>).
 
 sparc (sparc-linux-gnu)::
 SPARC, 64-Bit-Kernel, 32-Bit-Userland. Nur noch in 'unstable', der ist
