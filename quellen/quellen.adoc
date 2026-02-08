@@ -307,6 +307,8 @@
 
 - [[[Debian-Paket-apt-transport-https]]] Debian-Paket 'apt-transport-https', https://packages.debian.org/de/stable/apt-transport-https
 
+- [[[Debian-Paket-apt-utils]]] Debian-Paket 'apt-utils', https://packages.debian.org/stable/apt-utils
+
 - [[[Debian-Paket-apt-xapian-index]]] Debian-Paket 'apt-xapian-index', https://packages.debian.org/stable/apt-xapian-index
 
 - [[[Debian-Paket-ara]]] Debian-Paket 'ara', https://packages.debian.org/de/stable/ara

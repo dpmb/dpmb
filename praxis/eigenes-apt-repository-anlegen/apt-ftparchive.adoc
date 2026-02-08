@@ -4,7 +4,16 @@
 
 === apt-ftparchive ===
 
-* Goals: Superset of `dpkg-scanpackages` and `dpkg-scansources`
+// Stichworte für den Index
+(((APT-Repository, eigenes erstellen)))
+(((APT-Repository, mit apt-ftparchive erstellen)))
+(((Debianpaket, apt-utils)))
+(((Debianpaket, dpkg-dev)))
+
+* Werkzeug ist Bestandteil des Pakets 'apt-utils' <<Debian-Paket-apt-utils>>
+
+* Ziele: Obermenge der beiden Werkzeuge `dpkg-scanpackages` und 
+  `dpkg-scansources` aus dem Paket 'dpkg-dev' <<Debian-Paket-dpkg-dev>>
 
 * Pros:
 ** Does not rely on any external programs aside from gzip.
