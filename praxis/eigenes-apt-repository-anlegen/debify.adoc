@@ -11,9 +11,10 @@
 (((APT-Repository, mit debify erstellen)))
 (((debify)))
 
-* Ziel: nimmt ein Verzeichnis voller Debian-Pakete und erstellt ein 
-  signiertes und ordnungsgemäß strukturiertes Debian-Repository (Wrapper 
-  um `aptly` <<eigenes-apt-repository-anlegen-aptly>>)
+* Ziel: 
+** nimmt ein Verzeichnis voller Debian-Pakete und erstellt ein signiertes 
+   und ordnungsgemäß strukturiertes Debian-Repository 
+** Wrapper um `aptly` (siehe <<eigenes-apt-repository-anlegen-aptly>>)
 
 * Download als Docker-Image <<debify-docker>>
 
