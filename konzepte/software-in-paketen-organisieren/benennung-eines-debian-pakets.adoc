@@ -15,6 +15,7 @@
 (((Paketname, Namenserweiterung)))
 (((Paketname, Namensschema)))
 (((Paketname, Versionsangabe)))
+(((Paketname, Versionsnummer)))
 (((Paketname, Zeichensatz)))
 (((Paketname, zulässige Zeichen bei der Benennung)))
 Während der Benutzung von `dpkg`, APT oder `aptitude` sind Sie sicher
@@ -39,8 +40,11 @@ Paketnamen mit allen Zeichensätzen anzeigen zu können.
 (((Debianpaket, iceweasel)))
 (((Paketname, Architekturangabe)))
 (((Paketname, Kennung eines Binärpakets)))
+(((Paketname, verwendete Präfixe)))
+(((Paketname, verwendete Suffixe)))
 (((Paketname, Software)))
 (((Paketname, Versionsangabe)))
+(((Paketname, Versionsnummer)))
 _Feld 1_ bezeichnet den Namen des Pakets, welches durch die Paketdatei
 bereitgestellt wird. Die Paketdatei `iceweasel_3.5.16-12_i386.deb` ist
 ein Binärpaket (Dateiendung `.deb`) und beinhaltet den Webbrowser
@@ -57,7 +61,7 @@ Paketklassifikation und die spätere Recherche nach Paketen.
 (((Debianpaket, libreoffice-calc)))
 (((Debianpaket, libxml2)))
 (((Debianpaket, libxml2-utils)))
-(((Paketname, Präfix)))
+(((Paketname, verwendete Präfixe)))
 Beginnt der Paketname mit der Zeichenkette `lib`, handelt es sich meist
 um eine Bibliothek, auf englisch _library_. Als Beispiel seien hier die
 beiden XML-Bibliotheken 'libxml2-utils' und 'libxml2' genannt. Aus dem
@@ -96,6 +100,9 @@ auch für die textbasierte Version 'tshark' beinhaltet.
 ==== Versionsnummer ====
 
 // Stichworte für den Index
+(((Paketname, Debian-Revision)))
+(((Paketname, Upstream-Version)))
+(((Paketname, Versionsangabe)))
 (((Paketname, Versionsnummer)))
 (((Paketname, Versionsverlauf)))
 _Feld 2_ spiegelt eine Reihe unterschiedlicher Informationen und
