@@ -10,7 +10,13 @@
 // Stichworte für den Index
 (((Benennung eines Debianpakets)))
 (((Benennung einer Paketdatei)))
+(((Paketname, Architekturangabe)))
+(((Paketname, Benennung eines Debianpakets)))
+(((Paketname, Namenserweiterung)))
 (((Paketname, Namensschema)))
+(((Paketname, Versionsangabe)))
+(((Paketname, Zeichensatz)))
+(((Paketname, zulässige Zeichen bei der Benennung)))
 Während der Benutzung von `dpkg`, APT oder `aptitude` sind Sie sicher
 schon mit den etwas langen und auf den ersten Blick kurios anmutenden
 Dateinamen der einzelnen Pakete in Berührung gekommen. Die Benennung
@@ -24,18 +30,22 @@ abgegrenzt werden, plus einem Punkt und der Dateiendung '.deb'. Gemäß
 den Debian-Richtlinien <<Debian-Policy-Manual>> sind in o.g. Feldern nur
 ASCII-Zeichen zulässig. Unterstriche, Leerzeichen und Umlaute sind nicht
 gestattet. Das hilft dabei, Missverständnissen vorzubeugen und die
-Paketenamen mit allen Zeichensätzen anzeigen zu können.
+Paketnamen mit allen Zeichensätzen anzeigen zu können.
 
 [[benennung-paketname]]
 ==== Paketname ====
 
 // Stichworte für den Index
 (((Debianpaket, iceweasel)))
+(((Paketname, Architekturangabe)))
+(((Paketname, Kennung eines Binärpakets)))
 (((Paketname, Software)))
+(((Paketname, Versionsangabe)))
 _Feld 1_ bezeichnet den Namen des Pakets, welches durch die Paketdatei
 bereitgestellt wird. Die Paketdatei `iceweasel_3.5.16-12_i386.deb` ist
 ein Binärpaket (Dateiendung `.deb`) und beinhaltet den Webbrowser
-Iceweasel in der Version 3.5.16 für die Architektur i386.
+Iceweasel in der Version 3.5.16 für die Architektur i386 (siehe
+<<anhang-offizielle-debian-architekturen>>).
 
 Darüberhinaus existieren bei der Benennung eine Reihe von
 Gepflogenheiten in Form von Präfixen und Suffixen. Diese stellen kein
