@@ -40,11 +40,12 @@ Paketnamen mit allen Zeichensätzen anzeigen zu können.
 (((Debianpaket, iceweasel)))
 (((Paketname, Architekturangabe)))
 (((Paketname, Kennung eines Binärpakets)))
-(((Paketname, verwendete Präfixe)))
-(((Paketname, verwendete Suffixe)))
+(((Paketname, Plattform)))
 (((Paketname, Software)))
 (((Paketname, Versionsangabe)))
 (((Paketname, Versionsnummer)))
+(((Paketname, verwendete Präfixe)))
+(((Paketname, verwendete Suffixe)))
 _Feld 1_ bezeichnet den Namen des Pakets, welches durch die Paketdatei
 bereitgestellt wird. Die Paketdatei `iceweasel_3.5.16-12_i386.deb` ist
 ein Binärpaket (Dateiendung `.deb`) und beinhaltet den Webbrowser
@@ -160,6 +161,8 @@ Open-Source-Projekten übernommen.
 (((Paketname, Suffix -doc)))
 (((Paketname, Suffix +b)))
 (((Paketname, Suffix +deb)))
+(((Paketname, Suffix +dfsg)))
+(((Paketname, Suffix +ds)))
 (((Paketname, Suffix +nmu)))
 (((Paketname, Suffix ubuntu)))
 Wie oben schon angerissen, kann ein Paketname ein Suffix beinhalten. Es
@@ -172,6 +175,12 @@ Paketversion, die nicht vom Verantwortlichen (Maintainer) des Pakets
 stammt. Bspw. bezeichnet die Datei `adduser_3.113+nmu3_all.deb` das
 Paket 'adduser' als dritten Non-Maintainer-Upload basierend auf der
 Version 3.113 des Maintainers.
+
+`+dfsg` :: ToDo
+
+`+ds` :: ToDo
+
+`+repack` :: ToDo
 
 `-<x>.<y>` ::
 Debian-Revisionsnummer eines Non-Maintainer-Upload (NMU) eines
@@ -217,6 +226,7 @@ Ubuntu-Revision des Debian-Pakets mit der Versionsnummer `121-3`.
 
 // Stichworte für den Index
 (((Paketname, Architektur)))
+(((Paketname, Architekturangabe)))
 (((Paketname, Plattform)))
 _Feld 3_ im Dateinamen gibt an, für welche Architektur das vorliegende 
 Paket übersetzt wurde. Die Benennung entspricht den Bezeichnungen, wie 
