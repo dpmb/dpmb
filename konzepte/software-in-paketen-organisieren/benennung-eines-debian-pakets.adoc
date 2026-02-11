@@ -82,10 +82,9 @@ Schema fallen allerdings die Komponenten zu LibreOffice wie
 Endet der Paketname mit dem Suffix `-dev` wie bspw. in 'libxslt1-dev',
 beinhaltet das Paket Kopfdateien (engl. _header files_), die nur
 notwendig sind, wenn Sie Programme unter Nutzung der dazugehörigen
-Bibliothek entwickeln. _dev_ ist die gebräuchliche englische Abkürzung
-für _development_ (auf deutsch für 'in Entwicklung'. Im Paket 
-'libxslt1-dev' befinden sich beispielsweise die Kopfdateien zur 
-XSLT-1-Bibliothek.
+Bibliothek entwickeln. _dev_ ist die gebräuchliche englische Abkürzung für 
+_development_ (auf deutsch für 'in Entwicklung'). Im Paket 'libxslt1-dev' 
+befinden sich beispielsweise die Kopfdateien zur XSLT-1-Bibliothek.
 
 Das Suffix `-doc` weist auf Dokumentation hin, welches häufig noch von
 einer Abkürzung für die jeweilige Sprache gefolgt wird. Der Paketname
