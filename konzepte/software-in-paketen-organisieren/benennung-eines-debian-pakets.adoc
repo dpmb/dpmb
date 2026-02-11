@@ -18,20 +18,21 @@
 (((Paketname, Versionsnummer)))
 (((Paketname, Zeichensatz)))
 (((Paketname, zulässige Zeichen bei der Benennung)))
-Während der Benutzung von `dpkg`, APT oder `aptitude` sind Sie sicher
+Während der Benutzung von `dpkg`, APT oder `aptitude` sind Sie sicher 
 schon mit den etwas langen und auf den ersten Blick kurios anmutenden
-Dateinamen der einzelnen Pakete in Berührung gekommen. Die Benennung
-einer Paketdatei folgt einem ausgeklügelten Schema
-<<Krafft-Debian-System144>>. Dieses Schema ist eine Konvention, die
-leider bei Paketen aus Drittquellen oft nicht eingehalten wird.
+Dateinamen der einzelnen Pakete in Berührung gekommen. Die Benennung einer 
+Paketdatei folgt einem ausgeklügelten Schema <<Krafft-Debian-System144>>. 
+Dieses Schema ist eine Konvention, die leider bei Paketen aus Drittquellen 
+oft nicht eingehalten wird.
 
-Der Dateiname besteht aus den drei Feldern _Paketname_, _Version_ und
-_Architektur_, welche durch einen Unterstrich '_' voneinander
-abgegrenzt werden, plus einem Punkt und der Dateiendung '.deb'. Gemäß
-den Debian-Richtlinien <<Debian-Policy-Manual>> sind in o.g. Feldern nur
-ASCII-Zeichen zulässig. Unterstriche, Leerzeichen und Umlaute sind nicht
-gestattet. Das hilft dabei, Missverständnissen vorzubeugen und die
-Paketnamen mit allen Zeichensätzen anzeigen zu können.
+Der Dateiname besteht promär aus den drei Feldern _Paketname_, _Version_ 
+und _Architektur_. Alle drei Felder werden durch einen Unterstrich '_' 
+voneinander abgegrenzt. Der Dateiname endet mit einem Punkt und der 
+Dateiendung '.deb'. Gemäß den Debian-Richtlinien <<Debian-Policy-Manual>> 
+sind in o.g. Feldern nur ASCII-Zeichen zulässig. Unterstriche, Leerzeichen 
+und Umlaute sind nicht gestattet. Das hilft dabei, Missverständnissen 
+vorzubeugen und die Paketnamen auch mit allen Zeichensätzen anzeigen zu 
+können.
 
 [[benennung-paketname]]
 ==== Paketname ====
