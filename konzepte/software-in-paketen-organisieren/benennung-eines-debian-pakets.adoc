@@ -208,8 +208,8 @@ einer neueren Version auf die aktuelle Veröffentlichung. Dabei steht
 das Kürzel `bpo` für `backports.org`, dem Namen des
 Backports-Projektes, bevor es in Debian integriert wurde. Die Angabe
 `123-3~bpo8+2` steht bspw. für eine Rückportierung der Upstream-Version
-123-3 auf Debian 8 _Jessie_. Die Ziffer 2 deklariert das Paket die
-zweite Backports-Revision des Paket.
+123-3 auf Debian 8 _Jessie_. Die Ziffer 2 deklariert das Paket als die
+zweite Backports-Revision des Pakets.
 
 `+deb<x>u<y>` ::
 stabiles Update. Die Angabe `121-3+deb7u2` steht für das zweite stabile
