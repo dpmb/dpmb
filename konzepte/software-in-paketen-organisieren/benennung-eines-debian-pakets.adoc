@@ -106,46 +106,44 @@ auch für die textbasierte Version 'tshark' beinhaltet.
 (((Paketname, Versionsangabe)))
 (((Paketname, Versionsnummer)))
 (((Paketname, Versionsverlauf)))
-_Feld 2_ spiegelt eine Reihe unterschiedlicher Informationen und
-Zustände wieder, aus dem Sie den Versionsstand und -verlauf
-eines Pakets erkennen. Die Versionsangabe kann sowohl numerische
-Zeichen (Ziffern), als auch nichtnumerische Zeichen wie Punkte, Tilden
-und Buchstaben beinhalten.
+_Feld 2_ spiegelt eine Reihe unterschiedlicher Informationen und Zustände 
+wieder, aus dem Sie den Versionsstand und -verlauf eines Pakets erkennen. 
+Die Versionsangabe kann sowohl numerische Zeichen (Ziffern), als auch 
+nichtnumerische Zeichen wie Punkte, Tilden und Buchstaben beinhalten.
 
-Handelt es sich um ein _nicht-natives Debian-Paket_, besteht die
-Versionsnummer aus der Upstream-Version und der Debian-Revision. Bei
-dem Paket 'smartpm_1.4-2_all.deb' für 'smartpm' (siehe
-<<gui-smartpm>>) ist die Angabe 1.4 die Upstream-Version und die
-darauffolgende mit einem Minus `-` abgetrennte `2` steht für die
-zweite Debian-Revision. Hier liegt also das zweite Debianpaket vor,
-welches auf der Upstream-Version 1.4 basiert. Beinhaltet die
-Versionsnummer mehrere Bindestriche, ist immer der letzte Bindestrich
-der Trenner zwischen der Upstream-Version und der
+Handelt es sich um ein _nicht-natives Debian-Paket_, besteht die 
+Versionsnummer aus der Upstream-Version und der Debian-Revision. Bei dem 
+Paket 'smartpm_1.4-2_all.deb' für 'smartpm' (siehe <<gui-smartpm>>) ist 
+die Angabe 1.4 die Upstream-Version und die darauffolgende mit einem Minus 
+`-` abgetrennte `2` steht für die zweite Debian-Revision. Hier liegt also 
+das zweite Debianpaket vor, welches auf der Upstream-Version 1.4 basiert. 
+Beinhaltet die Versionsnummer mehrere Bindestriche, ist immer der letzte 
+Bindestrich der Trenner zwischen der Upstream-Version und der 
 Debian-Revisionsnummer.
 
-Handelt es sich hingegen um ein _natives Debian-Paket_, d.h. eine
-Software, die ausschließlich als Debian-Paket vertrieben wird, gibt es
-keine Debian-Revisionsnummer und die Versionsnummer des Pakets ist
-identisch mit der Versionsnummer der Software. Für das Paket
-'dpkg_1.17.25_i386.deb' zu `dpkg` ist das 1.17.25.
+Handelt es sich hingegen um ein _natives Debian-Paket_, d.h. eine Software, 
+die ausschließlich als Debian-Paket vertrieben wird, gibt es keine 
+Debian-Revisionsnummer und die Versionsnummer des Pakets ist identisch mit 
+der Versionsnummer der Software. Für das Paket 'dpkg_1.17.25_i386.deb' zu 
+`dpkg` ist das 1.17.25.
 
 // Stichworte für den Index
+(((Paketname, Sortierung der Versionsangabe anhand des Releasestatus_)))
 (((Paketname, Versionsangabe mit Epoche)))
 Ändert sich bei der Aktualisierung (Upstream) die Versionsangabe so
-grundlegend, dass die neuere Version eine kleinere Versionsnummer hat
-als die vorherige Version, so muss der Paketversion die Angabe einer
-mit einem Doppelpunkt abgetrennten _Epoche_ hinzugefügt werden. Ist
-bspw. die vorhergehende Versionsnummer 2013.06.06-4 (Upstream-Version
-2013.06.06 Revision 4), entspricht das der Epoche 0 und ist identisch zu
+grundlegend, dass die neuere Version eine kleinere Versionsnummer hat als 
+die vorherige Version, so muss der Paketversion die Angabe einer mit einem 
+Doppelpunkt abgetrennten _Epoche_ hinzugefügt werden. Ist bspw. die 
+vorhergehende Versionsnummer 2013.06.06-4 (Upstream-Version 2013.06.06 in 
+der Revision 4), entspricht das der Epoche 0 und ist identisch zu 
 0:2013.06.06-4. Die Folgeversion wird dann 1:1.0-1, d.h. Epoche 1,
 Upstream-Version 1.0 und Revision 1.
 
-Um eine spätere _alphanumerisch korrekte Sortierung anhand des
-Releasestatus_ zu ermöglichen, sind eine bzw. mehrere
-aufeinanderfolgende Tilden `~` zulässig. Damit wird bspw. die Version
-`1.0~beta1` vor der Version `1.0` einsortiert. Diese Schreibweise kam
-zuerst bei Debian auf, wurde mittlerweile aber auch von anderen
-Open-Source-Projekten übernommen.
+Um eine spätere _alphanumerisch korrekte Sortierung anhand des 
+Releasestatus_ zu ermöglichen, sind eine bzw. mehrere aufeinanderfolgende 
+Tilden `~` zulässig. Damit wird bspw. die Version `1.0~beta1` vor der 
+Version `1.0` einsortiert. Diese Schreibweise kam zuerst bei Debian auf, 
+wurde mittlerweile aber auch von anderen Open-Source-Projekten übernommen.
 
 // Stichworte für den Index
 (((Paketname, Anpassung für Ubuntu)))
