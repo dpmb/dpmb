@@ -129,7 +129,7 @@ identisch mit der Versionsnummer der Software. Für das Paket
 'dpkg_1.17.25_i386.deb' zu `dpkg` ist das 1.17.25.
 
 // Stichworte für den Index
-(((Paketname, Epoche)))
+(((Paketname, Versionsangabe mit Epoche)))
 Ändert sich bei der Aktualisierung (Upstream) die Versionsangabe so
 grundlegend, dass die neuere Version eine kleinere Versionsnummer hat
 als die vorherige Version, so muss der Paketversion die Angabe einer
@@ -149,16 +149,19 @@ Open-Source-Projekten übernommen.
 // Stichworte für den Index
 (((Paketname, Anpassung für Ubuntu)))
 (((Paketname, Backport)))
+(((Paketname, Binary Non-Maintainer Upload (BinNMU))))
 (((Paketname, BinNMU)))
+(((Paketname, Non-Maintainer Upload (NMU))))
 (((Paketname, NMU)))
-(((Paketname, Suffix -bpo)))
+(((Paketname, Suffix ~bpo)))
 (((Paketname, Suffix -common)))
 (((Paketname, Suffix -data)))
-(((Paketname, Suffix -deb)))
 (((Paketname, Suffix -dev)))
 (((Paketname, Suffix -doc)))
-(((Paketname, Suffix -ubuntu)))
+(((Paketname, Suffix +b)))
+(((Paketname, Suffix +deb)))
 (((Paketname, Suffix +nmu)))
+(((Paketname, Suffix ubuntu)))
 Wie oben schon angerissen, kann ein Paketname ein Suffix beinhalten. Es
 sind eine ganze Reihe von _Suffixen_ gebräuchlich. Diese gelten zwar nur
 als Konvention, werden aber auch an einigen Stellen erwartet.
