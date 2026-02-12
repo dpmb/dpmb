@@ -5,21 +5,24 @@
 [[von-apt-zu-apt-pinning]]
 === Von APT zu APT-Pinning ===
 
-Bisher wurden im Buch alle Pakete gleichwertig behandelt. Zusätzlich
-bekommen die Pakete nun unterschiedliche Prioritäten. Die
-Paketverwaltung mit APT überprüft verschiedene ``Schlüsselstellen'' und
-klärt, was für das jeweilige Paket eingestellt ist. Daraus ermittelt APT
-für jedes Paket dessen Priorität und wählt für die Installation die
-Version mit der höchsten ``Vorrangstufe'' aus. Liegt keine explizite
+// Stichworte für den Index
+(((Paketverwaltung, Festlegung der Prioritäten für Pakete)))
+(((Paketverwaltung, Pins)))
+
+Bisher wurden im Buch alle Pakete gleichwertig behandelt. In der Praxis 
+läßt sich das änderen, indem die Pakete nun zusätzlich unterschiedliche 
+Prioritäten bekommen. Die Paketverwaltung mit APT überprüft hierzu 
+verschiedene ``Schlüsselstellen'' und klärt zunächst, was Sie für das 
+jeweilige Paket eingestellt haben. Danach wählt APT für die Installation 
+die Version mit der höchsten ``Vorrangstufe'' aus. Liegt keine explizite 
 Angabe vor, kommen die Standardeinstellungen zum Tragen (siehe auch
 <<aus-welchem-repo-kommen-die-pakete>>).
 
 Die Steuerung der Vorrangstufe erfolgt über einzelne Zahlenwerte, genannt
-'Pins'. Anhand dieser wird ausgewählt, aus welchen Paketquellen die
-Pakete bezogen werden. Das ganze kann beliebig verkompliziert werden, da
-APT über den Zahlenwert entscheidet, was es installiert, nicht
-installiert oder aktualisiert (siehe dazu
-<<tab.apt-pinning-prioritaeten>>).
+'Pins'. Anhand dieser wird ausgewählt, aus welchen Paketquellen die Pakete 
+bezogen werden. Das ganze kann beliebig verkompliziert werden, da APT über 
+den Zahlenwert entscheidet, was es installiert, nicht installiert oder 
+aktualisiert (siehe dazu <<tab.apt-pinning-prioritaeten>>).
 
 .Verwendete Prioritäten beim APT-Pinning
 [frame="topbot",options="header",cols="2,3",id="tab.apt-pinning-prioritaeten"]
