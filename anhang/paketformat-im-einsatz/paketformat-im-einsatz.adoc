@@ -126,15 +126,19 @@ nur Live-CDs.
 (((Damn Small Linux (DSL))))
 (((Finnix)))
 (((Tiny Core Linux)))
+(((Trisquel Mini)))
 
-Damn Small Linux:: wird seit Mitte 2012 nicht mehr weiterentwickelt <<DamnSmallLinux>>
+Damn Small Linux :: wird seit Mitte 2012 nicht mehr weiterentwickelt <<DamnSmallLinux>>
 
 Finnix:: Debian-Minimalsystem, gedacht für Systemadministratoren zur
 Wartung und Reparatur im Rahmen von Notfällen <<Finnix>>
 
-Tiny Core Linux:: Nachfolger von Damn Small Linux. Die dCore-Variante
+Tiny Core Linux :: Nachfolger von Damn Small Linux. Die dCore-Variante
 basiert auf der Infrastruktur und den Paketen von Debian und Ubuntu
 <<TinyCoreLinux>>
+
+Trisquel Mini :: Minimalsystem der Linux-Distribution Trisquel GNU/Linux
+unter Verwendung von LXDE als graphische Bedienoberfläche
 
 === Spieleplattform ===
 
