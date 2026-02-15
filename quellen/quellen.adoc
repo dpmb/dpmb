@@ -1047,6 +1047,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[ToyStory]]] Toy Story im Disney Wiki, http://disney.wikia.com/wiki/Toy_Story
 
+- [[[Trisquel]]] Trisquel GNU/Linux, https://trisquel.info/
+
 - [[[Turnschuhnetzwerk]]], Turnschuhnetzwerk, Wikipedia, https://de.wikipedia.org/wiki/Turnschuhnetzwerk
 
 - [[[Ubuntu]]] Ubuntu Linux, https://www.ubuntu.com/

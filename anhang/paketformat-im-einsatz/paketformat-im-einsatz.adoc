@@ -138,7 +138,7 @@ basiert auf der Infrastruktur und den Paketen von Debian und Ubuntu
 <<TinyCoreLinux>>
 
 Trisquel Mini :: Minimalsystem der Linux-Distribution Trisquel GNU/Linux
-unter Verwendung von LXDE als graphische Bedienoberfläche
+<<Trisquel>> unter Verwendung von LXDE als graphische Bedienoberfläche
 
 === Spieleplattform ===
 
