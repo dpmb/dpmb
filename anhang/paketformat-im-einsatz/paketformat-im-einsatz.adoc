@@ -35,10 +35,17 @@ Standard-Installation enthält.
 (((DebianEdu/Skolelinux)))
 (((Edubuntu)))
 (((LernStick)))
+(((Trisquel Sugar TOAST)))
 
-Skolelinux:: früher DebianEdu, für den Einsatz in Schulen <<Skolelinux>>
-Edubuntu:: Ubuntu für Schule und Bildung <<Edubuntu>>
-LernStick:: Live-Distribution auf einem USB-Stick <<LernStick>>
+Skolelinux :: früher DebianEdu, für den Einsatz in Schulen <<Skolelinux>>
+
+Edubuntu :: Ubuntu für Schule und Bildung <<Edubuntu>>
+
+LernStick :: Live-Distribution auf einem USB-Stick <<LernStick>>
+
+Trisquel Sugar TOAST :: eine speziell für Schüler angepasste Version von 
+Trisquel GNU/Linux <<Trisquel>> mit der Lernumgebung Sugar <<Sugar>>, die
+vornehmlich aus dem Projekt One Laptop Per Child (OLPC) bekannt ist
 
 === Desktop ===
 

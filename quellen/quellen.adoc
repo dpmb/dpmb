@@ -1031,6 +1031,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[StormOS]]] StormOS, Wiki-Seite im Debian Derivative Census, https://wiki.debian.org/Derivatives/Census/StormOS
 
+- [[[Sugar]]] Sugar, https://www.sugarlabs.org/
+
 - [[[Suter-apt-offline]]] Samuel Suter: apt offline benutzen, http://www.lugs.ch/lib/doc/apt-offline.phtml
 
 - [[[SWITCH]]] SWITCH, das Hochleistungsnetzwerk der Schweizer Hochschulen, https://www.switch.ch/
