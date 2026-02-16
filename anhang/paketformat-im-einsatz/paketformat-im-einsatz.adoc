@@ -12,22 +12,19 @@
 (((Raspberry Pi OS)))
 (((Raspbian)))
 
-Armbian:: 
-Debian GNU/Linux für ARM-basierte Geräte, bspw. ein Cubieboard oder Cubietruck
-<<Armbian>>
+Armbian :: Debian GNU/Linux für ARM-basierte Geräte, bspw. ein Cubieboard 
+oder Cubietruck <<Armbian>>.
 
-DebWRT::
-Debian GNU/Linux auf der Basis von OpenWRT für WLAN-Router. Eingestellt 2010.
+DebWRT :: Debian GNU/Linux auf der Basis von OpenWRT für WLAN-Router. 
+Eingestellt im Jahr 2010.
 
-Raspbian:: 
-Debian GNU/Linux so rekompiliert, dass er mit bestmöglicher Optimierung auch 
-auf den schwächsten Raspberry Pis läuft. <<Raspbian>>
+Raspbian :: Debian GNU/Linux so rekompiliert, dass es mit bestmöglicher 
+Optimierung auch auf den schwächsten Raspberry Pis läuft <<Raspbian>>.
 
-Raspberry Pi OS::
-Eine auf Raspbian aufsetzende Distribution <<RaspberryPiOS>> der Raspberry Pi 
-Foundation <<RaspberryPi>>, die auch nicht-freie, "empfohlene" 
-Closed-Source-Software und Dritthersteller-APT-Repositories in der 
-Standard-Installation enthält.
+Raspberry Pi OS :: Eine auf Raspbian aufsetzende Distribution 
+<<RaspberryPiOS>> der Raspberry Pi Foundation <<RaspberryPi>>, die auch 
+nicht-freie, ``empfohlene'' Closed-Source-Software und Paketquellen von
+Drittherstellern in der Standard-Installation enthält.
 
 === Bildung ===
 
