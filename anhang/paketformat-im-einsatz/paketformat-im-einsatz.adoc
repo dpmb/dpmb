@@ -38,9 +38,13 @@ Standard-Installation enthält.
 (((One Laptop Per Child (OLPC))))
 (((Trisquel Sugar TOAST)))
 
-Skolelinux :: früher DebianEdu, für den Einsatz in Schulen <<Skolelinux>>
+Edubuntu :: Ubuntu Linux für Schule und Bildung <<Edubuntu>>
 
-Edubuntu :: Ubuntu für Schule und Bildung <<Edubuntu>>
+Escuelas LINUX :: speziell auf den Bildungsbereich angepasstes
+Bodhi Linux (Basis: Ubuntu Linux) <<EscuelasLinux>>
+
+Skolelinux :: früher DebianEdu, gedacht und konzipiert für den Einsatz in 
+Schulen <<Skolelinux>>
 
 LernStick :: Live-Distribution auf einem USB-Stick <<LernStick>>
 
