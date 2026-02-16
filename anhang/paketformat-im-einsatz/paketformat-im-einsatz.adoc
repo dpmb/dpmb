@@ -37,6 +37,7 @@ Standard-Installation enthält.
 (((Escuelas Linux)))
 (((LernStick)))
 (((Li-f-e)))
+(((Linkat)))
 (((Linux for Education)))
 (((Linux Schools)))
 (((One Laptop Per Child (OLPC))))
@@ -52,6 +53,12 @@ LernStick :: Live-Distribution auf einem USB-Stick <<LernStick>>
 Li-f-e (Linux for Education) :: basierend auf Ubuntu Mate 22.04 und 
 entwickelt für Lehrer und Schüler an Schulen und Hochschulen 
 <<LinuxForEducation>>
+
+Linkat :: Eine GNU/Linux-Distribution für den Bildungsbereich, die 
+aus der Autonomen Gemeinschaft Katalonien in Spanien stammt. Das 
+Betriebssystem wurde entwickelt, um die Verwendung von freier und 
+quelloffener Software in Bildungseinrichtungen der Region zu fördern. 
+Linkat <<Linkat>> basiert auf Ubuntu Linux.
 
 Linux Schools :: ähnlich zu Skolelinux und mit vielen Werkzeugen für das 
 Netzwerk und die Administration, jedoch statt Debian GNU/Linux auf der 
