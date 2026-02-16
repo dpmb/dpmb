@@ -36,6 +36,8 @@ Standard-Installation enthält.
 (((Edubuntu)))
 (((Escuelas Linux)))
 (((LernStick)))
+(((Li-f-e)))
+(((Linux for Education)))
 (((Linux Schools)))
 (((One Laptop Per Child (OLPC))))
 (((Trisquel Sugar TOAST)))
@@ -46,6 +48,10 @@ Escuelas LINUX :: speziell auf den Bildungsbereich angepasstes
 Bodhi Linux (Basis: Ubuntu Linux) <<EscuelasLinux>>
 
 LernStick :: Live-Distribution auf einem USB-Stick <<LernStick>>
+
+Li-f-e (Linux for Education) :: basierend auf Ubuntu Mate 22.04 und 
+entwickelt für Lehrer und Schüler an Schulen und Hochschulen 
+<<LinuxForEducation>>
 
 Linux Schools :: ähnlich zu Skolelinux und mit vielen Werkzeugen für das 
 Netzwerk und die Administration, jedoch statt Debian GNU/Linux auf der 

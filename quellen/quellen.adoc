@@ -848,6 +848,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[Lintian]]] Lintian-Projekt, https://lintian.debian.org/
 
+- [[[LinuxForEducation]]] Linux For Education, https://sourceforge.net/projects/cyberorg-home/files/Li-f-e/
+
 - [[[LinuxHardware]]] LinuxHardware, http://linux-hardware.org/
 
 - [[[LinuxMint]]] Linux Mint, https://www.linuxmint.com/
