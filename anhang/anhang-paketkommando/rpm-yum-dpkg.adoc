@@ -908,7 +908,7 @@ die Transaktionshistorie darzustellen. Dabei helfen Ihnen diese Kommandos:
 |          | `yum history summary` 'Paketname' | Zusammenfassung der Transaktionen zu 'Paketname'
 |====
 
-=== Eine installierte Veröffentlichung aktualisieren (Distributionsupgrade) ==
+=== Eine installierte Veröffentlichung aktualisieren (Distributionsupgrade) ===
 
 // Stichworte für den Index
 (((Veröffentlichung aktualisieren)))
