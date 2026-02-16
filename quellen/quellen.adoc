@@ -854,6 +854,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[LinuxMint-apt]]], LinuxMint: APT for Newbies, https://community.linuxmint.com/tutorial/view/588
 
+- [[[LinuxSchools]]] Linux Schools, https://www.linuxschools.com/
+
 - [[[localepurge]]] 'localepurge', Projektseite im Linux Wiki, http://linuxwiki.de/localepurge
 
 - [[[Loschwitz-Sourceformat]]] Martin Loschwitz: Zusammenpacken! Das neue Sourceformat für Debian-Pakete, Linux-Magazin 06/2011, http://www.linux-magazin.de/Ausgaben/2011/06/Debian-Src-3.0

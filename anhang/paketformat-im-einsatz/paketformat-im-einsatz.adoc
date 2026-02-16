@@ -34,7 +34,9 @@ Standard-Installation enthält.
 // Stichworte für den Index
 (((DebianEdu/Skolelinux)))
 (((Edubuntu)))
+(((Escuelas Linux)))
 (((LernStick)))
+(((Linux Schools)))
 (((One Laptop Per Child (OLPC))))
 (((Trisquel Sugar TOAST)))
 
@@ -43,10 +45,14 @@ Edubuntu :: Ubuntu Linux für Schule und Bildung <<Edubuntu>>
 Escuelas LINUX :: speziell auf den Bildungsbereich angepasstes
 Bodhi Linux (Basis: Ubuntu Linux) <<EscuelasLinux>>
 
+LernStick :: Live-Distribution auf einem USB-Stick <<LernStick>>
+
+Linux Schools :: ähnlich zu Skolelinux und mit vielen Werkzeugen für das 
+Netzwerk und die Administration, jedoch statt Debian GNU/Linux auf der 
+Basis von Ubuntu LTS <<LinuxSchools>>
+
 Skolelinux :: früher DebianEdu, gedacht und konzipiert für den Einsatz in 
 Schulen <<Skolelinux>>
-
-LernStick :: Live-Distribution auf einem USB-Stick <<LernStick>>
 
 Trisquel Sugar TOAST :: eine speziell für Schüler angepasste Version von 
 Trisquel GNU/Linux <<Trisquel>> mit der Lernumgebung Sugar <<Sugar>>, die
