@@ -904,6 +904,8 @@ https://packages.debian.org/de/stable/packagekit-command-not-found
 
 - [[[nixcraft-dpkg]]] `dpkg`-Spickzettel im Nixcraft-Blog, http://www.cyberciti.biz/howto/question/linux/dpkg-cheat-sheet.php
 
+- [[[OLPC]]] One Laptop Per Child, https://laptop.org/
+
 - [[[OpenContainer]]] Open Container Format (OCF), https://www.opencontainers.org/
 
 - [[[Openprinting]]] OpenPrinting, https://openprinting.github.io/
