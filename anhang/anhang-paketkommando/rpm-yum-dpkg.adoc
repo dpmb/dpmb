@@ -467,8 +467,8 @@ das zu `dpkg` und `aptitude` genauer.
 (((apt-rdepends, -r)))
 // (((aptitude, search ~D)))
 // (((aptitude, search ~R)))
-(((dnf, repoquery -q --requires)))
-(((dnf, repoquery -q --whatrequires)))
+(((dnf, repoquery --whatdepends)))
+(((dnf, repoquery --whatrequires)))
 (((dpkg, -f)))
 (((dpkg, --field)))
 (((dpkg-deb, -f)))
@@ -509,6 +509,8 @@ ein.
 |            | `aptitude search '~D'` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 | `grep-status` | `grep-status -F Package -s Depends` 'Paketname' | Abhängigkeiten anzeigen
 |            | `grep-status -P -s Depends` 'Paketname' | Abhängigkeiten anzeigen
+| DNF        | `dnf repoquery --whatdepends` 'Paketname' | Abhängigkeiten anzeigen
+|            | `dnf repoquery --whatrequires` 'Paketname' umgekehrte Abhängigkeiten anzeigen
 | Guix       | `guix graph` 'Paketname' | Abhängigkeiten anzeigen
 |            | `guix graph --type=reverse-package` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 | RPM        | `rpm -qR` 'Paketname' | das Paket muß lokal auf dem
@@ -522,8 +524,6 @@ lokal auf dem System installiert sein
 |            | `repoquery --requires` 'Paketname' | Abhängigkeiten anzeigen
 |            | `repoquery -q --whatrequires` 'Paketname' | umgekehrte Abhängigkeiten anzeigen
 |            | `yumdownloader --resolve` 'Paketname' |
-| DNF        | `dnf repoquery -q --requires` 'Paketname' | Abhängigkeiten anzeigen
-|            | `dnf repoquery -q --whatrequires` 'Paketname' umgekehrte Abhängigkeiten anzeigen
 |====
 
 === Alle Dateien eines Pakets anzeigen, bevor es installiert wird ===
