@@ -791,6 +791,7 @@ nachfolgende Tabelle. In Abschnitt ``Aktualisierbare Pakete anzeigen''
 (((apt, list)))
 (((apt-cache, pkgnames)))
 (((dnf, group list)))
+(((dnf, grouplist)))
 (((dnf, list available)))
 (((dnf, repository-packages list --available)))
 (((guix, search)))
@@ -805,7 +806,8 @@ Aufrufen. In Abschnitt ``Bekannte Paketnamen auflisten''
 | Werkzeug   | Aufruf | Anmerkungen
 | `apt`      | `apt list` | alle verfügbaren (bekannten) Pakete samt Status auflisten
 | `apt-cache`| `apt-cache pkgnames` | alle verfügbaren (bekannten) Pakete auflisten
-| DNF        | `dnf group list` | alle Paketgruppen auflisten
+| DNF        | `dnf group list` 'Gruppenname' | alle passenden Paketgruppen auflisten
+|            | `dnf grouplist` 'Gruppenname' | alle passenden Paketgruppen auflisten (veraltet)
 |            | `dnf list --available` | alle verfügbaren Pakete anzeigen
 |            | `dnf repository-packages repo list --available` | alle verfügbaren Pakete aus dem Repository 'repo' anzeigen
 | Guix       | `guix search` 'Muster' | alle verfügbaren Pakete anzeigen, die dieses Muster enthalten
