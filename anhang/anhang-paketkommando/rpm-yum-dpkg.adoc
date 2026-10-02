@@ -12,6 +12,7 @@
 (((dpkg)))
 (((Dandified YUM (DNF))))
 (((DNF)))
+(((DNF ersetzt YUM)))
 (((Effing Package Management (FPM))))
 (((FPM)))
 (((GNU Guix)))
@@ -42,6 +43,10 @@ sowie Debian 8 _Jessie_ bis einschließlich Debian 13 _Trixie_ und GNU Guix
 System 1.5. Die Verfügbarkeit der genannten Werkzeuge und deren 
 Möglichkeiten variiert recht stark <<RPM-Salve>> <<RPM-Gite>> <<RPM-Canepa>>
 <<YUM-Salve>> <<dpkg-Kumar>> <<apt-Salve>> <<DNF-Dokumentation>>.
+
+Auch zu beachten ist, dass auf neueren Red Hat-basierten Systemen YUM kein
+eigenständiges Werkzeug mehr ist. Ersetzt wurde es durch einen symbolischen
+Link auf DNF, welches alle Aktionen zur Paketverwaltung ausführt.
 
 === Die lokale Paketliste aktualisieren ===
 
