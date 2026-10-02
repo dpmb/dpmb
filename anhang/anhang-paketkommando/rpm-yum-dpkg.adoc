@@ -897,7 +897,8 @@ ein.
 // Stichworte für den Index
 (((Paket, Transaktionshistorie anzeigen)))
 (((dnf, history)))
-(((dnf, history list all)))
+(((dnf, history info)))
+(((dnf, history list)))
 (((yum, history)))
 (((yum, history info)))
 (((yum, history package-list)))
@@ -914,6 +915,7 @@ die Transaktionshistorie darzustellen. Dabei helfen Ihnen diese Kommandos:
 |====
 | Werkzeug | Aufruf | Anmerkungen
 | DNF      | `dnf history` | die gesamte Historie aller Transaktionen anzeigen
+|          | `dnf history info` | die gesamte Historie aller Transaktionen mit zusätzlichen Details anzeigen
 |          | `dnf history list` | die gesamte Historie aller Transaktionen anzeigen
 | YUM      | `yum history`| die gesamte Historie aller Transaktionen anzeigen
 |          | `yum history info` 'Paketname' | detailliertere Transaktionen zu 'Paketname' anzeigen
