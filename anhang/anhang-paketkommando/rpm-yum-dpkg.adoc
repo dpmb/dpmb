@@ -222,7 +222,7 @@ Paketinstallation.
 (((rpm, --reinstall)))
 (((yum, reinstall)))
 Mit den nachfolgenden Aufrufen installieren Sie ein Softwarepaket über die 
-Kommandozeile erneut. Guix verfügt bislang nicht über ein entsprechendes 
+Kommandozeile erneut. `dpkg` und Guix verfügen nicht über ein entsprechendes 
 Unterkommando.
 
 .Erneute Installation eines Pakets
