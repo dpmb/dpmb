@@ -81,6 +81,7 @@ neuesten Stand bringen.
 (((apt-get, install)))
 (((apt-get, --no-download install)))
 (((aptitude, install)))
+(((dnf, group install)))
 (((dnf, groupinstall)))
 (((dnf, install)))
 (((dnf, localinstall)))
@@ -114,7 +115,8 @@ vorliegen.
 | `apt-get`  | `apt-get install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |            | `apt-get --no-download install` 'Paketname' | Paket wird dem Paketcache entnommen und nicht vom Paketmirror bezogen
 | `aptitude` | `aptitude install` 'Paketname' | Paket wird dem Paketrepository entnommen
-| DNF        | `dnf groupinstall` 'Paketgruppe' | alle Pakete aus der Paketgruppe installieren
+| DNF        | `dnf group install` 'Paketgruppe' | alle Pakete aus der Paketgruppe installieren
+|            | `dnf groupinstall` 'Paketgruppe' | alle Pakete aus der Paketgruppe installieren (veraltet)
 |            | `dnf install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |            | `dnf install` 'Paketdatei' | Paketdatei liegt also lokale Datei vor
 |            | `dnf localinstall` 'Paketdatei' | Paketdatei liegt also lokale Datei vor oder wird von einem HTTP- oder FTP-Server bezogen (veraltet)
@@ -279,6 +281,7 @@ verfügen nicht über ein solches Unterkommando.
 (((aptitude, remove)))
 (((dnf, erase)))
 (((dnf, group remove)))
+(((dnf, groupremove)))
 (((dnf, remove)))
 (((dpkg, -P)))
 (((dpkg, --purge)))
@@ -311,6 +314,7 @@ Kommandozeile. Unter ``Pakete deinstallieren'' in
 |            | `aptitude purge` 'Paketname' | entfernt das Paket inklusive der Konfigurationsdateien des Pakets
 | DNF        | `dnf erase` 'Paketname' | Paket wird deinstalliert (veraltet)
 |            | `dnf group remove` 'Paketgruppe' | alle Pakete aus der Paketgruppe werden deinstalliert
+|            | `dnf groupremove` 'Paketgruppe' | alle Pakete aus der Paketgruppe werden deinstalliert (veraltet)
 |            | `dnf remove` 'Paketname' | Paket wird deinstalliert
 | `dpkg`     | `dpkg -r` 'Paketname' | entfernt nur das angegebene Paket
 |            | `dpkg --remove` 'Paketname' | entfernt nur das angegebene Paket
