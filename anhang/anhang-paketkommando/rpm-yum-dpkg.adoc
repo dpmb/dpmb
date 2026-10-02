@@ -97,7 +97,6 @@ neuesten Stand bringen.
 (((yum, groupinstall)))
 (((yum, install)))
 (((yum, localinstall)))
-(((yum, reinstall)))
 Mit den nachfolgenden Aufrufen installieren Sie ein Softwarepaket über die 
 Kommandozeile. Unter ``Pakete installieren'' in <<pakete-installieren>> 
 gehen wir detaillierter auf `dpkg`, APT und `aptitude` ein. Unter 
@@ -118,7 +117,7 @@ vorliegen.
 | DNF        | `dnf groupinstall` 'Paketgruppe' | alle Pakete aus der Paketgruppe installieren
 |            | `dnf install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |            | `dnf install` 'Paketdatei' | Paketdatei liegt also lokale Datei vor
-|            | `dnf localinstall` 'Paketdatei' | Paketdatei liegt also lokale Datei vor (veraltet)
+|            | `dnf localinstall` 'Paketdatei' | Paketdatei liegt also lokale Datei vor oder wird von einem HTTP- oder FTP-Server bezogen (veraltet)
 | `dpkg`     | `dpkg -i` 'Paketdatei' | Paket liegt lokal als Datei vor
 |            | `dpkg --install` 'Paketdatei' | Paket liegt lokal als Datei vor
 | Guix       | `guix install` 'Paketname' | Paket 'Paketname' wird dem Paketrepository entnommen
@@ -130,8 +129,7 @@ vorliegen.
 |            | `rpm -ihv` 'Paketdatei' | Paket liegt lokal als Datei vor, Installation mit Kommentaren und Verlaufsbalken
 | YUM        | `yum groupinstall` 'Paketgruppe' | Alle Pakete aus der Paketgruppe werden dem Paketrepository entnommen und installiert
 |            | `yum install` 'Paketname' | Paket wird dem Paketrepository entnommen
-|            | `yum localinstall` 'Paketname' | Paket liegt lokal als Datei vor oder wird von einem HTTP- oder FTP-Server bezogen
-|            | `yum reinstall` 'Paketname' | Paket wird dem Paketrepository entnommen und erneut installiert
+|            | `yum localinstall` 'Paketdatei' | Paketdatei liegt als lokale Datei vor oder wird von einem HTTP- oder FTP-Server bezogen (veraltet)
 |====
 
 === Bereits bestehende Softwarepakete erneuern ===
