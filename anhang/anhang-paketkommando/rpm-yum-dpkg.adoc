@@ -248,6 +248,7 @@ Unterkommando.
 (((apt, download)))
 (((apt-get, install --download-only)))
 (((aptitude, download)))
+(((dnf, download)))
 (((dnf, install --downloadonly)))
 (((Paket, nur herunterladen)))
 (((yum, install --downloadonly)))
@@ -265,7 +266,8 @@ verfügen nicht über ein solches Unterkommando.
 | APT        | `apt download` 'Paketname' | Paket wird dem Paketrepository entnommen und im Paketcache gespeichert, üblicherweise im Verzeichnis `/var/cache/apt/archives/`
 | `apt-get`  | `apt-get install --download-only` 'Paketname' | Paket wird dem Paketrepository entnommen und im Paketcache gespeichert, üblicherweise im Verzeichnis `/var/cache/apt/archives/`
 | `aptitude` | `aptitude download` 'Paketname' | Paket wird dem Paketrepository entnommen und im Paketcache gespeichert, üblicherweise im Verzeichnis `/var/cache/apt/archives/`
-| DNF        | `dnf install --downloadonly` 'Paketname' | Paket wird dem Paketrepository entnommen und im Paketcache gespeichert, üblicherweise im Verzeichnis `/var/cache/dnf/architektur/prod/repo/`
+| DNF        | `dnf download` 'Paketname' | Paket wird dem Paketrepository entnommen und im aktuellen Verzeichnis gespeichert, benötigt das DNF download-Plugin
+|            | `dnf install --downloadonly` 'Paketname' | Paket wird dem Paketrepository entnommen und im Paketcache gespeichert, üblicherweise im Verzeichnis `/var/cache/dnf/architektur/prod/repo/`
 | YUM        | `yum install --downloadonly` 'Paketname' | Paket wird dem Paketrepository entnommen und im Paketcache gespeichert, üblicherweise im Verzeichnis `/var/cache/yum/architektur/prod/repo/`
 |            | `yumdownloader` 'Paketname' | Paket wird dem Paketrepository entnommen und im aktuellen Verzeichnis gespeichert
 |            | `yumdownloader --resolve` 'Paketname' | Paket samt dessen Paketabhängigkeiten wird dem Paketrepository entnommen und im aktuellen Verzeichnis gespeichert
@@ -340,7 +342,8 @@ Kommandozeile. Unter ``Pakete deinstallieren'' in
 (((aptitude, search ~i)))
 (((aptitude, search ?installed)))
 (((aptitude, versions)))
-(((dnf, list installed)))
+(((dnf, list --available)))
+(((dnf, list --installed)))
 (((dpkg, -l)))
 (((dpkg, --list)))
 (((guix, package -I)))
@@ -376,7 +379,8 @@ sowie unter ``Aktualisierbare Pakete anzeigen'' in
 | `aptitude` | `aptitude search '~i'`| alle installierten Pakete auflisten
 |            | `aptitude versions` 'Paketname'| alle verfügbaren Pakete
 für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
-| DNF        | `dnf list installed` | alle installierten Pakete anzeigen
+| DNF        | `dnf list --available` | alle verfügbaren Pakete anzeigen
+|            | `dnf list --installed` | alle installierten Pakete anzeigen
 | `dpkg`     | `dpkg -l` | alle installierten Pakete auflisten
 |            | `dpkg --list` | alle installierten Pakete auflisten
 | Guix       | `guix package -I` | alle installierten Pakete auflisten
