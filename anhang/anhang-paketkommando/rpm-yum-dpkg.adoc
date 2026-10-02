@@ -406,7 +406,7 @@ für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
 (((aptitude, show)))
 (((dnf, info)))
 (((dnf, list)))
-(((dnf, list installed)))
+(((dnf, list --installed)))
 (((dpkg, -l)))
 (((dpkg, --list)))
 (((dpkg, -s)))
@@ -439,8 +439,8 @@ das zu `dpkg` und `aptitude` genauer.
 |            | `apt show` 'Paketname' | Detaillierte Informationen und den Installationsstatus zu Paketname anzeigen
 | `aptitude` | `aptitude show` 'Paketname'|
 | DNF        | `dnf info` 'Paketname' | Informationen zu Paketname anzeigen
-|            | `dnf list installed` | alle installierten Pakete anzeigen
-|            | `dnf list installed` 'Paketname' | Installationsstatus zu Paketname anzeigen
+|            | `dnf list --installed` | alle installierten Pakete anzeigen
+|            | `dnf list --installed` 'Paketname' | Installationsstatus zu Paketname anzeigen
 | `dpkg`     | `dpkg -l` 'Paketname' | Ausgabe des Installationsstatus
 |            | `dpkg --list` 'Paketname' | Ausgabe des Installationsstatus
 |            | `dpkg -s` 'Paketname' | Ausgabe der Paketinformationen
