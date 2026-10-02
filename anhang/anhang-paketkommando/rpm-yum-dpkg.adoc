@@ -244,14 +244,15 @@ Unterkommando.
 (((apt, download)))
 (((apt-get, install --download-only)))
 (((aptitude, download)))
+(((dnf, install --downloadonly)))
 (((Paket, nur herunterladen)))
 (((yum, install --downloadonly)))
 (((yumdownloader)))
 (((yumdownloader, --resolve)))
 (((yumdownloader, --destdir)))
 Mit den nachfolgenden Aufrufen laden Sie ein Softwarepaket herunter, 
-entweder in das aktuelle Verzeichnis oder in den Paketcache. Guix 
-verfügt bislang nicht über ein solches Unterkommando.
+entweder in das aktuelle Verzeichnis oder in den Paketcache. `dpkg` und Guix 
+verfügen nicht über ein solches Unterkommando.
 
 .Ein Softwarepaket nur herunterladen
 [frame="topbot",options="header",cols="2,4,4",id="tab.deb-paket-herunterladen"]
@@ -260,6 +261,7 @@ verfügt bislang nicht über ein solches Unterkommando.
 | APT        | `apt download` 'Paketname' | Paket wird dem Paketrepository entnommen und im Paketcache gespeichert, üblicherweise im Verzeichnis `/var/cache/apt/archives/`
 | `apt-get`  | `apt-get install --download-only` 'Paketname' | Paket wird dem Paketrepository entnommen und im Paketcache gespeichert, üblicherweise im Verzeichnis `/var/cache/apt/archives/`
 | `aptitude` | `aptitude download` 'Paketname' | Paket wird dem Paketrepository entnommen und im Paketcache gespeichert, üblicherweise im Verzeichnis `/var/cache/apt/archives/`
+| DNF        | `dnf install --downloadonly` 'Paketname' | Paket wird dem Paketrepository entnommen und im Paketcache gespeichert, üblicherweise im Verzeichnis `/var/cache/dnf/architektur/prod/repo/`
 | YUM        | `yum install --downloadonly` 'Paketname' | Paket wird dem Paketrepository entnommen und im Paketcache gespeichert, üblicherweise im Verzeichnis `/var/cache/yum/architektur/prod/repo/`
 |            | `yumdownloader` 'Paketname' | Paket wird dem Paketrepository entnommen und im aktuellen Verzeichnis gespeichert
 |            | `yumdownloader --resolve` 'Paketname' | Paket samt dessen Paketabhängigkeiten wird dem Paketrepository entnommen und im aktuellen Verzeichnis gespeichert
