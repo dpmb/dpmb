@@ -76,7 +76,7 @@ neuesten Stand bringen.
 (((apt-get, install)))
 (((apt-get, --no-download install)))
 (((aptitude, install)))
-(((dnf, group install)))
+(((dnf, groupinstall)))
 (((dnf, install)))
 (((dpkg, -i)))
 (((dpkg, --install)))
@@ -111,7 +111,7 @@ vorliegen.
 | `aptitude` | `aptitude install` 'Paketname' | Paket wird dem Paketrepository entnommen
 | DNF        | `dnf install` 'Paketname' | Paket wird dem Paketrepository entnommen
 |            | `dnf install` 'Paketdatei' | Paketdatei liegt also lokale Datei vor
-|            | `dnf group install` 'Paketgruppe' | alle Pakete aus der Paketgruppe installieren
+|            | `dnf groupinstall` 'Paketgruppe' | alle Pakete aus der Paketgruppe installieren
 | `dpkg`     | `dpkg -i` 'Paketdatei' | Paket liegt lokal als Datei vor
 |            | `dpkg --install` 'Paketdatei' | Paket liegt lokal als Datei vor
 | Guix       | `guix install` 'Paketname' | Paket 'Paketname' wird dem Paketrepository entnommen
