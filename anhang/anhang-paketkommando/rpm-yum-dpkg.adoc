@@ -145,6 +145,7 @@ vorliegen.
 (((aptitude, safe-upgrade)))
 (((dnf, update)))
 (((dnf, upgrade)))
+(((dnf, upgrade --security)))
 (((dnf, upgrade-minimal)))
 (((guix, upgrade)))
 (((Paket, aktualisieren)))
@@ -173,7 +174,8 @@ Unterschiede bei `dpkg`, APT, `apt` und `aptitude` ein.
 | DNF        | `dnf update` | alle installierten Pakete aktualisieren (veraltet)
 |            | `dnf update` 'Paketname' | nur aktualisierte Version des Pakets einspielen (veraltet)
 |            | `dnf upgrade` | alle installierten Pakete aktualisieren
-|            | `dnf upgrade` 'Paketname' | nur aktualisierte Version des Pakets einspielen
+|            | `dnf upgrade --security` | nur die Sicherheitsaktualisierungen einspielen
+|            | `dnf upgrade` 'Paketname' | nur aktualisierte Version von 'Paketname' einspielen
 |            | `dnf upgrade-minimal` | alle installierten Pakete aktualisieren, nur soweit unbedingt erforderlich
 | Guix       | `guix upgrade` 'Paketname' | aktualisierte Version des Pakets einspielen, sofern das Paket bereits in einer früheren Version installiert ist
 | RPM        | `rpm -F` 'Paketdatei' | aktualisiere ein bereits installiertes Paket; das Paket liegt lokal als Datei vor
