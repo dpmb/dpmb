@@ -344,6 +344,7 @@ Kommandozeile. Unter ``Pakete deinstallieren'' in
 (((aptitude, versions)))
 (((dnf, list --available)))
 (((dnf, list --installed)))
+(((dpkg, --get-selections)))
 (((dpkg, -l)))
 (((dpkg, --list)))
 (((guix, package -I)))
@@ -383,6 +384,7 @@ für 'Paketname' auflisten, auch die (noch) nicht installierten Varianten
 |            | `dnf list --installed` | alle installierten Pakete anzeigen
 | `dpkg`     | `dpkg -l` | alle installierten Pakete auflisten
 |            | `dpkg --list` | alle installierten Pakete auflisten
+|            | `dpkg --get-selections` | alle installierten Pakete auflisten
 | Guix       | `guix package -I` | alle installierten Pakete auflisten
 |            | `guix package --list-installed` | alle installierten Pakete auflisten
 |            | `guix package -p` 'Profilname' `-I` | alle installierten Pakete des benannten Profils auflisten
