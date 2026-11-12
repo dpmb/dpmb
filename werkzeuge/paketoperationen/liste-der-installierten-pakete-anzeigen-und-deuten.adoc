@@ -38,9 +38,34 @@ Möglichkeiten. Zwei betreffen `dpkg` mit unterschiedlichen Parametern,
 drittens `aptitude` und viertens `apt`. Die Darstellung in den 
 graphischen Programme klären wir weiter unten genauer.
 
-==== `dpkg --get-selections` 'Paketname' ====
+==== `dpkg --get-selections` 'Muster' ====
 
-Todo
+// Stichworte für den Index
+(((dpkg, --get-selections)))
+(((dpkg, vollständige Paketliste anzeigen)))
+(((Paket, Status anzeigen)))
+(((Paket, Zustand anzeigen)))
+(((Paketstatus)))
+(((Paketzustand)))
+`dpkg` ist ideal für diese Aufgabe, auch wenn der Parameter 
+`--get-selections` seltener als `-l` (siehe unten) zum Einsatz kommt.
+Es liest die Paketdatenbank und erstellt daraus eine Liste, die alle
+Pakete samt deren Installationsstatus umfaßt. Geben Sie kein Muster 
+an, führt `dpkg` nur die Pakete auf, die derzeit installiert sind. 
+
+Die Ausgabe ist zweispaltig und beinhaltet pro Zeile den Paketnamen 
+ohne die Versionsnummer (links) und den Status der Installation des
+Pakets (rechts). Nachfolgend ist das für die Softwarepakete zu sehen, 
+die auf das Muster `abi*` passen.
+
+.Paketliste mit `dpkg --get-selections`
+----
+$ dpkg --get-selections abi*
+abiword						install
+abiword-common					install
+abiword-plugin-grammar:amd64			install
+$
+----
 
 ==== `dpkg -l` 'Paketname' (Langform `--list`) ====
 
