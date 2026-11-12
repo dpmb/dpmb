@@ -33,10 +33,14 @@ installiert ist, und falls ja, ob dieses vollständig installiert und
 ob es vollständig entfernt wurde oder noch ``Reste'' übrig sind, bspw.
 paketspezifische Konfigurationsdateien.
 
-Für die Kommandozeile existieren mittlerweile drei grundlegende 
-Möglichkeiten. Einerseits ist das `dpkg -l`, andererseits 
-`aptitude search '~i'` und drittens `apt list --installed`. Die 
-Darstellung in den graphischen Programme klären wir weiter unten genauer.
+Für die Kommandozeile existieren mittlerweile vier grundlegende 
+Möglichkeiten. Zwei betreffen `dpkg` mit unterschiedlichen Parametern, 
+drittens `aptitude` und viertens `apt`. Die Darstellung in den 
+graphischen Programme klären wir weiter unten genauer.
+
+==== `dpkg --get-selections` 'Paketname' ====
+
+Todo
 
 ==== `dpkg -l` 'Paketname' (Langform `--list`) ====
 
